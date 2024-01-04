@@ -1,0 +1,346 @@
+\hypertarget{classWt_1_1Mail_1_1Message}{}\doxysection{Wt\+::Mail\+::Message Class Reference}
+\label{classWt_1_1Mail_1_1Message}\index{Wt::Mail::Message@{Wt::Mail::Message}}
+
+
+A mail message.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Mail/\+Message.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::Mail\+::Message\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1Mail_1_1Message_1_1Attachment}{Attachment}}
+\item 
+class \mbox{\hyperlink{classWt_1_1Mail_1_1Message_1_1Header}{Header}}
+\begin{DoxyCompactList}\small\item\em An S\+M\+TP message header. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{structWt_1_1Mail_1_1Message_1_1Recipient}{Recipient}}
+\begin{DoxyCompactList}\small\item\em A struct representing a recipient. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Mail_1_1Message_acb395cbd2f149780f8c55ef7d1250e8c}{Message}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_a3ae211155763576a85f43c4f1a4115f3}\label{classWt_1_1Mail_1_1Message_a3ae211155763576a85f43c4f1a4115f3}} 
+void \mbox{\hyperlink{classWt_1_1Mail_1_1Message_a3ae211155763576a85f43c4f1a4115f3}{set\+From}} (const \mbox{\hyperlink{classWt_1_1Mail_1_1Mailbox}{Mailbox}} \&\mbox{\hyperlink{classWt_1_1Mail_1_1Message_a5214bd7ad16fe6e2e465cbb70fc5c8ea}{from}})
+\begin{DoxyCompactList}\small\item\em Sets the sender mailbox. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1Mail_1_1Mailbox}{Mailbox}} \& \mbox{\hyperlink{classWt_1_1Mail_1_1Message_a5214bd7ad16fe6e2e465cbb70fc5c8ea}{from}} () const
+\begin{DoxyCompactList}\small\item\em Returns the sender mailbox. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_ab9590a4b6249247d95b36e20652e181c}\label{classWt_1_1Mail_1_1Message_ab9590a4b6249247d95b36e20652e181c}} 
+void \mbox{\hyperlink{classWt_1_1Mail_1_1Message_ab9590a4b6249247d95b36e20652e181c}{set\+Reply\+To}} (const \mbox{\hyperlink{classWt_1_1Mail_1_1Mailbox}{Mailbox}} \&\mbox{\hyperlink{classWt_1_1Mail_1_1Message_ad33eb0ae9d4c29fcc6f0d8dbaf789e0e}{reply\+To}})
+\begin{DoxyCompactList}\small\item\em Sets the reply-\/to mailbox. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1Mail_1_1Mailbox}{Mailbox}} \& \mbox{\hyperlink{classWt_1_1Mail_1_1Message_ad33eb0ae9d4c29fcc6f0d8dbaf789e0e}{reply\+To}} () const
+\begin{DoxyCompactList}\small\item\em Returns the reply-\/to mailbox. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_ae073e95a1d71941910738ae62ad697c6}\label{classWt_1_1Mail_1_1Message_ae073e95a1d71941910738ae62ad697c6}} 
+void \mbox{\hyperlink{classWt_1_1Mail_1_1Message_ae073e95a1d71941910738ae62ad697c6}{set\+Subject}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&\mbox{\hyperlink{classWt_1_1Mail_1_1Message_a92081f3fea617508029cb11ea32a9c74}{subject}})
+\begin{DoxyCompactList}\small\item\em Sets a subject. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \& \mbox{\hyperlink{classWt_1_1Mail_1_1Message_a92081f3fea617508029cb11ea32a9c74}{subject}} () const
+\begin{DoxyCompactList}\small\item\em Returns the subject. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Mail_1_1Message_ad5a8045f2be8be02ffe84d24e07024c3}{set\+Date}} (const \mbox{\hyperlink{classWt_1_1WLocalDateTime}{W\+Local\+Date\+Time}} \&\mbox{\hyperlink{classWt_1_1Mail_1_1Message_abb89f6216ce1215f3a9d84e0e0b74f3b}{date}})
+\begin{DoxyCompactList}\small\item\em Sets a date. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_abb89f6216ce1215f3a9d84e0e0b74f3b}\label{classWt_1_1Mail_1_1Message_abb89f6216ce1215f3a9d84e0e0b74f3b}} 
+\mbox{\hyperlink{classWt_1_1WLocalDateTime}{W\+Local\+Date\+Time}} \mbox{\hyperlink{classWt_1_1Mail_1_1Message_abb89f6216ce1215f3a9d84e0e0b74f3b}{date}} () const
+\begin{DoxyCompactList}\small\item\em Returns the date. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Mail_1_1Message_af26c2dc27a2815786725d9d3116a584c}{set\+Body}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text)
+\begin{DoxyCompactList}\small\item\em Sets the plain text body. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \& \mbox{\hyperlink{classWt_1_1Mail_1_1Message_a923d2aee96e16be97207e93491cb70ab}{body}} () const
+\begin{DoxyCompactList}\small\item\em Returns the plain text body. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Mail_1_1Message_ab9f8c9869fcc74f3425708e10ae17c0a}{add\+Recipient}} (\mbox{\hyperlink{namespaceWt_1_1Mail_a787e77713f5f302a3bbba194ee2a1c3b}{Recipient\+Type}} type, const \mbox{\hyperlink{classWt_1_1Mail_1_1Mailbox}{Mailbox}} \&recipient)
+\begin{DoxyCompactList}\small\item\em Adds a recipient. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{structWt_1_1Mail_1_1Message_1_1Recipient}{Recipient}} $>$ \& \mbox{\hyperlink{classWt_1_1Mail_1_1Message_a89a6d830485bdc4ee4fc3ac2fe0664d2}{recipients}} () const
+\begin{DoxyCompactList}\small\item\em Returns the recipients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Mail_1_1Message_a4b5cd1fa011257c35f12f7dc0e70fb1f}{set\+Header}} (const std\+::string \&name, const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Sets a header value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Mail_1_1Message_a2873f091f84913dff243c241ff411b92}{add\+Header}} (const std\+::string \&name, const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Adds a header value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_a59c8e9c493252bd15f47b5357fd2ea26}\label{classWt_1_1Mail_1_1Message_a59c8e9c493252bd15f47b5357fd2ea26}} 
+const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Mail_1_1Message_1_1Header}{Header}} $>$ \& \mbox{\hyperlink{classWt_1_1Mail_1_1Message_a59c8e9c493252bd15f47b5357fd2ea26}{headers}} () const
+\begin{DoxyCompactList}\small\item\em Returns the headers. \end{DoxyCompactList}\item 
+const std\+::string $\ast$ \mbox{\hyperlink{classWt_1_1Mail_1_1Message_aa9ffcf3bbcd237ed824e5af03ed8c206}{get\+Header}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Returns a header value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Mail_1_1Message_ab24036ddd6ee45837d12968ad9a5d962}{add\+Html\+Body}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text)
+\begin{DoxyCompactList}\small\item\em Adds an H\+T\+ML body. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \& \mbox{\hyperlink{classWt_1_1Mail_1_1Message_a4f7a5b67db90765bff7770b84b32df29}{html\+Body}} () const
+\begin{DoxyCompactList}\small\item\em Returns the H\+T\+ML body. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Mail_1_1Message_a00cdb9874009e9b6310d4e677901878e}{add\+Attachment}} (const std\+::string \&mime\+Type, const std\+::string \&file\+Name, std\+::istream $\ast$data)
+\begin{DoxyCompactList}\small\item\em Adds an attachment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Mail_1_1Message_a2599e3c485686961d57c7d675a1f7696}{write}} (std\+::ostream \&out) const
+\begin{DoxyCompactList}\small\item\em Writes the message to the stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_a967da1351ea043d46f19eca6fcf3e3f3}\label{classWt_1_1Mail_1_1Message_a967da1351ea043d46f19eca6fcf3e3f3}} 
+static std\+::string {\bfseries generate\+Boundary} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_acf3a58237e6ef69294955cf5b18afb59}\label{classWt_1_1Mail_1_1Message_acf3a58237e6ef69294955cf5b18afb59}} 
+static void {\bfseries encode\+Attachment} (const \mbox{\hyperlink{structWt_1_1Mail_1_1Message_1_1Attachment}{Attachment}} \&attachment, std\+::ostream \&out)
+\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_a344976fb00f189c21183bc6a00f475a5}\label{classWt_1_1Mail_1_1Message_a344976fb00f189c21183bc6a00f475a5}} 
+static void {\bfseries encode\+Char} (\mbox{\hyperlink{classWt_1_1WStringStream}{W\+String\+Stream}} \&s, unsigned char c)
+\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_aa52dae1bb18954591401a4975ab1cc0b}\label{classWt_1_1Mail_1_1Message_aa52dae1bb18954591401a4975ab1cc0b}} 
+static void {\bfseries encode\+Word} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text, std\+::ostream \&out, bool quote\+If\+Needed)
+\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_a6f4bbef494c06ee7c9f4d5c5885c80a8}\label{classWt_1_1Mail_1_1Message_a6f4bbef494c06ee7c9f4d5c5885c80a8}} 
+static void {\bfseries encode\+Quoted\+Printable} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text, std\+::ostream \&out)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_add84a0db50924d98b021f17fe457ed69}\label{classWt_1_1Mail_1_1Message_add84a0db50924d98b021f17fe457ed69}} 
+\mbox{\hyperlink{classWt_1_1Mail_1_1Mailbox}{Mailbox}} {\bfseries from\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_aa19339e305f476d473400bbb60e9142f}\label{classWt_1_1Mail_1_1Message_aa19339e305f476d473400bbb60e9142f}} 
+\mbox{\hyperlink{classWt_1_1Mail_1_1Mailbox}{Mailbox}} {\bfseries reply\+To\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_aff575648f2b5998b33d85d7dc44921c6}\label{classWt_1_1Mail_1_1Message_aff575648f2b5998b33d85d7dc44921c6}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1Mail_1_1Message_1_1Recipient}{Recipient}} $>$ {\bfseries recipients\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_aadbb9a40ca2286dcf6b8405b64cfd48a}\label{classWt_1_1Mail_1_1Message_aadbb9a40ca2286dcf6b8405b64cfd48a}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Mail_1_1Message_1_1Header}{Header}} $>$ {\bfseries headers\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_a34bbbe445f6cb0cff8ee4c6f70fd4478}\label{classWt_1_1Mail_1_1Message_a34bbbe445f6cb0cff8ee4c6f70fd4478}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1Mail_1_1Message_1_1Attachment}{Attachment}} $>$ {\bfseries attachments\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_a83671913e8c816e39272096c2ed9323e}\label{classWt_1_1Mail_1_1Message_a83671913e8c816e39272096c2ed9323e}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries subject\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_a380a2b9de3c36f93a2b41cbc982516d2}\label{classWt_1_1Mail_1_1Message_a380a2b9de3c36f93a2b41cbc982516d2}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries body\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_ac550a913d826c0dc9c69e1a0f7324cb6}\label{classWt_1_1Mail_1_1Message_ac550a913d826c0dc9c69e1a0f7324cb6}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries html\+Body\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_ad2dbf5822f746a90001edc1abbc88d04}\label{classWt_1_1Mail_1_1Message_ad2dbf5822f746a90001edc1abbc88d04}} 
+\mbox{\hyperlink{classWt_1_1WLocalDateTime}{W\+Local\+Date\+Time}} {\bfseries date\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_ae3c2cb7ac8c6872851e6307641dd2cda}\label{classWt_1_1Mail_1_1Message_ae3c2cb7ac8c6872851e6307641dd2cda}} 
+class {\bfseries Mailbox}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A mail message. 
+
+This class represents a M\+I\+M\+E-\/compliant mail message.
+
+The message can have a plain text body and an optional H\+T\+ML body, which when present is encoded as an M\+I\+ME multipart/alternative. It is recommended to send the same contents both in a plain text and an H\+T\+ML variant.
+
+\mbox{\hyperlink{structWt_1_1Mail_1_1Message_1_1Recipient}{Recipient}} names, names, and body text may contain unicode text.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Mail_1_1Client_a958089e2b169f9baed3107b40b958bb9}{Client\+::send()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_acb395cbd2f149780f8c55ef7d1250e8c}\label{classWt_1_1Mail_1_1Message_acb395cbd2f149780f8c55ef7d1250e8c}} 
+\index{Wt::Mail::Message@{Wt::Mail::Message}!Message@{Message}}
+\index{Message@{Message}!Wt::Mail::Message@{Wt::Mail::Message}}
+\doxysubsubsection{\texorpdfstring{Message()}{Message()}}
+{\footnotesize\ttfamily Wt\+::\+Mail\+::\+Message\+::\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Creates an empty message. You need to add at least a sender and a recipient to create a valid email message. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_a00cdb9874009e9b6310d4e677901878e}\label{classWt_1_1Mail_1_1Message_a00cdb9874009e9b6310d4e677901878e}} 
+\index{Wt::Mail::Message@{Wt::Mail::Message}!addAttachment@{addAttachment}}
+\index{addAttachment@{addAttachment}!Wt::Mail::Message@{Wt::Mail::Message}}
+\doxysubsubsection{\texorpdfstring{addAttachment()}{addAttachment()}}
+{\footnotesize\ttfamily void Wt\+::\+Mail\+::\+Message\+::add\+Attachment (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mime\+Type,  }\item[{const std\+::string \&}]{file\+Name,  }\item[{std\+::istream $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Adds an attachment. 
+
+Ownership of the {\ttfamily data} stream is not transferred; you should keep this object valid until the message has been sent using \mbox{\hyperlink{classWt_1_1Mail_1_1Client_a958089e2b169f9baed3107b40b958bb9}{Client\+::send()}} or written using \mbox{\hyperlink{classWt_1_1Mail_1_1Message_a2599e3c485686961d57c7d675a1f7696}{write()}}. \mbox{\Hypertarget{classWt_1_1Mail_1_1Message_a2873f091f84913dff243c241ff411b92}\label{classWt_1_1Mail_1_1Message_a2873f091f84913dff243c241ff411b92}} 
+\index{Wt::Mail::Message@{Wt::Mail::Message}!addHeader@{addHeader}}
+\index{addHeader@{addHeader}!Wt::Mail::Message@{Wt::Mail::Message}}
+\doxysubsubsection{\texorpdfstring{addHeader()}{addHeader()}}
+{\footnotesize\ttfamily void Wt\+::\+Mail\+::\+Message\+::add\+Header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Adds a header value. 
+
+A header is added, even if a header with the same name already was present.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Mail_1_1Message_a4b5cd1fa011257c35f12f7dc0e70fb1f}{set\+Header()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_ab24036ddd6ee45837d12968ad9a5d962}\label{classWt_1_1Mail_1_1Message_ab24036ddd6ee45837d12968ad9a5d962}} 
+\index{Wt::Mail::Message@{Wt::Mail::Message}!addHtmlBody@{addHtmlBody}}
+\index{addHtmlBody@{addHtmlBody}!Wt::Mail::Message@{Wt::Mail::Message}}
+\doxysubsubsection{\texorpdfstring{addHtmlBody()}{addHtmlBody()}}
+{\footnotesize\ttfamily void Wt\+::\+Mail\+::\+Message\+::add\+Html\+Body (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Adds an H\+T\+ML body. 
+
+The {\ttfamily text} should be an H\+T\+ML version of the plain text body. \mbox{\Hypertarget{classWt_1_1Mail_1_1Message_ab9f8c9869fcc74f3425708e10ae17c0a}\label{classWt_1_1Mail_1_1Message_ab9f8c9869fcc74f3425708e10ae17c0a}} 
+\index{Wt::Mail::Message@{Wt::Mail::Message}!addRecipient@{addRecipient}}
+\index{addRecipient@{addRecipient}!Wt::Mail::Message@{Wt::Mail::Message}}
+\doxysubsubsection{\texorpdfstring{addRecipient()}{addRecipient()}}
+{\footnotesize\ttfamily void Wt\+::\+Mail\+::\+Message\+::add\+Recipient (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWt_1_1Mail_a787e77713f5f302a3bbba194ee2a1c3b}{Recipient\+Type}}}]{type,  }\item[{const \mbox{\hyperlink{classWt_1_1Mail_1_1Mailbox}{Mailbox}} \&}]{recipient }\end{DoxyParamCaption})}
+
+
+
+Adds a recipient. 
+
+A mail can have multiple recipients. \mbox{\Hypertarget{classWt_1_1Mail_1_1Message_a923d2aee96e16be97207e93491cb70ab}\label{classWt_1_1Mail_1_1Message_a923d2aee96e16be97207e93491cb70ab}} 
+\index{Wt::Mail::Message@{Wt::Mail::Message}!body@{body}}
+\index{body@{body}!Wt::Mail::Message@{Wt::Mail::Message}}
+\doxysubsubsection{\texorpdfstring{body()}{body()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WString}{W\+String}}\& Wt\+::\+Mail\+::\+Message\+::body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the plain text body. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Mail_1_1Message_af26c2dc27a2815786725d9d3116a584c}{set\+Body()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_a5214bd7ad16fe6e2e465cbb70fc5c8ea}\label{classWt_1_1Mail_1_1Message_a5214bd7ad16fe6e2e465cbb70fc5c8ea}} 
+\index{Wt::Mail::Message@{Wt::Mail::Message}!from@{from}}
+\index{from@{from}!Wt::Mail::Message@{Wt::Mail::Message}}
+\doxysubsubsection{\texorpdfstring{from()}{from()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Mail_1_1Mailbox}{Mailbox}}\& Wt\+::\+Mail\+::\+Message\+::from (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the sender mailbox. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Mail_1_1Message_a3ae211155763576a85f43c4f1a4115f3}{set\+From()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_aa9ffcf3bbcd237ed824e5af03ed8c206}\label{classWt_1_1Mail_1_1Message_aa9ffcf3bbcd237ed824e5af03ed8c206}} 
+\index{Wt::Mail::Message@{Wt::Mail::Message}!getHeader@{getHeader}}
+\index{getHeader@{getHeader}!Wt::Mail::Message@{Wt::Mail::Message}}
+\doxysubsubsection{\texorpdfstring{getHeader()}{getHeader()}}
+{\footnotesize\ttfamily const std\+::string$\ast$ Wt\+::\+Mail\+::\+Message\+::get\+Header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Returns a header value. 
+
+Returns 0 if no header with that name is found. \mbox{\Hypertarget{classWt_1_1Mail_1_1Message_a4f7a5b67db90765bff7770b84b32df29}\label{classWt_1_1Mail_1_1Message_a4f7a5b67db90765bff7770b84b32df29}} 
+\index{Wt::Mail::Message@{Wt::Mail::Message}!htmlBody@{htmlBody}}
+\index{htmlBody@{htmlBody}!Wt::Mail::Message@{Wt::Mail::Message}}
+\doxysubsubsection{\texorpdfstring{htmlBody()}{htmlBody()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WString}{W\+String}}\& Wt\+::\+Mail\+::\+Message\+::html\+Body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the H\+T\+ML body. 
+
+\begin{DoxySeeAlso}{See also}
+set\+Html\+Body() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_a89a6d830485bdc4ee4fc3ac2fe0664d2}\label{classWt_1_1Mail_1_1Message_a89a6d830485bdc4ee4fc3ac2fe0664d2}} 
+\index{Wt::Mail::Message@{Wt::Mail::Message}!recipients@{recipients}}
+\index{recipients@{recipients}!Wt::Mail::Message@{Wt::Mail::Message}}
+\doxysubsubsection{\texorpdfstring{recipients()}{recipients()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{structWt_1_1Mail_1_1Message_1_1Recipient}{Recipient}}$>$\& Wt\+::\+Mail\+::\+Message\+::recipients (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the recipients. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Mail_1_1Message_ab9f8c9869fcc74f3425708e10ae17c0a}{add\+Recipient()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_ad33eb0ae9d4c29fcc6f0d8dbaf789e0e}\label{classWt_1_1Mail_1_1Message_ad33eb0ae9d4c29fcc6f0d8dbaf789e0e}} 
+\index{Wt::Mail::Message@{Wt::Mail::Message}!replyTo@{replyTo}}
+\index{replyTo@{replyTo}!Wt::Mail::Message@{Wt::Mail::Message}}
+\doxysubsubsection{\texorpdfstring{replyTo()}{replyTo()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Mail_1_1Mailbox}{Mailbox}}\& Wt\+::\+Mail\+::\+Message\+::reply\+To (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the reply-\/to mailbox. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Mail_1_1Message_ab9590a4b6249247d95b36e20652e181c}{set\+Reply\+To()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_af26c2dc27a2815786725d9d3116a584c}\label{classWt_1_1Mail_1_1Message_af26c2dc27a2815786725d9d3116a584c}} 
+\index{Wt::Mail::Message@{Wt::Mail::Message}!setBody@{setBody}}
+\index{setBody@{setBody}!Wt::Mail::Message@{Wt::Mail::Message}}
+\doxysubsubsection{\texorpdfstring{setBody()}{setBody()}}
+{\footnotesize\ttfamily void Wt\+::\+Mail\+::\+Message\+::set\+Body (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Sets the plain text body. 
+
+This is the plain text mail contents.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Mail_1_1Message_ab24036ddd6ee45837d12968ad9a5d962}{add\+Html\+Body()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_ad5a8045f2be8be02ffe84d24e07024c3}\label{classWt_1_1Mail_1_1Message_ad5a8045f2be8be02ffe84d24e07024c3}} 
+\index{Wt::Mail::Message@{Wt::Mail::Message}!setDate@{setDate}}
+\index{setDate@{setDate}!Wt::Mail::Message@{Wt::Mail::Message}}
+\doxysubsubsection{\texorpdfstring{setDate()}{setDate()}}
+{\footnotesize\ttfamily void Wt\+::\+Mail\+::\+Message\+::set\+Date (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLocalDateTime}{W\+Local\+Date\+Time}} \&}]{date }\end{DoxyParamCaption})}
+
+
+
+Sets a date. 
+
+According to R\+FC 2822, the date should express local time. \mbox{\Hypertarget{classWt_1_1Mail_1_1Message_a4b5cd1fa011257c35f12f7dc0e70fb1f}\label{classWt_1_1Mail_1_1Message_a4b5cd1fa011257c35f12f7dc0e70fb1f}} 
+\index{Wt::Mail::Message@{Wt::Mail::Message}!setHeader@{setHeader}}
+\index{setHeader@{setHeader}!Wt::Mail::Message@{Wt::Mail::Message}}
+\doxysubsubsection{\texorpdfstring{setHeader()}{setHeader()}}
+{\footnotesize\ttfamily void Wt\+::\+Mail\+::\+Message\+::set\+Header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets a header value. 
+
+If a header with that value was already defined, it is replaced with the new value. Otherwise, the header is added.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Mail_1_1Message_a2873f091f84913dff243c241ff411b92}{add\+Header()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_a92081f3fea617508029cb11ea32a9c74}\label{classWt_1_1Mail_1_1Message_a92081f3fea617508029cb11ea32a9c74}} 
+\index{Wt::Mail::Message@{Wt::Mail::Message}!subject@{subject}}
+\index{subject@{subject}!Wt::Mail::Message@{Wt::Mail::Message}}
+\doxysubsubsection{\texorpdfstring{subject()}{subject()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WString}{W\+String}}\& Wt\+::\+Mail\+::\+Message\+::subject (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the subject. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Mail_1_1Message_ae073e95a1d71941910738ae62ad697c6}{set\+Subject()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Message_a2599e3c485686961d57c7d675a1f7696}\label{classWt_1_1Mail_1_1Message_a2599e3c485686961d57c7d675a1f7696}} 
+\index{Wt::Mail::Message@{Wt::Mail::Message}!write@{write}}
+\index{write@{write}!Wt::Mail::Message@{Wt::Mail::Message}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void Wt\+::\+Mail\+::\+Message\+::write (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Writes the message to the stream. 
+
+This writes the message as a M\+I\+ME 1.\+0 message to the output stream. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Mail/Message.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,414 @@
+\hypertarget{classWt_1_1WTabWidget}{}\doxysection{Wt\+::W\+Tab\+Widget Class Reference}
+\label{classWt_1_1WTabWidget}\index{Wt::WTabWidget@{Wt::WTabWidget}}
+
+
+A widget that organizes contents in tab panes.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Tab\+Widget.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Tab\+Widget\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Tab\+Widget\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a2b16d3956aa5f976ba50d627f34bdac2}\label{classWt_1_1WTabWidget_a2b16d3956aa5f976ba50d627f34bdac2}} 
+\mbox{\hyperlink{classWt_1_1WTabWidget_a2b16d3956aa5f976ba50d627f34bdac2}{W\+Tab\+Widget}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new tab widget. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WTabWidget_aae790d2c52ddbd9f5b68dd2ce88ec96a}{add\+Tab}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ child, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&label, \mbox{\hyperlink{classWt_af25a7f0bb1d50c5b8bc98c4db9080313}{Content\+Loading}} load\+Policy=Content\+Loading\+::\+Lazy)
+\begin{DoxyCompactList}\small\item\em Adds a new tab, with {\itshape child} as content, and the given label. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WTabWidget_ab4970586e2dfd7f4855c20e36c9ec4b8}{insert\+Tab}} (int index, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ child, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&label, \mbox{\hyperlink{classWt_af25a7f0bb1d50c5b8bc98c4db9080313}{Content\+Loading}} load\+Policy=Content\+Loading\+::\+Lazy)
+\begin{DoxyCompactList}\small\item\em Inserts a new tab, with {\itshape child} as content, and the given label. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WTabWidget_adc9440b930663410360211879c0e3d82}{remove\+Tab}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$\mbox{\hyperlink{classWt_1_1WTabWidget_a41d2b67b214e259995d0a7ac2e082c57}{widget}})
+\begin{DoxyCompactList}\small\item\em Removes a tab item. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a57f377764395056ce4ac8f9b0dbe59f0}\label{classWt_1_1WTabWidget_a57f377764395056ce4ac8f9b0dbe59f0}} 
+int \mbox{\hyperlink{classWt_1_1WTabWidget_a57f377764395056ce4ac8f9b0dbe59f0}{count}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of tabs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a41d2b67b214e259995d0a7ac2e082c57}\label{classWt_1_1WTabWidget_a41d2b67b214e259995d0a7ac2e082c57}} 
+\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WTabWidget_a41d2b67b214e259995d0a7ac2e082c57}{widget}} (int index) const
+\begin{DoxyCompactList}\small\item\em Returns the content widget at the given tab {\itshape index}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a645533643071c4f6f1079033ed3772ad}\label{classWt_1_1WTabWidget_a645533643071c4f6f1079033ed3772ad}} 
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WTabWidget_a645533643071c4f6f1079033ed3772ad}{item\+At}} (int index) const
+\begin{DoxyCompactList}\small\item\em Returns the item at the given tab {\itshape index}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WTabWidget_a6ac1c61b192636f63e746e151de94358}{index\+Of}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$\mbox{\hyperlink{classWt_1_1WTabWidget_a41d2b67b214e259995d0a7ac2e082c57}{widget}}) const
+\begin{DoxyCompactList}\small\item\em Returns the index of the tab of the given content widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a55ae29857e27019af4daea64131148d6}\label{classWt_1_1WTabWidget_a55ae29857e27019af4daea64131148d6}} 
+void \mbox{\hyperlink{classWt_1_1WTabWidget_a55ae29857e27019af4daea64131148d6}{set\+Current\+Index}} (int index)
+\begin{DoxyCompactList}\small\item\em Activates the tab at {\itshape index}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a5a763974d4e206e5a3cea7b23d0bd0eb}\label{classWt_1_1WTabWidget_a5a763974d4e206e5a3cea7b23d0bd0eb}} 
+int \mbox{\hyperlink{classWt_1_1WTabWidget_a5a763974d4e206e5a3cea7b23d0bd0eb}{current\+Index}} () const
+\begin{DoxyCompactList}\small\item\em Returns the index of the activated tab. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_ae5f9a6ab4847f9c3ccc62606a19e1871}\label{classWt_1_1WTabWidget_ae5f9a6ab4847f9c3ccc62606a19e1871}} 
+void \mbox{\hyperlink{classWt_1_1WTabWidget_ae5f9a6ab4847f9c3ccc62606a19e1871}{set\+Current\+Widget}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$\mbox{\hyperlink{classWt_1_1WTabWidget_a41d2b67b214e259995d0a7ac2e082c57}{widget}})
+\begin{DoxyCompactList}\small\item\em Activates the tab showing the given {\itshape widget} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a1a327e94e3368020fbb2e646332df035}\label{classWt_1_1WTabWidget_a1a327e94e3368020fbb2e646332df035}} 
+\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WTabWidget_a1a327e94e3368020fbb2e646332df035}{current\+Widget}} () const
+\begin{DoxyCompactList}\small\item\em Returns the widget of the activated tab. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_af1e718a517ddd03004908fe83d4dfce4}\label{classWt_1_1WTabWidget_af1e718a517ddd03004908fe83d4dfce4}} 
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WTabWidget_af1e718a517ddd03004908fe83d4dfce4}{current\+Item}} () const
+\begin{DoxyCompactList}\small\item\em Returns the item of the activated tab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTabWidget_afd7bd7a9ae110bfcec42ebe0be1c0c3f}{set\+Tab\+Enabled}} (int index, bool \mbox{\hyperlink{classWt_1_1WWidget_ae6935d8baca9d37dd1d080b4383da87c}{enable}})
+\begin{DoxyCompactList}\small\item\em Enables or disables a tab. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WTabWidget_aaa5c5b5c99f7c0764fb9253c6824b099}{is\+Tab\+Enabled}} (int index) const
+\begin{DoxyCompactList}\small\item\em Returns whether a tab is enabled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTabWidget_aa672a2e2bb5ee5f3fa260b8c0abe3032}{set\+Tab\+Hidden}} (int index, bool hidden)
+\begin{DoxyCompactList}\small\item\em Hides or shows a tab. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a1a838e84fbf57bd09f9fe895fe480b80}\label{classWt_1_1WTabWidget_a1a838e84fbf57bd09f9fe895fe480b80}} 
+bool \mbox{\hyperlink{classWt_1_1WTabWidget_a1a838e84fbf57bd09f9fe895fe480b80}{is\+Tab\+Hidden}} (int index) const
+\begin{DoxyCompactList}\small\item\em Returns whether a tab is hidden. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTabWidget_a3cca019ee3ad730633d4341542985dba}{set\+Tab\+Closeable}} (int index, bool closeable)
+\begin{DoxyCompactList}\small\item\em Make it possible to close a tab interactively or by \mbox{\hyperlink{classWt_1_1WTabWidget_aefe8917e89b0db34c63634b3092a045b}{close\+Tab}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WTabWidget_a594e9376c27382be684742c2c78b72a4}{is\+Tab\+Closeable}} (int index)
+\begin{DoxyCompactList}\small\item\em Returns whether a tab is closeable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a2f941cb6a5bb6092cad3f438acd2de14}\label{classWt_1_1WTabWidget_a2f941cb6a5bb6092cad3f438acd2de14}} 
+void \mbox{\hyperlink{classWt_1_1WTabWidget_a2f941cb6a5bb6092cad3f438acd2de14}{set\+Tab\+Text}} (int index, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&label)
+\begin{DoxyCompactList}\small\item\em Changes the label for a tab. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1WTabWidget_ab79f971520fb35fb3ef2f8962cde3434}{tab\+Text}} (int index) const
+\begin{DoxyCompactList}\small\item\em Returns the label for a tab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTabWidget_abc7e97d8921ae9f3ebfb7fd5911fcea9}{set\+Tab\+Tool\+Tip}} (int index, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&tip)
+\begin{DoxyCompactList}\small\item\em Sets the tooltip for a tab. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1WTabWidget_a21756024642e26c77316fec9ad0fa258}{tab\+Tool\+Tip}} (int index) const
+\begin{DoxyCompactList}\small\item\em Returns the tooltip for a tab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTabWidget_a855b45897b00f82137cd0eb9e0d40dfd}{set\+Internal\+Path\+Enabled}} (const std\+::string \&base\+Path=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Enables internal paths for items. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WTabWidget_adfeb12fa2589d255dd1ccba18b6ed25d}{internal\+Path\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether internal paths are enabled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTabWidget_a42c7d6ad6bfc8e821e3e667467865902}{set\+Internal\+Base\+Path}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Sets the internal base path. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1WTabWidget_a8b10f1b173db0defd9221fc559decdfa}{internal\+Base\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Returns the internal base path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ int $>$ \& \mbox{\hyperlink{classWt_1_1WTabWidget_a5447e1149d6c854f25d6fb6792eef513}{current\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the user activates a tab. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTabWidget_aefe8917e89b0db34c63634b3092a045b}{close\+Tab}} (int index)
+\begin{DoxyCompactList}\small\item\em Closes a tab at {\ttfamily index}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ int $>$ \& \mbox{\hyperlink{classWt_1_1WTabWidget_ae71ac8fa905d0fd0a703589d375ce5f4}{tab\+Closed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the user closes a tab. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WStackedWidget}{W\+Stacked\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WTabWidget_ab1325c4947fb2da8d517b82ed985fc70}{contents\+Stack}} () const
+\begin{DoxyCompactList}\small\item\em Returns the contents stack. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a5344f0f41dbff545dc1fbb7313c4fd4b}\label{classWt_1_1WTabWidget_a5344f0f41dbff545dc1fbb7313c4fd4b}} 
+void \mbox{\hyperlink{classWt_1_1WTabWidget_a5344f0f41dbff545dc1fbb7313c4fd4b}{set\+Overflow}} (\mbox{\hyperlink{classWt_aadc6158874f32eb6e0a41b3a9f3f603e}{Overflow}} overflow, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} $>$ orientation=(Orientation\+::\+Horizontal$\vert$Orientation\+::\+Vertical))
+\begin{DoxyCompactList}\small\item\em Sets how overflow of contained children must be handled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_af05d3c28faad8ee68079796b307415aa}\label{classWt_1_1WTabWidget_af05d3c28faad8ee68079796b307415aa}} 
+void {\bfseries create} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a6309c2186f021d456d5f23de54dbb905}\label{classWt_1_1WTabWidget_a6309c2186f021d456d5f23de54dbb905}} 
+void {\bfseries on\+Item\+Selected} (\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$item)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a23b21ada231c26f05a2320d5dfd317a0}\label{classWt_1_1WTabWidget_a23b21ada231c26f05a2320d5dfd317a0}} 
+void {\bfseries on\+Item\+Closed} (\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$item)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a07c11b614d2e65db9c5598e7f1cbaa53}\label{classWt_1_1WTabWidget_a07c11b614d2e65db9c5598e7f1cbaa53}} 
+void {\bfseries set\+Js\+Size} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a0b664f38813725e3a505736a57b3adbc}\label{classWt_1_1WTabWidget_a0b664f38813725e3a505736a57b3adbc}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ int $>$ {\bfseries current\+Changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a6bab5927785f89e4440fc790d15e3997}\label{classWt_1_1WTabWidget_a6bab5927785f89e4440fc790d15e3997}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ int $>$ {\bfseries tab\+Closed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_afd7c8519a46cad90cc84faf50e5ed22f}\label{classWt_1_1WTabWidget_afd7c8519a46cad90cc84faf50e5ed22f}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries layout\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a6ac8e4f1c8070dadb611d99a63235752}\label{classWt_1_1WTabWidget_a6ac8e4f1c8070dadb611d99a63235752}} 
+\mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} $\ast$ {\bfseries menu\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a3e84c497663f45aa80e3e94b3cd34cfc}\label{classWt_1_1WTabWidget_a3e84c497663f45aa80e3e94b3cd34cfc}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ $>$ {\bfseries contents\+Widgets\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A widget that organizes contents in tab panes. 
+
+This widget combines a horizontal \mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} with a \mbox{\hyperlink{classWt_1_1WStackedWidget}{W\+Stacked\+Widget}}, and a tab-\/like look.
+
+A tab widget will place the tab bar on top of the contents, and fit the contents below it.
+
+Usage example\+:
+
+\doxyparagraph*{C\+SS}
+
+The tab widget is styled by the current C\+SS theme.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+  &   \\\cline{1-2}
+\end{longtabu}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WTabWidget_aae790d2c52ddbd9f5b68dd2ce88ec96a}\label{classWt_1_1WTabWidget_aae790d2c52ddbd9f5b68dd2ce88ec96a}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!addTab@{addTab}}
+\index{addTab@{addTab}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{addTab()}{addTab()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}$\ast$ Wt\+::\+W\+Tab\+Widget\+::add\+Tab (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$}]{child,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{label,  }\item[{\mbox{\hyperlink{classWt_af25a7f0bb1d50c5b8bc98c4db9080313}{Content\+Loading}}}]{load\+Policy = {\ttfamily ContentLoading\+:\+:Lazy} }\end{DoxyParamCaption})}
+
+
+
+Adds a new tab, with {\itshape child} as content, and the given label. 
+
+Returns the menu item that implements the tab item. \mbox{\Hypertarget{classWt_1_1WTabWidget_aefe8917e89b0db34c63634b3092a045b}\label{classWt_1_1WTabWidget_aefe8917e89b0db34c63634b3092a045b}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!closeTab@{closeTab}}
+\index{closeTab@{closeTab}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{closeTab()}{closeTab()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Tab\+Widget\+::close\+Tab (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Closes a tab at {\ttfamily index}. 
+
+A tab that has been closed is marked as hidden, but not removed from the menu.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTabWidget_adc9440b930663410360211879c0e3d82}{remove\+Tab()}}, \mbox{\hyperlink{classWt_1_1WTabWidget_aa672a2e2bb5ee5f3fa260b8c0abe3032}{set\+Tab\+Hidden()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTabWidget_ab1325c4947fb2da8d517b82ed985fc70}\label{classWt_1_1WTabWidget_ab1325c4947fb2da8d517b82ed985fc70}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!contentsStack@{contentsStack}}
+\index{contentsStack@{contentsStack}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{contentsStack()}{contentsStack()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WStackedWidget}{W\+Stacked\+Widget}}$\ast$ Wt\+::\+W\+Tab\+Widget\+::contents\+Stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the contents stack. 
+
+The tab widget is implemented as a \mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} + \mbox{\hyperlink{classWt_1_1WStackedWidget}{W\+Stacked\+Widget}} which displays the contents. This method returns a reference to this contents stack. \mbox{\Hypertarget{classWt_1_1WTabWidget_a5447e1149d6c854f25d6fb6792eef513}\label{classWt_1_1WTabWidget_a5447e1149d6c854f25d6fb6792eef513}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!currentChanged@{currentChanged}}
+\index{currentChanged@{currentChanged}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{currentChanged()}{currentChanged()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$int$>$\& Wt\+::\+W\+Tab\+Widget\+::current\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when the user activates a tab. 
+
+The index of the newly activated tab is passed as an argument. \mbox{\Hypertarget{classWt_1_1WTabWidget_a6ac1c61b192636f63e746e151de94358}\label{classWt_1_1WTabWidget_a6ac1c61b192636f63e746e151de94358}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!indexOf@{indexOf}}
+\index{indexOf@{indexOf}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{indexOf()}{indexOf()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Tab\+Widget\+::index\+Of (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{widget }\end{DoxyParamCaption}) const}
+
+
+
+Returns the index of the tab of the given content widget. 
+
+If the widget is not in this tab widget, then -\/1 is returned. \mbox{\Hypertarget{classWt_1_1WTabWidget_ab4970586e2dfd7f4855c20e36c9ec4b8}\label{classWt_1_1WTabWidget_ab4970586e2dfd7f4855c20e36c9ec4b8}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!insertTab@{insertTab}}
+\index{insertTab@{insertTab}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{insertTab()}{insertTab()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}$\ast$ Wt\+::\+W\+Tab\+Widget\+::insert\+Tab (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$}]{child,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{label,  }\item[{\mbox{\hyperlink{classWt_af25a7f0bb1d50c5b8bc98c4db9080313}{Content\+Loading}}}]{load\+Policy = {\ttfamily ContentLoading\+:\+:Lazy} }\end{DoxyParamCaption})}
+
+
+
+Inserts a new tab, with {\itshape child} as content, and the given label. 
+
+Returns the menu item that implements the tab item. \mbox{\Hypertarget{classWt_1_1WTabWidget_a8b10f1b173db0defd9221fc559decdfa}\label{classWt_1_1WTabWidget_a8b10f1b173db0defd9221fc559decdfa}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!internalBasePath@{internalBasePath}}
+\index{internalBasePath@{internalBasePath}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{internalBasePath()}{internalBasePath()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+W\+Tab\+Widget\+::internal\+Base\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the internal base path. 
+
+The default value is the application\textquotesingle{}s internal\+Path (\mbox{\hyperlink{classWt_1_1WApplication_a43a0ed694ea2279e6cb33a8de4bc7536}{W\+Application\+::internal\+Path()}}) that was recorded when \mbox{\hyperlink{classWt_1_1WTabWidget_a855b45897b00f82137cd0eb9e0d40dfd}{set\+Internal\+Path\+Enabled()}} was called, and together with each \mbox{\hyperlink{classWt_1_1WMenuItem_afded7ede14b03c42cfec06f9de515e6d}{W\+Menu\+Item\+::path\+Component()}} determines the paths for each item.
+
+For example, if \mbox{\hyperlink{classWt_1_1WTabWidget_a8b10f1b173db0defd9221fc559decdfa}{internal\+Base\+Path()}} is {\ttfamily \char`\"{}/examples/\char`\"{}} and path\+Component() for a particular item is {\ttfamily \char`\"{}charts/\char`\"{}}, then the internal path for that item will be {\ttfamily \char`\"{}/examples/charts/\char`\"{}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTabWidget_a855b45897b00f82137cd0eb9e0d40dfd}{set\+Internal\+Path\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTabWidget_adfeb12fa2589d255dd1ccba18b6ed25d}\label{classWt_1_1WTabWidget_adfeb12fa2589d255dd1ccba18b6ed25d}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!internalPathEnabled@{internalPathEnabled}}
+\index{internalPathEnabled@{internalPathEnabled}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{internalPathEnabled()}{internalPathEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Tab\+Widget\+::internal\+Path\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether internal paths are enabled. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTabWidget_a855b45897b00f82137cd0eb9e0d40dfd}{set\+Internal\+Path\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a594e9376c27382be684742c2c78b72a4}\label{classWt_1_1WTabWidget_a594e9376c27382be684742c2c78b72a4}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!isTabCloseable@{isTabCloseable}}
+\index{isTabCloseable@{isTabCloseable}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{isTabCloseable()}{isTabCloseable()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Tab\+Widget\+::is\+Tab\+Closeable (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Returns whether a tab is closeable. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTabWidget_a3cca019ee3ad730633d4341542985dba}{set\+Tab\+Closeable()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTabWidget_aaa5c5b5c99f7c0764fb9253c6824b099}\label{classWt_1_1WTabWidget_aaa5c5b5c99f7c0764fb9253c6824b099}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!isTabEnabled@{isTabEnabled}}
+\index{isTabEnabled@{isTabEnabled}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{isTabEnabled()}{isTabEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Tab\+Widget\+::is\+Tab\+Enabled (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether a tab is enabled. 
+
+\begin{DoxySeeAlso}{See also}
+W\+Menu\+::enable\+Item(), W\+Menu\+::disable\+Item() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTabWidget_adc9440b930663410360211879c0e3d82}\label{classWt_1_1WTabWidget_adc9440b930663410360211879c0e3d82}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!removeTab@{removeTab}}
+\index{removeTab@{removeTab}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{removeTab()}{removeTab()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$>$ Wt\+::\+W\+Tab\+Widget\+::remove\+Tab (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{widget }\end{DoxyParamCaption})}
+
+
+
+Removes a tab item. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_a94a426c268f185e8d7ee70af11f469e4}{W\+Menu\+::remove\+Item()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a42c7d6ad6bfc8e821e3e667467865902}\label{classWt_1_1WTabWidget_a42c7d6ad6bfc8e821e3e667467865902}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!setInternalBasePath@{setInternalBasePath}}
+\index{setInternalBasePath@{setInternalBasePath}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{setInternalBasePath()}{setInternalBasePath()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Tab\+Widget\+::set\+Internal\+Base\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Sets the internal base path. 
+
+A \textquotesingle{}/\textquotesingle{} is appended to turn it into a folder, if needed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTabWidget_a855b45897b00f82137cd0eb9e0d40dfd}{set\+Internal\+Path\+Enabled()}}, \mbox{\hyperlink{classWt_1_1WTabWidget_a8b10f1b173db0defd9221fc559decdfa}{internal\+Base\+Path()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a855b45897b00f82137cd0eb9e0d40dfd}\label{classWt_1_1WTabWidget_a855b45897b00f82137cd0eb9e0d40dfd}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!setInternalPathEnabled@{setInternalPathEnabled}}
+\index{setInternalPathEnabled@{setInternalPathEnabled}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{setInternalPathEnabled()}{setInternalPathEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Tab\+Widget\+::set\+Internal\+Path\+Enabled (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{base\+Path = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Enables internal paths for items. 
+
+The menu participates in the internal path by changing the internal path when an item has been selected, and listening for path changes to react to path selections. As a consequence this allows the user to bookmark the current menu selection and revisit it later, use back/forward buttons to navigate through history of visited menu items, and allows indexing of pages.
+
+For each menu item, \mbox{\hyperlink{classWt_1_1WMenuItem_afded7ede14b03c42cfec06f9de515e6d}{W\+Menu\+Item\+::path\+Component()}} is appended to the {\ttfamily base\+Path}, which defaults to the internal path (\mbox{\hyperlink{classWt_1_1WApplication_a43a0ed694ea2279e6cb33a8de4bc7536}{W\+Application\+::internal\+Path()}}). A \textquotesingle{}/\textquotesingle{} is appended to the base path, to turn it into a folder, if needed.
+
+By default, menu interaction does not change the application internal path.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_a77c17472df7f8625fbb64b171a76bd46}{W\+Menu\+Item\+::set\+Path\+Component()}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a3cca019ee3ad730633d4341542985dba}\label{classWt_1_1WTabWidget_a3cca019ee3ad730633d4341542985dba}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!setTabCloseable@{setTabCloseable}}
+\index{setTabCloseable@{setTabCloseable}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{setTabCloseable()}{setTabCloseable()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Tab\+Widget\+::set\+Tab\+Closeable (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{bool}]{closeable }\end{DoxyParamCaption})}
+
+
+
+Make it possible to close a tab interactively or by \mbox{\hyperlink{classWt_1_1WTabWidget_aefe8917e89b0db34c63634b3092a045b}{close\+Tab}}. 
+
+A tab that has been closed is marked as hidden, but not removed from the menu.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTabWidget_adc9440b930663410360211879c0e3d82}{remove\+Tab()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTabWidget_afd7bd7a9ae110bfcec42ebe0be1c0c3f}\label{classWt_1_1WTabWidget_afd7bd7a9ae110bfcec42ebe0be1c0c3f}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!setTabEnabled@{setTabEnabled}}
+\index{setTabEnabled@{setTabEnabled}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{setTabEnabled()}{setTabEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Tab\+Widget\+::set\+Tab\+Enabled (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+Enables or disables a tab. 
+
+Enables or disables the tab at {\ttfamily index}. A disabled tab cannot be activated. \mbox{\Hypertarget{classWt_1_1WTabWidget_aa672a2e2bb5ee5f3fa260b8c0abe3032}\label{classWt_1_1WTabWidget_aa672a2e2bb5ee5f3fa260b8c0abe3032}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!setTabHidden@{setTabHidden}}
+\index{setTabHidden@{setTabHidden}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{setTabHidden()}{setTabHidden()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Tab\+Widget\+::set\+Tab\+Hidden (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{bool}]{hidden }\end{DoxyParamCaption})}
+
+
+
+Hides or shows a tab. 
+
+Hides or shows the tab at {\ttfamily index}. \mbox{\Hypertarget{classWt_1_1WTabWidget_abc7e97d8921ae9f3ebfb7fd5911fcea9}\label{classWt_1_1WTabWidget_abc7e97d8921ae9f3ebfb7fd5911fcea9}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!setTabToolTip@{setTabToolTip}}
+\index{setTabToolTip@{setTabToolTip}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{setTabToolTip()}{setTabToolTip()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Tab\+Widget\+::set\+Tab\+Tool\+Tip (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{tip }\end{DoxyParamCaption})}
+
+
+
+Sets the tooltip for a tab. 
+
+The tooltip is shown when the user hovers over the label. \mbox{\Hypertarget{classWt_1_1WTabWidget_ae71ac8fa905d0fd0a703589d375ce5f4}\label{classWt_1_1WTabWidget_ae71ac8fa905d0fd0a703589d375ce5f4}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!tabClosed@{tabClosed}}
+\index{tabClosed@{tabClosed}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{tabClosed()}{tabClosed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$int$>$\& Wt\+::\+W\+Tab\+Widget\+::tab\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when the user closes a tab. 
+
+The index of the closed tab is passed as an argument.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTabWidget_aefe8917e89b0db34c63634b3092a045b}{close\+Tab()}}, \mbox{\hyperlink{classWt_1_1WTabWidget_a3cca019ee3ad730633d4341542985dba}{set\+Tab\+Closeable()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTabWidget_ab79f971520fb35fb3ef2f8962cde3434}\label{classWt_1_1WTabWidget_ab79f971520fb35fb3ef2f8962cde3434}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!tabText@{tabText}}
+\index{tabText@{tabText}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{tabText()}{tabText()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WString}{W\+String}} Wt\+::\+W\+Tab\+Widget\+::tab\+Text (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Returns the label for a tab. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTabWidget_a2f941cb6a5bb6092cad3f438acd2de14}{set\+Tab\+Text()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTabWidget_a21756024642e26c77316fec9ad0fa258}\label{classWt_1_1WTabWidget_a21756024642e26c77316fec9ad0fa258}} 
+\index{Wt::WTabWidget@{Wt::WTabWidget}!tabToolTip@{tabToolTip}}
+\index{tabToolTip@{tabToolTip}!Wt::WTabWidget@{Wt::WTabWidget}}
+\doxysubsubsection{\texorpdfstring{tabToolTip()}{tabToolTip()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WString}{W\+String}} Wt\+::\+W\+Tab\+Widget\+::tab\+Tool\+Tip (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Returns the tooltip for a tab. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTabWidget_abc7e97d8921ae9f3ebfb7fd5911fcea9}{set\+Tab\+Tool\+Tip()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Tab\+Widget.\+h\end{DoxyCompactItemize}

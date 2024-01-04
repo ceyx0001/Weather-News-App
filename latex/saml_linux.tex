@@ -1,0 +1,44 @@
+\hypertarget{saml_linux_autotoc_md21}{}\doxysection{Dependencies}\label{saml_linux_autotoc_md21}
+\hypertarget{saml_linux_autotoc_md22}{}\doxysubsection{Debian or Ubuntu}\label{saml_linux_autotoc_md22}
+In order to build \mbox{\hyperlink{classWt}{Wt}} with S\+A\+ML support on Debian or Ubuntu, you can simply install the following packages\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{apt install libsaml-\/dev opensaml-\/schemas xmltooling-\/schemas}
+\end{DoxyCode}
+\hypertarget{saml_linux_autotoc_md23}{}\doxysubsection{From source}\label{saml_linux_autotoc_md23}
+The following dependencies are usually available as a package on most distributions\+:
+
+
+\begin{DoxyItemize}
+\item \href{http://xerces.apache.org/xerces-c/download.cgi}{\texttt{ Xerces-\/\+C++}}
+\item \href{https://santuario.apache.org/cindex.html}{\texttt{ Apache Santuario / Apache X\+ML Security for C++}}
+\item \href{https://curl.se/}{\texttt{ libcurl}}
+\item \href{https://www.boost.org/}{\texttt{ Boost}} (also a \mbox{\hyperlink{classWt}{Wt}} dependency)
+\item \href{https://www.openssl.org/}{\texttt{ Open\+S\+SL}} (also an optional \mbox{\hyperlink{classWt}{Wt}} dependency)
+\end{DoxyItemize}
+
+You can download sources for Log4\+Shib, X\+M\+L\+Tooling, and Open\+S\+A\+ML from \href{https://shibboleth.net/downloads}{\texttt{ Shibboleth}}.
+
+
+\begin{DoxyItemize}
+\item \href{https://shibboleth.net/downloads/log4shib/latest/}{\texttt{ Log4\+Shib}}
+\item \href{https://shibboleth.net/downloads/c++-opensaml/latest/}{\texttt{ X\+M\+L\+Tooling and Open\+S\+A\+ML}}
+\end{DoxyItemize}
+
+Installation is a simple {\ttfamily ./configure}/{\ttfamily make install}. If you\textquotesingle{}re installing into a prefix, you can use {\ttfamily P\+K\+G\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+P\+A\+TH}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{PKG\_CONFIG\_PATH=\$PREFIX/lib/pkgconfig ./configure -\/-\/prefix=\$PREFIX}
+\DoxyCodeLine{make}
+\DoxyCodeLine{make install}
+\end{DoxyCode}
+\hypertarget{saml_linux_autotoc_md24}{}\doxysection{Configuring Wt}\label{saml_linux_autotoc_md24}
+You need to set {\ttfamily E\+N\+A\+B\+L\+E\+\_\+\+S\+A\+ML} to {\ttfamily ON} when configuring \mbox{\hyperlink{classWt}{Wt}}. You can use {\ttfamily S\+A\+M\+L\+\_\+\+R\+O\+OT} to set a different prefix\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake path/to/sources -\/DENABLE\_SAML=ON -\/DSAML\_ROOT=\$PREFIX}
+\end{DoxyCode}
+ 

@@ -1,0 +1,229 @@
+\hypertarget{classWt_1_1Render_1_1WPdfRenderer}{}\doxysection{Wt\+::Render\+::W\+Pdf\+Renderer Class Reference}
+\label{classWt_1_1Render_1_1WPdfRenderer}\index{Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}}
+
+
+An X\+H\+T\+ML to P\+DF renderer.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Render/\+W\+Pdf\+Renderer.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Render\+::W\+Pdf\+Renderer\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Render\+::W\+Pdf\+Renderer\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1Render_1_1WPdfRenderer_1_1FontCollection}{Font\+Collection}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_a0afdb54370cd863d857562a717ee19d6}{W\+Pdf\+Renderer}} (H\+P\+D\+F\+\_\+\+Doc pdf, H\+P\+D\+F\+\_\+\+Page page=nullptr)
+\begin{DoxyCompactList}\small\item\em Creates a new P\+DF renderer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_a606d6060bcf324dc3911e51f3945e7b5}{set\+Margin}} (double cm, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} $>$ sides=All\+Sides)
+\begin{DoxyCompactList}\small\item\em Sets the page margins. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_aca6980c07406506c5c59b51ad4d3f555}{set\+Dpi}} (int dpi)
+\begin{DoxyCompactList}\small\item\em Sets the resolution. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_abc2ad902bd0575905297db8479ad51b6}{add\+Font\+Collection}} (const std\+::string \&directory, bool recursive=true)
+\begin{DoxyCompactList}\small\item\em Adds a font collection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WPdfRenderer_ac3268e5c5028aa40bd404ed72c4f7fde}\label{classWt_1_1Render_1_1WPdfRenderer_ac3268e5c5028aa40bd404ed72c4f7fde}} 
+void \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_ac3268e5c5028aa40bd404ed72c4f7fde}{set\+Current\+Page}} (H\+P\+D\+F\+\_\+\+Page page)
+\begin{DoxyCompactList}\small\item\em Sets the current page. \end{DoxyCompactList}\item 
+H\+P\+D\+F\+\_\+\+Page \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_a6add1c5f0318dce17adbbcea62a8097b}{current\+Page}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current page. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_a6e7e64ed692a8cee627308fb427623dd}{page\+Width}} (int page) const override
+\begin{DoxyCompactList}\small\item\em Returns the page width. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_ac206f10a47692911b35fdca090e67220}{page\+Height}} (int page) const override
+\begin{DoxyCompactList}\small\item\em Returns the page height. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_a4e702ff3d62d3d6b1d5d28540cede72d}{margin}} (\mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} side) const override
+\begin{DoxyCompactList}\small\item\em Returns the margin. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}} $\ast$ \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_aa59c3f4fbae343018c8fe2de7987aa13}{start\+Page}} (int page) override
+\begin{DoxyCompactList}\small\item\em Returns a paint device to render a given page. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WPdfRenderer_a91f737c32eeebdc7a76f7d8f25146b1c}\label{classWt_1_1Render_1_1WPdfRenderer_a91f737c32eeebdc7a76f7d8f25146b1c}} 
+virtual void \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_a91f737c32eeebdc7a76f7d8f25146b1c}{end\+Page}} (\mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}} $\ast$device) override
+\begin{DoxyCompactList}\small\item\em Stops painting on the given page. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WPdfRenderer_a8487bea8e8f89c2b0b3276fb6df5e6bc}\label{classWt_1_1Render_1_1WPdfRenderer_a8487bea8e8f89c2b0b3276fb6df5e6bc}} 
+virtual \mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} $\ast$ \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_a8487bea8e8f89c2b0b3276fb6df5e6bc}{get\+Painter}} (\mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}} $\ast$device) override
+\begin{DoxyCompactList}\small\item\em Returns a painter for the current page. \end{DoxyCompactList}\item 
+virtual H\+P\+D\+F\+\_\+\+Page \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_a274a50ffd7aa2a32f15a2b413ac5feb7}{create\+Page}} (int page)
+\begin{DoxyCompactList}\small\item\em Creates a new page. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WPdfRenderer_ab53545438bf4bf311db3c4361a272650}\label{classWt_1_1Render_1_1WPdfRenderer_ab53545438bf4bf311db3c4361a272650}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1Render_1_1WPdfRenderer_1_1FontCollection}{Font\+Collection}} $>$ {\bfseries font\+Collections\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WPdfRenderer_aa61d39637c4d3660b363796ef3bfb2dd}\label{classWt_1_1Render_1_1WPdfRenderer_aa61d39637c4d3660b363796ef3bfb2dd}} 
+H\+P\+D\+F\+\_\+\+Doc {\bfseries pdf\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WPdfRenderer_ac6099d6fb65f1ee5627ad6e1e06ce064}\label{classWt_1_1Render_1_1WPdfRenderer_ac6099d6fb65f1ee5627ad6e1e06ce064}} 
+H\+P\+D\+F\+\_\+\+Page {\bfseries page\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WPdfRenderer_a036e8c65586f95f6c06713cba21ca484}\label{classWt_1_1Render_1_1WPdfRenderer_a036e8c65586f95f6c06713cba21ca484}} 
+double {\bfseries margin\+\_\+} \mbox{[}4\mbox{]}
+\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WPdfRenderer_a09f8eb074f66bf80e5273a70d46047c7}\label{classWt_1_1Render_1_1WPdfRenderer_a09f8eb074f66bf80e5273a70d46047c7}} 
+int {\bfseries dpi\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WPdfRenderer_a8c68168be4a939002cade13dc834eebe}\label{classWt_1_1Render_1_1WPdfRenderer_a8c68168be4a939002cade13dc834eebe}} 
+\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} $\ast$ {\bfseries painter\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An X\+H\+T\+ML to P\+DF renderer. 
+
+This class implements an X\+H\+T\+ML to P\+DF renderer. The rendering engine supports only a subset of X\+H\+T\+ML. See the documentation of \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer}{W\+Text\+Renderer}} for more information.
+
+By default it uses a pixel resolution of 72 D\+PI, which is the default for a \mbox{\hyperlink{classWt_1_1WPdfImage}{W\+Pdf\+Image}}, but differs from the default used by most browsers (which is 96 D\+PI and has nothing to do with the actual screen resolution). The pixel resolution can be configured using \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_aca6980c07406506c5c59b51ad4d3f555}{set\+Dpi()}}. Increasing the resolution has the effect of scaling down the rendering. This can be used in conjunction with \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a2ca18a73ebbe013b6913a277408eb2a6}{set\+Font\+Scale()}} to scale the font size differently than other content.
+
+Font information is embedded in the P\+DF. Fonts supported are native Post\+Script fonts (Base-\/14) (only A\+S\+C\+I\+I-\/7), or true type fonts (Unicode). See \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_abc2ad902bd0575905297db8479ad51b6}{add\+Font\+Collection()}} for more information on how fonts are located. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Render_1_1WPdfRenderer_a0afdb54370cd863d857562a717ee19d6}\label{classWt_1_1Render_1_1WPdfRenderer_a0afdb54370cd863d857562a717ee19d6}} 
+\index{Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}!WPdfRenderer@{WPdfRenderer}}
+\index{WPdfRenderer@{WPdfRenderer}!Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}}
+\doxysubsubsection{\texorpdfstring{WPdfRenderer()}{WPdfRenderer()}}
+{\footnotesize\ttfamily Wt\+::\+Render\+::\+W\+Pdf\+Renderer\+::\+W\+Pdf\+Renderer (\begin{DoxyParamCaption}\item[{H\+P\+D\+F\+\_\+\+Doc}]{pdf,  }\item[{H\+P\+D\+F\+\_\+\+Page}]{page = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Creates a new P\+DF renderer. 
+
+The P\+DF renderer will render on the given {\ttfamily pdf} (starting). If the {\ttfamily page} is not {\ttfamily 0}, then rendering will happen on this first page (and its page sizes will be taken into account).
+
+Default margins are 0, and the default D\+PI is 72. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Render_1_1WPdfRenderer_abc2ad902bd0575905297db8479ad51b6}\label{classWt_1_1Render_1_1WPdfRenderer_abc2ad902bd0575905297db8479ad51b6}} 
+\index{Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}!addFontCollection@{addFontCollection}}
+\index{addFontCollection@{addFontCollection}!Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}}
+\doxysubsubsection{\texorpdfstring{addFontCollection()}{addFontCollection()}}
+{\footnotesize\ttfamily void Wt\+::\+Render\+::\+W\+Pdf\+Renderer\+::add\+Font\+Collection (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{directory,  }\item[{bool}]{recursive = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Adds a font collection. 
+
+If Wt has been configured to use {\ttfamily libpango}, then font matching and character selection is done by libpango, and calls to this method are ignored. See \mbox{\hyperlink{classWt_1_1WPdfImage_a479b8988ba6d379088ef097b894cbc22}{W\+Pdf\+Image\+::add\+Font\+Collection()}} for more details.
+
+If Wt was not configured to use {\ttfamily libpango}, you will have to add the directories where Wt should look for fonts. You will also have to specify the required font in the H\+T\+ML source, e.\+g.\+:
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPdfImage_a479b8988ba6d379088ef097b894cbc22}{W\+Pdf\+Image\+::add\+Font\+Collection()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Render_1_1WPdfRenderer_a274a50ffd7aa2a32f15a2b413ac5feb7}\label{classWt_1_1Render_1_1WPdfRenderer_a274a50ffd7aa2a32f15a2b413ac5feb7}} 
+\index{Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}!createPage@{createPage}}
+\index{createPage@{createPage}!Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}}
+\doxysubsubsection{\texorpdfstring{createPage()}{createPage()}}
+{\footnotesize\ttfamily virtual H\+P\+D\+F\+\_\+\+Page Wt\+::\+Render\+::\+W\+Pdf\+Renderer\+::create\+Page (\begin{DoxyParamCaption}\item[{int}]{page }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a new page. 
+
+The default implementation creates a new page with the same dimensions as the previous page.
+
+You may want to specialize this method to add e.\+g.$\sim$headers and footers. \mbox{\Hypertarget{classWt_1_1Render_1_1WPdfRenderer_a6add1c5f0318dce17adbbcea62a8097b}\label{classWt_1_1Render_1_1WPdfRenderer_a6add1c5f0318dce17adbbcea62a8097b}} 
+\index{Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}!currentPage@{currentPage}}
+\index{currentPage@{currentPage}!Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}}
+\doxysubsubsection{\texorpdfstring{currentPage()}{currentPage()}}
+{\footnotesize\ttfamily H\+P\+D\+F\+\_\+\+Page Wt\+::\+Render\+::\+W\+Pdf\+Renderer\+::current\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current page. 
+
+This returns the page last created using \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_a274a50ffd7aa2a32f15a2b413ac5feb7}{create\+Page()}}, or the page set with \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_ac3268e5c5028aa40bd404ed72c4f7fde}{set\+Current\+Page()}} page. \mbox{\Hypertarget{classWt_1_1Render_1_1WPdfRenderer_a4e702ff3d62d3d6b1d5d28540cede72d}\label{classWt_1_1Render_1_1WPdfRenderer_a4e702ff3d62d3d6b1d5d28540cede72d}} 
+\index{Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}!margin@{margin}}
+\index{margin@{margin}!Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}}
+\doxysubsubsection{\texorpdfstring{margin()}{margin()}}
+{\footnotesize\ttfamily virtual double Wt\+::\+Render\+::\+W\+Pdf\+Renderer\+::margin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}}}]{side }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the margin. 
+
+Returns the margin at given side (in pixel units). 
+
+Implements \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a8a81ceb767658e5b378c885b6a1fbf30}{Wt\+::\+Render\+::\+W\+Text\+Renderer}}.
+
+\mbox{\Hypertarget{classWt_1_1Render_1_1WPdfRenderer_ac206f10a47692911b35fdca090e67220}\label{classWt_1_1Render_1_1WPdfRenderer_ac206f10a47692911b35fdca090e67220}} 
+\index{Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}!pageHeight@{pageHeight}}
+\index{pageHeight@{pageHeight}!Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}}
+\doxysubsubsection{\texorpdfstring{pageHeight()}{pageHeight()}}
+{\footnotesize\ttfamily virtual double Wt\+::\+Render\+::\+W\+Pdf\+Renderer\+::page\+Height (\begin{DoxyParamCaption}\item[{int}]{page }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the page height. 
+
+Returns the total page height (in pixel units), including vertical margins. 
+
+Implements \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a86a2e5a8042e5ea8d50593597e332791}{Wt\+::\+Render\+::\+W\+Text\+Renderer}}.
+
+\mbox{\Hypertarget{classWt_1_1Render_1_1WPdfRenderer_a6e7e64ed692a8cee627308fb427623dd}\label{classWt_1_1Render_1_1WPdfRenderer_a6e7e64ed692a8cee627308fb427623dd}} 
+\index{Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}!pageWidth@{pageWidth}}
+\index{pageWidth@{pageWidth}!Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}}
+\doxysubsubsection{\texorpdfstring{pageWidth()}{pageWidth()}}
+{\footnotesize\ttfamily virtual double Wt\+::\+Render\+::\+W\+Pdf\+Renderer\+::page\+Width (\begin{DoxyParamCaption}\item[{int}]{page }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the page width. 
+
+Returns the total page width (in pixel units), including horizontal margins. 
+
+Implements \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a49c53f92c778a63da84d8fd8dc0d876d}{Wt\+::\+Render\+::\+W\+Text\+Renderer}}.
+
+\mbox{\Hypertarget{classWt_1_1Render_1_1WPdfRenderer_aca6980c07406506c5c59b51ad4d3f555}\label{classWt_1_1Render_1_1WPdfRenderer_aca6980c07406506c5c59b51ad4d3f555}} 
+\index{Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}!setDpi@{setDpi}}
+\index{setDpi@{setDpi}!Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}}
+\doxysubsubsection{\texorpdfstring{setDpi()}{setDpi()}}
+{\footnotesize\ttfamily void Wt\+::\+Render\+::\+W\+Pdf\+Renderer\+::set\+Dpi (\begin{DoxyParamCaption}\item[{int}]{dpi }\end{DoxyParamCaption})}
+
+
+
+Sets the resolution. 
+
+The resolution used between C\+SS pixels and actual page dimensions. \mbox{\hyperlink{classNote}{Note}} that his does not have an effect on the {\itshape de facto} standard C\+SS resolution of 96 D\+PI that is used to convert between physical \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} units (like {\itshape cm}, {\itshape inch} and {\itshape point}) and pixels. Instead it has the effect of scaling down or up the rendered X\+H\+T\+ML on the page.
+
+The dpi setting also affects the \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_a6e7e64ed692a8cee627308fb427623dd}{page\+Width()}}, \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_ac206f10a47692911b35fdca090e67220}{page\+Height()}}, and \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_a4e702ff3d62d3d6b1d5d28540cede72d}{margin()}} pixel calculations.
+
+The default resolution is 72 D\+PI. \mbox{\Hypertarget{classWt_1_1Render_1_1WPdfRenderer_a606d6060bcf324dc3911e51f3945e7b5}\label{classWt_1_1Render_1_1WPdfRenderer_a606d6060bcf324dc3911e51f3945e7b5}} 
+\index{Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}!setMargin@{setMargin}}
+\index{setMargin@{setMargin}!Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}}
+\doxysubsubsection{\texorpdfstring{setMargin()}{setMargin()}}
+{\footnotesize\ttfamily void Wt\+::\+Render\+::\+W\+Pdf\+Renderer\+::set\+Margin (\begin{DoxyParamCaption}\item[{double}]{cm,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} $>$}]{sides = {\ttfamily AllSides} }\end{DoxyParamCaption})}
+
+
+
+Sets the page margins. 
+
+This sets page margins, in {\ttfamily cm}, for one or more {\ttfamily sides}. \mbox{\Hypertarget{classWt_1_1Render_1_1WPdfRenderer_aa59c3f4fbae343018c8fe2de7987aa13}\label{classWt_1_1Render_1_1WPdfRenderer_aa59c3f4fbae343018c8fe2de7987aa13}} 
+\index{Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}!startPage@{startPage}}
+\index{startPage@{startPage}!Wt::Render::WPdfRenderer@{Wt::Render::WPdfRenderer}}
+\doxysubsubsection{\texorpdfstring{startPage()}{startPage()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}}$\ast$ Wt\+::\+Render\+::\+W\+Pdf\+Renderer\+::start\+Page (\begin{DoxyParamCaption}\item[{int}]{page }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a paint device to render a given page. 
+
+The \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_ada84c9867c07a60c54e3f51e4b6426f5}{render()}} method calls this function once for each page it wants to render. 
+
+Implements \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a9b9230eb8210d5bb2408321ebc88c07d}{Wt\+::\+Render\+::\+W\+Text\+Renderer}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Render/W\+Pdf\+Renderer.\+h\end{DoxyCompactItemize}

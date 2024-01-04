@@ -1,0 +1,427 @@
+\hypertarget{classWt_1_1WFormModel}{}\doxysection{Wt\+::W\+Form\+Model Class Reference}
+\label{classWt_1_1WFormModel}\index{Wt::WFormModel@{Wt::WFormModel}}
+
+
+A basic model class for forms.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Form\+Model.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Form\+Model\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Form\+Model\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WFormModel_1_1FieldComparator}{Field\+Comparator}}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WFormModel_1_1FieldData}{Field\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WFormModel_a0fd4be96703b80957f6289e8f9eb3e4f}{W\+Form\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WFormModel_a0d570781cb3aaa44a1bd09254dd54c9e}{add\+Field}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&info=\mbox{\hyperlink{classWt_1_1WString_a511a12bce677dc733bd7b6b9415bff73}{W\+String\+::\+Empty}})
+\begin{DoxyCompactList}\small\item\em Adds a field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WFormModel_abca319cc5a0ab159d55adba68882f424}{remove\+Field}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field)
+\begin{DoxyCompactList}\small\item\em Removes a field. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} $>$ \mbox{\hyperlink{classWt_1_1WFormModel_aeeecaa2673cc4b492109faaf5a996e11}{fields}} () const
+\begin{DoxyCompactList}\small\item\em Returns the fields. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WFormModel_aa20f1efb3766f39ccee0e5179d921362}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the model. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WFormModel_a12a89c233490127f4a12ebf275e25e3a}{validate}} ()
+\begin{DoxyCompactList}\small\item\em Validates the current input. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WFormModel_a2d5f681a59aebbf458882896c7b15f17}{valid}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current overall validation state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WFormModel_a465d3ee3dd6c074c52dadc2167cd4437}{set\+Visible}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field, bool visible)
+\begin{DoxyCompactList}\small\item\em Sets whether a field is visible. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WFormModel_a57c318f268ec74825b49068644a77c8c}{is\+Visible}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field) const
+\begin{DoxyCompactList}\small\item\em Returns whether a field is visible. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WFormModel_adfa51b8bcebd7a75db93b8e1293114e7}{set\+Read\+Only}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field, bool read\+Only)
+\begin{DoxyCompactList}\small\item\em Sets whether a field is read-\/only. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WFormModel_a618f005896c66f9d276d4f1eac068aba}{is\+Read\+Only}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field) const
+\begin{DoxyCompactList}\small\item\em Returns whether a field is read only. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1WFormModel_a4d1f32594e074146ddebd1f4b579d8bc}{label}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field) const
+\begin{DoxyCompactList}\small\item\em Returns a field label. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WFormModel_a6d52d3ce5772935b069265a1c44f2146}{set\+Value}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&\mbox{\hyperlink{classWt_1_1WFormModel_a1d2bbf2f737d07a8f587aaf1f0651c3b}{value}})
+\begin{DoxyCompactList}\small\item\em Sets the field value. \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \& \mbox{\hyperlink{classWt_1_1WFormModel_a1d2bbf2f737d07a8f587aaf1f0651c3b}{value}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field) const
+\begin{DoxyCompactList}\small\item\em Returns the field value. \end{DoxyCompactList}\item 
+virtual W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \mbox{\hyperlink{classWt_1_1WFormModel_a1ff468eb870f571a1ef3ad5566e07dee}{value\+Text}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field) const
+\begin{DoxyCompactList}\small\item\em Returns the field value text. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WFormModel_a21b2c64e2f66b6f2eacdf1383ded6e8f}\label{classWt_1_1WFormModel_a21b2c64e2f66b6f2eacdf1383ded6e8f}} 
+virtual void \mbox{\hyperlink{classWt_1_1WFormModel_a21b2c64e2f66b6f2eacdf1383ded6e8f}{set\+Validator}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WValidator}{W\+Validator}} $>$ \&\mbox{\hyperlink{classWt_1_1WFormModel_a6b31d2aa0b0aecd24ddc936a740b773b}{validator}})
+\begin{DoxyCompactList}\small\item\em Sets a validator. \end{DoxyCompactList}\item 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WValidator}{W\+Validator}} $>$ \mbox{\hyperlink{classWt_1_1WFormModel_a6b31d2aa0b0aecd24ddc936a740b773b}{validator}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field) const
+\begin{DoxyCompactList}\small\item\em Returns a validator. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WFormModel_adf8060e571433e5f225ba2b60f3deefa}{validate\+Field}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field)
+\begin{DoxyCompactList}\small\item\em Validates a field. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WFormModel_a6f513a24fffff9fba5ad7f1486992337}{set\+Validated}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field, bool validated)
+\begin{DoxyCompactList}\small\item\em Sets whether a field has been validated. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WFormModel_a576c8c08f456dfba04d104bc061ef269}{is\+Validated}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field) const
+\begin{DoxyCompactList}\small\item\em Returns whether the field has been validated yet. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WValidator_1_1Result}{W\+Validator\+::\+Result}} \& \mbox{\hyperlink{classWt_1_1WFormModel_ae851f405e6a90c1b5944223a1efc4c7a}{validation}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field) const
+\begin{DoxyCompactList}\small\item\em Returns the result of a validation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WFormModel_a60d4fa8c2f37eac0f085112980866b1b}{set\+Validation}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field, const \mbox{\hyperlink{classWt_1_1WValidator_1_1Result}{W\+Validator\+::\+Result}} \&result)
+\begin{DoxyCompactList}\small\item\em Sets the validation result for a field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const typedef char $\ast$ \mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}
+\begin{DoxyCompactList}\small\item\em A type to identify a field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormModel_a02fd2fb2f35a0473653a180951a214e4}\label{classWt_1_1WFormModel_a02fd2fb2f35a0473653a180951a214e4}} 
+typedef std\+::map$<$ \mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}, \mbox{\hyperlink{structWt_1_1WFormModel_1_1FieldData}{Field\+Data}}, \mbox{\hyperlink{structWt_1_1WFormModel_1_1FieldComparator}{Field\+Comparator}} $>$ {\bfseries Field\+Map}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormModel_a171e38825be9085e91e5c36920160feb}\label{classWt_1_1WFormModel_a171e38825be9085e91e5c36920160feb}} 
+Field\+Map {\bfseries fields\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormModel_a71053baa4d64ecb62b9db236c7da3c34}\label{classWt_1_1WFormModel_a71053baa4d64ecb62b9db236c7da3c34}} 
+static const \mbox{\hyperlink{classWt_1_1WValidator_1_1Result}{W\+Validator\+::\+Result}} {\bfseries Valid}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormModel_aed8cdc7a36960e1b0966fa2e2c9a7652}\label{classWt_1_1WFormModel_aed8cdc7a36960e1b0966fa2e2c9a7652}} 
+static const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} {\bfseries No\+Value}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A basic model class for forms. 
+
+This implements field data and validation handling for (simple) form-\/based views. It provides a standard way for views to perform field validation, and react to validation results.
+
+All fields are uniquely identified using a string literal (which is the Field type). For each field, its value, the visibility, whether the field is read-\/only, and its current validation status is managed by the model. In addition, you will typically specialize the class to customize the validation and application logic.
+
+Although it can be setup to use \mbox{\hyperlink{classWt_1_1WValidator}{W\+Validator}} objects for individual fields, also other validation where more entered information needs to be considered simultaneously can be implemented.
+
+A model is typically used by a View which renders the fields configured in the model, updates the model values, invokes and reflects the validation status.
+
+Example (a bit contrived since you will usually not use the model directly)\+: 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WFormModel_a0fd4be96703b80957f6289e8f9eb3e4f}\label{classWt_1_1WFormModel_a0fd4be96703b80957f6289e8f9eb3e4f}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!WFormModel@{WFormModel}}
+\index{WFormModel@{WFormModel}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{WFormModel()}{WFormModel()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Form\+Model\+::\+W\+Form\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Creates a new form model. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WFormModel_a0d570781cb3aaa44a1bd09254dd54c9e}\label{classWt_1_1WFormModel_a0d570781cb3aaa44a1bd09254dd54c9e}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!addField@{addField}}
+\index{addField@{addField}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{addField()}{addField()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Form\+Model\+::add\+Field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{info = {\ttfamily \mbox{\hyperlink{classWt_1_1WString_a511a12bce677dc733bd7b6b9415bff73}{W\+String\+::\+Empty}}} }\end{DoxyParamCaption})}
+
+
+
+Adds a field. 
+
+The {\ttfamily field} is added to the model, with an optional short informational message that can be used by views to provide a hint on the value that needs to be entered. The message is set as the validation message as long as the field has not yet been validated.
+
+If the {\ttfamily field} was already in the model, its data is reset. \mbox{\Hypertarget{classWt_1_1WFormModel_aeeecaa2673cc4b492109faaf5a996e11}\label{classWt_1_1WFormModel_aeeecaa2673cc4b492109faaf5a996e11}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!fields@{fields}}
+\index{fields@{fields}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{fields()}{fields()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}$>$ Wt\+::\+W\+Form\+Model\+::fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the fields. 
+
+This returns the fields currently configured in the model (added with \mbox{\hyperlink{classWt_1_1WFormModel_a0d570781cb3aaa44a1bd09254dd54c9e}{add\+Field()}} or for which a value or property has been set). \mbox{\Hypertarget{classWt_1_1WFormModel_a618f005896c66f9d276d4f1eac068aba}\label{classWt_1_1WFormModel_a618f005896c66f9d276d4f1eac068aba}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!isReadOnly@{isReadOnly}}
+\index{isReadOnly@{isReadOnly}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{isReadOnly()}{isReadOnly()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Form\+Model\+::is\+Read\+Only (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns whether a field is read only. 
+
+The default implementation returns the value set by \mbox{\hyperlink{classWt_1_1WFormModel_adfa51b8bcebd7a75db93b8e1293114e7}{set\+Read\+Only()}} 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a36f5f8c93ca87b05c292d808c5d780e8}{Wt\+::\+Auth\+::\+Registration\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WFormModel_a576c8c08f456dfba04d104bc061ef269}\label{classWt_1_1WFormModel_a576c8c08f456dfba04d104bc061ef269}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!isValidated@{isValidated}}
+\index{isValidated@{isValidated}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{isValidated()}{isValidated()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Form\+Model\+::is\+Validated (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns whether the field has been validated yet. 
+
+This is initially {\ttfamily false}, and set to {\ttfamily true} by \mbox{\hyperlink{classWt_1_1WFormModel_a60d4fa8c2f37eac0f085112980866b1b}{set\+Validation()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormModel_a6f513a24fffff9fba5ad7f1486992337}{set\+Validated()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFormModel_a57c318f268ec74825b49068644a77c8c}\label{classWt_1_1WFormModel_a57c318f268ec74825b49068644a77c8c}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!isVisible@{isVisible}}
+\index{isVisible@{isVisible}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{isVisible()}{isVisible()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Form\+Model\+::is\+Visible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns whether a field is visible. 
+
+In some cases not all fields of the model need to be shown. This may depend on values input for certain fields, and thus change dynamically. You may specialize this method to indicate that a certain field should be invisible.
+
+The default implementation returns the value set by \mbox{\hyperlink{classWt_1_1WFormModel_a465d3ee3dd6c074c52dadc2167cd4437}{set\+Visible()}}. 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a2a45028b3977304f1b267f77c0156d68}{Wt\+::\+Auth\+::\+Registration\+Model}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_a4c4845c299b34f8a8ecc3ceb36fdaad3}{Wt\+::\+Auth\+::\+Auth\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WFormModel_a4d1f32594e074146ddebd1f4b579d8bc}\label{classWt_1_1WFormModel_a4d1f32594e074146ddebd1f4b579d8bc}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!label@{label}}
+\index{label@{label}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{label()}{label()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WString}{W\+String}} Wt\+::\+W\+Form\+Model\+::label (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a field label. 
+
+The default implementation returns the W\+String\+::tr(field) 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_abf810ff89ecbc96526ae4673b14d76b8}{Wt\+::\+Auth\+::\+Form\+Base\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WFormModel_abca319cc5a0ab159d55adba68882f424}\label{classWt_1_1WFormModel_abca319cc5a0ab159d55adba68882f424}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!removeField@{removeField}}
+\index{removeField@{removeField}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{removeField()}{removeField()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Form\+Model\+::remove\+Field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field }\end{DoxyParamCaption})}
+
+
+
+Removes a field. 
+
+The {\ttfamily field} is removed from the model. \mbox{\Hypertarget{classWt_1_1WFormModel_aa20f1efb3766f39ccee0e5179d921362}\label{classWt_1_1WFormModel_aa20f1efb3766f39ccee0e5179d921362}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!reset@{reset}}
+\index{reset@{reset}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Form\+Model\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resets the model. 
+
+The default implementation clears the value of all fields, and resets the validation state to not validated. 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a16b90f3eadc459b345cfbf79de499897}{Wt\+::\+Auth\+::\+Registration\+Model}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_ad607b9751930f6451fb8eebb0315a330}{Wt\+::\+Auth\+::\+Auth\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WFormModel_adfa51b8bcebd7a75db93b8e1293114e7}\label{classWt_1_1WFormModel_adfa51b8bcebd7a75db93b8e1293114e7}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!setReadOnly@{setReadOnly}}
+\index{setReadOnly@{setReadOnly}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{setReadOnly()}{setReadOnly()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Form\+Model\+::set\+Read\+Only (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field,  }\item[{bool}]{read\+Only }\end{DoxyParamCaption})}
+
+
+
+Sets whether a field is read-\/only. 
+
+Fields are read-\/write by default.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormModel_a618f005896c66f9d276d4f1eac068aba}{is\+Read\+Only()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFormModel_a6f513a24fffff9fba5ad7f1486992337}\label{classWt_1_1WFormModel_a6f513a24fffff9fba5ad7f1486992337}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!setValidated@{setValidated}}
+\index{setValidated@{setValidated}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{setValidated()}{setValidated()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Form\+Model\+::set\+Validated (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field,  }\item[{bool}]{validated }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets whether a field has been validated. 
+
+This is usually not used directly, but invoked by \mbox{\hyperlink{classWt_1_1WFormModel_a60d4fa8c2f37eac0f085112980866b1b}{set\+Validation()}}
+
+A field is initially (or after \mbox{\hyperlink{classWt_1_1WFormModel_aa20f1efb3766f39ccee0e5179d921362}{reset()}}), not validated. \mbox{\Hypertarget{classWt_1_1WFormModel_a60d4fa8c2f37eac0f085112980866b1b}\label{classWt_1_1WFormModel_a60d4fa8c2f37eac0f085112980866b1b}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!setValidation@{setValidation}}
+\index{setValidation@{setValidation}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{setValidation()}{setValidation()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Form\+Model\+::set\+Validation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field,  }\item[{const \mbox{\hyperlink{classWt_1_1WValidator_1_1Result}{W\+Validator\+::\+Result}} \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the validation result for a field. 
+
+This will also set the field as validated.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormModel_ae851f405e6a90c1b5944223a1efc4c7a}{validation()}}, \mbox{\hyperlink{classWt_1_1WFormModel_a576c8c08f456dfba04d104bc061ef269}{is\+Validated()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFormModel_a6d52d3ce5772935b069265a1c44f2146}\label{classWt_1_1WFormModel_a6d52d3ce5772935b069265a1c44f2146}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!setValue@{setValue}}
+\index{setValue@{setValue}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Form\+Model\+::set\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field,  }\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the field value. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormModel_a1d2bbf2f737d07a8f587aaf1f0651c3b}{value()}}, \mbox{\hyperlink{classWt_1_1WFormModel_a1ff468eb870f571a1ef3ad5566e07dee}{value\+Text()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFormModel_a465d3ee3dd6c074c52dadc2167cd4437}\label{classWt_1_1WFormModel_a465d3ee3dd6c074c52dadc2167cd4437}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!setVisible@{setVisible}}
+\index{setVisible@{setVisible}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{setVisible()}{setVisible()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Form\+Model\+::set\+Visible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field,  }\item[{bool}]{visible }\end{DoxyParamCaption})}
+
+
+
+Sets whether a field is visible. 
+
+Fields are visible by default. An invisible field will be ignored during validation (i.\+e. will be considered as valid).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormModel_a57c318f268ec74825b49068644a77c8c}{is\+Visible()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFormModel_a2d5f681a59aebbf458882896c7b15f17}\label{classWt_1_1WFormModel_a2d5f681a59aebbf458882896c7b15f17}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!valid@{valid}}
+\index{valid@{valid}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{valid()}{valid()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Form\+Model\+::valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the current overall validation state. 
+
+This checks the \mbox{\hyperlink{classWt_1_1WFormModel_ae851f405e6a90c1b5944223a1efc4c7a}{validation()}} of all fields, and returns {\ttfamily true} if all all fields have been validated and are valid.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormModel_a12a89c233490127f4a12ebf275e25e3a}{validate()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFormModel_a12a89c233490127f4a12ebf275e25e3a}\label{classWt_1_1WFormModel_a12a89c233490127f4a12ebf275e25e3a}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!validate@{validate}}
+\index{validate@{validate}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Form\+Model\+::validate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Validates the current input. 
+
+The default implementation calls \mbox{\hyperlink{classWt_1_1WFormModel_adf8060e571433e5f225ba2b60f3deefa}{validate\+Field()}} for each field and returns {\ttfamily true} if all fields validated.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormModel_adf8060e571433e5f225ba2b60f3deefa}{validate\+Field()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_a27faf850dfa6204b11719af1451a49c2}{Wt\+::\+Auth\+::\+Auth\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WFormModel_adf8060e571433e5f225ba2b60f3deefa}\label{classWt_1_1WFormModel_adf8060e571433e5f225ba2b60f3deefa}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!validateField@{validateField}}
+\index{validateField@{validateField}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{validateField()}{validateField()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Form\+Model\+::validate\+Field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Validates a field. 
+
+The default implementation uses the validator configured for the field to validate the field contents, or if no validator has been configured assumes that the field is valid.
+
+You will typically customize this method for more complex validation cases.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormModel_a12a89c233490127f4a12ebf275e25e3a}{validate()}}, validation\+Result() 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a3b4daa7064955447d02911cfc5e501dd}{Wt\+::\+Auth\+::\+Registration\+Model}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_aae894ae477a50ad6b8b3ba962f00f298}{Wt\+::\+Auth\+::\+Auth\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WFormModel_ae851f405e6a90c1b5944223a1efc4c7a}\label{classWt_1_1WFormModel_ae851f405e6a90c1b5944223a1efc4c7a}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!validation@{validation}}
+\index{validation@{validation}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{validation()}{validation()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WValidator_1_1Result}{W\+Validator\+::\+Result}}\& Wt\+::\+W\+Form\+Model\+::validation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field }\end{DoxyParamCaption}) const}
+
+
+
+Returns the result of a validation. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormModel_adf8060e571433e5f225ba2b60f3deefa}{validate\+Field()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFormModel_a6b31d2aa0b0aecd24ddc936a740b773b}\label{classWt_1_1WFormModel_a6b31d2aa0b0aecd24ddc936a740b773b}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!validator@{validator}}
+\index{validator@{validator}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{validator()}{validator()}}
+{\footnotesize\ttfamily virtual std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WValidator}{W\+Validator}}$>$ Wt\+::\+W\+Form\+Model\+::validator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a validator. 
+
+Returns the validator for the field. \mbox{\Hypertarget{classWt_1_1WFormModel_a1d2bbf2f737d07a8f587aaf1f0651c3b}\label{classWt_1_1WFormModel_a1d2bbf2f737d07a8f587aaf1f0651c3b}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!value@{value}}
+\index{value@{value}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{value()}{value()}}
+{\footnotesize\ttfamily virtual const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}}\& Wt\+::\+W\+Form\+Model\+::value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the field value. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormModel_a1ff468eb870f571a1ef3ad5566e07dee}{value\+Text()}}, \mbox{\hyperlink{classWt_1_1WFormModel_a6d52d3ce5772935b069265a1c44f2146}{set\+Value()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFormModel_a1ff468eb870f571a1ef3ad5566e07dee}\label{classWt_1_1WFormModel_a1ff468eb870f571a1ef3ad5566e07dee}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!valueText@{valueText}}
+\index{valueText@{valueText}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{valueText()}{valueText()}}
+{\footnotesize\ttfamily virtual W\+T\+\_\+\+U\+S\+T\+R\+I\+NG Wt\+::\+W\+Form\+Model\+::value\+Text (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the field value text. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormModel_a1d2bbf2f737d07a8f587aaf1f0651c3b}{value()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}\label{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}} 
+\index{Wt::WFormModel@{Wt::WFormModel}!Field@{Field}}
+\index{Field@{Field}!Wt::WFormModel@{Wt::WFormModel}}
+\doxysubsubsection{\texorpdfstring{Field}{Field}}
+{\footnotesize\ttfamily const typedef char$\ast$ Wt\+::\+W\+Form\+Model\+::\+Field}
+
+
+
+A type to identify a field. 
+
+Fields are identified by a string literal constant. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Form\+Model.\+h\end{DoxyCompactItemize}

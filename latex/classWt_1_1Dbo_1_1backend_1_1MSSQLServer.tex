@@ -1,0 +1,447 @@
+\hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer}{}\doxysection{Wt\+::Dbo\+::backend\+::M\+S\+S\+Q\+L\+Server Class Reference}
+\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer}\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+
+
+A Microsoft S\+QL \mbox{\hyperlink{classWt_1_1Server}{Server}} connection.  
+
+
+
+
+Inheritance diagram for Wt\+::Dbo\+::backend\+::M\+S\+S\+Q\+L\+Server\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Dbo\+::backend\+::M\+S\+S\+Q\+L\+Server\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_afda9637829e54d2a680c2407d23d177f}{M\+S\+S\+Q\+L\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new Microsoft S\+QL \mbox{\hyperlink{classWt_1_1Server}{Server}} backend connection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a220e291b15082e72e5a6e270a7d8777b}{M\+S\+S\+Q\+L\+Server}} (const std\+::string \&connection\+String)
+\begin{DoxyCompactList}\small\item\em Creates a new Microsoft S\+QL \mbox{\hyperlink{classWt_1_1Server}{Server}} backend connection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a247231314e4b29c6dcbdf30b16757171}{M\+S\+S\+Q\+L\+Server}} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer}{M\+S\+S\+Q\+L\+Server}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a21cc1d023a6d0f9eea5fab6b8be773e5}{$\sim$\+M\+S\+S\+Q\+L\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Wt\+::\+Dbo\+::\+Sql\+Connection}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_aa230bc15f573884fcc42ae3c4953f66d}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Clones the connection. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a15f9d413937ccc56a704f0e3314d2cd8}{connect}} (const std\+::string \&connection\+String)
+\begin{DoxyCompactList}\small\item\em Tries to connect. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_ab553474a6927d25b946056089d404b6b}{execute\+Sql}} (const std\+::string \&sql) override
+\begin{DoxyCompactList}\small\item\em Executes an S\+QL statement. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a3b487a678dff9381b0ab6ef61c6869d2}{start\+Transaction}} () override
+\begin{DoxyCompactList}\small\item\em Starts a transaction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_ad280a78c901bd54e917ab9e327342cc9}{commit\+Transaction}} () override
+\begin{DoxyCompactList}\small\item\em Commits a transaction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_af65b4f2a707b6a00a0a5cb6b3162bdd8}{rollback\+Transaction}} () override
+\begin{DoxyCompactList}\small\item\em Rolls back a transaction. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a5ef8d20e76cc2f58e10d05692d354fd5}{prepare\+Statement}} (const std\+::string \&sql) override
+\begin{DoxyCompactList}\small\item\em Prepares a statement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Methods that return dialect information}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a2474f079c0ae7156ae39bed929ee78fc}{autoincrement\+Sql}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type modifier. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a66aea7e11fa6b183bc4cf03f08856d36}{autoincrement\+Create\+Sequence\+Sql}} (const std\+::string \&table, const std\+::string \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the S\+QL statement(s) required to create an id sequence. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a1ca41359f1825df077e07b1c6cc54100}{autoincrement\+Drop\+Sequence\+Sql}} (const std\+::string \&table, const std\+::string \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the S\+QL statement(s) required to drop an id sequence. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_abfdc30fb93c6e7d805c3ae5b549ef79c}{autoincrement\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a750955d3e41c2ae5b9e0735b9d850102}{autoincrement\+Insert\+Infix}} (const std\+::string \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the infix for an \textquotesingle{}autoincrement\textquotesingle{} insert statement. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a2c99b06066bb5a3ec6a45901af10ffcc}{autoincrement\+Insert\+Suffix}} (const std\+::string \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the suffix for an \textquotesingle{}autoincrement\textquotesingle{} insert statement. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_acde6d86583cb722e72b163409c86d435}{date\+Time\+Type}} (\mbox{\hyperlink{namespaceWt_1_1Dbo_af213c090c1ccddc36d70d56e0804047f}{Sql\+Date\+Time\+Type}} type) const override
+\begin{DoxyCompactList}\small\item\em Returns the date/time type. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_ac7a63dbaa6cfd338f0feeb40643261fe}{blob\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the blob type. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a9a5efb2e87ee9ed32f6741d10386c0f9}{require\+Subquery\+Alias}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the true if the database require subquery alias. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a30eec30fd57f850f65243e012869c404}{boolean\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the boolean type. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a8d8472dd361dfe8e19a7671f644ce38e}{support\+Alter\+Table}} () const override
+\begin{DoxyCompactList}\small\item\em Returns true if the backend support Alter \mbox{\hyperlink{structTable}{Table}}. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_aa8eef440a80d3909ee428e21558d6991}{text\+Type}} (int size) const override
+\begin{DoxyCompactList}\small\item\em Returns the text type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_aef735f90d8a548b294374171383b2758}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_aef735f90d8a548b294374171383b2758}} 
+virtual \mbox{\hyperlink{namespaceWt_1_1Dbo_a5319c15910a9f9fd7744bb3061b9c643}{Limit\+Query}} {\bfseries limit\+Query\+Method} () const override
+\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a08678c1faff781b5768f828572725afb}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a08678c1faff781b5768f828572725afb}} 
+Impl $\ast$ {\bfseries impl\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a145ec93b712837d91ca9ede83b16123b}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a145ec93b712837d91ca9ede83b16123b}} 
+class {\bfseries M\+S\+S\+Q\+L\+Server\+Statement}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A Microsoft S\+QL \mbox{\hyperlink{classWt_1_1Server}{Server}} connection. 
+
+This class provides the backend implementation for Microsoft S\+QL \mbox{\hyperlink{classWt_1_1Server}{Server}} databases. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_afda9637829e54d2a680c2407d23d177f}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_afda9637829e54d2a680c2407d23d177f}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!MSSQLServer@{MSSQLServer}}
+\index{MSSQLServer@{MSSQLServer}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{MSSQLServer()}{MSSQLServer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::\+M\+S\+S\+Q\+L\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new Microsoft S\+QL \mbox{\hyperlink{classWt_1_1Server}{Server}} backend connection. 
+
+The connection is not yet open, and requires a \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a15f9d413937ccc56a704f0e3314d2cd8}{connect()}} before it can be used. \mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a220e291b15082e72e5a6e270a7d8777b}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a220e291b15082e72e5a6e270a7d8777b}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!MSSQLServer@{MSSQLServer}}
+\index{MSSQLServer@{MSSQLServer}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{MSSQLServer()}{MSSQLServer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::\+M\+S\+S\+Q\+L\+Server (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{connection\+String }\end{DoxyParamCaption})}
+
+
+
+Creates a new Microsoft S\+QL \mbox{\hyperlink{classWt_1_1Server}{Server}} backend connection. 
+
+For info about the connection string, see the \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a15f9d413937ccc56a704f0e3314d2cd8}{connect()}} method.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a15f9d413937ccc56a704f0e3314d2cd8}{connect()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a247231314e4b29c6dcbdf30b16757171}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a247231314e4b29c6dcbdf30b16757171}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!MSSQLServer@{MSSQLServer}}
+\index{MSSQLServer@{MSSQLServer}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{MSSQLServer()}{MSSQLServer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::\+M\+S\+S\+Q\+L\+Server (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer}{M\+S\+S\+Q\+L\+Server}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+This creates a new backend connection with the same settings as another connection.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_aa230bc15f573884fcc42ae3c4953f66d}{clone()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a21cc1d023a6d0f9eea5fab6b8be773e5}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a21cc1d023a6d0f9eea5fab6b8be773e5}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!````~MSSQLServer@{$\sim$MSSQLServer}}
+\index{````~MSSQLServer@{$\sim$MSSQLServer}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{$\sim$MSSQLServer()}{~MSSQLServer()}}
+{\footnotesize\ttfamily virtual Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::$\sim$\+M\+S\+S\+Q\+L\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+Closes the connection. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a66aea7e11fa6b183bc4cf03f08856d36}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a66aea7e11fa6b183bc4cf03f08856d36}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!autoincrementCreateSequenceSql@{autoincrementCreateSequenceSql}}
+\index{autoincrementCreateSequenceSql@{autoincrementCreateSequenceSql}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{autoincrementCreateSequenceSql()}{autoincrementCreateSequenceSql()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::autoincrement\+Create\+Sequence\+Sql (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{table,  }\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the S\+QL statement(s) required to create an id sequence. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aba79d84c7c91faae06f954e6d3d390ab}{Session\+::create\+Tables()}} to create the id sequence for a table. The table\textquotesingle{}s name and primary key are passed as arguments to this function and can be used to construct an S\+QL sequence that is unique for the table. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a7922dac3fd8a808dbbeef97a5a772e3f}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a1ca41359f1825df077e07b1c6cc54100}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a1ca41359f1825df077e07b1c6cc54100}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!autoincrementDropSequenceSql@{autoincrementDropSequenceSql}}
+\index{autoincrementDropSequenceSql@{autoincrementDropSequenceSql}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{autoincrementDropSequenceSql()}{autoincrementDropSequenceSql()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::autoincrement\+Drop\+Sequence\+Sql (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{table,  }\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the S\+QL statement(s) required to drop an id sequence. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a4c1fedb21e4e1cc44b182a34e8ebb4ef}{Session\+::drop\+Tables()}} to drop the id sequence for a table. The table\textquotesingle{}s name and primary key are passed as arguments to this function and can be used to construct an S\+QL sequence that is unique for the table. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a188acc931dd1d3dbd3a21e28783f7bd2}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a750955d3e41c2ae5b9e0735b9d850102}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a750955d3e41c2ae5b9e0735b9d850102}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!autoincrementInsertInfix@{autoincrementInsertInfix}}
+\index{autoincrementInsertInfix@{autoincrementInsertInfix}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{autoincrementInsertInfix()}{autoincrementInsertInfix()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::autoincrement\+Insert\+Infix (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the infix for an \textquotesingle{}autoincrement\textquotesingle{} insert statement. 
+
+This is inserted before the {\ttfamily values} part of the {\ttfamily insert} statement, since Microsoft S\+QL \mbox{\hyperlink{classWt_1_1Server}{Server}} requires that the autoincrement id is returned with {\ttfamily O\+U\+T\+P\+UT}.
+
+Returns an empty string by default. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a69a1d9261dd0510e1ace5ae774604ba5}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a2c99b06066bb5a3ec6a45901af10ffcc}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a2c99b06066bb5a3ec6a45901af10ffcc}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!autoincrementInsertSuffix@{autoincrementInsertSuffix}}
+\index{autoincrementInsertSuffix@{autoincrementInsertSuffix}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{autoincrementInsertSuffix()}{autoincrementInsertSuffix()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::autoincrement\+Insert\+Suffix (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the suffix for an \textquotesingle{}autoincrement\textquotesingle{} insert statement. 
+
+This is appended to the {\ttfamily insert} statement, since some back-\/ends need to be indicated that they should return the autoincrement id. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_abda2502e05a08d4728ff8f026663321f}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a2474f079c0ae7156ae39bed929ee78fc}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a2474f079c0ae7156ae39bed929ee78fc}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!autoincrementSql@{autoincrementSql}}
+\index{autoincrementSql@{autoincrementSql}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{autoincrementSql()}{autoincrementSql()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::autoincrement\+Sql (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type modifier. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aba79d84c7c91faae06f954e6d3d390ab}{Session\+::create\+Tables()}} to create the {\itshape id} column. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a8c00fd64eb82999880cc813ef3866f5d}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_abfdc30fb93c6e7d805c3ae5b549ef79c}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_abfdc30fb93c6e7d805c3ae5b549ef79c}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!autoincrementType@{autoincrementType}}
+\index{autoincrementType@{autoincrementType}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{autoincrementType()}{autoincrementType()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::autoincrement\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aba79d84c7c91faae06f954e6d3d390ab}{Session\+::create\+Tables()}} to create the {\itshape id} column. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_aff293ff5ad586e15143729eb38300ad6}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_ac7a63dbaa6cfd338f0feeb40643261fe}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_ac7a63dbaa6cfd338f0feeb40643261fe}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!blobType@{blobType}}
+\index{blobType@{blobType}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{blobType()}{blobType()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::blob\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the blob type. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_ae2bbddef8fd8c11687d23187920dc4da}{Sql\+Statement\+::bind(int, const std\+::vector$<$unsigned char$>$\&)}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a68a272eaafeef5e04912914f0662da39}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a30eec30fd57f850f65243e012869c404}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a30eec30fd57f850f65243e012869c404}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!booleanType@{booleanType}}
+\index{booleanType@{booleanType}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{booleanType()}{booleanType()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::boolean\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the boolean type. 
+
+This method will return \char`\"{}boolean\char`\"{} by default. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a754764408ff1d5a0fb502541949addd2}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_aa230bc15f573884fcc42ae3c4953f66d}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_aa230bc15f573884fcc42ae3c4953f66d}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!clone@{clone}}
+\index{clone@{clone}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Wt\+::\+Dbo\+::\+Sql\+Connection}}$>$ Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clones the connection. 
+
+Returns a new connection object that is configured like this object. This is used by connection pool implementations to create its connections. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a71270c0d9258bc6f9f7177799db49083}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_ad280a78c901bd54e917ab9e327342cc9}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_ad280a78c901bd54e917ab9e327342cc9}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!commitTransaction@{commitTransaction}}
+\index{commitTransaction@{commitTransaction}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{commitTransaction()}{commitTransaction()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::commit\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Commits a transaction. 
+
+This function commits a transaction. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a38ed9ab4831a0bfd8694f250813803bf}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a15f9d413937ccc56a704f0e3314d2cd8}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a15f9d413937ccc56a704f0e3314d2cd8}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!connect@{connect}}
+\index{connect@{connect}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily bool Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::connect (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{connection\+String }\end{DoxyParamCaption})}
+
+
+
+Tries to connect. 
+
+Throws an exception if there was a problem, otherwise returns true.
+
+The connection string is the connection string that should be passed to S\+Q\+L\+Driver\+ConnectW to connect to the Microsoft S\+QL \mbox{\hyperlink{classWt_1_1Server}{Server}} database.
+
+The {\ttfamily connection\+String} should be U\+T\+F-\/8 encoded.
+
+Example connection string\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Driver=\{ODBC Driver 13 \textcolor{keywordflow}{for} SQL Server\};}
+\DoxyCodeLine{Server=localhost;}
+\DoxyCodeLine{UID=SA;}
+\DoxyCodeLine{PWD=\{example password\};}
+\DoxyCodeLine{\mbox{\hyperlink{classDatabase}{Database}}=example\_db;}
+\end{DoxyCode}
+
+
+You could also specify a D\+SN (\mbox{\hyperlink{classData}{Data}} Source Name) if you have it configured.
+
+See the \href{https://docs.microsoft.com/en-us/sql/odbc/reference/syntax/sqldriverconnect-function}{\texttt{ S\+Q\+L\+Driver\+Connect}} function documentation on M\+S\+DN for more info. \mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_acde6d86583cb722e72b163409c86d435}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_acde6d86583cb722e72b163409c86d435}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!dateTimeType@{dateTimeType}}
+\index{dateTimeType@{dateTimeType}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{dateTimeType()}{dateTimeType()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::date\+Time\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWt_1_1Dbo_af213c090c1ccddc36d70d56e0804047f}{Sql\+Date\+Time\+Type}}}]{type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the date/time type. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_afbe4698684c7b9b355748a199e0b0558}{Sql\+Statement\+::bind(int, const std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point\&, Sql\+Date\+Time\+Type)}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_af1f3290a984288175c6d82d088d0636c}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_ab553474a6927d25b946056089d404b6b}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_ab553474a6927d25b946056089d404b6b}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!executeSql@{executeSql}}
+\index{executeSql@{executeSql}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{executeSql()}{executeSql()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::execute\+Sql (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sql }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes an S\+QL statement. 
+
+This is a convenience method for preparing a statement, executing it, and deleting it. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_afe86e3baaffa9276654a4dea9a6830a0}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a5ef8d20e76cc2f58e10d05692d354fd5}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a5ef8d20e76cc2f58e10d05692d354fd5}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!prepareStatement@{prepareStatement}}
+\index{prepareStatement@{prepareStatement}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{prepareStatement()}{prepareStatement()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}}$>$ Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::prepare\+Statement (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sql }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Prepares a statement. 
+
+Returns the prepared statement. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a4990470cf601ed8b523d97a7f8849210}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a9a5efb2e87ee9ed32f6741d10386c0f9}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a9a5efb2e87ee9ed32f6741d10386c0f9}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!requireSubqueryAlias@{requireSubqueryAlias}}
+\index{requireSubqueryAlias@{requireSubqueryAlias}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{requireSubqueryAlias()}{requireSubqueryAlias()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::require\+Subquery\+Alias (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the true if the database require subquery alias. 
+
+This method will return false by default. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a997517374428a3f5d5ea68fa97b4632e}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_af65b4f2a707b6a00a0a5cb6b3162bdd8}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_af65b4f2a707b6a00a0a5cb6b3162bdd8}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!rollbackTransaction@{rollbackTransaction}}
+\index{rollbackTransaction@{rollbackTransaction}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{rollbackTransaction()}{rollbackTransaction()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::rollback\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rolls back a transaction. 
+
+This function rolls back a transaction. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_aee5a42b2f3b452d32360a1c31f59f22d}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a3b487a678dff9381b0ab6ef61c6869d2}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a3b487a678dff9381b0ab6ef61c6869d2}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!startTransaction@{startTransaction}}
+\index{startTransaction@{startTransaction}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{startTransaction()}{startTransaction()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::start\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Starts a transaction. 
+
+This function starts a transaction. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_abcddbb27f50192113d14c66a5ca10731}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a8d8472dd361dfe8e19a7671f644ce38e}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_a8d8472dd361dfe8e19a7671f644ce38e}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!supportAlterTable@{supportAlterTable}}
+\index{supportAlterTable@{supportAlterTable}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{supportAlterTable()}{supportAlterTable()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::support\+Alter\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns true if the backend support Alter \mbox{\hyperlink{structTable}{Table}}. 
+
+This method will return false by default. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a35bfadac642cc5d6cfbf8c123a8b4a2f}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_aa8eef440a80d3909ee428e21558d6991}\label{classWt_1_1Dbo_1_1backend_1_1MSSQLServer_aa8eef440a80d3909ee428e21558d6991}} 
+\index{Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}!textType@{textType}}
+\index{textType@{textType}!Wt::Dbo::backend::MSSQLServer@{Wt::Dbo::backend::MSSQLServer}}
+\doxysubsubsection{\texorpdfstring{textType()}{textType()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server\+::text\+Type (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the text type. 
+
+This is the text type for a string. If {\ttfamily size} = -\/1, then a type should be returned which does not require size information, otherwise a type should be returned that limits the size of the stored string to {\ttfamily size}.
+
+This method will return \char`\"{}text\char`\"{} by default if size = -\/1, and \char`\"{}varchar(size)\char`\"{} otherwise.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_ad8b53ca87bdef11ceceb96ab05c260b9}{Sql\+Statement\+::bind(int column, const std\+::string\& value)}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a358a4b38123449ba8589ae43bc1d5fc9}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/backend/M\+S\+S\+Q\+L\+Server.\+h\end{DoxyCompactItemize}

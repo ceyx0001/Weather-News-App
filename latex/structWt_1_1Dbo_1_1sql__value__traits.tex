@@ -1,0 +1,135 @@
+\hypertarget{structWt_1_1Dbo_1_1sql__value__traits}{}\doxysection{Wt\+::Dbo\+::sql\+\_\+value\+\_\+traits$<$ V, Enable $>$ Class Template Reference}
+\label{structWt_1_1Dbo_1_1sql__value__traits}\index{Wt::Dbo::sql\_value\_traits$<$ V, Enable $>$@{Wt::Dbo::sql\_value\_traits$<$ V, Enable $>$}}
+
+
+Traits class for value types.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Dbo/\+Sql\+Traits.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::Dbo\+::sql\+\_\+value\+\_\+traits$<$ V, Enable $>$\+:
+% FIG 0
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structWt_1_1Dbo_1_1sql__value__traits_a94c5f5094e26a92fcc889e7d5b4563ea}\label{structWt_1_1Dbo_1_1sql__value__traits_a94c5f5094e26a92fcc889e7d5b4563ea}} 
+static void {\bfseries bind} (const char $\ast$v, \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $\ast$statement, int column, int size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structWt_1_1Dbo_1_1sql__value__traits_a1ae26e0faa458ad1bdbb087ac93941d1}\label{structWt_1_1Dbo_1_1sql__value__traits_a1ae26e0faa458ad1bdbb087ac93941d1}} 
+static const bool {\bfseries not\+\_\+specialized} = true
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename V, class Enable = void$>$\newline
+class Wt\+::\+Dbo\+::sql\+\_\+value\+\_\+traits$<$ V, Enable $>$}
+
+Traits class for value types. 
+
+This traits class may be specialized for a custom type {\ttfamily V}, to add dbo support for custom types. A value type has a one-\/to-\/one mapping to a single database column.
+
+The library has built-\/in support for\+:
+\begin{DoxyItemize}
+\item {\ttfamily std\+::string}
+\item {\ttfamily char const $\ast$} (read-\/only\+: only as a bound parameter for a query)
+\item {\ttfamily short}, {\ttfamily int}, {\ttfamily long long}
+\item {\ttfamily long}\+: since the size of a {\ttfamily long} is 64bit on U\+N\+I\+X/\+Linux 64bit systems and 32bit otherwise, it is mapped to an {\ttfamily integer} or a {\ttfamily bigint} depending on the environment.
+\item {\ttfamily float}, {\ttfamily double}
+\item enum types
+\item {\ttfamily bool}
+\item {\ttfamily std\+::vector$<$unsigned char$>$} (binary data)
+\item {\ttfamily boost\+::optional$<$\+T$>$}\+: to make the type optional (allowing an S\+QL {\ttfamily null} value)
+\item {\ttfamily std\+::optional$<$\+T$>$}\+: to make the type optional (allowing an S\+QL {\ttfamily null} value, C++17 only)
+\item {\ttfamily std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point}\+: time stamp
+\item {\ttfamily std\+::chrono\+::duration$<$int, std\+::milli$>$}\+: time interval
+\end{DoxyItemize}
+
+In $<$\mbox{\hyperlink{WtSqlTraits_8h_source}{Wt/\+Dbo/\+Wt\+Sql\+Traits.\+h}}$>$, traits classes are also provided for\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classWt_1_1WDate}{W\+Date}}
+\item \mbox{\hyperlink{classWt_1_1WDateTime}{W\+Date\+Time}}
+\item \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}}
+\item \mbox{\hyperlink{classWt_1_1WString}{W\+String}}
+\item \mbox{\hyperlink{classWt_1_1Json_1_1Object}{Json\+::\+Object}}
+\item \mbox{\hyperlink{classWt_1_1Json_1_1Array}{Json\+::\+Array}}
+\end{DoxyItemize}
+
+Example for an enum that is saved as a string rather than an int\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{enum class} Pet \{}
+\DoxyCodeLine{  Cat,}
+\DoxyCodeLine{  Dog,}
+\DoxyCodeLine{  Other}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{std::string petToString(Pet p) \{}
+\DoxyCodeLine{  \textcolor{keywordflow}{switch} (p) \{}
+\DoxyCodeLine{  \textcolor{keywordflow}{case} Pet::Cat:}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} \textcolor{stringliteral}{"cat"};}
+\DoxyCodeLine{  \textcolor{keywordflow}{case} Pet::Dog:}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} \textcolor{stringliteral}{"dog"};}
+\DoxyCodeLine{  \textcolor{keywordflow}{case} Pet::Other:}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} \textcolor{stringliteral}{"other"};}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{  \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"Unknown pet type: "} + std::to\_string(\textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(p)));}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{Pet petFromString(\textcolor{keyword}{const} std::string \&s) \{}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (s == \textcolor{stringliteral}{"cat"})}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} Pet::Cat;}
+\DoxyCodeLine{  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (s == \textcolor{stringliteral}{"dog"})}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} Pet::Dog;}
+\DoxyCodeLine{  \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (s == \textcolor{stringliteral}{"other"})}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} Pet::Other;}
+\DoxyCodeLine{  \textcolor{keywordflow}{else}}
+\DoxyCodeLine{    \textcolor{keywordflow}{throw} std::invalid\_argument(\textcolor{stringliteral}{"Unknown pet type: "} + s);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceWt}{Wt}} \{}
+\DoxyCodeLine{\textcolor{keyword}{namespace }Dbo \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{template}<>}
+\DoxyCodeLine{\textcolor{keyword}{struct }sql\_value\_traits<Pet>}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \textcolor{keyword}{static} std::string type(SqlConnection *conn, \textcolor{keywordtype}{int} size)}
+\DoxyCodeLine{  \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} sql\_value\_traits<std::string>::type(conn, size);}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \textcolor{keyword}{static} \textcolor{keywordtype}{void} bind(Pet p, SqlStatement *statement, \textcolor{keywordtype}{int} column, \textcolor{keywordtype}{int} size)}
+\DoxyCodeLine{  \{}
+\DoxyCodeLine{    statement-\/>bind(column, petToString(p));}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \textcolor{keyword}{static} \textcolor{keywordtype}{bool} read(Pet \&p, SqlStatement *statement, \textcolor{keywordtype}{int} column, \textcolor{keywordtype}{int} size)}
+\DoxyCodeLine{  \{}
+\DoxyCodeLine{    std::string s;}
+\DoxyCodeLine{    \textcolor{keywordtype}{bool} result = statement-\/>getResult(column, \&s, size);}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (!result)}
+\DoxyCodeLine{      \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{    p = petFromString(s);}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\} \textcolor{comment}{// Dbo}}
+\DoxyCodeLine{\} \textcolor{comment}{// Wt}}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits}{query\+\_\+result\+\_\+traits}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/Sql\+Traits.\+h\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/Sql\+Traits\+\_\+impl.\+h\end{DoxyCompactItemize}

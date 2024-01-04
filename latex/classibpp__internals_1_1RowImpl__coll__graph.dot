@@ -1,0 +1,33 @@
+digraph "ibpp_internals::RowImpl"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="ibpp_internals::RowImpl",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="IBPP::IRow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIBPP_1_1IRow.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mDatabase" ];
+  Node3 [label="ibpp_internals::DatabaseImpl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classibpp__internals_1_1DatabaseImpl.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="IBPP::IDatabase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIBPP_1_1IDatabase.html",tooltip=" "];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mHandle" ];
+  Node5 [label="void",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mDialect\nmRefCount" ];
+  Node6 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mServerName\nmCharSet\nmUserPassword\nmDatabaseName\nmCreateParams\nmRoleName\nmUserName" ];
+  Node7 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mDescrArea" ];
+  Node8 [label="XSQLDA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structXSQLDA.html",tooltip=" "];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sqlvar" ];
+  Node9 [label="XSQLVAR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structXSQLVAR.html",tooltip=" "];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sqlsubtype\nownname_length\nsqlscale\naliasname_length\nrelname_length\nsqlname_length\nsqllen\nsqltype" ];
+  Node10 [label="signed",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node10 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sqln\nsqldabc\nsqld\nversion" ];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mTransaction" ];
+  Node11 [label="ibpp_internals::TransactionImpl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classibpp__internals_1_1TransactionImpl.html",tooltip=" "];
+  Node12 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="IBPP::ITransaction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIBPP_1_1ITransaction.html",tooltip=" "];
+  Node5 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mHandle" ];
+  Node6 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mRefCount" ];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mDialect\nmRefCount" ];
+}

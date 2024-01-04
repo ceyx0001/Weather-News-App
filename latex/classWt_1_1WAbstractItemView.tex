@@ -1,0 +1,2132 @@
+\hypertarget{classWt_1_1WAbstractItemView}{}\doxysection{Wt\+::W\+Abstract\+Item\+View Class Reference}
+\label{classWt_1_1WAbstractItemView}\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+
+
+An abstract base class for item Views.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Abstract\+Item\+View.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Abstract\+Item\+View\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Abstract\+Item\+View\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WAbstractItemView_1_1ColumnInfo}{Column\+Info}}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WAbstractItemView_1_1Editor}{Editor}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_af09c376655e2f4326c2b8ac7bf7ec78b}{set\+Model}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \&\mbox{\hyperlink{classWt_1_1WAbstractItemView_ad48bce9c903a4d98c4dcf889377c7ab6}{model}})
+\begin{DoxyCompactList}\small\item\em Sets the model. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \mbox{\hyperlink{classWt_1_1WAbstractItemView_ad48bce9c903a4d98c4dcf889377c7ab6}{model}} () const
+\begin{DoxyCompactList}\small\item\em Returns the model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a3f8ecef3dac343faa00efc801e4e4c1f}{set\+Root\+Index}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemView_aa9613b547e360cad7df75e4bb7919491}{root\+Index}})
+\begin{DoxyCompactList}\small\item\em Sets the root index. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_aa9613b547e360cad7df75e4bb7919491}{root\+Index}} () const
+\begin{DoxyCompactList}\small\item\em Returns the root index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a2d6df9088345b9026bf5853a7194d1d9}{set\+Item\+Delegate}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}} $>$ \&delegate)
+\begin{DoxyCompactList}\small\item\em Sets the default item delegate. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}} $>$ \mbox{\hyperlink{classWt_1_1WAbstractItemView_a11310e2002e539b1c77f7496175b2e7b}{item\+Delegate}} () const
+\begin{DoxyCompactList}\small\item\em Returns the default item delegate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a044f062bbc48a046fa7de64e557f805a}{set\+Item\+Delegate\+For\+Column}} (int column, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}} $>$ \&delegate)
+\begin{DoxyCompactList}\small\item\em Sets the delegate for a column. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}} $>$ \mbox{\hyperlink{classWt_1_1WAbstractItemView_a9dff4ba5dceadd7cfd1f75123cade25e}{item\+Delegate\+For\+Column}} (int column) const
+\begin{DoxyCompactList}\small\item\em Returns the delegate that was set for a column. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}} $>$ \mbox{\hyperlink{classWt_1_1WAbstractItemView_ab81e4b626739262bc0270f556d6a53c8}{item\+Delegate}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index) const
+\begin{DoxyCompactList}\small\item\em Returns the delegate for rendering an item. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}} $>$ \mbox{\hyperlink{classWt_1_1WAbstractItemView_a37cd8cb045b9c2c04a47a775463616da}{item\+Delegate}} (int column) const
+\begin{DoxyCompactList}\small\item\em Returns the delegate for a column. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WAbstractItemView_a5b7d40b94b5254b52417f5cf2200ec30}{item\+Widget}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index) const =0
+\begin{DoxyCompactList}\small\item\em Returns the widget that renders an item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a71b802a256f24905bf9222d0f108e4e6}{set\+Header\+Item\+Delegate}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}} $>$ \&delegate)
+\begin{DoxyCompactList}\small\item\em Sets the header item delegate. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}} $>$ \mbox{\hyperlink{classWt_1_1WAbstractItemView_ae7a58e66b08736c36594ea8bb4ac4bf6}{header\+Item\+Delegate}} () const
+\begin{DoxyCompactList}\small\item\em Returns the header item delegate. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a708a7044268fa43a2a0d43c2c9e1de95}{set\+Column\+Alignment}} (int column, \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} alignment)
+\begin{DoxyCompactList}\small\item\em Sets the content alignment for a column. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} \mbox{\hyperlink{classWt_1_1WAbstractItemView_adaf570ecc263458c3ad4d148ed0f0285}{column\+Alignment}} (int column) const
+\begin{DoxyCompactList}\small\item\em Returns the content alignment for a column. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a1257f47715ed6f4522fc26180ac533b8}{set\+Header\+Alignment}} (int column, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment)
+\begin{DoxyCompactList}\small\item\em Sets the header alignment for a column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} \mbox{\hyperlink{classWt_1_1WAbstractItemView_ac73ec259dfe8e3680a66778fd417457f}{horizontal\+Header\+Alignment}} (int column) const
+\begin{DoxyCompactList}\small\item\em Returns the horizontal header alignment for a column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} \mbox{\hyperlink{classWt_1_1WAbstractItemView_a57b84260f8419f961f4993f8914b0325}{vertical\+Header\+Alignment}} (int column) const
+\begin{DoxyCompactList}\small\item\em Returns the vertical header alignment for a column. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a4c419a50fec4caa97b21f09b6087da85}{set\+Header\+Word\+Wrap}} (int column, bool enabled)
+\begin{DoxyCompactList}\small\item\em Configures header text wrapping. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a4e14860adc41eecb4dd99bc7fb3e9f03}\label{classWt_1_1WAbstractItemView_a4e14860adc41eecb4dd99bc7fb3e9f03}} 
+bool {\bfseries header\+Word\+Wrap} (int column) const
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_af20325d6c50955ae8b0d25f449db2508}{set\+Alternating\+Row\+Colors}} (bool \mbox{\hyperlink{classWt_1_1WWidget_ae6935d8baca9d37dd1d080b4383da87c}{enable}})
+\begin{DoxyCompactList}\small\item\em Sets if alternating row colors are to be used. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WAbstractItemView_a9c499a2fb1d224a310ce2ececd22b828}{alternating\+Row\+Colors}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether alternating row colors are used. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_af782069e7307d3a4ce2395336f338c4e}{sort\+By\+Column}} (int column, \mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Sort\+Order}} order)
+\begin{DoxyCompactList}\small\item\em Sorts the data according to a column. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WAbstractItemView_a79ed20fcab31771d6a79b1da5fc4ae8d}{sort\+Column}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current sorting columm. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Sort\+Order}} \mbox{\hyperlink{classWt_1_1WAbstractItemView_ab33272b95c9e173aba5b041b464aa7e7}{sort\+Order}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current sorting order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_ae1c86a0f37f97f63aed3b00fd8ffad7c}{set\+Sorting\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enables or disables sorting for all columns. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a62b873ab83a8ab64dd873c368daad387}{set\+Sorting\+Enabled}} (int column, bool enabled)
+\begin{DoxyCompactList}\small\item\em Enables or disables sorting for a single column. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WAbstractItemView_a957be86835bcae777ffc3fe655390683}{is\+Sorting\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether sorting is enabled. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WAbstractItemView_a336afd787ee42e84a920018489946467}{is\+Sorting\+Enabled}} (int column) const
+\begin{DoxyCompactList}\small\item\em Returns whether sorting is enabled for a single column. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a4fe24c3ed80cc59f6bed2ed7795bc127}{set\+Column\+Resize\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enables interactive column resizing. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WAbstractItemView_ab1170db72e468ad2b0e0158b58849d19}{is\+Column\+Resize\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether column resizing is enabled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_ad59b47cf9a1c5a65c5adc3e1900ceb5c}{set\+Selection\+Behavior}} (\mbox{\hyperlink{classWt_a04aecd34ae0810219e82208a9890de13}{Selection\+Behavior}} behavior)
+\begin{DoxyCompactList}\small\item\em Changes the selection behaviour. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_a04aecd34ae0810219e82208a9890de13}{Selection\+Behavior}} \mbox{\hyperlink{classWt_1_1WAbstractItemView_a0a40b31df1fe69a00cc50e7a56c3f3c7}{selection\+Behavior}} () const
+\begin{DoxyCompactList}\small\item\em Returns the selection behaviour. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_af6fcd9761e2f7a3b497d3563c849d320}{set\+Selection\+Mode}} (\mbox{\hyperlink{classWt_a74b3f7eb1689a3cbf0ea514ffd20bccc}{Selection\+Mode}} mode)
+\begin{DoxyCompactList}\small\item\em Sets the selection mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_a74b3f7eb1689a3cbf0ea514ffd20bccc}{Selection\+Mode}} \mbox{\hyperlink{classWt_1_1WAbstractItemView_ac62e2c13b6d096d41d07312c79879778}{selection\+Mode}} () const
+\begin{DoxyCompactList}\small\item\em Returns the selection mode. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WItemSelectionModel}{W\+Item\+Selection\+Model}} $\ast$ \mbox{\hyperlink{classWt_1_1WAbstractItemView_a099490b76f55f6a8a9abb009b95944c3}{selection\+Model}} () const
+\begin{DoxyCompactList}\small\item\em Returns the selection model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a67c4b49e04db1f19a7788c4580dfc25b}{set\+Selected\+Indexes}} (const \mbox{\hyperlink{classWt_a1ac86c224fa86a17f4ca1b52881163ed}{W\+Model\+Index\+Set}} \&indexes)
+\begin{DoxyCompactList}\small\item\em Sets the selected items. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a009d7b319a65a0cae561543a6ca99e33}{clear\+Selection}} ()
+\begin{DoxyCompactList}\small\item\em Clears the selection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_acbcee6896e4d30748f12c9019daa172e}{select}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, \mbox{\hyperlink{classWt_a1ec974261fb0e2b80498473dcb6c91ed}{Selection\+Flag}} option=Selection\+Flag\+::\+Select)
+\begin{DoxyCompactList}\small\item\em Selects a single item. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WAbstractItemView_a6d3a9ca7245f9d61bc79297585bdb5ad}{is\+Selected}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index) const
+\begin{DoxyCompactList}\small\item\em Returns wheter an item is selected. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_a1ac86c224fa86a17f4ca1b52881163ed}{W\+Model\+Index\+Set}} \mbox{\hyperlink{classWt_1_1WAbstractItemView_a02fbf609206a85f220782b6ee279c87c}{selected\+Indexes}} () const
+\begin{DoxyCompactList}\small\item\em Returns the set of selected items. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a0ca99b835708d990b90000917045738e}{set\+Drag\+Enabled}} (bool \mbox{\hyperlink{classWt_1_1WWidget_ae6935d8baca9d37dd1d080b4383da87c}{enable}})
+\begin{DoxyCompactList}\small\item\em Enables the selection to be dragged (drag \& drop). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a1eda46c8e9a21af7f6281e7096af8fbe}{set\+Drops\+Enabled}} (bool \mbox{\hyperlink{classWt_1_1WWidget_ae6935d8baca9d37dd1d080b4383da87c}{enable}})
+\begin{DoxyCompactList}\small\item\em Enables drop operations (drag \& drop). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a5469c23ea1e9066e98e832ec9da2af21}{set\+Enabled\+Drop\+Locations}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a46e584f830f2d8c9f5b16fcee7affc9b}{Drop\+Location}} $>$ droplocation)
+\begin{DoxyCompactList}\small\item\em Enables drop operations (drag \& drop). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a9bc6be61581da4f5409e60ac3429d500}\label{classWt_1_1WAbstractItemView_a9bc6be61581da4f5409e60ac3429d500}} 
+\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a46e584f830f2d8c9f5b16fcee7affc9b}{Drop\+Location}} $>$ \mbox{\hyperlink{classWt_1_1WAbstractItemView_a9bc6be61581da4f5409e60ac3429d500}{enabled\+Drop\+Locations}} () const
+\begin{DoxyCompactList}\small\item\em Returns the enabled drop locations. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_ae487074120d54fa6d961b9760a13b990}{set\+Row\+Height}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemView_a6c1c12ec77937064ac91e13c534f1ed4}{row\+Height}})
+\begin{DoxyCompactList}\small\item\em Sets the row height. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a6c1c12ec77937064ac91e13c534f1ed4}\label{classWt_1_1WAbstractItemView_a6c1c12ec77937064ac91e13c534f1ed4}} 
+const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_a6c1c12ec77937064ac91e13c534f1ed4}{row\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Returns the row height. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_aa80794ca5438e2b9971e8f85919353fd}{set\+Column\+Width}} (int column, const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WCompositeWidget_a29ea57c8313b5316bbfa5c6d3590ad3a}{width}})=0
+\begin{DoxyCompactList}\small\item\em Sets the column width. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \mbox{\hyperlink{classWt_1_1WAbstractItemView_ab2a7684bae805dec16e0a68f7d7f3fb0}{column\+Width}} (int column) const
+\begin{DoxyCompactList}\small\item\em Returns the column width. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_abf714e46ce657ffb16a6897e78a0ed13}{set\+Column\+Hidden}} (int column, bool \mbox{\hyperlink{classWt_1_1WWidget_a0825c3ccbd4999afc1a88fafa6aa6fc7}{hide}})
+\begin{DoxyCompactList}\small\item\em Changes the visibility of a column. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WAbstractItemView_a6bfefdba90116140771260c3a016c25d}{is\+Column\+Hidden}} (int column) const
+\begin{DoxyCompactList}\small\item\em Returns if a column is hidden. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_af3755e7f96e969dc608c6cfd3325c09e}{hide\+Column}} (int column)
+\begin{DoxyCompactList}\small\item\em Hides a column. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a2cbbe932d872baf103d88c6186e9b52a}{show\+Column}} (int column)
+\begin{DoxyCompactList}\small\item\em Shows a column. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_abcc10f057232621ef8b03b3caecc7a3b}{set\+Header\+Height}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WCompositeWidget_a058e81d74cf5290ad7bd484573d1fadf}{height}})
+\begin{DoxyCompactList}\small\item\em Sets the header height. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_aa61dc8036c54cfa5576051f3ace00c14}{header\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Returns the header height. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WAbstractItemView_a370beb06a2e6c82659756ba63a516b14}{page\+Count}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the number of pages. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WAbstractItemView_a2cc5d8f54c95a4d8d45c86ea85b428e9}{page\+Size}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the page size. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WAbstractItemView_a66b3bd22b9d57d9c466280a2f96b44c3}{current\+Page}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the current page. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a71585006c31128c3d606cc976b865008}{set\+Current\+Page}} (int page)=0
+\begin{DoxyCompactList}\small\item\em Sets the current page. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_afa8888e527008787aae1d3d68554afeb}{scroll\+To}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, \mbox{\hyperlink{classWt_ae0fdcefe4b1fefe747b5f423c020334a}{Scroll\+Hint}} hint=Scroll\+Hint\+::\+Ensure\+Visible)=0
+\begin{DoxyCompactList}\small\item\em Scrolls the view to an item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a93d2efc8642a6b9c55b35b7665a13da5}{set\+Edit\+Triggers}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a88f81c5ba57d9c9b8f7c052327c44284}{Edit\+Trigger}} $>$ \mbox{\hyperlink{classWt_1_1WAbstractItemView_aa263b5b5943aba27a250e183e843b188}{edit\+Triggers}})
+\begin{DoxyCompactList}\small\item\em Configures what actions should trigger editing. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a88f81c5ba57d9c9b8f7c052327c44284}{Edit\+Trigger}} $>$ \mbox{\hyperlink{classWt_1_1WAbstractItemView_aa263b5b5943aba27a250e183e843b188}{edit\+Triggers}} () const
+\begin{DoxyCompactList}\small\item\em Returns the editing triggers. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a9a5506e031a514696c4050ccc1521b6c}{set\+Edit\+Options}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a736621edbd61c68fecaa1e8e9204c339}{Edit\+Option}} $>$ options)
+\begin{DoxyCompactList}\small\item\em Configures editing options. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a736621edbd61c68fecaa1e8e9204c339}{Edit\+Option}} $>$ \mbox{\hyperlink{classWt_1_1WAbstractItemView_ace8b83a893e408d2890649a4b380c5ad}{edit\+Options}} () const
+\begin{DoxyCompactList}\small\item\em Returns the editing options. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a0793bef9c9d7d3d3b0b3f6d2585d5647}{edit}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index)
+\begin{DoxyCompactList}\small\item\em Opens an editor for the given index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a51c80c5c2d505c987047a489c960205b}{close\+Editor}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, bool save\+Data=true)
+\begin{DoxyCompactList}\small\item\em Closes the editor for the given index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a81aaaff9476d331f82c7875c0b46d6a4}{close\+Editors}} (bool save\+Data=true)
+\begin{DoxyCompactList}\small\item\em Closes all open editors. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_a06744b1cf5fdeae2a8a6c0d0084fdf25}{Validation\+State}} \mbox{\hyperlink{classWt_1_1WAbstractItemView_a7b638aa08afd214b1a385383d4a61489}{validate\+Editor}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index)
+\begin{DoxyCompactList}\small\item\em Validates the editor for the given index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_a06744b1cf5fdeae2a8a6c0d0084fdf25}{Validation\+State}} \mbox{\hyperlink{classWt_1_1WAbstractItemView_a4e0b6f968f9b74c73795efdc80a94953}{validate\+Editors}} ()
+\begin{DoxyCompactList}\small\item\em Validates all editors. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WAbstractItemView_ac1a65e57541ac3d10a0fa720096a7b02}{is\+Editing}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index) const
+\begin{DoxyCompactList}\small\item\em Returns whether an editor is open for a given index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a22f7a1bac7bb67d9887ae76a6a852fa9}\label{classWt_1_1WAbstractItemView_a22f7a1bac7bb67d9887ae76a6a852fa9}} 
+bool \mbox{\hyperlink{classWt_1_1WAbstractItemView_a22f7a1bac7bb67d9887ae76a6a852fa9}{is\+Valid}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index) const
+\begin{DoxyCompactList}\small\item\em Returns whether an editor\textquotesingle{}s state is valid. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a0fb9feb76158ba44bfcafbfb4b9c4677}\label{classWt_1_1WAbstractItemView_a0fb9feb76158ba44bfcafbfb4b9c4677}} 
+bool {\bfseries is\+Editing} () const
+\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_a3b72d5f8e5b0afdea83e224354d3e91b}{clicked}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when clicked. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_a14ac099f58621d66834aa5674ea8ecb5}{double\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when double clicked. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_a633d617978adc32d93c427c9f27000db}{mouse\+Went\+Down}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when a mouse button is pressed down. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_a0231396a3e026781c600645c24fff616}{mouse\+Went\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the mouse button is released. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_a93686fdab9f40f104a6914a37181c1cd}{touch\+Start}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when a finger is placed on the screen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$, \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_acd980e6a9eb110400f334e341f8386a4}{touch\+Started}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when one or more fingers are placed on the screen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$, \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_aaf371c95c294c952be0eaac5b3f56af7}{touch\+Moved}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when one or more fingers are moved on the screen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$, \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_a9f3bd68d6d5ca982b2a22bcd100ea271}{touch\+Ended}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when one or more fingers are removed from the screen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_ada37ffbe2d470dd227c8714645f150f0}{selection\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the selection is changed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_a419257bb553d44423d4d4d5325d61ec7}{page\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when page information was updated. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ int, \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_ad5ca828bca252012794ae85f580e96d1}{column\+Resized}} ()
+\begin{DoxyCompactList}\small\item\em Returns the signal emitted when a column is resized by the user. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WAbstractItemView_a3691a20e1092fc144af16744804df0ec}{sort\+Enabled}} ()
+\begin{DoxyCompactList}\small\item\em Returns whether the view is sortable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemView_af55156060cf30211c204a898e73f2279}{set\+Header\+Click\+Sort\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Alow to sort. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ int, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_ad762bd48613940c0bd2c113d4748e7f4}{header\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when a header item is clicked. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ int, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_ae833f8378be06a6bda18c7bff24a3ef2}{header\+Double\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when a header item is double clicked. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ int, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_ac1ad04bcf1d9230915c3909420ec59d4}{header\+Mouse\+Went\+Down}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when a mouse button is pressed on a header item \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ int, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_a171da4b7cf09c07afc7c04ba73657774}{header\+Mouse\+Went\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when a mouse button is released on a header item \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WScrollEvent}{W\+Scroll\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_a1a9343a886e6131a225171173cec1d5f}{scrolled}} ()=0
+\begin{DoxyCompactList}\small\item\em Signal emitted when scrolling. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a296b872601d0e8dcf8dac0411ef5040b}{set\+Row\+Header\+Count}} (int count)
+\begin{DoxyCompactList}\small\item\em Configures the number of columns that are used as row headers. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WAbstractItemView_abda4b5485b6829baf2961b6a38ed642f}{row\+Header\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of columns that are used as row headers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WKeyEvent}{W\+Key\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_a77ea932fa368237ec093b41f6ceaacdc}{key\+Went\+Down}} ()
+\begin{DoxyCompactList}\small\item\em Event signal emitted when a keyboard key is pushed down. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WKeyEvent}{W\+Key\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_ad74eb155e1c84aa61df5567f15b3b9c8}{key\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em Event signal emitted when a \char`\"{}character\char`\"{} was entered. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WKeyEvent}{W\+Key\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemView_addddab6fe919d5e51f750bd917ab9856}{key\+Went\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Event signal emitted when a keyboard key is released. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a767ad924751d9ca71810f195c08f8906}\label{classWt_1_1WAbstractItemView_a767ad924751d9ca71810f195c08f8906}} 
+enum {\bfseries Render\+State} \{ \newline
+{\bfseries Render\+Ok} = 0, 
+{\bfseries Need\+Adjust\+View\+Port} = 1, 
+{\bfseries Need\+Update\+Model\+Indexes} = 2, 
+{\bfseries Need\+Rerender\+Data} = 3, 
+\newline
+{\bfseries Need\+Rerender\+Header} = 4, 
+{\bfseries Need\+Rerender} = 5
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a6dea04d11213357b0b36b9022a4e641a}\label{classWt_1_1WAbstractItemView_a6dea04d11213357b0b36b9022a4e641a}} 
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a6dea04d11213357b0b36b9022a4e641a}{W\+Abstract\+Item\+View}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new item view. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a1c8db5b8dd986db16f091c2dec0f9c38}{drop\+Event}} (const \mbox{\hyperlink{classWt_1_1WDropEvent}{W\+Drop\+Event}} \&event, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&target)
+\begin{DoxyCompactList}\small\item\em Handles a drop event (drag \& drop). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a2964cc0c0d0aca680a0efdde596478c4}{drop\+Event}} (const \mbox{\hyperlink{classWt_1_1WDropEvent}{W\+Drop\+Event}} \&event, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, \mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Wt\+::\+Side}} side)
+\begin{DoxyCompactList}\small\item\em Handles a drop event (drag \& drop). \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WAbstractItemView_acf7db56a863023931d160364f444cf30}{create\+Extra\+Header\+Widget}} (int column)
+\begin{DoxyCompactList}\small\item\em Create an extra widget in the header. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WAbstractItemView_a1e427bd80ae3f89094cc7e4480d42a89}{extra\+Header\+Widget}} (int column)
+\begin{DoxyCompactList}\small\item\em Returns the extra header widget. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WAbstractItemView_a5dcb8d0f45a3c9b1c9f238a533f77b51}{create\+Page\+Navigation\+Bar}} ()
+\begin{DoxyCompactList}\small\item\em Returns a page navigation widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a41c03c52476de911bfcd0d5141f509b6}\label{classWt_1_1WAbstractItemView_a41c03c52476de911bfcd0d5141f509b6}} 
+virtual void {\bfseries schedule\+Rerender} (Render\+State what)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_acb690796891007459d64099fd4ba3591}\label{classWt_1_1WAbstractItemView_acb690796891007459d64099fd4ba3591}} 
+virtual void {\bfseries model\+Data\+Changed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&top\+Left, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&bottom\+Right)=0
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a565e28258e47a87328af47b07a308810}\label{classWt_1_1WAbstractItemView_a565e28258e47a87328af47b07a308810}} 
+virtual void {\bfseries model\+Layout\+About\+To\+Be\+Changed} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a96b82d6bcf844befdac817ea222d0f61}\label{classWt_1_1WAbstractItemView_a96b82d6bcf844befdac817ea222d0f61}} 
+virtual void {\bfseries model\+Layout\+Changed} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a82e396a0927ddc92f63cbfd24facf15b}\label{classWt_1_1WAbstractItemView_a82e396a0927ddc92f63cbfd24facf15b}} 
+void {\bfseries model\+Header\+Data\+Changed} (\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a71b56cacec86701db1c07b04f005c6cc}\label{classWt_1_1WAbstractItemView_a71b56cacec86701db1c07b04f005c6cc}} 
+void {\bfseries model\+Reset} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_aad143480fa5577ec2d9394add24883ac}\label{classWt_1_1WAbstractItemView_aad143480fa5577ec2d9394add24883ac}} 
+\mbox{\hyperlink{structWt_1_1WAbstractItemView_1_1ColumnInfo}{Column\+Info}} \& {\bfseries column\+Info} (int column) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_aefd9afd0533bc6cccae05fee2819af58}\label{classWt_1_1WAbstractItemView_aefd9afd0533bc6cccae05fee2819af58}} 
+int {\bfseries column\+By\+Id} (int columnid) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ae1b9eed02cd50e0835e2db3be5597b7b}\label{classWt_1_1WAbstractItemView_ae1b9eed02cd50e0835e2db3be5597b7b}} 
+int {\bfseries column\+Count} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a615526de73a4de3277581d46f307475a}\label{classWt_1_1WAbstractItemView_a615526de73a4de3277581d46f307475a}} 
+int {\bfseries visible\+Column\+Count} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a9ed85b76207e8d50bae56620970253b8}\label{classWt_1_1WAbstractItemView_a9ed85b76207e8d50bae56620970253b8}} 
+int {\bfseries visible\+Column\+Index} (int model\+Column) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_af2c9a1b11921fdbf1787c9a6b9e052d4}\label{classWt_1_1WAbstractItemView_af2c9a1b11921fdbf1787c9a6b9e052d4}} 
+int {\bfseries model\+Column\+Index} (int visible\+Column) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_accb949ddd0f116161d4d8a2c356e3656}\label{classWt_1_1WAbstractItemView_accb949ddd0f116161d4d8a2c356e3656}} 
+virtual \mbox{\hyperlink{structWt_1_1WAbstractItemView_1_1ColumnInfo}{Column\+Info}} {\bfseries create\+Column\+Info} (int column) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_aadf9b018469746196010fd5730eeb2ea}\label{classWt_1_1WAbstractItemView_aadf9b018469746196010fd5730eeb2ea}} 
+void {\bfseries save\+Extra\+Header\+Widgets} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a46301cfa07e01956653e85d593f09f3e}\label{classWt_1_1WAbstractItemView_a46301cfa07e01956653e85d593f09f3e}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ {\bfseries create\+Header\+Widget} (int column)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_af7f2fbbe17b0fc7111e5234bde3bbba2}\label{classWt_1_1WAbstractItemView_af7f2fbbe17b0fc7111e5234bde3bbba2}} 
+\mbox{\hyperlink{classWt_1_1WText}{W\+Text}} $\ast$ {\bfseries header\+Text\+Widget} (int column)
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a5815d02626da21a97e719a08965499c5}{handle\+Click}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, const \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Handles a click event. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a2e3fd2a792a2648de34322713bfa2d0d}{handle\+Double\+Click}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, const \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Handles a double click event. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a296bed4c8136abb817f462a70cd23731}{handle\+Mouse\+Down}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, const \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Handles a mouse down event. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_aba6ecacabfb1e590e7cf65a1a22ce400}{handle\+Mouse\+Up}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, const \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Handles a mouse up event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a870802eb68a391ac851fccbdda2c99da}\label{classWt_1_1WAbstractItemView_a870802eb68a391ac851fccbdda2c99da}} 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a870802eb68a391ac851fccbdda2c99da}{handle\+Touch\+Select}} (const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$ \&indices, const \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Handles a touch select event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a38fdb1128d73ac876ffdeec16d8acea0}\label{classWt_1_1WAbstractItemView_a38fdb1128d73ac876ffdeec16d8acea0}} 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a38fdb1128d73ac876ffdeec16d8acea0}{handle\+Touch\+Start}} (const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$ \&indices, const \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Handles a touch started event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a08488441fe972f8647a4abbc27edecb7}\label{classWt_1_1WAbstractItemView_a08488441fe972f8647a4abbc27edecb7}} 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a08488441fe972f8647a4abbc27edecb7}{handle\+Touch\+Move}} (const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$ \&indices, const \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Handles a touch moved event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_abe246b10225742f25578d638ed03d4a4}\label{classWt_1_1WAbstractItemView_abe246b10225742f25578d638ed03d4a4}} 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_abe246b10225742f25578d638ed03d4a4}{handle\+Touch\+End}} (const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$ \&indices, const \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Handles a touch ended event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a69df29e87fd32418b12c2401b2cc64fd}\label{classWt_1_1WAbstractItemView_a69df29e87fd32418b12c2401b2cc64fd}} 
+virtual bool {\bfseries internal\+Select} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, \mbox{\hyperlink{classWt_a1ec974261fb0e2b80498473dcb6c91ed}{Selection\+Flag}} option)
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a6530f83b0ed33f0d8d292bae5e46191e}{enable\+Ajax}} () override
+\begin{DoxyCompactList}\small\item\em Progresses to an Ajax-\/enabled widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a53c31b5076ec8148e3cb0ed4812b54a5}\label{classWt_1_1WAbstractItemView_a53c31b5076ec8148e3cb0ed4812b54a5}} 
+void {\bfseries set\+Edit\+State} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&edit\+State)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a4c2ddd2f232fc02d45b8dbfe9e39a3fe}\label{classWt_1_1WAbstractItemView_a4c2ddd2f232fc02d45b8dbfe9e39a3fe}} 
+\mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} {\bfseries edit\+State} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a92771645de1e6ba86a58d21294532d0e}\label{classWt_1_1WAbstractItemView_a92771645de1e6ba86a58d21294532d0e}} 
+bool {\bfseries has\+Edit\+Focus} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a6e0bae6e71abc360d290cdb96074b60a}\label{classWt_1_1WAbstractItemView_a6e0bae6e71abc360d290cdb96074b60a}} 
+void {\bfseries set\+Editor\+Widget} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$editor)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a0c44ce47d536dee32c60dbda55ebd762}\label{classWt_1_1WAbstractItemView_a0c44ce47d536dee32c60dbda55ebd762}} 
+void {\bfseries bind\+Obj\+JS} (\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} \&slot, const std\+::string \&js\+Method)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ad4c40513dc85e8267c85eb6bd8deca0b}\label{classWt_1_1WAbstractItemView_ad4c40513dc85e8267c85eb6bd8deca0b}} 
+void {\bfseries connect\+Obj\+JS} (\mbox{\hyperlink{classWt_1_1EventSignalBase}{Event\+Signal\+Base}} \&s, const std\+::string \&js\+Method)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a57c2a99f54184593cedf37e4bde5effa}\label{classWt_1_1WAbstractItemView_a57c2a99f54184593cedf37e4bde5effa}} 
+bool {\bfseries shift\+Editor\+Rows} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent}}, int start, int count, bool persist\+When\+Shifted)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_af7fbb0b3012fd2fa14a1374198bf59ef}\label{classWt_1_1WAbstractItemView_af7fbb0b3012fd2fa14a1374198bf59ef}} 
+bool {\bfseries shift\+Editor\+Columns} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent}}, int start, int count, bool persist\+When\+Shifted)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ae51a2416e7ffa96ad0fffd69a8461b9a}\label{classWt_1_1WAbstractItemView_ae51a2416e7ffa96ad0fffd69a8461b9a}} 
+void {\bfseries persist\+Editor} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index)
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemView_a76a62215402d25133664ba57185ac357}{drop\+Event}} (\mbox{\hyperlink{classWt_1_1WDropEvent}{W\+Drop\+Event}} drop\+Event)
+\begin{DoxyCompactList}\small\item\em Handles a drop event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a1a18651bcb55c358f8e8220b19325daa}\label{classWt_1_1WAbstractItemView_a1a18651bcb55c358f8e8220b19325daa}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries impl\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a74978ab2d7a86f561bf69bcd838552b7}\label{classWt_1_1WAbstractItemView_a74978ab2d7a86f561bf69bcd838552b7}} 
+Render\+State {\bfseries render\+State\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ad8d28c6a8144954ce1bd3dad3356b701}\label{classWt_1_1WAbstractItemView_ad8d28c6a8144954ce1bd3dad3356b701}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} $>$ {\bfseries model\+Connections\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a62bc6bb8b47c5eda5ecd848dc4067728}\label{classWt_1_1WAbstractItemView_a62bc6bb8b47c5eda5ecd848dc4067728}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1WAbstractItemView_1_1ColumnInfo}{Column\+Info}} $>$ {\bfseries columns\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a140638d6711faefc7a3b538173b28f3d}\label{classWt_1_1WAbstractItemView_a140638d6711faefc7a3b538173b28f3d}} 
+int {\bfseries current\+Sort\+Column\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a38c59a1f59b1bff34566775d024039b0}\label{classWt_1_1WAbstractItemView_a38c59a1f59b1bff34566775d024039b0}} 
+bool {\bfseries drag\+Enabled\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a51462c994d2e44a3cf27dd77a794baf8}\label{classWt_1_1WAbstractItemView_a51462c994d2e44a3cf27dd77a794baf8}} 
+\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a46e584f830f2d8c9f5b16fcee7affc9b}{Drop\+Location}} $>$ {\bfseries enabled\+Drop\+Locations\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a50b8fcf59b8117e3079f32384ca4cef8}\label{classWt_1_1WAbstractItemView_a50b8fcf59b8117e3079f32384ca4cef8}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ {\bfseries u\+Drag\+Widget\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ae1335eb544a2fe0d78a76be77838d4b9}\label{classWt_1_1WAbstractItemView_ae1335eb544a2fe0d78a76be77838d4b9}} 
+\mbox{\hyperlink{classWt_1_1Core_1_1observing__ptr}{observing\+\_\+ptr}}$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ {\bfseries drag\+Widget\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a973f494b2659ff67565e12e8fafa730f}\label{classWt_1_1WAbstractItemView_a973f494b2659ff67565e12e8fafa730f}} 
+typedef std\+::map$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, \mbox{\hyperlink{structWt_1_1WAbstractItemView_1_1Editor}{Editor}} $>$ {\bfseries Editor\+Map}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ab07db925dbf5e251ff3987719631ebd1}\label{classWt_1_1WAbstractItemView_ab07db925dbf5e251ff3987719631ebd1}} 
+void {\bfseries close\+Editor\+Widget} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$editor, bool save\+Data)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_aa46e3565b5646781b95fde84cda230e9}\label{classWt_1_1WAbstractItemView_aa46e3565b5646781b95fde84cda230e9}} 
+void {\bfseries save\+Edited\+Value} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, \mbox{\hyperlink{structWt_1_1WAbstractItemView_1_1Editor}{Editor}} \&editor)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a3d982272c9f3ebf32ac650330476d4ab}\label{classWt_1_1WAbstractItemView_a3d982272c9f3ebf32ac650330476d4ab}} 
+void {\bfseries persist\+Editor} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, \mbox{\hyperlink{structWt_1_1WAbstractItemView_1_1Editor}{Editor}} \&editor)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ad52dd07acdc0ca4ef5e2568eb5e23e40}\label{classWt_1_1WAbstractItemView_ad52dd07acdc0ca4ef5e2568eb5e23e40}} 
+virtual \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ {\bfseries header\+Widget} (int column, bool contents\+Only=true)=0
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_aaa6a8366834765f43255687e34880117}\label{classWt_1_1WAbstractItemView_aaa6a8366834765f43255687e34880117}} 
+virtual \mbox{\hyperlink{classWt_1_1WText}{W\+Text}} $\ast$ {\bfseries header\+Sort\+Icon\+Widget} (int column)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a2d283d2f50385fd2270af77da618dcf7}\label{classWt_1_1WAbstractItemView_a2d283d2f50385fd2270af77da618dcf7}} 
+void {\bfseries selection\+Handle\+Click} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__signalslot_ga50f91169486bada5931f3adc3a623091}{Keyboard\+Modifier}} $>$ modifiers)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ae62596db72cfe90a0ad0785d59fa06b3}\label{classWt_1_1WAbstractItemView_ae62596db72cfe90a0ad0785d59fa06b3}} 
+void {\bfseries selection\+Handle\+Touch} (const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$ \&indices, const \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}} \&event)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a856489e8ba6cbb50f9f52c14f7e88046}\label{classWt_1_1WAbstractItemView_a856489e8ba6cbb50f9f52c14f7e88046}} 
+void {\bfseries extend\+Selection} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_aaefc3937e1edff64cb6bca65925571b0}\label{classWt_1_1WAbstractItemView_aaefc3937e1edff64cb6bca65925571b0}} 
+void {\bfseries extend\+Selection} (const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$ \&index)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a221da7998d62d8d18eaa5f877bf8a8ab}\label{classWt_1_1WAbstractItemView_a221da7998d62d8d18eaa5f877bf8a8ab}} 
+virtual void {\bfseries select\+Range} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&first, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&last)=0
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a62eda709247b06c1829513eca378155e}\label{classWt_1_1WAbstractItemView_a62eda709247b06c1829513eca378155e}} 
+void {\bfseries check\+Drag\+Selection} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a1addc1d89b74c21bb31dd034bddaca97}\label{classWt_1_1WAbstractItemView_a1addc1d89b74c21bb31dd034bddaca97}} 
+void {\bfseries configure\+Model\+Drag\+Drop} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a32d2078aed750fe23d2b6b51556b9306}\label{classWt_1_1WAbstractItemView_a32d2078aed750fe23d2b6b51556b9306}} 
+void {\bfseries handle\+Header\+Mouse\+Down} (int columnid, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} event)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a7f1454db5d164c917a07e79805fa5e35}\label{classWt_1_1WAbstractItemView_a7f1454db5d164c917a07e79805fa5e35}} 
+void {\bfseries handle\+Header\+Mouse\+Up} (int columnid, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} event)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a5908cd2e637af539f122b1017fee3000}\label{classWt_1_1WAbstractItemView_a5908cd2e637af539f122b1017fee3000}} 
+void {\bfseries handle\+Header\+Clicked} (int columnid, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} event)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ad9974c2538b7fc1d24e24d675d94cea9}\label{classWt_1_1WAbstractItemView_ad9974c2538b7fc1d24e24d675d94cea9}} 
+void {\bfseries handle\+Header\+Dbl\+Clicked} (int columnid, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} event)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a13ed36f79d559d9517a2d8bff03f88b5}\label{classWt_1_1WAbstractItemView_a13ed36f79d559d9517a2d8bff03f88b5}} 
+void {\bfseries toggle\+Sort\+Column} (int columnid)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a9f7693baac63e414b59e0820a61e5cd5}\label{classWt_1_1WAbstractItemView_a9f7693baac63e414b59e0820a61e5cd5}} 
+void {\bfseries update\+Column\+Width} (int column\+Id, int \mbox{\hyperlink{classWt_1_1WCompositeWidget_a29ea57c8313b5316bbfa5c6d3590ad3a}{width}})
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_af3654fb88220f1dee26bb97986aba922}\label{classWt_1_1WAbstractItemView_af3654fb88220f1dee26bb97986aba922}} 
+virtual \mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries header\+Container} ()=0
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a829632f9de189f850ae04ac556c0512a}\label{classWt_1_1WAbstractItemView_a829632f9de189f850ae04ac556c0512a}} 
+int {\bfseries header\+Level} (int column) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a3ae870d89442f532342ac19266eab816}\label{classWt_1_1WAbstractItemView_a3ae870d89442f532342ac19266eab816}} 
+int {\bfseries header\+Level\+Count} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a144cf39fa00bdfa4ec0d5f8cf2116337}\label{classWt_1_1WAbstractItemView_a144cf39fa00bdfa4ec0d5f8cf2116337}} 
+void {\bfseries expand\+Column} (int columnid)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ac86c126214377a109f4331fc6b9ef654}\label{classWt_1_1WAbstractItemView_ac86c126214377a109f4331fc6b9ef654}} 
+void {\bfseries collapse\+Column} (int columnid)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_aeed26019e5ac1761adda7e1f885eb7db}\label{classWt_1_1WAbstractItemView_aeed26019e5ac1761adda7e1f885eb7db}} 
+void {\bfseries init\+Drag\+Drop} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_acee4c5c96d287970b2b9ae7f321ee719}\label{classWt_1_1WAbstractItemView_acee4c5c96d287970b2b9ae7f321ee719}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ {\bfseries model\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a857fd4d58182d9bfca5010495dab2161}\label{classWt_1_1WAbstractItemView_a857fd4d58182d9bfca5010495dab2161}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ {\bfseries header\+Model\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a9070c632e1cd58ce98895b1d4cfb5ab2}\label{classWt_1_1WAbstractItemView_a9070c632e1cd58ce98895b1d4cfb5ab2}} 
+\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} {\bfseries root\+Index\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a88536fa51b816e7288100d95f71c7e8d}\label{classWt_1_1WAbstractItemView_a88536fa51b816e7288100d95f71c7e8d}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}} $>$ {\bfseries item\+Delegate\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a2b603c35f2db70df9b9da4702ed50315}\label{classWt_1_1WAbstractItemView_a2b603c35f2db70df9b9da4702ed50315}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}} $>$ {\bfseries header\+Item\+Delegate\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ab21f229da26ae9a8ef5eb8b50eadf7ea}\label{classWt_1_1WAbstractItemView_ab21f229da26ae9a8ef5eb8b50eadf7ea}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WItemSelectionModel}{W\+Item\+Selection\+Model}} $>$ {\bfseries selection\+Model\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_afab26ff7231bd85dfdfc23b422ee6fb1}\label{classWt_1_1WAbstractItemView_afab26ff7231bd85dfdfc23b422ee6fb1}} 
+\mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} {\bfseries row\+Height\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a925553f8b7a4d0669782bd5d4e24e2cd}\label{classWt_1_1WAbstractItemView_a925553f8b7a4d0669782bd5d4e24e2cd}} 
+\mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} {\bfseries header\+Line\+Height\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ae0a097e6ff69cd286b1df53319b698db}\label{classWt_1_1WAbstractItemView_ae0a097e6ff69cd286b1df53319b698db}} 
+\mbox{\hyperlink{classWt_a74b3f7eb1689a3cbf0ea514ffd20bccc}{Selection\+Mode}} {\bfseries selection\+Mode\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a27022b5524c019a9c18c970ebb69cc00}\label{classWt_1_1WAbstractItemView_a27022b5524c019a9c18c970ebb69cc00}} 
+bool {\bfseries sorting\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_afd3e9f3b2d81fc5dd4300d3b414eeb1e}\label{classWt_1_1WAbstractItemView_afd3e9f3b2d81fc5dd4300d3b414eeb1e}} 
+bool {\bfseries column\+Resize\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a1da96cd98bff3aedd284cce36d518ced}\label{classWt_1_1WAbstractItemView_a1da96cd98bff3aedd284cce36d518ced}} 
+\mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} {\bfseries default\+Header\+V\+Alignment\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a6c87b752c22005cf6c46b75d34bb2a64}\label{classWt_1_1WAbstractItemView_a6c87b752c22005cf6c46b75d34bb2a64}} 
+bool {\bfseries default\+Header\+Word\+Wrap\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_af32330854a5ad946228a6d6565119a6b}\label{classWt_1_1WAbstractItemView_af32330854a5ad946228a6d6565119a6b}} 
+int {\bfseries row\+Header\+Count\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a89b3d2c35eb10feb1d340e754a496068}\label{classWt_1_1WAbstractItemView_a89b3d2c35eb10feb1d340e754a496068}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries computed\+Drag\+Mime\+Type\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a9c63cc1dfe55e5970318836566496c16}\label{classWt_1_1WAbstractItemView_a9c63cc1dfe55e5970318836566496c16}} 
+bool {\bfseries sort\+Enabled\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_af9b3a80ce2708effe65dd5bf9df452c5}\label{classWt_1_1WAbstractItemView_af9b3a80ce2708effe65dd5bf9df452c5}} 
+\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} {\bfseries delayed\+Clear\+And\+Select\+Index\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_aa3bdd322bfe808ea5bfa4fa5f7970a7b}\label{classWt_1_1WAbstractItemView_aa3bdd322bfe808ea5bfa4fa5f7970a7b}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ int, int $>$ {\bfseries column\+Width\+Changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_aa354ba956b1fefc3baab2d9147ee215d}\label{classWt_1_1WAbstractItemView_aa354ba956b1fefc3baab2d9147ee215d}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ int, \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} $>$ {\bfseries column\+Resized\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a8561a48199c95df0c05cc04b96548637}\label{classWt_1_1WAbstractItemView_a8561a48199c95df0c05cc04b96548637}} 
+\mbox{\hyperlink{classWt_1_1Core_1_1observing__ptr}{observing\+\_\+ptr}}$<$ \mbox{\hyperlink{classWt_1_1WCssTemplateRule}{W\+Css\+Template\+Rule}} $>$ {\bfseries header\+Height\+Rule\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a1061aa4f169bdd8a0b3fc8aa9bfa55ad}\label{classWt_1_1WAbstractItemView_a1061aa4f169bdd8a0b3fc8aa9bfa55ad}} 
+int {\bfseries next\+Column\+Id\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a8f9a9ca2f2a79fd0c08cbcf2aaf5b0c5}\label{classWt_1_1WAbstractItemView_a8f9a9ca2f2a79fd0c08cbcf2aaf5b0c5}} 
+bool {\bfseries alternating\+Row\+Colors\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a823b039d5087a38c9e17f1a147265933}\label{classWt_1_1WAbstractItemView_a823b039d5087a38c9e17f1a147265933}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries resize\+Handle\+M\+Down\+J\+S\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a41d4206aa125a3493d3c8fd8925b1891}\label{classWt_1_1WAbstractItemView_a41d4206aa125a3493d3c8fd8925b1891}} 
+Editor\+Map {\bfseries edited\+Items\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a342df63a0620ef792f5aa93464aa35fd}\label{classWt_1_1WAbstractItemView_a342df63a0620ef792f5aa93464aa35fd}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ int, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ {\bfseries header\+Clicked\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ae53a506d4de7f479b351c82d400d9f5a}\label{classWt_1_1WAbstractItemView_ae53a506d4de7f479b351c82d400d9f5a}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ int, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ {\bfseries header\+Dbl\+Clicked\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a330d71f4edbcc13d4165b768d819cdd1}\label{classWt_1_1WAbstractItemView_a330d71f4edbcc13d4165b768d819cdd1}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ int, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ {\bfseries header\+Mouse\+Went\+Down\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a17d7ebb8effcf3fc11ffffad4e789380}\label{classWt_1_1WAbstractItemView_a17d7ebb8effcf3fc11ffffad4e789380}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ int, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ {\bfseries header\+Mouse\+Went\+Up\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_aad4ebe8fa47fc6b1152e726f49461325}\label{classWt_1_1WAbstractItemView_aad4ebe8fa47fc6b1152e726f49461325}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ {\bfseries clicked\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a61c8adc521c39d38dfd503c3455c1e89}\label{classWt_1_1WAbstractItemView_a61c8adc521c39d38dfd503c3455c1e89}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ {\bfseries double\+Clicked\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a0102591227b352c1fc6794ccfa4f4960}\label{classWt_1_1WAbstractItemView_a0102591227b352c1fc6794ccfa4f4960}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ {\bfseries mouse\+Went\+Down\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a6c91bac888a9587327314aa4b2b46104}\label{classWt_1_1WAbstractItemView_a6c91bac888a9587327314aa4b2b46104}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ {\bfseries mouse\+Went\+Up\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a3b81601c123691fb75e2f86eee1449bf}\label{classWt_1_1WAbstractItemView_a3b81601c123691fb75e2f86eee1449bf}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}} $>$ {\bfseries touch\+Start\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_af4882f413744d552608c17e1c7621272}\label{classWt_1_1WAbstractItemView_af4882f413744d552608c17e1c7621272}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$, \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}} $>$ {\bfseries touch\+Started\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a4c2d4fbf0af6396c352e895dee7fcbb5}\label{classWt_1_1WAbstractItemView_a4c2d4fbf0af6396c352e895dee7fcbb5}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$, \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}} $>$ {\bfseries touch\+Moved\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a94c23c1f4ade6c87101e9fae450e3b41}\label{classWt_1_1WAbstractItemView_a94c23c1f4ade6c87101e9fae450e3b41}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$, \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}} $>$ {\bfseries touch\+Ended\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_abc615bb4b050df49f95a005c42561b97}\label{classWt_1_1WAbstractItemView_abc615bb4b050df49f95a005c42561b97}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} {\bfseries selection\+Changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a71eb1aa18b333d317a892ff81e8809c8}\label{classWt_1_1WAbstractItemView_a71eb1aa18b333d317a892ff81e8809c8}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} {\bfseries page\+Changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ae4632cf254927e2455769019917d8cd5}\label{classWt_1_1WAbstractItemView_ae4632cf254927e2455769019917d8cd5}} 
+\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a88f81c5ba57d9c9b8f7c052327c44284}{Edit\+Trigger}} $>$ {\bfseries edit\+Triggers\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a3f695180d0ca922d2660ab218ad3efe8}\label{classWt_1_1WAbstractItemView_a3f695180d0ca922d2660ab218ad3efe8}} 
+\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a736621edbd61c68fecaa1e8e9204c339}{Edit\+Option}} $>$ {\bfseries edit\+Options\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ae92313eca60cb701e7af914c3ec49dac}\label{classWt_1_1WAbstractItemView_ae92313eca60cb701e7af914c3ec49dac}} 
+bool {\bfseries touch\+Registered\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An abstract base class for item Views. 
+
+See \mbox{\hyperlink{classWt_1_1WTableView}{W\+Table\+View}} or \mbox{\hyperlink{classWt_1_1WTreeView}{W\+Tree\+View}} for a description.
+
+\doxyparagraph*{i18n}
+
+The strings used in this class can be translated by overriding the default values for the following localization keys\+:
+\begin{DoxyItemize}
+\item Wt.\+W\+Abstract\+Item\+View.\+Page\+I\+OfN\+: {\bfseries{\{1\}}} of {\bfseries{\{2\}}}
+\item Wt.\+W\+Abstract\+Item\+View.\+Page\+Bar.\+First\+: \&\#xc2ab; First
+\item Wt.\+W\+Abstract\+Item\+View.\+Page\+Bar.\+Previous\+: \&\#xe280b9; Previous
+\item Wt.\+W\+Abstract\+Item\+View.\+Page\+Bar.\+Next\+: Next \&\#xe280ba;
+\item Wt.\+W\+Abstract\+Item\+View.\+Page\+Bar.\+Last\+: Last \&\#xc2bb; 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a9c499a2fb1d224a310ce2ececd22b828}\label{classWt_1_1WAbstractItemView_a9c499a2fb1d224a310ce2ececd22b828}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!alternatingRowColors@{alternatingRowColors}}
+\index{alternatingRowColors@{alternatingRowColors}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{alternatingRowColors()}{alternatingRowColors()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Abstract\+Item\+View\+::alternating\+Row\+Colors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns whether alternating row colors are used. 
+
+When enabled, rows are displayed in alternating row colors, according to the current theme\textquotesingle{}s definition.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_af20325d6c50955ae8b0d25f449db2508}{set\+Alternating\+Row\+Colors()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a009d7b319a65a0cae561543a6ca99e33}\label{classWt_1_1WAbstractItemView_a009d7b319a65a0cae561543a6ca99e33}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!clearSelection@{clearSelection}}
+\index{clearSelection@{clearSelection}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{clearSelection()}{clearSelection()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::clear\+Selection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the selection. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a67c4b49e04db1f19a7788c4580dfc25b}{set\+Selected\+Indexes()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a3b72d5f8e5b0afdea83e224354d3e91b}\label{classWt_1_1WAbstractItemView_a3b72d5f8e5b0afdea83e224354d3e91b}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!clicked@{clicked}}
+\index{clicked@{clicked}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{clicked()}{clicked()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}}$>$\& Wt\+::\+W\+Abstract\+Item\+View\+::clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when clicked. 
+
+When the event happened over an item, the first argument indicates the item that was clicked on.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a14ac099f58621d66834aa5674ea8ecb5}{double\+Clicked()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a51c80c5c2d505c987047a489c960205b}\label{classWt_1_1WAbstractItemView_a51c80c5c2d505c987047a489c960205b}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!closeEditor@{closeEditor}}
+\index{closeEditor@{closeEditor}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{closeEditor()}{closeEditor()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::close\+Editor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{bool}]{save\+Data = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Closes the editor for the given index. 
+
+If {\ttfamily save\+Data} is true, then the currently edited value is saved first to the model.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a0793bef9c9d7d3d3b0b3f6d2585d5647}{edit()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a81aaaff9476d331f82c7875c0b46d6a4}\label{classWt_1_1WAbstractItemView_a81aaaff9476d331f82c7875c0b46d6a4}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!closeEditors@{closeEditors}}
+\index{closeEditors@{closeEditors}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{closeEditors()}{closeEditors()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::close\+Editors (\begin{DoxyParamCaption}\item[{bool}]{save\+Data = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Closes all open editors. 
+
+If {\ttfamily save\+Data} is true, then the currently edited values are saved to the model before closing the editor.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a51c80c5c2d505c987047a489c960205b}{close\+Editor()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_adaf570ecc263458c3ad4d148ed0f0285}\label{classWt_1_1WAbstractItemView_adaf570ecc263458c3ad4d148ed0f0285}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!columnAlignment@{columnAlignment}}
+\index{columnAlignment@{columnAlignment}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{columnAlignment()}{columnAlignment()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} Wt\+::\+W\+Abstract\+Item\+View\+::column\+Alignment (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the content alignment for a column. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a708a7044268fa43a2a0d43c2c9e1de95}{set\+Column\+Alignment()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ad5ca828bca252012794ae85f580e96d1}\label{classWt_1_1WAbstractItemView_ad5ca828bca252012794ae85f580e96d1}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!columnResized@{columnResized}}
+\index{columnResized@{columnResized}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{columnResized()}{columnResized()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$int, \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}}$>$\& Wt\+::\+W\+Abstract\+Item\+View\+::column\+Resized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the signal emitted when a column is resized by the user. 
+
+The arguments of the signal are\+: the column index and the new width of the column. \mbox{\Hypertarget{classWt_1_1WAbstractItemView_ab2a7684bae805dec16e0a68f7d7f3fb0}\label{classWt_1_1WAbstractItemView_ab2a7684bae805dec16e0a68f7d7f3fb0}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!columnWidth@{columnWidth}}
+\index{columnWidth@{columnWidth}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{columnWidth()}{columnWidth()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} Wt\+::\+W\+Abstract\+Item\+View\+::column\+Width (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption}) const}
+
+
+
+Returns the column width. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_aa80794ca5438e2b9971e8f85919353fd}{set\+Column\+Width()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_acf7db56a863023931d160364f444cf30}\label{classWt_1_1WAbstractItemView_acf7db56a863023931d160364f444cf30}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!createExtraHeaderWidget@{createExtraHeaderWidget}}
+\index{createExtraHeaderWidget@{createExtraHeaderWidget}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{createExtraHeaderWidget()}{createExtraHeaderWidget()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$>$ Wt\+::\+W\+Abstract\+Item\+View\+::create\+Extra\+Header\+Widget (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Create an extra widget in the header. 
+
+You may reimplement this method to provide an extra widget to be placed below the header label. The extra widget will be visible only if a multi-\/line header is configured using \mbox{\hyperlink{classWt_1_1WAbstractItemView_abcc10f057232621ef8b03b3caecc7a3b}{set\+Header\+Height()}}.
+
+The widget is created only once, but this method may be called repeatedly for a column for which prior calls returned {\ttfamily 0} (i.\+e. each time the header is rerendered).
+
+The default implementation returns {\ttfamily 0}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_abcc10f057232621ef8b03b3caecc7a3b}{set\+Header\+Height()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_a1e427bd80ae3f89094cc7e4480d42a89}{extra\+Header\+Widget()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a5dcb8d0f45a3c9b1c9f238a533f77b51}\label{classWt_1_1WAbstractItemView_a5dcb8d0f45a3c9b1c9f238a533f77b51}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!createPageNavigationBar@{createPageNavigationBar}}
+\index{createPageNavigationBar@{createPageNavigationBar}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{createPageNavigationBar()}{createPageNavigationBar()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$>$ Wt\+::\+W\+Abstract\+Item\+View\+::create\+Page\+Navigation\+Bar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Returns a page navigation widget. 
+
+When Ajax/\+Java\+Script is not available, the view will use a paging navigation bar to allow scrolling through the data, created by this method. The default implementation displays a simple navigation bar with (First, Prevous, Next, Last) buttons and a page counter.
+
+You may want to reimplement this method to provide a custom page navigation bar. You can use the \mbox{\hyperlink{classWt_1_1WAbstractItemView_a66b3bd22b9d57d9c466280a2f96b44c3}{current\+Page()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_a370beb06a2e6c82659756ba63a516b14}{page\+Count()}}, and \mbox{\hyperlink{classWt_1_1WAbstractItemView_a71585006c31128c3d606cc976b865008}{set\+Current\+Page()}} methods to set or get the page information, and listen to the \mbox{\hyperlink{classWt_1_1WAbstractItemView_a419257bb553d44423d4d4d5325d61ec7}{page\+Changed()}} signal to react to changes. \mbox{\Hypertarget{classWt_1_1WAbstractItemView_a66b3bd22b9d57d9c466280a2f96b44c3}\label{classWt_1_1WAbstractItemView_a66b3bd22b9d57d9c466280a2f96b44c3}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!currentPage@{currentPage}}
+\index{currentPage@{currentPage}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{currentPage()}{currentPage()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Abstract\+Item\+View\+::current\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the current page. 
+
+When Ajax/\+Java\+Script is not available, the view will use a paging navigation bar to allow scrolling through the data. This returns the current page (between 0 and \mbox{\hyperlink{classWt_1_1WAbstractItemView_a370beb06a2e6c82659756ba63a516b14}{page\+Count()}} -\/ 1).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a5dcb8d0f45a3c9b1c9f238a533f77b51}{create\+Page\+Navigation\+Bar()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_a419257bb553d44423d4d4d5325d61ec7}{page\+Changed()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WTreeView_a8aca1ea1c8c2278f5a5902824db7da8d}{Wt\+::\+W\+Tree\+View}}, and \mbox{\hyperlink{classWt_1_1WTableView_a2fad32e074aa3033e76e613b660dc8dd}{Wt\+::\+W\+Table\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a14ac099f58621d66834aa5674ea8ecb5}\label{classWt_1_1WAbstractItemView_a14ac099f58621d66834aa5674ea8ecb5}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!doubleClicked@{doubleClicked}}
+\index{doubleClicked@{doubleClicked}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{doubleClicked()}{doubleClicked()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}}$>$\& Wt\+::\+W\+Abstract\+Item\+View\+::double\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when double clicked. 
+
+When the event happened over an item, the first argument indicates the item that was double clicked on.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a3b72d5f8e5b0afdea83e224354d3e91b}{clicked()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a2964cc0c0d0aca680a0efdde596478c4}\label{classWt_1_1WAbstractItemView_a2964cc0c0d0aca680a0efdde596478c4}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!dropEvent@{dropEvent}}
+\index{dropEvent@{dropEvent}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{dropEvent()}{dropEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+View\+::drop\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WDropEvent}{W\+Drop\+Event}} \&}]{event,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{\mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Wt\+::\+Side}}}]{side }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Handles a drop event (drag \& drop). 
+
+The {\ttfamily event} object contains details about the drop operation, identifying the source (which provides the data) and the mime-\/type of the data. The drop was received relative to the {\ttfamily index} item and the {\ttfamily side} parameter will only be Wt\+::\+Top or Wt\+::\+Bottom.
+
+A drop below the lowest item or on an empty view will result in a call to this method with an invalid index and side Wt\+::\+Bottom.
+
+The drop event can be handled either by the view itself, or by the model. The default implementation checks if the mime-\/type is accepted by the model, and if so passes the drop event to the model as a Drop\+Action\+::\+Move.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a7478161267bcd2d4c7fccd83363074f8}{W\+Abstract\+Item\+Model\+::drop\+Event()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a1c8db5b8dd986db16f091c2dec0f9c38}\label{classWt_1_1WAbstractItemView_a1c8db5b8dd986db16f091c2dec0f9c38}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!dropEvent@{dropEvent}}
+\index{dropEvent@{dropEvent}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{dropEvent()}{dropEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+View\+::drop\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WDropEvent}{W\+Drop\+Event}} \&}]{event,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Handles a drop event (drag \& drop). 
+
+The {\ttfamily event} object contains details about the drop operation, identifying the source (which provides the data) and the mime-\/type of the data. The drop was received on the {\ttfamily target} item.
+
+The drop event can be handled either by the view itself, or by the model. The default implementation checks if the mime-\/type is accepted by the model, and if so passes the drop event to the model. If the source is the view\textquotesingle{}s own selection model, then the drop event will be handled as a Drop\+Action\+::\+Move, otherwise the drop event will be handled as a Drop\+Action\+::\+Copy.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a7478161267bcd2d4c7fccd83363074f8}{W\+Abstract\+Item\+Model\+::drop\+Event()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classFolderView_a7d7bbac39479e7eef323801318babb4c}{Folder\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a76a62215402d25133664ba57185ac357}\label{classWt_1_1WAbstractItemView_a76a62215402d25133664ba57185ac357}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!dropEvent@{dropEvent}}
+\index{dropEvent@{dropEvent}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{dropEvent()}{dropEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::drop\+Event\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Handles a drop event. 
+
+Reimplement this method to handle a drop events for mime types you declared to accept using accept\+Drops.
+
+The default implementation simply completes the drag and drop operation as if nothing happened.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a18d42a95a4a3ee01b19deb50fcbe37d4}{accept\+Drops()}}, \mbox{\hyperlink{classWt_1_1WInteractWidget_ae9f41b3e4c04f7537d1eb4ee9adb34e9}{W\+Interact\+Widget\+::set\+Draggable()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a0793bef9c9d7d3d3b0b3f6d2585d5647}\label{classWt_1_1WAbstractItemView_a0793bef9c9d7d3d3b0b3f6d2585d5647}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!edit@{edit}}
+\index{edit@{edit}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{edit()}{edit()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::edit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption})}
+
+
+
+Opens an editor for the given index. 
+
+Unless multiple editors are enabled, any other open editor is closed first.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a93d2efc8642a6b9c55b35b7665a13da5}{set\+Edit\+Triggers()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_a9a5506e031a514696c4050ccc1521b6c}{set\+Edit\+Options()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_a51c80c5c2d505c987047a489c960205b}{close\+Editor()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ace8b83a893e408d2890649a4b380c5ad}\label{classWt_1_1WAbstractItemView_ace8b83a893e408d2890649a4b380c5ad}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!editOptions@{editOptions}}
+\index{editOptions@{editOptions}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{editOptions()}{editOptions()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$\mbox{\hyperlink{classWt_a736621edbd61c68fecaa1e8e9204c339}{Edit\+Option}}$>$ Wt\+::\+W\+Abstract\+Item\+View\+::edit\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the editing options. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a9a5506e031a514696c4050ccc1521b6c}{set\+Edit\+Options()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_aa263b5b5943aba27a250e183e843b188}\label{classWt_1_1WAbstractItemView_aa263b5b5943aba27a250e183e843b188}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!editTriggers@{editTriggers}}
+\index{editTriggers@{editTriggers}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{editTriggers()}{editTriggers()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$\mbox{\hyperlink{classWt_a88f81c5ba57d9c9b8f7c052327c44284}{Edit\+Trigger}}$>$ Wt\+::\+W\+Abstract\+Item\+View\+::edit\+Triggers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the editing triggers. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a93d2efc8642a6b9c55b35b7665a13da5}{set\+Edit\+Triggers()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a6530f83b0ed33f0d8d292bae5e46191e}\label{classWt_1_1WAbstractItemView_a6530f83b0ed33f0d8d292bae5e46191e}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!enableAjax@{enableAjax}}
+\index{enableAjax@{enableAjax}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{enableAjax()}{enableAjax()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+View\+::enable\+Ajax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Progresses to an Ajax-\/enabled widget. 
+
+This method is called when the progressive bootstrap method is used, and support for A\+J\+AX has been detected. The default behavior will upgrade the widget\textquotesingle{}s event handling to use A\+J\+AX instead of full page reloads, and propagate the call to its children.
+
+You may want to reimplement this method if you want to make changes to widget when A\+J\+AX is enabled. You should always call the base implementation.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_a46c573a3cd370cb2f83250c99d42b575}{W\+Application\+::enable\+Ajax()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WCompositeWidget_aa2a6573b9c57db68758e4273c2bc5830}{Wt\+::\+W\+Composite\+Widget}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WTreeView_aa337178a9fa888530c4ff8ba84c3adf9}{Wt\+::\+W\+Tree\+View}}, and \mbox{\hyperlink{classWt_1_1WTableView_a7d9f1c86de739fc69f64908657f6dbf4}{Wt\+::\+W\+Table\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a1e427bd80ae3f89094cc7e4480d42a89}\label{classWt_1_1WAbstractItemView_a1e427bd80ae3f89094cc7e4480d42a89}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!extraHeaderWidget@{extraHeaderWidget}}
+\index{extraHeaderWidget@{extraHeaderWidget}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{extraHeaderWidget()}{extraHeaderWidget()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$\ast$ Wt\+::\+W\+Abstract\+Item\+View\+::extra\+Header\+Widget (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Returns the extra header widget. 
+
+Returns the widget previously created using \mbox{\hyperlink{classWt_1_1WAbstractItemView_acf7db56a863023931d160364f444cf30}{create\+Extra\+Header\+Widget()}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_acf7db56a863023931d160364f444cf30}{create\+Extra\+Header\+Widget()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a5815d02626da21a97e719a08965499c5}\label{classWt_1_1WAbstractItemView_a5815d02626da21a97e719a08965499c5}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!handleClick@{handleClick}}
+\index{handleClick@{handleClick}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{handleClick()}{handleClick()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+View\+::handle\+Click (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{const \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Handles a click event. 
+
+This processes the event for internal purposes (such as selection or editing) and emits the \mbox{\hyperlink{classWt_1_1WAbstractItemView_a3b72d5f8e5b0afdea83e224354d3e91b}{clicked()}} signal.
+
+You may want to override this signal to override the built-\/in selection or editing behaviour. \mbox{\Hypertarget{classWt_1_1WAbstractItemView_a2e3fd2a792a2648de34322713bfa2d0d}\label{classWt_1_1WAbstractItemView_a2e3fd2a792a2648de34322713bfa2d0d}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!handleDoubleClick@{handleDoubleClick}}
+\index{handleDoubleClick@{handleDoubleClick}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{handleDoubleClick()}{handleDoubleClick()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+View\+::handle\+Double\+Click (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{const \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Handles a double click event. 
+
+This processes the event for internal purposes (such as editing) and emits the \mbox{\hyperlink{classWt_1_1WAbstractItemView_a14ac099f58621d66834aa5674ea8ecb5}{double\+Clicked()}} signal.
+
+You may want to override this signal to override the built-\/in editing behaviour. \mbox{\Hypertarget{classWt_1_1WAbstractItemView_a296bed4c8136abb817f462a70cd23731}\label{classWt_1_1WAbstractItemView_a296bed4c8136abb817f462a70cd23731}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!handleMouseDown@{handleMouseDown}}
+\index{handleMouseDown@{handleMouseDown}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{handleMouseDown()}{handleMouseDown()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+View\+::handle\+Mouse\+Down (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{const \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Handles a mouse down event. 
+
+This emits the \mbox{\hyperlink{classWt_1_1WAbstractItemView_a633d617978adc32d93c427c9f27000db}{mouse\+Went\+Down()}} signal. \mbox{\Hypertarget{classWt_1_1WAbstractItemView_aba6ecacabfb1e590e7cf65a1a22ce400}\label{classWt_1_1WAbstractItemView_aba6ecacabfb1e590e7cf65a1a22ce400}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!handleMouseUp@{handleMouseUp}}
+\index{handleMouseUp@{handleMouseUp}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{handleMouseUp()}{handleMouseUp()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+View\+::handle\+Mouse\+Up (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{const \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Handles a mouse up event. 
+
+This emits the \mbox{\hyperlink{classWt_1_1WAbstractItemView_a0231396a3e026781c600645c24fff616}{mouse\+Went\+Up()}} signal. \mbox{\Hypertarget{classWt_1_1WAbstractItemView_ad762bd48613940c0bd2c113d4748e7f4}\label{classWt_1_1WAbstractItemView_ad762bd48613940c0bd2c113d4748e7f4}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!headerClicked@{headerClicked}}
+\index{headerClicked@{headerClicked}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{headerClicked()}{headerClicked()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$int, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}}$>$\& Wt\+::\+W\+Abstract\+Item\+View\+::header\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when a header item is clicked. 
+
+The argument that is passed is the column number.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a3b72d5f8e5b0afdea83e224354d3e91b}{clicked()}}, header\+Dbl\+Clicked() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ae833f8378be06a6bda18c7bff24a3ef2}\label{classWt_1_1WAbstractItemView_ae833f8378be06a6bda18c7bff24a3ef2}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!headerDoubleClicked@{headerDoubleClicked}}
+\index{headerDoubleClicked@{headerDoubleClicked}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{headerDoubleClicked()}{headerDoubleClicked()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$int, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}}$>$\& Wt\+::\+W\+Abstract\+Item\+View\+::header\+Double\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when a header item is double clicked. 
+
+The argument that is passed is the column number.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a14ac099f58621d66834aa5674ea8ecb5}{double\+Clicked()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_ad762bd48613940c0bd2c113d4748e7f4}{header\+Clicked()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_aa61dc8036c54cfa5576051f3ace00c14}\label{classWt_1_1WAbstractItemView_aa61dc8036c54cfa5576051f3ace00c14}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!headerHeight@{headerHeight}}
+\index{headerHeight@{headerHeight}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{headerHeight()}{headerHeight()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}}\& Wt\+::\+W\+Abstract\+Item\+View\+::header\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the header height. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_abcc10f057232621ef8b03b3caecc7a3b}{set\+Header\+Height()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ae7a58e66b08736c36594ea8bb4ac4bf6}\label{classWt_1_1WAbstractItemView_ae7a58e66b08736c36594ea8bb4ac4bf6}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!headerItemDelegate@{headerItemDelegate}}
+\index{headerItemDelegate@{headerItemDelegate}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{headerItemDelegate()}{headerItemDelegate()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}}$>$ Wt\+::\+W\+Abstract\+Item\+View\+::header\+Item\+Delegate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the header item delegate. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a71b802a256f24905bf9222d0f108e4e6}{set\+Header\+Item\+Delegate()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ac1ad04bcf1d9230915c3909420ec59d4}\label{classWt_1_1WAbstractItemView_ac1ad04bcf1d9230915c3909420ec59d4}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!headerMouseWentDown@{headerMouseWentDown}}
+\index{headerMouseWentDown@{headerMouseWentDown}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{headerMouseWentDown()}{headerMouseWentDown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$int, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}}$>$\& Wt\+::\+W\+Abstract\+Item\+View\+::header\+Mouse\+Went\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when a mouse button is pressed on a header item 
+
+The argument that is passed is the column number.
+
+\begin{DoxySeeAlso}{See also}
+header\+Mouse\+Went\+Down\+Up() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a171da4b7cf09c07afc7c04ba73657774}\label{classWt_1_1WAbstractItemView_a171da4b7cf09c07afc7c04ba73657774}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!headerMouseWentUp@{headerMouseWentUp}}
+\index{headerMouseWentUp@{headerMouseWentUp}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{headerMouseWentUp()}{headerMouseWentUp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$int, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}}$>$\& Wt\+::\+W\+Abstract\+Item\+View\+::header\+Mouse\+Went\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when a mouse button is released on a header item 
+
+The argument that is passed is the column number.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_ac1ad04bcf1d9230915c3909420ec59d4}{header\+Mouse\+Went\+Down()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_af3755e7f96e969dc608c6cfd3325c09e}\label{classWt_1_1WAbstractItemView_af3755e7f96e969dc608c6cfd3325c09e}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!hideColumn@{hideColumn}}
+\index{hideColumn@{hideColumn}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{hideColumn()}{hideColumn()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::hide\+Column (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption})}
+
+
+
+Hides a column. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a2cbbe932d872baf103d88c6186e9b52a}{show\+Column()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_abf714e46ce657ffb16a6897e78a0ed13}{set\+Column\+Hidden()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ac73ec259dfe8e3680a66778fd417457f}\label{classWt_1_1WAbstractItemView_ac73ec259dfe8e3680a66778fd417457f}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!horizontalHeaderAlignment@{horizontalHeaderAlignment}}
+\index{horizontalHeaderAlignment@{horizontalHeaderAlignment}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{horizontalHeaderAlignment()}{horizontalHeaderAlignment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} Wt\+::\+W\+Abstract\+Item\+View\+::horizontal\+Header\+Alignment (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption}) const}
+
+
+
+Returns the horizontal header alignment for a column. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a1257f47715ed6f4522fc26180ac533b8}{set\+Header\+Alignment()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a6bfefdba90116140771260c3a016c25d}\label{classWt_1_1WAbstractItemView_a6bfefdba90116140771260c3a016c25d}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!isColumnHidden@{isColumnHidden}}
+\index{isColumnHidden@{isColumnHidden}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{isColumnHidden()}{isColumnHidden()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Abstract\+Item\+View\+::is\+Column\+Hidden (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption}) const}
+
+
+
+Returns if a column is hidden. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_abf714e46ce657ffb16a6897e78a0ed13}{set\+Column\+Hidden()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ab1170db72e468ad2b0e0158b58849d19}\label{classWt_1_1WAbstractItemView_ab1170db72e468ad2b0e0158b58849d19}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!isColumnResizeEnabled@{isColumnResizeEnabled}}
+\index{isColumnResizeEnabled@{isColumnResizeEnabled}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{isColumnResizeEnabled()}{isColumnResizeEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Abstract\+Item\+View\+::is\+Column\+Resize\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether column resizing is enabled. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a4fe24c3ed80cc59f6bed2ed7795bc127}{set\+Column\+Resize\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ac1a65e57541ac3d10a0fa720096a7b02}\label{classWt_1_1WAbstractItemView_ac1a65e57541ac3d10a0fa720096a7b02}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!isEditing@{isEditing}}
+\index{isEditing@{isEditing}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{isEditing()}{isEditing()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Abstract\+Item\+View\+::is\+Editing (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether an editor is open for a given index. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a0793bef9c9d7d3d3b0b3f6d2585d5647}{edit()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a6d3a9ca7245f9d61bc79297585bdb5ad}\label{classWt_1_1WAbstractItemView_a6d3a9ca7245f9d61bc79297585bdb5ad}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!isSelected@{isSelected}}
+\index{isSelected@{isSelected}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{isSelected()}{isSelected()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Abstract\+Item\+View\+::is\+Selected (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Returns wheter an item is selected. 
+
+When selection operates on rows (Selection\+Behavior\+::\+Rows), this method returns true for each element in a selected row.
+
+This is a convenience method for\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WAbstractItemView_a099490b76f55f6a8a9abb009b95944c3}{selectionModel}}()-\/>\mbox{\hyperlink{classWt_1_1WItemSelectionModel_a37479a9a4eb273e32a7fc7b76f1e24d7}{isSelected}}(index)}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a02fbf609206a85f220782b6ee279c87c}{selected\+Indexes()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_acbcee6896e4d30748f12c9019daa172e}{select()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_a099490b76f55f6a8a9abb009b95944c3}{selection\+Model()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a957be86835bcae777ffc3fe655390683}\label{classWt_1_1WAbstractItemView_a957be86835bcae777ffc3fe655390683}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!isSortingEnabled@{isSortingEnabled}}
+\index{isSortingEnabled@{isSortingEnabled}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{isSortingEnabled()}{isSortingEnabled()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Abstract\+Item\+View\+::is\+Sorting\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether sorting is enabled. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_ae1c86a0f37f97f63aed3b00fd8ffad7c}{set\+Sorting\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a336afd787ee42e84a920018489946467}\label{classWt_1_1WAbstractItemView_a336afd787ee42e84a920018489946467}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!isSortingEnabled@{isSortingEnabled}}
+\index{isSortingEnabled@{isSortingEnabled}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{isSortingEnabled()}{isSortingEnabled()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Abstract\+Item\+View\+::is\+Sorting\+Enabled (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether sorting is enabled for a single column. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_ae1c86a0f37f97f63aed3b00fd8ffad7c}{set\+Sorting\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a11310e2002e539b1c77f7496175b2e7b}\label{classWt_1_1WAbstractItemView_a11310e2002e539b1c77f7496175b2e7b}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!itemDelegate@{itemDelegate}}
+\index{itemDelegate@{itemDelegate}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{itemDelegate()}{itemDelegate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}}$>$ Wt\+::\+W\+Abstract\+Item\+View\+::item\+Delegate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the default item delegate. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a2d6df9088345b9026bf5853a7194d1d9}{set\+Item\+Delegate()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ab81e4b626739262bc0270f556d6a53c8}\label{classWt_1_1WAbstractItemView_ab81e4b626739262bc0270f556d6a53c8}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!itemDelegate@{itemDelegate}}
+\index{itemDelegate@{itemDelegate}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{itemDelegate()}{itemDelegate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}}$>$ Wt\+::\+W\+Abstract\+Item\+View\+::item\+Delegate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Returns the delegate for rendering an item. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a044f062bbc48a046fa7de64e557f805a}{set\+Item\+Delegate\+For\+Column()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_a2d6df9088345b9026bf5853a7194d1d9}{set\+Item\+Delegate()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a37cd8cb045b9c2c04a47a775463616da}\label{classWt_1_1WAbstractItemView_a37cd8cb045b9c2c04a47a775463616da}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!itemDelegate@{itemDelegate}}
+\index{itemDelegate@{itemDelegate}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{itemDelegate()}{itemDelegate()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}}$>$ Wt\+::\+W\+Abstract\+Item\+View\+::item\+Delegate (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption}) const}
+
+
+
+Returns the delegate for a column. 
+
+Returns either the delegate that was set for the column, or the default delegate. \mbox{\Hypertarget{classWt_1_1WAbstractItemView_a9dff4ba5dceadd7cfd1f75123cade25e}\label{classWt_1_1WAbstractItemView_a9dff4ba5dceadd7cfd1f75123cade25e}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!itemDelegateForColumn@{itemDelegateForColumn}}
+\index{itemDelegateForColumn@{itemDelegateForColumn}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{itemDelegateForColumn()}{itemDelegateForColumn()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}}$>$ Wt\+::\+W\+Abstract\+Item\+View\+::item\+Delegate\+For\+Column (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption}) const}
+
+
+
+Returns the delegate that was set for a column. 
+
+Returns {\ttfamily 0} if no delegate was set for the column.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a044f062bbc48a046fa7de64e557f805a}{set\+Item\+Delegate\+For\+Column()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a5b7d40b94b5254b52417f5cf2200ec30}\label{classWt_1_1WAbstractItemView_a5b7d40b94b5254b52417f5cf2200ec30}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!itemWidget@{itemWidget}}
+\index{itemWidget@{itemWidget}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{itemWidget()}{itemWidget()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$\ast$ Wt\+::\+W\+Abstract\+Item\+View\+::item\+Widget (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the widget that renders an item. 
+
+This returns the widget that renders the given item. This may return 0 if the item is currently not rendered.
+
+This widget has been created by an item delegate, and usually an item delegate is involved when updating it. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WTreeView_aa8f36b17b4ed3722087a9ec7d8c544b1}{Wt\+::\+W\+Tree\+View}}, and \mbox{\hyperlink{classWt_1_1WTableView_a41906e1529438de73b97b119d915965f}{Wt\+::\+W\+Table\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ad74eb155e1c84aa61df5567f15b3b9c8}\label{classWt_1_1WAbstractItemView_ad74eb155e1c84aa61df5567f15b3b9c8}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!keyPressed@{keyPressed}}
+\index{keyPressed@{keyPressed}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{keyPressed()}{keyPressed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$\mbox{\hyperlink{classWt_1_1WKeyEvent}{W\+Key\+Event}}$>$\& Wt\+::\+W\+Abstract\+Item\+View\+::key\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Event signal emitted when a \char`\"{}character\char`\"{} was entered. 
+
+The key\+Pressed signal is emitted when a key is pressed, and a character is entered. Unlike \mbox{\hyperlink{classWt_1_1WAbstractItemView_a77ea932fa368237ec093b41f6ceaacdc}{key\+Went\+Down()}}, it is emitted only for key presses that result in a character being entered, and thus not for modifier keys or keyboard navigation keys.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a77ea932fa368237ec093b41f6ceaacdc}{key\+Went\+Down()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a77ea932fa368237ec093b41f6ceaacdc}\label{classWt_1_1WAbstractItemView_a77ea932fa368237ec093b41f6ceaacdc}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!keyWentDown@{keyWentDown}}
+\index{keyWentDown@{keyWentDown}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{keyWentDown()}{keyWentDown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$\mbox{\hyperlink{classWt_1_1WKeyEvent}{W\+Key\+Event}}$>$\& Wt\+::\+W\+Abstract\+Item\+View\+::key\+Went\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Event signal emitted when a keyboard key is pushed down. 
+
+The key\+Went\+Down signal is the first signal emitted when a key is pressed (before the key\+Pressed signal). Unlike \mbox{\hyperlink{classWt_1_1WAbstractItemView_ad74eb155e1c84aa61df5567f15b3b9c8}{key\+Pressed()}} however it is also emitted for modifier keys (such as \char`\"{}shift\char`\"{}, \char`\"{}control\char`\"{}, ...) or keyboard navigation keys that do not have a corresponding character.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_ad74eb155e1c84aa61df5567f15b3b9c8}{key\+Pressed()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_addddab6fe919d5e51f750bd917ab9856}{key\+Went\+Up()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_addddab6fe919d5e51f750bd917ab9856}\label{classWt_1_1WAbstractItemView_addddab6fe919d5e51f750bd917ab9856}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!keyWentUp@{keyWentUp}}
+\index{keyWentUp@{keyWentUp}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{keyWentUp()}{keyWentUp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$\mbox{\hyperlink{classWt_1_1WKeyEvent}{W\+Key\+Event}}$>$\& Wt\+::\+W\+Abstract\+Item\+View\+::key\+Went\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Event signal emitted when a keyboard key is released. 
+
+This is the counter-\/part of the \mbox{\hyperlink{classWt_1_1WAbstractItemView_a77ea932fa368237ec093b41f6ceaacdc}{key\+Went\+Down()}} event. Every key-\/down has its corresponding key-\/up.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a77ea932fa368237ec093b41f6ceaacdc}{key\+Went\+Down()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ad48bce9c903a4d98c4dcf889377c7ab6}\label{classWt_1_1WAbstractItemView_ad48bce9c903a4d98c4dcf889377c7ab6}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!model@{model}}
+\index{model@{model}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{model()}{model()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}}$>$ Wt\+::\+W\+Abstract\+Item\+View\+::model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the model. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_af09c376655e2f4326c2b8ac7bf7ec78b}{set\+Model()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a633d617978adc32d93c427c9f27000db}\label{classWt_1_1WAbstractItemView_a633d617978adc32d93c427c9f27000db}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!mouseWentDown@{mouseWentDown}}
+\index{mouseWentDown@{mouseWentDown}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{mouseWentDown()}{mouseWentDown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}}$>$\& Wt\+::\+W\+Abstract\+Item\+View\+::mouse\+Went\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when a mouse button is pressed down. 
+
+This signal is emitted only when \textquotesingle{}over\textquotesingle{} an item (the model index is passed as first argument is never invalid).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a0231396a3e026781c600645c24fff616}{mouse\+Went\+Up()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a0231396a3e026781c600645c24fff616}\label{classWt_1_1WAbstractItemView_a0231396a3e026781c600645c24fff616}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!mouseWentUp@{mouseWentUp}}
+\index{mouseWentUp@{mouseWentUp}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{mouseWentUp()}{mouseWentUp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}}$>$\& Wt\+::\+W\+Abstract\+Item\+View\+::mouse\+Went\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when the mouse button is released. 
+
+When the event happened over an item, the first argument indicates the item where the mouse went up.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a633d617978adc32d93c427c9f27000db}{mouse\+Went\+Down()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a419257bb553d44423d4d4d5325d61ec7}\label{classWt_1_1WAbstractItemView_a419257bb553d44423d4d4d5325d61ec7}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!pageChanged@{pageChanged}}
+\index{pageChanged@{pageChanged}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{pageChanged()}{pageChanged()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}\& Wt\+::\+W\+Abstract\+Item\+View\+::page\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when page information was updated. 
+
+When Ajax/\+Java\+Script is not available, the view will use a paging navigation bar to allow scrolling through the data. This signal is emitted when page-\/related information changed (e.\+g. the current page was changed, or the number of rows was changed).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a5dcb8d0f45a3c9b1c9f238a533f77b51}{create\+Page\+Navigation\+Bar()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a370beb06a2e6c82659756ba63a516b14}\label{classWt_1_1WAbstractItemView_a370beb06a2e6c82659756ba63a516b14}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!pageCount@{pageCount}}
+\index{pageCount@{pageCount}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{pageCount()}{pageCount()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Abstract\+Item\+View\+::page\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the number of pages. 
+
+When Ajax/\+Java\+Script is not available, the view will use a paging navigation bar to allow scrolling through the data. This returns the number of pages currently shown.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a5dcb8d0f45a3c9b1c9f238a533f77b51}{create\+Page\+Navigation\+Bar()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_a419257bb553d44423d4d4d5325d61ec7}{page\+Changed()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WTreeView_ab0a54141d8b01f2e44409ee0525dc682}{Wt\+::\+W\+Tree\+View}}, and \mbox{\hyperlink{classWt_1_1WTableView_a065dfda434311f5a8fb5e82762fe8d3c}{Wt\+::\+W\+Table\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a2cc5d8f54c95a4d8d45c86ea85b428e9}\label{classWt_1_1WAbstractItemView_a2cc5d8f54c95a4d8d45c86ea85b428e9}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!pageSize@{pageSize}}
+\index{pageSize@{pageSize}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{pageSize()}{pageSize()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Abstract\+Item\+View\+::page\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the page size. 
+
+When Ajax/\+Java\+Script is not available, the view will use a paging navigation bar to allow scrolling through the data. This returns the number of items per page.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a5dcb8d0f45a3c9b1c9f238a533f77b51}{create\+Page\+Navigation\+Bar()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_a419257bb553d44423d4d4d5325d61ec7}{page\+Changed()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WTreeView_aa452045d5e5671b898b59994aee8112d}{Wt\+::\+W\+Tree\+View}}, and \mbox{\hyperlink{classWt_1_1WTableView_ad8a78923401e38eb415ed533eb9e3f61}{Wt\+::\+W\+Table\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_aa9613b547e360cad7df75e4bb7919491}\label{classWt_1_1WAbstractItemView_aa9613b547e360cad7df75e4bb7919491}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!rootIndex@{rootIndex}}
+\index{rootIndex@{rootIndex}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{rootIndex()}{rootIndex()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}\& Wt\+::\+W\+Abstract\+Item\+View\+::root\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the root index. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a3f8ecef3dac343faa00efc801e4e4c1f}{set\+Root\+Index()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_abda4b5485b6829baf2961b6a38ed642f}\label{classWt_1_1WAbstractItemView_abda4b5485b6829baf2961b6a38ed642f}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!rowHeaderCount@{rowHeaderCount}}
+\index{rowHeaderCount@{rowHeaderCount}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{rowHeaderCount()}{rowHeaderCount()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Abstract\+Item\+View\+::row\+Header\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the number of columns that are used as row headers. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a296b872601d0e8dcf8dac0411ef5040b}{set\+Row\+Header\+Count()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a1a9343a886e6131a225171173cec1d5f}\label{classWt_1_1WAbstractItemView_a1a9343a886e6131a225171173cec1d5f}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!scrolled@{scrolled}}
+\index{scrolled@{scrolled}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{scrolled()}{scrolled()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$\mbox{\hyperlink{classWt_1_1WScrollEvent}{W\+Scroll\+Event}}$>$\& Wt\+::\+W\+Abstract\+Item\+View\+::scrolled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Signal emitted when scrolling. 
+
+\begin{DoxyNote}{Note}
+Works only if ajax is available. 
+\end{DoxyNote}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WTreeView_a54c8bac6140804b1cd57fafcf2981a48}{Wt\+::\+W\+Tree\+View}}, and \mbox{\hyperlink{classWt_1_1WTableView_a4096185b02a5c5f4d144265e213192d4}{Wt\+::\+W\+Table\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_afa8888e527008787aae1d3d68554afeb}\label{classWt_1_1WAbstractItemView_afa8888e527008787aae1d3d68554afeb}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!scrollTo@{scrollTo}}
+\index{scrollTo@{scrollTo}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{scrollTo()}{scrollTo()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+View\+::scroll\+To (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{\mbox{\hyperlink{classWt_ae0fdcefe4b1fefe747b5f423c020334a}{Scroll\+Hint}}}]{hint = {\ttfamily ScrollHint\+:\+:EnsureVisible} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Scrolls the view to an item. 
+
+Scrolls the view to ensure that the item which represents the provided {\ttfamily index} is visible. A {\ttfamily hint} may indicate how the item should appear in the viewport (if possible).
+
+\begin{DoxyNote}{Note}
+Currently only implemented to scroll to the correct row, not taking into account the column. 
+\end{DoxyNote}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WTreeView_aa299ad97708c19178acee2a8e01aceea}{Wt\+::\+W\+Tree\+View}}, and \mbox{\hyperlink{classWt_1_1WTableView_a5a5d79fb3d73f7ade74af38c45fcc757}{Wt\+::\+W\+Table\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_acbcee6896e4d30748f12c9019daa172e}\label{classWt_1_1WAbstractItemView_acbcee6896e4d30748f12c9019daa172e}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!select@{select}}
+\index{select@{select}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{select()}{select()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::select (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{\mbox{\hyperlink{classWt_a1ec974261fb0e2b80498473dcb6c91ed}{Selection\+Flag}}}]{option = {\ttfamily SelectionFlag\+:\+:Select} }\end{DoxyParamCaption})}
+
+
+
+Selects a single item. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a67c4b49e04db1f19a7788c4580dfc25b}{set\+Selected\+Indexes()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_a099490b76f55f6a8a9abb009b95944c3}{selection\+Model()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a02fbf609206a85f220782b6ee279c87c}\label{classWt_1_1WAbstractItemView_a02fbf609206a85f220782b6ee279c87c}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!selectedIndexes@{selectedIndexes}}
+\index{selectedIndexes@{selectedIndexes}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{selectedIndexes()}{selectedIndexes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_a1ac86c224fa86a17f4ca1b52881163ed}{W\+Model\+Index\+Set}} Wt\+::\+W\+Abstract\+Item\+View\+::selected\+Indexes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the set of selected items. 
+
+The model indexes are returned as a set, topologically ordered (in the order they appear in the view).
+
+When selection operates on rows (Selection\+Behavior\+::\+Rows), this method only returns the model index of first column\textquotesingle{}s element of the selected rows.
+
+This is a convenience method for\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WAbstractItemView_a099490b76f55f6a8a9abb009b95944c3}{selectionModel}}()-\/>\mbox{\hyperlink{classWt_1_1WItemSelectionModel_a3ad1aa1ccf20b951faf41b1952bb0a7b}{selectedIndexes}}()}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a67c4b49e04db1f19a7788c4580dfc25b}{set\+Selected\+Indexes()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a0a40b31df1fe69a00cc50e7a56c3f3c7}\label{classWt_1_1WAbstractItemView_a0a40b31df1fe69a00cc50e7a56c3f3c7}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!selectionBehavior@{selectionBehavior}}
+\index{selectionBehavior@{selectionBehavior}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{selectionBehavior()}{selectionBehavior()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_a04aecd34ae0810219e82208a9890de13}{Selection\+Behavior}} Wt\+::\+W\+Abstract\+Item\+View\+::selection\+Behavior (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the selection behaviour. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_ad59b47cf9a1c5a65c5adc3e1900ceb5c}{set\+Selection\+Behavior()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ada37ffbe2d470dd227c8714645f150f0}\label{classWt_1_1WAbstractItemView_ada37ffbe2d470dd227c8714645f150f0}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!selectionChanged@{selectionChanged}}
+\index{selectionChanged@{selectionChanged}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{selectionChanged()}{selectionChanged()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}\& Wt\+::\+W\+Abstract\+Item\+View\+::selection\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when the selection is changed. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_acbcee6896e4d30748f12c9019daa172e}{select()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_af6fcd9761e2f7a3b497d3563c849d320}{set\+Selection\+Mode()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_ad59b47cf9a1c5a65c5adc3e1900ceb5c}{set\+Selection\+Behavior()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ac62e2c13b6d096d41d07312c79879778}\label{classWt_1_1WAbstractItemView_ac62e2c13b6d096d41d07312c79879778}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!selectionMode@{selectionMode}}
+\index{selectionMode@{selectionMode}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{selectionMode()}{selectionMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_a74b3f7eb1689a3cbf0ea514ffd20bccc}{Selection\+Mode}} Wt\+::\+W\+Abstract\+Item\+View\+::selection\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the selection mode. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_af6fcd9761e2f7a3b497d3563c849d320}{set\+Selection\+Mode()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a099490b76f55f6a8a9abb009b95944c3}\label{classWt_1_1WAbstractItemView_a099490b76f55f6a8a9abb009b95944c3}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!selectionModel@{selectionModel}}
+\index{selectionModel@{selectionModel}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{selectionModel()}{selectionModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WItemSelectionModel}{W\+Item\+Selection\+Model}}$\ast$ Wt\+::\+W\+Abstract\+Item\+View\+::selection\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the selection model. 
+
+The selection model keeps track of the currently selected items. \mbox{\Hypertarget{classWt_1_1WAbstractItemView_af20325d6c50955ae8b0d25f449db2508}\label{classWt_1_1WAbstractItemView_af20325d6c50955ae8b0d25f449db2508}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setAlternatingRowColors@{setAlternatingRowColors}}
+\index{setAlternatingRowColors@{setAlternatingRowColors}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setAlternatingRowColors()}{setAlternatingRowColors()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Alternating\+Row\+Colors (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets if alternating row colors are to be used. 
+
+Configure whether rows get alternating background colors, defined by the current C\+SS theme.
+
+The default value is {\ttfamily false}. 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WTreeView_a8928545beb57de0b46fc686bac27f75a}{Wt\+::\+W\+Tree\+View}}, and \mbox{\hyperlink{classWt_1_1WTableView_a5ec8b9fce59c398ecdbb6e0df1ae5298}{Wt\+::\+W\+Table\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a708a7044268fa43a2a0d43c2c9e1de95}\label{classWt_1_1WAbstractItemView_a708a7044268fa43a2a0d43c2c9e1de95}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setColumnAlignment@{setColumnAlignment}}
+\index{setColumnAlignment@{setColumnAlignment}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setColumnAlignment()}{setColumnAlignment()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Column\+Alignment (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{\mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}}}]{alignment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the content alignment for a column. 
+
+The default value is Wt\+::\+Alignment\+Flag\+::\+Left.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a1257f47715ed6f4522fc26180ac533b8}{set\+Header\+Alignment()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_abf714e46ce657ffb16a6897e78a0ed13}\label{classWt_1_1WAbstractItemView_abf714e46ce657ffb16a6897e78a0ed13}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setColumnHidden@{setColumnHidden}}
+\index{setColumnHidden@{setColumnHidden}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setColumnHidden()}{setColumnHidden()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Column\+Hidden (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{bool}]{hide }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Changes the visibility of a column. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a6bfefdba90116140771260c3a016c25d}{is\+Column\+Hidden()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WTreeView_a825cdb596ad342b12e0c3639fa29590b}{Wt\+::\+W\+Tree\+View}}, and \mbox{\hyperlink{classWt_1_1WTableView_aebaab97d3247238c1d816e7a344a6012}{Wt\+::\+W\+Table\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a4fe24c3ed80cc59f6bed2ed7795bc127}\label{classWt_1_1WAbstractItemView_a4fe24c3ed80cc59f6bed2ed7795bc127}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setColumnResizeEnabled@{setColumnResizeEnabled}}
+\index{setColumnResizeEnabled@{setColumnResizeEnabled}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setColumnResizeEnabled()}{setColumnResizeEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Column\+Resize\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enables interactive column resizing. 
+
+Enable or disable column resize handles for interactive resizing of the columns.
+
+\mbox{\hyperlink{structColumn}{Column}} resizing is enabled by default when Java\+Script is available.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a4fe24c3ed80cc59f6bed2ed7795bc127}{set\+Column\+Resize\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_aa80794ca5438e2b9971e8f85919353fd}\label{classWt_1_1WAbstractItemView_aa80794ca5438e2b9971e8f85919353fd}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setColumnWidth@{setColumnWidth}}
+\index{setColumnWidth@{setColumnWidth}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setColumnWidth()}{setColumnWidth()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Column\+Width (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the column width. 
+
+The default column width is 150 pixels.
+
+\begin{DoxyNote}{Note}
+The width must be specified in Length\+Unit\+::\+Pixel units.
+
+The actual space occupied by each column is the column width augmented by 7 pixels for internal padding and a border. 
+\end{DoxyNote}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WTreeView_a8560c58e4933aa767c27d56168db5d4d}{Wt\+::\+W\+Tree\+View}}, and \mbox{\hyperlink{classWt_1_1WTableView_a43b40850fc97c67ca28f17e0580e0ea4}{Wt\+::\+W\+Table\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a71585006c31128c3d606cc976b865008}\label{classWt_1_1WAbstractItemView_a71585006c31128c3d606cc976b865008}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setCurrentPage@{setCurrentPage}}
+\index{setCurrentPage@{setCurrentPage}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setCurrentPage()}{setCurrentPage()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Current\+Page (\begin{DoxyParamCaption}\item[{int}]{page }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the current page. 
+
+When Ajax/\+Java\+Script is not available, the view will use a paging navigation bar to allow scrolling through the data. This method can be used to change the current page.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a5dcb8d0f45a3c9b1c9f238a533f77b51}{create\+Page\+Navigation\+Bar()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_a419257bb553d44423d4d4d5325d61ec7}{page\+Changed()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WTreeView_a1b175a443fadcb4b8f4373d2663b97f3}{Wt\+::\+W\+Tree\+View}}, and \mbox{\hyperlink{classWt_1_1WTableView_aef5c23da680452a92bfa1d8fd59eee72}{Wt\+::\+W\+Table\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a0ca99b835708d990b90000917045738e}\label{classWt_1_1WAbstractItemView_a0ca99b835708d990b90000917045738e}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setDragEnabled@{setDragEnabled}}
+\index{setDragEnabled@{setDragEnabled}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setDragEnabled()}{setDragEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Drag\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+Enables the selection to be dragged (drag \& drop). 
+
+To enable dragging of the selection, you first need to enable selection using \mbox{\hyperlink{classWt_1_1WAbstractItemView_af6fcd9761e2f7a3b497d3563c849d320}{set\+Selection\+Mode()}}.
+
+Whether an individual item may be dragged is controlled by the item\textquotesingle{}s Item\+Flag\+::\+Drag\+Enabled flag. The selection can be dragged only if all items currently selected can be dragged.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a1eda46c8e9a21af7f6281e7096af8fbe}{set\+Drops\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a1eda46c8e9a21af7f6281e7096af8fbe}\label{classWt_1_1WAbstractItemView_a1eda46c8e9a21af7f6281e7096af8fbe}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setDropsEnabled@{setDropsEnabled}}
+\index{setDropsEnabled@{setDropsEnabled}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setDropsEnabled()}{setDropsEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Drops\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+Enables drop operations (drag \& drop). 
+
+When drop is enabled, the tree view will indicate that something may be dropped when the mime-\/type of the dragged object is compatible with one of the model\textquotesingle{}s accepted drop mime-\/types (see \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aba657722e361087a00cbe8b961bbe624}{W\+Abstract\+Item\+Model\+::accept\+Drop\+Mime\+Types()}}) or this widget\textquotesingle{}s accepted drop mime-\/types (see \mbox{\hyperlink{classWt_1_1WWidget_a18d42a95a4a3ee01b19deb50fcbe37d4}{W\+Widget\+::accept\+Drops()}}), and the target item has drop enabled (which is controlled by the item\textquotesingle{}s Item\+Flag\+::\+Drop\+Enabled flag).
+
+Drop events must be handled in \mbox{\hyperlink{classWt_1_1WAbstractItemView_a1c8db5b8dd986db16f091c2dec0f9c38}{drop\+Event()}}.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000010}{Deprecated}}]Use \mbox{\hyperlink{classWt_1_1WAbstractItemView_a5469c23ea1e9066e98e832ec9da2af21}{set\+Enabled\+Drop\+Locations()}} instead. This method now enables Drop\+Location\+::\+On\+Item.\end{DoxyRefDesc}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a0ca99b835708d990b90000917045738e}{set\+Drag\+Enabled()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_a1c8db5b8dd986db16f091c2dec0f9c38}{drop\+Event()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a9a5506e031a514696c4050ccc1521b6c}\label{classWt_1_1WAbstractItemView_a9a5506e031a514696c4050ccc1521b6c}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setEditOptions@{setEditOptions}}
+\index{setEditOptions@{setEditOptions}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setEditOptions()}{setEditOptions()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Edit\+Options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a736621edbd61c68fecaa1e8e9204c339}{Edit\+Option}} $>$}]{options }\end{DoxyParamCaption})}
+
+
+
+Configures editing options. 
+
+The default value is Single\+Editor; \mbox{\Hypertarget{classWt_1_1WAbstractItemView_a93d2efc8642a6b9c55b35b7665a13da5}\label{classWt_1_1WAbstractItemView_a93d2efc8642a6b9c55b35b7665a13da5}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setEditTriggers@{setEditTriggers}}
+\index{setEditTriggers@{setEditTriggers}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setEditTriggers()}{setEditTriggers()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Edit\+Triggers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a88f81c5ba57d9c9b8f7c052327c44284}{Edit\+Trigger}} $>$}]{edit\+Triggers }\end{DoxyParamCaption})}
+
+
+
+Configures what actions should trigger editing. 
+
+The default value is Double\+Clicked.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a0793bef9c9d7d3d3b0b3f6d2585d5647}{edit()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a5469c23ea1e9066e98e832ec9da2af21}\label{classWt_1_1WAbstractItemView_a5469c23ea1e9066e98e832ec9da2af21}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setEnabledDropLocations@{setEnabledDropLocations}}
+\index{setEnabledDropLocations@{setEnabledDropLocations}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setEnabledDropLocations()}{setEnabledDropLocations()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Enabled\+Drop\+Locations (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a46e584f830f2d8c9f5b16fcee7affc9b}{Drop\+Location}} $>$}]{droplocation }\end{DoxyParamCaption})}
+
+
+
+Enables drop operations (drag \& drop). 
+
+When drop is enabled, the tree view will indicate that something may be dropped when the mime-\/type of the dragged object is compatible with one of the model\textquotesingle{}s accepted drop mime-\/types (see \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aba657722e361087a00cbe8b961bbe624}{W\+Abstract\+Item\+Model\+::accept\+Drop\+Mime\+Types()}}) or this widget\textquotesingle{}s accepted drop mime-\/types (see \mbox{\hyperlink{classWt_1_1WWidget_a18d42a95a4a3ee01b19deb50fcbe37d4}{W\+Widget\+::accept\+Drops()}}).
+
+When Drop\+Location\+::\+On\+Item is enabled, the view will allow drops on items that have the Item\+Flag\+::\+Drop\+Enabled flag set. When Drop\+Location\+::\+Between\+Rows is enabled, the view will indicate that something may be dropped between any two rows. When Drop\+Location\+::\+On\+Item and Drop\+Location\+::\+Between\+Rows are both enabled, the drop indication differs depending on whether Item\+Flag\+::\+Drop\+Enabled is set on the item.
+
+Drop events must be handled in \mbox{\hyperlink{classWt_1_1WAbstractItemView_a1c8db5b8dd986db16f091c2dec0f9c38}{drop\+Event()}}. \mbox{\Hypertarget{classWt_1_1WAbstractItemView_a1257f47715ed6f4522fc26180ac533b8}\label{classWt_1_1WAbstractItemView_a1257f47715ed6f4522fc26180ac533b8}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setHeaderAlignment@{setHeaderAlignment}}
+\index{setHeaderAlignment@{setHeaderAlignment}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setHeaderAlignment()}{setHeaderAlignment()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Header\+Alignment (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the header alignment for a column. 
+
+The default alignemnt is horizontally left, and vertically centered. (Wt\+::\+Alignment\+Flag\+::\+Left $\vert$ Wt\+::\+Alignment\+Flag\+::\+Middle).
+
+Valid options for horizontal alignment are Wt\+::\+Alignment\+Flag\+::\+Left, Wt\+::\+Alignment\+Flag\+::\+Center or Wt\+::\+Alignment\+Flag\+::\+Right.
+
+Valid options for vertical alignment are Wt\+::\+Alignment\+Flag\+::\+Middle or Wt\+::\+Alignment\+Flag\+::\+Top. In the latter case, other contents may be added below the label in \mbox{\hyperlink{classWt_1_1WAbstractItemView_acf7db56a863023931d160364f444cf30}{create\+Extra\+Header\+Widget()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a708a7044268fa43a2a0d43c2c9e1de95}{set\+Column\+Alignment()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_af55156060cf30211c204a898e73f2279}\label{classWt_1_1WAbstractItemView_af55156060cf30211c204a898e73f2279}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setHeaderClickSortEnabled@{setHeaderClickSortEnabled}}
+\index{setHeaderClickSortEnabled@{setHeaderClickSortEnabled}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setHeaderClickSortEnabled()}{setHeaderClickSortEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Header\+Click\+Sort\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Alow to sort. 
+
+When enabeld the view can be sorted by clicking on the header. \mbox{\Hypertarget{classWt_1_1WAbstractItemView_abcc10f057232621ef8b03b3caecc7a3b}\label{classWt_1_1WAbstractItemView_abcc10f057232621ef8b03b3caecc7a3b}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setHeaderHeight@{setHeaderHeight}}
+\index{setHeaderHeight@{setHeaderHeight}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setHeaderHeight()}{setHeaderHeight()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Header\+Height (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the header height. 
+
+The default value is 20 pixels.
+
+\begin{DoxyNote}{Note}
+The height must be specified in Length\+Unit\+::\+Pixel units. 
+\end{DoxyNote}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WTreeView_a96effd932eafc395ca91ce4510d41b7a}{Wt\+::\+W\+Tree\+View}}, and \mbox{\hyperlink{classWt_1_1WTableView_ab15dce1cacff4c53aa9774a44295cfb9}{Wt\+::\+W\+Table\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a71b802a256f24905bf9222d0f108e4e6}\label{classWt_1_1WAbstractItemView_a71b802a256f24905bf9222d0f108e4e6}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setHeaderItemDelegate@{setHeaderItemDelegate}}
+\index{setHeaderItemDelegate@{setHeaderItemDelegate}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setHeaderItemDelegate()}{setHeaderItemDelegate()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Header\+Item\+Delegate (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}} $>$ \&}]{delegate }\end{DoxyParamCaption})}
+
+
+
+Sets the header item delegate. 
+
+This item delegate is used for rendering items in the header.
+
+The previous delegate is not deleted. This item delegate is for all columns for which no specific item delegate is set.
+
+The default item delegate is a \mbox{\hyperlink{classWt_1_1WItemDelegate}{W\+Item\+Delegate}}. \mbox{\Hypertarget{classWt_1_1WAbstractItemView_a4c419a50fec4caa97b21f09b6087da85}\label{classWt_1_1WAbstractItemView_a4c419a50fec4caa97b21f09b6087da85}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setHeaderWordWrap@{setHeaderWordWrap}}
+\index{setHeaderWordWrap@{setHeaderWordWrap}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setHeaderWordWrap()}{setHeaderWordWrap()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Header\+Word\+Wrap (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Configures header text wrapping. 
+
+This setting only affects a multiline header, and the default value is {\ttfamily true}. When set to {\ttfamily false}, the header itself will not wrap (as with a vertically centered header), and thus extra widgets will not shift down when there is a long header label. \mbox{\Hypertarget{classWt_1_1WAbstractItemView_a2d6df9088345b9026bf5853a7194d1d9}\label{classWt_1_1WAbstractItemView_a2d6df9088345b9026bf5853a7194d1d9}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setItemDelegate@{setItemDelegate}}
+\index{setItemDelegate@{setItemDelegate}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setItemDelegate()}{setItemDelegate()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Item\+Delegate (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}} $>$ \&}]{delegate }\end{DoxyParamCaption})}
+
+
+
+Sets the default item delegate. 
+
+The previous delegate is not deleted. This item delegate is for all columns for which no specific item delegate is set.
+
+The default item delegate is a \mbox{\hyperlink{classWt_1_1WItemDelegate}{W\+Item\+Delegate}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a044f062bbc48a046fa7de64e557f805a}{set\+Item\+Delegate\+For\+Column()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a044f062bbc48a046fa7de64e557f805a}\label{classWt_1_1WAbstractItemView_a044f062bbc48a046fa7de64e557f805a}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setItemDelegateForColumn@{setItemDelegateForColumn}}
+\index{setItemDelegateForColumn@{setItemDelegateForColumn}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setItemDelegateForColumn()}{setItemDelegateForColumn()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Item\+Delegate\+For\+Column (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}} $>$ \&}]{delegate }\end{DoxyParamCaption})}
+
+
+
+Sets the delegate for a column. 
+
+A delegate previously set (if any) is not deleted.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a2d6df9088345b9026bf5853a7194d1d9}{set\+Item\+Delegate()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_af09c376655e2f4326c2b8ac7bf7ec78b}\label{classWt_1_1WAbstractItemView_af09c376655e2f4326c2b8ac7bf7ec78b}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setModel@{setModel}}
+\index{setModel@{setModel}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setModel()}{setModel()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Model (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the model. 
+
+The View will display data of the given {\ttfamily model} and changes in the model are reflected by the View.
+
+The initial model is {\ttfamily 0}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a3f8ecef3dac343faa00efc801e4e4c1f}{set\+Root\+Index()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WTreeView_abc6f9eca65cdb8951a5a182b4eeedf85}{Wt\+::\+W\+Tree\+View}}, and \mbox{\hyperlink{classWt_1_1WTableView_a7b6af67c7a1ce4e25d086f7f87721eb5}{Wt\+::\+W\+Table\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a3f8ecef3dac343faa00efc801e4e4c1f}\label{classWt_1_1WAbstractItemView_a3f8ecef3dac343faa00efc801e4e4c1f}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setRootIndex@{setRootIndex}}
+\index{setRootIndex@{setRootIndex}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setRootIndex()}{setRootIndex()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Root\+Index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{root\+Index }\end{DoxyParamCaption})}
+
+
+
+Sets the root index. 
+
+The root index is the model index that is considered the root node. This node itself is not rendered, but its children are.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_af09c376655e2f4326c2b8ac7bf7ec78b}{set\+Model()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a296b872601d0e8dcf8dac0411ef5040b}\label{classWt_1_1WAbstractItemView_a296b872601d0e8dcf8dac0411ef5040b}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setRowHeaderCount@{setRowHeaderCount}}
+\index{setRowHeaderCount@{setRowHeaderCount}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setRowHeaderCount()}{setRowHeaderCount()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Row\+Header\+Count (\begin{DoxyParamCaption}\item[{int}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Configures the number of columns that are used as row headers. 
+
+An item view does not use the vertical header data from the model in any way, but instead you can configure data in the first column(s) to be used as a row headers.
+
+These columns will not scroll horizontally together with the rest of the model.
+
+The default value is 0.
+
+\begin{DoxyNote}{Note}
+Currently, this property must be set before any other settings of the view and only a value of 0 or 1 is supported. 
+\end{DoxyNote}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WTreeView_ae5f21d76b7905241f30023719ad8a9d0}{Wt\+::\+W\+Tree\+View}}, and \mbox{\hyperlink{classWt_1_1WTableView_a4c86717486117478228bacc2648d840c}{Wt\+::\+W\+Table\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ae487074120d54fa6d961b9760a13b990}\label{classWt_1_1WAbstractItemView_ae487074120d54fa6d961b9760a13b990}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setRowHeight@{setRowHeight}}
+\index{setRowHeight@{setRowHeight}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setRowHeight()}{setRowHeight()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Row\+Height (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{row\+Height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the row height. 
+
+The view renders all rows with a same height. This method configures this row height.
+
+The default value is 20 pixels.
+
+\begin{DoxyNote}{Note}
+The height must be specified in Length\+Unit\+::\+Pixel units.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_aa80794ca5438e2b9971e8f85919353fd}{set\+Column\+Width()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WTreeView_a1bd83d1f48a11dbc731f56a16d420148}{Wt\+::\+W\+Tree\+View}}, and \mbox{\hyperlink{classWt_1_1WTableView_a894e733273bdf2457d87729989bfffc2}{Wt\+::\+W\+Table\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a67c4b49e04db1f19a7788c4580dfc25b}\label{classWt_1_1WAbstractItemView_a67c4b49e04db1f19a7788c4580dfc25b}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setSelectedIndexes@{setSelectedIndexes}}
+\index{setSelectedIndexes@{setSelectedIndexes}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setSelectedIndexes()}{setSelectedIndexes()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Selected\+Indexes (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_a1ac86c224fa86a17f4ca1b52881163ed}{W\+Model\+Index\+Set}} \&}]{indexes }\end{DoxyParamCaption})}
+
+
+
+Sets the selected items. 
+
+Replaces the current selection with {\ttfamily indexes}.
+
+When selection operates on rows (Selection\+Behavior\+::\+Rows), it is sufficient to pass the first element in a row (column {\ttfamily 0} ) to select the entire row.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_acbcee6896e4d30748f12c9019daa172e}{select()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_a099490b76f55f6a8a9abb009b95944c3}{selection\+Model()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ad59b47cf9a1c5a65c5adc3e1900ceb5c}\label{classWt_1_1WAbstractItemView_ad59b47cf9a1c5a65c5adc3e1900ceb5c}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setSelectionBehavior@{setSelectionBehavior}}
+\index{setSelectionBehavior@{setSelectionBehavior}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setSelectionBehavior()}{setSelectionBehavior()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Selection\+Behavior (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a04aecd34ae0810219e82208a9890de13}{Selection\+Behavior}}}]{behavior }\end{DoxyParamCaption})}
+
+
+
+Changes the selection behaviour. 
+
+The selection behavior indicates whether whole rows or individual items can be selected. It is a property of the \mbox{\hyperlink{classWt_1_1WAbstractItemView_a099490b76f55f6a8a9abb009b95944c3}{selection\+Model()}}.
+
+By default, selection operates on rows (Selection\+Behavior\+::\+Rows), in which case model indexes will always be in the first column (column {\ttfamily 0}).
+
+Alternatively, you can allow selection for individual items (Selection\+Behavior\+::\+Items)
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WItemSelectionModel_acbf2a0659f9b5f04becbf5dd02aff9b3}{W\+Item\+Selection\+Model\+::set\+Selection\+Behavior()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_af6fcd9761e2f7a3b497d3563c849d320}{set\+Selection\+Mode()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_af6fcd9761e2f7a3b497d3563c849d320}\label{classWt_1_1WAbstractItemView_af6fcd9761e2f7a3b497d3563c849d320}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setSelectionMode@{setSelectionMode}}
+\index{setSelectionMode@{setSelectionMode}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setSelectionMode()}{setSelectionMode()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Selection\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a74b3f7eb1689a3cbf0ea514ffd20bccc}{Selection\+Mode}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Sets the selection mode. 
+
+By default selection is disabled (Selection\+Mode\+::\+None).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_ad59b47cf9a1c5a65c5adc3e1900ceb5c}{set\+Selection\+Behavior()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_ae1c86a0f37f97f63aed3b00fd8ffad7c}\label{classWt_1_1WAbstractItemView_ae1c86a0f37f97f63aed3b00fd8ffad7c}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setSortingEnabled@{setSortingEnabled}}
+\index{setSortingEnabled@{setSortingEnabled}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setSortingEnabled()}{setSortingEnabled()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Sorting\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enables or disables sorting for all columns. 
+
+Enable or disable sorting by the user on all columns.
+
+Sorting is enabled by default.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab044b92afa69282ea2e351bcdfd7c0c7}{W\+Abstract\+Item\+Model\+::sort()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a62b873ab83a8ab64dd873c368daad387}\label{classWt_1_1WAbstractItemView_a62b873ab83a8ab64dd873c368daad387}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!setSortingEnabled@{setSortingEnabled}}
+\index{setSortingEnabled@{setSortingEnabled}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{setSortingEnabled()}{setSortingEnabled()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Sorting\+Enabled (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enables or disables sorting for a single column. 
+
+Enable or disable sorting by the user for a specific column.
+
+Sorting is enabled by default.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab044b92afa69282ea2e351bcdfd7c0c7}{W\+Abstract\+Item\+Model\+::sort()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a2cbbe932d872baf103d88c6186e9b52a}\label{classWt_1_1WAbstractItemView_a2cbbe932d872baf103d88c6186e9b52a}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!showColumn@{showColumn}}
+\index{showColumn@{showColumn}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{showColumn()}{showColumn()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::show\+Column (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption})}
+
+
+
+Shows a column. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_af3755e7f96e969dc608c6cfd3325c09e}{hide\+Column()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_abf714e46ce657ffb16a6897e78a0ed13}{set\+Column\+Hidden()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_af782069e7307d3a4ce2395336f338c4e}\label{classWt_1_1WAbstractItemView_af782069e7307d3a4ce2395336f338c4e}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!sortByColumn@{sortByColumn}}
+\index{sortByColumn@{sortByColumn}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{sortByColumn()}{sortByColumn()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+View\+::sort\+By\+Column (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{\mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Sort\+Order}}}]{order }\end{DoxyParamCaption})}
+
+
+
+Sorts the data according to a column. 
+
+Sorts the data according to data in column {\ttfamily column} and sort order {\ttfamily order}.
+
+The default sorting column is -\/1\+: the model is unsorted.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab044b92afa69282ea2e351bcdfd7c0c7}{W\+Abstract\+Item\+Model\+::sort()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a79ed20fcab31771d6a79b1da5fc4ae8d}\label{classWt_1_1WAbstractItemView_a79ed20fcab31771d6a79b1da5fc4ae8d}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!sortColumn@{sortColumn}}
+\index{sortColumn@{sortColumn}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{sortColumn()}{sortColumn()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Abstract\+Item\+View\+::sort\+Column (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the current sorting columm. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_af782069e7307d3a4ce2395336f338c4e}{sort\+By\+Column()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_ab33272b95c9e173aba5b041b464aa7e7}{sort\+Order()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a3691a20e1092fc144af16744804df0ec}\label{classWt_1_1WAbstractItemView_a3691a20e1092fc144af16744804df0ec}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!sortEnabled@{sortEnabled}}
+\index{sortEnabled@{sortEnabled}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{sortEnabled()}{sortEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Abstract\+Item\+View\+::sort\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the view is sortable. 
+
+When enabeld the view can be sorted by clicking on the header. \mbox{\Hypertarget{classWt_1_1WAbstractItemView_ab33272b95c9e173aba5b041b464aa7e7}\label{classWt_1_1WAbstractItemView_ab33272b95c9e173aba5b041b464aa7e7}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!sortOrder@{sortOrder}}
+\index{sortOrder@{sortOrder}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{sortOrder()}{sortOrder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Sort\+Order}} Wt\+::\+W\+Abstract\+Item\+View\+::sort\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the current sorting order. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_af782069e7307d3a4ce2395336f338c4e}{sort\+By\+Column()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_a79ed20fcab31771d6a79b1da5fc4ae8d}{sort\+Column()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a9f3bd68d6d5ca982b2a22bcd100ea271}\label{classWt_1_1WAbstractItemView_a9f3bd68d6d5ca982b2a22bcd100ea271}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!touchEnded@{touchEnded}}
+\index{touchEnded@{touchEnded}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{touchEnded()}{touchEnded()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$std\+::vector$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}$>$, \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}}$>$\& Wt\+::\+W\+Abstract\+Item\+View\+::touch\+Ended (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when one or more fingers are removed from the screen. 
+
+When the event happened over an item, the first argument indicates the items where the touch ended. The indices in the model index vector match the indices in the \mbox{\hyperlink{classWt_1_1WTouchEvent_a88abc88be22303a6b10fcd232cf467ea}{changed\+Touches() of the W\+Touch\+Event}}.
+
+\begin{DoxyNote}{Note}
+When Java\+Script is disabled, the signal will never fire. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_aaf371c95c294c952be0eaac5b3f56af7}\label{classWt_1_1WAbstractItemView_aaf371c95c294c952be0eaac5b3f56af7}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!touchMoved@{touchMoved}}
+\index{touchMoved@{touchMoved}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{touchMoved()}{touchMoved()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$std\+::vector$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}$>$, \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}}$>$\& Wt\+::\+W\+Abstract\+Item\+View\+::touch\+Moved (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when one or more fingers are moved on the screen. 
+
+When the event happened over an item, the first argument indicates the items that were touched. The indices in the model index vector match the indices in the \mbox{\hyperlink{classWt_1_1WTouchEvent_a88abc88be22303a6b10fcd232cf467ea}{changed\+Touches() of the W\+Touch\+Event}}. \mbox{\Hypertarget{classWt_1_1WAbstractItemView_a93686fdab9f40f104a6914a37181c1cd}\label{classWt_1_1WAbstractItemView_a93686fdab9f40f104a6914a37181c1cd}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!touchStart@{touchStart}}
+\index{touchStart@{touchStart}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{touchStart()}{touchStart()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}}$>$\& Wt\+::\+W\+Abstract\+Item\+View\+::touch\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when a finger is placed on the screen. 
+
+When the event happened over an item, the first argument indicates the item that was touched.
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000011}{Deprecated}}]Use \mbox{\hyperlink{classWt_1_1WAbstractItemView_acd980e6a9eb110400f334e341f8386a4}{touch\+Started()}} instead. \end{DoxyRefDesc}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_acd980e6a9eb110400f334e341f8386a4}\label{classWt_1_1WAbstractItemView_acd980e6a9eb110400f334e341f8386a4}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!touchStarted@{touchStarted}}
+\index{touchStarted@{touchStarted}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{touchStarted()}{touchStarted()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$std\+::vector$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}$>$, \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}}$>$\& Wt\+::\+W\+Abstract\+Item\+View\+::touch\+Started (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when one or more fingers are placed on the screen. 
+
+When the event happened over an item, the first argument indicates the items that were touched. The indices in the model index vector match the indices in the \mbox{\hyperlink{classWt_1_1WTouchEvent_a88abc88be22303a6b10fcd232cf467ea}{changed\+Touches() of the W\+Touch\+Event}}. \mbox{\Hypertarget{classWt_1_1WAbstractItemView_a7b638aa08afd214b1a385383d4a61489}\label{classWt_1_1WAbstractItemView_a7b638aa08afd214b1a385383d4a61489}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!validateEditor@{validateEditor}}
+\index{validateEditor@{validateEditor}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{validateEditor()}{validateEditor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_a06744b1cf5fdeae2a8a6c0d0084fdf25}{Validation\+State}} Wt\+::\+W\+Abstract\+Item\+View\+::validate\+Editor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption})}
+
+
+
+Validates the editor for the given index. 
+
+Validation is done by invoking \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate_a358fe7db0e03a8a75c5f90bba7b875b2}{W\+Abstract\+Item\+Delegate\+::validate()}}. \mbox{\Hypertarget{classWt_1_1WAbstractItemView_a4e0b6f968f9b74c73795efdc80a94953}\label{classWt_1_1WAbstractItemView_a4e0b6f968f9b74c73795efdc80a94953}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!validateEditors@{validateEditors}}
+\index{validateEditors@{validateEditors}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{validateEditors()}{validateEditors()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_a06744b1cf5fdeae2a8a6c0d0084fdf25}{Validation\+State}} Wt\+::\+W\+Abstract\+Item\+View\+::validate\+Editors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Validates all editors. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a7b638aa08afd214b1a385383d4a61489}{validate\+Editor()}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemView_a57b84260f8419f961f4993f8914b0325}\label{classWt_1_1WAbstractItemView_a57b84260f8419f961f4993f8914b0325}} 
+\index{Wt::WAbstractItemView@{Wt::WAbstractItemView}!verticalHeaderAlignment@{verticalHeaderAlignment}}
+\index{verticalHeaderAlignment@{verticalHeaderAlignment}!Wt::WAbstractItemView@{Wt::WAbstractItemView}}
+\doxysubsubsection{\texorpdfstring{verticalHeaderAlignment()}{verticalHeaderAlignment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} Wt\+::\+W\+Abstract\+Item\+View\+::vertical\+Header\+Alignment (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption}) const}
+
+
+
+Returns the vertical header alignment for a column. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a1257f47715ed6f4522fc26180ac533b8}{set\+Header\+Alignment()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Abstract\+Item\+View.\+h\end{DoxyCompactItemize}

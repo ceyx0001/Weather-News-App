@@ -1,0 +1,89 @@
+\hypertarget{classhttp_1_1server_1_1SessionProcessManager}{}\doxysection{http\+::server\+::Session\+Process\+Manager Class Reference}
+\label{classhttp_1_1server_1_1SessionProcessManager}\index{http::server::SessionProcessManager@{http::server::SessionProcessManager}}
+
+
+For dedicated processes\+: maps session ids to child processes and their sockets.  
+
+
+
+
+{\ttfamily \#include $<$Session\+Process\+Manager.\+h$>$}
+
+
+
+Collaboration diagram for http\+::server\+::Session\+Process\+Manager\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcessManager_a86745019f361bad318361397e4eecd45}\label{classhttp_1_1server_1_1SessionProcessManager_a86745019f361bad318361397e4eecd45}} 
+{\bfseries Session\+Process\+Manager} (asio\+::io\+\_\+service \&io\+Service, const \mbox{\hyperlink{classWt_1_1Configuration}{Wt\+::\+Configuration}} \&configuration)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcessManager_a43065c8d6d39b248960d7d632a17a4dd}\label{classhttp_1_1server_1_1SessionProcessManager_a43065c8d6d39b248960d7d632a17a4dd}} 
+{\bfseries Session\+Process\+Manager} (const \mbox{\hyperlink{classhttp_1_1server_1_1SessionProcessManager}{Session\+Process\+Manager}} \&)=delete
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcessManager_a5cdadfd79146e90d5a9b507ee8b3ab3c}\label{classhttp_1_1server_1_1SessionProcessManager_a5cdadfd79146e90d5a9b507ee8b3ab3c}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1SessionProcessManager}{Session\+Process\+Manager}} \& {\bfseries operator=} (const \mbox{\hyperlink{classhttp_1_1server_1_1SessionProcessManager}{Session\+Process\+Manager}} \&)=delete
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcessManager_a16766cf343be6077fe384ef67b757005}\label{classhttp_1_1server_1_1SessionProcessManager_a16766cf343be6077fe384ef67b757005}} 
+void {\bfseries stop} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcessManager_abb463c0707267a58c9ab7ac40f2ee578}\label{classhttp_1_1server_1_1SessionProcessManager_abb463c0707267a58c9ab7ac40f2ee578}} 
+bool {\bfseries try\+To\+Increment\+Session\+Count} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcessManager_a787e6b14d6e452b89a06e0eae7ea5db0}\label{classhttp_1_1server_1_1SessionProcessManager_a787e6b14d6e452b89a06e0eae7ea5db0}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhttp_1_1server_1_1SessionProcess}{Session\+Process}} $>$ {\bfseries create\+Session\+Process} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcessManager_a9a6d8c0a783e4ca22d5e835d7e18dcce}\label{classhttp_1_1server_1_1SessionProcessManager_a9a6d8c0a783e4ca22d5e835d7e18dcce}} 
+const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhttp_1_1server_1_1SessionProcess}{Session\+Process}} $>$ \& {\bfseries session\+Process} (std\+::string session\+Id)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcessManager_aeb250fdf5733f48321a7750bb808e123}\label{classhttp_1_1server_1_1SessionProcessManager_aeb250fdf5733f48321a7750bb808e123}} 
+void {\bfseries update\+Session\+Id} (std\+::string session\+Id, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhttp_1_1server_1_1SessionProcess}{Session\+Process}} $>$ \&process)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcessManager_ac693c08ac09f9535e46e1c876da896a2}\label{classhttp_1_1server_1_1SessionProcessManager_ac693c08ac09f9535e46e1c876da896a2}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1WServer_1_1SessionInfo}{Wt\+::\+W\+Server\+::\+Session\+Info}} $>$ {\bfseries sessions} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcessManager_a3985872d1ca39d7e612b6ad95fd0761a}\label{classhttp_1_1server_1_1SessionProcessManager_a3985872d1ca39d7e612b6ad95fd0761a}} 
+asio\+::io\+\_\+service \& {\bfseries io\+Service} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcessManager_a2c251d1e7745cf1b44ac4b0f005ee656}\label{classhttp_1_1server_1_1SessionProcessManager_a2c251d1e7745cf1b44ac4b0f005ee656}} 
+void {\bfseries process\+Dead\+Children} (Wt\+::\+Asio\+Wrapper\+::error\+\_\+code ec)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcessManager_adecac00f8ce8a45a384afe3b24da1895}\label{classhttp_1_1server_1_1SessionProcessManager_adecac00f8ce8a45a384afe3b24da1895}} 
+void {\bfseries log\+Exit} (pid\+\_\+t cpid, int wstatus)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcessManager_a5789846cca27dc131ca7c30361236d8b}\label{classhttp_1_1server_1_1SessionProcessManager_a5789846cca27dc131ca7c30361236d8b}} 
+void {\bfseries remove\+Session\+For\+Pid} (pid\+\_\+t cpid)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcessManager_adad035b402ed519ef49ab8154ca11598}\label{classhttp_1_1server_1_1SessionProcessManager_adad035b402ed519ef49ab8154ca11598}} 
+Session\+Process\+List {\bfseries pending\+Processes\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcessManager_ab810f9487e6838b13fb98480a7ac01cb}\label{classhttp_1_1server_1_1SessionProcessManager_ab810f9487e6838b13fb98480a7ac01cb}} 
+Session\+Map {\bfseries sessions\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcessManager_adabacc8be634efe7b6c81ff547acf2f5}\label{classhttp_1_1server_1_1SessionProcessManager_adabacc8be634efe7b6c81ff547acf2f5}} 
+asio\+::io\+\_\+service \& {\bfseries io\+Service\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcessManager_aa83fe4d4e12b6efbdb6065529bfa1891}\label{classhttp_1_1server_1_1SessionProcessManager_aa83fe4d4e12b6efbdb6065529bfa1891}} 
+asio\+::steady\+\_\+timer {\bfseries timer\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcessManager_a457cfd027e6dbebbb83ef71ed56261b9}\label{classhttp_1_1server_1_1SessionProcessManager_a457cfd027e6dbebbb83ef71ed56261b9}} 
+int {\bfseries num\+Sessions\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcessManager_ac55938961530fef804a3f1e02ac53f4a}\label{classhttp_1_1server_1_1SessionProcessManager_ac55938961530fef804a3f1e02ac53f4a}} 
+const \mbox{\hyperlink{classWt_1_1Configuration}{Wt\+::\+Configuration}} \& {\bfseries configuration\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+For dedicated processes\+: maps session ids to child processes and their sockets. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/http/Session\+Process\+Manager.\+h\end{DoxyCompactItemize}

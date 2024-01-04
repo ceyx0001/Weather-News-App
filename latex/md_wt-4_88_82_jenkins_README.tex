@@ -1,0 +1,10 @@
+This directory contains Jenkinsfiles and Dockerfiles used for testing \mbox{\hyperlink{classWt}{Wt}} at Emweb. These are included in the main \mbox{\hyperlink{classWt}{Wt}} repository since they may be of interest to external contributors or users of \mbox{\hyperlink{classWt}{Wt}} as well.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily minimal}\+: a \mbox{\hyperlink{classWt}{Wt}} build with a minimum of features enabled on Ubuntu, testing once with threading support enabled, and once with threading support disabled. This is run often to provide immediate feedback on new commits.
+\item {\ttfamily freebsd}\+: same as {\ttfamily minimal}, but on Free\+B\+SD (this machine is provisioned manually)
+\item {\ttfamily minver}\+: same as {\ttfamily minimal}, but on an older version of Ubuntu using the minimum G\+CC and Boost versions we\textquotesingle{}re claiming to support at the moment
+\item {\ttfamily full}\+: a \mbox{\hyperlink{classWt}{Wt}} build with almost all features enabled
+\item {\ttfamily db}\+: uses the Dockerfile of {\ttfamily full}. Builds \mbox{\hyperlink{classWt}{Wt}} with all database backends except for Firebird, and runs the database tests using sidecar containers. 
+\end{DoxyItemize}

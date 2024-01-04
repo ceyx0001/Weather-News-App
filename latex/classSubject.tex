@@ -1,0 +1,122 @@
+\hypertarget{classSubject}{}\doxysection{Subject Class Reference}
+\label{classSubject}\index{Subject@{Subject}}
+
+
+\mbox{\hyperlink{classSubject}{Subject}} for an \mbox{\hyperlink{classObserver}{Observer}}.  
+
+
+
+
+{\ttfamily \#include $<$Subject.\+h$>$}
+
+
+
+Inheritance diagram for Subject\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classSubject_af32ccd290f8d910225cdedad0f37e874}{attach}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Attach \mbox{\hyperlink{classObserver}{Observer}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSubject_a97b87993de0a0c0f4a9da6e7a3a73055}{detach}} (\mbox{\hyperlink{classObserver}{Observer}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Detach \mbox{\hyperlink{classObserver}{Observer}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSubject_a7c4f522850f718466e5be7eb55ba1969}{$\sim$\+Subject}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classSubject_af104c2baf37c7aa63b2ef6d32c2b3a9c}{notify}} ()
+\begin{DoxyCompactList}\small\item\em Attach observer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSubject_a3f3be4475cb5ca1a6cf81013450b8dfe}\label{classSubject_a3f3be4475cb5ca1a6cf81013450b8dfe}} 
+std\+::vector$<$ \mbox{\hyperlink{classObserver}{Observer}} $\ast$ $>$ {\bfseries \+\_\+observers}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classSubject}{Subject}} for an \mbox{\hyperlink{classObserver}{Observer}}. 
+
+\mbox{\hyperlink{classSubject}{Subject}} encapsulates the behaviour \mbox{\hyperlink{classObserver}{Observer}} objects are dependent on and is able to notify \mbox{\hyperlink{classObserver}{Observer}} objects without depending on their types. \begin{DoxyAuthor}{Author}
+Jun Shao 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSubject_a7c4f522850f718466e5be7eb55ba1969}\label{classSubject_a7c4f522850f718466e5be7eb55ba1969}} 
+\index{Subject@{Subject}!````~Subject@{$\sim$Subject}}
+\index{````~Subject@{$\sim$Subject}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{$\sim$Subject()}{~Subject()}}
+{\footnotesize\ttfamily Subject\+::$\sim$\+Subject (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default destructor. 
+
+Default destructor for \mbox{\hyperlink{classSubject}{Subject}} but does not do anything. \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSubject_af32ccd290f8d910225cdedad0f37e874}\label{classSubject_af32ccd290f8d910225cdedad0f37e874}} 
+\index{Subject@{Subject}!attach@{attach}}
+\index{attach@{attach}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{attach()}{attach()}}
+{\footnotesize\ttfamily void Subject\+::attach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}} $\ast$}]{o }\end{DoxyParamCaption})}
+
+
+
+Attach \mbox{\hyperlink{classObserver}{Observer}}. 
+
+Attaches an \mbox{\hyperlink{classObserver}{Observer}} to \mbox{\hyperlink{classSubject}{Subject}} by adding it to the internal list of \mbox{\hyperlink{classObserver}{Observer}} objects. 
+\begin{DoxyParams}{Parameters}
+{\em o} & is the pointer to the \mbox{\hyperlink{classObserver}{Observer}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSubject_a97b87993de0a0c0f4a9da6e7a3a73055}\label{classSubject_a97b87993de0a0c0f4a9da6e7a3a73055}} 
+\index{Subject@{Subject}!detach@{detach}}
+\index{detach@{detach}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{detach()}{detach()}}
+{\footnotesize\ttfamily void Subject\+::detach (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}} $\ast$}]{o }\end{DoxyParamCaption})}
+
+
+
+Detach \mbox{\hyperlink{classObserver}{Observer}}. 
+
+Detaches an \mbox{\hyperlink{classObserver}{Observer}} to \mbox{\hyperlink{classSubject}{Subject}} by removing it from the internal list of \mbox{\hyperlink{classObserver}{Observer}} objects. 
+\begin{DoxyParams}{Parameters}
+{\em o} & is the pointer to the \mbox{\hyperlink{classObserver}{Observer}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSubject_af104c2baf37c7aa63b2ef6d32c2b3a9c}\label{classSubject_af104c2baf37c7aa63b2ef6d32c2b3a9c}} 
+\index{Subject@{Subject}!notify@{notify}}
+\index{notify@{notify}!Subject@{Subject}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily void Subject\+::notify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Attach observer. 
+
+Attaches an \mbox{\hyperlink{classObserver}{Observer}} to \mbox{\hyperlink{classSubject}{Subject}} by adding it to a list of \mbox{\hyperlink{classObserver}{Observer}} objects. 
+\begin{DoxyParams}{Parameters}
+{\em o} & is the pointer to the \mbox{\hyperlink{classObserver}{Observer}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+gui/settings/Subject.\+h\item 
+gui/settings/Subject.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,175 @@
+\hypertarget{classWt_1_1WebController}{}\doxysection{Wt\+::Web\+Controller Class Reference}
+\label{classWt_1_1WebController}\index{Wt::WebController@{Wt::WebController}}
+
+
+Collaboration diagram for Wt\+::Web\+Controller\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WebController_1_1UpdateResourceProgressParams}{Update\+Resource\+Progress\+Params}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a2ee04e15f2b8145421b5e9e23f2924a0}\label{classWt_1_1WebController_a2ee04e15f2b8145421b5e9e23f2924a0}} 
+typedef std\+::map$<$ int, \mbox{\hyperlink{classWt_1_1WSocketNotifier}{W\+Socket\+Notifier}} $\ast$ $>$ {\bfseries Socket\+Notifier\+Map}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a8d0e5cbd6f3021942f29fb1a2545a06a}\label{classWt_1_1WebController_a8d0e5cbd6f3021942f29fb1a2545a06a}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $>$ {\bfseries do\+Create\+Application} (\mbox{\hyperlink{classWt_1_1WebSession}{Web\+Session}} $\ast$session)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a292e806ae5cea199ba2853ebbc343f59}\label{classWt_1_1WebController_a292e806ae5cea199ba2853ebbc343f59}} 
+\mbox{\hyperlink{classWt_1_1Configuration}{Configuration}} \& {\bfseries configuration} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_ad035fa6ee49285ebde4c9ddd912b0a03}\label{classWt_1_1WebController_ad035fa6ee49285ebde4c9ddd912b0a03}} 
+void {\bfseries add\+Session} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WebSession}{Web\+Session}} $>$ \&session)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a5014806e892b7be21f890d22a77ee5ea}\label{classWt_1_1WebController_a5014806e892b7be21f890d22a77ee5ea}} 
+void {\bfseries remove\+Session} (const std\+::string \&session\+Id)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a98407c118f4d3df286b153ebf42769c6}\label{classWt_1_1WebController_a98407c118f4d3df286b153ebf42769c6}} 
+void {\bfseries session\+Deleted} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_ad7eeae1ee0c890e22b4f2aabe5403656}\label{classWt_1_1WebController_ad7eeae1ee0c890e22b4f2aabe5403656}} 
+void {\bfseries new\+Ajax\+Session} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_aef0d46c78f8486e5f9d155b329a20064}\label{classWt_1_1WebController_aef0d46c78f8486e5f9d155b329a20064}} 
+bool {\bfseries limit\+Plain\+Html\+Sessions} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a309cb2c008169c4447ba14fde41aa354}\label{classWt_1_1WebController_a309cb2c008169c4447ba14fde41aa354}} 
+\mbox{\hyperlink{classWt_1_1WServer}{W\+Server}} $\ast$ {\bfseries server} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a14b9dc2988b350bb451738c16df555b0}\label{classWt_1_1WebController_a14b9dc2988b350bb451738c16df555b0}} 
+std\+::string {\bfseries compute\+Redirect\+Hash} (const std\+::string \&url)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a5bfc2acd2650f0374bc817d0d64bac15}\label{classWt_1_1WebController_a5bfc2acd2650f0374bc817d0d64bac15}} 
+{\bfseries Web\+Controller} (\mbox{\hyperlink{classWt_1_1WServer}{W\+Server}} \&server, const std\+::string \&single\+Session\+Id=std\+::string(), bool auto\+Expire=true)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_acd43f9117ef3ccf9bc06d9f7281ccd27}\label{classWt_1_1WebController_acd43f9117ef3ccf9bc06d9f7281ccd27}} 
+int {\bfseries session\+Count} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a44284bf9536dd09449fd5ed399c94e74}\label{classWt_1_1WebController_a44284bf9536dd09449fd5ed399c94e74}} 
+bool {\bfseries request\+Data\+Received} (\mbox{\hyperlink{classWt_1_1WebRequest}{Web\+Request}} $\ast$request, std\+::uintmax\+\_\+t current, std\+::uintmax\+\_\+t total)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a8cffd976eb93ac3b540aa08c72de506e}\label{classWt_1_1WebController_a8cffd976eb93ac3b540aa08c72de506e}} 
+void {\bfseries handle\+Request} (\mbox{\hyperlink{classWt_1_1WebRequest}{Web\+Request}} $\ast$request)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a225a8ab59b5489ca1bf0df6604336a1c}\label{classWt_1_1WebController_a225a8ab59b5489ca1bf0df6604336a1c}} 
+bool {\bfseries handle\+Application\+Event} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structWt_1_1ApplicationEvent}{Application\+Event}} $>$ \&event)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_ad4d87711b0633279c9ecc29bcc431920}\label{classWt_1_1WebController_ad4d87711b0633279c9ecc29bcc431920}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries sessions} (bool only\+Rendered=false)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_af276c9b8b3cf7b492aa3acc0d66abc11}\label{classWt_1_1WebController_af276c9b8b3cf7b492aa3acc0d66abc11}} 
+bool {\bfseries expire\+Sessions} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a0b9bf9823fc4a64aedaafb1aa65a1e41}\label{classWt_1_1WebController_a0b9bf9823fc4a64aedaafb1aa65a1e41}} 
+void {\bfseries start} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_ad3305f899c964eef5288f14246d960c5}\label{classWt_1_1WebController_ad3305f899c964eef5288f14246d960c5}} 
+void {\bfseries shutdown} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a7b28ab2412d540a59ccb8e267a90d445}\label{classWt_1_1WebController_a7b28ab2412d540a59ccb8e267a90d445}} 
+void {\bfseries add\+Socket\+Notifier} (\mbox{\hyperlink{classWt_1_1WSocketNotifier}{W\+Socket\+Notifier}} $\ast$notifier)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a9ac8d0d8733c8ee3bc16b80888530806}\label{classWt_1_1WebController_a9ac8d0d8733c8ee3bc16b80888530806}} 
+void {\bfseries remove\+Socket\+Notifier} (\mbox{\hyperlink{classWt_1_1WSocketNotifier}{W\+Socket\+Notifier}} $\ast$notifier)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_ae19f134107946636e624b431cbd26700}\label{classWt_1_1WebController_ae19f134107946636e624b431cbd26700}} 
+void {\bfseries add\+Upload\+Progress\+Url} (const std\+::string \&url)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a7b90e092f1ce970e620af7cb52195a87}\label{classWt_1_1WebController_a7b90e092f1ce970e620af7cb52195a87}} 
+void {\bfseries remove\+Upload\+Progress\+Url} (const std\+::string \&url)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a1a80703cc08af28035ea932681b2702b}\label{classWt_1_1WebController_a1a80703cc08af28035ea932681b2702b}} 
+void {\bfseries socket\+Selected} (int descriptor, \mbox{\hyperlink{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548c}{W\+Socket\+Notifier\+::\+Type}} type)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_afb5b38d6c884d420d2d392b0d9726e65}\label{classWt_1_1WebController_afb5b38d6c884d420d2d392b0d9726e65}} 
+std\+::string {\bfseries switch\+Session} (\mbox{\hyperlink{classWt_1_1WebSession}{Web\+Session}} $\ast$session, const std\+::string \&new\+Session\+Id)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_aaa7da49131e29bd04e4d914147113ba7}\label{classWt_1_1WebController_aaa7da49131e29bd04e4d914147113ba7}} 
+std\+::string {\bfseries generate\+New\+Session\+Id} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WebSession}{Web\+Session}} $>$ \&session)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a9da4c8b07d314230683301d4a238f96a}\label{classWt_1_1WebController_a9da4c8b07d314230683301d4a238f96a}} 
+static bool {\bfseries is\+Async\+Supported} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_adbd2ea4f2775e33f90964295b3158c89}\label{classWt_1_1WebController_adbd2ea4f2775e33f90964295b3158c89}} 
+static std\+::string {\bfseries session\+From\+Cookie} (const char $\ast$const cookies, const std\+::string \&script\+Name, const int session\+Id\+Length)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a8cd4ca6b428205b48e96bd278df09148}\label{classWt_1_1WebController_a8cd4ca6b428205b48e96bd278df09148}} 
+typedef std\+::map$<$ std\+::string, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WebSession}{Web\+Session}} $>$ $>$ {\bfseries Session\+Map}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_ab2357e749c50bd45e692bdbd8778c003}\label{classWt_1_1WebController_ab2357e749c50bd45e692bdbd8778c003}} 
+void {\bfseries update\+Resource\+Progress} (const \mbox{\hyperlink{structWt_1_1WebController_1_1UpdateResourceProgressParams}{Update\+Resource\+Progress\+Params}} \&params)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_ac73c121277e83ea28c683e5909065337}\label{classWt_1_1WebController_ac73c121277e83ea28c683e5909065337}} 
+\mbox{\hyperlink{structWt_1_1EntryPointMatch}{Entry\+Point\+Match}} {\bfseries get\+Entry\+Point} (\mbox{\hyperlink{classWt_1_1WebRequest}{Web\+Request}} $\ast$request)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_ad7783e446103bcf58330035c3ac86379}\label{classWt_1_1WebController_ad7783e446103bcf58330035c3ac86379}} 
+static std\+::string {\bfseries app\+Session\+Cookie} (const std\+::string \&url)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a2895af8846ee0bba9b704f94366b2a4c}\label{classWt_1_1WebController_a2895af8846ee0bba9b704f94366b2a4c}} 
+\mbox{\hyperlink{classWt_1_1Configuration}{Configuration}} \& {\bfseries conf\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a6f9354851ce67d5c8628a8a564cb4bba}\label{classWt_1_1WebController_a6f9354851ce67d5c8628a8a564cb4bba}} 
+std\+::string {\bfseries single\+Session\+Id\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_afbbf9f91476aa535b271a96de6469be2}\label{classWt_1_1WebController_afbbf9f91476aa535b271a96de6469be2}} 
+bool {\bfseries auto\+Expire\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_ad0b68abe55354bf3b94793cab1912d61}\label{classWt_1_1WebController_ad0b68abe55354bf3b94793cab1912d61}} 
+int {\bfseries plain\+Html\+Sessions\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a18e0fadf841824877f6e3313eb35e3f4}\label{classWt_1_1WebController_a18e0fadf841824877f6e3313eb35e3f4}} 
+int {\bfseries ajax\+Sessions\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_abde41c87f51102cd6a8bad06b1bf4401}\label{classWt_1_1WebController_abde41c87f51102cd6a8bad06b1bf4401}} 
+volatile int {\bfseries zombie\+Sessions\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a9d07b28f7bab4c12987398d34056efe6}\label{classWt_1_1WebController_a9d07b28f7bab4c12987398d34056efe6}} 
+std\+::string {\bfseries redirect\+Secret\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_ad5ea01c500449c3c71ac1dc47de08b97}\label{classWt_1_1WebController_ad5ea01c500449c3c71ac1dc47de08b97}} 
+bool {\bfseries running\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a72c9cccc8bd2a3693329cc5b93587d8c}\label{classWt_1_1WebController_a72c9cccc8bd2a3693329cc5b93587d8c}} 
+std\+::set$<$ std\+::string $>$ {\bfseries upload\+Progress\+Urls\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_ac10bfa69258bafd447e1e7f21aef6ac7}\label{classWt_1_1WebController_ac10bfa69258bafd447e1e7f21aef6ac7}} 
+Session\+Map {\bfseries sessions\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_afeaedeb4ae4e8310f8b1909e6d14be1a}\label{classWt_1_1WebController_afeaedeb4ae4e8310f8b1909e6d14be1a}} 
+\mbox{\hyperlink{classWt_1_1WServer}{W\+Server}} \& {\bfseries server\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a739e65afbdcc693c53b71d62bd38409e}\label{classWt_1_1WebController_a739e65afbdcc693c53b71d62bd38409e}} 
+class {\bfseries http\+::server\+::\+Proxy\+Reply}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebController_a9f2783868a6f37c811b4599a640dde62}\label{classWt_1_1WebController_a9f2783868a6f37c811b4599a640dde62}} 
+class {\bfseries W\+Environment}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/web/Web\+Controller.\+h\end{DoxyCompactItemize}

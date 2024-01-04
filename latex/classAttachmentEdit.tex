@@ -1,0 +1,103 @@
+\hypertarget{classAttachmentEdit}{}\doxysection{Attachment\+Edit Class Reference}
+\label{classAttachmentEdit}\index{AttachmentEdit@{AttachmentEdit}}
+
+
+An edit field for an email attachment.  
+
+
+
+
+{\ttfamily \#include $<$Attachment\+Edit.\+h$>$}
+
+
+
+Inheritance diagram for Attachment\+Edit\+:
+% FIG 0
+
+
+Collaboration diagram for Attachment\+Edit\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classAttachmentEdit_1_1UploadInfo}{Upload\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAttachmentEdit_ae23a85505618162919a94a158df352b8}\label{classAttachmentEdit_ae23a85505618162919a94a158df352b8}} 
+\mbox{\hyperlink{classAttachmentEdit_ae23a85505618162919a94a158df352b8}{Attachment\+Edit}} (\mbox{\hyperlink{classComposer}{Composer}} $\ast$composer)
+\begin{DoxyCompactList}\small\item\em Creates an attachment edit field. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAttachmentEdit_a172fff67913dc3e3adf8c1e4198d6ea6}{upload\+Now}} ()
+\begin{DoxyCompactList}\small\item\em Updates the file now. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAttachmentEdit_a2df094c49386d3b3a2abefe4b352903c}\label{classAttachmentEdit_a2df094c49386d3b3a2abefe4b352903c}} 
+bool \mbox{\hyperlink{classAttachmentEdit_a2df094c49386d3b3a2abefe4b352903c}{upload\+Failed}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the upload failed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAttachmentEdit_acab98bb9c9f1cded92592e4539b6c5ea}\label{classAttachmentEdit_acab98bb9c9f1cded92592e4539b6c5ea}} 
+std\+::vector$<$ \mbox{\hyperlink{classAttachment}{Attachment}} $>$ \mbox{\hyperlink{classAttachmentEdit_acab98bb9c9f1cded92592e4539b6c5ea}{attachments}} ()
+\begin{DoxyCompactList}\small\item\em Returns the attachment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAttachmentEdit_addbe8e2049cb491d6e8f93833420cca4}\label{classAttachmentEdit_addbe8e2049cb491d6e8f93833420cca4}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} \& \mbox{\hyperlink{classAttachmentEdit_addbe8e2049cb491d6e8f93833420cca4}{upload\+Done}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when new attachment(s) have been uploaded (or failed to upload. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAttachmentEdit_a85d6892fe9c38394d17dc350ce678acd}\label{classAttachmentEdit_a85d6892fe9c38394d17dc350ce678acd}} 
+void \mbox{\hyperlink{classAttachmentEdit_a85d6892fe9c38394d17dc350ce678acd}{uploaded}} ()
+\begin{DoxyCompactList}\small\item\em Slot triggered when the W\+File\+Upload completed an upload. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAttachmentEdit_ae2435ee247748851f9b02ae217260766}\label{classAttachmentEdit_ae2435ee247748851f9b02ae217260766}} 
+void \mbox{\hyperlink{classAttachmentEdit_ae2435ee247748851f9b02ae217260766}{file\+Too\+Large}} (\+::int64\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em Slot triggered when the W\+File\+Upload received an oversized file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAttachmentEdit_a27277be62832ebbda987707b7a2d814e}\label{classAttachmentEdit_a27277be62832ebbda987707b7a2d814e}} 
+void \mbox{\hyperlink{classAttachmentEdit_a27277be62832ebbda987707b7a2d814e}{remove}} ()
+\begin{DoxyCompactList}\small\item\em Slot triggered when the users wishes to remove this attachment edit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAttachmentEdit_a403927978e9c841e64b62421458790e8}\label{classAttachmentEdit_a403927978e9c841e64b62421458790e8}} 
+\mbox{\hyperlink{classComposer}{Composer}} $\ast$ {\bfseries composer\+\_\+}
+\item 
+\mbox{\Hypertarget{classAttachmentEdit_a61fd10dca0e46a7386c8e490c59dbb59}\label{classAttachmentEdit_a61fd10dca0e46a7386c8e490c59dbb59}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} {\bfseries upload\+Done\+\_\+}
+\item 
+\mbox{\Hypertarget{classAttachmentEdit_aa9a3945293cf0a30d35e8bc56312d430}\label{classAttachmentEdit_aa9a3945293cf0a30d35e8bc56312d430}} 
+\mbox{\hyperlink{classWt_1_1WFileUpload}{W\+File\+Upload}} $\ast$ \mbox{\hyperlink{classAttachmentEdit_aa9a3945293cf0a30d35e8bc56312d430}{upload\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The W\+File\+Upload control. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAttachmentEdit_ad3f98e98d3e5502fc275446dc5c6b762}\label{classAttachmentEdit_ad3f98e98d3e5502fc275446dc5c6b762}} 
+std\+::vector$<$ \mbox{\hyperlink{classAttachmentEdit_1_1UploadInfo}{Upload\+Info}} $\ast$ $>$ {\bfseries upload\+Info\+\_\+}
+\item 
+\mbox{\Hypertarget{classAttachmentEdit_a2c3fa5d63ec5feedc63f95295989cd4d}\label{classAttachmentEdit_a2c3fa5d63ec5feedc63f95295989cd4d}} 
+\mbox{\hyperlink{classWt_1_1WText}{W\+Text}} $\ast$ \mbox{\hyperlink{classAttachmentEdit_a2c3fa5d63ec5feedc63f95295989cd4d}{error\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The text box to display an error (empty or too big file) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAttachmentEdit_a55484424d37b196d07035e245399ffae}\label{classAttachmentEdit_a55484424d37b196d07035e245399ffae}} 
+\mbox{\hyperlink{classOption}{Option}} $\ast$ \mbox{\hyperlink{classAttachmentEdit_a55484424d37b196d07035e245399ffae}{remove\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The option to cancel the file upload. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAttachmentEdit_a6a19f364e7a82797bc5c18adb6a01530}\label{classAttachmentEdit_a6a19f364e7a82797bc5c18adb6a01530}} 
+bool \mbox{\hyperlink{classAttachmentEdit_a6a19f364e7a82797bc5c18adb6a01530}{upload\+Failed\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The state of the last upload process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An edit field for an email attachment. 
+
+This widget manages one attachment edit\+: it shows a file upload control, handles the upload, and gives feed-\/back on the file uploaded.
+
+This widget is part of the Wt composer example. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAttachmentEdit_a172fff67913dc3e3adf8c1e4198d6ea6}\label{classAttachmentEdit_a172fff67913dc3e3adf8c1e4198d6ea6}} 
+\index{AttachmentEdit@{AttachmentEdit}!uploadNow@{uploadNow}}
+\index{uploadNow@{uploadNow}!AttachmentEdit@{AttachmentEdit}}
+\doxysubsubsection{\texorpdfstring{uploadNow()}{uploadNow()}}
+{\footnotesize\ttfamily bool Attachment\+Edit\+::upload\+Now (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the file now. 
+
+Returns whether a new file will be uploaded. If so, the upload\+Done signal will be signalled when the file is uploaded (or failed to upload). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/composer/Attachment\+Edit.\+h\end{DoxyCompactItemize}

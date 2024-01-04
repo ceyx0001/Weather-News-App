@@ -1,0 +1,578 @@
+\hypertarget{classWt_1_1Auth_1_1OidcService}{}\doxysection{Wt\+::Auth\+::Oidc\+Service Class Reference}
+\label{classWt_1_1Auth_1_1OidcService}\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+
+
+An Open\+Id Connect authentication service provider.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Auth/\+Oidc\+Service.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Auth\+::Oidc\+Service\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Auth\+::Oidc\+Service\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_af5806a618d03b3cd6cba7649828d3570}\label{classWt_1_1Auth_1_1OidcService_af5806a618d03b3cd6cba7649828d3570}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_af5806a618d03b3cd6cba7649828d3570}{Oidc\+Service}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a9f0d00b998656e9b9be808b447f705d9}{base\+Auth}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_adcb56614c72828bc7a4b423f9c4ef543}{name}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the provider name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a5ba4e08a636113d29e6e72adbf188d20}{description}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the provider description. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a8d98be3318242d985f32d16e1e76179e}{popup\+Width}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the desired width for the popup window. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_ab2a4393cf9b26dd929c97c54808138e7}{popup\+Height}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the desired height of the popup window. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_ab7747346bb35de9a01cacf3fac0d1a76}{authentication\+Scope}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the scope needed for authentication. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_aef1aceb2bd123fab39e352a1fbb4f69f}{redirect\+Endpoint}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the redirection endpoint U\+RL. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a4421754ea3a7ac197d92cade6c9b0303}{authorization\+Endpoint}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the authorization endpoint U\+RL. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a1ac42991b7fb3fa3fc74f30409940517}{token\+Endpoint}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the token endpoint U\+RL. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a85bf6db097007e35a6b9dda382950a61}{user\+Info\+Endpoint}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the user info endpoint U\+RL. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_aadd82ba79a73180a507bc7fe948befe1}{client\+Id}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the client ID. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a1a91ecf656aaa0cc99e26efe075c6fbe}{client\+Secret}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the client secret. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespaceWt_1_1Auth_a4e55a92c5ff4dd9bbd74439868b8400d}{Client\+Secret\+Method}} \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a31d1f85ee72756275295a0524442b591}{client\+Secret\+Method}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the method to transfer the client secret. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess}{O\+Auth\+Process}} $>$ \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a739fe836b326bc1b47b6e25845689a53}{create\+Process}} (const std\+::string \&scope) const override
+\begin{DoxyCompactList}\small\item\em Creates a new authentication process. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a87442db845cb6fd7b1f44f23504768f1}{set\+Redirect\+Endpoint}} (const std\+::string \&url)
+\begin{DoxyCompactList}\small\item\em Sets the redirection endpoint U\+RL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_aa12f84e9b331fd91938d543d29b4a0bd}{set\+Client\+Id}} (const std\+::string \&id)
+\begin{DoxyCompactList}\small\item\em Sets the client ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_abe300481baecf41564df21d6e4d72244}{set\+Client\+Secret}} (const std\+::string \&secret)
+\begin{DoxyCompactList}\small\item\em Sets the client secret. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a9249cab3d4a1f66e9edb74fcb82d939d}{set\+Auth\+Endpoint}} (const std\+::string \&url)
+\begin{DoxyCompactList}\small\item\em Sets the authorization endpoint U\+RL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a63c8a73987feac485094a5c7ca614dc9}{set\+Token\+Endpoint}} (const std\+::string \&url)
+\begin{DoxyCompactList}\small\item\em Sets the token endpoint U\+RL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a0fc05a920f1d6d59d37c691d47bf3390}{set\+User\+Info\+Endpoint}} (const std\+::string \&url)
+\begin{DoxyCompactList}\small\item\em Sets the user info endpoint U\+RL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a2178b9cf03a12b551fdcd40171e2f202}{set\+Authentication\+Scope}} (const std\+::string \&scope)
+\begin{DoxyCompactList}\small\item\em Sets the scope needed for authentication. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a3f010c967abfa807cea2f8e89e89c6a1}{set\+Name}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_adcb56614c72828bc7a4b423f9c4ef543}{name}})
+\begin{DoxyCompactList}\small\item\em Sets the provider name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a95dc4b3e9ac0cb6b64eb04cdc40cf671}{set\+Description}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a5ba4e08a636113d29e6e72adbf188d20}{description}})
+\begin{DoxyCompactList}\small\item\em Sets the provider description. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_ae7309be4aea4a0f249b9701b0be0ab3d}{set\+Client\+Secret\+Method}} (\mbox{\hyperlink{namespaceWt_1_1Auth_a4e55a92c5ff4dd9bbd74439868b8400d}{Client\+Secret\+Method}} method)
+\begin{DoxyCompactList}\small\item\em Sets the method to transfer the client secret. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a7a8421e5617d4f4d4f31e207dfdd9bcd}{set\+Popup\+Width}} (int width)
+\begin{DoxyCompactList}\small\item\em Sets the desired width for the popup window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_abd3acd5d9d1785f9e591cc1ebe85bd34}{set\+Popup\+Height}} (int height)
+\begin{DoxyCompactList}\small\item\em Sets the desired height for the popup window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a494f3e63a970bee954a23f67f4fd926f}\label{classWt_1_1Auth_1_1OidcService_a494f3e63a970bee954a23f67f4fd926f}} 
+bool {\bfseries configure} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a04dc414dcf1539a615653a2adbebf760}\label{classWt_1_1Auth_1_1OidcService_a04dc414dcf1539a615653a2adbebf760}} 
+std\+::string {\bfseries redirect\+Endpoint\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a71e435da589dd612ad3572523a496689}\label{classWt_1_1Auth_1_1OidcService_a71e435da589dd612ad3572523a496689}} 
+std\+::string {\bfseries authorization\+Endpoint\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_aefa24bcd604436259368cccbd34c322a}\label{classWt_1_1Auth_1_1OidcService_aefa24bcd604436259368cccbd34c322a}} 
+std\+::string {\bfseries token\+Endpoint\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_af9ebe37398a1fc93ef949eeb8e53b02e}\label{classWt_1_1Auth_1_1OidcService_af9ebe37398a1fc93ef949eeb8e53b02e}} 
+std\+::string {\bfseries user\+Info\+Endpoint\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_aa56a431ca84cc79dc6cfc624d307380f}\label{classWt_1_1Auth_1_1OidcService_aa56a431ca84cc79dc6cfc624d307380f}} 
+std\+::string {\bfseries client\+Id\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a030fff4a8917a3a0e81ed168ce59459e}\label{classWt_1_1Auth_1_1OidcService_a030fff4a8917a3a0e81ed168ce59459e}} 
+std\+::string {\bfseries client\+Secret\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_abbb07bb21bf2aa73b2534d39ba486196}\label{classWt_1_1Auth_1_1OidcService_abbb07bb21bf2aa73b2534d39ba486196}} 
+std\+::string {\bfseries name\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a51cf994471a1309a3cbce59a827d1ad0}\label{classWt_1_1Auth_1_1OidcService_a51cf994471a1309a3cbce59a827d1ad0}} 
+std\+::string {\bfseries description\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_af7502bd90d40c9392084e50c78320dce}\label{classWt_1_1Auth_1_1OidcService_af7502bd90d40c9392084e50c78320dce}} 
+std\+::string {\bfseries scope\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a3f9728bb9741c3b0f480839bb4414cfc}\label{classWt_1_1Auth_1_1OidcService_a3f9728bb9741c3b0f480839bb4414cfc}} 
+int {\bfseries popup\+Width\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a678570fa64c36b793def951d6b1f0273}\label{classWt_1_1Auth_1_1OidcService_a678570fa64c36b793def951d6b1f0273}} 
+int {\bfseries popup\+Height\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a53c2ab33c361f0f83f399bee4d2639d6}\label{classWt_1_1Auth_1_1OidcService_a53c2ab33c361f0f83f399bee4d2639d6}} 
+\mbox{\hyperlink{namespaceWt_1_1Auth_a4e55a92c5ff4dd9bbd74439868b8400d}{Client\+Secret\+Method}} {\bfseries method\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_ab21f723d583a795f4244594f485ff979}\label{classWt_1_1Auth_1_1OidcService_ab21f723d583a795f4244594f485ff979}} 
+bool {\bfseries configured\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An Open\+Id Connect authentication service provider. 
+
+This class implements an Open\+ID Connect client (\href{http://openid.net/specs/openid-connect-core-1_0.html}{\texttt{ core specification}}), which can be used to allow the user to be safely authenticated with your web application without needing to store or even handle his authorization credentials (such as a password).
+
+Open\+ID Connect is a simple identity layer on top of the O\+Auth 2.\+0 protocol. It enables Clients to verify the identity of the End-\/\+User based on the authentication performed by an Authorization \mbox{\hyperlink{classWt_1_1Server}{Server}}, as well as to obtain basic profile information about the End-\/\+User in an interoperable and R\+E\+S\+T-\/like manner.
+
+This implementation only supports authentication using the Authorization Code Flow.
+
+The configuration of this service is done by using the setters the service class exposes. Before the authentication process can be started these settings must be configured first and may not be changed afterwards. 
+
+The Open\+ID Connect protocol, including the subsequent use for authentication, consists of a number of consecutive steps, some of which require user interaction, and some which require the use of remote web services. The state machine for this process is implemented in an \mbox{\hyperlink{classWt_1_1Auth_1_1OidcProcess}{Oidc\+Process}}. To use Open\+ID Connect, you need to create such a process and listen for state changes. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_ab7747346bb35de9a01cacf3fac0d1a76}\label{classWt_1_1Auth_1_1OidcService_ab7747346bb35de9a01cacf3fac0d1a76}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!authenticationScope@{authenticationScope}}
+\index{authenticationScope@{authenticationScope}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{authenticationScope()}{authenticationScope()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+Oidc\+Service\+::authentication\+Scope (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the scope needed for authentication. 
+
+This returns the scope that is needed (and sufficient) for obtaining identity information, and thus to authenticate the user.
+
+This defaults to \char`\"{}openid\char`\"{}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcProcess_a9f13e10a3f9e9121f919732d5b65f1db}{Oidc\+Process\+::start\+Authenticate()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a739fe836b326bc1b47b6e25845689a53}{Oidc\+Service\+::create\+Process()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a2178b9cf03a12b551fdcd40171e2f202}{Oidc\+Service\+::set\+Authentication\+Scope()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a040351f2a2b956c059ea9974e6829d13}{Wt\+::\+Auth\+::\+O\+Auth\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a4421754ea3a7ac197d92cade6c9b0303}\label{classWt_1_1Auth_1_1OidcService_a4421754ea3a7ac197d92cade6c9b0303}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!authorizationEndpoint@{authorizationEndpoint}}
+\index{authorizationEndpoint@{authorizationEndpoint}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{authorizationEndpoint()}{authorizationEndpoint()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+Oidc\+Service\+::authorization\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the authorization endpoint U\+RL. 
+
+This is a remote U\+RL which hosts the Open\+ID Connect authorization user interface. This U\+RL is loaded in the popup window at the start of an authorization process.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a9249cab3d4a1f66e9edb74fcb82d939d}{set\+Auth\+Endpoint()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_acab141d7eb5a987baf8ea9281bf00a9a}{Wt\+::\+Auth\+::\+O\+Auth\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_aadd82ba79a73180a507bc7fe948befe1}\label{classWt_1_1Auth_1_1OidcService_aadd82ba79a73180a507bc7fe948befe1}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!clientId@{clientId}}
+\index{clientId@{clientId}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{clientId()}{clientId()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+Oidc\+Service\+::client\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the client ID. 
+
+This is the identification for this web application with the Open\+ID Connect provider.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_aa12f84e9b331fd91938d543d29b4a0bd}{set\+Client\+Id()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a3f5d653cb613109848321463663ba636}{Wt\+::\+Auth\+::\+O\+Auth\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a1a91ecf656aaa0cc99e26efe075c6fbe}\label{classWt_1_1Auth_1_1OidcService_a1a91ecf656aaa0cc99e26efe075c6fbe}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!clientSecret@{clientSecret}}
+\index{clientSecret@{clientSecret}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{clientSecret()}{clientSecret()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+Oidc\+Service\+::client\+Secret (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the client secret. 
+
+This is the secret credentials for this web application with the Open\+ID Connect provider.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_abe300481baecf41564df21d6e4d72244}{set\+Client\+Secret()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a10f60c79a0892266e75fef4b0965c1f8}{Wt\+::\+Auth\+::\+O\+Auth\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a31d1f85ee72756275295a0524442b591}\label{classWt_1_1Auth_1_1OidcService_a31d1f85ee72756275295a0524442b591}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!clientSecretMethod@{clientSecretMethod}}
+\index{clientSecretMethod@{clientSecretMethod}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{clientSecretMethod()}{clientSecretMethod()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespaceWt_1_1Auth_a4e55a92c5ff4dd9bbd74439868b8400d}{Client\+Secret\+Method}} Wt\+::\+Auth\+::\+Oidc\+Service\+::client\+Secret\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the method to transfer the client secret. 
+
+The default implementation returns Http\+Authorization\+Basic (the recommended method). 
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a375e645974e14c31d7ef755526cc35a4}{Wt\+::\+Auth\+::\+O\+Auth\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a739fe836b326bc1b47b6e25845689a53}\label{classWt_1_1Auth_1_1OidcService_a739fe836b326bc1b47b6e25845689a53}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!createProcess@{createProcess}}
+\index{createProcess@{createProcess}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{createProcess()}{createProcess()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess}{O\+Auth\+Process}}$>$ Wt\+::\+Auth\+::\+Oidc\+Service\+::create\+Process (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{scope }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a new authentication process. 
+
+This creates a new authentication process for the indicated scope. Valid names for the scope are service provider dependent.
+
+The service needs to be correctly configured before being able to call this function. configure() needs to be called first to check if the configuration is valid.
+
+\begin{DoxyNote}{Note}
+The returned process will be an instance of \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService}{Oidc\+Service}}
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+configure() 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_ab7747346bb35de9a01cacf3fac0d1a76}{authentication\+Scope()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a2978c25f9b60f7e0b5fac414e23923a6}{Wt\+::\+Auth\+::\+O\+Auth\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a5ba4e08a636113d29e6e72adbf188d20}\label{classWt_1_1Auth_1_1OidcService_a5ba4e08a636113d29e6e72adbf188d20}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!description@{description}}
+\index{description@{description}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{description()}{description()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WString}{W\+String}} Wt\+::\+Auth\+::\+Oidc\+Service\+::description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the provider description. 
+
+This returns a description useful for e.\+g. tool tips on a login icon.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_adcb56614c72828bc7a4b423f9c4ef543}{name()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a95dc4b3e9ac0cb6b64eb04cdc40cf671}{set\+Description()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a17346a2921fe706bc83018fb2443f236}{Wt\+::\+Auth\+::\+O\+Auth\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_adcb56614c72828bc7a4b423f9c4ef543}\label{classWt_1_1Auth_1_1OidcService_adcb56614c72828bc7a4b423f9c4ef543}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!name@{name}}
+\index{name@{name}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+Oidc\+Service\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the provider name. 
+
+This is a short identifier.
+
+\begin{DoxySeeAlso}{See also}
+Identify\+::provider() 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a5ba4e08a636113d29e6e72adbf188d20}{description()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a3f010c967abfa807cea2f8e89e89c6a1}{set\+Name()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a5718ddabc7de591b5f056daf1f17701e}{Wt\+::\+Auth\+::\+O\+Auth\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_ab2a4393cf9b26dd929c97c54808138e7}\label{classWt_1_1Auth_1_1OidcService_ab2a4393cf9b26dd929c97c54808138e7}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!popupHeight@{popupHeight}}
+\index{popupHeight@{popupHeight}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{popupHeight()}{popupHeight()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+Auth\+::\+Oidc\+Service\+::popup\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the desired height of the popup window. 
+
+Defaults to 400 pixels.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_abd3acd5d9d1785f9e591cc1ebe85bd34}{set\+Popup\+Height()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a3f5f2ca918803753061105c0a5836a1e}{Wt\+::\+Auth\+::\+O\+Auth\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a8d98be3318242d985f32d16e1e76179e}\label{classWt_1_1Auth_1_1OidcService_a8d98be3318242d985f32d16e1e76179e}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!popupWidth@{popupWidth}}
+\index{popupWidth@{popupWidth}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{popupWidth()}{popupWidth()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+Auth\+::\+Oidc\+Service\+::popup\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the desired width for the popup window. 
+
+Defaults to 670 pixels.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a7a8421e5617d4f4d4f31e207dfdd9bcd}{set\+Popup\+Width()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_ae7caef7e593e4e078a50e5f872f14d20}{Wt\+::\+Auth\+::\+O\+Auth\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_aef1aceb2bd123fab39e352a1fbb4f69f}\label{classWt_1_1Auth_1_1OidcService_aef1aceb2bd123fab39e352a1fbb4f69f}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!redirectEndpoint@{redirectEndpoint}}
+\index{redirectEndpoint@{redirectEndpoint}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{redirectEndpoint()}{redirectEndpoint()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+Oidc\+Service\+::redirect\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the redirection endpoint U\+RL. 
+
+This is the local U\+RL to which the browser is redirect from the service provider, after the authorization process. You need to configure this U\+RL with the third party authentication service.
+
+A static resource will be deployed at this U\+RL.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a87442db845cb6fd7b1f44f23504768f1}{set\+Redirect\+Endpoint()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_add76eee14370693fa109c2768ca70725}{Wt\+::\+Auth\+::\+O\+Auth\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a9249cab3d4a1f66e9edb74fcb82d939d}\label{classWt_1_1Auth_1_1OidcService_a9249cab3d4a1f66e9edb74fcb82d939d}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!setAuthEndpoint@{setAuthEndpoint}}
+\index{setAuthEndpoint@{setAuthEndpoint}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{setAuthEndpoint()}{setAuthEndpoint()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Oidc\+Service\+::set\+Auth\+Endpoint (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url }\end{DoxyParamCaption})}
+
+
+
+Sets the authorization endpoint U\+RL. 
+
+This setting is required.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a4421754ea3a7ac197d92cade6c9b0303}{authorization\+Endpoint()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a2178b9cf03a12b551fdcd40171e2f202}\label{classWt_1_1Auth_1_1OidcService_a2178b9cf03a12b551fdcd40171e2f202}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!setAuthenticationScope@{setAuthenticationScope}}
+\index{setAuthenticationScope@{setAuthenticationScope}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{setAuthenticationScope()}{setAuthenticationScope()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Oidc\+Service\+::set\+Authentication\+Scope (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{scope }\end{DoxyParamCaption})}
+
+
+
+Sets the scope needed for authentication. 
+
+This setting is required.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_ab7747346bb35de9a01cacf3fac0d1a76}{authentication\+Scope()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_aa12f84e9b331fd91938d543d29b4a0bd}\label{classWt_1_1Auth_1_1OidcService_aa12f84e9b331fd91938d543d29b4a0bd}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!setClientId@{setClientId}}
+\index{setClientId@{setClientId}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{setClientId()}{setClientId()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Oidc\+Service\+::set\+Client\+Id (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})}
+
+
+
+Sets the client ID. 
+
+This setting is required.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_aadd82ba79a73180a507bc7fe948befe1}{client\+Id()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_abe300481baecf41564df21d6e4d72244}\label{classWt_1_1Auth_1_1OidcService_abe300481baecf41564df21d6e4d72244}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!setClientSecret@{setClientSecret}}
+\index{setClientSecret@{setClientSecret}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{setClientSecret()}{setClientSecret()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Oidc\+Service\+::set\+Client\+Secret (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{secret }\end{DoxyParamCaption})}
+
+
+
+Sets the client secret. 
+
+This setting is required.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_abe300481baecf41564df21d6e4d72244}{set\+Client\+Secret()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_ae7309be4aea4a0f249b9701b0be0ab3d}\label{classWt_1_1Auth_1_1OidcService_ae7309be4aea4a0f249b9701b0be0ab3d}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!setClientSecretMethod@{setClientSecretMethod}}
+\index{setClientSecretMethod@{setClientSecretMethod}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{setClientSecretMethod()}{setClientSecretMethod()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Oidc\+Service\+::set\+Client\+Secret\+Method (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWt_1_1Auth_a4e55a92c5ff4dd9bbd74439868b8400d}{Client\+Secret\+Method}}}]{method }\end{DoxyParamCaption})}
+
+
+
+Sets the method to transfer the client secret. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_adcb56614c72828bc7a4b423f9c4ef543}{name()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a95dc4b3e9ac0cb6b64eb04cdc40cf671}\label{classWt_1_1Auth_1_1OidcService_a95dc4b3e9ac0cb6b64eb04cdc40cf671}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{setDescription()}{setDescription()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Oidc\+Service\+::set\+Description (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{description }\end{DoxyParamCaption})}
+
+
+
+Sets the provider description. 
+
+This setting is required.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_adcb56614c72828bc7a4b423f9c4ef543}{name()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a3f010c967abfa807cea2f8e89e89c6a1}\label{classWt_1_1Auth_1_1OidcService_a3f010c967abfa807cea2f8e89e89c6a1}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!setName@{setName}}
+\index{setName@{setName}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Oidc\+Service\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Sets the provider name. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_adcb56614c72828bc7a4b423f9c4ef543}{name()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_abd3acd5d9d1785f9e591cc1ebe85bd34}\label{classWt_1_1Auth_1_1OidcService_abd3acd5d9d1785f9e591cc1ebe85bd34}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!setPopupHeight@{setPopupHeight}}
+\index{setPopupHeight@{setPopupHeight}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{setPopupHeight()}{setPopupHeight()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Oidc\+Service\+::set\+Popup\+Height (\begin{DoxyParamCaption}\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+Sets the desired height for the popup window. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_ab2a4393cf9b26dd929c97c54808138e7}{popup\+Height()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a7a8421e5617d4f4d4f31e207dfdd9bcd}\label{classWt_1_1Auth_1_1OidcService_a7a8421e5617d4f4d4f31e207dfdd9bcd}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!setPopupWidth@{setPopupWidth}}
+\index{setPopupWidth@{setPopupWidth}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{setPopupWidth()}{setPopupWidth()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Oidc\+Service\+::set\+Popup\+Width (\begin{DoxyParamCaption}\item[{int}]{width }\end{DoxyParamCaption})}
+
+
+
+Sets the desired width for the popup window. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a8d98be3318242d985f32d16e1e76179e}{popup\+Width()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a87442db845cb6fd7b1f44f23504768f1}\label{classWt_1_1Auth_1_1OidcService_a87442db845cb6fd7b1f44f23504768f1}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!setRedirectEndpoint@{setRedirectEndpoint}}
+\index{setRedirectEndpoint@{setRedirectEndpoint}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{setRedirectEndpoint()}{setRedirectEndpoint()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Oidc\+Service\+::set\+Redirect\+Endpoint (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url }\end{DoxyParamCaption})}
+
+
+
+Sets the redirection endpoint U\+RL. 
+
+\begin{DoxySeeAlso}{See also}
+redirect\+Endoint() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a63c8a73987feac485094a5c7ca614dc9}\label{classWt_1_1Auth_1_1OidcService_a63c8a73987feac485094a5c7ca614dc9}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!setTokenEndpoint@{setTokenEndpoint}}
+\index{setTokenEndpoint@{setTokenEndpoint}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{setTokenEndpoint()}{setTokenEndpoint()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Oidc\+Service\+::set\+Token\+Endpoint (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url }\end{DoxyParamCaption})}
+
+
+
+Sets the token endpoint U\+RL. 
+
+This setting is required.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a1ac42991b7fb3fa3fc74f30409940517}{token\+Endpoint()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a0fc05a920f1d6d59d37c691d47bf3390}\label{classWt_1_1Auth_1_1OidcService_a0fc05a920f1d6d59d37c691d47bf3390}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!setUserInfoEndpoint@{setUserInfoEndpoint}}
+\index{setUserInfoEndpoint@{setUserInfoEndpoint}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{setUserInfoEndpoint()}{setUserInfoEndpoint()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Oidc\+Service\+::set\+User\+Info\+Endpoint (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url }\end{DoxyParamCaption})}
+
+
+
+Sets the user info endpoint U\+RL. 
+
+This setting is required.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a85bf6db097007e35a6b9dda382950a61}{user\+Info\+Endpoint()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a1ac42991b7fb3fa3fc74f30409940517}\label{classWt_1_1Auth_1_1OidcService_a1ac42991b7fb3fa3fc74f30409940517}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!tokenEndpoint@{tokenEndpoint}}
+\index{tokenEndpoint@{tokenEndpoint}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{tokenEndpoint()}{tokenEndpoint()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+Oidc\+Service\+::token\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the token endpoint U\+RL. 
+
+This is a remote U\+RL which hosts a web-\/service that generates access and id tokens.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a63c8a73987feac485094a5c7ca614dc9}{set\+Token\+Endpoint()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_ad649c21d85628e58eeba7171f1bb9990}{Wt\+::\+Auth\+::\+O\+Auth\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcService_a85bf6db097007e35a6b9dda382950a61}\label{classWt_1_1Auth_1_1OidcService_a85bf6db097007e35a6b9dda382950a61}} 
+\index{Wt::Auth::OidcService@{Wt::Auth::OidcService}!userInfoEndpoint@{userInfoEndpoint}}
+\index{userInfoEndpoint@{userInfoEndpoint}!Wt::Auth::OidcService@{Wt::Auth::OidcService}}
+\doxysubsubsection{\texorpdfstring{userInfoEndpoint()}{userInfoEndpoint()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+Oidc\+Service\+::user\+Info\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the user info endpoint U\+RL. 
+
+This is a remote U\+RL which hosts a web-\/service that provides the claims that are associated with the requested scope.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a63c8a73987feac485094a5c7ca614dc9}{set\+Token\+Endpoint()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService}{Wt\+::\+Auth\+::\+O\+Auth\+Service}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/Oidc\+Service.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,261 @@
+\hypertarget{classWt_1_1WValidator}{}\doxysection{Wt\+::W\+Validator Class Reference}
+\label{classWt_1_1WValidator}\index{Wt::WValidator@{Wt::WValidator}}
+
+
+A validator is used to validate user input according to pre-\/defined rules.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Validator.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Validator\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Validator\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWt_1_1WValidator_1_1Result}{Result}}
+\begin{DoxyCompactList}\small\item\em A class that holds a validation result. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WValidator_a862e64cb271db59f28372dd4acff6a09}\label{classWt_1_1WValidator_a862e64cb271db59f28372dd4acff6a09}} 
+typedef \mbox{\hyperlink{classWt_a06744b1cf5fdeae2a8a6c0d0084fdf25}{Validation\+State}} \mbox{\hyperlink{classWt_1_1WValidator_a862e64cb271db59f28372dd4acff6a09}{State}}
+\begin{DoxyCompactList}\small\item\em Typedef for enum \mbox{\hyperlink{classWt_a06744b1cf5fdeae2a8a6c0d0084fdf25}{Wt\+::\+Validation\+State}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WValidator_ac2872ed2b901a46cc4954f1905b1c825}{W\+Validator}} (bool mandatory=false)
+\begin{DoxyCompactList}\small\item\em Creates a new validator. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WValidator_af448fa1219d649b14e75235082105fbb}{$\sim$\+W\+Validator}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WValidator_a6f7993c51a0088b927d7c9aa516efabb}{set\+Mandatory}} (bool how)
+\begin{DoxyCompactList}\small\item\em Sets if input is mandatory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WValidator_a65f55713354195635e949afe88d50fe3}\label{classWt_1_1WValidator_a65f55713354195635e949afe88d50fe3}} 
+bool \mbox{\hyperlink{classWt_1_1WValidator_a65f55713354195635e949afe88d50fe3}{is\+Mandatory}} () const
+\begin{DoxyCompactList}\small\item\em Returns if input is mandatory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WValidator_abafa7c49159d5475a8ec6eff1fef8c17}{set\+Invalid\+Blank\+Text}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text)
+\begin{DoxyCompactList}\small\item\em Sets the message to display when a mandatory field is left blank. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1WValidator_a7983f2ea0fa333d190669704aed013e8}{invalid\+Blank\+Text}} () const
+\begin{DoxyCompactList}\small\item\em Returns the message displayed when a mandatory field is left blank. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WValidator_1_1Result}{Result}} \mbox{\hyperlink{classWt_1_1WValidator_a8c3f8f39bfba125a161a8ff49cffd212}{validate}} (const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&input) const
+\begin{DoxyCompactList}\small\item\em Validates the given input. \end{DoxyCompactList}\item 
+virtual W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \mbox{\hyperlink{classWt_1_1WValidator_a2118f1c12ad3a40d14a806810269ff3f}{format}} () const
+\begin{DoxyCompactList}\small\item\em Returns the validator format. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WValidator_a5067eb396def59bd0a94c33d69387c44}{java\+Script\+Validate}} () const
+\begin{DoxyCompactList}\small\item\em Creates a Javascript object that validates the input. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WValidator_a948f61eb48f0bd112878569eccefdf3c}{input\+Filter}} () const
+\begin{DoxyCompactList}\small\item\em Returns a regular expression that filters input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WValidator_aac61b19b2b9d6df3cfa5ed471aa6eb7f}\label{classWt_1_1WValidator_aac61b19b2b9d6df3cfa5ed471aa6eb7f}} 
+void {\bfseries repaint} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WValidator_aea49e5d9f0e5d8f349cfa1c95aff201e}\label{classWt_1_1WValidator_aea49e5d9f0e5d8f349cfa1c95aff201e}} 
+void {\bfseries add\+Form\+Widget} (\mbox{\hyperlink{classWt_1_1WFormWidget}{W\+Form\+Widget}} $\ast$w)
+\item 
+\mbox{\Hypertarget{classWt_1_1WValidator_acca791c63c628e20bfa7c6df226891a3}\label{classWt_1_1WValidator_acca791c63c628e20bfa7c6df226891a3}} 
+void {\bfseries remove\+Form\+Widget} (\mbox{\hyperlink{classWt_1_1WFormWidget}{W\+Form\+Widget}} $\ast$w)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WValidator_a83adca44a1552ec3dccffe2aea53265a}\label{classWt_1_1WValidator_a83adca44a1552ec3dccffe2aea53265a}} 
+bool {\bfseries mandatory\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WValidator_adb7672318c9dc5a46ecad09166b9b36e}\label{classWt_1_1WValidator_adb7672318c9dc5a46ecad09166b9b36e}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries mandatory\+Text\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WValidator_a23b4027842f275729c86a32921e3e773}\label{classWt_1_1WValidator_a23b4027842f275729c86a32921e3e773}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WFormWidget}{W\+Form\+Widget}} $\ast$ $>$ {\bfseries form\+Widgets\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WValidator_a59ce4b0d448a3792ea983862f4e657b0}\label{classWt_1_1WValidator_a59ce4b0d448a3792ea983862f4e657b0}} 
+class {\bfseries W\+Form\+Widget}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A validator is used to validate user input according to pre-\/defined rules. 
+
+A validator may be associated with a form widget using \mbox{\hyperlink{classWt_1_1WFormWidget_a8b5fa8567e930691b95f1d0fa69359f1}{W\+Form\+Widget\+::set\+Validator()}}.
+
+The validator validates the user input. A validator may have a split implementation to provide both validation at the client-\/side (which gives instant feed-\/back to the user while editing), and server-\/side validation (to be sure that the client was not tampered with). The feed-\/back given by (client-\/side and server-\/side) validation is reflected in the style class of the form field\+: a style class of {\ttfamily Wt-\/invalid} is set for a field that is invalid.
+
+This W\+Validator only checks that mandatory fields are not empty. This class is reimplemented in \mbox{\hyperlink{classWt_1_1WDateValidator}{W\+Date\+Validator}}, \mbox{\hyperlink{classWt_1_1WIntValidator}{W\+Int\+Validator}}, \mbox{\hyperlink{classWt_1_1WDoubleValidator}{W\+Double\+Validator}}, \mbox{\hyperlink{classWt_1_1WLengthValidator}{W\+Length\+Validator}} and \mbox{\hyperlink{classWt_1_1WRegExpValidator}{W\+Reg\+Exp\+Validator}}. All these validators provide both client-\/side and server-\/side validation.
+
+If these validators are not suitable, you can inherit from this class, and provide a suitable implementation to \mbox{\hyperlink{classWt_1_1WValidator_a8c3f8f39bfba125a161a8ff49cffd212}{validate()}} which does the server-\/side validation. If you want to provide client-\/side validation for your own validator, you may also reimplement \mbox{\hyperlink{classWt_1_1WValidator_a5067eb396def59bd0a94c33d69387c44}{java\+Script\+Validate()}}.
+
+\doxyparagraph*{i18n}
+
+The strings used in this class can be translated by overriding the default values for the following localization keys\+:
+\begin{DoxyItemize}
+\item Wt.\+W\+Validator.\+Invalid\+: This field cannot be empty
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormWidget}{W\+Form\+Widget}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WValidator_ac2872ed2b901a46cc4954f1905b1c825}\label{classWt_1_1WValidator_ac2872ed2b901a46cc4954f1905b1c825}} 
+\index{Wt::WValidator@{Wt::WValidator}!WValidator@{WValidator}}
+\index{WValidator@{WValidator}!Wt::WValidator@{Wt::WValidator}}
+\doxysubsubsection{\texorpdfstring{WValidator()}{WValidator()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Validator\+::\+W\+Validator (\begin{DoxyParamCaption}\item[{bool}]{mandatory = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Creates a new validator. 
+
+Indicate whether input is mandatory.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WValidator_a6f7993c51a0088b927d7c9aa516efabb}{set\+Mandatory(bool)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WValidator_af448fa1219d649b14e75235082105fbb}\label{classWt_1_1WValidator_af448fa1219d649b14e75235082105fbb}} 
+\index{Wt::WValidator@{Wt::WValidator}!````~WValidator@{$\sim$WValidator}}
+\index{````~WValidator@{$\sim$WValidator}!Wt::WValidator@{Wt::WValidator}}
+\doxysubsubsection{\texorpdfstring{$\sim$WValidator()}{~WValidator()}}
+{\footnotesize\ttfamily virtual Wt\+::\+W\+Validator\+::$\sim$\+W\+Validator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+The validator automatically removes itself from all formfields to which it was associated. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WValidator_a2118f1c12ad3a40d14a806810269ff3f}\label{classWt_1_1WValidator_a2118f1c12ad3a40d14a806810269ff3f}} 
+\index{Wt::WValidator@{Wt::WValidator}!format@{format}}
+\index{format@{format}!Wt::WValidator@{Wt::WValidator}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}}
+{\footnotesize\ttfamily virtual W\+T\+\_\+\+U\+S\+T\+R\+I\+NG Wt\+::\+W\+Validator\+::format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the validator format. 
+
+The default implementation returns an empty string. 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WDateValidator_a0c35fbec8fde37405f2d5a33bfb72eb5}{Wt\+::\+W\+Date\+Validator}}, and \mbox{\hyperlink{classWt_1_1WTimeValidator_acefb857bd51e23542301f663b1d26df4}{Wt\+::\+W\+Time\+Validator}}.
+
+\mbox{\Hypertarget{classWt_1_1WValidator_a948f61eb48f0bd112878569eccefdf3c}\label{classWt_1_1WValidator_a948f61eb48f0bd112878569eccefdf3c}} 
+\index{Wt::WValidator@{Wt::WValidator}!inputFilter@{inputFilter}}
+\index{inputFilter@{inputFilter}!Wt::WValidator@{Wt::WValidator}}
+\doxysubsubsection{\texorpdfstring{inputFilter()}{inputFilter()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+W\+Validator\+::input\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a regular expression that filters input. 
+
+The returned regular expression is used to filter keys presses. The regular expression should accept valid single characters.
+
+For details on valid regular expressions, see \mbox{\hyperlink{classWt_1_1WRegExpValidator}{W\+Reg\+Exp\+Validator}}. As an example, \char`\"{}\mbox{[}0-\/9\mbox{]}\char`\"{} would only accept numbers as valid input.
+
+The default implementation returns an empty string, which does not filter any input.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WValidator_a5067eb396def59bd0a94c33d69387c44}{java\+Script\+Validate()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WIntValidator_a453b546efaa05a32d34b911bb398cca4}{Wt\+::\+W\+Int\+Validator}}.
+
+\mbox{\Hypertarget{classWt_1_1WValidator_a7983f2ea0fa333d190669704aed013e8}\label{classWt_1_1WValidator_a7983f2ea0fa333d190669704aed013e8}} 
+\index{Wt::WValidator@{Wt::WValidator}!invalidBlankText@{invalidBlankText}}
+\index{invalidBlankText@{invalidBlankText}!Wt::WValidator@{Wt::WValidator}}
+\doxysubsubsection{\texorpdfstring{invalidBlankText()}{invalidBlankText()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WString}{W\+String}} Wt\+::\+W\+Validator\+::invalid\+Blank\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the message displayed when a mandatory field is left blank. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WValidator_abafa7c49159d5475a8ec6eff1fef8c17}{set\+Invalid\+Blank\+Text(const W\+String\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WValidator_a5067eb396def59bd0a94c33d69387c44}\label{classWt_1_1WValidator_a5067eb396def59bd0a94c33d69387c44}} 
+\index{Wt::WValidator@{Wt::WValidator}!javaScriptValidate@{javaScriptValidate}}
+\index{javaScriptValidate@{javaScriptValidate}!Wt::WValidator@{Wt::WValidator}}
+\doxysubsubsection{\texorpdfstring{javaScriptValidate()}{javaScriptValidate()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+W\+Validator\+::java\+Script\+Validate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a Javascript object that validates the input. 
+
+The Java\+Script expression should evaluate to an object which contains a {\ttfamily validate(text)} function, which returns an object that contains the following two fields\+:
+\begin{DoxyItemize}
+\item fields\+: a boolean {\itshape valid},
+\item a {\ttfamily message} that indicates the problem if not valid.
+\end{DoxyItemize}
+
+Returns an empty string if the validator does not provide a client-\/side validation implementationq.
+
+\begin{DoxyNote}{Note}
+The signature and contract changed changed in Wt 3.\+1.\+9.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WValidator_a948f61eb48f0bd112878569eccefdf3c}{input\+Filter()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WDateValidator_aff29d13c790bd3eca1a13cbeae8c345d}{Wt\+::\+W\+Date\+Validator}}, \mbox{\hyperlink{classWt_1_1WDoubleValidator_a3c4c7a6587393168b13317834e2cf1f0}{Wt\+::\+W\+Double\+Validator}}, \mbox{\hyperlink{classWt_1_1WIntValidator_a4eda6d358177c852e6e798c13145d674}{Wt\+::\+W\+Int\+Validator}}, \mbox{\hyperlink{classWt_1_1WRegExpValidator_ac1bdd7bc28cb7dd6bc342eb71364b8e1}{Wt\+::\+W\+Reg\+Exp\+Validator}}, \mbox{\hyperlink{classWt_1_1WLengthValidator_a7488e93d32ee493c4043d494f383489a}{Wt\+::\+W\+Length\+Validator}}, and \mbox{\hyperlink{classWt_1_1WTimeValidator_a64a386cf7b46981f29ab78f8ff32c61a}{Wt\+::\+W\+Time\+Validator}}.
+
+\mbox{\Hypertarget{classWt_1_1WValidator_abafa7c49159d5475a8ec6eff1fef8c17}\label{classWt_1_1WValidator_abafa7c49159d5475a8ec6eff1fef8c17}} 
+\index{Wt::WValidator@{Wt::WValidator}!setInvalidBlankText@{setInvalidBlankText}}
+\index{setInvalidBlankText@{setInvalidBlankText}!Wt::WValidator@{Wt::WValidator}}
+\doxysubsubsection{\texorpdfstring{setInvalidBlankText()}{setInvalidBlankText()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Validator\+::set\+Invalid\+Blank\+Text (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Sets the message to display when a mandatory field is left blank. 
+
+The default value is \char`\"{}\+This field cannot be empty\char`\"{}. \mbox{\Hypertarget{classWt_1_1WValidator_a6f7993c51a0088b927d7c9aa516efabb}\label{classWt_1_1WValidator_a6f7993c51a0088b927d7c9aa516efabb}} 
+\index{Wt::WValidator@{Wt::WValidator}!setMandatory@{setMandatory}}
+\index{setMandatory@{setMandatory}!Wt::WValidator@{Wt::WValidator}}
+\doxysubsubsection{\texorpdfstring{setMandatory()}{setMandatory()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Validator\+::set\+Mandatory (\begin{DoxyParamCaption}\item[{bool}]{how }\end{DoxyParamCaption})}
+
+
+
+Sets if input is mandatory. 
+
+When an input is not mandatory, then an empty field is always valid. \mbox{\Hypertarget{classWt_1_1WValidator_a8c3f8f39bfba125a161a8ff49cffd212}\label{classWt_1_1WValidator_a8c3f8f39bfba125a161a8ff49cffd212}} 
+\index{Wt::WValidator@{Wt::WValidator}!validate@{validate}}
+\index{validate@{validate}!Wt::WValidator@{Wt::WValidator}}
+\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WValidator_1_1Result}{Result}} Wt\+::\+W\+Validator\+::validate (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{input }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Validates the given input. 
+
+\begin{DoxyNote}{Note}
+The signature for this method changed in Wt 3.\+2.\+0. 
+\end{DoxyNote}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractPasswordService_1_1AbstractStrengthValidator_a0f614251eb2cdb2d09759f4b70f92141}{Wt\+::\+Auth\+::\+Abstract\+Password\+Service\+::\+Abstract\+Strength\+Validator}}, \mbox{\hyperlink{classWt_1_1WDateValidator_a491c2d83eeeaa5c04eb2d19bec00adbf}{Wt\+::\+W\+Date\+Validator}}, \mbox{\hyperlink{classWt_1_1WRegExpValidator_ad1ee6c9accc4220c50ae8732bf20cb70}{Wt\+::\+W\+Reg\+Exp\+Validator}}, \mbox{\hyperlink{classWt_1_1WTimeValidator_a0304b048344a5e74bbfaa77d95a3b377}{Wt\+::\+W\+Time\+Validator}}, \mbox{\hyperlink{classWt_1_1WDoubleValidator_a237036172799fa6f15013788e5d191b6}{Wt\+::\+W\+Double\+Validator}}, \mbox{\hyperlink{classWt_1_1WIntValidator_ab19086ac2b0d337a3c93a86315da2be5}{Wt\+::\+W\+Int\+Validator}}, and \mbox{\hyperlink{classWt_1_1WLengthValidator_a8746fd1fc6b04f587bda0e9a64a15907}{Wt\+::\+W\+Length\+Validator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Validator.\+h\end{DoxyCompactItemize}

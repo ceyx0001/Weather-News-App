@@ -1,0 +1,260 @@
+\hypertarget{classWt_1_1Auth_1_1AuthModel}{}\doxysection{Wt\+::Auth\+::Auth\+Model Class Reference}
+\label{classWt_1_1Auth_1_1AuthModel}\index{Wt::Auth::AuthModel@{Wt::Auth::AuthModel}}
+
+
+Model for implementing an authentication view.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Auth/\+Auth\+Model.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Auth\+::Auth\+Model\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Auth\+::Auth\+Model\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_a368c75689b08ce66a536e3494ed8ddc8}{Auth\+Model}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a37e8facdc2ea29975c948567b5d8192f}{base\+Auth}}, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a28037bb9c5b0ef277b3832b4f823ae11}{users}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_ad607b9751930f6451fb8eebb0315a330}{reset}} () override
+\begin{DoxyCompactList}\small\item\em Resets the model. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_a4c4845c299b34f8a8ecc3ceb36fdaad3}{is\+Visible}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field) const override
+\begin{DoxyCompactList}\small\item\em Returns whether a field is visible. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_aae894ae477a50ad6b8b3ba962f00f298}{validate\+Field}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field) override
+\begin{DoxyCompactList}\small\item\em Validates a field. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_a27faf850dfa6204b11719af1451a49c2}{validate}} () override
+\begin{DoxyCompactList}\small\item\em Validates the current input. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_a278e9ea2fd31530d677b7d6c331fdc95}{configure\+Throttling}} (\mbox{\hyperlink{classWt_1_1WInteractWidget}{W\+Interact\+Widget}} $\ast$button)
+\begin{DoxyCompactList}\small\item\em Initializes client-\/side login throttling. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_acd2acd450a3acdb984d9215b6e599c96}{update\+Throttling}} (\mbox{\hyperlink{classWt_1_1WInteractWidget}{W\+Interact\+Widget}} $\ast$button)
+\begin{DoxyCompactList}\small\item\em Updates client-\/side login throttling. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_a45e58ea275b2f313703948cf42f5a61b}{login}} (\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \&login)
+\begin{DoxyCompactList}\small\item\em Logs the user in. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_aa5735151862d96f122f6dc8586fcfdd3}{logout}} (\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_a45e58ea275b2f313703948cf42f5a61b}{login}})
+\begin{DoxyCompactList}\small\item\em Logs the user out. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1EmailTokenResult}{Email\+Token\+Result}} \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_afd57f7865548665cd488ac2fb484c83b}{process\+Email\+Token}} (const std\+::string \&token)
+\begin{DoxyCompactList}\small\item\em Processes an email token. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_a1c7919b3922e4b7ddf55cde0389af376}{set\+Remember\+Me\+Cookie}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user)
+\begin{DoxyCompactList}\small\item\em Creates a token and stores it in a cookie. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_a6b81ebe81838ea989a8436f4918fcc31}{process\+Auth\+Token}} ()
+\begin{DoxyCompactList}\small\item\em Detects and processes an authentication token. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthModel_aec38d7dfecbe59bbc172e78101f0e988}\label{classWt_1_1Auth_1_1AuthModel_aec38d7dfecbe59bbc172e78101f0e988}} 
+static const \mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_aec38d7dfecbe59bbc172e78101f0e988}{Password\+Field}}
+\begin{DoxyCompactList}\small\item\em Password field. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthModel_a487d0f442b0c5df8e9db3a1a03f195d8}\label{classWt_1_1Auth_1_1AuthModel_a487d0f442b0c5df8e9db3a1a03f195d8}} 
+static const \mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_a487d0f442b0c5df8e9db3a1a03f195d8}{Remember\+Me\+Field}}
+\begin{DoxyCompactList}\small\item\em Remember-\/me field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthModel_aba81129044d1121578d78f40d858ad61}\label{classWt_1_1Auth_1_1AuthModel_aba81129044d1121578d78f40d858ad61}} 
+int {\bfseries throttling\+Delay\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Model for implementing an authentication view. 
+
+This model implements the logic for authenticating a user (the \char`\"{}login\char`\"{} interface). It implements traditional username/password registration, and third party identification methods (although for the latter, it doesn\textquotesingle{}t really do anything).
+
+The model exposes three fields\+:
+\begin{DoxyItemize}
+\item Login\+Name\+Field\+: the login name (used as an identity for the \mbox{\hyperlink{classWt_1_1Auth_1_1Identity_a1d680fd0dbf7a12684a511d74081eb06}{Identity\+::\+Login\+Name}} provider)
+\item Password\+Field\+: the password
+\item Remember\+Me\+Field\+: whether the login should be remembered with an authentication cookie (if that is configured in the \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}}).
+\end{DoxyItemize}
+
+When the model validates correctly (\mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_a27faf850dfa6204b11719af1451a49c2}{validate()}} returns {\ttfamily true}), the entered credentials are correct. At that point you can use the \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_a45e58ea275b2f313703948cf42f5a61b}{login()}} utility function to login the identified user.
+
+The model can also be used when the user is already known (e.\+g. to implement password confirmation before a critical operation). In that case you can set a value for the Login\+Name\+Field and make this field invisible or read-\/only.
+
+The model also provides the client-\/side Java\+Script logic to indicate password attempt throttling (\mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_a278e9ea2fd31530d677b7d6c331fdc95}{configure\+Throttling()}} and \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_acd2acd450a3acdb984d9215b6e599c96}{update\+Throttling()}}).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget}{Auth\+Widget}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthModel_a368c75689b08ce66a536e3494ed8ddc8}\label{classWt_1_1Auth_1_1AuthModel_a368c75689b08ce66a536e3494ed8ddc8}} 
+\index{Wt::Auth::AuthModel@{Wt::Auth::AuthModel}!AuthModel@{AuthModel}}
+\index{AuthModel@{AuthModel}!Wt::Auth::AuthModel@{Wt::Auth::AuthModel}}
+\doxysubsubsection{\texorpdfstring{AuthModel()}{AuthModel()}}
+{\footnotesize\ttfamily Wt\+::\+Auth\+::\+Auth\+Model\+::\+Auth\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} \&}]{base\+Auth,  }\item[{\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&}]{users }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Creates a new authentication model, using a basic authentication service and user database. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthModel_a278e9ea2fd31530d677b7d6c331fdc95}\label{classWt_1_1Auth_1_1AuthModel_a278e9ea2fd31530d677b7d6c331fdc95}} 
+\index{Wt::Auth::AuthModel@{Wt::Auth::AuthModel}!configureThrottling@{configureThrottling}}
+\index{configureThrottling@{configureThrottling}!Wt::Auth::AuthModel@{Wt::Auth::AuthModel}}
+\doxysubsubsection{\texorpdfstring{configureThrottling()}{configureThrottling()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Model\+::configure\+Throttling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WInteractWidget}{W\+Interact\+Widget}} $\ast$}]{button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes client-\/side login throttling. 
+
+If login attempt throttling is enabled, then this may also be indicated client-\/side using Java\+Script by disabling the login button and showing a count-\/down indicator. This method initializes this Java\+Script utlity function for a login button.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_acd2acd450a3acdb984d9215b6e599c96}{update\+Throttling()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthModel_a4c4845c299b34f8a8ecc3ceb36fdaad3}\label{classWt_1_1Auth_1_1AuthModel_a4c4845c299b34f8a8ecc3ceb36fdaad3}} 
+\index{Wt::Auth::AuthModel@{Wt::Auth::AuthModel}!isVisible@{isVisible}}
+\index{isVisible@{isVisible}!Wt::Auth::AuthModel@{Wt::Auth::AuthModel}}
+\doxysubsubsection{\texorpdfstring{isVisible()}{isVisible()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Auth\+::\+Auth\+Model\+::is\+Visible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns whether a field is visible. 
+
+In some cases not all fields of the model need to be shown. This may depend on values input for certain fields, and thus change dynamically. You may specialize this method to indicate that a certain field should be invisible.
+
+The default implementation returns the value set by \mbox{\hyperlink{classWt_1_1WFormModel_a465d3ee3dd6c074c52dadc2167cd4437}{set\+Visible()}}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WFormModel_a57c318f268ec74825b49068644a77c8c}{Wt\+::\+W\+Form\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthModel_a45e58ea275b2f313703948cf42f5a61b}\label{classWt_1_1Auth_1_1AuthModel_a45e58ea275b2f313703948cf42f5a61b}} 
+\index{Wt::Auth::AuthModel@{Wt::Auth::AuthModel}!login@{login}}
+\index{login@{login}!Wt::Auth::AuthModel@{Wt::Auth::AuthModel}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Auth\+::\+Auth\+Model\+::login (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \&}]{login }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Logs the user in. 
+
+Logs in the user after a successful call to \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_a27faf850dfa6204b11719af1451a49c2}{validate()}}. To avoid mishaps, you should call this method immediately after a call to \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_a27faf850dfa6204b11719af1451a49c2}{validate()}}.
+
+Returns whether the user could be logged in. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthModel_aa5735151862d96f122f6dc8586fcfdd3}\label{classWt_1_1Auth_1_1AuthModel_aa5735151862d96f122f6dc8586fcfdd3}} 
+\index{Wt::Auth::AuthModel@{Wt::Auth::AuthModel}!logout@{logout}}
+\index{logout@{logout}!Wt::Auth::AuthModel@{Wt::Auth::AuthModel}}
+\doxysubsubsection{\texorpdfstring{logout()}{logout()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Model\+::logout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \&}]{login }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Logs the user out. 
+
+This also removes the remember-\/me cookie for the user. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthModel_a6b81ebe81838ea989a8436f4918fcc31}\label{classWt_1_1Auth_1_1AuthModel_a6b81ebe81838ea989a8436f4918fcc31}} 
+\index{Wt::Auth::AuthModel@{Wt::Auth::AuthModel}!processAuthToken@{processAuthToken}}
+\index{processAuthToken@{processAuthToken}!Wt::Auth::AuthModel@{Wt::Auth::AuthModel}}
+\doxysubsubsection{\texorpdfstring{processAuthToken()}{processAuthToken()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} Wt\+::\+Auth\+::\+Auth\+Model\+::process\+Auth\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Detects and processes an authentication token. 
+
+This returns a user that was identified with an authentication token found in the application environment, or an invalid \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} object if this feature is not configured, or no valid cookie was found.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_afa24e731e80bedc299d2560efbcb0c34}{Auth\+Service\+::process\+Auth\+Token()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthModel_afd57f7865548665cd488ac2fb484c83b}\label{classWt_1_1Auth_1_1AuthModel_afd57f7865548665cd488ac2fb484c83b}} 
+\index{Wt::Auth::AuthModel@{Wt::Auth::AuthModel}!processEmailToken@{processEmailToken}}
+\index{processEmailToken@{processEmailToken}!Wt::Auth::AuthModel@{Wt::Auth::AuthModel}}
+\doxysubsubsection{\texorpdfstring{processEmailToken()}{processEmailToken()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Auth_1_1EmailTokenResult}{Email\+Token\+Result}} Wt\+::\+Auth\+::\+Auth\+Model\+::process\+Email\+Token (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Processes an email token. 
+
+This simply calls \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a7b3e02441e619e9adc64588fe7a7536c}{Auth\+Service\+::process\+Email\+Token()}}. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthModel_ad607b9751930f6451fb8eebb0315a330}\label{classWt_1_1Auth_1_1AuthModel_ad607b9751930f6451fb8eebb0315a330}} 
+\index{Wt::Auth::AuthModel@{Wt::Auth::AuthModel}!reset@{reset}}
+\index{reset@{reset}!Wt::Auth::AuthModel@{Wt::Auth::AuthModel}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Model\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Resets the model. 
+
+The default implementation clears the value of all fields, and resets the validation state to not validated. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WFormModel_aa20f1efb3766f39ccee0e5179d921362}{Wt\+::\+W\+Form\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthModel_a1c7919b3922e4b7ddf55cde0389af376}\label{classWt_1_1Auth_1_1AuthModel_a1c7919b3922e4b7ddf55cde0389af376}} 
+\index{Wt::Auth::AuthModel@{Wt::Auth::AuthModel}!setRememberMeCookie@{setRememberMeCookie}}
+\index{setRememberMeCookie@{setRememberMeCookie}!Wt::Auth::AuthModel@{Wt::Auth::AuthModel}}
+\doxysubsubsection{\texorpdfstring{setRememberMeCookie()}{setRememberMeCookie()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Model\+::set\+Remember\+Me\+Cookie (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a token and stores it in a cookie. 
+
+This enables automatic authentication in a next session. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthModel_acd2acd450a3acdb984d9215b6e599c96}\label{classWt_1_1Auth_1_1AuthModel_acd2acd450a3acdb984d9215b6e599c96}} 
+\index{Wt::Auth::AuthModel@{Wt::Auth::AuthModel}!updateThrottling@{updateThrottling}}
+\index{updateThrottling@{updateThrottling}!Wt::Auth::AuthModel@{Wt::Auth::AuthModel}}
+\doxysubsubsection{\texorpdfstring{updateThrottling()}{updateThrottling()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Model\+::update\+Throttling (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WInteractWidget}{W\+Interact\+Widget}} $\ast$}]{button }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates client-\/side login throttling. 
+
+This should be called after a call to attempt\+Password\+Login(), if you want to reflect throttling using a client-\/side count-\/down indicator in the button.
+
+You need to call \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_a278e9ea2fd31530d677b7d6c331fdc95}{configure\+Throttling()}} before you can do this. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthModel_a27faf850dfa6204b11719af1451a49c2}\label{classWt_1_1Auth_1_1AuthModel_a27faf850dfa6204b11719af1451a49c2}} 
+\index{Wt::Auth::AuthModel@{Wt::Auth::AuthModel}!validate@{validate}}
+\index{validate@{validate}!Wt::Auth::AuthModel@{Wt::Auth::AuthModel}}
+\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Auth\+::\+Auth\+Model\+::validate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Validates the current input. 
+
+The default implementation calls \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_aae894ae477a50ad6b8b3ba962f00f298}{validate\+Field()}} for each field and returns {\ttfamily true} if all fields validated.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_aae894ae477a50ad6b8b3ba962f00f298}{validate\+Field()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WFormModel_a12a89c233490127f4a12ebf275e25e3a}{Wt\+::\+W\+Form\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthModel_aae894ae477a50ad6b8b3ba962f00f298}\label{classWt_1_1Auth_1_1AuthModel_aae894ae477a50ad6b8b3ba962f00f298}} 
+\index{Wt::Auth::AuthModel@{Wt::Auth::AuthModel}!validateField@{validateField}}
+\index{validateField@{validateField}!Wt::Auth::AuthModel@{Wt::Auth::AuthModel}}
+\doxysubsubsection{\texorpdfstring{validateField()}{validateField()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Auth\+::\+Auth\+Model\+::validate\+Field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Validates a field. 
+
+The default implementation uses the validator configured for the field to validate the field contents, or if no validator has been configured assumes that the field is valid.
+
+You will typically customize this method for more complex validation cases.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel_a27faf850dfa6204b11719af1451a49c2}{validate()}}, validation\+Result() 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WFormModel_adf8060e571433e5f225ba2b60f3deefa}{Wt\+::\+W\+Form\+Model}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/Auth\+Model.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,435 @@
+\hypertarget{group__dbo}{}\doxysection{Database Objects (Wt\+::Dbo)}
+\label{group__dbo}\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}
+
+
+An implemenation of an Object Relational Mapping layer.  
+
+
+Collaboration diagram for Database Objects (Wt\+::Dbo)\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Wt\+::\+Dbo\+::\+Foreign\+Key\+Constraint}}
+\begin{DoxyCompactList}\small\item\em Type that indicates one or more foreign key constraints. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Wt\+::\+Dbo\+::\+Sql\+Statement}}
+\begin{DoxyCompactList}\small\item\em Abstract base class for a prepared S\+QL statement. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird}{Wt\+::\+Dbo\+::backend\+::\+Firebird}}
+\begin{DoxyCompactList}\small\item\em A Firebird connection. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MSSQLServer}{Wt\+::\+Dbo\+::backend\+::\+M\+S\+S\+Q\+L\+Server}}
+\begin{DoxyCompactList}\small\item\em A Microsoft S\+QL \mbox{\hyperlink{classWt_1_1Server}{Server}} connection. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL}{Wt\+::\+Dbo\+::backend\+::\+My\+S\+QL}}
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL}{My\+S\+QL}} connection. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres}{Wt\+::\+Dbo\+::backend\+::\+Postgres}}
+\begin{DoxyCompactList}\small\item\em A Postgre\+S\+QL connection. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3}{Wt\+::\+Dbo\+::backend\+::\+Sqlite3}}
+\begin{DoxyCompactList}\small\item\em An S\+Q\+Lite3 connection. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Wt\+::\+Dbo\+::collection$<$ C $>$}}
+\begin{DoxyCompactList}\small\item\em An S\+TL container for iterating query results. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1Exception}{Wt\+::\+Dbo\+::\+Exception}}
+\begin{DoxyCompactList}\small\item\em Exception base class for Wt\+::Dbo. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1StaleObjectException}{Wt\+::\+Dbo\+::\+Stale\+Object\+Exception}}
+\begin{DoxyCompactList}\small\item\em Exception thrown when Wt\+::Dbo detects a concurrent modification \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1ObjectNotFoundException}{Wt\+::\+Dbo\+::\+Object\+Not\+Found\+Exception}}
+\begin{DoxyCompactList}\small\item\em Exception thrown when trying to load a non-\/existing object. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1NoUniqueResultException}{Wt\+::\+Dbo\+::\+No\+Unique\+Result\+Exception}}
+\begin{DoxyCompactList}\small\item\em Exception thrown when a query unexpectedly finds a non-\/unique result. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1FixedSqlConnectionPool}{Wt\+::\+Dbo\+::\+Fixed\+Sql\+Connection\+Pool}}
+\begin{DoxyCompactList}\small\item\em A connection pool of fixed size. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1JsonSerializer}{Wt\+::\+Dbo\+::\+Json\+Serializer}}
+\begin{DoxyCompactList}\small\item\em An action to serialize objects to J\+S\+ON. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{structWt_1_1Dbo_1_1dbo__default__traits}{Wt\+::\+Dbo\+::dbo\+\_\+default\+\_\+traits}}
+\begin{DoxyCompactList}\small\item\em Default traits for a class mapped with Wt\+::Dbo. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{structWt_1_1Dbo_1_1dbo__traits}{Wt\+::\+Dbo\+::dbo\+\_\+traits$<$ C $>$}}
+\begin{DoxyCompactList}\small\item\em Traits for a class mapped with Wt\+::Dbo. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo}{Wt\+::\+Dbo\+::\+Dbo$<$ C $>$}}
+\begin{DoxyCompactList}\small\item\em A base class for database objects. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{Wt\+::\+Dbo\+::ptr}}
+\begin{DoxyCompactList}\small\item\em A smart pointer for a database object. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Wt\+::\+Dbo\+::\+Abstract\+Query}}
+\begin{DoxyCompactList}\small\item\em An abstract dynamic database query. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Wt\+::\+Dbo\+::\+Query}}
+\begin{DoxyCompactList}\small\item\em A database query. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model$<$ Result $>$}}
+\begin{DoxyCompactList}\small\item\em A Wt M\+VC Model to view/edit query results. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Wt\+::\+Dbo\+::\+Session}}
+\begin{DoxyCompactList}\small\item\em A database session. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Wt\+::\+Dbo\+::\+Sql\+Connection}}
+\begin{DoxyCompactList}\small\item\em Abstract base class for an S\+QL connection. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnectionPool}{Wt\+::\+Dbo\+::\+Sql\+Connection\+Pool}}
+\begin{DoxyCompactList}\small\item\em Abstract base class for a S\+QL connection pool. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{structWt_1_1Dbo_1_1sql__value__traits}{Wt\+::\+Dbo\+::sql\+\_\+value\+\_\+traits$<$ V, Enable $>$}}
+\begin{DoxyCompactList}\small\item\em Traits class for value types. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1FieldInfo}{Wt\+::\+Dbo\+::\+Field\+Info}}
+\begin{DoxyCompactList}\small\item\em Description of a field. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits}{Wt\+::\+Dbo\+::query\+\_\+result\+\_\+traits$<$ Result $>$}}
+\begin{DoxyCompactList}\small\item\em Traits class for result types. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction}{Wt\+::\+Dbo\+::\+Transaction}}
+\begin{DoxyCompactList}\small\item\em A database transaction. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1weak__ptr}{Wt\+::\+Dbo\+::weak\+\_\+ptr}}
+\begin{DoxyCompactList}\small\item\em A weak pointer for a database object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__dbo_ga1d0ec6819b1bf5b7a88ad030b91ca564}{Wt\+::\+Dbo\+::\+Relation\+Type}} \{ \mbox{\hyperlink{group__dbo_gga1d0ec6819b1bf5b7a88ad030b91ca564a32d7393c325724244671b18be53058fa}{Wt\+::\+Dbo\+::\+Many\+To\+One}}, 
+\mbox{\hyperlink{group__dbo_gga1d0ec6819b1bf5b7a88ad030b91ca564ad0bd477ec215a878e0758cce8494af24}{Wt\+::\+Dbo\+::\+Many\+To\+Many}}
+ \}
+\begin{DoxyCompactList}\small\item\em Type of an S\+QL relation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__dbo_ga3815c99266412f8ff53cf4c73546d918}\label{group__dbo_ga3815c99266412f8ff53cf4c73546d918}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} \mbox{\hyperlink{group__dbo_ga3815c99266412f8ff53cf4c73546d918}{Wt\+::\+Dbo\+::operator$\vert$}} (\mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} lhs, \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} rhs)
+\begin{DoxyCompactList}\small\item\em Combines two constraints. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} \mbox{\hyperlink{group__dbo_ga288c99c96bdeea3a13b8fe04a9f9151d}{Wt\+::\+Dbo\+::\+Not\+Null}} (Impl\+::\+F\+K\+Not\+Null)
+\begin{DoxyCompactList}\small\item\em A constraint that prevents a {\ttfamily null} ptr. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} \mbox{\hyperlink{group__dbo_ga0cf2043c74bbc7eaf333e65871e7f07f}{Wt\+::\+Dbo\+::\+On\+Update\+Cascade}} (Impl\+::\+F\+K\+On\+Update\+Cascade)
+\begin{DoxyCompactList}\small\item\em A constraint that cascades updates. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} \mbox{\hyperlink{group__dbo_ga993d38114f94fb49a15545e3783165e0}{Wt\+::\+Dbo\+::\+On\+Update\+Set\+Null}} (Impl\+::\+F\+K\+On\+Update\+Set\+Null)
+\begin{DoxyCompactList}\small\item\em A constraint that cascades updates. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} \mbox{\hyperlink{group__dbo_gad9dac3fd4ec0b650f3c6f811b12018f0}{Wt\+::\+Dbo\+::\+On\+Update\+Restrict}} (Impl\+::\+F\+K\+On\+Update\+Restrict)
+\begin{DoxyCompactList}\small\item\em A constraint that restricts updates. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} \mbox{\hyperlink{group__dbo_ga5acf2e0dd1af1be56489b5ebfcbabea8}{Wt\+::\+Dbo\+::\+On\+Delete\+Cascade}} (Impl\+::\+F\+K\+On\+Delete\+Cascade)
+\begin{DoxyCompactList}\small\item\em A constraint that cascades deletes. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} \mbox{\hyperlink{group__dbo_gad3818e7a1052bdfc69e888b7160e5842}{Wt\+::\+Dbo\+::\+On\+Delete\+Set\+Null}} (Impl\+::\+F\+K\+On\+Delete\+Set\+Null)
+\begin{DoxyCompactList}\small\item\em A constraint that cascades deletes. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} \mbox{\hyperlink{group__dbo_ga2ed29fa2c3f8e5dd90515280589e8712}{Wt\+::\+Dbo\+::\+On\+Delete\+Restrict}} (Impl\+::\+F\+K\+On\+Delete\+Restrict)
+\begin{DoxyCompactList}\small\item\em A constraint that restricts deletes. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Action , typename V $>$ }\\void \mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{Wt\+::\+Dbo\+::id}} (Action \&action, V \&value, const std\+::string \&name=\char`\"{}id\char`\"{}, int size=-\/1)
+\begin{DoxyCompactList}\small\item\em Maps a natural primary key (id) field. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Action , class C $>$ }\\void \mbox{\hyperlink{group__dbo_gaf6e683b7a7124e562134caf155ef0080}{Wt\+::\+Dbo\+::id}} (Action \&action, \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ \&value, const std\+::string \&name, \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} constraints, int size=-\/1)
+\begin{DoxyCompactList}\small\item\em Maps a natural primary key (id) field that is a foreign key. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Action , typename V $>$ }\\void \mbox{\hyperlink{group__dbo_ga864a2e134149e7f614f45967777992c7}{Wt\+::\+Dbo\+::field}} (Action \&action, V \&value, const std\+::string \&name, int size=-\/1)
+\begin{DoxyCompactList}\small\item\em Maps a database object field. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Action , class C $>$ }\\void \mbox{\hyperlink{group__dbo_gac089020eff000d9e2c4ef72cf715bd21}{Wt\+::\+Dbo\+::belongs\+To}} (Action \&action, \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ \&value, const std\+::string \&name=std\+::string())
+\begin{DoxyCompactList}\small\item\em Maps the \char`\"{}\+One\char`\"{}-\/side (foreign key) of a Many\+To\+One or One\+To\+One relation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Action , class C $>$ }\\void \mbox{\hyperlink{group__dbo_ga31a1292b863cb47ee1eb37c7ddd51fad}{Wt\+::\+Dbo\+::belongs\+To}} (Action \&action, \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ \&value, const std\+::string \&name, \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} constraints)
+\begin{DoxyCompactList}\small\item\em Maps the \char`\"{}\+One\char`\"{}-\/side (foreign key) of a Many\+To\+One or One\+To\+One relation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Action , class C $>$ }\\void \mbox{\hyperlink{group__dbo_gaa3a5224090f8bb4b423485328b5b3030}{Wt\+::\+Dbo\+::belongs\+To}} (Action \&action, \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ \&value, \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} constraints)
+\begin{DoxyCompactList}\small\item\em Maps the \char`\"{}\+One\char`\"{}-\/side (foreign key) of a Many\+To\+One or One\+To\+One relation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Action , class C $>$ }\\void \mbox{\hyperlink{group__dbo_ga00a060d5f4764f673948989f21837548}{Wt\+::\+Dbo\+::has\+One}} (Action \&action, \mbox{\hyperlink{classWt_1_1Dbo_1_1weak__ptr}{weak\+\_\+ptr}}$<$ C $>$ \&value, const std\+::string \&name=std\+::string())
+\begin{DoxyCompactList}\small\item\em Maps the \char`\"{}\+One\char`\"{}-\/side of a One\+To\+One relation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Action , class C $>$ }\\void \mbox{\hyperlink{group__dbo_ga570b71f937c991b000b9db01b327a363}{Wt\+::\+Dbo\+::has\+Many}} (Action \&action, \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}}$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ $>$ \&value, \mbox{\hyperlink{group__dbo_ga1d0ec6819b1bf5b7a88ad030b91ca564}{Relation\+Type}} type, const std\+::string \&name=std\+::string())
+\begin{DoxyCompactList}\small\item\em Maps the \char`\"{}\+Many\char`\"{}-\/side of a Many\+To\+One or Many\+To\+Many relation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Action , class C $>$ }\\void \mbox{\hyperlink{group__dbo_ga544e9fb1aa6202fa4e3b66be64aff098}{Wt\+::\+Dbo\+::has\+Many}} (Action \&action, \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}}$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ $>$ \&value, \mbox{\hyperlink{group__dbo_ga1d0ec6819b1bf5b7a88ad030b91ca564}{Relation\+Type}} type, const std\+::string \&name, const std\+::string \&join\+Id, \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} constraints=(\mbox{\hyperlink{group__dbo_ga288c99c96bdeea3a13b8fe04a9f9151d}{Not\+Null}}$\vert$\mbox{\hyperlink{group__dbo_ga5acf2e0dd1af1be56489b5ebfcbabea8}{On\+Delete\+Cascade}}))
+\begin{DoxyCompactList}\small\item\em Maps the \char`\"{}\+Many\char`\"{}-\/side of a Many\+To\+Many relation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An implemenation of an Object Relational Mapping layer. 
+
+For an introduction, see the \href{../../tutorial/dbo.html}{\texttt{ tutorial}}. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__dbo_ga1d0ec6819b1bf5b7a88ad030b91ca564}\label{group__dbo_ga1d0ec6819b1bf5b7a88ad030b91ca564}} 
+\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}!RelationType@{RelationType}}
+\index{RelationType@{RelationType}!Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}
+\doxysubsubsection{\texorpdfstring{RelationType}{RelationType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__dbo_ga1d0ec6819b1bf5b7a88ad030b91ca564}{Wt\+::\+Dbo\+::\+Relation\+Type}}}
+
+
+
+Type of an S\+QL relation. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ManyToOne@{ManyToOne}!Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}!ManyToOne@{ManyToOne}}}\mbox{\Hypertarget{group__dbo_gga1d0ec6819b1bf5b7a88ad030b91ca564a32d7393c325724244671b18be53058fa}\label{group__dbo_gga1d0ec6819b1bf5b7a88ad030b91ca564a32d7393c325724244671b18be53058fa}} 
+Many\+To\+One&Many-\/to-\/\+One relationship. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ManyToMany@{ManyToMany}!Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}!ManyToMany@{ManyToMany}}}\mbox{\Hypertarget{group__dbo_gga1d0ec6819b1bf5b7a88ad030b91ca564ad0bd477ec215a878e0758cce8494af24}\label{group__dbo_gga1d0ec6819b1bf5b7a88ad030b91ca564ad0bd477ec215a878e0758cce8494af24}} 
+Many\+To\+Many&Many-\/to-\/\+Many relationship. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__dbo_ga31a1292b863cb47ee1eb37c7ddd51fad}\label{group__dbo_ga31a1292b863cb47ee1eb37c7ddd51fad}} 
+\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}!belongsTo@{belongsTo}}
+\index{belongsTo@{belongsTo}!Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}
+\doxysubsubsection{\texorpdfstring{belongsTo()}{belongsTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Action , class C $>$ \\
+void Wt\+::\+Dbo\+::belongs\+To (\begin{DoxyParamCaption}\item[{Action \&}]{action,  }\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ \&}]{value,  }\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}}}]{constraints }\end{DoxyParamCaption})}
+
+
+
+Maps the \char`\"{}\+One\char`\"{}-\/side (foreign key) of a Many\+To\+One or One\+To\+One relation. 
+
+This overloaded method allows to specify constraints for the foreign key.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__dbo_ga570b71f937c991b000b9db01b327a363}{has\+Many()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__dbo_gac089020eff000d9e2c4ef72cf715bd21}\label{group__dbo_gac089020eff000d9e2c4ef72cf715bd21}} 
+\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}!belongsTo@{belongsTo}}
+\index{belongsTo@{belongsTo}!Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}
+\doxysubsubsection{\texorpdfstring{belongsTo()}{belongsTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Action , class C $>$ \\
+void Wt\+::\+Dbo\+::belongs\+To (\begin{DoxyParamCaption}\item[{Action \&}]{action,  }\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ \&}]{value,  }\item[{const std\+::string \&}]{name = {\ttfamily std\+:\+:string()} }\end{DoxyParamCaption})}
+
+
+
+Maps the \char`\"{}\+One\char`\"{}-\/side (foreign key) of a Many\+To\+One or One\+To\+One relation. 
+
+This function binds the pointer field {\ttfamily value} to the database foreign key field(s) {\ttfamily name} {\ttfamily + \char`\"{}\+\_\+\char`\"{} +} (C\textquotesingle{}s primary key(s)).
+
+If the name starts with a {\ttfamily $>$}, the {\ttfamily $>$} is omitted and the name is used literally, instead of {\ttfamily name} {\ttfamily + \char`\"{}\+\_\+\char`\"{} +} (C\textquotesingle{}s primary key(s)), e.\+g. if the primary key of C is {\ttfamily id}, then the name {\ttfamily foo} translates to a column with the name {\ttfamily foo\+\_\+id}, and the name {\ttfamily $>$foo} translates to a column with the name {\ttfamily foo}.
+
+If the name is omitted or empty, then C\textquotesingle{}s mapped table name is used.
+
+A \mbox{\hyperlink{group__dbo_gac089020eff000d9e2c4ef72cf715bd21}{belongs\+To()}} will usually have a counter-\/part \mbox{\hyperlink{group__dbo_ga570b71f937c991b000b9db01b327a363}{has\+Many()}} or \mbox{\hyperlink{group__dbo_ga00a060d5f4764f673948989f21837548}{has\+One()}} declaration in the referenced class {\ttfamily C}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__dbo_ga570b71f937c991b000b9db01b327a363}{has\+Many()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__dbo_gaa3a5224090f8bb4b423485328b5b3030}\label{group__dbo_gaa3a5224090f8bb4b423485328b5b3030}} 
+\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}!belongsTo@{belongsTo}}
+\index{belongsTo@{belongsTo}!Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}
+\doxysubsubsection{\texorpdfstring{belongsTo()}{belongsTo()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Action , class C $>$ \\
+void Wt\+::\+Dbo\+::belongs\+To (\begin{DoxyParamCaption}\item[{Action \&}]{action,  }\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ \&}]{value,  }\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}}}]{constraints }\end{DoxyParamCaption})}
+
+
+
+Maps the \char`\"{}\+One\char`\"{}-\/side (foreign key) of a Many\+To\+One or One\+To\+One relation. 
+
+This overloaded method allows to specify constraints for the foreign key.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__dbo_ga570b71f937c991b000b9db01b327a363}{has\+Many()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__dbo_ga864a2e134149e7f614f45967777992c7}\label{group__dbo_ga864a2e134149e7f614f45967777992c7}} 
+\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}!field@{field}}
+\index{field@{field}!Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}
+\doxysubsubsection{\texorpdfstring{field()}{field()}}
+{\footnotesize\ttfamily template$<$class Action , typename V $>$ \\
+void Wt\+::\+Dbo\+::field (\begin{DoxyParamCaption}\item[{Action \&}]{action,  }\item[{V \&}]{value,  }\item[{const std\+::string \&}]{name,  }\item[{int}]{size = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Maps a database object field. 
+
+This function binds the field {\ttfamily value} to the database field {\ttfamily name}.
+
+The optional {\ttfamily size} may be used as a hint for the needed storage. It is only useful for {\itshape std\+::string} or {\itshape \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}}} fields, and causes the schema to use a {\ttfamily varchar(}{\itshape {\ttfamily size}}{\ttfamily )} for storing the field instead of an unlimited length string type.
+
+You may want to specialize this method for a particular composite type which should be persisted in multiple database fields but not as a separate table (e.\+g. for natural composite primary keys, see \mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id()}}).
+
+For example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{struct }\mbox{\hyperlink{structCoordinate}{Coordinate}} \{}
+\DoxyCodeLine{  \textcolor{keywordtype}{int} x, y;}
+\DoxyCodeLine{\};}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceWt}{Wt}} \{}
+\DoxyCodeLine{  \textcolor{keyword}{namespace }Dbo \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{template} <\textcolor{keyword}{class} Action>}
+\DoxyCodeLine{    \textcolor{keywordtype}{void} field(Action\& action, \mbox{\hyperlink{structCoordinate}{Coordinate}}\& coordinate, \textcolor{keyword}{const} std::string\& name, \textcolor{keywordtype}{int} size = -\/1)}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{      field(action, coordinate.x, name + \textcolor{stringliteral}{"\_x"});}
+\DoxyCodeLine{      field(action, coordinate.y, name + \textcolor{stringliteral}{"\_y"});}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \} \textcolor{comment}{// namespace Dbo}}
+\DoxyCodeLine{\} \textcolor{comment}{// namespace Wt}}
+\end{DoxyCode}
+
+
+To support a custom type that needs to be persisted as a single field, you should specialize \mbox{\hyperlink{structWt_1_1Dbo_1_1sql__value__traits}{sql\+\_\+value\+\_\+traits}} instead. \mbox{\Hypertarget{group__dbo_ga544e9fb1aa6202fa4e3b66be64aff098}\label{group__dbo_ga544e9fb1aa6202fa4e3b66be64aff098}} 
+\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}!hasMany@{hasMany}}
+\index{hasMany@{hasMany}!Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}
+\doxysubsubsection{\texorpdfstring{hasMany()}{hasMany()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Action , class C $>$ \\
+void Wt\+::\+Dbo\+::has\+Many (\begin{DoxyParamCaption}\item[{Action \&}]{action,  }\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}}$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ $>$ \&}]{value,  }\item[{\mbox{\hyperlink{group__dbo_ga1d0ec6819b1bf5b7a88ad030b91ca564}{Relation\+Type}}}]{type,  }\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{join\+Id,  }\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}}}]{constraints = {\ttfamily (\mbox{\hyperlink{group__dbo_ga288c99c96bdeea3a13b8fe04a9f9151d}{Not\+Null}}$\vert$\mbox{\hyperlink{group__dbo_ga5acf2e0dd1af1be56489b5ebfcbabea8}{On\+Delete\+Cascade}})} }\end{DoxyParamCaption})}
+
+
+
+Maps the \char`\"{}\+Many\char`\"{}-\/side of a Many\+To\+Many relation. 
+
+This function binds the collection field {\ttfamily value} to contain objects (of type {\ttfamily C}).
+
+This overloaded method allows to customize the field name of the foreign id in the join table, and specify constraints for this foreign key. The only allowed value for {\ttfamily type} is \mbox{\hyperlink{group__dbo_gga1d0ec6819b1bf5b7a88ad030b91ca564ad0bd477ec215a878e0758cce8494af24}{Many\+To\+Many}}.
+
+The {\ttfamily join\+Id} is used to reference this side of the relationship in the join table, e.\+g. if {\ttfamily join\+Id} is {\ttfamily foo} and the primary key is {\ttfamily id}, then this side of the join table will be named {\ttfamily foo\+\_\+id}. If {\ttfamily join\+Id} is left blank, the value will be table name {\ttfamily + \char`\"{}\+\_\+\char`\"{} +} (primary key(s)) of the current class. If {\ttfamily join\+Id} starts with {\ttfamily $>$}, the {\ttfamily $>$} is omitted, and the join\+Id is used literally (the primary key of the current class is not appended), e.\+g. {\ttfamily $>$foo} maps to the column name {\ttfamily foo}.
+
+A \mbox{\hyperlink{group__dbo_ga570b71f937c991b000b9db01b327a363}{has\+Many()}} must have a counter-\/part \mbox{\hyperlink{group__dbo_gac089020eff000d9e2c4ef72cf715bd21}{belongs\+To()}} or \mbox{\hyperlink{group__dbo_ga570b71f937c991b000b9db01b327a363}{has\+Many()}} declaration in the referenced class {\ttfamily C}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__dbo_gac089020eff000d9e2c4ef72cf715bd21}{belongs\+To()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__dbo_ga570b71f937c991b000b9db01b327a363}\label{group__dbo_ga570b71f937c991b000b9db01b327a363}} 
+\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}!hasMany@{hasMany}}
+\index{hasMany@{hasMany}!Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}
+\doxysubsubsection{\texorpdfstring{hasMany()}{hasMany()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Action , class C $>$ \\
+void Wt\+::\+Dbo\+::has\+Many (\begin{DoxyParamCaption}\item[{Action \&}]{action,  }\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}}$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ $>$ \&}]{value,  }\item[{\mbox{\hyperlink{group__dbo_ga1d0ec6819b1bf5b7a88ad030b91ca564}{Relation\+Type}}}]{type,  }\item[{const std\+::string \&}]{name = {\ttfamily std\+:\+:string()} }\end{DoxyParamCaption})}
+
+
+
+Maps the \char`\"{}\+Many\char`\"{}-\/side of a Many\+To\+One or Many\+To\+Many relation. 
+
+This function binds the collection field {\ttfamily value} to contain objects (of type {\ttfamily C}) that holds the associated objects\+: reading from the collection and adding or removing objects from the collection results in S\+QL statements.
+
+For a \mbox{\hyperlink{group__dbo_gga1d0ec6819b1bf5b7a88ad030b91ca564a32d7393c325724244671b18be53058fa}{Many\+To\+One}} relation, the query is defined by the database field(s) {\ttfamily name} {\ttfamily + \char`\"{}\+\_\+\char`\"{} + } (C\textquotesingle{}s primary key(s)), in the mapped table for C. This should be the same {\itshape name} as passed to the matching \mbox{\hyperlink{group__dbo_gac089020eff000d9e2c4ef72cf715bd21}{belongs\+To()}} method for the other side of the relation. If the {\ttfamily name} is omitted or empty, then the mapped table name of the current class is used.
+
+For a \mbox{\hyperlink{group__dbo_gga1d0ec6819b1bf5b7a88ad030b91ca564ad0bd477ec215a878e0758cce8494af24}{Many\+To\+Many}} relation, the {\ttfamily name} is the name of a linker table (this linker table may be schema qualified, e.\+g. {\ttfamily \char`\"{}myschema.\+posts\+\_\+tags\char`\"{}}. Thus, also for a Many\+To\+Many relation, both sides of the relationship will have the same {\ttfamily name} passed to them. In the join table, this side of the the relation will be referenced using the table name {\ttfamily + \char`\"{}\+\_\+\char`\"{} + } (primary key(s)) of the current class.
+
+A \mbox{\hyperlink{group__dbo_ga570b71f937c991b000b9db01b327a363}{has\+Many()}} must have a counter-\/part \mbox{\hyperlink{group__dbo_gac089020eff000d9e2c4ef72cf715bd21}{belongs\+To()}} or \mbox{\hyperlink{group__dbo_ga570b71f937c991b000b9db01b327a363}{has\+Many()}} declaration in the referenced class {\ttfamily C}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__dbo_gac089020eff000d9e2c4ef72cf715bd21}{belongs\+To()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__dbo_ga00a060d5f4764f673948989f21837548}\label{group__dbo_ga00a060d5f4764f673948989f21837548}} 
+\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}!hasOne@{hasOne}}
+\index{hasOne@{hasOne}!Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}
+\doxysubsubsection{\texorpdfstring{hasOne()}{hasOne()}}
+{\footnotesize\ttfamily template$<$class Action , class C $>$ \\
+void Wt\+::\+Dbo\+::has\+One (\begin{DoxyParamCaption}\item[{Action \&}]{action,  }\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1weak__ptr}{weak\+\_\+ptr}}$<$ C $>$ \&}]{value,  }\item[{const std\+::string \&}]{name = {\ttfamily std\+:\+:string()} }\end{DoxyParamCaption})}
+
+
+
+Maps the \char`\"{}\+One\char`\"{}-\/side of a One\+To\+One relation. 
+
+This function binds the \mbox{\hyperlink{classWt_1_1Dbo_1_1weak__ptr}{weak\+\_\+ptr}} field {\ttfamily value} to the associated object (of type {\ttfamily C}).
+
+A \mbox{\hyperlink{classWt_1_1Dbo_1_1weak__ptr}{weak\+\_\+ptr}} is required here to break the cycle that would otherwise be created by the \mbox{\hyperlink{group__dbo_ga00a060d5f4764f673948989f21837548}{has\+One()}} and \mbox{\hyperlink{group__dbo_gac089020eff000d9e2c4ef72cf715bd21}{belongs\+To()}} associations. The value is not actually stored but defined in terms of a S\+QL query (not that different from how a \mbox{\hyperlink{group__dbo_ga570b71f937c991b000b9db01b327a363}{has\+Many()}} call backs a collection by a S\+QL query).
+
+The query is defined by the database field(s) {\ttfamily name} {\ttfamily + \char`\"{}\+\_\+\char`\"{} + } (C\textquotesingle{}s primary key(s)), in the mapped table for C. This should be the same {\itshape name} as passed to the matching \mbox{\hyperlink{group__dbo_gac089020eff000d9e2c4ef72cf715bd21}{belongs\+To()}} method for the other side of the relation. If the {\ttfamily name} is omitted or empty, then the mapped table name of the current class is used. If the name starts with {\ttfamily $>$}, the {\ttfamily $>$} is discarded, and the name is used literally, instead of {\ttfamily name} {\ttfamily + \char`\"{}\+\_\+\char`\"{} + } (C\textquotesingle{}s primary key(s)).
+
+A \mbox{\hyperlink{group__dbo_ga00a060d5f4764f673948989f21837548}{has\+One()}} must have a counter-\/part \mbox{\hyperlink{group__dbo_gac089020eff000d9e2c4ef72cf715bd21}{belongs\+To()}} declaration in the referenced class {\ttfamily C}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__dbo_gac089020eff000d9e2c4ef72cf715bd21}{belongs\+To()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__dbo_gaf6e683b7a7124e562134caf155ef0080}\label{group__dbo_gaf6e683b7a7124e562134caf155ef0080}} 
+\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}!id@{id}}
+\index{id@{id}!Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Action , class C $>$ \\
+void Wt\+::\+Dbo\+::id (\begin{DoxyParamCaption}\item[{Action \&}]{action,  }\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ \&}]{value,  }\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}}}]{constraints,  }\item[{int}]{size = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Maps a natural primary key (id) field that is a foreign key. 
+
+This overloaded method allows to specify constraints for the foreign key.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__dbo_ga570b71f937c991b000b9db01b327a363}{has\+Many()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}\label{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}} 
+\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}!id@{id}}
+\index{id@{id}!Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Action , typename V $>$ \\
+void Wt\+::\+Dbo\+::id (\begin{DoxyParamCaption}\item[{Action \&}]{action,  }\item[{V \&}]{value,  }\item[{const std\+::string \&}]{name = {\ttfamily \char`\"{}id\char`\"{}},  }\item[{int}]{size = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Maps a natural primary key (id) field. 
+
+A natural primary key field is optional. If you define one and its type is not {\ttfamily long long}, you must specialize \mbox{\hyperlink{structWt_1_1Dbo_1_1dbo__traits}{Wt\+::\+Dbo\+::dbo\+\_\+traits}} to match the type {\ttfamily V} as the Id\+Type for this class. When not specified for a class, an auto-\/generated surrogate key field is used with the name specified by \mbox{\hyperlink{structWt_1_1Dbo_1_1dbo__default__traits_a0c092c6b045f77d4fc04b5360b762b7f}{Wt\+::\+Dbo\+::dbo\+\_\+traits\+::surrogate\+Id\+Field()}}, which defaults to \char`\"{}id\char`\"{}.
+
+Unlike the default surrogate key, a natural id is not auto-\/generated and thus you need to give each object a unique value when creating a new object.
+
+The id may be a composite type. In that case, you need to specialize Wt\+::\+Dbo\+::field(). \mbox{\Hypertarget{group__dbo_ga288c99c96bdeea3a13b8fe04a9f9151d}\label{group__dbo_ga288c99c96bdeea3a13b8fe04a9f9151d}} 
+\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}!NotNull@{NotNull}}
+\index{NotNull@{NotNull}!Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}
+\doxysubsubsection{\texorpdfstring{NotNull()}{NotNull()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} Wt\+::\+Dbo\+::\+Not\+Null (\begin{DoxyParamCaption}\item[{Impl\+::\+F\+K\+Not\+Null}]{ }\end{DoxyParamCaption})}
+
+
+
+A constraint that prevents a {\ttfamily null} ptr. 
+
+A database constraint which prevents that a ptr references no object and has a value of {\ttfamily null}. \mbox{\Hypertarget{group__dbo_ga5acf2e0dd1af1be56489b5ebfcbabea8}\label{group__dbo_ga5acf2e0dd1af1be56489b5ebfcbabea8}} 
+\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}!OnDeleteCascade@{OnDeleteCascade}}
+\index{OnDeleteCascade@{OnDeleteCascade}!Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}
+\doxysubsubsection{\texorpdfstring{OnDeleteCascade()}{OnDeleteCascade()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} Wt\+::\+Dbo\+::\+On\+Delete\+Cascade (\begin{DoxyParamCaption}\item[{Impl\+::\+F\+K\+On\+Delete\+Cascade}]{ }\end{DoxyParamCaption})}
+
+
+
+A constraint that cascades deletes. 
+
+A database constraint which propagates deletes of the referenced object to also delete the object(s) that reference it.
+
+\begin{DoxyNote}{Note}
+This constraint only affects the database schema creation. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__dbo_ga2ed29fa2c3f8e5dd90515280589e8712}\label{group__dbo_ga2ed29fa2c3f8e5dd90515280589e8712}} 
+\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}!OnDeleteRestrict@{OnDeleteRestrict}}
+\index{OnDeleteRestrict@{OnDeleteRestrict}!Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}
+\doxysubsubsection{\texorpdfstring{OnDeleteRestrict()}{OnDeleteRestrict()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} Wt\+::\+Dbo\+::\+On\+Delete\+Restrict (\begin{DoxyParamCaption}\item[{Impl\+::\+F\+K\+On\+Delete\+Restrict}]{ }\end{DoxyParamCaption})}
+
+
+
+A constraint that restricts deletes. 
+
+A database constraint which restricts deletes of the referenced object to also restrict deletion of the objects that reference.
+
+\begin{DoxyNote}{Note}
+This constraint only affects the database schema creation. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__dbo_gad3818e7a1052bdfc69e888b7160e5842}\label{group__dbo_gad3818e7a1052bdfc69e888b7160e5842}} 
+\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}!OnDeleteSetNull@{OnDeleteSetNull}}
+\index{OnDeleteSetNull@{OnDeleteSetNull}!Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}
+\doxysubsubsection{\texorpdfstring{OnDeleteSetNull()}{OnDeleteSetNull()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} Wt\+::\+Dbo\+::\+On\+Delete\+Set\+Null (\begin{DoxyParamCaption}\item[{Impl\+::\+F\+K\+On\+Delete\+Set\+Null}]{ }\end{DoxyParamCaption})}
+
+
+
+A constraint that cascades deletes. 
+
+A database constraint which propagates deletes of the referenced object to also delete the objects that reference.
+
+\begin{DoxyNote}{Note}
+This constraint only affects the database schema creation. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__dbo_ga0cf2043c74bbc7eaf333e65871e7f07f}\label{group__dbo_ga0cf2043c74bbc7eaf333e65871e7f07f}} 
+\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}!OnUpdateCascade@{OnUpdateCascade}}
+\index{OnUpdateCascade@{OnUpdateCascade}!Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}
+\doxysubsubsection{\texorpdfstring{OnUpdateCascade()}{OnUpdateCascade()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} Wt\+::\+Dbo\+::\+On\+Update\+Cascade (\begin{DoxyParamCaption}\item[{Impl\+::\+F\+K\+On\+Update\+Cascade}]{ }\end{DoxyParamCaption})}
+
+
+
+A constraint that cascades updates. 
+
+A database constraint which propagates updates to the natural primary key in the referenced table.
+
+\begin{DoxyNote}{Note}
+This constraint only affects the database schema creation. Currently it is not possible to update a natural Id of an already saved object through Dbo itself. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__dbo_gad9dac3fd4ec0b650f3c6f811b12018f0}\label{group__dbo_gad9dac3fd4ec0b650f3c6f811b12018f0}} 
+\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}!OnUpdateRestrict@{OnUpdateRestrict}}
+\index{OnUpdateRestrict@{OnUpdateRestrict}!Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}
+\doxysubsubsection{\texorpdfstring{OnUpdateRestrict()}{OnUpdateRestrict()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} Wt\+::\+Dbo\+::\+On\+Update\+Restrict (\begin{DoxyParamCaption}\item[{Impl\+::\+F\+K\+On\+Update\+Restrict}]{ }\end{DoxyParamCaption})}
+
+
+
+A constraint that restricts updates. 
+
+A database constraint which restricts updates to the natural primary key in the referenced table.
+
+\begin{DoxyNote}{Note}
+This constraint only affects the database schema creation. Currently it is not possible to update a natural Id of an already saved object through Dbo itself. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__dbo_ga993d38114f94fb49a15545e3783165e0}\label{group__dbo_ga993d38114f94fb49a15545e3783165e0}} 
+\index{Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}!OnUpdateSetNull@{OnUpdateSetNull}}
+\index{OnUpdateSetNull@{OnUpdateSetNull}!Database Objects (Wt::Dbo)@{Database Objects (Wt::Dbo)}}
+\doxysubsubsection{\texorpdfstring{OnUpdateSetNull()}{OnUpdateSetNull()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Dbo_1_1ForeignKeyConstraint}{Foreign\+Key\+Constraint}} Wt\+::\+Dbo\+::\+On\+Update\+Set\+Null (\begin{DoxyParamCaption}\item[{Impl\+::\+F\+K\+On\+Update\+Set\+Null}]{ }\end{DoxyParamCaption})}
+
+
+
+A constraint that cascades updates. 
+
+A database constraint which sets the value of the ptr to null when the referenced primary key changes.
+
+\begin{DoxyNote}{Note}
+This constraint only affects the database schema creation. Currently it is not possible to update a natural Id of an already saved object through Dbo itself. 
+\end{DoxyNote}

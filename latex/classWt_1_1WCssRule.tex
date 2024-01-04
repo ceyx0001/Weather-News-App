@@ -1,0 +1,110 @@
+\hypertarget{classWt_1_1WCssRule}{}\doxysection{Wt\+::W\+Css\+Rule Class Reference}
+\label{classWt_1_1WCssRule}\index{Wt::WCssRule@{Wt::WCssRule}}
+
+
+Abstract rule in a C\+SS style sheet.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Css\+Style\+Sheet.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Css\+Rule\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Css\+Rule\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WCssRule_a4cbe8c668428d52daf4d1cc539b52fa4}\label{classWt_1_1WCssRule_a4cbe8c668428d52daf4d1cc539b52fa4}} 
+virtual \mbox{\hyperlink{classWt_1_1WCssRule_a4cbe8c668428d52daf4d1cc539b52fa4}{$\sim$\+W\+Css\+Rule}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WCssRule_a7ac4be2a52a9d098926e8090f8779c63}{set\+Selector}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1WCssRule_abedc916853c3d8a889c070ca2c7ae7e7}{selector}})
+\begin{DoxyCompactList}\small\item\em Sets the selector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WCssRule_abedc916853c3d8a889c070ca2c7ae7e7}\label{classWt_1_1WCssRule_abedc916853c3d8a889c070ca2c7ae7e7}} 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WCssRule_abedc916853c3d8a889c070ca2c7ae7e7}{selector}} () const
+\begin{DoxyCompactList}\small\item\em Returns the selector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WCssRule_a4a03aa7ecac6c528c882247b74b99a79}\label{classWt_1_1WCssRule_a4a03aa7ecac6c528c882247b74b99a79}} 
+\mbox{\hyperlink{classWt_1_1WCssStyleSheet}{W\+Css\+Style\+Sheet}} $\ast$ \mbox{\hyperlink{classWt_1_1WCssRule_a4a03aa7ecac6c528c882247b74b99a79}{sheet}} () const
+\begin{DoxyCompactList}\small\item\em Returns the style sheet to which this rule belongs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WCssRule_a15ca55980b693ac64e70ca5f0d8cbf5d}\label{classWt_1_1WCssRule_a15ca55980b693ac64e70ca5f0d8cbf5d}} 
+void \mbox{\hyperlink{classWt_1_1WCssRule_a15ca55980b693ac64e70ca5f0d8cbf5d}{modified}} ()
+\begin{DoxyCompactList}\small\item\em Indicates that the rule has changed and needs updating. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WCssRule_afecf9476d8d319f1f607bf0519e4eeb3}{declarations}} ()=0
+\begin{DoxyCompactList}\small\item\em Returns the declarations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WCssRule_a79b9043cbdf95ec6dd5f5dcc99efd738}\label{classWt_1_1WCssRule_a79b9043cbdf95ec6dd5f5dcc99efd738}} 
+virtual bool {\bfseries update\+Dom\+Element} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&css\+Rule\+Element, bool all)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WCssRule_adc9c4088ba70dae3f82175a370677ee9}\label{classWt_1_1WCssRule_adc9c4088ba70dae3f82175a370677ee9}} 
+\mbox{\hyperlink{classWt_1_1WCssRule_adc9c4088ba70dae3f82175a370677ee9}{W\+Css\+Rule}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1WCssRule_abedc916853c3d8a889c070ca2c7ae7e7}{selector}})
+\begin{DoxyCompactList}\small\item\em Creates a new C\+SS rule with given selector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WCssRule_a133e68b0367a03170282edfa0b96afb8}\label{classWt_1_1WCssRule_a133e68b0367a03170282edfa0b96afb8}} 
+std\+::string {\bfseries selector\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WCssRule_ad7777c9047df1c0a47139d57e7683410}\label{classWt_1_1WCssRule_ad7777c9047df1c0a47139d57e7683410}} 
+\mbox{\hyperlink{classWt_1_1WCssStyleSheet}{W\+Css\+Style\+Sheet}} $\ast$ {\bfseries sheet\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WCssRule_aada52d5da42d1ae0a3c1bd3fa8d264d0}\label{classWt_1_1WCssRule_aada52d5da42d1ae0a3c1bd3fa8d264d0}} 
+class {\bfseries W\+Css\+Style\+Sheet}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Abstract rule in a C\+SS style sheet. 
+
+A rule presents C\+SS style properties that are applied to a selected set of elements.
+
+Use \mbox{\hyperlink{classWt_1_1WCssTemplateRule}{W\+Css\+Template\+Rule}} if you would like to use a widget as a template for specifying ({\itshape and} updating) a style rule, using the widgets style properties, or \mbox{\hyperlink{classWt_1_1WCssTextRule}{W\+Css\+Text\+Rule}} if you wish to directly specify the C\+SS declarations.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WCssStyleSheet}{W\+Css\+Style\+Sheet}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WCssRule_afecf9476d8d319f1f607bf0519e4eeb3}\label{classWt_1_1WCssRule_afecf9476d8d319f1f607bf0519e4eeb3}} 
+\index{Wt::WCssRule@{Wt::WCssRule}!declarations@{declarations}}
+\index{declarations@{declarations}!Wt::WCssRule@{Wt::WCssRule}}
+\doxysubsubsection{\texorpdfstring{declarations()}{declarations()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+W\+Css\+Rule\+::declarations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the declarations. 
+
+This is a semi-\/colon separated list of C\+SS declarations. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WCssTextRule_a6d04fc4cd195f18824817e43b1581abd}{Wt\+::\+W\+Css\+Text\+Rule}}, and \mbox{\hyperlink{classWt_1_1WCssTemplateRule_a4eca1206bd0f6556c1af31c4d54019c8}{Wt\+::\+W\+Css\+Template\+Rule}}.
+
+\mbox{\Hypertarget{classWt_1_1WCssRule_a7ac4be2a52a9d098926e8090f8779c63}\label{classWt_1_1WCssRule_a7ac4be2a52a9d098926e8090f8779c63}} 
+\index{Wt::WCssRule@{Wt::WCssRule}!setSelector@{setSelector}}
+\index{setSelector@{setSelector}!Wt::WCssRule@{Wt::WCssRule}}
+\doxysubsubsection{\texorpdfstring{setSelector()}{setSelector()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Css\+Rule\+::set\+Selector (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{selector }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the selector. 
+
+\begin{DoxyNote}{Note}
+The selector can only be changed as long as the rule hasn\textquotesingle{}t been rendered. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Css\+Style\+Sheet.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,116 @@
+\hypertarget{classhttp_1_1server_1_1Request}{}\doxysection{http\+::server\+::Request Class Reference}
+\label{classhttp_1_1server_1_1Request}\index{http::server::Request@{http::server::Request}}
+
+
+{\ttfamily \#include $<$Request.\+h$>$}
+
+
+
+Collaboration diagram for http\+::server\+::Request\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhttp_1_1server_1_1Request_1_1Header}{Header}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_a548844215a4985689f83cc3785d49f6a}\label{classhttp_1_1server_1_1Request_a548844215a4985689f83cc3785d49f6a}} 
+enum {\bfseries State} \{ {\bfseries Partial}, 
+{\bfseries Complete}, 
+{\bfseries Error}
+ \}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_af2863d67a2190b6b9787432e46fcf4f4}\label{classhttp_1_1server_1_1Request_af2863d67a2190b6b9787432e46fcf4f4}} 
+enum {\bfseries Type} \{ {\bfseries H\+T\+TP}, 
+{\bfseries Web\+Socket}, 
+{\bfseries T\+CP}
+ \}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_a5e09dd1282e63950452021b9820a6453}\label{classhttp_1_1server_1_1Request_a5e09dd1282e63950452021b9820a6453}} 
+typedef std\+::list$<$ \mbox{\hyperlink{structhttp_1_1server_1_1Request_1_1Header}{Header}} $>$ {\bfseries Header\+List}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_ad8d0aff585823853bf96105e5c190f51}\label{classhttp_1_1server_1_1Request_ad8d0aff585823853bf96105e5c190f51}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WSslInfo}{Wt\+::\+W\+Ssl\+Info}} $>$ {\bfseries ssl\+Info} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_a276723575bb9e43a48b3987bfcb783ec}\label{classhttp_1_1server_1_1Request_a276723575bb9e43a48b3987bfcb783ec}} 
+void {\bfseries reset} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_a0bf41e4c3f9b067dc8765dfc0167c950}\label{classhttp_1_1server_1_1Request_a0bf41e4c3f9b067dc8765dfc0167c950}} 
+void {\bfseries process} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_a3a1a251abd2c40cfb3cce0b4924bcbeb}\label{classhttp_1_1server_1_1Request_a3a1a251abd2c40cfb3cce0b4924bcbeb}} 
+bool {\bfseries close\+Connection} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_ad3b190bfd013308a8e13cbd975af47b8}\label{classhttp_1_1server_1_1Request_ad3b190bfd013308a8e13cbd975af47b8}} 
+bool {\bfseries accept\+Gzip\+Encoding} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_aca508c5f124120cbe0a207c6739574f6}\label{classhttp_1_1server_1_1Request_aca508c5f124120cbe0a207c6739574f6}} 
+void {\bfseries enable\+Web\+Socket} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_a38db867c83fc920bc0ae9255926847ad}\label{classhttp_1_1server_1_1Request_a38db867c83fc920bc0ae9255926847ad}} 
+const \mbox{\hyperlink{structhttp_1_1server_1_1Request_1_1Header}{Header}} $\ast$ {\bfseries get\+Header} (const std\+::string \&name) const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_a5b42a7aff6e65aad0a825865b4763858}\label{classhttp_1_1server_1_1Request_a5b42a7aff6e65aad0a825865b4763858}} 
+const \mbox{\hyperlink{structhttp_1_1server_1_1Request_1_1Header}{Header}} $\ast$ {\bfseries get\+Header} (const char $\ast$name) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_a5c5dc959c7bff097daa71c353377bb03}\label{classhttp_1_1server_1_1Request_a5c5dc959c7bff097daa71c353377bb03}} 
+\mbox{\hyperlink{structhttp_1_1server_1_1buffer__string}{buffer\+\_\+string}} {\bfseries method}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_abc7410eb932cfeaf815f3666cef83de0}\label{classhttp_1_1server_1_1Request_abc7410eb932cfeaf815f3666cef83de0}} 
+\mbox{\hyperlink{structhttp_1_1server_1_1buffer__string}{buffer\+\_\+string}} {\bfseries uri}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_a639b9ba7e10a4f802ea0a42ed77a1baf}\label{classhttp_1_1server_1_1Request_a639b9ba7e10a4f802ea0a42ed77a1baf}} 
+char {\bfseries url\+Scheme} \mbox{[}10\mbox{]}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_ac7dcb9f22b46082966992a6d705c8134}\label{classhttp_1_1server_1_1Request_ac7dcb9f22b46082966992a6d705c8134}} 
+std\+::string {\bfseries remote\+IP}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_afab47b541deb13f73b50854e5fb8f6bf}\label{classhttp_1_1server_1_1Request_afab47b541deb13f73b50854e5fb8f6bf}} 
+short {\bfseries port}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_ae42af0e39dd308706091eaccb0612f5c}\label{classhttp_1_1server_1_1Request_ae42af0e39dd308706091eaccb0612f5c}} 
+int {\bfseries http\+\_\+version\+\_\+major}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_a56e5024da2c4aaf01c51434156a50a3c}\label{classhttp_1_1server_1_1Request_a56e5024da2c4aaf01c51434156a50a3c}} 
+int {\bfseries http\+\_\+version\+\_\+minor}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_a028ee775d5a70877166b1da7420cf8e6}\label{classhttp_1_1server_1_1Request_a028ee775d5a70877166b1da7420cf8e6}} 
+Header\+List {\bfseries headers}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_a407b6a1b03abf7715f2442d1db47ee4d}\label{classhttp_1_1server_1_1Request_a407b6a1b03abf7715f2442d1db47ee4d}} 
+\+::int64\+\_\+t {\bfseries content\+Length}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_af3ce427a90e49724f28aa9b11abbbe29}\label{classhttp_1_1server_1_1Request_af3ce427a90e49724f28aa9b11abbbe29}} 
+int {\bfseries web\+Socket\+Version}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_a9f4b301fc4e57d0f1add917642bf1ef1}\label{classhttp_1_1server_1_1Request_a9f4b301fc4e57d0f1add917642bf1ef1}} 
+enum http\+::server\+::\+Request\+::\+Type {\bfseries type}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_a68f380a085c921d48a67d5b97a143f86}\label{classhttp_1_1server_1_1Request_a68f380a085c921d48a67d5b97a143f86}} 
+std\+::string {\bfseries request\+\_\+path}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_a2c4c2985ab7f64c997f50b0a54e82cec}\label{classhttp_1_1server_1_1Request_a2c4c2985ab7f64c997f50b0a54e82cec}} 
+std\+::string {\bfseries request\+\_\+query}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_a54b7f6b936cb3b8032ee165db900f9b7}\label{classhttp_1_1server_1_1Request_a54b7f6b936cb3b8032ee165db900f9b7}} 
+std\+::string {\bfseries request\+\_\+extra\+\_\+path}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Request_ae4bf55a2d068d2dadec280f32f561a44}\label{classhttp_1_1server_1_1Request_ae4bf55a2d068d2dadec280f32f561a44}} 
+std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ {\bfseries url\+\_\+params}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A request received from a client. A request with a body will have a content-\/length. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/http/Request.\+h\end{DoxyCompactItemize}

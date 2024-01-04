@@ -1,0 +1,131 @@
+\hypertarget{classSimpleChatServer}{}\doxysection{Simple\+Chat\+Server Class Reference}
+\label{classSimpleChatServer}\index{SimpleChatServer@{SimpleChatServer}}
+
+
+A simple chat server.  
+
+
+
+
+{\ttfamily \#include $<$Simple\+Chat\+Server.\+h$>$}
+
+
+
+Collaboration diagram for Simple\+Chat\+Server\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classSimpleChatServer_1_1Client}{Client}}
+\item 
+struct \mbox{\hyperlink{structSimpleChatServer_1_1ClientInfo}{Client\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSimpleChatServer_a911329f24472ca7ed245ab18611488d4}\label{classSimpleChatServer_a911329f24472ca7ed245ab18611488d4}} 
+typedef std\+::set$<$ \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} $>$ \mbox{\hyperlink{classSimpleChatServer_a911329f24472ca7ed245ab18611488d4}{User\+Set}}
+\begin{DoxyCompactList}\small\item\em Typedef for a collection of user names. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSimpleChatServer_a2cf35cb3b79c6a3d3815df92b25b713e}\label{classSimpleChatServer_a2cf35cb3b79c6a3d3815df92b25b713e}} 
+\mbox{\hyperlink{classSimpleChatServer_a2cf35cb3b79c6a3d3815df92b25b713e}{Simple\+Chat\+Server}} (\mbox{\hyperlink{classWt_1_1WServer}{Wt\+::\+W\+Server}} \&server)
+\begin{DoxyCompactList}\small\item\em Create a new chat server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSimpleChatServer_a0d603a0155626e331cb2cc1e2f5facec}\label{classSimpleChatServer_a0d603a0155626e331cb2cc1e2f5facec}} 
+{\bfseries Simple\+Chat\+Server} (const \mbox{\hyperlink{classSimpleChatServer}{Simple\+Chat\+Server}} \&)=delete
+\item 
+\mbox{\Hypertarget{classSimpleChatServer_a99f3a530055b5b8a1be567a9cc4a2600}\label{classSimpleChatServer_a99f3a530055b5b8a1be567a9cc4a2600}} 
+\mbox{\hyperlink{classSimpleChatServer}{Simple\+Chat\+Server}} \& {\bfseries operator=} (const \mbox{\hyperlink{classSimpleChatServer}{Simple\+Chat\+Server}} \&)=delete
+\item 
+bool \mbox{\hyperlink{classSimpleChatServer_a916cec08c2aeb2d2ccf413e9c9a45036}{connect}} (\mbox{\hyperlink{classSimpleChatServer_1_1Client}{Client}} $\ast$client, const Chat\+Event\+Callback \&handle\+Event)
+\begin{DoxyCompactList}\small\item\em Connects to the chat server. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSimpleChatServer_a070e07e1a2a5ec5ecc4e944a761256c9}{disconnect}} (\mbox{\hyperlink{classSimpleChatServer_1_1Client}{Client}} $\ast$client)
+\begin{DoxyCompactList}\small\item\em Disconnect from the chat server. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSimpleChatServer_ada0ab17464e1711ca15f30b381ede57c}{login}} (const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&user)
+\begin{DoxyCompactList}\small\item\em Try to login with given user name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSimpleChatServer_a5d376e3ff441f24843be648dd420e027}\label{classSimpleChatServer_a5d376e3ff441f24843be648dd420e027}} 
+void \mbox{\hyperlink{classSimpleChatServer_a5d376e3ff441f24843be648dd420e027}{logout}} (const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&user)
+\begin{DoxyCompactList}\small\item\em Logout from the server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSimpleChatServer_a0154462f2176611e8c44d93efe306283}\label{classSimpleChatServer_a0154462f2176611e8c44d93efe306283}} 
+bool \mbox{\hyperlink{classSimpleChatServer_a0154462f2176611e8c44d93efe306283}{change\+Name}} (const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&user, const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&new\+User)
+\begin{DoxyCompactList}\small\item\em Changes the name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSimpleChatServer_ac51f590048bce9ebda2b83b3dfd9ec47}\label{classSimpleChatServer_ac51f590048bce9ebda2b83b3dfd9ec47}} 
+\mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \mbox{\hyperlink{classSimpleChatServer_ac51f590048bce9ebda2b83b3dfd9ec47}{suggest\+Guest}} ()
+\begin{DoxyCompactList}\small\item\em Get a suggestion for a guest user name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSimpleChatServer_aab42074f7904397b3547a6df89c16d9d}\label{classSimpleChatServer_aab42074f7904397b3547a6df89c16d9d}} 
+void \mbox{\hyperlink{classSimpleChatServer_aab42074f7904397b3547a6df89c16d9d}{send\+Message}} (const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&user, const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&message)
+\begin{DoxyCompactList}\small\item\em Send a message on behalve of a user. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSimpleChatServer_a562f1722d82fb5895416faa7a2df2fa3}\label{classSimpleChatServer_a562f1722d82fb5895416faa7a2df2fa3}} 
+\mbox{\hyperlink{classSimpleChatServer_a911329f24472ca7ed245ab18611488d4}{User\+Set}} \mbox{\hyperlink{classSimpleChatServer_a562f1722d82fb5895416faa7a2df2fa3}{users}} ()
+\begin{DoxyCompactList}\small\item\em Get the users currently logged in. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSimpleChatServer_a2a3c1f56445447ee41294bd2b339a8ed}\label{classSimpleChatServer_a2a3c1f56445447ee41294bd2b339a8ed}} 
+typedef std\+::map$<$ \mbox{\hyperlink{classSimpleChatServer_1_1Client}{Client}} $\ast$, \mbox{\hyperlink{structSimpleChatServer_1_1ClientInfo}{Client\+Info}} $>$ {\bfseries Client\+Map}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSimpleChatServer_a5038714fb4463072bd795fea419e6f09}\label{classSimpleChatServer_a5038714fb4463072bd795fea419e6f09}} 
+void {\bfseries post\+Chat\+Event} (const \mbox{\hyperlink{classChatEvent}{Chat\+Event}} \&event)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSimpleChatServer_ab63a496e6fdfebbb2ca3ab9dfaace70b}\label{classSimpleChatServer_ab63a496e6fdfebbb2ca3ab9dfaace70b}} 
+\mbox{\hyperlink{classWt_1_1WServer}{Wt\+::\+W\+Server}} \& {\bfseries server\+\_\+}
+\item 
+\mbox{\Hypertarget{classSimpleChatServer_ab25e13f66a89770485507d34af49464a}\label{classSimpleChatServer_ab25e13f66a89770485507d34af49464a}} 
+std\+::recursive\+\_\+mutex {\bfseries mutex\+\_\+}
+\item 
+\mbox{\Hypertarget{classSimpleChatServer_ae04169217cc74765f5d08fff55e8ee26}\label{classSimpleChatServer_ae04169217cc74765f5d08fff55e8ee26}} 
+Client\+Map {\bfseries clients\+\_\+}
+\item 
+\mbox{\Hypertarget{classSimpleChatServer_ae6712308cbb1f6b1ff4024630ea1d20c}\label{classSimpleChatServer_ae6712308cbb1f6b1ff4024630ea1d20c}} 
+\mbox{\hyperlink{classSimpleChatServer_a911329f24472ca7ed245ab18611488d4}{User\+Set}} {\bfseries users\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A simple chat server. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSimpleChatServer_a916cec08c2aeb2d2ccf413e9c9a45036}\label{classSimpleChatServer_a916cec08c2aeb2d2ccf413e9c9a45036}} 
+\index{SimpleChatServer@{SimpleChatServer}!connect@{connect}}
+\index{connect@{connect}!SimpleChatServer@{SimpleChatServer}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily bool Simple\+Chat\+Server\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSimpleChatServer_1_1Client}{Client}} $\ast$}]{client,  }\item[{const Chat\+Event\+Callback \&}]{handle\+Event }\end{DoxyParamCaption})}
+
+
+
+Connects to the chat server. 
+
+The passed callback method is posted to when a new chat event is received.
+
+Returns whether the client has been connected (or false if the client was already connected). \mbox{\Hypertarget{classSimpleChatServer_a070e07e1a2a5ec5ecc4e944a761256c9}\label{classSimpleChatServer_a070e07e1a2a5ec5ecc4e944a761256c9}} 
+\index{SimpleChatServer@{SimpleChatServer}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!SimpleChatServer@{SimpleChatServer}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily bool Simple\+Chat\+Server\+::disconnect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSimpleChatServer_1_1Client}{Client}} $\ast$}]{client }\end{DoxyParamCaption})}
+
+
+
+Disconnect from the chat server. 
+
+Returns whether the client has been disconnected (or false if the client was not connected). \mbox{\Hypertarget{classSimpleChatServer_ada0ab17464e1711ca15f30b381ede57c}\label{classSimpleChatServer_ada0ab17464e1711ca15f30b381ede57c}} 
+\index{SimpleChatServer@{SimpleChatServer}!login@{login}}
+\index{login@{login}!SimpleChatServer@{SimpleChatServer}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily bool Simple\+Chat\+Server\+::login (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&}]{user }\end{DoxyParamCaption})}
+
+
+
+Try to login with given user name. 
+
+Returns false if the login was not successful. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/simplechat/Simple\+Chat\+Server.\+h\end{DoxyCompactItemize}

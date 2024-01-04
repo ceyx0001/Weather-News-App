@@ -1,0 +1,122 @@
+\hypertarget{classWt_1_1WFileResource}{}\doxysection{Wt\+::W\+File\+Resource Class Reference}
+\label{classWt_1_1WFileResource}\index{Wt::WFileResource@{Wt::WFileResource}}
+
+
+A resource which streams the data from a local file.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+File\+Resource.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+File\+Resource\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+File\+Resource\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WFileResource_ab20f019f86a00e35caa3f49c8c7c7b16}{W\+File\+Resource}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WFileResource_aa69952af6686bb0f17359306c5859f84}{W\+File\+Resource}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1WFileResource_ab893760b2fcf368b5a9f3c9027f766a8}{file\+Name}})
+\begin{DoxyCompactList}\small\item\em Creates a new resource for a file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WFileResource_ae22dfa18b675f7b5d048853babf0bf89}\label{classWt_1_1WFileResource_ae22dfa18b675f7b5d048853babf0bf89}} 
+\mbox{\hyperlink{classWt_1_1WFileResource_ae22dfa18b675f7b5d048853babf0bf89}{W\+File\+Resource}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1WStreamResource_a3a22c05b650b646266dd1bda1251db64}{mime\+Type}}, const std\+::string \&\mbox{\hyperlink{classWt_1_1WFileResource_ab893760b2fcf368b5a9f3c9027f766a8}{file\+Name}})
+\begin{DoxyCompactList}\small\item\em Creates a new resource with given mime-\/type for a file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WFileResource_a60bcdd2873274df4143c79444d178004}{$\sim$\+W\+File\+Resource}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WFileResource_a02a899ebef188895c4f1707e529c0ef3}{set\+File\+Name}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1WFileResource_ab893760b2fcf368b5a9f3c9027f766a8}{file\+Name}})
+\begin{DoxyCompactList}\small\item\em Sets a (different) filename. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WFileResource_ab893760b2fcf368b5a9f3c9027f766a8}\label{classWt_1_1WFileResource_ab893760b2fcf368b5a9f3c9027f766a8}} 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1WFileResource_ab893760b2fcf368b5a9f3c9027f766a8}{file\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the filename. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WFileResource_a06f4ee0961cbdd6c1663396455855964}{handle\+Request}} (const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&request, \mbox{\hyperlink{classWt_1_1Http_1_1Response}{Http\+::\+Response}} \&response) override
+\begin{DoxyCompactList}\small\item\em Handles a request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileResource_ab60a98bf445e360b8cbfb455e1ee5997}\label{classWt_1_1WFileResource_ab60a98bf445e360b8cbfb455e1ee5997}} 
+std\+::string {\bfseries file\+Name\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A resource which streams the data from a local file. 
+
+To update the resource, either use \mbox{\hyperlink{classWt_1_1WFileResource_a02a899ebef188895c4f1707e529c0ef3}{set\+File\+Name()}} to point it to a new file, or emit the \mbox{\hyperlink{classWt_1_1WResource_a1527418354a584790c372e86a40c6027}{W\+Resource\+::data\+Changed()}} signal when only the file contents has changed, but not the filename.
+
+The resource makes use of continuations to transmit data piecewise, without blocking a thread or requiring the entire file to be read in memory. The size of the buffer can be changed using \mbox{\hyperlink{classWt_1_1WStreamResource_a016797af9eca9a2dc8000fac69946ec3}{set\+Buffer\+Size()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WStreamResource}{W\+Stream\+Resource}}, \mbox{\hyperlink{classWt_1_1WMemoryResource}{W\+Memory\+Resource}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WFileResource_ab20f019f86a00e35caa3f49c8c7c7b16}\label{classWt_1_1WFileResource_ab20f019f86a00e35caa3f49c8c7c7b16}} 
+\index{Wt::WFileResource@{Wt::WFileResource}!WFileResource@{WFileResource}}
+\index{WFileResource@{WFileResource}!Wt::WFileResource@{Wt::WFileResource}}
+\doxysubsubsection{\texorpdfstring{WFileResource()}{WFileResource()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wt\+::\+W\+File\+Resource\+::\+W\+File\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+You need to set a file name (and mime type) for the resource using \mbox{\hyperlink{classWt_1_1WFileResource_a02a899ebef188895c4f1707e529c0ef3}{set\+File\+Name()}} and \mbox{\hyperlink{classWt_1_1WStreamResource_aa25f97d38747be9451336422029bbde5}{set\+Mime\+Type()}}. \mbox{\Hypertarget{classWt_1_1WFileResource_aa69952af6686bb0f17359306c5859f84}\label{classWt_1_1WFileResource_aa69952af6686bb0f17359306c5859f84}} 
+\index{Wt::WFileResource@{Wt::WFileResource}!WFileResource@{WFileResource}}
+\index{WFileResource@{WFileResource}!Wt::WFileResource@{Wt::WFileResource}}
+\doxysubsubsection{\texorpdfstring{WFileResource()}{WFileResource()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wt\+::\+W\+File\+Resource\+::\+W\+File\+Resource (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Creates a new resource for a file. 
+
+The mime type defaults to \char`\"{}text/plain\char`\"{}. \mbox{\Hypertarget{classWt_1_1WFileResource_a60bcdd2873274df4143c79444d178004}\label{classWt_1_1WFileResource_a60bcdd2873274df4143c79444d178004}} 
+\index{Wt::WFileResource@{Wt::WFileResource}!````~WFileResource@{$\sim$WFileResource}}
+\index{````~WFileResource@{$\sim$WFileResource}!Wt::WFileResource@{Wt::WFileResource}}
+\doxysubsubsection{\texorpdfstring{$\sim$WFileResource()}{~WFileResource()}}
+{\footnotesize\ttfamily Wt\+::\+W\+File\+Resource\+::$\sim$\+W\+File\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+It is up to the user to make sure that the resource is no longer in use (by e.\+g. a \mbox{\hyperlink{classWt_1_1WImage}{W\+Image}}). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WFileResource_a06f4ee0961cbdd6c1663396455855964}\label{classWt_1_1WFileResource_a06f4ee0961cbdd6c1663396455855964}} 
+\index{Wt::WFileResource@{Wt::WFileResource}!handleRequest@{handleRequest}}
+\index{handleRequest@{handleRequest}!Wt::WFileResource@{Wt::WFileResource}}
+\doxysubsubsection{\texorpdfstring{handleRequest()}{handleRequest()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+File\+Resource\+::handle\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&}]{request,  }\item[{\mbox{\hyperlink{classWt_1_1Http_1_1Response}{Http\+::\+Response}} \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles a request. 
+
+You may want to specialize this function to compute the file on the fly. However, you need to take into account the fact that the \mbox{\hyperlink{classWt_1_1WFileResource}{W\+File\+Resource}} implementation may use continuations to split the download in smaller chunks. Your implementation should thus look like\+: 
+
+Implements \mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{Wt\+::\+W\+Resource}}.
+
+\mbox{\Hypertarget{classWt_1_1WFileResource_a02a899ebef188895c4f1707e529c0ef3}\label{classWt_1_1WFileResource_a02a899ebef188895c4f1707e529c0ef3}} 
+\index{Wt::WFileResource@{Wt::WFileResource}!setFileName@{setFileName}}
+\index{setFileName@{setFileName}!Wt::WFileResource@{Wt::WFileResource}}
+\doxysubsubsection{\texorpdfstring{setFileName()}{setFileName()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+File\+Resource\+::set\+File\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Sets a (different) filename. 
+
+Set the location of the file on the local filesystem which must be streamed for this resource. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+File\+Resource.\+h\end{DoxyCompactItemize}

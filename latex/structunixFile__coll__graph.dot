@@ -1,0 +1,42 @@
+digraph "unixFile"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="unixFile",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" lockingContext" ];
+  Node2 [label="void",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pVfs" ];
+  Node3 [label="sqlite3_vfs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsqlite3__vfs.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" xDlClose\nxDlOpen\nxDlError\nxDlSym\npAppData" ];
+  Node3 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pNext" ];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" xSleep\nxCurrentTime\nmxPathname\nxFullPathname\nxRandomness\nxGetLastError\nxAccess\nxSetSystemCall\nxOpen\nszOsFile\n..." ];
+  Node4 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" xNextSystemCall\nzName" ];
+  Node5 [label="const",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pShm" ];
+  Node6 [label="unixShm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structunixShm.html",tooltip=" "];
+  Node6 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pNext" ];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pShmNode" ];
+  Node7 [label="unixShmNode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structunixShmNode.html",tooltip=" "];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pShmMutex" ];
+  Node8 [label="sqlite3_mutex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsqlite3__mutex.html",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pFirst" ];
+  Node4 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" hShm\naLock\nnRef\nszRegion" ];
+  Node9 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pInode" ];
+  Node9 [label="unixInodeInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structunixInodeInfo.html",tooltip=" "];
+  Node8 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pLockMutex" ];
+  Node4 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" nLock\nnShared\nnRef" ];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pUnused" ];
+  Node10 [label="UnixUnusedFd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structUnixUnusedFd.html",tooltip=" "];
+  Node4 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" flags\nfd" ];
+  Node10 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pNext" ];
+  Node9 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pPrev\npNext" ];
+  Node11 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fileId" ];
+  Node11 [label="unixFileId",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structunixFileId.html",tooltip=" "];
+  Node7 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pShmNode" ];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" deviceCharacteristics\nh\nszChunk\nsectorSize\nctrlFlags\nlastErrno" ];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pPreallocatedUnused" ];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pInode" ];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pMethod\nzPath" ];
+}

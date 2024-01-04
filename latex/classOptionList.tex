@@ -1,0 +1,74 @@
+\hypertarget{classOptionList}{}\doxysection{Option\+List Class Reference}
+\label{classOptionList}\index{OptionList@{OptionList}}
+
+
+A list of options, separated by \textquotesingle{}$\vert$\textquotesingle{}.  
+
+
+
+
+{\ttfamily \#include $<$Option\+List.\+h$>$}
+
+
+
+Inheritance diagram for Option\+List\+:
+% FIG 0
+
+
+Collaboration diagram for Option\+List\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classOptionList_ae963c31330b24a2ead6304edd2cb0755}\label{classOptionList_ae963c31330b24a2ead6304edd2cb0755}} 
+\mbox{\hyperlink{classOptionList_ae963c31330b24a2ead6304edd2cb0755}{Option\+List}} ()
+\begin{DoxyCompactList}\small\item\em Create an \mbox{\hyperlink{classOptionList}{Option\+List}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOptionList_af0c8e1685b27c766a811cfb9295a4268}\label{classOptionList_af0c8e1685b27c766a811cfb9295a4268}} 
+void \mbox{\hyperlink{classOptionList_af0c8e1685b27c766a811cfb9295a4268}{add}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classOption}{Option}} $>$ option)
+\begin{DoxyCompactList}\small\item\em Add an \mbox{\hyperlink{classOption}{Option}} to the list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOptionList_a5b0013e09c5f269f33aa5c9bfb17e32b}\label{classOptionList_a5b0013e09c5f269f33aa5c9bfb17e32b}} 
+void \mbox{\hyperlink{classOptionList_a5b0013e09c5f269f33aa5c9bfb17e32b}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the stateless implementations after an \mbox{\hyperlink{classOption}{Option}} has been hidden or shown. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classOptionList_a3d7599510d4a5a1da8a197990d50e597}\label{classOptionList_a3d7599510d4a5a1da8a197990d50e597}} 
+void \mbox{\hyperlink{classOptionList_a3d7599510d4a5a1da8a197990d50e597}{option\+Visibility\+Changed}} (\mbox{\hyperlink{classOption}{Option}} $\ast$opt, bool hidden)
+\begin{DoxyCompactList}\small\item\em An option changed visibility\+: possibly update the separators inbetween. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classOptionList_a8c4df58ec022c0c79fb897448efa8a1f}\label{classOptionList_a8c4df58ec022c0c79fb897448efa8a1f}} 
+std\+::vector$<$ \mbox{\hyperlink{classOption}{Option}} $\ast$ $>$ \mbox{\hyperlink{classOptionList_a8c4df58ec022c0c79fb897448efa8a1f}{options\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The list of options. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOptionList_a51f0ec3f162144435b233c25a689b8f7}\label{classOptionList_a51f0ec3f162144435b233c25a689b8f7}} 
+\mbox{\hyperlink{classOption}{Option}} $\ast$ \mbox{\hyperlink{classOptionList_a51f0ec3f162144435b233c25a689b8f7}{option\+Need\+Reset\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The option that needs its stateless code updated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classOptionList_abd6e6c0003d4ecf9ff0385ab131dcc0e}\label{classOptionList_abd6e6c0003d4ecf9ff0385ab131dcc0e}} 
+class {\bfseries Option}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A list of options, separated by \textquotesingle{}$\vert$\textquotesingle{}. 
+
+This widget is part of the Wt composer example.
+
+An \mbox{\hyperlink{classOptionList}{Option\+List}} displays a list of \mbox{\hyperlink{classOption}{Option}} widgets, which are separated by a \textquotesingle{}$\vert$\textquotesingle{} separator.
+
+For example, Foo $\vert$ Bar $\vert$ Huu
+
+When Options are hidden, the separators are adjusted so that there is no separator after the last visible option. However, this requires a call of \mbox{\hyperlink{classOptionList_a5b0013e09c5f269f33aa5c9bfb17e32b}{update()}} each time an option is hidden or shown. This is because the removing of separators is optimized in stateless implementations, and thus in client-\/side Java\+Script code. Since the behaviour is not entirely stateless, the \mbox{\hyperlink{classOptionList_a5b0013e09c5f269f33aa5c9bfb17e32b}{update()}} method resets stateless implementations if necessary.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classOptionList}{Option\+List}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/composer/Option\+List.\+h\end{DoxyCompactItemize}

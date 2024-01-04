@@ -1,0 +1,129 @@
+\hypertarget{classWt_1_1Auth_1_1OidcUserInfoEndpoint}{}\doxysection{Wt\+::Auth\+::Oidc\+User\+Info\+Endpoint Class Reference}
+\label{classWt_1_1Auth_1_1OidcUserInfoEndpoint}\index{Wt::Auth::OidcUserInfoEndpoint@{Wt::Auth::OidcUserInfoEndpoint}}
+
+
+Endpoint at which user info can be requested.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Auth/\+Oidc\+User\+Info\+Endpoint.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Auth\+::Oidc\+User\+Info\+Endpoint\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Auth\+::Oidc\+User\+Info\+Endpoint\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcUserInfoEndpoint_a4c20b9426a80e986a4c3b57e50599158}\label{classWt_1_1Auth_1_1OidcUserInfoEndpoint_a4c20b9426a80e986a4c3b57e50599158}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcUserInfoEndpoint_a4c20b9426a80e986a4c3b57e50599158}{Oidc\+User\+Info\+Endpoint}} (\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&db)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1OidcUserInfoEndpoint_a341f81448aa6fa29a5ada28afdbc6365}{handle\+Request}} (const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&request, \mbox{\hyperlink{classWt_1_1Http_1_1Response}{Http\+::\+Response}} \&response) override
+\begin{DoxyCompactList}\small\item\em Handles a request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OidcUserInfoEndpoint_aff78d14477456c4e836a446069547ba8}{set\+Scope\+Token}} (const std\+::string \&scope\+Token, const std\+::set$<$ std\+::string $>$ \&claims)
+\begin{DoxyCompactList}\small\item\em Maps the given scope token to the given set of claims. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcUserInfoEndpoint_a43dd7b20db14f3e37c2f70164d4d591c}\label{classWt_1_1Auth_1_1OidcUserInfoEndpoint_a43dd7b20db14f3e37c2f70164d4d591c}} 
+const std\+::map$<$ std\+::string, std\+::set$<$ std\+::string $>$ $>$ \& \mbox{\hyperlink{classWt_1_1Auth_1_1OidcUserInfoEndpoint_a43dd7b20db14f3e37c2f70164d4d591c}{scope\+Tokens}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves the set of claims that has been mapped to the given scope token. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classWt_1_1Json_1_1Object}{Json\+::\+Object}} \mbox{\hyperlink{classWt_1_1Auth_1_1OidcUserInfoEndpoint_a9d68a450688f4ea640fa8ff7ea51b41d}{generate\+User\+Info}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, const std\+::set$<$ std\+::string $>$ \&scope)
+\begin{DoxyCompactList}\small\item\em Generates the J\+S\+ON containing the claims for the given scope. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcUserInfoEndpoint_ae116e0b21b3f3726f8ec001089ba8621}\label{classWt_1_1Auth_1_1OidcUserInfoEndpoint_ae116e0b21b3f3726f8ec001089ba8621}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} $\ast$ {\bfseries db\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcUserInfoEndpoint_a6e3b8288df488aa74067458ca3026880}\label{classWt_1_1Auth_1_1OidcUserInfoEndpoint_a6e3b8288df488aa74067458ca3026880}} 
+std\+::map$<$ std\+::string, std\+::set$<$ std\+::string $>$ $>$ {\bfseries claim\+Map\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Endpoint at which user info can be requested. 
+
+The \mbox{\hyperlink{classUserInfo}{User\+Info}} Endpoint is an O\+Auth 2.\+0 Protected Resource that returns Claims about the authenticated End-\/\+User. To obtain the requested Claims about the End-\/\+User, the Client makes a request to the \mbox{\hyperlink{classUserInfo}{User\+Info}} Endpoint using an Access \mbox{\hyperlink{classWt_1_1Auth_1_1Token}{Token}} obtained through Open\+ID Connect Authentication. These Claims are normally represented by a J\+S\+ON object that contains a collection of name and value pairs for the Claims.
+
+One can use set\+Scope\+Token to map claims to a scope\+Token. The value of these claims will be retrieved using the \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a2fd1e71fca20b1c377d08f9b228d17e4}{Abstract\+User\+Database\+::idp\+Json\+Claim}} function.
+
+You can look at \href{http://openid.net/specs/openid-connect-core-1_0.html\#UserInfo}{\texttt{ http\+://openid.\+net/specs/openid-\/connect-\/core-\/1\+\_\+0.\+html\#\+User\+Info}} for more information.
+
+This endpoint is implemented as a \mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}}, so it\textquotesingle{}s usually deployed using \mbox{\hyperlink{classWt_1_1WServer_a3c5c323a9bccf591b63c9fb3f40e8b59}{W\+Server\+::add\+Resource}}.
+
+This class relies on the implementation of several functions in the \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}}. Namely \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a2fd1e71fca20b1c377d08f9b228d17e4}{Abstract\+User\+Database\+::idp\+Json\+Claim}}, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a0ff39c79cf392aac7d3f9c6357fc8872}{Abstract\+User\+Database\+::idp\+Token\+Find\+With\+Value}}, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_acbf9e7f2a1f511ae740bf1e00c0e2ab6}{Abstract\+User\+Database\+::idp\+Token\+User}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a9e480167530f3df98dbee974dd62305c}{Abstract\+User\+Database\+::idp\+Token\+Scope}}.
+
+Must be deployed using T\+LS.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcUserInfoEndpoint_aff78d14477456c4e836a446069547ba8}{set\+Scope\+Token}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcUserInfoEndpoint_a9d68a450688f4ea640fa8ff7ea51b41d}\label{classWt_1_1Auth_1_1OidcUserInfoEndpoint_a9d68a450688f4ea640fa8ff7ea51b41d}} 
+\index{Wt::Auth::OidcUserInfoEndpoint@{Wt::Auth::OidcUserInfoEndpoint}!generateUserInfo@{generateUserInfo}}
+\index{generateUserInfo@{generateUserInfo}!Wt::Auth::OidcUserInfoEndpoint@{Wt::Auth::OidcUserInfoEndpoint}}
+\doxysubsubsection{\texorpdfstring{generateUserInfo()}{generateUserInfo()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Json_1_1Object}{Json\+::\+Object}} Wt\+::\+Auth\+::\+Oidc\+User\+Info\+Endpoint\+::generate\+User\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{const std\+::set$<$ std\+::string $>$ \&}]{scope }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Generates the J\+S\+ON containing the claims for the given scope. 
+
+Can be overridden, but by default it uses the configured mapping set by set\+Scope\+Token, and \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a2fd1e71fca20b1c377d08f9b228d17e4}{Abstract\+User\+Database\+::idp\+Json\+Claim}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a2fd1e71fca20b1c377d08f9b228d17e4}{Abstract\+User\+Database\+::idp\+Json\+Claim}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcUserInfoEndpoint_a341f81448aa6fa29a5ada28afdbc6365}\label{classWt_1_1Auth_1_1OidcUserInfoEndpoint_a341f81448aa6fa29a5ada28afdbc6365}} 
+\index{Wt::Auth::OidcUserInfoEndpoint@{Wt::Auth::OidcUserInfoEndpoint}!handleRequest@{handleRequest}}
+\index{handleRequest@{handleRequest}!Wt::Auth::OidcUserInfoEndpoint@{Wt::Auth::OidcUserInfoEndpoint}}
+\doxysubsubsection{\texorpdfstring{handleRequest()}{handleRequest()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Oidc\+User\+Info\+Endpoint\+::handle\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&}]{request,  }\item[{\mbox{\hyperlink{classWt_1_1Http_1_1Response}{Http\+::\+Response}} \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles a request. 
+
+Reimplement this method so that a proper response is generated for the given request. From the {\ttfamily request} object you can access request parameters and whether the request is a continuation request. In the {\ttfamily response} object, you should set the mime type and stream the output data.
+
+A request may also concern a continuation, indicated in \mbox{\hyperlink{classWt_1_1Http_1_1Request_a9fe40c73e6d2bd3b4fec6f2476d71265}{Http\+::\+Request\+::continuation()}}, in which case the next part for a previously created continuation should be served.
+
+While handling a request, which may happen at any time together with event handling, the library makes sure that the resource is not being concurrently deleted, but multiple requests may happend simultaneously for a single resource. 
+
+Implements \mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{Wt\+::\+W\+Resource}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcUserInfoEndpoint_aff78d14477456c4e836a446069547ba8}\label{classWt_1_1Auth_1_1OidcUserInfoEndpoint_aff78d14477456c4e836a446069547ba8}} 
+\index{Wt::Auth::OidcUserInfoEndpoint@{Wt::Auth::OidcUserInfoEndpoint}!setScopeToken@{setScopeToken}}
+\index{setScopeToken@{setScopeToken}!Wt::Auth::OidcUserInfoEndpoint@{Wt::Auth::OidcUserInfoEndpoint}}
+\doxysubsubsection{\texorpdfstring{setScopeToken()}{setScopeToken()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Oidc\+User\+Info\+Endpoint\+::set\+Scope\+Token (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{scope\+Token,  }\item[{const std\+::set$<$ std\+::string $>$ \&}]{claims }\end{DoxyParamCaption})}
+
+
+
+Maps the given scope token to the given set of claims. 
+
+The value of these claims will be retrieved from the \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} using the \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a2fd1e71fca20b1c377d08f9b228d17e4}{Abstract\+User\+Database\+::idp\+Json\+Claim}} function.
+
+At construction, the following default scopes are automatically populated\+: profile -\/$>$ \{name\} and email -\/$>$ \{email, email\+\_\+verified\}
+
+A scope can be erased by setting it to an empty set of claims.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a2fd1e71fca20b1c377d08f9b228d17e4}{Abstract\+User\+Database\+::idp\+Json\+Claim}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/Oidc\+User\+Info\+Endpoint.\+h\end{DoxyCompactItemize}

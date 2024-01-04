@@ -1,0 +1,89 @@
+\hypertarget{classWt_1_1WStaticModelView}{}\doxysection{Wt\+::W\+Static\+Model\+View$<$ Renderer $>$ Class Template Reference}
+\label{classWt_1_1WStaticModelView}\index{Wt::WStaticModelView$<$ Renderer $>$@{Wt::WStaticModelView$<$ Renderer $>$}}
+
+
+A widget that implements a view for a non-\/changing model.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+View\+Widget.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Static\+Model\+View$<$ Renderer $>$\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Static\+Model\+View$<$ Renderer $>$\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WStaticModelView_a39195e5c49c50885cfd24d15386ad0ba}\label{classWt_1_1WStaticModelView_a39195e5c49c50885cfd24d15386ad0ba}} 
+\mbox{\hyperlink{classWt_1_1WStaticModelView_a39195e5c49c50885cfd24d15386ad0ba}{W\+Static\+Model\+View}} (Renderer f)
+\begin{DoxyCompactList}\small\item\em Creates a new static model view, given a function object to render the View widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WStaticModelView_a8ae76533bf5ecff5f4555600c1e2540a}{render\+View}} ()
+\begin{DoxyCompactList}\small\item\em Creates a widget that renders the View. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WStaticModelView_ac3614005f8055b6cfdfe665a8b288723}\label{classWt_1_1WStaticModelView_ac3614005f8055b6cfdfe665a8b288723}} 
+Renderer {\bfseries f\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Related Functions}
+(\mbox{\hyperlink{classNote}{Note}} that these are not member functions.) \begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename R $>$ }\\std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WStaticModelView}{W\+Static\+Model\+View}}$<$ R $>$ $>$ \mbox{\hyperlink{classWt_1_1WStaticModelView_a14bf898a669fbf01a071baaa25650d7c}{make\+Static\+Model}} (R f)
+\begin{DoxyCompactList}\small\item\em Wraps a widget into a view with a non-\/changing model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Renderer$>$\newline
+class Wt\+::\+W\+Static\+Model\+View$<$ Renderer $>$}
+
+A widget that implements a view for a non-\/changing model. 
+
+This model uses a function object which is passed in the constructor to render the View, and does not react to changes.
+
+You may want to use the utility function Wt\+::make\+Static\+Model() to create an instance of this class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WStaticModelView_a8ae76533bf5ecff5f4555600c1e2540a}\label{classWt_1_1WStaticModelView_a8ae76533bf5ecff5f4555600c1e2540a}} 
+\index{Wt::WStaticModelView$<$ Renderer $>$@{Wt::WStaticModelView$<$ Renderer $>$}!renderView@{renderView}}
+\index{renderView@{renderView}!Wt::WStaticModelView$<$ Renderer $>$@{Wt::WStaticModelView$<$ Renderer $>$}}
+\doxysubsubsection{\texorpdfstring{renderView()}{renderView()}}
+{\footnotesize\ttfamily template$<$typename Renderer $>$ \\
+std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$>$ \mbox{\hyperlink{classWt_1_1WStaticModelView}{Wt\+::\+W\+Static\+Model\+View}}$<$ Renderer $>$\+::render\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates a widget that renders the View. 
+
+This method must be reimplemented to return a widget that renders the view. The returned widget will be deleted by W\+View\+Widget. 
+
+Implements \mbox{\hyperlink{classWt_1_1WViewWidget_a58784e9a334ea7b23c200aaf08f0c1dd}{Wt\+::\+W\+View\+Widget}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WStaticModelView_a14bf898a669fbf01a071baaa25650d7c}\label{classWt_1_1WStaticModelView_a14bf898a669fbf01a071baaa25650d7c}} 
+\index{Wt::WStaticModelView$<$ Renderer $>$@{Wt::WStaticModelView$<$ Renderer $>$}!makeStaticModel@{makeStaticModel}}
+\index{makeStaticModel@{makeStaticModel}!Wt::WStaticModelView$<$ Renderer $>$@{Wt::WStaticModelView$<$ Renderer $>$}}
+\doxysubsubsection{\texorpdfstring{makeStaticModel()}{makeStaticModel()}}
+{\footnotesize\ttfamily template$<$typename R $>$ \\
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WStaticModelView}{W\+Static\+Model\+View}}$<$ R $>$ $>$ make\+Static\+Model (\begin{DoxyParamCaption}\item[{R}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [related]}}
+
+
+
+Wraps a widget into a view with a non-\/changing model. 
+
+The View\+Renderer is called without arguments and must return a newly created widget (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+View\+Widget.\+h\end{DoxyCompactItemize}

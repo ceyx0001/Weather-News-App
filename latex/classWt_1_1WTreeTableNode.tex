@@ -1,0 +1,170 @@
+\hypertarget{classWt_1_1WTreeTableNode}{}\doxysection{Wt\+::W\+Tree\+Table\+Node Class Reference}
+\label{classWt_1_1WTreeTableNode}\index{Wt::WTreeTableNode@{Wt::WTreeTableNode}}
+
+
+A specialized tree node which allows additional data to be associated with each node.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Tree\+Table\+Node.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Tree\+Table\+Node\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Tree\+Table\+Node\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WTreeTableNode_1_1ColumnWidget}{Column\+Widget}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WTreeTableNode_a1069793e1144ef36fa04349f5f606132}{W\+Tree\+Table\+Node}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&label\+Text, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WIconPair}{W\+Icon\+Pair}} $>$ \mbox{\hyperlink{classWt_1_1WTreeNode_a0c410ac8595a7df7f94c785595ca2ddd}{label\+Icon}}=nullptr)
+\begin{DoxyCompactList}\small\item\em Creates a new tree table node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTreeTableNode_a85d9b06b7329c0ae9b951c5680a02c6c}{set\+Column\+Widget}} (int column, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ item)
+\begin{DoxyCompactList}\small\item\em Sets a widget to be displayed in the given column for this node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WTreeTableNode_a51e726f721c8d97bca0e7eead5a7c086}{column\+Widget}} (int column)
+\begin{DoxyCompactList}\small\item\em Returns the widget set for a column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTreeTable}{W\+Tree\+Table}} $\ast$ \mbox{\hyperlink{classWt_1_1WTreeTableNode_abc73b63e6c11922f0a9e7720da8e8a21}{table}} () const
+\begin{DoxyCompactList}\small\item\em Returns the table for this node. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTreeTableNode_af9b0d60007d057ebd15870e391c3482d}{insert\+Child\+Node}} (int index, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}} $>$ node) override
+\begin{DoxyCompactList}\small\item\em Inserts a child node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTreeTableNode_a27dd54e95eb26aeb67bebaa0dacc80b8}{set\+Table}} (\mbox{\hyperlink{classWt_1_1WTreeTable}{W\+Tree\+Table}} $\ast$\mbox{\hyperlink{classWt_1_1WTreeTableNode_abc73b63e6c11922f0a9e7720da8e8a21}{table}})
+\begin{DoxyCompactList}\small\item\em Sets the table for this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeTableNode_a079ac3216b5c5aacf973ae97a81c0a83}\label{classWt_1_1WTreeTableNode_a079ac3216b5c5aacf973ae97a81c0a83}} 
+void {\bfseries create\+Extra\+Columns} (int num\+Columns)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeTableNode_adb062833ef2a9d6f6674174a94346ca9}\label{classWt_1_1WTreeTableNode_adb062833ef2a9d6f6674174a94346ca9}} 
+\mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} {\bfseries column\+Width} (int column)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeTableNode_aadb6f99cce88a96919cbbd96387b5180}\label{classWt_1_1WTreeTableNode_aadb6f99cce88a96919cbbd96387b5180}} 
+\mbox{\hyperlink{classWt_1_1WTreeTable}{W\+Tree\+Table}} $\ast$ {\bfseries table\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeTableNode_a7030504cdac2cdf4c0d3cf0cfc051f1f}\label{classWt_1_1WTreeTableNode_a7030504cdac2cdf4c0d3cf0cfc051f1f}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries row\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeTableNode_a1fa22b5918c80cafb7ea2d49e9ab6d61}\label{classWt_1_1WTreeTableNode_a1fa22b5918c80cafb7ea2d49e9ab6d61}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1WTreeTableNode_1_1ColumnWidget}{Column\+Widget}} $>$ {\bfseries column\+Widgets\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeTableNode_abc0e4a871dda6473d997d80211562c4a}\label{classWt_1_1WTreeTableNode_abc0e4a871dda6473d997d80211562c4a}} 
+class {\bfseries W\+Tree\+Table}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A specialized tree node which allows additional data to be associated with each node. 
+
+Additional data for each column can be set using \mbox{\hyperlink{classWt_1_1WTreeTableNode_a85d9b06b7329c0ae9b951c5680a02c6c}{set\+Column\+Widget()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}}, \mbox{\hyperlink{classWt_1_1WTreeTable}{W\+Tree\+Table}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WTreeTableNode_a1069793e1144ef36fa04349f5f606132}\label{classWt_1_1WTreeTableNode_a1069793e1144ef36fa04349f5f606132}} 
+\index{Wt::WTreeTableNode@{Wt::WTreeTableNode}!WTreeTableNode@{WTreeTableNode}}
+\index{WTreeTableNode@{WTreeTableNode}!Wt::WTreeTableNode@{Wt::WTreeTableNode}}
+\doxysubsubsection{\texorpdfstring{WTreeTableNode()}{WTreeTableNode()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Tree\+Table\+Node\+::\+W\+Tree\+Table\+Node (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{label\+Text,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WIconPair}{W\+Icon\+Pair}} $>$}]{label\+Icon = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Creates a new tree table node. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTreeNode_a58a48c1504f466ddbd6ae0eda60e8014}{W\+Tree\+Node\+::\+W\+Tree\+Node()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WTreeTableNode_a51e726f721c8d97bca0e7eead5a7c086}\label{classWt_1_1WTreeTableNode_a51e726f721c8d97bca0e7eead5a7c086}} 
+\index{Wt::WTreeTableNode@{Wt::WTreeTableNode}!columnWidget@{columnWidget}}
+\index{columnWidget@{columnWidget}!Wt::WTreeTableNode@{Wt::WTreeTableNode}}
+\doxysubsubsection{\texorpdfstring{columnWidget()}{columnWidget()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$\ast$ Wt\+::\+W\+Tree\+Table\+Node\+::column\+Widget (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption})}
+
+
+
+Returns the widget set for a column. 
+
+Returns the widget set previously using \mbox{\hyperlink{classWt_1_1WTreeTableNode_a85d9b06b7329c0ae9b951c5680a02c6c}{set\+Column\+Widget()}}, or {\ttfamily 0} if no widget was previously set. \mbox{\Hypertarget{classWt_1_1WTreeTableNode_af9b0d60007d057ebd15870e391c3482d}\label{classWt_1_1WTreeTableNode_af9b0d60007d057ebd15870e391c3482d}} 
+\index{Wt::WTreeTableNode@{Wt::WTreeTableNode}!insertChildNode@{insertChildNode}}
+\index{insertChildNode@{insertChildNode}!Wt::WTreeTableNode@{Wt::WTreeTableNode}}
+\doxysubsubsection{\texorpdfstring{insertChildNode()}{insertChildNode()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Tree\+Table\+Node\+::insert\+Child\+Node (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}} $>$}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inserts a child node. 
+
+Inserts the node {\ttfamily node} at index {\ttfamily index}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WTreeNode_af021577a40d347420783ce10d59568f3}{Wt\+::\+W\+Tree\+Node}}.
+
+\mbox{\Hypertarget{classWt_1_1WTreeTableNode_a85d9b06b7329c0ae9b951c5680a02c6c}\label{classWt_1_1WTreeTableNode_a85d9b06b7329c0ae9b951c5680a02c6c}} 
+\index{Wt::WTreeTableNode@{Wt::WTreeTableNode}!setColumnWidget@{setColumnWidget}}
+\index{setColumnWidget@{setColumnWidget}!Wt::WTreeTableNode@{Wt::WTreeTableNode}}
+\doxysubsubsection{\texorpdfstring{setColumnWidget()}{setColumnWidget()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Tree\+Table\+Node\+::set\+Column\+Widget (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$}]{item }\end{DoxyParamCaption})}
+
+
+
+Sets a widget to be displayed in the given column for this node. 
+
+Columns are counted starting from 0 for the tree list itself, and 1 for the first additional column.
+
+The node label (in column 0) is not considered a column widget. To set a custom widget in column 0, you can add a widget to the \mbox{\hyperlink{classWt_1_1WTreeNode_ae9acd45dc1f8c6ce1cdde76503f9d9d1}{label\+Area()}}. \mbox{\Hypertarget{classWt_1_1WTreeTableNode_a27dd54e95eb26aeb67bebaa0dacc80b8}\label{classWt_1_1WTreeTableNode_a27dd54e95eb26aeb67bebaa0dacc80b8}} 
+\index{Wt::WTreeTableNode@{Wt::WTreeTableNode}!setTable@{setTable}}
+\index{setTable@{setTable}!Wt::WTreeTableNode@{Wt::WTreeTableNode}}
+\doxysubsubsection{\texorpdfstring{setTable()}{setTable()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Tree\+Table\+Node\+::set\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WTreeTable}{W\+Tree\+Table}} $\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Sets the table for this node. 
+
+This method is called when the node is inserted, directly, or indirectly into a table.
+
+You may want to reimplement this method if you wish to customize the behaviour of the node depending on table properties. For example to only associate data with the node when the tree list is actually used inside a table.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTreeTableNode_abc73b63e6c11922f0a9e7720da8e8a21}{W\+Tree\+Table\+Node\+::table()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTreeTableNode_abc73b63e6c11922f0a9e7720da8e8a21}\label{classWt_1_1WTreeTableNode_abc73b63e6c11922f0a9e7720da8e8a21}} 
+\index{Wt::WTreeTableNode@{Wt::WTreeTableNode}!table@{table}}
+\index{table@{table}!Wt::WTreeTableNode@{Wt::WTreeTableNode}}
+\doxysubsubsection{\texorpdfstring{table()}{table()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WTreeTable}{W\+Tree\+Table}}$\ast$ Wt\+::\+W\+Tree\+Table\+Node\+::table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the table for this node. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTreeTableNode_a27dd54e95eb26aeb67bebaa0dacc80b8}{W\+Tree\+Table\+Node\+::set\+Table()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Tree\+Table\+Node.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,254 @@
+\hypertarget{classWt_1_1WebRequest}{}\doxysection{Wt\+::Web\+Request Class Reference}
+\label{classWt_1_1WebRequest}\index{Wt::WebRequest@{Wt::WebRequest}}
+
+
+Inheritance diagram for Wt\+::Web\+Request\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Web\+Request\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a72506efdd1163a655ae037262557c6cb}\label{classWt_1_1WebRequest_a72506efdd1163a655ae037262557c6cb}} 
+enum {\bfseries Response\+State} \{ {\bfseries Response\+Done}, 
+{\bfseries Response\+Flush}
+ \}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a6c0296581d6be0cce8354668a7271150}\label{classWt_1_1WebRequest_a6c0296581d6be0cce8354668a7271150}} 
+enum {\bfseries Response\+Type} \{ {\bfseries Page}, 
+{\bfseries Script}, 
+{\bfseries Update}
+ \}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a65678b867dc1698757d16a40c2bedd28}\label{classWt_1_1WebRequest_a65678b867dc1698757d16a40c2bedd28}} 
+typedef std\+::function$<$ void(Web\+Write\+Event)$>$ {\bfseries Write\+Callback}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_aca9baceb927ad8175c4a0879fbefd707}\label{classWt_1_1WebRequest_aca9baceb927ad8175c4a0879fbefd707}} 
+typedef std\+::function$<$ void(Web\+Read\+Event)$>$ {\bfseries Read\+Callback}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_ae539d448f21518c2ce77aa907407b13b}\label{classWt_1_1WebRequest_ae539d448f21518c2ce77aa907407b13b}} 
+typedef std\+::function$<$ void(void)$>$ {\bfseries Disconnect\+Callback}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a6dfabe0577cbeff995945fc8c35608b2}\label{classWt_1_1WebRequest_a6dfabe0577cbeff995945fc8c35608b2}} 
+void {\bfseries log} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_ab2cb59f55ed43204ec68ae1d39a1054b}\label{classWt_1_1WebRequest_ab2cb59f55ed43204ec68ae1d39a1054b}} 
+virtual void {\bfseries flush} (Response\+State state=Response\+State\+::\+Response\+Done, const Write\+Callback \&callback=Write\+Callback())=0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a63952bf197c7c109cf781587aa6f8761}\label{classWt_1_1WebRequest_a63952bf197c7c109cf781587aa6f8761}} 
+virtual void {\bfseries read\+Web\+Socket\+Message} (const Read\+Callback \&callback)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a44c26274fffc2b6e589d02346312d526}\label{classWt_1_1WebRequest_a44c26274fffc2b6e589d02346312d526}} 
+virtual bool {\bfseries web\+Socket\+Message\+Pending} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_aad894be9822a79b0e96e0993cdd28e05}\label{classWt_1_1WebRequest_aad894be9822a79b0e96e0993cdd28e05}} 
+virtual bool {\bfseries detect\+Disconnect} (const Disconnect\+Callback \&callback)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a7108580197485115a599a73837f7f1d3}\label{classWt_1_1WebRequest_a7108580197485115a599a73837f7f1d3}} 
+virtual std\+::istream \& {\bfseries in} ()=0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a1788b51073431e385ad77ccfc91b4b07}\label{classWt_1_1WebRequest_a1788b51073431e385ad77ccfc91b4b07}} 
+virtual std\+::ostream \& {\bfseries out} ()=0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a9995d53093266534bec890334c801542}\label{classWt_1_1WebRequest_a9995d53093266534bec890334c801542}} 
+W\+T\+\_\+\+B\+O\+S\+T\+R\+E\+AM \& {\bfseries bout} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_ad0ad889a6e095c8e01d9402cbc6daa01}\label{classWt_1_1WebRequest_ad0ad889a6e095c8e01d9402cbc6daa01}} 
+virtual std\+::ostream \& {\bfseries err} ()=0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a5c666d12187ffafcd16fc59ad00305f3}\label{classWt_1_1WebRequest_a5c666d12187ffafcd16fc59ad00305f3}} 
+virtual void {\bfseries set\+Redirect} (const std\+::string \&url)=0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a6454b64e417bef663cfc3f9c8e8ef48c}\label{classWt_1_1WebRequest_a6454b64e417bef663cfc3f9c8e8ef48c}} 
+virtual void {\bfseries set\+Status} (int status)=0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_acef9b6d533a3dc3bde9697d620ff0cec}\label{classWt_1_1WebRequest_acef9b6d533a3dc3bde9697d620ff0cec}} 
+virtual void {\bfseries set\+Content\+Type} (const std\+::string \&value)=0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a201f115201b3bf8aeaa4a48306c67cd1}\label{classWt_1_1WebRequest_a201f115201b3bf8aeaa4a48306c67cd1}} 
+virtual void {\bfseries set\+Content\+Length} (std\+::int64\+\_\+t length)=0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_adf957f17d1b3989a8dde84cf712c87f0}\label{classWt_1_1WebRequest_adf957f17d1b3989a8dde84cf712c87f0}} 
+virtual void {\bfseries add\+Header} (const std\+::string \&name, const std\+::string \&value)=0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_abaf62db82abd20394643d4e87613d0ce}\label{classWt_1_1WebRequest_abaf62db82abd20394643d4e87613d0ce}} 
+virtual const char $\ast$ {\bfseries env\+Value} (const char $\ast$name) const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_aaea489a7759bf25f5d771cff582eabc4}\label{classWt_1_1WebRequest_aaea489a7759bf25f5d771cff582eabc4}} 
+virtual const std\+::string \& {\bfseries server\+Name} () const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a508573c0a81100c96ecc57a5aee4d831}\label{classWt_1_1WebRequest_a508573c0a81100c96ecc57a5aee4d831}} 
+virtual const std\+::string \& {\bfseries server\+Port} () const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a148d4287572a2a3b0a18436746de43fe}\label{classWt_1_1WebRequest_a148d4287572a2a3b0a18436746de43fe}} 
+virtual const std\+::string \& {\bfseries script\+Name} () const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a9972d83c2171e3d1b8e386e0221fa150}\label{classWt_1_1WebRequest_a9972d83c2171e3d1b8e386e0221fa150}} 
+virtual const char $\ast$ {\bfseries request\+Method} () const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_af193f9fa6c9bdb17d4be803fdeb98fce}\label{classWt_1_1WebRequest_af193f9fa6c9bdb17d4be803fdeb98fce}} 
+virtual const std\+::string \& {\bfseries query\+String} () const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a4ae36eb97d9a7f92a1caa5447ad9316d}\label{classWt_1_1WebRequest_a4ae36eb97d9a7f92a1caa5447ad9316d}} 
+virtual const std\+::string \& {\bfseries path\+Info} () const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a7184b5044d4f63d2adf88b96935ebe0b}\label{classWt_1_1WebRequest_a7184b5044d4f63d2adf88b96935ebe0b}} 
+virtual const std\+::string \& {\bfseries remote\+Addr} () const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_adfa8c19a7e3086dca46bfc36d4f380e0}\label{classWt_1_1WebRequest_adfa8c19a7e3086dca46bfc36d4f380e0}} 
+virtual const char $\ast$ {\bfseries url\+Scheme} () const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_ae2be6cdd5e2cc397244165898ae0f655}\label{classWt_1_1WebRequest_ae2be6cdd5e2cc397244165898ae0f655}} 
+virtual bool {\bfseries is\+Web\+Socket\+Message} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a8e8b3f52c501cb969ae31ca84839e0bc}\label{classWt_1_1WebRequest_a8e8b3f52c501cb969ae31ca84839e0bc}} 
+bool {\bfseries is\+Web\+Socket\+Request} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a7325a12e341a3e0ce4c271f107469a48}\label{classWt_1_1WebRequest_a7325a12e341a3e0ce4c271f107469a48}} 
+void {\bfseries set\+Web\+Socket\+Request} (bool ws)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_aadbababb14be553c69d6c568a5d8c40e}\label{classWt_1_1WebRequest_aadbababb14be553c69d6c568a5d8c40e}} 
+virtual const char $\ast$ {\bfseries header\+Value} (const char $\ast$name) const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a5e96c7eda1dc2d204a686aca5a2be0aa}\label{classWt_1_1WebRequest_a5e96c7eda1dc2d204a686aca5a2be0aa}} 
+const char $\ast$ {\bfseries user\+Agent} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a7920d81a308574965fbf3ff0ac516ed1}\label{classWt_1_1WebRequest_a7920d81a308574965fbf3ff0ac516ed1}} 
+const char $\ast$ {\bfseries referer} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a88b0a5baecee4b04969c20fe6103ac7d}\label{classWt_1_1WebRequest_a88b0a5baecee4b04969c20fe6103ac7d}} 
+virtual std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Http_1_1Message_1_1Header}{Wt\+::\+Http\+::\+Message\+::\+Header}} $>$ {\bfseries headers} () const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a7aa7c611d9cd4f149bae432c75e47759}\label{classWt_1_1WebRequest_a7aa7c611d9cd4f149bae432c75e47759}} 
+virtual const char $\ast$ {\bfseries content\+Type} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_af876d08c4671ab84a89d0dfec7c4e66d}\label{classWt_1_1WebRequest_af876d08c4671ab84a89d0dfec7c4e66d}} 
+virtual \+::int64\+\_\+t {\bfseries content\+Length} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_abfb87b6a6f727bdc39052754cc793c35}\label{classWt_1_1WebRequest_abfb87b6a6f727bdc39052754cc793c35}} 
+const std\+::string $\ast$ {\bfseries get\+Parameter} (const std\+::string \&name) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a26140a34d698a3097ecd0186f0c26ec3}\label{classWt_1_1WebRequest_a26140a34d698a3097ecd0186f0c26ec3}} 
+const \mbox{\hyperlink{namespaceWt_1_1Http_ae1470e15e15eab123a19e4204f624598}{Http\+::\+Parameter\+Values}} \& {\bfseries get\+Parameter\+Values} (const std\+::string \&name) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_afff75bc8cc932318cfb4106c0e4a73de}\label{classWt_1_1WebRequest_afff75bc8cc932318cfb4106c0e4a73de}} 
+const \mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Http\+::\+Parameter\+Map}} \& {\bfseries get\+Parameter\+Map} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_aa39e98732b1687ab4fedf2af34843fba}\label{classWt_1_1WebRequest_aa39e98732b1687ab4fedf2af34843fba}} 
+const \mbox{\hyperlink{namespaceWt_1_1Http_a90602329029048d738daae9ba63e059a}{Http\+::\+Uploaded\+File\+Map}} \& {\bfseries uploaded\+Files} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a849b43c37805542f30cb2009acf3300f}\label{classWt_1_1WebRequest_a849b43c37805542f30cb2009acf3300f}} 
+\+::int64\+\_\+t {\bfseries post\+Data\+Exceeded} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a272a0c6e9db2138e0d87d536e97f0012}\label{classWt_1_1WebRequest_a272a0c6e9db2138e0d87d536e97f0012}} 
+\mbox{\hyperlink{classWt_1_1WLocale}{W\+Locale}} {\bfseries parse\+Locale} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_ae03328d5e56afceb5169443eba92ed51}\label{classWt_1_1WebRequest_ae03328d5e56afceb5169443eba92ed51}} 
+void {\bfseries set\+Response\+Type} (Response\+Type response\+Type)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_ad44e6257cc75f1cc732f5b8c84b82de3}\label{classWt_1_1WebRequest_ad44e6257cc75f1cc732f5b8c84b82de3}} 
+Response\+Type {\bfseries response\+Type} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a24315498832c1d0ed29d66d063e22079}\label{classWt_1_1WebRequest_a24315498832c1d0ed29d66d063e22079}} 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WSslInfo}{W\+Ssl\+Info}} $>$ {\bfseries ssl\+Info} (const \mbox{\hyperlink{classWt_1_1Configuration}{Configuration}} \&conf) const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_acdd9bd94351606fc0b730b3011be0e43}\label{classWt_1_1WebRequest_acdd9bd94351606fc0b730b3011be0e43}} 
+virtual const std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \& {\bfseries url\+Params} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_af31b213d8bfea82200f69a97171e51e3}\label{classWt_1_1WebRequest_af31b213d8bfea82200f69a97171e51e3}} 
+std\+::string {\bfseries client\+Address} (const \mbox{\hyperlink{classWt_1_1Configuration}{Configuration}} \&conf) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a29c680126d96a7d8f48af36afb6057b5}\label{classWt_1_1WebRequest_a29c680126d96a7d8f48af36afb6057b5}} 
+std\+::string {\bfseries host\+Name} (const \mbox{\hyperlink{classWt_1_1Configuration}{Configuration}} \&conf) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a03fe6ba05a7b43d1154e5b5ad214a608}\label{classWt_1_1WebRequest_a03fe6ba05a7b43d1154e5b5ad214a608}} 
+std\+::string {\bfseries url\+Scheme} (const \mbox{\hyperlink{classWt_1_1Configuration}{Configuration}} \&conf) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a7cd016db194ef70428379f6bca065105}\label{classWt_1_1WebRequest_a7cd016db194ef70428379f6bca065105}} 
+void {\bfseries reset} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a780b765a07036c961ce481f9be6bc802}\label{classWt_1_1WebRequest_a780b765a07036c961ce481f9be6bc802}} 
+void {\bfseries emulate\+Async} (Response\+State state)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a1d3b713bf271e10b0d913705f87311a9}\label{classWt_1_1WebRequest_a1d3b713bf271e10b0d913705f87311a9}} 
+void {\bfseries set\+Async\+Callback} (const Write\+Callback \&cb)
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_af1ab18cbb5236e32af20df9b0a48cf6c}\label{classWt_1_1WebRequest_af1ab18cbb5236e32af20df9b0a48cf6c}} 
+const Write\+Callback \& {\bfseries get\+Async\+Callback} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_aae3c6c7d7c369682dd3ddbd8ea64da28}\label{classWt_1_1WebRequest_aae3c6c7d7c369682dd3ddbd8ea64da28}} 
+const \mbox{\hyperlink{classWt_1_1EntryPoint}{Entry\+Point}} $\ast$ {\bfseries entry\+Point\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a300edb289670c31217689ec21e0d17bf}\label{classWt_1_1WebRequest_a300edb289670c31217689ec21e0d17bf}} 
+Async\+Emulation $\ast$ {\bfseries async\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a6da6cddbd4bd90ad9e927561582261ce}\label{classWt_1_1WebRequest_a6da6cddbd4bd90ad9e927561582261ce}} 
+std\+::string {\bfseries parse\+Preferred\+Accept\+Value} (const char $\ast$value) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a72121d36d840dd601e093dc2cc172842}\label{classWt_1_1WebRequest_a72121d36d840dd601e093dc2cc172842}} 
+\+::int64\+\_\+t {\bfseries post\+Data\+Exceeded\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a140713eea84d560cf202a6573fb978d8}\label{classWt_1_1WebRequest_a140713eea84d560cf202a6573fb978d8}} 
+\mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Http\+::\+Parameter\+Map}} {\bfseries parameters\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a97964d74b3480b05a2588fe02cbfc97c}\label{classWt_1_1WebRequest_a97964d74b3480b05a2588fe02cbfc97c}} 
+\mbox{\hyperlink{namespaceWt_1_1Http_a90602329029048d738daae9ba63e059a}{Http\+::\+Uploaded\+File\+Map}} {\bfseries files\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a6f8fa82be638f56aced41569042cd0db}\label{classWt_1_1WebRequest_a6f8fa82be638f56aced41569042cd0db}} 
+Response\+Type {\bfseries response\+Type\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_ae1cad82ff051ba08af717a2f10a3b4bc}\label{classWt_1_1WebRequest_ae1cad82ff051ba08af717a2f10a3b4bc}} 
+bool {\bfseries web\+Socket\+Request\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_ab777c7055f6488467c63214769aa87e1}\label{classWt_1_1WebRequest_ab777c7055f6488467c63214769aa87e1}} 
+std\+::chrono\+::high\+\_\+resolution\+\_\+clock\+::time\+\_\+point {\bfseries start\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_ab15cf8b944fb970317316f7d3fa7b83f}\label{classWt_1_1WebRequest_ab15cf8b944fb970317316f7d3fa7b83f}} 
+std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ {\bfseries url\+Params\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a9699c9ca0f09307ba400e670d4e43693}\label{classWt_1_1WebRequest_a9699c9ca0f09307ba400e670d4e43693}} 
+Write\+Callback {\bfseries async\+Callback\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_aefeee3395c6423d569aa830d2d3f73a5}\label{classWt_1_1WebRequest_aefeee3395c6423d569aa830d2d3f73a5}} 
+static \mbox{\hyperlink{namespaceWt_1_1Http_ae1470e15e15eab123a19e4204f624598}{Http\+::\+Parameter\+Values}} {\bfseries empty\+Values\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a48fa92d8cd3dec29c71e6661150b8e32}\label{classWt_1_1WebRequest_a48fa92d8cd3dec29c71e6661150b8e32}} 
+class {\bfseries Cgi\+Parser}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a9f12fceba911c927f68c87c8f958c4e2}\label{classWt_1_1WebRequest_a9f12fceba911c927f68c87c8f958c4e2}} 
+class {\bfseries Http\+::\+Request}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a9f2783868a6f37c811b4599a640dde62}\label{classWt_1_1WebRequest_a9f2783868a6f37c811b4599a640dde62}} 
+class {\bfseries W\+Environment}
+\item 
+\mbox{\Hypertarget{classWt_1_1WebRequest_a61e851e22dadd21892e94ec3cfecda53}\label{classWt_1_1WebRequest_a61e851e22dadd21892e94ec3cfecda53}} 
+class {\bfseries Web\+Controller}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/web/Web\+Request.\+h\end{DoxyCompactItemize}

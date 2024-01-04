@@ -1,0 +1,153 @@
+\hypertarget{classWt_1_1EscapeOStream}{}\doxysection{Wt\+::Escape\+O\+Stream Class Reference}
+\label{classWt_1_1EscapeOStream}\index{Wt::EscapeOStream@{Wt::EscapeOStream}}
+
+
+Collaboration diagram for Wt\+::Escape\+O\+Stream\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1EscapeOStream_1_1Entry}{Entry}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_ae3b6302a5049a6537f7efef5627dd19f}\label{classWt_1_1EscapeOStream_ae3b6302a5049a6537f7efef5627dd19f}} 
+enum {\bfseries Rule\+Set} \{ \newline
+{\bfseries Empty} = 0, 
+{\bfseries Html\+Attribute} = 1, 
+{\bfseries Js\+String\+Literal\+S\+Quote} = 2, 
+{\bfseries Js\+String\+Literal\+D\+Quote} = 3, 
+\newline
+{\bfseries Plain} = 4, 
+{\bfseries Plain\+Text\+New\+Lines} = 5
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a4b3fa6fe2362035affa1f1edd2879bb7}\label{classWt_1_1EscapeOStream_a4b3fa6fe2362035affa1f1edd2879bb7}} 
+{\bfseries Escape\+O\+Stream} (std\+::ostream \&sink)
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_adf2557a7ce49f7d24ed7c04e162c6df8}\label{classWt_1_1EscapeOStream_adf2557a7ce49f7d24ed7c04e162c6df8}} 
+{\bfseries Escape\+O\+Stream} (\mbox{\hyperlink{classWt_1_1WStringStream}{W\+String\+Stream}} \&sink)
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a32cb401595c8cb0a5a22f13b70f421a9}\label{classWt_1_1EscapeOStream_a32cb401595c8cb0a5a22f13b70f421a9}} 
+{\bfseries Escape\+O\+Stream} (\mbox{\hyperlink{classWt_1_1EscapeOStream}{Escape\+O\+Stream}} \&other)
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a67593c88b64a50a6aba0a02d48fab825}\label{classWt_1_1EscapeOStream_a67593c88b64a50a6aba0a02d48fab825}} 
+void {\bfseries push\+Escape} (Rule\+Set rules)
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a2ffc5a282a6899373fb76814b4bf60f6}\label{classWt_1_1EscapeOStream_a2ffc5a282a6899373fb76814b4bf60f6}} 
+void {\bfseries pop\+Escape} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a9104f8f021c353d756eb47766a9fbba1}\label{classWt_1_1EscapeOStream_a9104f8f021c353d756eb47766a9fbba1}} 
+void {\bfseries append} (const std\+::string \&s, const \mbox{\hyperlink{classWt_1_1EscapeOStream}{Escape\+O\+Stream}} \&rules)
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a93226b396c5c73d718937b1c787e9273}\label{classWt_1_1EscapeOStream_a93226b396c5c73d718937b1c787e9273}} 
+void {\bfseries append} (const char $\ast$s, std\+::size\+\_\+t len)
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a3f18092de35f002cff93119e8e34d706}\label{classWt_1_1EscapeOStream_a3f18092de35f002cff93119e8e34d706}} 
+\mbox{\hyperlink{classWt_1_1EscapeOStream}{Escape\+O\+Stream}} \& {\bfseries operator$<$$<$} (char)
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_aa77b3841e0c6544b85abd9887433353b}\label{classWt_1_1EscapeOStream_aa77b3841e0c6544b85abd9887433353b}} 
+\mbox{\hyperlink{classWt_1_1EscapeOStream}{Escape\+O\+Stream}} \& {\bfseries operator$<$$<$} (const char $\ast$s)
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a1d5cb618a17d377183b2be8aba74964f}\label{classWt_1_1EscapeOStream_a1d5cb618a17d377183b2be8aba74964f}} 
+\mbox{\hyperlink{classWt_1_1EscapeOStream}{Escape\+O\+Stream}} \& {\bfseries operator$<$$<$} (const std\+::string \&s)
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a9088d5ed92659c76243eb65f03b22375}\label{classWt_1_1EscapeOStream_a9088d5ed92659c76243eb65f03b22375}} 
+\mbox{\hyperlink{classWt_1_1EscapeOStream}{Escape\+O\+Stream}} \& {\bfseries operator$<$$<$} (int)
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_abac783f927d3c4160361f2c5b27e1170}\label{classWt_1_1EscapeOStream_abac783f927d3c4160361f2c5b27e1170}} 
+\mbox{\hyperlink{classWt_1_1EscapeOStream}{Escape\+O\+Stream}} \& {\bfseries operator$<$$<$} (unsigned int)
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a9252fdb2b9d319dec05df375de4e2a31}\label{classWt_1_1EscapeOStream_a9252fdb2b9d319dec05df375de4e2a31}} 
+\mbox{\hyperlink{classWt_1_1EscapeOStream}{Escape\+O\+Stream}} \& {\bfseries operator$<$$<$} (long long)
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a7c6b0b50f8ba3d6818228100fab802be}\label{classWt_1_1EscapeOStream_a7c6b0b50f8ba3d6818228100fab802be}} 
+\mbox{\hyperlink{classWt_1_1EscapeOStream}{Escape\+O\+Stream}} \& {\bfseries operator$<$$<$} (bool)
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_ac11ca7cb1c2df30186b5ef50c9328451}\label{classWt_1_1EscapeOStream_ac11ca7cb1c2df30186b5ef50c9328451}} 
+\mbox{\hyperlink{classWt_1_1EscapeOStream}{Escape\+O\+Stream}} \& {\bfseries operator$<$$<$} (const \mbox{\hyperlink{classWt_1_1EscapeOStream}{Escape\+O\+Stream}} \&other)
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_ad803e00dd562399cdd07cb39d262130e}\label{classWt_1_1EscapeOStream_ad803e00dd562399cdd07cb39d262130e}} 
+const char $\ast$ {\bfseries c\+\_\+str} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_ac67014dad79c51018d2375d5ba4aaee1}\label{classWt_1_1EscapeOStream_ac67014dad79c51018d2375d5ba4aaee1}} 
+std\+::string {\bfseries str} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a62e9a0b1a8f2c5287c6fce83bd96ceb1}\label{classWt_1_1EscapeOStream_a62e9a0b1a8f2c5287c6fce83bd96ceb1}} 
+bool {\bfseries empty} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_ab8892b49d4d4045c9725539fb1c2832c}\label{classWt_1_1EscapeOStream_ab8892b49d4d4045c9725539fb1c2832c}} 
+void {\bfseries clear} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_ab81b4277162e635b6d278d1218d3db85}\label{classWt_1_1EscapeOStream_ab81b4277162e635b6d278d1218d3db85}} 
+void {\bfseries mix\+Rules} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a0bfe4def093bb988af90b0f163b6eb35}\label{classWt_1_1EscapeOStream_a0bfe4def093bb988af90b0f163b6eb35}} 
+void {\bfseries put} (const char $\ast$s, const \mbox{\hyperlink{classWt_1_1EscapeOStream}{Escape\+O\+Stream}} \&rules)
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a9f06ece78dc1c2b7f1539b5014a99eeb}\label{classWt_1_1EscapeOStream_a9f06ece78dc1c2b7f1539b5014a99eeb}} 
+void {\bfseries s\+Append} (char c)
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a88d0da4cc0c5509cee5d5082463aff61}\label{classWt_1_1EscapeOStream_a88d0da4cc0c5509cee5d5082463aff61}} 
+void {\bfseries s\+Append} (const char $\ast$s, int length)
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a0773658842218e33205daaf05ad60f8e}\label{classWt_1_1EscapeOStream_a0773658842218e33205daaf05ad60f8e}} 
+void {\bfseries s\+Append} (const std\+::string \&s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a2a40a455a91868236d25ca8266e54f8e}\label{classWt_1_1EscapeOStream_a2a40a455a91868236d25ca8266e54f8e}} 
+\mbox{\hyperlink{classWt_1_1WStringStream}{W\+String\+Stream}} {\bfseries own\+\_\+stream\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_aa5454ba501b0bdbfb8e7674549940df6}\label{classWt_1_1EscapeOStream_aa5454ba501b0bdbfb8e7674549940df6}} 
+\mbox{\hyperlink{classWt_1_1WStringStream}{W\+String\+Stream}} \& {\bfseries stream\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a5420ab06e639287c88cdfd7f9cf6eb26}\label{classWt_1_1EscapeOStream_a5420ab06e639287c88cdfd7f9cf6eb26}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1EscapeOStream_1_1Entry}{Entry}} $>$ {\bfseries mixed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_ae31d39d3d2386d2b36c9daf00aa8f43e}\label{classWt_1_1EscapeOStream_ae31d39d3d2386d2b36c9daf00aa8f43e}} 
+std\+::string {\bfseries special\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_ad0e85bd8b47e64a6f3fac4ae7c7b6590}\label{classWt_1_1EscapeOStream_ad0e85bd8b47e64a6f3fac4ae7c7b6590}} 
+const char $\ast$ {\bfseries c\+\_\+special\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a1193822575996c2ee3461a3bc1858de9}\label{classWt_1_1EscapeOStream_a1193822575996c2ee3461a3bc1858de9}} 
+std\+::vector$<$ Rule\+Set $>$ {\bfseries rule\+Sets\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a04bcd97c94eb5b67e37fc384d3f151ac}\label{classWt_1_1EscapeOStream_a04bcd97c94eb5b67e37fc384d3f151ac}} 
+static const std\+::vector$<$ \mbox{\hyperlink{structWt_1_1EscapeOStream_1_1Entry}{Entry}} $>$ {\bfseries standard\+Sets\+\_\+} \mbox{[}6\mbox{]}
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a49ff1691a9059ae14f1fcb721b55bb08}\label{classWt_1_1EscapeOStream_a49ff1691a9059ae14f1fcb721b55bb08}} 
+static const std\+::string {\bfseries standard\+Sets\+Special\+\_\+} \mbox{[}6\mbox{]}
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a788761e4db01d0fa916e7b059e063a23}\label{classWt_1_1EscapeOStream_a788761e4db01d0fa916e7b059e063a23}} 
+static const \mbox{\hyperlink{structWt_1_1EscapeOStream_1_1Entry}{Entry}} {\bfseries html\+Attribute\+Entries\+\_\+} \mbox{[}3\mbox{]}
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_affb6fc621a13bf54281a42e578bea625}\label{classWt_1_1EscapeOStream_affb6fc621a13bf54281a42e578bea625}} 
+static const \mbox{\hyperlink{structWt_1_1EscapeOStream_1_1Entry}{Entry}} {\bfseries js\+String\+Literal\+S\+Quote\+Entries\+\_\+} \mbox{[}5\mbox{]}
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a52e404fb30f92b3e2627fd20e3639a9b}\label{classWt_1_1EscapeOStream_a52e404fb30f92b3e2627fd20e3639a9b}} 
+static const \mbox{\hyperlink{structWt_1_1EscapeOStream_1_1Entry}{Entry}} {\bfseries js\+String\+Literal\+D\+Quote\+Entries\+\_\+} \mbox{[}5\mbox{]}
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a0dd4bf010685ee4316fa10212f05924d}\label{classWt_1_1EscapeOStream_a0dd4bf010685ee4316fa10212f05924d}} 
+static const \mbox{\hyperlink{structWt_1_1EscapeOStream_1_1Entry}{Entry}} {\bfseries plain\+Text\+Entries\+\_\+} \mbox{[}3\mbox{]}
+\item 
+\mbox{\Hypertarget{classWt_1_1EscapeOStream_a9092b1eb27fea62bc420af54a29abebc}\label{classWt_1_1EscapeOStream_a9092b1eb27fea62bc420af54a29abebc}} 
+static const \mbox{\hyperlink{structWt_1_1EscapeOStream_1_1Entry}{Entry}} {\bfseries plain\+Text\+New\+Lines\+Entries\+\_\+} \mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/web/Escape\+O\+Stream.\+h\end{DoxyCompactItemize}

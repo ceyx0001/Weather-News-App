@@ -1,0 +1,478 @@
+\hypertarget{classWt_1_1WRasterImage}{}\doxysection{Wt\+::W\+Raster\+Image Class Reference}
+\label{classWt_1_1WRasterImage}\index{Wt::WRasterImage@{Wt::WRasterImage}}
+
+
+A paint device for rendering to a raster image.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Raster\+Image.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Raster\+Image\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Raster\+Image\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WRasterImage_abf6c474a48248ccade166994c63a02fe}{W\+Raster\+Image}} (const std\+::string \&type, const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WRasterImage_a51017eedaa4ad4cf7d016e0694d27ff7}{width}}, const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WRasterImage_a03a89444ee29f45f80f44e0d2e019bbb}{height}})
+\begin{DoxyCompactList}\small\item\em Creates a raster image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WRasterImage_a660f5904f28a7f10861afa014e8df882}\label{classWt_1_1WRasterImage_a660f5904f28a7f10861afa014e8df882}} 
+\mbox{\hyperlink{classWt_1_1WRasterImage_a660f5904f28a7f10861afa014e8df882}{$\sim$\+W\+Raster\+Image}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WRasterImage_a227a9c6f057fb6335fa305a6f8510c55}{add\+Font\+Collection}} (const std\+::string \&directory, bool recursive=true)
+\begin{DoxyCompactList}\small\item\em Adds a font collection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WRasterImage_a0fd9947a7c888baa2d17b91b4be1df20}\label{classWt_1_1WRasterImage_a0fd9947a7c888baa2d17b91b4be1df20}} 
+virtual \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ac5d03da7eec8b3a3f25e1ca054c88afa}{Paint\+Device\+Feature\+Flag}} $>$ \mbox{\hyperlink{classWt_1_1WRasterImage_a0fd9947a7c888baa2d17b91b4be1df20}{features}} () const override
+\begin{DoxyCompactList}\small\item\em Returns device features. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WRasterImage_a243e658d549ff5f5ce0879ad02107116}{set\+Changed}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a5afa3162ba5b228f8074e0fda89f9a50}{Painter\+Change\+Flag}} $>$ flags) override
+\begin{DoxyCompactList}\small\item\em Indicates changes in painter state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WRasterImage_af38858008c12ee061276b0fde2cf2603}{draw\+Arc}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rect, double start\+Angle, double span\+Angle) override
+\begin{DoxyCompactList}\small\item\em Draws an arc. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WRasterImage_abdd397cae73303a6c73daebe5c7ef9a8}{draw\+Image}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rect, const std\+::string \&img\+Uri, int img\+Width, int img\+Height, const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&source\+Rect) override
+\begin{DoxyCompactList}\small\item\em Draws an image. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WRasterImage_af1c746fdbebb64126375c9908ad74782}{draw\+Line}} (double x1, double y1, double x2, double y2) override
+\begin{DoxyCompactList}\small\item\em Draws a line. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WRasterImage_aecf089bbd8c349806ef5f27d2f64e5b0}{draw\+Rect}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rect) override
+\begin{DoxyCompactList}\small\item\em Draws a rectangle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WRasterImage_a40a701d0131ebc9006249e986e6d77d4}{draw\+Path}} (const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&path) override
+\begin{DoxyCompactList}\small\item\em Draws a path. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WRasterImage_afcd9e45b6d30221c830deefa769b9cfe}{draw\+Text}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rect, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment\+Flags, \mbox{\hyperlink{classWt_a3bf85f6b385349dadfa7e205a39ec419}{Text\+Flag}} text\+Flag, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text, const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} $\ast$clip\+Point) override
+\begin{DoxyCompactList}\small\item\em Draws text. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WTextItem}{W\+Text\+Item}} \mbox{\hyperlink{classWt_1_1WRasterImage_a657e87b09b708764ef625d96b119c3a6}{measure\+Text}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text, double max\+Width=-\/1, bool word\+Wrap=false) override
+\begin{DoxyCompactList}\small\item\em Measures rendered text size. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WFontMetrics}{W\+Font\+Metrics}} \mbox{\hyperlink{classWt_1_1WRasterImage_a1c6f15f2e08274dd0334420fd2c63c8d}{font\+Metrics}} () override
+\begin{DoxyCompactList}\small\item\em Returns font metrics. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WRasterImage_adc91bd4f8409e46dee64d604085a8a1e}{init}} () override
+\begin{DoxyCompactList}\small\item\em Initializes the device for painting. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WRasterImage_a79a4e4394debb5119a0dc7fd3da7e460}{done}} () override
+\begin{DoxyCompactList}\small\item\em Finishes painting on the device. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WRasterImage_a98be76834a344f7323f391b2904b696e}{paint\+Active}} () const override
+\begin{DoxyCompactList}\small\item\em Returns whether painting is active. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \mbox{\hyperlink{classWt_1_1WRasterImage_a51017eedaa4ad4cf7d016e0694d27ff7}{width}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the device width. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \mbox{\hyperlink{classWt_1_1WRasterImage_a03a89444ee29f45f80f44e0d2e019bbb}{height}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the device height. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WRasterImage_a19a55883c3052cb60859dab2b2a952b7}{handle\+Request}} (const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&request, \mbox{\hyperlink{classWt_1_1Http_1_1Response}{Http\+::\+Response}} \&response) override
+\begin{DoxyCompactList}\small\item\em Handles a request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WRasterImage_a96888a696b1f98c2d36fda556595ab08}{set\+Pixel}} (int x, int y, const \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \&color)
+\begin{DoxyCompactList}\small\item\em Low-\/level paint method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \mbox{\hyperlink{classWt_1_1WRasterImage_a4ef7d7a0684af480a2a61881d7240da2}{get\+Pixel}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Low-\/level paint method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WRasterImage_a8ca1accfd280050e78f1e7ff745ac3f4}{get\+Pixels}} (void $\ast$data)
+\begin{DoxyCompactList}\small\item\em Low-\/level pixel retrieval. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WRasterImage_af4e9da55569320bdc3168749ba66d3c0}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears the image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} $\ast$ \mbox{\hyperlink{classWt_1_1WRasterImage_addf2d3c9342651b1b451c60b9663fbc9}{painter}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the painter that is currently painting on the device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WRasterImage_afcfa6b04c25ba982027bf4f6b9866b3f}\label{classWt_1_1WRasterImage_afcfa6b04c25ba982027bf4f6b9866b3f}} 
+virtual void \mbox{\hyperlink{classWt_1_1WRasterImage_afcfa6b04c25ba982027bf4f6b9866b3f}{set\+Painter}} (\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} $\ast$\mbox{\hyperlink{classWt_1_1WRasterImage_addf2d3c9342651b1b451c60b9663fbc9}{painter}}) override
+\begin{DoxyCompactList}\small\item\em Sets the painter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WRasterImage_a57df06e82b8ef53a3dfe61d4e3845735}\label{classWt_1_1WRasterImage_a57df06e82b8ef53a3dfe61d4e3845735}} 
+\mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} {\bfseries width\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WRasterImage_ac6a6bf1ab6ba58c9836b3b05ed8fd775}\label{classWt_1_1WRasterImage_ac6a6bf1ab6ba58c9836b3b05ed8fd775}} 
+\mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} {\bfseries height\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WRasterImage_abfb13f707d13672e388dee7a69d26e63}\label{classWt_1_1WRasterImage_abfb13f707d13672e388dee7a69d26e63}} 
+\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} $\ast$ {\bfseries painter\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WRasterImage_a5b96451227e9a0fe044dc47601bb6ad5}\label{classWt_1_1WRasterImage_a5b96451227e9a0fe044dc47601bb6ad5}} 
+std\+::unique\+\_\+ptr$<$ Impl $>$ {\bfseries impl\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A paint device for rendering to a raster image. 
+
+A W\+Raster\+Image paint device provides support for creating raster images (such as P\+NG or G\+IF images).
+
+It implements two main use-\/cases\+:
+
+
+\begin{DoxyItemize}
+\item When used either in conjunction with a \mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}}, it supports vector graphics operations, and can be used to make a P\+NG or G\+IF version of a \mbox{\hyperlink{classWt_1_1WPaintedWidget}{W\+Painted\+Widget}}\textquotesingle{}s contents.
+\item It also provides a low-\/level A\+PI to color individual pixels using \mbox{\hyperlink{classWt_1_1WRasterImage_a96888a696b1f98c2d36fda556595ab08}{set\+Pixel()}}, which directly sets the raster pixels.
+\end{DoxyItemize}
+
+On Linux, the rendering is provided by \href{http://www.graphicsmagick.org/}{\texttt{ Graphics\+Magick}}, and this class is included in the library only if {\ttfamily libgraphicsmagick} was found during the build of the library. On Windows, Direct2D is used for rendering, which means that no extra dependencies have to be installed.
+
+If Wt is built to use {\ttfamily libpango} for font support, then text rendering is done using this library. On Windows, Direct\+Write is used for font support functions. In other cases, you may want to configure True\+Type font search directories using \mbox{\hyperlink{classWt_1_1WRasterImage_a227a9c6f057fb6335fa305a6f8510c55}{add\+Font\+Collection()}}.
+
+You can use the image as a resource and specialize \mbox{\hyperlink{classWt_1_1WRasterImage_a19a55883c3052cb60859dab2b2a952b7}{handle\+Request()}} to paint the contents on the fly. Alternatively can also use \mbox{\hyperlink{classWt_1_1WResource_aaf6d964de1056c7c9404f88fa5e5a0de}{write()}} to serialize to an image file (std\+::ostream).
+
+The latter usage is illustrated by the code below\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{Wt::Chart::WCartesianChart}} *chart = ...}
+\DoxyCodeLine{}
+\DoxyCodeLine{Wt::WRasterImage pngImage(\textcolor{stringliteral}{"png"}, 600, 400);}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \mbox{\hyperlink{classWt_1_1WPainter}{Wt::WPainter}} p(\&pngImage);}
+\DoxyCodeLine{  chart-\/>paint(p);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{std::ofstream f(\textcolor{stringliteral}{"chart.png"}, std::ios::out | std::ios::binary);}
+\DoxyCodeLine{pngImage.write(f);}
+\end{DoxyCode}
+
+
+This paint device has the following limitations\+:
+\begin{DoxyItemize}
+\item drop shadows are (not yet?) supported. 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WRasterImage_abf6c474a48248ccade166994c63a02fe}\label{classWt_1_1WRasterImage_abf6c474a48248ccade166994c63a02fe}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!WRasterImage@{WRasterImage}}
+\index{WRasterImage@{WRasterImage}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{WRasterImage()}{WRasterImage()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Raster\+Image\+::\+W\+Raster\+Image (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type,  }\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{width,  }\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{height }\end{DoxyParamCaption})}
+
+
+
+Creates a raster image. 
+
+{\ttfamily type} indicates an image type. The mime type of the resource is {\ttfamily \char`\"{}image/\char`\"{}} {\ttfamily type}.
+
+Wt supports the following image types (amongst others)\+:
+\begin{DoxyItemize}
+\item png\+: Portable Network Graphics
+\item gif\+: Graphics Interchange Format
+\item bmp\+: Microsoft windows bitmap
+\item jpeg\+: Joint Photographic Experts Group J\+F\+IF format 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WRasterImage_a227a9c6f057fb6335fa305a6f8510c55}\label{classWt_1_1WRasterImage_a227a9c6f057fb6335fa305a6f8510c55}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!addFontCollection@{addFontCollection}}
+\index{addFontCollection@{addFontCollection}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{addFontCollection()}{addFontCollection()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Raster\+Image\+::add\+Font\+Collection (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{directory,  }\item[{bool}]{recursive = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Adds a font collection. 
+
+If Wt has been configured to use {\ttfamily libpango}, then font matching and character selection is done by libpango, which is seeded with information on installed fonts by fontconfig. In that case, invocations for this method is ignored.
+
+If Wt has not been configured to use {\ttfamily libpango}, then this method may be used to indicate the location of true type fonts. The main drawback compared to libpango is that font selection is not steered by the need for particular characters, i.\+e. font selection is independent from the text\textquotesingle{}s need for specific characters. Most truetype fonts provided only partial unicode support. The provided {\ttfamily directory} will be searched for fonts (currently only True\+Type \char`\"{}.\+ttf\char`\"{} or \char`\"{}.\+ttc\char`\"{} fonts). \mbox{\Hypertarget{classWt_1_1WRasterImage_af4e9da55569320bdc3168749ba66d3c0}\label{classWt_1_1WRasterImage_af4e9da55569320bdc3168749ba66d3c0}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!clear@{clear}}
+\index{clear@{clear}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Raster\+Image\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the image. 
+
+Fills the image with a white background, or transparent if possible. \mbox{\Hypertarget{classWt_1_1WRasterImage_a79a4e4394debb5119a0dc7fd3da7e460}\label{classWt_1_1WRasterImage_a79a4e4394debb5119a0dc7fd3da7e460}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!done@{done}}
+\index{done@{done}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{done()}{done()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Raster\+Image\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finishes painting on the device. 
+
+This method is called when a \mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} stopped painting.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a50beb0c8cb77c12e2dee807e4fe4bcb4}{W\+Painter\+::end()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a75827be2076716985533dbc75dfdc512}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WRasterImage_af38858008c12ee061276b0fde2cf2603}\label{classWt_1_1WRasterImage_af38858008c12ee061276b0fde2cf2603}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!drawArc@{drawArc}}
+\index{drawArc@{drawArc}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{drawArc()}{drawArc()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Raster\+Image\+::draw\+Arc (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rect,  }\item[{double}]{start\+Angle,  }\item[{double}]{span\+Angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws an arc. 
+
+The arc describes the segment of an ellipse enclosed by the rect. The segment starts at {\ttfamily start\+Angle}, and spans an angle given by {\ttfamily span\+Angle}. These angles have as unit degree, and are measured counter-\/clockwise starting from the 3 o\textquotesingle{}clock position.
+
+The arc must be stroked, filled, and transformed using the current painter settings. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a605316797b1aa4be60c24d95fc5a1ab4}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WRasterImage_abdd397cae73303a6c73daebe5c7ef9a8}\label{classWt_1_1WRasterImage_abdd397cae73303a6c73daebe5c7ef9a8}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!drawImage@{drawImage}}
+\index{drawImage@{drawImage}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{drawImage()}{drawImage()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Raster\+Image\+::draw\+Image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rect,  }\item[{const std\+::string \&}]{image\+Uri,  }\item[{int}]{img\+Width,  }\item[{int}]{img\+Height,  }\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{source\+Rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws an image. 
+
+Draws {\itshape source\+Rect} from the image with U\+RL {\ttfamily image\+Uri} and original dimensions {\itshape img\+Width} and {\ttfamily img\+Height} to the location, into the rectangle defined by {\ttfamily rect}.
+
+The image is transformed using the current painter settings. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_af92ff3c6d2f5c351c6931306d9cc1162}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WRasterImage_af1c746fdbebb64126375c9908ad74782}\label{classWt_1_1WRasterImage_af1c746fdbebb64126375c9908ad74782}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!drawLine@{drawLine}}
+\index{drawLine@{drawLine}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{drawLine()}{drawLine()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Raster\+Image\+::draw\+Line (\begin{DoxyParamCaption}\item[{double}]{x1,  }\item[{double}]{y1,  }\item[{double}]{x2,  }\item[{double}]{y2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws a line. 
+
+The line must be stroked and transformed using the current painter settings. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_abd267ca3adb6c394079042810864ac9a}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WRasterImage_a40a701d0131ebc9006249e986e6d77d4}\label{classWt_1_1WRasterImage_a40a701d0131ebc9006249e986e6d77d4}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!drawPath@{drawPath}}
+\index{drawPath@{drawPath}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{drawPath()}{drawPath()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Raster\+Image\+::draw\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws a path. 
+
+The path must be stroked, filled, and transformed using the current painter settings. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_ab3c368b79fef8bc53681821610dd2077}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WRasterImage_aecf089bbd8c349806ef5f27d2f64e5b0}\label{classWt_1_1WRasterImage_aecf089bbd8c349806ef5f27d2f64e5b0}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!drawRect@{drawRect}}
+\index{drawRect@{drawRect}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{drawRect()}{drawRect()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Raster\+Image\+::draw\+Rect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rectangle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws a rectangle. 
+
+The rect must be stroked, filled, and transformed using the current painter settings. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a1ef00ae9ef4506ab8a151810fc01b10c}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WRasterImage_afcd9e45b6d30221c830deefa769b9cfe}\label{classWt_1_1WRasterImage_afcd9e45b6d30221c830deefa769b9cfe}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!drawText@{drawText}}
+\index{drawText@{drawText}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{drawText()}{drawText()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Raster\+Image\+::draw\+Text (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rect,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment\+Flags,  }\item[{\mbox{\hyperlink{classWt_a3bf85f6b385349dadfa7e205a39ec419}{Text\+Flag}}}]{text\+Flag,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text,  }\item[{const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} $\ast$}]{clip\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws text. 
+
+The text must be rendered, stroked and transformed using the current painter settings.
+
+If clip\+Point is not null, a check is performed whether the point is inside of the current clip area. If not, the text is not drawn. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a970d7bcaa7d6b26c0134b7479626aea3}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WRasterImage_a1c6f15f2e08274dd0334420fd2c63c8d}\label{classWt_1_1WRasterImage_a1c6f15f2e08274dd0334420fd2c63c8d}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!fontMetrics@{fontMetrics}}
+\index{fontMetrics@{fontMetrics}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{fontMetrics()}{fontMetrics()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WFontMetrics}{W\+Font\+Metrics}} Wt\+::\+W\+Raster\+Image\+::font\+Metrics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns font metrics. 
+
+This returns font metrics for the current font.
+
+Throws a std\+::logic\+\_\+error if the underlying device does not provide font metrics. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a468ec8684106f8e24b3c46876ee86ff7}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WRasterImage_a4ef7d7a0684af480a2a61881d7240da2}\label{classWt_1_1WRasterImage_a4ef7d7a0684af480a2a61881d7240da2}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!getPixel@{getPixel}}
+\index{getPixel@{getPixel}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{getPixel()}{getPixel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} Wt\+::\+W\+Raster\+Image\+::get\+Pixel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Low-\/level paint method. 
+
+Use this method to directly get the color for an individual pixel, when using the paint device without a painter. \mbox{\Hypertarget{classWt_1_1WRasterImage_a8ca1accfd280050e78f1e7ff745ac3f4}\label{classWt_1_1WRasterImage_a8ca1accfd280050e78f1e7ff745ac3f4}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!getPixels@{getPixels}}
+\index{getPixels@{getPixels}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{getPixels()}{getPixels()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Raster\+Image\+::get\+Pixels (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Low-\/level pixel retrieval. 
+
+This is a more efficient alternative than calling \mbox{\hyperlink{classWt_1_1WRasterImage_a4ef7d7a0684af480a2a61881d7240da2}{get\+Pixel()}} for every pixel.
+
+Parameter data must point to an allocated memory region of width$\ast$height 32-\/bit words. The pixels will be written in row-\/order from top-\/left to bottom-\/right, in R\+G\+BA format. \mbox{\Hypertarget{classWt_1_1WRasterImage_a19a55883c3052cb60859dab2b2a952b7}\label{classWt_1_1WRasterImage_a19a55883c3052cb60859dab2b2a952b7}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!handleRequest@{handleRequest}}
+\index{handleRequest@{handleRequest}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{handleRequest()}{handleRequest()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Raster\+Image\+::handle\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&}]{request,  }\item[{\mbox{\hyperlink{classWt_1_1Http_1_1Response}{Http\+::\+Response}} \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles a request. 
+
+Reimplement this method so that a proper response is generated for the given request. From the {\ttfamily request} object you can access request parameters and whether the request is a continuation request. In the {\ttfamily response} object, you should set the mime type and stream the output data.
+
+A request may also concern a continuation, indicated in \mbox{\hyperlink{classWt_1_1Http_1_1Request_a9fe40c73e6d2bd3b4fec6f2476d71265}{Http\+::\+Request\+::continuation()}}, in which case the next part for a previously created continuation should be served.
+
+While handling a request, which may happen at any time together with event handling, the library makes sure that the resource is not being concurrently deleted, but multiple requests may happend simultaneously for a single resource. 
+
+Implements \mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{Wt\+::\+W\+Resource}}.
+
+\mbox{\Hypertarget{classWt_1_1WRasterImage_a03a89444ee29f45f80f44e0d2e019bbb}\label{classWt_1_1WRasterImage_a03a89444ee29f45f80f44e0d2e019bbb}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!height@{height}}
+\index{height@{height}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} Wt\+::\+W\+Raster\+Image\+::height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the device height. 
+
+The device height, in pixels, establishes the height of the device coordinate system. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a24c7e1363440e6994b44381ebf443157}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WRasterImage_adc91bd4f8409e46dee64d604085a8a1e}\label{classWt_1_1WRasterImage_adc91bd4f8409e46dee64d604085a8a1e}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!init@{init}}
+\index{init@{init}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Raster\+Image\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the device for painting. 
+
+This method is called when a \mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} starts painting.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a6b81663b5599f0736ae5099ac7325d44}{W\+Painter\+::begin(\+W\+Paint\+Device $\ast$)}}, \mbox{\hyperlink{classWt_1_1WRasterImage_addf2d3c9342651b1b451c60b9663fbc9}{painter()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a04d6f9e0653a9785662c1e987b597cc6}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WRasterImage_a657e87b09b708764ef625d96b119c3a6}\label{classWt_1_1WRasterImage_a657e87b09b708764ef625d96b119c3a6}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!measureText@{measureText}}
+\index{measureText@{measureText}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{measureText()}{measureText()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WTextItem}{W\+Text\+Item}} Wt\+::\+W\+Raster\+Image\+::measure\+Text (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text,  }\item[{double}]{max\+Width = {\ttfamily -\/1},  }\item[{bool}]{word\+Wrap = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Measures rendered text size. 
+
+Returns the bounding rect of the given text when rendered using the current font.
+
+If {\ttfamily max\+Width} != -\/1, then the text is truncated to fit in the width.
+
+If {\ttfamily word\+Wrap} = {\ttfamily true} then text is truncated only at word boundaries. \mbox{\hyperlink{classNote}{Note}} that in this case the whitespace at the truncated position is included in the text but not accounted for by the returned width (since usually you will not render the whitespace at the end of a line).
+
+Throws a std\+::logic\+\_\+error if the underlying device does not provide font metrics. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a21d005287f1973348357e089d6d18df1}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WRasterImage_a98be76834a344f7323f391b2904b696e}\label{classWt_1_1WRasterImage_a98be76834a344f7323f391b2904b696e}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!paintActive@{paintActive}}
+\index{paintActive@{paintActive}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{paintActive()}{paintActive()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Raster\+Image\+::paint\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns whether painting is active. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WRasterImage_adc91bd4f8409e46dee64d604085a8a1e}{init()}}, \mbox{\hyperlink{classWt_1_1WRasterImage_addf2d3c9342651b1b451c60b9663fbc9}{painter()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a7dc74a2c7c98e38c7851277313d313f6}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WRasterImage_addf2d3c9342651b1b451c60b9663fbc9}\label{classWt_1_1WRasterImage_addf2d3c9342651b1b451c60b9663fbc9}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!painter@{painter}}
+\index{painter@{painter}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{painter()}{painter()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}}$\ast$ Wt\+::\+W\+Raster\+Image\+::painter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Returns the painter that is currently painting on the device. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WRasterImage_adc91bd4f8409e46dee64d604085a8a1e}{init()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_ae1c75c6bc0e5a2d6322b176f6f13403c}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WRasterImage_a243e658d549ff5f5ce0879ad02107116}\label{classWt_1_1WRasterImage_a243e658d549ff5f5ce0879ad02107116}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!setChanged@{setChanged}}
+\index{setChanged@{setChanged}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{setChanged()}{setChanged()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Raster\+Image\+::set\+Changed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a5afa3162ba5b228f8074e0fda89f9a50}{Painter\+Change\+Flag}} $>$}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicates changes in painter state. 
+
+The {\ttfamily flags} argument is the logical OR of one or more change flags.
+
+\begin{DoxySeeAlso}{See also}
+Change\+Flag 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_ae79cffac9e666ec6a62d96b73fd2a996}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WRasterImage_a96888a696b1f98c2d36fda556595ab08}\label{classWt_1_1WRasterImage_a96888a696b1f98c2d36fda556595ab08}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!setPixel@{setPixel}}
+\index{setPixel@{setPixel}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{setPixel()}{setPixel()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Raster\+Image\+::set\+Pixel (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{const \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \&}]{color }\end{DoxyParamCaption})}
+
+
+
+Low-\/level paint method. 
+
+Use this method to directly set colors for individual pixels, when using the paint device without a painter. \mbox{\Hypertarget{classWt_1_1WRasterImage_a51017eedaa4ad4cf7d016e0694d27ff7}\label{classWt_1_1WRasterImage_a51017eedaa4ad4cf7d016e0694d27ff7}} 
+\index{Wt::WRasterImage@{Wt::WRasterImage}!width@{width}}
+\index{width@{width}!Wt::WRasterImage@{Wt::WRasterImage}}
+\doxysubsubsection{\texorpdfstring{width()}{width()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} Wt\+::\+W\+Raster\+Image\+::width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the device width. 
+
+The device width, in pixels, establishes the width of the device coordinate system. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a9a0d38acb408d4520d0dd520c93d47e0}{Wt\+::\+W\+Paint\+Device}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Raster\+Image.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,232 @@
+\hypertarget{classConversionUI}{}\doxysection{Conversion\+UI Class Reference}
+\label{classConversionUI}\index{ConversionUI@{ConversionUI}}
+
+
+Unit Conversion User Interface.  
+
+
+
+
+{\ttfamily \#include $<$Conversion\+U\+I.\+h$>$}
+
+
+
+Inheritance diagram for Conversion\+UI\+:
+% FIG 0
+
+
+Collaboration diagram for Conversion\+UI\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classConversionUI_a131b2d8881471678d8217d05dbb72796}{Conversion\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classConversionUI_aab9ae3385108c58ec1ffd85eeaaa8236}{$\sim$\+Conversion\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classConversionUI_a069dd8dde7a55b9294005401462c746e}{convert}} (double source, std\+::string source\+Type, std\+::string result\+Type)
+\begin{DoxyCompactList}\small\item\em Converts number to different unit. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classConversionUI_a1c2a666629bbcc93ff32adbac64e0b63}{match\+Type}} (std\+::string type)
+\begin{DoxyCompactList}\small\item\em Matches a unit in string form to a constant value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classConversionUI_ac7bd299af9afbcaff7f15e34b123dfac}\label{classConversionUI_ac7bd299af9afbcaff7f15e34b123dfac}} 
+std\+::string {\bfseries clean\+Text} (std\+::string text)
+\item 
+std\+::string \mbox{\hyperlink{classConversionUI_af770d52b55761285060b536b923eb8cd}{clean\+Text}} (double text)
+\begin{DoxyCompactList}\small\item\em Cleans text from double input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classConversionUI_acdc344f8f9c063ef0a208e6a986fe6d5}{add\+Item\+Both\+Sides}} (std\+::string item)
+\begin{DoxyCompactList}\small\item\em Adds the provided dropdown item to both left and right dropdown forms. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classConversionUI_ad80b2a45b7086a377c415ad3b3810a2a}{create\+Dropdowns}} (std\+::string type)
+\begin{DoxyCompactList}\small\item\em Creates dropdown menu UI items for the given unit category. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classConversionUI_a0bd6789626126dc85fa0f96de4a4f190}{convert\+Units}} (std\+::string field)
+\begin{DoxyCompactList}\small\item\em Main algorithm for converting units. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classConversionUI_a2c958433d5b253b23711127ef9a081f3}\label{classConversionUI_a2c958433d5b253b23711127ef9a081f3}} 
+void {\bfseries get\+Units} ()
+\item 
+\mbox{\Hypertarget{classConversionUI_a00fdaf7d6a1e1cd5ca01118ed5ae974e}\label{classConversionUI_a00fdaf7d6a1e1cd5ca01118ed5ae974e}} 
+void {\bfseries get\+Types} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classConversionUI_a19b862a3e978df903984e1c17547dbe7}\label{classConversionUI_a19b862a3e978df903984e1c17547dbe7}} 
+double {\bfseries leftD}
+\item 
+\mbox{\Hypertarget{classConversionUI_a6ca7e46af67ff3b36c430cb7b766c56e}\label{classConversionUI_a6ca7e46af67ff3b36c430cb7b766c56e}} 
+double {\bfseries rightD}
+\item 
+\mbox{\Hypertarget{classConversionUI_a639374d382bf3789a582ec4ae23e93cf}\label{classConversionUI_a639374d382bf3789a582ec4ae23e93cf}} 
+Wt\+::\+W\+Line\+Edit $\ast$ {\bfseries left}
+\item 
+\mbox{\Hypertarget{classConversionUI_adeb517db91fa53a5b93ca0c689df46f0}\label{classConversionUI_adeb517db91fa53a5b93ca0c689df46f0}} 
+Wt\+::\+W\+Line\+Edit $\ast$ {\bfseries right}
+\item 
+\mbox{\Hypertarget{classConversionUI_a9d47b48562375984f7181831ca701ae7}\label{classConversionUI_a9d47b48562375984f7181831ca701ae7}} 
+Wt\+::\+W\+Combo\+Box $\ast$ {\bfseries left\+Sel}
+\item 
+\mbox{\Hypertarget{classConversionUI_a9c671331bbdb81f5e101cbebaf24120f}\label{classConversionUI_a9c671331bbdb81f5e101cbebaf24120f}} 
+Wt\+::\+W\+Combo\+Box $\ast$ {\bfseries right\+Sel}
+\item 
+\mbox{\Hypertarget{classConversionUI_a076c970a3688c2c64d53253a6d1da634}\label{classConversionUI_a076c970a3688c2c64d53253a6d1da634}} 
+Wt\+::\+W\+Combo\+Box $\ast$ {\bfseries type}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Unit Conversion User Interface. 
+
+Contains the user interface as well as logic for unit conversion, allowing users to choose various types of measurement and units and convert between them \begin{DoxyAuthor}{Author}
+Anthony Tam 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classConversionUI_a131b2d8881471678d8217d05dbb72796}\label{classConversionUI_a131b2d8881471678d8217d05dbb72796}} 
+\index{ConversionUI@{ConversionUI}!ConversionUI@{ConversionUI}}
+\index{ConversionUI@{ConversionUI}!ConversionUI@{ConversionUI}}
+\doxysubsubsection{\texorpdfstring{ConversionUI()}{ConversionUI()}}
+{\footnotesize\ttfamily Conversion\+U\+I\+::\+Conversion\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor for \mbox{\hyperlink{classConversionUI}{Conversion\+UI}}, creates the user interface for the calculator, intitalizes fields, creates interactable buttons. \begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classConversionUI_aab9ae3385108c58ec1ffd85eeaaa8236}\label{classConversionUI_aab9ae3385108c58ec1ffd85eeaaa8236}} 
+\index{ConversionUI@{ConversionUI}!````~ConversionUI@{$\sim$ConversionUI}}
+\index{````~ConversionUI@{$\sim$ConversionUI}!ConversionUI@{ConversionUI}}
+\doxysubsubsection{\texorpdfstring{$\sim$ConversionUI()}{~ConversionUI()}}
+{\footnotesize\ttfamily Conversion\+U\+I\+::$\sim$\+Conversion\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Default Destructor for \mbox{\hyperlink{classConversionUI}{Conversion\+UI}}. \begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classConversionUI_acdc344f8f9c063ef0a208e6a986fe6d5}\label{classConversionUI_acdc344f8f9c063ef0a208e6a986fe6d5}} 
+\index{ConversionUI@{ConversionUI}!addItemBothSides@{addItemBothSides}}
+\index{addItemBothSides@{addItemBothSides}!ConversionUI@{ConversionUI}}
+\doxysubsubsection{\texorpdfstring{addItemBothSides()}{addItemBothSides()}}
+{\footnotesize\ttfamily void Conversion\+U\+I\+::add\+Item\+Both\+Sides (\begin{DoxyParamCaption}\item[{std\+::string}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Adds the provided dropdown item to both left and right dropdown forms. 
+
+Takes the provided string input representing a unit/measurement dropdown item and adds it to both dropdown combo boxes. 
+\begin{DoxyParams}{Parameters}
+{\em item} & is a string representing a unit/measurement to be added to the dropdown combo boxes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classConversionUI_af770d52b55761285060b536b923eb8cd}\label{classConversionUI_af770d52b55761285060b536b923eb8cd}} 
+\index{ConversionUI@{ConversionUI}!cleanText@{cleanText}}
+\index{cleanText@{cleanText}!ConversionUI@{ConversionUI}}
+\doxysubsubsection{\texorpdfstring{cleanText()}{cleanText()}}
+{\footnotesize\ttfamily string Conversion\+U\+I\+::clean\+Text (\begin{DoxyParamCaption}\item[{double}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Cleans text from double input. 
+
+Cleans text for output by removing trailing zeroes from double input. 
+\begin{DoxyParams}{Parameters}
+{\em text} & is a double representing a number from a text field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+cleaned string without trailing zeroes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classConversionUI_a069dd8dde7a55b9294005401462c746e}\label{classConversionUI_a069dd8dde7a55b9294005401462c746e}} 
+\index{ConversionUI@{ConversionUI}!convert@{convert}}
+\index{convert@{convert}!ConversionUI@{ConversionUI}}
+\doxysubsubsection{\texorpdfstring{convert()}{convert()}}
+{\footnotesize\ttfamily double Conversion\+U\+I\+::convert (\begin{DoxyParamCaption}\item[{double}]{source,  }\item[{std\+::string}]{source\+Type,  }\item[{std\+::string}]{result\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Converts number to different unit. 
+
+Main algorithm for converting a number in a certain unit type to another unit type 
+\begin{DoxyParams}{Parameters}
+{\em source} & is a double representing the changed text field \\
+\hline
+{\em source\+Type} & is a string representing the unit type of the changed text field \\
+\hline
+{\em result\+Type} & is a string representing the unit type to be converted to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double represnting converted unit 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classConversionUI_a0bd6789626126dc85fa0f96de4a4f190}\label{classConversionUI_a0bd6789626126dc85fa0f96de4a4f190}} 
+\index{ConversionUI@{ConversionUI}!convertUnits@{convertUnits}}
+\index{convertUnits@{convertUnits}!ConversionUI@{ConversionUI}}
+\doxysubsubsection{\texorpdfstring{convertUnits()}{convertUnits()}}
+{\footnotesize\ttfamily void Conversion\+U\+I\+::convert\+Units (\begin{DoxyParamCaption}\item[{std\+::string}]{field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Main algorithm for converting units. 
+
+Called whenever one of the textfields is changed with a valid input or whenever one of the unit types is changed and calls conversion for opposite field accordingly. 
+\begin{DoxyParams}{Parameters}
+{\em field} & is a string representing which textfield/combobox was changed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classConversionUI_ad80b2a45b7086a377c415ad3b3810a2a}\label{classConversionUI_ad80b2a45b7086a377c415ad3b3810a2a}} 
+\index{ConversionUI@{ConversionUI}!createDropdowns@{createDropdowns}}
+\index{createDropdowns@{createDropdowns}!ConversionUI@{ConversionUI}}
+\doxysubsubsection{\texorpdfstring{createDropdowns()}{createDropdowns()}}
+{\footnotesize\ttfamily void Conversion\+U\+I\+::create\+Dropdowns (\begin{DoxyParamCaption}\item[{std\+::string}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Creates dropdown menu UI items for the given unit category. 
+
+Creates dropdown combobox menu items for the UI for the given unit/measurement category. 
+\begin{DoxyParams}{Parameters}
+{\em type} & is a string representing the chosen category of units \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classConversionUI_a1c2a666629bbcc93ff32adbac64e0b63}\label{classConversionUI_a1c2a666629bbcc93ff32adbac64e0b63}} 
+\index{ConversionUI@{ConversionUI}!matchType@{matchType}}
+\index{matchType@{matchType}!ConversionUI@{ConversionUI}}
+\doxysubsubsection{\texorpdfstring{matchType()}{matchType()}}
+{\footnotesize\ttfamily double Conversion\+U\+I\+::match\+Type (\begin{DoxyParamCaption}\item[{std\+::string}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Matches a unit in string form to a constant value. 
+
+Takes a unit/measurement type in string form from a combobox dropdown option and returns a double for the appropriate constant value 
+\begin{DoxyParams}{Parameters}
+{\em type} & is a string representing a unit/measurement type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double that is a constant value which mathces to a given unit type 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+gui/math/Conversion\+U\+I.\+h\item 
+gui/math/Conversion\+U\+I.\+cpp\end{DoxyCompactItemize}

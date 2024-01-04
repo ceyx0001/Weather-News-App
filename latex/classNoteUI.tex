@@ -1,0 +1,236 @@
+\hypertarget{classNoteUI}{}\doxysection{Note\+UI Class Reference}
+\label{classNoteUI}\index{NoteUI@{NoteUI}}
+
+
+\mbox{\hyperlink{classNoteUI}{Note\+UI}}.  
+
+
+
+
+{\ttfamily \#include $<$Note\+U\+I.\+h$>$}
+
+
+
+Inheritance diagram for Note\+UI\+:
+% FIG 0
+
+
+Collaboration diagram for Note\+UI\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNoteUI_af1efa6c49c24c6faae7b517969a482e6}{Note\+UI}} (std\+::string username)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNoteUI_a5270abe840919a08941adc32a852f2ec}{$\sim$\+Note\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNoteUI_ae4b89f423c003943b94c1f9f65f9bb2d}\label{classNoteUI_ae4b89f423c003943b94c1f9f65f9bb2d}} 
+std\+::string {\bfseries get\+Type\+Input} (Wt\+::\+W\+Popup\+Menu $\ast$popup)
+\item 
+void \mbox{\hyperlink{classNoteUI_ac23634cec9361fd1cac024daa5b6b9a5}{create\+Dialog}} ()
+\begin{DoxyCompactList}\small\item\em Prompt user input for note. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNoteUI_a7135ae030df11a2f3f0c749ab7b36331}{save}} (std\+::string note, std\+::string type)
+\begin{DoxyCompactList}\small\item\em Save a note. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNoteUI_a44fce4a03bd710f7f5ee8628bbf413fc}{update}} (Wt\+::\+W\+Label $\ast$content\+Label, Wt\+::\+W\+Label $\ast$type\+Label, Wt\+::\+W\+Label $\ast$date\+Label)
+\begin{DoxyCompactList}\small\item\em Update old note. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNoteUI_a62a7b3d55cc1bd0172d713c51022aa92}{add\+Type}} (Wt\+::\+W\+Line\+Edit $\ast$type\+Edit)
+\begin{DoxyCompactList}\small\item\em Add new note type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNoteUI_a381c58e8829c0c0e40c81178597380a3}{filter}} (std\+::string type)
+\begin{DoxyCompactList}\small\item\em Filter notes by type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNoteUI_a207bc1a4ad8f40eb8730f6b8020d879b}{load}} ()
+\begin{DoxyCompactList}\small\item\em Add new note type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNoteUI_a33c09ce7da98044094fb0df67455137c}{render\+Note}} (\mbox{\hyperlink{classNote}{Note}} note)
+\begin{DoxyCompactList}\small\item\em Display note. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNoteUI_a43b3face97dbec2bfdc72a505a8bf74a}\label{classNoteUI_a43b3face97dbec2bfdc72a505a8bf74a}} 
+Wt\+::\+W\+Line\+Edit $\ast$ {\bfseries search}
+\item 
+\mbox{\Hypertarget{classNoteUI_a537b72a4023034ed3db94d3804bb99bb}\label{classNoteUI_a537b72a4023034ed3db94d3804bb99bb}} 
+Wt\+::\+W\+Popup\+Menu $\ast$ {\bfseries popup}
+\item 
+\mbox{\Hypertarget{classNoteUI_ab71abd362ff0da4e222a7ced058129ed}\label{classNoteUI_ab71abd362ff0da4e222a7ced058129ed}} 
+\mbox{\hyperlink{classNoteMap}{Note\+Map}} {\bfseries notes}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classNoteUI}{Note\+UI}}. 
+
+A template object containing behaviour for rendering the sticky note UI and its associated dialogs. \begin{DoxyAuthor}{Author}
+Jun Shao 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNoteUI_af1efa6c49c24c6faae7b517969a482e6}\label{classNoteUI_af1efa6c49c24c6faae7b517969a482e6}} 
+\index{NoteUI@{NoteUI}!NoteUI@{NoteUI}}
+\index{NoteUI@{NoteUI}!NoteUI@{NoteUI}}
+\doxysubsubsection{\texorpdfstring{NoteUI()}{NoteUI()}}
+{\footnotesize\ttfamily Note\+U\+I\+::\+Note\+UI (\begin{DoxyParamCaption}\item[{std\+::string}]{username }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor for \mbox{\hyperlink{classNoteUI}{Note\+UI}} that initializes all members and renders the UI. 
+\begin{DoxyParams}{Parameters}
+{\em username} & is the session username \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNoteUI_a5270abe840919a08941adc32a852f2ec}\label{classNoteUI_a5270abe840919a08941adc32a852f2ec}} 
+\index{NoteUI@{NoteUI}!````~NoteUI@{$\sim$NoteUI}}
+\index{````~NoteUI@{$\sim$NoteUI}!NoteUI@{NoteUI}}
+\doxysubsubsection{\texorpdfstring{$\sim$NoteUI()}{~NoteUI()}}
+{\footnotesize\ttfamily Note\+U\+I\+::$\sim$\+Note\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default destructor. 
+
+Default destructor for \mbox{\hyperlink{classNoteUI}{Note\+UI}} but does not do anything. \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNoteUI_a62a7b3d55cc1bd0172d713c51022aa92}\label{classNoteUI_a62a7b3d55cc1bd0172d713c51022aa92}} 
+\index{NoteUI@{NoteUI}!addType@{addType}}
+\index{addType@{addType}!NoteUI@{NoteUI}}
+\doxysubsubsection{\texorpdfstring{addType()}{addType()}}
+{\footnotesize\ttfamily void Note\+U\+I\+::add\+Type (\begin{DoxyParamCaption}\item[{Wt\+::\+W\+Line\+Edit $\ast$}]{type\+Edit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Add new note type. 
+
+Adds a new note type to the filter options if a new note was added that has a type not previously seen. 
+\begin{DoxyParams}{Parameters}
+{\em type} & is the note type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNoteUI_ac23634cec9361fd1cac024daa5b6b9a5}\label{classNoteUI_ac23634cec9361fd1cac024daa5b6b9a5}} 
+\index{NoteUI@{NoteUI}!createDialog@{createDialog}}
+\index{createDialog@{createDialog}!NoteUI@{NoteUI}}
+\doxysubsubsection{\texorpdfstring{createDialog()}{createDialog()}}
+{\footnotesize\ttfamily void Note\+U\+I\+::create\+Dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prompt user input for note. 
+
+Creates the dialog that prompts the user for note information when a new note is meant to be added and assigns its behaviour after the information has been inputted \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNoteUI_a381c58e8829c0c0e40c81178597380a3}\label{classNoteUI_a381c58e8829c0c0e40c81178597380a3}} 
+\index{NoteUI@{NoteUI}!filter@{filter}}
+\index{filter@{filter}!NoteUI@{NoteUI}}
+\doxysubsubsection{\texorpdfstring{filter()}{filter()}}
+{\footnotesize\ttfamily void Note\+U\+I\+::filter (\begin{DoxyParamCaption}\item[{std\+::string}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Filter notes by type. 
+
+Filters the notes by type and repaints the UI to only show the notes that are of this type. 
+\begin{DoxyParams}{Parameters}
+{\em type} & is the note type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNoteUI_a207bc1a4ad8f40eb8730f6b8020d879b}\label{classNoteUI_a207bc1a4ad8f40eb8730f6b8020d879b}} 
+\index{NoteUI@{NoteUI}!load@{load}}
+\index{load@{load}!NoteUI@{NoteUI}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void Note\+U\+I\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Add new note type. 
+
+Adds a new note type to the filter options if a new note was added that has a type not previously seen. 
+\begin{DoxyParams}{Parameters}
+{\em type} & is the note type \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNoteUI_a33c09ce7da98044094fb0df67455137c}\label{classNoteUI_a33c09ce7da98044094fb0df67455137c}} 
+\index{NoteUI@{NoteUI}!renderNote@{renderNote}}
+\index{renderNote@{renderNote}!NoteUI@{NoteUI}}
+\doxysubsubsection{\texorpdfstring{renderNote()}{renderNote()}}
+{\footnotesize\ttfamily void Note\+U\+I\+::render\+Note (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNote}{Note}}}]{note }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Display note. 
+
+Renders a new \mbox{\hyperlink{classNote}{Note}} in the sticky notes list UI and assigns the behaviour for clicking on it in the list 
+\begin{DoxyParams}{Parameters}
+{\em note} & is the \mbox{\hyperlink{classNote}{Note}} to render \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNoteUI_a7135ae030df11a2f3f0c749ab7b36331}\label{classNoteUI_a7135ae030df11a2f3f0c749ab7b36331}} 
+\index{NoteUI@{NoteUI}!save@{save}}
+\index{save@{save}!NoteUI@{NoteUI}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Note\+U\+I\+::save (\begin{DoxyParamCaption}\item[{std\+::string}]{note,  }\item[{std\+::string}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Save a note. 
+
+Saves a new \mbox{\hyperlink{classNote}{Note}} object and renders it in the note list. 
+\begin{DoxyParams}{Parameters}
+{\em content} & is the note content. \\
+\hline
+{\em type} & is the note type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNoteUI_a44fce4a03bd710f7f5ee8628bbf413fc}\label{classNoteUI_a44fce4a03bd710f7f5ee8628bbf413fc}} 
+\index{NoteUI@{NoteUI}!update@{update}}
+\index{update@{update}!NoteUI@{NoteUI}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Note\+U\+I\+::update (\begin{DoxyParamCaption}\item[{Wt\+::\+W\+Label $\ast$}]{content\+Label,  }\item[{Wt\+::\+W\+Label $\ast$}]{type\+Label,  }\item[{Wt\+::\+W\+Label $\ast$}]{date\+Label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Update old note. 
+
+Updates a previously created note in the note list by reprompting for its information and re-\/rendering the note as well as assigning its behaviour so that it shows the updated contents 
+\begin{DoxyParams}{Parameters}
+{\em content\+Label} & is the old \mbox{\hyperlink{classNote}{Note}} content \\
+\hline
+{\em type\+Label} & is the old \mbox{\hyperlink{classNote}{Note}} type \\
+\hline
+{\em date\+Label} & is the old \mbox{\hyperlink{classNote}{Note}} date \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+gui/note/Note\+U\+I.\+h\item 
+gui/note/Note\+U\+I.\+cpp\end{DoxyCompactItemize}

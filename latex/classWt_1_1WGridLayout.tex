@@ -1,0 +1,547 @@
+\hypertarget{classWt_1_1WGridLayout}{}\doxysection{Wt\+::W\+Grid\+Layout Class Reference}
+\label{classWt_1_1WGridLayout}\index{Wt::WGridLayout@{Wt::WGridLayout}}
+
+
+A layout manager which arranges widgets in a grid.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Grid\+Layout.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Grid\+Layout\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Grid\+Layout\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WGridLayout_ab96fa2a381e1f8207c1b9bc06da50c2a}{W\+Grid\+Layout}} ()
+\begin{DoxyCompactList}\small\item\em Create a new grid layout. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WGridLayout_aea1c0a1e2188f477fe2076e2d185519f}{add\+Item}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $>$ item) override
+\begin{DoxyCompactList}\small\item\em Adds a layout {\itshape item}. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $>$ \mbox{\hyperlink{classWt_1_1WGridLayout_a250b3e198cab01cdab63f6ac50b6b5b6}{remove\+Item}} (\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$item) override
+\begin{DoxyCompactList}\small\item\em Removes a layout {\itshape item} (widget or nested layout). \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WGridLayout_a158530f0703912239623959890984b2f}{item\+At}} (int index) const override
+\begin{DoxyCompactList}\small\item\em Returns the layout item at a specific {\itshape index}. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WGridLayout_aca5cce4994ebd8d2535d033314c100be}{count}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the number of items in this layout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGridLayout_af0b566bd4ad753cbf5030fdbf459858a}{add\+Item}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $>$ item, int row, int column, int row\+Span=1, int column\+Span=1, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment=None)
+\begin{DoxyCompactList}\small\item\em Adds a layout item to the grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGridLayout_a685ac487eea6fd0be0d2d335eb238955}{add\+Layout}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}} $>$ \mbox{\hyperlink{classWt_1_1WLayout_aa880d7b97d507600941ed6d782c2cccd}{layout}}, int row, int column, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment=None)
+\begin{DoxyCompactList}\small\item\em Adds a nested layout item to the grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGridLayout_a7eadd1f6814e62e97478b87b2bc7267c}{add\+Layout}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}} $>$ \mbox{\hyperlink{classWt_1_1WLayout_aa880d7b97d507600941ed6d782c2cccd}{layout}}, int row, int column, int row\+Span, int column\+Span, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment=None)
+\begin{DoxyCompactList}\small\item\em Adds a nested layout item to the grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGridLayout_a0ca5456998423bc561e7c715b014a66f}{add\+Widget}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}}, int row, int column, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment)
+\begin{DoxyCompactList}\small\item\em Adds a widget to the grid. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Widget $>$ }\\Widget $\ast$ \mbox{\hyperlink{classWt_1_1WGridLayout_a6275c45b28aab01598df5479a4a9a2a4}{add\+Widget}} (std\+::unique\+\_\+ptr$<$ Widget $>$ \mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}}, int row, int column, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment=None)
+\begin{DoxyCompactList}\small\item\em Adds a widget to the grid, returning a raw pointer to the widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGridLayout_a016cb220678f049304e9a455b3b37387}{add\+Widget}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}}, int row, int column, int row\+Span, int column\+Span, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment)
+\begin{DoxyCompactList}\small\item\em Adds a widget to the grid. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Widget $>$ }\\Widget $\ast$ \mbox{\hyperlink{classWt_1_1WGridLayout_a22e29749a6ee27612a22724da9efe9f7}{add\+Widget}} (std\+::unique\+\_\+ptr$<$ Widget $>$ \mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}}, int row, int column, int row\+Span, int column\+Span, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment=None)
+\begin{DoxyCompactList}\small\item\em Adds a widget to the grid, returning a raw pointer to the widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGridLayout_a60713a99ab98907fe5c9f99417fb6493}{set\+Horizontal\+Spacing}} (int size)
+\begin{DoxyCompactList}\small\item\em Sets the horizontal spacing. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WGridLayout_abee301db82ba753b7ba55aaa2965a501}{horizontal\+Spacing}} () const
+\begin{DoxyCompactList}\small\item\em Returns the horizontal spacing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGridLayout_ad2a2188bece8a47628dae340108962ae}{set\+Vertical\+Spacing}} (int size)
+\begin{DoxyCompactList}\small\item\em Sets the vertical spacing. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WGridLayout_a12684a98429394e50b3afdf44fc66aaa}{vertical\+Spacing}} () const
+\begin{DoxyCompactList}\small\item\em Returns the vertical spacing. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WGridLayout_ae381972d1f5c0226c2bfe07d19bb2753}{column\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Returns the column count. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WGridLayout_a520017c6b21a1056485d4bd9d92f39d7}{row\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Returns the row count. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGridLayout_a4605de0523f5613096b6cbd983123c8b}{set\+Column\+Stretch}} (int column, int stretch)
+\begin{DoxyCompactList}\small\item\em Sets the column stretch. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WGridLayout_a08d6d587d8022e73c25074bacfd5b8bb}{column\+Stretch}} (int column) const
+\begin{DoxyCompactList}\small\item\em Returns the column stretch. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGridLayout_ad8d1199b57063fb7286be6dab13c998c}{set\+Row\+Stretch}} (int row, int stretch)
+\begin{DoxyCompactList}\small\item\em Sets the row stretch. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WGridLayout_af409fc47b820d8258f67f599ef3e0aaa}{row\+Stretch}} (int row) const
+\begin{DoxyCompactList}\small\item\em Returns the column stretch. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGridLayout_a4bf1c12862c45548c6cf9ca2dabdb971}{set\+Column\+Resizable}} (int column, bool enabled=true, const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&initial\+Size=\mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}})
+\begin{DoxyCompactList}\small\item\em Sets whether the user may drag a particular column border. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WGridLayout_a3f3dd32c5ab42fb2bcf58ddcaa093103}{column\+Is\+Resizable}} (int column) const
+\begin{DoxyCompactList}\small\item\em Returns whether the user may drag a particular column border. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGridLayout_afe6f079d377ff1046dfdbc2d939da784}{set\+Row\+Resizable}} (int row, bool enabled=true, const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&initial\+Size=\mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}})
+\begin{DoxyCompactList}\small\item\em Sets whether the user may drag a particular row border. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WGridLayout_ad1654a0d86bdda665dd4bccc8026361a}{row\+Is\+Resizable}} (int row) const
+\begin{DoxyCompactList}\small\item\em Returns whether the user may drag a particular row border. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGridLayout_a82c65396ab0f2b1fd4127690d87992d2}\label{classWt_1_1WGridLayout_a82c65396ab0f2b1fd4127690d87992d2}} 
+virtual void {\bfseries iterate\+Widgets} (const Handle\+Widget\+Method \&method) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WGridLayout_a74980fe277926d8f51feeed94e9cfdb4}\label{classWt_1_1WGridLayout_a74980fe277926d8f51feeed94e9cfdb4}} 
+void {\bfseries expand} (int row, int column, int row\+Span, int column\+Span)
+\item 
+\mbox{\Hypertarget{classWt_1_1WGridLayout_a7aa9dba71ebe1a9294af4f356707ee90}\label{classWt_1_1WGridLayout_a7aa9dba71ebe1a9294af4f356707ee90}} 
+virtual void \mbox{\hyperlink{classWt_1_1WGridLayout_a7aa9dba71ebe1a9294af4f356707ee90}{set\+Parent\+Widget}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$parent) override
+\begin{DoxyCompactList}\small\item\em Internal method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WGridLayout_a4dd69cb6875dd84759403a7f919b278a}\label{classWt_1_1WGridLayout_a4dd69cb6875dd84759403a7f919b278a}} 
+\mbox{\hyperlink{structWt_1_1Impl_1_1Grid}{Impl\+::\+Grid}} {\bfseries grid\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A layout manager which arranges widgets in a grid. 
+
+This layout manager arranges widgets in a grid.
+
+Each grid cell (row, column) may contain one widget or nested layout. Orientation\+::\+Horizontal and vertical space are divided so that each non-\/stretchable column/row is given its preferred size (if possible) and the remaining space is divided according to stretch factors among the columns/rows. If not all columns/rows can be given their preferred size (there is not enough room), then columns/rows are given a smaller size (down to a minimum size based on widget minimum sizes). If necessary, the container (or parent layout) of this layout is resized to meet minimum size requirements.
+
+The preferred width/height of a column/row is based on the natural size of the widgets, where they present their contents without overflowing. \mbox{\hyperlink{classWt_1_1WWidget_a54365f7acdc237895328be54969165f4}{W\+Widget\+::resize()}} or (C\+SS {\ttfamily width}, {\ttfamily height} properties) can be used to adjust the preferred size of a widget.
+
+The minimum width/height of a column/row is based on the minimum dimensions of contained widgets or nested layouts. The default minimum height and width for a widget is 0. It can be specified using \mbox{\hyperlink{classWt_1_1WWidget_a092c7d1ecfde7f004ef120389d91775d}{W\+Widget\+::set\+Minimum\+Size()}} or using C\+SS {\ttfamily min-\/width} and {\ttfamily min-\/height} properties.
+
+You should use \mbox{\hyperlink{classWt_1_1WContainerWidget_af3d9510f569deed060689aa509ecc831}{W\+Container\+Widget\+::set\+Overflow(\+Overflow\+Auto) }} to automatically show scrollbars for widgets inserted in the layout to cope with a size set by the layout manager that is smaller than the preferred size.
+
+When the container of a layout manager has a maximum size set using \mbox{\hyperlink{classWt_1_1WWidget_af023064cf8007bda6baeb5277d79bbd9}{W\+Widget\+::set\+Maximum\+Size()}}, then the size of the container will be based on the preferred size of the contents, up to this maximum size, instead of the default behaviour of constraining the size of the children based on the size of the container.
+
+A layout manager may provide resize handles between columns or rows which allow the user to change the automatic layout provided by the layout manager (see \mbox{\hyperlink{classWt_1_1WGridLayout_afe6f079d377ff1046dfdbc2d939da784}{set\+Row\+Resizable()}} and \mbox{\hyperlink{classWt_1_1WGridLayout_a4bf1c12862c45548c6cf9ca2dabdb971}{set\+Column\+Resizable()}}).
+
+Columns and rows are separated using a constant spacing, which defaults to 6 pixels by default, and can be changed using \mbox{\hyperlink{classWt_1_1WGridLayout_a60713a99ab98907fe5c9f99417fb6493}{set\+Horizontal\+Spacing()}} and \mbox{\hyperlink{classWt_1_1WGridLayout_ad2a2188bece8a47628dae340108962ae}{set\+Vertical\+Spacing()}}. In addition, when this layout is a top-\/level layout (i.\+e. is not nested inside another layout), a margin is set around the contents. This margin defaults to 9 pixels, and can be changed using \mbox{\hyperlink{classWt_1_1WLayout_af18bae8c743c9f9a5cabee58826ffb45}{set\+Contents\+Margins()}}.
+
+For each column or row, a stretch factor may be defined, which controls how remaining horizontal or vertical space is used. Each column and row is stretched using the stretch factor to fill the remaining space. When the stretch factor is 0, the height of the row and its contents is set to the preferred size (if possible). When the stretch factor is 1 or higher, these widgets will be given the remaining size, limited only by their minimum size (their preferred size is ignored).
+
+Usage example\+:
+
+\begin{DoxyNote}{Note}
+When Java\+Script support is not available, not all functionality of the layout is available. In particular, vertical size management is not available.
+
+When a layout is used on a first page with progressive bootstrap, then the layout will progress only in a limited way to a full Java\+Script-\/based layout. You can thus not rely on it to behave properly for example when dynamically adding or removing widgets. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WGridLayout_ab96fa2a381e1f8207c1b9bc06da50c2a}\label{classWt_1_1WGridLayout_ab96fa2a381e1f8207c1b9bc06da50c2a}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!WGridLayout@{WGridLayout}}
+\index{WGridLayout@{WGridLayout}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{WGridLayout()}{WGridLayout()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Grid\+Layout\+::\+W\+Grid\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a new grid layout. 
+
+The grid will grow dynamically as items are added.
+
+Use {\ttfamily parent} = {\ttfamily 0} to create a layout manager that can be nested inside other layout managers or if you use \mbox{\hyperlink{classWt_1_1WContainerWidget_a60e57a8860785d6b587a36b616cb5e12}{W\+Container\+Widget\+::set\+Layout()}} to add specify the container later. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WGridLayout_aea1c0a1e2188f477fe2076e2d185519f}\label{classWt_1_1WGridLayout_aea1c0a1e2188f477fe2076e2d185519f}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!addItem@{addItem}}
+\index{addItem@{addItem}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Grid\+Layout\+::add\+Item (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $>$}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds a layout {\itshape item}. 
+
+The item may be a widget or nested layout.
+
+How the item is layed out with respect to siblings is implementation specific to the layout manager. In some cases, a layout manager will overload this method with extra arguments that specify layout options.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WGridLayout_a250b3e198cab01cdab63f6ac50b6b5b6}{remove\+Item(\+W\+Layout\+Item $\ast$)}}, add\+Widget(\+W\+Widget $\ast$) 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WLayout_a8cd69b5eb41376e6e7ab0dd97a2ab2b5}{Wt\+::\+W\+Layout}}.
+
+\mbox{\Hypertarget{classWt_1_1WGridLayout_af0b566bd4ad753cbf5030fdbf459858a}\label{classWt_1_1WGridLayout_af0b566bd4ad753cbf5030fdbf459858a}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!addItem@{addItem}}
+\index{addItem@{addItem}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Grid\+Layout\+::add\+Item (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $>$}]{item,  }\item[{int}]{row,  }\item[{int}]{column,  }\item[{int}]{row\+Span = {\ttfamily 1},  }\item[{int}]{column\+Span = {\ttfamily 1},  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Adds a layout item to the grid. 
+
+Adds the {\itshape item} at ({\itshape row}, {\ttfamily column}). If an item was already added to that location, it is replaced.
+
+An item may span several more rows or columns, which is controlled by {\itshape row\+Span} and {\ttfamily column\+Span}.
+
+The {\ttfamily alignment} specifies the vertical and horizontal alignment of the item. The default value 0 indicates that the item is stretched to fill the entire grid cell. The alignment can be specified as a logical combination of a horizontal alignment (Wt\+::\+Alignment\+Flag\+::\+Left, Wt\+::\+Alignment\+Flag\+::\+Center, or Wt\+::\+Alignment\+Flag\+::\+Right) and a vertical alignment (Wt\+::\+Alignment\+Flag\+::\+Top, Wt\+::\+Alignment\+Flag\+::\+Middle, or Wt\+::\+Alignment\+Flag\+::\+Bottom).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WGridLayout_a685ac487eea6fd0be0d2d335eb238955}{add\+Layout()}}, \mbox{\hyperlink{classWt_1_1WGridLayout_a0ca5456998423bc561e7c715b014a66f}{add\+Widget()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WGridLayout_a7eadd1f6814e62e97478b87b2bc7267c}\label{classWt_1_1WGridLayout_a7eadd1f6814e62e97478b87b2bc7267c}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!addLayout@{addLayout}}
+\index{addLayout@{addLayout}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{addLayout()}{addLayout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Grid\+Layout\+::add\+Layout (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}} $>$}]{layout,  }\item[{int}]{row,  }\item[{int}]{column,  }\item[{int}]{row\+Span,  }\item[{int}]{column\+Span,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Adds a nested layout item to the grid. 
+
+Adds the {\itshape layout} at ({\itshape row}, {\ttfamily column}). If an item was already added to that location, it is replaced (but not deleted).
+
+An item may span several more rows or columns, which is controlled by {\itshape row\+Span} and {\ttfamily column\+Span}.
+
+The {\ttfamily alignment} specifies the vertical and horizontal alignment of the item. The default value 0 indicates that the item is stretched to fill the entire grid cell. The alignment can be specified as a logical combination of a horizontal alignment (Wt\+::\+Alignment\+Flag\+::\+Left, Wt\+::\+Alignment\+Flag\+::\+Center, or Wt\+::\+Alignment\+Flag\+::\+Right) and a vertical alignment (Wt\+::\+Alignment\+Flag\+::\+Top, Wt\+::\+Alignment\+Flag\+::\+Middle, or Wt\+::\+Alignment\+Flag\+::\+Bottom).
+
+\begin{DoxySeeAlso}{See also}
+add\+Layout(\+W\+Layout $\ast$, int, int, W\+Flags$<$\+Alignment\+Flag$>$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WGridLayout_a685ac487eea6fd0be0d2d335eb238955}\label{classWt_1_1WGridLayout_a685ac487eea6fd0be0d2d335eb238955}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!addLayout@{addLayout}}
+\index{addLayout@{addLayout}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{addLayout()}{addLayout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Grid\+Layout\+::add\+Layout (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}} $>$}]{layout,  }\item[{int}]{row,  }\item[{int}]{column,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Adds a nested layout item to the grid. 
+
+Adds the {\itshape layout} at ({\itshape row}, {\ttfamily column}). If an item was already added to that location, it is replaced (but not deleted).
+
+The {\ttfamily alignment} specifies the vertical and horizontal alignment of the item. The default value 0 indicates that the item is stretched to fill the entire grid cell. The alignment can be specified as a logical combination of a horizontal alignment (Wt\+::\+Alignment\+Flag\+::\+Left, Wt\+::\+Alignment\+Flag\+::\+Center, or Wt\+::\+Alignment\+Flag\+::\+Right) and a vertical alignment (Wt\+::\+Alignment\+Flag\+::\+Top, Wt\+::\+Alignment\+Flag\+::\+Middle, or Wt\+::\+Alignment\+Flag\+::\+Bottom).
+
+\begin{DoxySeeAlso}{See also}
+add\+Layout(\+W\+Layout $\ast$, int, int, int, int, W\+Flags$<$\+Alignment\+Flag$>$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WGridLayout_a22e29749a6ee27612a22724da9efe9f7}\label{classWt_1_1WGridLayout_a22e29749a6ee27612a22724da9efe9f7}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!addWidget@{addWidget}}
+\index{addWidget@{addWidget}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{addWidget()}{addWidget()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename Widget $>$ \\
+Widget$\ast$ Wt\+::\+W\+Grid\+Layout\+::add\+Widget (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ Widget $>$}]{widget,  }\item[{int}]{row,  }\item[{int}]{column,  }\item[{int}]{row\+Span,  }\item[{int}]{column\+Span,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment = {\ttfamily None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a widget to the grid, returning a raw pointer to the widget. 
+
+This is implemented as\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Widget *result = \mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}}.get();}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WGridLayout_a0ca5456998423bc561e7c715b014a66f}{addWidget}}(std::unique\_ptr<WWidget>(std::move(\mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}})), row, column,}
+\DoxyCodeLine{          rowSpan, columnSpan, alignment);}
+\DoxyCodeLine{\textcolor{keywordflow}{return} result;}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1WGridLayout_a6275c45b28aab01598df5479a4a9a2a4}\label{classWt_1_1WGridLayout_a6275c45b28aab01598df5479a4a9a2a4}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!addWidget@{addWidget}}
+\index{addWidget@{addWidget}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{addWidget()}{addWidget()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename Widget $>$ \\
+Widget$\ast$ Wt\+::\+W\+Grid\+Layout\+::add\+Widget (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ Widget $>$}]{widget,  }\item[{int}]{row,  }\item[{int}]{column,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment = {\ttfamily None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a widget to the grid, returning a raw pointer to the widget. 
+
+This is implemented as\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Widget *result = \mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}}.get();}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WGridLayout_a0ca5456998423bc561e7c715b014a66f}{addWidget}}(std::unique\_ptr<WWidget>(std::move(\mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}})), row, column, alignment);}
+\DoxyCodeLine{\textcolor{keywordflow}{return} result;}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1WGridLayout_a016cb220678f049304e9a455b3b37387}\label{classWt_1_1WGridLayout_a016cb220678f049304e9a455b3b37387}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!addWidget@{addWidget}}
+\index{addWidget@{addWidget}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{addWidget()}{addWidget()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Grid\+Layout\+::add\+Widget (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$}]{widget,  }\item[{int}]{row,  }\item[{int}]{column,  }\item[{int}]{row\+Span,  }\item[{int}]{column\+Span,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment }\end{DoxyParamCaption})}
+
+
+
+Adds a widget to the grid. 
+
+Adds the {\itshape widget} at ({\itshape row}, {\ttfamily column}). If an item was already added to that location, it is replaced (but not deleted).
+
+The widget may span several more rows or columns, which is controlled by {\itshape row\+Span} and {\ttfamily column\+Span}.
+
+The {\ttfamily alignment} specifies the vertical and horizontal alignment of the item. The default value 0 indicates that the item is stretched to fill the entire grid cell. The alignment can be specified as a logical combination of a horizontal alignment (Wt\+::\+Alignment\+Flag\+::\+Left, Wt\+::\+Alignment\+Flag\+::\+Center, or Wt\+::\+Alignment\+Flag\+::\+Right) and a vertical alignment (Wt\+::\+Alignment\+Flag\+::\+Top, Wt\+::\+Alignment\+Flag\+::\+Middle, or Wt\+::\+Alignment\+Flag\+::\+Bottom).
+
+\begin{DoxySeeAlso}{See also}
+add\+Widget(\+W\+Widget $\ast$, int, int, W\+Flags$<$\+Alignment\+Flag$>$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WGridLayout_a0ca5456998423bc561e7c715b014a66f}\label{classWt_1_1WGridLayout_a0ca5456998423bc561e7c715b014a66f}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!addWidget@{addWidget}}
+\index{addWidget@{addWidget}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{addWidget()}{addWidget()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Grid\+Layout\+::add\+Widget (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$}]{widget,  }\item[{int}]{row,  }\item[{int}]{column,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment }\end{DoxyParamCaption})}
+
+
+
+Adds a widget to the grid. 
+
+Adds the {\itshape widget} at ({\itshape row}, {\ttfamily column}). If an item was already added to that location, it is replaced (but not deleted).
+
+The {\ttfamily alignment} specifies the vertical and horizontal alignment of the item. The default value 0 indicates that the item is stretched to fill the entire grid cell. The alignment can be specified as a logical combination of a horizontal alignment (Wt\+::\+Alignment\+Flag\+::\+Left, Wt\+::\+Alignment\+Flag\+::\+Center, or Wt\+::\+Alignment\+Flag\+::\+Right) and a vertical alignment (Wt\+::\+Alignment\+Flag\+::\+Top, Wt\+::\+Alignment\+Flag\+::\+Middle, or Wt\+::\+Alignment\+Flag\+::\+Bottom).
+
+\begin{DoxySeeAlso}{See also}
+add\+Widget(\+W\+Widget $\ast$, int, int, int, int, W\+Flags$<$\+Alignment\+Flag$>$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WGridLayout_ae381972d1f5c0226c2bfe07d19bb2753}\label{classWt_1_1WGridLayout_ae381972d1f5c0226c2bfe07d19bb2753}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!columnCount@{columnCount}}
+\index{columnCount@{columnCount}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{columnCount()}{columnCount()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Grid\+Layout\+::column\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the column count. 
+
+The grid dimensions change dynamically when adding contents to the grid.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WGridLayout_a520017c6b21a1056485d4bd9d92f39d7}{row\+Count()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WGridLayout_a3f3dd32c5ab42fb2bcf58ddcaa093103}\label{classWt_1_1WGridLayout_a3f3dd32c5ab42fb2bcf58ddcaa093103}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!columnIsResizable@{columnIsResizable}}
+\index{columnIsResizable@{columnIsResizable}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{columnIsResizable()}{columnIsResizable()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Grid\+Layout\+::column\+Is\+Resizable (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the user may drag a particular column border. 
+
+This method returns whether the border that separates column {\itshape column} from the next column may be resized by the user.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WGridLayout_a4bf1c12862c45548c6cf9ca2dabdb971}{set\+Column\+Resizable()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WGridLayout_a08d6d587d8022e73c25074bacfd5b8bb}\label{classWt_1_1WGridLayout_a08d6d587d8022e73c25074bacfd5b8bb}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!columnStretch@{columnStretch}}
+\index{columnStretch@{columnStretch}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{columnStretch()}{columnStretch()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Grid\+Layout\+::column\+Stretch (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption}) const}
+
+
+
+Returns the column stretch. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WGridLayout_a4605de0523f5613096b6cbd983123c8b}{set\+Column\+Stretch(int, int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WGridLayout_aca5cce4994ebd8d2535d033314c100be}\label{classWt_1_1WGridLayout_aca5cce4994ebd8d2535d033314c100be}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!count@{count}}
+\index{count@{count}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Grid\+Layout\+::count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of items in this layout. 
+
+This may be a theoretical number, which is greater than the actual number of items. It can be used to iterate over the items in the layout, in conjunction with \mbox{\hyperlink{classWt_1_1WGridLayout_a158530f0703912239623959890984b2f}{item\+At()}}. 
+
+Implements \mbox{\hyperlink{classWt_1_1WLayout_a799b3cce5c1717b18e54c14471e84033}{Wt\+::\+W\+Layout}}.
+
+\mbox{\Hypertarget{classWt_1_1WGridLayout_abee301db82ba753b7ba55aaa2965a501}\label{classWt_1_1WGridLayout_abee301db82ba753b7ba55aaa2965a501}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!horizontalSpacing@{horizontalSpacing}}
+\index{horizontalSpacing@{horizontalSpacing}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{horizontalSpacing()}{horizontalSpacing()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Grid\+Layout\+::horizontal\+Spacing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the horizontal spacing. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WGridLayout_a60713a99ab98907fe5c9f99417fb6493}{set\+Horizontal\+Spacing(int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WGridLayout_a158530f0703912239623959890984b2f}\label{classWt_1_1WGridLayout_a158530f0703912239623959890984b2f}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!itemAt@{itemAt}}
+\index{itemAt@{itemAt}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{itemAt()}{itemAt()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}}$\ast$ Wt\+::\+W\+Grid\+Layout\+::item\+At (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the layout item at a specific {\itshape index}. 
+
+If there is no item at the {\ttfamily index}, {\ttfamily 0} is returned.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLayout_a1ddb82c4f7d5ded93793af6eb3d0f2df}{index\+Of(\+W\+Layout\+Item $\ast$) const}}, \mbox{\hyperlink{classWt_1_1WGridLayout_aca5cce4994ebd8d2535d033314c100be}{count()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WLayout_a3d48e5e4f56ad5d1b0e60180ebc91442}{Wt\+::\+W\+Layout}}.
+
+\mbox{\Hypertarget{classWt_1_1WGridLayout_a250b3e198cab01cdab63f6ac50b6b5b6}\label{classWt_1_1WGridLayout_a250b3e198cab01cdab63f6ac50b6b5b6}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!removeItem@{removeItem}}
+\index{removeItem@{removeItem}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{removeItem()}{removeItem()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}}$>$ Wt\+::\+W\+Grid\+Layout\+::remove\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Removes a layout {\itshape item} (widget or nested layout). 
+
+\begin{DoxySeeAlso}{See also}
+add\+Item(\+W\+Layout\+Item $\ast$), \mbox{\hyperlink{classWt_1_1WLayout_adfff15c9ebcb28d8f152b6b754544988}{remove\+Widget(\+W\+Widget $\ast$)}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WLayout_a0647c62081611a0ef0135ff2e62341be}{Wt\+::\+W\+Layout}}.
+
+\mbox{\Hypertarget{classWt_1_1WGridLayout_a520017c6b21a1056485d4bd9d92f39d7}\label{classWt_1_1WGridLayout_a520017c6b21a1056485d4bd9d92f39d7}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!rowCount@{rowCount}}
+\index{rowCount@{rowCount}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{rowCount()}{rowCount()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Grid\+Layout\+::row\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the row count. 
+
+The grid dimensions change dynamically when adding contents to the grid.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WGridLayout_ae381972d1f5c0226c2bfe07d19bb2753}{column\+Count()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WGridLayout_ad1654a0d86bdda665dd4bccc8026361a}\label{classWt_1_1WGridLayout_ad1654a0d86bdda665dd4bccc8026361a}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!rowIsResizable@{rowIsResizable}}
+\index{rowIsResizable@{rowIsResizable}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{rowIsResizable()}{rowIsResizable()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Grid\+Layout\+::row\+Is\+Resizable (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the user may drag a particular row border. 
+
+This method returns whether the border that separates row {\itshape row} from the next row may be resized by the user.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WGridLayout_afe6f079d377ff1046dfdbc2d939da784}{set\+Row\+Resizable()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WGridLayout_af409fc47b820d8258f67f599ef3e0aaa}\label{classWt_1_1WGridLayout_af409fc47b820d8258f67f599ef3e0aaa}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!rowStretch@{rowStretch}}
+\index{rowStretch@{rowStretch}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{rowStretch()}{rowStretch()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Grid\+Layout\+::row\+Stretch (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption}) const}
+
+
+
+Returns the column stretch. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WGridLayout_ad8d1199b57063fb7286be6dab13c998c}{set\+Row\+Stretch(int, int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WGridLayout_a4bf1c12862c45548c6cf9ca2dabdb971}\label{classWt_1_1WGridLayout_a4bf1c12862c45548c6cf9ca2dabdb971}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!setColumnResizable@{setColumnResizable}}
+\index{setColumnResizable@{setColumnResizable}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{setColumnResizable()}{setColumnResizable()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Grid\+Layout\+::set\+Column\+Resizable (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{bool}]{enabled = {\ttfamily true},  }\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{initial\+Size = {\ttfamily \mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}}} }\end{DoxyParamCaption})}
+
+
+
+Sets whether the user may drag a particular column border. 
+
+This method sets whether the border that separates column {\itshape column} from the next column may be resized by the user, depending on the value of {\itshape enabled}.
+
+The default value is {\itshape false}.
+
+If an {\ttfamily initial\+Size} is given (that is not \mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}}), then this size is used for the width of the column, overriding the width it would be given by the layout manager. \mbox{\Hypertarget{classWt_1_1WGridLayout_a4605de0523f5613096b6cbd983123c8b}\label{classWt_1_1WGridLayout_a4605de0523f5613096b6cbd983123c8b}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!setColumnStretch@{setColumnStretch}}
+\index{setColumnStretch@{setColumnStretch}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{setColumnStretch()}{setColumnStretch()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Grid\+Layout\+::set\+Column\+Stretch (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{int}]{stretch }\end{DoxyParamCaption})}
+
+
+
+Sets the column stretch. 
+
+Sets the {\itshape stretch} factor for column {\ttfamily column}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WGridLayout_a08d6d587d8022e73c25074bacfd5b8bb}{column\+Stretch()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WGridLayout_a60713a99ab98907fe5c9f99417fb6493}\label{classWt_1_1WGridLayout_a60713a99ab98907fe5c9f99417fb6493}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!setHorizontalSpacing@{setHorizontalSpacing}}
+\index{setHorizontalSpacing@{setHorizontalSpacing}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{setHorizontalSpacing()}{setHorizontalSpacing()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Grid\+Layout\+::set\+Horizontal\+Spacing (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Sets the horizontal spacing. 
+
+The default horizontal spacing is 9 pixels.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WGridLayout_ad2a2188bece8a47628dae340108962ae}{set\+Vertical\+Spacing(int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WGridLayout_afe6f079d377ff1046dfdbc2d939da784}\label{classWt_1_1WGridLayout_afe6f079d377ff1046dfdbc2d939da784}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!setRowResizable@{setRowResizable}}
+\index{setRowResizable@{setRowResizable}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{setRowResizable()}{setRowResizable()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Grid\+Layout\+::set\+Row\+Resizable (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{bool}]{enabled = {\ttfamily true},  }\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{initial\+Size = {\ttfamily \mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}}} }\end{DoxyParamCaption})}
+
+
+
+Sets whether the user may drag a particular row border. 
+
+This method sets whether the border that separates row {\itshape row} from the next row may be resized by the user, depending on the value of {\itshape enabled}.
+
+The default value is {\itshape false}.
+
+If an {\ttfamily initial\+Size} is given (that is not \mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}}), then this size is used for the height of the row, overriding the height it would be given by the layout manager. \mbox{\Hypertarget{classWt_1_1WGridLayout_ad8d1199b57063fb7286be6dab13c998c}\label{classWt_1_1WGridLayout_ad8d1199b57063fb7286be6dab13c998c}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!setRowStretch@{setRowStretch}}
+\index{setRowStretch@{setRowStretch}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{setRowStretch()}{setRowStretch()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Grid\+Layout\+::set\+Row\+Stretch (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{stretch }\end{DoxyParamCaption})}
+
+
+
+Sets the row stretch. 
+
+Sets the {\itshape stretch} factor for row {\ttfamily row}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WGridLayout_af409fc47b820d8258f67f599ef3e0aaa}{row\+Stretch()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WGridLayout_ad2a2188bece8a47628dae340108962ae}\label{classWt_1_1WGridLayout_ad2a2188bece8a47628dae340108962ae}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!setVerticalSpacing@{setVerticalSpacing}}
+\index{setVerticalSpacing@{setVerticalSpacing}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{setVerticalSpacing()}{setVerticalSpacing()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Grid\+Layout\+::set\+Vertical\+Spacing (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Sets the vertical spacing. 
+
+The default vertical spacing is 9 pixels.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WGridLayout_a60713a99ab98907fe5c9f99417fb6493}{set\+Horizontal\+Spacing(int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WGridLayout_a12684a98429394e50b3afdf44fc66aaa}\label{classWt_1_1WGridLayout_a12684a98429394e50b3afdf44fc66aaa}} 
+\index{Wt::WGridLayout@{Wt::WGridLayout}!verticalSpacing@{verticalSpacing}}
+\index{verticalSpacing@{verticalSpacing}!Wt::WGridLayout@{Wt::WGridLayout}}
+\doxysubsubsection{\texorpdfstring{verticalSpacing()}{verticalSpacing()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Grid\+Layout\+::vertical\+Spacing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the vertical spacing. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WGridLayout_ad2a2188bece8a47628dae340108962ae}{set\+Vertical\+Spacing(int)}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Grid\+Layout.\+h\end{DoxyCompactItemize}

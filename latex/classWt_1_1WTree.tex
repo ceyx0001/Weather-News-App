@@ -1,0 +1,168 @@
+\hypertarget{classWt_1_1WTree}{}\doxysection{Wt\+::W\+Tree Class Reference}
+\label{classWt_1_1WTree}\index{Wt::WTree@{Wt::WTree}}
+
+
+A widget that represents a navigatable tree.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Tree.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Tree\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Tree\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTree_a2308f07ae7dfb959360ad1bdcf394e44}\label{classWt_1_1WTree_a2308f07ae7dfb959360ad1bdcf394e44}} 
+typedef std\+::set$<$ \mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}} $\ast$ $>$ \mbox{\hyperlink{classWt_1_1WTree_a2308f07ae7dfb959360ad1bdcf394e44}{W\+Tree\+Node\+Set}}
+\begin{DoxyCompactList}\small\item\em Typedef for a set of \mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}}\textquotesingle{}s. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTree_a5e7004844f0ca3a104574a58b16d2eed}\label{classWt_1_1WTree_a5e7004844f0ca3a104574a58b16d2eed}} 
+\mbox{\hyperlink{classWt_1_1WTree_a5e7004844f0ca3a104574a58b16d2eed}{W\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTree_ad72f85efdc428c53351e9a541bb902e9}{set\+Tree\+Root}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}} $>$ root)
+\begin{DoxyCompactList}\small\item\em Sets the tree root node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}} $\ast$ \mbox{\hyperlink{classWt_1_1WTree_a454b1d28285b6a58acdda5dadf39f31c}{tree\+Root}} () const
+\begin{DoxyCompactList}\small\item\em Returns the root node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTree_a7270f705ad5f9be1e2bee06a73348a9a}{set\+Selection\+Mode}} (\mbox{\hyperlink{classWt_a74b3f7eb1689a3cbf0ea514ffd20bccc}{Selection\+Mode}} mode)
+\begin{DoxyCompactList}\small\item\em Sets the selection mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTree_a0bcc0410ed64b5972a7d48ab0d0df332}\label{classWt_1_1WTree_a0bcc0410ed64b5972a7d48ab0d0df332}} 
+\mbox{\hyperlink{classWt_a74b3f7eb1689a3cbf0ea514ffd20bccc}{Selection\+Mode}} \mbox{\hyperlink{classWt_1_1WTree_a0bcc0410ed64b5972a7d48ab0d0df332}{selection\+Mode}} () const
+\begin{DoxyCompactList}\small\item\em Returns the selection mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTree_a74a9a693627d2e094509c132ad5d7e58}\label{classWt_1_1WTree_a74a9a693627d2e094509c132ad5d7e58}} 
+const \mbox{\hyperlink{classWt_1_1WTree_a2308f07ae7dfb959360ad1bdcf394e44}{W\+Tree\+Node\+Set}} \& \mbox{\hyperlink{classWt_1_1WTree_a74a9a693627d2e094509c132ad5d7e58}{selected\+Nodes}} () const
+\begin{DoxyCompactList}\small\item\em Returns the set of selected tree nodes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTree_a9e09dff326743004dc9f2bf27408551a}\label{classWt_1_1WTree_a9e09dff326743004dc9f2bf27408551a}} 
+void \mbox{\hyperlink{classWt_1_1WTree_a9e09dff326743004dc9f2bf27408551a}{select}} (const \mbox{\hyperlink{classWt_1_1WTree_a2308f07ae7dfb959360ad1bdcf394e44}{W\+Tree\+Node\+Set}} \&nodes)
+\begin{DoxyCompactList}\small\item\em Sets a selection of tree nodes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTree_a52c770a65ac3f4c2493f714271a5133a}\label{classWt_1_1WTree_a52c770a65ac3f4c2493f714271a5133a}} 
+void \mbox{\hyperlink{classWt_1_1WTree_a52c770a65ac3f4c2493f714271a5133a}{select}} (\mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}} $\ast$node, bool selected=true)
+\begin{DoxyCompactList}\small\item\em Selects or unselect the given {\itshape node}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTree_a100ef5cfc46328720808ace9ce114494}\label{classWt_1_1WTree_a100ef5cfc46328720808ace9ce114494}} 
+bool \mbox{\hyperlink{classWt_1_1WTree_a100ef5cfc46328720808ace9ce114494}{is\+Selected}} (\mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}} $\ast$node) const
+\begin{DoxyCompactList}\small\item\em Returns if the given {\itshape node} is currently selected. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTree_a14a781edeb90b3040a5e09238290514e}\label{classWt_1_1WTree_a14a781edeb90b3040a5e09238290514e}} 
+void \mbox{\hyperlink{classWt_1_1WTree_a14a781edeb90b3040a5e09238290514e}{clear\+Selection}} ()
+\begin{DoxyCompactList}\small\item\em Clears the current selection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTree_a103603f639e07f83d1a75e293b70966d}\label{classWt_1_1WTree_a103603f639e07f83d1a75e293b70966d}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} \& \mbox{\hyperlink{classWt_1_1WTree_a103603f639e07f83d1a75e293b70966d}{item\+Selection\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Signal that is emitted when the selection changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTree_a9e1c8541e1df202bc97236a0ac895613}\label{classWt_1_1WTree_a9e1c8541e1df202bc97236a0ac895613}} 
+void {\bfseries node\+Removed} (\mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}} $\ast$node)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTree_ae6af28d0bf0104b75f940a991cf9a94e}\label{classWt_1_1WTree_ae6af28d0bf0104b75f940a991cf9a94e}} 
+void {\bfseries node\+Added} (\mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}} $\ast$const node)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTree_aea8ba678c94ff7d0d2227837b22446b2}\label{classWt_1_1WTree_aea8ba678c94ff7d0d2227837b22446b2}} 
+void {\bfseries on\+Click} (\mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}} $\ast$node, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} event)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTree_a2cb7a27542beb1013e3654b87878ebe8}\label{classWt_1_1WTree_a2cb7a27542beb1013e3654b87878ebe8}} 
+void {\bfseries select\+Range} (\mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}} $\ast$from, \mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}} $\ast$to)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTree_acbe87161966b2a8bd538db13e3fae418}\label{classWt_1_1WTree_acbe87161966b2a8bd538db13e3fae418}} 
+void {\bfseries extend\+Selection} (\mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}} $\ast$node)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTree_a63afba8ee0b2f4850556931617a1c98d}\label{classWt_1_1WTree_a63afba8ee0b2f4850556931617a1c98d}} 
+\mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}} $\ast$ {\bfseries tree\+Root\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTree_aa5bc90e94803705ff3787c3eec9e2ade}\label{classWt_1_1WTree_aa5bc90e94803705ff3787c3eec9e2ade}} 
+Impl\+::\+Sentinel\+Tree\+Node $\ast$ {\bfseries sentinel\+Root\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTree_a0e4ae798265bc74a375e8c7dfd2a3ec1}\label{classWt_1_1WTree_a0e4ae798265bc74a375e8c7dfd2a3ec1}} 
+\mbox{\hyperlink{classWt_a74b3f7eb1689a3cbf0ea514ffd20bccc}{Selection\+Mode}} {\bfseries selection\+Mode\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTree_a1f607fe6001a5b0f009fb2367ee06284}\label{classWt_1_1WTree_a1f607fe6001a5b0f009fb2367ee06284}} 
+\mbox{\hyperlink{classWt_1_1WTree_a2308f07ae7dfb959360ad1bdcf394e44}{W\+Tree\+Node\+Set}} {\bfseries selection\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTree_aea37aacc292c812ae4fcf8bbdb0e4f33}\label{classWt_1_1WTree_aea37aacc292c812ae4fcf8bbdb0e4f33}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} {\bfseries item\+Selection\+Changed\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTree_a035f37b6faa9caeaafbb258e110399cb}\label{classWt_1_1WTree_a035f37b6faa9caeaafbb258e110399cb}} 
+class {\bfseries Impl\+::\+Sentinel\+Tree\+Node}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A widget that represents a navigatable tree. 
+
+W\+Tree provides a tree widget, and coordinates selection functionality.
+
+Unlike the M\+V\+C-\/based \mbox{\hyperlink{classWt_1_1WTreeView}{W\+Tree\+View}}, the tree renders a widget hierarchy, rather than a hierarhical standard model. This provides extra flexibility (as any widget can be used as contents), at the cost of server-\/side, client-\/side and bandwidth resources (especially for large tree tables).
+
+The tree is implemented as a hierarchy of \mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}} widgets.
+
+Selection is rendered by calling \mbox{\hyperlink{classWt_1_1WTreeNode_a39f1c20248eeab7cd97dc3116b124af0}{W\+Tree\+Node\+::render\+Selected(bool)}}. Only tree nodes that are \mbox{\hyperlink{classWt_1_1WTreeNode_ac9ba44fb7b14a65874ab9eccd7469f36}{selectable}} may participate in the selection.
+
+A screenshot of the tree\+: \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+  &   \\\cline{1-2}
+\end{longtabu}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}}, \mbox{\hyperlink{classWt_1_1WTreeTable}{W\+Tree\+Table}}, \mbox{\hyperlink{classWt_1_1WTreeView}{W\+Tree\+View}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WTree_a7270f705ad5f9be1e2bee06a73348a9a}\label{classWt_1_1WTree_a7270f705ad5f9be1e2bee06a73348a9a}} 
+\index{Wt::WTree@{Wt::WTree}!setSelectionMode@{setSelectionMode}}
+\index{setSelectionMode@{setSelectionMode}!Wt::WTree@{Wt::WTree}}
+\doxysubsubsection{\texorpdfstring{setSelectionMode()}{setSelectionMode()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Tree\+::set\+Selection\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a74b3f7eb1689a3cbf0ea514ffd20bccc}{Selection\+Mode}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Sets the selection mode. 
+
+The default selection mode is Wt\+::\+Selection\+Mode\+::\+None. \mbox{\Hypertarget{classWt_1_1WTree_ad72f85efdc428c53351e9a541bb902e9}\label{classWt_1_1WTree_ad72f85efdc428c53351e9a541bb902e9}} 
+\index{Wt::WTree@{Wt::WTree}!setTreeRoot@{setTreeRoot}}
+\index{setTreeRoot@{setTreeRoot}!Wt::WTree@{Wt::WTree}}
+\doxysubsubsection{\texorpdfstring{setTreeRoot()}{setTreeRoot()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Tree\+::set\+Tree\+Root (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}} $>$}]{root }\end{DoxyParamCaption})}
+
+
+
+Sets the tree root node. 
+
+The initial value is {\ttfamily 0}. \mbox{\Hypertarget{classWt_1_1WTree_a454b1d28285b6a58acdda5dadf39f31c}\label{classWt_1_1WTree_a454b1d28285b6a58acdda5dadf39f31c}} 
+\index{Wt::WTree@{Wt::WTree}!treeRoot@{treeRoot}}
+\index{treeRoot@{treeRoot}!Wt::WTree@{Wt::WTree}}
+\doxysubsubsection{\texorpdfstring{treeRoot()}{treeRoot()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}}$\ast$ Wt\+::\+W\+Tree\+::tree\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the root node. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTree_ad72f85efdc428c53351e9a541bb902e9}{set\+Tree\+Root()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Tree.\+h\end{DoxyCompactItemize}

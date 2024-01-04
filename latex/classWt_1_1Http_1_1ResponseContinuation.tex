@@ -1,0 +1,168 @@
+\hypertarget{classWt_1_1Http_1_1ResponseContinuation}{}\doxysection{Wt\+::Http\+::Response\+Continuation Class Reference}
+\label{classWt_1_1Http_1_1ResponseContinuation}\index{Wt::Http::ResponseContinuation@{Wt::Http::ResponseContinuation}}
+
+
+A resource response continuation object.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Http/\+Response\+Continuation.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Http\+::Response\+Continuation\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Http\+::Response\+Continuation\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation_a018939ff7a622576f072b94de59d2b6e}{set\+Data}} (const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&\mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation_a20bd93d7429d8de5af200daab0cf22c8}{data}})
+\begin{DoxyCompactList}\small\item\em Set data associated with the continuation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation_a20bd93d7429d8de5af200daab0cf22c8}{data}} ()
+\begin{DoxyCompactList}\small\item\em Return data associated with the continuation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_a2cbea7f0fbec85eb135e4c93eb86b39f}\label{classWt_1_1Http_1_1ResponseContinuation_a2cbea7f0fbec85eb135e4c93eb86b39f}} 
+\mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}} $\ast$ \mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation_a2cbea7f0fbec85eb135e4c93eb86b39f}{resource}} () const
+\begin{DoxyCompactList}\small\item\em Return the resource. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation_a3b441e3fa71a68b9dfb7091464e07433}{wait\+For\+More\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Wait for more data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation_a08c2bc59b253f255c4cea87326373479}{have\+More\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Indicates that we have more data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation_af408995597ad736a41fb9f3af60b872f}{is\+Waiting\+For\+More\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this continuation is waiting for data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_ab02c6e6a87813673b44179c054c42e9c}\label{classWt_1_1Http_1_1ResponseContinuation_ab02c6e6a87813673b44179c054c42e9c}} 
+{\bfseries Response\+Continuation} (\mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}} $\ast$\mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation_a2cbea7f0fbec85eb135e4c93eb86b39f}{resource}}, \mbox{\hyperlink{classWt_1_1WebResponse}{Web\+Response}} $\ast$response)
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_a8982de07e1998a1422d866fd50da6e88}\label{classWt_1_1Http_1_1ResponseContinuation_a8982de07e1998a1422d866fd50da6e88}} 
+{\bfseries Response\+Continuation} (const \mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation}{Response\+Continuation}} \&)
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_a3ce811cb2b29512339b07b421596c479}\label{classWt_1_1Http_1_1ResponseContinuation_a3ce811cb2b29512339b07b421596c479}} 
+void {\bfseries cancel} (bool resource\+Is\+Being\+Deleted)
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_af16033a003eb3654e914f7afaad9a6ac}\label{classWt_1_1Http_1_1ResponseContinuation_af16033a003eb3654e914f7afaad9a6ac}} 
+void {\bfseries ready\+To\+Continue} (Web\+Write\+Event write\+Result)
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_a630caa2935bd920270a97725a89f011f}\label{classWt_1_1Http_1_1ResponseContinuation_a630caa2935bd920270a97725a89f011f}} 
+void {\bfseries handle\+Disconnect} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_abdecb7a47ab63a26a4ee32a880fa2013}\label{classWt_1_1Http_1_1ResponseContinuation_abdecb7a47ab63a26a4ee32a880fa2013}} 
+\mbox{\hyperlink{classWt_1_1WebResponse}{Web\+Response}} $\ast$ {\bfseries response} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_a72c82cd11685e21cd8342680a0043997}\label{classWt_1_1Http_1_1ResponseContinuation_a72c82cd11685e21cd8342680a0043997}} 
+\mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}} $\ast$ {\bfseries resource\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_aa6e5de795153cb7ea347f034e69000e2}\label{classWt_1_1Http_1_1ResponseContinuation_aa6e5de795153cb7ea347f034e69000e2}} 
+\mbox{\hyperlink{classWt_1_1WebResponse}{Web\+Response}} $\ast$ {\bfseries response\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_ae6f52f005de206f59d1a9a8f2493889e}\label{classWt_1_1Http_1_1ResponseContinuation_ae6f52f005de206f59d1a9a8f2493889e}} 
+\mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} {\bfseries data\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_a9e9b6fd43ce07766fcb75be8e8b429c6}\label{classWt_1_1Http_1_1ResponseContinuation_a9e9b6fd43ce07766fcb75be8e8b429c6}} 
+bool {\bfseries waiting\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_af2b1c95b7eb586675ef57e912c652027}\label{classWt_1_1Http_1_1ResponseContinuation_af2b1c95b7eb586675ef57e912c652027}} 
+bool {\bfseries ready\+To\+Continue\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_ac331572ec8a235b3ebf1030c5614cdec}\label{classWt_1_1Http_1_1ResponseContinuation_ac331572ec8a235b3ebf1030c5614cdec}} 
+class {\bfseries Wt\+::\+W\+Resource}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_ac6243a6417de40a9e95175fd4ee87a06}\label{classWt_1_1Http_1_1ResponseContinuation_ac6243a6417de40a9e95175fd4ee87a06}} 
+class {\bfseries Wt\+::\+Web\+Session}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_a0bb0e5a2fcd99881ef189293e209db7f}\label{classWt_1_1Http_1_1ResponseContinuation_a0bb0e5a2fcd99881ef189293e209db7f}} 
+class {\bfseries Response}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A resource response continuation object. 
+
+A response continuation object is used to keep track of a response which is to be continued.
+
+You may associate data with the object using \mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation_a018939ff7a622576f072b94de59d2b6e}{set\+Data()}}.
+
+A continuation is used to resume sending more data later for this response. There are two possible reasons for this\+:
+\begin{DoxyItemize}
+\item the entire response is quite big and you may want to read and send it in smaller chunks. This avoids unbounded memory usage since the I/O layer buffers the response first in memory to send it then out to a possibly slow client using async I/O.
+\item you may not have any more data available, currently, but expect more data later. In that case you can call \mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation_a3b441e3fa71a68b9dfb7091464e07433}{wait\+For\+More\+Data()}} and later call \mbox{\hyperlink{classWt_1_1WResource_a1a9c35416eb690939ff288b053da3e1b}{W\+Resource\+::have\+More\+Data()}} when more data is available.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Response_a76391b7300bdf3be3ca0a00f3670d592}{Response\+::create\+Continuation()}}, \mbox{\hyperlink{classWt_1_1Http_1_1Request_a9fe40c73e6d2bd3b4fec6f2476d71265}{Request\+::continuation()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_a20bd93d7429d8de5af200daab0cf22c8}\label{classWt_1_1Http_1_1ResponseContinuation_a20bd93d7429d8de5af200daab0cf22c8}} 
+\index{Wt::Http::ResponseContinuation@{Wt::Http::ResponseContinuation}!data@{data}}
+\index{data@{data}!Wt::Http::ResponseContinuation@{Wt::Http::ResponseContinuation}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} Wt\+::\+Http\+::\+Response\+Continuation\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return data associated with the continuation. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation_a018939ff7a622576f072b94de59d2b6e}{set\+Data()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_a08c2bc59b253f255c4cea87326373479}\label{classWt_1_1Http_1_1ResponseContinuation_a08c2bc59b253f255c4cea87326373479}} 
+\index{Wt::Http::ResponseContinuation@{Wt::Http::ResponseContinuation}!haveMoreData@{haveMoreData}}
+\index{haveMoreData@{haveMoreData}!Wt::Http::ResponseContinuation@{Wt::Http::ResponseContinuation}}
+\doxysubsubsection{\texorpdfstring{haveMoreData()}{haveMoreData()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Response\+Continuation\+::have\+More\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Indicates that we have more data. 
+
+This will allow the response to be resumed with a new call to \mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{W\+Resource\+::handle\+Request()}}. \mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_af408995597ad736a41fb9f3af60b872f}\label{classWt_1_1Http_1_1ResponseContinuation_af408995597ad736a41fb9f3af60b872f}} 
+\index{Wt::Http::ResponseContinuation@{Wt::Http::ResponseContinuation}!isWaitingForMoreData@{isWaitingForMoreData}}
+\index{isWaitingForMoreData@{isWaitingForMoreData}!Wt::Http::ResponseContinuation@{Wt::Http::ResponseContinuation}}
+\doxysubsubsection{\texorpdfstring{isWaitingForMoreData()}{isWaitingForMoreData()}}
+{\footnotesize\ttfamily bool Wt\+::\+Http\+::\+Response\+Continuation\+::is\+Waiting\+For\+More\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether this continuation is waiting for data. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation_a3b441e3fa71a68b9dfb7091464e07433}{wait\+For\+More\+Data()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_a018939ff7a622576f072b94de59d2b6e}\label{classWt_1_1Http_1_1ResponseContinuation_a018939ff7a622576f072b94de59d2b6e}} 
+\index{Wt::Http::ResponseContinuation@{Wt::Http::ResponseContinuation}!setData@{setData}}
+\index{setData@{setData}!Wt::Http::ResponseContinuation@{Wt::Http::ResponseContinuation}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Response\+Continuation\+::set\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Set data associated with the continuation. 
+
+You could do this to keep track of the state of sending the data for a \mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}}. \mbox{\Hypertarget{classWt_1_1Http_1_1ResponseContinuation_a3b441e3fa71a68b9dfb7091464e07433}\label{classWt_1_1Http_1_1ResponseContinuation_a3b441e3fa71a68b9dfb7091464e07433}} 
+\index{Wt::Http::ResponseContinuation@{Wt::Http::ResponseContinuation}!waitForMoreData@{waitForMoreData}}
+\index{waitForMoreData@{waitForMoreData}!Wt::Http::ResponseContinuation@{Wt::Http::ResponseContinuation}}
+\doxysubsubsection{\texorpdfstring{waitForMoreData()}{waitForMoreData()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Response\+Continuation\+::wait\+For\+More\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Wait for more data. 
+
+This suspends the handling of this request until more data is available, indicated with a call to \mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation_a08c2bc59b253f255c4cea87326373479}{have\+More\+Data()}}, or to a resource globally using \mbox{\hyperlink{classWt_1_1WResource_a1a9c35416eb690939ff288b053da3e1b}{W\+Resource\+::have\+More\+Data()}}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Http/Response\+Continuation.\+h\end{DoxyCompactItemize}

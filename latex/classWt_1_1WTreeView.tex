@@ -1,0 +1,931 @@
+\hypertarget{classWt_1_1WTreeView}{}\doxysection{Wt\+::W\+Tree\+View Class Reference}
+\label{classWt_1_1WTreeView}\index{Wt::WTreeView@{Wt::WTreeView}}
+
+
+A view class that displays a model as a tree or tree table.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Tree\+View.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Tree\+View\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Tree\+View\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_aeb07703b36f369b2e493899246de03d1}\label{classWt_1_1WTreeView_aeb07703b36f369b2e493899246de03d1}} 
+\mbox{\hyperlink{classWt_1_1WTreeView_aeb07703b36f369b2e493899246de03d1}{W\+Tree\+View}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new tree view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTreeView_a49566dd5cc8d1d0d95bad4783dd4e11a}{set\+Expanded}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&, bool \mbox{\hyperlink{classWt_1_1WTreeView_a96586671660b0e81cc2ae99fff284909}{expanded}})
+\begin{DoxyCompactList}\small\item\em Expands or collapses a node. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WTreeView_a3810b69fae37be77e5bf70e8cb6723ac}{is\+Expanded}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index) const
+\begin{DoxyCompactList}\small\item\em Returns whether a node is expanded. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTreeView_abe1b839fc999634806df030301422411}{collapse}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index)
+\begin{DoxyCompactList}\small\item\em Collapses a node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTreeView_ab7c527ce5304cdbe7f5bcb3e51880641}{collapse\+All}} ()
+\begin{DoxyCompactList}\small\item\em Collapse all expanded nodes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTreeView_a03cd862e9c5dbbfbc126ac627b48592a}{expand}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index)
+\begin{DoxyCompactList}\small\item\em Expands a node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTreeView_add40d3e05352ae094f6fe2b9c879c2c7}{expand\+To\+Depth}} (int depth)
+\begin{DoxyCompactList}\small\item\em Expands all nodes to a depth. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTreeView_aef8576ebdf2089edc259362a15e2f750}{set\+Root\+Is\+Decorated}} (bool \mbox{\hyperlink{classWt_1_1WWidget_a52dcef5a385ddfa0a8c3e6c20000f181}{show}})
+\begin{DoxyCompactList}\small\item\em Sets whether toplevel items are decorated. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WTreeView_aa640b56fc7f1cd979d833c95257763d2}{root\+Is\+Decorated}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether toplevel items are decorated. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTreeView_afc6d07a4ee9c3a3d979ded4da4253c36}{resize}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WCompositeWidget_a29ea57c8313b5316bbfa5c6d3590ad3a}{width}}, const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WCompositeWidget_a058e81d74cf5290ad7bd484573d1fadf}{height}}) override
+\begin{DoxyCompactList}\small\item\em Resizes the widget. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$ \& \mbox{\hyperlink{classWt_1_1WTreeView_a8d014f2cd6637f5f842d7fe2fff00418}{collapsed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when a node is collapsed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$ \& \mbox{\hyperlink{classWt_1_1WTreeView_a96586671660b0e81cc2ae99fff284909}{expanded}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when a node is expanded. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WTreeView_aa8f36b17b4ed3722087a9ec7d8c544b1}{item\+Widget}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index) const override
+\begin{DoxyCompactList}\small\item\em Returns the widget that renders an item. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTreeView_abc6f9eca65cdb8951a5a182b4eeedf85}{set\+Model}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \&\mbox{\hyperlink{classWt_1_1WAbstractItemView_ad48bce9c903a4d98c4dcf889377c7ab6}{model}}) override
+\begin{DoxyCompactList}\small\item\em Sets the model. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTreeView_a8560c58e4933aa767c27d56168db5d4d}{set\+Column\+Width}} (int column, const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WCompositeWidget_a29ea57c8313b5316bbfa5c6d3590ad3a}{width}}) override
+\begin{DoxyCompactList}\small\item\em Sets the column width. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTreeView_a8928545beb57de0b46fc686bac27f75a}{set\+Alternating\+Row\+Colors}} (bool \mbox{\hyperlink{classWt_1_1WWidget_ae6935d8baca9d37dd1d080b4383da87c}{enable}}) override
+\begin{DoxyCompactList}\small\item\em Sets if alternating row colors are to be used. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTreeView_a1bd83d1f48a11dbc731f56a16d420148}{set\+Row\+Height}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemView_a6c1c12ec77937064ac91e13c534f1ed4}{row\+Height}}) override
+\begin{DoxyCompactList}\small\item\em Sets the row height. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTreeView_a96effd932eafc395ca91ce4510d41b7a}{set\+Header\+Height}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WCompositeWidget_a058e81d74cf5290ad7bd484573d1fadf}{height}}) override
+\begin{DoxyCompactList}\small\item\em Sets the header height. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTreeView_a825cdb596ad342b12e0c3639fa29590b}{set\+Column\+Hidden}} (int column, bool hidden) override
+\begin{DoxyCompactList}\small\item\em Changes the visibility of a column. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTreeView_ae5f21d76b7905241f30023719ad8a9d0}{set\+Row\+Header\+Count}} (int count) override
+\begin{DoxyCompactList}\small\item\em Configures the number of columns that are used as row headers. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WTreeView_ab0a54141d8b01f2e44409ee0525dc682}{page\+Count}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the number of pages. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WTreeView_aa452045d5e5671b898b59994aee8112d}{page\+Size}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the page size. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WTreeView_a8aca1ea1c8c2278f5a5902824db7da8d}{current\+Page}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the current page. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTreeView_a1b175a443fadcb4b8f4373d2663b97f3}{set\+Current\+Page}} (int page) override
+\begin{DoxyCompactList}\small\item\em Sets the current page. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTreeView_aa299ad97708c19178acee2a8e01aceea}{scroll\+To}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, \mbox{\hyperlink{classWt_ae0fdcefe4b1fefe747b5f423c020334a}{Scroll\+Hint}} hint=Scroll\+Hint\+::\+Ensure\+Visible) override
+\begin{DoxyCompactList}\small\item\em Scrolls the view to an item. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WScrollEvent}{W\+Scroll\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WTreeView_a54c8bac6140804b1cd57fafcf2981a48}{scrolled}} () override
+\begin{DoxyCompactList}\small\item\em Signal emitted when scrolling. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTreeView_a99974e8fc9ce45f2952280e1174aa0f4}{set\+Id}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1WCompositeWidget_a6e7fc16162314016e109b771ce476d59}{id}}) override
+\begin{DoxyCompactList}\small\item\em Sets the C\+SS Id. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTreeView_abcc10f057232621ef8b03b3caecc7a3b}{set\+Header\+Height}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WCompositeWidget_a058e81d74cf5290ad7bd484573d1fadf}{height}})
+\begin{DoxyCompactList}\small\item\em Sets the header height. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTreeView_a1a427771d3095e6a92addf38b9af82b0}{render}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$ flags) override
+\begin{DoxyCompactList}\small\item\em Renders the widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTreeView_aa337178a9fa888530c4ff8ba84c3adf9}{enable\+Ajax}} () override
+\begin{DoxyCompactList}\small\item\em Progresses to an Ajax-\/enabled widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_adc04887fadc83e97ad18455e480e9e96}\label{classWt_1_1WTreeView_adc04887fadc83e97ad18455e480e9e96}} 
+typedef std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, W\+Tree\+View\+Node $\ast$ $>$ {\bfseries Node\+Map}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_acbab6987c2cc4f976c5e86beb7b0c043}\label{classWt_1_1WTreeView_acbab6987c2cc4f976c5e86beb7b0c043}} 
+virtual \mbox{\hyperlink{structWt_1_1WAbstractItemView_1_1ColumnInfo}{Column\+Info}} {\bfseries create\+Column\+Info} (int column) const override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a24ee04916196eb270a5ec72af83d4939}\label{classWt_1_1WTreeView_a24ee04916196eb270a5ec72af83d4939}} 
+void {\bfseries define\+Java\+Script} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_aafe5dac7e43fe0409a09b0be1533d922}\label{classWt_1_1WTreeView_aafe5dac7e43fe0409a09b0be1533d922}} 
+void {\bfseries rerender\+Header} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_af85684788b53373f0bb83fcdbc6d8048}\label{classWt_1_1WTreeView_af85684788b53373f0bb83fcdbc6d8048}} 
+void {\bfseries rerender\+Tree} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a7a95c5af4f14bb7110d6aeca0dccb62e}\label{classWt_1_1WTreeView_a7a95c5af4f14bb7110d6aeca0dccb62e}} 
+void {\bfseries setup} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a3a61c9acd6c35dc1886b0ebdb0a546ef}\label{classWt_1_1WTreeView_a3a61c9acd6c35dc1886b0ebdb0a546ef}} 
+virtual void {\bfseries schedule\+Rerender} (Render\+State what) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_aa92799c1c3afeb7f167759fe8b5aa581}\label{classWt_1_1WTreeView_aa92799c1c3afeb7f167759fe8b5aa581}} 
+void {\bfseries model\+Columns\+Inserted} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a02767ed1d2253abf3828541b2ad37403}\label{classWt_1_1WTreeView_a02767ed1d2253abf3828541b2ad37403}} 
+void {\bfseries model\+Columns\+About\+To\+Be\+Removed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a3a96beb66b23d48df021fbf45729da24}\label{classWt_1_1WTreeView_a3a96beb66b23d48df021fbf45729da24}} 
+void {\bfseries model\+Columns\+Removed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a89c679919f1864f50ae6bd7db7fc6a5d}\label{classWt_1_1WTreeView_a89c679919f1864f50ae6bd7db7fc6a5d}} 
+void {\bfseries model\+Rows\+Inserted} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a38b1988f944e3eec9b378d5ed28ad1de}\label{classWt_1_1WTreeView_a38b1988f944e3eec9b378d5ed28ad1de}} 
+void {\bfseries model\+Rows\+About\+To\+Be\+Removed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a5c5164046c2c55b7f252122bc057af56}\label{classWt_1_1WTreeView_a5c5164046c2c55b7f252122bc057af56}} 
+void {\bfseries model\+Rows\+Removed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_ab51665a7320bd34ce8c32f6980e2b1fd}\label{classWt_1_1WTreeView_ab51665a7320bd34ce8c32f6980e2b1fd}} 
+virtual void {\bfseries model\+Data\+Changed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&top\+Left, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&bottom\+Right) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a05a2ca01859dfb97ed867528c525cc03}\label{classWt_1_1WTreeView_a05a2ca01859dfb97ed867528c525cc03}} 
+virtual void {\bfseries model\+Layout\+About\+To\+Be\+Changed} () override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_aeb723081001432451e08e8386e400321}\label{classWt_1_1WTreeView_aeb723081001432451e08e8386e400321}} 
+virtual void {\bfseries model\+Layout\+Changed} () override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a6810c818a0c188e9cd8923534c990033}\label{classWt_1_1WTreeView_a6810c818a0c188e9cd8923534c990033}} 
+void {\bfseries on\+Viewport\+Change} (\mbox{\hyperlink{classWt_1_1WScrollEvent}{W\+Scroll\+Event}} event)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a5e3443958013336e296a0e7caeac81f0}\label{classWt_1_1WTreeView_a5e3443958013336e296a0e7caeac81f0}} 
+void {\bfseries contents\+Size\+Changed} (int \mbox{\hyperlink{classWt_1_1WCompositeWidget_a29ea57c8313b5316bbfa5c6d3590ad3a}{width}}, int \mbox{\hyperlink{classWt_1_1WCompositeWidget_a058e81d74cf5290ad7bd484573d1fadf}{height}})
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a3dfbcebcf17816eb0ac78edcb4653c1a}\label{classWt_1_1WTreeView_a3dfbcebcf17816eb0ac78edcb4653c1a}} 
+void {\bfseries on\+Item\+Event} (std\+::string node\+And\+Column\+Id, std\+::string type, std\+::string extra1, std\+::string extra2, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} event)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_ae888e92e487f96fa534ec2b1576f1312}\label{classWt_1_1WTreeView_ae888e92e487f96fa534ec2b1576f1312}} 
+void {\bfseries on\+Row\+Drop\+Event} (std\+::string node\+And\+Column\+Id, std\+::string source\+Id, std\+::string mime\+Type, std\+::string side, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} event)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_ae0fc8c4830e6df81d8724060195eeed9}\label{classWt_1_1WTreeView_ae0fc8c4830e6df81d8724060195eeed9}} 
+void {\bfseries on\+Item\+Touch\+Event} (std\+::string node\+And\+Column\+Id, std\+::string type, \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}} event)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_adfe7c673edcec2b1b1e561f59c00e36a}\label{classWt_1_1WTreeView_adfe7c673edcec2b1b1e561f59c00e36a}} 
+\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} {\bfseries calculate\+Model\+Index} (std\+::string node\+And\+Column\+Id)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a8f3f7f3c91e59108de3b654c7e758daf}\label{classWt_1_1WTreeView_a8f3f7f3c91e59108de3b654c7e758daf}} 
+void {\bfseries set\+Root\+Node\+Style} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a916591be35edd45778de221ddf4a377e}\label{classWt_1_1WTreeView_a916591be35edd45778de221ddf4a377e}} 
+void {\bfseries set\+Collapsed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a1d2a96339682633ad4404b6f181d67e2}\label{classWt_1_1WTreeView_a1d2a96339682633ad4404b6f181d67e2}} 
+int {\bfseries calc\+Optimal\+First\+Rendered\+Row} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a71e2a87b672aeb19e447b6282fb1e09a}\label{classWt_1_1WTreeView_a71e2a87b672aeb19e447b6282fb1e09a}} 
+int {\bfseries calc\+Optimal\+Rendered\+Row\+Count} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a66c6b6c04e5a15ee6acd1670d270fc6f}\label{classWt_1_1WTreeView_a66c6b6c04e5a15ee6acd1670d270fc6f}} 
+void {\bfseries shift\+Model\+Indexes} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent}}, int start, int count)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a655444ae8e574c6f48d3b9c9b08e4dfe}\label{classWt_1_1WTreeView_a655444ae8e574c6f48d3b9c9b08e4dfe}} 
+void {\bfseries add\+Rendered\+Node} (W\+Tree\+View\+Node $\ast$node)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a02f262c02c4628253919b12f2b0efeb2}\label{classWt_1_1WTreeView_a02f262c02c4628253919b12f2b0efeb2}} 
+void {\bfseries remove\+Rendered\+Node} (W\+Tree\+View\+Node $\ast$node)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_ae4fa7cb8de97a03eaee986c82151a4e5}\label{classWt_1_1WTreeView_ae4fa7cb8de97a03eaee986c82151a4e5}} 
+void {\bfseries adjust\+To\+Viewport} (W\+Tree\+View\+Node $\ast$changed=nullptr)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_ac216364e877825c7e09ddc1ecd98924a}\label{classWt_1_1WTreeView_ac216364e877825c7e09ddc1ecd98924a}} 
+int {\bfseries prune\+Nodes} (W\+Tree\+View\+Node $\ast$node, int the\+Node\+Row)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a9ee17d0182fe14fb15dfa9a7aa6be384}\label{classWt_1_1WTreeView_a9ee17d0182fe14fb15dfa9a7aa6be384}} 
+int {\bfseries adjust\+Rendered\+Node} (W\+Tree\+View\+Node $\ast$node, int the\+Node\+Row)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a9c2aa3afd26f066eed73ddb750b9005d}\label{classWt_1_1WTreeView_a9c2aa3afd26f066eed73ddb750b9005d}} 
+\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ {\bfseries widget\+For\+Index} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a7902960a54f7afd3b2d5fdc4442042ea}\label{classWt_1_1WTreeView_a7902960a54f7afd3b2d5fdc4442042ea}} 
+W\+Tree\+View\+Node $\ast$ {\bfseries node\+For\+Index} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a3ab8c3a1f98b1e947dc1afd5c829a24f}\label{classWt_1_1WTreeView_a3ab8c3a1f98b1e947dc1afd5c829a24f}} 
+int {\bfseries sub\+Tree\+Height} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, int lower\+Bound=0, int upper\+Bound=std\+::numeric\+\_\+limits$<$ int $>$\+::max()) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a0242256bb6f21b73f81099c7468fb801}\label{classWt_1_1WTreeView_a0242256bb6f21b73f81099c7468fb801}} 
+int {\bfseries rendered\+Row} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$w, int lower\+Bound=0, int upper\+Bound=std\+::numeric\+\_\+limits$<$ int $>$\+::max())
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_aba577bec32b078ba84cdbeb27cf35742}\label{classWt_1_1WTreeView_aba577bec32b078ba84cdbeb27cf35742}} 
+int {\bfseries get\+Index\+Row} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&ancestor, int lower\+Bound=0, int upper\+Bound=std\+::numeric\+\_\+limits$<$ int $>$\+::max()) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a9bef4c0c7667c05c513442128026ab06}\label{classWt_1_1WTreeView_a9bef4c0c7667c05c513442128026ab06}} 
+std\+::string {\bfseries column\+Style\+Class} (int column) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_ad94eab3262aa384026168f1b07285271}\label{classWt_1_1WTreeView_ad94eab3262aa384026168f1b07285271}} 
+int {\bfseries render\+Lower\+Bound} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_aab8f394f85153543ab5c6ac567b8f77e}\label{classWt_1_1WTreeView_aab8f394f85153543ab5c6ac567b8f77e}} 
+int {\bfseries render\+Upper\+Bound} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_aa8c69f94aa4bbd43d21882e267752894}\label{classWt_1_1WTreeView_aa8c69f94aa4bbd43d21882e267752894}} 
+void {\bfseries rendered\+Rows\+Changed} (int row, int count)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_ace0d7ece71be7cdfebdaaeaaf5a90090}\label{classWt_1_1WTreeView_ace0d7ece71be7cdfebdaaeaaf5a90090}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries header\+Row} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a65d3d50f2daaf2532eafdcc2e54daa7f}\label{classWt_1_1WTreeView_a65d3d50f2daaf2532eafdcc2e54daa7f}} 
+virtual bool {\bfseries internal\+Select} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, \mbox{\hyperlink{classWt_a1ec974261fb0e2b80498473dcb6c91ed}{Selection\+Flag}} option) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_aa04393efd61917de949b222a6228f7c5}\label{classWt_1_1WTreeView_aa04393efd61917de949b222a6228f7c5}} 
+virtual void {\bfseries select\+Range} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&first, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&last) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a9136483fab17bc79c670930999fbf957}\label{classWt_1_1WTreeView_a9136483fab17bc79c670930999fbf957}} 
+bool {\bfseries is\+Expanded\+Recursive} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a3b51d539c73a216933bf2a38a4862557}\label{classWt_1_1WTreeView_a3b51d539c73a216933bf2a38a4862557}} 
+void {\bfseries expand\+Children\+To\+Depth} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, int depth)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_ac49175c56a25765542621cf40f47d5f2}\label{classWt_1_1WTreeView_ac49175c56a25765542621cf40f47d5f2}} 
+void {\bfseries update\+Column\+Width} (int column\+Id, int \mbox{\hyperlink{classWt_1_1WCompositeWidget_a29ea57c8313b5316bbfa5c6d3590ad3a}{width}})
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a92546db2a119bd5c83e5f19b8093d3d9}\label{classWt_1_1WTreeView_a92546db2a119bd5c83e5f19b8093d3d9}} 
+virtual \mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries header\+Container} () override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a52715a14815818e3a347dbe5bb85e914}\label{classWt_1_1WTreeView_a52715a14815818e3a347dbe5bb85e914}} 
+virtual \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ {\bfseries header\+Widget} (int column, bool contents\+Only=true) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_afb3c60b8ec978c5c44acba066a47d80f}\label{classWt_1_1WTreeView_afb3c60b8ec978c5c44acba066a47d80f}} 
+static int {\bfseries shift\+Model\+Indexes} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent}}, int start, int count, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \&\mbox{\hyperlink{classWt_1_1WAbstractItemView_ad48bce9c903a4d98c4dcf889377c7ab6}{model}}, \mbox{\hyperlink{classWt_a1ac86c224fa86a17f4ca1b52881163ed}{W\+Model\+Index\+Set}} \&set)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_ad25183a2eca089cd873106b349c550fd}\label{classWt_1_1WTreeView_ad25183a2eca089cd873106b349c550fd}} 
+static int {\bfseries shift\+Model\+Indexes} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent}}, int start, int count, const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \&\mbox{\hyperlink{classWt_1_1WAbstractItemView_ad48bce9c903a4d98c4dcf889377c7ab6}{model}}, std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$ \&set)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a85e42dd6b83ff7751e448d91082d1db0}\label{classWt_1_1WTreeView_a85e42dd6b83ff7751e448d91082d1db0}} 
+bool {\bfseries skip\+Next\+Mouse\+Event\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_aeaef3c79149923f173821f76893a9a29}\label{classWt_1_1WTreeView_aeaef3c79149923f173821f76893a9a29}} 
+std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$ {\bfseries expanded\+Set\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_ab76c726a77e96cbe7ec07f87de5a0010}\label{classWt_1_1WTreeView_ab76c726a77e96cbe7ec07f87de5a0010}} 
+Node\+Map {\bfseries rendered\+Nodes\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a1f4e7fc631fb59faaf2b588a745cc7d9}\label{classWt_1_1WTreeView_a1f4e7fc631fb59faaf2b588a745cc7d9}} 
+bool {\bfseries rendered\+Nodes\+Added\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_aa28d8e40f8050b232a412fe2681608ab}\label{classWt_1_1WTreeView_aa28d8e40f8050b232a412fe2681608ab}} 
+W\+Tree\+View\+Node $\ast$ {\bfseries root\+Node\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a32096d88e8db2fe12d00303e669b51d3}\label{classWt_1_1WTreeView_a32096d88e8db2fe12d00303e669b51d3}} 
+\mbox{\hyperlink{classWt_1_1WCssTemplateRule}{W\+Css\+Template\+Rule}} $\ast$ {\bfseries row\+Height\+Rule\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a78886fe9ef3f085c37a9a59ee7987b86}\label{classWt_1_1WTreeView_a78886fe9ef3f085c37a9a59ee7987b86}} 
+\mbox{\hyperlink{classWt_1_1WCssTemplateRule}{W\+Css\+Template\+Rule}} $\ast$ {\bfseries row\+Width\+Rule\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a80a72dc353ebc22682122325147a37f5}\label{classWt_1_1WTreeView_a80a72dc353ebc22682122325147a37f5}} 
+\mbox{\hyperlink{classWt_1_1WCssTemplateRule}{W\+Css\+Template\+Rule}} $\ast$ {\bfseries row\+Contents\+Width\+Rule\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a57e1610ae95cfbf9a000dbe6e1cef2ae}\label{classWt_1_1WTreeView_a57e1610ae95cfbf9a000dbe6e1cef2ae}} 
+\mbox{\hyperlink{classWt_1_1WCssRule}{W\+Css\+Rule}} $\ast$ {\bfseries c0\+Style\+Rule\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a03e51037cc56e3a7cd9bf6e5ec2228f9}\label{classWt_1_1WTreeView_a03e51037cc56e3a7cd9bf6e5ec2228f9}} 
+bool {\bfseries root\+Is\+Decorated\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a9997caec2c2921151cfe4885ba0ad89b}\label{classWt_1_1WTreeView_a9997caec2c2921151cfe4885ba0ad89b}} 
+bool {\bfseries column1\+Fixed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a32efc8f058372e09d006f17e5fd12b62}\label{classWt_1_1WTreeView_a32efc8f058372e09d006f17e5fd12b62}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$ {\bfseries collapsed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_ab4624f7cfd1b067be10da59d65467249}\label{classWt_1_1WTreeView_ab4624f7cfd1b067be10da59d65467249}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$ {\bfseries expanded\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_af6a44bf00ec9708b6069bc31d22d453a}\label{classWt_1_1WTreeView_af6a44bf00ec9708b6069bc31d22d453a}} 
+int {\bfseries viewport\+Top\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_ae1c87fe15f78c34ce04cd4f3bb11f98c}\label{classWt_1_1WTreeView_ae1c87fe15f78c34ce04cd4f3bb11f98c}} 
+int {\bfseries viewport\+Height\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_aa9969195e48f8143e9ecf3bf8f36e117}\label{classWt_1_1WTreeView_aa9969195e48f8143e9ecf3bf8f36e117}} 
+int {\bfseries first\+Rendered\+Row\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_aaea9f17f5e2fb2da715c457e57136662}\label{classWt_1_1WTreeView_aaea9f17f5e2fb2da715c457e57136662}} 
+int {\bfseries valid\+Row\+Count\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a7748faf9cffcf9202f4838ce017fbb1b}\label{classWt_1_1WTreeView_a7748faf9cffcf9202f4838ce017fbb1b}} 
+int {\bfseries node\+Load\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a7c6e96b3bba2cb9b1e21086edbc061fd}\label{classWt_1_1WTreeView_a7c6e96b3bba2cb9b1e21086edbc061fd}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries headers\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a18193ebef2a0ee716c956f5d92e4068b}\label{classWt_1_1WTreeView_a18193ebef2a0ee716c956f5d92e4068b}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries header\+Container\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a696733697a82ea0a25d29666ebcfb242}\label{classWt_1_1WTreeView_a696733697a82ea0a25d29666ebcfb242}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries contents\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a9aa96a0f650327aa44876aa1c17b0606}\label{classWt_1_1WTreeView_a9aa96a0f650327aa44876aa1c17b0606}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries contents\+Container\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a44852e8dfd9af18bd18cf21b201f9233}\label{classWt_1_1WTreeView_a44852e8dfd9af18bd18cf21b201f9233}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries scroll\+Bar\+C\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_ae48389c1016d1fa59015a4f4b19f927e}\label{classWt_1_1WTreeView_ae48389c1016d1fa59015a4f4b19f927e}} 
+int {\bfseries first\+Removed\+Row\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a4da6d72aa51f40bebe16daca49db41ee}\label{classWt_1_1WTreeView_a4da6d72aa51f40bebe16daca49db41ee}} 
+int {\bfseries removed\+Height\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a7b1735295ee25f2264aec2c42e8fa082}\label{classWt_1_1WTreeView_a7b1735295ee25f2264aec2c42e8fa082}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ std\+::string, std\+::string, std\+::string, std\+::string, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ {\bfseries item\+Event\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a1a548c000e33faa65e229e1a16da5e03}\label{classWt_1_1WTreeView_a1a548c000e33faa65e229e1a16da5e03}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ std\+::string, std\+::string, \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}} $>$ {\bfseries item\+Touch\+Event\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_ac0136ea9657a2da7b353434815a25c5f}\label{classWt_1_1WTreeView_ac0136ea9657a2da7b353434815a25c5f}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ std\+::string, std\+::string, std\+::string, std\+::string, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ {\bfseries row\+Drop\+Event\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a6b72fea9bfd4a7acb0baba61cfdc40c1}\label{classWt_1_1WTreeView_a6b72fea9bfd4a7acb0baba61cfdc40c1}} 
+std\+::unique\+\_\+ptr$<$ Toggle\+Button\+Config $>$ {\bfseries expand\+Config\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a34c2ee98a0a9df010457ca127f86316d}\label{classWt_1_1WTreeView_a34c2ee98a0a9df010457ca127f86316d}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries tie\+Rows\+Scroll\+J\+S\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a4417ffc6695ad19fd8f09045b9f57aa6}\label{classWt_1_1WTreeView_a4417ffc6695ad19fd8f09045b9f57aa6}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries item\+Clicked\+J\+S\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_ad9c57a9b1ca680f5f7c26a5c719bba1c}\label{classWt_1_1WTreeView_ad9c57a9b1ca680f5f7c26a5c719bba1c}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries root\+Clicked\+J\+S\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_ab1e96142d6f9a18258733105cebdbf7c}\label{classWt_1_1WTreeView_ab1e96142d6f9a18258733105cebdbf7c}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries item\+Double\+Clicked\+J\+S\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a28cf512f886dd452e32642b05b5d84b2}\label{classWt_1_1WTreeView_a28cf512f886dd452e32642b05b5d84b2}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries root\+Double\+Clicked\+J\+S\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a1e535435f5fdd48f9835ad4f1d70a2db}\label{classWt_1_1WTreeView_a1e535435f5fdd48f9835ad4f1d70a2db}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries item\+Mouse\+Down\+J\+S\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_aced6bbfcdcf19a67f3b9ef9dc167cbbb}\label{classWt_1_1WTreeView_aced6bbfcdcf19a67f3b9ef9dc167cbbb}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries root\+Mouse\+Down\+J\+S\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_aa900f5705126ebb246535b5de1b4dc04}\label{classWt_1_1WTreeView_aa900f5705126ebb246535b5de1b4dc04}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries item\+Mouse\+Up\+J\+S\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a2a8126c10407955bba9c44e931f8f7bc}\label{classWt_1_1WTreeView_a2a8126c10407955bba9c44e931f8f7bc}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries root\+Mouse\+Up\+J\+S\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a7a3e4e115eac4f64c4c4127be91821c4}\label{classWt_1_1WTreeView_a7a3e4e115eac4f64c4c4127be91821c4}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries touch\+Started\+J\+S\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a1c95de85afa37b06569dac4feae1f5cb}\label{classWt_1_1WTreeView_a1c95de85afa37b06569dac4feae1f5cb}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries touch\+Moved\+J\+S\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a394fa47b74f326662b591bff0d484025}\label{classWt_1_1WTreeView_a394fa47b74f326662b591bff0d484025}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries touch\+Ended\+J\+S\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_a72c4bdeb488adb4d0fff302eddae599e}\label{classWt_1_1WTreeView_a72c4bdeb488adb4d0fff302eddae599e}} 
+class {\bfseries W\+Tree\+View\+Node}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTreeView_ad6299216e44ee232dedea9d6c98b9db8}\label{classWt_1_1WTreeView_ad6299216e44ee232dedea9d6c98b9db8}} 
+class {\bfseries Contents\+Container}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A view class that displays a model as a tree or tree table. 
+
+The view displays data from a \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} in a tree or tree table. It provides incremental rendering, allowing the display of data models of any size efficiently, without excessive use of client-\/ or serverside resources.
+
+The rendering (and editing) of items is handled by a \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}}, by default it uses \mbox{\hyperlink{classWt_1_1WItemDelegate}{W\+Item\+Delegate}} which renders data of all predefined roles (see also \mbox{\hyperlink{classWt_1_1ItemDataRole}{Wt\+::\+Item\+Data\+Role}}), including text, icons, checkboxes, and tooltips.
+
+The view may support editing of items, if the model indicates support (see the Wt\+::\+Item\+Flag\+::\+Editable flag). You can define triggers that initiate editing of an item using \mbox{\hyperlink{classWt_1_1WAbstractItemView_a93d2efc8642a6b9c55b35b7665a13da5}{set\+Edit\+Triggers()}}. The actual editing is provided by the item delegate (you can set an appropriate delegate for one column using \mbox{\hyperlink{classWt_1_1WAbstractItemView_a044f062bbc48a046fa7de64e557f805a}{set\+Item\+Delegate\+For\+Column()}}). Using \mbox{\hyperlink{classWt_1_1WAbstractItemView_a9a5506e031a514696c4050ccc1521b6c}{set\+Edit\+Options()}} you can customize if and how the view deals with multiple editors.
+
+By default, all but the first columns are given a width of 150px, and the first column takes the remaining size. {\bfseries{\mbox{\hyperlink{classNote}{Note}} that this may have as consequence that the first column\textquotesingle{}s size is reduced to 0.}} \mbox{\hyperlink{structColumn}{Column}} widths of all columns, including the first column, can be set through the A\+PI method \mbox{\hyperlink{classWt_1_1WTreeView_a8560c58e4933aa767c27d56168db5d4d}{set\+Column\+Width()}}, and also by the user using handles provided in the header.
+
+Optionally, the treeview may be configured so that the first column is always visible while scrolling through the other columns, which may be convenient if you wish to display a model with many columns. Use set\+Column1\+Fixed() to enable this behaviour.
+
+If the model supports sorting (\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab044b92afa69282ea2e351bcdfd7c0c7}{W\+Abstract\+Item\+Model\+::sort()}}), such as the \mbox{\hyperlink{classWt_1_1WStandardItemModel}{W\+Standard\+Item\+Model}}, then you can enable sorting buttons in the header, using \mbox{\hyperlink{classWt_1_1WAbstractItemView_ae1c86a0f37f97f63aed3b00fd8ffad7c}{set\+Sorting\+Enabled()}}.
+
+You can allow selection on row or item level (using \mbox{\hyperlink{classWt_1_1WAbstractItemView_ad59b47cf9a1c5a65c5adc3e1900ceb5c}{set\+Selection\+Behavior()}}), and selection of single or multiple items (using \mbox{\hyperlink{classWt_1_1WAbstractItemView_af6fcd9761e2f7a3b497d3563c849d320}{set\+Selection\+Mode()}}), and listen for changes in the selection using the \mbox{\hyperlink{classWt_1_1WAbstractItemView_ada37ffbe2d470dd227c8714645f150f0}{selection\+Changed()}} signal.
+
+You may enable drag \& drop support for this view, with awareness of the items in the model. When enabling dragging (see \mbox{\hyperlink{classWt_1_1WAbstractItemView_a0ca99b835708d990b90000917045738e}{set\+Drag\+Enabled()}}), the current selection may be dragged, but only when all items in the selection indicate support for dragging (controlled by the \mbox{\hyperlink{}{Item\+Flag\+::\+Drag\+Enabled}} flag), and if the model indicates a mime-\/type (controlled by \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a22a6c0dc9f4c9a6259a2daac07b78f61}{W\+Abstract\+Item\+Model\+::mime\+Type()}}). Likewise, by enabling support for dropping (see \mbox{\hyperlink{classWt_1_1WAbstractItemView_a1eda46c8e9a21af7f6281e7096af8fbe}{set\+Drops\+Enabled()}}), the treeview may receive a drop event on a particular item, at least if the item indicates support for drops (controlled by the \mbox{\hyperlink{}{Item\+Flag\+::\+Drop\+Enabled}} flag).
+
+You may also react to mouse click events on any item, by connecting to one of the \mbox{\hyperlink{classWt_1_1WAbstractItemView_a3b72d5f8e5b0afdea83e224354d3e91b}{clicked()}} or \mbox{\hyperlink{classWt_1_1WAbstractItemView_a14ac099f58621d66834aa5674ea8ecb5}{double\+Clicked()}} signals.
+
+\doxyparagraph*{Graceful degradation}
+
+The view provides a virtual scrolling behavior which relies on Ajax availability. When Ajax is not available, a page navigation bar is used instead, see \mbox{\hyperlink{classWt_1_1WAbstractItemView_a5dcb8d0f45a3c9b1c9f238a533f77b51}{create\+Page\+Navigation\+Bar()}}. In that case, the widget needs to be given an explicit height using \mbox{\hyperlink{classWt_1_1WTreeView_afc6d07a4ee9c3a3d979ded4da4253c36}{resize()}} which determines the number of rows that are displayed at a time.
+
+A snapshot of the \mbox{\hyperlink{classWt_1_1WTreeView}{W\+Tree\+View}}\+:   
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WTreeView_abe1b839fc999634806df030301422411}\label{classWt_1_1WTreeView_abe1b839fc999634806df030301422411}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!collapse@{collapse}}
+\index{collapse@{collapse}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{collapse()}{collapse()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Tree\+View\+::collapse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption})}
+
+
+
+Collapses a node. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTreeView_a49566dd5cc8d1d0d95bad4783dd4e11a}{set\+Expanded()}}, \mbox{\hyperlink{classWt_1_1WTreeView_a03cd862e9c5dbbfbc126ac627b48592a}{expand()}}
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+until 3.\+3.\+4, selection was removed from within nodes that were collapsed. This (inconsistent) behavior has been removed in 3.\+3.\+4. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WTreeView_ab7c527ce5304cdbe7f5bcb3e51880641}\label{classWt_1_1WTreeView_ab7c527ce5304cdbe7f5bcb3e51880641}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!collapseAll@{collapseAll}}
+\index{collapseAll@{collapseAll}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{collapseAll()}{collapseAll()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Tree\+View\+::collapse\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Collapse all expanded nodes. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTreeView_abe1b839fc999634806df030301422411}{collapse()}}, \mbox{\hyperlink{classWt_1_1WTreeView_a03cd862e9c5dbbfbc126ac627b48592a}{expand()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTreeView_a8d014f2cd6637f5f842d7fe2fff00418}\label{classWt_1_1WTreeView_a8d014f2cd6637f5f842d7fe2fff00418}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!collapsed@{collapsed}}
+\index{collapsed@{collapsed}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{collapsed()}{collapsed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}$>$\& Wt\+::\+W\+Tree\+View\+::collapsed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when a node is collapsed. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTreeView_a49566dd5cc8d1d0d95bad4783dd4e11a}{set\+Expanded()}}, \mbox{\hyperlink{classWt_1_1WTreeView_a96586671660b0e81cc2ae99fff284909}{expanded()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTreeView_a8aca1ea1c8c2278f5a5902824db7da8d}\label{classWt_1_1WTreeView_a8aca1ea1c8c2278f5a5902824db7da8d}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!currentPage@{currentPage}}
+\index{currentPage@{currentPage}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{currentPage()}{currentPage()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Tree\+View\+::current\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the current page. 
+
+When Ajax/\+Java\+Script is not available, the view will use a paging navigation bar to allow scrolling through the data. This returns the current page (between 0 and \mbox{\hyperlink{classWt_1_1WTreeView_ab0a54141d8b01f2e44409ee0525dc682}{page\+Count()}} -\/ 1).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a5dcb8d0f45a3c9b1c9f238a533f77b51}{create\+Page\+Navigation\+Bar()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_a419257bb553d44423d4d4d5325d61ec7}{page\+Changed()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemView_a66b3bd22b9d57d9c466280a2f96b44c3}{Wt\+::\+W\+Abstract\+Item\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WTreeView_aa337178a9fa888530c4ff8ba84c3adf9}\label{classWt_1_1WTreeView_aa337178a9fa888530c4ff8ba84c3adf9}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!enableAjax@{enableAjax}}
+\index{enableAjax@{enableAjax}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{enableAjax()}{enableAjax()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Tree\+View\+::enable\+Ajax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Progresses to an Ajax-\/enabled widget. 
+
+This method is called when the progressive bootstrap method is used, and support for A\+J\+AX has been detected. The default behavior will upgrade the widget\textquotesingle{}s event handling to use A\+J\+AX instead of full page reloads, and propagate the call to its children.
+
+You may want to reimplement this method if you want to make changes to widget when A\+J\+AX is enabled. You should always call the base implementation.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_a46c573a3cd370cb2f83250c99d42b575}{W\+Application\+::enable\+Ajax()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemView_a6530f83b0ed33f0d8d292bae5e46191e}{Wt\+::\+W\+Abstract\+Item\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WTreeView_a03cd862e9c5dbbfbc126ac627b48592a}\label{classWt_1_1WTreeView_a03cd862e9c5dbbfbc126ac627b48592a}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!expand@{expand}}
+\index{expand@{expand}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{expand()}{expand()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Tree\+View\+::expand (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption})}
+
+
+
+Expands a node. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTreeView_a49566dd5cc8d1d0d95bad4783dd4e11a}{set\+Expanded()}}, \mbox{\hyperlink{classWt_1_1WTreeView_abe1b839fc999634806df030301422411}{collapse()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTreeView_a96586671660b0e81cc2ae99fff284909}\label{classWt_1_1WTreeView_a96586671660b0e81cc2ae99fff284909}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!expanded@{expanded}}
+\index{expanded@{expanded}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{expanded()}{expanded()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}$>$\& Wt\+::\+W\+Tree\+View\+::expanded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when a node is expanded. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTreeView_a49566dd5cc8d1d0d95bad4783dd4e11a}{set\+Expanded()}}, \mbox{\hyperlink{classWt_1_1WTreeView_a8d014f2cd6637f5f842d7fe2fff00418}{collapsed()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTreeView_add40d3e05352ae094f6fe2b9c879c2c7}\label{classWt_1_1WTreeView_add40d3e05352ae094f6fe2b9c879c2c7}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!expandToDepth@{expandToDepth}}
+\index{expandToDepth@{expandToDepth}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{expandToDepth()}{expandToDepth()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Tree\+View\+::expand\+To\+Depth (\begin{DoxyParamCaption}\item[{int}]{depth }\end{DoxyParamCaption})}
+
+
+
+Expands all nodes to a depth. 
+
+Expands all nodes to the given {\ttfamily depth}. A depth of 1 corresponds to the top level nodes.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTreeView_a03cd862e9c5dbbfbc126ac627b48592a}{expand()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTreeView_a3810b69fae37be77e5bf70e8cb6723ac}\label{classWt_1_1WTreeView_a3810b69fae37be77e5bf70e8cb6723ac}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!isExpanded@{isExpanded}}
+\index{isExpanded@{isExpanded}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{isExpanded()}{isExpanded()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Tree\+View\+::is\+Expanded (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether a node is expanded. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTreeView_a49566dd5cc8d1d0d95bad4783dd4e11a}{set\+Expanded()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTreeView_aa8f36b17b4ed3722087a9ec7d8c544b1}\label{classWt_1_1WTreeView_aa8f36b17b4ed3722087a9ec7d8c544b1}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!itemWidget@{itemWidget}}
+\index{itemWidget@{itemWidget}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{itemWidget()}{itemWidget()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$\ast$ Wt\+::\+W\+Tree\+View\+::item\+Widget (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the widget that renders an item. 
+
+This returns the widget that renders the given item. This may return 0 if the item is currently not rendered.
+
+This widget has been created by an item delegate, and usually an item delegate is involved when updating it. 
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemView_a5b7d40b94b5254b52417f5cf2200ec30}{Wt\+::\+W\+Abstract\+Item\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WTreeView_ab0a54141d8b01f2e44409ee0525dc682}\label{classWt_1_1WTreeView_ab0a54141d8b01f2e44409ee0525dc682}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!pageCount@{pageCount}}
+\index{pageCount@{pageCount}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{pageCount()}{pageCount()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Tree\+View\+::page\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of pages. 
+
+When Ajax/\+Java\+Script is not available, the view will use a paging navigation bar to allow scrolling through the data. This returns the number of pages currently shown.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a5dcb8d0f45a3c9b1c9f238a533f77b51}{create\+Page\+Navigation\+Bar()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_a419257bb553d44423d4d4d5325d61ec7}{page\+Changed()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemView_a370beb06a2e6c82659756ba63a516b14}{Wt\+::\+W\+Abstract\+Item\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WTreeView_aa452045d5e5671b898b59994aee8112d}\label{classWt_1_1WTreeView_aa452045d5e5671b898b59994aee8112d}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!pageSize@{pageSize}}
+\index{pageSize@{pageSize}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{pageSize()}{pageSize()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Tree\+View\+::page\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the page size. 
+
+When Ajax/\+Java\+Script is not available, the view will use a paging navigation bar to allow scrolling through the data. This returns the number of items per page.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a5dcb8d0f45a3c9b1c9f238a533f77b51}{create\+Page\+Navigation\+Bar()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_a419257bb553d44423d4d4d5325d61ec7}{page\+Changed()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemView_a2cc5d8f54c95a4d8d45c86ea85b428e9}{Wt\+::\+W\+Abstract\+Item\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WTreeView_a1a427771d3095e6a92addf38b9af82b0}\label{classWt_1_1WTreeView_a1a427771d3095e6a92addf38b9af82b0}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!render@{render}}
+\index{render@{render}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Tree\+View\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Renders the widget. 
+
+This function renders the widget (or an update for the widget), after this has been scheduled using \mbox{\hyperlink{classWt_1_1WWidget_a5d3d4edaafa2d7c892a5078f3df4cf11}{schedule\+Render()}}.
+
+The default implementation will render the widget by serializing changes to Java\+Script and H\+T\+ML. You may want to reimplement this widget if you have been postponing some of the layout / rendering implementation until the latest moment possible. In that case you should make sure you call the base implementation however. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WCompositeWidget_aeb7ede8809e2f195a61106a9d5cc9de3}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WTreeView_afc6d07a4ee9c3a3d979ded4da4253c36}\label{classWt_1_1WTreeView_afc6d07a4ee9c3a3d979ded4da4253c36}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!resize@{resize}}
+\index{resize@{resize}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Tree\+View\+::resize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{width,  }\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Resizes the widget. 
+
+Specifies a fixed size for this widget, setting C\+SS {\ttfamily width} and {\ttfamily height} properties. By default a widget has automatic width and height, which sets a size for the widget following C\+SS rules.
+
+When the widget is not managed by a layout manager, the automatic (natural) size of a widget depends on whether they widget is a {\itshape block} or {\itshape inline} widget\+:
+\begin{DoxyItemize}
+\item a {\itshape block} widget takes by default the width of the parent, and the height that it needs based on its contents
+\item an {\itshape inline} widget takes the width and height that it needs based on its contents (possibly wrapping over multiple lines). The width and height of an inline widget cannot be changed (by the letter of C\+SS, although most browsers will react to it in varying ways).
+\end{DoxyItemize}
+
+When inserted in a layout manager, the size set will be used as a widget\textquotesingle{}s preferred size, but the widget may be given a different size by the layout manager based on available space and stretch factors. The actual size given by a layout manager may be retrieved by making the widget \char`\"{}layout size aware\char`\"{}, using \mbox{\hyperlink{classWt_1_1WWidget_a4f83592912a7f8fa4fd35dadde78ee74}{set\+Layout\+Size\+Aware()}}. If you have defined a {\ttfamily \char`\"{}wt\+Resize()\char`\"{}} Java\+Script method for the widget, then this method will also be called.
+
+The default width and height of a widget is \mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WCompositeWidget_a29ea57c8313b5316bbfa5c6d3590ad3a}{width()}}, \mbox{\hyperlink{classWt_1_1WCompositeWidget_a058e81d74cf5290ad7bd484573d1fadf}{height()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WCompositeWidget_a95584ea20561ba00e8c58156a24ba238}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WTreeView_aa640b56fc7f1cd979d833c95257763d2}\label{classWt_1_1WTreeView_aa640b56fc7f1cd979d833c95257763d2}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!rootIsDecorated@{rootIsDecorated}}
+\index{rootIsDecorated@{rootIsDecorated}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{rootIsDecorated()}{rootIsDecorated()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Tree\+View\+::root\+Is\+Decorated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether toplevel items are decorated. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTreeView_aef8576ebdf2089edc259362a15e2f750}{set\+Root\+Is\+Decorated()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTreeView_a54c8bac6140804b1cd57fafcf2981a48}\label{classWt_1_1WTreeView_a54c8bac6140804b1cd57fafcf2981a48}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!scrolled@{scrolled}}
+\index{scrolled@{scrolled}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{scrolled()}{scrolled()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$\mbox{\hyperlink{classWt_1_1WScrollEvent}{W\+Scroll\+Event}}$>$\& Wt\+::\+W\+Tree\+View\+::scrolled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Signal emitted when scrolling. 
+
+\begin{DoxyNote}{Note}
+Works only if ajax is available. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemView_a1a9343a886e6131a225171173cec1d5f}{Wt\+::\+W\+Abstract\+Item\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WTreeView_aa299ad97708c19178acee2a8e01aceea}\label{classWt_1_1WTreeView_aa299ad97708c19178acee2a8e01aceea}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!scrollTo@{scrollTo}}
+\index{scrollTo@{scrollTo}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{scrollTo()}{scrollTo()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Tree\+View\+::scroll\+To (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{\mbox{\hyperlink{classWt_ae0fdcefe4b1fefe747b5f423c020334a}{Scroll\+Hint}}}]{hint = {\ttfamily ScrollHint\+:\+:EnsureVisible} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Scrolls the view to an item. 
+
+Scrolls the view to ensure that the item which represents the provided {\ttfamily index} is visible. A {\ttfamily hint} may indicate how the item should appear in the viewport (if possible).
+
+\begin{DoxyNote}{Note}
+Currently only implemented to scroll to the correct row, not taking into account the column. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemView_afa8888e527008787aae1d3d68554afeb}{Wt\+::\+W\+Abstract\+Item\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WTreeView_a8928545beb57de0b46fc686bac27f75a}\label{classWt_1_1WTreeView_a8928545beb57de0b46fc686bac27f75a}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!setAlternatingRowColors@{setAlternatingRowColors}}
+\index{setAlternatingRowColors@{setAlternatingRowColors}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{setAlternatingRowColors()}{setAlternatingRowColors()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Tree\+View\+::set\+Alternating\+Row\+Colors (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets if alternating row colors are to be used. 
+
+Configure whether rows get alternating background colors, defined by the current C\+SS theme.
+
+The default value is {\ttfamily false}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemView_af20325d6c50955ae8b0d25f449db2508}{Wt\+::\+W\+Abstract\+Item\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WTreeView_a825cdb596ad342b12e0c3639fa29590b}\label{classWt_1_1WTreeView_a825cdb596ad342b12e0c3639fa29590b}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!setColumnHidden@{setColumnHidden}}
+\index{setColumnHidden@{setColumnHidden}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{setColumnHidden()}{setColumnHidden()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Tree\+View\+::set\+Column\+Hidden (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{bool}]{hide }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Changes the visibility of a column. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a6bfefdba90116140771260c3a016c25d}{is\+Column\+Hidden()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemView_abf714e46ce657ffb16a6897e78a0ed13}{Wt\+::\+W\+Abstract\+Item\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WTreeView_a8560c58e4933aa767c27d56168db5d4d}\label{classWt_1_1WTreeView_a8560c58e4933aa767c27d56168db5d4d}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!setColumnWidth@{setColumnWidth}}
+\index{setColumnWidth@{setColumnWidth}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{setColumnWidth()}{setColumnWidth()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Tree\+View\+::set\+Column\+Width (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the column width. 
+
+For a model with \mbox{\hyperlink{classWt_1_1WAbstractItemModel_abcf7912a95a0a60f8e9b1c37d30b8383}{column\+Count()}} == {\ttfamily N}, the initial width of columns 1..{\ttfamily N} is set to 150 pixels, and column 0 will take all remaining space.
+
+\begin{DoxyNote}{Note}
+The actual space occupied by each column is the column width augmented by 7 pixels for internal padding and a border.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTreeView_a1bd83d1f48a11dbc731f56a16d420148}{set\+Row\+Height()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemView_aa80794ca5438e2b9971e8f85919353fd}{Wt\+::\+W\+Abstract\+Item\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WTreeView_a1b175a443fadcb4b8f4373d2663b97f3}\label{classWt_1_1WTreeView_a1b175a443fadcb4b8f4373d2663b97f3}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!setCurrentPage@{setCurrentPage}}
+\index{setCurrentPage@{setCurrentPage}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{setCurrentPage()}{setCurrentPage()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Tree\+View\+::set\+Current\+Page (\begin{DoxyParamCaption}\item[{int}]{page }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the current page. 
+
+When Ajax/\+Java\+Script is not available, the view will use a paging navigation bar to allow scrolling through the data. This method can be used to change the current page.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a5dcb8d0f45a3c9b1c9f238a533f77b51}{create\+Page\+Navigation\+Bar()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemView_a419257bb553d44423d4d4d5325d61ec7}{page\+Changed()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemView_a71585006c31128c3d606cc976b865008}{Wt\+::\+W\+Abstract\+Item\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WTreeView_a49566dd5cc8d1d0d95bad4783dd4e11a}\label{classWt_1_1WTreeView_a49566dd5cc8d1d0d95bad4783dd4e11a}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!setExpanded@{setExpanded}}
+\index{setExpanded@{setExpanded}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{setExpanded()}{setExpanded()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Tree\+View\+::set\+Expanded (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{,  }\item[{bool}]{expanded }\end{DoxyParamCaption})}
+
+
+
+Expands or collapses a node. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTreeView_a03cd862e9c5dbbfbc126ac627b48592a}{expand()}}, \mbox{\hyperlink{classWt_1_1WTreeView_abe1b839fc999634806df030301422411}{collapse()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTreeView_abcc10f057232621ef8b03b3caecc7a3b}\label{classWt_1_1WTreeView_abcc10f057232621ef8b03b3caecc7a3b}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!setHeaderHeight@{setHeaderHeight}}
+\index{setHeaderHeight@{setHeaderHeight}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{setHeaderHeight()}{setHeaderHeight()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+View\+::set\+Header\+Height}
+
+
+
+Sets the header height. 
+
+The default value is 20 pixels.
+
+\begin{DoxyNote}{Note}
+The height must be specified in Length\+Unit\+::\+Pixel units. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WTreeView_a96effd932eafc395ca91ce4510d41b7a}\label{classWt_1_1WTreeView_a96effd932eafc395ca91ce4510d41b7a}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!setHeaderHeight@{setHeaderHeight}}
+\index{setHeaderHeight@{setHeaderHeight}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{setHeaderHeight()}{setHeaderHeight()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Tree\+View\+::set\+Header\+Height (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the header height. 
+
+The default value is 20 pixels.
+
+\begin{DoxyNote}{Note}
+The height must be specified in Length\+Unit\+::\+Pixel units. 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemView_abcc10f057232621ef8b03b3caecc7a3b}{Wt\+::\+W\+Abstract\+Item\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WTreeView_a99974e8fc9ce45f2952280e1174aa0f4}\label{classWt_1_1WTreeView_a99974e8fc9ce45f2952280e1174aa0f4}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!setId@{setId}}
+\index{setId@{setId}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Tree\+View\+::set\+Id (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the C\+SS Id. 
+
+Sets a custom Id. \mbox{\hyperlink{classNote}{Note}} that the Id must be unique across the whole widget tree, can only be set right after construction and cannot be changed. This is mostly useful for in tests using a test plan that manipulates D\+OM elements by Id.
+
+By default, auto-\/generated id\textquotesingle{}s are used.
+
+\begin{DoxyNote}{Note}
+An id must start with a letter (\mbox{[}A-\/\+Za-\/z\mbox{]}), followed by one or more letters, digits (\mbox{[}0-\/9\mbox{]}), hyphens (\char`\"{}-\/\char`\"{}), underscores (\char`\"{}\+\_\+\char`\"{}), colons (\char`\"{}\+:\char`\"{}), and periods (\char`\"{}.\char`\"{}).
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+We recommend that you leave the id of a widget unchanged. Wt uses the id to identify widgets in the Java\+Script it generates, and this can often leads to bugs. If you do change the id, {\bfseries{only}} change the id right after widget construction. However, usually there\textquotesingle{}s a more preferable alternative, like setting the object name (\mbox{\hyperlink{classWt_1_1WObject_a875fda02eff6260ab665647f7215e262}{W\+Object\+::set\+Object\+Name}}), or adding style classes (\mbox{\hyperlink{classWt_1_1WWidget_a8a8f4537dd93462c063cb02cddec2ea3}{W\+Widget\+::add\+Style\+Class}}).
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WObject_a9f34b0c9ec343cf467f8b237d3256792}{W\+Object\+::id()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WCompositeWidget_a37e6c2b356362866dba89da9e4082bec}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WTreeView_abc6f9eca65cdb8951a5a182b4eeedf85}\label{classWt_1_1WTreeView_abc6f9eca65cdb8951a5a182b4eeedf85}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!setModel@{setModel}}
+\index{setModel@{setModel}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{setModel()}{setModel()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Tree\+View\+::set\+Model (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \&}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the model. 
+
+The View will display data of the given {\ttfamily model} and changes in the model are reflected by the View.
+
+The initial model is {\ttfamily 0}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemView_a3f8ecef3dac343faa00efc801e4e4c1f}{set\+Root\+Index()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemView_af09c376655e2f4326c2b8ac7bf7ec78b}{Wt\+::\+W\+Abstract\+Item\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WTreeView_aef8576ebdf2089edc259362a15e2f750}\label{classWt_1_1WTreeView_aef8576ebdf2089edc259362a15e2f750}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!setRootIsDecorated@{setRootIsDecorated}}
+\index{setRootIsDecorated@{setRootIsDecorated}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{setRootIsDecorated()}{setRootIsDecorated()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Tree\+View\+::set\+Root\+Is\+Decorated (\begin{DoxyParamCaption}\item[{bool}]{show }\end{DoxyParamCaption})}
+
+
+
+Sets whether toplevel items are decorated. 
+
+By default, top level nodes have expand/collapse and other lines to display their linkage and offspring, like any node.
+
+By setting {\ttfamily show} to {\ttfamily false}, you can hide these decorations for root nodes, and in this way mimic a plain list. You could also consider using a \mbox{\hyperlink{classWt_1_1WTableView}{W\+Table\+View}} instead. \mbox{\Hypertarget{classWt_1_1WTreeView_ae5f21d76b7905241f30023719ad8a9d0}\label{classWt_1_1WTreeView_ae5f21d76b7905241f30023719ad8a9d0}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!setRowHeaderCount@{setRowHeaderCount}}
+\index{setRowHeaderCount@{setRowHeaderCount}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{setRowHeaderCount()}{setRowHeaderCount()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Tree\+View\+::set\+Row\+Header\+Count (\begin{DoxyParamCaption}\item[{int}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Configures the number of columns that are used as row headers. 
+
+An item view does not use the vertical header data from the model in any way, but instead you can configure data in the first column(s) to be used as a row headers.
+
+These columns will not scroll horizontally together with the rest of the model.
+
+The default value is 0.
+
+\begin{DoxyNote}{Note}
+Currently, this property must be set before any other settings of the view and only a value of 0 or 1 is supported. 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemView_a296b872601d0e8dcf8dac0411ef5040b}{Wt\+::\+W\+Abstract\+Item\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WTreeView_a1bd83d1f48a11dbc731f56a16d420148}\label{classWt_1_1WTreeView_a1bd83d1f48a11dbc731f56a16d420148}} 
+\index{Wt::WTreeView@{Wt::WTreeView}!setRowHeight@{setRowHeight}}
+\index{setRowHeight@{setRowHeight}!Wt::WTreeView@{Wt::WTreeView}}
+\doxysubsubsection{\texorpdfstring{setRowHeight()}{setRowHeight()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Tree\+View\+::set\+Row\+Height (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{row\+Height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the row height. 
+
+The view renders all rows with a same height. This method configures this row height.
+
+The default value is 20 pixels.
+
+\begin{DoxyNote}{Note}
+The height must be specified in Length\+Unit\+::\+Pixel units.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTreeView_a8560c58e4933aa767c27d56168db5d4d}{set\+Column\+Width()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemView_ae487074120d54fa6d961b9760a13b990}{Wt\+::\+W\+Abstract\+Item\+View}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Tree\+View.\+h\end{DoxyCompactItemize}

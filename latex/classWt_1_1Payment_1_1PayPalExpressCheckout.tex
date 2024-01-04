@@ -1,0 +1,312 @@
+\hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout}{}\doxysection{Wt\+::Payment\+::Pay\+Pal\+Express\+Checkout Class Reference}
+\label{classWt_1_1Payment_1_1PayPalExpressCheckout}\index{Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}}
+
+
+A paypal express checkout process.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Payment/\+Paypal$>$}
+
+
+
+Inheritance diagram for Wt\+::Payment\+::Pay\+Pal\+Express\+Checkout\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Payment\+::Pay\+Pal\+Express\+Checkout\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_a1cd7acb78f0708359291d2aaebeb9c5a}{set\+Payment\+Action}} (\mbox{\hyperlink{namespaceWt_1_1Payment_a64159a650673a19aa6f0314520a6a132}{Payment\+Action}} action)
+\begin{DoxyCompactList}\small\item\em Sets the payment action. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceWt_1_1Payment_a64159a650673a19aa6f0314520a6a132}{Payment\+Action}} \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_a0e740310e10527c42fd3c57160f377ca}{payment\+Action}} () const
+\begin{DoxyCompactList}\small\item\em Returns the payment action. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_a7b81e081261bdba4813224e0f0d57e16}{set\+Parameter}} (const std\+::string \&name, const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Adds or overrides a Pay\+Pal A\+PI request parameter. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1Payment_1_1Customer}{Customer}} \& \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_a5acbaea64633875d7b93c5fc57618bde}{customer}} () const
+\begin{DoxyCompactList}\small\item\em Returns the customer information. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1Payment_1_1Order}{Order}} \& \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_a4c912e3b416ee51a8b366a2b3ba58eba}{order}} () const
+\begin{DoxyCompactList}\small\item\em Returns the order information. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1Payment_1_1Result}{Result}} $>$ \& \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_aa4ca7442b2cf2c270e41dd38d28688b1}{setup}} ()
+\begin{DoxyCompactList}\small\item\em Setup the transaction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_a2ad80f81c4915cb60d23f37747e435f3}{start\+Payment}} ()
+\begin{DoxyCompactList}\small\item\em Start the payment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1Payment_1_1Result}{Result}} $>$ \& \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_abb8b7f11667c3f42a68356fcad990f64}{update\+Customer\+Details}} ()
+\begin{DoxyCompactList}\small\item\em Updates customer information from Pay\+Pal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1Payment_1_1Result}{Result}} $>$ \& \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_ae00cfd060907ec6418fd8c38b03f82fd}{complete\+Payment}} (const \mbox{\hyperlink{classWt_1_1Payment_1_1Money}{Money}} \&total\+Amount)
+\begin{DoxyCompactList}\small\item\em Completes the payment. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1Payment_1_1Approval}{Approval}} $>$ \& \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_a955834c610713290246f0c0905779255}{payment\+Approved}} ()
+\begin{DoxyCompactList}\small\item\em The payment approval signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a920000f037b2cd8df8a98fca62c835a9}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a920000f037b2cd8df8a98fca62c835a9}} 
+typedef std\+::map$<$ std\+::string, std\+::string $>$ {\bfseries String\+Map}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a3147ba76dd74969abffce138be596d2f}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a3147ba76dd74969abffce138be596d2f}} 
+{\bfseries Pay\+Pal\+Express\+Checkout} (\mbox{\hyperlink{classWt_1_1Payment_1_1PayPalService}{Pay\+Pal\+Service}} \&service, const \mbox{\hyperlink{classWt_1_1Payment_1_1Customer}{Customer}} \&\mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_a5acbaea64633875d7b93c5fc57618bde}{customer}}, const \mbox{\hyperlink{classWt_1_1Payment_1_1Order}{Order}} \&\mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_a4c912e3b416ee51a8b366a2b3ba58eba}{order}})
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a209e0909721a42fb038827dda55dfc90}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a209e0909721a42fb038827dda55dfc90}} 
+std\+::string {\bfseries encode\+Message} (const std\+::map$<$ std\+::string, std\+::string $>$ \&map) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_ac2ad7c1a4ca6473bfc82bc0495b1296e}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_ac2ad7c1a4ca6473bfc82bc0495b1296e}} 
+void {\bfseries add\+User\+Fields} (std\+::map$<$ std\+::string, std\+::string $>$ \&map)
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a0bf4263d214a68be5d23a83bab94392b}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a0bf4263d214a68be5d23a83bab94392b}} 
+void {\bfseries add\+Edited\+Parameters} (std\+::map$<$ std\+::string, std\+::string $>$ \&map)
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a7564902aa4da74e4c606385b0fd82d53}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a7564902aa4da74e4c606385b0fd82d53}} 
+void {\bfseries create\+Setup\+Message} (std\+::map$<$ std\+::string, std\+::string $>$ \&map)
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a0bbcbed3baf3472fc7955e6e6e35143f}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a0bbcbed3baf3472fc7955e6e6e35143f}} 
+std\+::string {\bfseries to\+String} (\mbox{\hyperlink{namespaceWt_1_1Payment_a64159a650673a19aa6f0314520a6a132}{Payment\+Action}} action)
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a6067d20196a1974ede27e5512fa91306}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a6067d20196a1974ede27e5512fa91306}} 
+std\+::map$<$ std\+::string, std\+::string $>$ {\bfseries parameters\+Map\+To\+Map} (\mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Http\+::\+Parameter\+Map}} \&map)
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_af657491d92a7a545569349e14e55dc1f}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_af657491d92a7a545569349e14e55dc1f}} 
+void {\bfseries handle\+Setup} (Wt\+::\+Asio\+Wrapper\+::error\+\_\+code err, const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Http\+::\+Message}} \&response)
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_ad4896d39b13c1b94cd1c8124c7db9155}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_ad4896d39b13c1b94cd1c8124c7db9155}} 
+void {\bfseries set\+Token} (const std\+::string \&url)
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a8c5ab2d09c8a43a9f99a12ebcf7db2e7}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a8c5ab2d09c8a43a9f99a12ebcf7db2e7}} 
+std\+::string {\bfseries cancel\+Url} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a4d1b05ef406735e28d1c8d5bcd8678a6}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a4d1b05ef406735e28d1c8d5bcd8678a6}} 
+std\+::string {\bfseries return\+Url} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_abeb986faf00171a1fafc9fb9279442a1}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_abeb986faf00171a1fafc9fb9279442a1}} 
+std\+::string {\bfseries payment\+Url} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_ad742b73b8fdc61ac1071416c57212d3e}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_ad742b73b8fdc61ac1071416c57212d3e}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ int $>$ \& {\bfseries redirected} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a12c0d0e9e971d018d72e09763863aad7}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a12c0d0e9e971d018d72e09763863aad7}} 
+void {\bfseries set\+Payment\+Accepted} (bool accepted, const std\+::string \&payer\+Id)
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_aa12b1b4582c8f45c7f6d58eb6c4ee8ea}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_aa12b1b4582c8f45c7f6d58eb6c4ee8ea}} 
+void {\bfseries on\+Redirect} (int result)
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a810149d806d7cabbd11f8d59ea397bca}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a810149d806d7cabbd11f8d59ea397bca}} 
+void {\bfseries handle\+Internal\+Path} (const std\+::string \&internal\+Path)
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_ae653ffb474df369b38003c61fb6f108d}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_ae653ffb474df369b38003c61fb6f108d}} 
+void {\bfseries handle\+Customer\+Details} (Wt\+::\+Asio\+Wrapper\+::error\+\_\+code err, const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Http\+::\+Message}} \&response)
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a5250ff2fff10cfe9e0c27c2f8cc6c4a2}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a5250ff2fff10cfe9e0c27c2f8cc6c4a2}} 
+std\+::string {\bfseries prameter\+Value} (const std\+::string \&parameter\+Name, \mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Http\+::\+Parameter\+Map}} \&params)
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a145a50951f92a2fafaa89c2866b238ed}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a145a50951f92a2fafaa89c2866b238ed}} 
+void {\bfseries save\+Customer\+Details} (\mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Http\+::\+Parameter\+Map}} \&params)
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a616f05824f3d5f898c0e33b4c4bca82e}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a616f05824f3d5f898c0e33b4c4bca82e}} 
+void {\bfseries handle\+Complete\+Payment} (Wt\+::\+Asio\+Wrapper\+::error\+\_\+code err, const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Http\+::\+Message}} \&response)
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a3d2b74c639d3ef85320b234da4c43370}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a3d2b74c639d3ef85320b234da4c43370}} 
+\mbox{\hyperlink{classWt_1_1Payment_1_1Result}{Result}} {\bfseries test\+Message} (Wt\+::\+Asio\+Wrapper\+::error\+\_\+code err, const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Http\+::\+Message}} \&response)
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_ac4beb412f7a2351f7d78d418cf523422}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_ac4beb412f7a2351f7d78d418cf523422}} 
+void {\bfseries print\+Message} (\mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Http\+::\+Parameter\+Map}} \&params) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_ad050c6472e7f55017072d6af5011fd98}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_ad050c6472e7f55017072d6af5011fd98}} 
+std\+::string {\bfseries message\+To\+String} (\mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Http\+::\+Parameter\+Map}} \&params) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a9c678376945ebcd9339fdfdd7ca27bff}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a9c678376945ebcd9339fdfdd7ca27bff}} 
+Impl $\ast$ {\bfseries impl\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a5a588754556eb33602617361e854097d}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a5a588754556eb33602617361e854097d}} 
+class {\bfseries Pay\+Pal\+Service}
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a0ae4345e58955bd9fbc922ec2051463d}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a0ae4345e58955bd9fbc922ec2051463d}} 
+class {\bfseries Pay\+Pal\+Redirect\+Resource}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A paypal express checkout process. 
+
+This implements the Pay\+Pal Express Checkout process.
+
+For more information about the Pay\+Pal A\+PI see\+: \href{https://cms.paypal.com/us/cgi-bin/?cmd=_render-content&content_ID=developer/e_howto_api_ECGettingStarted}{\texttt{ https\+://cms.\+paypal.\+com/us/cgi-\/bin/?cmd=\+\_\+render-\/content\&content\+\_\+\+I\+D=developer/e\+\_\+howto\+\_\+api\+\_\+\+E\+C\+Getting\+Started}}
+
+Use flow\+:
+\begin{DoxyEnumerate}
+\item use \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalService}{Pay\+Pal\+Service}} to create a \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout}{Pay\+Pal\+Express\+Checkout}} instance.
+\item \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_aa4ca7442b2cf2c270e41dd38d28688b1}{setup()}} -\/ sends Set\+Express\+Checkout A\+PI call returns a result signal.
+\item \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_a2ad80f81c4915cb60d23f37747e435f3}{start\+Payment()}} -\/ Redirects to Pay\+Pal. Use it after receiving the \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_aa4ca7442b2cf2c270e41dd38d28688b1}{setup()}} result signal.
+\item payment\+Approved signal will be emitted with the result of Set\+Express\+Checkout A\+PI call.
+\item \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_abb8b7f11667c3f42a68356fcad990f64}{update\+Customer\+Details()}} -\/ Get\+Express\+Checkout\+Details A\+PI call returns a result signal.
+\item \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_ae00cfd060907ec6418fd8c38b03f82fd}{complete\+Payment()}} -\/ Do\+Express\+Checkout\+Payment A\+PI call returns a result signal.
+\end{DoxyEnumerate}
+
+For an example, see the paypal feature example. This example reads the necessary variables from the wt\+\_\+config.\+xml file.
+
+For the api server url you should use A\+PI signature with the S\+O\+AP format. More information about the necessary url\textquotesingle{}s and S\+O\+AP\+: \href{https://developer.paypal.com/docs/classic/api/endpoints/}{\texttt{ https\+://developer.\+paypal.\+com/docs/classic/api/endpoints/}} and \href{https://developer.paypal.com/docs/integration/direct/identity/seamless-checkout/\#nvp-soap-credentials}{\texttt{ https\+://developer.\+paypal.\+com/docs/integration/direct/identity/seamless-\/checkout/\#nvp-\/soap-\/credentials}}.
+
+The login credentials can be found in a paypal business account. You can create a sandbox test account by following the documentantion\+: \href{https://developer.paypal.com/docs/classic/lifecycle/sb_create-accounts}{\texttt{ https\+://developer.\+paypal.\+com/docs/classic/lifecycle/sb\+\_\+create-\/accounts}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Payment_1_1PayPalService}{Pay\+Pal\+Service}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_ae00cfd060907ec6418fd8c38b03f82fd}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_ae00cfd060907ec6418fd8c38b03f82fd}} 
+\index{Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}!completePayment@{completePayment}}
+\index{completePayment@{completePayment}!Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}}
+\doxysubsubsection{\texorpdfstring{completePayment()}{completePayment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1Payment_1_1Result}{Result}}$>$\& Wt\+::\+Payment\+::\+Pay\+Pal\+Express\+Checkout\+::complete\+Payment (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Payment_1_1Money}{Money}} \&}]{total\+Amount }\end{DoxyParamCaption})}
+
+
+
+Completes the payment. 
+
+This is the last step of a Pay\+Pal checkout, which uses the Pay\+Pal Do\+Express\+Checkout\+Payment A\+PI call to confirm the payment.
+
+This may update the exact amount (for example to reflect accurate shipping information knowing the customer\textquotesingle{}s shipping address).
+
+This is an asynchronous call, which returns a signal that is emitted when the call has finished. \mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a5acbaea64633875d7b93c5fc57618bde}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a5acbaea64633875d7b93c5fc57618bde}} 
+\index{Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}!customer@{customer}}
+\index{customer@{customer}!Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}}
+\doxysubsubsection{\texorpdfstring{customer()}{customer()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Payment_1_1Customer}{Customer}}\& Wt\+::\+Payment\+::\+Pay\+Pal\+Express\+Checkout\+::customer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the customer information. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Payment_1_1Customer}{Customer}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a4c912e3b416ee51a8b366a2b3ba58eba}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a4c912e3b416ee51a8b366a2b3ba58eba}} 
+\index{Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}!order@{order}}
+\index{order@{order}!Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}}
+\doxysubsubsection{\texorpdfstring{order()}{order()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Payment_1_1Order}{Order}}\& Wt\+::\+Payment\+::\+Pay\+Pal\+Express\+Checkout\+::order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the order information. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Payment_1_1Order}{Order}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a0e740310e10527c42fd3c57160f377ca}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a0e740310e10527c42fd3c57160f377ca}} 
+\index{Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}!paymentAction@{paymentAction}}
+\index{paymentAction@{paymentAction}!Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}}
+\doxysubsubsection{\texorpdfstring{paymentAction()}{paymentAction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceWt_1_1Payment_a64159a650673a19aa6f0314520a6a132}{Payment\+Action}} Wt\+::\+Payment\+::\+Pay\+Pal\+Express\+Checkout\+::payment\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the payment action. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_a1cd7acb78f0708359291d2aaebeb9c5a}{set\+Payment\+Action()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a955834c610713290246f0c0905779255}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a955834c610713290246f0c0905779255}} 
+\index{Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}!paymentApproved@{paymentApproved}}
+\index{paymentApproved@{paymentApproved}!Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}}
+\doxysubsubsection{\texorpdfstring{paymentApproved()}{paymentApproved()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1Payment_1_1Approval}{Approval}}$>$\& Wt\+::\+Payment\+::\+Pay\+Pal\+Express\+Checkout\+::payment\+Approved (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The payment approval signal. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_a2ad80f81c4915cb60d23f37747e435f3}{start\+Payment()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a7b81e081261bdba4813224e0f0d57e16}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a7b81e081261bdba4813224e0f0d57e16}} 
+\index{Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}!setParameter@{setParameter}}
+\index{setParameter@{setParameter}!Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}}
+\doxysubsubsection{\texorpdfstring{setParameter()}{setParameter()}}
+{\footnotesize\ttfamily void Wt\+::\+Payment\+::\+Pay\+Pal\+Express\+Checkout\+::set\+Parameter (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Adds or overrides a Pay\+Pal A\+PI request parameter. 
+
+If value is empty, then this will remove a request parameter.
+
+Useful use examples\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \textcolor{comment}{//send to paypal -\/ \&REQCONFIRMSHIPPING=1}}
+\DoxyCodeLine{ \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_a7b81e081261bdba4813224e0f0d57e16}{setParameter}}(\textcolor{stringliteral}{"REQCONFIRMSHIPPING"}, 1);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//send to paypal -\/ \&NOSHIPPING=1}}
+\DoxyCodeLine{ \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_a7b81e081261bdba4813224e0f0d57e16}{setParameter}}(\textcolor{stringliteral}{"NOSHIPPING"}, 1);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//send to paypal -\/ \&LOGOIMG=https://www.../logo.gif}}
+\DoxyCodeLine{ \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_a7b81e081261bdba4813224e0f0d57e16}{setParameter}}(\textcolor{stringliteral}{"LOGOIMG"}, \textcolor{stringliteral}{"https://www.../logo.gif"});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//send to paypal -\/ \&CARTBORDERCOLOR=00CD}}
+\DoxyCodeLine{ \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_a7b81e081261bdba4813224e0f0d57e16}{setParameter}}(\textcolor{stringliteral}{"CARTBORDERCOLOR"}, \textcolor{stringliteral}{"00CD"});}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a1cd7acb78f0708359291d2aaebeb9c5a}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a1cd7acb78f0708359291d2aaebeb9c5a}} 
+\index{Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}!setPaymentAction@{setPaymentAction}}
+\index{setPaymentAction@{setPaymentAction}!Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}}
+\doxysubsubsection{\texorpdfstring{setPaymentAction()}{setPaymentAction()}}
+{\footnotesize\ttfamily void Wt\+::\+Payment\+::\+Pay\+Pal\+Express\+Checkout\+::set\+Payment\+Action (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWt_1_1Payment_a64159a650673a19aa6f0314520a6a132}{Payment\+Action}}}]{action }\end{DoxyParamCaption})}
+
+
+
+Sets the payment action. 
+
+The default payment action is Sale\+Action. \mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_aa4ca7442b2cf2c270e41dd38d28688b1}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_aa4ca7442b2cf2c270e41dd38d28688b1}} 
+\index{Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}!setup@{setup}}
+\index{setup@{setup}!Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1Payment_1_1Result}{Result}}$>$\& Wt\+::\+Payment\+::\+Pay\+Pal\+Express\+Checkout\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Setup the transaction. 
+
+This uses the Pay\+Pal Set\+Express\+Checkout A\+PI call to initiate the payment process, preparing things for a subsequent call to \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_a2ad80f81c4915cb60d23f37747e435f3}{start\+Payment()}}.
+
+This is an asynchronous call, which returns a signal that is emitted when the call has finished. \mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_a2ad80f81c4915cb60d23f37747e435f3}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_a2ad80f81c4915cb60d23f37747e435f3}} 
+\index{Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}!startPayment@{startPayment}}
+\index{startPayment@{startPayment}!Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}}
+\doxysubsubsection{\texorpdfstring{startPayment()}{startPayment()}}
+{\footnotesize\ttfamily void Wt\+::\+Payment\+::\+Pay\+Pal\+Express\+Checkout\+::start\+Payment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Start the payment. 
+
+This redirects to Pay\+Pal. It should be directly connected to a clicked event (on the Pay\+Pal button), to allow a Java\+Script popup window to be used.
+
+This is an asynchronous call, whose result will be indicated using the \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_a955834c610713290246f0c0905779255}{payment\+Approved()}} signal. \mbox{\Hypertarget{classWt_1_1Payment_1_1PayPalExpressCheckout_abb8b7f11667c3f42a68356fcad990f64}\label{classWt_1_1Payment_1_1PayPalExpressCheckout_abb8b7f11667c3f42a68356fcad990f64}} 
+\index{Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}!updateCustomerDetails@{updateCustomerDetails}}
+\index{updateCustomerDetails@{updateCustomerDetails}!Wt::Payment::PayPalExpressCheckout@{Wt::Payment::PayPalExpressCheckout}}
+\doxysubsubsection{\texorpdfstring{updateCustomerDetails()}{updateCustomerDetails()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1Payment_1_1Result}{Result}}$>$\& Wt\+::\+Payment\+::\+Pay\+Pal\+Express\+Checkout\+::update\+Customer\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates customer information from Pay\+Pal. 
+
+This fetches customer information that is kept at Pay\+Pal for the current user. This call is optional, and can be used only after the user approved the payment (see \mbox{\hyperlink{classWt_1_1Payment_1_1PayPalExpressCheckout_a955834c610713290246f0c0905779255}{payment\+Approved()}}).
+
+This uses the Pay\+Pal Get\+Express\+Checkout\+Details A\+PI call.
+
+This is an asynchronous call, which returns a signal that is emitted when the call has finished. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Payment/Pay\+Pal.\+h\end{DoxyCompactItemize}

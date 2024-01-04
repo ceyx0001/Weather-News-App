@@ -1,0 +1,212 @@
+\hypertarget{classhttp_1_1server_1_1Reply}{}\doxysection{http\+::server\+::Reply Class Reference}
+\label{classhttp_1_1server_1_1Reply}\index{http::server::Reply@{http::server::Reply}}
+
+
+Inheritance diagram for http\+::server\+::Reply\+:
+% FIG 0
+
+
+Collaboration diagram for http\+::server\+::Reply\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_ab6529168e6ec603267162e0545331b19}\label{classhttp_1_1server_1_1Reply_ab6529168e6ec603267162e0545331b19}} 
+enum {\bfseries status\+\_\+type} \{ \newline
+{\bfseries no\+\_\+status} = 0, 
+{\bfseries switching\+\_\+protocols} = 101, 
+{\bfseries ok} = 200, 
+{\bfseries created} = 201, 
+\newline
+{\bfseries accepted} = 202, 
+{\bfseries no\+\_\+content} = 204, 
+{\bfseries partial\+\_\+content} = 206, 
+{\bfseries multiple\+\_\+choices} = 300, 
+\newline
+{\bfseries moved\+\_\+permanently} = 301, 
+{\bfseries found} = 302, 
+{\bfseries see\+\_\+other} = 303, 
+{\bfseries not\+\_\+modified} = 304, 
+\newline
+{\bfseries moved\+\_\+temporarily} = 307, 
+{\bfseries bad\+\_\+request} = 400, 
+{\bfseries unauthorized} = 401, 
+{\bfseries forbidden} = 403, 
+\newline
+{\bfseries not\+\_\+found} = 404, 
+{\bfseries request\+\_\+entity\+\_\+too\+\_\+large} = 413, 
+{\bfseries requested\+\_\+range\+\_\+not\+\_\+satisfiable} = 416, 
+{\bfseries internal\+\_\+server\+\_\+error} = 500, 
+\newline
+{\bfseries not\+\_\+implemented} = 501, 
+{\bfseries bad\+\_\+gateway} = 502, 
+{\bfseries service\+\_\+unavailable} = 503, 
+{\bfseries version\+\_\+not\+\_\+supported} = 505
+ \}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a4dacd56971b690e1c600976abc78e122}\label{classhttp_1_1server_1_1Reply_a4dacd56971b690e1c600976abc78e122}} 
+enum {\bfseries ws\+\_\+opcode} \{ \newline
+{\bfseries continuation} = 0x0, 
+{\bfseries text\+\_\+frame} = 0x1, 
+{\bfseries binary\+\_\+frame} = 0x2, 
+{\bfseries connection\+\_\+close} = 0x8, 
+\newline
+{\bfseries ping} = 0x9, 
+{\bfseries pong} = 0xA
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a68b0e28ed00e082a17b951a4dd757ef3}\label{classhttp_1_1server_1_1Reply_a68b0e28ed00e082a17b951a4dd757ef3}} 
+{\bfseries Reply} (\mbox{\hyperlink{classhttp_1_1server_1_1Request}{Request}} \&request, const \mbox{\hyperlink{classhttp_1_1server_1_1Configuration}{Configuration}} \&config)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a3e375b208fc6c467619495388194d79e}\label{classhttp_1_1server_1_1Reply_a3e375b208fc6c467619495388194d79e}} 
+virtual void {\bfseries reset} (const \mbox{\hyperlink{classWt_1_1EntryPoint}{Wt\+::\+Entry\+Point}} $\ast$ep)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a6d01dac59fade810d6c412d09400d833}\label{classhttp_1_1server_1_1Reply_a6d01dac59fade810d6c412d09400d833}} 
+virtual void {\bfseries write\+Done} (bool success)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a10c5b467a36e20aba44e431421d84a9c}\label{classhttp_1_1server_1_1Reply_a10c5b467a36e20aba44e431421d84a9c}} 
+virtual bool {\bfseries consume\+Data} (const char $\ast$begin, const char $\ast$end, Request\+::\+State state)=0
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a3233bb2770fc54ecf7fa3b9fa7b0c7f2}\label{classhttp_1_1server_1_1Reply_a3233bb2770fc54ecf7fa3b9fa7b0c7f2}} 
+virtual bool {\bfseries consume\+Web\+Socket\+Message} (ws\+\_\+opcode opcode, const char $\ast$begin, const char $\ast$end, Request\+::\+State state)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a838180f4f8f5aa4566313157c57df9b8}\label{classhttp_1_1server_1_1Reply_a838180f4f8f5aa4566313157c57df9b8}} 
+void {\bfseries set\+Connection} (Connection\+Ptr connection)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a74fdf1ef98c61332008f4b8c3ba45cac}\label{classhttp_1_1server_1_1Reply_a74fdf1ef98c61332008f4b8c3ba45cac}} 
+bool {\bfseries next\+Wrapped\+Content\+Buffers} (std\+::vector$<$ asio\+::const\+\_\+buffer $>$ \&result)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_ab8a68246d08a4979e99f9284deab6fdc}\label{classhttp_1_1server_1_1Reply_ab8a68246d08a4979e99f9284deab6fdc}} 
+bool {\bfseries next\+Buffers} (std\+::vector$<$ asio\+::const\+\_\+buffer $>$ \&result)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_ac6d1de4686ebe441bba261ec41ae7300}\label{classhttp_1_1server_1_1Reply_ac6d1de4686ebe441bba261ec41ae7300}} 
+bool {\bfseries close\+Connection} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a335e5d6037864629fdbb3309a6a44362}\label{classhttp_1_1server_1_1Reply_a335e5d6037864629fdbb3309a6a44362}} 
+void {\bfseries set\+Close\+Connection} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_aaf955234ffafcef7e062b4b9dab31793}\label{classhttp_1_1server_1_1Reply_aaf955234ffafcef7e062b4b9dab31793}} 
+void {\bfseries detect\+Disconnect} (const std\+::function$<$ void()$>$ \&callback)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a15a7eb767b854fbd1947e72ec9caae01}\label{classhttp_1_1server_1_1Reply_a15a7eb767b854fbd1947e72ec9caae01}} 
+void {\bfseries add\+Header} (const std\+::string name, const std\+::string value)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_ad0728222f0e53b1bc3a7b41da4d6e5d5}\label{classhttp_1_1server_1_1Reply_ad0728222f0e53b1bc3a7b41da4d6e5d5}} 
+void {\bfseries receive} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a356448183e8a5e432fc0013fff2a97a8}\label{classhttp_1_1server_1_1Reply_a356448183e8a5e432fc0013fff2a97a8}} 
+void {\bfseries send} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_ade66561a1e9024c6c81c45a723a67380}\label{classhttp_1_1server_1_1Reply_ade66561a1e9024c6c81c45a723a67380}} 
+const \mbox{\hyperlink{classhttp_1_1server_1_1Configuration}{Configuration}} \& {\bfseries configuration} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_ae6e743e0145f3b0968514ce30fe6d939}\label{classhttp_1_1server_1_1Reply_ae6e743e0145f3b0968514ce30fe6d939}} 
+virtual void {\bfseries log\+Reply} (\mbox{\hyperlink{classWt_1_1WLogger}{Wt\+::\+W\+Logger}} \&logger)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a8937feca7b06d3a01f2c348436b80bf7}\label{classhttp_1_1server_1_1Reply_a8937feca7b06d3a01f2c348436b80bf7}} 
+void {\bfseries set\+Status} (status\+\_\+type status)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_af035932612015c4a1435f978d89cb771}\label{classhttp_1_1server_1_1Reply_af035932612015c4a1435f978d89cb771}} 
+status\+\_\+type {\bfseries status} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a5c57599af877ac091b5875e2291fda3a}\label{classhttp_1_1server_1_1Reply_a5c57599af877ac091b5875e2291fda3a}} 
+virtual std\+::string {\bfseries content\+Type} ()=0
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a60eb4ee5fe8d695bcf472652e009b057}\label{classhttp_1_1server_1_1Reply_a60eb4ee5fe8d695bcf472652e009b057}} 
+virtual std\+::string {\bfseries location} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a540bfe43d17ce1bce058cbc8e31834e6}\label{classhttp_1_1server_1_1Reply_a540bfe43d17ce1bce058cbc8e31834e6}} 
+virtual \+::int64\+\_\+t {\bfseries content\+Length} ()=0
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a7a8d33827181e3eda1ed2b7e245c641d}\label{classhttp_1_1server_1_1Reply_a7a8d33827181e3eda1ed2b7e245c641d}} 
+virtual bool {\bfseries next\+Content\+Buffers} (std\+::vector$<$ asio\+::const\+\_\+buffer $>$ \&result)=0
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a6c7acdaf13d61c8344c69560d885dcdb}\label{classhttp_1_1server_1_1Reply_a6c7acdaf13d61c8344c69560d885dcdb}} 
+void {\bfseries set\+Relay} (Reply\+Ptr reply)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a78efa69d95e9558fe5409a971ea0bdba}\label{classhttp_1_1server_1_1Reply_a78efa69d95e9558fe5409a971ea0bdba}} 
+Reply\+Ptr {\bfseries relay} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_ac9a7dadde0cf76d38051ae10bf916ac8}\label{classhttp_1_1server_1_1Reply_ac9a7dadde0cf76d38051ae10bf916ac8}} 
+Connection\+Ptr {\bfseries connection} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a2ad4b5895362728f1f4e3ccb65430f2b}\label{classhttp_1_1server_1_1Reply_a2ad4b5895362728f1f4e3ccb65430f2b}} 
+bool {\bfseries transmitting} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_aba1bd2a915209d740a46c25135d3e10b}\label{classhttp_1_1server_1_1Reply_aba1bd2a915209d740a46c25135d3e10b}} 
+asio\+::const\+\_\+buffer {\bfseries buf} (const std\+::string \&s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_aba0ef4e1d148c33df6196f86a60a6c4e}\label{classhttp_1_1server_1_1Reply_aba0ef4e1d148c33df6196f86a60a6c4e}} 
+static std\+::string {\bfseries http\+Date} (time\+\_\+t t)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a1435be40d493744c2e810f09afd7fe03}\label{classhttp_1_1server_1_1Reply_a1435be40d493744c2e810f09afd7fe03}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1Request}{Request}} \& {\bfseries request\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_ad9b46d1d9508e0f5c20fe61a2fb5b2fa}\label{classhttp_1_1server_1_1Reply_ad9b46d1d9508e0f5c20fe61a2fb5b2fa}} 
+const \mbox{\hyperlink{classhttp_1_1server_1_1Configuration}{Configuration}} \& {\bfseries configuration\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a57e10049563600a019e7e40732ce6f38}\label{classhttp_1_1server_1_1Reply_a57e10049563600a019e7e40732ce6f38}} 
+bool {\bfseries encode\+Next\+Content\+Buffer} (std\+::vector$<$ asio\+::const\+\_\+buffer $>$ \&result, int \&original\+Size, int \&encoded\+Size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a256a6fe067eae58ecfd3365943185765}\label{classhttp_1_1server_1_1Reply_a256a6fe067eae58ecfd3365943185765}} 
+std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ {\bfseries headers\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a88155246e2d40ec10e372333fd0aa952}\label{classhttp_1_1server_1_1Reply_a88155246e2d40ec10e372333fd0aa952}} 
+Connection\+Ptr {\bfseries connection\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_aa95f7f6b2c13971360c3c0b12333cd75}\label{classhttp_1_1server_1_1Reply_aa95f7f6b2c13971360c3c0b12333cd75}} 
+status\+\_\+type {\bfseries status\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a0ea894cb44f748d7f1bf52195329e70e}\label{classhttp_1_1server_1_1Reply_a0ea894cb44f748d7f1bf52195329e70e}} 
+bool {\bfseries transmitting\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a91b075cea35cb2dd5664eaf75ce124fb}\label{classhttp_1_1server_1_1Reply_a91b075cea35cb2dd5664eaf75ce124fb}} 
+bool {\bfseries close\+Connection\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_ad87e5c154a34a38d206cc46830720dc1}\label{classhttp_1_1server_1_1Reply_ad87e5c154a34a38d206cc46830720dc1}} 
+bool {\bfseries chunked\+Encoding\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_afd150ad36599d14e62f81ee174cffd94}\label{classhttp_1_1server_1_1Reply_afd150ad36599d14e62f81ee174cffd94}} 
+bool {\bfseries gzip\+Encoding\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a3275c4df979e1f28b7a942c434b6cec9}\label{classhttp_1_1server_1_1Reply_a3275c4df979e1f28b7a942c434b6cec9}} 
+\+::int64\+\_\+t {\bfseries content\+Sent\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a2b61cb2d4a601f35ddb27f2d1ed4f6bf}\label{classhttp_1_1server_1_1Reply_a2b61cb2d4a601f35ddb27f2d1ed4f6bf}} 
+\+::int64\+\_\+t {\bfseries content\+Original\+Size\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a2197c89ebd227fae1e9701fe6a3bd998}\label{classhttp_1_1server_1_1Reply_a2197c89ebd227fae1e9701fe6a3bd998}} 
+Reply\+Ptr {\bfseries relay\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_aca6759f9856bba3898248087587a3802}\label{classhttp_1_1server_1_1Reply_aca6759f9856bba3898248087587a3802}} 
+\mbox{\hyperlink{classWt_1_1WStringStream}{Wt\+::\+W\+String\+Stream}} {\bfseries buf\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a95f46dce730b3f7ca0f40fab5ad52a90}\label{classhttp_1_1server_1_1Reply_a95f46dce730b3f7ca0f40fab5ad52a90}} 
+\mbox{\hyperlink{classWt_1_1WStringStream}{Wt\+::\+W\+String\+Stream}} {\bfseries post\+Buf\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Reply_a3ec5241b73a789d1c7537ac123ed8c53}\label{classhttp_1_1server_1_1Reply_a3ec5241b73a789d1c7537ac123ed8c53}} 
+std\+::list$<$ std\+::string $>$ {\bfseries bufs\+\_\+}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/http/Reply.\+h\end{DoxyCompactItemize}

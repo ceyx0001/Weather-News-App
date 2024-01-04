@@ -1,0 +1,991 @@
+\hypertarget{classWt_1_1WMenu}{}\doxysection{Wt\+::W\+Menu Class Reference}
+\label{classWt_1_1WMenu}\index{Wt::WMenu@{Wt::WMenu}}
+
+
+A widget that shows a menu of options.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Menu.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Menu\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Menu\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WMenu_ac994130e2d23d9417d6a056b4f59ce58}{W\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMenu_a0ea8b9520b10daa61c0866fbb622c6df}{W\+Menu}} (\mbox{\hyperlink{classWt_1_1WStackedWidget}{W\+Stacked\+Widget}} $\ast$\mbox{\hyperlink{classWt_1_1WMenu_aa16aef4cf01e7bf095e2b868dfd0b565}{contents\+Stack}})
+\begin{DoxyCompactList}\small\item\em Creates a new menu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_a7e2fef60ee49edaa9056b3284964576e}\label{classWt_1_1WMenu_a7e2fef60ee49edaa9056b3284964576e}} 
+\mbox{\hyperlink{classWt_1_1WMenu_a7e2fef60ee49edaa9056b3284964576e}{$\sim$\+W\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_ad0cc2914b7c0a5ee545013d8d7720e4d}{add\+Item}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&label, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ contents=nullptr, \mbox{\hyperlink{classWt_af25a7f0bb1d50c5b8bc98c4db9080313}{Content\+Loading}} policy=Content\+Loading\+::\+Lazy)
+\begin{DoxyCompactList}\small\item\em Adds an item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_a1d3262d424d13b0512a68059d360f142}{add\+Item}} (const std\+::string \&icon\+Path, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&label, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ contents=nullptr, \mbox{\hyperlink{classWt_af25a7f0bb1d50c5b8bc98c4db9080313}{Content\+Loading}} policy=Content\+Loading\+::\+Lazy)
+\begin{DoxyCompactList}\small\item\em Adds an item. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class V $>$ }\\\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_afeefebc3d03d683f75598ac98acab58f}{add\+Item}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text, T $\ast$target, void(V\+::$\ast$method)())
+\begin{DoxyCompactList}\small\item\em Adds an item with given text, and specify a slot method to be called when the item is triggered. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class V $>$ }\\\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_a100e8367f489fff8258db2e1c35c69a4}{add\+Item}} (const std\+::string \&icon\+Path, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text, T $\ast$target, void(V\+::$\ast$method)())
+\begin{DoxyCompactList}\small\item\em Adds an item with given text and icon, and specify a slot method to be called when activated. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_a6934e3c30a1ccd340ffe238921b343a2}{add\+Menu}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} $>$ menu)
+\begin{DoxyCompactList}\small\item\em Adds a submenu, with given text. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_a7b79929b73d7b114ee5ccbb7c8be40dd}{add\+Menu}} (const std\+::string \&icon\+Path, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} $>$ menu)
+\begin{DoxyCompactList}\small\item\em Adds a submenu, with given icon and text. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_a9cba2aaf345680b3e435029ee3f4bbd8}{add\+Item}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $>$ item)
+\begin{DoxyCompactList}\small\item\em Adds an item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_a50d870b986c796180cd4947f4ba4c353}{insert\+Item}} (int index, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&label, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ contents=nullptr, \mbox{\hyperlink{classWt_af25a7f0bb1d50c5b8bc98c4db9080313}{Content\+Loading}} policy=Content\+Loading\+::\+Lazy)
+\begin{DoxyCompactList}\small\item\em inserts an item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_aa9c78d2bf30336ba0073efea341e0d6d}{insert\+Item}} (int index, const std\+::string \&icon\+Path, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&label, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ contents=nullptr, \mbox{\hyperlink{classWt_af25a7f0bb1d50c5b8bc98c4db9080313}{Content\+Loading}} policy=Content\+Loading\+::\+Lazy)
+\begin{DoxyCompactList}\small\item\em inserts an item. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class V $>$ }\\\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_a7040ba0b3ad01c5a3d2106524a1ff4ff}{insert\+Item}} (int index, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text, T $\ast$target, void(V\+::$\ast$method)())
+\begin{DoxyCompactList}\small\item\em inserts an item with given text, and specify a slot method to be called when the item is triggered. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class V $>$ }\\\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_a4d8be714110f263ae069dce160c86a7e}{insert\+Item}} (int index, const std\+::string \&icon\+Path, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text, T $\ast$target, void(V\+::$\ast$method)())
+\begin{DoxyCompactList}\small\item\em inserts an item with given text and icon, and specify a slot method to be called when activated. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_a2e0aee445e7fba3ca63b1a205dc0a242}{insert\+Menu}} (int index, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} $>$ menu)
+\begin{DoxyCompactList}\small\item\em inserts a submenu, with given text. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_a90b6869f276c4e7bd4d37d70fcbfccaa}{insert\+Menu}} (int index, const std\+::string \&icon\+Path, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} $>$ menu)
+\begin{DoxyCompactList}\small\item\em inserts a submenu, with given icon and text. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_a2606d0ad23fe025293c05b5ae3a0ecef}{insert\+Item}} (int index, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $>$ item)
+\begin{DoxyCompactList}\small\item\em Inserts an item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_a8a88b41240358b6003a94b04d4f96cdf}{add\+Separator}} ()
+\begin{DoxyCompactList}\small\item\em Adds a separator to the menu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_a3c09f45358d3107038050bdb2182272b}\label{classWt_1_1WMenu_a3c09f45358d3107038050bdb2182272b}} 
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_a3c09f45358d3107038050bdb2182272b}{add\+Section\+Header}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text)
+\begin{DoxyCompactList}\small\item\em Adds a section header to the menu. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $>$ \mbox{\hyperlink{classWt_1_1WMenu_a94a426c268f185e8d7ee70af11f469e4}{remove\+Item}} (\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$item)
+\begin{DoxyCompactList}\small\item\em Removes an item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenu_a7bafc33564cb06d980d75e2f4d89f28d}{select}} (\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$item)
+\begin{DoxyCompactList}\small\item\em Selects an item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenu_aec1801d047dc0f150d1cc12b801aa6c2}{select}} (int index)
+\begin{DoxyCompactList}\small\item\em Selects an item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ $>$ \& \mbox{\hyperlink{classWt_1_1WMenu_a0303879705bcdd8dbffc2d1528670d20}{item\+Selected}} ()
+\begin{DoxyCompactList}\small\item\em Signal which indicates that a new item was selected. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ $>$ \& \mbox{\hyperlink{classWt_1_1WMenu_a8737f262f99d0db0a0f4b7aeb01cfe2e}{item\+Select\+Rendered}} ()
+\begin{DoxyCompactList}\small\item\em Signal which indicates that a new selected item is rendered. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenu_a97c9be1df48cb0d27e2e4b904b51e184}{close}} (\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$item)
+\begin{DoxyCompactList}\small\item\em Closes an item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenu_a1040233afcd0372468faff230c685825}{close}} (int index)
+\begin{DoxyCompactList}\small\item\em Closes an item. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ $>$ \mbox{\hyperlink{classWt_1_1WMenu_a9853f236b892a5d7b3c46746b49858a5}{items}} () const
+\begin{DoxyCompactList}\small\item\em Returns the items. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ $>$ \& \mbox{\hyperlink{classWt_1_1WMenu_ab9fa68e381972fb5385478b1e9eb6c78}{item\+Closed}} ()
+\begin{DoxyCompactList}\small\item\em Signal which indicates that an item was closed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenu_ab3d880e2b089bb084d5634130d61f4d7}{set\+Item\+Hidden}} (\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$item, bool hidden)
+\begin{DoxyCompactList}\small\item\em Hides an item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenu_a20e921974ecea341bdcfd5df9596ed53}{set\+Item\+Hidden}} (int index, bool hidden)
+\begin{DoxyCompactList}\small\item\em Hides an item. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WMenu_a849ba79d03adc2e654a53b03d3847611}{is\+Item\+Hidden}} (\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$item) const
+\begin{DoxyCompactList}\small\item\em Returns whether the item widget of the given item is hidden. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WMenu_a11f4e02c2f25f09ec9389ccc9b716ef9}{is\+Item\+Hidden}} (int index) const
+\begin{DoxyCompactList}\small\item\em Returns whether the item widget of the given index is hidden. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenu_a294d53469b71cb5d35fa59865c3b75cb}{set\+Item\+Disabled}} (\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$item, bool disabled)
+\begin{DoxyCompactList}\small\item\em Disables an item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenu_ac647478bd0bf0086a52a9e572755b3a2}{set\+Item\+Disabled}} (int index, bool disabled)
+\begin{DoxyCompactList}\small\item\em Disables an item. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WMenu_a91f08dd5674b639d76a034090b713529}{is\+Item\+Disabled}} (\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$item) const
+\begin{DoxyCompactList}\small\item\em Returns whether the item widget of the given item is disabled. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WMenu_ad3f312ee8e0e5655e791a710585417c2}{is\+Item\+Disabled}} (int index) const
+\begin{DoxyCompactList}\small\item\em Returns whether the item widget of the given index is disabled. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_ab1034b5c9fae29b1fc912657d5458bd1}{current\+Item}} () const
+\begin{DoxyCompactList}\small\item\em Returns the currently selected item. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WMenu_a4b8a02fead9c195d99a3fab1e70a4f65}{current\+Index}} () const
+\begin{DoxyCompactList}\small\item\em Returns the index of the currently selected item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenu_ae1807eba0b1002808dbec779d00a79dc}{set\+Internal\+Path\+Enabled}} (const std\+::string \&base\+Path=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Enables internal paths for items. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WMenu_a8828d34b081eb921398c81d2a3a7064a}{internal\+Path\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the menu generates internal paths entries. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenu_aa5cf3b5b9919d2f130c8acd156447132}{set\+Internal\+Base\+Path}} (const std\+::string \&base\+Path)
+\begin{DoxyCompactList}\small\item\em Sets the internal base path. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1WMenu_a534df522539f1f7c5a1a224acda48d56}{internal\+Base\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Returns the internal base path. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_aa16aef4cf01e7bf095e2b868dfd0b565}\label{classWt_1_1WMenu_aa16aef4cf01e7bf095e2b868dfd0b565}} 
+\mbox{\hyperlink{classWt_1_1WStackedWidget}{W\+Stacked\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_aa16aef4cf01e7bf095e2b868dfd0b565}{contents\+Stack}} () const
+\begin{DoxyCompactList}\small\item\em Returns the contents stack associated with the menu. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_a6f71a85a08d91fc0e5e107e870449527}\label{classWt_1_1WMenu_a6f71a85a08d91fc0e5e107e870449527}} 
+int \mbox{\hyperlink{classWt_1_1WMenu_a6f71a85a08d91fc0e5e107e870449527}{count}} () const
+\begin{DoxyCompactList}\small\item\em Returns the item count. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_adc0c1e5dbc2d009e0193e64b3b340db7}{item\+At}} (int index) const
+\begin{DoxyCompactList}\small\item\em Returns the item by index. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WMenu_a4fa3b33c6abc30c207fcef69685f899f}{index\+Of}} (\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$item) const
+\begin{DoxyCompactList}\small\item\em Returns the index of an item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenu_ad723178ea350996a217dd7c46866dd38}{parent\+Item}} () const
+\begin{DoxyCompactList}\small\item\em Returns the parent item (for a submenu) \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WMenu_a14a08ca53b34e992a2ac4f3fb2d881db}{load}} () override
+\begin{DoxyCompactList}\small\item\em Loads content just before the widget is used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WMenu_ae7c2a1c38cd081d46af2fd3461071a8f}{render}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$ flags) override
+\begin{DoxyCompactList}\small\item\em Renders the widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WMenu_a6cb75990af2ae21503143c2ae3bfa05b}{internal\+Path\+Changed}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Handling of internal path changes. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WMenu_a8c6ef0aa69230552094285060a4d8cdd}{next\+After\+Hide}} (int index)
+\begin{DoxyCompactList}\small\item\em Returns the index of the item to be selected after hides. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_a2b3b5bd2ab495e6f3c31738d8f4fe621}\label{classWt_1_1WMenu_a2b3b5bd2ab495e6f3c31738d8f4fe621}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries ul} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_acbfbbe6b81c53fb5315d76daca7ac034}\label{classWt_1_1WMenu_acbfbbe6b81c53fb5315d76daca7ac034}} 
+virtual void {\bfseries render\+Selected} (\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$item, bool selected)
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_ae638ee69e086f2875a9fe8e11452d82e}\label{classWt_1_1WMenu_ae638ee69e086f2875a9fe8e11452d82e}} 
+virtual void {\bfseries set\+Current} (int index)
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WMenu_aeedfeebbf718e0881f2d1eaf725aad2d}{select}} (int index, bool change\+Path)
+\begin{DoxyCompactList}\small\item\em Selects an item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_ab6475886fc325284b7955eee483cac70}\label{classWt_1_1WMenu_ab6475886fc325284b7955eee483cac70}} 
+void {\bfseries handle\+Internal\+Path\+Change} (const std\+::string \&path)
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_af5e0e1f55ac2e8aa98d272e46076130a}\label{classWt_1_1WMenu_af5e0e1f55ac2e8aa98d272e46076130a}} 
+void {\bfseries update\+Items\+Internal\+Path} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_a85ff9ca05d4f8837b6e6b4db1a5f744a}\label{classWt_1_1WMenu_a85ff9ca05d4f8837b6e6b4db1a5f744a}} 
+void {\bfseries item\+Path\+Changed} (\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$item)
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_aa90cd57d3b8f7cfdbd818df76def569b}\label{classWt_1_1WMenu_aa90cd57d3b8f7cfdbd818df76def569b}} 
+void {\bfseries select\+Visual} (\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$item)
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_a4c7aa36ce1026bc016e1e5fe5656f327}\label{classWt_1_1WMenu_a4c7aa36ce1026bc016e1e5fe5656f327}} 
+void {\bfseries undo\+Select\+Visual} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_ae29bf90c8c532295eea737bf6563aa01}\label{classWt_1_1WMenu_ae29bf90c8c532295eea737bf6563aa01}} 
+void {\bfseries select\+Visual} (int item, bool change\+Path, bool show\+Contents)
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_aac845e720dc7482a4e44f2916c1b09a6}\label{classWt_1_1WMenu_aac845e720dc7482a4e44f2916c1b09a6}} 
+void {\bfseries on\+Item\+Hidden} (int index, bool hidden)
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_ad67d810b6e5569b7a9ab6b27632e613e}\label{classWt_1_1WMenu_ad67d810b6e5569b7a9ab6b27632e613e}} 
+void {\bfseries update\+Selection\+Event} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_ae9e7e8589a12a8e605a0981b0c238ac5}\label{classWt_1_1WMenu_ae9e7e8589a12a8e605a0981b0c238ac5}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries ul\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_a5598f4edbc2a4b6f0786a30ee5d0002b}\label{classWt_1_1WMenu_a5598f4edbc2a4b6f0786a30ee5d0002b}} 
+\mbox{\hyperlink{classWt_1_1WStackedWidget}{W\+Stacked\+Widget}} $\ast$ {\bfseries contents\+Stack\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_a5dad8ecf65891741d2f46ad3451dfaa0}\label{classWt_1_1WMenu_a5dad8ecf65891741d2f46ad3451dfaa0}} 
+bool {\bfseries internal\+Path\+Enabled\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_abba1ec01109aa736f1b92c63c9211ccb}\label{classWt_1_1WMenu_abba1ec01109aa736f1b92c63c9211ccb}} 
+bool {\bfseries emit\+Path\+Change\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_a7136d0d367b4458084c3454b1702884f}\label{classWt_1_1WMenu_a7136d0d367b4458084c3454b1702884f}} 
+std\+::string {\bfseries base\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_a4fc3f70670249e2311ff1fb1caad9aaa}\label{classWt_1_1WMenu_a4fc3f70670249e2311ff1fb1caad9aaa}} 
+std\+::string {\bfseries previous\+Internal\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_aed31d04a2a64de2a97022efa09b29b87}\label{classWt_1_1WMenu_aed31d04a2a64de2a97022efa09b29b87}} 
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ {\bfseries parent\+Item\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_a33d00c1f8571c73c7272cdae1977bc0f}\label{classWt_1_1WMenu_a33d00c1f8571c73c7272cdae1977bc0f}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ $>$ {\bfseries item\+Selected\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_a2758ee3c2fa1018d5d653a87fcbf33e4}\label{classWt_1_1WMenu_a2758ee3c2fa1018d5d653a87fcbf33e4}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ $>$ {\bfseries item\+Select\+Rendered\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_aeaf539ffc254c9e4b0fdb76bc3c338d4}\label{classWt_1_1WMenu_aeaf539ffc254c9e4b0fdb76bc3c338d4}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ $>$ {\bfseries item\+Closed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_a98dc1f74c3753ff88f075ba57f2b8765}\label{classWt_1_1WMenu_a98dc1f74c3753ff88f075ba57f2b8765}} 
+int {\bfseries current\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_aae7346be1caad9dfe17728ddb7e59cfc}\label{classWt_1_1WMenu_aae7346be1caad9dfe17728ddb7e59cfc}} 
+int {\bfseries previous\+Stack\+Index\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_a298eacebbea3a29577f954e0a0aad75d}\label{classWt_1_1WMenu_a298eacebbea3a29577f954e0a0aad75d}} 
+bool {\bfseries need\+Selection\+Event\+Update\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenu_a470d2962644cef2cd372edba96a64287}\label{classWt_1_1WMenu_a470d2962644cef2cd372edba96a64287}} 
+class {\bfseries W\+Menu\+Item}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A widget that shows a menu of options. 
+
+The W\+Menu widget offers menu navigation.
+
+Typically, a menu is used in conjunction with a \mbox{\hyperlink{classWt_1_1WStackedWidget}{W\+Stacked\+Widget}} (but can be used without too), where different \textquotesingle{}contents\textquotesingle{} are stacked upon each other. Each choice in the menu (which is implemented as a \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}) corresponds to a tab in the contents stack. The contents stack may contain other items, and could be shared with other \mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} instances.
+
+When used without a contents stack, you can react to menu item selection using the \mbox{\hyperlink{classWt_1_1WMenu_a0303879705bcdd8dbffc2d1528670d20}{item\+Selected()}} signal, to implement some custom handling of item selection.
+
+Usage example\+:
+
+After construction, the first entry will be selected. At any time, it is possible to select a particular item using \mbox{\hyperlink{classWt_1_1WMenu_a7bafc33564cb06d980d75e2f4d89f28d}{select()}}.
+
+Each item of W\+Menu may be closeable (see \mbox{\hyperlink{classWt_1_1WMenuItem_a59b6dee6c95ae958f0c3b76d5ef7272d}{W\+Menu\+Item\+::set\+Closeable(bool)}}. Like selection, at any time, it is possible to close a particular item using \mbox{\hyperlink{classWt_1_1WMenu_a97c9be1df48cb0d27e2e4b904b51e184}{close()}}. You can react to close of item by using the \mbox{\hyperlink{classWt_1_1WMenu_ab9fa68e381972fb5385478b1e9eb6c78}{item\+Closed()}} signal.
+
+The W\+Menu implementation offers fine-\/grained control on how contents should be preloaded. By default, all contents is lazy-\/loaded, only when needed. To improve response time, an item may also be preloaded (using \mbox{\hyperlink{classWt_1_1WMenu_ad0cc2914b7c0a5ee545013d8d7720e4d}{add\+Item()}}). In that case, the item will be loaded in the background, before its first use. In any case, once the contents corresponding to a menu item is loaded, subsequent navigation to it is handled entirely client-\/side.
+
+The W\+Menu may participate in the application\textquotesingle{}s internal path, which lets menu items correspond to internal U\+R\+Ls, see \mbox{\hyperlink{classWt_1_1WMenu_ae1807eba0b1002808dbec779d00a79dc}{set\+Internal\+Path\+Enabled()}}.
+
+The look of the items may be defined through style sheets. The default \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} implementation uses four style classes to distinguish between inactivated, activated, closeable inactivated and closeable activated menu items\+: {\ttfamily \char`\"{}item\char`\"{}}, {\ttfamily \char`\"{}itemselected\char`\"{}}, {\ttfamily \char`\"{}citem\char`\"{}}, {\ttfamily \char`\"{}citemselected\char`\"{}}. By using C\+SS nested selectors, a different style may be defined for items in a different menu.
+
+You may customize the rendering and behaviour of menu entries by specializing \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}.
+
+\doxyparagraph*{C\+SS}
+
+The menu is rendered as a $<$ul$>$. Unless you use the bootstrap theme, you will want to customize the menu using inline or external styles to hide the bullets and provide the appropriate horizontal or vertical layout.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WMenu_ac994130e2d23d9417d6a056b4f59ce58}\label{classWt_1_1WMenu_ac994130e2d23d9417d6a056b4f59ce58}} 
+\index{Wt::WMenu@{Wt::WMenu}!WMenu@{WMenu}}
+\index{WMenu@{WMenu}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{WMenu()}{WMenu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Menu\+::\+W\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new menu. 
+
+The menu is not associated with a contents stack, and thus you will want to react to the \mbox{\hyperlink{classWt_1_1WMenu_a0303879705bcdd8dbffc2d1528670d20}{item\+Selected()}} signal to react to menu changes. \mbox{\Hypertarget{classWt_1_1WMenu_a0ea8b9520b10daa61c0866fbb622c6df}\label{classWt_1_1WMenu_a0ea8b9520b10daa61c0866fbb622c6df}} 
+\index{Wt::WMenu@{Wt::WMenu}!WMenu@{WMenu}}
+\index{WMenu@{WMenu}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{WMenu()}{WMenu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Menu\+::\+W\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WStackedWidget}{W\+Stacked\+Widget}} $\ast$}]{contents\+Stack }\end{DoxyParamCaption})}
+
+
+
+Creates a new menu. 
+
+Construct a menu to manage the widgets in {\ttfamily contents\+Stack}.
+
+Each menu item will manage a single widget in the {\ttfamily contents\+Stack}, making it the current widget when the menu item is activated. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WMenu_a1d3262d424d13b0512a68059d360f142}\label{classWt_1_1WMenu_a1d3262d424d13b0512a68059d360f142}} 
+\index{Wt::WMenu@{Wt::WMenu}!addItem@{addItem}}
+\index{addItem@{addItem}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}$\ast$ Wt\+::\+W\+Menu\+::add\+Item (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{icon\+Path,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{label,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$}]{contents = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{classWt_af25a7f0bb1d50c5b8bc98c4db9080313}{Content\+Loading}}}]{policy = {\ttfamily ContentLoading\+:\+:Lazy} }\end{DoxyParamCaption})}
+
+
+
+Adds an item. 
+
+Adds a menu item with given {\ttfamily contents}, which is added to the menu\textquotesingle{}s associated contents stack.
+
+{\ttfamily contents} may be {\ttfamily 0} for two reasons\+:
+\begin{DoxyItemize}
+\item if the menu is not associated with a contents stack, then you cannot associate a menu item with a contents widget
+\item or, you may have one or more items which which are not associated with a contents widget in the contents stack.
+\end{DoxyItemize}
+
+Returns the corresponding \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}.
+
+\begin{DoxySeeAlso}{See also}
+add\+Item(\+W\+Menu\+Item $\ast$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a100e8367f489fff8258db2e1c35c69a4}\label{classWt_1_1WMenu_a100e8367f489fff8258db2e1c35c69a4}} 
+\index{Wt::WMenu@{Wt::WMenu}!addItem@{addItem}}
+\index{addItem@{addItem}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$class T , class V $>$ \\
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ Wt\+::\+W\+Menu\+::add\+Item (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{icon\+Path,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text,  }\item[{T $\ast$}]{target,  }\item[{void(V\+::$\ast$)()}]{method }\end{DoxyParamCaption})}
+
+
+
+Adds an item with given text and icon, and specify a slot method to be called when activated. 
+
+The {\itshape target} and {\ttfamily method} are connected to the \mbox{\hyperlink{classWt_1_1WMenuItem_a06ceec38d6a866c0a1305f236bd712ef}{W\+Menu\+Item\+::triggered}} signal.
+
+\begin{DoxyNote}{Note}
+The icon should have a width of 16 pixels.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+add(\+W\+Menu\+Item $\ast$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_ad0cc2914b7c0a5ee545013d8d7720e4d}\label{classWt_1_1WMenu_ad0cc2914b7c0a5ee545013d8d7720e4d}} 
+\index{Wt::WMenu@{Wt::WMenu}!addItem@{addItem}}
+\index{addItem@{addItem}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}$\ast$ Wt\+::\+W\+Menu\+::add\+Item (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{label,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$}]{contents = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{classWt_af25a7f0bb1d50c5b8bc98c4db9080313}{Content\+Loading}}}]{policy = {\ttfamily ContentLoading\+:\+:Lazy} }\end{DoxyParamCaption})}
+
+
+
+Adds an item. 
+
+Use this version of \mbox{\hyperlink{classWt_1_1WMenu_ad0cc2914b7c0a5ee545013d8d7720e4d}{add\+Item()}} if you do not want to specify an icon for this menu item.
+
+Returns the corresponding \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}.
+
+\begin{DoxySeeAlso}{See also}
+add\+Item(const std\+::string\&, const W\+String\&, W\+Widget $\ast$, Content\+Loading) 
+
+add\+Item(\+W\+Menu\+Item $\ast$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_afeefebc3d03d683f75598ac98acab58f}\label{classWt_1_1WMenu_afeefebc3d03d683f75598ac98acab58f}} 
+\index{Wt::WMenu@{Wt::WMenu}!addItem@{addItem}}
+\index{addItem@{addItem}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$class T , class V $>$ \\
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ Wt\+::\+W\+Menu\+::add\+Item (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text,  }\item[{T $\ast$}]{target,  }\item[{void(V\+::$\ast$)()}]{method }\end{DoxyParamCaption})}
+
+
+
+Adds an item with given text, and specify a slot method to be called when the item is triggered. 
+
+The {\itshape target} and {\ttfamily method} are connected to the \mbox{\hyperlink{classWt_1_1WMenuItem_a06ceec38d6a866c0a1305f236bd712ef}{W\+Menu\+Item\+::triggered}} signal.
+
+\begin{DoxySeeAlso}{See also}
+add(\+W\+Menu\+Item $\ast$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a9cba2aaf345680b3e435029ee3f4bbd8}\label{classWt_1_1WMenu_a9cba2aaf345680b3e435029ee3f4bbd8}} 
+\index{Wt::WMenu@{Wt::WMenu}!addItem@{addItem}}
+\index{addItem@{addItem}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}$\ast$ Wt\+::\+W\+Menu\+::add\+Item (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $>$}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adds an item. 
+
+Adds a menu item. Use this form to add specialized \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} implementations.
+
+\begin{DoxySeeAlso}{See also}
+add\+Item(const W\+String\&, W\+Widget $\ast$, Content\+Loading) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a7b79929b73d7b114ee5ccbb7c8be40dd}\label{classWt_1_1WMenu_a7b79929b73d7b114ee5ccbb7c8be40dd}} 
+\index{Wt::WMenu@{Wt::WMenu}!addMenu@{addMenu}}
+\index{addMenu@{addMenu}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{addMenu()}{addMenu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}$\ast$ Wt\+::\+W\+Menu\+::add\+Menu (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{icon\+Path,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} $>$}]{menu }\end{DoxyParamCaption})}
+
+
+
+Adds a submenu, with given icon and text. 
+
+Adds an item with given text and icon, that leads to a submenu {\ttfamily menu}.
+
+\begin{DoxySeeAlso}{See also}
+add(\+W\+Menu\+Item $\ast$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a6934e3c30a1ccd340ffe238921b343a2}\label{classWt_1_1WMenu_a6934e3c30a1ccd340ffe238921b343a2}} 
+\index{Wt::WMenu@{Wt::WMenu}!addMenu@{addMenu}}
+\index{addMenu@{addMenu}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{addMenu()}{addMenu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}$\ast$ Wt\+::\+W\+Menu\+::add\+Menu (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} $>$}]{menu }\end{DoxyParamCaption})}
+
+
+
+Adds a submenu, with given text. 
+
+Adds an item with text {\ttfamily text}, that leads to a submenu {\ttfamily menu}.
+
+\begin{DoxySeeAlso}{See also}
+add(\+W\+Menu\+Item $\ast$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a8a88b41240358b6003a94b04d4f96cdf}\label{classWt_1_1WMenu_a8a88b41240358b6003a94b04d4f96cdf}} 
+\index{Wt::WMenu@{Wt::WMenu}!addSeparator@{addSeparator}}
+\index{addSeparator@{addSeparator}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{addSeparator()}{addSeparator()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}$\ast$ Wt\+::\+W\+Menu\+::add\+Separator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Adds a separator to the menu. 
+
+Adds a separator the menu. \mbox{\Hypertarget{classWt_1_1WMenu_a1040233afcd0372468faff230c685825}\label{classWt_1_1WMenu_a1040233afcd0372468faff230c685825}} 
+\index{Wt::WMenu@{Wt::WMenu}!close@{close}}
+\index{close@{close}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+::close (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Closes an item. 
+
+Menu items in a menu with {\ttfamily N} items are numbered from 0 to {\ttfamily N} -\/ 1.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_a97c9be1df48cb0d27e2e4b904b51e184}{close(\+W\+Menu\+Item $\ast$)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a97c9be1df48cb0d27e2e4b904b51e184}\label{classWt_1_1WMenu_a97c9be1df48cb0d27e2e4b904b51e184}} 
+\index{Wt::WMenu@{Wt::WMenu}!close@{close}}
+\index{close@{close}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+::close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+
+
+Closes an item. 
+
+Close the menu item {\ttfamily item}. Only \mbox{\hyperlink{classWt_1_1WMenuItem_a59b6dee6c95ae958f0c3b76d5ef7272d}{closeable}} items can be closed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_a1040233afcd0372468faff230c685825}{close(int)}}, \mbox{\hyperlink{classWt_1_1WMenuItem_a9da31eaf6a40078207bbf484d21b9285}{W\+Menu\+Item\+::close()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a4b8a02fead9c195d99a3fab1e70a4f65}\label{classWt_1_1WMenu_a4b8a02fead9c195d99a3fab1e70a4f65}} 
+\index{Wt::WMenu@{Wt::WMenu}!currentIndex@{currentIndex}}
+\index{currentIndex@{currentIndex}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{currentIndex()}{currentIndex()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Menu\+::current\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the index of the currently selected item. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_ab1034b5c9fae29b1fc912657d5458bd1}{current\+Item()}}, \mbox{\hyperlink{classWt_1_1WMenu_aec1801d047dc0f150d1cc12b801aa6c2}{select(int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_ab1034b5c9fae29b1fc912657d5458bd1}\label{classWt_1_1WMenu_ab1034b5c9fae29b1fc912657d5458bd1}} 
+\index{Wt::WMenu@{Wt::WMenu}!currentItem@{currentItem}}
+\index{currentItem@{currentItem}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{currentItem()}{currentItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}$\ast$ Wt\+::\+W\+Menu\+::current\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the currently selected item. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_a4b8a02fead9c195d99a3fab1e70a4f65}{current\+Index()}}, \mbox{\hyperlink{classWt_1_1WMenu_a7bafc33564cb06d980d75e2f4d89f28d}{select(\+W\+Menu\+Item $\ast$)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a4fa3b33c6abc30c207fcef69685f899f}\label{classWt_1_1WMenu_a4fa3b33c6abc30c207fcef69685f899f}} 
+\index{Wt::WMenu@{Wt::WMenu}!indexOf@{indexOf}}
+\index{indexOf@{indexOf}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{indexOf()}{indexOf()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Menu\+::index\+Of (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$}]{item }\end{DoxyParamCaption}) const}
+
+
+
+Returns the index of an item. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_adc0c1e5dbc2d009e0193e64b3b340db7}{item\+At()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_aa9c78d2bf30336ba0073efea341e0d6d}\label{classWt_1_1WMenu_aa9c78d2bf30336ba0073efea341e0d6d}} 
+\index{Wt::WMenu@{Wt::WMenu}!insertItem@{insertItem}}
+\index{insertItem@{insertItem}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{insertItem()}{insertItem()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}$\ast$ Wt\+::\+W\+Menu\+::insert\+Item (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{const std\+::string \&}]{icon\+Path,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{label,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$}]{contents = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{classWt_af25a7f0bb1d50c5b8bc98c4db9080313}{Content\+Loading}}}]{policy = {\ttfamily ContentLoading\+:\+:Lazy} }\end{DoxyParamCaption})}
+
+
+
+inserts an item. 
+
+inserts a menu item with given {\ttfamily contents}, which is inserted to the menu\textquotesingle{}s associated contents stack.
+
+{\ttfamily contents} may be {\ttfamily 0} for two reasons\+:
+\begin{DoxyItemize}
+\item if the menu is not associated with a contents stack, then you cannot associate a menu item with a contents widget
+\item or, you may have one or more items which which are not associated with a contents widget in the contents stack.
+\end{DoxyItemize}
+
+Returns the corresponding \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}.
+
+\begin{DoxySeeAlso}{See also}
+insert\+Item(int index, W\+Menu\+Item $\ast$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a4d8be714110f263ae069dce160c86a7e}\label{classWt_1_1WMenu_a4d8be714110f263ae069dce160c86a7e}} 
+\index{Wt::WMenu@{Wt::WMenu}!insertItem@{insertItem}}
+\index{insertItem@{insertItem}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{insertItem()}{insertItem()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily template$<$class T , class V $>$ \\
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ Wt\+::\+W\+Menu\+::insert\+Item (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{const std\+::string \&}]{icon\+Path,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text,  }\item[{T $\ast$}]{target,  }\item[{void(V\+::$\ast$)()}]{method }\end{DoxyParamCaption})}
+
+
+
+inserts an item with given text and icon, and specify a slot method to be called when activated. 
+
+The {\itshape target} and {\ttfamily method} are connected to the \mbox{\hyperlink{classWt_1_1WMenuItem_a06ceec38d6a866c0a1305f236bd712ef}{W\+Menu\+Item\+::triggered}} signal.
+
+\begin{DoxyNote}{Note}
+The icon should have a width of 16 pixels.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+insert(int index, W\+Menu\+Item $\ast$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a50d870b986c796180cd4947f4ba4c353}\label{classWt_1_1WMenu_a50d870b986c796180cd4947f4ba4c353}} 
+\index{Wt::WMenu@{Wt::WMenu}!insertItem@{insertItem}}
+\index{insertItem@{insertItem}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{insertItem()}{insertItem()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}$\ast$ Wt\+::\+W\+Menu\+::insert\+Item (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{label,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$}]{contents = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{classWt_af25a7f0bb1d50c5b8bc98c4db9080313}{Content\+Loading}}}]{policy = {\ttfamily ContentLoading\+:\+:Lazy} }\end{DoxyParamCaption})}
+
+
+
+inserts an item. 
+
+Use this version of \mbox{\hyperlink{classWt_1_1WMenu_a50d870b986c796180cd4947f4ba4c353}{insert\+Item()}} if you do not want to specify an icon for this menu item.
+
+Returns the corresponding \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}.
+
+\begin{DoxySeeAlso}{See also}
+insert\+Item(int index, const std\+::string\&, const W\+String\&, W\+Widget $\ast$, Content\+Loading) 
+
+insert\+Item(int index, W\+Menu\+Item $\ast$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a7040ba0b3ad01c5a3d2106524a1ff4ff}\label{classWt_1_1WMenu_a7040ba0b3ad01c5a3d2106524a1ff4ff}} 
+\index{Wt::WMenu@{Wt::WMenu}!insertItem@{insertItem}}
+\index{insertItem@{insertItem}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{insertItem()}{insertItem()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily template$<$class T , class V $>$ \\
+\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ Wt\+::\+W\+Menu\+::insert\+Item (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text,  }\item[{T $\ast$}]{target,  }\item[{void(V\+::$\ast$)()}]{method }\end{DoxyParamCaption})}
+
+
+
+inserts an item with given text, and specify a slot method to be called when the item is triggered. 
+
+The {\itshape target} and {\ttfamily method} are connected to the \mbox{\hyperlink{classWt_1_1WMenuItem_a06ceec38d6a866c0a1305f236bd712ef}{W\+Menu\+Item\+::triggered}} signal.
+
+\begin{DoxySeeAlso}{See also}
+insert(int index,\+W\+Menu\+Item $\ast$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a2606d0ad23fe025293c05b5ae3a0ecef}\label{classWt_1_1WMenu_a2606d0ad23fe025293c05b5ae3a0ecef}} 
+\index{Wt::WMenu@{Wt::WMenu}!insertItem@{insertItem}}
+\index{insertItem@{insertItem}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{insertItem()}{insertItem()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}$\ast$ Wt\+::\+W\+Menu\+::insert\+Item (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $>$}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Inserts an item. 
+
+Inserts a menu item. Use this form to insert specialized \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} implementations.
+
+\begin{DoxySeeAlso}{See also}
+insert\+Item(\+W\+Menu\+Item $\ast$item) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a90b6869f276c4e7bd4d37d70fcbfccaa}\label{classWt_1_1WMenu_a90b6869f276c4e7bd4d37d70fcbfccaa}} 
+\index{Wt::WMenu@{Wt::WMenu}!insertMenu@{insertMenu}}
+\index{insertMenu@{insertMenu}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{insertMenu()}{insertMenu()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}$\ast$ Wt\+::\+W\+Menu\+::insert\+Menu (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{const std\+::string \&}]{icon\+Path,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} $>$}]{menu }\end{DoxyParamCaption})}
+
+
+
+inserts a submenu, with given icon and text. 
+
+inserts an item with given text and icon, that leads to a submenu {\ttfamily menu}.
+
+\begin{DoxySeeAlso}{See also}
+insert(int index, W\+Menu\+Item $\ast$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a2e0aee445e7fba3ca63b1a205dc0a242}\label{classWt_1_1WMenu_a2e0aee445e7fba3ca63b1a205dc0a242}} 
+\index{Wt::WMenu@{Wt::WMenu}!insertMenu@{insertMenu}}
+\index{insertMenu@{insertMenu}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{insertMenu()}{insertMenu()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}$\ast$ Wt\+::\+W\+Menu\+::insert\+Menu (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} $>$}]{menu }\end{DoxyParamCaption})}
+
+
+
+inserts a submenu, with given text. 
+
+inserts an item with text {\ttfamily text}, that leads to a submenu {\ttfamily menu}.
+
+\begin{DoxySeeAlso}{See also}
+insert(int index, W\+Menu\+Item $\ast$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a534df522539f1f7c5a1a224acda48d56}\label{classWt_1_1WMenu_a534df522539f1f7c5a1a224acda48d56}} 
+\index{Wt::WMenu@{Wt::WMenu}!internalBasePath@{internalBasePath}}
+\index{internalBasePath@{internalBasePath}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{internalBasePath()}{internalBasePath()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+W\+Menu\+::internal\+Base\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the internal base path. 
+
+The default value is the application\textquotesingle{}s internal\+Path (\mbox{\hyperlink{classWt_1_1WApplication_a43a0ed694ea2279e6cb33a8de4bc7536}{W\+Application\+::internal\+Path()}}) that was recorded when \mbox{\hyperlink{classWt_1_1WMenu_ae1807eba0b1002808dbec779d00a79dc}{set\+Internal\+Path\+Enabled()}} was called, and together with each \mbox{\hyperlink{classWt_1_1WMenuItem_afded7ede14b03c42cfec06f9de515e6d}{W\+Menu\+Item\+::path\+Component()}} determines the paths for each item.
+
+For example, if \mbox{\hyperlink{classWt_1_1WMenu_a534df522539f1f7c5a1a224acda48d56}{internal\+Base\+Path()}} is {\ttfamily \char`\"{}/examples/\char`\"{}} and path\+Component() for a particular item is {\ttfamily \char`\"{}charts/\char`\"{}}, then the internal path for that item will be {\ttfamily \char`\"{}/examples/charts/\char`\"{}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_ae1807eba0b1002808dbec779d00a79dc}{set\+Internal\+Path\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a6cb75990af2ae21503143c2ae3bfa05b}\label{classWt_1_1WMenu_a6cb75990af2ae21503143c2ae3bfa05b}} 
+\index{Wt::WMenu@{Wt::WMenu}!internalPathChanged@{internalPathChanged}}
+\index{internalPathChanged@{internalPathChanged}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{internalPathChanged()}{internalPathChanged()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Menu\+::internal\+Path\+Changed (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Handling of internal path changes. 
+
+This methods makes the menu react to internal path changes (and also the initial internal path).
+
+You may want to reimplement this if you want to customize the internal path handling. \mbox{\Hypertarget{classWt_1_1WMenu_a8828d34b081eb921398c81d2a3a7064a}\label{classWt_1_1WMenu_a8828d34b081eb921398c81d2a3a7064a}} 
+\index{Wt::WMenu@{Wt::WMenu}!internalPathEnabled@{internalPathEnabled}}
+\index{internalPathEnabled@{internalPathEnabled}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{internalPathEnabled()}{internalPathEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Menu\+::internal\+Path\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the menu generates internal paths entries. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_ae1807eba0b1002808dbec779d00a79dc}{set\+Internal\+Path\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_ad3f312ee8e0e5655e791a710585417c2}\label{classWt_1_1WMenu_ad3f312ee8e0e5655e791a710585417c2}} 
+\index{Wt::WMenu@{Wt::WMenu}!isItemDisabled@{isItemDisabled}}
+\index{isItemDisabled@{isItemDisabled}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{isItemDisabled()}{isItemDisabled()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Menu\+::is\+Item\+Disabled (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the item widget of the given index is disabled. 
+
+Menu items in a menu with {\ttfamily N} items are numbered from 0 to {\ttfamily N} -\/ 1.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_a294d53469b71cb5d35fa59865c3b75cb}{set\+Item\+Disabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a91f08dd5674b639d76a034090b713529}\label{classWt_1_1WMenu_a91f08dd5674b639d76a034090b713529}} 
+\index{Wt::WMenu@{Wt::WMenu}!isItemDisabled@{isItemDisabled}}
+\index{isItemDisabled@{isItemDisabled}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{isItemDisabled()}{isItemDisabled()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Menu\+::is\+Item\+Disabled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$}]{item }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the item widget of the given item is disabled. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_a294d53469b71cb5d35fa59865c3b75cb}{set\+Item\+Disabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a11f4e02c2f25f09ec9389ccc9b716ef9}\label{classWt_1_1WMenu_a11f4e02c2f25f09ec9389ccc9b716ef9}} 
+\index{Wt::WMenu@{Wt::WMenu}!isItemHidden@{isItemHidden}}
+\index{isItemHidden@{isItemHidden}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{isItemHidden()}{isItemHidden()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Menu\+::is\+Item\+Hidden (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the item widget of the given index is hidden. 
+
+Menu items in a menu with {\ttfamily N} items are numbered from 0 to {\ttfamily N} -\/ 1.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_ab3d880e2b089bb084d5634130d61f4d7}{set\+Item\+Hidden()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a849ba79d03adc2e654a53b03d3847611}\label{classWt_1_1WMenu_a849ba79d03adc2e654a53b03d3847611}} 
+\index{Wt::WMenu@{Wt::WMenu}!isItemHidden@{isItemHidden}}
+\index{isItemHidden@{isItemHidden}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{isItemHidden()}{isItemHidden()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Menu\+::is\+Item\+Hidden (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$}]{item }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the item widget of the given item is hidden. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_ab3d880e2b089bb084d5634130d61f4d7}{set\+Item\+Hidden()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_adc0c1e5dbc2d009e0193e64b3b340db7}\label{classWt_1_1WMenu_adc0c1e5dbc2d009e0193e64b3b340db7}} 
+\index{Wt::WMenu@{Wt::WMenu}!itemAt@{itemAt}}
+\index{itemAt@{itemAt}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{itemAt()}{itemAt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}$\ast$ Wt\+::\+W\+Menu\+::item\+At (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Returns the item by index. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_a4fa3b33c6abc30c207fcef69685f899f}{index\+Of()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_ab9fa68e381972fb5385478b1e9eb6c78}\label{classWt_1_1WMenu_ab9fa68e381972fb5385478b1e9eb6c78}} 
+\index{Wt::WMenu@{Wt::WMenu}!itemClosed@{itemClosed}}
+\index{itemClosed@{itemClosed}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{itemClosed()}{itemClosed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$$>$\& Wt\+::\+W\+Menu\+::item\+Closed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal which indicates that an item was closed. 
+
+This signal is emitted when an item was closed. It is emitted both when the user closes an item, or when \mbox{\hyperlink{classWt_1_1WMenu_a97c9be1df48cb0d27e2e4b904b51e184}{close()}} was invoked. \mbox{\Hypertarget{classWt_1_1WMenu_a9853f236b892a5d7b3c46746b49858a5}\label{classWt_1_1WMenu_a9853f236b892a5d7b3c46746b49858a5}} 
+\index{Wt::WMenu@{Wt::WMenu}!items@{items}}
+\index{items@{items}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{items()}{items()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$$>$ Wt\+::\+W\+Menu\+::items (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the items. 
+
+Returns the list of menu items in this menu.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_adc0c1e5dbc2d009e0193e64b3b340db7}{item\+At()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a0303879705bcdd8dbffc2d1528670d20}\label{classWt_1_1WMenu_a0303879705bcdd8dbffc2d1528670d20}} 
+\index{Wt::WMenu@{Wt::WMenu}!itemSelected@{itemSelected}}
+\index{itemSelected@{itemSelected}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{itemSelected()}{itemSelected()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$$>$\& Wt\+::\+W\+Menu\+::item\+Selected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal which indicates that a new item was selected. 
+
+This signal is emitted when an item was selected. It is emitted both when the user activated an item, or when \mbox{\hyperlink{classWt_1_1WMenu_a7bafc33564cb06d980d75e2f4d89f28d}{select()}} was invoked.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_a8737f262f99d0db0a0f4b7aeb01cfe2e}{item\+Select\+Rendered()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a8737f262f99d0db0a0f4b7aeb01cfe2e}\label{classWt_1_1WMenu_a8737f262f99d0db0a0f4b7aeb01cfe2e}} 
+\index{Wt::WMenu@{Wt::WMenu}!itemSelectRendered@{itemSelectRendered}}
+\index{itemSelectRendered@{itemSelectRendered}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{itemSelectRendered()}{itemSelectRendered()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$$>$\& Wt\+::\+W\+Menu\+::item\+Select\+Rendered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal which indicates that a new selected item is rendered. 
+
+This signal is similar to \mbox{\hyperlink{classWt_1_1WMenu_a0303879705bcdd8dbffc2d1528670d20}{item\+Selected}}, but is emitted from within a stateless slot. Therefore, any slot connected to this signal will be optimized to client-\/side Java\+Script, and must support the contract of a stateless slot (i.\+e., be idempotent).
+
+If you are unsure what is the difference with the \mbox{\hyperlink{classWt_1_1WMenu_a0303879705bcdd8dbffc2d1528670d20}{item\+Selected}} signal, you\textquotesingle{}ll probably need the latter instead.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_a0303879705bcdd8dbffc2d1528670d20}{item\+Selected()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a14a08ca53b34e992a2ac4f3fb2d881db}\label{classWt_1_1WMenu_a14a08ca53b34e992a2ac4f3fb2d881db}} 
+\index{Wt::WMenu@{Wt::WMenu}!load@{load}}
+\index{load@{load}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Menu\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Loads content just before the widget is used. 
+
+This function is called when a widget is inserted in the widget hierarchy. Widgets that get inserted in the widget hierarchy will be rendered. Visible widgets are rendered immediately, and invisible widgets in the back-\/ground (or not for a plain H\+T\+ML session). This method is called when the widget is directly or indirectly inserted into the widget tree.
+
+The default implementation simply propagates the load signal to its children. You may want to override this method to delay loading of resource-\/intensive contents.
+
+During the life-\/time of a widget, this method may be called multiple times, so you should make sure that you do a deferred initialization only once. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WCompositeWidget_ac8c792d059b81b90a1663d3c46b18854}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WMenu_a8c6ef0aa69230552094285060a4d8cdd}\label{classWt_1_1WMenu_a8c6ef0aa69230552094285060a4d8cdd}} 
+\index{Wt::WMenu@{Wt::WMenu}!nextAfterHide@{nextAfterHide}}
+\index{nextAfterHide@{nextAfterHide}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{nextAfterHide()}{nextAfterHide()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Menu\+::next\+After\+Hide (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Returns the index of the item to be selected after hides. 
+
+Returns the index of the item to be selected after the item with given index will be hidden.
+
+By default, if the given index is an index of currently selected item, returns an index of the first visible item to the right of it. If it is not found, returns the index of the first visible item to the left of it. If there are no visible items around the currently selected item, returns the index of currently selected item.
+
+You may want to reimplement this if you want to customize the algorithm of determining the index of the item to be selected after hiding the item with given index. \mbox{\Hypertarget{classWt_1_1WMenu_ad723178ea350996a217dd7c46866dd38}\label{classWt_1_1WMenu_ad723178ea350996a217dd7c46866dd38}} 
+\index{Wt::WMenu@{Wt::WMenu}!parentItem@{parentItem}}
+\index{parentItem@{parentItem}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{parentItem()}{parentItem()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}$\ast$ Wt\+::\+W\+Menu\+::parent\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the parent item (for a submenu) 
+
+This is the item with which this menu is associated as a submenu (if any). \mbox{\Hypertarget{classWt_1_1WMenu_a94a426c268f185e8d7ee70af11f469e4}\label{classWt_1_1WMenu_a94a426c268f185e8d7ee70af11f469e4}} 
+\index{Wt::WMenu@{Wt::WMenu}!removeItem@{removeItem}}
+\index{removeItem@{removeItem}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{removeItem()}{removeItem()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}}$>$ Wt\+::\+W\+Menu\+::remove\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Removes an item. 
+
+Removes the given item.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_ad0cc2914b7c0a5ee545013d8d7720e4d}{add\+Item()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_ae7c2a1c38cd081d46af2fd3461071a8f}\label{classWt_1_1WMenu_ae7c2a1c38cd081d46af2fd3461071a8f}} 
+\index{Wt::WMenu@{Wt::WMenu}!render@{render}}
+\index{render@{render}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Menu\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Renders the widget. 
+
+This function renders the widget (or an update for the widget), after this has been scheduled using \mbox{\hyperlink{classWt_1_1WWidget_a5d3d4edaafa2d7c892a5078f3df4cf11}{schedule\+Render()}}.
+
+The default implementation will render the widget by serializing changes to Java\+Script and H\+T\+ML. You may want to reimplement this widget if you have been postponing some of the layout / rendering implementation until the latest moment possible. In that case you should make sure you call the base implementation however. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WCompositeWidget_aeb7ede8809e2f195a61106a9d5cc9de3}{Wt\+::\+W\+Composite\+Widget}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WPopupMenu_a8f6bf29823772a8e30070de944238988}{Wt\+::\+W\+Popup\+Menu}}.
+
+\mbox{\Hypertarget{classWt_1_1WMenu_aec1801d047dc0f150d1cc12b801aa6c2}\label{classWt_1_1WMenu_aec1801d047dc0f150d1cc12b801aa6c2}} 
+\index{Wt::WMenu@{Wt::WMenu}!select@{select}}
+\index{select@{select}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{select()}{select()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+::select (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Selects an item. 
+
+Menu items in a menu with {\ttfamily N} items are numbered from 0 to {\ttfamily N} -\/ 1.
+
+Using a value of -\/1 removes the current selection.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_a7bafc33564cb06d980d75e2f4d89f28d}{select(\+W\+Menu\+Item $\ast$)}}, \mbox{\hyperlink{classWt_1_1WMenu_a4b8a02fead9c195d99a3fab1e70a4f65}{current\+Index()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_aeedfeebbf718e0881f2d1eaf725aad2d}\label{classWt_1_1WMenu_aeedfeebbf718e0881f2d1eaf725aad2d}} 
+\index{Wt::WMenu@{Wt::WMenu}!select@{select}}
+\index{select@{select}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{select()}{select()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Menu\+::select (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{bool}]{change\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Selects an item. 
+
+This is the internal function that implements the selection logic, including optional internal path change (if {\ttfamily change\+Path} is {\ttfamily true}). The latter may be {\ttfamily false} in case an internal path change itself is the reason for selection. \mbox{\Hypertarget{classWt_1_1WMenu_a7bafc33564cb06d980d75e2f4d89f28d}\label{classWt_1_1WMenu_a7bafc33564cb06d980d75e2f4d89f28d}} 
+\index{Wt::WMenu@{Wt::WMenu}!select@{select}}
+\index{select@{select}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{select()}{select()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+::select (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+
+
+Selects an item. 
+
+\mbox{\hyperlink{structSelect}{Select}} the menu item {\ttfamily item}.
+
+When {\ttfamily item} is {\ttfamily 0}, the current selection is removed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_aec1801d047dc0f150d1cc12b801aa6c2}{select(int)}}, \mbox{\hyperlink{classWt_1_1WMenu_ab1034b5c9fae29b1fc912657d5458bd1}{current\+Item()}}, \mbox{\hyperlink{classWt_1_1WMenuItem_a9acd8465249e221093f87d9a726c33af}{W\+Menu\+Item\+::select()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_aa5cf3b5b9919d2f130c8acd156447132}\label{classWt_1_1WMenu_aa5cf3b5b9919d2f130c8acd156447132}} 
+\index{Wt::WMenu@{Wt::WMenu}!setInternalBasePath@{setInternalBasePath}}
+\index{setInternalBasePath@{setInternalBasePath}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{setInternalBasePath()}{setInternalBasePath()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+::set\+Internal\+Base\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{base\+Path }\end{DoxyParamCaption})}
+
+
+
+Sets the internal base path. 
+
+A \textquotesingle{}/\textquotesingle{} is appended to turn it into a folder, if needed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_ae1807eba0b1002808dbec779d00a79dc}{set\+Internal\+Path\+Enabled()}}, \mbox{\hyperlink{classWt_1_1WMenu_a534df522539f1f7c5a1a224acda48d56}{internal\+Base\+Path()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_ae1807eba0b1002808dbec779d00a79dc}\label{classWt_1_1WMenu_ae1807eba0b1002808dbec779d00a79dc}} 
+\index{Wt::WMenu@{Wt::WMenu}!setInternalPathEnabled@{setInternalPathEnabled}}
+\index{setInternalPathEnabled@{setInternalPathEnabled}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{setInternalPathEnabled()}{setInternalPathEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+::set\+Internal\+Path\+Enabled (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{base\+Path = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Enables internal paths for items. 
+
+The menu participates in the internal path by changing the internal path when an item has been selected, and listening for path changes to react to path selections. As a consequence this allows the user to bookmark the current menu selection and revisit it later, use back/forward buttons to navigate through history of visited menu items, and allows indexing of pages.
+
+For each menu item, \mbox{\hyperlink{classWt_1_1WMenuItem_afded7ede14b03c42cfec06f9de515e6d}{W\+Menu\+Item\+::path\+Component()}} is appended to the {\ttfamily base\+Path}, which defaults to the internal path (\mbox{\hyperlink{classWt_1_1WApplication_a43a0ed694ea2279e6cb33a8de4bc7536}{W\+Application\+::internal\+Path()}}). A \textquotesingle{}/\textquotesingle{} is appended to the base path, to turn it into a folder, if needed.
+
+By default, menu interaction does not change the application internal path.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_a77c17472df7f8625fbb64b171a76bd46}{W\+Menu\+Item\+::set\+Path\+Component()}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_ac647478bd0bf0086a52a9e572755b3a2}\label{classWt_1_1WMenu_ac647478bd0bf0086a52a9e572755b3a2}} 
+\index{Wt::WMenu@{Wt::WMenu}!setItemDisabled@{setItemDisabled}}
+\index{setItemDisabled@{setItemDisabled}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{setItemDisabled()}{setItemDisabled()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+::set\+Item\+Disabled (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{bool}]{disabled }\end{DoxyParamCaption})}
+
+
+
+Disables an item. 
+
+Menu items in a menu with {\ttfamily N} items are numbered from 0 to {\ttfamily N} -\/ 1.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_a294d53469b71cb5d35fa59865c3b75cb}{set\+Item\+Disabled(\+W\+Menu\+Item $\ast$, bool)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a294d53469b71cb5d35fa59865c3b75cb}\label{classWt_1_1WMenu_a294d53469b71cb5d35fa59865c3b75cb}} 
+\index{Wt::WMenu@{Wt::WMenu}!setItemDisabled@{setItemDisabled}}
+\index{setItemDisabled@{setItemDisabled}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{setItemDisabled()}{setItemDisabled()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+::set\+Item\+Disabled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$}]{item,  }\item[{bool}]{disabled }\end{DoxyParamCaption})}
+
+
+
+Disables an item. 
+
+Disables the menu item {\ttfamily item}. Only an item that is enabled can be selected. By default, all menu items are enabled.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_ac647478bd0bf0086a52a9e572755b3a2}{set\+Item\+Disabled(int, bool)}}, \mbox{\hyperlink{classWt_1_1WMenuItem_a0a74ca30abe0a1767d94678ea73393e9}{W\+Menu\+Item\+::set\+Disabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_a20e921974ecea341bdcfd5df9596ed53}\label{classWt_1_1WMenu_a20e921974ecea341bdcfd5df9596ed53}} 
+\index{Wt::WMenu@{Wt::WMenu}!setItemHidden@{setItemHidden}}
+\index{setItemHidden@{setItemHidden}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{setItemHidden()}{setItemHidden()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+::set\+Item\+Hidden (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{bool}]{hidden }\end{DoxyParamCaption})}
+
+
+
+Hides an item. 
+
+Menu items in a menu with {\ttfamily N} items are numbered from 0 to {\ttfamily N} -\/ 1.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_ab3d880e2b089bb084d5634130d61f4d7}{set\+Item\+Hidden(\+W\+Menu\+Item $\ast$, bool)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenu_ab3d880e2b089bb084d5634130d61f4d7}\label{classWt_1_1WMenu_ab3d880e2b089bb084d5634130d61f4d7}} 
+\index{Wt::WMenu@{Wt::WMenu}!setItemHidden@{setItemHidden}}
+\index{setItemHidden@{setItemHidden}!Wt::WMenu@{Wt::WMenu}}
+\doxysubsubsection{\texorpdfstring{setItemHidden()}{setItemHidden()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+::set\+Item\+Hidden (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$}]{item,  }\item[{bool}]{hidden }\end{DoxyParamCaption})}
+
+
+
+Hides an item. 
+
+Hides the menu item {\ttfamily item}. By default, all menu items are visible.
+
+If the item was currently selected, then the next item to be selected is determined by \mbox{\hyperlink{classWt_1_1WMenu_a8c6ef0aa69230552094285060a4d8cdd}{next\+After\+Hide()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_a20e921974ecea341bdcfd5df9596ed53}{set\+Item\+Hidden(int, bool)}}, \mbox{\hyperlink{classWt_1_1WWidget_a0825c3ccbd4999afc1a88fafa6aa6fc7}{W\+Menu\+Item\+::hide()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Menu.\+h\end{DoxyCompactItemize}

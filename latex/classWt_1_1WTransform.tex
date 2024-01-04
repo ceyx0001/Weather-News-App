@@ -1,0 +1,550 @@
+\hypertarget{classWt_1_1WTransform}{}\doxysection{Wt\+::W\+Transform Class Reference}
+\label{classWt_1_1WTransform}\index{Wt::WTransform@{Wt::WTransform}}
+
+
+A value class that defines a 2D affine transformation matrix.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Transform.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Transform\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Transform\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WTransform_1_1TRSRDecomposition}{T\+R\+S\+R\+Decomposition}}
+\begin{DoxyCompactList}\small\item\em Result of a T\+R\+SR decomposition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structWt_1_1WTransform_1_1TRSSDecomposition}{T\+R\+S\+S\+Decomposition}}
+\begin{DoxyCompactList}\small\item\em Result of a T\+R\+SS decomposition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WTransform_aa83f5dc582b77c4ac706cfb6b097a6e3}{W\+Transform}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTransform_a7af529e947eefac16dbce9d4ecdf374b}{W\+Transform}} (double \mbox{\hyperlink{classWt_1_1WTransform_ae1166875478011bbaa47b0c143c8650e}{m11}}, double \mbox{\hyperlink{classWt_1_1WTransform_a2f28772a3535c810d8af5421777b4a6f}{m12}}, double \mbox{\hyperlink{classWt_1_1WTransform_a10ce670920d570d07e91d1dd846d02e4}{m21}}, double \mbox{\hyperlink{classWt_1_1WTransform_a21d7e4b130fc196923ce3a1c3b5f9a62}{m22}}, double \mbox{\hyperlink{classWt_1_1WTransform_a0acf97ec22b09d77fb18ec363bdfafb7}{dx}}, double \mbox{\hyperlink{classWt_1_1WTransform_ab970a37ccdd388af73a9d45e44b63e36}{dy}})
+\begin{DoxyCompactList}\small\item\em Construct a custom matrix by specifying the parameters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_a06ce158eeb5621a7292ae1fe50b0a53f}\label{classWt_1_1WTransform_a06ce158eeb5621a7292ae1fe50b0a53f}} 
+\mbox{\hyperlink{classWt_1_1WTransform_a06ce158eeb5621a7292ae1fe50b0a53f}{W\+Transform}} (const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \& \mbox{\hyperlink{classWt_1_1WTransform_a083acfaf3b6f9df363dc0efc47d52d66}{operator=}} (const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WTransform_a7d73c1776348632d81422d0aa75b5464}{operator==}} (const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Comparison operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WTransform_a446805f86b749565ace3b6ca0e1bbf73}{operator!=}} (const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Comparison operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WTransform_a23303425ad2e79918f95637127044a59}{is\+Identity}} () const
+\begin{DoxyCompactList}\small\item\em Identity check. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_ae1166875478011bbaa47b0c143c8650e}\label{classWt_1_1WTransform_ae1166875478011bbaa47b0c143c8650e}} 
+double \mbox{\hyperlink{classWt_1_1WTransform_ae1166875478011bbaa47b0c143c8650e}{m11}} () const
+\begin{DoxyCompactList}\small\item\em Returns the horizontal scaling factor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_a2f28772a3535c810d8af5421777b4a6f}\label{classWt_1_1WTransform_a2f28772a3535c810d8af5421777b4a6f}} 
+double \mbox{\hyperlink{classWt_1_1WTransform_a2f28772a3535c810d8af5421777b4a6f}{m12}} () const
+\begin{DoxyCompactList}\small\item\em Returns the vertical shearing factor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_aa975f9b6ee628805f438d38f8781dc82}\label{classWt_1_1WTransform_aa975f9b6ee628805f438d38f8781dc82}} 
+double \mbox{\hyperlink{classWt_1_1WTransform_aa975f9b6ee628805f438d38f8781dc82}{m13}} () const
+\begin{DoxyCompactList}\small\item\em Returns m13 = 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_a10ce670920d570d07e91d1dd846d02e4}\label{classWt_1_1WTransform_a10ce670920d570d07e91d1dd846d02e4}} 
+double \mbox{\hyperlink{classWt_1_1WTransform_a10ce670920d570d07e91d1dd846d02e4}{m21}} () const
+\begin{DoxyCompactList}\small\item\em Returns the horizontal shearing factor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_a21d7e4b130fc196923ce3a1c3b5f9a62}\label{classWt_1_1WTransform_a21d7e4b130fc196923ce3a1c3b5f9a62}} 
+double \mbox{\hyperlink{classWt_1_1WTransform_a21d7e4b130fc196923ce3a1c3b5f9a62}{m22}} () const
+\begin{DoxyCompactList}\small\item\em Returns the vertical scaling factor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_a4c440bffa0b3c236e122bd5dfb83565c}\label{classWt_1_1WTransform_a4c440bffa0b3c236e122bd5dfb83565c}} 
+double \mbox{\hyperlink{classWt_1_1WTransform_a4c440bffa0b3c236e122bd5dfb83565c}{m23}} () const
+\begin{DoxyCompactList}\small\item\em Returns m23 = 0. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1WTransform_a1b26e47e25f8b2254fad617dd8d2f17e}{m31}} () const
+\begin{DoxyCompactList}\small\item\em Returns the horizontal translation factor. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1WTransform_a27c83995085447e1de0e179b589db1df}{m32}} () const
+\begin{DoxyCompactList}\small\item\em Returns the vertical translation factor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_a3837a6b344383b9dd88bd1cb5bf328a2}\label{classWt_1_1WTransform_a3837a6b344383b9dd88bd1cb5bf328a2}} 
+double \mbox{\hyperlink{classWt_1_1WTransform_a3837a6b344383b9dd88bd1cb5bf328a2}{m33}} () const
+\begin{DoxyCompactList}\small\item\em Returns m33 = 1. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1WTransform_a0acf97ec22b09d77fb18ec363bdfafb7}{dx}} () const
+\begin{DoxyCompactList}\small\item\em Returns the horizontal translation factor. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1WTransform_ab970a37ccdd388af73a9d45e44b63e36}{dy}} () const
+\begin{DoxyCompactList}\small\item\em Returns the vertical translation factor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \mbox{\hyperlink{classWt_1_1WTransform_ac16907b5f7ee9b9a9fc63e0a4edf970c}{map}} (const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&p) const
+\begin{DoxyCompactList}\small\item\em Applys the transformation to a point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTransform_a7d086e0005889e079cdffe4183d7c58a}{map}} (double x, double y, double $\ast$tx, double $\ast$ty) const
+\begin{DoxyCompactList}\small\item\em Applys the transformation to a point. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \mbox{\hyperlink{classWt_1_1WTransform_a056dfce84725d9d43567260d653946ed}{map}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rect) const
+\begin{DoxyCompactList}\small\item\em Applies the transformation to a rectangle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \mbox{\hyperlink{classWt_1_1WTransform_a380b799669abc4b3ee6193e5ea747b76}{map}} (const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&path) const
+\begin{DoxyCompactList}\small\item\em Applies the transformation to a painter path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTransform_a36e8423634a12878a6a7262bd749fe6b}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the transformation to the identity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \& \mbox{\hyperlink{classWt_1_1WTransform_a9fb70c530d57c5b3826c3266b7bd1cbd}{rotate}} (double angle)
+\begin{DoxyCompactList}\small\item\em Rotates the transformation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \& \mbox{\hyperlink{classWt_1_1WTransform_a5818cba1264aa37151c972ad9be411c2}{rotate\+Radians}} (double angle)
+\begin{DoxyCompactList}\small\item\em Rotates the transformation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \& \mbox{\hyperlink{classWt_1_1WTransform_a2bffeef816ccb2be161fdc7c2d339e5d}{scale}} (double sx, double sy)
+\begin{DoxyCompactList}\small\item\em Scales the transformation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \& \mbox{\hyperlink{classWt_1_1WTransform_a58dc3da9a195adc212e9001faaa152bf}{shear}} (double sh, double sv)
+\begin{DoxyCompactList}\small\item\em Shears the transformation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \& \mbox{\hyperlink{classWt_1_1WTransform_a5819b2d1b3681abeca43d2fc05b4732a}{translate}} (double \mbox{\hyperlink{classWt_1_1WTransform_a0acf97ec22b09d77fb18ec363bdfafb7}{dx}}, double \mbox{\hyperlink{classWt_1_1WTransform_ab970a37ccdd388af73a9d45e44b63e36}{dy}})
+\begin{DoxyCompactList}\small\item\em Translates the transformation. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \& \mbox{\hyperlink{classWt_1_1WTransform_ab9b8740a5052b8c258ad6f2efa2c4b70}{translate}} (const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&p)
+\begin{DoxyCompactList}\small\item\em Translates the transformation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_a4ffe3e222f479eb1a658aa4c7bb94258}\label{classWt_1_1WTransform_a4ffe3e222f479eb1a658aa4c7bb94258}} 
+\mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \& \mbox{\hyperlink{classWt_1_1WTransform_a4ffe3e222f479eb1a658aa4c7bb94258}{operator$\ast$=}} (const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Adds a transform that is conceptually applied after this transform. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_aec99b84b7eb741a4830ebbfc1e186e68}\label{classWt_1_1WTransform_aec99b84b7eb741a4830ebbfc1e186e68}} 
+\mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \mbox{\hyperlink{classWt_1_1WTransform_aec99b84b7eb741a4830ebbfc1e186e68}{operator$\ast$}} (const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Multiply 2 transform objects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_a893732986df842693c3ce872a9893b31}\label{classWt_1_1WTransform_a893732986df842693c3ce872a9893b31}} 
+double \mbox{\hyperlink{classWt_1_1WTransform_a893732986df842693c3ce872a9893b31}{determinant}} () const
+\begin{DoxyCompactList}\small\item\em Returns the determinant. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_a19d36c4ae8833874a7be0ca5c87de4d1}\label{classWt_1_1WTransform_a19d36c4ae8833874a7be0ca5c87de4d1}} 
+\mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \mbox{\hyperlink{classWt_1_1WTransform_a19d36c4ae8833874a7be0ca5c87de4d1}{adjoint}} () const
+\begin{DoxyCompactList}\small\item\em Returns the adjoint. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \mbox{\hyperlink{classWt_1_1WTransform_a9ca20340ef1256dd02715672cc15e75c}{inverted}} () const
+\begin{DoxyCompactList}\small\item\em Returns the inverted transformation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTransform_a6949998bdf1a6fa12646d8fd6c6c056a}{decompose\+Translate\+Rotate\+Scale\+Skew}} (\mbox{\hyperlink{structWt_1_1WTransform_1_1TRSSDecomposition}{T\+R\+S\+S\+Decomposition}} \&result) const
+\begin{DoxyCompactList}\small\item\em Decomposes the transformation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTransform_ab0f477fb4c6a9102638d72be27665b37}{decompose\+Translate\+Rotate\+Scale\+Rotate}} (\mbox{\hyperlink{structWt_1_1WTransform_1_1TRSRDecomposition}{T\+R\+S\+R\+Decomposition}} \&result) const
+\begin{DoxyCompactList}\small\item\em Decomposes the transformation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_a016d8586d78ab73f647bc965f34cb4aa}\label{classWt_1_1WTransform_a016d8586d78ab73f647bc965f34cb4aa}} 
+bool {\bfseries close\+To} (const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \&other) const
+\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WTransform_a0eb8519ac9d52661ca5ad5514ef5e0f3}{js\+Value}} () const override
+\begin{DoxyCompactList}\small\item\em Returns a Java\+Script representation of the value of this object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_ac3ca0203a85ed28b79ad22f2f31f57a2}\label{classWt_1_1WTransform_ac3ca0203a85ed28b79ad22f2f31f57a2}} 
+static double \mbox{\hyperlink{classWt_1_1WTransform_ac3ca0203a85ed28b79ad22f2f31f57a2}{degrees\+To\+Radians}} (double angle)
+\begin{DoxyCompactList}\small\item\em Utility method to convert degrees to radians. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \mbox{\hyperlink{classWt_1_1WTransform_a32281880ff4f50a1aa6b07477f779da0}{Identity}}
+\begin{DoxyCompactList}\small\item\em A constant that represents the identity transform. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_a63d190a2155ac4383d33a03fac9fd105}\label{classWt_1_1WTransform_a63d190a2155ac4383d33a03fac9fd105}} 
+virtual void {\bfseries assign\+From\+J\+S\+ON} (const \mbox{\hyperlink{classWt_1_1Json_1_1Value}{Json\+::\+Value}} \&value) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_adb6d0af4efbff98e1bb25070edcd60f4}\label{classWt_1_1WTransform_adb6d0af4efbff98e1bb25070edcd60f4}} 
+double {\bfseries m\+\_\+} \mbox{[}6\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_a7d0a56dce3389fe854cc4607d8d83619}\label{classWt_1_1WTransform_a7d0a56dce3389fe854cc4607d8d83619}} 
+static const int {\bfseries M11} = 0
+\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_a4f47acfb0685a5fc9ad763c650fdfa28}\label{classWt_1_1WTransform_a4f47acfb0685a5fc9ad763c650fdfa28}} 
+static const int {\bfseries M12} = 1
+\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_a9d120bbc26f804649b73ce5a7129572d}\label{classWt_1_1WTransform_a9d120bbc26f804649b73ce5a7129572d}} 
+static const int {\bfseries M21} = 2
+\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_a7063c9810adc79dc7a0514a374df0595}\label{classWt_1_1WTransform_a7063c9810adc79dc7a0514a374df0595}} 
+static const int {\bfseries M22} = 3
+\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_a131d426a800602e1afff68589d68c5ec}\label{classWt_1_1WTransform_a131d426a800602e1afff68589d68c5ec}} 
+static const int {\bfseries M13} = 4
+\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_ad40c31addd182bd205dd998127c7c347}\label{classWt_1_1WTransform_ad40c31addd182bd205dd998127c7c347}} 
+static const int {\bfseries DX} = 4
+\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_a0103a97214fb986300098a87afc79d70}\label{classWt_1_1WTransform_a0103a97214fb986300098a87afc79d70}} 
+static const int {\bfseries M23} = 5
+\item 
+\mbox{\Hypertarget{classWt_1_1WTransform_a82fdffd2699519abe386c5ad484fa8bf}\label{classWt_1_1WTransform_a82fdffd2699519abe386c5ad484fa8bf}} 
+static const int {\bfseries DY} = 5
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A value class that defines a 2D affine transformation matrix. 
+
+The matrix is encoded using 6 parameters\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WTransform_ae1166875478011bbaa47b0c143c8650e}{m11}}  \mbox{\hyperlink{classWt_1_1WTransform_a2f28772a3535c810d8af5421777b4a6f}{m12}}   0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WTransform_a10ce670920d570d07e91d1dd846d02e4}{m21}}  \mbox{\hyperlink{classWt_1_1WTransform_a21d7e4b130fc196923ce3a1c3b5f9a62}{m22}}   0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WTransform_a0acf97ec22b09d77fb18ec363bdfafb7}{dx}}   \mbox{\hyperlink{classWt_1_1WTransform_ab970a37ccdd388af73a9d45e44b63e36}{dy}}    1}
+\end{DoxyCode}
+
+
+In this representation, \mbox{\hyperlink{classWt_1_1WTransform_a0acf97ec22b09d77fb18ec363bdfafb7}{dx()}} (= \mbox{\hyperlink{classWt_1_1WTransform_a1b26e47e25f8b2254fad617dd8d2f17e}{m31()}}) and \mbox{\hyperlink{classWt_1_1WTransform_ab970a37ccdd388af73a9d45e44b63e36}{dy()}} (= \mbox{\hyperlink{classWt_1_1WTransform_a27c83995085447e1de0e179b589db1df}{m32()}}) represent the translation components, and m{\itshape xy} represent a 2D matrix that contains the scale, rotation (and skew) components.
+
+The transformation is used to represent a tansformed coordinate system, and provides methods to \mbox{\hyperlink{classWt_1_1WTransform_a9fb70c530d57c5b3826c3266b7bd1cbd}{rotate()}}, \mbox{\hyperlink{classWt_1_1WTransform_a2bffeef816ccb2be161fdc7c2d339e5d}{scale()}}, \mbox{\hyperlink{classWt_1_1WTransform_a58dc3da9a195adc212e9001faaa152bf}{shear()}} or \mbox{\hyperlink{classWt_1_1WTransform_a5819b2d1b3681abeca43d2fc05b4732a}{translate()}} this coordinate system.
+
+There are also 2 methods to decompose an arbitrary matrix into elementary operations\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classWt_1_1WTransform_a6949998bdf1a6fa12646d8fd6c6c056a}{decompose\+Translate\+Rotate\+Scale\+Skew()}} decomposes into a {\itshape T} \&\#x2218; {\itshape R} \&\#x2218; {\itshape Sxx} \&\#x2218; {\itshape Sxy}
+\item \mbox{\hyperlink{classWt_1_1WTransform_ab0f477fb4c6a9102638d72be27665b37}{decompose\+Translate\+Rotate\+Scale\+Rotate()}} decomposes into a {\itshape T} \&\#x2218; {\itshape R1} \&\#x2218; {\itshape Sxx} \&\#x2218; {\itshape R2}
+\end{DoxyItemize}
+
+with {\itshape T} a translation, {\itshape R} a rotation, {\itshape Sxx} a scale, and {\itshape Sxy} a skew component.
+
+\doxyparagraph*{Java\+Script exposability}
+
+A W\+Transform is Java\+Script exposable. If a W\+Transform \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}, it can be accessed in your custom Java\+Script code through \mbox{\hyperlink{classWt_1_1WJavaScriptHandle_a0d0bc00f0bcafb596c3f6c96c4241ded}{its handle\textquotesingle{}s js\+Ref()}}. A transform is represented as a Java\+Script array, e.\+g. a W\+Transform(m11, m12, m21, m22, dx, dy) will be represented in Java\+Script by\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[\mbox{\hyperlink{classWt_1_1WTransform_ae1166875478011bbaa47b0c143c8650e}{m11}}, \mbox{\hyperlink{classWt_1_1WTransform_a2f28772a3535c810d8af5421777b4a6f}{m12}}, \mbox{\hyperlink{classWt_1_1WTransform_a10ce670920d570d07e91d1dd846d02e4}{m21}}, \mbox{\hyperlink{classWt_1_1WTransform_a21d7e4b130fc196923ce3a1c3b5f9a62}{m22}}, \mbox{\hyperlink{classWt_1_1WTransform_a0acf97ec22b09d77fb18ec363bdfafb7}{dx}}, \mbox{\hyperlink{classWt_1_1WTransform_ab970a37ccdd388af73a9d45e44b63e36}{dy}}]}
+\end{DoxyCode}
+
+
+As an exception to the general rule that \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{Java\+Script bound}} objects should not be modified, W\+Transform does support many modifications. These modifications will then accumulate in the Java\+Script representation of the transform. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WTransform_aa83f5dc582b77c4ac706cfb6b097a6e3}\label{classWt_1_1WTransform_aa83f5dc582b77c4ac706cfb6b097a6e3}} 
+\index{Wt::WTransform@{Wt::WTransform}!WTransform@{WTransform}}
+\index{WTransform@{WTransform}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{WTransform()}{WTransform()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Transform\+::\+W\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Creates the identity transformation matrix. \mbox{\Hypertarget{classWt_1_1WTransform_a7af529e947eefac16dbce9d4ecdf374b}\label{classWt_1_1WTransform_a7af529e947eefac16dbce9d4ecdf374b}} 
+\index{Wt::WTransform@{Wt::WTransform}!WTransform@{WTransform}}
+\index{WTransform@{WTransform}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{WTransform()}{WTransform()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Transform\+::\+W\+Transform (\begin{DoxyParamCaption}\item[{double}]{m11,  }\item[{double}]{m12,  }\item[{double}]{m21,  }\item[{double}]{m22,  }\item[{double}]{dx,  }\item[{double}]{dy }\end{DoxyParamCaption})}
+
+
+
+Construct a custom matrix by specifying the parameters. 
+
+Creates a matrix from the specified parameters. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WTransform_ab0f477fb4c6a9102638d72be27665b37}\label{classWt_1_1WTransform_ab0f477fb4c6a9102638d72be27665b37}} 
+\index{Wt::WTransform@{Wt::WTransform}!decomposeTranslateRotateScaleRotate@{decomposeTranslateRotateScaleRotate}}
+\index{decomposeTranslateRotateScaleRotate@{decomposeTranslateRotateScaleRotate}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{decomposeTranslateRotateScaleRotate()}{decomposeTranslateRotateScaleRotate()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Transform\+::decompose\+Translate\+Rotate\+Scale\+Rotate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structWt_1_1WTransform_1_1TRSRDecomposition}{T\+R\+S\+R\+Decomposition}} \&}]{result }\end{DoxyParamCaption}) const}
+
+
+
+Decomposes the transformation. 
+
+Decomposes the transformation into elementary operations\+: translation ({\itshape dx}, {\ttfamily dy}), followed by rotation ({\itshape alpha2}), followed by scale ({\itshape sx}, {\ttfamily sy}) and again a rotation ({\ttfamily alpha2}). The angles are expressed in radians.
+
+This performs a \href{http://en.wikipedia.org/wiki/Singular_value_decomposition}{\texttt{ Singular Value Decomposition (S\+VD)}}. \mbox{\Hypertarget{classWt_1_1WTransform_a6949998bdf1a6fa12646d8fd6c6c056a}\label{classWt_1_1WTransform_a6949998bdf1a6fa12646d8fd6c6c056a}} 
+\index{Wt::WTransform@{Wt::WTransform}!decomposeTranslateRotateScaleSkew@{decomposeTranslateRotateScaleSkew}}
+\index{decomposeTranslateRotateScaleSkew@{decomposeTranslateRotateScaleSkew}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{decomposeTranslateRotateScaleSkew()}{decomposeTranslateRotateScaleSkew()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Transform\+::decompose\+Translate\+Rotate\+Scale\+Skew (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structWt_1_1WTransform_1_1TRSSDecomposition}{T\+R\+S\+S\+Decomposition}} \&}]{result }\end{DoxyParamCaption}) const}
+
+
+
+Decomposes the transformation. 
+
+Decomposes the transformation into elementary operations\+: translation ({\itshape dx}, {\ttfamily dy}), followed by rotation ({\itshape alpha}), followed by scale ({\itshape sx}, {\ttfamily sy}) and vertical shearing factor ({\ttfamily sh}). The angle is expressed in radians.
+
+This performs a \href{http://en.wikipedia.org/wiki/Gram_schmidt}{\texttt{ Gram-\/\+Schmidt orthonormalization}}. \mbox{\Hypertarget{classWt_1_1WTransform_a0acf97ec22b09d77fb18ec363bdfafb7}\label{classWt_1_1WTransform_a0acf97ec22b09d77fb18ec363bdfafb7}} 
+\index{Wt::WTransform@{Wt::WTransform}!dx@{dx}}
+\index{dx@{dx}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{dx()}{dx()}}
+{\footnotesize\ttfamily double Wt\+::\+W\+Transform\+::dx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the horizontal translation factor. 
+
+Is equivalent to \mbox{\hyperlink{classWt_1_1WTransform_a1b26e47e25f8b2254fad617dd8d2f17e}{m31()}} \mbox{\Hypertarget{classWt_1_1WTransform_ab970a37ccdd388af73a9d45e44b63e36}\label{classWt_1_1WTransform_ab970a37ccdd388af73a9d45e44b63e36}} 
+\index{Wt::WTransform@{Wt::WTransform}!dy@{dy}}
+\index{dy@{dy}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{dy()}{dy()}}
+{\footnotesize\ttfamily double Wt\+::\+W\+Transform\+::dy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the vertical translation factor. 
+
+Is equivalent to \mbox{\hyperlink{classWt_1_1WTransform_a27c83995085447e1de0e179b589db1df}{m32()}} \mbox{\Hypertarget{classWt_1_1WTransform_a9ca20340ef1256dd02715672cc15e75c}\label{classWt_1_1WTransform_a9ca20340ef1256dd02715672cc15e75c}} 
+\index{Wt::WTransform@{Wt::WTransform}!inverted@{inverted}}
+\index{inverted@{inverted}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{inverted()}{inverted()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} Wt\+::\+W\+Transform\+::inverted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the inverted transformation. 
+
+Returns {\ttfamily this} if the transformation could not be inverted (\mbox{\hyperlink{classWt_1_1WTransform_a893732986df842693c3ce872a9893b31}{determinant()}} == 0), and logs an error instead. \mbox{\Hypertarget{classWt_1_1WTransform_a23303425ad2e79918f95637127044a59}\label{classWt_1_1WTransform_a23303425ad2e79918f95637127044a59}} 
+\index{Wt::WTransform@{Wt::WTransform}!isIdentity@{isIdentity}}
+\index{isIdentity@{isIdentity}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{isIdentity()}{isIdentity()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Transform\+::is\+Identity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Identity check. 
+
+Returns true if the transform represents an identity transformation.
+
+\begin{DoxyNote}{Note}
+This is always false if the transform is \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{Java\+Script bound}}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WTransform_a0eb8519ac9d52661ca5ad5514ef5e0f3}\label{classWt_1_1WTransform_a0eb8519ac9d52661ca5ad5514ef5e0f3}} 
+\index{Wt::WTransform@{Wt::WTransform}!jsValue@{jsValue}}
+\index{jsValue@{jsValue}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{jsValue()}{jsValue()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+W\+Transform\+::js\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a Java\+Script representation of the value of this object. 
+
+\begin{DoxyNote}{Note}
+The value returned will reflect the current server side value of the object. If this object is Java\+Script bound, this value may not reflect the actual client side value. If you need access to the client side value, use \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_aee9bb7156b269529a7a750745c1a4690}{js\+Ref()}} intead. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a629c537a37b1c669c96d519360b53d14}{Wt\+::\+W\+Java\+Script\+Exposable\+Object}}.
+
+\mbox{\Hypertarget{classWt_1_1WTransform_a1b26e47e25f8b2254fad617dd8d2f17e}\label{classWt_1_1WTransform_a1b26e47e25f8b2254fad617dd8d2f17e}} 
+\index{Wt::WTransform@{Wt::WTransform}!m31@{m31}}
+\index{m31@{m31}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{m31()}{m31()}}
+{\footnotesize\ttfamily double Wt\+::\+W\+Transform\+::m31 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the horizontal translation factor. 
+
+Is equivalent to \mbox{\hyperlink{classWt_1_1WTransform_a0acf97ec22b09d77fb18ec363bdfafb7}{dx()}} \mbox{\Hypertarget{classWt_1_1WTransform_a27c83995085447e1de0e179b589db1df}\label{classWt_1_1WTransform_a27c83995085447e1de0e179b589db1df}} 
+\index{Wt::WTransform@{Wt::WTransform}!m32@{m32}}
+\index{m32@{m32}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{m32()}{m32()}}
+{\footnotesize\ttfamily double Wt\+::\+W\+Transform\+::m32 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the vertical translation factor. 
+
+Is equivalent to \mbox{\hyperlink{classWt_1_1WTransform_ab970a37ccdd388af73a9d45e44b63e36}{dy()}} \mbox{\Hypertarget{classWt_1_1WTransform_a380b799669abc4b3ee6193e5ea747b76}\label{classWt_1_1WTransform_a380b799669abc4b3ee6193e5ea747b76}} 
+\index{Wt::WTransform@{Wt::WTransform}!map@{map}}
+\index{map@{map}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{map()}{map()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} Wt\+::\+W\+Transform\+::map (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&}]{path }\end{DoxyParamCaption}) const}
+
+
+
+Applies the transformation to a painter path. 
+
+This will transform all individual points according to the transformation. The radius of arcs will be unaffected.
+
+\begin{DoxyNote}{Note}
+If this transform or the given path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{are Java\+Script bound}}, the resulting path will also be Java\+Script bound. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WTransform_ac16907b5f7ee9b9a9fc63e0a4edf970c}\label{classWt_1_1WTransform_ac16907b5f7ee9b9a9fc63e0a4edf970c}} 
+\index{Wt::WTransform@{Wt::WTransform}!map@{map}}
+\index{map@{map}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{map()}{map()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} Wt\+::\+W\+Transform\+::map (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&}]{p }\end{DoxyParamCaption}) const}
+
+
+
+Applys the transformation to a point. 
+
+Returns the transformed point.
+
+\begin{DoxyNote}{Note}
+If this transform or the given point \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{are Java\+Script bound}}, the resulting point will also be Java\+Script bound.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTransform_a7d086e0005889e079cdffe4183d7c58a}{map(double x, double y, double $\ast$tx, double $\ast$ty) const}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTransform_a056dfce84725d9d43567260d653946ed}\label{classWt_1_1WTransform_a056dfce84725d9d43567260d653946ed}} 
+\index{Wt::WTransform@{Wt::WTransform}!map@{map}}
+\index{map@{map}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{map()}{map()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} Wt\+::\+W\+Transform\+::map (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rect }\end{DoxyParamCaption}) const}
+
+
+
+Applies the transformation to a rectangle. 
+
+Since the rectangle is aligned with X and Y axes, this may increase the size of the rectangle even for a transformation that only rotates.
+
+\begin{DoxyNote}{Note}
+If this transform or the given rectangle \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{are Java\+Script bound}}, the resulting rectangle will also be Java\+Script bound. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WTransform_a7d086e0005889e079cdffe4183d7c58a}\label{classWt_1_1WTransform_a7d086e0005889e079cdffe4183d7c58a}} 
+\index{Wt::WTransform@{Wt::WTransform}!map@{map}}
+\index{map@{map}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{map()}{map()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Transform\+::map (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double $\ast$}]{tx,  }\item[{double $\ast$}]{ty }\end{DoxyParamCaption}) const}
+
+
+
+Applys the transformation to a point. 
+
+Sets the point ({\itshape tx}, {\ttfamily ty}) to the transformation of the point ({\itshape x}, {\ttfamily y}).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTransform_ac16907b5f7ee9b9a9fc63e0a4edf970c}{map(const W\+Point\+F\&) const}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTransform_a446805f86b749565ace3b6ca0e1bbf73}\label{classWt_1_1WTransform_a446805f86b749565ace3b6ca0e1bbf73}} 
+\index{Wt::WTransform@{Wt::WTransform}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Transform\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Comparison operator. 
+
+Returns {\ttfamily true} if the transforms are different. \mbox{\Hypertarget{classWt_1_1WTransform_a083acfaf3b6f9df363dc0efc47d52d66}\label{classWt_1_1WTransform_a083acfaf3b6f9df363dc0efc47d52d66}} 
+\index{Wt::WTransform@{Wt::WTransform}!operator=@{operator=}}
+\index{operator=@{operator=}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}}\& Wt\+::\+W\+Transform\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \&}]{rhs }\end{DoxyParamCaption})}
+
+
+
+Assignment operator. 
+
+Copies the transformation from the {\ttfamily rhs}. \mbox{\Hypertarget{classWt_1_1WTransform_a7d73c1776348632d81422d0aa75b5464}\label{classWt_1_1WTransform_a7d73c1776348632d81422d0aa75b5464}} 
+\index{Wt::WTransform@{Wt::WTransform}!operator==@{operator==}}
+\index{operator==@{operator==}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Transform\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Comparison operator. 
+
+Returns {\ttfamily true} if the transforms are exactly the same. \mbox{\Hypertarget{classWt_1_1WTransform_a36e8423634a12878a6a7262bd749fe6b}\label{classWt_1_1WTransform_a36e8423634a12878a6a7262bd749fe6b}} 
+\index{Wt::WTransform@{Wt::WTransform}!reset@{reset}}
+\index{reset@{reset}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Transform\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the transformation to the identity. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the transform \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTransform_a23303425ad2e79918f95637127044a59}{is\+Identity()}}, \mbox{\hyperlink{classWt_1_1WTransform_aa83f5dc582b77c4ac706cfb6b097a6e3}{W\+Transform()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTransform_a9fb70c530d57c5b3826c3266b7bd1cbd}\label{classWt_1_1WTransform_a9fb70c530d57c5b3826c3266b7bd1cbd}} 
+\index{Wt::WTransform@{Wt::WTransform}!rotate@{rotate}}
+\index{rotate@{rotate}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}}\& Wt\+::\+W\+Transform\+::rotate (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})}
+
+
+
+Rotates the transformation. 
+
+Applies a clock-\/wise rotation to the current transformation matrix, over {\ttfamily angle} degrees.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTransform_a5818cba1264aa37151c972ad9be411c2}{rotate\+Radians()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTransform_a5818cba1264aa37151c972ad9be411c2}\label{classWt_1_1WTransform_a5818cba1264aa37151c972ad9be411c2}} 
+\index{Wt::WTransform@{Wt::WTransform}!rotateRadians@{rotateRadians}}
+\index{rotateRadians@{rotateRadians}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{rotateRadians()}{rotateRadians()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}}\& Wt\+::\+W\+Transform\+::rotate\+Radians (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})}
+
+
+
+Rotates the transformation. 
+
+Applies a clock-\/wise rotation to the current transformation matrix, over {\ttfamily angle} radians.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTransform_a9fb70c530d57c5b3826c3266b7bd1cbd}{rotate()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTransform_a2bffeef816ccb2be161fdc7c2d339e5d}\label{classWt_1_1WTransform_a2bffeef816ccb2be161fdc7c2d339e5d}} 
+\index{Wt::WTransform@{Wt::WTransform}!scale@{scale}}
+\index{scale@{scale}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}}\& Wt\+::\+W\+Transform\+::scale (\begin{DoxyParamCaption}\item[{double}]{sx,  }\item[{double}]{sy }\end{DoxyParamCaption})}
+
+
+
+Scales the transformation. 
+
+Scales the current transformation.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTransform_a58dc3da9a195adc212e9001faaa152bf}{shear()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTransform_a58dc3da9a195adc212e9001faaa152bf}\label{classWt_1_1WTransform_a58dc3da9a195adc212e9001faaa152bf}} 
+\index{Wt::WTransform@{Wt::WTransform}!shear@{shear}}
+\index{shear@{shear}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{shear()}{shear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}}\& Wt\+::\+W\+Transform\+::shear (\begin{DoxyParamCaption}\item[{double}]{sh,  }\item[{double}]{sv }\end{DoxyParamCaption})}
+
+
+
+Shears the transformation. 
+
+Shears the current transformation.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTransform_a2bffeef816ccb2be161fdc7c2d339e5d}{scale()}}, \mbox{\hyperlink{classWt_1_1WTransform_a9fb70c530d57c5b3826c3266b7bd1cbd}{rotate()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTransform_ab9b8740a5052b8c258ad6f2efa2c4b70}\label{classWt_1_1WTransform_ab9b8740a5052b8c258ad6f2efa2c4b70}} 
+\index{Wt::WTransform@{Wt::WTransform}!translate@{translate}}
+\index{translate@{translate}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}}\& Wt\+::\+W\+Transform\+::translate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Translates the transformation. 
+
+Translates the current transformation.
+
+\begin{DoxyNote}{Note}
+If this transform or the given point \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{are Java\+Script bound}}, the resulting transform will also be Java\+Script bound. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WTransform_a5819b2d1b3681abeca43d2fc05b4732a}\label{classWt_1_1WTransform_a5819b2d1b3681abeca43d2fc05b4732a}} 
+\index{Wt::WTransform@{Wt::WTransform}!translate@{translate}}
+\index{translate@{translate}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}}\& Wt\+::\+W\+Transform\+::translate (\begin{DoxyParamCaption}\item[{double}]{dx,  }\item[{double}]{dy }\end{DoxyParamCaption})}
+
+
+
+Translates the transformation. 
+
+Translates the current transformation. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classWt_1_1WTransform_a32281880ff4f50a1aa6b07477f779da0}\label{classWt_1_1WTransform_a32281880ff4f50a1aa6b07477f779da0}} 
+\index{Wt::WTransform@{Wt::WTransform}!Identity@{Identity}}
+\index{Identity@{Identity}!Wt::WTransform@{Wt::WTransform}}
+\doxysubsubsection{\texorpdfstring{Identity}{Identity}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} Wt\+::\+W\+Transform\+::\+Identity\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A constant that represents the identity transform. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTransform_a23303425ad2e79918f95637127044a59}{is\+Identity()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Transform.\+h\end{DoxyCompactItemize}

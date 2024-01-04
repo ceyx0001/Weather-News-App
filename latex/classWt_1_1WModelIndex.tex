@@ -1,0 +1,445 @@
+\hypertarget{classWt_1_1WModelIndex}{}\doxysection{Wt\+::W\+Model\+Index Class Reference}
+\label{classWt_1_1WModelIndex}\index{Wt::WModelIndex@{Wt::WModelIndex}}
+
+
+A value class that describes an index to an item in a data model.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Model\+Index.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::W\+Model\+Index\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WModelIndex_1_1UnorderedLess}{Unordered\+Less}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WModelIndex_a29431c83f8ed71654e213ec4aae21813}{W\+Model\+Index}} ()
+\begin{DoxyCompactList}\small\item\em Create an invalid \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WModelIndex_ad963ed55141a0363e667ec0634b19815}{column}} () const
+\begin{DoxyCompactList}\small\item\em Returns the column for this model index. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WModelIndex_a25cdcbdc2d1a0030ec37c08b39618f13}{row}} () const
+\begin{DoxyCompactList}\small\item\em Returns the row for this model index. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{classWt_1_1WModelIndex_a870e6637b7beebef4f4dfaec9f08e0a2}{internal\+Pointer}} () const
+\begin{DoxyCompactList}\small\item\em Returns the internal pointer. \end{DoxyCompactList}\item 
+\+::uint64\+\_\+t \mbox{\hyperlink{classWt_1_1WModelIndex_aa1373ac26110e15238bd8379fdb04c3b}{internal\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the internal id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WModelIndex_a9ff7915a9594dd3e48b55341e20c9c2a}{child}} (int \mbox{\hyperlink{classWt_1_1WModelIndex_a25cdcbdc2d1a0030ec37c08b39618f13}{row}}, int \mbox{\hyperlink{classWt_1_1WModelIndex_ad963ed55141a0363e667ec0634b19815}{column}}) const
+\begin{DoxyCompactList}\small\item\em Returns a model index for a child item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WModelIndex_ad115129ae47879654639e6cc8c4f0f08}{parent}} () const
+\begin{DoxyCompactList}\small\item\em Returns an index to the parent. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classWt_1_1WModelIndex_ada1e81484925d24df6081bf4fa6b7dc4}{data}} (\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}) const
+\begin{DoxyCompactList}\small\item\em Returns data in the model at this index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}} $>$ \mbox{\hyperlink{classWt_1_1WModelIndex_ad7beb87e0f534cbf521196ac4806694f}{flags}} () const
+\begin{DoxyCompactList}\small\item\em Returns the flags for this item. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WModelIndex_a7abfa7fbb4385511da8cfd40c7c6838a}{is\+Valid}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the index is a real valid index. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $\ast$ \mbox{\hyperlink{classWt_1_1WModelIndex_a64cc420f610e1c6cae01863448f50439}{model}} () const
+\begin{DoxyCompactList}\small\item\em Returns the model to which this (valid) index is bound. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WModelIndex_a930100eea844de84e91bfecd0a87f601}{operator==}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&other) const
+\begin{DoxyCompactList}\small\item\em Comparison operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WModelIndex_a91eaf9d3c9702f0da47be0abe611bcc9}{operator!=}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&other) const
+\begin{DoxyCompactList}\small\item\em Comparison operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WModelIndex_aa237b853e56c535f0d0a8f95913e0847}{operator$<$}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&other) const
+\begin{DoxyCompactList}\small\item\em Comparison operator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WModelIndex_a93c11e136a0fdc596eb745cc7fce7033}{encode\+As\+Raw\+Index}} ()
+\begin{DoxyCompactList}\small\item\em Encode to raw index (before a layout change). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WModelIndex_a068d2232b5ed7d2dcd9560305f82c0fe}{decode\+From\+Raw\+Index}} () const
+\begin{DoxyCompactList}\small\item\em Decodes a raw index (after a layout change). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WModelIndex_a6ad090ee45a97c74746397c3d937437c}{depth}} () const
+\begin{DoxyCompactList}\small\item\em Returns the depth (in a hierarchical model). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classWt_1_1WModelIndex_a1e35a1dc56fc137b837080501153bb67}{encode\+As\+Raw\+Indexes}} (\mbox{\hyperlink{classWt_a1ac86c224fa86a17f4ca1b52881163ed}{W\+Model\+Index\+Set}} \&indexes)
+\begin{DoxyCompactList}\small\item\em Utility method for converting an entire set of indexes to raw. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classWt_1_1WModelIndex_a52e789330c08de819f01b2eb66d176e4}{encode\+As\+Raw\+Indexes}} (std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$ \&indexes)
+\begin{DoxyCompactList}\small\item\em Utility method for converting an entire set of indexes to raw. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classWt_a1ac86c224fa86a17f4ca1b52881163ed}{W\+Model\+Index\+Set}} \mbox{\hyperlink{classWt_1_1WModelIndex_aa7e28055d7f38d583e162d624aa51f57}{decode\+From\+Raw\+Indexes}} (const \mbox{\hyperlink{classWt_a1ac86c224fa86a17f4ca1b52881163ed}{W\+Model\+Index\+Set}} \&encoded\+Indexes)
+\begin{DoxyCompactList}\small\item\em Utility method to decode an entire set of raw indexes. \end{DoxyCompactList}\item 
+static std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$ \mbox{\hyperlink{classWt_1_1WModelIndex_a3512255bcee8f99256d665c0b118b312}{decode\+From\+Raw\+Indexes}} (const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$ \&encoded\+Indexes)
+\begin{DoxyCompactList}\small\item\em Utility method to decode an entire set of raw indexes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WModelIndex_a762f6bd546140ae551ba136569970058}\label{classWt_1_1WModelIndex_a762f6bd546140ae551ba136569970058}} 
+static bool \mbox{\hyperlink{classWt_1_1WModelIndex_a762f6bd546140ae551ba136569970058}{is\+Ancestor}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&i1, const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&i2)
+\begin{DoxyCompactList}\small\item\em Returns whether i2 is an ancestor of i1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WModelIndex_a2feab38b6760b3148451e146b5e036d3}\label{classWt_1_1WModelIndex_a2feab38b6760b3148451e146b5e036d3}} 
+{\bfseries W\+Model\+Index} (int \mbox{\hyperlink{classWt_1_1WModelIndex_a25cdcbdc2d1a0030ec37c08b39618f13}{row}}, int \mbox{\hyperlink{classWt_1_1WModelIndex_ad963ed55141a0363e667ec0634b19815}{column}}, const \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $\ast$\mbox{\hyperlink{classWt_1_1WModelIndex_a64cc420f610e1c6cae01863448f50439}{model}}, void $\ast$ptr)
+\item 
+\mbox{\Hypertarget{classWt_1_1WModelIndex_a83da730f22cfad7414e3fd3842c686cf}\label{classWt_1_1WModelIndex_a83da730f22cfad7414e3fd3842c686cf}} 
+{\bfseries W\+Model\+Index} (int \mbox{\hyperlink{classWt_1_1WModelIndex_a25cdcbdc2d1a0030ec37c08b39618f13}{row}}, int \mbox{\hyperlink{classWt_1_1WModelIndex_ad963ed55141a0363e667ec0634b19815}{column}}, const \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $\ast$\mbox{\hyperlink{classWt_1_1WModelIndex_a64cc420f610e1c6cae01863448f50439}{model}}, \+::uint64\+\_\+t id)
+\item 
+\mbox{\Hypertarget{classWt_1_1WModelIndex_a2e1ab6823d0c6c35172ec7be71c2d9be}\label{classWt_1_1WModelIndex_a2e1ab6823d0c6c35172ec7be71c2d9be}} 
+\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} {\bfseries ancestor} (int \mbox{\hyperlink{classWt_1_1WModelIndex_a6ad090ee45a97c74746397c3d937437c}{depth}}) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WModelIndex_ac4d38423b8fc4ab70a918fafc9a75a36}\label{classWt_1_1WModelIndex_ac4d38423b8fc4ab70a918fafc9a75a36}} 
+bool {\bfseries is\+Raw\+Index} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WModelIndex_af4af352acab448d61a2e476f81193548}\label{classWt_1_1WModelIndex_af4af352acab448d61a2e476f81193548}} 
+const \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $\ast$ {\bfseries model\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WModelIndex_a2e6e742edf37c2b2af3f66013ea2dff6}\label{classWt_1_1WModelIndex_a2e6e742edf37c2b2af3f66013ea2dff6}} 
+int {\bfseries row\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WModelIndex_a7636f154a013b9f71418a929f2b9d3ee}\label{classWt_1_1WModelIndex_a7636f154a013b9f71418a929f2b9d3ee}} 
+int {\bfseries column\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WModelIndex_a8692fe90c8f8c5cc04d073e6fa0dd77d}\label{classWt_1_1WModelIndex_a8692fe90c8f8c5cc04d073e6fa0dd77d}} 
+\+::uint64\+\_\+t {\bfseries internal\+Id\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WModelIndex_a8f33aece522b6bcee8685bb23b1c1e0a}\label{classWt_1_1WModelIndex_a8f33aece522b6bcee8685bb23b1c1e0a}} 
+class {\bfseries W\+Abstract\+Item\+Model}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A value class that describes an index to an item in a data model. 
+
+Indexes are used to indicate a particular item in a \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}}. An index points to the item by identifying its row and column location within a parent model index.
+
+An index is immutable.
+
+The default constructor creates an {\itshape invalid index}, which by convention indicates the parent of top level indexes. Thus, a model that specifies only a list or table of data (but no hierarchical data) would have as valid indexes only indexes that specify the {\itshape invalid} model index as parent.
+
+Upon the model\textquotesingle{}s choice, model indexes for hierarchical models may have an internal Id represented by a int64\+\_\+t (\mbox{\hyperlink{classWt_1_1WModelIndex_aa1373ac26110e15238bd8379fdb04c3b}{internal\+Id()}}), a pointer (\mbox{\hyperlink{classWt_1_1WModelIndex_a870e6637b7beebef4f4dfaec9f08e0a2}{internal\+Pointer()}}).
+
+Indexes are created by the model, within the protected \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af9b04fdec198dfbc1c9297ead93c8930}{W\+Abstract\+Item\+Model\+::create\+Index()}} methods. In this way, models can define an internal pointer or id suitable for identifying parent items in the model.
+
+When a model\textquotesingle{}s geometry changes due to row or column insertions or removals, you may need to update your indexes, as otherwise they may no longer point to the same item (but instead still to the same row/column). Thus, if you store indexes and want to support model changes such as row or columns insertions/removals, then you need to react to the corresponding signals such as \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a54c971088bb9b424f97fe31c17f8f12f}{W\+Abstract\+Item\+Model\+::rows\+Inserted()}} to update these indexes (i.\+e. shift them), or even remove them when the corresponding row/column has been removed.
+
+When a model\textquotesingle{}s layout changes (it is rearranging its contents for example in response to a sort operation), a similar problem arises. Some models support tracking of indexes over layout changes, using {\itshape raw} indexes. In reaction to \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab377ac2fcb9de9d191bd1353665d1389}{W\+Abstract\+Item\+Model\+::layout\+About\+To\+Be\+Changed()}}, you should encode any index which you wish to recover after the layout change using \mbox{\hyperlink{classWt_1_1WModelIndex_a93c11e136a0fdc596eb745cc7fce7033}{encode\+As\+Raw\+Index()}}, and in \mbox{\hyperlink{classWt_1_1WAbstractItemModel_afe7cb1d5186881f83aa8f0e452aaef66}{W\+Abstract\+Item\+Model\+::layout\+Changed()}} you can obtain an index that points to the same item using \mbox{\hyperlink{classWt_1_1WModelIndex_a068d2232b5ed7d2dcd9560305f82c0fe}{decode\+From\+Raw\+Index()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WModelIndex_a29431c83f8ed71654e213ec4aae21813}\label{classWt_1_1WModelIndex_a29431c83f8ed71654e213ec4aae21813}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!WModelIndex@{WModelIndex}}
+\index{WModelIndex@{WModelIndex}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{WModelIndex()}{WModelIndex()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Model\+Index\+::\+W\+Model\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create an invalid \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}. 
+
+Returns a model index for which \mbox{\hyperlink{classWt_1_1WModelIndex_a7abfa7fbb4385511da8cfd40c7c6838a}{is\+Valid()}} return {\ttfamily false}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WModelIndex_a9ff7915a9594dd3e48b55341e20c9c2a}\label{classWt_1_1WModelIndex_a9ff7915a9594dd3e48b55341e20c9c2a}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!child@{child}}
+\index{child@{child}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{child()}{child()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Model\+Index\+::child (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column }\end{DoxyParamCaption}) const}
+
+
+
+Returns a model index for a child item. 
+
+This is a convenience method, and is only defined for indexes that are valid().
+
+It has the same function as \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{W\+Abstract\+Item\+Model\+::index()}} but is less general because the latter expression may also be used to retrieve top level children, i.\+e. when {\ttfamily index} is invalid.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{W\+Abstract\+Item\+Model\+::index()}}, \mbox{\hyperlink{classWt_1_1WModelIndex_a7abfa7fbb4385511da8cfd40c7c6838a}{is\+Valid()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WModelIndex_ad963ed55141a0363e667ec0634b19815}\label{classWt_1_1WModelIndex_ad963ed55141a0363e667ec0634b19815}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!column@{column}}
+\index{column@{column}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{column()}{column()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Model\+Index\+::column (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the column for this model index. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WModelIndex_a25cdcbdc2d1a0030ec37c08b39618f13}{row()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WModelIndex_ada1e81484925d24df6081bf4fa6b7dc4}\label{classWt_1_1WModelIndex_ada1e81484925d24df6081bf4fa6b7dc4}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!data@{data}}
+\index{data@{data}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} Wt\+::\+W\+Model\+Index\+::data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}} }\end{DoxyParamCaption}) const}
+
+
+
+Returns data in the model at this index. 
+
+This is a convenience method for \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af77f707dd2340652717e7122cd7f4ffd}{W\+Abstract\+Item\+Model\+::data()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_af77f707dd2340652717e7122cd7f4ffd}{W\+Abstract\+Item\+Model\+::data()}} 
+
+\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WModelIndex_a068d2232b5ed7d2dcd9560305f82c0fe}\label{classWt_1_1WModelIndex_a068d2232b5ed7d2dcd9560305f82c0fe}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!decodeFromRawIndex@{decodeFromRawIndex}}
+\index{decodeFromRawIndex@{decodeFromRawIndex}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{decodeFromRawIndex()}{decodeFromRawIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Model\+Index\+::decode\+From\+Raw\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Decodes a raw index (after a layout change). 
+
+A raw index can be decoded, within the context of a model that has been re-\/layed out.
+
+This method returns a new index that points to the same item, or, \mbox{\hyperlink{classWt_1_1WModelIndex_a29431c83f8ed71654e213ec4aae21813}{W\+Model\+Index()}} if the underlying model did not support encoding to raw indexes, or, if the item to which the index previously pointed, is no longer part of the model.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a56f6aa462a2707cfb8697b8b31a8ca1f}{W\+Abstract\+Item\+Model\+::from\+Raw\+Index()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_afe7cb1d5186881f83aa8f0e452aaef66}{W\+Abstract\+Item\+Model\+::layout\+Changed()}} 
+
+\mbox{\hyperlink{classWt_1_1WModelIndex_a93c11e136a0fdc596eb745cc7fce7033}{encode\+As\+Raw\+Index()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WModelIndex_a3512255bcee8f99256d665c0b118b312}\label{classWt_1_1WModelIndex_a3512255bcee8f99256d665c0b118b312}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!decodeFromRawIndexes@{decodeFromRawIndexes}}
+\index{decodeFromRawIndexes@{decodeFromRawIndexes}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{decodeFromRawIndexes()}{decodeFromRawIndexes()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static std\+::unordered\+\_\+set$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}$>$ Wt\+::\+W\+Model\+Index\+::decode\+From\+Raw\+Indexes (\begin{DoxyParamCaption}\item[{const std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$ \&}]{encoded\+Indexes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Utility method to decode an entire set of raw indexes. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WModelIndex_a068d2232b5ed7d2dcd9560305f82c0fe}{decode\+From\+Raw\+Index()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WModelIndex_aa7e28055d7f38d583e162d624aa51f57}\label{classWt_1_1WModelIndex_aa7e28055d7f38d583e162d624aa51f57}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!decodeFromRawIndexes@{decodeFromRawIndexes}}
+\index{decodeFromRawIndexes@{decodeFromRawIndexes}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{decodeFromRawIndexes()}{decodeFromRawIndexes()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classWt_a1ac86c224fa86a17f4ca1b52881163ed}{W\+Model\+Index\+Set}} Wt\+::\+W\+Model\+Index\+::decode\+From\+Raw\+Indexes (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_a1ac86c224fa86a17f4ca1b52881163ed}{W\+Model\+Index\+Set}} \&}]{encoded\+Indexes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Utility method to decode an entire set of raw indexes. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WModelIndex_a068d2232b5ed7d2dcd9560305f82c0fe}{decode\+From\+Raw\+Index()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WModelIndex_a6ad090ee45a97c74746397c3d937437c}\label{classWt_1_1WModelIndex_a6ad090ee45a97c74746397c3d937437c}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!depth@{depth}}
+\index{depth@{depth}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{depth()}{depth()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Model\+Index\+::depth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the depth (in a hierarchical model). 
+
+A top level index has depth 0. \mbox{\Hypertarget{classWt_1_1WModelIndex_a93c11e136a0fdc596eb745cc7fce7033}\label{classWt_1_1WModelIndex_a93c11e136a0fdc596eb745cc7fce7033}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!encodeAsRawIndex@{encodeAsRawIndex}}
+\index{encodeAsRawIndex@{encodeAsRawIndex}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{encodeAsRawIndex()}{encodeAsRawIndex()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Model\+Index\+::encode\+As\+Raw\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Encode to raw index (before a layout change). 
+
+Use this method to encode an index for which you want to recover an index after the layout change to the same item (which may still be in the model, but at a different location).
+
+An index that has been encoded as a raw index cannot be used for anything but \mbox{\hyperlink{classWt_1_1WModelIndex_a068d2232b5ed7d2dcd9560305f82c0fe}{decode\+From\+Raw\+Index()}} at a later point.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_aa5b86f5b8e68bd5149d50b5c101855d9}{W\+Abstract\+Item\+Model\+::to\+Raw\+Index()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab377ac2fcb9de9d191bd1353665d1389}{W\+Abstract\+Item\+Model\+::layout\+About\+To\+Be\+Changed()}} 
+
+\mbox{\hyperlink{classWt_1_1WModelIndex_a068d2232b5ed7d2dcd9560305f82c0fe}{decode\+From\+Raw\+Index()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WModelIndex_a52e789330c08de819f01b2eb66d176e4}\label{classWt_1_1WModelIndex_a52e789330c08de819f01b2eb66d176e4}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!encodeAsRawIndexes@{encodeAsRawIndexes}}
+\index{encodeAsRawIndexes@{encodeAsRawIndexes}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{encodeAsRawIndexes()}{encodeAsRawIndexes()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void Wt\+::\+W\+Model\+Index\+::encode\+As\+Raw\+Indexes (\begin{DoxyParamCaption}\item[{std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$ \&}]{indexes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Utility method for converting an entire set of indexes to raw. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WModelIndex_a93c11e136a0fdc596eb745cc7fce7033}{encode\+As\+Raw\+Index()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WModelIndex_a1e35a1dc56fc137b837080501153bb67}\label{classWt_1_1WModelIndex_a1e35a1dc56fc137b837080501153bb67}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!encodeAsRawIndexes@{encodeAsRawIndexes}}
+\index{encodeAsRawIndexes@{encodeAsRawIndexes}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{encodeAsRawIndexes()}{encodeAsRawIndexes()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void Wt\+::\+W\+Model\+Index\+::encode\+As\+Raw\+Indexes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a1ac86c224fa86a17f4ca1b52881163ed}{W\+Model\+Index\+Set}} \&}]{indexes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Utility method for converting an entire set of indexes to raw. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WModelIndex_a93c11e136a0fdc596eb745cc7fce7033}{encode\+As\+Raw\+Index()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WModelIndex_ad7beb87e0f534cbf521196ac4806694f}\label{classWt_1_1WModelIndex_ad7beb87e0f534cbf521196ac4806694f}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!flags@{flags}}
+\index{flags@{flags}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{flags()}{flags()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$\mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}}$>$ Wt\+::\+W\+Model\+Index\+::flags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the flags for this item. 
+
+This is a convenience method for \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ad65561084d42facbde3e075801ed2e4d}{W\+Abstract\+Item\+Model\+::flags()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ad65561084d42facbde3e075801ed2e4d}{W\+Abstract\+Item\+Model\+::flags()}} 
+
+\mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WModelIndex_aa1373ac26110e15238bd8379fdb04c3b}\label{classWt_1_1WModelIndex_aa1373ac26110e15238bd8379fdb04c3b}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!internalId@{internalId}}
+\index{internalId@{internalId}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{internalId()}{internalId()}}
+{\footnotesize\ttfamily \+::uint64\+\_\+t Wt\+::\+W\+Model\+Index\+::internal\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the internal id. 
+
+The internal id is used by the model to retrieve the corresponding data.
+
+This is only defined when the model created the index using W\+Abstract\+Item\+Model\+::create\+Index(int, int, uint64\+\_\+t) const.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WModelIndex_a870e6637b7beebef4f4dfaec9f08e0a2}{internal\+Pointer()}} 
+
+W\+Abstract\+Item\+Model\+::create\+Index(int, int, uint64\+\_\+t) const 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WModelIndex_a870e6637b7beebef4f4dfaec9f08e0a2}\label{classWt_1_1WModelIndex_a870e6637b7beebef4f4dfaec9f08e0a2}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!internalPointer@{internalPointer}}
+\index{internalPointer@{internalPointer}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{internalPointer()}{internalPointer()}}
+{\footnotesize\ttfamily void$\ast$ Wt\+::\+W\+Model\+Index\+::internal\+Pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the internal pointer. 
+
+The internal pointer is used by the model to retrieve the corresponding data.
+
+This is only defined when the model created the index using \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af9b04fdec198dfbc1c9297ead93c8930}{W\+Abstract\+Item\+Model\+::create\+Index(int, int, void $\ast$) const}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WModelIndex_aa1373ac26110e15238bd8379fdb04c3b}{internal\+Id()}}, 
+
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_af9b04fdec198dfbc1c9297ead93c8930}{W\+Abstract\+Item\+Model\+::create\+Index(int, int, void $\ast$) const}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WModelIndex_a7abfa7fbb4385511da8cfd40c7c6838a}\label{classWt_1_1WModelIndex_a7abfa7fbb4385511da8cfd40c7c6838a}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!isValid@{isValid}}
+\index{isValid@{isValid}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Model\+Index\+::is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the index is a real valid index. 
+
+Returns {\ttfamily true} when the index points to a valid data item, i.\+e. at a valid \mbox{\hyperlink{classWt_1_1WModelIndex_a25cdcbdc2d1a0030ec37c08b39618f13}{row()}} and \mbox{\hyperlink{classWt_1_1WModelIndex_ad963ed55141a0363e667ec0634b19815}{column()}}.
+
+An index may be invalid for two reasons\+:
+\begin{DoxyItemize}
+\item an operation requested an index that was out of model bounds,
+\item or, the index corresponds to the model\textquotesingle{}s top level root item, and is thus the parent index for top level items. 
+\end{DoxyItemize}\mbox{\Hypertarget{classWt_1_1WModelIndex_a64cc420f610e1c6cae01863448f50439}\label{classWt_1_1WModelIndex_a64cc420f610e1c6cae01863448f50439}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!model@{model}}
+\index{model@{model}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{model()}{model()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}}$\ast$ Wt\+::\+W\+Model\+Index\+::model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the model to which this (valid) index is bound. 
+
+This returns the model that created the model index. \mbox{\Hypertarget{classWt_1_1WModelIndex_a91eaf9d3c9702f0da47be0abe611bcc9}\label{classWt_1_1WModelIndex_a91eaf9d3c9702f0da47be0abe611bcc9}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Model\+Index\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Comparison operator. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WModelIndex_a930100eea844de84e91bfecd0a87f601}{operator==()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WModelIndex_aa237b853e56c535f0d0a8f95913e0847}\label{classWt_1_1WModelIndex_aa237b853e56c535f0d0a8f95913e0847}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Model\+Index\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Comparison operator. 
+
+Returns {\ttfamily true} if the index comes topologically before {\ttfamily other}.
+
+Topological order follows the order in which the indexes would be displayed in a tree table view, from top to bottom followed by left to right.
+
+An invalid index comes before all other indexes. Indexes \mbox{\hyperlink{classWt_1_1WModelIndex_a93c11e136a0fdc596eb745cc7fce7033}{encoded as raw index}} come after the invalid index and before all other indexes, and are ordered according to their \mbox{\hyperlink{classWt_1_1WModelIndex_aa1373ac26110e15238bd8379fdb04c3b}{internal\+Id()}}. \mbox{\Hypertarget{classWt_1_1WModelIndex_a930100eea844de84e91bfecd0a87f601}\label{classWt_1_1WModelIndex_a930100eea844de84e91bfecd0a87f601}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!operator==@{operator==}}
+\index{operator==@{operator==}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Model\+Index\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Comparison operator. 
+
+Returns {\ttfamily true} only if the indexes point at the same data, in the same model. \mbox{\Hypertarget{classWt_1_1WModelIndex_ad115129ae47879654639e6cc8c4f0f08}\label{classWt_1_1WModelIndex_ad115129ae47879654639e6cc8c4f0f08}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!parent@{parent}}
+\index{parent@{parent}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{parent()}{parent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Model\+Index\+::parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns an index to the parent. 
+
+This is a convenience method for \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{W\+Abstract\+Item\+Model\+::parent()}}.
+
+For a top level data item, the \mbox{\hyperlink{classWt_1_1WModelIndex_ad115129ae47879654639e6cc8c4f0f08}{parent()}} is an invalid index (see \mbox{\hyperlink{classWt_1_1WModelIndex_a29431c83f8ed71654e213ec4aae21813}{W\+Model\+Index()}}).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{W\+Abstract\+Item\+Model\+::parent()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WModelIndex_a25cdcbdc2d1a0030ec37c08b39618f13}\label{classWt_1_1WModelIndex_a25cdcbdc2d1a0030ec37c08b39618f13}} 
+\index{Wt::WModelIndex@{Wt::WModelIndex}!row@{row}}
+\index{row@{row}!Wt::WModelIndex@{Wt::WModelIndex}}
+\doxysubsubsection{\texorpdfstring{row()}{row()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Model\+Index\+::row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the row for this model index. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WModelIndex_ad963ed55141a0363e667ec0634b19815}{column()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Model\+Index.\+h\end{DoxyCompactItemize}

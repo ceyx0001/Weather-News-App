@@ -1,0 +1,76 @@
+\hypertarget{classExampleSourceViewer}{}\doxysection{Example\+Source\+Viewer Class Reference}
+\label{classExampleSourceViewer}\index{ExampleSourceViewer@{ExampleSourceViewer}}
+
+
+A simple widget to visualise a set of example source files.  
+
+
+
+
+{\ttfamily \#include $<$Example\+Source\+Viewer.\+h$>$}
+
+
+
+Inheritance diagram for Example\+Source\+Viewer\+:
+% FIG 0
+
+
+Collaboration diagram for Example\+Source\+Viewer\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExampleSourceViewer_a3ab5978077589e8dbf6d8cfdb6da36d4}\label{classExampleSourceViewer_a3ab5978077589e8dbf6d8cfdb6da36d4}} 
+\mbox{\hyperlink{classExampleSourceViewer_a3ab5978077589e8dbf6d8cfdb6da36d4}{Example\+Source\+Viewer}} (const std\+::string \&deploy\+Path, const std\+::string \&examples\+Root, const std\+::string \&examples\+Type)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExampleSourceViewer_a042ba8548f26c3def9114fc7cf1cdd39}\label{classExampleSourceViewer_a042ba8548f26c3def9114fc7cf1cdd39}} 
+void {\bfseries cpp\+Traverse\+Dir} (\mbox{\hyperlink{classWt_1_1WStandardItem}{W\+Standard\+Item}} $\ast$\mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent}}, const boost\+::filesystem\+::path \&path)
+\item 
+\mbox{\Hypertarget{classExampleSourceViewer_abd08cbc4f809738e8e06cdd959a50bdd}\label{classExampleSourceViewer_abd08cbc4f809738e8e06cdd959a50bdd}} 
+void {\bfseries java\+Traverse\+Dir} (\mbox{\hyperlink{classWt_1_1WStandardItem}{W\+Standard\+Item}} $\ast$\mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent}}, const boost\+::filesystem\+::path \&path)
+\item 
+\mbox{\Hypertarget{classExampleSourceViewer_a425eceadfc6c752e1a5bfd344e172e39}\label{classExampleSourceViewer_a425eceadfc6c752e1a5bfd344e172e39}} 
+void {\bfseries java\+Traverse\+Packages} (\mbox{\hyperlink{classWt_1_1WStandardItem}{W\+Standard\+Item}} $\ast$\mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent}}, const boost\+::filesystem\+::path \&src\+Path, const std\+::string package\+Name)
+\item 
+\mbox{\Hypertarget{classExampleSourceViewer_a7f10a65267869bb570fec25bc19348ac}\label{classExampleSourceViewer_a7f10a65267869bb570fec25bc19348ac}} 
+void \mbox{\hyperlink{classExampleSourceViewer_a7f10a65267869bb570fec25bc19348ac}{show\+File}} ()
+\begin{DoxyCompactList}\small\item\em Displayed the currently selected file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classExampleSourceViewer_a8aeb783e81242455f97f83d259919a20}\label{classExampleSourceViewer_a8aeb783e81242455f97f83d259919a20}} 
+void {\bfseries handle\+Path\+Change} ()
+\item 
+\mbox{\Hypertarget{classExampleSourceViewer_a04710b0af789b12346a22a2f7ba2bccf}\label{classExampleSourceViewer_a04710b0af789b12346a22a2f7ba2bccf}} 
+void {\bfseries set\+Example} (const std\+::string \&example\+Dir, const std\+::string \&example)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExampleSourceViewer_ad9badbb71fa6be8fd3e52ba1debfd654}\label{classExampleSourceViewer_ad9badbb71fa6be8fd3e52ba1debfd654}} 
+\mbox{\hyperlink{classWt_1_1WTreeView}{W\+Tree\+View}} $\ast$ {\bfseries example\+View\+\_\+}
+\item 
+\mbox{\Hypertarget{classExampleSourceViewer_aefc329bfd3d8f7ae11c3f452a5744ab9}\label{classExampleSourceViewer_aefc329bfd3d8f7ae11c3f452a5744ab9}} 
+\mbox{\hyperlink{classSourceView}{Source\+View}} $\ast$ {\bfseries source\+View\+\_\+}
+\item 
+\mbox{\Hypertarget{classExampleSourceViewer_a49e72c4bc9714e8fdf9fad810f0d79b1}\label{classExampleSourceViewer_a49e72c4bc9714e8fdf9fad810f0d79b1}} 
+std\+::string {\bfseries deploy\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classExampleSourceViewer_a7e33f7d49055157d7d26d036f91d2891}\label{classExampleSourceViewer_a7e33f7d49055157d7d26d036f91d2891}} 
+std\+::string {\bfseries examples\+Root\+\_\+}
+\item 
+\mbox{\Hypertarget{classExampleSourceViewer_a7aaeb2ded7907e864f3ea804f19307cd}\label{classExampleSourceViewer_a7aaeb2ded7907e864f3ea804f19307cd}} 
+std\+::string {\bfseries examples\+Type\+\_\+}
+\item 
+\mbox{\Hypertarget{classExampleSourceViewer_a310c793282edb55a1c8d01baff2e1c1d}\label{classExampleSourceViewer_a310c793282edb55a1c8d01baff2e1c1d}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WStandardItemModel}{W\+Standard\+Item\+Model}} $>$ {\bfseries model\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A simple widget to visualise a set of example source files. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/wt-\/homepage/Example\+Source\+Viewer.\+h\end{DoxyCompactItemize}

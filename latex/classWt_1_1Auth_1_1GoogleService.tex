@@ -1,0 +1,98 @@
+\hypertarget{classWt_1_1Auth_1_1GoogleService}{}\doxysection{Wt\+::Auth\+::Google\+Service Class Reference}
+\label{classWt_1_1Auth_1_1GoogleService}\index{Wt::Auth::GoogleService@{Wt::Auth::GoogleService}}
+
+
+O\+Auth service for Google as third-\/party authenticator.  
+
+
+
+
+{\ttfamily \#include $<$Google\+Service.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Auth\+::Google\+Service\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Auth\+::Google\+Service\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1GoogleService_a86bcf010d33b29810f74664fdc926a1c}\label{classWt_1_1Auth_1_1GoogleService_a86bcf010d33b29810f74664fdc926a1c}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1GoogleService_a86bcf010d33b29810f74664fdc926a1c}{Google\+Service}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a9f0d00b998656e9b9be808b447f705d9}{base\+Auth}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1GoogleService_a8beae22dae2ca60cb54c7905da8c68d3}{redirect\+Endpoint\+Path}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the deployment path of the redirection endpoint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classWt_1_1Auth_1_1GoogleService_ae8326e49d4c4edfab453859876eb1b8e}{configured}} ()
+\begin{DoxyCompactList}\small\item\em Checks whether a Google\+Auth service is properly configured. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+O\+Auth service for Google as third-\/party authenticator. 
+
+The configuration of the service is done using properties, whose values need to match the values configured at Google.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily google-\/oauth2-\/redirect-\/endpoint}\+: the U\+RL of the local redirect endpoint, to which the google O\+Auth service redirects the user after authentication. See also \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_aef1aceb2bd123fab39e352a1fbb4f69f}{redirect\+Endpoint()}}
+\item {\ttfamily google-\/oauth2-\/redirect-\/endpoint-\/path}\+: optionally, the deployment path that corresponds to the redirect endpoint. See also \mbox{\hyperlink{classWt_1_1Auth_1_1GoogleService_a8beae22dae2ca60cb54c7905da8c68d3}{redirect\+Endpoint\+Path()}}
+\item {\ttfamily google-\/oauth2-\/client-\/id}\+: The client ID
+\item {\ttfamily google-\/oauth2-\/client-\/secret}\+: The client secret.
+\end{DoxyItemize}
+
+For example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<properties>}
+\DoxyCodeLine{  <\textcolor{keyword}{property} name=\textcolor{stringliteral}{"google-\/oauth2-\/redirect-\/endpoint"}>}
+\DoxyCodeLine{    http:\textcolor{comment}{//localhost:8080/oauth2callback}}
+\DoxyCodeLine{  </\textcolor{keyword}{property}>}
+\DoxyCodeLine{  <\textcolor{keyword}{property} name=\textcolor{stringliteral}{"google-\/oauth2-\/client-\/id"}>}
+\DoxyCodeLine{    123456789012.apps.googleusercontent.com}
+\DoxyCodeLine{  </\textcolor{keyword}{property}>}
+\DoxyCodeLine{  <\textcolor{keyword}{property} name=\textcolor{stringliteral}{"google-\/oauth2-\/client-\/secret"}>}
+\DoxyCodeLine{    abcdefghijk-\/12312312312}
+\DoxyCodeLine{  </\textcolor{keyword}{property}>}
+\DoxyCodeLine{</properties>}
+\end{DoxyCode}
+
+
+Like all {\bfseries{service classes}}, this class holds only configuration state. Thus, once configured, it can be safely shared between multiple sessions since its state (the configuration) is read-\/only. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1GoogleService_ae8326e49d4c4edfab453859876eb1b8e}\label{classWt_1_1Auth_1_1GoogleService_ae8326e49d4c4edfab453859876eb1b8e}} 
+\index{Wt::Auth::GoogleService@{Wt::Auth::GoogleService}!configured@{configured}}
+\index{configured@{configured}!Wt::Auth::GoogleService@{Wt::Auth::GoogleService}}
+\doxysubsubsection{\texorpdfstring{configured()}{configured()}}
+{\footnotesize\ttfamily static bool Wt\+::\+Auth\+::\+Google\+Service\+::configured (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks whether a Google\+Auth service is properly configured. 
+
+This returns {\ttfamily true} if a value is found for the three configuration properties. \mbox{\Hypertarget{classWt_1_1Auth_1_1GoogleService_a8beae22dae2ca60cb54c7905da8c68d3}\label{classWt_1_1Auth_1_1GoogleService_a8beae22dae2ca60cb54c7905da8c68d3}} 
+\index{Wt::Auth::GoogleService@{Wt::Auth::GoogleService}!redirectEndpointPath@{redirectEndpointPath}}
+\index{redirectEndpointPath@{redirectEndpointPath}!Wt::Auth::GoogleService@{Wt::Auth::GoogleService}}
+\doxysubsubsection{\texorpdfstring{redirectEndpointPath()}{redirectEndpointPath()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+Google\+Service\+::redirect\+Endpoint\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the deployment path of the redirection endpoint. 
+
+This returns the path at which the static resource is deployed that corresponds to the \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_aef1aceb2bd123fab39e352a1fbb4f69f}{redirect\+Endpoint()}}.
+
+The default implementation will derive this path from the \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_aef1aceb2bd123fab39e352a1fbb4f69f}{redirect\+Endpoint()}} U\+RL. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a4b03967bf49f5e53d0ecefbe78f6ec68}{Wt\+::\+Auth\+::\+O\+Auth\+Service}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/Google\+Service.\+h\end{DoxyCompactItemize}

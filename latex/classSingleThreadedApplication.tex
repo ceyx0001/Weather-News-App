@@ -1,0 +1,165 @@
+\hypertarget{classSingleThreadedApplication}{}\doxysection{Single\+Threaded\+Application Class Reference}
+\label{classSingleThreadedApplication}\index{SingleThreadedApplication@{SingleThreadedApplication}}
+
+
+Inheritance diagram for Single\+Threaded\+Application\+:
+% FIG 0
+
+
+Collaboration diagram for Single\+Threaded\+Application\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSingleThreadedApplication_a39bf7b529d8e8c61c3b6e087bd2841d4}\label{classSingleThreadedApplication_a39bf7b529d8e8c61c3b6e087bd2841d4}} 
+{\bfseries Single\+Threaded\+Application} (const \mbox{\hyperlink{classWt_1_1WEnvironment}{W\+Environment}} \&env)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSingleThreadedApplication_a85724d363a0c6f94588af121b8df3cc9}\label{classSingleThreadedApplication_a85724d363a0c6f94588af121b8df3cc9}} 
+virtual void {\bfseries create} ()=0
+\item 
+\mbox{\Hypertarget{classSingleThreadedApplication_ae548093fae70e3a4579fd7e3e88f4ca3}\label{classSingleThreadedApplication_ae548093fae70e3a4579fd7e3e88f4ca3}} 
+virtual void {\bfseries destroy} ()=0
+\item 
+\mbox{\Hypertarget{classSingleThreadedApplication_ae2e51741aa40d4cc42feba6a2b0917cf}\label{classSingleThreadedApplication_ae2e51741aa40d4cc42feba6a2b0917cf}} 
+virtual void {\bfseries thread\+Notify} (const \mbox{\hyperlink{classWt_1_1WEvent}{W\+Event}} \&event)
+\item 
+virtual void \mbox{\hyperlink{classSingleThreadedApplication_a3112adba697840042b9f637634ab9e3a}{notify}} (const \mbox{\hyperlink{classWt_1_1WEvent}{W\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Notifies an event to the application. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSingleThreadedApplication_a0b572ee61807f9b40e1ffe1ae1e2d604}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the application, post-\/construction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSingleThreadedApplication_ae3ec6596343f24072586215489760aea}{finalize}} ()
+\begin{DoxyCompactList}\small\item\em Finalizes the application, pre-\/destruction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classSingleThreadedApplication_a77146d41b0cce3b43487ea1f61de7f1e}{wait\+For\+Event}} ()
+\begin{DoxyCompactList}\small\item\em Blocks the thread, waiting for an UI event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSingleThreadedApplication_a9d87616994b51046c69305ac518cd695}\label{classSingleThreadedApplication_a9d87616994b51046c69305ac518cd695}} 
+void {\bfseries run} ()
+\item 
+\mbox{\Hypertarget{classSingleThreadedApplication_a877d77ed782da1950bf34624bc957e67}\label{classSingleThreadedApplication_a877d77ed782da1950bf34624bc957e67}} 
+void {\bfseries signal\+Done} ()
+\item 
+\mbox{\Hypertarget{classSingleThreadedApplication_a2323c1264b88c96371fbb6cd8488d985}\label{classSingleThreadedApplication_a2323c1264b88c96371fbb6cd8488d985}} 
+void {\bfseries wait\+Done} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSingleThreadedApplication_ac0fa52b8da1a1fcea62beeea7869e80f}\label{classSingleThreadedApplication_ac0fa52b8da1a1fcea62beeea7869e80f}} 
+std\+::thread {\bfseries app\+Thread\+\_\+}
+\item 
+\mbox{\Hypertarget{classSingleThreadedApplication_a39aa2bf30206754419e543ac3a484f3e}\label{classSingleThreadedApplication_a39aa2bf30206754419e543ac3a484f3e}} 
+bool {\bfseries finalized\+\_\+}
+\item 
+\mbox{\Hypertarget{classSingleThreadedApplication_a3b1580c61f8179ee2a2c74c285d78ba9}\label{classSingleThreadedApplication_a3b1580c61f8179ee2a2c74c285d78ba9}} 
+bool {\bfseries exception\+\_\+}
+\item 
+\mbox{\Hypertarget{classSingleThreadedApplication_af7b3afa4571c25ef2d5c03fb49cbeca5}\label{classSingleThreadedApplication_af7b3afa4571c25ef2d5c03fb49cbeca5}} 
+const \mbox{\hyperlink{classWt_1_1WEvent}{W\+Event}} $\ast$ {\bfseries event\+\_\+}
+\item 
+\mbox{\Hypertarget{classSingleThreadedApplication_a32f390eb7a54549bff77cefce35a022a}\label{classSingleThreadedApplication_a32f390eb7a54549bff77cefce35a022a}} 
+std\+::mutex {\bfseries done\+Mutex\+\_\+}
+\item 
+\mbox{\Hypertarget{classSingleThreadedApplication_a864bb576ef94e6509e7e106025a8ac79}\label{classSingleThreadedApplication_a864bb576ef94e6509e7e106025a8ac79}} 
+bool {\bfseries done\+\_\+}
+\item 
+\mbox{\Hypertarget{classSingleThreadedApplication_a1eb81c1f8a9b70efebf6f45d3e62b115}\label{classSingleThreadedApplication_a1eb81c1f8a9b70efebf6f45d3e62b115}} 
+std\+::condition\+\_\+variable {\bfseries done\+Condition\+\_\+}
+\item 
+\mbox{\Hypertarget{classSingleThreadedApplication_acfba69e94529a64b8d9c7e498be06fe3}\label{classSingleThreadedApplication_acfba69e94529a64b8d9c7e498be06fe3}} 
+std\+::mutex {\bfseries new\+Event\+Mutex\+\_\+}
+\item 
+\mbox{\Hypertarget{classSingleThreadedApplication_a12b2c8677578b20debde4358f8cb19c5}\label{classSingleThreadedApplication_a12b2c8677578b20debde4358f8cb19c5}} 
+bool {\bfseries new\+Event\+\_\+}
+\item 
+\mbox{\Hypertarget{classSingleThreadedApplication_a7ab0fdab94050bf8c9e782f6f7582729}\label{classSingleThreadedApplication_a7ab0fdab94050bf8c9e782f6f7582729}} 
+std\+::condition\+\_\+variable {\bfseries new\+Event\+Condition\+\_\+}
+\item 
+\mbox{\Hypertarget{classSingleThreadedApplication_ad803a728453bd6efb6e1cc781b95ae33}\label{classSingleThreadedApplication_ad803a728453bd6efb6e1cc781b95ae33}} 
+std\+::unique\+\_\+lock$<$ std\+::mutex $>$ $\ast$ {\bfseries event\+Lock\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSingleThreadedApplication_ae3ec6596343f24072586215489760aea}\label{classSingleThreadedApplication_ae3ec6596343f24072586215489760aea}} 
+\index{SingleThreadedApplication@{SingleThreadedApplication}!finalize@{finalize}}
+\index{finalize@{finalize}!SingleThreadedApplication@{SingleThreadedApplication}}
+\doxysubsubsection{\texorpdfstring{finalize()}{finalize()}}
+{\footnotesize\ttfamily virtual void Single\+Threaded\+Application\+::finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Finalizes the application, pre-\/destruction. 
+
+This method is invoked by the Wt library before destruction of a new application. You may reimplement this method to do additional finalization that is not possible from the destructor (e.\+g. which uses virtual methods). 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WApplication_a71c5f7dc7ca9d848348d6df556bfbe91}{Wt\+::\+W\+Application}}.
+
+\mbox{\Hypertarget{classSingleThreadedApplication_a0b572ee61807f9b40e1ffe1ae1e2d604}\label{classSingleThreadedApplication_a0b572ee61807f9b40e1ffe1ae1e2d604}} 
+\index{SingleThreadedApplication@{SingleThreadedApplication}!initialize@{initialize}}
+\index{initialize@{initialize}!SingleThreadedApplication@{SingleThreadedApplication}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual void Single\+Threaded\+Application\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the application, post-\/construction. 
+
+This method is invoked by the Wt library after construction of a new application. You may reimplement this method to do additional initialization that is not possible from the constructor (e.\+g. which uses virtual methods). 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WApplication_a52515e6ea3e4ae0add087c3a1c11815f}{Wt\+::\+W\+Application}}.
+
+\mbox{\Hypertarget{classSingleThreadedApplication_a3112adba697840042b9f637634ab9e3a}\label{classSingleThreadedApplication_a3112adba697840042b9f637634ab9e3a}} 
+\index{SingleThreadedApplication@{SingleThreadedApplication}!notify@{notify}}
+\index{notify@{notify}!SingleThreadedApplication@{SingleThreadedApplication}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily virtual void Single\+Threaded\+Application\+::notify (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WEvent}{W\+Event}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Notifies an event to the application. 
+
+This method is called by the event loop for propagating an event to the application. It provides a single point of entry for events to the application, besides the application constructor.
+
+You may want to reimplement this method for two reasons\+:
+
+
+\begin{DoxyItemize}
+\item for having a single point for exception handling\+: while you may want to catch recoverable exceptions in a more appropriate place, general (usually fatal) exceptions may be caught here. You will probably want to catch the same exceptions in the application constructor in the same way.
+\item you want to manage resource usage during requests. For example, at the end of request handling, you want to return a database session back to the pool. Since notify() is also used for rendering right after the application is created, this will also clean up resources after application construction.
+\end{DoxyItemize}
+
+In either case, you will need to call the base class implementation of notify(), as otherwise no events will be delivered to your application.
+
+The following shows a generic template for reimplementhing this method for both managing request resources and generic exception handling.
+
+\mbox{\hyperlink{classNote}{Note}} that any uncaught exception throw during event handling terminates the session. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WApplication_a1887c4240d619abd3a01ab1b94002cbb}{Wt\+::\+W\+Application}}.
+
+\mbox{\Hypertarget{classSingleThreadedApplication_a77146d41b0cce3b43487ea1f61de7f1e}\label{classSingleThreadedApplication_a77146d41b0cce3b43487ea1f61de7f1e}} 
+\index{SingleThreadedApplication@{SingleThreadedApplication}!waitForEvent@{waitForEvent}}
+\index{waitForEvent@{waitForEvent}!SingleThreadedApplication@{SingleThreadedApplication}}
+\doxysubsubsection{\texorpdfstring{waitForEvent()}{waitForEvent()}}
+{\footnotesize\ttfamily virtual void Single\+Threaded\+Application\+::wait\+For\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Blocks the thread, waiting for an UI event. 
+
+This function is used by functions like W\+Dialog\+::exec() or W\+Popup\+Menu\+::exec(), to block the current thread waiting for a new event.
+
+This requires that at least one additional thread is available to process incoming requests, and is not scalable when working with a fixed size thread pools. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WApplication_a11d72cc684e3cbe2df9100b8ef82b901}{Wt\+::\+W\+Application}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/onethread/Single\+Threaded\+Application.\+h\end{DoxyCompactItemize}

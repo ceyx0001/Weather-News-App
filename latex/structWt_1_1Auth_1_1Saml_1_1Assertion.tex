@@ -1,0 +1,58 @@
+\hypertarget{structWt_1_1Auth_1_1Saml_1_1Assertion}{}\doxysection{Wt\+::Auth\+::Saml\+::Assertion Struct Reference}
+\label{structWt_1_1Auth_1_1Saml_1_1Assertion}\index{Wt::Auth::Saml::Assertion@{Wt::Auth::Saml::Assertion}}
+
+
+Represents a S\+A\+ML assertion (saml-\/core-\/2.\+0-\/os, section 2.\+3.\+3)  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Auth/\+Saml/\+Assertion.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string $\ast$ \mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion_ae1bbb636b13b008ccaca7e262e5a4944}{attribute\+Value}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Gets a single attribute\textquotesingle{}s value. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion_a80cbbac0962d1a0f062e2d18a6826ffb}{attribute\+Values}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Gets the values of an attribute. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structWt_1_1Auth_1_1Saml_1_1Assertion_af3566db7ca183f925f472fe8b6d24f4c}\label{structWt_1_1Auth_1_1Saml_1_1Assertion_af3566db7ca183f925f472fe8b6d24f4c}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Subject}{Subject}} $>$ \mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion_af3566db7ca183f925f472fe8b6d24f4c}{subject}}
+\begin{DoxyCompactList}\small\item\em The optional subject. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structWt_1_1Auth_1_1Saml_1_1Assertion_a65a1aa06b06811b4eb578945cccb2cd0}\label{structWt_1_1Auth_1_1Saml_1_1Assertion_a65a1aa06b06811b4eb578945cccb2cd0}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Attribute}{Attribute}} $>$ \mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion_a65a1aa06b06811b4eb578945cccb2cd0}{attributes}}
+\begin{DoxyCompactList}\small\item\em The attributes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a S\+A\+ML assertion (saml-\/core-\/2.\+0-\/os, section 2.\+3.\+3) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structWt_1_1Auth_1_1Saml_1_1Assertion_ae1bbb636b13b008ccaca7e262e5a4944}\label{structWt_1_1Auth_1_1Saml_1_1Assertion_ae1bbb636b13b008ccaca7e262e5a4944}} 
+\index{Wt::Auth::Saml::Assertion@{Wt::Auth::Saml::Assertion}!attributeValue@{attributeValue}}
+\index{attributeValue@{attributeValue}!Wt::Auth::Saml::Assertion@{Wt::Auth::Saml::Assertion}}
+\doxysubsubsection{\texorpdfstring{attributeValue()}{attributeValue()}}
+{\footnotesize\ttfamily const std\+::string$\ast$ Wt\+::\+Auth\+::\+Saml\+::\+Assertion\+::attribute\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Gets a single attribute\textquotesingle{}s value. 
+
+This searches for the attribute with the given name, and returns its value. If the attribute has more than one value the first value is returned. If no attribute with the given name was found (or the attribute has no value), nullptr is returned. \mbox{\Hypertarget{structWt_1_1Auth_1_1Saml_1_1Assertion_a80cbbac0962d1a0f062e2d18a6826ffb}\label{structWt_1_1Auth_1_1Saml_1_1Assertion_a80cbbac0962d1a0f062e2d18a6826ffb}} 
+\index{Wt::Auth::Saml::Assertion@{Wt::Auth::Saml::Assertion}!attributeValues@{attributeValues}}
+\index{attributeValues@{attributeValues}!Wt::Auth::Saml::Assertion@{Wt::Auth::Saml::Assertion}}
+\doxysubsubsection{\texorpdfstring{attributeValues()}{attributeValues()}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::string$>$\& Wt\+::\+Auth\+::\+Saml\+::\+Assertion\+::attribute\+Values (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Gets the values of an attribute. 
+
+This searches for the attribute with the given name, and returns its values. If no attribute with the given name was found (or the attribute has no value), an empty vector is returned. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/\+Saml/Assertion.\+h\end{DoxyCompactItemize}

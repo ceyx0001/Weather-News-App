@@ -1,0 +1,479 @@
+\hypertarget{classWt_1_1Auth_1_1User}{}\doxysection{Wt\+::Auth\+::User Class Reference}
+\label{classWt_1_1Auth_1_1User}\index{Wt::Auth::User@{Wt::Auth::User}}
+
+
+A user.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Auth/\+User.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::Auth\+::User\+:
+% FIG 0
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a77dc7cb67ec8e41f656a5f7b989f7a0f}\label{classWt_1_1Auth_1_1User_a77dc7cb67ec8e41f656a5f7b989f7a0f}} 
+typedef \mbox{\hyperlink{namespaceWt_1_1Auth_a70a1c0094c0dbc4731b3fd0dae143034}{Account\+Status}} \mbox{\hyperlink{classWt_1_1Auth_1_1User_a77dc7cb67ec8e41f656a5f7b989f7a0f}{Status}}
+\begin{DoxyCompactList}\small\item\em Typedef for enum \mbox{\hyperlink{namespaceWt_1_1Auth_a70a1c0094c0dbc4731b3fd0dae143034}{Wt\+::\+Auth\+::\+Account\+Status}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1User_a2319756742238e5f4809d754e2fc735b}{User}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1User_a2bd7e605d6bac3210076a260fab24d4d}{User}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1Auth_1_1User_a4fa00bdcedec23a00f653bd92c144dee}{id}}, const \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1User_a2d68b82840f0495b959e4be53dfe8a68}{database}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} $\ast$ \mbox{\hyperlink{classWt_1_1Auth_1_1User_a2d68b82840f0495b959e4be53dfe8a68}{database}} () const
+\begin{DoxyCompactList}\small\item\em Returns the user database. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Auth_1_1User_a1c12ea7bbc34fee6efa62421ab3ef769}{operator==}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&other) const
+\begin{DoxyCompactList}\small\item\em Comparison operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Auth_1_1User_ae172385fbc77f8032ccb0d4d08fb62c0}{operator!=}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&other) const
+\begin{DoxyCompactList}\small\item\em Comparison operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Auth_1_1User_ac96b4f1ee0da7579b5a52eefdf9d4d7f}{is\+Valid}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the user is valid. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Auth_1_1User_a4fa00bdcedec23a00f653bd92c144dee}{id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the user id. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a7fc3e61b4e0c02f2e9491d37cfe0a553}\label{classWt_1_1Auth_1_1User_a7fc3e61b4e0c02f2e9491d37cfe0a553}} 
+W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \mbox{\hyperlink{classWt_1_1Auth_1_1User_a7fc3e61b4e0c02f2e9491d37cfe0a553}{identity}} (const std\+::string \&provider) const
+\begin{DoxyCompactList}\small\item\em Returns an identity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1User_a85863b2b72b8c94d0d83a0f2b438d0cd}{add\+Identity}} (const std\+::string \&provider, const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&\mbox{\hyperlink{classWt_1_1Auth_1_1User_a7fc3e61b4e0c02f2e9491d37cfe0a553}{identity}})
+\begin{DoxyCompactList}\small\item\em Adds an identity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1User_a416030a4ae8e2d75e042fea039ce4ce3}{set\+Identity}} (const std\+::string \&provider, const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&\mbox{\hyperlink{classWt_1_1Auth_1_1User_a7fc3e61b4e0c02f2e9491d37cfe0a553}{identity}})
+\begin{DoxyCompactList}\small\item\em Sets an identity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1User_ac65b7e7277df1d8cd4805e0b4d13b29d}{remove\+Identity}} (const std\+::string \&provider)
+\begin{DoxyCompactList}\small\item\em Removes an identity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1User_a7ba540783ef86d9f756d812939138e25}{set\+Password}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1PasswordHash}{Password\+Hash}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1User_abb2c92583ecb580a944b415e796e3b02}{password}}) const
+\begin{DoxyCompactList}\small\item\em Sets a password. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1PasswordHash}{Password\+Hash}} \mbox{\hyperlink{classWt_1_1Auth_1_1User_abb2c92583ecb580a944b415e796e3b02}{password}} () const
+\begin{DoxyCompactList}\small\item\em Returns the password. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1User_aa1ebd0d9a840c9d3ad8db85a494a8241}{set\+Email}} (const std\+::string \&address) const
+\begin{DoxyCompactList}\small\item\em Sets the email address. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1User_a6bbf470e76769af70baa81cb15453ebb}{email}} () const
+\begin{DoxyCompactList}\small\item\em Returns the email address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1User_a077c93690ba3ea0be45f81dd19be21e4}{set\+Unverified\+Email}} (const std\+::string \&address) const
+\begin{DoxyCompactList}\small\item\em Sets the unverified email address. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1User_a577e77e63a458be2d203dacff7bacc47}{unverified\+Email}} () const
+\begin{DoxyCompactList}\small\item\em Returns the unverified email address. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceWt_1_1Auth_a70a1c0094c0dbc4731b3fd0dae143034}{Account\+Status}} \mbox{\hyperlink{classWt_1_1Auth_1_1User_a6f0e7c1aa39d3f9754e3e210c4f43206}{status}} () const
+\begin{DoxyCompactList}\small\item\em Returns the account status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1User_a4b12dc82b526b268b3cf0c26d458081d}{set\+Status}} (\mbox{\hyperlink{namespaceWt_1_1Auth_a70a1c0094c0dbc4731b3fd0dae143034}{Account\+Status}} \mbox{\hyperlink{classWt_1_1Auth_1_1User_a6f0e7c1aa39d3f9754e3e210c4f43206}{status}})
+\begin{DoxyCompactList}\small\item\em Sets the account status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1Token}{Token}} \mbox{\hyperlink{classWt_1_1Auth_1_1User_ab0e30229987963cffc667190ce8baa6d}{email\+Token}} () const
+\begin{DoxyCompactList}\small\item\em Returns the email token. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceWt_1_1Auth_abfeea7e2d9573be8c3e081cc6cd70b5d}{Email\+Token\+Role}} \mbox{\hyperlink{classWt_1_1Auth_1_1User_a1d7a05799d421e38bcf8a980d587cb09}{email\+Token\+Role}} () const
+\begin{DoxyCompactList}\small\item\em Returns the email token role. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1User_a05514b34296051941d47dabfea21592c}{set\+Email\+Token}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1Token}{Token}} \&token, \mbox{\hyperlink{namespaceWt_1_1Auth_abfeea7e2d9573be8c3e081cc6cd70b5d}{Email\+Token\+Role}} role) const
+\begin{DoxyCompactList}\small\item\em Sets an email token. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1User_ae692304b1026ba5477515f2621ce9e1b}{clear\+Email\+Token}} () const
+\begin{DoxyCompactList}\small\item\em Clears the email token. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1User_aa576bdc3a8be09b36e5016a627ee7128}{add\+Auth\+Token}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1Token}{Token}} \&token) const
+\begin{DoxyCompactList}\small\item\em Adds an authentication token. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1User_a160988fee0937f8f62e876a4f835c497}{remove\+Auth\+Token}} (const std\+::string \&hash) const
+\begin{DoxyCompactList}\small\item\em Removes an authentication token. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Auth_1_1User_a87253f00137f49e0d5a46a1eec3e48a8}{update\+Auth\+Token}} (const std\+::string \&hash, const std\+::string \&new\+Hash) const
+\begin{DoxyCompactList}\small\item\em Updates an authentication token. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1User_ac0756b61b47fc378a7da92ad9c9ba380}{set\+Authenticated}} (bool success) const
+\begin{DoxyCompactList}\small\item\em Logs the result of an authentication attempt. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Auth_1_1User_a26c6cff6e984d9733accfe65dc2a962f}{failed\+Login\+Attempts}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of consecutive unsuccessful login attempts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WDateTime}{W\+Date\+Time}} \mbox{\hyperlink{classWt_1_1Auth_1_1User_aeaf051caea3f1bd662fea0d2ef24a1f0}{last\+Login\+Attempt}} () const
+\begin{DoxyCompactList}\small\item\em Returns the last login attempt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a66ac6a647b2d70502729dc7f325a19c2}\label{classWt_1_1Auth_1_1User_a66ac6a647b2d70502729dc7f325a19c2}} 
+void {\bfseries check\+Valid} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a0845818d5e9d5253e9f7c109cca5f3e1}\label{classWt_1_1Auth_1_1User_a0845818d5e9d5253e9f7c109cca5f3e1}} 
+std\+::string {\bfseries id\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_aee5aaaf201b2b298e26d4121b233d6ac}\label{classWt_1_1Auth_1_1User_aee5aaaf201b2b298e26d4121b233d6ac}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} $\ast$ {\bfseries db\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A user. 
+
+This class represents a user. It is a value class that stores only the user id and a reference to an \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} to access its properties.
+
+An object can point to a valid user, or be invalid. Invalid users are typically used as return value for database queries which did not match with an existing user.
+
+Not all methods are valid or applicable to your authentication system. See \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} for a discussion.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a2319756742238e5f4809d754e2fc735b}\label{classWt_1_1Auth_1_1User_a2319756742238e5f4809d754e2fc735b}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!User@{User}}
+\index{User@{User}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wt\+::\+Auth\+::\+User\+::\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Creates an invalid user.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1User_ac96b4f1ee0da7579b5a52eefdf9d4d7f}{is\+Valid()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a2bd7e605d6bac3210076a260fab24d4d}\label{classWt_1_1Auth_1_1User_a2bd7e605d6bac3210076a260fab24d4d}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!User@{User}}
+\index{User@{User}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{User()}{User()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wt\+::\+Auth\+::\+User\+::\+User (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id,  }\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&}]{database }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Creates a user with id {\ttfamily id}, and whose information is stored in the {\ttfamily database}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_aa576bdc3a8be09b36e5016a627ee7128}\label{classWt_1_1Auth_1_1User_aa576bdc3a8be09b36e5016a627ee7128}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!addAuthToken@{addAuthToken}}
+\index{addAuthToken@{addAuthToken}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{addAuthToken()}{addAuthToken()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+User\+::add\+Auth\+Token (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1Token}{Token}} \&}]{token }\end{DoxyParamCaption}) const}
+
+
+
+Adds an authentication token. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a980983064d3831064b5c3ce1279ee2ed}{Abstract\+User\+Database\+::add\+Auth\+Token()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a85863b2b72b8c94d0d83a0f2b438d0cd}\label{classWt_1_1Auth_1_1User_a85863b2b72b8c94d0d83a0f2b438d0cd}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!addIdentity@{addIdentity}}
+\index{addIdentity@{addIdentity}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{addIdentity()}{addIdentity()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+User\+::add\+Identity (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{provider,  }\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{identity }\end{DoxyParamCaption})}
+
+
+
+Adds an identity. 
+
+Depending on whether the database supports multiple identities per provider, this may change (like \mbox{\hyperlink{classWt_1_1Auth_1_1User_a416030a4ae8e2d75e042fea039ce4ce3}{set\+Identity()}}), or add another identity to the user. For some identity providers (e.\+g. a 3rd party identity provider), it may be sensible to have more than one identity of the same provider for a single user (e.\+g. multiple email accounts managed by the same provider, that in fact identify the same user). \mbox{\Hypertarget{classWt_1_1Auth_1_1User_ae692304b1026ba5477515f2621ce9e1b}\label{classWt_1_1Auth_1_1User_ae692304b1026ba5477515f2621ce9e1b}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!clearEmailToken@{clearEmailToken}}
+\index{clearEmailToken@{clearEmailToken}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{clearEmailToken()}{clearEmailToken()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+User\+::clear\+Email\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Clears the email token. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1User_a05514b34296051941d47dabfea21592c}{set\+Email\+Token()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a2d68b82840f0495b959e4be53dfe8a68}\label{classWt_1_1Auth_1_1User_a2d68b82840f0495b959e4be53dfe8a68}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!database@{database}}
+\index{database@{database}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{database()}{database()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}}$\ast$ Wt\+::\+Auth\+::\+User\+::database (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the user database. 
+
+This returns the user database passed in the constructor, or 0 if the user is invalid, and was constructed using the default constructor. \mbox{\Hypertarget{classWt_1_1Auth_1_1User_a6bbf470e76769af70baa81cb15453ebb}\label{classWt_1_1Auth_1_1User_a6bbf470e76769af70baa81cb15453ebb}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!email@{email}}
+\index{email@{email}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{email()}{email()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Auth\+::\+User\+::email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the email address. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ab54b93ae853c44553ee4343870cc1a21}{Abstract\+User\+Database\+::email()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_ab0e30229987963cffc667190ce8baa6d}\label{classWt_1_1Auth_1_1User_ab0e30229987963cffc667190ce8baa6d}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!emailToken@{emailToken}}
+\index{emailToken@{emailToken}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{emailToken()}{emailToken()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Auth_1_1Token}{Token}} Wt\+::\+Auth\+::\+User\+::email\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the email token. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a6150d907bed1c9aa0c313bba7e7e4d99}{Abstract\+User\+Database\+::email\+Token()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a1d7a05799d421e38bcf8a980d587cb09}\label{classWt_1_1Auth_1_1User_a1d7a05799d421e38bcf8a980d587cb09}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!emailTokenRole@{emailTokenRole}}
+\index{emailTokenRole@{emailTokenRole}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{emailTokenRole()}{emailTokenRole()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceWt_1_1Auth_abfeea7e2d9573be8c3e081cc6cd70b5d}{Email\+Token\+Role}} Wt\+::\+Auth\+::\+User\+::email\+Token\+Role (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the email token role. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a98bb5c2c10caf820ece6d32ce660c064}{Abstract\+User\+Database\+::email\+Token\+Role()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a26c6cff6e984d9733accfe65dc2a962f}\label{classWt_1_1Auth_1_1User_a26c6cff6e984d9733accfe65dc2a962f}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!failedLoginAttempts@{failedLoginAttempts}}
+\index{failedLoginAttempts@{failedLoginAttempts}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{failedLoginAttempts()}{failedLoginAttempts()}}
+{\footnotesize\ttfamily int Wt\+::\+Auth\+::\+User\+::failed\+Login\+Attempts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the number of consecutive unsuccessful login attempts. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1User_ac0756b61b47fc378a7da92ad9c9ba380}{set\+Authenticated()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a4fa00bdcedec23a00f653bd92c144dee}\label{classWt_1_1Auth_1_1User_a4fa00bdcedec23a00f653bd92c144dee}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!id@{id}}
+\index{id@{id}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+Auth\+::\+User\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the user id. 
+
+This returns the id that uniquely identifies the user, and acts as a \char`\"{}primary key\char`\"{} to obtain other information for the user in the database.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_ac96b4f1ee0da7579b5a52eefdf9d4d7f}\label{classWt_1_1Auth_1_1User_ac96b4f1ee0da7579b5a52eefdf9d4d7f}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!isValid@{isValid}}
+\index{isValid@{isValid}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily bool Wt\+::\+Auth\+::\+User\+::is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the user is valid. 
+
+A invalid user is a sentinel value returned by methods that query the database but could not identify a matching user. \mbox{\Hypertarget{classWt_1_1Auth_1_1User_aeaf051caea3f1bd662fea0d2ef24a1f0}\label{classWt_1_1Auth_1_1User_aeaf051caea3f1bd662fea0d2ef24a1f0}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!lastLoginAttempt@{lastLoginAttempt}}
+\index{lastLoginAttempt@{lastLoginAttempt}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{lastLoginAttempt()}{lastLoginAttempt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WDateTime}{W\+Date\+Time}} Wt\+::\+Auth\+::\+User\+::last\+Login\+Attempt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the last login attempt. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1User_ac0756b61b47fc378a7da92ad9c9ba380}{set\+Authenticated()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_ae172385fbc77f8032ccb0d4d08fb62c0}\label{classWt_1_1Auth_1_1User_ae172385fbc77f8032ccb0d4d08fb62c0}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Wt\+::\+Auth\+::\+User\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Comparison operator. 
+
+\begin{DoxySeeAlso}{See also}
+operator== 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a1c12ea7bbc34fee6efa62421ab3ef769}\label{classWt_1_1Auth_1_1User_a1c12ea7bbc34fee6efa62421ab3ef769}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!operator==@{operator==}}
+\index{operator==@{operator==}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Wt\+::\+Auth\+::\+User\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Comparison operator. 
+
+Two users are equal if they have the same identity and the same database. \mbox{\Hypertarget{classWt_1_1Auth_1_1User_abb2c92583ecb580a944b415e796e3b02}\label{classWt_1_1Auth_1_1User_abb2c92583ecb580a944b415e796e3b02}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!password@{password}}
+\index{password@{password}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{password()}{password()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Auth_1_1PasswordHash}{Password\+Hash}} Wt\+::\+Auth\+::\+User\+::password (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the password. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a8343af7b2561734b907472346e324cb5}{Abstract\+User\+Database\+::password()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a160988fee0937f8f62e876a4f835c497}\label{classWt_1_1Auth_1_1User_a160988fee0937f8f62e876a4f835c497}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!removeAuthToken@{removeAuthToken}}
+\index{removeAuthToken@{removeAuthToken}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{removeAuthToken()}{removeAuthToken()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+User\+::remove\+Auth\+Token (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hash }\end{DoxyParamCaption}) const}
+
+
+
+Removes an authentication token. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a418a1ddb2f8c3e9c87fa6eb76cb6bfb3}{Abstract\+User\+Database\+::remove\+Auth\+Token()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_ac65b7e7277df1d8cd4805e0b4d13b29d}\label{classWt_1_1Auth_1_1User_ac65b7e7277df1d8cd4805e0b4d13b29d}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!removeIdentity@{removeIdentity}}
+\index{removeIdentity@{removeIdentity}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{removeIdentity()}{removeIdentity()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+User\+::remove\+Identity (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{provider }\end{DoxyParamCaption})}
+
+
+
+Removes an identity. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1User_a85863b2b72b8c94d0d83a0f2b438d0cd}{add\+Identity()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_ac0756b61b47fc378a7da92ad9c9ba380}\label{classWt_1_1Auth_1_1User_ac0756b61b47fc378a7da92ad9c9ba380}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!setAuthenticated@{setAuthenticated}}
+\index{setAuthenticated@{setAuthenticated}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{setAuthenticated()}{setAuthenticated()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+User\+::set\+Authenticated (\begin{DoxyParamCaption}\item[{bool}]{success }\end{DoxyParamCaption}) const}
+
+
+
+Logs the result of an authentication attempt. 
+
+This changes the number of failed login attempts, and stores the current date as the last login attempt time.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1User_a26c6cff6e984d9733accfe65dc2a962f}{failed\+Login\+Attempts()}}, \mbox{\hyperlink{classWt_1_1Auth_1_1User_aeaf051caea3f1bd662fea0d2ef24a1f0}{last\+Login\+Attempt()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_aa1ebd0d9a840c9d3ad8db85a494a8241}\label{classWt_1_1Auth_1_1User_aa1ebd0d9a840c9d3ad8db85a494a8241}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!setEmail@{setEmail}}
+\index{setEmail@{setEmail}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{setEmail()}{setEmail()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+User\+::set\+Email (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address }\end{DoxyParamCaption}) const}
+
+
+
+Sets the email address. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ab7f95375f23fad770d757126d6235cae}{Abstract\+User\+Database\+::set\+Email()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a05514b34296051941d47dabfea21592c}\label{classWt_1_1Auth_1_1User_a05514b34296051941d47dabfea21592c}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!setEmailToken@{setEmailToken}}
+\index{setEmailToken@{setEmailToken}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{setEmailToken()}{setEmailToken()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+User\+::set\+Email\+Token (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1Token}{Token}} \&}]{token,  }\item[{\mbox{\hyperlink{namespaceWt_1_1Auth_abfeea7e2d9573be8c3e081cc6cd70b5d}{Email\+Token\+Role}}}]{role }\end{DoxyParamCaption}) const}
+
+
+
+Sets an email token. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a7f1e40d0b6293b9a28c24bcf70d245ca}{Abstract\+User\+Database\+::set\+Email\+Token()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a416030a4ae8e2d75e042fea039ce4ce3}\label{classWt_1_1Auth_1_1User_a416030a4ae8e2d75e042fea039ce4ce3}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!setIdentity@{setIdentity}}
+\index{setIdentity@{setIdentity}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{setIdentity()}{setIdentity()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+User\+::set\+Identity (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{provider,  }\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{identity }\end{DoxyParamCaption})}
+
+
+
+Sets an identity. 
+
+Unlike \mbox{\hyperlink{classWt_1_1Auth_1_1User_a85863b2b72b8c94d0d83a0f2b438d0cd}{add\+Identity()}} this overrides any other identity of the given provider, in case the underlying database supports multiple identities per user. \mbox{\Hypertarget{classWt_1_1Auth_1_1User_a7ba540783ef86d9f756d812939138e25}\label{classWt_1_1Auth_1_1User_a7ba540783ef86d9f756d812939138e25}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!setPassword@{setPassword}}
+\index{setPassword@{setPassword}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{setPassword()}{setPassword()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+User\+::set\+Password (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1PasswordHash}{Password\+Hash}} \&}]{password }\end{DoxyParamCaption}) const}
+
+
+
+Sets a password. 
+
+This also clears the email token.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a50849af8aefa9b74c5881a1eccbcc211}{Abstract\+User\+Database\+::set\+Password()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1User_ae692304b1026ba5477515f2621ce9e1b}{clear\+Email\+Token()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a4b12dc82b526b268b3cf0c26d458081d}\label{classWt_1_1Auth_1_1User_a4b12dc82b526b268b3cf0c26d458081d}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!setStatus@{setStatus}}
+\index{setStatus@{setStatus}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{setStatus()}{setStatus()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+User\+::set\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWt_1_1Auth_a70a1c0094c0dbc4731b3fd0dae143034}{Account\+Status}}}]{status }\end{DoxyParamCaption})}
+
+
+
+Sets the account status. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a6a164f70cb02cac0997e20b7f08e1e7b}{Abstract\+User\+Database\+::set\+Status()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a077c93690ba3ea0be45f81dd19be21e4}\label{classWt_1_1Auth_1_1User_a077c93690ba3ea0be45f81dd19be21e4}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!setUnverifiedEmail@{setUnverifiedEmail}}
+\index{setUnverifiedEmail@{setUnverifiedEmail}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{setUnverifiedEmail()}{setUnverifiedEmail()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+User\+::set\+Unverified\+Email (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address }\end{DoxyParamCaption}) const}
+
+
+
+Sets the unverified email address. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a0c284fbcd4e29a6ae60c544289302a35}{Abstract\+User\+Database\+::set\+Unverified\+Email()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a6f0e7c1aa39d3f9754e3e210c4f43206}\label{classWt_1_1Auth_1_1User_a6f0e7c1aa39d3f9754e3e210c4f43206}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!status@{status}}
+\index{status@{status}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{status()}{status()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceWt_1_1Auth_a70a1c0094c0dbc4731b3fd0dae143034}{Account\+Status}} Wt\+::\+Auth\+::\+User\+::status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the account status. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ac9f5e9db5ffc59ca89435b82c2f2ceb0}{Abstract\+User\+Database\+::status()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a577e77e63a458be2d203dacff7bacc47}\label{classWt_1_1Auth_1_1User_a577e77e63a458be2d203dacff7bacc47}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!unverifiedEmail@{unverifiedEmail}}
+\index{unverifiedEmail@{unverifiedEmail}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{unverifiedEmail()}{unverifiedEmail()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Auth\+::\+User\+::unverified\+Email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the unverified email address. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_aa64f7c08b99810ca0c5474335c9fd53b}{Abstract\+User\+Database\+::unverified\+Email()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1User_a87253f00137f49e0d5a46a1eec3e48a8}\label{classWt_1_1Auth_1_1User_a87253f00137f49e0d5a46a1eec3e48a8}} 
+\index{Wt::Auth::User@{Wt::Auth::User}!updateAuthToken@{updateAuthToken}}
+\index{updateAuthToken@{updateAuthToken}!Wt::Auth::User@{Wt::Auth::User}}
+\doxysubsubsection{\texorpdfstring{updateAuthToken()}{updateAuthToken()}}
+{\footnotesize\ttfamily int Wt\+::\+Auth\+::\+User\+::update\+Auth\+Token (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hash,  }\item[{const std\+::string \&}]{new\+Hash }\end{DoxyParamCaption}) const}
+
+
+
+Updates an authentication token. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ac5b9a6ffc139ad83d5648b9aeecae4ce}{Abstract\+User\+Database\+::update\+Auth\+Token()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/User.\+h\end{DoxyCompactItemize}

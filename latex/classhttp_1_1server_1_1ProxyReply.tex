@@ -1,0 +1,136 @@
+\hypertarget{classhttp_1_1server_1_1ProxyReply}{}\doxysection{http\+::server\+::Proxy\+Reply Class Reference}
+\label{classhttp_1_1server_1_1ProxyReply}\index{http::server::ProxyReply@{http::server::ProxyReply}}
+
+
+Inheritance diagram for http\+::server\+::Proxy\+Reply\+:
+% FIG 0
+
+
+Collaboration diagram for http\+::server\+::Proxy\+Reply\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a2b5607ce14e649f2801b7f660b812f27}\label{classhttp_1_1server_1_1ProxyReply_a2b5607ce14e649f2801b7f660b812f27}} 
+{\bfseries Proxy\+Reply} (\mbox{\hyperlink{classhttp_1_1server_1_1Request}{Request}} \&request, const \mbox{\hyperlink{classhttp_1_1server_1_1Configuration}{Configuration}} \&config, \mbox{\hyperlink{classhttp_1_1server_1_1SessionProcessManager}{Session\+Process\+Manager}} \&session\+Manager)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a1dd4a1f7d2d5e7faf610f2d7a0ab5f0c}\label{classhttp_1_1server_1_1ProxyReply_a1dd4a1f7d2d5e7faf610f2d7a0ab5f0c}} 
+virtual void {\bfseries reset} (const \mbox{\hyperlink{classWt_1_1EntryPoint}{Wt\+::\+Entry\+Point}} $\ast$ep) override
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a883ebcdd8b9c70c9f09d0ee603dd5475}\label{classhttp_1_1server_1_1ProxyReply_a883ebcdd8b9c70c9f09d0ee603dd5475}} 
+virtual void {\bfseries write\+Done} (bool success) override
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a048fc7f447c042b5026feb2563a2b921}\label{classhttp_1_1server_1_1ProxyReply_a048fc7f447c042b5026feb2563a2b921}} 
+virtual bool {\bfseries consume\+Data} (const char $\ast$begin, const char $\ast$end, Request\+::\+State state) override
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a45d66729d52a1ebf6fe0a9e24cb4e724}\label{classhttp_1_1server_1_1ProxyReply_a45d66729d52a1ebf6fe0a9e24cb4e724}} 
+void {\bfseries close\+Client\+Socket} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_ae27339ec89942d384878bdee925fecfc}\label{classhttp_1_1server_1_1ProxyReply_ae27339ec89942d384878bdee925fecfc}} 
+virtual std\+::string {\bfseries content\+Type} () override
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_abff52d74e30beea3b2e06b485c38899a}\label{classhttp_1_1server_1_1ProxyReply_abff52d74e30beea3b2e06b485c38899a}} 
+virtual \+::int64\+\_\+t {\bfseries content\+Length} () override
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_ac08b3389e2a759e48e31341f659cf156}\label{classhttp_1_1server_1_1ProxyReply_ac08b3389e2a759e48e31341f659cf156}} 
+virtual bool {\bfseries next\+Content\+Buffers} (std\+::vector$<$ asio\+::const\+\_\+buffer $>$ \&result) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_abcf38206e0aa5d27b46f9272a89bf3df}\label{classhttp_1_1server_1_1ProxyReply_abcf38206e0aa5d27b46f9272a89bf3df}} 
+void {\bfseries error} (status\+\_\+type status)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a5df435138ccd3deb8d25a9d1faacbacb}\label{classhttp_1_1server_1_1ProxyReply_a5df435138ccd3deb8d25a9d1faacbacb}} 
+std\+::string {\bfseries get\+Session\+Id} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_af3012f9a60c6e34da3f88d736d09bfcf}\label{classhttp_1_1server_1_1ProxyReply_af3012f9a60c6e34da3f88d736d09bfcf}} 
+void {\bfseries connect\+To\+Child} (bool success)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_ad1a07b4adff97ddf6c69466c6653aa5e}\label{classhttp_1_1server_1_1ProxyReply_ad1a07b4adff97ddf6c69466c6653aa5e}} 
+void {\bfseries handle\+Child\+Connected} (const Wt\+::\+Asio\+Wrapper\+::error\+\_\+code \&ec)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a09e16598564f3b4b5707ed219c8bd158}\label{classhttp_1_1server_1_1ProxyReply_a09e16598564f3b4b5707ed219c8bd158}} 
+void {\bfseries assemble\+Request\+Headers} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a95ff7e78a2620c7aa43fdd819b08a4bf}\label{classhttp_1_1server_1_1ProxyReply_a95ff7e78a2620c7aa43fdd819b08a4bf}} 
+void {\bfseries handle\+Data\+Written} (const Wt\+::\+Asio\+Wrapper\+::error\+\_\+code \&ec, std\+::size\+\_\+t transferred)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_ae26225f0f5ea9ebf40e32d781c1b950a}\label{classhttp_1_1server_1_1ProxyReply_ae26225f0f5ea9ebf40e32d781c1b950a}} 
+void {\bfseries handle\+Status\+Read} (const Wt\+::\+Asio\+Wrapper\+::error\+\_\+code \&ec)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a6baac5db57363ab44f502bde57ade19d}\label{classhttp_1_1server_1_1ProxyReply_a6baac5db57363ab44f502bde57ade19d}} 
+void {\bfseries handle\+Headers\+Read} (const Wt\+::\+Asio\+Wrapper\+::error\+\_\+code \&ec)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_accbfbbba1fc9d5eaa88ce6ab6e381747}\label{classhttp_1_1server_1_1ProxyReply_accbfbbba1fc9d5eaa88ce6ab6e381747}} 
+void {\bfseries handle\+Response\+Read} (const Wt\+::\+Asio\+Wrapper\+::error\+\_\+code \&ec)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a61e215730cdaf828fb2a2a2ac76fa871}\label{classhttp_1_1server_1_1ProxyReply_a61e215730cdaf828fb2a2a2ac76fa871}} 
+void {\bfseries append\+S\+S\+L\+Info} (const \mbox{\hyperlink{classWt_1_1WSslInfo}{Wt\+::\+W\+Ssl\+Info}} $\ast$ssl\+Info, std\+::ostream \&os)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a6a9c9df586768fb570611507da8c20d7}\label{classhttp_1_1server_1_1ProxyReply_a6a9c9df586768fb570611507da8c20d7}} 
+bool {\bfseries send\+Reload} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a32697056951fa19e0f3832b194ae4887}\label{classhttp_1_1server_1_1ProxyReply_a32697056951fa19e0f3832b194ae4887}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1SessionProcessManager}{Session\+Process\+Manager}} \& {\bfseries session\+Manager\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_ab7da98ed946358f03a49123640643904}\label{classhttp_1_1server_1_1ProxyReply_ab7da98ed946358f03a49123640643904}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classhttp_1_1server_1_1SessionProcess}{Session\+Process}} $>$ {\bfseries session\+Process\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a5502aee98053d4165b5c915b238e9338}\label{classhttp_1_1server_1_1ProxyReply_a5502aee98053d4165b5c915b238e9338}} 
+std\+::shared\+\_\+ptr$<$ asio\+::ip\+::tcp\+::socket $>$ {\bfseries socket\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a3ef42bd8befc3d203b88211c4fac6356}\label{classhttp_1_1server_1_1ProxyReply_a3ef42bd8befc3d203b88211c4fac6356}} 
+std\+::string {\bfseries content\+Type\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a10fdd1ac02be3d60a411b65d997f1a7d}\label{classhttp_1_1server_1_1ProxyReply_a10fdd1ac02be3d60a411b65d997f1a7d}} 
+asio\+::streambuf \mbox{\hyperlink{classhttp_1_1server_1_1ProxyReply_a10fdd1ac02be3d60a411b65d997f1a7d}{request\+Buf\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Request/response buffers for the child connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_ab19e94acaec4555257b1bc549d368a1b}\label{classhttp_1_1server_1_1ProxyReply_ab19e94acaec4555257b1bc549d368a1b}} 
+asio\+::streambuf {\bfseries response\+Buf\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_aec9291a6bec132ffb9cf23589647b28e}\label{classhttp_1_1server_1_1ProxyReply_aec9291a6bec132ffb9cf23589647b28e}} 
+asio\+::streambuf \mbox{\hyperlink{classhttp_1_1server_1_1ProxyReply_aec9291a6bec132ffb9cf23589647b28e}{out\+\_\+buf\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Response buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a8910461dc41f5b039de3fa358a1317d8}\label{classhttp_1_1server_1_1ProxyReply_a8910461dc41f5b039de3fa358a1317d8}} 
+std\+::ostream {\bfseries out\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_af3079d65d817e45eed46a2d2e7fd7ee7}\label{classhttp_1_1server_1_1ProxyReply_af3079d65d817e45eed46a2d2e7fd7ee7}} 
+std\+::size\+\_\+t {\bfseries sending\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a1c457ae08185a54cf840fe7aa031f7f6}\label{classhttp_1_1server_1_1ProxyReply_a1c457ae08185a54cf840fe7aa031f7f6}} 
+\+::int64\+\_\+t {\bfseries content\+Length\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a1122f528bb4d47c46b58f5471c591966}\label{classhttp_1_1server_1_1ProxyReply_a1122f528bb4d47c46b58f5471c591966}} 
+bool {\bfseries more\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a8c80ea4963ddb7ba62c5235dfdf66975}\label{classhttp_1_1server_1_1ProxyReply_a8c80ea4963ddb7ba62c5235dfdf66975}} 
+bool {\bfseries receiving\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a46bada533c42814457eaa9afa2d35baf}\label{classhttp_1_1server_1_1ProxyReply_a46bada533c42814457eaa9afa2d35baf}} 
+bool {\bfseries fw\+Certificates\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_ab290dc137018e6c93e1ae527bafe94dc}\label{classhttp_1_1server_1_1ProxyReply_ab290dc137018e6c93e1ae527bafe94dc}} 
+const char $\ast$ {\bfseries begin\+Request\+Buf\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a94cc5c2e95b94ad4e6ed6561220a9ea6}\label{classhttp_1_1server_1_1ProxyReply_a94cc5c2e95b94ad4e6ed6561220a9ea6}} 
+const char $\ast$ {\bfseries end\+Request\+Buf\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a0952628dcdd5de38825f3c4ed4452f62}\label{classhttp_1_1server_1_1ProxyReply_a0952628dcdd5de38825f3c4ed4452f62}} 
+Request\+::\+State {\bfseries state\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1ProxyReply_a56035001a5a8b3c2f24790b41842d458}\label{classhttp_1_1server_1_1ProxyReply_a56035001a5a8b3c2f24790b41842d458}} 
+\mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Wt\+::\+Http\+::\+Parameter\+Map}} {\bfseries query\+Params\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/http/Proxy\+Reply.\+h\end{DoxyCompactItemize}

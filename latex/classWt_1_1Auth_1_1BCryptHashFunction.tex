@@ -1,0 +1,110 @@
+\hypertarget{classWt_1_1Auth_1_1BCryptHashFunction}{}\doxysection{Wt\+::Auth\+::B\+Crypt\+Hash\+Function Class Reference}
+\label{classWt_1_1Auth_1_1BCryptHashFunction}\index{Wt::Auth::BCryptHashFunction@{Wt::Auth::BCryptHashFunction}}
+
+
+An cryptographic hash function that implements bcrypt.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Auth/\+Hash\+Function.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Auth\+::B\+Crypt\+Hash\+Function\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Auth\+::B\+Crypt\+Hash\+Function\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1BCryptHashFunction_aefb9597277b162b10c0b61e9b5e0114f}{B\+Crypt\+Hash\+Function}} (int count=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1BCryptHashFunction_a00aaa33e43263858e71c2d908e36d3db}{name}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the name for this hash function. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1BCryptHashFunction_a998f448d1719bdffd04cc45dbc23eb8e}{compute}} (const std\+::string \&msg, const std\+::string \&salt) const override
+\begin{DoxyCompactList}\small\item\em Computes the hash of a message + salt. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Auth_1_1BCryptHashFunction_acab64174992ce03406abee206087a2f4}{verify}} (const std\+::string \&msg, const std\+::string \&salt, const std\+::string \&hash) const override
+\begin{DoxyCompactList}\small\item\em Verifies a message with the salted hash. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1BCryptHashFunction_add4679e9564a4c32054f9a6f8c09c88d}\label{classWt_1_1Auth_1_1BCryptHashFunction_add4679e9564a4c32054f9a6f8c09c88d}} 
+int {\bfseries count\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An cryptographic hash function that implements bcrypt. 
+
+This hashing function is intended for password hashes. In addition to be collision-\/resistant, the bcrypt algorithm has a parameter which makes the computation more computationally intensive. In this way, a dictionary-\/based attack on a compromised hash is also less feasible. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1BCryptHashFunction_aefb9597277b162b10c0b61e9b5e0114f}\label{classWt_1_1Auth_1_1BCryptHashFunction_aefb9597277b162b10c0b61e9b5e0114f}} 
+\index{Wt::Auth::BCryptHashFunction@{Wt::Auth::BCryptHashFunction}!BCryptHashFunction@{BCryptHashFunction}}
+\index{BCryptHashFunction@{BCryptHashFunction}!Wt::Auth::BCryptHashFunction@{Wt::Auth::BCryptHashFunction}}
+\doxysubsubsection{\texorpdfstring{BCryptHashFunction()}{BCryptHashFunction()}}
+{\footnotesize\ttfamily Wt\+::\+Auth\+::\+B\+Crypt\+Hash\+Function\+::\+B\+Crypt\+Hash\+Function (\begin{DoxyParamCaption}\item[{int}]{count = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The {\ttfamily count} parameter controls the number of iterations, and thus the computational complexity. \mbox{\hyperlink{structWith}{With}} a value of 0, a small default is chosen. The computational complexity increases exponentionally with increasing values of {\ttfamily count}. The parameter only affects new hashes computed with \mbox{\hyperlink{classWt_1_1Auth_1_1BCryptHashFunction_a998f448d1719bdffd04cc45dbc23eb8e}{compute()}}, and its value is stored in the computed hash.
+
+The value of {\ttfamily count} needs to be 0, or in the range 4-\/31. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1BCryptHashFunction_a998f448d1719bdffd04cc45dbc23eb8e}\label{classWt_1_1Auth_1_1BCryptHashFunction_a998f448d1719bdffd04cc45dbc23eb8e}} 
+\index{Wt::Auth::BCryptHashFunction@{Wt::Auth::BCryptHashFunction}!compute@{compute}}
+\index{compute@{compute}!Wt::Auth::BCryptHashFunction@{Wt::Auth::BCryptHashFunction}}
+\doxysubsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+B\+Crypt\+Hash\+Function\+::compute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg,  }\item[{const std\+::string \&}]{salt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Computes the hash of a message + salt. 
+
+The message is usually an A\+S\+C\+II or U\+T\+F-\/8 string.
+
+The {\ttfamily salt} and the computed hash are encoded in printable characters. This is usually A\+S\+C\+I\+I-\/encoded or could be Base64-\/encoded. 
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1HashFunction_a7a79f2aae54b390ba8a3b451d590ac92}{Wt\+::\+Auth\+::\+Hash\+Function}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1BCryptHashFunction_a00aaa33e43263858e71c2d908e36d3db}\label{classWt_1_1Auth_1_1BCryptHashFunction_a00aaa33e43263858e71c2d908e36d3db}} 
+\index{Wt::Auth::BCryptHashFunction@{Wt::Auth::BCryptHashFunction}!name@{name}}
+\index{name@{name}!Wt::Auth::BCryptHashFunction@{Wt::Auth::BCryptHashFunction}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+B\+Crypt\+Hash\+Function\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the name for this hash function. 
+
+Returns {\ttfamily \char`\"{}bcrypt\char`\"{}}. 
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1HashFunction_aaa3f4d60d558577c118c3d8684f72ed4}{Wt\+::\+Auth\+::\+Hash\+Function}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1BCryptHashFunction_acab64174992ce03406abee206087a2f4}\label{classWt_1_1Auth_1_1BCryptHashFunction_acab64174992ce03406abee206087a2f4}} 
+\index{Wt::Auth::BCryptHashFunction@{Wt::Auth::BCryptHashFunction}!verify@{verify}}
+\index{verify@{verify}!Wt::Auth::BCryptHashFunction@{Wt::Auth::BCryptHashFunction}}
+\doxysubsubsection{\texorpdfstring{verify()}{verify()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Auth\+::\+B\+Crypt\+Hash\+Function\+::verify (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg,  }\item[{const std\+::string \&}]{salt,  }\item[{const std\+::string \&}]{hash }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Verifies a message with the salted hash. 
+
+The base implementation will recompute the hash of the message with the given salt, and compare it to the {\ttfamily hash}.
+
+Some methods however store the salt and additional settings in the {\ttfamily hash}, and this information is thus needed to verify the message hash. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1HashFunction_a0a81472fd0c5077c0cf83322c3f40953}{Wt\+::\+Auth\+::\+Hash\+Function}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/Hash\+Function.\+h\end{DoxyCompactItemize}

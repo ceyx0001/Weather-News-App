@@ -1,0 +1,164 @@
+\hypertarget{classdate_1_1zoned__time}{}\doxysection{date\+::zoned\+\_\+time$<$ Duration, Time\+Zone\+Ptr $>$ Class Template Reference}
+\label{classdate_1_1zoned__time}\index{date::zoned\_time$<$ Duration, TimeZonePtr $>$@{date::zoned\_time$<$ Duration, TimeZonePtr $>$}}
+
+
+Collaboration diagram for date\+::zoned\+\_\+time$<$ Duration, Time\+Zone\+Ptr $>$\+:
+% FIG 0
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a7b2b85bb1229bc2bc34ba7a749a7565c}\label{classdate_1_1zoned__time_a7b2b85bb1229bc2bc34ba7a749a7565c}} 
+using {\bfseries duration} = typename std\+::common\+\_\+type$<$ Duration, std\+::chrono\+::seconds $>$\+::type
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a86561841887e4bc9b17b84e3eeb14086}\label{classdate_1_1zoned__time_a86561841887e4bc9b17b84e3eeb14086}} 
+{\footnotesize template$<$class T  = Time\+Zone\+Ptr, class  = decltype(zoned\+\_\+traits$<$\+T$>$\+::default\+\_\+zone())$>$ }\\{\bfseries zoned\+\_\+time} (const sys\+\_\+time$<$ Duration $>$ \&st)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a1bdfc36a5674a00ec0eb9753001dadb3}\label{classdate_1_1zoned__time_a1bdfc36a5674a00ec0eb9753001dadb3}} 
+{\bfseries zoned\+\_\+time} (Time\+Zone\+Ptr z)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a1324aa3ea2f34cf4f4f8f0017e2f8f58}\label{classdate_1_1zoned__time_a1324aa3ea2f34cf4f4f8f0017e2f8f58}} 
+{\footnotesize template$<$class T  = Time\+Zone\+Ptr, class  = typename std\+::enable\+\_\+if $<$                  std\+::is\+\_\+constructible                  $<$                      zoned\+\_\+time,                      decltype(zoned\+\_\+traits$<$\+T$>$\+::locate\+\_\+zone(std\+::string()))                  $>$\+::value, \+::type $>$ }\\{\bfseries zoned\+\_\+time} (const std\+::string \&name)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a3b3fc49d02c141a9b8d6ad05bcb10ed8}\label{classdate_1_1zoned__time_a3b3fc49d02c141a9b8d6ad05bcb10ed8}} 
+{\footnotesize template$<$class Duration2 , class  = typename std\+::enable\+\_\+if $<$                          std\+::is\+\_\+convertible$<$sys\+\_\+time$<$\+Duration2$>$,                                              sys\+\_\+time$<$\+Duration$>$$>$\+::value                      $>$\+::type$>$ }\\{\bfseries zoned\+\_\+time} (const \mbox{\hyperlink{classdate_1_1zoned__time}{zoned\+\_\+time}}$<$ Duration2, Time\+Zone\+Ptr $>$ \&zt) N\+O\+E\+X\+C\+E\+PT
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a532699b7a368328d51ba5073d1cd4d3b}\label{classdate_1_1zoned__time_a532699b7a368328d51ba5073d1cd4d3b}} 
+{\bfseries zoned\+\_\+time} (Time\+Zone\+Ptr z, const sys\+\_\+time$<$ Duration $>$ \&st)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a3371a36987fb65cf23f064192942e45f}\label{classdate_1_1zoned__time_a3371a36987fb65cf23f064192942e45f}} 
+{\footnotesize template$<$class T  = Time\+Zone\+Ptr, class  = typename std\+::enable\+\_\+if $<$                  std\+::is\+\_\+convertible                  $<$                      decltype(std\+::declval$<$\+T\&$>$()-\/$>$to\+\_\+sys(local\+\_\+time$<$\+Duration$>$\{\})),                      sys\+\_\+time$<$duration$>$                  $>$\+::value, \+::type $>$ }\\{\bfseries zoned\+\_\+time} (Time\+Zone\+Ptr z, const local\+\_\+time$<$ Duration $>$ \&tp)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_ab7bc419518b9e645c974e0241d48cf8f}\label{classdate_1_1zoned__time_ab7bc419518b9e645c974e0241d48cf8f}} 
+{\footnotesize template$<$class T  = Time\+Zone\+Ptr, class  = typename std\+::enable\+\_\+if $<$                  std\+::is\+\_\+convertible                  $<$                      decltype(std\+::declval$<$\+T\&$>$()-\/$>$to\+\_\+sys(local\+\_\+time$<$\+Duration$>$\{\},                                                          choose\+::earliest)),                      sys\+\_\+time$<$duration$>$                  $>$\+::value, \+::type $>$ }\\{\bfseries zoned\+\_\+time} (Time\+Zone\+Ptr z, const local\+\_\+time$<$ Duration $>$ \&tp, choose c)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a7445248e487a43f2578884edcfaa3e2a}\label{classdate_1_1zoned__time_a7445248e487a43f2578884edcfaa3e2a}} 
+{\footnotesize template$<$class Duration2 , class Time\+Zone\+Ptr2 , class  = typename std\+::enable\+\_\+if $<$                          std\+::is\+\_\+convertible$<$sys\+\_\+time$<$\+Duration2$>$,                                              sys\+\_\+time$<$\+Duration$>$$>$\+::value                      $>$\+::type$>$ }\\{\bfseries zoned\+\_\+time} (Time\+Zone\+Ptr z, const \mbox{\hyperlink{classdate_1_1zoned__time}{zoned\+\_\+time}}$<$ Duration2, Time\+Zone\+Ptr2 $>$ \&zt)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_abcb33ad213245d8f089710613b01c821}\label{classdate_1_1zoned__time_abcb33ad213245d8f089710613b01c821}} 
+{\footnotesize template$<$class Duration2 , class Time\+Zone\+Ptr2 , class  = typename std\+::enable\+\_\+if $<$                          std\+::is\+\_\+convertible$<$sys\+\_\+time$<$\+Duration2$>$,                                              sys\+\_\+time$<$\+Duration$>$$>$\+::value                      $>$\+::type$>$ }\\{\bfseries zoned\+\_\+time} (Time\+Zone\+Ptr z, const \mbox{\hyperlink{classdate_1_1zoned__time}{zoned\+\_\+time}}$<$ Duration2, Time\+Zone\+Ptr2 $>$ \&zt, choose)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_ae139c1b5bfed9e54db40a19028075b3d}\label{classdate_1_1zoned__time_ae139c1b5bfed9e54db40a19028075b3d}} 
+{\footnotesize template$<$class T  = Time\+Zone\+Ptr, class  = typename std\+::enable\+\_\+if $<$                  std\+::is\+\_\+constructible                  $<$                      zoned\+\_\+time,                      decltype(zoned\+\_\+traits$<$\+T$>$\+::locate\+\_\+zone(std\+::string())),                      sys\+\_\+time$<$\+Duration$>$                  $>$\+::value, \+::type $>$ }\\{\bfseries zoned\+\_\+time} (const std\+::string \&name, const sys\+\_\+time$<$ Duration $>$ \&st)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_aeb78fa05884975337c3ce7e071fc0022}\label{classdate_1_1zoned__time_aeb78fa05884975337c3ce7e071fc0022}} 
+{\footnotesize template$<$class T  = Time\+Zone\+Ptr, class  = typename std\+::enable\+\_\+if $<$                  std\+::is\+\_\+constructible                  $<$                      zoned\+\_\+time,                      decltype(zoned\+\_\+traits$<$\+T$>$\+::locate\+\_\+zone(std\+::string())),                      sys\+\_\+time$<$\+Duration$>$                  $>$\+::value, \+::type $>$ }\\{\bfseries zoned\+\_\+time} (const char $\ast$name, const sys\+\_\+time$<$ Duration $>$ \&st)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_aa9d16d21e9c3cf4b3e9b560abb01aaf0}\label{classdate_1_1zoned__time_aa9d16d21e9c3cf4b3e9b560abb01aaf0}} 
+{\footnotesize template$<$class T  = Time\+Zone\+Ptr, class  = typename std\+::enable\+\_\+if $<$                  std\+::is\+\_\+constructible                  $<$                      zoned\+\_\+time,                      decltype(zoned\+\_\+traits$<$\+T$>$\+::locate\+\_\+zone(std\+::string())),                      local\+\_\+time$<$\+Duration$>$                  $>$\+::value, \+::type $>$ }\\{\bfseries zoned\+\_\+time} (const std\+::string \&name, const local\+\_\+time$<$ Duration $>$ \&tp)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_abd99be59a4e867fa961a42cb67092f48}\label{classdate_1_1zoned__time_abd99be59a4e867fa961a42cb67092f48}} 
+{\footnotesize template$<$class T  = Time\+Zone\+Ptr, class  = typename std\+::enable\+\_\+if $<$                  std\+::is\+\_\+constructible                  $<$                      zoned\+\_\+time,                      decltype(zoned\+\_\+traits$<$\+T$>$\+::locate\+\_\+zone(std\+::string())),                      local\+\_\+time$<$\+Duration$>$                  $>$\+::value, \+::type $>$ }\\{\bfseries zoned\+\_\+time} (const char $\ast$name, const local\+\_\+time$<$ Duration $>$ \&tp)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a2aab032661541bd27e6fee83594715eb}\label{classdate_1_1zoned__time_a2aab032661541bd27e6fee83594715eb}} 
+{\footnotesize template$<$class T  = Time\+Zone\+Ptr, class  = typename std\+::enable\+\_\+if $<$                  std\+::is\+\_\+constructible                  $<$                      zoned\+\_\+time,                      decltype(zoned\+\_\+traits$<$\+T$>$\+::locate\+\_\+zone(std\+::string())),                      local\+\_\+time$<$\+Duration$>$,                      choose                  $>$\+::value, \+::type $>$ }\\{\bfseries zoned\+\_\+time} (const std\+::string \&name, const local\+\_\+time$<$ Duration $>$ \&tp, choose c)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_ab0bd88a3262d906661af9b8526b4cdca}\label{classdate_1_1zoned__time_ab0bd88a3262d906661af9b8526b4cdca}} 
+{\footnotesize template$<$class T  = Time\+Zone\+Ptr, class  = typename std\+::enable\+\_\+if $<$                  std\+::is\+\_\+constructible                  $<$                      zoned\+\_\+time,                      decltype(zoned\+\_\+traits$<$\+T$>$\+::locate\+\_\+zone(std\+::string())),                      local\+\_\+time$<$\+Duration$>$,                      choose                  $>$\+::value, \+::type $>$ }\\{\bfseries zoned\+\_\+time} (const char $\ast$name, const local\+\_\+time$<$ Duration $>$ \&tp, choose c)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a89115a4f062616ca817ef66fbc76ad9f}\label{classdate_1_1zoned__time_a89115a4f062616ca817ef66fbc76ad9f}} 
+{\footnotesize template$<$class Duration2 , class Time\+Zone\+Ptr2 , class T  = Time\+Zone\+Ptr, class  = typename std\+::enable\+\_\+if $<$                          std\+::is\+\_\+convertible$<$sys\+\_\+time$<$\+Duration2$>$,                                              sys\+\_\+time$<$\+Duration$>$$>$\+::value \&\&                          std\+::is\+\_\+constructible                          $<$                              zoned\+\_\+time,                              decltype(zoned\+\_\+traits$<$\+T$>$\+::locate\+\_\+zone(std\+::string())),                              zoned\+\_\+time                          $>$\+::value, \+::type $>$ }\\{\bfseries zoned\+\_\+time} (const std\+::string \&name, const \mbox{\hyperlink{classdate_1_1zoned__time}{zoned\+\_\+time}}$<$ Duration2, Time\+Zone\+Ptr2 $>$ \&zt)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_ad6c35353efd004e66d968d3e1cb34d21}\label{classdate_1_1zoned__time_ad6c35353efd004e66d968d3e1cb34d21}} 
+{\footnotesize template$<$class Duration2 , class Time\+Zone\+Ptr2 , class T  = Time\+Zone\+Ptr, class  = typename std\+::enable\+\_\+if $<$                          std\+::is\+\_\+convertible$<$sys\+\_\+time$<$\+Duration2$>$,                                              sys\+\_\+time$<$\+Duration$>$$>$\+::value \&\&                          std\+::is\+\_\+constructible                          $<$                              zoned\+\_\+time,                              decltype(zoned\+\_\+traits$<$\+T$>$\+::locate\+\_\+zone(std\+::string())),                              zoned\+\_\+time                          $>$\+::value, \+::type $>$ }\\{\bfseries zoned\+\_\+time} (const char $\ast$name, const \mbox{\hyperlink{classdate_1_1zoned__time}{zoned\+\_\+time}}$<$ Duration2, Time\+Zone\+Ptr2 $>$ \&zt)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a700b4cedd64cbcbbe471b744f4f8534b}\label{classdate_1_1zoned__time_a700b4cedd64cbcbbe471b744f4f8534b}} 
+{\footnotesize template$<$class Duration2 , class Time\+Zone\+Ptr2 , class T  = Time\+Zone\+Ptr, class  = typename std\+::enable\+\_\+if $<$                          std\+::is\+\_\+convertible$<$sys\+\_\+time$<$\+Duration2$>$,                                              sys\+\_\+time$<$\+Duration$>$$>$\+::value \&\&                          std\+::is\+\_\+constructible                          $<$                              zoned\+\_\+time,                              decltype(zoned\+\_\+traits$<$\+T$>$\+::locate\+\_\+zone(std\+::string())),                              zoned\+\_\+time,                              choose                          $>$\+::value, \+::type $>$ }\\{\bfseries zoned\+\_\+time} (const std\+::string \&name, const \mbox{\hyperlink{classdate_1_1zoned__time}{zoned\+\_\+time}}$<$ Duration2, Time\+Zone\+Ptr2 $>$ \&zt, choose)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_af4a51d19022c50b3da9c0ce5e1cce24d}\label{classdate_1_1zoned__time_af4a51d19022c50b3da9c0ce5e1cce24d}} 
+{\footnotesize template$<$class Duration2 , class Time\+Zone\+Ptr2 , class T  = Time\+Zone\+Ptr, class  = typename std\+::enable\+\_\+if $<$                          std\+::is\+\_\+convertible$<$sys\+\_\+time$<$\+Duration2$>$,                                              sys\+\_\+time$<$\+Duration$>$$>$\+::value \&\&                          std\+::is\+\_\+constructible                          $<$                              zoned\+\_\+time,                              decltype(zoned\+\_\+traits$<$\+T$>$\+::locate\+\_\+zone(std\+::string())),                              zoned\+\_\+time,                              choose                          $>$\+::value, \+::type $>$ }\\{\bfseries zoned\+\_\+time} (const char $\ast$name, const \mbox{\hyperlink{classdate_1_1zoned__time}{zoned\+\_\+time}}$<$ Duration2, Time\+Zone\+Ptr2 $>$ \&zt, choose)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a9fd244fb47a0141b7a32098dc9f4c5e9}\label{classdate_1_1zoned__time_a9fd244fb47a0141b7a32098dc9f4c5e9}} 
+\mbox{\hyperlink{classdate_1_1zoned__time}{zoned\+\_\+time}} \& {\bfseries operator=} (const sys\+\_\+time$<$ Duration $>$ \&st)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_aee9ad9d9d27d4ad9747aacd9e086ba05}\label{classdate_1_1zoned__time_aee9ad9d9d27d4ad9747aacd9e086ba05}} 
+\mbox{\hyperlink{classdate_1_1zoned__time}{zoned\+\_\+time}} \& {\bfseries operator=} (const local\+\_\+time$<$ Duration $>$ \&ut)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a6aa59605a12bd5391abf499aa7c7d649}\label{classdate_1_1zoned__time_a6aa59605a12bd5391abf499aa7c7d649}} 
+{\bfseries operator sys\+\_\+time$<$ duration $>$} () const
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a12bece328eaf683a29f4b2588ca3237f}\label{classdate_1_1zoned__time_a12bece328eaf683a29f4b2588ca3237f}} 
+{\bfseries operator local\+\_\+time$<$ duration $>$} () const
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_af336a78411ae7c5b4d4a1a57539cbd32}\label{classdate_1_1zoned__time_af336a78411ae7c5b4d4a1a57539cbd32}} 
+Time\+Zone\+Ptr {\bfseries get\+\_\+time\+\_\+zone} () const
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a9e6b62cf7cb341a7516447893fe57c6d}\label{classdate_1_1zoned__time_a9e6b62cf7cb341a7516447893fe57c6d}} 
+local\+\_\+time$<$ duration $>$ {\bfseries get\+\_\+local\+\_\+time} () const
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a816d8c3e0fc94f6aeadf0da89de09b55}\label{classdate_1_1zoned__time_a816d8c3e0fc94f6aeadf0da89de09b55}} 
+sys\+\_\+time$<$ duration $>$ {\bfseries get\+\_\+sys\+\_\+time} () const
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_adae43de6a5b83037f4a9e24b2255fb65}\label{classdate_1_1zoned__time_adae43de6a5b83037f4a9e24b2255fb65}} 
+\mbox{\hyperlink{structdate_1_1sys__info}{sys\+\_\+info}} {\bfseries get\+\_\+info} () const
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_adc409fc16c119effb38d9208f5fea36d}\label{classdate_1_1zoned__time_adc409fc16c119effb38d9208f5fea36d}} 
+{\footnotesize template$<$class T , class $>$ }\\{\bfseries zoned\+\_\+time} (const std\+::string \&name)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a6a56e113db2d59128540717323fa62ee}\label{classdate_1_1zoned__time_a6a56e113db2d59128540717323fa62ee}} 
+{\footnotesize template$<$class T , class $>$ }\\{\bfseries zoned\+\_\+time} (Time\+Zone\+Ptr z, const local\+\_\+time$<$ Duration $>$ \&t)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_ae8ae526db7fe6bf3ec22773b6e66aaeb}\label{classdate_1_1zoned__time_ae8ae526db7fe6bf3ec22773b6e66aaeb}} 
+{\footnotesize template$<$class T , class $>$ }\\{\bfseries zoned\+\_\+time} (Time\+Zone\+Ptr z, const local\+\_\+time$<$ Duration $>$ \&t, choose c)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a57d5ccedc613e0bff80d5a65355827e4}\label{classdate_1_1zoned__time_a57d5ccedc613e0bff80d5a65355827e4}} 
+{\footnotesize template$<$class T , class $>$ }\\{\bfseries zoned\+\_\+time} (const std\+::string \&name, const sys\+\_\+time$<$ Duration $>$ \&st)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_aa50ed74615ba229b46643b4272f3028a}\label{classdate_1_1zoned__time_aa50ed74615ba229b46643b4272f3028a}} 
+{\footnotesize template$<$class T , class $>$ }\\{\bfseries zoned\+\_\+time} (const char $\ast$name, const sys\+\_\+time$<$ Duration $>$ \&st)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a4062ab2c38e4483e5bfaaf1198eaf0f8}\label{classdate_1_1zoned__time_a4062ab2c38e4483e5bfaaf1198eaf0f8}} 
+{\footnotesize template$<$class T , class $>$ }\\{\bfseries zoned\+\_\+time} (const std\+::string \&name, const local\+\_\+time$<$ Duration $>$ \&t)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_af0321e2be323935ad25043f59c2e7093}\label{classdate_1_1zoned__time_af0321e2be323935ad25043f59c2e7093}} 
+{\footnotesize template$<$class T , class $>$ }\\{\bfseries zoned\+\_\+time} (const char $\ast$name, const local\+\_\+time$<$ Duration $>$ \&t)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_af704dcb8265ce3971033b2775428c470}\label{classdate_1_1zoned__time_af704dcb8265ce3971033b2775428c470}} 
+{\footnotesize template$<$class T , class $>$ }\\{\bfseries zoned\+\_\+time} (const std\+::string \&name, const local\+\_\+time$<$ Duration $>$ \&t, choose c)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a305c4f2119077dea0c7e43df4317c610}\label{classdate_1_1zoned__time_a305c4f2119077dea0c7e43df4317c610}} 
+{\footnotesize template$<$class T , class $>$ }\\{\bfseries zoned\+\_\+time} (const char $\ast$name, const local\+\_\+time$<$ Duration $>$ \&t, choose c)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a96d171037ae874ae1cf40f10f3cd257a}\label{classdate_1_1zoned__time_a96d171037ae874ae1cf40f10f3cd257a}} 
+{\footnotesize template$<$class Duration2 , class Time\+Zone\+Ptr2 , class , class $>$ }\\{\bfseries zoned\+\_\+time} (const std\+::string \&name, const \mbox{\hyperlink{classdate_1_1zoned__time}{zoned\+\_\+time}}$<$ Duration2, Time\+Zone\+Ptr2 $>$ \&zt)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a71d3d1c2e677cfc012e3d5d32b5d226b}\label{classdate_1_1zoned__time_a71d3d1c2e677cfc012e3d5d32b5d226b}} 
+{\footnotesize template$<$class Duration2 , class Time\+Zone\+Ptr2 , class , class $>$ }\\{\bfseries zoned\+\_\+time} (const char $\ast$name, const \mbox{\hyperlink{classdate_1_1zoned__time}{zoned\+\_\+time}}$<$ Duration2, Time\+Zone\+Ptr2 $>$ \&zt)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a6fd942d98816dc36754f0b7fe679117b}\label{classdate_1_1zoned__time_a6fd942d98816dc36754f0b7fe679117b}} 
+{\footnotesize template$<$class Duration2 , class Time\+Zone\+Ptr2 , class , class $>$ }\\{\bfseries zoned\+\_\+time} (const std\+::string \&name, const \mbox{\hyperlink{classdate_1_1zoned__time}{zoned\+\_\+time}}$<$ Duration2, Time\+Zone\+Ptr2 $>$ \&zt, choose c)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a23a035910ba3ef218fb294271f426fd1}\label{classdate_1_1zoned__time_a23a035910ba3ef218fb294271f426fd1}} 
+{\footnotesize template$<$class Duration2 , class Time\+Zone\+Ptr2 , class , class $>$ }\\{\bfseries zoned\+\_\+time} (const char $\ast$name, const \mbox{\hyperlink{classdate_1_1zoned__time}{zoned\+\_\+time}}$<$ Duration2, Time\+Zone\+Ptr2 $>$ \&zt, choose c)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_ab1070093cb8a159405f03f3df8833870}\label{classdate_1_1zoned__time_ab1070093cb8a159405f03f3df8833870}} 
+{\footnotesize template$<$class Time\+Zone\+Ptr2 $>$ }\\static Time\+Zone\+Ptr2 \&\& {\bfseries check} (Time\+Zone\+Ptr2 \&\&p)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a5ea7fed4bb32c40692cf2cc7dd858d6e}\label{classdate_1_1zoned__time_a5ea7fed4bb32c40692cf2cc7dd858d6e}} 
+Time\+Zone\+Ptr {\bfseries zone\+\_\+}
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a5849bffa581cae3c6436127676cfae11}\label{classdate_1_1zoned__time_a5849bffa581cae3c6436127676cfae11}} 
+sys\+\_\+time$<$ duration $>$ {\bfseries tp\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a7e767c2bd25d17c59c85932cbfb39d59}\label{classdate_1_1zoned__time_a7e767c2bd25d17c59c85932cbfb39d59}} 
+{\footnotesize template$<$class Duration1 , class Duration2 , class Time\+Zone\+Ptr1 $>$ }\\bool {\bfseries operator==} (const \mbox{\hyperlink{classdate_1_1zoned__time}{zoned\+\_\+time}}$<$ Duration1, Time\+Zone\+Ptr1 $>$ \&x, const \mbox{\hyperlink{classdate_1_1zoned__time}{zoned\+\_\+time}}$<$ Duration2, Time\+Zone\+Ptr1 $>$ \&y)
+\item 
+\mbox{\Hypertarget{classdate_1_1zoned__time_a01bac0250b58777422e41bb6cae9ff4b}\label{classdate_1_1zoned__time_a01bac0250b58777422e41bb6cae9ff4b}} 
+{\footnotesize template$<$class CharT , class Traits , class Duration1 , class Time\+Zone\+Ptr1 $>$ }\\std\+::basic\+\_\+ostream$<$ CharT, Traits $>$ \& {\bfseries operator$<$$<$} (std\+::basic\+\_\+ostream$<$ CharT, Traits $>$ \&os, const \mbox{\hyperlink{classdate_1_1zoned__time}{zoned\+\_\+time}}$<$ Duration1, Time\+Zone\+Ptr1 $>$ \&t)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Date/include/date/tz.\+h\end{DoxyCompactItemize}

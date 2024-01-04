@@ -1,0 +1,412 @@
+\hypertarget{classWt_1_1WObject}{}\doxysection{Wt\+::W\+Object Class Reference}
+\label{classWt_1_1WObject}\index{Wt::WObject@{Wt::WObject}}
+
+
+A base class for objects that participate in the signal/slot system.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Object.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Object\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Object\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WObject_1_1FormData}{Form\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_aec904644d278b09d3f7e568fd2efd400}\label{classWt_1_1WObject_aec904644d278b09d3f7e568fd2efd400}} 
+typedef void(W\+Object\+::$\ast$ \mbox{\hyperlink{classWt_1_1WObject_aec904644d278b09d3f7e568fd2efd400}{Method}}) ()
+\begin{DoxyCompactList}\small\item\em Typedef for a W\+Object method without arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_ab70a7353c304f8594f6491d999625a21}\label{classWt_1_1WObject_ab70a7353c304f8594f6491d999625a21}} 
+{\bfseries W\+Object} (const \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} \&)=delete
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_a3844d4dc5076b49e7414f04f90837f97}\label{classWt_1_1WObject_a3844d4dc5076b49e7414f04f90837f97}} 
+\mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} \& {\bfseries operator=} (const \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} \&)=delete
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_a3de0f0baf35f42aa4e77a90d427f2e11}\label{classWt_1_1WObject_a3de0f0baf35f42aa4e77a90d427f2e11}} 
+void \mbox{\hyperlink{classWt_1_1WObject_a3de0f0baf35f42aa4e77a90d427f2e11}{add\+Child}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} $>$ child)
+\begin{DoxyCompactList}\small\item\em Add a child \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} whose lifetime is determined by this \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Child $>$ }\\Child $\ast$ \mbox{\hyperlink{classWt_1_1WObject_a73777218b9a77b674e15a62d14eab734}{add\+Child}} (std\+::unique\+\_\+ptr$<$ Child $>$ child)
+\begin{DoxyCompactList}\small\item\em Add a child \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}}, returning a raw pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WObject_ad1d60618c6ca687226a5f1bbf1be6dc4}\label{classWt_1_1WObject_ad1d60618c6ca687226a5f1bbf1be6dc4}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} $>$ \mbox{\hyperlink{classWt_1_1WObject_ad1d60618c6ca687226a5f1bbf1be6dc4}{remove\+Child}} (\mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} $\ast$child)
+\begin{DoxyCompactList}\small\item\em Remove a child \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}}, so its lifetime is no longer determined by this \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Child $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ Child $\ast$, \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} $\ast$ $>$\+::value \&\&!std\+::is\+\_\+same$<$ Child, \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} $>$\+::value, std\+::unique\+\_\+ptr$<$ Child $>$ $>$\+::type \mbox{\hyperlink{classWt_1_1WObject_a34743ebfe5d0063495964f33286523d5}{remove\+Child}} (Child $\ast$child)
+\begin{DoxyCompactList}\small\item\em Remove a child \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}}, so its lifetime is no longer determined by this \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WObject_a07106c614644fcccf5e3d8543ef9cab0}\label{classWt_1_1WObject_a07106c614644fcccf5e3d8543ef9cab0}} 
+unsigned {\bfseries raw\+Unique\+Id} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_a888964c358571b929a4a2b59a68e3213}\label{classWt_1_1WObject_a888964c358571b929a4a2b59a68e3213}} 
+const std\+::string {\bfseries unique\+Id} () const
+\item 
+virtual const std\+::string \mbox{\hyperlink{classWt_1_1WObject_a9f34b0c9ec343cf467f8b237d3256792}{id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the (unique) identifier for this object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WObject_a875fda02eff6260ab665647f7215e262}{set\+Object\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets an object name. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WObject_a73aedaccd24488c182912782de70ce2d}{object\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the object name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WObject_a92d8b00edc79b7a60d41d7c088f50436}{reset\+Learned\+Slots}} ()
+\begin{DoxyCompactList}\small\item\em Resets learned stateless slot implementations. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{classWt_1_1WObject_a5c7dcd5a60c88e5b36f0c8e0f9117698}{reset\+Learned\+Slot}} (void(T\+::$\ast$method)())
+\begin{DoxyCompactList}\small\item\em Resets a learned stateless slot implementation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{classWt_1_1WStatelessSlot}{W\+Stateless\+Slot}} $\ast$ \mbox{\hyperlink{classWt_1_1WObject_adaa163b9e92933f3b2ff4ec58e2734c6}{implement\+Stateless}} (void(T\+::$\ast$method)())
+\begin{DoxyCompactList}\small\item\em Declares a slot to be stateless and learn client-\/side behaviour on first invocation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{classWt_1_1WStatelessSlot}{W\+Stateless\+Slot}} $\ast$ \mbox{\hyperlink{classWt_1_1WObject_a7bf46fd1437f07150a9dd95bd95c266d}{implement\+Stateless}} (void(T\+::$\ast$method)(), void(T\+::$\ast$undo\+Method)())
+\begin{DoxyCompactList}\small\item\em Declares a slot to be stateless and learn client-\/side behaviour in advance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WObject_a6dde4ce1e833a9966709daf3c0dedc9f}{is\+Not\+Stateless}} ()
+\begin{DoxyCompactList}\small\item\em Marks the current function as not stateless. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{classWt_1_1WStatelessSlot}{W\+Stateless\+Slot}} $\ast$ \mbox{\hyperlink{classWt_1_1WObject_a214deee5d7324b9afd4ce44534daa782}{implement\+Java\+Script}} (void(T\+::$\ast$method)(), const std\+::string \&js\+Code)
+\begin{DoxyCompactList}\small\item\em Provides a Java\+Script implementation for a method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WObject_af0e3176f9f1f814a13420d829b07cc6c}\label{classWt_1_1WObject_af0e3176f9f1f814a13420d829b07cc6c}} 
+\mbox{\hyperlink{classWt_1_1WStatelessSlot}{W\+Stateless\+Slot}} $\ast$ {\bfseries is\+Stateless} (\mbox{\hyperlink{classWt_1_1WObject_aec904644d278b09d3f7e568fd2efd400}{Method}} method) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_af835d3dba7b5d043709b14a1b042ff2e}\label{classWt_1_1WObject_af835d3dba7b5d043709b14a1b042ff2e}} 
+static void {\bfseries seed\+Id} (unsigned \mbox{\hyperlink{classWt_1_1WObject_a9f34b0c9ec343cf467f8b237d3256792}{id}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_aa996079298424b7d71388367a75f704e}\label{classWt_1_1WObject_aa996079298424b7d71388367a75f704e}} 
+virtual void {\bfseries signal\+Connections\+Changed} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_a98211733311178e0440b6f2bbe98149c}\label{classWt_1_1WObject_a98211733311178e0440b6f2bbe98149c}} 
+virtual void {\bfseries set\+Form\+Data} (const \mbox{\hyperlink{structWt_1_1WObject_1_1FormData}{Form\+Data}} \&form\+Data)
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_a290e1873497a04eaa5b32fa745d952fb}\label{classWt_1_1WObject_a290e1873497a04eaa5b32fa745d952fb}} 
+virtual void {\bfseries set\+Request\+Too\+Large} (\+::int64\+\_\+t size)
+\item 
+virtual \mbox{\hyperlink{classWt_1_1WStatelessSlot}{W\+Stateless\+Slot}} $\ast$ \mbox{\hyperlink{classWt_1_1WObject_adbed50331d6abf7c19628b3140daa9b4}{get\+Stateless}} (\mbox{\hyperlink{classWt_1_1WObject_aec904644d278b09d3f7e568fd2efd400}{Method}} method)
+\begin{DoxyCompactList}\small\item\em On-\/demand stateless slot implementation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_aaa0e872146a93a43416b1eee32b9f686}\label{classWt_1_1WObject_aaa0e872146a93a43416b1eee32b9f686}} 
+\mbox{\hyperlink{classWt_1_1WStatelessSlot}{W\+Stateless\+Slot}} $\ast$ {\bfseries implement\+Prelearn} (\mbox{\hyperlink{classWt_1_1WObject_aec904644d278b09d3f7e568fd2efd400}{Method}} method, \mbox{\hyperlink{classWt_1_1WObject_aec904644d278b09d3f7e568fd2efd400}{Method}} undo\+Method)
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_a31ac994c273a52967b54cdf7aed1811a}\label{classWt_1_1WObject_a31ac994c273a52967b54cdf7aed1811a}} 
+\mbox{\hyperlink{classWt_1_1WStatelessSlot}{W\+Stateless\+Slot}} $\ast$ {\bfseries implement\+Prelearned} (\mbox{\hyperlink{classWt_1_1WObject_aec904644d278b09d3f7e568fd2efd400}{Method}} method, const std\+::string \&js\+Code)
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_a0b76423a75f0ba37f45784e469a16859}\label{classWt_1_1WObject_a0b76423a75f0ba37f45784e469a16859}} 
+\mbox{\hyperlink{classWt_1_1WStatelessSlot}{W\+Stateless\+Slot}} $\ast$ {\bfseries implement\+Autolearn} (\mbox{\hyperlink{classWt_1_1WObject_aec904644d278b09d3f7e568fd2efd400}{Method}} method)
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_a140ef7ec17aae0fc20863d863e5584e6}\label{classWt_1_1WObject_a140ef7ec17aae0fc20863d863e5584e6}} 
+void {\bfseries reset\+Learned\+Slot} (\mbox{\hyperlink{classWt_1_1WObject_aec904644d278b09d3f7e568fd2efd400}{Method}} method)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_a65d9b069f4260eae79cf85e4e5e17d9a}\label{classWt_1_1WObject_a65d9b069f4260eae79cf85e4e5e17d9a}} 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WStatelessSlot}{W\+Stateless\+Slot}} $>$ $>$ {\bfseries stateless\+Slots\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_aa3c0a36fd9824cb59e06a80dfd400b27}\label{classWt_1_1WObject_aa3c0a36fd9824cb59e06a80dfd400b27}} 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} $>$ $>$ {\bfseries children\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_a58b89dad01f5f3f55e2c389c796c53f8}\label{classWt_1_1WObject_a58b89dad01f5f3f55e2c389c796c53f8}} 
+const unsigned {\bfseries id\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_aa539d8a1792fef27d2ea8acec034dd12}\label{classWt_1_1WObject_aa539d8a1792fef27d2ea8acec034dd12}} 
+std\+::string {\bfseries name\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_a4d5596be28ff5f7418e59b4040793fdd}\label{classWt_1_1WObject_a4d5596be28ff5f7418e59b4040793fdd}} 
+static unsigned {\bfseries next\+Obj\+Id\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_a51f71f26be5bfce179266fdecad9f91d}\label{classWt_1_1WObject_a51f71f26be5bfce179266fdecad9f91d}} 
+class {\bfseries Event\+Signal\+Base}
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_a59f159dd904f669563320a185598a167}\label{classWt_1_1WObject_a59f159dd904f669563320a185598a167}} 
+class {\bfseries W\+Application}
+\item 
+\mbox{\Hypertarget{classWt_1_1WObject_a8248f10e62aee707eabe43458855d835}\label{classWt_1_1WObject_a8248f10e62aee707eabe43458855d835}} 
+class {\bfseries Web\+Session}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A base class for objects that participate in the signal/slot system. 
+
+The main feature offered by W\+Object is automated object life-\/time tracking when involved in signal/slot connections. Connections between signals and slots of W\+Object instances implement a type-\/safe event callback system. For example, one can simply connect() the \mbox{\hyperlink{classWt_1_1WInteractWidget_af6cb297f8593e6884de66d23ea69d49c}{W\+Interact\+Widget\+::clicked()}} signal of a \mbox{\hyperlink{classWt_1_1WPushButton}{W\+Push\+Button}} to the \mbox{\hyperlink{classWt_1_1WApplication_a5231d54ed34982f4366058eb6440c8f7}{W\+Application\+::quit()}} method, to exit the application when the button is clicked\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::unique\_ptr<Wt::WInteractWidget> sender\{\textcolor{keyword}{new} \mbox{\hyperlink{classWt_1_1WText}{Wt::WText}}(\textcolor{stringliteral}{"Quit."})\};}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WApplication}{Wt::WApplication}} *app = \mbox{\hyperlink{classWt_1_1WApplication_a27690e10fb1dffef9b688b5a6ecf26b0}{Wt::WApplication::instance}}();}
+\DoxyCodeLine{sender-\/>clicked().connect(app, \&\mbox{\hyperlink{classWt_1_1WApplication_a5231d54ed34982f4366058eb6440c8f7}{Wt::WApplication::quit}});}
+\end{DoxyCode}
+
+
+Wt\textquotesingle{}s signals may also propagate arguments to slots. For example, the same clicked() signal provides event details in a \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} details class, and these details may be received in the slot\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }MyClass : \textcolor{keyword}{public} \mbox{\hyperlink{classWt_1_1WContainerWidget}{Wt::WContainerWidget}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{  MyClass()}
+\DoxyCodeLine{  \{}
+\DoxyCodeLine{    \mbox{\hyperlink{classWt_1_1WText}{Wt::WText}} *text = addWidget(std::make\_unique<Wt::WText>(\textcolor{stringliteral}{"Click here"}));}
+\DoxyCodeLine{    text-\/>clicked().connect(\textcolor{keyword}{this}, \&MyClass::handleClick);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    ...}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{private}:}
+\DoxyCodeLine{  \textcolor{keywordtype}{void} handleClick(\textcolor{keyword}{const} \mbox{\hyperlink{classWt_1_1WMouseEvent}{Wt::WMouseEvent}}\& event) \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (event.modifiers().test(Wt::KeyboardModifier::Shift)) \{}
+\DoxyCodeLine{      ...}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\};}
+\end{DoxyCode}
+ As the example illustrates, slots are ordinary W\+Object methods.
+
+In conjunction with \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}, W\+Object also facilitates learning of client-\/side event handling (in Java\+Script) through invocation of the slot method. This is only possible when the slot behaviour is stateless, i.\+e. independent of any application state, and can be specified using the \mbox{\hyperlink{classWt_1_1WObject_adaa163b9e92933f3b2ff4ec58e2734c6}{implement\+Stateless()}} methods.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}, \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WObject_a73777218b9a77b674e15a62d14eab734}\label{classWt_1_1WObject_a73777218b9a77b674e15a62d14eab734}} 
+\index{Wt::WObject@{Wt::WObject}!addChild@{addChild}}
+\index{addChild@{addChild}!Wt::WObject@{Wt::WObject}}
+\doxysubsubsection{\texorpdfstring{addChild()}{addChild()}}
+{\footnotesize\ttfamily template$<$typename Child $>$ \\
+Child$\ast$ Wt\+::\+W\+Object\+::add\+Child (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ Child $>$}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Add a child \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}}, returning a raw pointer. 
+
+This is implemented as\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Child *result = child.get();}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WObject_a3de0f0baf35f42aa4e77a90d427f2e11}{addChild}}(std::unique\_ptr<WObject>(std::move(child)));}
+\DoxyCodeLine{\textcolor{keywordflow}{return} result;}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1WObject_adbed50331d6abf7c19628b3140daa9b4}\label{classWt_1_1WObject_adbed50331d6abf7c19628b3140daa9b4}} 
+\index{Wt::WObject@{Wt::WObject}!getStateless@{getStateless}}
+\index{getStateless@{getStateless}!Wt::WObject@{Wt::WObject}}
+\doxysubsubsection{\texorpdfstring{getStateless()}{getStateless()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WStatelessSlot}{W\+Stateless\+Slot}}$\ast$ Wt\+::\+W\+Object\+::get\+Stateless (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WObject_aec904644d278b09d3f7e568fd2efd400}{Method}}}]{method }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+On-\/demand stateless slot implementation. 
+
+This method returns a stateless slot implementation for the given {\ttfamily method}. To avoid the cost of declaring methods to be stateless when they are not used, you may reimplement this method to provide a stateless implementation for a method only when the method is involved in a slot connection.
+
+Use \mbox{\hyperlink{classWt_1_1WObject_adaa163b9e92933f3b2ff4ec58e2734c6}{implement\+Stateless()}} to provide a stateless implementation of the given {\ttfamily method}, or return the base class implementation otherwise. 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WWidget_af0055d333414c99aee674e13da95f89b}{Wt\+::\+W\+Widget}}, \mbox{\hyperlink{classWt_1_1WWebWidget_a603ed3e92421dab3c96dda05afa47513}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WAbstractToggleButton_adf52bd04a8c10ff6dda2db224e25cb71}{Wt\+::\+W\+Abstract\+Toggle\+Button}}.
+
+\mbox{\Hypertarget{classWt_1_1WObject_a9f34b0c9ec343cf467f8b237d3256792}\label{classWt_1_1WObject_a9f34b0c9ec343cf467f8b237d3256792}} 
+\index{Wt::WObject@{Wt::WObject}!id@{id}}
+\index{id@{id}!Wt::WObject@{Wt::WObject}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily virtual const std\+::string Wt\+::\+W\+Object\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the (unique) identifier for this object. 
+
+For a W\+Widget, this corresponds to the id of the D\+OM element that represents the widget. This is not entirely unique, since a \mbox{\hyperlink{classWt_1_1WCompositeWidget}{composite widget}} shares the same id as its implementation.
+
+By default, the id is auto-\/generated, unless a custom id is set for a widget using \mbox{\hyperlink{classWt_1_1WWidget_a93ff9d1ca04e733cd54cd40a06775f7e}{W\+Widget\+::set\+Id()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a83a186d2feacfbfbdb5b54f4cefc6735}{W\+Widget\+::js\+Ref()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WWebWidget_ab438c51f9184d0ed37d01b15f07355d6}{Wt\+::\+W\+Web\+Widget}}, \mbox{\hyperlink{classWt_1_1WTableRow_ae0097a7de92acdb677f3b98e0b993f93}{Wt\+::\+W\+Table\+Row}}, \mbox{\hyperlink{classWt_1_1WButtonGroup_a2f1b5269d9dae69bdc78aaa8ede36e1b}{Wt\+::\+W\+Button\+Group}}, \mbox{\hyperlink{classWt_1_1WTableColumn_a84baf2a0d96367fe0d6c1a0ca6e49ce9}{Wt\+::\+W\+Table\+Column}}, \mbox{\hyperlink{classWt_1_1WCompositeWidget_a6e7fc16162314016e109b771ce476d59}{Wt\+::\+W\+Composite\+Widget}}, and \mbox{\hyperlink{classWt_1_1StdWidgetItemImpl_ad44ff4c23ffc82d11e465e447dacb79d}{Wt\+::\+Std\+Widget\+Item\+Impl}}.
+
+\mbox{\Hypertarget{classWt_1_1WObject_a214deee5d7324b9afd4ce44534daa782}\label{classWt_1_1WObject_a214deee5d7324b9afd4ce44534daa782}} 
+\index{Wt::WObject@{Wt::WObject}!implementJavaScript@{implementJavaScript}}
+\index{implementJavaScript@{implementJavaScript}!Wt::WObject@{Wt::WObject}}
+\doxysubsubsection{\texorpdfstring{implementJavaScript()}{implementJavaScript()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classWt_1_1WStatelessSlot}{W\+Stateless\+Slot}} $\ast$ Wt\+::\+W\+Object\+::implement\+Java\+Script (\begin{DoxyParamCaption}\item[{void(T\+::$\ast$)()}]{method,  }\item[{const std\+::string \&}]{js\+Code }\end{DoxyParamCaption})}
+
+
+
+Provides a Java\+Script implementation for a method. 
+
+This method sets the Java\+Script implementation for a method. As a result, if Java\+Script is available, the Java\+Script version will be used on the client side and the visual effect of the C++ implementation will be ignored.
+
+This is very similar to an auto-\/learned stateless slot, but here the learning is avoided by directly setting the Java\+Script implementation.
+
+The {\ttfamily js\+Code} should be one or more valid Java\+Script statements.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WObject_adaa163b9e92933f3b2ff4ec58e2734c6}{implement\+Stateless(void (T\+:\+:$\ast$method)())}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WObject_adaa163b9e92933f3b2ff4ec58e2734c6}\label{classWt_1_1WObject_adaa163b9e92933f3b2ff4ec58e2734c6}} 
+\index{Wt::WObject@{Wt::WObject}!implementStateless@{implementStateless}}
+\index{implementStateless@{implementStateless}!Wt::WObject@{Wt::WObject}}
+\doxysubsubsection{\texorpdfstring{implementStateless()}{implementStateless()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classWt_1_1WStatelessSlot}{W\+Stateless\+Slot}} $\ast$ Wt\+::\+W\+Object\+::implement\+Stateless (\begin{DoxyParamCaption}\item[{void(T\+::$\ast$)()}]{method }\end{DoxyParamCaption})}
+
+
+
+Declares a slot to be stateless and learn client-\/side behaviour on first invocation. 
+
+Indicate that the given slot is stateless, and meets the requirement that the slot\textquotesingle{}s code does not depend on any state of the object, but performs the same visual effect regardless of any state, or at least until \mbox{\hyperlink{classWt_1_1WObject_a5c7dcd5a60c88e5b36f0c8e0f9117698}{reset\+Learned\+Slot()}} is called.
+
+When this slot is connected to an \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}} (such as those exposed by \mbox{\hyperlink{classWt_1_1WInteractWidget}{W\+Interact\+Widget}} and \mbox{\hyperlink{classWt_1_1WFormWidget}{W\+Form\+Widget}}), the Wt library may decide to cache the visual effect of this slot in Java\+Script code at client-\/side\+: this effect will be learned automatically at the first invocation. This has no consequences for the normal event handling, since the slot implementation is still executed in response to any event notification. Therefore, it is merely an optimization of the latency for the visual effect, but it does not change the behaviour of the application.
+
+When for some reason the visual effect does change, one may use \mbox{\hyperlink{classWt_1_1WObject_a5c7dcd5a60c88e5b36f0c8e0f9117698}{reset\+Learned\+Slot()}} or \mbox{\hyperlink{classWt_1_1WObject_a92d8b00edc79b7a60d41d7c088f50436}{reset\+Learned\+Slots()}} to flush the existing cached visual effect, forcing the library to relearn it.
+
+It is crucial that this function be applied first to a slot that is intended to be stateless before any Event\+Signal connects to that slot. Otherwise, the connecting Event\+Signal cannot find the stateless slot implementation for the intended slot, and the statement will have no effect for that connection.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WObject_a5c7dcd5a60c88e5b36f0c8e0f9117698}{reset\+Learned\+Slot()}}, \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WObject_a7bf46fd1437f07150a9dd95bd95c266d}\label{classWt_1_1WObject_a7bf46fd1437f07150a9dd95bd95c266d}} 
+\index{Wt::WObject@{Wt::WObject}!implementStateless@{implementStateless}}
+\index{implementStateless@{implementStateless}!Wt::WObject@{Wt::WObject}}
+\doxysubsubsection{\texorpdfstring{implementStateless()}{implementStateless()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{classWt_1_1WStatelessSlot}{W\+Stateless\+Slot}} $\ast$ Wt\+::\+W\+Object\+::implement\+Stateless (\begin{DoxyParamCaption}\item[{void(T\+::$\ast$)()}]{method,  }\item[{void(T\+::$\ast$)()}]{undo\+Method }\end{DoxyParamCaption})}
+
+
+
+Declares a slot to be stateless and learn client-\/side behaviour in advance. 
+
+This method has the same effect as \mbox{\hyperlink{classWt_1_1WObject_adaa163b9e92933f3b2ff4ec58e2734c6}{implement\+Stateless(void (T\+:\+:$\ast$method)())}}, but learns the visual effect of the slot before the first invocation of the event.
+
+To learn the visual effect, the library will simulate the event and record the visual effect. To restore the application state, it will call the undo\+Method which must restore the effect of method.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WObject_adaa163b9e92933f3b2ff4ec58e2734c6}{implement\+Stateless(void (T\+:\+:$\ast$method)())}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WObject_a6dde4ce1e833a9966709daf3c0dedc9f}\label{classWt_1_1WObject_a6dde4ce1e833a9966709daf3c0dedc9f}} 
+\index{Wt::WObject@{Wt::WObject}!isNotStateless@{isNotStateless}}
+\index{isNotStateless@{isNotStateless}!Wt::WObject@{Wt::WObject}}
+\doxysubsubsection{\texorpdfstring{isNotStateless()}{isNotStateless()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Object\+::is\+Not\+Stateless (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Marks the current function as not stateless. 
+
+This may be useful if your current function is manipulating the UI in a way that is not stateless (i.\+e. does depend on some state), but which happens to be called from within a function that is marked stateless (such as \mbox{\hyperlink{classWt_1_1WWidget_a66bdda41220267a8c7ff9865996e2675}{W\+Widget\+::set\+Hidden()}}). This will reject stateless slot pre-\/learning in this case, reverting to plain server-\/side dynamic UI updates. \mbox{\Hypertarget{classWt_1_1WObject_a73aedaccd24488c182912782de70ce2d}\label{classWt_1_1WObject_a73aedaccd24488c182912782de70ce2d}} 
+\index{Wt::WObject@{Wt::WObject}!objectName@{objectName}}
+\index{objectName@{objectName}!Wt::WObject@{Wt::WObject}}
+\doxysubsubsection{\texorpdfstring{objectName()}{objectName()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+W\+Object\+::object\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the object name. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WObject_a875fda02eff6260ab665647f7215e262}{set\+Object\+Name()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WCompositeWidget_a379aaf81ec17f4f17befd1979df17ab1}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WObject_a34743ebfe5d0063495964f33286523d5}\label{classWt_1_1WObject_a34743ebfe5d0063495964f33286523d5}} 
+\index{Wt::WObject@{Wt::WObject}!removeChild@{removeChild}}
+\index{removeChild@{removeChild}!Wt::WObject@{Wt::WObject}}
+\doxysubsubsection{\texorpdfstring{removeChild()}{removeChild()}}
+{\footnotesize\ttfamily template$<$typename Child $>$ \\
+std\+::enable\+\_\+if$<$std\+::is\+\_\+convertible$<$Child$\ast$,\mbox{\hyperlink{classWt_1_1WObject}{W\+Object}}$\ast$$>$\+::value \&\& !std\+::is\+\_\+same$<$Child,\mbox{\hyperlink{classWt_1_1WObject}{W\+Object}}$>$\+::value, std\+::unique\+\_\+ptr$<$Child$>$ $>$\+::type Wt\+::\+W\+Object\+::remove\+Child (\begin{DoxyParamCaption}\item[{Child $\ast$}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Remove a child \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}}, so its lifetime is no longer determined by this \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}}. 
+
+This is an overload that automatically casts the returned value to a unique\+\_\+ptr$<$\+Child$>$ for convenience
+
+This is implemented as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{return} std::unique\_ptr<Child>(\textcolor{keyword}{static\_cast<}Child*\textcolor{keyword}{>}(\mbox{\hyperlink{classWt_1_1WObject_ad1d60618c6ca687226a5f1bbf1be6dc4}{removeChild}}(\textcolor{keyword}{static\_cast<}WObject*\textcolor{keyword}{>}(child)).release()));}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1WObject_a5c7dcd5a60c88e5b36f0c8e0f9117698}\label{classWt_1_1WObject_a5c7dcd5a60c88e5b36f0c8e0f9117698}} 
+\index{Wt::WObject@{Wt::WObject}!resetLearnedSlot@{resetLearnedSlot}}
+\index{resetLearnedSlot@{resetLearnedSlot}!Wt::WObject@{Wt::WObject}}
+\doxysubsubsection{\texorpdfstring{resetLearnedSlot()}{resetLearnedSlot()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void Wt\+::\+W\+Object\+::reset\+Learned\+Slot (\begin{DoxyParamCaption}\item[{void(T\+::$\ast$)()}]{method }\end{DoxyParamCaption})}
+
+
+
+Resets a learned stateless slot implementation. 
+
+Clears the stateless implementation for the given slot that was declared to be implemented with a stateless implementation.
+
+When something has changed that breaks the contract of a stateless slot to always have the same effect, you may call this method to force the application to discard the current implementation.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WObject_adaa163b9e92933f3b2ff4ec58e2734c6}{implement\+Stateless()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WObject_a92d8b00edc79b7a60d41d7c088f50436}\label{classWt_1_1WObject_a92d8b00edc79b7a60d41d7c088f50436}} 
+\index{Wt::WObject@{Wt::WObject}!resetLearnedSlots@{resetLearnedSlots}}
+\index{resetLearnedSlots@{resetLearnedSlots}!Wt::WObject@{Wt::WObject}}
+\doxysubsubsection{\texorpdfstring{resetLearnedSlots()}{resetLearnedSlots()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Object\+::reset\+Learned\+Slots (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets learned stateless slot implementations. 
+
+Clears the stateless implementation for all slots declared to be implemented with a stateless implementation.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WObject_a5c7dcd5a60c88e5b36f0c8e0f9117698}{reset\+Learned\+Slot()}}, \mbox{\hyperlink{classWt_1_1WObject_adaa163b9e92933f3b2ff4ec58e2734c6}{implement\+Stateless()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WObject_a875fda02eff6260ab665647f7215e262}\label{classWt_1_1WObject_a875fda02eff6260ab665647f7215e262}} 
+\index{Wt::WObject@{Wt::WObject}!setObjectName@{setObjectName}}
+\index{setObjectName@{setObjectName}!Wt::WObject@{Wt::WObject}}
+\doxysubsubsection{\texorpdfstring{setObjectName()}{setObjectName()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Object\+::set\+Object\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets an object name. 
+
+The object name can be used to easily identify a type of object in the D\+OM, and does not need to be unique. It will usually reflect the widget type or role.
+
+If a \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} has an object name, the object name is reflected in the {\ttfamily data-\/object-\/name} attribute. You can use this to find widgets in Java\+Script (e.\+g. for automated testing) using\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{document.querySelector(\textcolor{stringliteral}{'*[data-\/object-\/name="yourObjectNameHere"]'})}
+\end{DoxyCode}
+
+
+The default object name is empty (no object name). 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a8a90ac0a5b963994ee0e5ff35213b276}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a0f46cc7bc8e0aa368837dcc138303c76}{Wt\+::\+W\+Composite\+Widget}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Object.\+h\end{DoxyCompactItemize}

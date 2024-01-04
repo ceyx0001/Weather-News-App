@@ -1,0 +1,777 @@
+\hypertarget{classWt_1_1WDialog}{}\doxysection{Wt\+::W\+Dialog Class Reference}
+\label{classWt_1_1WDialog}\index{Wt::WDialog@{Wt::WDialog}}
+
+
+A W\+Dialog shows a dialog.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Dialog.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Dialog\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Dialog\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a92f80e0f2b73023f7527aaea79fa5aa2}\label{classWt_1_1WDialog_a92f80e0f2b73023f7527aaea79fa5aa2}} 
+typedef \mbox{\hyperlink{classWt_a73f9972c2bf74bf66b455031f1603ee0}{Dialog\+Code}} \mbox{\hyperlink{classWt_1_1WDialog_a92f80e0f2b73023f7527aaea79fa5aa2}{Code}}
+\begin{DoxyCompactList}\small\item\em Typedef for enum \mbox{\hyperlink{classWt_a73f9972c2bf74bf66b455031f1603ee0}{Wt\+::\+Dialog\+Code}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WDialog_a943574bdb999dafd3b66fc0d0cad3ed2}{W\+Dialog}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new dialog. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WDialog_af9863b8a9edb989c54c035c283d22898}{W\+Dialog}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&\mbox{\hyperlink{classWt_1_1WDialog_a77af782ed0904f49f0c850c95c797f61}{window\+Title}})
+\begin{DoxyCompactList}\small\item\em Constructs a dialog with a given window title. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a97fa6bfc8c31a3bf98284ad66b2df738}\label{classWt_1_1WDialog_a97fa6bfc8c31a3bf98284ad66b2df738}} 
+\mbox{\hyperlink{classWt_1_1WDialog_a97fa6bfc8c31a3bf98284ad66b2df738}{$\sim$\+W\+Dialog}} ()
+\begin{DoxyCompactList}\small\item\em Deletes a dialog. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WDialog_ae0923afc12895002f30b8ee12ab91aae}{set\+Window\+Title}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&title)
+\begin{DoxyCompactList}\small\item\em Sets the dialog window title. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1WDialog_a77af782ed0904f49f0c850c95c797f61}{window\+Title}} () const
+\begin{DoxyCompactList}\small\item\em Returns the dialog window title. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WDialog_ab8ae8763648de12a67ada4b8237154a9}{set\+Title\+Bar\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enables or disables the title bar. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WDialog_a37e4f1341d15aadfd4b7e2895aae0b55}{is\+Title\+Bar\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the title bar is enabled. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WDialog_ae016a75d11e22888f21eeec62c9374c8}{title\+Bar}} () const
+\begin{DoxyCompactList}\small\item\em Returns the dialog title bar container. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WDialog_afdd49e5f71f65ea48b6fa312d820cbbd}{contents}} () const
+\begin{DoxyCompactList}\small\item\em Returns the dialog contents container. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WDialog_a9495058092638dc39f7a9ad9d970aec9}{footer}} () const
+\begin{DoxyCompactList}\small\item\em Returns the dialog footer container. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_a73f9972c2bf74bf66b455031f1603ee0}{Dialog\+Code}} \mbox{\hyperlink{classWt_1_1WDialog_a223f8635e38a6e9809b867f247b2185f}{exec}} (const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&animation=\mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}}())
+\begin{DoxyCompactList}\small\item\em Executes the dialog in a recursive event loop. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WDialog_a3e7c81e33d2709c83e6046cb544d1afb}{done}} (\mbox{\hyperlink{classWt_a73f9972c2bf74bf66b455031f1603ee0}{Dialog\+Code}} r)
+\begin{DoxyCompactList}\small\item\em Stops the dialog. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WDialog_ae63bc6d22a5081dd86a8d1f1e7b80549}{accept}} ()
+\begin{DoxyCompactList}\small\item\em Closes the dialog, with result is Accepted. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WDialog_ae7253f64af91db028109523c71f36caf}{reject}} ()
+\begin{DoxyCompactList}\small\item\em Closes the dialog, with result is Rejected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WDialog_afbea0405a68e8700091f3b8d548e055b}{reject\+When\+Escape\+Pressed}} (bool \mbox{\hyperlink{classWt_1_1WWidget_ae6935d8baca9d37dd1d080b4383da87c}{enable}}=true)
+\begin{DoxyCompactList}\small\item\em Lets pressing the escape key reject the dialog. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_a73f9972c2bf74bf66b455031f1603ee0}{Dialog\+Code}} $>$ \& \mbox{\hyperlink{classWt_1_1WDialog_ae7f3991e5adf17ec4e9e93fd8a3a2f79}{finished}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the dialog is closed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_a73f9972c2bf74bf66b455031f1603ee0}{Dialog\+Code}} \mbox{\hyperlink{classWt_1_1WDialog_ad7e883b5293d06bf3c616824440c46c4}{result}} () const
+\begin{DoxyCompactList}\small\item\em Returns the result that was set for this dialog. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WDialog_acc8c9734f33b405bf0a706fe2f6e4e05}{set\+Modal}} (bool modal)
+\begin{DoxyCompactList}\small\item\em Sets whether the dialog is modal. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WDialog_aa891e33ee66b53ef64ab02fd61a88375}{is\+Modal}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the dialog is modal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WDialog_a0a3517bffbd049b988e80bb85ae18c46}{set\+Resizable}} (bool \mbox{\hyperlink{classWt_1_1WDialog_ad9204eee3b7caba213b27b60e76bf1bf}{resizable}})
+\begin{DoxyCompactList}\small\item\em Adds a resize handle to the dialog. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WDialog_ad9204eee3b7caba213b27b60e76bf1bf}{resizable}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the dialog has a resize handle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WDialog_afbccf557a0343591f3087c9a0a9b7051}{set\+Movable}} (bool \mbox{\hyperlink{classWt_1_1WDialog_a29fc77663d3de9def8a7f17e58238cb3}{movable}})
+\begin{DoxyCompactList}\small\item\em Allows the dialog to be moved. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WDialog_a29fc77663d3de9def8a7f17e58238cb3}{movable}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the dialog can be moved. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WDialog_afe7c5f57ddb5fd1bc67334c931401e98}{set\+Closable}} (bool \mbox{\hyperlink{classWt_1_1WDialog_ac3fef5cec7c3a0c475adb92da20542fa}{closable}})
+\begin{DoxyCompactList}\small\item\em Adds a close button to the titlebar. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_ac3fef5cec7c3a0c475adb92da20542fa}\label{classWt_1_1WDialog_ac3fef5cec7c3a0c475adb92da20542fa}} 
+bool \mbox{\hyperlink{classWt_1_1WDialog_ac3fef5cec7c3a0c475adb92da20542fa}{closable}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the dialog can be closed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WDialog_a2cf1a5d6ccde9bbea734bda389fbd5c8}{set\+Auto\+Focus}} (bool \mbox{\hyperlink{classWt_1_1WWidget_ae6935d8baca9d37dd1d080b4383da87c}{enable}})
+\begin{DoxyCompactList}\small\item\em Set focus on the first widget in the dialog. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WDialog_a463eff1cca2623aed12f80c86e3ce331}{set\+Hidden}} (bool \mbox{\hyperlink{classWt_1_1WPopupWidget_ae7a830eb0047a72ac973d4e7ee40c6f1}{hidden}}, const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&animation=\mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}}()) override
+\begin{DoxyCompactList}\small\item\em Hides or shows the widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WDialog_a49d7685ad51d9e74334e746af2ccf1c3}{position\+At}} (const \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$widget, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} \mbox{\hyperlink{classWt_1_1WPopupWidget_a2b8f99b08bf43dd8c199b7d57cd9d850}{orientation}}=Orientation\+::\+Vertical) override
+\begin{DoxyCompactList}\small\item\em Positions a widget next to another widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a7dd5be946b39806805285cfa7416757f}\label{classWt_1_1WDialog_a7dd5be946b39806805285cfa7416757f}} 
+void \mbox{\hyperlink{classWt_1_1WDialog_a7dd5be946b39806805285cfa7416757f}{position\+At}} (const \mbox{\hyperlink{classWt_1_1WMouseEvent}{Wt\+::\+W\+Mouse\+Event}} \&ev)
+\begin{DoxyCompactList}\small\item\em Set the position of the widget at the mouse position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a113dd08d646491476342e5293c6e36f9}\label{classWt_1_1WDialog_a113dd08d646491476342e5293c6e36f9}} 
+void \mbox{\hyperlink{classWt_1_1WDialog_a113dd08d646491476342e5293c6e36f9}{raise\+To\+Front}} ()
+\begin{DoxyCompactList}\small\item\em Raises this dialog to be the top-\/most dialog. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WDialog_adeca1bfc134d8c41e9e658c46025b246}{set\+Minimum\+Size}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WCompositeWidget_a29ea57c8313b5316bbfa5c6d3590ad3a}{width}}, const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WCompositeWidget_a058e81d74cf5290ad7bd484573d1fadf}{height}}) override
+\begin{DoxyCompactList}\small\item\em Sets a minimum size. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WDialog_acc3bfa4afea05c8ed342620da9dd897f}{set\+Maximum\+Size}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WCompositeWidget_a29ea57c8313b5316bbfa5c6d3590ad3a}{width}}, const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WCompositeWidget_a058e81d74cf5290ad7bd484573d1fadf}{height}}) override
+\begin{DoxyCompactList}\small\item\em Sets a maximum size. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ int, int $>$ \& \mbox{\hyperlink{classWt_1_1WDialog_a0c258ff49273242b7a43e4a75ac93c3b}{resized}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the dialog is being resized by the user. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ int, int $>$ \& \mbox{\hyperlink{classWt_1_1WDialog_a139707b3b05f02887ee6257fc244c31d}{moved}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the dialog is being moved by the user. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_ab1de560c29a006b138e8a35c23e0c11d}\label{classWt_1_1WDialog_ab1de560c29a006b138e8a35c23e0c11d}} 
+\mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WDialog_ab1de560c29a006b138e8a35c23e0c11d}{touch\+Started}} ()
+\begin{DoxyCompactList}\small\item\em Event signal emitted when a finger is placed on the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a915ca082a4ca98917f79f62ce6bef73e}\label{classWt_1_1WDialog_a915ca082a4ca98917f79f62ce6bef73e}} 
+\mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WDialog_a915ca082a4ca98917f79f62ce6bef73e}{touch\+Ended}} ()
+\begin{DoxyCompactList}\small\item\em Event signal emitted when a finger is removed from the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a8efc5e5de0ad728b5f9bcd40ea128461}\label{classWt_1_1WDialog_a8efc5e5de0ad728b5f9bcd40ea128461}} 
+\mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WDialog_a8efc5e5de0ad728b5f9bcd40ea128461}{touch\+Moved}} ()
+\begin{DoxyCompactList}\small\item\em Event signal emitted when a finger, which is already placed on the screen, is moved across the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ keyboard and mouse events}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WKeyEvent}{W\+Key\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WDialog_a50f5becb0b48ebd53f65358fa793dd4a}{key\+Went\+Down}} ()
+\begin{DoxyCompactList}\small\item\em Event signal emitted when a keyboard key is pushed down. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WKeyEvent}{W\+Key\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WDialog_ac94349ffe958b4195884f11cbcb3c491}{key\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em Event signal emitted when a \char`\"{}character\char`\"{} was entered. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WKeyEvent}{W\+Key\+Event}} $>$ \& \mbox{\hyperlink{classWt_1_1WDialog_a6b20530c8b9386cb7253a3b772fcfb62}{key\+Went\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Event signal emitted when a keyboard key is released. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}} \& \mbox{\hyperlink{classWt_1_1WDialog_a452d8ba06c5aab7a38dd63c2f3448274}{enter\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em Event signal emitted when enter was pressed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}} \& \mbox{\hyperlink{classWt_1_1WDialog_a9c340a0bc0106df86810a827face7564}{escape\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em Event signal emitted when escape was pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WDialog_ab2d29f97f95cd7a92e20ec8b3501ffbd}{render}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$ flags) override
+\begin{DoxyCompactList}\small\item\em Renders the widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a4bd37484a724b9ded3b92e0e90024708}\label{classWt_1_1WDialog_a4bd37484a724b9ded3b92e0e90024708}} 
+virtual void {\bfseries on\+Path\+Change} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a268d282a2169fce02b25275365a63a10}\label{classWt_1_1WDialog_a268d282a2169fce02b25275365a63a10}} 
+void {\bfseries create} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_afd0503578a3e23956d2fc7ed38a04917}\label{classWt_1_1WDialog_afd0503578a3e23956d2fc7ed38a04917}} 
+void {\bfseries on\+Escape\+Pressed} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a0af23ae687cef51bc9c83ca52ea09b40}\label{classWt_1_1WDialog_a0af23ae687cef51bc9c83ca52ea09b40}} 
+void {\bfseries on\+Default\+Pressed} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a26554c47596e3a173cf860bd0df0a087}\label{classWt_1_1WDialog_a26554c47596e3a173cf860bd0df0a087}} 
+void {\bfseries bring\+To\+Front} (const \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} \&e)
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a940414936b552df961cd557a888ccd7c}\label{classWt_1_1WDialog_a940414936b552df961cd557a888ccd7c}} 
+void {\bfseries z\+Index\+Changed} (int z\+Index)
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a43e2a8232f01323df9470aa5592e88f0}\label{classWt_1_1WDialog_a43e2a8232f01323df9470aa5592e88f0}} 
+void {\bfseries do\+J\+S\+After\+Load} (std\+::string js)
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a9c46890b8ab7e8cbe55ecf54f7930e72}\label{classWt_1_1WDialog_a9c46890b8ab7e8cbe55ecf54f7930e72}} 
+Dialog\+Cover $\ast$ {\bfseries cover} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a7bc9a5c302486af5a2038cacf0564bb8}\label{classWt_1_1WDialog_a7bc9a5c302486af5a2038cacf0564bb8}} 
+\mbox{\hyperlink{classWt_1_1WTemplate}{W\+Template}} $\ast$ {\bfseries impl\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a1f82c39dea57149ae1ba18e74fa6f557}\label{classWt_1_1WDialog_a1f82c39dea57149ae1ba18e74fa6f557}} 
+\mbox{\hyperlink{classWt_1_1WTemplate}{W\+Template}} $\ast$ {\bfseries caption\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a5e7726446b00425c37b98bd12438ed1b}\label{classWt_1_1WDialog_a5e7726446b00425c37b98bd12438ed1b}} 
+\mbox{\hyperlink{classWt_1_1WInteractWidget}{W\+Interact\+Widget}} $\ast$ {\bfseries close\+Icon\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a845d9213037c079fa11071529a59a2ac}\label{classWt_1_1WDialog_a845d9213037c079fa11071529a59a2ac}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries title\+Bar\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_ad05864c6eb0dd8b107ed24da75788865}\label{classWt_1_1WDialog_ad05864c6eb0dd8b107ed24da75788865}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries contents\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_ac9d5ccc8ee5e165ab84adf4a8f1a7ac1}\label{classWt_1_1WDialog_ac9d5ccc8ee5e165ab84adf4a8f1a7ac1}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries layout\+Container\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a5c0bdee596fe30ed4c4d3145271b7eeb}\label{classWt_1_1WDialog_a5c0bdee596fe30ed4c4d3145271b7eeb}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries footer\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a24ba65808eb8b30f0f8f86febe2f1b5c}\label{classWt_1_1WDialog_a24ba65808eb8b30f0f8f86febe2f1b5c}} 
+bool {\bfseries modal\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a2600fbf0c81fe10c6e2540dca3bf692d}\label{classWt_1_1WDialog_a2600fbf0c81fe10c6e2540dca3bf692d}} 
+bool {\bfseries resizable\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a7cc38ed3a367aeca78064aa2fbb502d2}\label{classWt_1_1WDialog_a7cc38ed3a367aeca78064aa2fbb502d2}} 
+bool {\bfseries movable\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_afceeba3960cd8d541dd81ce61427dbb6}\label{classWt_1_1WDialog_afceeba3960cd8d541dd81ce61427dbb6}} 
+bool {\bfseries escape\+Is\+Reject\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_ad5838903011461597d03a580ea1caa6b}\label{classWt_1_1WDialog_ad5838903011461597d03a580ea1caa6b}} 
+bool {\bfseries auto\+Focus\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a098d129517d65a26057f07bc121cc380}\label{classWt_1_1WDialog_a098d129517d65a26057f07bc121cc380}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ int, int $>$ {\bfseries moved\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a30bfecbad9e41d4b8735d18247ae7f63}\label{classWt_1_1WDialog_a30bfecbad9e41d4b8735d18247ae7f63}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ int, int $>$ {\bfseries resized\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_af360268d54400de2123e1b2e50c53e4f}\label{classWt_1_1WDialog_af360268d54400de2123e1b2e50c53e4f}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ int $>$ {\bfseries z\+Index\+Changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a3d4446c4b5cd86788e3e8d9c18b37d9a}\label{classWt_1_1WDialog_a3d4446c4b5cd86788e3e8d9c18b37d9a}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries delayed\+Js\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a4bc84976a287b120f9d818f87ff6b402}\label{classWt_1_1WDialog_a4bc84976a287b120f9d818f87ff6b402}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_a73f9972c2bf74bf66b455031f1603ee0}{Dialog\+Code}} $>$ {\bfseries finished\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_ad530c0aab5c0fe4cfd2f4ed6f6468b6c}\label{classWt_1_1WDialog_ad530c0aab5c0fe4cfd2f4ed6f6468b6c}} 
+\mbox{\hyperlink{classWt_a73f9972c2bf74bf66b455031f1603ee0}{Dialog\+Code}} {\bfseries result\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a39f4050ce61322124de2e37272735c1c}\label{classWt_1_1WDialog_a39f4050ce61322124de2e37272735c1c}} 
+bool {\bfseries recursive\+Event\+Loop\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_ad64155ef54366ef1c32f065a7507497e}\label{classWt_1_1WDialog_ad64155ef54366ef1c32f065a7507497e}} 
+\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} {\bfseries escape\+Connection1\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_a4c4408787352e475f4b4d3fe4b64a157}\label{classWt_1_1WDialog_a4c4408787352e475f4b4d3fe4b64a157}} 
+\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} {\bfseries escape\+Connection2\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_ad3727536534df4078fa44288534b7a29}\label{classWt_1_1WDialog_ad3727536534df4078fa44288534b7a29}} 
+\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} {\bfseries enter\+Connection1\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_adb435bc7fbcfadcba7787f2546f8a41e}\label{classWt_1_1WDialog_adb435bc7fbcfadcba7787f2546f8a41e}} 
+\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} {\bfseries enter\+Connection2\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WDialog_af60032a1cc09a05e29720ba051318d27}\label{classWt_1_1WDialog_af60032a1cc09a05e29720ba051318d27}} 
+class {\bfseries Dialog\+Cover}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A W\+Dialog shows a dialog. 
+
+By default, the dialog is {\itshape modal}. A modal window blocks the user interface, and does not allow the user to interact with any other part of the user interface until the dialog is closed (this is enforced at the server side, so you may rely on this behavior).
+
+A modal dialog can be instantiated synchronously or asynchronously. A non-\/modal dialog can only be instantiated asynchronously.
+
+When using a dialog asynchronously, there is no A\+PI call that waits for the dialog to be closed. Then, the usage is similar to instantiating any other widget. The dialog may be closed by calling \mbox{\hyperlink{classWt_1_1WDialog_ae63bc6d22a5081dd86a8d1f1e7b80549}{accept()}}, \mbox{\hyperlink{classWt_1_1WDialog_ae7253f64af91db028109523c71f36caf}{reject()}} or \mbox{\hyperlink{classWt_1_1WDialog_a3e7c81e33d2709c83e6046cb544d1afb}{done()}} (or connecting a signal to one of these methods). This will hide the dialog and emit the \mbox{\hyperlink{classWt_1_1WDialog_ae7f3991e5adf17ec4e9e93fd8a3a2f79}{finished()}} signal, which you then can listen for to process the dialog result and delete the dialog. Unlike other widgets, a dialog does not need to be added to a parent widget, but is hidden by default. You must use the method \mbox{\hyperlink{classWt_1_1WWidget_a52dcef5a385ddfa0a8c3e6c20000f181}{show()}} or \mbox{\hyperlink{classWt_1_1WDialog_a463eff1cca2623aed12f80c86e3ce331}{set\+Hidden(false)}} to show the dialog.
+
+The synchronous use of a dialog involves a call to \mbox{\hyperlink{classWt_1_1WDialog_a223f8635e38a6e9809b867f247b2185f}{exec()}} which will block (suspend the thread) until the dialog window is closed, and return the dialog result. Events within dialog are handled using a so-\/called recursive event loop. Typically, an OK button will be connected to \mbox{\hyperlink{classWt_1_1WDialog_ae63bc6d22a5081dd86a8d1f1e7b80549}{accept()}}, and in some cases a Standard\+Button\+::\+Cancel button to \mbox{\hyperlink{classWt_1_1WDialog_ae7253f64af91db028109523c71f36caf}{reject()}}. This solution has the drawback that it is not scalable to many concurrent sessions, since for every session with a recursive event loop, a thread is locked until \mbox{\hyperlink{classWt_1_1WDialog_a223f8635e38a6e9809b867f247b2185f}{exec()}} returns. A thread that is locked by a recursive event loop cannot be used to process requests from another sessions. When all threads in the threadpool are locked in recursive event loops, the server will be unresponsive to requests from any other session. In practical terms, this means you must not use \mbox{\hyperlink{classWt_1_1WDialog_a223f8635e38a6e9809b867f247b2185f}{exec()}}, unless your application will never be used by more concurrent users than the amount of threads in your threadpool (like on some intranets or extranets). Using \mbox{\hyperlink{classWt_1_1WDialog_a223f8635e38a6e9809b867f247b2185f}{exec()}} is not supported from outside the regular event loop (i.\+e. when taking a lock on a session using W\+Application\+::get\+Update\+Lock() or by posting an event using \mbox{\hyperlink{classWt_1_1WServer_a191243d6c9718b18f6e1830562b01806}{W\+Server\+::post()}}). Use \mbox{\hyperlink{classWt_1_1WDialog_acc8c9734f33b405bf0a706fe2f6e4e05}{set\+Modal(false)}} to create a non-\/modal dialog. A non-\/modal dialog does not block the underlying user interface\+: the user must not first deal with the dialog before interacting with the rest of the user interface.
+
+Contents for the dialog is defined by adding it to the \mbox{\hyperlink{classWt_1_1WDialog_afdd49e5f71f65ea48b6fa312d820cbbd}{contents()}} widget.
+
+This dialog looks like this (using the default css themes)\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+  &   \\\cline{1-2}
+\end{longtabu}
+
+
+\begin{DoxyNote}{Note}
+For the dialog (or rather, the silkscreen covering the user interface below) to render properly in IE, the \char`\"{}html body\char`\"{} margin is set to 0 (if it wasn\textquotesingle{}t already). 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WDialog_a943574bdb999dafd3b66fc0d0cad3ed2}\label{classWt_1_1WDialog_a943574bdb999dafd3b66fc0d0cad3ed2}} 
+\index{Wt::WDialog@{Wt::WDialog}!WDialog@{WDialog}}
+\index{WDialog@{WDialog}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{WDialog()}{WDialog()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Dialog\+::\+W\+Dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a new dialog. 
+
+Unlike other widgets, the dialog does not require a parent container since it is a top-\/level widget. \mbox{\Hypertarget{classWt_1_1WDialog_af9863b8a9edb989c54c035c283d22898}\label{classWt_1_1WDialog_af9863b8a9edb989c54c035c283d22898}} 
+\index{Wt::WDialog@{Wt::WDialog}!WDialog@{WDialog}}
+\index{WDialog@{WDialog}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{WDialog()}{WDialog()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Dialog\+::\+W\+Dialog (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{window\+Title }\end{DoxyParamCaption})}
+
+
+
+Constructs a dialog with a given window title. 
+
+Unlike other widgets, the dialog does not require a parent container since it is a top-\/level widget. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WDialog_ae63bc6d22a5081dd86a8d1f1e7b80549}\label{classWt_1_1WDialog_ae63bc6d22a5081dd86a8d1f1e7b80549}} 
+\index{Wt::WDialog@{Wt::WDialog}!accept@{accept}}
+\index{accept@{accept}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Dialog\+::accept (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Closes the dialog, with result is Accepted. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WDialog_a3e7c81e33d2709c83e6046cb544d1afb}{done(\+Dialog\+Code r)}}, \mbox{\hyperlink{classWt_1_1WDialog_ae7253f64af91db028109523c71f36caf}{reject()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WDialog_afdd49e5f71f65ea48b6fa312d820cbbd}\label{classWt_1_1WDialog_afdd49e5f71f65ea48b6fa312d820cbbd}} 
+\index{Wt::WDialog@{Wt::WDialog}!contents@{contents}}
+\index{contents@{contents}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{contents()}{contents()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}}$\ast$ Wt\+::\+W\+Dialog\+::contents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the dialog contents container. 
+
+Content to the dialog window may be added to this container widget. \mbox{\Hypertarget{classWt_1_1WDialog_a3e7c81e33d2709c83e6046cb544d1afb}\label{classWt_1_1WDialog_a3e7c81e33d2709c83e6046cb544d1afb}} 
+\index{Wt::WDialog@{Wt::WDialog}!done@{done}}
+\index{done@{done}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{done()}{done()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Dialog\+::done (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a73f9972c2bf74bf66b455031f1603ee0}{Dialog\+Code}}}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Stops the dialog. 
+
+Sets the dialog result, and emits the \mbox{\hyperlink{classWt_1_1WDialog_ae7f3991e5adf17ec4e9e93fd8a3a2f79}{finished()}} signal.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WDialog_ae7f3991e5adf17ec4e9e93fd8a3a2f79}{finished()}}, \mbox{\hyperlink{classWt_1_1WDialog_ad7e883b5293d06bf3c616824440c46c4}{result()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WDialog_a452d8ba06c5aab7a38dd63c2f3448274}\label{classWt_1_1WDialog_a452d8ba06c5aab7a38dd63c2f3448274}} 
+\index{Wt::WDialog@{Wt::WDialog}!enterPressed@{enterPressed}}
+\index{enterPressed@{enterPressed}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{enterPressed()}{enterPressed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}\& Wt\+::\+W\+Dialog\+::enter\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Event signal emitted when enter was pressed. 
+
+The event will be triggered if nothing in the \mbox{\hyperlink{classWt_1_1WDialog}{W\+Dialog}} has focus
+
+\begin{DoxySeeAlso}{See also}
+W\+Interactive\+Widget\+::enter\+Pressed 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WDialog_a9c340a0bc0106df86810a827face7564}\label{classWt_1_1WDialog_a9c340a0bc0106df86810a827face7564}} 
+\index{Wt::WDialog@{Wt::WDialog}!escapePressed@{escapePressed}}
+\index{escapePressed@{escapePressed}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{escapePressed()}{escapePressed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}\& Wt\+::\+W\+Dialog\+::escape\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Event signal emitted when escape was pressed. 
+
+The event will be triggered if nothing in the \mbox{\hyperlink{classWt_1_1WDialog}{W\+Dialog}} has focus
+
+\begin{DoxySeeAlso}{See also}
+W\+Interactive\+Widget\+::escape\+Pressed 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WDialog_a223f8635e38a6e9809b867f247b2185f}\label{classWt_1_1WDialog_a223f8635e38a6e9809b867f247b2185f}} 
+\index{Wt::WDialog@{Wt::WDialog}!exec@{exec}}
+\index{exec@{exec}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{exec()}{exec()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_a73f9972c2bf74bf66b455031f1603ee0}{Dialog\+Code}} Wt\+::\+W\+Dialog\+::exec (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&}]{animation = {\ttfamily \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}}()} }\end{DoxyParamCaption})}
+
+
+
+Executes the dialog in a recursive event loop. 
+
+Executes the dialog synchronously. This blocks the current thread of execution until one of \mbox{\hyperlink{classWt_1_1WDialog_a3e7c81e33d2709c83e6046cb544d1afb}{done(\+Dialog\+Code)}}, \mbox{\hyperlink{classWt_1_1WDialog_ae63bc6d22a5081dd86a8d1f1e7b80549}{accept()}} or \mbox{\hyperlink{classWt_1_1WDialog_ae7253f64af91db028109523c71f36caf}{reject()}} is called.
+
+{\itshape Warning\+: using \mbox{\hyperlink{classWt_1_1WDialog_a223f8635e38a6e9809b867f247b2185f}{exec()}} does not scale to many concurrent sessions, since the thread is locked until exec returns, so the entire server will be unresponsive when the thread pool is exhausted.}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WDialog_a3e7c81e33d2709c83e6046cb544d1afb}{done(\+Dialog\+Code r)}}, \mbox{\hyperlink{classWt_1_1WDialog_ae63bc6d22a5081dd86a8d1f1e7b80549}{accept()}}, \mbox{\hyperlink{classWt_1_1WDialog_ae7253f64af91db028109523c71f36caf}{reject()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WDialog_ae7f3991e5adf17ec4e9e93fd8a3a2f79}\label{classWt_1_1WDialog_ae7f3991e5adf17ec4e9e93fd8a3a2f79}} 
+\index{Wt::WDialog@{Wt::WDialog}!finished@{finished}}
+\index{finished@{finished}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{finished()}{finished()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_a73f9972c2bf74bf66b455031f1603ee0}{Dialog\+Code}}$>$\& Wt\+::\+W\+Dialog\+::finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when the dialog is closed. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WDialog_a3e7c81e33d2709c83e6046cb544d1afb}{done(\+Dialog\+Code r)}}, \mbox{\hyperlink{classWt_1_1WDialog_ae63bc6d22a5081dd86a8d1f1e7b80549}{accept()}}, \mbox{\hyperlink{classWt_1_1WDialog_ae7253f64af91db028109523c71f36caf}{reject()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WDialog_a9495058092638dc39f7a9ad9d970aec9}\label{classWt_1_1WDialog_a9495058092638dc39f7a9ad9d970aec9}} 
+\index{Wt::WDialog@{Wt::WDialog}!footer@{footer}}
+\index{footer@{footer}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{footer()}{footer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}}$\ast$ Wt\+::\+W\+Dialog\+::footer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the dialog footer container. 
+
+This is an optional section which is typically used for buttons. \mbox{\Hypertarget{classWt_1_1WDialog_aa891e33ee66b53ef64ab02fd61a88375}\label{classWt_1_1WDialog_aa891e33ee66b53ef64ab02fd61a88375}} 
+\index{Wt::WDialog@{Wt::WDialog}!isModal@{isModal}}
+\index{isModal@{isModal}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{isModal()}{isModal()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Dialog\+::is\+Modal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the dialog is modal. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WDialog_acc8c9734f33b405bf0a706fe2f6e4e05}{set\+Modal()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WDialog_a37e4f1341d15aadfd4b7e2895aae0b55}\label{classWt_1_1WDialog_a37e4f1341d15aadfd4b7e2895aae0b55}} 
+\index{Wt::WDialog@{Wt::WDialog}!isTitleBarEnabled@{isTitleBarEnabled}}
+\index{isTitleBarEnabled@{isTitleBarEnabled}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{isTitleBarEnabled()}{isTitleBarEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Dialog\+::is\+Title\+Bar\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the title bar is enabled. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WDialog_ab8ae8763648de12a67ada4b8237154a9}{set\+Title\+Bar\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WDialog_ac94349ffe958b4195884f11cbcb3c491}\label{classWt_1_1WDialog_ac94349ffe958b4195884f11cbcb3c491}} 
+\index{Wt::WDialog@{Wt::WDialog}!keyPressed@{keyPressed}}
+\index{keyPressed@{keyPressed}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{keyPressed()}{keyPressed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$\mbox{\hyperlink{classWt_1_1WKeyEvent}{W\+Key\+Event}}$>$\& Wt\+::\+W\+Dialog\+::key\+Pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Event signal emitted when a \char`\"{}character\char`\"{} was entered. 
+
+The event will be triggered if nothing in the \mbox{\hyperlink{classWt_1_1WDialog}{W\+Dialog}} has focus
+
+\begin{DoxySeeAlso}{See also}
+W\+Interactive\+Widget\+::key\+Pressed 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WDialog_a50f5becb0b48ebd53f65358fa793dd4a}\label{classWt_1_1WDialog_a50f5becb0b48ebd53f65358fa793dd4a}} 
+\index{Wt::WDialog@{Wt::WDialog}!keyWentDown@{keyWentDown}}
+\index{keyWentDown@{keyWentDown}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{keyWentDown()}{keyWentDown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$\mbox{\hyperlink{classWt_1_1WKeyEvent}{W\+Key\+Event}}$>$\& Wt\+::\+W\+Dialog\+::key\+Went\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Event signal emitted when a keyboard key is pushed down. 
+
+The event will be triggered if nothing in the \mbox{\hyperlink{classWt_1_1WDialog}{W\+Dialog}} has focus
+
+\begin{DoxySeeAlso}{See also}
+W\+Interactive\+Widget\+::key\+Went\+Down 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WDialog_a6b20530c8b9386cb7253a3b772fcfb62}\label{classWt_1_1WDialog_a6b20530c8b9386cb7253a3b772fcfb62}} 
+\index{Wt::WDialog@{Wt::WDialog}!keyWentUp@{keyWentUp}}
+\index{keyWentUp@{keyWentUp}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{keyWentUp()}{keyWentUp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$\mbox{\hyperlink{classWt_1_1WKeyEvent}{W\+Key\+Event}}$>$\& Wt\+::\+W\+Dialog\+::key\+Went\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Event signal emitted when a keyboard key is released. 
+
+The event will be triggered if nothing in the \mbox{\hyperlink{classWt_1_1WDialog}{W\+Dialog}} has focus
+
+\begin{DoxySeeAlso}{See also}
+W\+Interactive\+Widget\+::key\+Went\+Up 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WDialog_a29fc77663d3de9def8a7f17e58238cb3}\label{classWt_1_1WDialog_a29fc77663d3de9def8a7f17e58238cb3}} 
+\index{Wt::WDialog@{Wt::WDialog}!movable@{movable}}
+\index{movable@{movable}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{movable()}{movable()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Dialog\+::movable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the dialog can be moved. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WDialog_afbccf557a0343591f3087c9a0a9b7051}{set\+Movable()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WDialog_a139707b3b05f02887ee6257fc244c31d}\label{classWt_1_1WDialog_a139707b3b05f02887ee6257fc244c31d}} 
+\index{Wt::WDialog@{Wt::WDialog}!moved@{moved}}
+\index{moved@{moved}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{moved()}{moved()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$int, int$>$\& Wt\+::\+W\+Dialog\+::moved (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when the dialog is being moved by the user. 
+
+The information passed are the new x and y position (relative to the wietdow). \mbox{\Hypertarget{classWt_1_1WDialog_a49d7685ad51d9e74334e746af2ccf1c3}\label{classWt_1_1WDialog_a49d7685ad51d9e74334e746af2ccf1c3}} 
+\index{Wt::WDialog@{Wt::WDialog}!positionAt@{positionAt}}
+\index{positionAt@{positionAt}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{positionAt()}{positionAt()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Dialog\+::position\+At (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{widget,  }\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation = {\ttfamily Orientation\+:\+:Vertical} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Positions a widget next to another widget. 
+
+Positions this absolutely positioned widget next to another {\ttfamily widget}. Both widgets must be visible (including all their ancestors). The current widget is shown automatically if needed.
+
+When {\ttfamily orientation} = Wt\+::\+Orientation\+::\+Vertical, the widget is displayed below the other widget (or above in case there is not enough room below). It is aligned so that the left edges align (or the right edges if there is not enough room to the right).
+
+Conversely, when {\ttfamily orientation} = Wt\+::\+Orientation\+::\+Horizontal, the widget is displayed to the right of the other widget (or to the left in case there is not enough room to the right). It is aligned so that the top edges align (or the bottom edges if there is not enough room below).
+
+\begin{DoxyNote}{Note}
+This only works if Java\+Script is available. 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWidget_a8e867e0b40e41b8ffcd66f4dc08fc372}{Wt\+::\+W\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WDialog_ae7253f64af91db028109523c71f36caf}\label{classWt_1_1WDialog_ae7253f64af91db028109523c71f36caf}} 
+\index{Wt::WDialog@{Wt::WDialog}!reject@{reject}}
+\index{reject@{reject}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{reject()}{reject()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Dialog\+::reject (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Closes the dialog, with result is Rejected. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WDialog_a3e7c81e33d2709c83e6046cb544d1afb}{done(\+Dialog\+Code r)}}, \mbox{\hyperlink{classWt_1_1WDialog_ae63bc6d22a5081dd86a8d1f1e7b80549}{accept()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WDialog_afbea0405a68e8700091f3b8d548e055b}\label{classWt_1_1WDialog_afbea0405a68e8700091f3b8d548e055b}} 
+\index{Wt::WDialog@{Wt::WDialog}!rejectWhenEscapePressed@{rejectWhenEscapePressed}}
+\index{rejectWhenEscapePressed@{rejectWhenEscapePressed}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{rejectWhenEscapePressed()}{rejectWhenEscapePressed()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Dialog\+::reject\+When\+Escape\+Pressed (\begin{DoxyParamCaption}\item[{bool}]{enable = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Lets pressing the escape key reject the dialog. 
+
+Before Wt 3.\+1.\+5, pressing escape automatically rejected the dialog. Since 3.\+1.\+4 this behaviour is no longer the default since it may interfere with other functionality in the dialog. Use this method to enable this behaviour.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WDialog_ae7253f64af91db028109523c71f36caf}{reject()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WDialog_ab2d29f97f95cd7a92e20ec8b3501ffbd}\label{classWt_1_1WDialog_ab2d29f97f95cd7a92e20ec8b3501ffbd}} 
+\index{Wt::WDialog@{Wt::WDialog}!render@{render}}
+\index{render@{render}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Dialog\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Renders the widget. 
+
+This function renders the widget (or an update for the widget), after this has been scheduled using \mbox{\hyperlink{classWt_1_1WWidget_a5d3d4edaafa2d7c892a5078f3df4cf11}{schedule\+Render()}}.
+
+The default implementation will render the widget by serializing changes to Java\+Script and H\+T\+ML. You may want to reimplement this widget if you have been postponing some of the layout / rendering implementation until the latest moment possible. In that case you should make sure you call the base implementation however. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WPopupWidget_a0274232e09629de47a12eb57ff8c1bc0}{Wt\+::\+W\+Popup\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WDialog_ad9204eee3b7caba213b27b60e76bf1bf}\label{classWt_1_1WDialog_ad9204eee3b7caba213b27b60e76bf1bf}} 
+\index{Wt::WDialog@{Wt::WDialog}!resizable@{resizable}}
+\index{resizable@{resizable}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{resizable()}{resizable()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Dialog\+::resizable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the dialog has a resize handle. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WDialog_a0a3517bffbd049b988e80bb85ae18c46}{set\+Resizable()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WDialog_a0c258ff49273242b7a43e4a75ac93c3b}\label{classWt_1_1WDialog_a0c258ff49273242b7a43e4a75ac93c3b}} 
+\index{Wt::WDialog@{Wt::WDialog}!resized@{resized}}
+\index{resized@{resized}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{resized()}{resized()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$int, int$>$\& Wt\+::\+W\+Dialog\+::resized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when the dialog is being resized by the user. 
+
+The information passed are the new width and height.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WDialog_a0a3517bffbd049b988e80bb85ae18c46}{set\+Resizable()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WDialog_ad7e883b5293d06bf3c616824440c46c4}\label{classWt_1_1WDialog_ad7e883b5293d06bf3c616824440c46c4}} 
+\index{Wt::WDialog@{Wt::WDialog}!result@{result}}
+\index{result@{result}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{result()}{result()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_a73f9972c2bf74bf66b455031f1603ee0}{Dialog\+Code}} Wt\+::\+W\+Dialog\+::result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the result that was set for this dialog. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WDialog_a3e7c81e33d2709c83e6046cb544d1afb}{done(\+Dialog\+Code r)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WDialog_a2cf1a5d6ccde9bbea734bda389fbd5c8}\label{classWt_1_1WDialog_a2cf1a5d6ccde9bbea734bda389fbd5c8}} 
+\index{Wt::WDialog@{Wt::WDialog}!setAutoFocus@{setAutoFocus}}
+\index{setAutoFocus@{setAutoFocus}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{setAutoFocus()}{setAutoFocus()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Dialog\+::set\+Auto\+Focus (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set focus on the first widget in the dialog. 
+
+Autofocus is enabled by default. If a widget inside of this dialog already has focus, the focus will not be changed. \mbox{\Hypertarget{classWt_1_1WDialog_afe7c5f57ddb5fd1bc67334c931401e98}\label{classWt_1_1WDialog_afe7c5f57ddb5fd1bc67334c931401e98}} 
+\index{Wt::WDialog@{Wt::WDialog}!setClosable@{setClosable}}
+\index{setClosable@{setClosable}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{setClosable()}{setClosable()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Dialog\+::set\+Closable (\begin{DoxyParamCaption}\item[{bool}]{closable }\end{DoxyParamCaption})}
+
+
+
+Adds a close button to the titlebar. 
+
+The close button is shown in the title bar. Clicking the close button will reject the dialog. \mbox{\Hypertarget{classWt_1_1WDialog_a463eff1cca2623aed12f80c86e3ce331}\label{classWt_1_1WDialog_a463eff1cca2623aed12f80c86e3ce331}} 
+\index{Wt::WDialog@{Wt::WDialog}!setHidden@{setHidden}}
+\index{setHidden@{setHidden}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{setHidden()}{setHidden()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Dialog\+::set\+Hidden (\begin{DoxyParamCaption}\item[{bool}]{hidden,  }\item[{const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&}]{animation = {\ttfamily \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Hides or shows the widget. 
+
+Hides or show the widget (including all its descendant widgets). When setting {\ttfamily hidden} = {\ttfamily false}, this widget and all descendant widgets that are not hidden will be shown. A widget is only visible if it and all its ancestors in the widget tree are visible, which may be checked using \mbox{\hyperlink{classWt_1_1WCompositeWidget_a4cc174483fe8bfc1e45639eb0a9c5a03}{is\+Visible()}}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WPopupWidget_a14a014c21069fc293bf73ebb3a17475d}{Wt\+::\+W\+Popup\+Widget}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WMessageBox_aaf4e30f472f3cf21a404a309c2c10013}{Wt\+::\+W\+Message\+Box}}.
+
+\mbox{\Hypertarget{classWt_1_1WDialog_acc3bfa4afea05c8ed342620da9dd897f}\label{classWt_1_1WDialog_acc3bfa4afea05c8ed342620da9dd897f}} 
+\index{Wt::WDialog@{Wt::WDialog}!setMaximumSize@{setMaximumSize}}
+\index{setMaximumSize@{setMaximumSize}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{setMaximumSize()}{setMaximumSize()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Dialog\+::set\+Maximum\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{width,  }\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets a maximum size. 
+
+Specifies a maximum size for this widget, setting C\+SS {\ttfamily max-\/width} and {\ttfamily max-\/height} properties.
+
+The default the maximum width and height are \mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}}, indicating no maximum size. A Length\+Unit\+::\+Percentage size should not be used, as this is (in virtually all cases) undefined behaviour.
+
+When the widget is a container widget that contains a layout manager, then setting a maximum size will have the effect of letting the size of the container to reflect the preferred size of the contents (rather than constraining the size of the children based on the size of the container), up to the specified maximum size.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WCompositeWidget_a95584ea20561ba00e8c58156a24ba238}{resize()}}, \mbox{\hyperlink{classWt_1_1WDialog_adeca1bfc134d8c41e9e658c46025b246}{set\+Minimum\+Size()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WCompositeWidget_a8d6e43eec426afb7d96a200abe246ad7}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WDialog_adeca1bfc134d8c41e9e658c46025b246}\label{classWt_1_1WDialog_adeca1bfc134d8c41e9e658c46025b246}} 
+\index{Wt::WDialog@{Wt::WDialog}!setMinimumSize@{setMinimumSize}}
+\index{setMinimumSize@{setMinimumSize}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{setMinimumSize()}{setMinimumSize()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Dialog\+::set\+Minimum\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{width,  }\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets a minimum size. 
+
+Specifies a minimum size for this widget, setting C\+SS {\ttfamily min-\/width} and {\ttfamily min-\/height} properties.
+
+The default minimum width and height is 0. The special value \mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}} indicates that the initial width is used as minimum size. A Length\+Unit\+::\+Percentage size should not be used, as this is (in virtually all cases) undefined behaviour.
+
+When the widget is inserted in a layout manager, then the minimum size will be taken into account.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WCompositeWidget_a95584ea20561ba00e8c58156a24ba238}{resize()}}, \mbox{\hyperlink{classWt_1_1WCompositeWidget_ae9bef220ae2b5a631b7f8ca81387b386}{minimum\+Width()}}, \mbox{\hyperlink{classWt_1_1WCompositeWidget_ad1ed17b90ce00858af97bfd383fc5b8c}{minimum\+Height()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WCompositeWidget_a562d90c7e7aa813a202605e5cd522cfa}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WDialog_acc8c9734f33b405bf0a706fe2f6e4e05}\label{classWt_1_1WDialog_acc8c9734f33b405bf0a706fe2f6e4e05}} 
+\index{Wt::WDialog@{Wt::WDialog}!setModal@{setModal}}
+\index{setModal@{setModal}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{setModal()}{setModal()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Dialog\+::set\+Modal (\begin{DoxyParamCaption}\item[{bool}]{modal }\end{DoxyParamCaption})}
+
+
+
+Sets whether the dialog is modal. 
+
+A modal dialog will block the underlying user interface. A modal dialog can be shown synchronously or asynchronously. A non-\/modal dialog can only be shown asynchronously.
+
+By default a dialog is modal. \mbox{\Hypertarget{classWt_1_1WDialog_afbccf557a0343591f3087c9a0a9b7051}\label{classWt_1_1WDialog_afbccf557a0343591f3087c9a0a9b7051}} 
+\index{Wt::WDialog@{Wt::WDialog}!setMovable@{setMovable}}
+\index{setMovable@{setMovable}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{setMovable()}{setMovable()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Dialog\+::set\+Movable (\begin{DoxyParamCaption}\item[{bool}]{movable }\end{DoxyParamCaption})}
+
+
+
+Allows the dialog to be moved. 
+
+The dialog can be moved by grabbing the titlebar.
+
+The default value is {\ttfamily true}. \mbox{\Hypertarget{classWt_1_1WDialog_a0a3517bffbd049b988e80bb85ae18c46}\label{classWt_1_1WDialog_a0a3517bffbd049b988e80bb85ae18c46}} 
+\index{Wt::WDialog@{Wt::WDialog}!setResizable@{setResizable}}
+\index{setResizable@{setResizable}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{setResizable()}{setResizable()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Dialog\+::set\+Resizable (\begin{DoxyParamCaption}\item[{bool}]{resizable }\end{DoxyParamCaption})}
+
+
+
+Adds a resize handle to the dialog. 
+
+The resize handle is shown in the bottom right corner of the dialog, and allows the user to resize the dialog (but not smaller than the content allows).
+
+This also sets the minimum width and height to \mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}} to use the initial width and height as minimum sizes. You may want to provide other values for minimum width and height to allow the dialog to be reduced in size.
+
+The default value is {\ttfamily false}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WDialog_adeca1bfc134d8c41e9e658c46025b246}{set\+Minimum\+Size()}}, \mbox{\hyperlink{classWt_1_1WDialog_acc3bfa4afea05c8ed342620da9dd897f}{set\+Maximum\+Size()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WDialog_ab8ae8763648de12a67ada4b8237154a9}\label{classWt_1_1WDialog_ab8ae8763648de12a67ada4b8237154a9}} 
+\index{Wt::WDialog@{Wt::WDialog}!setTitleBarEnabled@{setTitleBarEnabled}}
+\index{setTitleBarEnabled@{setTitleBarEnabled}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{setTitleBarEnabled()}{setTitleBarEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Dialog\+::set\+Title\+Bar\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enables or disables the title bar. 
+
+The titlebar is enabled by default. \mbox{\Hypertarget{classWt_1_1WDialog_ae0923afc12895002f30b8ee12ab91aae}\label{classWt_1_1WDialog_ae0923afc12895002f30b8ee12ab91aae}} 
+\index{Wt::WDialog@{Wt::WDialog}!setWindowTitle@{setWindowTitle}}
+\index{setWindowTitle@{setWindowTitle}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{setWindowTitle()}{setWindowTitle()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Dialog\+::set\+Window\+Title (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{title }\end{DoxyParamCaption})}
+
+
+
+Sets the dialog window title. 
+
+The window title is displayed in the title bar.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WDialog_ab8ae8763648de12a67ada4b8237154a9}{set\+Title\+Bar\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WDialog_ae016a75d11e22888f21eeec62c9374c8}\label{classWt_1_1WDialog_ae016a75d11e22888f21eeec62c9374c8}} 
+\index{Wt::WDialog@{Wt::WDialog}!titleBar@{titleBar}}
+\index{titleBar@{titleBar}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{titleBar()}{titleBar()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}}$\ast$ Wt\+::\+W\+Dialog\+::title\+Bar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the dialog title bar container. 
+
+The title bar contains a single text that contains the caption. You may customize the title bar by for example adding other content. \mbox{\Hypertarget{classWt_1_1WDialog_a77af782ed0904f49f0c850c95c797f61}\label{classWt_1_1WDialog_a77af782ed0904f49f0c850c95c797f61}} 
+\index{Wt::WDialog@{Wt::WDialog}!windowTitle@{windowTitle}}
+\index{windowTitle@{windowTitle}!Wt::WDialog@{Wt::WDialog}}
+\doxysubsubsection{\texorpdfstring{windowTitle()}{windowTitle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WString}{W\+String}} Wt\+::\+W\+Dialog\+::window\+Title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the dialog window title. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WDialog_ae0923afc12895002f30b8ee12ab91aae}{set\+Window\+Title()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Dialog.\+h\end{DoxyCompactItemize}

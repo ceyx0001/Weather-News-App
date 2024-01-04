@@ -1,0 +1,192 @@
+\hypertarget{classWt_1_1WSocketNotifier}{}\doxysection{Wt\+::W\+Socket\+Notifier Class Reference}
+\label{classWt_1_1WSocketNotifier}\index{Wt::WSocketNotifier@{Wt::WSocketNotifier}}
+
+
+A utility class for asynchronous notification of socket activity.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Socket\+Notifier.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Socket\+Notifier\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Socket\+Notifier\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548c}{Type}} \{ \mbox{\hyperlink{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548ca7a1a5f3e79fdc91edf2f5ead9d66abb4}{Type\+::\+Read}}, 
+\mbox{\hyperlink{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548ca1129c0e4d43f2d121652a7302712cff6}{Type\+::\+Write}}, 
+\mbox{\hyperlink{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548cab0d4998a26f5b5742ad38c4af8817e32}{Type\+::\+Exception}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration that event type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WSocketNotifier_a056e22e7cba2ef8a9578b2f9874de49c}{W\+Socket\+Notifier}} (int \mbox{\hyperlink{classWt_1_1WSocketNotifier_a76e35d7668d096b741315c34eb7c35aa}{socket}}, \mbox{\hyperlink{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548c}{Type}} \mbox{\hyperlink{classWt_1_1WSocketNotifier_a9797a002ce0fa1642e7a78917972ac6b}{type}})
+\begin{DoxyCompactList}\small\item\em Creates a new socket notifier. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WSocketNotifier_aff88999b1c55254f8b129193a53ee485}\label{classWt_1_1WSocketNotifier_aff88999b1c55254f8b129193a53ee485}} 
+\mbox{\hyperlink{classWt_1_1WSocketNotifier_aff88999b1c55254f8b129193a53ee485}{$\sim$\+W\+Socket\+Notifier}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WSocketNotifier_a76e35d7668d096b741315c34eb7c35aa}\label{classWt_1_1WSocketNotifier_a76e35d7668d096b741315c34eb7c35aa}} 
+int \mbox{\hyperlink{classWt_1_1WSocketNotifier_a76e35d7668d096b741315c34eb7c35aa}{socket}} () const
+\begin{DoxyCompactList}\small\item\em Returns the socket. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WSocketNotifier_a9797a002ce0fa1642e7a78917972ac6b}\label{classWt_1_1WSocketNotifier_a9797a002ce0fa1642e7a78917972ac6b}} 
+\mbox{\hyperlink{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548c}{Type}} \mbox{\hyperlink{classWt_1_1WSocketNotifier_a9797a002ce0fa1642e7a78917972ac6b}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the event type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSocketNotifier_a9cb21fa4b5827a205b21f9b656baca6d}{set\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enables or disable the notifier. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WSocketNotifier_a846a84a3df2b30c746a74cb27eb0d7ac}\label{classWt_1_1WSocketNotifier_a846a84a3df2b30c746a74cb27eb0d7ac}} 
+bool \mbox{\hyperlink{classWt_1_1WSocketNotifier_a846a84a3df2b30c746a74cb27eb0d7ac}{is\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns if the notifier is enabled. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ int $>$ \& \mbox{\hyperlink{classWt_1_1WSocketNotifier_acf78fc846ca6f915111533575dcc9401}{activated}} ()
+\begin{DoxyCompactList}\small\item\em Signal indicating an event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSocketNotifier_adb956689e6437f47d5e8888fc040e733}\label{classWt_1_1WSocketNotifier_adb956689e6437f47d5e8888fc040e733}} 
+const std\+::string \& {\bfseries session\+Id} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WSocketNotifier_a6da080abf69601236fe36e104ef6b0c0}\label{classWt_1_1WSocketNotifier_a6da080abf69601236fe36e104ef6b0c0}} 
+void {\bfseries notify} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WSocketNotifier_a803b6de2b9645bf3896bd157d03adbbc}\label{classWt_1_1WSocketNotifier_a803b6de2b9645bf3896bd157d03adbbc}} 
+void {\bfseries dummy} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSocketNotifier_a43467583d7a98da9e1c2f78b05d5d760}\label{classWt_1_1WSocketNotifier_a43467583d7a98da9e1c2f78b05d5d760}} 
+int {\bfseries socket\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSocketNotifier_ae8f76cf896f2ac621145ef89264db0c8}\label{classWt_1_1WSocketNotifier_ae8f76cf896f2ac621145ef89264db0c8}} 
+\mbox{\hyperlink{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548c}{Type}} {\bfseries type\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSocketNotifier_a1642150a8778c9cc35e894806dcb0494}\label{classWt_1_1WSocketNotifier_a1642150a8778c9cc35e894806dcb0494}} 
+bool {\bfseries enabled\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSocketNotifier_ac91b5a95be3d3c1f11a157477f1a5fe1}\label{classWt_1_1WSocketNotifier_ac91b5a95be3d3c1f11a157477f1a5fe1}} 
+bool {\bfseries being\+Notified\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSocketNotifier_ae4bd5550712e70e5e6801d706e2f0bb9}\label{classWt_1_1WSocketNotifier_ae4bd5550712e70e5e6801d706e2f0bb9}} 
+std\+::string {\bfseries session\+Id\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSocketNotifier_a154574601a820163fd2d1ac85114ae47}\label{classWt_1_1WSocketNotifier_a154574601a820163fd2d1ac85114ae47}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ int $>$ {\bfseries activated\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSocketNotifier_a61e851e22dadd21892e94ec3cfecda53}\label{classWt_1_1WSocketNotifier_a61e851e22dadd21892e94ec3cfecda53}} 
+class {\bfseries Web\+Controller}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A utility class for asynchronous notification of socket activity. 
+
+Use a socket notifier to integrate listening for socket events into the Wt event loop. In this way, you do not need a separate thread to listen for socket activity. Socket activity is either the availability of data to be read (\mbox{\hyperlink{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548ca7a1a5f3e79fdc91edf2f5ead9d66abb4}{Read event}}), possibility to write data (\mbox{\hyperlink{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548ca1129c0e4d43f2d121652a7302712cff6}{Write event}}), or an exception that occurred (\mbox{\hyperlink{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548cab0d4998a26f5b5742ad38c4af8817e32}{Exception event}}).
+
+When an event on a socket is available, the notifier emits the \mbox{\hyperlink{classWt_1_1WSocketNotifier_acf78fc846ca6f915111533575dcc9401}{activated()}} signal. As in the case of a user interface event (like for example \mbox{\hyperlink{classWt_1_1WInteractWidget_af6cb297f8593e6884de66d23ea69d49c}{W\+Interact\+Widget\+::clicked()}}), you will typically modify the widget tree in response to the event. But, unless you use a timer (\mbox{\hyperlink{classWt_1_1WTimer}{W\+Timer}}) or use server-\/initiated updates (see W\+Application\+::trigger\+Updates()), these changes are not propagated to the user interface, until the next user interface event.
+
+Like other events, socket notification events are serial (not simultaneous), and there are no thread safety issues (you don\textquotesingle{}t need to take the \mbox{\hyperlink{classWt_1_1WApplication_1_1UpdateLock}{W\+Application\+::\+Update\+Lock}}).
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::unique\_ptr<Wt::WSocketNotifier> notifier\_;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} init() \{}
+\DoxyCodeLine{  ...}
+\DoxyCodeLine{  \textcolor{keywordtype}{int} sock = ...}
+\DoxyCodeLine{  notifier\_ = std::make\_unique<Wt::WSocketNotifier>(sock, \mbox{\hyperlink{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548ca7a1a5f3e79fdc91edf2f5ead9d66abb4}{Wt::WSocketNotifier::Type::Read}});}
+\DoxyCodeLine{  notifier\_-\/>activated().connect(\textcolor{keyword}{this}, \&HelloApplication::readData);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} readData() \{}
+\DoxyCodeLine{  \textcolor{comment}{// data is available on socket, or socket was closed by peer}}
+\DoxyCodeLine{  \textcolor{keywordtype}{char} buf[100];}
+\DoxyCodeLine{  \textcolor{keywordtype}{int} s = read(notifier\_-\/>socket(), buf, 99);}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (s > 0) \{}
+\DoxyCodeLine{    ...}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{    \textcolor{comment}{// closed by peer}}
+\DoxyCodeLine{    notifier\_-\/>setEnabled(\textcolor{keyword}{false});}
+\DoxyCodeLine{    close(notifier\_-\/>socket());}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548c}\label{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548c}} 
+\index{Wt::WSocketNotifier@{Wt::WSocketNotifier}!Type@{Type}}
+\index{Type@{Type}!Wt::WSocketNotifier@{Wt::WSocketNotifier}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548c}{Wt\+::\+W\+Socket\+Notifier\+::\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration that event type. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Read@{Read}!Wt::WSocketNotifier@{Wt::WSocketNotifier}}\index{Wt::WSocketNotifier@{Wt::WSocketNotifier}!Read@{Read}}}\mbox{\Hypertarget{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548ca7a1a5f3e79fdc91edf2f5ead9d66abb4}\label{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548ca7a1a5f3e79fdc91edf2f5ead9d66abb4}} 
+Read&Ready to read. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Write@{Write}!Wt::WSocketNotifier@{Wt::WSocketNotifier}}\index{Wt::WSocketNotifier@{Wt::WSocketNotifier}!Write@{Write}}}\mbox{\Hypertarget{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548ca1129c0e4d43f2d121652a7302712cff6}\label{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548ca1129c0e4d43f2d121652a7302712cff6}} 
+Write&Ready to write. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Exception@{Exception}!Wt::WSocketNotifier@{Wt::WSocketNotifier}}\index{Wt::WSocketNotifier@{Wt::WSocketNotifier}!Exception@{Exception}}}\mbox{\Hypertarget{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548cab0d4998a26f5b5742ad38c4af8817e32}\label{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548cab0d4998a26f5b5742ad38c4af8817e32}} 
+Exception&Exception. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WSocketNotifier_a056e22e7cba2ef8a9578b2f9874de49c}\label{classWt_1_1WSocketNotifier_a056e22e7cba2ef8a9578b2f9874de49c}} 
+\index{Wt::WSocketNotifier@{Wt::WSocketNotifier}!WSocketNotifier@{WSocketNotifier}}
+\index{WSocketNotifier@{WSocketNotifier}!Wt::WSocketNotifier@{Wt::WSocketNotifier}}
+\doxysubsubsection{\texorpdfstring{WSocketNotifier()}{WSocketNotifier()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Socket\+Notifier\+::\+W\+Socket\+Notifier (\begin{DoxyParamCaption}\item[{int}]{socket,  }\item[{\mbox{\hyperlink{classWt_1_1WSocketNotifier_a5be2fe0fe94d449a0d6b1ac77f7b548c}{Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Creates a new socket notifier. 
+
+Create a new socket listener to listen for events of given {\ttfamily type} on a socket with file descriptor {\ttfamily socket}. The \mbox{\hyperlink{classWt_1_1WSocketNotifier}{W\+Socket\+Notifier}} is enabled after construction. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WSocketNotifier_acf78fc846ca6f915111533575dcc9401}\label{classWt_1_1WSocketNotifier_acf78fc846ca6f915111533575dcc9401}} 
+\index{Wt::WSocketNotifier@{Wt::WSocketNotifier}!activated@{activated}}
+\index{activated@{activated}!Wt::WSocketNotifier@{Wt::WSocketNotifier}}
+\doxysubsubsection{\texorpdfstring{activated()}{activated()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$int$>$\& Wt\+::\+W\+Socket\+Notifier\+::activated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal indicating an event. 
+
+The signal is emitted when an event that was waited for is available. The signal argument is \mbox{\hyperlink{classWt_1_1WSocketNotifier_a76e35d7668d096b741315c34eb7c35aa}{socket()}}. \mbox{\Hypertarget{classWt_1_1WSocketNotifier_a9cb21fa4b5827a205b21f9b656baca6d}\label{classWt_1_1WSocketNotifier_a9cb21fa4b5827a205b21f9b656baca6d}} 
+\index{Wt::WSocketNotifier@{Wt::WSocketNotifier}!setEnabled@{setEnabled}}
+\index{setEnabled@{setEnabled}!Wt::WSocketNotifier@{Wt::WSocketNotifier}}
+\doxysubsubsection{\texorpdfstring{setEnabled()}{setEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Socket\+Notifier\+::set\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enables or disable the notifier. 
+
+By default, the socket notifier is enabled to receive events. When disabled, no events will be notified (as if the socket notifier didn\textquotesingle{}t exist). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Socket\+Notifier.\+h\end{DoxyCompactItemize}

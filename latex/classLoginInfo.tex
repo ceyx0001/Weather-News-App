@@ -1,0 +1,192 @@
+\hypertarget{classLoginInfo}{}\doxysection{Login\+Info Class Reference}
+\label{classLoginInfo}\index{LoginInfo@{LoginInfo}}
+
+
+User information handling.  
+
+
+
+
+{\ttfamily \#include $<$Login\+Info.\+h$>$}
+
+
+
+Inheritance diagram for Login\+Info\+:
+% FIG 0
+
+
+Collaboration diagram for Login\+Info\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLoginInfo_a81785e975c84fe04ef48e9ebcb8fd31d}{Login\+Info}} (std\+::string username, std\+::string password)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLoginInfo_a4041c0488b22db21ae1611a7bead53d1}{$\sim$\+Login\+Info}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLoginInfo_a3ff70b2fde4ae19b2f50d99977458a1c}{authenticate}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classAuthenticate}{Authenticate}} user info. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLoginInfo_ac3825ede7c4ce392026276b2e747e2a1}{exists}} ()
+\begin{DoxyCompactList}\small\item\em Existence of username. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoginInfo_a462a961d02b6a83dbe92b220179fa966}\label{classLoginInfo_a462a961d02b6a83dbe92b220179fa966}} 
+void {\bfseries link\+Profile} (std\+::string username)
+\item 
+void \mbox{\hyperlink{classLoginInfo_ab7786efddb7d0dc90bece8a0535862e4}{save\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Save user info. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLoginInfo_a11d2705ac5f4caff2f2defcc92bfdc95}{del\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Delete user info. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classLoginInfo_ae049c8ead59a61c7a3530bf44f8d347b}{get\+Username}} ()
+\begin{DoxyCompactList}\small\item\em Get username. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classLoginInfo_a8594af4c727434a34814462a49e2fdb4}{get\+Password}} ()
+\begin{DoxyCompactList}\small\item\em Get password. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLoginInfo_a95c1eaef06b986964dbb25172b2b254b}\label{classLoginInfo_a95c1eaef06b986964dbb25172b2b254b}} 
+std\+::string {\bfseries username}
+\item 
+\mbox{\Hypertarget{classLoginInfo_a674454ffb1b21ca6da97f260defdac15}\label{classLoginInfo_a674454ffb1b21ca6da97f260defdac15}} 
+std\+::string {\bfseries encrypted\+Password}
+\item 
+\mbox{\Hypertarget{classLoginInfo_a0c049cc2bc7146c10a34dcc3ab97e76e}\label{classLoginInfo_a0c049cc2bc7146c10a34dcc3ab97e76e}} 
+\mbox{\hyperlink{classDatabase}{Database}} {\bfseries db}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+User information handling. 
+
+The \mbox{\hyperlink{classLoginInfo}{Login\+Info}} object contains functionality for handling user data by saving or deleting the data from the database as well as data authentication. \begin{DoxyAuthor}{Author}
+Jun Shao 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLoginInfo_a81785e975c84fe04ef48e9ebcb8fd31d}\label{classLoginInfo_a81785e975c84fe04ef48e9ebcb8fd31d}} 
+\index{LoginInfo@{LoginInfo}!LoginInfo@{LoginInfo}}
+\index{LoginInfo@{LoginInfo}!LoginInfo@{LoginInfo}}
+\doxysubsubsection{\texorpdfstring{LoginInfo()}{LoginInfo()}}
+{\footnotesize\ttfamily Login\+Info\+::\+Login\+Info (\begin{DoxyParamCaption}\item[{std\+::string}]{username,  }\item[{std\+::string}]{password }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor for a \mbox{\hyperlink{classLoginInfo}{Login\+Info}} object that initializes members. 
+\begin{DoxyParams}{Parameters}
+{\em username} & is the session\textquotesingle{}s username. \\
+\hline
+{\em password} & is the session\textquotesingle{}s password. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLoginInfo_a4041c0488b22db21ae1611a7bead53d1}\label{classLoginInfo_a4041c0488b22db21ae1611a7bead53d1}} 
+\index{LoginInfo@{LoginInfo}!````~LoginInfo@{$\sim$LoginInfo}}
+\index{````~LoginInfo@{$\sim$LoginInfo}!LoginInfo@{LoginInfo}}
+\doxysubsubsection{\texorpdfstring{$\sim$LoginInfo()}{~LoginInfo()}}
+{\footnotesize\ttfamily Login\+Info\+::$\sim$\+Login\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default destructor. 
+
+Default destructor for a \mbox{\hyperlink{classLoginInfo}{Login\+Info}} object but does not do anything. \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLoginInfo_a3ff70b2fde4ae19b2f50d99977458a1c}\label{classLoginInfo_a3ff70b2fde4ae19b2f50d99977458a1c}} 
+\index{LoginInfo@{LoginInfo}!authenticate@{authenticate}}
+\index{authenticate@{authenticate}!LoginInfo@{LoginInfo}}
+\doxysubsubsection{\texorpdfstring{authenticate()}{authenticate()}}
+{\footnotesize\ttfamily bool Login\+Info\+::authenticate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classAuthenticate}{Authenticate}} user info. 
+
+Determines if the \mbox{\hyperlink{classLoginInfo}{Login\+Info}} user info matches an entry in the database. \begin{DoxyReturn}{Returns}
+Whether or not the user info is correct. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLoginInfo_a11d2705ac5f4caff2f2defcc92bfdc95}\label{classLoginInfo_a11d2705ac5f4caff2f2defcc92bfdc95}} 
+\index{LoginInfo@{LoginInfo}!delData@{delData}}
+\index{delData@{delData}!LoginInfo@{LoginInfo}}
+\doxysubsubsection{\texorpdfstring{delData()}{delData()}}
+{\footnotesize\ttfamily void Login\+Info\+::del\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Delete user info. 
+
+Delete the \mbox{\hyperlink{classLoginInfo}{Login\+Info}} user information to the database. \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classData_a80fda217e8c5777b662bae60bce00776}{Data}}.
+
+\mbox{\Hypertarget{classLoginInfo_ac3825ede7c4ce392026276b2e747e2a1}\label{classLoginInfo_ac3825ede7c4ce392026276b2e747e2a1}} 
+\index{LoginInfo@{LoginInfo}!exists@{exists}}
+\index{exists@{exists}!LoginInfo@{LoginInfo}}
+\doxysubsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily bool Login\+Info\+::exists (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Existence of username. 
+
+Determines if the \mbox{\hyperlink{classLoginInfo}{Login\+Info}} username exists in the database. \begin{DoxyReturn}{Returns}
+Whether or not the username exists. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLoginInfo_a8594af4c727434a34814462a49e2fdb4}\label{classLoginInfo_a8594af4c727434a34814462a49e2fdb4}} 
+\index{LoginInfo@{LoginInfo}!getPassword@{getPassword}}
+\index{getPassword@{getPassword}!LoginInfo@{LoginInfo}}
+\doxysubsubsection{\texorpdfstring{getPassword()}{getPassword()}}
+{\footnotesize\ttfamily string Login\+Info\+::get\+Password (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get password. 
+
+Returns the password that is saved internally. \begin{DoxyReturn}{Returns}
+The password. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLoginInfo_ae049c8ead59a61c7a3530bf44f8d347b}\label{classLoginInfo_ae049c8ead59a61c7a3530bf44f8d347b}} 
+\index{LoginInfo@{LoginInfo}!getUsername@{getUsername}}
+\index{getUsername@{getUsername}!LoginInfo@{LoginInfo}}
+\doxysubsubsection{\texorpdfstring{getUsername()}{getUsername()}}
+{\footnotesize\ttfamily string Login\+Info\+::get\+Username (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get username. 
+
+Returns the username that is saved internally. \begin{DoxyReturn}{Returns}
+The username. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLoginInfo_ab7786efddb7d0dc90bece8a0535862e4}\label{classLoginInfo_ab7786efddb7d0dc90bece8a0535862e4}} 
+\index{LoginInfo@{LoginInfo}!saveData@{saveData}}
+\index{saveData@{saveData}!LoginInfo@{LoginInfo}}
+\doxysubsubsection{\texorpdfstring{saveData()}{saveData()}}
+{\footnotesize\ttfamily void Login\+Info\+::save\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Save user info. 
+
+Saves the \mbox{\hyperlink{classLoginInfo}{Login\+Info}} user information to the database. \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classData_a1e9710ed430d1183985f285cf742da65}{Data}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+data/login/Login\+Info.\+h\item 
+data/login/Login\+Info.\+cpp\end{DoxyCompactItemize}

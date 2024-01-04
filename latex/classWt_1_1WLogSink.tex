@@ -1,0 +1,78 @@
+\hypertarget{classWt_1_1WLogSink}{}\doxysection{Wt\+::W\+Log\+Sink Class Reference}
+\label{classWt_1_1WLogSink}\index{Wt::WLogSink@{Wt::WLogSink}}
+
+
+An abstract log sink.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Log\+Sink.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WLogSink_a490245f5970f579b608706532732fff4}{log}} (const std\+::string \&type, const std\+::string \&scope, const std\+::string \&message) const noexcept=0
+\begin{DoxyCompactList}\small\item\em Logs a message. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WLogSink_a161a4d69c61426909cab25c1f1f0fc52}{logging}} (const std\+::string \&type, const std\+::string \&scope) const noexcept
+\begin{DoxyCompactList}\small\item\em Returns whether messages of the given type should be logged. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An abstract log sink. 
+
+You can implement this to redirect \mbox{\hyperlink{classWt}{Wt}} or \mbox{\hyperlink{namespaceWt_1_1Dbo}{Wt\+::\+Dbo}}\textquotesingle{}s logging to another logging system.
+
+For \mbox{\hyperlink{classWt}{Wt}}, you can configure the logger on a \mbox{\hyperlink{classWt_1_1WServer}{W\+Server}} level using \mbox{\hyperlink{classWt_1_1WServer_a2f1a0ee0bc7611ee31147808a07ef9e6}{W\+Server\+::set\+Custom\+Logger()}}. For \mbox{\hyperlink{namespaceWt_1_1Dbo}{Wt\+::\+Dbo}}, you can configure the logger globally using \mbox{\hyperlink{namespaceWt_1_1Dbo_a9a326a13084b93cbb33bf1c470879b0d}{Wt\+::\+Dbo\+::set\+Custom\+Logger()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WServer_a2f1a0ee0bc7611ee31147808a07ef9e6}{W\+Server\+::set\+Custom\+Logger()}} 
+
+\mbox{\hyperlink{namespaceWt_1_1Dbo_a9a326a13084b93cbb33bf1c470879b0d}{Wt\+::\+Dbo\+::set\+Custom\+Logger()}} 
+
+\mbox{\hyperlink{namespaceWt_1_1Dbo_ac1c13200d17c21ab7a8dfe4cbf3aed05}{Wt\+::\+Dbo\+::log\+To\+Wt()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WLogSink_a490245f5970f579b608706532732fff4}\label{classWt_1_1WLogSink_a490245f5970f579b608706532732fff4}} 
+\index{Wt::WLogSink@{Wt::WLogSink}!log@{log}}
+\index{log@{log}!Wt::WLogSink@{Wt::WLogSink}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Log\+Sink\+::log (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type,  }\item[{const std\+::string \&}]{scope,  }\item[{const std\+::string \&}]{message }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Logs a message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of the log message (e.\+g. debug, info, ...) \\
+\hline
+{\em scope} & The scope of the message (e.\+g. \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}, wthttp, ...) \\
+\hline
+{\em message} & The message itself (usually starts with the scope too) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWt_1_1WLogSink_a161a4d69c61426909cab25c1f1f0fc52}\label{classWt_1_1WLogSink_a161a4d69c61426909cab25c1f1f0fc52}} 
+\index{Wt::WLogSink@{Wt::WLogSink}!logging@{logging}}
+\index{logging@{logging}!Wt::WLogSink@{Wt::WLogSink}}
+\doxysubsubsection{\texorpdfstring{logging()}{logging()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Log\+Sink\+::logging (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type,  }\item[{const std\+::string \&}]{scope }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Returns whether messages of the given type should be logged. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type of the log message (e.\+g. debug, info, ...) \\
+\hline
+{\em scope} & The scope of the message (e.\+g. \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}, wthttp, ...)\\
+\hline
+\end{DoxyParams}
+The default implementation always returns true. You can reimplement this as an optimization\+: if the underlying logger doesn\textquotesingle{}t log messages of a certain type, then \mbox{\hyperlink{classWt}{Wt}} does not need to generate the log message. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Log\+Sink.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,807 @@
+\hypertarget{classWt_1_1Dbo_1_1Session}{}\doxysection{Wt\+::Dbo\+::Session Class Reference}
+\label{classWt_1_1Dbo_1_1Session}\index{Wt::Dbo::Session@{Wt::Dbo::Session}}
+
+
+A database session.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Dbo/\+Session.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Dbo\+::Session\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Dbo\+::Session\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1Dbo_1_1Session_1_1JoinId}{Join\+Id}}
+\item 
+struct \mbox{\hyperlink{structWt_1_1Dbo_1_1Session_1_1Mapping}{Mapping}}
+\item 
+struct \mbox{\hyperlink{structWt_1_1Dbo_1_1Session_1_1typecomp}{typecomp}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a55c41a33e862729b80837347da199b20}\label{classWt_1_1Dbo_1_1Session_a55c41a33e862729b80837347da199b20}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a55c41a33e862729b80837347da199b20}{Session}} ()
+\begin{DoxyCompactList}\small\item\em Creates a database session. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_ac4822eb0294094d17f623d1d58c8bc7e}{$\sim$\+Session}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a2a75e268724abd5cd60073dbf43f530b}\label{classWt_1_1Dbo_1_1Session_a2a75e268724abd5cd60073dbf43f530b}} 
+{\bfseries Session} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} \&)=delete
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a9eea91abe9b5082ef369aedeb506e9aa}\label{classWt_1_1Dbo_1_1Session_a9eea91abe9b5082ef369aedeb506e9aa}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} \& {\bfseries operator=} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} \&)=delete
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a5849469c5b8bceb2db47ff53ca6198d2}\label{classWt_1_1Dbo_1_1Session_a5849469c5b8bceb2db47ff53ca6198d2}} 
+{\bfseries Session} (\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a276151a0e1d86ca1e2eb005ba855f03f}\label{classWt_1_1Dbo_1_1Session_a276151a0e1d86ca1e2eb005ba855f03f}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} \& {\bfseries operator=} (\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} \&\&)=delete
+\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_acfd45189db138506e6e7c202e39878f9}{set\+Connection}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} $>$ connection)
+\begin{DoxyCompactList}\small\item\em Sets a dedicated connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a63ab17e16c9b721c94e6e9f67c5c255d}{set\+Connection\+Pool}} (\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnectionPool}{Sql\+Connection\+Pool}} \&pool)
+\begin{DoxyCompactList}\small\item\em Sets a connection pool. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class C $>$ }\\void \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a84697335ac90339e099ad198bab56b98}{map\+Class}} (const char $\ast$\mbox{\hyperlink{classWt_1_1Dbo_1_1Session_af6c558ff394e0a2437698b4cf2a6583c}{table\+Name}})
+\begin{DoxyCompactList}\small\item\em Maps a class to a database table. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class C $>$ }\\const char $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_af6c558ff394e0a2437698b4cf2a6583c}{table\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the mapped table name for a class. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class C $>$ }\\const std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_ae2ab2ae7caf3acd6754f50d278ffafa3}{table\+Name\+Quoted}} () const
+\begin{DoxyCompactList}\small\item\em Returns the mapped quoted table name for a class. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class C $>$ }\\\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_ad762cc052a1bdc1ef42d6b90bcf1ee1b}{add}} (\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ \&\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}})
+\begin{DoxyCompactList}\small\item\em Persists a transient object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class C $>$ }\\\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_ac28b22f5cf826f520eeb74e3bb090630}{add}} (std\+::unique\+\_\+ptr$<$ C $>$ obj)
+\begin{DoxyCompactList}\small\item\em Persists a transient object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename ... Args$>$ }\\\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ T $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a672cb6a493abe71d72d4d1ecf1e6b37d}{add\+New}} (Args \&\&...args)
+\begin{DoxyCompactList}\small\item\em Persists a transient object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class C $>$ }\\\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_af28082ec3551be9b5dfe34cebaba53ec}{load}} (const typename \mbox{\hyperlink{structWt_1_1Dbo_1_1dbo__traits}{dbo\+\_\+traits}}$<$ C $>$\+::Id\+Type \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}}, bool force\+Reread=false)
+\begin{DoxyCompactList}\small\item\em Loads a persisted object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class C $>$ }\\\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a8f6c11d780bafb889ca302a489fa1f7f}{load\+Lazy}} (const typename \mbox{\hyperlink{structWt_1_1Dbo_1_1dbo__traits}{dbo\+\_\+traits}}$<$ C $>$\+::Id\+Type \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}})
+\begin{DoxyCompactList}\small\item\em Lazy loads a persisted object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_aec47095890ee4f2b57cc57a45207a58d}\label{classWt_1_1Dbo_1_1Session_aec47095890ee4f2b57cc57a45207a58d}} 
+{\footnotesize template$<$class C $>$ }\\\mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}}$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ $>$ {\bfseries find} (const std\+::string \&condition=std\+::string())
+\item 
+{\footnotesize template$<$class C , typename Bind\+Strategy $>$ }\\\mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}}$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$, Bind\+Strategy $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_ab79369400f2023c92221e24983ed1e3b}{find}} (const std\+::string \&condition=std\+::string())
+\begin{DoxyCompactList}\small\item\em Finds database objects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a9c5a4bc7e6cedfe9508748a32a1491a7}\label{classWt_1_1Dbo_1_1Session_a9c5a4bc7e6cedfe9508748a32a1491a7}} 
+{\footnotesize template$<$class Result $>$ }\\\mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}}$<$ Result $>$ {\bfseries query} (const std\+::string \&sql)
+\item 
+{\footnotesize template$<$class Result , typename Bind\+Strategy $>$ }\\\mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}}$<$ Result, Bind\+Strategy $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a08ecd8b604acd66230a7f1d5eecd30f9}{query}} (const std\+::string \&sql)
+\begin{DoxyCompactList}\small\item\em Creates a query. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Call}{Call}} \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a42b1d61b66e996eff474d677a10d5b8f}{execute}} (const std\+::string \&sql)
+\begin{DoxyCompactList}\small\item\em Executs an Sql command. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aba79d84c7c91faae06f954e6d3d390ab}{create\+Tables}} ()
+\begin{DoxyCompactList}\small\item\em Creates the database schema. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a89c36de3c02f83e621dda5d149dd7b9b}\label{classWt_1_1Dbo_1_1Session_a89c36de3c02f83e621dda5d149dd7b9b}} 
+std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a89c36de3c02f83e621dda5d149dd7b9b}{table\+Creation\+Sql}} ()
+\begin{DoxyCompactList}\small\item\em Returns database creation S\+QL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a4c1fedb21e4e1cc44b182a34e8ebb4ef}{drop\+Tables}} ()
+\begin{DoxyCompactList}\small\item\em Drops the database schema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_ab896d119f1e0fb79adffe2282b92ef17}{flush}} ()
+\begin{DoxyCompactList}\small\item\em Flushes the session. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_add5f4d579b9841072d5e777925acd92c}{reread\+All}} (const char $\ast$\mbox{\hyperlink{classWt_1_1Dbo_1_1Session_af6c558ff394e0a2437698b4cf2a6583c}{table\+Name}}=nullptr)
+\begin{DoxyCompactList}\small\item\em Rereads all objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a1c75a1701de8ae978e58f2d1e9cad39b}{discard\+Unflushed}} ()
+\begin{DoxyCompactList}\small\item\em Discards all unflushed changes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a6a479c3fea3e4f6b0b1898224b9d1ffa}\label{classWt_1_1Dbo_1_1Session_a6a479c3fea3e4f6b0b1898224b9d1ffa}} 
+void {\bfseries get\+Fields} (const char $\ast$\mbox{\hyperlink{classWt_1_1Dbo_1_1Session_af6c558ff394e0a2437698b4cf2a6583c}{table\+Name}}, std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1FieldInfo}{Field\+Info}} $>$ \&result)
+\item 
+\mbox{\hyperlink{namespaceWt_1_1Dbo_a4c7a7297140823d0c45131edc4d7c616}{Flush\+Mode}} \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aebc34f3a9a0b364024128cb7a8ea3587}{flush\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Returns the flush\+Mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a3074ef6656f9c74409d2e8cade36d4ab}{set\+Flush\+Mode}} (\mbox{\hyperlink{namespaceWt_1_1Dbo_a4c7a7297140823d0c45131edc4d7c616}{Flush\+Mode}} mode)
+\begin{DoxyCompactList}\small\item\em Sets the flush\+Mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ae80550a14e2109d6f88af937aa13337e}\label{classWt_1_1Dbo_1_1Session_ae80550a14e2109d6f88af937aa13337e}} 
+enum \{ \newline
+{\bfseries Sql\+Insert} = 0, 
+{\bfseries Sql\+Update} = 1, 
+{\bfseries Sql\+Delete} = 2, 
+{\bfseries Sql\+Delete\+Versioned} = 3, 
+\newline
+{\bfseries Sql\+Select\+By\+Id} = 4, 
+{\bfseries First\+Sql\+Select\+Set} = 5
+ \}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a4be4da32e6308283fa6d1466b7dfecd1}\label{classWt_1_1Dbo_1_1Session_a4be4da32e6308283fa6d1466b7dfecd1}} 
+typedef std\+::map$<$ const\+\_\+typeinfo\+\_\+ptr, \mbox{\hyperlink{structWt_1_1Dbo_1_1Impl_1_1MappingInfo}{Impl\+::\+Mapping\+Info}} $\ast$, \mbox{\hyperlink{structWt_1_1Dbo_1_1Session_1_1typecomp}{typecomp}} $>$ {\bfseries Class\+Registry}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_aa8a1977b04d7612029e3f145ae3ba181}\label{classWt_1_1Dbo_1_1Session_aa8a1977b04d7612029e3f145ae3ba181}} 
+typedef std\+::map$<$ std\+::string, \mbox{\hyperlink{structWt_1_1Dbo_1_1Impl_1_1MappingInfo}{Impl\+::\+Mapping\+Info}} $\ast$ $>$ {\bfseries Table\+Registry}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_aab19272c02494f957f5f8e24a2cbb399}\label{classWt_1_1Dbo_1_1Session_aab19272c02494f957f5f8e24a2cbb399}} 
+void {\bfseries init\+Schema} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a5552eb95d5cdce7a56c352fb203d2907}\label{classWt_1_1Dbo_1_1Session_a5552eb95d5cdce7a56c352fb203d2907}} 
+void {\bfseries resolve\+Join\+Ids} (\mbox{\hyperlink{structWt_1_1Dbo_1_1Impl_1_1MappingInfo}{Impl\+::\+Mapping\+Info}} $\ast$mapping)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a29499164eb9dfc892aa0add6a44a53d6}\label{classWt_1_1Dbo_1_1Session_a29499164eb9dfc892aa0add6a44a53d6}} 
+void {\bfseries prepare\+Statements} (\mbox{\hyperlink{structWt_1_1Dbo_1_1Impl_1_1MappingInfo}{Impl\+::\+Mapping\+Info}} $\ast$mapping)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a8fe054810d2cbd7ca8a0af083c38e747}\label{classWt_1_1Dbo_1_1Session_a8fe054810d2cbd7ca8a0af083c38e747}} 
+void {\bfseries execute\+Sql} (std\+::vector$<$ std\+::string $>$ \&sql, std\+::ostream $\ast$sout)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ad0258b5dfcd392e4c76ea2c581b28c92}\label{classWt_1_1Dbo_1_1Session_ad0258b5dfcd392e4c76ea2c581b28c92}} 
+void {\bfseries execute\+Sql} (std\+::stringstream \&sql, std\+::ostream $\ast$sout)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a4bb5250d567a8a912f919d1c272bcec3}\label{classWt_1_1Dbo_1_1Session_a4bb5250d567a8a912f919d1c272bcec3}} 
+std\+::string {\bfseries constraint\+Name} (const char $\ast$\mbox{\hyperlink{classWt_1_1Dbo_1_1Session_af6c558ff394e0a2437698b4cf2a6583c}{table\+Name}}, std\+::string foreign\+Key\+Name)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a8bdb9d965ccb77476f3a96f3e751846f}\label{classWt_1_1Dbo_1_1Session_a8bdb9d965ccb77476f3a96f3e751846f}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1Dbo_1_1Session_1_1JoinId}{Join\+Id}} $>$ {\bfseries get\+Join\+Ids} (\mbox{\hyperlink{structWt_1_1Dbo_1_1Impl_1_1MappingInfo}{Impl\+::\+Mapping\+Info}} $\ast$mapping, const std\+::string \&join\+Id, bool literal\+Join\+Id)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a35a1906c3a94213e1da7e04ddbb3916f}\label{classWt_1_1Dbo_1_1Session_a35a1906c3a94213e1da7e04ddbb3916f}} 
+void {\bfseries create\+Table} (\mbox{\hyperlink{structWt_1_1Dbo_1_1Impl_1_1MappingInfo}{Impl\+::\+Mapping\+Info}} $\ast$mapping, std\+::set$<$ std\+::string $>$ \&tables\+Created, std\+::ostream $\ast$sout, bool create\+Constraints)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a18863924cf3c2e31d9bcee2f44fc93d9}\label{classWt_1_1Dbo_1_1Session_a18863924cf3c2e31d9bcee2f44fc93d9}} 
+void {\bfseries create\+Relations} (\mbox{\hyperlink{structWt_1_1Dbo_1_1Impl_1_1MappingInfo}{Impl\+::\+Mapping\+Info}} $\ast$mapping, std\+::set$<$ std\+::string $>$ \&tables\+Created, std\+::ostream $\ast$sout)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ac7c030b4b3dbd62696795a14b62f8238}\label{classWt_1_1Dbo_1_1Session_ac7c030b4b3dbd62696795a14b62f8238}} 
+std\+::string {\bfseries constraint\+String} (\mbox{\hyperlink{structWt_1_1Dbo_1_1Impl_1_1MappingInfo}{Impl\+::\+Mapping\+Info}} $\ast$mapping, const \mbox{\hyperlink{classWt_1_1Dbo_1_1FieldInfo}{Field\+Info}} \&field, unsigned from\+Index, unsigned to\+Index)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a592ae30c5e33d5fe40591f90d1369e9a}\label{classWt_1_1Dbo_1_1Session_a592ae30c5e33d5fe40591f90d1369e9a}} 
+unsigned {\bfseries find\+Last\+Foreign\+Key\+Field} (\mbox{\hyperlink{structWt_1_1Dbo_1_1Impl_1_1MappingInfo}{Impl\+::\+Mapping\+Info}} $\ast$mapping, const \mbox{\hyperlink{classWt_1_1Dbo_1_1FieldInfo}{Field\+Info}} \&field, unsigned index)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a4794e5052e25809f2c745fc89de17891}\label{classWt_1_1Dbo_1_1Session_a4794e5052e25809f2c745fc89de17891}} 
+void {\bfseries create\+Join\+Table} (const std\+::string \&join\+Name, \mbox{\hyperlink{structWt_1_1Dbo_1_1Impl_1_1MappingInfo}{Impl\+::\+Mapping\+Info}} $\ast$mapping1, \mbox{\hyperlink{structWt_1_1Dbo_1_1Impl_1_1MappingInfo}{Impl\+::\+Mapping\+Info}} $\ast$mapping2, const std\+::string \&join\+Id1, const std\+::string \&join\+Id2, int fk\+Constraints1, int fk\+Constraints2, bool literal\+Join\+Id1, bool literal\+Join\+Id2, std\+::set$<$ std\+::string $>$ \&tables\+Created, std\+::ostream $\ast$sout)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_af2b6691a8775936c601966b0e9ecb1e5}\label{classWt_1_1Dbo_1_1Session_af2b6691a8775936c601966b0e9ecb1e5}} 
+void {\bfseries add\+Join\+Table\+Fields} (\mbox{\hyperlink{structWt_1_1Dbo_1_1Impl_1_1MappingInfo}{Impl\+::\+Mapping\+Info}} \&join\+Table\+Mapping, \mbox{\hyperlink{structWt_1_1Dbo_1_1Impl_1_1MappingInfo}{Impl\+::\+Mapping\+Info}} $\ast$mapping, const std\+::string \&join\+Id, const std\+::string \&foreign\+Key\+Name, int fk\+Constraints, bool literal\+Join\+Id)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_aa49b32c30188a7fabe45768ee529fb5c}\label{classWt_1_1Dbo_1_1Session_aa49b32c30188a7fabe45768ee529fb5c}} 
+void {\bfseries create\+Join\+Index} (\mbox{\hyperlink{structWt_1_1Dbo_1_1Impl_1_1MappingInfo}{Impl\+::\+Mapping\+Info}} \&join\+Table\+Mapping, \mbox{\hyperlink{structWt_1_1Dbo_1_1Impl_1_1MappingInfo}{Impl\+::\+Mapping\+Info}} $\ast$mapping, const std\+::string \&join\+Id, const std\+::string \&foreign\+Key\+Name, std\+::ostream $\ast$sout)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a84fce1784870ea658c6c3f1253b05620}\label{classWt_1_1Dbo_1_1Session_a84fce1784870ea658c6c3f1253b05620}} 
+void {\bfseries needs\+Flush} (\mbox{\hyperlink{classWt_1_1Dbo_1_1MetaDboBase}{Meta\+Dbo\+Base}} $\ast$dbo)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ad5d42e4803314d3b277aa621e1d2a109}\label{classWt_1_1Dbo_1_1Session_ad5d42e4803314d3b277aa621e1d2a109}} 
+{\footnotesize template$<$class C $>$ }\\\mbox{\hyperlink{structWt_1_1Dbo_1_1Session_1_1Mapping}{Mapping}}$<$ C $>$ $\ast$ {\bfseries get\+Mapping} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ae6421b8cbb73ceabb49b244c74869941}\label{classWt_1_1Dbo_1_1Session_ae6421b8cbb73ceabb49b244c74869941}} 
+\mbox{\hyperlink{structWt_1_1Dbo_1_1Impl_1_1MappingInfo}{Impl\+::\+Mapping\+Info}} $\ast$ {\bfseries get\+Mapping} (const char $\ast$\mbox{\hyperlink{classWt_1_1Dbo_1_1Session_af6c558ff394e0a2437698b4cf2a6583c}{table\+Name}}) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_aff991f1f0d518793b8bbf4f4793d2084}\label{classWt_1_1Dbo_1_1Session_aff991f1f0d518793b8bbf4f4793d2084}} 
+void {\bfseries load} (\mbox{\hyperlink{classWt_1_1Dbo_1_1MetaDboBase}{Meta\+Dbo\+Base}} $\ast$obj)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a027419ddf668a1f8c7999c3fe042f626}\label{classWt_1_1Dbo_1_1Session_a027419ddf668a1f8c7999c3fe042f626}} 
+{\footnotesize template$<$class C $>$ }\\\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ {\bfseries load} (\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $\ast$statement, int \&column)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a0626c4f3b93c5c4ab084000de23f2900}\label{classWt_1_1Dbo_1_1Session_a0626c4f3b93c5c4ab084000de23f2900}} 
+{\footnotesize template$<$class C $>$ }\\\mbox{\hyperlink{classWt_1_1Dbo_1_1MetaDbo}{Meta\+Dbo}}$<$ C $>$ $\ast$ {\bfseries load\+With\+Natural\+Id} (\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $\ast$statement, int \&column)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a2bb855c410306131a1847917a98ed868}\label{classWt_1_1Dbo_1_1Session_a2bb855c410306131a1847917a98ed868}} 
+{\footnotesize template$<$class C $>$ }\\\mbox{\hyperlink{classWt_1_1Dbo_1_1MetaDbo}{Meta\+Dbo}}$<$ C $>$ $\ast$ {\bfseries load\+With\+Long\+Long\+Id} (\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $\ast$statement, int \&column)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a77bbd9653df36ff00221b0e1b7460557}\label{classWt_1_1Dbo_1_1Session_a77bbd9653df36ff00221b0e1b7460557}} 
+void {\bfseries discard\+Changes} (\mbox{\hyperlink{classWt_1_1Dbo_1_1MetaDboBase}{Meta\+Dbo\+Base}} $\ast$obj)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a2c9e17c82768dc88ee84b3caedc67f21}\label{classWt_1_1Dbo_1_1Session_a2c9e17c82768dc88ee84b3caedc67f21}} 
+{\footnotesize template$<$class C $>$ }\\void {\bfseries prune} (\mbox{\hyperlink{classWt_1_1Dbo_1_1MetaDbo}{Meta\+Dbo}}$<$ C $>$ $\ast$obj)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ac220d3a60f9ee5dd75e435fbf59c8dac}\label{classWt_1_1Dbo_1_1Session_ac220d3a60f9ee5dd75e435fbf59c8dac}} 
+{\footnotesize template$<$class C $>$ }\\void {\bfseries impl\+Save} (\mbox{\hyperlink{classWt_1_1Dbo_1_1MetaDbo}{Meta\+Dbo}}$<$ C $>$ \&dbo)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a1432cc76ad59291c37773dad6f4a1354}\label{classWt_1_1Dbo_1_1Session_a1432cc76ad59291c37773dad6f4a1354}} 
+{\footnotesize template$<$class C $>$ }\\void {\bfseries impl\+Delete} (\mbox{\hyperlink{classWt_1_1Dbo_1_1MetaDbo}{Meta\+Dbo}}$<$ C $>$ \&dbo)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a45c5ccb61c687bd4c3cdc5f3b42c2ad9}\label{classWt_1_1Dbo_1_1Session_a45c5ccb61c687bd4c3cdc5f3b42c2ad9}} 
+{\footnotesize template$<$class C $>$ }\\void {\bfseries impl\+Transaction\+Done} (\mbox{\hyperlink{classWt_1_1Dbo_1_1MetaDbo}{Meta\+Dbo}}$<$ C $>$ \&dbo, bool success)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a6bc3fe24bef9ef61d2687e86809e06cf}\label{classWt_1_1Dbo_1_1Session_a6bc3fe24bef9ef61d2687e86809e06cf}} 
+{\footnotesize template$<$class C $>$ }\\void {\bfseries impl\+Load} (\mbox{\hyperlink{classWt_1_1Dbo_1_1MetaDbo}{Meta\+Dbo}}$<$ C $>$ \&dbo, \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $\ast$statement, int \&column)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a6b96a942c83fcf87954dade474042df8}\label{classWt_1_1Dbo_1_1Session_a6b96a942c83fcf87954dade474042df8}} 
+{\footnotesize template$<$class C $>$ }\\\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $\ast$ {\bfseries get\+Statement} (int statement\+Idx)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_aacd220779c0df3b353f53fef5d14e2ff}\label{classWt_1_1Dbo_1_1Session_aacd220779c0df3b353f53fef5d14e2ff}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $\ast$ {\bfseries get\+Statement} (const std\+::string \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}})
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_aa1b8179c46978f43ab98b81449319050}\label{classWt_1_1Dbo_1_1Session_aa1b8179c46978f43ab98b81449319050}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $\ast$ {\bfseries get\+Statement} (const char $\ast$\mbox{\hyperlink{classWt_1_1Dbo_1_1Session_af6c558ff394e0a2437698b4cf2a6583c}{table\+Name}}, int statement\+Idx)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_aa70dd55903f847950c71ee2c336fa65b}\label{classWt_1_1Dbo_1_1Session_aa70dd55903f847950c71ee2c336fa65b}} 
+const std\+::string \& {\bfseries get\+Statement\+Sql} (const char $\ast$\mbox{\hyperlink{classWt_1_1Dbo_1_1Session_af6c558ff394e0a2437698b4cf2a6583c}{table\+Name}}, int statement\+Idx)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a16cd0552cd1475b4e0ee1197bb5140e4}\label{classWt_1_1Dbo_1_1Session_a16cd0552cd1475b4e0ee1197bb5140e4}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $\ast$ {\bfseries prepare\+Statement} (const std\+::string \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}}, const std\+::string \&sql)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a9f6c2e05ba85bb2ca87e95bc016eccb7}\label{classWt_1_1Dbo_1_1Session_a9f6c2e05ba85bb2ca87e95bc016eccb7}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $\ast$ {\bfseries get\+Or\+Prepare\+Statement} (const std\+::string \&sql)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a6e12760a7986156d9fd6cd4e16d6023d}\label{classWt_1_1Dbo_1_1Session_a6e12760a7986156d9fd6cd4e16d6023d}} 
+{\footnotesize template$<$class C $>$ }\\void {\bfseries prepare\+Statements} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ab313d95dffb510d883ebf773fb03fbd4}\label{classWt_1_1Dbo_1_1Session_ab313d95dffb510d883ebf773fb03fbd4}} 
+{\footnotesize template$<$class C $>$ }\\std\+::string {\bfseries many\+To\+Many\+Join\+Id} (const std\+::string \&join\+Name, const std\+::string \&not\+Id)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a512528e32b6d6d05fa9faf476a0c4b70}\label{classWt_1_1Dbo_1_1Session_a512528e32b6d6d05fa9faf476a0c4b70}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} $>$ {\bfseries use\+Connection} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a124caf03fc469b47b172f9b3b2389b1f}\label{classWt_1_1Dbo_1_1Session_a124caf03fc469b47b172f9b3b2389b1f}} 
+void {\bfseries return\+Connection} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} $>$ connection)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ae77b91281bb10db9fe04cb76347fe9d6}\label{classWt_1_1Dbo_1_1Session_ae77b91281bb10db9fe04cb76347fe9d6}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} $\ast$ {\bfseries connection} (bool open\+Transaction)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ad16aa9d43d8d97e3de1c6bf6166a7cf8}\label{classWt_1_1Dbo_1_1Session_ad16aa9d43d8d97e3de1c6bf6166a7cf8}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1MetaDboBase}{Meta\+Dbo\+Base}} $\ast$ {\bfseries create\+Dbo} (\mbox{\hyperlink{structWt_1_1Dbo_1_1Impl_1_1MappingInfo}{Impl\+::\+Mapping\+Info}} $\ast$mapping)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ad33ce45bcaef7ae391423877ad3eb626}\label{classWt_1_1Dbo_1_1Session_ad33ce45bcaef7ae391423877ad3eb626}} 
+static std\+::string {\bfseries statement\+Id} (const char $\ast$table, int statement\+Idx)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ad8bf021336ba8629edd5ce8409bef28d}\label{classWt_1_1Dbo_1_1Session_ad8bf021336ba8629edd5ce8409bef28d}} 
+const typedef std\+::type\+\_\+info $\ast$ {\bfseries const\+\_\+typeinfo\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a8cefd9fded15db2e9e4aaaa18651fbe6}\label{classWt_1_1Dbo_1_1Session_a8cefd9fded15db2e9e4aaaa18651fbe6}} 
+std\+::string {\bfseries longlong\+Type\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_abd4c79af5cb66b5c2f6282418ae58c41}\label{classWt_1_1Dbo_1_1Session_abd4c79af5cb66b5c2f6282418ae58c41}} 
+std\+::string {\bfseries int\+Type\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a39453bb448f5f31d20698e98afec207c}\label{classWt_1_1Dbo_1_1Session_a39453bb448f5f31d20698e98afec207c}} 
+bool {\bfseries have\+Support\+Update\+Cascade\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a00f9672bd0aa6c91839ee7e50097ddea}\label{classWt_1_1Dbo_1_1Session_a00f9672bd0aa6c91839ee7e50097ddea}} 
+Class\+Registry {\bfseries class\+Registry\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_af3b03633a3a152dfbfe914db0f54e9a5}\label{classWt_1_1Dbo_1_1Session_af3b03633a3a152dfbfe914db0f54e9a5}} 
+Table\+Registry {\bfseries table\+Registry\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_add8ba3a03c9cdd24e178463ba4757533}\label{classWt_1_1Dbo_1_1Session_add8ba3a03c9cdd24e178463ba4757533}} 
+bool {\bfseries schema\+Initialized\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ab58e37d3a39a8cfc3eac90a2a01e34bd}\label{classWt_1_1Dbo_1_1Session_ab58e37d3a39a8cfc3eac90a2a01e34bd}} 
+\mbox{\hyperlink{namespaceWt_1_1Dbo_a5319c15910a9f9fd7744bb3061b9c643}{Limit\+Query}} {\bfseries limit\+Query\+Method\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a1f40be70850c3d9c95d99c5fb1398f8f}\label{classWt_1_1Dbo_1_1Session_a1f40be70850c3d9c95d99c5fb1398f8f}} 
+bool {\bfseries require\+Subquery\+Alias\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a3bd32bf17107144148edaa3d49db33f9}\label{classWt_1_1Dbo_1_1Session_a3bd32bf17107144148edaa3d49db33f9}} 
+Impl\+::\+Meta\+Dbo\+Base\+Set $\ast$ {\bfseries dirty\+Objects\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a418ea2352275b2a3a120b51921ef0064}\label{classWt_1_1Dbo_1_1Session_a418ea2352275b2a3a120b51921ef0064}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1MetaDboBase}{Meta\+Dbo\+Base}} $\ast$ $>$ {\bfseries objects\+To\+Add\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ac1fb8d276786cdf850d912d78bfe949f}\label{classWt_1_1Dbo_1_1Session_ac1fb8d276786cdf850d912d78bfe949f}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} $>$ {\bfseries connection\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a3dafaef24f825ff993cd0d18edad1afb}\label{classWt_1_1Dbo_1_1Session_a3dafaef24f825ff993cd0d18edad1afb}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnectionPool}{Sql\+Connection\+Pool}} $\ast$ {\bfseries connection\+Pool\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a4d6fea3931fba9743d91a03a913e4da5}\label{classWt_1_1Dbo_1_1Session_a4d6fea3931fba9743d91a03a913e4da5}} 
+\mbox{\hyperlink{structWt_1_1Dbo_1_1Transaction_1_1Impl}{Transaction\+::\+Impl}} $\ast$ {\bfseries transaction\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a3119d0135408752651490b16d1bd0bad}\label{classWt_1_1Dbo_1_1Session_a3119d0135408752651490b16d1bd0bad}} 
+\mbox{\hyperlink{namespaceWt_1_1Dbo_a4c7a7297140823d0c45131edc4d7c616}{Flush\+Mode}} {\bfseries flush\+Mode\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a8eecd89c3e46085c4c9cf8101d8918d1}\label{classWt_1_1Dbo_1_1Session_a8eecd89c3e46085c4c9cf8101d8918d1}} 
+{\footnotesize template$<$class C $>$ }\\class {\bfseries Meta\+Dbo}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a916ea84dc420573cfdb360b67445d5d0}\label{classWt_1_1Dbo_1_1Session_a916ea84dc420573cfdb360b67445d5d0}} 
+{\footnotesize template$<$class C $>$ }\\class {\bfseries collection}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a27df6e2a1650d985bdeda33f0303c83f}\label{classWt_1_1Dbo_1_1Session_a27df6e2a1650d985bdeda33f0303c83f}} 
+{\footnotesize template$<$class C $>$ }\\class {\bfseries weak\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a448ee34b0f6e9de049edc1d502256db8}\label{classWt_1_1Dbo_1_1Session_a448ee34b0f6e9de049edc1d502256db8}} 
+{\footnotesize template$<$class C , typename S $>$ }\\class {\bfseries Query}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a44a3c8f0a55b070e20f60482c6625933}\label{classWt_1_1Dbo_1_1Session_a44a3c8f0a55b070e20f60482c6625933}} 
+class {\bfseries Abstract\+Query}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ac8d85c141255ff61f0792f25227406ae}\label{classWt_1_1Dbo_1_1Session_ac8d85c141255ff61f0792f25227406ae}} 
+{\footnotesize template$<$class C $>$ }\\class {\bfseries Impl\+::\+Query\+Base}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ac8f9911216508697c4923493029e0eab}\label{classWt_1_1Dbo_1_1Session_ac8f9911216508697c4923493029e0eab}} 
+{\footnotesize template$<$class C , typename T $>$ }\\struct {\bfseries Impl\+::\+Load\+Helper}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_aa37fd8f2c47b156376f663cb9253bb5b}\label{classWt_1_1Dbo_1_1Session_aa37fd8f2c47b156376f663cb9253bb5b}} 
+{\footnotesize template$<$typename V $>$ }\\class {\bfseries Field\+Ref}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_abdc688075904f58fd037070f8b2722a0}\label{classWt_1_1Dbo_1_1Session_abdc688075904f58fd037070f8b2722a0}} 
+{\footnotesize template$<$class C $>$ }\\struct {\bfseries query\+\_\+result\+\_\+traits}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ab81ba935251e3fd751414f993bfad2ac}\label{classWt_1_1Dbo_1_1Session_ab81ba935251e3fd751414f993bfad2ac}} 
+{\footnotesize template$<$class C $>$ }\\class {\bfseries Save\+Db\+Action}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a2509ccfaed8bd9da45ceafdb663769eb}\label{classWt_1_1Dbo_1_1Session_a2509ccfaed8bd9da45ceafdb663769eb}} 
+{\footnotesize template$<$class C $>$ }\\class {\bfseries Load\+Db\+Action}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ab3e73f11e7a3f2d3073f85c03630b26a}\label{classWt_1_1Dbo_1_1Session_ab3e73f11e7a3f2d3073f85c03630b26a}} 
+{\footnotesize template$<$class C $>$ }\\class {\bfseries Ptr\+Ref}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a5a6fe2517d31a6ef43e344928e89bae0}\label{classWt_1_1Dbo_1_1Session_a5a6fe2517d31a6ef43e344928e89bae0}} 
+class {\bfseries Set\+Reciproce\+Action}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a3a94b1395b4234bcdbacfe33bf2c3b7c}\label{classWt_1_1Dbo_1_1Session_a3a94b1395b4234bcdbacfe33bf2c3b7c}} 
+class {\bfseries To\+Anys\+Action}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a963fa5a75e80aa25a086d35f716ad275}\label{classWt_1_1Dbo_1_1Session_a963fa5a75e80aa25a086d35f716ad275}} 
+class {\bfseries From\+Anys\+Action}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_aefa68537a6f6a27f7736802d690c4e77}\label{classWt_1_1Dbo_1_1Session_aefa68537a6f6a27f7736802d690c4e77}} 
+class {\bfseries Call}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_af33d7cd6c8cb1028b1e562ef3435d3ad}\label{classWt_1_1Dbo_1_1Session_af33d7cd6c8cb1028b1e562ef3435d3ad}} 
+class {\bfseries Collection\+Helper}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a8b3b8d8c209023c6dfaf2807c78cb44d}\label{classWt_1_1Dbo_1_1Session_a8b3b8d8c209023c6dfaf2807c78cb44d}} 
+class {\bfseries Dbo\+Action}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a692bb78e76df785592fc08000a708f89}\label{classWt_1_1Dbo_1_1Session_a692bb78e76df785592fc08000a708f89}} 
+class {\bfseries Drop\+Schema}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a479585821b52922be374991c0e1e1fa9}\label{classWt_1_1Dbo_1_1Session_a479585821b52922be374991c0e1e1fa9}} 
+class {\bfseries From\+Any\+Action}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a522e44a2f6f154fc7cc75d689bec3d55}\label{classWt_1_1Dbo_1_1Session_a522e44a2f6f154fc7cc75d689bec3d55}} 
+class {\bfseries Init\+Schema}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a51d053999113f2f048791f13fa1d3ba7}\label{classWt_1_1Dbo_1_1Session_a51d053999113f2f048791f13fa1d3ba7}} 
+class {\bfseries Load\+Base\+Action}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a665b0cbf885695fb2999e94a2660789c}\label{classWt_1_1Dbo_1_1Session_a665b0cbf885695fb2999e94a2660789c}} 
+class {\bfseries Meta\+Dbo\+Base}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ac4858dc2017d7c1c4c30c7a67866fbda}\label{classWt_1_1Dbo_1_1Session_ac4858dc2017d7c1c4c30c7a67866fbda}} 
+class {\bfseries Save\+Base\+Action}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ae8f8a16d55793cafa1e0a861d507c342}\label{classWt_1_1Dbo_1_1Session_ae8f8a16d55793cafa1e0a861d507c342}} 
+class {\bfseries Session\+Add\+Action}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a49982aa325e19f0956d42fde9132caa2}\label{classWt_1_1Dbo_1_1Session_a49982aa325e19f0956d42fde9132caa2}} 
+class {\bfseries Transaction}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ae1db5aa2f3c16367a433614db6b9255a}\label{classWt_1_1Dbo_1_1Session_ae1db5aa2f3c16367a433614db6b9255a}} 
+class {\bfseries Transaction\+Done\+Action}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ab6c5ee492e8ebb0f2b26ddd3dc2b0388}\label{classWt_1_1Dbo_1_1Session_ab6c5ee492e8ebb0f2b26ddd3dc2b0388}} 
+struct {\bfseries Transaction\+::\+Impl}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A database session. 
+
+A database session manages meta data about the mapping of C++ classes to database tables, and keeps track of a working set of in-\/memory objects (objects which are referenced from your code or from within a transaction).
+
+It also manages an active transaction, which you need to access database objects.
+
+You can provide the session with a dedicated database connection using \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_acfd45189db138506e6e7c202e39878f9}{set\+Connection()}}, or with a connection pool (from which it will take a connection while processing a transaction) using \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a63ab17e16c9b721c94e6e9f67c5c255d}{set\+Connection\+Pool()}}.
+
+A session will typically be a long-\/lived object in your application. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ac4822eb0294094d17f623d1d58c8bc7e}\label{classWt_1_1Dbo_1_1Session_ac4822eb0294094d17f623d1d58c8bc7e}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!````~Session@{$\sim$Session}}
+\index{````~Session@{$\sim$Session}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{$\sim$Session()}{~Session()}}
+{\footnotesize\ttfamily virtual Wt\+::\+Dbo\+::\+Session\+::$\sim$\+Session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+A session must survive all database objects that have been loaded through it, and will warning during this destructor if there are still database objects that are being referenced from a ptr. 
+
+Reimplemented in \mbox{\hyperlink{classSession_a8753bb9dee966b7d39abc9b7237cd665}{Session}}, \mbox{\hyperlink{classSession_a8753bb9dee966b7d39abc9b7237cd665}{Session}}, and \mbox{\hyperlink{classSession_a8753bb9dee966b7d39abc9b7237cd665}{Session}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ad762cc052a1bdc1ef42d6b90bcf1ee1b}\label{classWt_1_1Dbo_1_1Session_ad762cc052a1bdc1ef42d6b90bcf1ee1b}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!add@{add}}
+\index{add@{add}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ Session\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ \&}]{ptr }\end{DoxyParamCaption})}
+
+
+
+Persists a transient object. 
+
+The transient object pointed to by {\ttfamily ptr} is added to the session, and will be persisted when the session is flushed.
+
+A transient object is usually a newly created object which want to add to the database.
+
+The method returns {\ttfamily ptr}. \mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ac28b22f5cf826f520eeb74e3bb090630}\label{classWt_1_1Dbo_1_1Session_ac28b22f5cf826f520eeb74e3bb090630}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!add@{add}}
+\index{add@{add}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ Session\+::add (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ C $>$}]{obj }\end{DoxyParamCaption})}
+
+
+
+Persists a transient object. 
+
+This is an overloaded method for convenience, and is implemented as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{return} \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_ad762cc052a1bdc1ef42d6b90bcf1ee1b}{add}}(ptr<C>(std::move(obj)));}
+\end{DoxyCode}
+
+
+The method returns a database pointer to the object. \mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a672cb6a493abe71d72d4d1ecf1e6b37d}\label{classWt_1_1Dbo_1_1Session_a672cb6a493abe71d72d4d1ecf1e6b37d}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!addNew@{addNew}}
+\index{addNew@{addNew}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{addNew()}{addNew()}}
+{\footnotesize\ttfamily template$<$typename T , typename ... Args$>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$T$>$ Wt\+::\+Dbo\+::\+Session\+::add\+New (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Persists a transient object. 
+
+This an overloaded method for convenience, and is implemented as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{return} \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_ad762cc052a1bdc1ef42d6b90bcf1ee1b}{add}}(ptr<C>(std::unique\_ptr<T>(\textcolor{keyword}{new} T(...))))}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{namespaceWt_1_1Dbo_a4b2cf43723fe059fb4c97362d01522ed}{Wt\+::\+Dbo\+::make\+\_\+ptr()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_aba79d84c7c91faae06f954e6d3d390ab}\label{classWt_1_1Dbo_1_1Session_aba79d84c7c91faae06f954e6d3d390ab}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!createTables@{createTables}}
+\index{createTables@{createTables}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{createTables()}{createTables()}}
+{\footnotesize\ttfamily void Wt\+::\+Dbo\+::\+Session\+::create\+Tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates the database schema. 
+
+This will create the database schema of the mapped tables. \mbox{\hyperlink{structSchema}{Schema}} creation will fail if one or more tables already existed. The creation of the tables is executed in a transaction that is rolled back when an error occurs.
+
+This method throws an \mbox{\hyperlink{classWt_1_1Dbo_1_1Exception}{Wt\+::\+Dbo\+::\+Exception}} if the table creation failed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a84697335ac90339e099ad198bab56b98}{map\+Class()}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a4c1fedb21e4e1cc44b182a34e8ebb4ef}{drop\+Tables()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a1c75a1701de8ae978e58f2d1e9cad39b}\label{classWt_1_1Dbo_1_1Session_a1c75a1701de8ae978e58f2d1e9cad39b}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!discardUnflushed@{discardUnflushed}}
+\index{discardUnflushed@{discardUnflushed}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{discardUnflushed()}{discardUnflushed()}}
+{\footnotesize\ttfamily void Wt\+::\+Dbo\+::\+Session\+::discard\+Unflushed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Discards all unflushed changes. 
+
+This method is useful when the \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aebc34f3a9a0b364024128cb7a8ea3587}{flush\+Mode()}} is set to Manual. It discards all Dbo-\/objects which were added to the session and rereads all existing Dbo-\/objects.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a3074ef6656f9c74409d2e8cade36d4ab}{set\+Flush\+Mode()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a4c1fedb21e4e1cc44b182a34e8ebb4ef}\label{classWt_1_1Dbo_1_1Session_a4c1fedb21e4e1cc44b182a34e8ebb4ef}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!dropTables@{dropTables}}
+\index{dropTables@{dropTables}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{dropTables()}{dropTables()}}
+{\footnotesize\ttfamily void Wt\+::\+Dbo\+::\+Session\+::drop\+Tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Drops the database schema. 
+
+This will drop the database schema. Dropping the schema will fail if one or more tables did not exist.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aba79d84c7c91faae06f954e6d3d390ab}{create\+Tables()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a42b1d61b66e996eff474d677a10d5b8f}\label{classWt_1_1Dbo_1_1Session_a42b1d61b66e996eff474d677a10d5b8f}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!execute@{execute}}
+\index{execute@{execute}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Dbo_1_1Call}{Call}} Wt\+::\+Dbo\+::\+Session\+::execute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sql }\end{DoxyParamCaption})}
+
+
+
+Executs an Sql command. 
+
+This executs an Sql command. It differs from query() in that no result is expected from the call.
+
+Usage example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{session.\mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a42b1d61b66e996eff474d677a10d5b8f}{execute}}(\textcolor{stringliteral}{"update user set name = ? where name = ?"}).\mbox{\hyperlink{classWt_1_1Dbo_1_1Call_a902fdd5bc8ff98d7a100074d1de4e130}{bind}}(\textcolor{stringliteral}{"Bart"}).\mbox{\hyperlink{classWt_1_1Dbo_1_1Call_a902fdd5bc8ff98d7a100074d1de4e130}{bind}}(\textcolor{stringliteral}{"Sarah"});}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ab79369400f2023c92221e24983ed1e3b}\label{classWt_1_1Dbo_1_1Session_ab79369400f2023c92221e24983ed1e3b}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!find@{find}}
+\index{find@{find}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$class C , typename Bind\+Strategy $>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}}$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$, Bind\+Strategy $>$ Session\+::find (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{condition = {\ttfamily std\+:\+:string()} }\end{DoxyParamCaption})}
+
+
+
+Finds database objects. 
+
+This method creates a query for finding objects of type {\ttfamily C}.
+
+When passing an empty {\ttfamily condition} parameter, it will return all objects of type {\ttfamily C}. Otherwise, it will add the condition, by generating an S\+QL {\itshape where} clause.
+
+The {\ttfamily Bind\+Strategy} specifies how you want to bind parameters to your query (if any).
+
+When using {\ttfamily \mbox{\hyperlink{structWt_1_1Dbo_1_1DynamicBinding}{Dynamic\+Binding}}} (which is the default), you will defer the binding until the query is run. This has the advantage that you can compose the query definition using helper methods provided in the query object, you can keep the query around and run the query multiple times, perhaps with different parameter values or to scroll through the query results.
+
+When using {\ttfamily \mbox{\hyperlink{structWt_1_1Dbo_1_1DirectBinding}{Direct\+Binding}}}, the query must be specified entirely using the {\ttfamily condition}, and can be run only once. This method does have the benefit of binding parameters directly to the underlying prepared statement.
+
+This method is convenient when you are querying only results from a single table. For more generic query support, see query().
+
+Usage example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Bart is missing, let's find him.}}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{Wt::Dbo::ptr<User>}} bart = session.find<\mbox{\hyperlink{classUser}{User}}>().where(\textcolor{stringliteral}{"name = ?"}).bind(\textcolor{stringliteral}{"Bart"});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Find all users, order by name}}
+\DoxyCodeLine{\textcolor{keyword}{typedef} \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Wt::Dbo::collection< Wt::Dbo::ptr<User>}} > \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Users}};}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Users}} users = session.find<\mbox{\hyperlink{classUser}{User}}>().orderBy(\textcolor{stringliteral}{"name"});}
+\end{DoxyCode}
+
+
+In the {\ttfamily condition}, parameters can be bound using \textquotesingle{}?\textquotesingle{} as a positional placeholder\+: each occurence of \textquotesingle{}?\textquotesingle{} (as a lexical token) is replaced by a bound parameter. This is actually done by most of the backends themselves using prepared statements and parameter binding. Parameter binding is possible for all types for which \mbox{\hyperlink{structWt_1_1Dbo_1_1sql__value__traits}{sql\+\_\+value\+\_\+traits}} is specialized.
+
+\begin{DoxySeeAlso}{See also}
+query() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ab896d119f1e0fb79adffe2282b92ef17}\label{classWt_1_1Dbo_1_1Session_ab896d119f1e0fb79adffe2282b92ef17}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!flush@{flush}}
+\index{flush@{flush}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{flush()}{flush()}}
+{\footnotesize\ttfamily void Wt\+::\+Dbo\+::\+Session\+::flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Flushes the session. 
+
+This flushes all modified objects to the database. This does not commit the transaction.
+
+Normally, you need not to call this method as the session is flushed automatically before committing a transaction, or before running a query (to be sure to take into account pending modifications). \mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_aebc34f3a9a0b364024128cb7a8ea3587}\label{classWt_1_1Dbo_1_1Session_aebc34f3a9a0b364024128cb7a8ea3587}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!flushMode@{flushMode}}
+\index{flushMode@{flushMode}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{flushMode()}{flushMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceWt_1_1Dbo_a4c7a7297140823d0c45131edc4d7c616}{Flush\+Mode}} Wt\+::\+Dbo\+::\+Session\+::flush\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the flush\+Mode. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a3074ef6656f9c74409d2e8cade36d4ab}{set\+Flush\+Mode()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_af28082ec3551be9b5dfe34cebaba53ec}\label{classWt_1_1Dbo_1_1Session_af28082ec3551be9b5dfe34cebaba53ec}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!load@{load}}
+\index{load@{load}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ Session\+::load (\begin{DoxyParamCaption}\item[{const typename \mbox{\hyperlink{structWt_1_1Dbo_1_1dbo__traits}{dbo\+\_\+traits}}$<$ C $>$\+::Id\+Type \&}]{id,  }\item[{bool}]{force\+Reread = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Loads a persisted object. 
+
+This method returns a database object with the given object id. If the object was already loaded in the session, the loaded object is returned, otherwise the object is loaded from the database.
+
+If {\ttfamily force\+Reread} is set to {\ttfamily true}, then a fresh copy is loaded from the database. This is almost equivalent to calling \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr_aa8bfb5e7230ce4298f858d82022ec4e4}{reread()}} on the returned object, except that it will not result in two database reads in case the object was in fact not yet loaded in the session.
+
+Throws an \mbox{\hyperlink{classWt_1_1Dbo_1_1ObjectNotFoundException}{Object\+Not\+Found\+Exception}} when the object was not found.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr_a43ea33191c46985752c192edb8254331}{ptr\+::id()}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a8f6c11d780bafb889ca302a489fa1f7f}{load\+Lazy()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a8f6c11d780bafb889ca302a489fa1f7f}\label{classWt_1_1Dbo_1_1Session_a8f6c11d780bafb889ca302a489fa1f7f}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!loadLazy@{loadLazy}}
+\index{loadLazy@{loadLazy}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{loadLazy()}{loadLazy()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ Session\+::load\+Lazy (\begin{DoxyParamCaption}\item[{const typename \mbox{\hyperlink{structWt_1_1Dbo_1_1dbo__traits}{dbo\+\_\+traits}}$<$ C $>$\+::Id\+Type \&}]{id }\end{DoxyParamCaption})}
+
+
+
+Lazy loads a persisted object. 
+
+This method returns a database object with the given object id without directly accessing the database.
+
+If the object data is already available in the session, then it will be available upon return. Otherwise, the object data will be retrieved from the database on first access. \mbox{\hyperlink{classNote}{Note}}\+: This will result in an \mbox{\hyperlink{classWt_1_1Dbo_1_1ObjectNotFoundException}{Object\+Not\+Found\+Exception}} if the object id is not valid.
+
+lazy\+Load can be used to obtain a \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr$<$\+C$>$}} from a known id when a \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr$<$\+C$>$}} is required, but access to the C object is not anticipated. For instance, a \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr$<$\+C$>$}} may be required to add an object of class X that is in a belongs\+To relationship with C.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr_a43ea33191c46985752c192edb8254331}{ptr\+::id()}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_af28082ec3551be9b5dfe34cebaba53ec}{load()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a84697335ac90339e099ad198bab56b98}\label{classWt_1_1Dbo_1_1Session_a84697335ac90339e099ad198bab56b98}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!mapClass@{mapClass}}
+\index{mapClass@{mapClass}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{mapClass()}{mapClass()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+void Session\+::map\+Class (\begin{DoxyParamCaption}\item[{const char $\ast$}]{table\+Name }\end{DoxyParamCaption})}
+
+
+
+Maps a class to a database table. 
+
+The class {\ttfamily C} is mapped to table with name {\ttfamily table\+Name}. You need to map classes to tables.
+
+You may provide a schema-\/qualified table name, if the underlying database supports this, eg. {\ttfamily \char`\"{}myschema.\+users\char`\"{}}. \mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a08ecd8b604acd66230a7f1d5eecd30f9}\label{classWt_1_1Dbo_1_1Session_a08ecd8b604acd66230a7f1d5eecd30f9}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!query@{query}}
+\index{query@{query}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}}
+{\footnotesize\ttfamily template$<$class Result , typename Bind\+Strategy $>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}}$<$ Result, Bind\+Strategy $>$ Session\+::query (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sql }\end{DoxyParamCaption})}
+
+
+
+Creates a query. 
+
+The sql statement should be a complete S\+QL statement, starting with a \char`\"{}select \char`\"{}. The items listed in the \char`\"{}select\char`\"{} must match the {\ttfamily Result} type. An item that corresponds to a database object (ptr) is substituted with the selection of all the fields in the dbo.
+
+For example, the following query (class \mbox{\hyperlink{classUser}{User}} is mapped onto table \textquotesingle{}user\textquotesingle{})\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{session.query< ptr<User> >(\textcolor{stringliteral}{"select u from user u"}).where(\textcolor{stringliteral}{"u.name = ?"}).bind(\textcolor{stringliteral}{"Bart"});}
+\end{DoxyCode}
+ is the more general version of\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{session.find<\mbox{\hyperlink{classUser}{User}}>().where(\textcolor{stringliteral}{"name = ?"}).bind(\textcolor{stringliteral}{"Bart"});}
+\end{DoxyCode}
+
+
+\mbox{\hyperlink{classNote}{Note}} that \char`\"{}u\char`\"{} in this query will be expanded to select the fields of the user table (u.\+id, u.\+version, u.\+name, ...). The same expansion happens when using an alias in Query\+::group\+By().
+
+The additional flexibility offered by query() over find() is however that it may support other result types.
+
+Thus, it may return plain values\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{session.query<\textcolor{keywordtype}{int}>(\textcolor{stringliteral}{"select count(1) from ..."});}
+\end{DoxyCode}
+
+
+Or std\+::tuple for an arbitrary combination of result values\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{session.query< std::tuple<int, int> >(\textcolor{stringliteral}{"select A.id, B.id from table\_a A, table\_b B"}).where(\textcolor{stringliteral}{"..."});}
+\end{DoxyCode}
+
+
+A tuple may combine any kind of object that is supported as a result, including database objects (see also ptr\+\_\+tuple)\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{session.query< std::tuple<ptr<A>, ptr<B> > >(\textcolor{stringliteral}{"select A, B from table\_a A, table\_b B"}).where(\textcolor{stringliteral}{"..."});}
+\end{DoxyCode}
+
+
+The {\ttfamily Bind\+Strategy} specifies how you want to bind parameters to your query (if any).
+
+When using {\ttfamily \mbox{\hyperlink{structWt_1_1Dbo_1_1DynamicBinding}{Dynamic\+Binding}}} (which is the default), you will defer the binding until the query is run. This has the advantage that you can compose the query using helper methods provided in the \mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}} object, you can keep the query around and run the query multiple times, perhaps with different parameter values or to scroll through the query results.
+
+When using {\ttfamily \mbox{\hyperlink{structWt_1_1Dbo_1_1DirectBinding}{Direct\+Binding}}}, the query must be specified entirely using the {\ttfamily sql}, and can be run only once. This method does have the benefit of binding parameters directly to the underlying prepared statement.
+
+This method uses \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits}{query\+\_\+result\+\_\+traits}} to unmarshal the query result into the {\ttfamily Result} type.
+
+In the {\ttfamily sql} query, parameters can be bound using \textquotesingle{}?\textquotesingle{} as the positional placeholder\+: each occurence of \textquotesingle{}?\textquotesingle{} (as a lexical token) is replaced by a bound parameter. This is actually done by most of the backends themselves using prepared statements and parameter binding. Parameter binding is possible for all types for which \mbox{\hyperlink{structWt_1_1Dbo_1_1sql__value__traits}{sql\+\_\+value\+\_\+traits}} is specialized.
+
+\begin{DoxyNote}{Note}
+Postgre\+S\+QL uses a literal question mark (\textquotesingle{}?\textquotesingle{}) as an operator. To distinguish between a positional placeholder and a literal \textquotesingle{}?\textquotesingle{}, use a double question mark (\textquotesingle{}??\textquotesingle{}) if you mean a literal \textquotesingle{}?\textquotesingle{}.
+
+The query must be a A\+S\+C\+I\+I-\/7 string\+: U\+T\+F-\/8 is not supported by the underlying query parser. To add a non-\/\+English string to the query use parameter binding instead (which prevents against S\+QL injection attacks at the same time) instead of string concatenation. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_add5f4d579b9841072d5e777925acd92c}\label{classWt_1_1Dbo_1_1Session_add5f4d579b9841072d5e777925acd92c}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!rereadAll@{rereadAll}}
+\index{rereadAll@{rereadAll}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{rereadAll()}{rereadAll()}}
+{\footnotesize\ttfamily void Wt\+::\+Dbo\+::\+Session\+::reread\+All (\begin{DoxyParamCaption}\item[{const char $\ast$}]{table\+Name = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Rereads all objects. 
+
+This rereads all objects from the database, possibly discarding unflushed modifications. This is a catch-\/all solution for a \mbox{\hyperlink{classWt_1_1Dbo_1_1StaleObjectException}{Stale\+Object\+Exception}}.
+
+If a {\ttfamily table\+Name} is given, then only objects of that table are reread.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr_aa8bfb5e7230ce4298f858d82022ec4e4}{ptr\+::reread()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_acfd45189db138506e6e7c202e39878f9}\label{classWt_1_1Dbo_1_1Session_acfd45189db138506e6e7c202e39878f9}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!setConnection@{setConnection}}
+\index{setConnection@{setConnection}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{setConnection()}{setConnection()}}
+{\footnotesize\ttfamily void Wt\+::\+Dbo\+::\+Session\+::set\+Connection (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} $>$}]{connection }\end{DoxyParamCaption})}
+
+
+
+Sets a dedicated connection. 
+
+The connection will be used exclusively by this session.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a63ab17e16c9b721c94e6e9f67c5c255d}{set\+Connection\+Pool()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a63ab17e16c9b721c94e6e9f67c5c255d}\label{classWt_1_1Dbo_1_1Session_a63ab17e16c9b721c94e6e9f67c5c255d}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!setConnectionPool@{setConnectionPool}}
+\index{setConnectionPool@{setConnectionPool}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{setConnectionPool()}{setConnectionPool()}}
+{\footnotesize\ttfamily void Wt\+::\+Dbo\+::\+Session\+::set\+Connection\+Pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnectionPool}{Sql\+Connection\+Pool}} \&}]{pool }\end{DoxyParamCaption})}
+
+
+
+Sets a connection pool. 
+
+The connection pool is typically shared with other sessions.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session_acfd45189db138506e6e7c202e39878f9}{set\+Connection()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_a3074ef6656f9c74409d2e8cade36d4ab}\label{classWt_1_1Dbo_1_1Session_a3074ef6656f9c74409d2e8cade36d4ab}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!setFlushMode@{setFlushMode}}
+\index{setFlushMode@{setFlushMode}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{setFlushMode()}{setFlushMode()}}
+{\footnotesize\ttfamily void Wt\+::\+Dbo\+::\+Session\+::set\+Flush\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWt_1_1Dbo_a4c7a7297140823d0c45131edc4d7c616}{Flush\+Mode}}}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the flush\+Mode. 
+
+The default flush\+Mode is Auto. Label\+Option\+::\+Inside a transaction this means that changes are flushed when a query is affected by them. When flush\+Mode is set to Manual, changes are only flushed when the user manually calls \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_ab896d119f1e0fb79adffe2282b92ef17}{flush()}}, or resets the mode to Auto. \mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}}\textquotesingle{}s wil possibly return an inconsistent result, but collections will still keep track of changes. This also makes it possible to operate on Dbo-\/objects and collections outside of a transaction. When the moment comes to flush the changes, a transaction must of course be active.
+
+{\itshape \mbox{\hyperlink{classNote}{Note}}\+:} only operations on a collecion are tracked in Manual mode, reciproke operations are not yet taken into account.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aebc34f3a9a0b364024128cb7a8ea3587}{flush\+Mode()}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a1c75a1701de8ae978e58f2d1e9cad39b}{discard\+Unflushed()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_af6c558ff394e0a2437698b4cf2a6583c}\label{classWt_1_1Dbo_1_1Session_af6c558ff394e0a2437698b4cf2a6583c}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!tableName@{tableName}}
+\index{tableName@{tableName}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{tableName()}{tableName()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+const char $\ast$ Session\+::table\+Name}
+
+
+
+Returns the mapped table name for a class. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a84697335ac90339e099ad198bab56b98}{map\+Class()}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_ae2ab2ae7caf3acd6754f50d278ffafa3}{table\+Name\+Quoted()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Session_ae2ab2ae7caf3acd6754f50d278ffafa3}\label{classWt_1_1Dbo_1_1Session_ae2ab2ae7caf3acd6754f50d278ffafa3}} 
+\index{Wt::Dbo::Session@{Wt::Dbo::Session}!tableNameQuoted@{tableNameQuoted}}
+\index{tableNameQuoted@{tableNameQuoted}!Wt::Dbo::Session@{Wt::Dbo::Session}}
+\doxysubsubsection{\texorpdfstring{tableNameQuoted()}{tableNameQuoted()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+const std\+::string Session\+::table\+Name\+Quoted}
+
+
+
+Returns the mapped quoted table name for a class. 
+
+This will quote schemas, as necessary.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a84697335ac90339e099ad198bab56b98}{map\+Class()}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_af6c558ff394e0a2437698b4cf2a6583c}{table\+Name()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/Session.\+h\item 
+wt-\/4.\+8.\+2/doc/tutorial/dbo.\+doc\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/Session\+\_\+impl.\+h\end{DoxyCompactItemize}

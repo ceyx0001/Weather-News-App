@@ -1,0 +1,56 @@
+digraph "http::server::Server"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="http::server::Server",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="The top-level class of the HTTP server."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" request_handler_" ,fontname="Helvetica"];
+  Node2 [label="http::server::RequestHandler",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhttp_1_1server_1_1RequestHandler.html",tooltip="The common handler for all incoming requests."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sessionManager_" ,fontname="Helvetica"];
+  Node3 [label="http::server::SessionProcess\lManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhttp_1_1server_1_1SessionProcessManager.html",tooltip="For dedicated processes: maps session ids to child processes and their sockets."];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" numSessions_" ,fontname="Helvetica"];
+  Node4 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" configuration_" ,fontname="Helvetica"];
+  Node5 [label="const",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" logger_" ,fontname="Helvetica"];
+  Node6 [label="Wt::WLogger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WLogger.html",tooltip="A simple logging class."];
+  Node5 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sep\ntimestamp" ,fontname="Helvetica"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" wtConfig_\nconfig_" ,fontname="Helvetica"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sessionManager_" ,fontname="Helvetica"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" accessLogger_" ,fontname="Helvetica"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" connection_manager_" ,fontname="Helvetica"];
+  Node7 [label="http::server::Connection\lManager",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhttp_1_1server_1_1ConnectionManager.html",tooltip=" "];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" wt_" ,fontname="Helvetica"];
+  Node8 [label="Wt::WServer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WServer.html",tooltip="A class encapsulating a web application server."];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ioService_" ,fontname="Helvetica"];
+  Node9 [label="Wt::WIOService",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WIOService.html",tooltip="An I/O service."];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="AsioWrapper::asio::\lio_service",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node11 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" configuration_" ,fontname="Helvetica"];
+  Node11 [label="Wt::Configuration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Configuration.html",tooltip=" "];
+  Node12 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rootPathSegment_" ,fontname="Helvetica"];
+  Node12 [label="Wt::PathSegment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1PathSegment.html",tooltip=" "];
+  Node12 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" parent" ,fontname="Helvetica"];
+  Node13 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" segment" ,fontname="Helvetica"];
+  Node13 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" entryPoint" ,fontname="Helvetica"];
+  Node8 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" server_" ,fontname="Helvetica"];
+  Node4 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" numSessionThreads_\nbootstrapTimeout_\nmaxPendingEvents_\nserverPushTimeout\l_\nsessionIdLength\l_\nnumThreads_\nsessionTimeout\l_\nindicatorTimeout\l_\nidleTimeout\l_\ndoubleClickTimeout\l_\n..." ,fontname="Helvetica"];
+  Node13 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" valgrindPath_\nredirectMsg_\nappRoot_\nuaCompatible_\noriginalIPHeader\l_\nconnectorSessionId\lPrefix_\ndefaultEntryPoint\l_\nrunDirectory\l_\napplicationPath\l_\nconfigurationFile\l_\n..." ,fontname="Helvetica"];
+  Node6 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" logger_" ,fontname="Helvetica"];
+  Node8 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" instance_" ,fontname="Helvetica"];
+  Node14 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" webController_" ,fontname="Helvetica"];
+  Node14 [label="Wt::WebController",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WebController.html",tooltip=" "];
+  Node11 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" conf_" ,fontname="Helvetica"];
+  Node8 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" server_" ,fontname="Helvetica"];
+  Node4 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ajaxSessions_\nplainHtmlSessions\l_\nzombieSessions_" ,fontname="Helvetica"];
+  Node13 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" redirectSecret_\nsingleSessionId_" ,fontname="Helvetica"];
+  Node13 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" appRoot_\ndescription_\napplication_\nconfigurationFile_" ,fontname="Helvetica"];
+  Node5 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" customLogger_" ,fontname="Helvetica"];
+  Node15 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" config_" ,fontname="Helvetica"];
+  Node15 [label="http::server::Configuration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhttp_1_1server_1_1Configuration.html",tooltip=" "];
+  Node6 -> Node15 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" logger_" ,fontname="Helvetica"];
+  Node4 -> Node15 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sslVerifyDepth_\nthreads_\nparentPort_" ,fontname="Helvetica"];
+  Node13 -> Node15 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sslPrivateKeyFile_\nhttpAddress_\nappRoot_\naccessLog_\ndeployPath_\nresourcesDir_\nsslCipherList\l_\nsslCaCertificates\l_\npidPath_\nhttpsPort_\n..." ,fontname="Helvetica"];
+}

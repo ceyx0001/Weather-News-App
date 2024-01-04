@@ -1,0 +1,311 @@
+\hypertarget{classWt_1_1EventSignalBase}{}\doxysection{Wt\+::Event\+Signal\+Base Class Reference}
+\label{classWt_1_1EventSignalBase}\index{Wt::EventSignalBase@{Wt::EventSignalBase}}
+
+
+Abstract base class of an event signal.  
+
+
+
+
+{\ttfamily \#include $<$W\+Signal.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Event\+Signal\+Base\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Event\+Signal\+Base\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1EventSignalBase_1_1StatelessConnection}{Stateless\+Connection}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{classWt_1_1EventSignalBase_abfb27bd7b4d3497fedfdd7280b633417}{name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the event name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_afc7186e7e95722b3b4a991977377a605}\label{classWt_1_1EventSignalBase_afc7186e7e95722b3b4a991977377a605}} 
+bool {\bfseries needs\+Update} (bool all) const
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_aa9eab1eacd0bd8d44103238211fb17fa}\label{classWt_1_1EventSignalBase_aa9eab1eacd0bd8d44103238211fb17fa}} 
+void {\bfseries update\+Ok} ()
+\item 
+virtual bool \mbox{\hyperlink{classWt_1_1EventSignalBase_ab8ca6e4fa3748797d27fc571eb6f305d}{is\+Connected}} () const override
+\begin{DoxyCompactList}\small\item\em Returns whether this signal is connected. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a7eec1622f3c5648692633bccc4a2d7b4}\label{classWt_1_1EventSignalBase_a7eec1622f3c5648692633bccc4a2d7b4}} 
+virtual const std\+::string {\bfseries encode\+Cmd} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a7de202e2711882f9dcb3977cd38d3a29}\label{classWt_1_1EventSignalBase_a7de202e2711882f9dcb3977cd38d3a29}} 
+const std\+::string {\bfseries java\+Script} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_ab25fba40fa1211a3a4e3f98f0144ae52}\label{classWt_1_1EventSignalBase_ab25fba40fa1211a3a4e3f98f0144ae52}} 
+bool {\bfseries is\+Exposed\+Signal} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a771dd11f18eba526e4f5377f769f20f8}\label{classWt_1_1EventSignalBase_a771dd11f18eba526e4f5377f769f20f8}} 
+bool {\bfseries can\+Auto\+Learn} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_aeadc723f8fc5b525b19b856fcd12ab97}\label{classWt_1_1EventSignalBase_aeadc723f8fc5b525b19b856fcd12ab97}} 
+void {\bfseries set\+Not\+Exposed} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a07dbaaf8f6a4668447ba3102c81ff83c}\label{classWt_1_1EventSignalBase_a07dbaaf8f6a4668447ba3102c81ff83c}} 
+void {\bfseries disconnect} (\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} \&conn)
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a33923cc362b9e87baddebeb97de8db1b}\label{classWt_1_1EventSignalBase_a33923cc362b9e87baddebeb97de8db1b}} 
+void \mbox{\hyperlink{classWt_1_1EventSignalBase_a33923cc362b9e87baddebeb97de8db1b}{disconnect}} (\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} \&slot)
+\begin{DoxyCompactList}\small\item\em Disconnects a \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1EventSignalBase_afd8983929683ffc4c6dda8a91a7bda7b}{prevent\+Default\+Action}} (bool prevent=true)
+\begin{DoxyCompactList}\small\item\em Prevents the default browser action. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1EventSignalBase_aeb110a69a17988a30ed832f3aab45b52}{default\+Action\+Prevented}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the default browser action is prevented. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1EventSignalBase_a63f088978e6dd375b3a329f458f9db3f}{prevent\+Propagation}} (bool prevent=true)
+\begin{DoxyCompactList}\small\item\em Prevents event propagation. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1EventSignalBase_af5fa42e5f6dd422505ac3397a7f2c52e}{propagation\+Prevented}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether event propagation is prevented. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_abb957d7baf72f207929a2ee51f6116d0}\label{classWt_1_1EventSignalBase_abb957d7baf72f207929a2ee51f6116d0}} 
+const std\+::string {\bfseries create\+User\+Event\+Call} (const std\+::string \&js\+Object, const std\+::string \&js\+Event, const std\+::string \&event\+Name, std\+::initializer\+\_\+list$<$ std\+::string $>$ args) const
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_aee3103d7c654a608298cd9d72d7f63bc}\label{classWt_1_1EventSignalBase_aee3103d7c654a608298cd9d72d7f63bc}} 
+\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} {\bfseries connect\+Stateless} (\mbox{\hyperlink{classWt_1_1WObject_aec904644d278b09d3f7e568fd2efd400}{W\+Object\+::\+Method}} method, \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} $\ast$target, \mbox{\hyperlink{classWt_1_1WStatelessSlot}{W\+Stateless\+Slot}} $\ast$slot)
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a64d7cb2527ddd699e0da12afae42171e}\label{classWt_1_1EventSignalBase_a64d7cb2527ddd699e0da12afae42171e}} 
+void {\bfseries connect} (\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} \&slot)
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_aa2e54949808c555c8583e6bcfaab6526}\label{classWt_1_1EventSignalBase_aa2e54949808c555c8583e6bcfaab6526}} 
+void {\bfseries connect} (const std\+::string \&function)
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_ae7205ee9a946075f88ac2319f58d8478}\label{classWt_1_1EventSignalBase_ae7205ee9a946075f88ac2319f58d8478}} 
+\mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} $\ast$ {\bfseries owner} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a9bbe5bd580fcadb1cbf98bf4ae5ef190}\label{classWt_1_1EventSignalBase_a9bbe5bd580fcadb1cbf98bf4ae5ef190}} 
+void {\bfseries owner\+Repaint} ()
+\item 
+virtual \mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} \mbox{\hyperlink{classWt_1_1EventSignalBase_ae43b51490db269a8a3b2356b218222d6}{connect}} (\mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} $\ast$target, \mbox{\hyperlink{classWt_1_1WObject_aec904644d278b09d3f7e568fd2efd400}{W\+Object\+::\+Method}} method)=0
+\begin{DoxyCompactList}\small\item\em Connects to a slot. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class V $>$ }\\\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} \mbox{\hyperlink{classWt_1_1EventSignalBase_a1f4178f19a827a31454d948e503848ad}{connect}} (T $\ast$target, void(V\+::$\ast$method)())
+\begin{DoxyCompactList}\small\item\em Connects to a slot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_adc32234fbe484113eeb74fc866858219}\label{classWt_1_1EventSignalBase_adc32234fbe484113eeb74fc866858219}} 
+{\bfseries Event\+Signal\+Base} (const char $\ast$\mbox{\hyperlink{classWt_1_1EventSignalBase_abfb27bd7b4d3497fedfdd7280b633417}{name}}, \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} $\ast$owner, bool auto\+Learn)
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a339408b4fa07a5ec3fa86fc7b82b2e25}\label{classWt_1_1EventSignalBase_a339408b4fa07a5ec3fa86fc7b82b2e25}} 
+void {\bfseries prepare\+Destruct} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a477814d1f11c9872bc14b4276f38e60d}\label{classWt_1_1EventSignalBase_a477814d1f11c9872bc14b4276f38e60d}} 
+void {\bfseries expose\+Signal} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a7cc53b1afa38b14f130a7c3ce132a58b}\label{classWt_1_1EventSignalBase_a7cc53b1afa38b14f130a7c3ce132a58b}} 
+void {\bfseries process\+Learned\+Stateless} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a78e24349fbe71441fb0fe6567c114193}\label{classWt_1_1EventSignalBase_a78e24349fbe71441fb0fe6567c114193}} 
+void {\bfseries process\+Non\+Learned\+Stateless} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a966870a449c31d2d4df605c446a06068}\label{classWt_1_1EventSignalBase_a966870a449c31d2d4df605c446a06068}} 
+virtual int {\bfseries argument\+Count} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_ab10b49c353772a81f3b204d9686f1998}\label{classWt_1_1EventSignalBase_ab10b49c353772a81f3b204d9686f1998}} 
+static void $\ast$ {\bfseries alloc} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_ae96c8b1d8b7efff7864781f99dfde449}\label{classWt_1_1EventSignalBase_ae96c8b1d8b7efff7864781f99dfde449}} 
+static void {\bfseries free} (void $\ast$s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_aef9c5161d5e3d540e1366a90091a74f9}\label{classWt_1_1EventSignalBase_aef9c5161d5e3d540e1366a90091a74f9}} 
+const char $\ast$ {\bfseries name\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_aa31438509d2f5627584c47456cd67e34}\label{classWt_1_1EventSignalBase_aa31438509d2f5627584c47456cd67e34}} 
+\mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} $\ast$ {\bfseries owner\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a851b4f88812534147ae0ab4e003ee597}\label{classWt_1_1EventSignalBase_a851b4f88812534147ae0ab4e003ee597}} 
+const unsigned {\bfseries id\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_af5782c42ba95338abac3329d8ed00d20}\label{classWt_1_1EventSignalBase_af5782c42ba95338abac3329d8ed00d20}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1EventSignalBase_1_1StatelessConnection}{Stateless\+Connection}} $>$ {\bfseries connections\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a2b79462f0d65a12dcb9aadbf5b9566e4}\label{classWt_1_1EventSignalBase_a2b79462f0d65a12dcb9aadbf5b9566e4}} 
+std\+::bitset$<$ 7 $>$ {\bfseries flags\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a2904405c1fa0999c2ae0ddfa3e530f29}\label{classWt_1_1EventSignalBase_a2904405c1fa0999c2ae0ddfa3e530f29}} 
+\mbox{\hyperlink{structWt_1_1Signals_1_1Signal}{Signals\+::\+Signal}} {\bfseries dummy\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a894b8aa2511303f85c15057ec6ed60da}\label{classWt_1_1EventSignalBase_a894b8aa2511303f85c15057ec6ed60da}} 
+static const int {\bfseries B\+I\+T\+\_\+\+N\+E\+E\+D\+\_\+\+U\+P\+D\+A\+TE} = 0
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a5fe2d3779f570ffe5ee59fc6ccf62f0a}\label{classWt_1_1EventSignalBase_a5fe2d3779f570ffe5ee59fc6ccf62f0a}} 
+static const int {\bfseries B\+I\+T\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+E\+V\+E\+NT} = 1
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_aff7f2e35d2bb1787ecb4c1a16a9b7988}\label{classWt_1_1EventSignalBase_aff7f2e35d2bb1787ecb4c1a16a9b7988}} 
+static const int {\bfseries B\+I\+T\+\_\+\+E\+X\+P\+O\+S\+ED} = 2
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_ac582d832c0c44b0f8c1504faefd5cde6}\label{classWt_1_1EventSignalBase_ac582d832c0c44b0f8c1504faefd5cde6}} 
+static const int {\bfseries B\+I\+T\+\_\+\+C\+A\+N\+\_\+\+A\+U\+T\+O\+L\+E\+A\+RN} = 3
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a201b8d8658f96d659207fe791c8d9685}\label{classWt_1_1EventSignalBase_a201b8d8658f96d659207fe791c8d9685}} 
+static const int {\bfseries B\+I\+T\+\_\+\+P\+R\+E\+V\+E\+N\+T\+\_\+\+D\+E\+F\+A\+U\+LT} = 4
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_ae082e28c3eeba648b0ad2a66bf468a17}\label{classWt_1_1EventSignalBase_ae082e28c3eeba648b0ad2a66bf468a17}} 
+static const int {\bfseries B\+I\+T\+\_\+\+P\+R\+E\+V\+E\+N\+T\+\_\+\+P\+R\+O\+P\+A\+G\+A\+T\+I\+ON} = 5
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a442d3587b006863f336c687cb016c412}\label{classWt_1_1EventSignalBase_a442d3587b006863f336c687cb016c412}} 
+static const int {\bfseries B\+I\+T\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+S\+E\+R\+V\+E\+R\+\_\+\+A\+N\+Y\+W\+AY} = 6
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a8894ff0e75462fdce6e628868acb8312}\label{classWt_1_1EventSignalBase_a8894ff0e75462fdce6e628868acb8312}} 
+static unsigned {\bfseries next\+Id\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a828460c4b2eb5129765861109d7f9f16}\label{classWt_1_1EventSignalBase_a828460c4b2eb5129765861109d7f9f16}} 
+void {\bfseries remove\+Slot} (\mbox{\hyperlink{classWt_1_1WStatelessSlot}{W\+Stateless\+Slot}} $\ast$slot)
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_ad97be8b0c8d6a748e178721e6dc92d57}\label{classWt_1_1EventSignalBase_ad97be8b0c8d6a748e178721e6dc92d57}} 
+void {\bfseries process\+Pre\+Learn\+Stateless} (\mbox{\hyperlink{classWt_1_1SlotLearnerInterface}{Slot\+Learner\+Interface}} $\ast$learner)
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a212fc89296c58b010d6820649f75c7d1}\label{classWt_1_1EventSignalBase_a212fc89296c58b010d6820649f75c7d1}} 
+void {\bfseries process\+Auto\+Learn\+Stateless} (\mbox{\hyperlink{classWt_1_1SlotLearnerInterface}{Slot\+Learner\+Interface}} $\ast$learner)
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_ae249086e5820d713634420b0d6118097}\label{classWt_1_1EventSignalBase_ae249086e5820d713634420b0d6118097}} 
+virtual void {\bfseries process\+Dynamic} (const \mbox{\hyperlink{classWt_1_1JavaScriptEvent}{Java\+Script\+Event}} \&e) const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a3bc7290fb7f4d715de0fe6975ac218d1}\label{classWt_1_1EventSignalBase_a3bc7290fb7f4d715de0fe6975ac218d1}} 
+class {\bfseries W\+Stateless\+Slot}
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a2da2051ff31597b74f7d7a63a9b0db5f}\label{classWt_1_1EventSignalBase_a2da2051ff31597b74f7d7a63a9b0db5f}} 
+class {\bfseries Web\+Renderer}
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a8248f10e62aee707eabe43458855d835}\label{classWt_1_1EventSignalBase_a8248f10e62aee707eabe43458855d835}} 
+class {\bfseries Web\+Session}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class of an event signal. 
+
+An event signal is directly associated with a user-\/interface generated event. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a1f4178f19a827a31454d948e503848ad}\label{classWt_1_1EventSignalBase_a1f4178f19a827a31454d948e503848ad}} 
+\index{Wt::EventSignalBase@{Wt::EventSignalBase}!connect@{connect}}
+\index{connect@{connect}!Wt::EventSignalBase@{Wt::EventSignalBase}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class V $>$ \\
+\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} Wt\+::\+Signal\+Base\+::connect (\begin{DoxyParamCaption}\item[{class T}]{,  }\item[{class V}]{ }\end{DoxyParamCaption})}
+
+
+
+Connects to a slot. 
+
+Every signal can be connected to a slot which does not take any arguments (and may thus ignore signal arguments). \mbox{\Hypertarget{classWt_1_1EventSignalBase_ae43b51490db269a8a3b2356b218222d6}\label{classWt_1_1EventSignalBase_ae43b51490db269a8a3b2356b218222d6}} 
+\index{Wt::EventSignalBase@{Wt::EventSignalBase}!connect@{connect}}
+\index{connect@{connect}!Wt::EventSignalBase@{Wt::EventSignalBase}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} Wt\+::\+Signal\+Base\+::connect}
+
+
+
+Connects to a slot. 
+
+Every signal can be connected to a slot which does not take any arguments (and may thus ignore signal arguments). \mbox{\Hypertarget{classWt_1_1EventSignalBase_aeb110a69a17988a30ed832f3aab45b52}\label{classWt_1_1EventSignalBase_aeb110a69a17988a30ed832f3aab45b52}} 
+\index{Wt::EventSignalBase@{Wt::EventSignalBase}!defaultActionPrevented@{defaultActionPrevented}}
+\index{defaultActionPrevented@{defaultActionPrevented}!Wt::EventSignalBase@{Wt::EventSignalBase}}
+\doxysubsubsection{\texorpdfstring{defaultActionPrevented()}{defaultActionPrevented()}}
+{\footnotesize\ttfamily bool Wt\+::\+Event\+Signal\+Base\+::default\+Action\+Prevented (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the default browser action is prevented. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1EventSignalBase_afd8983929683ffc4c6dda8a91a7bda7b}{prevent\+Default\+Action()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_ab8ca6e4fa3748797d27fc571eb6f305d}\label{classWt_1_1EventSignalBase_ab8ca6e4fa3748797d27fc571eb6f305d}} 
+\index{Wt::EventSignalBase@{Wt::EventSignalBase}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!Wt::EventSignalBase@{Wt::EventSignalBase}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Event\+Signal\+Base\+::is\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns whether this signal is connected. 
+
+Returns true when the signal was connected to to at least one slot. 
+
+Implements \mbox{\hyperlink{classWt_1_1SignalBase_a13a3106be8949b273edc74aa61be14ce}{Wt\+::\+Signal\+Base}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1JSignal_aa1ca52a2197cbb9d9c6bd818c2e3b719}{Wt\+::\+J\+Signal$<$ A $>$}}.
+
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_abfb27bd7b4d3497fedfdd7280b633417}\label{classWt_1_1EventSignalBase_abfb27bd7b4d3497fedfdd7280b633417}} 
+\index{Wt::EventSignalBase@{Wt::EventSignalBase}!name@{name}}
+\index{name@{name}!Wt::EventSignalBase@{Wt::EventSignalBase}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const char$\ast$ Wt\+::\+Event\+Signal\+Base\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the event name. 
+
+The event name is implementation-\/defined. \mbox{\Hypertarget{classWt_1_1EventSignalBase_afd8983929683ffc4c6dda8a91a7bda7b}\label{classWt_1_1EventSignalBase_afd8983929683ffc4c6dda8a91a7bda7b}} 
+\index{Wt::EventSignalBase@{Wt::EventSignalBase}!preventDefaultAction@{preventDefaultAction}}
+\index{preventDefaultAction@{preventDefaultAction}!Wt::EventSignalBase@{Wt::EventSignalBase}}
+\doxysubsubsection{\texorpdfstring{preventDefaultAction()}{preventDefaultAction()}}
+{\footnotesize\ttfamily void Wt\+::\+Event\+Signal\+Base\+::prevent\+Default\+Action (\begin{DoxyParamCaption}\item[{bool}]{prevent = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Prevents the default browser action. 
+
+Use this method to prevent the default browser action associated with this event.
+
+\begin{DoxySeeAlso}{See also}
+set\+Prevent\+Propagation() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_a63f088978e6dd375b3a329f458f9db3f}\label{classWt_1_1EventSignalBase_a63f088978e6dd375b3a329f458f9db3f}} 
+\index{Wt::EventSignalBase@{Wt::EventSignalBase}!preventPropagation@{preventPropagation}}
+\index{preventPropagation@{preventPropagation}!Wt::EventSignalBase@{Wt::EventSignalBase}}
+\doxysubsubsection{\texorpdfstring{preventPropagation()}{preventPropagation()}}
+{\footnotesize\ttfamily void Wt\+::\+Event\+Signal\+Base\+::prevent\+Propagation (\begin{DoxyParamCaption}\item[{bool}]{prevent = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Prevents event propagation. 
+
+Use this method to prevent that the event propagates further to its ancestors.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1EventSignalBase_afd8983929683ffc4c6dda8a91a7bda7b}{prevent\+Default\+Action()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1EventSignalBase_af5fa42e5f6dd422505ac3397a7f2c52e}\label{classWt_1_1EventSignalBase_af5fa42e5f6dd422505ac3397a7f2c52e}} 
+\index{Wt::EventSignalBase@{Wt::EventSignalBase}!propagationPrevented@{propagationPrevented}}
+\index{propagationPrevented@{propagationPrevented}!Wt::EventSignalBase@{Wt::EventSignalBase}}
+\doxysubsubsection{\texorpdfstring{propagationPrevented()}{propagationPrevented()}}
+{\footnotesize\ttfamily bool Wt\+::\+Event\+Signal\+Base\+::propagation\+Prevented (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether event propagation is prevented. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1EventSignalBase_a63f088978e6dd375b3a329f458f9db3f}{prevent\+Propagation()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Signal.\+h\end{DoxyCompactItemize}

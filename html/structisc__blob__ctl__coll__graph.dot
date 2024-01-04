@@ -1,0 +1,12 @@
+digraph "isc_blob_ctl"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="isc_blob_ctl",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ctl_source_handle" ,fontname="Helvetica"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ctl_total_length\nctl_max_segment\nctl_number_segments" ,fontname="Helvetica"];
+  Node2 [label="signed",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ctl_data\nctl_source\nctl_status" ,fontname="Helvetica"];
+  Node3 [label="long",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

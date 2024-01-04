@@ -1,0 +1,119 @@
+\hypertarget{classWt_1_1Dbo_1_1Call}{}\doxysection{Wt\+::Dbo\+::Call Class Reference}
+\label{classWt_1_1Dbo_1_1Call}\index{Wt::Dbo::Call@{Wt::Dbo::Call}}
+
+
+A database call.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Dbo/\+Call.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::Dbo\+::Call\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Call_ac32ad969b5d6a194099c54a2b6ab8a61}{$\sim$\+Call}} () noexcept(false)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Call_ace6fa91750481408ad768a908a33a73d}{Call}} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1Call}{Call}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classWt_1_1Dbo_1_1Call}{Call}} \& \mbox{\hyperlink{classWt_1_1Dbo_1_1Call_a902fdd5bc8ff98d7a100074d1de4e130}{bind}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Binds a value to the next positional marker. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1Call_a3208686427d7efeaf45e48d98c843e6a}{run}} ()
+\begin{DoxyCompactList}\small\item\em Runs the database call. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Call_aa120717522f32542e4bb9c0dd9430576}\label{classWt_1_1Dbo_1_1Call_aa120717522f32542e4bb9c0dd9430576}} 
+{\bfseries Call} (\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} \&session, const std\+::string \&sql)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Call_ac4a4dc9f91b00c8a4e721af7094f1cbd}\label{classWt_1_1Dbo_1_1Call_ac4a4dc9f91b00c8a4e721af7094f1cbd}} 
+bool {\bfseries copied\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Call_a73f92e5f8356e464dea71be542f5fbb4}\label{classWt_1_1Dbo_1_1Call_a73f92e5f8356e464dea71be542f5fbb4}} 
+bool {\bfseries run\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Call_ab525a513975aef01f83897b006fae4ef}\label{classWt_1_1Dbo_1_1Call_ab525a513975aef01f83897b006fae4ef}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $\ast$ {\bfseries statement\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Call_abd919137fe0926631ad491ef862ec2f0}\label{classWt_1_1Dbo_1_1Call_abd919137fe0926631ad491ef862ec2f0}} 
+int {\bfseries column\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Call_afbdd63a566878ce30072e785ca7e7740}\label{classWt_1_1Dbo_1_1Call_afbdd63a566878ce30072e785ca7e7740}} 
+class {\bfseries Session}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Call_a916ea84dc420573cfdb360b67445d5d0}\label{classWt_1_1Dbo_1_1Call_a916ea84dc420573cfdb360b67445d5d0}} 
+{\footnotesize template$<$class C $>$ }\\class {\bfseries collection}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A database call. 
+
+A call can be used to execute a database command (e.\+g. an update, or a stored procedure call).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Call_ac32ad969b5d6a194099c54a2b6ab8a61}\label{classWt_1_1Dbo_1_1Call_ac32ad969b5d6a194099c54a2b6ab8a61}} 
+\index{Wt::Dbo::Call@{Wt::Dbo::Call}!````~Call@{$\sim$Call}}
+\index{````~Call@{$\sim$Call}!Wt::Dbo::Call@{Wt::Dbo::Call}}
+\doxysubsubsection{\texorpdfstring{$\sim$Call()}{~Call()}}
+{\footnotesize\ttfamily Wt\+::\+Dbo\+::\+Call\+::$\sim$\+Call (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Destructor. 
+
+This executes the call if it wasn\textquotesingle{}t \mbox{\hyperlink{classWt_1_1Dbo_1_1Call_a3208686427d7efeaf45e48d98c843e6a}{run()}} yet, and the call has not been copied. \mbox{\Hypertarget{classWt_1_1Dbo_1_1Call_ace6fa91750481408ad768a908a33a73d}\label{classWt_1_1Dbo_1_1Call_ace6fa91750481408ad768a908a33a73d}} 
+\index{Wt::Dbo::Call@{Wt::Dbo::Call}!Call@{Call}}
+\index{Call@{Call}!Wt::Dbo::Call@{Wt::Dbo::Call}}
+\doxysubsubsection{\texorpdfstring{Call()}{Call()}}
+{\footnotesize\ttfamily Wt\+::\+Dbo\+::\+Call\+::\+Call (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Dbo_1_1Call}{Call}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+This transfer the call \char`\"{}token\char`\"{} to the copy. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Call_a902fdd5bc8ff98d7a100074d1de4e130}\label{classWt_1_1Dbo_1_1Call_a902fdd5bc8ff98d7a100074d1de4e130}} 
+\index{Wt::Dbo::Call@{Wt::Dbo::Call}!bind@{bind}}
+\index{bind@{bind}!Wt::Dbo::Call@{Wt::Dbo::Call}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Call}{Call}} \& Wt\+::\+Dbo\+::\+Call\+::bind (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Binds a value to the next positional marker. 
+
+This binds the {\ttfamily value} to the next positional marker. \mbox{\Hypertarget{classWt_1_1Dbo_1_1Call_a3208686427d7efeaf45e48d98c843e6a}\label{classWt_1_1Dbo_1_1Call_a3208686427d7efeaf45e48d98c843e6a}} 
+\index{Wt::Dbo::Call@{Wt::Dbo::Call}!run@{run}}
+\index{run@{run}!Wt::Dbo::Call@{Wt::Dbo::Call}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Wt\+::\+Dbo\+::\+Call\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Runs the database call. 
+
+This may throw an exception if there was a problem with the S\+QL command. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/Call.\+h\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/Call\+\_\+impl.\+h\end{DoxyCompactItemize}

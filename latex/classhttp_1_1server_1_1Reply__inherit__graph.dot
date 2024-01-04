@@ -1,0 +1,18 @@
+digraph "http::server::Reply"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="http::server::Reply",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="std::enable_shared\l_from_this\< Reply \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="http::server::ProxyReply",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhttp_1_1server_1_1ProxyReply.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="http::server::StaticReply",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhttp_1_1server_1_1StaticReply.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="http::server::StockReply",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhttp_1_1server_1_1StockReply.html",tooltip="A stock reply to be sent to a client."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="http::server::WtReply",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhttp_1_1server_1_1WtReply.html",tooltip="A Wt application reply to be sent to a client."];
+}

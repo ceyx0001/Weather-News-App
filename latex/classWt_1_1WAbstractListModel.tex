@@ -1,0 +1,111 @@
+\hypertarget{classWt_1_1WAbstractListModel}{}\doxysection{Wt\+::W\+Abstract\+List\+Model Class Reference}
+\label{classWt_1_1WAbstractListModel}\index{Wt::WAbstractListModel@{Wt::WAbstractListModel}}
+
+
+An abstract list model for use with Wt\textquotesingle{}s view classes.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Abstract\+List\+Model.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Abstract\+List\+Model\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Abstract\+List\+Model\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractListModel_a94ed5cf2c064a29832946254fde5cd5f}\label{classWt_1_1WAbstractListModel_a94ed5cf2c064a29832946254fde5cd5f}} 
+\mbox{\hyperlink{classWt_1_1WAbstractListModel_a94ed5cf2c064a29832946254fde5cd5f}{W\+Abstract\+List\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Create a new abstract list model. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractListModel_a1476c92cf08ce4548a08858f45007746}\label{classWt_1_1WAbstractListModel_a1476c92cf08ce4548a08858f45007746}} 
+\mbox{\hyperlink{classWt_1_1WAbstractListModel_a1476c92cf08ce4548a08858f45007746}{$\sim$\+W\+Abstract\+List\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WAbstractListModel_a3010cedec820ce2c882acdbd97bb5125}{parent}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractListModel_a26f1b86b9075a3546dba1bd6e5e4b7b3}{index}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the parent for a model index. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WAbstractListModel_a26f1b86b9075a3546dba1bd6e5e4b7b3}{index}} (int row, int column=0, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractListModel_a3010cedec820ce2c882acdbd97bb5125}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const override
+\begin{DoxyCompactList}\small\item\em Returns the child index for the given row and column. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WAbstractListModel_a4f90e4a2a6d5d7cc0454591bb04662af}{column\+Count}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractListModel_a3010cedec820ce2c882acdbd97bb5125}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const override
+\begin{DoxyCompactList}\small\item\em Returns the number of columns. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An abstract list model for use with Wt\textquotesingle{}s view classes. 
+
+An abstract list model specializes \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} for one-\/dimensional lists (i.\+e. a model with 1 column and no children).
+
+It cannot be used directly but must be subclassed. Subclassed models must at least reimplement \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab0709a8f71fd5df882f29bb29fd055f0}{row\+Count()}} to return the number of rows, and \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af77f707dd2340652717e7122cd7f4ffd}{data()}} to return data. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WAbstractListModel_a4f90e4a2a6d5d7cc0454591bb04662af}\label{classWt_1_1WAbstractListModel_a4f90e4a2a6d5d7cc0454591bb04662af}} 
+\index{Wt::WAbstractListModel@{Wt::WAbstractListModel}!columnCount@{columnCount}}
+\index{columnCount@{columnCount}!Wt::WAbstractListModel@{Wt::WAbstractListModel}}
+\doxysubsubsection{\texorpdfstring{columnCount()}{columnCount()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Abstract\+List\+Model\+::column\+Count (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of columns. 
+
+This returns the number of columns at index {\ttfamily parent}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab0709a8f71fd5df882f29bb29fd055f0}{row\+Count()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_abcf7912a95a0a60f8e9b1c37d30b8383}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractListModel_a26f1b86b9075a3546dba1bd6e5e4b7b3}\label{classWt_1_1WAbstractListModel_a26f1b86b9075a3546dba1bd6e5e4b7b3}} 
+\index{Wt::WAbstractListModel@{Wt::WAbstractListModel}!index@{index}}
+\index{index@{index}!Wt::WAbstractListModel@{Wt::WAbstractListModel}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Abstract\+List\+Model\+::index (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column = {\ttfamily 0},  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the child index for the given row and column. 
+
+When implementing this method, you can use \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af9b04fdec198dfbc1c9297ead93c8930}{create\+Index()}} to create an index that corresponds to the item at {\ttfamily row} and {\ttfamily column} within {\ttfamily parent}.
+
+If the location is invalid (out of bounds at the parent), then an invalid index must be returned.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractListModel_a3010cedec820ce2c882acdbd97bb5125}{parent()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractListModel_a3010cedec820ce2c882acdbd97bb5125}\label{classWt_1_1WAbstractListModel_a3010cedec820ce2c882acdbd97bb5125}} 
+\index{Wt::WAbstractListModel@{Wt::WAbstractListModel}!parent@{parent}}
+\index{parent@{parent}!Wt::WAbstractListModel@{Wt::WAbstractListModel}}
+\doxysubsubsection{\texorpdfstring{parent()}{parent()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Abstract\+List\+Model\+::parent (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the parent for a model index. 
+
+An implementation should use \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af9b04fdec198dfbc1c9297ead93c8930}{create\+Index()}} to create a model index that corresponds to the parent of a given index.
+
+\mbox{\hyperlink{classNote}{Note}} that the index itself may be stale (referencing a row/column within the parent that is outside the model geometry), but its parent (identified by the \mbox{\hyperlink{classWt_1_1WModelIndex_a870e6637b7beebef4f4dfaec9f08e0a2}{W\+Model\+Index\+::internal\+Pointer()}}) is referencing an existing parent. A stale index can only be used while the model geometry is being updated, i.\+e. during the emission of the corresponding \mbox{[}rows/columns\mbox{]}(Being)\mbox{[}Removed/\+Inserted\mbox{]}() signals.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractListModel_a26f1b86b9075a3546dba1bd6e5e4b7b3}{index()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Abstract\+List\+Model.\+h\end{DoxyCompactItemize}

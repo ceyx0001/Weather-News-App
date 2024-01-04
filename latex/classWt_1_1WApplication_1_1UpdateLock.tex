@@ -1,0 +1,85 @@
+\hypertarget{classWt_1_1WApplication_1_1UpdateLock}{}\doxysection{Wt\+::W\+Application\+::Update\+Lock Class Reference}
+\label{classWt_1_1WApplication_1_1UpdateLock}\index{Wt::WApplication::UpdateLock@{Wt::WApplication::UpdateLock}}
+
+
+A R\+A\+II lock for manipulating and updating the application and its widgets outside of the event loop.  
+
+
+
+
+{\ttfamily \#include $<$W\+Application.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WApplication_1_1UpdateLock_a117c05cee4d0e9c825155d0e77ca0c16}{Update\+Lock}} (\mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app)
+\begin{DoxyCompactList}\small\item\em Creates and locks the given application. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WApplication_1_1UpdateLock_a09011389bb0b9319acbcd32800852918}{operator bool}} () const
+\begin{DoxyCompactList}\small\item\em Tests whether the update lock was succesfully taken. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WApplication_1_1UpdateLock_a7d9898c9d19bd54675c7d178746659c0}\label{classWt_1_1WApplication_1_1UpdateLock_a7d9898c9d19bd54675c7d178746659c0}} 
+\mbox{\hyperlink{classWt_1_1WApplication_1_1UpdateLock_a7d9898c9d19bd54675c7d178746659c0}{$\sim$\+Update\+Lock}} ()
+\begin{DoxyCompactList}\small\item\em Releases the lock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WApplication_1_1UpdateLock_af1645c285e17e2781d05eae2debe0827}\label{classWt_1_1WApplication_1_1UpdateLock_af1645c285e17e2781d05eae2debe0827}} 
+std\+::unique\+\_\+ptr$<$ Update\+Lock\+Impl $>$ {\bfseries impl\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WApplication_1_1UpdateLock_aa9fa1446998aaf6d9c3824e6af9b6bef}\label{classWt_1_1WApplication_1_1UpdateLock_aa9fa1446998aaf6d9c3824e6af9b6bef}} 
+bool {\bfseries ok\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WApplication_1_1UpdateLock_a59f159dd904f669563320a185598a167}\label{classWt_1_1WApplication_1_1UpdateLock_a59f159dd904f669563320a185598a167}} 
+class {\bfseries W\+Application}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A R\+A\+II lock for manipulating and updating the application and its widgets outside of the event loop. 
+
+You can use this lock to manipulate widgets outside of the event loop. Inside the event loop (including events posted using \mbox{\hyperlink{classWt_1_1WServer_a191243d6c9718b18f6e1830562b01806}{W\+Server\+::post()}}), this lock is already held by the library itself.
+
+The lock is recursive, so trying to take a lock, while already holding a lock, will not block. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WApplication_1_1UpdateLock_a117c05cee4d0e9c825155d0e77ca0c16}\label{classWt_1_1WApplication_1_1UpdateLock_a117c05cee4d0e9c825155d0e77ca0c16}} 
+\index{Wt::WApplication::UpdateLock@{Wt::WApplication::UpdateLock}!UpdateLock@{UpdateLock}}
+\index{UpdateLock@{UpdateLock}!Wt::WApplication::UpdateLock@{Wt::WApplication::UpdateLock}}
+\doxysubsubsection{\texorpdfstring{UpdateLock()}{UpdateLock()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Application\+::\+Update\+Lock\+::\+Update\+Lock (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$}]{app }\end{DoxyParamCaption})}
+
+
+
+Creates and locks the given application. 
+
+The lock guarantees exclusive access to modify the application\textquotesingle{}s state.
+
+You should also consider \mbox{\hyperlink{classWt_1_1WServer_a191243d6c9718b18f6e1830562b01806}{W\+Server\+::post()}} for lock-\/free communication between different application sessions.
+
+As soon as the library decides to destroy the application, the lock will no longer succeed in taking the application lock. You can need to detect this by checking that after the lock is taken, the lock is taken\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{WApplication::UpdateLock lock(app);}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (lock) \{}
+\DoxyCodeLine{  \textcolor{comment}{// exclusive access to app state}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WApplication_1_1UpdateLock_a09011389bb0b9319acbcd32800852918}\label{classWt_1_1WApplication_1_1UpdateLock_a09011389bb0b9319acbcd32800852918}} 
+\index{Wt::WApplication::UpdateLock@{Wt::WApplication::UpdateLock}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!Wt::WApplication::UpdateLock@{Wt::WApplication::UpdateLock}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Application\+::\+Update\+Lock\+::operator bool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Tests whether the update lock was succesfully taken. 
+
+This may return {\ttfamily false} when the library has already decided to destroy the session (but before your application finalizer/destructor has run to notify helper threads that the application is destroyed). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Application.\+h\end{DoxyCompactItemize}

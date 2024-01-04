@@ -1,0 +1,228 @@
+\hypertarget{classWt_1_1EventSignal}{}\doxysection{Wt\+::Event\+Signal Class Reference}
+\label{classWt_1_1EventSignal}\index{Wt::EventSignal@{Wt::EventSignal}}
+
+
+A signal that conveys user-\/interface events.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Signal.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::Event\+Signal\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignal_a9577ca114ffdbd369ca4317854e63a51}\label{classWt_1_1EventSignal_a9577ca114ffdbd369ca4317854e63a51}} 
+{\bfseries Event\+Signal} (const char $\ast$name, \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} $\ast$object)
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignal_aa49b05f37fe150597add34d0a3d40f04}\label{classWt_1_1EventSignal_aa49b05f37fe150597add34d0a3d40f04}} 
+virtual bool \mbox{\hyperlink{classWt_1_1EventSignal_aa49b05f37fe150597add34d0a3d40f04}{is\+Connected}} () const override
+\begin{DoxyCompactList}\small\item\em Returns whether the signal is connected. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class F $>$ }\\\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} \mbox{\hyperlink{classWt_1_1EventSignal_a2669720d9c90a84df79e442f8aba60ec}{connect}} (F function)
+\begin{DoxyCompactList}\small\item\em Connects to a function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1EventSignal_a0321a1267b772232e8124d9f0635f636}\label{classWt_1_1EventSignal_a0321a1267b772232e8124d9f0635f636}} 
+{\footnotesize template$<$class F $>$ }\\\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} {\bfseries connect} (const \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} $\ast$target, F function)
+\item 
+{\footnotesize template$<$class T , class V $>$ }\\\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} \mbox{\hyperlink{classWt_1_1EventSignal_a11caa4eba52212308e87e27bfc9568a4}{connect}} (T $\ast$target, void(V\+::$\ast$method)())
+\begin{DoxyCompactList}\small\item\em Connects a slot that takes no arguments. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class V $>$ }\\\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} \mbox{\hyperlink{classWt_1_1EventSignal_aab8d98e9b5466df313c2cd98e210ad65}{connect}} (T $\ast$target, void(V\+::$\ast$method)(E))
+\begin{DoxyCompactList}\small\item\em Connects a slot that takes one argument. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class V $>$ }\\\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} \mbox{\hyperlink{classWt_1_1EventSignal_ac633cf7afbe79fcb913d84bee7bbd174}{connect}} (T $\ast$target, void(V\+::$\ast$method)(const E \&))
+\begin{DoxyCompactList}\small\item\em Connects a slot that takes a \textquotesingle{}const argument\&\textquotesingle{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1EventSignal_add4e7bf537e0559beebd40ed9b2cf17c}{connect}} (const std\+::string \&function)
+\begin{DoxyCompactList}\small\item\em Connects a Java\+Script function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1EventSignal_a0840ebd0715f6bca8e08085b3d20df74}\label{classWt_1_1EventSignal_a0840ebd0715f6bca8e08085b3d20df74}} 
+void {\bfseries connect} (const char $\ast$function)
+\item 
+void \mbox{\hyperlink{classWt_1_1EventSignal_a7459dfa6636d4c4f65cc8928eb8675a7}{connect}} (\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} \&slot)
+\begin{DoxyCompactList}\small\item\em Connects a slot that is specified as Java\+Script only. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1EventSignal_ab541fe8ebf0a24afd0240c8d13a1931b}{emit}} (E e=\mbox{\hyperlink{structWt_1_1NoClass}{No\+Class}}()) const
+\begin{DoxyCompactList}\small\item\em Emits the signal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1EventSignal_a84296930afc302d2f9022bca33176c98}{operator()}} (E e) const
+\begin{DoxyCompactList}\small\item\em Emits the signal. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1EventSignal_a36759227391706363510b4859d915088}\label{classWt_1_1EventSignal_a36759227391706363510b4859d915088}} 
+virtual \mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} {\bfseries connect} (\mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} $\ast$target, \mbox{\hyperlink{classWt_1_1WObject_aec904644d278b09d3f7e568fd2efd400}{W\+Object\+::\+Method}} method) override
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignal_ae74517c17951b45d2faa318ac63b7b20}\label{classWt_1_1EventSignal_ae74517c17951b45d2faa318ac63b7b20}} 
+{\footnotesize template$<$typename E $>$ }\\void {\bfseries connect} (const char $\ast$function)
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignal_ab18431becb67bd69d0b86e5143978437}\label{classWt_1_1EventSignal_ab18431becb67bd69d0b86e5143978437}} 
+{\footnotesize template$<$typename E $>$ }\\void {\bfseries connect} (const std\+::string \&function)
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignal_a6c8e3f42be01e26fc9e0452d325bcf07}\label{classWt_1_1EventSignal_a6c8e3f42be01e26fc9e0452d325bcf07}} 
+{\footnotesize template$<$typename E $>$ }\\void {\bfseries connect} (\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} \&slot)
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignal_a3ab799477d944ff0ded191eddf24e004}\label{classWt_1_1EventSignal_a3ab799477d944ff0ded191eddf24e004}} 
+{\footnotesize template$<$typename E $>$ }\\\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} {\bfseries connect} (\mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} $\ast$target, \mbox{\hyperlink{classWt_1_1WObject_aec904644d278b09d3f7e568fd2efd400}{W\+Object\+::\+Method}} method)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignal_aa959fbb44739233419f921b816c13821}\label{classWt_1_1EventSignal_aa959fbb44739233419f921b816c13821}} 
+static void $\ast$ {\bfseries operator new} (std\+::size\+\_\+t size)
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignal_a1a6e4beebde49622ca33fa736729036a}\label{classWt_1_1EventSignal_a1a6e4beebde49622ca33fa736729036a}} 
+static void {\bfseries operator delete} (void $\ast$deletable, std\+::size\+\_\+t size)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignal_a123af7bbd03a7f143a57a5fc1498baec}\label{classWt_1_1EventSignal_a123af7bbd03a7f143a57a5fc1498baec}} 
+virtual int {\bfseries argument\+Count} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignal_a1f4670723ac621c99172fcda7e83f5af}\label{classWt_1_1EventSignal_a1f4670723ac621c99172fcda7e83f5af}} 
+typedef \mbox{\hyperlink{structWt_1_1Signals_1_1Signal}{Signals\+::\+Signal}}$<$ E $>$ {\bfseries Signal\+Type}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignal_a38d1c27365daa97974683c867ff56605}\label{classWt_1_1EventSignal_a38d1c27365daa97974683c867ff56605}} 
+void {\bfseries process\+Dynamic} (const \mbox{\hyperlink{classWt_1_1JavaScriptEvent}{Java\+Script\+Event}} \&e) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1EventSignal_ab6a166079ec55c2dce9ebfd5d2e8946f}\label{classWt_1_1EventSignal_ab6a166079ec55c2dce9ebfd5d2e8946f}} 
+\mbox{\hyperlink{structWt_1_1Signals_1_1Signal}{Signal\+Type}} {\bfseries dynamic\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A signal that conveys user-\/interface events. 
+
+An Event\+Signal is a special Signal that may be triggered by user interface events such as a mouse click, key press, or focus change. They are made available through the library in widgets like \mbox{\hyperlink{classWt_1_1WInteractWidget}{W\+Interact\+Widget}}, and should not be instantiated directly.
+
+In addition to the behaviour of Signal, they are capable of both executing client-\/side and server-\/side slot code. They may learn Java\+Script from C++ code, through stateless slot learning, when connected to a slot that has a stateless implementation, using \mbox{\hyperlink{classWt_1_1WObject_adaa163b9e92933f3b2ff4ec58e2734c6}{W\+Object\+::implement\+Stateless()}}. Or they may be connected to a \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} which provides manual Java\+Script code.
+
+The typically relay UI event details, using event details objects like \mbox{\hyperlink{classWt_1_1WKeyEvent}{W\+Key\+Event}} or \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}, \mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1EventSignal_add4e7bf537e0559beebd40ed9b2cf17c}\label{classWt_1_1EventSignal_add4e7bf537e0559beebd40ed9b2cf17c}} 
+\index{Wt::EventSignal@{Wt::EventSignal}!connect@{connect}}
+\index{connect@{connect}!Wt::EventSignal@{Wt::EventSignal}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily void Wt\+::\+Event\+Signal\+::connect (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{function }\end{DoxyParamCaption})}
+
+
+
+Connects a Java\+Script function. 
+
+This will provide a client-\/side connection between the event and a Java\+Script function. The argument must be a Java\+Script function which optionally accepts two arguments (object and the event)\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{function}(object, event) \{}
+\DoxyCodeLine{  ...}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+Unlike a \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}}, there is no automatic connection management\+: the connection cannot be removed. If you need automatic connection management, you should use \mbox{\hyperlink{classWt_1_1EventSignal_a7459dfa6636d4c4f65cc8928eb8675a7}{connect(\+J\+Slot\&)}} instead. \mbox{\Hypertarget{classWt_1_1EventSignal_a2669720d9c90a84df79e442f8aba60ec}\label{classWt_1_1EventSignal_a2669720d9c90a84df79e442f8aba60ec}} 
+\index{Wt::EventSignal@{Wt::EventSignal}!connect@{connect}}
+\index{connect@{connect}!Wt::EventSignal@{Wt::EventSignal}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily template$<$class F $>$ \\
+\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} Wt\+::\+Event\+Signal\+::connect (\begin{DoxyParamCaption}\item[{F}]{function }\end{DoxyParamCaption})}
+
+
+
+Connects to a function. 
+
+This variant of the overloaded \mbox{\hyperlink{classWt_1_1EventSignal_a2669720d9c90a84df79e442f8aba60ec}{connect()}} method supports a template function object (which supports operator ()).
+
+When the receiver function is an object method, the signal will automatically be disconnected when the object is deleted, as long as the object inherits from \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} (or Wt\+::\+Signals\+::trackable). \mbox{\Hypertarget{classWt_1_1EventSignal_a7459dfa6636d4c4f65cc8928eb8675a7}\label{classWt_1_1EventSignal_a7459dfa6636d4c4f65cc8928eb8675a7}} 
+\index{Wt::EventSignal@{Wt::EventSignal}!connect@{connect}}
+\index{connect@{connect}!Wt::EventSignal@{Wt::EventSignal}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily void Wt\+::\+Event\+Signal\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} \&}]{slot }\end{DoxyParamCaption})}
+
+
+
+Connects a slot that is specified as Java\+Script only. 
+
+This will provide a client-\/side connection between the event and some Java\+Script code as implemented by the slot. Unlike other connects, this does not cause the event to propagated to the application, and thus the state changes caused by the Java\+Script slot are not tracked client-\/side.
+
+The connection is tracked, taking into account the life-\/time of the \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} object, and can be updated by modifying the {\ttfamily slot}. If you do not need connection management (e.\+g. because the slot has the same life-\/time as the signal), then you can use connect(const std\+::string\&) instead. \mbox{\Hypertarget{classWt_1_1EventSignal_a11caa4eba52212308e87e27bfc9568a4}\label{classWt_1_1EventSignal_a11caa4eba52212308e87e27bfc9568a4}} 
+\index{Wt::EventSignal@{Wt::EventSignal}!connect@{connect}}
+\index{connect@{connect}!Wt::EventSignal@{Wt::EventSignal}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily template$<$class T , class V $>$ \\
+\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} Wt\+::\+Event\+Signal\+::connect (\begin{DoxyParamCaption}\item[{T $\ast$}]{target,  }\item[{void(V\+::$\ast$)()}]{method }\end{DoxyParamCaption})}
+
+
+
+Connects a slot that takes no arguments. 
+
+If a stateless implementation is specified for the slot, then the visual behaviour will be learned in terms of Java\+Script, and will be cached on the client side for instant feed-\/back, in addition running the slot on the server.
+
+The slot is as a {\ttfamily method} of an object {\ttfamily target} of class {\ttfamily T}, which equals class {\ttfamily V}, or is a base class of class {\ttfamily V}. In addition, to check for stateless implementations, class {\ttfamily T} must be also be a descendant of \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}}. Thus, the following statement must return a non-\/null pointer\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{WObject *o = \textcolor{keyword}{dynamic\_cast<}WObject *\textcolor{keyword}{>}(\textcolor{keyword}{dynamic\_cast<}V *\textcolor{keyword}{>}(target));}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1EventSignal_ac633cf7afbe79fcb913d84bee7bbd174}\label{classWt_1_1EventSignal_ac633cf7afbe79fcb913d84bee7bbd174}} 
+\index{Wt::EventSignal@{Wt::EventSignal}!connect@{connect}}
+\index{connect@{connect}!Wt::EventSignal@{Wt::EventSignal}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily template$<$class T , class V $>$ \\
+\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} Wt\+::\+Event\+Signal\+::connect (\begin{DoxyParamCaption}\item[{T $\ast$}]{target,  }\item[{void(V\+::$\ast$)(const E \&)}]{method }\end{DoxyParamCaption})}
+
+
+
+Connects a slot that takes a \textquotesingle{}const argument\&\textquotesingle{}. 
+
+This is only possible for signals that take at least one argument. \mbox{\Hypertarget{classWt_1_1EventSignal_aab8d98e9b5466df313c2cd98e210ad65}\label{classWt_1_1EventSignal_aab8d98e9b5466df313c2cd98e210ad65}} 
+\index{Wt::EventSignal@{Wt::EventSignal}!connect@{connect}}
+\index{connect@{connect}!Wt::EventSignal@{Wt::EventSignal}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily template$<$class T , class V $>$ \\
+\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} Wt\+::\+Event\+Signal\+::connect (\begin{DoxyParamCaption}\item[{T $\ast$}]{target,  }\item[{void(V\+::$\ast$)(E)}]{method }\end{DoxyParamCaption})}
+
+
+
+Connects a slot that takes one argument. 
+
+This is only possible for signals that take at least one argument. \mbox{\Hypertarget{classWt_1_1EventSignal_ab541fe8ebf0a24afd0240c8d13a1931b}\label{classWt_1_1EventSignal_ab541fe8ebf0a24afd0240c8d13a1931b}} 
+\index{Wt::EventSignal@{Wt::EventSignal}!emit@{emit}}
+\index{emit@{emit}!Wt::EventSignal@{Wt::EventSignal}}
+\doxysubsubsection{\texorpdfstring{emit()}{emit()}}
+{\footnotesize\ttfamily void Wt\+::\+Event\+Signal\+::emit (\begin{DoxyParamCaption}\item[{E}]{e = {\ttfamily \mbox{\hyperlink{structWt_1_1NoClass}{No\+Class}}()} }\end{DoxyParamCaption}) const}
+
+
+
+Emits the signal. 
+
+This will cause all connected slots to be triggered, with the given argument. \mbox{\Hypertarget{classWt_1_1EventSignal_a84296930afc302d2f9022bca33176c98}\label{classWt_1_1EventSignal_a84296930afc302d2f9022bca33176c98}} 
+\index{Wt::EventSignal@{Wt::EventSignal}!operator()@{operator()}}
+\index{operator()@{operator()}!Wt::EventSignal@{Wt::EventSignal}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void Wt\+::\+Event\+Signal\+::operator() (\begin{DoxyParamCaption}\item[{E}]{e }\end{DoxyParamCaption}) const}
+
+
+
+Emits the signal. 
+
+This is equivalent to \mbox{\hyperlink{classWt_1_1EventSignal_ab541fe8ebf0a24afd0240c8d13a1931b}{emit()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1EventSignal_ab541fe8ebf0a24afd0240c8d13a1931b}{emit()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Event.\+h\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Signal.\+h\end{DoxyCompactItemize}

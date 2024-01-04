@@ -1,0 +1,410 @@
+\hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird}{}\doxysection{Wt\+::Dbo\+::backend\+::Firebird Class Reference}
+\label{classWt_1_1Dbo_1_1backend_1_1Firebird}\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+
+
+A Firebird connection.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Dbo/backend/\+Firebird.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Dbo\+::backend\+::Firebird\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Dbo\+::backend\+::Firebird\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_a2e5453a38e548108c18cb79a2b4a7388}{Firebird}} ()
+\begin{DoxyCompactList}\small\item\em Creates a Firebird backend connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_acfbb6df642e4beed3004d4bbfc7428f7}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_acfbb6df642e4beed3004d4bbfc7428f7}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_acfbb6df642e4beed3004d4bbfc7428f7}{Firebird}} (const std\+::string \&Server\+Name, const std\+::string \&Database\+Name, const std\+::string \&User\+Name, const std\+::string \&User\+Password, const std\+::string \&Role\+Name, const std\+::string \&Char\+Set=std\+::string(), const std\+::string \&Create\+Params=std\+::string())
+\begin{DoxyCompactList}\small\item\em Creates and opens a Firebird backend connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a6e3631cd5519f11d408fc8ca9d12dab4}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a6e3631cd5519f11d408fc8ca9d12dab4}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_a6e3631cd5519f11d408fc8ca9d12dab4}{Firebird}} (\mbox{\hyperlink{classIBPP_1_1Ptr}{I\+B\+P\+P\+::\+Database}} db)
+\begin{DoxyCompactList}\small\item\em Creates and opens a Firebird backend connection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_ab88a5f9e24a76871d133e75f60c1a9fc}{Firebird}} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird}{Firebird}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_a1194a692ec4cf59a456f866244f7ecd8}{$\sim$\+Firebird}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_a005c4bbefcffeaee86b90846ea5dc9e8}{connect}} (const std\+::string \&Server\+Name, const std\+::string \&Database\+Name, const std\+::string \&User\+Name, const std\+::string \&User\+Password, const std\+::string \&Role\+Name, const std\+::string \&Char\+Set=std\+::string(), const std\+::string \&Create\+Params=std\+::string())
+\begin{DoxyCompactList}\small\item\em Tries to connect. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_a3dcece474910b271c6c2bf1a19881e55}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Clones the connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_aa7ba16b32a3d92e3cc4160d986d08ad1}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_aa7ba16b32a3d92e3cc4160d986d08ad1}} 
+\mbox{\hyperlink{classIBPP_1_1Ptr}{I\+B\+P\+P\+::\+Database}} \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_aa7ba16b32a3d92e3cc4160d986d08ad1}{connection}} ()
+\begin{DoxyCompactList}\small\item\em Returns the underlying connection handle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_adf60348bde13636027137caf4cc33619}{start\+Transaction}} () override
+\begin{DoxyCompactList}\small\item\em Starts a transaction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_a4aec40daeff84ae847414433fb1993de}{commit\+Transaction}} () override
+\begin{DoxyCompactList}\small\item\em Commits a transaction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_afb6f94dae5695f9d4c465fb2196d73c4}{rollback\+Transaction}} () override
+\begin{DoxyCompactList}\small\item\em Rolls back a transaction. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_a7697265c98cab6f65575a7115d2f3d49}{prepare\+Statement}} (const std\+::string \&sql) override
+\begin{DoxyCompactList}\small\item\em Prepares a statement. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_a2fca38f4d77957de42d39187e9298a9e}{prepare\+For\+Drop\+Tables}} () override
+\begin{DoxyCompactList}\small\item\em Execute code before dropping the tables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Methods that return dialect information}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_a261829033854243cd1b4d4dfe6e72e98}{autoincrement\+Sql}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type modifier. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_a4bceaa3a180d505d97be91c01ca96ab8}{autoincrement\+Create\+Sequence\+Sql}} (const std\+::string \&table, const std\+::string \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the S\+QL statement(s) required to create an id sequence. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_a67e5dffd196fa6c838bc485636c0c861}{autoincrement\+Drop\+Sequence\+Sql}} (const std\+::string \&table, const std\+::string \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the S\+QL statement(s) required to drop an id sequence. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_a1acd282a21e9eefd085955336e765352}{autoincrement\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_acd043c9e11b587b6917f92719e3c9cec}{autoincrement\+Insert\+Suffix}} (const std\+::string \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the suffix for an \textquotesingle{}autoincrement\textquotesingle{} insert statement. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_a222a7f89882e127631be0544c6d59ee3}{date\+Time\+Type}} (\mbox{\hyperlink{namespaceWt_1_1Dbo_af213c090c1ccddc36d70d56e0804047f}{Sql\+Date\+Time\+Type}} type) const override
+\begin{DoxyCompactList}\small\item\em Returns the date/time type. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_a6a2618469dfe96814932662bd538c8a6}{blob\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the blob type. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_a85c81de754ade1267f7c0320176d9367}{text\+Type}} (int size) const override
+\begin{DoxyCompactList}\small\item\em Returns the text type. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_a0136d8a8271e6cd4d5daf40842af7986}{boolean\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the boolean type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a89cee505e109f38c12907f3f5c0122de}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a89cee505e109f38c12907f3f5c0122de}} 
+virtual \mbox{\hyperlink{namespaceWt_1_1Dbo_a5319c15910a9f9fd7744bb3061b9c643}{Limit\+Query}} {\bfseries limit\+Query\+Method} () const override
+\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_a2a37798da24bdd0495ebe3ad91f1853c}{support\+Alter\+Table}} () const override
+\begin{DoxyCompactList}\small\item\em Returns true if the backend support Alter \mbox{\hyperlink{structTable}{Table}}. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_a8e44d67e127a9c1ef987c19b386f7ca1}{uses\+Rows\+From\+To}} () const override
+\begin{DoxyCompactList}\small\item\em Returns whether the S\+QL dialect uses \textquotesingle{}R\+O\+WS ? TO ?\textquotesingle{}, limit or rownum for partial select results. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_acb365a4a60935f5a431af66679e481ce}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_acb365a4a60935f5a431af66679e481ce}} 
+Firebird\+\_\+impl $\ast$ {\bfseries impl\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a2e5d5b927c58212cbb944d1c29978baf}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a2e5d5b927c58212cbb944d1c29978baf}} 
+bool {\bfseries m\+\_\+writable\+Transaction}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_aec4d4c0564c6c95dced50ac713f41d0f}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_aec4d4c0564c6c95dced50ac713f41d0f}} 
+class {\bfseries Firebird\+Statement}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A Firebird connection. 
+
+This class provides the backend implementation for Firebird databases. It supports Firebird databases with version 2.\+1 or higher.
+
+\begin{DoxyWarning}{Warning}
+The Firebird backend is {\bfseries{U\+N\+M\+A\+I\+N\+T\+A\+I\+N\+ED}}, and may not work at all with recent versions of Firebird. This backend is based on I\+B\+PP, a project which has not seen any activity in a very long time. Emweb has no plans to continue supporting the Firebird backend. 
+\end{DoxyWarning}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a2e5453a38e548108c18cb79a2b4a7388}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a2e5453a38e548108c18cb79a2b4a7388}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!Firebird@{Firebird}}
+\index{Firebird@{Firebird}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{Firebird()}{Firebird()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wt\+::\+Dbo\+::backend\+::\+Firebird\+::\+Firebird (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a Firebird backend connection. 
+
+The connection is not yet open, and requires a \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird_a005c4bbefcffeaee86b90846ea5dc9e8}{connect()}} before it can be used. \mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_ab88a5f9e24a76871d133e75f60c1a9fc}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_ab88a5f9e24a76871d133e75f60c1a9fc}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!Firebird@{Firebird}}
+\index{Firebird@{Firebird}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{Firebird()}{Firebird()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wt\+::\+Dbo\+::backend\+::\+Firebird\+::\+Firebird (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Firebird}{Firebird}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+This creates a new backend connection with the same settings as another connection. \mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a1194a692ec4cf59a456f866244f7ecd8}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a1194a692ec4cf59a456f866244f7ecd8}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!````~Firebird@{$\sim$Firebird}}
+\index{````~Firebird@{$\sim$Firebird}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{$\sim$Firebird()}{~Firebird()}}
+{\footnotesize\ttfamily virtual Wt\+::\+Dbo\+::backend\+::\+Firebird\+::$\sim$\+Firebird (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+Closes the connection. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a4bceaa3a180d505d97be91c01ca96ab8}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a4bceaa3a180d505d97be91c01ca96ab8}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!autoincrementCreateSequenceSql@{autoincrementCreateSequenceSql}}
+\index{autoincrementCreateSequenceSql@{autoincrementCreateSequenceSql}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{autoincrementCreateSequenceSql()}{autoincrementCreateSequenceSql()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ Wt\+::\+Dbo\+::backend\+::\+Firebird\+::autoincrement\+Create\+Sequence\+Sql (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{table,  }\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the S\+QL statement(s) required to create an id sequence. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aba79d84c7c91faae06f954e6d3d390ab}{Session\+::create\+Tables()}} to create the id sequence for a table. The table\textquotesingle{}s name and primary key are passed as arguments to this function and can be used to construct an S\+QL sequence that is unique for the table. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a7922dac3fd8a808dbbeef97a5a772e3f}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a67e5dffd196fa6c838bc485636c0c861}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a67e5dffd196fa6c838bc485636c0c861}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!autoincrementDropSequenceSql@{autoincrementDropSequenceSql}}
+\index{autoincrementDropSequenceSql@{autoincrementDropSequenceSql}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{autoincrementDropSequenceSql()}{autoincrementDropSequenceSql()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ Wt\+::\+Dbo\+::backend\+::\+Firebird\+::autoincrement\+Drop\+Sequence\+Sql (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{table,  }\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the S\+QL statement(s) required to drop an id sequence. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a4c1fedb21e4e1cc44b182a34e8ebb4ef}{Session\+::drop\+Tables()}} to drop the id sequence for a table. The table\textquotesingle{}s name and primary key are passed as arguments to this function and can be used to construct an S\+QL sequence that is unique for the table. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a188acc931dd1d3dbd3a21e28783f7bd2}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_acd043c9e11b587b6917f92719e3c9cec}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_acd043c9e11b587b6917f92719e3c9cec}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!autoincrementInsertSuffix@{autoincrementInsertSuffix}}
+\index{autoincrementInsertSuffix@{autoincrementInsertSuffix}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{autoincrementInsertSuffix()}{autoincrementInsertSuffix()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Dbo\+::backend\+::\+Firebird\+::autoincrement\+Insert\+Suffix (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the suffix for an \textquotesingle{}autoincrement\textquotesingle{} insert statement. 
+
+This is appended to the {\ttfamily insert} statement, since some back-\/ends need to be indicated that they should return the autoincrement id. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_abda2502e05a08d4728ff8f026663321f}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a261829033854243cd1b4d4dfe6e72e98}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a261829033854243cd1b4d4dfe6e72e98}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!autoincrementSql@{autoincrementSql}}
+\index{autoincrementSql@{autoincrementSql}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{autoincrementSql()}{autoincrementSql()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Dbo\+::backend\+::\+Firebird\+::autoincrement\+Sql (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type modifier. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aba79d84c7c91faae06f954e6d3d390ab}{Session\+::create\+Tables()}} to create the {\itshape id} column. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a8c00fd64eb82999880cc813ef3866f5d}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a1acd282a21e9eefd085955336e765352}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a1acd282a21e9eefd085955336e765352}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!autoincrementType@{autoincrementType}}
+\index{autoincrementType@{autoincrementType}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{autoincrementType()}{autoincrementType()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Dbo\+::backend\+::\+Firebird\+::autoincrement\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aba79d84c7c91faae06f954e6d3d390ab}{Session\+::create\+Tables()}} to create the {\itshape id} column. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_aff293ff5ad586e15143729eb38300ad6}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a6a2618469dfe96814932662bd538c8a6}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a6a2618469dfe96814932662bd538c8a6}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!blobType@{blobType}}
+\index{blobType@{blobType}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{blobType()}{blobType()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Wt\+::\+Dbo\+::backend\+::\+Firebird\+::blob\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the blob type. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_ae2bbddef8fd8c11687d23187920dc4da}{Sql\+Statement\+::bind(int, const std\+::vector$<$unsigned char$>$\&)}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a68a272eaafeef5e04912914f0662da39}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a0136d8a8271e6cd4d5daf40842af7986}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a0136d8a8271e6cd4d5daf40842af7986}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!booleanType@{booleanType}}
+\index{booleanType@{booleanType}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{booleanType()}{booleanType()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Wt\+::\+Dbo\+::backend\+::\+Firebird\+::boolean\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the boolean type. 
+
+This method will return \char`\"{}boolean\char`\"{} by default. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a754764408ff1d5a0fb502541949addd2}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a3dcece474910b271c6c2bf1a19881e55}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a3dcece474910b271c6c2bf1a19881e55}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!clone@{clone}}
+\index{clone@{clone}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}}$>$ Wt\+::\+Dbo\+::backend\+::\+Firebird\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clones the connection. 
+
+Returns a new connection object that is configured like this object. This is used by connection pool implementations to create its connections. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a71270c0d9258bc6f9f7177799db49083}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a4aec40daeff84ae847414433fb1993de}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a4aec40daeff84ae847414433fb1993de}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!commitTransaction@{commitTransaction}}
+\index{commitTransaction@{commitTransaction}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{commitTransaction()}{commitTransaction()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::backend\+::\+Firebird\+::commit\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Commits a transaction. 
+
+This function commits a transaction. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a38ed9ab4831a0bfd8694f250813803bf}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a005c4bbefcffeaee86b90846ea5dc9e8}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a005c4bbefcffeaee86b90846ea5dc9e8}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!connect@{connect}}
+\index{connect@{connect}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily bool Wt\+::\+Dbo\+::backend\+::\+Firebird\+::connect (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{Server\+Name,  }\item[{const std\+::string \&}]{Database\+Name,  }\item[{const std\+::string \&}]{User\+Name,  }\item[{const std\+::string \&}]{User\+Password,  }\item[{const std\+::string \&}]{Role\+Name,  }\item[{const std\+::string \&}]{Char\+Set = {\ttfamily std\+:\+:string()},  }\item[{const std\+::string \&}]{Create\+Params = {\ttfamily std\+:\+:string()} }\end{DoxyParamCaption})}
+
+
+
+Tries to connect. 
+
+Throws an exception if there was a problem, otherwise returns {\ttfamily true}. \mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a222a7f89882e127631be0544c6d59ee3}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a222a7f89882e127631be0544c6d59ee3}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!dateTimeType@{dateTimeType}}
+\index{dateTimeType@{dateTimeType}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{dateTimeType()}{dateTimeType()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Wt\+::\+Dbo\+::backend\+::\+Firebird\+::date\+Time\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWt_1_1Dbo_af213c090c1ccddc36d70d56e0804047f}{Sql\+Date\+Time\+Type}}}]{type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the date/time type. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_afbe4698684c7b9b355748a199e0b0558}{Sql\+Statement\+::bind(int, const std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point\&, Sql\+Date\+Time\+Type)}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_af1f3290a984288175c6d82d088d0636c}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a2fca38f4d77957de42d39187e9298a9e}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a2fca38f4d77957de42d39187e9298a9e}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!prepareForDropTables@{prepareForDropTables}}
+\index{prepareForDropTables@{prepareForDropTables}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{prepareForDropTables()}{prepareForDropTables()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::backend\+::\+Firebird\+::prepare\+For\+Drop\+Tables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Execute code before dropping the tables. 
+
+This method is called before calling \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a4c1fedb21e4e1cc44b182a34e8ebb4ef}{Session\+::drop\+Tables()}}. The default implementation is empty. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a4292a8406fd1c82f6bec386ae3200d17}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a7697265c98cab6f65575a7115d2f3d49}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a7697265c98cab6f65575a7115d2f3d49}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!prepareStatement@{prepareStatement}}
+\index{prepareStatement@{prepareStatement}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{prepareStatement()}{prepareStatement()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}}$>$ Wt\+::\+Dbo\+::backend\+::\+Firebird\+::prepare\+Statement (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sql }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Prepares a statement. 
+
+Returns the prepared statement. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a4990470cf601ed8b523d97a7f8849210}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_afb6f94dae5695f9d4c465fb2196d73c4}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_afb6f94dae5695f9d4c465fb2196d73c4}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!rollbackTransaction@{rollbackTransaction}}
+\index{rollbackTransaction@{rollbackTransaction}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{rollbackTransaction()}{rollbackTransaction()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::backend\+::\+Firebird\+::rollback\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rolls back a transaction. 
+
+This function rolls back a transaction. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_aee5a42b2f3b452d32360a1c31f59f22d}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_adf60348bde13636027137caf4cc33619}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_adf60348bde13636027137caf4cc33619}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!startTransaction@{startTransaction}}
+\index{startTransaction@{startTransaction}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{startTransaction()}{startTransaction()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::backend\+::\+Firebird\+::start\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Starts a transaction. 
+
+This function starts a transaction. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_abcddbb27f50192113d14c66a5ca10731}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a2a37798da24bdd0495ebe3ad91f1853c}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a2a37798da24bdd0495ebe3ad91f1853c}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!supportAlterTable@{supportAlterTable}}
+\index{supportAlterTable@{supportAlterTable}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{supportAlterTable()}{supportAlterTable()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::backend\+::\+Firebird\+::support\+Alter\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns true if the backend support Alter \mbox{\hyperlink{structTable}{Table}}. 
+
+This method will return false by default. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a35bfadac642cc5d6cfbf8c123a8b4a2f}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a85c81de754ade1267f7c0320176d9367}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a85c81de754ade1267f7c0320176d9367}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!textType@{textType}}
+\index{textType@{textType}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{textType()}{textType()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Dbo\+::backend\+::\+Firebird\+::text\+Type (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the text type. 
+
+This is the text type for a string. If {\ttfamily size} = -\/1, then a type should be returned which does not require size information, otherwise a type should be returned that limits the size of the stored string to {\ttfamily size}.
+
+This method will return \char`\"{}text\char`\"{} by default if size = -\/1, and \char`\"{}varchar(size)\char`\"{} otherwise.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_ad8b53ca87bdef11ceceb96ab05c260b9}{Sql\+Statement\+::bind(int column, const std\+::string\& value)}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a358a4b38123449ba8589ae43bc1d5fc9}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Firebird_a8e44d67e127a9c1ef987c19b386f7ca1}\label{classWt_1_1Dbo_1_1backend_1_1Firebird_a8e44d67e127a9c1ef987c19b386f7ca1}} 
+\index{Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}!usesRowsFromTo@{usesRowsFromTo}}
+\index{usesRowsFromTo@{usesRowsFromTo}!Wt::Dbo::backend::Firebird@{Wt::Dbo::backend::Firebird}}
+\doxysubsubsection{\texorpdfstring{usesRowsFromTo()}{usesRowsFromTo()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::backend\+::\+Firebird\+::uses\+Rows\+From\+To (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns whether the S\+QL dialect uses \textquotesingle{}R\+O\+WS ? TO ?\textquotesingle{}, limit or rownum for partial select results. 
+
+This is an alternative S\+QL dialect option to the (non-\/standard) \textquotesingle{}O\+F\+F\+S\+ET ? L\+I\+M\+IT ?\textquotesingle{} syntax.
+
+The default implementation returns {\ttfamily \mbox{\hyperlink{namespaceWt_1_1Dbo_a5319c15910a9f9fd7744bb3061b9c643a80d2677cf518f4d04320042f4ea6c146}{Limit\+Query\+::\+Limit}}}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_adf7c12f1d5decd698b2d05214e7ad9bd}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/backend/Firebird.\+h\end{DoxyCompactItemize}

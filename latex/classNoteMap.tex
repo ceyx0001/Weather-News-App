@@ -1,0 +1,220 @@
+\hypertarget{classNoteMap}{}\doxysection{Note\+Map Class Reference}
+\label{classNoteMap}\index{NoteMap@{NoteMap}}
+
+
+Sticky notes container.  
+
+
+
+
+{\ttfamily \#include $<$Note\+Map.\+h$>$}
+
+
+
+Inheritance diagram for Note\+Map\+:
+% FIG 0
+
+
+Collaboration diagram for Note\+Map\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNoteMap_a45be9c3c1a0c6b5920798c20c9049dae}{Note\+Map}} (std\+::string username)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNoteMap_a216ea85584e140582d4659d7dc55e518}{$\sim$\+Note\+Map}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNoteMap_a54cd0563dcf7d42dab8fc01d30e24318}{save\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Save Notes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNoteMap_ad9c6219d42a1c79f581825a8adba46d8}{del\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Delete Notes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNoteMap_a8df8a3170e0995a90922ee55bf41bd35}{load\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Load Notes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNoteMap_af94052517735c8b1430e262738ccc4fb}{add}} (\mbox{\hyperlink{classNote}{Note}} list)
+\begin{DoxyCompactList}\small\item\em Add \mbox{\hyperlink{classNote}{Note}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classNoteMap_a33e52ff4c67945f8d55d45bd64c08db5}{del}} (\mbox{\hyperlink{classNote}{Note}} list)
+\begin{DoxyCompactList}\small\item\em Delete \mbox{\hyperlink{classNote}{Note}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNote}{Note}} \mbox{\hyperlink{classNoteMap_a3dd0de92d16482912ce0b5854f07a342}{get}} (std\+::string key)
+\begin{DoxyCompactList}\small\item\em Get \mbox{\hyperlink{classNote}{Note}}. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classNote}{Note}} $>$ \mbox{\hyperlink{classNoteMap_a5f513f9d097844e749918dd385a0ac42}{get\+Notes}} ()
+\begin{DoxyCompactList}\small\item\em Get all \mbox{\hyperlink{classNote}{Note}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNoteMap_aafef13f0f28f543362f5d73340ef142c}\label{classNoteMap_aafef13f0f28f543362f5d73340ef142c}} 
+std\+::string {\bfseries username}
+\item 
+\mbox{\Hypertarget{classNoteMap_a3c1b359b87b3a2231f35a5d2f35d02a1}\label{classNoteMap_a3c1b359b87b3a2231f35a5d2f35d02a1}} 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classNote}{Note}} $>$ {\bfseries notes}
+\item 
+\mbox{\Hypertarget{classNoteMap_aa038238cec9807afaa9370a44561dd25}\label{classNoteMap_aa038238cec9807afaa9370a44561dd25}} 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{classNote}{Note}} $>$ {\bfseries batch\+To\+Del}
+\item 
+\mbox{\Hypertarget{classNoteMap_ad38257eddfa33bb3109fa32c86ccb5ac}\label{classNoteMap_ad38257eddfa33bb3109fa32c86ccb5ac}} 
+\mbox{\hyperlink{classDatabase}{Database}} {\bfseries db}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sticky notes container. 
+
+The \mbox{\hyperlink{classNoteMap}{Note\+Map}} object holds \mbox{\hyperlink{classNote}{Note}} objects and performs data operations such as saving and deleting them from the database. \begin{DoxyAuthor}{Author}
+Jun Shao 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNoteMap_a45be9c3c1a0c6b5920798c20c9049dae}\label{classNoteMap_a45be9c3c1a0c6b5920798c20c9049dae}} 
+\index{NoteMap@{NoteMap}!NoteMap@{NoteMap}}
+\index{NoteMap@{NoteMap}!NoteMap@{NoteMap}}
+\doxysubsubsection{\texorpdfstring{NoteMap()}{NoteMap()}}
+{\footnotesize\ttfamily Note\+Map\+::\+Note\+Map (\begin{DoxyParamCaption}\item[{std\+::string}]{username }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor for a \mbox{\hyperlink{classNoteMap}{Note\+Map}} object that initialzes all members. 
+\begin{DoxyParams}{Parameters}
+{\em username} & is the session username. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNoteMap_a216ea85584e140582d4659d7dc55e518}\label{classNoteMap_a216ea85584e140582d4659d7dc55e518}} 
+\index{NoteMap@{NoteMap}!````~NoteMap@{$\sim$NoteMap}}
+\index{````~NoteMap@{$\sim$NoteMap}!NoteMap@{NoteMap}}
+\doxysubsubsection{\texorpdfstring{$\sim$NoteMap()}{~NoteMap()}}
+{\footnotesize\ttfamily Note\+Map\+::$\sim$\+Note\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default destructor. 
+
+Default destructor for a \mbox{\hyperlink{classNoteMap}{Note\+Map}} object but does nothing. \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNoteMap_af94052517735c8b1430e262738ccc4fb}\label{classNoteMap_af94052517735c8b1430e262738ccc4fb}} 
+\index{NoteMap@{NoteMap}!add@{add}}
+\index{add@{add}!NoteMap@{NoteMap}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Note\+Map\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNote}{Note}}}]{note }\end{DoxyParamCaption})}
+
+
+
+Add \mbox{\hyperlink{classNote}{Note}}. 
+
+Adds to notes a new \mbox{\hyperlink{classNote}{Note}}. 
+\begin{DoxyParams}{Parameters}
+{\em note} & is the \mbox{\hyperlink{classNote}{Note}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNoteMap_a33e52ff4c67945f8d55d45bd64c08db5}\label{classNoteMap_a33e52ff4c67945f8d55d45bd64c08db5}} 
+\index{NoteMap@{NoteMap}!del@{del}}
+\index{del@{del}!NoteMap@{NoteMap}}
+\doxysubsubsection{\texorpdfstring{del()}{del()}}
+{\footnotesize\ttfamily void Note\+Map\+::del (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classNote}{Note}}}]{note }\end{DoxyParamCaption})}
+
+
+
+Delete \mbox{\hyperlink{classNote}{Note}}. 
+
+Deletes a \mbox{\hyperlink{classNote}{Note}} from notes and adds it to batch\+To\+Del. 
+\begin{DoxyParams}{Parameters}
+{\em note} & is the \mbox{\hyperlink{classNote}{Note}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNoteMap_ad9c6219d42a1c79f581825a8adba46d8}\label{classNoteMap_ad9c6219d42a1c79f581825a8adba46d8}} 
+\index{NoteMap@{NoteMap}!delData@{delData}}
+\index{delData@{delData}!NoteMap@{NoteMap}}
+\doxysubsubsection{\texorpdfstring{delData()}{delData()}}
+{\footnotesize\ttfamily void Note\+Map\+::del\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Delete Notes. 
+
+Deletes the \mbox{\hyperlink{classNoteMap}{Note\+Map}}\textquotesingle{}s map of \mbox{\hyperlink{classNote}{Note}} objects in batch\+To\+Del from the database which were intended to be removed by the user. \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classData_a80fda217e8c5777b662bae60bce00776}{Data}}.
+
+\mbox{\Hypertarget{classNoteMap_a3dd0de92d16482912ce0b5854f07a342}\label{classNoteMap_a3dd0de92d16482912ce0b5854f07a342}} 
+\index{NoteMap@{NoteMap}!get@{get}}
+\index{get@{get}!NoteMap@{NoteMap}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNote}{Note}} Note\+Map\+::get (\begin{DoxyParamCaption}\item[{std\+::string}]{key }\end{DoxyParamCaption})}
+
+
+
+Get \mbox{\hyperlink{classNote}{Note}}. 
+
+Returns the \mbox{\hyperlink{classNote}{Note}} associated with a key. 
+\begin{DoxyParams}{Parameters}
+{\em key} & is the key of the \mbox{\hyperlink{classNote}{Note}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \mbox{\hyperlink{classNote}{Note}} associated with the key. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNoteMap_a5f513f9d097844e749918dd385a0ac42}\label{classNoteMap_a5f513f9d097844e749918dd385a0ac42}} 
+\index{NoteMap@{NoteMap}!getNotes@{getNotes}}
+\index{getNotes@{getNotes}!NoteMap@{NoteMap}}
+\doxysubsubsection{\texorpdfstring{getNotes()}{getNotes()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ string, \mbox{\hyperlink{classNote}{Note}} $>$ Note\+Map\+::get\+Notes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get all \mbox{\hyperlink{classNote}{Note}}. 
+
+Returns all of the \mbox{\hyperlink{classNote}{Note}} objects in notes. \begin{DoxyReturn}{Returns}
+The unordered\+\_\+map of \mbox{\hyperlink{classNote}{Note}} objects in notes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNoteMap_a8df8a3170e0995a90922ee55bf41bd35}\label{classNoteMap_a8df8a3170e0995a90922ee55bf41bd35}} 
+\index{NoteMap@{NoteMap}!loadData@{loadData}}
+\index{loadData@{loadData}!NoteMap@{NoteMap}}
+\doxysubsubsection{\texorpdfstring{loadData()}{loadData()}}
+{\footnotesize\ttfamily void Note\+Map\+::load\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load Notes. 
+
+Loads into notes the \mbox{\hyperlink{classNote}{Note}} objects which were previously stored by the user and found in the database. \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNoteMap_a54cd0563dcf7d42dab8fc01d30e24318}\label{classNoteMap_a54cd0563dcf7d42dab8fc01d30e24318}} 
+\index{NoteMap@{NoteMap}!saveData@{saveData}}
+\index{saveData@{saveData}!NoteMap@{NoteMap}}
+\doxysubsubsection{\texorpdfstring{saveData()}{saveData()}}
+{\footnotesize\ttfamily void Note\+Map\+::save\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Save Notes. 
+
+Saves the \mbox{\hyperlink{classNote}{Note}} objects in notes to the database. \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classData_a1e9710ed430d1183985f285cf742da65}{Data}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+data/note/Note\+Map.\+h\item 
+data/note/Note\+Map.\+cpp\end{DoxyCompactItemize}

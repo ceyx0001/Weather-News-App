@@ -1,0 +1,489 @@
+\hypertarget{classWt_1_1Configuration}{}\doxysection{Wt\+::Configuration Class Reference}
+\label{classWt_1_1Configuration}\index{Wt::Configuration@{Wt::Configuration}}
+
+
+Collaboration diagram for Wt\+::Configuration\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1Configuration_1_1BootstrapEntry}{Bootstrap\+Entry}}
+\item 
+struct \mbox{\hyperlink{structWt_1_1Configuration_1_1Network}{Network}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_af6b042ce1394a9a08d74347baf2763da}\label{classWt_1_1Configuration_af6b042ce1394a9a08d74347baf2763da}} 
+enum {\bfseries Session\+Policy} \{ {\bfseries Dedicated\+Process}, 
+{\bfseries Shared\+Process}
+ \}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a5eba053413d9cf0097c4b70449af2408}\label{classWt_1_1Configuration_a5eba053413d9cf0097c4b70449af2408}} 
+enum {\bfseries Session\+Tracking} \{ {\bfseries Cookies\+U\+RL}, 
+{\bfseries U\+RL}, 
+{\bfseries Combined}
+ \}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a5094340600ea1d6621818935a39395a0}\label{classWt_1_1Configuration_a5094340600ea1d6621818935a39395a0}} 
+enum {\bfseries Error\+Reporting} \{ {\bfseries No\+Errors}, 
+{\bfseries Server\+Side\+Only}, 
+{\bfseries Error\+Message}
+ \}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_acf8eabc78fad7e61505d9136e2cba161}\label{classWt_1_1Configuration_acf8eabc78fad7e61505d9136e2cba161}} 
+enum {\bfseries Bootstrap\+Method} \{ {\bfseries Detect\+Ajax}, 
+{\bfseries Progressive}
+ \}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a32de4dc4e80440411961a96f370a86d8}\label{classWt_1_1Configuration_a32de4dc4e80440411961a96f370a86d8}} 
+typedef std\+::map$<$ std\+::string, std\+::string $>$ {\bfseries Property\+Map}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ae1576028a3cb4ff0d2c7e593267bcf44}\label{classWt_1_1Configuration_ae1576028a3cb4ff0d2c7e593267bcf44}} 
+typedef std\+::vector$<$ std\+::string $>$ {\bfseries Agent\+List}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_aed685caee4c5311ad4ad02f089503271}\label{classWt_1_1Configuration_aed685caee4c5311ad4ad02f089503271}} 
+using {\bfseries Ip\+Address} = Asio\+Wrapper\+::asio\+::ip\+::address
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ae7edc5fdf62532c9263030d059b6bb99}\label{classWt_1_1Configuration_ae7edc5fdf62532c9263030d059b6bb99}} 
+{\bfseries Configuration} (const std\+::string \&application\+Path, const std\+::string \&app\+Root, const std\+::string \&configuration\+File, \mbox{\hyperlink{classWt_1_1WServer}{W\+Server}} $\ast$server)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a9efb031ea82e0f2f26622c7c46fc12a3}\label{classWt_1_1Configuration_a9efb031ea82e0f2f26622c7c46fc12a3}} 
+void {\bfseries reread\+Configuration} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_af61b704fd2d908cf6bd6e8caad7b177d}\label{classWt_1_1Configuration_af61b704fd2d908cf6bd6e8caad7b177d}} 
+void {\bfseries set\+Session\+Id\+Prefix} (const std\+::string \&prefix)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a0526fe786056903e65f6185903298343}\label{classWt_1_1Configuration_a0526fe786056903e65f6185903298343}} 
+void {\bfseries add\+Entry\+Point} (const \mbox{\hyperlink{classWt_1_1EntryPoint}{Entry\+Point}} \&entry\+Point)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_aba491eec8a70f56d5dbe4de9d1f60d96}\label{classWt_1_1Configuration_aba491eec8a70f56d5dbe4de9d1f60d96}} 
+bool {\bfseries try\+Add\+Resource} (const \mbox{\hyperlink{classWt_1_1EntryPoint}{Entry\+Point}} \&entry\+Point)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ae208639b4b778f8d8194aefcfb1da50c}\label{classWt_1_1Configuration_ae208639b4b778f8d8194aefcfb1da50c}} 
+void {\bfseries remove\+Entry\+Point} (const std\+::string \&path)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a1c4e0265a9a2707c52fd3a15c1e5e8db}\label{classWt_1_1Configuration_a1c4e0265a9a2707c52fd3a15c1e5e8db}} 
+void {\bfseries set\+Default\+Entry\+Point} (const std\+::string \&path)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a6066235daad6c143714cc117b7d71147}\label{classWt_1_1Configuration_a6066235daad6c143714cc117b7d71147}} 
+\mbox{\hyperlink{structWt_1_1EntryPointMatch}{Entry\+Point\+Match}} {\bfseries match\+Entry\+Point} (const std\+::string \&script\+Name, const std\+::string \&path, bool match\+After\+Slash) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ad5d9e9d09326e825b922b6b529fe7183}\label{classWt_1_1Configuration_ad5d9e9d09326e825b922b6b529fe7183}} 
+void {\bfseries set\+Num\+Threads} (int threads)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ac66b353063131d23023175390c8f944e}\label{classWt_1_1Configuration_ac66b353063131d23023175390c8f944e}} 
+const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1MetaHeader}{Meta\+Header}} $>$ \& {\bfseries meta\+Headers} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a63713003b9969296825f93a6f8f397ab}\label{classWt_1_1Configuration_a63713003b9969296825f93a6f8f397ab}} 
+const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1HeadMatter}{Head\+Matter}} $>$ \& {\bfseries head\+Matter} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a073412e26ab4aa9a89966a778d6c80e5}\label{classWt_1_1Configuration_a073412e26ab4aa9a89966a778d6c80e5}} 
+Session\+Policy {\bfseries session\+Policy} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a5be466b55e8c27c71b75d1fe433683ee}\label{classWt_1_1Configuration_a5be466b55e8c27c71b75d1fe433683ee}} 
+int {\bfseries num\+Processes} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a7c55ea56bdf3404b43cbff9011823a8e}\label{classWt_1_1Configuration_a7c55ea56bdf3404b43cbff9011823a8e}} 
+int {\bfseries num\+Threads} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a9dbedda6f5a3e296a3d08b5c53eaf55d}\label{classWt_1_1Configuration_a9dbedda6f5a3e296a3d08b5c53eaf55d}} 
+int {\bfseries max\+Num\+Sessions} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a495ac96774c1309546cb853ac0a7c8f6}\label{classWt_1_1Configuration_a495ac96774c1309546cb853ac0a7c8f6}} 
+\+::int64\+\_\+t {\bfseries max\+Request\+Size} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_acc395d716c113521ab4a6132f6898086}\label{classWt_1_1Configuration_acc395d716c113521ab4a6132f6898086}} 
+\+::int64\+\_\+t {\bfseries max\+Form\+Data\+Size} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_acdac40a3acd1ed562bd5f3bf5618c43f}\label{classWt_1_1Configuration_acdac40a3acd1ed562bd5f3bf5618c43f}} 
+int {\bfseries max\+Pending\+Events} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a92b1aec82c1c46cc8883f05daee70389}\label{classWt_1_1Configuration_a92b1aec82c1c46cc8883f05daee70389}} 
+\+::int64\+\_\+t {\bfseries isapi\+Max\+Memory\+Request\+Size} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a9edfd4d4c72e95426acde986a3a2c14a}\label{classWt_1_1Configuration_a9edfd4d4c72e95426acde986a3a2c14a}} 
+Session\+Tracking {\bfseries session\+Tracking} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_acb55f7585540d3e496e0be18fa4c49bb}\label{classWt_1_1Configuration_acb55f7585540d3e496e0be18fa4c49bb}} 
+bool {\bfseries reload\+Is\+New\+Session} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a8a51ffb549e77df7a1129031940462cd}\label{classWt_1_1Configuration_a8a51ffb549e77df7a1129031940462cd}} 
+int {\bfseries session\+Timeout} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a0d7c4afeb312306b5136aebd64edad7e}\label{classWt_1_1Configuration_a0d7c4afeb312306b5136aebd64edad7e}} 
+int {\bfseries idle\+Timeout} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ab1b8978f6753302825dac903e083ebe8}\label{classWt_1_1Configuration_ab1b8978f6753302825dac903e083ebe8}} 
+int {\bfseries keep\+Alive} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a2d1106648433c93ec20006e66dc29af3}\label{classWt_1_1Configuration_a2d1106648433c93ec20006e66dc29af3}} 
+int {\bfseries multi\+Session\+Cookie\+Timeout} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a6dba3b8e384f756c2920de83ea913acf}\label{classWt_1_1Configuration_a6dba3b8e384f756c2920de83ea913acf}} 
+int {\bfseries bootstrap\+Timeout} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a86c59d23ebeddd759e63fd00375f7f82}\label{classWt_1_1Configuration_a86c59d23ebeddd759e63fd00375f7f82}} 
+int {\bfseries indicator\+Timeout} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a0da2e7892f05eaca4a734c0cd581784e}\label{classWt_1_1Configuration_a0da2e7892f05eaca4a734c0cd581784e}} 
+int {\bfseries double\+Click\+Timeout} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a9bd050662b1ff17eba55e825da1da29a}\label{classWt_1_1Configuration_a9bd050662b1ff17eba55e825da1da29a}} 
+int {\bfseries server\+Push\+Timeout} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_aa47dbfe80034bea2c25677de7c541569}\label{classWt_1_1Configuration_aa47dbfe80034bea2c25677de7c541569}} 
+std\+::string {\bfseries valgrind\+Path} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a0e767104e81356f146a491e7796fa834}\label{classWt_1_1Configuration_a0e767104e81356f146a491e7796fa834}} 
+Error\+Reporting {\bfseries error\+Reporting} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_abf5051fddc02682203e6aead2442544b}\label{classWt_1_1Configuration_abf5051fddc02682203e6aead2442544b}} 
+bool {\bfseries debug} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a81ab2d761c84ec33ad8e2e2fa8c7af37}\label{classWt_1_1Configuration_a81ab2d761c84ec33ad8e2e2fa8c7af37}} 
+std\+::string {\bfseries run\+Directory} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a7e074d8af9b6e59a2d61bbbebb389b9a}\label{classWt_1_1Configuration_a7e074d8af9b6e59a2d61bbbebb389b9a}} 
+int {\bfseries session\+Id\+Length} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a139260d85140f067aa0fc9fccab48351}\label{classWt_1_1Configuration_a139260d85140f067aa0fc9fccab48351}} 
+std\+::string {\bfseries session\+Id\+Prefix} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a92bed4d98f2ac5be6c9bb706927edadd}\label{classWt_1_1Configuration_a92bed4d98f2ac5be6c9bb706927edadd}} 
+int {\bfseries full\+Session\+Id\+Length} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a3d8c532f1142910ab8586e7cc3c8531d}\label{classWt_1_1Configuration_a3d8c532f1142910ab8586e7cc3c8531d}} 
+int {\bfseries num\+Session\+Threads} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_aa6d718e9125c53552b1c242adac037e2}\label{classWt_1_1Configuration_aa6d718e9125c53552b1c242adac037e2}} 
+bool {\bfseries is\+Allowed\+Origin} (const std\+::string \&origin) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_afaf72fa1dc6855a05420a74f4afbed0f}\label{classWt_1_1Configuration_afaf72fa1dc6855a05420a74f4afbed0f}} 
+bool {\bfseries read\+Configuration\+Property} (const std\+::string \&name, std\+::string \&value) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a668cf023658ebbf479c5c240ffbaeada}\label{classWt_1_1Configuration_a668cf023658ebbf479c5c240ffbaeada}} 
+void {\bfseries set\+App\+Root} (const std\+::string \&path)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a0cf842a51defda8687fc7c37b668dcfc}\label{classWt_1_1Configuration_a0cf842a51defda8687fc7c37b668dcfc}} 
+std\+::string {\bfseries app\+Root} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a0b96574878e59f01ada86758428839fc}\label{classWt_1_1Configuration_a0b96574878e59f01ada86758428839fc}} 
+bool {\bfseries behind\+Reverse\+Proxy} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a6a6283a889873c47a4e956b2aae8fab2}\label{classWt_1_1Configuration_a6a6283a889873c47a4e956b2aae8fab2}} 
+std\+::string {\bfseries original\+I\+P\+Header} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a446cc541f68b16518f3b8c84961ccc99}\label{classWt_1_1Configuration_a446cc541f68b16518f3b8c84961ccc99}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1Configuration_1_1Network}{Network}} $>$ {\bfseries trusted\+Proxies} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_aa7636909fb7c6c85af5fe6cc01b5e650}\label{classWt_1_1Configuration_aa7636909fb7c6c85af5fe6cc01b5e650}} 
+bool {\bfseries is\+Trusted\+Proxy} (const std\+::string \&ip\+Address) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a8f3fb8f9383f127efe5018ab670e5c3f}\label{classWt_1_1Configuration_a8f3fb8f9383f127efe5018ab670e5c3f}} 
+std\+::string {\bfseries redirect\+Message} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ad5be50af7bad40b3ca08ef29ff3b2622}\label{classWt_1_1Configuration_ad5be50af7bad40b3ca08ef29ff3b2622}} 
+bool {\bfseries serialized\+Events} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a1958870e0bcb2f622d62b0ca81f3dc5b}\label{classWt_1_1Configuration_a1958870e0bcb2f622d62b0ca81f3dc5b}} 
+bool {\bfseries web\+Sockets} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_af29dbbae0ce823a9e7365e5b82a3707d}\label{classWt_1_1Configuration_af29dbbae0ce823a9e7365e5b82a3707d}} 
+bool {\bfseries inline\+Css} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ade6c2fd41028af6e11831bdb56df5b6c}\label{classWt_1_1Configuration_ade6c2fd41028af6e11831bdb56df5b6c}} 
+bool {\bfseries persistent\+Sessions} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ae633fe41e434129ca4c063cfbaa8ca7d}\label{classWt_1_1Configuration_ae633fe41e434129ca4c063cfbaa8ca7d}} 
+bool {\bfseries progressive\+Boot} (const std\+::string \&internal\+Path) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a468f13bef4be828b7b5f80f7ab31989c}\label{classWt_1_1Configuration_a468f13bef4be828b7b5f80f7ab31989c}} 
+bool {\bfseries split\+Script} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a180249a005f85fe13c4281c52c150809}\label{classWt_1_1Configuration_a180249a005f85fe13c4281c52c150809}} 
+float {\bfseries max\+Plain\+Sessions\+Ratio} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a62a796ae151b9a374ae5369562fc2239}\label{classWt_1_1Configuration_a62a796ae151b9a374ae5369562fc2239}} 
+bool {\bfseries ajax\+Puzzle} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a012e61db239e57ec3a02d0f5cb408fed}\label{classWt_1_1Configuration_a012e61db239e57ec3a02d0f5cb408fed}} 
+bool {\bfseries session\+Id\+Cookie} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_aeedc43e8240f6e858eda6402d26099b8}\label{classWt_1_1Configuration_aeedc43e8240f6e858eda6402d26099b8}} 
+bool {\bfseries cookie\+Checks} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a8d565725813e76d02c9bb5b1d02e267f}\label{classWt_1_1Configuration_a8d565725813e76d02c9bb5b1d02e267f}} 
+bool {\bfseries use\+Slash\+Exception\+For\+Internal\+Paths} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ac4dcea31d7006cc4d5e2df046f7ffde4}\label{classWt_1_1Configuration_ac4dcea31d7006cc4d5e2df046f7ffde4}} 
+bool {\bfseries need\+Read\+Body\+Before\+Response} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a36d2bad4121395251c25ea26b1ae23bd}\label{classWt_1_1Configuration_a36d2bad4121395251c25ea26b1ae23bd}} 
+bool {\bfseries webgl\+Detect} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a248abaacd12ff1ea3d1de543d0f97f35}\label{classWt_1_1Configuration_a248abaacd12ff1ea3d1de543d0f97f35}} 
+bool {\bfseries agent\+Is\+Bot} (const std\+::string \&agent) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a270321e17f149dfa39cb586f19ce49db}\label{classWt_1_1Configuration_a270321e17f149dfa39cb586f19ce49db}} 
+bool {\bfseries agent\+Supports\+Ajax} (const std\+::string \&agent) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a2ff05024029786c740349e085e636a19}\label{classWt_1_1Configuration_a2ff05024029786c740349e085e636a19}} 
+std\+::string {\bfseries ua\+Compatible} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a2a63adc04fdb7be045fd01ef5299a530}\label{classWt_1_1Configuration_a2a63adc04fdb7be045fd01ef5299a530}} 
+void {\bfseries set\+Session\+Timeout} (int session\+Timeout)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ab3362b8453c44041bb8e1143a630eb46}\label{classWt_1_1Configuration_ab3362b8453c44041bb8e1143a630eb46}} 
+void {\bfseries set\+Web\+Sockets} (bool enabled)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a1a74026db5ee7678dcdf89af12c33d2e}\label{classWt_1_1Configuration_a1a74026db5ee7678dcdf89af12c33d2e}} 
+void {\bfseries set\+Run\+Directory} (const std\+::string \&path)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ac0d5aa37f1aeac59fcf90043bb915c98}\label{classWt_1_1Configuration_ac0d5aa37f1aeac59fcf90043bb915c98}} 
+void {\bfseries set\+Use\+Slash\+Exception\+For\+Internal\+Paths} (bool enabled)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a611c3f792aad2900560896fae8d36e9c}\label{classWt_1_1Configuration_a611c3f792aad2900560896fae8d36e9c}} 
+void {\bfseries set\+Need\+Read\+Body\+Before\+Response} (bool needed)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ab733be03fccdbfece322f5f2a331ad16}\label{classWt_1_1Configuration_ab733be03fccdbfece322f5f2a331ad16}} 
+void {\bfseries set\+Behind\+Reverse\+Proxy} (bool enabled)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ad70a5d71cb9296f86c7b1f0ea5b3567d}\label{classWt_1_1Configuration_ad70a5d71cb9296f86c7b1f0ea5b3567d}} 
+void {\bfseries set\+Original\+I\+P\+Header} (const std\+::string \&original\+I\+P\+Header)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a9aa5bce583885f0c0fdf65780b3bbda5}\label{classWt_1_1Configuration_a9aa5bce583885f0c0fdf65780b3bbda5}} 
+void {\bfseries set\+Trusted\+Proxies} (const std\+::vector$<$ \mbox{\hyperlink{structWt_1_1Configuration_1_1Network}{Network}} $>$ \&trusted\+Proxies)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a39631ca619cdd0bbeadbb8fa999df451}\label{classWt_1_1Configuration_a39631ca619cdd0bbeadbb8fa999df451}} 
+void {\bfseries set\+Bootstrap\+Method} (Bootstrap\+Method method)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ae6a6f08cb5a3c89c016c9eadd500c184}\label{classWt_1_1Configuration_ae6a6f08cb5a3c89c016c9eadd500c184}} 
+std\+::string {\bfseries generate\+Session\+Id} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a53ff57cacab7d304576db1704388a653}\label{classWt_1_1Configuration_a53ff57cacab7d304576db1704388a653}} 
+bool {\bfseries register\+Session\+Id} (const std\+::string \&old\+Id, const std\+::string \&new\+Id)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a2abb4c291ca4e59c5d0512a8ecf82671}\label{classWt_1_1Configuration_a2abb4c291ca4e59c5d0512a8ecf82671}} 
+std\+::string {\bfseries session\+Socket\+Path} (const std\+::string \&session\+Id)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a66a8fe4d396c9c72a708bd6d9912563d}\label{classWt_1_1Configuration_a66a8fe4d396c9c72a708bd6d9912563d}} 
+const std\+::string \& {\bfseries default\+Entry\+Point} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a19699b7842a2d99818253c6640db1e11}\label{classWt_1_1Configuration_a19699b7842a2d99818253c6640db1e11}} 
+static std\+::string {\bfseries locate\+App\+Root} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a186228c099ca4c536c7f227279d7cf43}\label{classWt_1_1Configuration_a186228c099ca4c536c7f227279d7cf43}} 
+static std\+::string {\bfseries locate\+Config\+File} (const std\+::string \&app\+Root)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_abdbc9df559d26e35192ad8d358e07684}\label{classWt_1_1Configuration_abdbc9df559d26e35192ad8d358e07684}} 
+static bool {\bfseries matches\+Path} (const std\+::string \&path, const std\+::string \&prefix, bool match\+After\+Slash)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a06a7fcd5869351b5634650f35b6f5ee9}\label{classWt_1_1Configuration_a06a7fcd5869351b5634650f35b6f5ee9}} 
+void {\bfseries reset} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_acefd457d06384250d5fe29336741dae2}\label{classWt_1_1Configuration_acefd457d06384250d5fe29336741dae2}} 
+void {\bfseries read\+Application\+Settings} (\mbox{\hyperlink{classWt_1_1rapidxml_1_1xml__node}{Wt\+::rapidxml\+::xml\+\_\+node}}$<$ char $>$ $\ast$app)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a5818cf11c1c57254dd586cbd1558572c}\label{classWt_1_1Configuration_a5818cf11c1c57254dd586cbd1558572c}} 
+void {\bfseries read\+Configuration} (bool silent)
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a45e9d1a1b09077ead44a590d92416d38}\label{classWt_1_1Configuration_a45e9d1a1b09077ead44a590d92416d38}} 
+\mbox{\hyperlink{classWt_1_1WLogEntry}{W\+Log\+Entry}} {\bfseries log} (const std\+::string \&type) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a34f26414cceddc5a1a4bdef325972a71}\label{classWt_1_1Configuration_a34f26414cceddc5a1a4bdef325972a71}} 
+void {\bfseries register\+Entry\+Point} (const \mbox{\hyperlink{classWt_1_1EntryPoint}{Entry\+Point}} \&entry\+Point)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a82e89f3fd71ad6eae70d7dbb42fb199d}\label{classWt_1_1Configuration_a82e89f3fd71ad6eae70d7dbb42fb199d}} 
+\mbox{\hyperlink{classWt_1_1WServer}{W\+Server}} $\ast$ {\bfseries server\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ad3c35377d3b4c5f1556ce3135cd4ec06}\label{classWt_1_1Configuration_ad3c35377d3b4c5f1556ce3135cd4ec06}} 
+std\+::string {\bfseries application\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a1c1d88b523da9952dc21e5381b694142}\label{classWt_1_1Configuration_a1c1d88b523da9952dc21e5381b694142}} 
+std\+::string {\bfseries app\+Root\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ae76161e21d2e72b4166bc538fbfd5e57}\label{classWt_1_1Configuration_ae76161e21d2e72b4166bc538fbfd5e57}} 
+std\+::string {\bfseries configuration\+File\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a17014e29d71796944eac49ada493c36d}\label{classWt_1_1Configuration_a17014e29d71796944eac49ada493c36d}} 
+std\+::string {\bfseries ua\+Compatible\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a5322883787b09c42cb5258109c9e578c}\label{classWt_1_1Configuration_a5322883787b09c42cb5258109c9e578c}} 
+Entry\+Point\+List {\bfseries entry\+Points\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a63bd31c2760d2fdcb0aac705e0a6e028}\label{classWt_1_1Configuration_a63bd31c2760d2fdcb0aac705e0a6e028}} 
+\mbox{\hyperlink{structWt_1_1PathSegment}{Path\+Segment}} {\bfseries root\+Path\+Segment\+\_\+}
+\item 
+Session\+Policy \mbox{\hyperlink{classWt_1_1Configuration_a311f5df869ddbb476dc0cb6ba68fc09a}{session\+Policy\+\_\+}}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_aeaad7754a571a64a27b7afec9b01cd2a}\label{classWt_1_1Configuration_aeaad7754a571a64a27b7afec9b01cd2a}} 
+int {\bfseries num\+Processes\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a9d8e67dc9bcff0616483665a147b5f0c}\label{classWt_1_1Configuration_a9d8e67dc9bcff0616483665a147b5f0c}} 
+int {\bfseries num\+Threads\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a4ea06b08834c9e3c9564aa9d44674d95}\label{classWt_1_1Configuration_a4ea06b08834c9e3c9564aa9d44674d95}} 
+int {\bfseries max\+Num\+Sessions\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a042daf9165442c1dfd2c6835d9cc566c}\label{classWt_1_1Configuration_a042daf9165442c1dfd2c6835d9cc566c}} 
+\+::int64\+\_\+t {\bfseries max\+Request\+Size\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a8c7dae9e0f5fbe82364eec81c50dcc82}\label{classWt_1_1Configuration_a8c7dae9e0f5fbe82364eec81c50dcc82}} 
+\+::int64\+\_\+t {\bfseries max\+Form\+Data\+Size\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a2d5917c9264df07638c4f535656ed775}\label{classWt_1_1Configuration_a2d5917c9264df07638c4f535656ed775}} 
+int {\bfseries max\+Pending\+Events\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a69ea59c32786d2c53241663f2b1aa790}\label{classWt_1_1Configuration_a69ea59c32786d2c53241663f2b1aa790}} 
+\+::int64\+\_\+t {\bfseries isapi\+Max\+Memory\+Request\+Size\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_af5eae86ebfb8a14945f2c27f8fac9160}\label{classWt_1_1Configuration_af5eae86ebfb8a14945f2c27f8fac9160}} 
+Session\+Tracking {\bfseries session\+Tracking\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a54e2efa416a05a9521f2692cef881d35}\label{classWt_1_1Configuration_a54e2efa416a05a9521f2692cef881d35}} 
+bool {\bfseries reload\+Is\+New\+Session\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ab19e2062800f4e64b84535de492ec1c5}\label{classWt_1_1Configuration_ab19e2062800f4e64b84535de492ec1c5}} 
+int {\bfseries session\+Timeout\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a08947fece2784a43608e7878e6e66a2f}\label{classWt_1_1Configuration_a08947fece2784a43608e7878e6e66a2f}} 
+int {\bfseries idle\+Timeout\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a1250f7b8cde2979ed1e1c7c918a2e077}\label{classWt_1_1Configuration_a1250f7b8cde2979ed1e1c7c918a2e077}} 
+int {\bfseries bootstrap\+Timeout\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_af3bfa0e21ee1637741119ea2effed022}\label{classWt_1_1Configuration_af3bfa0e21ee1637741119ea2effed022}} 
+int {\bfseries indicator\+Timeout\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a985a8369dfb8ae4c94607f385d971543}\label{classWt_1_1Configuration_a985a8369dfb8ae4c94607f385d971543}} 
+int {\bfseries double\+Click\+Timeout\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a78452d2b8f858552384f900c33bfffb7}\label{classWt_1_1Configuration_a78452d2b8f858552384f900c33bfffb7}} 
+int {\bfseries server\+Push\+Timeout\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a7d517433d0c77c6f73a51b27d660793e}\label{classWt_1_1Configuration_a7d517433d0c77c6f73a51b27d660793e}} 
+std\+::string {\bfseries valgrind\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_aab7dfe4f912e693c777f8c99e7965206}\label{classWt_1_1Configuration_aab7dfe4f912e693c777f8c99e7965206}} 
+Error\+Reporting {\bfseries error\+Reporting\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a11b0cbcf633ee16be00f8ee9efad6f7f}\label{classWt_1_1Configuration_a11b0cbcf633ee16be00f8ee9efad6f7f}} 
+std\+::string {\bfseries run\+Directory\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a9f252faf19150543030c5a3f74042e8c}\label{classWt_1_1Configuration_a9f252faf19150543030c5a3f74042e8c}} 
+int {\bfseries session\+Id\+Length\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a898b0a9cdfdf9529c840f211d813586f}\label{classWt_1_1Configuration_a898b0a9cdfdf9529c840f211d813586f}} 
+Property\+Map {\bfseries properties\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a57ba3223680b76dfc4393a9bbf45559c}\label{classWt_1_1Configuration_a57ba3223680b76dfc4393a9bbf45559c}} 
+bool {\bfseries xhtml\+Mime\+Type\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a3f6152040704328952e0620adc8706b1}\label{classWt_1_1Configuration_a3f6152040704328952e0620adc8706b1}} 
+bool {\bfseries behind\+Reverse\+Proxy\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a0f36d4b52c0f5800de401cb04097b504}\label{classWt_1_1Configuration_a0f36d4b52c0f5800de401cb04097b504}} 
+std\+::string {\bfseries original\+I\+P\+Header\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ab309ca836789b3c3d7597a72b5140594}\label{classWt_1_1Configuration_ab309ca836789b3c3d7597a72b5140594}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1Configuration_1_1Network}{Network}} $>$ {\bfseries trusted\+Proxies\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_abe02d416406414316c569762b594ec24}\label{classWt_1_1Configuration_abe02d416406414316c569762b594ec24}} 
+std\+::string {\bfseries redirect\+Msg\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a8cfd71b44d7a3f1b30f8b1274235ea4a}\label{classWt_1_1Configuration_a8cfd71b44d7a3f1b30f8b1274235ea4a}} 
+bool {\bfseries serialized\+Events\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a8e09f6a4a33093e0ee3b902bce150394}\label{classWt_1_1Configuration_a8e09f6a4a33093e0ee3b902bce150394}} 
+bool {\bfseries web\+Sockets\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a783e32a898c723557af8fa54474c089b}\label{classWt_1_1Configuration_a783e32a898c723557af8fa54474c089b}} 
+bool {\bfseries inline\+Css\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a67c900c263017ae604a397fdbc3b84ab}\label{classWt_1_1Configuration_a67c900c263017ae604a397fdbc3b84ab}} 
+Agent\+List {\bfseries ajax\+Agent\+List\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a4d4772be6960543e3d66b95c34294021}\label{classWt_1_1Configuration_a4d4772be6960543e3d66b95c34294021}} 
+Agent\+List {\bfseries bot\+List\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_abe0629aaf3325b3562fcf776eb2b74c6}\label{classWt_1_1Configuration_abe0629aaf3325b3562fcf776eb2b74c6}} 
+bool {\bfseries ajax\+Agent\+White\+List\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_abf5e532e434fd815ec90eb8d6264711d}\label{classWt_1_1Configuration_abf5e532e434fd815ec90eb8d6264711d}} 
+bool {\bfseries persistent\+Sessions\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_abfbc165ae06f7f2b802420edf072b2a0}\label{classWt_1_1Configuration_abfbc165ae06f7f2b802420edf072b2a0}} 
+bool {\bfseries split\+Script\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ac3f46e4c96411f311d4c3490f3480407}\label{classWt_1_1Configuration_ac3f46e4c96411f311d4c3490f3480407}} 
+float {\bfseries max\+Plain\+Sessions\+Ratio\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a81a7473d44d51c1f74756f4952e0f455}\label{classWt_1_1Configuration_a81a7473d44d51c1f74756f4952e0f455}} 
+bool {\bfseries ajax\+Puzzle\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_aa3c32ed8c21161fc57c53e5adf3731e2}\label{classWt_1_1Configuration_aa3c32ed8c21161fc57c53e5adf3731e2}} 
+bool {\bfseries session\+Id\+Cookie\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a1cb9ed5919363702a3d57a3291869dfa}\label{classWt_1_1Configuration_a1cb9ed5919363702a3d57a3291869dfa}} 
+bool {\bfseries cookie\+Checks\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ac0888ea53891414b02424a2eb725d948}\label{classWt_1_1Configuration_ac0888ea53891414b02424a2eb725d948}} 
+bool {\bfseries webgl\+Detection\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a63f277adce5fc973174cbb856a461ea6}\label{classWt_1_1Configuration_a63f277adce5fc973174cbb856a461ea6}} 
+int {\bfseries num\+Session\+Threads\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_aceff2e3694b363561a32ddc92fe3687f}\label{classWt_1_1Configuration_aceff2e3694b363561a32ddc92fe3687f}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries allowed\+Origins\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_aca3780c4d338a7a2cdad4be4f850df19}\label{classWt_1_1Configuration_aca3780c4d338a7a2cdad4be4f850df19}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1Configuration_1_1BootstrapEntry}{Bootstrap\+Entry}} $>$ {\bfseries bootstrap\+Config\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_af89defe61430ed78cc4903295962aa34}\label{classWt_1_1Configuration_af89defe61430ed78cc4903295962aa34}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1MetaHeader}{Meta\+Header}} $>$ {\bfseries meta\+Headers\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a4511b0c89acb044110c7782fa8ebcad5}\label{classWt_1_1Configuration_a4511b0c89acb044110c7782fa8ebcad5}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1HeadMatter}{Head\+Matter}} $>$ {\bfseries head\+Matter\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a4cf42cb446e66d5a1b5e09a48b9a07af}\label{classWt_1_1Configuration_a4cf42cb446e66d5a1b5e09a48b9a07af}} 
+bool {\bfseries connector\+Slash\+Exception\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_ab84c367440197d57d4bfe075bbc41d48}\label{classWt_1_1Configuration_ab84c367440197d57d4bfe075bbc41d48}} 
+bool {\bfseries connector\+Need\+Read\+Body\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a5bfa2bb7b5af7c1915247d2e49b59cf4}\label{classWt_1_1Configuration_a5bfa2bb7b5af7c1915247d2e49b59cf4}} 
+bool {\bfseries connector\+Web\+Sockets\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_a6cb8ac31fc2139155492879d45d3318f}\label{classWt_1_1Configuration_a6cb8ac31fc2139155492879d45d3318f}} 
+std\+::string {\bfseries connector\+Session\+Id\+Prefix\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Configuration_acebe2a2bb541af22de5830eed4ac84aa}\label{classWt_1_1Configuration_acebe2a2bb541af22de5830eed4ac84aa}} 
+std\+::string {\bfseries default\+Entry\+Point\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classWt_1_1Configuration_a311f5df869ddbb476dc0cb6ba68fc09a}\label{classWt_1_1Configuration_a311f5df869ddbb476dc0cb6ba68fc09a}} 
+\index{Wt::Configuration@{Wt::Configuration}!sessionPolicy\_@{sessionPolicy\_}}
+\index{sessionPolicy\_@{sessionPolicy\_}!Wt::Configuration@{Wt::Configuration}}
+\doxysubsubsection{\texorpdfstring{sessionPolicy\_}{sessionPolicy\_}}
+{\footnotesize\ttfamily Session\+Policy Wt\+::\+Configuration\+::session\+Policy\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+The toplevel path segment (\textquotesingle{}/\textquotesingle{}) for routing, root of the rounting tree. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/web/Configuration.\+h\end{DoxyCompactItemize}

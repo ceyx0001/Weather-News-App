@@ -1,0 +1,133 @@
+\hypertarget{classWt_1_1WStreamResource}{}\doxysection{Wt\+::W\+Stream\+Resource Class Reference}
+\label{classWt_1_1WStreamResource}\index{Wt::WStreamResource@{Wt::WStreamResource}}
+
+
+An object which streams the data from a std\+::istream.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Stream\+Resource.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Stream\+Resource\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Stream\+Resource\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WStreamResource_a3fdf260f949959dda47502cd2cdbed3f}{W\+Stream\+Resource}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WStreamResource_a3f32d32980f0b570df27e501ad30a7bf}\label{classWt_1_1WStreamResource_a3f32d32980f0b570df27e501ad30a7bf}} 
+\mbox{\hyperlink{classWt_1_1WStreamResource_a3f32d32980f0b570df27e501ad30a7bf}{W\+Stream\+Resource}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1WStreamResource_a3a22c05b650b646266dd1bda1251db64}{mime\+Type}})
+\begin{DoxyCompactList}\small\item\em Creates a new resource with given mime-\/type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WStreamResource_afcdfc91f2660d58ba7d7c0424592d4e8}{$\sim$\+W\+Stream\+Resource}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WStreamResource_aa25f97d38747be9451336422029bbde5}\label{classWt_1_1WStreamResource_aa25f97d38747be9451336422029bbde5}} 
+void \mbox{\hyperlink{classWt_1_1WStreamResource_aa25f97d38747be9451336422029bbde5}{set\+Mime\+Type}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1WStreamResource_a3a22c05b650b646266dd1bda1251db64}{mime\+Type}})
+\begin{DoxyCompactList}\small\item\em Sets the mime-\/type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WStreamResource_a3a22c05b650b646266dd1bda1251db64}\label{classWt_1_1WStreamResource_a3a22c05b650b646266dd1bda1251db64}} 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1WStreamResource_a3a22c05b650b646266dd1bda1251db64}{mime\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the mime-\/type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WStreamResource_a016797af9eca9a2dc8000fac69946ec3}{set\+Buffer\+Size}} (int size)
+\begin{DoxyCompactList}\small\item\em Configures the buffer size. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WStreamResource_ae280b61ab08aa98b297e2aaa55f230af}{buffer\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the buffer size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classWt_1_1WStreamResource_ab83350ee7a4a14ad06965145073b0293}{handle\+Request\+Piecewise}} (const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&request, \mbox{\hyperlink{classWt_1_1Http_1_1Response}{Http\+::\+Response}} \&response, std\+::istream \&input)
+\begin{DoxyCompactList}\small\item\em Handles a request and streams the data from a std\+::istream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WStreamResource_a51b4e13648244f9dacf402008964ac9e}\label{classWt_1_1WStreamResource_a51b4e13648244f9dacf402008964ac9e}} 
+std\+::string {\bfseries mime\+Type\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WStreamResource_ac673d6187e946f4922fd3c35002d26f7}\label{classWt_1_1WStreamResource_ac673d6187e946f4922fd3c35002d26f7}} 
+int {\bfseries buffer\+Size\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WStreamResource_a5589135cebf37e5bb76e02daaa1577b0}\label{classWt_1_1WStreamResource_a5589135cebf37e5bb76e02daaa1577b0}} 
+std\+::streamsize {\bfseries beyond\+Last\+Byte\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An object which streams the data from a std\+::istream. 
+
+This class can be useful base for implementing resources which streams the data from std\+::istream derivatives.
+
+The utility method \mbox{\hyperlink{classWt_1_1WStreamResource_ab83350ee7a4a14ad06965145073b0293}{handle\+Request\+Piecewise()}} makes use of continuations to transmit data piecewise, without blocking a thread or requiring the whole data to be read in memory. The size of the buffer can be changed by using \mbox{\hyperlink{classWt_1_1WStreamResource_a016797af9eca9a2dc8000fac69946ec3}{set\+Buffer\+Size()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFileResource}{W\+File\+Resource}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WStreamResource_a3fdf260f949959dda47502cd2cdbed3f}\label{classWt_1_1WStreamResource_a3fdf260f949959dda47502cd2cdbed3f}} 
+\index{Wt::WStreamResource@{Wt::WStreamResource}!WStreamResource@{WStreamResource}}
+\index{WStreamResource@{WStreamResource}!Wt::WStreamResource@{Wt::WStreamResource}}
+\doxysubsubsection{\texorpdfstring{WStreamResource()}{WStreamResource()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Stream\+Resource\+::\+W\+Stream\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+The mime type defaults to \char`\"{}text/plain\char`\"{}. \mbox{\Hypertarget{classWt_1_1WStreamResource_afcdfc91f2660d58ba7d7c0424592d4e8}\label{classWt_1_1WStreamResource_afcdfc91f2660d58ba7d7c0424592d4e8}} 
+\index{Wt::WStreamResource@{Wt::WStreamResource}!````~WStreamResource@{$\sim$WStreamResource}}
+\index{````~WStreamResource@{$\sim$WStreamResource}!Wt::WStreamResource@{Wt::WStreamResource}}
+\doxysubsubsection{\texorpdfstring{$\sim$WStreamResource()}{~WStreamResource()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Stream\+Resource\+::$\sim$\+W\+Stream\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+It is up to the user to make sure that the resource is no longer in use (by e.\+g. a \mbox{\hyperlink{classWt_1_1WImage}{W\+Image}}). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WStreamResource_ae280b61ab08aa98b297e2aaa55f230af}\label{classWt_1_1WStreamResource_ae280b61ab08aa98b297e2aaa55f230af}} 
+\index{Wt::WStreamResource@{Wt::WStreamResource}!bufferSize@{bufferSize}}
+\index{bufferSize@{bufferSize}!Wt::WStreamResource@{Wt::WStreamResource}}
+\doxysubsubsection{\texorpdfstring{bufferSize()}{bufferSize()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Stream\+Resource\+::buffer\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the buffer size. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WStreamResource_a016797af9eca9a2dc8000fac69946ec3}{set\+Buffer\+Size()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WStreamResource_ab83350ee7a4a14ad06965145073b0293}\label{classWt_1_1WStreamResource_ab83350ee7a4a14ad06965145073b0293}} 
+\index{Wt::WStreamResource@{Wt::WStreamResource}!handleRequestPiecewise@{handleRequestPiecewise}}
+\index{handleRequestPiecewise@{handleRequestPiecewise}!Wt::WStreamResource@{Wt::WStreamResource}}
+\doxysubsubsection{\texorpdfstring{handleRequestPiecewise()}{handleRequestPiecewise()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Stream\+Resource\+::handle\+Request\+Piecewise (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&}]{request,  }\item[{\mbox{\hyperlink{classWt_1_1Http_1_1Response}{Http\+::\+Response}} \&}]{response,  }\item[{std\+::istream \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Handles a request and streams the data from a std\+::istream. 
+
+You can call this method from a custom \mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{handle\+Request()}} implementations. \mbox{\Hypertarget{classWt_1_1WStreamResource_a016797af9eca9a2dc8000fac69946ec3}\label{classWt_1_1WStreamResource_a016797af9eca9a2dc8000fac69946ec3}} 
+\index{Wt::WStreamResource@{Wt::WStreamResource}!setBufferSize@{setBufferSize}}
+\index{setBufferSize@{setBufferSize}!Wt::WStreamResource@{Wt::WStreamResource}}
+\doxysubsubsection{\texorpdfstring{setBufferSize()}{setBufferSize()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Stream\+Resource\+::set\+Buffer\+Size (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Configures the buffer size. 
+
+This configures the size of the buffer used to transmit the data piece by piece. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Stream\+Resource.\+h\end{DoxyCompactItemize}

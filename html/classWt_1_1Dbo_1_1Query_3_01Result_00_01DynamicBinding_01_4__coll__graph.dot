@@ -1,0 +1,27 @@
+digraph "Wt::Dbo::Query&lt; Result, DynamicBinding &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Wt::Dbo::Query\< Result,\l DynamicBinding \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Wt::Dbo::AbstractQuery",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Dbo_1_1AbstractQuery.html",tooltip="An abstract dynamic database query."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" limit_\noffset_" ,fontname="Helvetica"];
+  Node3 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" join_\ngroupBy_\norderBy_\nwhere_\nhaving_" ,fontname="Helvetica"];
+  Node4 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Wt::Dbo::Impl::QueryBase\l\< Result \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Dbo_1_1Impl_1_1QueryBase.html",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sql_" ,fontname="Helvetica"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" session_" ,fontname="Helvetica"];
+  Node6 [label="Wt::Dbo::Session",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Dbo_1_1Session.html",tooltip="A database session."];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" transaction_" ,fontname="Helvetica"];
+  Node7 [label="Wt::Dbo::Transaction\l::Impl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1Dbo_1_1Transaction_1_1Impl.html",tooltip=" "];
+  Node3 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" transactionCount_" ,fontname="Helvetica"];
+  Node6 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" session_" ,fontname="Helvetica"];
+  Node4 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" longlongType_\nintType_" ,fontname="Helvetica"];
+  Node8 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" const_typeinfo_ptr" ,fontname="Helvetica"];
+  Node8 [label="const",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node9 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" connectionPool_" ,fontname="Helvetica"];
+  Node9 [label="Wt::Dbo::SqlConnectionPool",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Dbo_1_1SqlConnectionPool.html",tooltip="Abstract base class for a SQL connection pool."];
+}

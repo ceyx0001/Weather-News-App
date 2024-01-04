@@ -1,0 +1,61 @@
+\hypertarget{classhttp_1_1server_1_1TcpConnection}{}\doxysection{http\+::server\+::Tcp\+Connection Class Reference}
+\label{classhttp_1_1server_1_1TcpConnection}\index{http::server::TcpConnection@{http::server::TcpConnection}}
+
+
+Represents a single connection from a client.  
+
+
+
+
+{\ttfamily \#include $<$Tcp\+Connection.\+h$>$}
+
+
+
+Inheritance diagram for http\+::server\+::Tcp\+Connection\+:
+% FIG 0
+
+
+Collaboration diagram for http\+::server\+::Tcp\+Connection\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1TcpConnection_a40b0053314af4b8ed8b4553088544815}\label{classhttp_1_1server_1_1TcpConnection_a40b0053314af4b8ed8b4553088544815}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1TcpConnection_a40b0053314af4b8ed8b4553088544815}{Tcp\+Connection}} (asio\+::io\+\_\+service \&io\+\_\+service, \mbox{\hyperlink{classhttp_1_1server_1_1Server}{Server}} $\ast$server, \mbox{\hyperlink{classhttp_1_1server_1_1ConnectionManager}{Connection\+Manager}} \&manager, \mbox{\hyperlink{classhttp_1_1server_1_1RequestHandler}{Request\+Handler}} \&handler)
+\begin{DoxyCompactList}\small\item\em Construct a connection with the given io\+\_\+service. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1TcpConnection_a6e5bfc4b35100fefd2854f7a2b4c8136}\label{classhttp_1_1server_1_1TcpConnection_a6e5bfc4b35100fefd2854f7a2b4c8136}} 
+virtual asio\+::ip\+::tcp\+::socket \& \mbox{\hyperlink{classhttp_1_1server_1_1TcpConnection_a6e5bfc4b35100fefd2854f7a2b4c8136}{socket}} () override
+\begin{DoxyCompactList}\small\item\em Get the socket associated with the connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1TcpConnection_a67607d4b0bd1fd79e8edd45aa72456cf}\label{classhttp_1_1server_1_1TcpConnection_a67607d4b0bd1fd79e8edd45aa72456cf}} 
+virtual const char $\ast$ \mbox{\hyperlink{classhttp_1_1server_1_1TcpConnection_a67607d4b0bd1fd79e8edd45aa72456cf}{url\+Scheme}} () override
+\begin{DoxyCompactList}\small\item\em Like C\+GI\textquotesingle{}s Url scheme\+: http or https. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1TcpConnection_a230841e035918b29de3afd2eaf0fa30e}\label{classhttp_1_1server_1_1TcpConnection_a230841e035918b29de3afd2eaf0fa30e}} 
+virtual void {\bfseries start\+Async\+Read\+Request} (Buffer \&buffer, int timeout) override
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1TcpConnection_a140bb3cc65c12c27459035535feb005e}\label{classhttp_1_1server_1_1TcpConnection_a140bb3cc65c12c27459035535feb005e}} 
+virtual void {\bfseries start\+Async\+Read\+Body} (Reply\+Ptr reply, Buffer \&buffer, int timeout) override
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1TcpConnection_abc92ba743470519c383b5f7752d7f5f4}\label{classhttp_1_1server_1_1TcpConnection_abc92ba743470519c383b5f7752d7f5f4}} 
+virtual void {\bfseries start\+Async\+Write\+Response} (Reply\+Ptr reply, const std\+::vector$<$ asio\+::const\+\_\+buffer $>$ \&buffers, int timeout) override
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1TcpConnection_ab2b3ef6520c3770f1c30c15ea7830761}\label{classhttp_1_1server_1_1TcpConnection_ab2b3ef6520c3770f1c30c15ea7830761}} 
+virtual void {\bfseries stop} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1TcpConnection_a1488c8f7d570a913bf621f34a2b22658}\label{classhttp_1_1server_1_1TcpConnection_a1488c8f7d570a913bf621f34a2b22658}} 
+asio\+::ip\+::tcp\+::socket \mbox{\hyperlink{classhttp_1_1server_1_1TcpConnection_a1488c8f7d570a913bf621f34a2b22658}{socket\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Socket for the connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents a single connection from a client. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/http/Tcp\+Connection.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,85 @@
+\hypertarget{classWt_1_1WTextItem}{}\doxysection{Wt\+::W\+Text\+Item Class Reference}
+\label{classWt_1_1WTextItem}\index{Wt::WTextItem@{Wt::WTextItem}}
+
+
+The result of a font metrics computation.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Paint\+Device.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::W\+Text\+Item\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTextItem_a4f6596838bcd4bcee9dc3734484b6941}\label{classWt_1_1WTextItem_a4f6596838bcd4bcee9dc3734484b6941}} 
+\mbox{\hyperlink{classWt_1_1WTextItem_a4f6596838bcd4bcee9dc3734484b6941}{W\+Text\+Item}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&\mbox{\hyperlink{classWt_1_1WTextItem_a5d955896b1a04ed93b8ee160b7424359}{text}}, double \mbox{\hyperlink{classWt_1_1WTextItem_ac3a36856edd632405adea8be6b6ecf86}{width}}, double \mbox{\hyperlink{classWt_1_1WTextItem_ab61a294ba247202b9238ccfa44671890}{next\+Width}}=-\/1)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1WTextItem_a5d955896b1a04ed93b8ee160b7424359}{text}} () const
+\begin{DoxyCompactList}\small\item\em Returns the measured text. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1WTextItem_ac3a36856edd632405adea8be6b6ecf86}{width}} () const
+\begin{DoxyCompactList}\small\item\em Returns the measured width. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1WTextItem_ab61a294ba247202b9238ccfa44671890}{next\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Returns the width for a next line-\/break boundary. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTextItem_a3b68c6b4813590269fab5d0e5ff81fa9}\label{classWt_1_1WTextItem_a3b68c6b4813590269fab5d0e5ff81fa9}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries text\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTextItem_ae61a30fc5a2ce2352818cfb53895426f}\label{classWt_1_1WTextItem_ae61a30fc5a2ce2352818cfb53895426f}} 
+double {\bfseries width\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTextItem_abd631b1e1aeddc20be73bb7ba0805a80}\label{classWt_1_1WTextItem_abd631b1e1aeddc20be73bb7ba0805a80}} 
+double {\bfseries next\+Width\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The result of a font metrics computation. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPaintDevice_a21d005287f1973348357e089d6d18df1}{W\+Paint\+Device\+::measure\+Text()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WTextItem_ab61a294ba247202b9238ccfa44671890}\label{classWt_1_1WTextItem_ab61a294ba247202b9238ccfa44671890}} 
+\index{Wt::WTextItem@{Wt::WTextItem}!nextWidth@{nextWidth}}
+\index{nextWidth@{nextWidth}!Wt::WTextItem@{Wt::WTextItem}}
+\doxysubsubsection{\texorpdfstring{nextWidth()}{nextWidth()}}
+{\footnotesize\ttfamily double Wt\+::\+W\+Text\+Item\+::next\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the width for a next line-\/break boundary. 
+
+Returns the width until the next line-\/break boundary, or -\/1 if the underlying word boundary analysis does not support this. \mbox{\Hypertarget{classWt_1_1WTextItem_a5d955896b1a04ed93b8ee160b7424359}\label{classWt_1_1WTextItem_a5d955896b1a04ed93b8ee160b7424359}} 
+\index{Wt::WTextItem@{Wt::WTextItem}!text@{text}}
+\index{text@{text}!Wt::WTextItem@{Wt::WTextItem}}
+\doxysubsubsection{\texorpdfstring{text()}{text()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WString}{W\+String}} Wt\+::\+W\+Text\+Item\+::text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the measured text. 
+
+If the item was measured with word breaking enabled, then the text may contain trailing whitespace that is not included in the \mbox{\hyperlink{classWt_1_1WTextItem_ac3a36856edd632405adea8be6b6ecf86}{width()}}. \mbox{\Hypertarget{classWt_1_1WTextItem_ac3a36856edd632405adea8be6b6ecf86}\label{classWt_1_1WTextItem_ac3a36856edd632405adea8be6b6ecf86}} 
+\index{Wt::WTextItem@{Wt::WTextItem}!width@{width}}
+\index{width@{width}!Wt::WTextItem@{Wt::WTextItem}}
+\doxysubsubsection{\texorpdfstring{width()}{width()}}
+{\footnotesize\ttfamily double Wt\+::\+W\+Text\+Item\+::width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the measured width. 
+
+Returns the text width, in device local coordinates (pixels). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Paint\+Device.\+h\end{DoxyCompactItemize}

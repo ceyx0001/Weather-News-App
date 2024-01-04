@@ -1,0 +1,103 @@
+\hypertarget{classWt_1_1Auth_1_1OidcProcess}{}\doxysection{Wt\+::Auth\+::Oidc\+Process Class Reference}
+\label{classWt_1_1Auth_1_1OidcProcess}\index{Wt::Auth::OidcProcess@{Wt::Auth::OidcProcess}}
+
+
+An Open\+Id Connect authentication process.  
+
+
+
+
+Inheritance diagram for Wt\+::Auth\+::Oidc\+Process\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Auth\+::Oidc\+Process\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcProcess_a1658b1df4f5583aeb9d617e081cda696}\label{classWt_1_1Auth_1_1OidcProcess_a1658b1df4f5583aeb9d617e081cda696}} 
+{\bfseries Oidc\+Process} (const \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService}{Oidc\+Service}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_acee5353a12ed322183b7418558d27025}{service}}, const std\+::string \&\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_a0abac41f14450571445d1c82e9dba4cc}{scope}})
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1OidcProcess_a9f13e10a3f9e9121f919732d5b65f1db}{start\+Authenticate}} () override
+\begin{DoxyCompactList}\small\item\em Starts an authorization and authentication process. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1OidcProcess_a9c7ba6dfe59b7563d99a97aa95ecbf27}{get\+Identity}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAccessToken}{O\+Auth\+Access\+Token}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_aea64f50455bdef267ebc854e9991e4f8}{token}}) override
+\begin{DoxyCompactList}\small\item\em Obtains an authenticated identity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcProcess_a56f4509b3acf7cf5113bdafe58cc45fd}\label{classWt_1_1Auth_1_1OidcProcess_a56f4509b3acf7cf5113bdafe58cc45fd}} 
+void {\bfseries handle\+Response} (Asio\+Wrapper\+::error\+\_\+code err, const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Http\+::\+Message}} \&response)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcProcess_ae4b11bbe77feeed8a7282d0c2dba8950}\label{classWt_1_1Auth_1_1OidcProcess_ae4b11bbe77feeed8a7282d0c2dba8950}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} {\bfseries parse\+Id\+Token} (const std\+::string \&id\+Token)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcProcess_a28bebac81fccd73960ce4bb960c34725}\label{classWt_1_1Auth_1_1OidcProcess_a28bebac81fccd73960ce4bb960c34725}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} {\bfseries parse\+Claims} (const \mbox{\hyperlink{classWt_1_1Json_1_1Object}{Json\+::\+Object}} \&claims)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcProcess_a0200344d91bdac4f41f66626463e331b}\label{classWt_1_1Auth_1_1OidcProcess_a0200344d91bdac4f41f66626463e331b}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Http_1_1Client}{Http\+::\+Client}} $>$ {\bfseries http\+Client\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An Open\+Id Connect authentication process. 
+
+The process implements the state machine that is needed to complete an Open\+ID Connect authentication cycle.
+
+A process is created for a particular scope, which represents what kind of information one wants to access, and which is used to inform the user of the kind of operations he needs to authorize for your application to make with his protected data.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a739fe836b326bc1b47b6e25845689a53}{Oidc\+Service\+::create\+Process()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess}{O\+Auth\+Process}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcProcess_a9c7ba6dfe59b7563d99a97aa95ecbf27}\label{classWt_1_1Auth_1_1OidcProcess_a9c7ba6dfe59b7563d99a97aa95ecbf27}} 
+\index{Wt::Auth::OidcProcess@{Wt::Auth::OidcProcess}!getIdentity@{getIdentity}}
+\index{getIdentity@{getIdentity}!Wt::Auth::OidcProcess@{Wt::Auth::OidcProcess}}
+\doxysubsubsection{\texorpdfstring{getIdentity()}{getIdentity()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Oidc\+Process\+::get\+Identity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAccessToken}{O\+Auth\+Access\+Token}} \&}]{token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Obtains an authenticated identity. 
+
+The authentication process will either use the ID token included with the access token or, when this is not available, request the identity at the user info endpoint using claims.
+
+The authentication process ends with the \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_a22d65da9fa8a510363beff4b6e057d8b}{authenticated()}} signal which signals the obtained identity. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_ae1e483eb0a1bb3032e15bcbc78ff47e9}{Wt\+::\+Auth\+::\+O\+Auth\+Process}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OidcProcess_a9f13e10a3f9e9121f919732d5b65f1db}\label{classWt_1_1Auth_1_1OidcProcess_a9f13e10a3f9e9121f919732d5b65f1db}} 
+\index{Wt::Auth::OidcProcess@{Wt::Auth::OidcProcess}!startAuthenticate@{startAuthenticate}}
+\index{startAuthenticate@{startAuthenticate}!Wt::Auth::OidcProcess@{Wt::Auth::OidcProcess}}
+\doxysubsubsection{\texorpdfstring{startAuthenticate()}{startAuthenticate()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Oidc\+Process\+::start\+Authenticate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Starts an authorization and authentication process. 
+
+This is \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_a93e204aa6b2f4fdadaf4d51f878a41c5}{start\+Authorize()}} followed by \mbox{\hyperlink{classWt_1_1Auth_1_1OidcProcess_a9c7ba6dfe59b7563d99a97aa95ecbf27}{get\+Identity()}}.
+
+The authentication process ends with the \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_a22d65da9fa8a510363beff4b6e057d8b}{authenticated()}} signal which signals the obtained identity.
+
+\begin{DoxyNote}{Note}
+To be able to use a popup (instead of a page redirect), you should connect this method directly to an, since popup windows are blocked in most web browsers unless they are the direct consequence of an event. 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_ad5f0e4c66f098d1b3e61fbe8ae36e742}{Wt\+::\+Auth\+::\+O\+Auth\+Process}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/Oidc\+Service.\+h\end{DoxyCompactItemize}

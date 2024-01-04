@@ -1,0 +1,472 @@
+\hypertarget{group__signalslot}{}\doxysection{Signal/slot system}
+\label{group__signalslot}\index{Signal/slot system@{Signal/slot system}}
+
+
+Support for event handling using signals and slots.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWt_1_1SignalBase}{Wt\+::\+Signal\+Base}}
+\begin{DoxyCompactList}\small\item\em Abstract base class of a signal. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1EventSignalBase}{Wt\+::\+Event\+Signal\+Base}}
+\begin{DoxyCompactList}\small\item\em Abstract base class of an event signal. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WMouseEvent}{Wt\+::\+W\+Mouse\+Event}}
+\begin{DoxyCompactList}\small\item\em A class providing details for a mouse event. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WKeyEvent}{Wt\+::\+W\+Key\+Event}}
+\begin{DoxyCompactList}\small\item\em A class providing details for a keyboard event. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WDropEvent}{Wt\+::\+W\+Drop\+Event}}
+\begin{DoxyCompactList}\small\item\em A class providing details for a drop event. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WScrollEvent}{Wt\+::\+W\+Scroll\+Event}}
+\begin{DoxyCompactList}\small\item\em A class providing details for a scroll event. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WTouchEvent}{Wt\+::\+W\+Touch\+Event}}
+\begin{DoxyCompactList}\small\item\em A class providing details for a touch event. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WGestureEvent}{Wt\+::\+W\+Gesture\+Event}}
+\begin{DoxyCompactList}\small\item\em A class providing details for a gesture event. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1JSignal}{Wt\+::\+J\+Signal$<$ A $>$}}
+\begin{DoxyCompactList}\small\item\em A signal to relay Java\+Script to C++ calls. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1JSlot}{Wt\+::\+J\+Slot}}
+\begin{DoxyCompactList}\small\item\em A slot that is only implemented in client side Java\+Script code. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WObject}{Wt\+::\+W\+Object}}
+\begin{DoxyCompactList}\small\item\em A base class for objects that participate in the signal/slot system. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Signal}{Wt\+::\+Signal$<$ A $>$}}
+\begin{DoxyCompactList}\small\item\em A signal that propagates events to listeners. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1EventSignal}{Wt\+::\+Event\+Signal}}
+\begin{DoxyCompactList}\small\item\em A signal that conveys user-\/interface events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__signalslot_ga50f91169486bada5931f3adc3a623091}{Wt\+::\+Keyboard\+Modifier}} \{ \newline
+\mbox{\hyperlink{group__signalslot_gga50f91169486bada5931f3adc3a623091a6adf97f83acf6453d4a6a4b1070f3754}{Wt\+::\+Keyboard\+Modifier\+::\+None}} = 0x0, 
+\mbox{\hyperlink{group__signalslot_gga50f91169486bada5931f3adc3a623091a825a3d98017bab11815ad2817201324c}{Wt\+::\+Keyboard\+Modifier\+::\+Shift}} = 0x1, 
+\mbox{\hyperlink{group__signalslot_gga50f91169486bada5931f3adc3a623091aa1595abbb4c3a326636dd178757cd6c1}{Wt\+::\+Keyboard\+Modifier\+::\+Control}} = 0x2, 
+\mbox{\hyperlink{group__signalslot_gga50f91169486bada5931f3adc3a623091aa2e92861b757ab878312dd57993d60cf}{Wt\+::\+Keyboard\+Modifier\+::\+Alt}} = 0x4, 
+\newline
+\mbox{\hyperlink{group__signalslot_gga50f91169486bada5931f3adc3a623091ab6755d218d5f4e1cef9cce9cc39aeda9}{Wt\+::\+Keyboard\+Modifier\+::\+Meta}} = 0x8
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for keyboard modifiers. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__signalslot_ga34e65660d30e69c56aa636a8856aa52d}{Wt\+::\+Key}} \{ \newline
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da88183b946cc5f0e8c96b2e66e1c74a7e}{Wt\+::\+Key\+::\+Unknown}} = 0, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daf1851d5600eae616ee802a31ac74701b}{Wt\+::\+Key\+::\+Enter}} = 13, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da5c6ba25104401c9ee0650230fc6ba413}{Wt\+::\+Key\+::\+Tab}} = 9, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dacd7d13ceea728b08555f7c818cfb13ef}{Wt\+::\+Key\+::\+Backspace}} = 8, 
+\newline
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da825a3d98017bab11815ad2817201324c}{Wt\+::\+Key\+::\+Shift}} = 16, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daa1595abbb4c3a326636dd178757cd6c1}{Wt\+::\+Key\+::\+Control}} = 17, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daa2e92861b757ab878312dd57993d60cf}{Wt\+::\+Key\+::\+Alt}} = 18, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da9b869c510c75c5827ac82e49d4340927}{Wt\+::\+Key\+::\+Page\+Up}} = 33, 
+\newline
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daee3677bcca83ece9384b01e43952bf33}{Wt\+::\+Key\+::\+Page\+Down}} = 34, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da87557f11575c0ad78e4e28abedc13b6e}{Wt\+::\+Key\+::\+End}} = 35, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da8cf04a9734132302f96da8e113e80ce5}{Wt\+::\+Key\+::\+Home}} = 36, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da945d5e233cf7d6240f6b783b36a374ff}{Wt\+::\+Key\+::\+Left}} = 37, 
+\newline
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da258f49887ef8d14ac268c92b02503aaa}{Wt\+::\+Key\+::\+Up}} = 38, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da92b09c7c48c520c3c55e497875da437c}{Wt\+::\+Key\+::\+Right}} = 39, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da08a38277b0309070706f6652eeae9a53}{Wt\+::\+Key\+::\+Down}} = 40, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daa458be0f08b7e4ff3c0f633c100176c0}{Wt\+::\+Key\+::\+Insert}} = 45, 
+\newline
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daf2a6c498fb90ee345d997f888fce3b18}{Wt\+::\+Key\+::\+Delete}} = 46, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da013ec032d3460d4be4431c6ab1f8f224}{Wt\+::\+Key\+::\+Escape}} = 27, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dae1dffc8709f31a4987c8a88334107e89}{Wt\+::\+Key\+::\+F1}} = 112, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dafe5c3684dce76cdd9f7f42430868aa74}{Wt\+::\+Key\+::\+F2}} = 113, 
+\newline
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da4b6bf4b531770872d4328ce69bef5627}{Wt\+::\+Key\+::\+F3}} = 114, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dae7e0e72401a9f2718ed0f39f2861d702}{Wt\+::\+Key\+::\+F4}} = 115, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da37f438df6a6d5ba4c17ef8ca58562f00}{Wt\+::\+Key\+::\+F5}} = 116, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da1faf42f2823f184eb2c9f0dffe5d73f2}{Wt\+::\+Key\+::\+F6}} = 117, 
+\newline
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da47489eb597b7db34caa24b1fc78fc839}{Wt\+::\+Key\+::\+F7}} = 118, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da4787509ad9f9d747a81a30e9dde3d4a7}{Wt\+::\+Key\+::\+F8}} = 119, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da892a245e287c163080b23db737d3c4c9}{Wt\+::\+Key\+::\+F9}} = 120, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dab213ce22ca6ad4eda8db82966b9b6e5a}{Wt\+::\+Key\+::\+F10}} = 121, 
+\newline
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da643b0662422d1d0dffa3fca2e2bf28a8}{Wt\+::\+Key\+::\+F11}} = 122, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dae902674982fc99aa343cdd94da7476c3}{Wt\+::\+Key\+::\+F12}} = 123, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dad511f8439ecde36647437fbba67a4394}{Wt\+::\+Key\+::\+Space}} = \textquotesingle{} \textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da7fc56270e7a70fa81a5935b72eacbe29}{Wt\+::\+Key\+::A}} = \textquotesingle{}A\textquotesingle{}, 
+\newline
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da9d5ed678fe57bcca610140957afab571}{Wt\+::\+Key\+::B}} = \textquotesingle{}B\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da0d61f8370cad1d412f80b84d143e1257}{Wt\+::\+Key\+::C}} = \textquotesingle{}C\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daf623e75af30e62bbd73d6df5b50bb7b5}{Wt\+::\+Key\+::D}} = \textquotesingle{}D\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da3a3ea00cfc35332cedf6e5e9a32e94da}{Wt\+::\+Key\+::E}} = \textquotesingle{}E\textquotesingle{}, 
+\newline
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da800618943025315f869e4e1f09471012}{Wt\+::\+Key\+::F}} = \textquotesingle{}F\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dadfcf28d0734569a6a693bc8194de62bf}{Wt\+::\+Key\+::G}} = \textquotesingle{}G\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dac1d9f50f86825a1a2302ec2449c17196}{Wt\+::\+Key\+::H}} = \textquotesingle{}H\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dadd7536794b63bf90eccfd37f9b147d7f}{Wt\+::\+Key\+::I}} = \textquotesingle{}I\textquotesingle{}, 
+\newline
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daff44570aca8241914870afbc310cdb85}{Wt\+::\+Key\+::J}} = \textquotesingle{}J\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daa5f3c6a11b03839d46af9fb43c97c188}{Wt\+::\+Key\+::K}} = \textquotesingle{}K\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dad20caec3b48a1eef164cb4ca81ba2587}{Wt\+::\+Key\+::L}} = \textquotesingle{}L\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da69691c7bdcc3ce6d5d8a1361f22d04ac}{Wt\+::\+Key\+::M}} = \textquotesingle{}M\textquotesingle{}, 
+\newline
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da8d9c307cb7f3c4a32822a51922d1ceaa}{Wt\+::\+Key\+::N}} = \textquotesingle{}N\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daf186217753c37b9b9f958d906208506e}{Wt\+::\+Key\+::O}} = \textquotesingle{}O\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da44c29edb103a2872f519ad0c9a0fdaaa}{Wt\+::\+Key\+::P}} = \textquotesingle{}P\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daf09564c9ca56850d4cd6b3319e541aee}{Wt\+::\+Key\+::Q}} = \textquotesingle{}Q\textquotesingle{}, 
+\newline
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dae1e1d3d40573127e9ee0480caf1283d6}{Wt\+::\+Key\+::R}} = \textquotesingle{}R\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da5dbc98dcc983a70728bd082d1a47546e}{Wt\+::\+Key\+::S}} = \textquotesingle{}S\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dab9ece18c950afbfa6b0fdbfa4ff731d3}{Wt\+::\+Key\+::T}} = \textquotesingle{}T\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da4c614360da93c0a041b22e537de151eb}{Wt\+::\+Key\+::U}} = \textquotesingle{}U\textquotesingle{}, 
+\newline
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da5206560a306a2e085a437fd258eb57ce}{Wt\+::\+Key\+::V}} = \textquotesingle{}V\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da61e9c06ea9a85a5088a499df6458d276}{Wt\+::\+Key\+::W}} = \textquotesingle{}W\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da02129bb861061d1a052c592e2dc6b383}{Wt\+::\+Key\+::X}} = \textquotesingle{}X\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da57cec4137b614c87cb4e24a3d003a3e0}{Wt\+::\+Key\+::Y}} = \textquotesingle{}Y\textquotesingle{}, 
+\newline
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da21c2e59531c8710156d34a3c30ac81d5}{Wt\+::\+Key\+::Z}} = \textquotesingle{}Z\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da7008dae6e21bba9332daab92d829dbda}{Wt\+::\+Key\+::\+Key\+\_\+1}} = \textquotesingle{}1\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da1dfb488fdab3fb75cc0a5e371580ccab}{Wt\+::\+Key\+::\+Key\+\_\+2}} = \textquotesingle{}2\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da8bb9b4775309e87d73b444c5f88deb36}{Wt\+::\+Key\+::\+Key\+\_\+3}} = \textquotesingle{}3\textquotesingle{}, 
+\newline
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da5352c75d225b1aff21b207d4b78b9948}{Wt\+::\+Key\+::\+Key\+\_\+4}} = \textquotesingle{}4\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dad9148b6f011a15c4f0818ad1f4d6f8b3}{Wt\+::\+Key\+::\+Key\+\_\+5}} = \textquotesingle{}5\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da301d1361703503a70567938b519070e1}{Wt\+::\+Key\+::\+Key\+\_\+6}} = \textquotesingle{}6\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da179f94272580cbc69b0f5fddced1ce2f}{Wt\+::\+Key\+::\+Key\+\_\+7}} = \textquotesingle{}7\textquotesingle{}, 
+\newline
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da732ca0da2d4f9db51ed9507f7b10bc1a}{Wt\+::\+Key\+::\+Key\+\_\+8}} = \textquotesingle{}8\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daae4461c07901b9f7b3d8bbdbc3445baa}{Wt\+::\+Key\+::\+Key\+\_\+9}} = \textquotesingle{}9\textquotesingle{}, 
+\mbox{\hyperlink{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da04d3273dce36fcab516ea1694b9583c0}{Wt\+::\+Key\+::\+Key\+\_\+0}} = \textquotesingle{}0\textquotesingle{}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for key codes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Support for event handling using signals and slots. 
+
+To respond to user-\/interactivity events, or in general to communicate events from one widget to any other, Wt uses a signal/slot system.
+
+A slot is any method of any descendant of \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}}. To connect a signal with a slot, the only requirement is that the method signature of the slot must be compatible with the signal definition. In this way every method may be used as a slot, and it is not necessary to explicitly indicate a particular method to be a slot (as is needed in Qt), by putting them in a special section. Nevertheless, you may still do that if you wish to emphasize that these functions can be used as slots, or, if you have done extra work to optimize the implementation of these methods as client-\/side Java\+Script code (see below).
+
+A signal may be created by adding a \mbox{\hyperlink{classWt_1_1Signal}{Signal$<$X, ...$>$}} object to your class. You may specify up to 6 arguments which may be of arbitrary types that are {\itshape Copyable}, that may be passed through the signal to connected slots.
+
+The library defines several user-\/event signals on various widgets, and it is easy and convenient to add signals and slots to widget classes to communicate events and trigger callbacks.
+
+Event signals (\mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal$<$\+E$>$}}) are signals that may be triggered internally by the library to respond to user interactivity events. The abstract base classes \mbox{\hyperlink{classWt_1_1WInteractWidget}{W\+Interact\+Widget}} and \mbox{\hyperlink{classWt_1_1WFormWidget}{W\+Form\+Widget}} define most of these event signals. To react to one of these events, the programmer connects a self-\/defined or already existing slot to such a signal.
+
+To connect a signal from multiple senders to a single slot, we recommend the use of std\+::bind() to identify the sender (or otherwise the intention) of the signal. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__signalslot_ga34e65660d30e69c56aa636a8856aa52d}\label{group__signalslot_ga34e65660d30e69c56aa636a8856aa52d}} 
+\index{Signal/slot system@{Signal/slot system}!Key@{Key}}
+\index{Key@{Key}!Signal/slot system@{Signal/slot system}}
+\doxysubsubsection{\texorpdfstring{Key}{Key}}
+{\footnotesize\ttfamily enum Wt\+::\+Key\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration for key codes. 
+
+These are key codes that identify a key on a keyboard. All keys listed here can be identified across all browsers and (Western) keyboards. A Key is returned by \mbox{\hyperlink{classWt_1_1WKeyEvent_ad69f2c0f6ea4f4189e2db028be031254}{W\+Key\+Event\+::key()}}. If you want to identify a character, you should use the \mbox{\hyperlink{classWt_1_1WKeyEvent_a0685e315762ae3641c13e5e211a7af67}{W\+Key\+Event\+::char\+Code()}} method instead.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WInteractWidget_a639e4f54902b864f211e2e6cf9f80dc7}{W\+Interact\+Widget\+::key\+Went\+Down}}, \mbox{\hyperlink{classWt_1_1WInteractWidget_aed28d2568889f54a4809250ae265a08b}{W\+Interact\+Widget\+::key\+Went\+Up}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Unknown@{Unknown}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Unknown@{Unknown}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da88183b946cc5f0e8c96b2e66e1c74a7e}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da88183b946cc5f0e8c96b2e66e1c74a7e}} 
+Unknown&Unknown key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Enter@{Enter}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Enter@{Enter}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daf1851d5600eae616ee802a31ac74701b}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daf1851d5600eae616ee802a31ac74701b}} 
+Enter&Enter key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Tab@{Tab}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Tab@{Tab}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da5c6ba25104401c9ee0650230fc6ba413}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da5c6ba25104401c9ee0650230fc6ba413}} 
+Tab&Tab key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Backspace@{Backspace}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Backspace@{Backspace}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dacd7d13ceea728b08555f7c818cfb13ef}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dacd7d13ceea728b08555f7c818cfb13ef}} 
+Backspace&Backspace key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Shift@{Shift}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Shift@{Shift}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da825a3d98017bab11815ad2817201324c}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da825a3d98017bab11815ad2817201324c}} 
+Shift&Shift key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Control@{Control}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Control@{Control}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daa1595abbb4c3a326636dd178757cd6c1}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daa1595abbb4c3a326636dd178757cd6c1}} 
+Control&Control key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Alt@{Alt}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Alt@{Alt}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daa2e92861b757ab878312dd57993d60cf}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daa2e92861b757ab878312dd57993d60cf}} 
+Alt&Alt key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PageUp@{PageUp}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!PageUp@{PageUp}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da9b869c510c75c5827ac82e49d4340927}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da9b869c510c75c5827ac82e49d4340927}} 
+Page\+Up&Page up key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PageDown@{PageDown}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!PageDown@{PageDown}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daee3677bcca83ece9384b01e43952bf33}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daee3677bcca83ece9384b01e43952bf33}} 
+Page\+Down&Page down key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{End@{End}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!End@{End}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da87557f11575c0ad78e4e28abedc13b6e}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da87557f11575c0ad78e4e28abedc13b6e}} 
+End&End key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Home@{Home}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Home@{Home}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da8cf04a9734132302f96da8e113e80ce5}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da8cf04a9734132302f96da8e113e80ce5}} 
+Home&\mbox{\hyperlink{classHome}{Home}} key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Left@{Left}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Left@{Left}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da945d5e233cf7d6240f6b783b36a374ff}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da945d5e233cf7d6240f6b783b36a374ff}} 
+Left&Left arrow key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Up@{Up}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Up@{Up}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da258f49887ef8d14ac268c92b02503aaa}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da258f49887ef8d14ac268c92b02503aaa}} 
+Up&Up arrow key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Right@{Right}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Right@{Right}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da92b09c7c48c520c3c55e497875da437c}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da92b09c7c48c520c3c55e497875da437c}} 
+Right&Right arrow key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Down@{Down}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Down@{Down}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da08a38277b0309070706f6652eeae9a53}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da08a38277b0309070706f6652eeae9a53}} 
+Down&Down arrow key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Insert@{Insert}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Insert@{Insert}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daa458be0f08b7e4ff3c0f633c100176c0}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daa458be0f08b7e4ff3c0f633c100176c0}} 
+Insert&Insert key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Delete@{Delete}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Delete@{Delete}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daf2a6c498fb90ee345d997f888fce3b18}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daf2a6c498fb90ee345d997f888fce3b18}} 
+Delete&Delete key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Escape@{Escape}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Escape@{Escape}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da013ec032d3460d4be4431c6ab1f8f224}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da013ec032d3460d4be4431c6ab1f8f224}} 
+Escape&Escape key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F1@{F1}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!F1@{F1}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dae1dffc8709f31a4987c8a88334107e89}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dae1dffc8709f31a4987c8a88334107e89}} 
+F1&F1 function key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F2@{F2}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!F2@{F2}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dafe5c3684dce76cdd9f7f42430868aa74}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dafe5c3684dce76cdd9f7f42430868aa74}} 
+F2&F2 function key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F3@{F3}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!F3@{F3}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da4b6bf4b531770872d4328ce69bef5627}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da4b6bf4b531770872d4328ce69bef5627}} 
+F3&F3 function key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F4@{F4}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!F4@{F4}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dae7e0e72401a9f2718ed0f39f2861d702}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dae7e0e72401a9f2718ed0f39f2861d702}} 
+F4&F4 function key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F5@{F5}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!F5@{F5}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da37f438df6a6d5ba4c17ef8ca58562f00}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da37f438df6a6d5ba4c17ef8ca58562f00}} 
+F5&F5 function key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F6@{F6}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!F6@{F6}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da1faf42f2823f184eb2c9f0dffe5d73f2}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da1faf42f2823f184eb2c9f0dffe5d73f2}} 
+F6&F6 function key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F7@{F7}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!F7@{F7}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da47489eb597b7db34caa24b1fc78fc839}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da47489eb597b7db34caa24b1fc78fc839}} 
+F7&F7 function key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F8@{F8}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!F8@{F8}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da4787509ad9f9d747a81a30e9dde3d4a7}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da4787509ad9f9d747a81a30e9dde3d4a7}} 
+F8&F8 function key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F9@{F9}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!F9@{F9}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da892a245e287c163080b23db737d3c4c9}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da892a245e287c163080b23db737d3c4c9}} 
+F9&F9 function key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F10@{F10}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!F10@{F10}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dab213ce22ca6ad4eda8db82966b9b6e5a}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dab213ce22ca6ad4eda8db82966b9b6e5a}} 
+F10&F10 function key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F11@{F11}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!F11@{F11}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da643b0662422d1d0dffa3fca2e2bf28a8}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da643b0662422d1d0dffa3fca2e2bf28a8}} 
+F11&F11 function key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F12@{F12}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!F12@{F12}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dae902674982fc99aa343cdd94da7476c3}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dae902674982fc99aa343cdd94da7476c3}} 
+F12&F12 function key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Space@{Space}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Space@{Space}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dad511f8439ecde36647437fbba67a4394}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dad511f8439ecde36647437fbba67a4394}} 
+Space&Space. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A@{A}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!A@{A}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da7fc56270e7a70fa81a5935b72eacbe29}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da7fc56270e7a70fa81a5935b72eacbe29}} 
+A&\textquotesingle{}A\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B@{B}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!B@{B}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da9d5ed678fe57bcca610140957afab571}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da9d5ed678fe57bcca610140957afab571}} 
+B&\textquotesingle{}B\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{C@{C}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!C@{C}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da0d61f8370cad1d412f80b84d143e1257}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da0d61f8370cad1d412f80b84d143e1257}} 
+C&\textquotesingle{}C\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D@{D}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!D@{D}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daf623e75af30e62bbd73d6df5b50bb7b5}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daf623e75af30e62bbd73d6df5b50bb7b5}} 
+D&\textquotesingle{}D\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E@{E}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!E@{E}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da3a3ea00cfc35332cedf6e5e9a32e94da}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da3a3ea00cfc35332cedf6e5e9a32e94da}} 
+E&\textquotesingle{}E\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{F@{F}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!F@{F}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da800618943025315f869e4e1f09471012}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da800618943025315f869e4e1f09471012}} 
+F&\textquotesingle{}F\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{G@{G}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!G@{G}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dadfcf28d0734569a6a693bc8194de62bf}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dadfcf28d0734569a6a693bc8194de62bf}} 
+G&\textquotesingle{}G\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{H@{H}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!H@{H}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dac1d9f50f86825a1a2302ec2449c17196}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dac1d9f50f86825a1a2302ec2449c17196}} 
+H&\textquotesingle{}H\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I@{I}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!I@{I}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dadd7536794b63bf90eccfd37f9b147d7f}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dadd7536794b63bf90eccfd37f9b147d7f}} 
+I&\textquotesingle{}I\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{J@{J}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!J@{J}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daff44570aca8241914870afbc310cdb85}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daff44570aca8241914870afbc310cdb85}} 
+J&\textquotesingle{}J\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K@{K}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!K@{K}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daa5f3c6a11b03839d46af9fb43c97c188}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daa5f3c6a11b03839d46af9fb43c97c188}} 
+K&\textquotesingle{}K\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L@{L}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!L@{L}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dad20caec3b48a1eef164cb4ca81ba2587}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dad20caec3b48a1eef164cb4ca81ba2587}} 
+L&\textquotesingle{}L\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M@{M}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!M@{M}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da69691c7bdcc3ce6d5d8a1361f22d04ac}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da69691c7bdcc3ce6d5d8a1361f22d04ac}} 
+M&\textquotesingle{}M\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{N@{N}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!N@{N}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da8d9c307cb7f3c4a32822a51922d1ceaa}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da8d9c307cb7f3c4a32822a51922d1ceaa}} 
+N&\textquotesingle{}N\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{O@{O}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!O@{O}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daf186217753c37b9b9f958d906208506e}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daf186217753c37b9b9f958d906208506e}} 
+O&\textquotesingle{}O\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P@{P}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!P@{P}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da44c29edb103a2872f519ad0c9a0fdaaa}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da44c29edb103a2872f519ad0c9a0fdaaa}} 
+P&\textquotesingle{}P\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Q@{Q}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Q@{Q}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daf09564c9ca56850d4cd6b3319e541aee}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daf09564c9ca56850d4cd6b3319e541aee}} 
+Q&\textquotesingle{}Q\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R@{R}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!R@{R}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dae1e1d3d40573127e9ee0480caf1283d6}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dae1e1d3d40573127e9ee0480caf1283d6}} 
+R&\textquotesingle{}R\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S@{S}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!S@{S}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da5dbc98dcc983a70728bd082d1a47546e}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da5dbc98dcc983a70728bd082d1a47546e}} 
+S&\textquotesingle{}S\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T@{T}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!T@{T}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dab9ece18c950afbfa6b0fdbfa4ff731d3}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dab9ece18c950afbfa6b0fdbfa4ff731d3}} 
+T&\textquotesingle{}T\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U@{U}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!U@{U}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da4c614360da93c0a041b22e537de151eb}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da4c614360da93c0a041b22e537de151eb}} 
+U&\textquotesingle{}U\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{V@{V}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!V@{V}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da5206560a306a2e085a437fd258eb57ce}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da5206560a306a2e085a437fd258eb57ce}} 
+V&\textquotesingle{}V\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W@{W}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!W@{W}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da61e9c06ea9a85a5088a499df6458d276}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da61e9c06ea9a85a5088a499df6458d276}} 
+W&\textquotesingle{}W\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X@{X}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!X@{X}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da02129bb861061d1a052c592e2dc6b383}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da02129bb861061d1a052c592e2dc6b383}} 
+X&\textquotesingle{}X\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Y@{Y}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Y@{Y}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da57cec4137b614c87cb4e24a3d003a3e0}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da57cec4137b614c87cb4e24a3d003a3e0}} 
+Y&\textquotesingle{}Y\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Z@{Z}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Z@{Z}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da21c2e59531c8710156d34a3c30ac81d5}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da21c2e59531c8710156d34a3c30ac81d5}} 
+Z&\textquotesingle{}Z\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Key\_1@{Key\_1}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Key\_1@{Key\_1}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da7008dae6e21bba9332daab92d829dbda}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da7008dae6e21bba9332daab92d829dbda}} 
+Key\+\_\+1&\textquotesingle{}1\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Key\_2@{Key\_2}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Key\_2@{Key\_2}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da1dfb488fdab3fb75cc0a5e371580ccab}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da1dfb488fdab3fb75cc0a5e371580ccab}} 
+Key\+\_\+2&\textquotesingle{}2\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Key\_3@{Key\_3}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Key\_3@{Key\_3}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da8bb9b4775309e87d73b444c5f88deb36}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da8bb9b4775309e87d73b444c5f88deb36}} 
+Key\+\_\+3&\textquotesingle{}3\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Key\_4@{Key\_4}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Key\_4@{Key\_4}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da5352c75d225b1aff21b207d4b78b9948}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da5352c75d225b1aff21b207d4b78b9948}} 
+Key\+\_\+4&\textquotesingle{}4\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Key\_5@{Key\_5}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Key\_5@{Key\_5}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dad9148b6f011a15c4f0818ad1f4d6f8b3}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52dad9148b6f011a15c4f0818ad1f4d6f8b3}} 
+Key\+\_\+5&\textquotesingle{}5\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Key\_6@{Key\_6}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Key\_6@{Key\_6}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da301d1361703503a70567938b519070e1}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da301d1361703503a70567938b519070e1}} 
+Key\+\_\+6&\textquotesingle{}6\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Key\_7@{Key\_7}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Key\_7@{Key\_7}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da179f94272580cbc69b0f5fddced1ce2f}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da179f94272580cbc69b0f5fddced1ce2f}} 
+Key\+\_\+7&\textquotesingle{}7\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Key\_8@{Key\_8}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Key\_8@{Key\_8}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da732ca0da2d4f9db51ed9507f7b10bc1a}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da732ca0da2d4f9db51ed9507f7b10bc1a}} 
+Key\+\_\+8&\textquotesingle{}8\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Key\_9@{Key\_9}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Key\_9@{Key\_9}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daae4461c07901b9f7b3d8bbdbc3445baa}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52daae4461c07901b9f7b3d8bbdbc3445baa}} 
+Key\+\_\+9&\textquotesingle{}9\textquotesingle{} key \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Key\_0@{Key\_0}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Key\_0@{Key\_0}}}\mbox{\Hypertarget{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da04d3273dce36fcab516ea1694b9583c0}\label{group__signalslot_gga34e65660d30e69c56aa636a8856aa52da04d3273dce36fcab516ea1694b9583c0}} 
+Key\+\_\+0&\textquotesingle{}0\textquotesingle{} key \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__signalslot_ga50f91169486bada5931f3adc3a623091}\label{group__signalslot_ga50f91169486bada5931f3adc3a623091}} 
+\index{Signal/slot system@{Signal/slot system}!KeyboardModifier@{KeyboardModifier}}
+\index{KeyboardModifier@{KeyboardModifier}!Signal/slot system@{Signal/slot system}}
+\doxysubsubsection{\texorpdfstring{KeyboardModifier}{KeyboardModifier}}
+{\footnotesize\ttfamily enum Wt\+::\+Keyboard\+Modifier\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration for keyboard modifiers. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMouseEvent_a546499e074ae403057f5acda1da1be0f}{W\+Mouse\+Event\+::modifiers()}}, \mbox{\hyperlink{classWt_1_1WKeyEvent_abbb3876c3e1f91e07dfd905e206caafc}{W\+Key\+Event\+::modifiers()}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!None@{None}}}\mbox{\Hypertarget{group__signalslot_gga50f91169486bada5931f3adc3a623091a6adf97f83acf6453d4a6a4b1070f3754}\label{group__signalslot_gga50f91169486bada5931f3adc3a623091a6adf97f83acf6453d4a6a4b1070f3754}} 
+None&No modifiers. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Shift@{Shift}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Shift@{Shift}}}\mbox{\Hypertarget{group__signalslot_gga50f91169486bada5931f3adc3a623091a825a3d98017bab11815ad2817201324c}\label{group__signalslot_gga50f91169486bada5931f3adc3a623091a825a3d98017bab11815ad2817201324c}} 
+Shift&Shift key pressed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Control@{Control}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Control@{Control}}}\mbox{\Hypertarget{group__signalslot_gga50f91169486bada5931f3adc3a623091aa1595abbb4c3a326636dd178757cd6c1}\label{group__signalslot_gga50f91169486bada5931f3adc3a623091aa1595abbb4c3a326636dd178757cd6c1}} 
+Control&Control key pressed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Alt@{Alt}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Alt@{Alt}}}\mbox{\Hypertarget{group__signalslot_gga50f91169486bada5931f3adc3a623091aa2e92861b757ab878312dd57993d60cf}\label{group__signalslot_gga50f91169486bada5931f3adc3a623091aa2e92861b757ab878312dd57993d60cf}} 
+Alt&Alt key pressed. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Meta@{Meta}!Signal/slot system@{Signal/slot system}}\index{Signal/slot system@{Signal/slot system}!Meta@{Meta}}}\mbox{\Hypertarget{group__signalslot_gga50f91169486bada5931f3adc3a623091ab6755d218d5f4e1cef9cce9cc39aeda9}\label{group__signalslot_gga50f91169486bada5931f3adc3a623091ab6755d218d5f4e1cef9cce9cc39aeda9}} 
+Meta&Meta key pressed (\char`\"{}\+Windows\char`\"{} or \char`\"{}\+Command\char`\"{} (Mac) key) \\
+\hline
+
+\end{DoxyEnumFields}

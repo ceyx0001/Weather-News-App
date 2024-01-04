@@ -1,0 +1,137 @@
+\hypertarget{classIconPair}{}\doxysection{Icon\+Pair Class Reference}
+\label{classIconPair}\index{IconPair@{IconPair}}
+
+
+An icon pair (identical to W\+Icon\+Pair)  
+
+
+
+
+{\ttfamily \#include $<$Icon\+Pair.\+h$>$}
+
+
+
+Inheritance diagram for Icon\+Pair\+:
+% FIG 0
+
+
+Collaboration diagram for Icon\+Pair\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIconPair_a8e45686bb7232f3b00107919859f9b5b}{Icon\+Pair}} (const std\+::string icon1\+U\+RI, const std\+::string icon2\+U\+RI, bool click\+Is\+Switch=true)
+\begin{DoxyCompactList}\small\item\em Construct a two-\/state icon widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classIconPair_a349d74977ef2174b64bab37e2b9a27ea}{set\+State}} (int num)
+\begin{DoxyCompactList}\small\item\em Set which icon should be visible. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classIconPair_a03aa33b0d9cec4765b117304825eca1c}{state}} () const
+\begin{DoxyCompactList}\small\item\em Get the current state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIconPair_a4556020ab1be2557f2b7d671be2b9a1e}\label{classIconPair_a4556020ab1be2557f2b7d671be2b9a1e}} 
+\mbox{\hyperlink{classWt_1_1WImage}{W\+Image}} $\ast$ \mbox{\hyperlink{classIconPair_a4556020ab1be2557f2b7d671be2b9a1e}{icon1}} () const
+\begin{DoxyCompactList}\small\item\em Get the first icon image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIconPair_a564d825b21fb16caee6d33e262618325}\label{classIconPair_a564d825b21fb16caee6d33e262618325}} 
+\mbox{\hyperlink{classWt_1_1WImage}{W\+Image}} $\ast$ \mbox{\hyperlink{classIconPair_a564d825b21fb16caee6d33e262618325}{icon2}} () const
+\begin{DoxyCompactList}\small\item\em Get the second icon image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIconPair_ac4fc5158f2431ff46f81943db2c6edca}\label{classIconPair_ac4fc5158f2431ff46f81943db2c6edca}} 
+void \mbox{\hyperlink{classIconPair_ac4fc5158f2431ff46f81943db2c6edca}{show\+Icon1}} ()
+\begin{DoxyCompactList}\small\item\em Set state to 0 (show icon 1). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIconPair_a4a06f61619db889f4f11adac37e45b42}\label{classIconPair_a4a06f61619db889f4f11adac37e45b42}} 
+void \mbox{\hyperlink{classIconPair_a4a06f61619db889f4f11adac37e45b42}{show\+Icon2}} ()
+\begin{DoxyCompactList}\small\item\em Set state to 1 (show icon 2). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classIconPair_a9ad258cf2850cb7efc142130d8deddab}\label{classIconPair_a9ad258cf2850cb7efc142130d8deddab}} 
+\mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ $\ast$ \mbox{\hyperlink{classIconPair_a9ad258cf2850cb7efc142130d8deddab}{icon1\+Clicked}}
+\begin{DoxyCompactList}\small\item\em Signal emitted when clicked while in state 0 (icon 1 is shown). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIconPair_a23859bbde114fb9dcbcb3f96e0ca4e32}\label{classIconPair_a23859bbde114fb9dcbcb3f96e0ca4e32}} 
+\mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} $>$ $\ast$ \mbox{\hyperlink{classIconPair_a23859bbde114fb9dcbcb3f96e0ca4e32}{icon2\+Clicked}}
+\begin{DoxyCompactList}\small\item\em Signal emitted when clicked while in state 1 (icon 2 is shown). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classIconPair_a6f89d1e7951bcc1e060b9bc73bc97a7e}\label{classIconPair_a6f89d1e7951bcc1e060b9bc73bc97a7e}} 
+void \mbox{\hyperlink{classIconPair_a6f89d1e7951bcc1e060b9bc73bc97a7e}{undo\+Show\+Icon1}} ()
+\begin{DoxyCompactList}\small\item\em Undo function for prelearning \mbox{\hyperlink{classIconPair_ac4fc5158f2431ff46f81943db2c6edca}{show\+Icon1()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIconPair_a28fe301bcdd61cb0f022cb3aac17de6d}\label{classIconPair_a28fe301bcdd61cb0f022cb3aac17de6d}} 
+void \mbox{\hyperlink{classIconPair_a28fe301bcdd61cb0f022cb3aac17de6d}{undo\+Show\+Icon2}} ()
+\begin{DoxyCompactList}\small\item\em Undo function for prelearning \mbox{\hyperlink{classIconPair_a4a06f61619db889f4f11adac37e45b42}{show\+Icon2()}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classIconPair_a21a2ea9220152bbb9e7ed72b3fffe1f6}\label{classIconPair_a21a2ea9220152bbb9e7ed72b3fffe1f6}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries impl\+\_\+}
+\item 
+\mbox{\Hypertarget{classIconPair_a49c0fcfd24613da349511468ae24bc0c}\label{classIconPair_a49c0fcfd24613da349511468ae24bc0c}} 
+\mbox{\hyperlink{classWt_1_1WImage}{W\+Image}} $\ast$ \mbox{\hyperlink{classIconPair_a49c0fcfd24613da349511468ae24bc0c}{icon1\+\_\+}}
+\begin{DoxyCompactList}\small\item\em First icon. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIconPair_a016a379d7fe42d78b189820439bfc95a}\label{classIconPair_a016a379d7fe42d78b189820439bfc95a}} 
+\mbox{\hyperlink{classWt_1_1WImage}{W\+Image}} $\ast$ \mbox{\hyperlink{classIconPair_a016a379d7fe42d78b189820439bfc95a}{icon2\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Second icon. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classIconPair_aae00701197f8c04483503c8f11be2fe9}\label{classIconPair_aae00701197f8c04483503c8f11be2fe9}} 
+int \mbox{\hyperlink{classIconPair_aae00701197f8c04483503c8f11be2fe9}{previous\+State\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Undo state for prelearning stateless \mbox{\hyperlink{classIconPair_ac4fc5158f2431ff46f81943db2c6edca}{show\+Icon1()}} and \mbox{\hyperlink{classIconPair_a4a06f61619db889f4f11adac37e45b42}{show\+Icon2()}} slots. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An icon pair (identical to W\+Icon\+Pair) 
+
+This widget manages two images, only one of which is shown at a single time.
+
+The widget may also react to click events, by changing state.
+
+This widget is part of the Wt treelist example, where it is used to represent the expand/collapse icons, and the corresponding map open/close icon.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classTreeNode}{Tree\+Node}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIconPair_a8e45686bb7232f3b00107919859f9b5b}\label{classIconPair_a8e45686bb7232f3b00107919859f9b5b}} 
+\index{IconPair@{IconPair}!IconPair@{IconPair}}
+\index{IconPair@{IconPair}!IconPair@{IconPair}}
+\doxysubsubsection{\texorpdfstring{IconPair()}{IconPair()}}
+{\footnotesize\ttfamily Icon\+Pair\+::\+Icon\+Pair (\begin{DoxyParamCaption}\item[{const std\+::string}]{icon1\+U\+RI,  }\item[{const std\+::string}]{icon2\+U\+RI,  }\item[{bool}]{click\+Is\+Switch = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Construct a two-\/state icon widget. 
+
+The constructor takes the U\+RI of the two icons. When click\+Is\+Switch is set true, clicking on the icon will switch state. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIconPair_a349d74977ef2174b64bab37e2b9a27ea}\label{classIconPair_a349d74977ef2174b64bab37e2b9a27ea}} 
+\index{IconPair@{IconPair}!setState@{setState}}
+\index{setState@{setState}!IconPair@{IconPair}}
+\doxysubsubsection{\texorpdfstring{setState()}{setState()}}
+{\footnotesize\ttfamily void Icon\+Pair\+::set\+State (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+Set which icon should be visible. 
+
+The first icon has number 0, and the second icon has number 1.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classIconPair_a03aa33b0d9cec4765b117304825eca1c}{state()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classIconPair_a03aa33b0d9cec4765b117304825eca1c}\label{classIconPair_a03aa33b0d9cec4765b117304825eca1c}} 
+\index{IconPair@{IconPair}!state@{state}}
+\index{state@{state}!IconPair@{IconPair}}
+\doxysubsubsection{\texorpdfstring{state()}{state()}}
+{\footnotesize\ttfamily int Icon\+Pair\+::state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the current state. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classIconPair_a349d74977ef2174b64bab37e2b9a27ea}{set\+State()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/treelist/Icon\+Pair.\+h\end{DoxyCompactItemize}

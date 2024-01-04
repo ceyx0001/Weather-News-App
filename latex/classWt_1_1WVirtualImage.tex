@@ -1,0 +1,417 @@
+\hypertarget{classWt_1_1WVirtualImage}{}\doxysection{Wt\+::W\+Virtual\+Image Class Reference}
+\label{classWt_1_1WVirtualImage}\index{Wt::WVirtualImage@{Wt::WVirtualImage}}
+
+
+An abstract widget that shows a viewport to a virtually large image.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Virtual\+Image.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Virtual\+Image\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Virtual\+Image\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WVirtualImage_1_1Coordinate}{Coordinate}}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WVirtualImage_1_1Rect}{Rect}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WVirtualImage_a6ed5dc7cbd0ecebb8611dc2bed4c9b3e}{W\+Virtual\+Image}} (int \mbox{\hyperlink{classWt_1_1WVirtualImage_ab1b114e130939fda488af26c00bde989}{view\+Port\+Width}}, int \mbox{\hyperlink{classWt_1_1WVirtualImage_ac446888b296195f9712e41d785f6f19a}{view\+Port\+Height}}, \+::int64\+\_\+t \mbox{\hyperlink{classWt_1_1WVirtualImage_ac8a11701ac23f432aed3256914e78cd8}{image\+Width}}, \+::int64\+\_\+t \mbox{\hyperlink{classWt_1_1WVirtualImage_a0fae7ac293cad8173722fddf9d35a6bb}{image\+Height}}, int \mbox{\hyperlink{classWt_1_1WVirtualImage_ae1f705134ad028f5c378fced378262c0}{grid\+Image\+Size}}=256)
+\begin{DoxyCompactList}\small\item\em Creates a viewport for a virtual image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_ae579c6380dddbc8a6390344e21c5e8bd}\label{classWt_1_1WVirtualImage_ae579c6380dddbc8a6390344e21c5e8bd}} 
+\mbox{\hyperlink{classWt_1_1WVirtualImage_ae579c6380dddbc8a6390344e21c5e8bd}{$\sim$\+W\+Virtual\+Image}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WVirtualImage_ac77880df77641e2778667d89135bd8c5}{redraw\+All}} ()
+\begin{DoxyCompactList}\small\item\em Regenerates and redraws the image pieces. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WVirtualImage_a967961b3744ce70b0dcfffd2dd4e5582}{enable\+Dragging}} ()
+\begin{DoxyCompactList}\small\item\em Enables mouse dragging to scroll around the image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WVirtualImage_adcd9ca1d1681e1588f83d19fb9d30bdf}{scroll}} (\+::int64\+\_\+t dx, \+::int64\+\_\+t dy)
+\begin{DoxyCompactList}\small\item\em Scrolls the viewport of the image over a distance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WVirtualImage_a0feb746fc22b907f779423bd9768109c}{scroll\+To}} (\+::int64\+\_\+t x, \+::int64\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em Scrolls the viewport of the image to a specific coordinate. \end{DoxyCompactList}\item 
+\+::int64\+\_\+t \mbox{\hyperlink{classWt_1_1WVirtualImage_ac8a11701ac23f432aed3256914e78cd8}{image\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Returns the virtual image width. \end{DoxyCompactList}\item 
+\+::int64\+\_\+t \mbox{\hyperlink{classWt_1_1WVirtualImage_a0fae7ac293cad8173722fddf9d35a6bb}{image\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Returns the virtual image height. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WVirtualImage_a8c52c8b7de786784c764a83ccbfa62eb}{resize\+Image}} (\+::int64\+\_\+t w, \+::int64\+\_\+t h)
+\begin{DoxyCompactList}\small\item\em Resizes the virtual image. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WVirtualImage_ab1b114e130939fda488af26c00bde989}{view\+Port\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Returns the viewport width. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WVirtualImage_ac446888b296195f9712e41d785f6f19a}{view\+Port\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Returns the viewport height. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WVirtualImage_ae1f705134ad028f5c378fced378262c0}{grid\+Image\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the size of a single piece. \end{DoxyCompactList}\item 
+\+::int64\+\_\+t \mbox{\hyperlink{classWt_1_1WVirtualImage_ab6a19aeaa1173fcf2692a47d97961f7b}{current\+Top\+LeftX}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current top left X coordinate. \end{DoxyCompactList}\item 
+\+::int64\+\_\+t \mbox{\hyperlink{classWt_1_1WVirtualImage_a5f959d64a57c517366eb2396c6991091}{current\+Top\+LeftY}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current top left Y coordinate. \end{DoxyCompactList}\item 
+\+::int64\+\_\+t \mbox{\hyperlink{classWt_1_1WVirtualImage_adc54da265d173ada02e2a7eaed8807d5}{current\+Bottom\+RightX}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current bottom right X coordinate. \end{DoxyCompactList}\item 
+\+::int64\+\_\+t \mbox{\hyperlink{classWt_1_1WVirtualImage_a25491c012424e755c37754ff5ec077c1}{current\+Bottom\+RightY}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current bottom right Y coordinate. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \+::int64\+\_\+t, \+::int64\+\_\+t $>$ \& \mbox{\hyperlink{classWt_1_1WVirtualImage_a5b5850535038ea4a505d55cadc6a8446}{view\+Port\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted whenever the viewport changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_ac2657f31a609a69b48631d26e0bd0b81}\label{classWt_1_1WVirtualImage_ac2657f31a609a69b48631d26e0bd0b81}} 
+static const \+::int64\+\_\+t \mbox{\hyperlink{classWt_1_1WVirtualImage_ac2657f31a609a69b48631d26e0bd0b81}{Infinite}}
+\begin{DoxyCompactList}\small\item\em Special value for image\+Width or image\+Height. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WImage}{W\+Image}} $>$ \mbox{\hyperlink{classWt_1_1WVirtualImage_a118ca8382d5d7726393ddf954b2c007a}{create\+Image}} (\+::int64\+\_\+t x, \+::int64\+\_\+t y, int \mbox{\hyperlink{classWt_1_1WCompositeWidget_a29ea57c8313b5316bbfa5c6d3590ad3a}{width}}, int \mbox{\hyperlink{classWt_1_1WCompositeWidget_a058e81d74cf5290ad7bd484573d1fadf}{height}})
+\begin{DoxyCompactList}\small\item\em Creates a grid image for the given rectangle. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}} $>$ \mbox{\hyperlink{classWt_1_1WVirtualImage_a9f6e06d0aef2b5b5d0ecaaeed4cb8a4c}{render}} (\+::int64\+\_\+t x, \+::int64\+\_\+t y, int \mbox{\hyperlink{classWt_1_1WCompositeWidget_a29ea57c8313b5316bbfa5c6d3590ad3a}{width}}, int \mbox{\hyperlink{classWt_1_1WCompositeWidget_a058e81d74cf5290ad7bd484573d1fadf}{height}})
+\begin{DoxyCompactList}\small\item\em Render a grid image for the given rectangle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_aeb7ede8809e2f195a61106a9d5cc9de3}\label{classWt_1_1WVirtualImage_aeb7ede8809e2f195a61106a9d5cc9de3}} 
+virtual void {\bfseries render} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$ flags) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a1e94d17530f23cca1c09d13ba0f2832d}\label{classWt_1_1WVirtualImage_a1e94d17530f23cca1c09d13ba0f2832d}} 
+typedef std\+::map$<$ \+::int64\+\_\+t, \mbox{\hyperlink{classWt_1_1WImage}{W\+Image}} $\ast$ $>$ {\bfseries Grid\+Map}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a3455dbfc8dfeb79057b53e371197674c}\label{classWt_1_1WVirtualImage_a3455dbfc8dfeb79057b53e371197674c}} 
+void {\bfseries mouse\+Up} (const \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} \&e)
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_adad6963d15bcd3fb50a45f566d425e64}\label{classWt_1_1WVirtualImage_adad6963d15bcd3fb50a45f566d425e64}} 
+\mbox{\hyperlink{structWt_1_1WVirtualImage_1_1Rect}{Rect}} {\bfseries neighbourhood} (\+::int64\+\_\+t x, \+::int64\+\_\+t y, int marginX, int marginY)
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a108ca24c04816e00929e6e1813711a86}\label{classWt_1_1WVirtualImage_a108ca24c04816e00929e6e1813711a86}} 
+\+::int64\+\_\+t {\bfseries grid\+Key} (\+::int64\+\_\+t i, \+::int64\+\_\+t j)
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_ae07f6167b97d3a21e49683dc82231d03}\label{classWt_1_1WVirtualImage_ae07f6167b97d3a21e49683dc82231d03}} 
+void {\bfseries decode\+Key} (\+::int64\+\_\+t key, \mbox{\hyperlink{structWt_1_1WVirtualImage_1_1Coordinate}{Coordinate}} \&coordinate)
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a6c1cb8719888a88d738adcd0ea374f7c}\label{classWt_1_1WVirtualImage_a6c1cb8719888a88d738adcd0ea374f7c}} 
+void {\bfseries generate\+Grid\+Items} (\+::int64\+\_\+t newX, \+::int64\+\_\+t newY)
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a547b88dd7cf9075fe378d6d9f84845b6}\label{classWt_1_1WVirtualImage_a547b88dd7cf9075fe378d6d9f84845b6}} 
+void {\bfseries clean\+Grid} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a1494fe5aa483acc737b303c04690c592}\label{classWt_1_1WVirtualImage_a1494fe5aa483acc737b303c04690c592}} 
+bool {\bfseries visible} (\+::int64\+\_\+t i, \+::int64\+\_\+t j) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a4dc826e424249ae30a7c18aaa1f490aa}\label{classWt_1_1WVirtualImage_a4dc826e424249ae30a7c18aaa1f490aa}} 
+void {\bfseries internal\+Scroll\+To} (\+::int64\+\_\+t x, \+::int64\+\_\+t y, bool move\+View\+Port)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_ad8def0101f6991cb3bcc3d783c5eb371}\label{classWt_1_1WVirtualImage_ad8def0101f6991cb3bcc3d783c5eb371}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ int64\+\_\+t, int64\+\_\+t $>$ {\bfseries view\+Port\+Changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a2b9250331ce03979f6cb5db07be2f0c1}\label{classWt_1_1WVirtualImage_a2b9250331ce03979f6cb5db07be2f0c1}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries impl\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a7a651006a04de49068deaa60d4cc3eee}\label{classWt_1_1WVirtualImage_a7a651006a04de49068deaa60d4cc3eee}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries contents\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_aa1ad1acf776af14568d58586f912de08}\label{classWt_1_1WVirtualImage_aa1ad1acf776af14568d58586f912de08}} 
+Grid\+Map {\bfseries grid\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_adc5b61765f22401b8c225fc692537d19}\label{classWt_1_1WVirtualImage_adc5b61765f22401b8c225fc692537d19}} 
+int {\bfseries grid\+Image\+Size\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a61e669d400c394f81b9b779b5afce5af}\label{classWt_1_1WVirtualImage_a61e669d400c394f81b9b779b5afce5af}} 
+int {\bfseries view\+Port\+Width\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_aca2198638a09f351560f33fb1f2c6f0b}\label{classWt_1_1WVirtualImage_aca2198638a09f351560f33fb1f2c6f0b}} 
+int {\bfseries view\+Port\+Height\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a1eb92067e22ac491c3ab3fd794ee81b7}\label{classWt_1_1WVirtualImage_a1eb92067e22ac491c3ab3fd794ee81b7}} 
+\+::int64\+\_\+t {\bfseries image\+Width\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a7679d9cc7183295e20f123348969304d}\label{classWt_1_1WVirtualImage_a7679d9cc7183295e20f123348969304d}} 
+\+::int64\+\_\+t {\bfseries image\+Height\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_ae9fb91486a89bddad5289fb95ab4b961}\label{classWt_1_1WVirtualImage_ae9fb91486a89bddad5289fb95ab4b961}} 
+\+::int64\+\_\+t {\bfseries current\+X\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a76dc065e2baf61a312f40c20eb0a53c2}\label{classWt_1_1WVirtualImage_a76dc065e2baf61a312f40c20eb0a53c2}} 
+\+::int64\+\_\+t {\bfseries current\+Y\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An abstract widget that shows a viewport to a virtually large image. 
+
+W\+Virtual\+Image is an abstract class which renders a large image in small pieces. The large image is broken down, and rendered as a grid of smaller square images parts.
+
+The W\+Virtual\+Image may provide interactive navigation using the mouse, by reacting to dragging of the mouse on the image.
+
+The W\+Virtual\+Image renders pieces in and bordering the current viewport. In this way, provided the individual pieces load sufficiently fast, the user has effectively the impression of scrolling through a single large image, without glitches. Whenever the image is navigated, if necessary, new images are rendered to maintain the border. Images that are too far from the current viewport are pruned away, so that browser memory remains bounded.
+
+To use this class, you must reimplement one of two virtual methods to specify the contents of each grid piece. Either you provide a suitable \mbox{\hyperlink{classWt_1_1WImage}{W\+Image}} for every grid piece, or you provide a \mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}} which renders the contents for a \mbox{\hyperlink{classWt_1_1WImage}{W\+Image}} for every grid piece.
+
+The total image dimensions are (0, 0) to (image\+Width, image\+Height) for a finite image, and become unbounded (including negative numbers) for each dimension which is Infinite.
+
+\doxyparagraph*{C\+SS}
+
+Styling through C\+SS is not applicable. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a6ed5dc7cbd0ecebb8611dc2bed4c9b3e}\label{classWt_1_1WVirtualImage_a6ed5dc7cbd0ecebb8611dc2bed4c9b3e}} 
+\index{Wt::WVirtualImage@{Wt::WVirtualImage}!WVirtualImage@{WVirtualImage}}
+\index{WVirtualImage@{WVirtualImage}!Wt::WVirtualImage@{Wt::WVirtualImage}}
+\doxysubsubsection{\texorpdfstring{WVirtualImage()}{WVirtualImage()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Virtual\+Image\+::\+W\+Virtual\+Image (\begin{DoxyParamCaption}\item[{int}]{view\+Port\+Width,  }\item[{int}]{view\+Port\+Height,  }\item[{\+::int64\+\_\+t}]{image\+Width,  }\item[{\+::int64\+\_\+t}]{image\+Height,  }\item[{int}]{grid\+Image\+Size = {\ttfamily 256} }\end{DoxyParamCaption})}
+
+
+
+Creates a viewport for a virtual image. 
+
+You must specify the size of the viewport, and the size of the virtual image. The latter dimensions may be the special value Infinite, indicating that in one or more dimensions, the image size is infinite (in practice limited by the maximum integer value).
+
+In addition, you must specify the size of each square grid item. The default is 256 by 256. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a118ca8382d5d7726393ddf954b2c007a}\label{classWt_1_1WVirtualImage_a118ca8382d5d7726393ddf954b2c007a}} 
+\index{Wt::WVirtualImage@{Wt::WVirtualImage}!createImage@{createImage}}
+\index{createImage@{createImage}!Wt::WVirtualImage@{Wt::WVirtualImage}}
+\doxysubsubsection{\texorpdfstring{createImage()}{createImage()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WImage}{W\+Image}}$>$ Wt\+::\+W\+Virtual\+Image\+::create\+Image (\begin{DoxyParamCaption}\item[{\+::int64\+\_\+t}]{x,  }\item[{\+::int64\+\_\+t}]{y,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates a grid image for the given rectangle. 
+
+Create the image which spans image coordinates with left upper corner (x, y) and given width and height.
+
+Width and height will not necesarilly equal \mbox{\hyperlink{classWt_1_1WVirtualImage_ae1f705134ad028f5c378fced378262c0}{grid\+Image\+Size()}}, if the the image is not infinite sized.
+
+The default implementation calls \mbox{\hyperlink{classWt_1_1WVirtualImage_a9f6e06d0aef2b5b5d0ecaaeed4cb8a4c}{render()}} and creates an image for the resource returned.
+
+You should override this method if you wish to serve for example static image content.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WVirtualImage_a9f6e06d0aef2b5b5d0ecaaeed4cb8a4c}{render()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_adc54da265d173ada02e2a7eaed8807d5}\label{classWt_1_1WVirtualImage_adc54da265d173ada02e2a7eaed8807d5}} 
+\index{Wt::WVirtualImage@{Wt::WVirtualImage}!currentBottomRightX@{currentBottomRightX}}
+\index{currentBottomRightX@{currentBottomRightX}!Wt::WVirtualImage@{Wt::WVirtualImage}}
+\doxysubsubsection{\texorpdfstring{currentBottomRightX()}{currentBottomRightX()}}
+{\footnotesize\ttfamily \+::int64\+\_\+t Wt\+::\+W\+Virtual\+Image\+::current\+Bottom\+RightX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current bottom right X coordinate. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WVirtualImage_a25491c012424e755c37754ff5ec077c1}{current\+Bottom\+Right\+Y()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a25491c012424e755c37754ff5ec077c1}\label{classWt_1_1WVirtualImage_a25491c012424e755c37754ff5ec077c1}} 
+\index{Wt::WVirtualImage@{Wt::WVirtualImage}!currentBottomRightY@{currentBottomRightY}}
+\index{currentBottomRightY@{currentBottomRightY}!Wt::WVirtualImage@{Wt::WVirtualImage}}
+\doxysubsubsection{\texorpdfstring{currentBottomRightY()}{currentBottomRightY()}}
+{\footnotesize\ttfamily \+::int64\+\_\+t Wt\+::\+W\+Virtual\+Image\+::current\+Bottom\+RightY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current bottom right Y coordinate. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WVirtualImage_adc54da265d173ada02e2a7eaed8807d5}{current\+Bottom\+Right\+X()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_ab6a19aeaa1173fcf2692a47d97961f7b}\label{classWt_1_1WVirtualImage_ab6a19aeaa1173fcf2692a47d97961f7b}} 
+\index{Wt::WVirtualImage@{Wt::WVirtualImage}!currentTopLeftX@{currentTopLeftX}}
+\index{currentTopLeftX@{currentTopLeftX}!Wt::WVirtualImage@{Wt::WVirtualImage}}
+\doxysubsubsection{\texorpdfstring{currentTopLeftX()}{currentTopLeftX()}}
+{\footnotesize\ttfamily \+::int64\+\_\+t Wt\+::\+W\+Virtual\+Image\+::current\+Top\+LeftX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current top left X coordinate. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WVirtualImage_a5f959d64a57c517366eb2396c6991091}{current\+Top\+Left\+Y()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a5f959d64a57c517366eb2396c6991091}\label{classWt_1_1WVirtualImage_a5f959d64a57c517366eb2396c6991091}} 
+\index{Wt::WVirtualImage@{Wt::WVirtualImage}!currentTopLeftY@{currentTopLeftY}}
+\index{currentTopLeftY@{currentTopLeftY}!Wt::WVirtualImage@{Wt::WVirtualImage}}
+\doxysubsubsection{\texorpdfstring{currentTopLeftY()}{currentTopLeftY()}}
+{\footnotesize\ttfamily \+::int64\+\_\+t Wt\+::\+W\+Virtual\+Image\+::current\+Top\+LeftY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current top left Y coordinate. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WVirtualImage_ab6a19aeaa1173fcf2692a47d97961f7b}{current\+Top\+Left\+X()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a967961b3744ce70b0dcfffd2dd4e5582}\label{classWt_1_1WVirtualImage_a967961b3744ce70b0dcfffd2dd4e5582}} 
+\index{Wt::WVirtualImage@{Wt::WVirtualImage}!enableDragging@{enableDragging}}
+\index{enableDragging@{enableDragging}!Wt::WVirtualImage@{Wt::WVirtualImage}}
+\doxysubsubsection{\texorpdfstring{enableDragging()}{enableDragging()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Virtual\+Image\+::enable\+Dragging (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables mouse dragging to scroll around the image. 
+
+The cursor is changed to a \textquotesingle{}move\textquotesingle{} symbol to indicate the interactivity. \mbox{\Hypertarget{classWt_1_1WVirtualImage_ae1f705134ad028f5c378fced378262c0}\label{classWt_1_1WVirtualImage_ae1f705134ad028f5c378fced378262c0}} 
+\index{Wt::WVirtualImage@{Wt::WVirtualImage}!gridImageSize@{gridImageSize}}
+\index{gridImageSize@{gridImageSize}!Wt::WVirtualImage@{Wt::WVirtualImage}}
+\doxysubsubsection{\texorpdfstring{gridImageSize()}{gridImageSize()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Virtual\+Image\+::grid\+Image\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the size of a single piece. 
+
+This is the size of a side of the square pieces that is used to render the visible part of the image. \mbox{\Hypertarget{classWt_1_1WVirtualImage_a0fae7ac293cad8173722fddf9d35a6bb}\label{classWt_1_1WVirtualImage_a0fae7ac293cad8173722fddf9d35a6bb}} 
+\index{Wt::WVirtualImage@{Wt::WVirtualImage}!imageHeight@{imageHeight}}
+\index{imageHeight@{imageHeight}!Wt::WVirtualImage@{Wt::WVirtualImage}}
+\doxysubsubsection{\texorpdfstring{imageHeight()}{imageHeight()}}
+{\footnotesize\ttfamily \+::int64\+\_\+t Wt\+::\+W\+Virtual\+Image\+::image\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the virtual image height. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WVirtualImage_ac8a11701ac23f432aed3256914e78cd8}{image\+Width()}}, \mbox{\hyperlink{classWt_1_1WVirtualImage_a8c52c8b7de786784c764a83ccbfa62eb}{resize\+Image()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_ac8a11701ac23f432aed3256914e78cd8}\label{classWt_1_1WVirtualImage_ac8a11701ac23f432aed3256914e78cd8}} 
+\index{Wt::WVirtualImage@{Wt::WVirtualImage}!imageWidth@{imageWidth}}
+\index{imageWidth@{imageWidth}!Wt::WVirtualImage@{Wt::WVirtualImage}}
+\doxysubsubsection{\texorpdfstring{imageWidth()}{imageWidth()}}
+{\footnotesize\ttfamily \+::int64\+\_\+t Wt\+::\+W\+Virtual\+Image\+::image\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the virtual image width. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WVirtualImage_a0fae7ac293cad8173722fddf9d35a6bb}{image\+Height()}}, \mbox{\hyperlink{classWt_1_1WVirtualImage_a8c52c8b7de786784c764a83ccbfa62eb}{resize\+Image()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_ac77880df77641e2778667d89135bd8c5}\label{classWt_1_1WVirtualImage_ac77880df77641e2778667d89135bd8c5}} 
+\index{Wt::WVirtualImage@{Wt::WVirtualImage}!redrawAll@{redrawAll}}
+\index{redrawAll@{redrawAll}!Wt::WVirtualImage@{Wt::WVirtualImage}}
+\doxysubsubsection{\texorpdfstring{redrawAll()}{redrawAll()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Virtual\+Image\+::redraw\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Regenerates and redraws the image pieces. 
+
+This method invalidates all current grid images, and recreates them. \mbox{\Hypertarget{classWt_1_1WVirtualImage_a9f6e06d0aef2b5b5d0ecaaeed4cb8a4c}\label{classWt_1_1WVirtualImage_a9f6e06d0aef2b5b5d0ecaaeed4cb8a4c}} 
+\index{Wt::WVirtualImage@{Wt::WVirtualImage}!render@{render}}
+\index{render@{render}!Wt::WVirtualImage@{Wt::WVirtualImage}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}}$>$ Wt\+::\+W\+Virtual\+Image\+::render (\begin{DoxyParamCaption}\item[{\+::int64\+\_\+t}]{x,  }\item[{\+::int64\+\_\+t}]{y,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Render a grid image for the given rectangle. 
+
+Returns a resource that streams an image which renders the rectangle which spans image coordinates with left upper corner (x, y) and given width and height.
+
+Width and height will not necesarilly equal to \mbox{\hyperlink{classWt_1_1WVirtualImage_ae1f705134ad028f5c378fced378262c0}{grid\+Image\+Size()}}, if the the image is not infinite sized.
+
+The default implementation throws an Exception. You must reimplement this method unless you reimplement \mbox{\hyperlink{classWt_1_1WVirtualImage_a118ca8382d5d7726393ddf954b2c007a}{create\+Image()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WVirtualImage_a118ca8382d5d7726393ddf954b2c007a}{create\+Image()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a8c52c8b7de786784c764a83ccbfa62eb}\label{classWt_1_1WVirtualImage_a8c52c8b7de786784c764a83ccbfa62eb}} 
+\index{Wt::WVirtualImage@{Wt::WVirtualImage}!resizeImage@{resizeImage}}
+\index{resizeImage@{resizeImage}!Wt::WVirtualImage@{Wt::WVirtualImage}}
+\doxysubsubsection{\texorpdfstring{resizeImage()}{resizeImage()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Virtual\+Image\+::resize\+Image (\begin{DoxyParamCaption}\item[{\+::int64\+\_\+t}]{w,  }\item[{\+::int64\+\_\+t}]{h }\end{DoxyParamCaption})}
+
+
+
+Resizes the virtual image. 
+
+This sets a new virtual size for the image. The viewport size sets the visible portion of the image.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WVirtualImage_ac8a11701ac23f432aed3256914e78cd8}{image\+Width()}}, \mbox{\hyperlink{classWt_1_1WVirtualImage_a0fae7ac293cad8173722fddf9d35a6bb}{image\+Height()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_adcd9ca1d1681e1588f83d19fb9d30bdf}\label{classWt_1_1WVirtualImage_adcd9ca1d1681e1588f83d19fb9d30bdf}} 
+\index{Wt::WVirtualImage@{Wt::WVirtualImage}!scroll@{scroll}}
+\index{scroll@{scroll}!Wt::WVirtualImage@{Wt::WVirtualImage}}
+\doxysubsubsection{\texorpdfstring{scroll()}{scroll()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Virtual\+Image\+::scroll (\begin{DoxyParamCaption}\item[{\+::int64\+\_\+t}]{dx,  }\item[{\+::int64\+\_\+t}]{dy }\end{DoxyParamCaption})}
+
+
+
+Scrolls the viewport of the image over a distance. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WVirtualImage_a0feb746fc22b907f779423bd9768109c}{scroll\+To()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a0feb746fc22b907f779423bd9768109c}\label{classWt_1_1WVirtualImage_a0feb746fc22b907f779423bd9768109c}} 
+\index{Wt::WVirtualImage@{Wt::WVirtualImage}!scrollTo@{scrollTo}}
+\index{scrollTo@{scrollTo}!Wt::WVirtualImage@{Wt::WVirtualImage}}
+\doxysubsubsection{\texorpdfstring{scrollTo()}{scrollTo()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Virtual\+Image\+::scroll\+To (\begin{DoxyParamCaption}\item[{\+::int64\+\_\+t}]{x,  }\item[{\+::int64\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+Scrolls the viewport of the image to a specific coordinate. 
+
+Scroll the viewport so that its top left coordinate becomes (x, y).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WVirtualImage_adcd9ca1d1681e1588f83d19fb9d30bdf}{scroll()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_a5b5850535038ea4a505d55cadc6a8446}\label{classWt_1_1WVirtualImage_a5b5850535038ea4a505d55cadc6a8446}} 
+\index{Wt::WVirtualImage@{Wt::WVirtualImage}!viewPortChanged@{viewPortChanged}}
+\index{viewPortChanged@{viewPortChanged}!Wt::WVirtualImage@{Wt::WVirtualImage}}
+\doxysubsubsection{\texorpdfstring{viewPortChanged()}{viewPortChanged()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \+::int64\+\_\+t, \+::int64\+\_\+t $>$\& Wt\+::\+W\+Virtual\+Image\+::view\+Port\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted whenever the viewport changes. 
+
+The viewport can be changed by the user dragging the image or through the A\+PI methods \mbox{\hyperlink{classWt_1_1WVirtualImage_a0feb746fc22b907f779423bd9768109c}{scroll\+To()}} and \mbox{\hyperlink{classWt_1_1WVirtualImage_adcd9ca1d1681e1588f83d19fb9d30bdf}{scroll()}}. \mbox{\Hypertarget{classWt_1_1WVirtualImage_ac446888b296195f9712e41d785f6f19a}\label{classWt_1_1WVirtualImage_ac446888b296195f9712e41d785f6f19a}} 
+\index{Wt::WVirtualImage@{Wt::WVirtualImage}!viewPortHeight@{viewPortHeight}}
+\index{viewPortHeight@{viewPortHeight}!Wt::WVirtualImage@{Wt::WVirtualImage}}
+\doxysubsubsection{\texorpdfstring{viewPortHeight()}{viewPortHeight()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Virtual\+Image\+::view\+Port\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the viewport height. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WVirtualImage_ab1b114e130939fda488af26c00bde989}{view\+Port\+Width()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WVirtualImage_ab1b114e130939fda488af26c00bde989}\label{classWt_1_1WVirtualImage_ab1b114e130939fda488af26c00bde989}} 
+\index{Wt::WVirtualImage@{Wt::WVirtualImage}!viewPortWidth@{viewPortWidth}}
+\index{viewPortWidth@{viewPortWidth}!Wt::WVirtualImage@{Wt::WVirtualImage}}
+\doxysubsubsection{\texorpdfstring{viewPortWidth()}{viewPortWidth()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Virtual\+Image\+::view\+Port\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the viewport width. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WVirtualImage_ac446888b296195f9712e41d785f6f19a}{view\+Port\+Height()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Virtual\+Image.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,830 @@
+\hypertarget{classWt_1_1WServer}{}\doxysection{Wt\+::W\+Server Class Reference}
+\label{classWt_1_1WServer}\index{Wt::WServer@{Wt::WServer}}
+
+
+A class encapsulating a web application server.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Server.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::W\+Server\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWt_1_1WServer_1_1Exception}{Exception}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWt_1_1Server}{Server}} Exception class. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{structWt_1_1WServer_1_1SessionInfo}{Session\+Info}}
+\begin{DoxyCompactList}\small\item\em Contains the information for one session. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_aa2660416b55f91f6c09616bbbb17328c}\label{classWt_1_1WServer_aa2660416b55f91f6c09616bbbb17328c}} 
+typedef std\+::function$<$ std\+::string(std\+::size\+\_\+t max\+\_\+length, int purpose)$>$ {\bfseries Ssl\+Password\+Callback}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI \mbox{\hyperlink{classWt_1_1WServer_a1ca5d25f8dfcb15f3fec8952ef586113}{W\+Server}} (const std\+::string \&wt\+Application\+Path=std\+::string(), const std\+::string \&wt\+Configuration\+File=std\+::string())
+\begin{DoxyCompactList}\small\item\em Creates a new server instance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WServer_afbdbd356cfbff79f136bbf8b840cc1bd}\label{classWt_1_1WServer_afbdbd356cfbff79f136bbf8b840cc1bd}} 
+{\bfseries W\+Server} (const \mbox{\hyperlink{classWt_1_1WServer}{W\+Server}} \&)=delete
+\item 
+W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI \mbox{\hyperlink{classWt_1_1WServer_af1c8d38be9df939846f27e773ec73041}{W\+Server}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, const std\+::string \&wt\+Configuration\+File=std\+::string())
+\begin{DoxyCompactList}\small\item\em Creates a new server instance and configures it. \end{DoxyCompactList}\item 
+W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI \mbox{\hyperlink{classWt_1_1WServer_af22c4176fb07d6f5f3cab42ef7f36f7f}{W\+Server}} (const std\+::string \&application\+Path, const std\+::vector$<$ std\+::string $>$ \&args, const std\+::string \&wt\+Configuration\+File=std\+::string())
+\begin{DoxyCompactList}\small\item\em Creates a new server instance and configures it. \end{DoxyCompactList}\item 
+virtual W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI \mbox{\hyperlink{classWt_1_1WServer_ae93c1f2c1d1672de52612aafb2bd8ee4}{$\sim$\+W\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+W\+T\+\_\+\+A\+PI void \mbox{\hyperlink{classWt_1_1WServer_a37fda69ecd21daf7b78ca1996be4581f}{set\+I\+O\+Service}} (\mbox{\hyperlink{classWt_1_1WIOService}{W\+I\+O\+Service}} \&\mbox{\hyperlink{classWt_1_1WServer_adf84e177385ff262005a2044daa9c34f}{io\+Service}})
+\begin{DoxyCompactList}\small\item\em Sets the I/O service. \end{DoxyCompactList}\item 
+W\+T\+\_\+\+A\+PI \mbox{\hyperlink{classWt_1_1WIOService}{W\+I\+O\+Service}} \& \mbox{\hyperlink{classWt_1_1WServer_adf84e177385ff262005a2044daa9c34f}{io\+Service}} ()
+\begin{DoxyCompactList}\small\item\em Returns the I/O service. \end{DoxyCompactList}\item 
+W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI void \mbox{\hyperlink{classWt_1_1WServer_a58852f006b4a233b49c332e819e3dce2}{set\+Server\+Configuration}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, const std\+::string \&server\+Configuration\+File=std\+::string())
+\begin{DoxyCompactList}\small\item\em Configures the H\+T\+T\+P(\+S) server or Fast\+C\+GI process. \end{DoxyCompactList}\item 
+W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI void \mbox{\hyperlink{classWt_1_1WServer_a6ef2c780a70eebc68707ea0d684b8509}{set\+Server\+Configuration}} (const std\+::string \&application\+Path, const std\+::vector$<$ std\+::string $>$ \&args, const std\+::string \&server\+Configuration\+File=std\+::string())
+\begin{DoxyCompactList}\small\item\em Configures the H\+T\+T\+P(\+S) server or Fast\+C\+GI process. \end{DoxyCompactList}\item 
+W\+T\+\_\+\+A\+PI void \mbox{\hyperlink{classWt_1_1WServer_af2b8ea616bee5bd63e6294bad3d7574e}{add\+Entry\+Point}} (\mbox{\hyperlink{classWt_af4b6ed5fd28b4f5fa141b153c1107349}{Entry\+Point\+Type}} type, Application\+Creator callback, const std\+::string \&path=std\+::string(), const std\+::string \&favicon=std\+::string())
+\begin{DoxyCompactList}\small\item\em Binds an entry-\/point to a callback function to create a new application. \end{DoxyCompactList}\item 
+W\+T\+\_\+\+A\+PI void \mbox{\hyperlink{classWt_1_1WServer_a3c5c323a9bccf591b63c9fb3f40e8b59}{add\+Resource}} (\mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}} $\ast$resource, const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Binds a resource to a fixed path. \end{DoxyCompactList}\item 
+W\+T\+\_\+\+A\+PI void \mbox{\hyperlink{classWt_1_1WServer_a626fb5c11d3977dbb65681273501f30f}{remove\+Entry\+Point}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Removes an entry point. \end{DoxyCompactList}\item 
+W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI bool \mbox{\hyperlink{classWt_1_1WServer_a921af79ce0a6a35555409f2f844f8a72}{start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the server in the background. \end{DoxyCompactList}\item 
+W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI void \mbox{\hyperlink{classWt_1_1WServer_a806538821ad3fe9b4b0b28c55fa160a0}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the server. \end{DoxyCompactList}\item 
+W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI bool \mbox{\hyperlink{classWt_1_1WServer_a182dd9bddead67b08c4802a8c8065b4a}{is\+Running}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the server is running. \end{DoxyCompactList}\item 
+W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI void \mbox{\hyperlink{classWt_1_1WServer_a360cce4c69d5344e4a954f3fa7b4a896}{run}} ()
+\begin{DoxyCompactList}\small\item\em Starts the server, waits for shutdown, then stops the server. \end{DoxyCompactList}\item 
+W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI void \mbox{\hyperlink{classWt_1_1WServer_ad27189183523a6d718db4c7733cd29ab}{resume}} ()
+\begin{DoxyCompactList}\small\item\em Resumes the server. \end{DoxyCompactList}\item 
+W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI int \mbox{\hyperlink{classWt_1_1WServer_a5ff5c3155eb8952346d38cdcf6797a23}{http\+Port}} () const
+\begin{DoxyCompactList}\small\item\em Returns the server H\+T\+TP port number. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WServer_aa51e2ded8028e22753beaae3e4afa563}\label{classWt_1_1WServer_aa51e2ded8028e22753beaae3e4afa563}} 
+W\+T\+\_\+\+A\+PI void {\bfseries set\+App\+Root} (const std\+::string \&path)
+\item 
+W\+T\+\_\+\+A\+PI std\+::string \mbox{\hyperlink{classWt_1_1WServer_a5c545ef1b02ca91023174637d41933b9}{app\+Root}} () const
+\begin{DoxyCompactList}\small\item\em Returns the approot special property. \end{DoxyCompactList}\item 
+W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI std\+::string \mbox{\hyperlink{classWt_1_1WServer_a28794f657a950e81c17e2c11fe4270b1}{doc\+Root}} () const
+\begin{DoxyCompactList}\small\item\em Returns the docroot (if using wthttp) \end{DoxyCompactList}\item 
+W\+T\+\_\+\+A\+PI void \mbox{\hyperlink{classWt_1_1WServer_a191243d6c9718b18f6e1830562b01806}{post}} (const std\+::string \&session\+Id, const std\+::function$<$ void()$>$ \&function, const std\+::function$<$ void()$>$ \&fall\+Back\+Function=std\+::function$<$ void()$>$())
+\begin{DoxyCompactList}\small\item\em Posts a function to a session. \end{DoxyCompactList}\item 
+W\+T\+\_\+\+A\+PI void \mbox{\hyperlink{classWt_1_1WServer_ad4125222c94670568c26ed80cdbe9e2d}{post\+All}} (const std\+::function$<$ void()$>$ \&function)
+\begin{DoxyCompactList}\small\item\em Posts a function to all currently active sessions. \end{DoxyCompactList}\item 
+W\+T\+\_\+\+A\+PI void \mbox{\hyperlink{classWt_1_1WServer_aca34f72dcbf9df4345967b5b4140e5a9}{schedule}} (std\+::chrono\+::steady\+\_\+clock\+::duration duration, const std\+::string \&session\+Id, const std\+::function$<$ void()$>$ \&function, const std\+::function$<$ void()$>$ \&fall\+Back\+Function=std\+::function$<$ void()$>$())
+\begin{DoxyCompactList}\small\item\em Schedules a function to be executed in a session. \end{DoxyCompactList}\item 
+W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI void \mbox{\hyperlink{classWt_1_1WServer_ae3aa82f8e28463dd0f6e4bbd30fb14a6}{set\+Ssl\+Password\+Callback}} (const Ssl\+Password\+Callback \&cb)
+\begin{DoxyCompactList}\small\item\em Change input method for server certificate passwords (http backend) \end{DoxyCompactList}\item 
+W\+T\+\_\+\+A\+PI bool \mbox{\hyperlink{classWt_1_1WServer_a8f649566973dbc2f6fedcee866080576}{read\+Configuration\+Property}} (const std\+::string \&name, std\+::string \&value) const
+\begin{DoxyCompactList}\small\item\em Reads a configuration property. \end{DoxyCompactList}\item 
+W\+T\+\_\+\+A\+PI void \mbox{\hyperlink{classWt_1_1WServer_afb8b547843155316217ae04ad82f4b70}{set\+Localized\+Strings}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLocalizedStrings}{W\+Localized\+Strings}} $>$ \&string\+Resolver)
+\begin{DoxyCompactList}\small\item\em Sets the resource object that provides localized strings. \end{DoxyCompactList}\item 
+W\+T\+\_\+\+A\+PI std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLocalizedStrings}{W\+Localized\+Strings}} $>$ \mbox{\hyperlink{classWt_1_1WServer_a0b4b50c603ac8e5407fbce6aaa514b70}{localized\+Strings}} () const
+\begin{DoxyCompactList}\small\item\em Sets the resource object that provides localized strings. \end{DoxyCompactList}\item 
+W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI std\+::vector$<$ \mbox{\hyperlink{structWt_1_1WServer_1_1SessionInfo}{Session\+Info}} $>$ \mbox{\hyperlink{classWt_1_1WServer_a64b060069d78afd7bc3ddd69b956279c}{sessions}} () const
+\begin{DoxyCompactList}\small\item\em Retrieve information on all sessions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a1ed7046429f152fba584f197e223fa81}\label{classWt_1_1WServer_a1ed7046429f152fba584f197e223fa81}} 
+void {\bfseries update\+Process\+Session\+Id} (const std\+::string \&session\+Id)
+\item 
+W\+T\+\_\+\+A\+PI \mbox{\hyperlink{classWt_1_1WLogger}{W\+Logger}} \& \mbox{\hyperlink{classWt_1_1WServer_a4993114bb8d24996102fb65506c0af15}{logger}} ()
+\begin{DoxyCompactList}\small\item\em Returns the logger instance. \end{DoxyCompactList}\item 
+W\+T\+\_\+\+A\+PI void \mbox{\hyperlink{classWt_1_1WServer_a2f1a0ee0bc7611ee31147808a07ef9e6}{set\+Custom\+Logger}} (const \mbox{\hyperlink{classWt_1_1WLogSink}{W\+Log\+Sink}} \&custom\+Logger)
+\begin{DoxyCompactList}\small\item\em Sets a custom logger to redirect all logging to. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a6127575b62e765a2bcc2e0e21b3475fe}\label{classWt_1_1WServer_a6127575b62e765a2bcc2e0e21b3475fe}} 
+const \mbox{\hyperlink{classWt_1_1WLogSink}{W\+Log\+Sink}} $\ast$ {\bfseries custom\+Logger} () const
+\item 
+W\+T\+\_\+\+A\+PI \mbox{\hyperlink{classWt_1_1WLogEntry}{W\+Log\+Entry}} \mbox{\hyperlink{classWt_1_1WServer_ab2a5c6eb6a7d5c18271eadb03b6e312f}{log}} (const std\+::string \&type) const
+\begin{DoxyCompactList}\small\item\em Adds an entry to the log. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WServer_aab4d36f18ff9961d17876fb9904e832d}\label{classWt_1_1WServer_aab4d36f18ff9961d17876fb9904e832d}} 
+W\+T\+\_\+\+A\+PI void {\bfseries init\+Logger} (const std\+::string \&log\+File, const std\+::string \&log\+Config)
+\item 
+W\+T\+\_\+\+A\+PI bool \mbox{\hyperlink{classWt_1_1WServer_afaf3b11a939cf361908ab57f59b7c6e2}{dedicated\+Session\+Process}} () const
+\begin{DoxyCompactList}\small\item\em Reflects whether the current process is a dedicated session process. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a485a7bdaf5db6de80d14fe3a016b5fea}\label{classWt_1_1WServer_a485a7bdaf5db6de80d14fe3a016b5fea}} 
+W\+T\+\_\+\+A\+PI bool {\bfseries expire\+Sessions} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a4c95ed108d56a419b4ce62d4ed87c1bd}\label{classWt_1_1WServer_a4c95ed108d56a419b4ce62d4ed87c1bd}} 
+W\+T\+\_\+\+A\+PI \mbox{\hyperlink{classWt_1_1Configuration}{Configuration}} \& {\bfseries configuration} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_aed3576d8268fd702fb1438eae62ed2d0}\label{classWt_1_1WServer_aed3576d8268fd702fb1438eae62ed2d0}} 
+W\+T\+\_\+\+A\+PI \mbox{\hyperlink{classWt_1_1WebController}{Web\+Controller}} $\ast$ {\bfseries controller} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_ac1356d0d795cec2134236deb2aae8e30}\label{classWt_1_1WServer_ac1356d0d795cec2134236deb2aae8e30}} 
+W\+T\+\_\+\+A\+PI void {\bfseries schedule\+Stop} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classWt_1_1WServer}{W\+Server}} $\ast$ \mbox{\hyperlink{classWt_1_1WServer_aa3eab477bbb3bc73a3ce0f3535003bff}{instance}} ()
+\begin{DoxyCompactList}\small\item\em Returns the server instance. \end{DoxyCompactList}\item 
+static W\+T\+\_\+\+A\+PI int \mbox{\hyperlink{classWt_1_1WServer_ad80187f7760e834b04f3bc96b78848a1}{wait\+For\+Shutdown}} ()
+\begin{DoxyCompactList}\small\item\em Waits for a shutdown signal. \end{DoxyCompactList}\item 
+static W\+T\+\_\+\+A\+PI void \mbox{\hyperlink{classWt_1_1WServer_a2cc76350e3d030d14b1ec825838c0c49}{restart}} (int argc, char $\ast$$\ast$argv, char $\ast$$\ast$envp)
+\begin{DoxyCompactList}\small\item\em A utility method to restart. \end{DoxyCompactList}\item 
+static W\+T\+\_\+\+A\+PI void \mbox{\hyperlink{classWt_1_1WServer_abdf05cd9d2b337655d09c4a4ddbdc010}{restart}} (const std\+::string \&application\+Path, const std\+::vector$<$ std\+::string $>$ \&args)
+\begin{DoxyCompactList}\small\item\em A utility method to restart. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a3d78d525088c90dcf3aac40b3dca3dda}\label{classWt_1_1WServer_a3d78d525088c90dcf3aac40b3dca3dda}} 
+W\+T\+\_\+\+A\+PI void {\bfseries set\+Configuration} (const std\+::string \&file, const std\+::string \&application)
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_aa2ac7f4ecc7c455317bbc60c1ce03506}\label{classWt_1_1WServer_aa2ac7f4ecc7c455317bbc60c1ce03506}} 
+W\+T\+\_\+\+A\+PI void {\bfseries set\+Configuration} (const std\+::string \&file)
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a09e8cb5700c090d5e4d5852e770cade4}\label{classWt_1_1WServer_a09e8cb5700c090d5e4d5852e770cade4}} 
+const std\+::string \& {\bfseries configuration\+File} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a263193f439eddba9a1446ae8d5873b12}\label{classWt_1_1WServer_a263193f439eddba9a1446ae8d5873b12}} 
+W\+T\+\_\+\+A\+PI void {\bfseries init} (const std\+::string \&wt\+Application\+Path, const std\+::string \&configuration\+File)
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a19c7d219bfa9489c27a0ee2670ad0b16}\label{classWt_1_1WServer_a19c7d219bfa9489c27a0ee2670ad0b16}} 
+W\+T\+\_\+\+A\+PI void {\bfseries destroy} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_ae77a3010dcf96a85d52d334beb2f8a4a}\label{classWt_1_1WServer_ae77a3010dcf96a85d52d334beb2f8a4a}} 
+W\+T\+\_\+\+A\+PI void {\bfseries set\+Catch\+Signals} (bool catch\+Signals)
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a04753412894663b255da92378daa895e}\label{classWt_1_1WServer_a04753412894663b255da92378daa895e}} 
+W\+T\+\_\+\+A\+PI std\+::string {\bfseries prepend\+Default\+Path} (const std\+::string \&path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_ae90f5748dc8242f7d1d4c178b8ca1ad9}\label{classWt_1_1WServer_ae90f5748dc8242f7d1d4c178b8ca1ad9}} 
+\mbox{\hyperlink{classWt_1_1WebController}{Web\+Controller}} $\ast$ {\bfseries web\+Controller\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a08df93a8f2f17e9f4e506ed8f5d0e70c}\label{classWt_1_1WServer_a08df93a8f2f17e9f4e506ed8f5d0e70c}} 
+\mbox{\hyperlink{classWt_1_1WLogger}{W\+Logger}} {\bfseries logger\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_aadb1024fc385272dba9ace3c05fafce9}\label{classWt_1_1WServer_aadb1024fc385272dba9ace3c05fafce9}} 
+const \mbox{\hyperlink{classWt_1_1WLogSink}{W\+Log\+Sink}} $\ast$ {\bfseries custom\+Logger\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_ad9b35dd07c5eda8cf660857be2b1f498}\label{classWt_1_1WServer_ad9b35dd07c5eda8cf660857be2b1f498}} 
+std\+::string {\bfseries application\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a1d26c7a3c125d4aebf9377c4960bd367}\label{classWt_1_1WServer_a1d26c7a3c125d4aebf9377c4960bd367}} 
+std\+::string {\bfseries configuration\+File\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a88190f99a791a213fa8c95c6896e6642}\label{classWt_1_1WServer_a88190f99a791a213fa8c95c6896e6642}} 
+std\+::string {\bfseries app\+Root\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a7e72ea30adde01478a869fb4720258c9}\label{classWt_1_1WServer_a7e72ea30adde01478a869fb4720258c9}} 
+std\+::string {\bfseries description\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a3964e217e4d529836781ec5cfeae0816}\label{classWt_1_1WServer_a3964e217e4d529836781ec5cfeae0816}} 
+\mbox{\hyperlink{classWt_1_1Configuration}{Configuration}} $\ast$ {\bfseries configuration\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_ae4154a5574d9357c22233d0569f3d0b9}\label{classWt_1_1WServer_ae4154a5574d9357c22233d0569f3d0b9}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLocalizedStrings}{W\+Localized\+Strings}} $>$ {\bfseries localized\+Strings\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_adf9aaf6acde8982693df37f555a8593d}\label{classWt_1_1WServer_adf9aaf6acde8982693df37f555a8593d}} 
+bool {\bfseries owns\+I\+O\+Service\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a31a6b02612977768251101e85b62fbfa}\label{classWt_1_1WServer_a31a6b02612977768251101e85b62fbfa}} 
+\mbox{\hyperlink{classWt_1_1WIOService}{W\+I\+O\+Service}} $\ast$ {\bfseries io\+Service\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a1e4aaddbd69c6f4a2741f9f52feef2e3}\label{classWt_1_1WServer_a1e4aaddbd69c6f4a2741f9f52feef2e3}} 
+bool {\bfseries dedicated\+Process\+Enabled\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a66599cfe0b3586a17ec82d6708449652}\label{classWt_1_1WServer_a66599cfe0b3586a17ec82d6708449652}} 
+Impl $\ast$ {\bfseries impl\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a52ea61715f764025f5558298a874df7b}\label{classWt_1_1WServer_a52ea61715f764025f5558298a874df7b}} 
+std\+::function$<$ std\+::string(std\+::size\+\_\+t max\+\_\+length, int purpose)$>$ {\bfseries ssl\+Password\+Callback\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a911e0e66468c9d88321bb61e01b75c42}\label{classWt_1_1WServer_a911e0e66468c9d88321bb61e01b75c42}} 
+std\+::function$<$ void()$>$ {\bfseries stop\+Callback\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_abbd93af759ccba59d5511ca8b00bd7ea}\label{classWt_1_1WServer_abbd93af759ccba59d5511ca8b00bd7ea}} 
+std\+::function$<$ void(const std\+::string \&session\+Id)$>$ {\bfseries update\+Process\+Session\+Id\+Callback\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WServer_a60927e053c4da9573808e339e6c51017}\label{classWt_1_1WServer_a60927e053c4da9573808e339e6c51017}} 
+static W\+T\+\_\+\+A\+PI \mbox{\hyperlink{classWt_1_1WServer}{W\+Server}} $\ast$ {\bfseries instance\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class encapsulating a web application server. 
+
+This server class represents an instance of an application server.
+
+It offers support for multiple application entry points and control over starting and stopping the server. This may be used as an alternative to using W\+Run() when you wish to support multiple application entry points, or for integrating a Wt (stand-\/alone httpd) server application into an existing application, with control over starting and stopping the server as appropriate.
+
+As an example usage, consider the implementation of W\+Run(), which starts the server until a Ctrl-\/C is pressed or a termination signal has been received, or a restart is indicated using S\+I\+G\+H\+UP or a changed binary (argv\mbox{[}0\mbox{]})\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int} WRun(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[], ApplicationCreator createApplication)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{    \textcolor{comment}{// use argv[0] as the application name to match a suitable entry}}
+\DoxyCodeLine{    \textcolor{comment}{// in the Wt configuration file, and use the default configuration}}
+\DoxyCodeLine{    \textcolor{comment}{// file (which defaults to /etc/wt/wt\_config.xml unless the environment}}
+\DoxyCodeLine{    \textcolor{comment}{// variable WT\_CONFIG\_XML is set)}}
+\DoxyCodeLine{    \mbox{\hyperlink{classWt_1_1WServer_a1ca5d25f8dfcb15f3fec8952ef586113}{WServer}} server(argv[0]);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// WTHTTP\_CONFIGURATION is e.g. "/etc/wt/wthttpd"}}
+\DoxyCodeLine{    server.setServerConfiguration(argc, argv, WTHTTP\_CONFIGURATION);}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// add a single entry point, at the default location (as determined}}
+\DoxyCodeLine{    \textcolor{comment}{// by the server configuration's deploy-\/path)}}
+\DoxyCodeLine{    server.addEntryPoint(Wt::EntryPointType::Application, createApplication);}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (server.start()) \{}
+\DoxyCodeLine{      \textcolor{keywordtype}{int} sig = \mbox{\hyperlink{classWt_1_1WServer_ad80187f7760e834b04f3bc96b78848a1}{WServer::waitForShutdown}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{      std::cerr << \textcolor{stringliteral}{"Shutdown (signal = "} << sig << \textcolor{stringliteral}{")"} << std::endl;}
+\DoxyCodeLine{      server.stop();}
+\DoxyCodeLine{}
+\DoxyCodeLine{      \textcolor{keywordflow}{if} (sig == SIGHUP)}
+\DoxyCodeLine{        \mbox{\hyperlink{classWt_1_1WServer_a2cc76350e3d030d14b1ec825838c0c49}{WServer::restart}}(argc, argv, environ);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{catch} (WServer::Exception\& e) \{}
+\DoxyCodeLine{    std::cerr << e.what() << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{catch} (std::exception\& e) \{}
+\DoxyCodeLine{    std::cerr << \textcolor{stringliteral}{"exception: "} << e.what() << \textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WServer_a1ca5d25f8dfcb15f3fec8952ef586113}\label{classWt_1_1WServer_a1ca5d25f8dfcb15f3fec8952ef586113}} 
+\index{Wt::WServer@{Wt::WServer}!WServer@{WServer}}
+\index{WServer@{WServer}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{WServer()}{WServer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI Wt\+::\+W\+Server\+::\+W\+Server (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{wt\+Application\+Path = {\ttfamily std\+:\+:string()},  }\item[{const std\+::string \&}]{wt\+Configuration\+File = {\ttfamily std\+:\+:string()} }\end{DoxyParamCaption})}
+
+
+
+Creates a new server instance. 
+
+The {\ttfamily wt\+Application\+Path} is used to match specific application-\/settings in the Wt configuration file. If no specific match could be found, the general settings are used (corresponding to the \textquotesingle{}$\ast$\textquotesingle{} selector).
+
+The Wt application configuration is read from the {\ttfamily wt\+Configuration\+File}. If empty, this defaults to the value configured at build time.
+
+For more information on configuring Wt applications, see Configuration.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WServer_1_1Exception}{Exception}}} & \+: indicates a configuration problem.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WServer_a58852f006b4a233b49c332e819e3dce2}{set\+Server\+Configuration()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WServer_af1c8d38be9df939846f27e773ec73041}\label{classWt_1_1WServer_af1c8d38be9df939846f27e773ec73041}} 
+\index{Wt::WServer@{Wt::WServer}!WServer@{WServer}}
+\index{WServer@{WServer}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{WServer()}{WServer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI Wt\+::\+W\+Server\+::\+W\+Server (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{const std\+::string \&}]{wt\+Configuration\+File = {\ttfamily std\+:\+:string()} }\end{DoxyParamCaption})}
+
+
+
+Creates a new server instance and configures it. 
+
+This is equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WServer_a1ca5d25f8dfcb15f3fec8952ef586113}{WServer}} server(argv[0]);}
+\DoxyCodeLine{server.setServerConfiguration(argc, argv, wtConfigurationFile);}
+\end{DoxyCode}
+
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WServer_1_1Exception}{Exception}}} & \+: indicates a configuration problem.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WServer_a1ca5d25f8dfcb15f3fec8952ef586113}{W\+Server(const std\+::string\&, const std\+::string\&)}} 
+
+\mbox{\hyperlink{classWt_1_1WServer_a58852f006b4a233b49c332e819e3dce2}{set\+Server\+Configuration()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WServer_af22c4176fb07d6f5f3cab42ef7f36f7f}\label{classWt_1_1WServer_af22c4176fb07d6f5f3cab42ef7f36f7f}} 
+\index{Wt::WServer@{Wt::WServer}!WServer@{WServer}}
+\index{WServer@{WServer}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{WServer()}{WServer()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI Wt\+::\+W\+Server\+::\+W\+Server (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{application\+Path,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{args,  }\item[{const std\+::string \&}]{wt\+Configuration\+File = {\ttfamily std\+:\+:string()} }\end{DoxyParamCaption})}
+
+
+
+Creates a new server instance and configures it. 
+
+This is equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WServer_a1ca5d25f8dfcb15f3fec8952ef586113}{WServer}} server(applicationPath);}
+\DoxyCodeLine{server.setServerConfiguration(applicationPath, args, wtConfigurationFile);}
+\end{DoxyCode}
+
+
+This version of the \mbox{\hyperlink{classWt_1_1WServer}{W\+Server}} constructor takes a std\+::string for the application path, and a vector of arguments (not including argv\mbox{[}0\mbox{]}, the application path) instead of argc and argv, for better convenience when arguments are not provided via the command line.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WServer_1_1Exception}{Exception}}} & \+: indicates a configuration problem.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WServer_a1ca5d25f8dfcb15f3fec8952ef586113}{W\+Server(const std\+::string\&, const std\+::string\&)}} 
+
+\mbox{\hyperlink{classWt_1_1WServer_a58852f006b4a233b49c332e819e3dce2}{set\+Server\+Configuration()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WServer_ae93c1f2c1d1672de52612aafb2bd8ee4}\label{classWt_1_1WServer_ae93c1f2c1d1672de52612aafb2bd8ee4}} 
+\index{Wt::WServer@{Wt::WServer}!````~WServer@{$\sim$WServer}}
+\index{````~WServer@{$\sim$WServer}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{$\sim$WServer()}{~WServer()}}
+{\footnotesize\ttfamily virtual W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI Wt\+::\+W\+Server\+::$\sim$\+W\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+If the server was still running, it is stopped first by calling \mbox{\hyperlink{classWt_1_1WServer_a806538821ad3fe9b4b0b28c55fa160a0}{stop()}}. It is probably safer to call \mbox{\hyperlink{classWt_1_1WServer_a806538821ad3fe9b4b0b28c55fa160a0}{stop()}} first yourself, since this allows exceptions to be caught.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WServer_a182dd9bddead67b08c4802a8c8065b4a}{is\+Running()}}, \mbox{\hyperlink{classWt_1_1WServer_a806538821ad3fe9b4b0b28c55fa160a0}{stop()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WServer_af2b8ea616bee5bd63e6294bad3d7574e}\label{classWt_1_1WServer_af2b8ea616bee5bd63e6294bad3d7574e}} 
+\index{Wt::WServer@{Wt::WServer}!addEntryPoint@{addEntryPoint}}
+\index{addEntryPoint@{addEntryPoint}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{addEntryPoint()}{addEntryPoint()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+A\+PI void Wt\+::\+W\+Server\+::add\+Entry\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_af4b6ed5fd28b4f5fa141b153c1107349}{Entry\+Point\+Type}}}]{type,  }\item[{Application\+Creator}]{callback,  }\item[{const std\+::string \&}]{path = {\ttfamily std\+:\+:string()},  }\item[{const std\+::string \&}]{favicon = {\ttfamily std\+:\+:string()} }\end{DoxyParamCaption})}
+
+
+
+Binds an entry-\/point to a callback function to create a new application. 
+
+The {\ttfamily path} is the local U\+RL at which the application is deployed\+: when a user visits this U\+RL, the callback will be called to create a new application.
+
+If the {\ttfamily path} does not start with a slash (\textquotesingle{}/\textquotesingle{}), the deployment path will be prepended. The deployment path defaults to \textquotesingle{}/\textquotesingle{} but can be overridden in the wthttp connector with the --deploy-\/path option (see also Built-\/in httpd configuration). This implies that when the {\ttfamily path} is empty (the default), it is set to the deployment path.
+
+The optional {\ttfamily favicon} is a U\+RL path (which should not contain the host part!) to a favicon, which is the icon displayed in the browser for your application. Alternatively, you may specify a favicon using the \char`\"{}favicon\char`\"{} property in the configuration file (see also config\+\_\+general).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WServer_a626fb5c11d3977dbb65681273501f30f}{remove\+Entry\+Point()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WServer_a3c5c323a9bccf591b63c9fb3f40e8b59}\label{classWt_1_1WServer_a3c5c323a9bccf591b63c9fb3f40e8b59}} 
+\index{Wt::WServer@{Wt::WServer}!addResource@{addResource}}
+\index{addResource@{addResource}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{addResource()}{addResource()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+A\+PI void Wt\+::\+W\+Server\+::add\+Resource (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}} $\ast$}]{resource,  }\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Binds a resource to a fixed path. 
+
+Resources may either be private to a single session or public. Use this method to add a public resource with a fixed path.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WServer_a626fb5c11d3977dbb65681273501f30f}{remove\+Entry\+Point()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WServer_a5c545ef1b02ca91023174637d41933b9}\label{classWt_1_1WServer_a5c545ef1b02ca91023174637d41933b9}} 
+\index{Wt::WServer@{Wt::WServer}!appRoot@{appRoot}}
+\index{appRoot@{appRoot}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{appRoot()}{appRoot()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+A\+PI std\+::string Wt\+::\+W\+Server\+::app\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the approot special property. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_a1eda1505e07b24dba48f87bdb78391b4}{W\+Application\+::app\+Root()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WServer_afaf3b11a939cf361908ab57f59b7c6e2}\label{classWt_1_1WServer_afaf3b11a939cf361908ab57f59b7c6e2}} 
+\index{Wt::WServer@{Wt::WServer}!dedicatedSessionProcess@{dedicatedSessionProcess}}
+\index{dedicatedSessionProcess@{dedicatedSessionProcess}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{dedicatedSessionProcess()}{dedicatedSessionProcess()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+A\+PI bool Wt\+::\+W\+Server\+::dedicated\+Session\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Reflects whether the current process is a dedicated session process. 
+
+\begin{DoxyNote}{Note}
+This will only be accurate after the \mbox{\hyperlink{classWt_1_1WServer}{W\+Server}} has been configured, either through \mbox{\hyperlink{classWt_1_1WServer_a58852f006b4a233b49c332e819e3dce2}{set\+Server\+Configuration()}} or one of the constructors that immediately configures the server. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WServer_a28794f657a950e81c17e2c11fe4270b1}\label{classWt_1_1WServer_a28794f657a950e81c17e2c11fe4270b1}} 
+\index{Wt::WServer@{Wt::WServer}!docRoot@{docRoot}}
+\index{docRoot@{docRoot}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{docRoot()}{docRoot()}}
+{\footnotesize\ttfamily W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI std\+::string Wt\+::\+W\+Server\+::doc\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the docroot (if using wthttp) 
+
+If you\textquotesingle{}re using wthttp, this returns the location passed to the --docroot argument, just like \mbox{\hyperlink{classWt_1_1WApplication_a48eff4829124d8739e118e83dc4a0d7f}{W\+Application\+::doc\+Root()}}. This allows access to this parameter outside of the context of a \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}}.
+
+If you\textquotesingle{}re using any other connector, this returns the empty string. \mbox{\Hypertarget{classWt_1_1WServer_a5ff5c3155eb8952346d38cdcf6797a23}\label{classWt_1_1WServer_a5ff5c3155eb8952346d38cdcf6797a23}} 
+\index{Wt::WServer@{Wt::WServer}!httpPort@{httpPort}}
+\index{httpPort@{httpPort}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{httpPort()}{httpPort()}}
+{\footnotesize\ttfamily W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI int Wt\+::\+W\+Server\+::http\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the server H\+T\+TP port number. 
+
+Returns -\/1 if the port is not known (i.\+e. because the connector is not aware of how the http server is configured).
+
+\begin{DoxyNote}{Note}
+If the server listens on multiple ports, only the first port is returned. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WServer_aa3eab477bbb3bc73a3ce0f3535003bff}\label{classWt_1_1WServer_aa3eab477bbb3bc73a3ce0f3535003bff}} 
+\index{Wt::WServer@{Wt::WServer}!instance@{instance}}
+\index{instance@{instance}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classWt_1_1WServer}{W\+Server}}$\ast$ Wt\+::\+W\+Server\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Returns the server instance. 
+
+Returns the single server instance. This may be useful when using W\+Run(), which does not provide direct access to the instantiated server, but still you want to use functions like \mbox{\hyperlink{classWt_1_1WServer_a191243d6c9718b18f6e1830562b01806}{post()}}.
+
+\begin{DoxyNote}{Note}
+When instantiating multiple servers, this will simply return the last instance. You probably want to avoid this function then. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WServer_adf84e177385ff262005a2044daa9c34f}\label{classWt_1_1WServer_adf84e177385ff262005a2044daa9c34f}} 
+\index{Wt::WServer@{Wt::WServer}!ioService@{ioService}}
+\index{ioService@{ioService}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{ioService()}{ioService()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+A\+PI \mbox{\hyperlink{classWt_1_1WIOService}{W\+I\+O\+Service}}\& Wt\+::\+W\+Server\+::io\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the I/O service. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WServer_a37fda69ecd21daf7b78ca1996be4581f}{set\+I\+O\+Service()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WServer_a182dd9bddead67b08c4802a8c8065b4a}\label{classWt_1_1WServer_a182dd9bddead67b08c4802a8c8065b4a}} 
+\index{Wt::WServer@{Wt::WServer}!isRunning@{isRunning}}
+\index{isRunning@{isRunning}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{isRunning()}{isRunning()}}
+{\footnotesize\ttfamily W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI bool Wt\+::\+W\+Server\+::is\+Running (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the server is running. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WServer_a921af79ce0a6a35555409f2f844f8a72}{start()}}, \mbox{\hyperlink{classWt_1_1WServer_a806538821ad3fe9b4b0b28c55fa160a0}{stop()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WServer_a0b4b50c603ac8e5407fbce6aaa514b70}\label{classWt_1_1WServer_a0b4b50c603ac8e5407fbce6aaa514b70}} 
+\index{Wt::WServer@{Wt::WServer}!localizedStrings@{localizedStrings}}
+\index{localizedStrings@{localizedStrings}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{localizedStrings()}{localizedStrings()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+A\+PI std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WLocalizedStrings}{W\+Localized\+Strings}}$>$ Wt\+::\+W\+Server\+::localized\+Strings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Sets the resource object that provides localized strings. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WServer_afb8b547843155316217ae04ad82f4b70}{set\+Localized\+Strings()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WServer_ab2a5c6eb6a7d5c18271eadb03b6e312f}\label{classWt_1_1WServer_ab2a5c6eb6a7d5c18271eadb03b6e312f}} 
+\index{Wt::WServer@{Wt::WServer}!log@{log}}
+\index{log@{log}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+A\+PI \mbox{\hyperlink{classWt_1_1WLogEntry}{W\+Log\+Entry}} Wt\+::\+W\+Server\+::log (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type }\end{DoxyParamCaption}) const}
+
+
+
+Adds an entry to the log. 
+
+\begin{DoxySeeAlso}{See also}
+Wt\+::log(), \mbox{\hyperlink{classWt_1_1WApplication_aa806c98262a4d5c4d4d0537da59cdf1d}{W\+Application\+::log()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WServer_a4993114bb8d24996102fb65506c0af15}\label{classWt_1_1WServer_a4993114bb8d24996102fb65506c0af15}} 
+\index{Wt::WServer@{Wt::WServer}!logger@{logger}}
+\index{logger@{logger}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{logger()}{logger()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+A\+PI \mbox{\hyperlink{classWt_1_1WLogger}{W\+Logger}}\& Wt\+::\+W\+Server\+::logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the logger instance. 
+
+This is the logger class used in \mbox{\hyperlink{classWt_1_1WApplication_aa806c98262a4d5c4d4d0537da59cdf1d}{W\+Application\+::log()}} and Wt\+::log() functions. \mbox{\Hypertarget{classWt_1_1WServer_a191243d6c9718b18f6e1830562b01806}\label{classWt_1_1WServer_a191243d6c9718b18f6e1830562b01806}} 
+\index{Wt::WServer@{Wt::WServer}!post@{post}}
+\index{post@{post}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{post()}{post()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+A\+PI void Wt\+::\+W\+Server\+::post (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{session\+Id,  }\item[{const std\+::function$<$ void()$>$ \&}]{function,  }\item[{const std\+::function$<$ void()$>$ \&}]{fall\+Back\+Function = {\ttfamily std\+:\+:function$<$~void()$>$()} }\end{DoxyParamCaption})}
+
+
+
+Posts a function to a session. 
+
+This is a thread-\/safe method to post a particular event (implemented as a function object) to be run within the context of a session, identified by its \mbox{\hyperlink{classWt_1_1WApplication_a314a5461dc410f4713ab1b1258fd8ced}{W\+Application\+::session\+Id()}}. The method will safely handle the case where the session is being terminated, and the session lock will be taken to execute the function in the context of the session (with \mbox{\hyperlink{classWt_1_1WApplication_a27690e10fb1dffef9b688b5a6ecf26b0}{W\+Application\+::instance()}} pointing to the correct application), just as with a request initiated by the browser. You will typically also want to push the changes to the client using server-\/initiated updates (\mbox{\hyperlink{classWt_1_1WApplication_a51f50e0641a6d702a7c6ab7f8dd5946a}{W\+Application\+::trigger\+Update()}}).
+
+The method returns immediately, and the function will be run within the thread-\/pool that handles incoming web requests. In this way, it avoids dead-\/lock scenarios.
+
+If a {\ttfamily fallback\+Function} is specified then in case the session is dead, it is called instead.
+
+This provides a good alternative to grabbing the update lock of an application to directly push changes to a session out of its event loop.
+
+\mbox{\hyperlink{classNote}{Note}} that if you post an event to a method of a widget (or other object), it may still be that the targeted object has been deleted, if the life-\/time of that object is not the same as the life-\/time of the application. It may be useful to protect yourself from this by using W\+Application\+::bind(). \mbox{\Hypertarget{classWt_1_1WServer_ad4125222c94670568c26ed80cdbe9e2d}\label{classWt_1_1WServer_ad4125222c94670568c26ed80cdbe9e2d}} 
+\index{Wt::WServer@{Wt::WServer}!postAll@{postAll}}
+\index{postAll@{postAll}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{postAll()}{postAll()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+A\+PI void Wt\+::\+W\+Server\+::post\+All (\begin{DoxyParamCaption}\item[{const std\+::function$<$ void()$>$ \&}]{function }\end{DoxyParamCaption})}
+
+
+
+Posts a function to all currently active sessions. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WServer_a191243d6c9718b18f6e1830562b01806}{post()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WServer_a8f649566973dbc2f6fedcee866080576}\label{classWt_1_1WServer_a8f649566973dbc2f6fedcee866080576}} 
+\index{Wt::WServer@{Wt::WServer}!readConfigurationProperty@{readConfigurationProperty}}
+\index{readConfigurationProperty@{readConfigurationProperty}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{readConfigurationProperty()}{readConfigurationProperty()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+A\+PI bool Wt\+::\+W\+Server\+::read\+Configuration\+Property (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{std\+::string \&}]{value }\end{DoxyParamCaption}) const}
+
+
+
+Reads a configuration property. 
+
+As properties are unique to an executable location, they are defined from the moment that \mbox{\hyperlink{classWt_1_1WServer_a58852f006b4a233b49c332e819e3dce2}{set\+Server\+Configuration()}} is invoked. Use this method to access configuration properties outside of an active session, e.\+g. from within the main() function.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_a6df79da6453c2ec99564568d9c6d7d8d}{W\+Application\+::read\+Configuration\+Property()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WServer_a626fb5c11d3977dbb65681273501f30f}\label{classWt_1_1WServer_a626fb5c11d3977dbb65681273501f30f}} 
+\index{Wt::WServer@{Wt::WServer}!removeEntryPoint@{removeEntryPoint}}
+\index{removeEntryPoint@{removeEntryPoint}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{removeEntryPoint()}{removeEntryPoint()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+A\+PI void Wt\+::\+W\+Server\+::remove\+Entry\+Point (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Removes an entry point. 
+
+Use this method to remove an entry point or static resource.
+
+In a multi-\/threaded environment, this may only be done when the server is not running.
+
+\begin{DoxyNote}{Note}
+If the entry point is a resource, the resource will not be deleted
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WServer_af2b8ea616bee5bd63e6294bad3d7574e}{add\+Entry\+Point()}}, \mbox{\hyperlink{classWt_1_1WServer_a3c5c323a9bccf591b63c9fb3f40e8b59}{add\+Resource()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WServer_abdf05cd9d2b337655d09c4a4ddbdc010}\label{classWt_1_1WServer_abdf05cd9d2b337655d09c4a4ddbdc010}} 
+\index{Wt::WServer@{Wt::WServer}!restart@{restart}}
+\index{restart@{restart}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{restart()}{restart()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static W\+T\+\_\+\+A\+PI void Wt\+::\+W\+Server\+::restart (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{application\+Path,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A utility method to restart. 
+
+This will result the application with the new image (application\+Path), effectively loading a newly deployed version. {\itshape (Experimental, U\+N\+IX only)}
+
+This version of \mbox{\hyperlink{classWt_1_1WServer_a2cc76350e3d030d14b1ec825838c0c49}{restart()}} takes a std\+::string for the application path, and a vector of arguments (not including argv\mbox{[}0\mbox{]}, the application path) instead of argc and argv, for better convenience when arguments are not provided via the command line. \mbox{\Hypertarget{classWt_1_1WServer_a2cc76350e3d030d14b1ec825838c0c49}\label{classWt_1_1WServer_a2cc76350e3d030d14b1ec825838c0c49}} 
+\index{Wt::WServer@{Wt::WServer}!restart@{restart}}
+\index{restart@{restart}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{restart()}{restart()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static W\+T\+\_\+\+A\+PI void Wt\+::\+W\+Server\+::restart (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv,  }\item[{char $\ast$$\ast$}]{envp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A utility method to restart. 
+
+This will result the application with the new image (argv\mbox{[}0\mbox{]}), effectively loading a newly deployed version. {\itshape (Experimental, U\+N\+IX only)} \mbox{\Hypertarget{classWt_1_1WServer_ad27189183523a6d718db4c7733cd29ab}\label{classWt_1_1WServer_ad27189183523a6d718db4c7733cd29ab}} 
+\index{Wt::WServer@{Wt::WServer}!resume@{resume}}
+\index{resume@{resume}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{resume()}{resume()}}
+{\footnotesize\ttfamily W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI void Wt\+::\+W\+Server\+::resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resumes the server. 
+
+This closes and reopens the listen socket(s) for accepting new T\+CP and/or S\+SL connections. This may be needed when the OS (like I\+Phone\+OS) has closed the sockets while suspending the application. \mbox{\Hypertarget{classWt_1_1WServer_a360cce4c69d5344e4a954f3fa7b4a896}\label{classWt_1_1WServer_a360cce4c69d5344e4a954f3fa7b4a896}} 
+\index{Wt::WServer@{Wt::WServer}!run@{run}}
+\index{run@{run}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI void Wt\+::\+W\+Server\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the server, waits for shutdown, then stops the server. 
+
+This is equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (\mbox{\hyperlink{classWt_1_1WServer_a921af79ce0a6a35555409f2f844f8a72}{start}}()) \{}
+\DoxyCodeLine{  \mbox{\hyperlink{classWt_1_1WServer_ad80187f7760e834b04f3bc96b78848a1}{WServer::waitForShutdown}}();}
+\DoxyCodeLine{  \mbox{\hyperlink{classWt_1_1WServer_a806538821ad3fe9b4b0b28c55fa160a0}{stop}}();}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WServer_a921af79ce0a6a35555409f2f844f8a72}{start()}} 
+
+\mbox{\hyperlink{classWt_1_1WServer_a806538821ad3fe9b4b0b28c55fa160a0}{stop()}} 
+
+\mbox{\hyperlink{classWt_1_1WServer_ad80187f7760e834b04f3bc96b78848a1}{wait\+For\+Shutdown()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WServer_aca34f72dcbf9df4345967b5b4140e5a9}\label{classWt_1_1WServer_aca34f72dcbf9df4345967b5b4140e5a9}} 
+\index{Wt::WServer@{Wt::WServer}!schedule@{schedule}}
+\index{schedule@{schedule}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{schedule()}{schedule()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+A\+PI void Wt\+::\+W\+Server\+::schedule (\begin{DoxyParamCaption}\item[{std\+::chrono\+::steady\+\_\+clock\+::duration}]{duration,  }\item[{const std\+::string \&}]{session\+Id,  }\item[{const std\+::function$<$ void()$>$ \&}]{function,  }\item[{const std\+::function$<$ void()$>$ \&}]{fall\+Back\+Function = {\ttfamily std\+:\+:function$<$~void()$>$()} }\end{DoxyParamCaption})}
+
+
+
+Schedules a function to be executed in a session. 
+
+The {\ttfamily function} will run in the session specified by {\ttfamily session\+Id}, after {\ttfamily duration}. If the session does not exist anymore, {\ttfamily fall\+Back\+Function} will be executed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WServer_a191243d6c9718b18f6e1830562b01806}{post()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WServer_a64b060069d78afd7bc3ddd69b956279c}\label{classWt_1_1WServer_a64b060069d78afd7bc3ddd69b956279c}} 
+\index{Wt::WServer@{Wt::WServer}!sessions@{sessions}}
+\index{sessions@{sessions}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{sessions()}{sessions()}}
+{\footnotesize\ttfamily W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI std\+::vector$<$\mbox{\hyperlink{structWt_1_1WServer_1_1SessionInfo}{Session\+Info}}$>$ Wt\+::\+W\+Server\+::sessions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieve information on all sessions. 
+
+This is only implemented for the wthttp connector.
+
+If the dedicated process session policy is used, only the original process has access to the full list of sessions. Public resources (those registered with \mbox{\hyperlink{classWt_1_1WServer_a3c5c323a9bccf591b63c9fb3f40e8b59}{add\+Resource()}}) run in the original process, so they can access this list. \mbox{\Hypertarget{classWt_1_1WServer_a2f1a0ee0bc7611ee31147808a07ef9e6}\label{classWt_1_1WServer_a2f1a0ee0bc7611ee31147808a07ef9e6}} 
+\index{Wt::WServer@{Wt::WServer}!setCustomLogger@{setCustomLogger}}
+\index{setCustomLogger@{setCustomLogger}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{setCustomLogger()}{setCustomLogger()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+A\+PI void Wt\+::\+W\+Server\+::set\+Custom\+Logger (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLogSink}{W\+Log\+Sink}} \&}]{custom\+Logger }\end{DoxyParamCaption})}
+
+
+
+Sets a custom logger to redirect all logging to. 
+
+Instead of using the server\textquotesingle{}s default logger, this will send all logging to some custom \mbox{\hyperlink{classWt_1_1WLogSink}{W\+Log\+Sink}}. \mbox{\Hypertarget{classWt_1_1WServer_a37fda69ecd21daf7b78ca1996be4581f}\label{classWt_1_1WServer_a37fda69ecd21daf7b78ca1996be4581f}} 
+\index{Wt::WServer@{Wt::WServer}!setIOService@{setIOService}}
+\index{setIOService@{setIOService}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{setIOService()}{setIOService()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+A\+PI void Wt\+::\+W\+Server\+::set\+I\+O\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WIOService}{W\+I\+O\+Service}} \&}]{io\+Service }\end{DoxyParamCaption})}
+
+
+
+Sets the I/O service. 
+
+The server will use an I/O service for scheduling functions into a thread-\/pool, and to implement asynchronous networking, whose call-\/back funtions are scheduled in the same thread pool.
+
+By default, a server will create its own I/O service, but you may configure it to reuse another I/O service. \mbox{\Hypertarget{classWt_1_1WServer_afb8b547843155316217ae04ad82f4b70}\label{classWt_1_1WServer_afb8b547843155316217ae04ad82f4b70}} 
+\index{Wt::WServer@{Wt::WServer}!setLocalizedStrings@{setLocalizedStrings}}
+\index{setLocalizedStrings@{setLocalizedStrings}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{setLocalizedStrings()}{setLocalizedStrings()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+A\+PI void Wt\+::\+W\+Server\+::set\+Localized\+Strings (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLocalizedStrings}{W\+Localized\+Strings}} $>$ \&}]{string\+Resolver }\end{DoxyParamCaption})}
+
+
+
+Sets the resource object that provides localized strings. 
+
+This is used only for \mbox{\hyperlink{classWt_1_1WString_adf1e7e5fc3c7199563a69bf07d77e571}{W\+String\+::tr()}} used from within static resources.
+
+The default value is 0. \mbox{\Hypertarget{classWt_1_1WServer_a6ef2c780a70eebc68707ea0d684b8509}\label{classWt_1_1WServer_a6ef2c780a70eebc68707ea0d684b8509}} 
+\index{Wt::WServer@{Wt::WServer}!setServerConfiguration@{setServerConfiguration}}
+\index{setServerConfiguration@{setServerConfiguration}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{setServerConfiguration()}{setServerConfiguration()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI void Wt\+::\+W\+Server\+::set\+Server\+Configuration (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{application\+Path,  }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{args,  }\item[{const std\+::string \&}]{server\+Configuration\+File = {\ttfamily std\+:\+:string()} }\end{DoxyParamCaption})}
+
+
+
+Configures the H\+T\+T\+P(\+S) server or Fast\+C\+GI process. 
+
+Configures the H\+T\+T\+P(\+S) server using command-\/line arguments, a configuration file, or both. The valid options are described in Built-\/in httpd configuration.
+
+The applications themselves are configured using the configuration file passed to the constructor.
+
+The server configuration must be set before any other functionality can be used.
+
+In case of Fast\+C\+GI deployment, the {\ttfamily server\+Configuration\+File} argument is ignored, and depending on the command-\/line arguments, this process may become a Fast\+C\+GI protocol relay process which never returning from this call but directs the Fast\+C\+GI stream to the correct session, rather than a \mbox{\hyperlink{classWt}{Wt}} application server.
+
+This version of \mbox{\hyperlink{classWt_1_1WServer_a58852f006b4a233b49c332e819e3dce2}{set\+Server\+Configuration()}} takes a std\+::string for the application path, and a vector of arguments (not including argv\mbox{[}0\mbox{]}, the application path) instead of argc and argv, for better convenience when arguments are not provided via the command line.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WServer_1_1Exception}{Exception}}} & \+: indicates a configuration problem. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classWt_1_1WServer_a58852f006b4a233b49c332e819e3dce2}\label{classWt_1_1WServer_a58852f006b4a233b49c332e819e3dce2}} 
+\index{Wt::WServer@{Wt::WServer}!setServerConfiguration@{setServerConfiguration}}
+\index{setServerConfiguration@{setServerConfiguration}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{setServerConfiguration()}{setServerConfiguration()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI void Wt\+::\+W\+Server\+::set\+Server\+Configuration (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]},  }\item[{const std\+::string \&}]{server\+Configuration\+File = {\ttfamily std\+:\+:string()} }\end{DoxyParamCaption})}
+
+
+
+Configures the H\+T\+T\+P(\+S) server or Fast\+C\+GI process. 
+
+Configures the H\+T\+T\+P(\+S) server using command-\/line arguments, a configuration file, or both. The valid options are described in Built-\/in httpd configuration.
+
+The applications themselves are configured using the configuration file passed to the constructor.
+
+The server configuration must be set before any other functionality can be used.
+
+In case of Fast\+C\+GI deployment, the {\ttfamily server\+Configuration\+File} argument is ignored, and depending on the command-\/line arguments, this process may become a Fast\+C\+GI protocol relay process which never returning from this call but directs the Fast\+C\+GI stream to the correct session, rather than a \mbox{\hyperlink{classWt}{Wt}} application server.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WServer_1_1Exception}{Exception}}} & \+: indicates a configuration problem. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classWt_1_1WServer_ae3aa82f8e28463dd0f6e4bbd30fb14a6}\label{classWt_1_1WServer_ae3aa82f8e28463dd0f6e4bbd30fb14a6}} 
+\index{Wt::WServer@{Wt::WServer}!setSslPasswordCallback@{setSslPasswordCallback}}
+\index{setSslPasswordCallback@{setSslPasswordCallback}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{setSslPasswordCallback()}{setSslPasswordCallback()}}
+{\footnotesize\ttfamily W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI void Wt\+::\+W\+Server\+::set\+Ssl\+Password\+Callback (\begin{DoxyParamCaption}\item[{const Ssl\+Password\+Callback \&}]{cb }\end{DoxyParamCaption})}
+
+
+
+Change input method for server certificate passwords (http backend) 
+
+The private server identity key may be protected by a password. If you want to control how the password is retrieved, set a password handler by calling this function. If no password handler is set, the Open\+S\+SL default handler will be used, which asks to enter the password on stdio.
+
+This function must be called before calling \mbox{\hyperlink{classWt_1_1WServer_a921af79ce0a6a35555409f2f844f8a72}{start()}}.
+
+The max\+\_\+length parameter is informational and indicates that the underlying implementation will truncate the password to this length. \mbox{\Hypertarget{classWt_1_1WServer_a921af79ce0a6a35555409f2f844f8a72}\label{classWt_1_1WServer_a921af79ce0a6a35555409f2f844f8a72}} 
+\index{Wt::WServer@{Wt::WServer}!start@{start}}
+\index{start@{start}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI bool Wt\+::\+W\+Server\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the server in the background. 
+
+Returns whether the server could be successfully started.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WServer_1_1Exception}{Exception}}} & \+: indicates a problem starting the server.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WServer_a182dd9bddead67b08c4802a8c8065b4a}{is\+Running()}}, \mbox{\hyperlink{classWt_1_1WServer_a806538821ad3fe9b4b0b28c55fa160a0}{stop()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WServer_a806538821ad3fe9b4b0b28c55fa160a0}\label{classWt_1_1WServer_a806538821ad3fe9b4b0b28c55fa160a0}} 
+\index{Wt::WServer@{Wt::WServer}!stop@{stop}}
+\index{stop@{stop}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily W\+T\+C\+O\+N\+N\+E\+C\+T\+O\+R\+\_\+\+A\+PI void Wt\+::\+W\+Server\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stops the server. 
+
+All active application sessions are terminated cleanly, and the H\+T\+T\+P(\+S) server is shut down.
+
+\begin{DoxyNote}{Note}
+This will also stop the underlying \mbox{\hyperlink{classWt_1_1WServer_adf84e177385ff262005a2044daa9c34f}{io\+Service()}}, and will block until all pending tasks have completed.
+\end{DoxyNote}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WServer_1_1Exception}{Exception}}} & \+: indicates a problem while stopping the server.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WServer_a182dd9bddead67b08c4802a8c8065b4a}{is\+Running()}}, \mbox{\hyperlink{classWt_1_1WServer_a921af79ce0a6a35555409f2f844f8a72}{start()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WServer_ad80187f7760e834b04f3bc96b78848a1}\label{classWt_1_1WServer_ad80187f7760e834b04f3bc96b78848a1}} 
+\index{Wt::WServer@{Wt::WServer}!waitForShutdown@{waitForShutdown}}
+\index{waitForShutdown@{waitForShutdown}!Wt::WServer@{Wt::WServer}}
+\doxysubsubsection{\texorpdfstring{waitForShutdown()}{waitForShutdown()}}
+{\footnotesize\ttfamily static W\+T\+\_\+\+A\+PI int Wt\+::\+W\+Server\+::wait\+For\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Waits for a shutdown signal. 
+
+This static method blocks the current thread, waiting for a shutdown signal. The implementation and details are platform dependent, but this is usually Ctrl-\/C (S\+I\+G\+I\+NT) or S\+I\+G\+K\+I\+LL.
+
+This method is convenient if you want to customize how the server is started (by instantiating a \mbox{\hyperlink{classWt_1_1WServer}{W\+Server}} object yourself, instead of using Wt\+::\+W\+Run()), but still want to use Wt as a standalone server that cleanly terminates on interruption.
+
+This will also catch S\+I\+G\+H\+UP, to reread the configuration file. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Server.\+h\end{DoxyCompactItemize}

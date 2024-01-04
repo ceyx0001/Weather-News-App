@@ -1,0 +1,473 @@
+\hypertarget{classWt_1_1Dbo_1_1collection}{}\doxysection{Wt\+::Dbo\+::collection$<$ C $>$ Class Template Reference}
+\label{classWt_1_1Dbo_1_1collection}\index{Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}}
+
+
+An S\+TL container for iterating query results.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Dbo/collection.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::Dbo\+::collection$<$ C $>$\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1Dbo_1_1collection_1_1Activity}{Activity}}
+\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_1_1const__iterator}{const\+\_\+iterator}}
+\begin{DoxyCompactList}\small\item\em Const Iterator. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_1_1iterator}{iterator}}
+\begin{DoxyCompactList}\small\item\em Iterator. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structWt_1_1Dbo_1_1collection_1_1QueryData}{Query\+Data}}
+\item 
+struct \mbox{\hyperlink{structWt_1_1Dbo_1_1collection_1_1RelationData}{Relation\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a49af50adc6d43f473f2bb45e57a77e0d}\label{classWt_1_1Dbo_1_1collection_a49af50adc6d43f473f2bb45e57a77e0d}} 
+typedef C \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a49af50adc6d43f473f2bb45e57a77e0d}{value\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Value type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a993679d78b463701c249f7dd6acd4584}\label{classWt_1_1Dbo_1_1collection_a993679d78b463701c249f7dd6acd4584}} 
+typedef \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a49af50adc6d43f473f2bb45e57a77e0d}{value\+\_\+type}} {\bfseries key\+\_\+type}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a26d76bbf7d5c75ca929728b5888274b6}\label{classWt_1_1Dbo_1_1collection_a26d76bbf7d5c75ca929728b5888274b6}} 
+typedef std\+::size\+\_\+t {\bfseries size\+\_\+type}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a8f09abaf38f4bdc9f14c30c574280817}\label{classWt_1_1Dbo_1_1collection_a8f09abaf38f4bdc9f14c30c574280817}} 
+typedef std\+::ptrdiff\+\_\+t {\bfseries difference\+\_\+type}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a4fee23c401d12b94f3d2c04d1661546a}\label{classWt_1_1Dbo_1_1collection_a4fee23c401d12b94f3d2c04d1661546a}} 
+typedef \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a49af50adc6d43f473f2bb45e57a77e0d}{value\+\_\+type}} $\ast$ {\bfseries pointer}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_affe4c75e050ce2a5980a10498bc5fccb}{collection}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_aecf456e81d943c9d2e0aaf9d001b5d7d}\label{classWt_1_1Dbo_1_1collection_aecf456e81d943c9d2e0aaf9d001b5d7d}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_aecf456e81d943c9d2e0aaf9d001b5d7d}{collection}} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}}$<$ C $>$ \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a0d0268c153cad76755af11337262aa85}\label{classWt_1_1Dbo_1_1collection_a0d0268c153cad76755af11337262aa85}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a0d0268c153cad76755af11337262aa85}{collection}} (\mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}}$<$ C $>$ \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a678c22774766a86e65891fa9ecb1713e}\label{classWt_1_1Dbo_1_1collection_a678c22774766a86e65891fa9ecb1713e}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}}$<$ C $>$ \& \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a678c22774766a86e65891fa9ecb1713e}{operator=}} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}}$<$ C $>$ \&other)
+\begin{DoxyCompactList}\small\item\em Copy assignment operator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a94edf10c48924057e5cc9d40bdcdb45f}\label{classWt_1_1Dbo_1_1collection_a94edf10c48924057e5cc9d40bdcdb45f}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}}$<$ C $>$ \& \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a94edf10c48924057e5cc9d40bdcdb45f}{operator=}} (\mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}}$<$ C $>$ \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move assignment operator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_abd01cbfac7573fafa8cc69bf58cd8cd4}\label{classWt_1_1Dbo_1_1collection_abd01cbfac7573fafa8cc69bf58cd8cd4}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_abd01cbfac7573fafa8cc69bf58cd8cd4}{$\sim$collection}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_1_1iterator}{iterator}} \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a34a2c5408e6df76ddceca97f391e49fa}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the begin of the collection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_1_1iterator}{iterator}} \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a4931ae96b15c78394e9e1abdc1bfd462}{end}} ()
+\begin{DoxyCompactList}\small\item\em Returns an iterator to the end of the collection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a21ae6a6da232c3283d20c120b4115cc8}{begin}} () const
+\begin{DoxyCompactList}\small\item\em Returns a const iterator to the begin of the collection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a8377b36c601e58aeb5ada686d3708797}{end}} () const
+\begin{DoxyCompactList}\small\item\em Returns a const iterator to the end of the collection. \end{DoxyCompactList}\item 
+C \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a7f0de078b2b0f0927f3f61ce9708b598}{front}} () const
+\begin{DoxyCompactList}\small\item\em Returns a reference to the first object. \end{DoxyCompactList}\item 
+size\+\_\+type \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a7ecc225c15dafe95aef5cb7cef8f9608}{size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the size. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a0608d6931cf97831c4798bfbb25c34cd}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the collection is empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a7b497add0d6ac2b1e098820f9ee64c93}{insert}} (C c)
+\begin{DoxyCompactList}\small\item\em Inserts an object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a35d046e991b3fec59af85d501fd49e51}{erase}} (C c)
+\begin{DoxyCompactList}\small\item\em Removes an object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_af153d38d1b3ce7c0dcb6ad68d52e8e9b}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears the collection. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a527909301213c80c855b0249a4652729}{count}} (C c) const
+\begin{DoxyCompactList}\small\item\em Returns the whether the collection contains an object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a2726da873bd60becfa488f14f83eb546}\label{classWt_1_1Dbo_1_1collection_a2726da873bd60becfa488f14f83eb546}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a2726da873bd60becfa488f14f83eb546}{session}} () const
+\begin{DoxyCompactList}\small\item\em Returns the session to which this collection is bound. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}}$<$ C, \mbox{\hyperlink{structWt_1_1Dbo_1_1DynamicBinding}{Dynamic\+Binding}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_abd04a49cd9bfff5aaf49adf16dad100e}{find}} () const
+\begin{DoxyCompactList}\small\item\em Returns the query that backs the collection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a3bbf8ffce24c46805adf5f892c05ec2f}\label{classWt_1_1Dbo_1_1collection_a3bbf8ffce24c46805adf5f892c05ec2f}} 
+const std\+::vector$<$ C $>$ \& {\bfseries manual\+Mode\+Insertions} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_ac00e068118dcb8ea929dae45b278bf2a}\label{classWt_1_1Dbo_1_1collection_ac00e068118dcb8ea929dae45b278bf2a}} 
+std\+::vector$<$ C $>$ \& {\bfseries manual\+Mode\+Insertions} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a378bbc29b5b03188b020982618e566f7}\label{classWt_1_1Dbo_1_1collection_a378bbc29b5b03188b020982618e566f7}} 
+const std\+::vector$<$ C $>$ \& {\bfseries manual\+Mode\+Removals} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a1691fa92b8b15bbc2793003292f4340a}\label{classWt_1_1Dbo_1_1collection_a1691fa92b8b15bbc2793003292f4340a}} 
+std\+::vector$<$ C $>$ \& {\bfseries manual\+Mode\+Removals} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_aab8cc7056986286c93c9caba45869a10}\label{classWt_1_1Dbo_1_1collection_aab8cc7056986286c93c9caba45869a10}} 
+const typedef \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a49af50adc6d43f473f2bb45e57a77e0d}{value\+\_\+type}} \& {\bfseries const\+\_\+reference}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a73c1896939ff5cd6e008bae2486fce2d}\label{classWt_1_1Dbo_1_1collection_a73c1896939ff5cd6e008bae2486fce2d}} 
+const typedef \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a49af50adc6d43f473f2bb45e57a77e0d}{value\+\_\+type}} $\ast$ {\bfseries const\+\_\+pointer}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_ae6ea0170845691be73565fc3cf455793}\label{classWt_1_1Dbo_1_1collection_ae6ea0170845691be73565fc3cf455793}} 
+\mbox{\hyperlink{structWt_1_1Dbo_1_1collection_1_1QueryData}{Query\+Data}} $\ast$ {\bfseries query}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a1616865929fc9b2d40e4e033296bbf3f}\label{classWt_1_1Dbo_1_1collection_a1616865929fc9b2d40e4e033296bbf3f}} 
+\mbox{\hyperlink{structWt_1_1Dbo_1_1collection_1_1RelationData}{Relation\+Data}} {\bfseries relation}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a195a7ae2f6c1849f372c2009537520ce}\label{classWt_1_1Dbo_1_1collection_a195a7ae2f6c1849f372c2009537520ce}} 
+enum \{ {\bfseries Query\+Collection}, 
+{\bfseries Relation\+Collection}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a658c6447b827a7e7f6443a60a49d17b2}\label{classWt_1_1Dbo_1_1collection_a658c6447b827a7e7f6443a60a49d17b2}} 
+{\bfseries collection} (\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} $\ast$\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a2726da873bd60becfa488f14f83eb546}{session}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $\ast$select\+Statement, \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $\ast$count\+Statement)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a7aaebe18f567a942456dc685464024ee}\label{classWt_1_1Dbo_1_1collection_a7aaebe18f567a942456dc685464024ee}} 
+void {\bfseries set\+Relation\+Data} (\mbox{\hyperlink{classWt_1_1Dbo_1_1MetaDboBase}{Meta\+Dbo\+Base}} $\ast$dbo, const std\+::string $\ast$sql, \mbox{\hyperlink{structWt_1_1Dbo_1_1Impl_1_1SetInfo}{Impl\+::\+Set\+Info}} $\ast$info)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a2763e9c627c662bcd921248921292586}\label{classWt_1_1Dbo_1_1collection_a2763e9c627c662bcd921248921292586}} 
+\mbox{\hyperlink{structWt_1_1Dbo_1_1collection_1_1Activity}{Activity}} $\ast$ {\bfseries activity} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a7ed492751d589b2240411058736c7f9a}\label{classWt_1_1Dbo_1_1collection_a7ed492751d589b2240411058736c7f9a}} 
+void {\bfseries reset\+Activity} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a9696d3ee27c0a04c93aed3ac929a5e89}\label{classWt_1_1Dbo_1_1collection_a9696d3ee27c0a04c93aed3ac929a5e89}} 
+void {\bfseries release\+Query} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_ac908af8425092b35e121b775d0a8f928}\label{classWt_1_1Dbo_1_1collection_ac908af8425092b35e121b775d0a8f928}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $\ast$ {\bfseries execute\+Statement} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a206545662dd7e5393fc1081fe8ae9533}\label{classWt_1_1Dbo_1_1collection_a206545662dd7e5393fc1081fe8ae9533}} 
+void {\bfseries iterate\+Done} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_aa7e4ba9ff6b8b299746abe41eac5fb85}\label{classWt_1_1Dbo_1_1collection_aa7e4ba9ff6b8b299746abe41eac5fb85}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} $\ast$ {\bfseries session\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_af97570d3396a68e25d59540e33421834}\label{classWt_1_1Dbo_1_1collection_af97570d3396a68e25d59540e33421834}} 
+enum Wt\+::\+Dbo\+::collection\+:: \{ ... \}  {\bfseries type\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a34c1c75b21880462d8621f31e26242b2}\label{classWt_1_1Dbo_1_1collection_a34c1c75b21880462d8621f31e26242b2}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>\mbox{\hyperlink{structWt_1_1Dbo_1_1collection_1_1QueryData}{QueryData}} $\ast$ {\bfseries query}\\
+\>\mbox{\hyperlink{structWt_1_1Dbo_1_1collection_1_1RelationData}{RelationData}} {\bfseries relation}\\
+\} {\bfseries data\_}\\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a4e0d1ca2de8ed8a2eccbf801e570896e}\label{classWt_1_1Dbo_1_1collection_a4e0d1ca2de8ed8a2eccbf801e570896e}} 
+std\+::vector$<$ C $>$ {\bfseries manual\+Mode\+Insertions\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a7d4252140734da13a6c1c21780d2e30b}\label{classWt_1_1Dbo_1_1collection_a7d4252140734da13a6c1c21780d2e30b}} 
+std\+::vector$<$ C $>$ {\bfseries manual\+Mode\+Removals\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a8b3b8d8c209023c6dfaf2807c78cb44d}\label{classWt_1_1Dbo_1_1collection_a8b3b8d8c209023c6dfaf2807c78cb44d}} 
+class {\bfseries Dbo\+Action}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_ae8f8a16d55793cafa1e0a861d507c342}\label{classWt_1_1Dbo_1_1collection_ae8f8a16d55793cafa1e0a861d507c342}} 
+class {\bfseries Session\+Add\+Action}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a51d053999113f2f048791f13fa1d3ba7}\label{classWt_1_1Dbo_1_1collection_a51d053999113f2f048791f13fa1d3ba7}} 
+class {\bfseries Load\+Base\+Action}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_ac4858dc2017d7c1c4c30c7a67866fbda}\label{classWt_1_1Dbo_1_1collection_ac4858dc2017d7c1c4c30c7a67866fbda}} 
+class {\bfseries Save\+Base\+Action}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_ae1db5aa2f3c16367a433614db6b9255a}\label{classWt_1_1Dbo_1_1collection_ae1db5aa2f3c16367a433614db6b9255a}} 
+class {\bfseries Transaction\+Done\+Action}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a27df6e2a1650d985bdeda33f0303c83f}\label{classWt_1_1Dbo_1_1collection_a27df6e2a1650d985bdeda33f0303c83f}} 
+{\footnotesize template$<$class D $>$ }\\class {\bfseries weak\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a448ee34b0f6e9de049edc1d502256db8}\label{classWt_1_1Dbo_1_1collection_a448ee34b0f6e9de049edc1d502256db8}} 
+{\footnotesize template$<$class Result , typename Bind\+Strategy $>$ }\\class {\bfseries Query}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class C$>$\newline
+class Wt\+::\+Dbo\+::collection$<$ C $>$}
+
+An S\+TL container for iterating query results. 
+
+This is an S\+T\+L-\/compatible container that is backed by an S\+QL query for fetching data.
+
+A collection has two uses in \mbox{\hyperlink{namespaceWt_1_1Dbo}{Wt\+::\+Dbo}}\+:
+\begin{DoxyItemize}
+\item to iterate the results of a \mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}};
+\item to map the many-\/side of a Many-\/to-\/\+One or Many-\/to-\/\+Many relation.
+\end{DoxyItemize}
+
+Its iterators implement the Input\+Iterator requirements, meaning you have to traverse the results from \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a34a2c5408e6df76ddceca97f391e49fa}{begin()}} to \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a4931ae96b15c78394e9e1abdc1bfd462}{end()}} solely by alternating between reading an element and incrementing the iterator. When the collection represents the results of a \mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}}, you can only iterate the results just once\+: i.\+e. you can have only one \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a34a2c5408e6df76ddceca97f391e49fa}{begin()}} call.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{typedef} \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{dbo::collection< dbo::ptr<User>}} > \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Users}};}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Users}} allUsers = \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a2726da873bd60becfa488f14f83eb546}{session}}.find<\mbox{\hyperlink{classUser}{User}}> ();}
+\DoxyCodeLine{\textcolor{keywordflow}{for} (\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_1_1const__iterator}{Users::const\_iterator}} i = allUsers.\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a34a2c5408e6df76ddceca97f391e49fa}{begin}}();}
+\DoxyCodeLine{    i != allUsers.\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a4931ae96b15c78394e9e1abdc1bfd462}{end}}(); ++i)\{}
+\DoxyCodeLine{  \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{dbo::ptr<User>}} user = *i;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+The container is read only when it reflects results of a query. Otherwise, when involved in a Many-\/to-\/\+One or Many-\/to-\/\+Many relation, you may also \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a7b497add0d6ac2b1e098820f9ee64c93}{insert()}} and \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a35d046e991b3fec59af85d501fd49e51}{erase()}} objects in it.
+
+You will typically iterate the container results for local processing, or copy the results into a standard S\+TL container for extended processing. Not only the weak guarantees of the iterators make this recommended, but also in the current implementation of the library, all sql statements are non-\/reentrant prepared statements (this limitation is likely to be removed in the future)\+: only one collection, which is backed by the same S\+QL statement may be used at once per session. Thus, the following will fail\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void} iterateChildren(\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{Wt::Dbo::ptr<Comment>}} comment)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{typedef} \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Wt::Dbo::collection<Wt::Dbo::ptr<Comment>}} > \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Comments}};}
+\DoxyCodeLine{    \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Comments}} children = comment-\/>children;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{for} (Comments::const\_iterator i = children.\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a34a2c5408e6df76ddceca97f391e49fa}{begin}}(); i != children.\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a4931ae96b15c78394e9e1abdc1bfd462}{end}}(); ++i) \{}
+\DoxyCodeLine{       std::cerr << \textcolor{stringliteral}{"Comment: "} << i-\/>text << std::endl;}
+\DoxyCodeLine{       iterateChildren(*i); \textcolor{comment}{// Illegal since will result in nested use of the same query.}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+If you cannot guarantee that during its iteration the same query will be reused, you should copy the results in a standard container. \mbox{\hyperlink{classNote}{Note}} that this is no big overhead since dbo pointers are lightweight.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void} iterateChildren(\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{Wt::Dbo::ptr<Comment>}} comment)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keyword}{typedef} std::vector<Wt::Dbo::ptr<Comment> > \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Comments}};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Comments}} children(comment-\/>children.begin(), comment-\/>children.end()); \textcolor{comment}{// copy into an STL container, freeing the underlying query for reuse}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{for} (Comments::const\_iterator i = children.\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a34a2c5408e6df76ddceca97f391e49fa}{begin}}(); i != children.\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a4931ae96b15c78394e9e1abdc1bfd462}{end}}(); ++i) \{}
+\DoxyCodeLine{       std::cerr << \textcolor{stringliteral}{"Comment: "} << i-\/>text << std::endl;}
+\DoxyCodeLine{       iterateChildren(*i); \textcolor{comment}{// Okay now.}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+Before iterating a collection, the session is flushed. In this way, the collection will reflect any pending dirty changes. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_affe4c75e050ce2a5980a10498bc5fccb}\label{classWt_1_1Dbo_1_1collection_affe4c75e050ce2a5980a10498bc5fccb}} 
+\index{Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}!collection@{collection}}
+\index{collection@{collection}!Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}}
+\doxysubsubsection{\texorpdfstring{collection()}{collection()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Wt\+::\+Dbo\+::collection}}$<$ C $>$\+::\mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}}}
+
+
+
+Default constructor. 
+
+Constructs an empty collection that is not bound to a database session or query. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a34a2c5408e6df76ddceca97f391e49fa}\label{classWt_1_1Dbo_1_1collection_a34a2c5408e6df76ddceca97f391e49fa}} 
+\index{Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}!begin@{begin}}
+\index{begin@{begin}!Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}}$<$ C $>$\+::\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Wt\+::\+Dbo\+::collection}}$<$ C $>$\+::begin}
+
+
+
+Returns an iterator to the begin of the collection. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a4931ae96b15c78394e9e1abdc1bfd462}{end()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a21ae6a6da232c3283d20c120b4115cc8}\label{classWt_1_1Dbo_1_1collection_a21ae6a6da232c3283d20c120b4115cc8}} 
+\index{Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}!begin@{begin}}
+\index{begin@{begin}!Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Wt\+::\+Dbo\+::collection}}$<$ C $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a const iterator to the begin of the collection. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a4931ae96b15c78394e9e1abdc1bfd462}{end()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_af153d38d1b3ce7c0dcb6ad68d52e8e9b}\label{classWt_1_1Dbo_1_1collection_af153d38d1b3ce7c0dcb6ad68d52e8e9b}} 
+\index{Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}!clear@{clear}}
+\index{clear@{clear}!Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Wt\+::\+Dbo\+::collection}}$<$ C $>$\+::clear}
+
+
+
+Clears the collection. 
+
+\begin{DoxyNote}{Note}
+This is only implemented for collections that are involved in a Many\+To\+One or Many\+To\+Many relation, and not for collections that are used to iterated the result of a query.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a35d046e991b3fec59af85d501fd49e51}{erase()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a527909301213c80c855b0249a4652729}\label{classWt_1_1Dbo_1_1collection_a527909301213c80c855b0249a4652729}} 
+\index{Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}!count@{count}}
+\index{count@{count}!Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+int \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Wt\+::\+Dbo\+::collection}}$<$ C $>$\+::count (\begin{DoxyParamCaption}\item[{C}]{c }\end{DoxyParamCaption}) const}
+
+
+
+Returns the whether the collection contains an object. 
+
+This creates a suitable query that checks whether the collection contains ptr$<$\+X$>$ objects (without getting the entire collection from the database). The returned value is the number of times the collection contains the object (0 or 1).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_abd04a49cd9bfff5aaf49adf16dad100e}{find()}}
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+This is (currently) only implemented for collections that are involved in a Many\+To\+One or Many\+To\+Many relation, and not for collections that are used to iterate the result of a query. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a0608d6931cf97831c4798bfbb25c34cd}\label{classWt_1_1Dbo_1_1collection_a0608d6931cf97831c4798bfbb25c34cd}} 
+\index{Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}!empty@{empty}}
+\index{empty@{empty}!Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+bool \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Wt\+::\+Dbo\+::collection}}$<$ C $>$\+::empty}
+
+
+
+Returns whether the collection is empty. 
+
+Returns whether \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a7ecc225c15dafe95aef5cb7cef8f9608}{size()}} == 0 \mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a4931ae96b15c78394e9e1abdc1bfd462}\label{classWt_1_1Dbo_1_1collection_a4931ae96b15c78394e9e1abdc1bfd462}} 
+\index{Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}!end@{end}}
+\index{end@{end}!Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}}$<$ C $>$\+::\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Wt\+::\+Dbo\+::collection}}$<$ C $>$\+::end}
+
+
+
+Returns an iterator to the end of the collection. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a34a2c5408e6df76ddceca97f391e49fa}{begin()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a8377b36c601e58aeb5ada686d3708797}\label{classWt_1_1Dbo_1_1collection_a8377b36c601e58aeb5ada686d3708797}} 
+\index{Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}!end@{end}}
+\index{end@{end}!Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_1_1const__iterator}{const\+\_\+iterator}} \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Wt\+::\+Dbo\+::collection}}$<$ C $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a const iterator to the end of the collection. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a34a2c5408e6df76ddceca97f391e49fa}{begin()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a35d046e991b3fec59af85d501fd49e51}\label{classWt_1_1Dbo_1_1collection_a35d046e991b3fec59af85d501fd49e51}} 
+\index{Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}!erase@{erase}}
+\index{erase@{erase}!Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Wt\+::\+Dbo\+::collection}}$<$ C $>$\+::erase (\begin{DoxyParamCaption}\item[{C}]{c }\end{DoxyParamCaption})}
+
+
+
+Removes an object. 
+
+\begin{DoxyNote}{Note}
+This is only implemented for collections that are involved in a Many\+To\+One or Many\+To\+Many relation, and not for collections that are used to iterated the result of a query.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a7b497add0d6ac2b1e098820f9ee64c93}{insert()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_abd04a49cd9bfff5aaf49adf16dad100e}\label{classWt_1_1Dbo_1_1collection_abd04a49cd9bfff5aaf49adf16dad100e}} 
+\index{Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}!find@{find}}
+\index{find@{find}!Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}}$<$ C, \mbox{\hyperlink{structWt_1_1Dbo_1_1DynamicBinding}{Dynamic\+Binding}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Wt\+::\+Dbo\+::collection}}$<$ C $>$\+::find}
+
+
+
+Returns the query that backs the collection. 
+
+Returns the query that backs the collection. This can be used to search for a subset or to browse the results in a particular order.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a527909301213c80c855b0249a4652729}{count()}}
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+This is (currently) only implemented for collections that are involved in a Many\+To\+One or Many\+To\+Many relation, and not for collections that are used to iterate the result of a query. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a7f0de078b2b0f0927f3f61ce9708b598}\label{classWt_1_1Dbo_1_1collection_a7f0de078b2b0f0927f3f61ce9708b598}} 
+\index{Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}!front@{front}}
+\index{front@{front}!Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+C \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Wt\+::\+Dbo\+::collection}}$<$ C $>$\+::front}
+
+
+
+Returns a reference to the first object. 
+
+This is equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{*(\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_affe4c75e050ce2a5980a10498bc5fccb}{collection}}.begin())}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a7b497add0d6ac2b1e098820f9ee64c93}\label{classWt_1_1Dbo_1_1collection_a7b497add0d6ac2b1e098820f9ee64c93}} 
+\index{Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}!insert@{insert}}
+\index{insert@{insert}!Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Wt\+::\+Dbo\+::collection}}$<$ C $>$\+::insert (\begin{DoxyParamCaption}\item[{C}]{c }\end{DoxyParamCaption})}
+
+
+
+Inserts an object. 
+
+\begin{DoxyNote}{Note}
+This is only implemented for collections that are involved in a Many\+To\+One or Many\+To\+Many relation, and not for collections that are used to iterated the result of a query.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a35d046e991b3fec59af85d501fd49e51}{erase()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1collection_a7ecc225c15dafe95aef5cb7cef8f9608}\label{classWt_1_1Dbo_1_1collection_a7ecc225c15dafe95aef5cb7cef8f9608}} 
+\index{Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}!size@{size}}
+\index{size@{size}!Wt::Dbo::collection$<$ C $>$@{Wt::Dbo::collection$<$ C $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}}$<$ C $>$\+::size\+\_\+type \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Wt\+::\+Dbo\+::collection}}$<$ C $>$\+::size}
+
+
+
+Returns the size. 
+
+This will execute an S\+QL {\ttfamily count($\ast$)} statement to fetch the size of the collection without fetching all results.
+
+If the collection represents the result of a \mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}}, the underlying query is run only once, and its result is cached so that \mbox{\hyperlink{classWt_1_1Dbo_1_1collection_a7ecc225c15dafe95aef5cb7cef8f9608}{size()}} always returns the same value. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/collection.\+h\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/collection\+\_\+impl.\+h\end{DoxyCompactItemize}

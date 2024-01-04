@@ -1,0 +1,180 @@
+\hypertarget{structWt_1_1Dbo_1_1query__result__traits}{}\doxysection{Wt\+::Dbo\+::query\+\_\+result\+\_\+traits$<$ Result $>$ Class Template Reference}
+\label{structWt_1_1Dbo_1_1query__result__traits}\index{Wt::Dbo::query\_result\_traits$<$ Result $>$@{Wt::Dbo::query\_result\_traits$<$ Result $>$}}
+
+
+Traits class for result types.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Dbo/\+Sql\+Traits.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_a15021d5b70cb03ee08b39f0c45b02572}{get\+Fields}} (\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} \&session, std\+::vector$<$ std\+::string $>$ $\ast$aliases, std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1FieldInfo}{Field\+Info}} $>$ \&result)
+\begin{DoxyCompactList}\small\item\em Obtains the list of fields in this result. \end{DoxyCompactList}\item 
+static Result \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_a24228c4fbd6fd851a44c7aaf3416d0b3}{load}} (\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} \&session, \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} \&statement, int \&column)
+\begin{DoxyCompactList}\small\item\em Reads a result from an executed query. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_a9e28304a061c7ad52cb34e34fc410759}{get\+Values}} (const Result \&result, std\+::vector$<$ \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} $>$ \&values)
+\begin{DoxyCompactList}\small\item\em Returns result values. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_afd928ae3f5216574125647063135cc3a}{set\+Value}} (Result \&result, int \&index, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value)
+\begin{DoxyCompactList}\small\item\em Sets a result value. \end{DoxyCompactList}\item 
+static Result \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_ad5ff66197006a5daef3ce806ad29ddf7}{create}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new result. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_af54fbd95d2319077cacbb718d6f33f1b}{add}} (\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} \&session, Result \&result)
+\begin{DoxyCompactList}\small\item\em Adds a new result to the session. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_ae60de38f7bbffad41f60bd80df2ad8ca}{remove}} (Result \&result)
+\begin{DoxyCompactList}\small\item\em Removes a result from the session. \end{DoxyCompactList}\item 
+static long long \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_a23408463cc4a22d49fc8cc6328391fae}{id}} (const Result \&result)
+\begin{DoxyCompactList}\small\item\em Returns a unique id for a result. \end{DoxyCompactList}\item 
+static Result \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_a45cf741a8090502f234fadfbad05819e}{find\+By\+Id}} (\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} \&session, long long \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_a23408463cc4a22d49fc8cc6328391fae}{id}})
+\begin{DoxyCompactList}\small\item\em Find a result by id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Result$>$\newline
+class Wt\+::\+Dbo\+::query\+\_\+result\+\_\+traits$<$ Result $>$}
+
+Traits class for result types. 
+
+This traits class may be used to add support for using classes or structs as a result for a Session\+::query().
+
+The library provides by default support for primitive types, using \mbox{\hyperlink{structWt_1_1Dbo_1_1sql__value__traits}{sql\+\_\+value\+\_\+traits}}, mapped objects held by ptr types, and std\+::tuple$<$$>$ or any combination of these.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{structWt_1_1Dbo_1_1sql__value__traits}{sql\+\_\+value\+\_\+traits}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structWt_1_1Dbo_1_1query__result__traits_af54fbd95d2319077cacbb718d6f33f1b}\label{structWt_1_1Dbo_1_1query__result__traits_af54fbd95d2319077cacbb718d6f33f1b}} 
+\index{Wt::Dbo::query\_result\_traits$<$ Result $>$@{Wt::Dbo::query\_result\_traits$<$ Result $>$}!add@{add}}
+\index{add@{add}!Wt::Dbo::query\_result\_traits$<$ Result $>$@{Wt::Dbo::query\_result\_traits$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$typename Result $>$ \\
+void \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits}{Wt\+::\+Dbo\+::query\+\_\+result\+\_\+traits}}$<$ Result $>$\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} \&}]{session,  }\item[{Result \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Adds a new result to the session. 
+
+Adds a (newly created) result to a session.
+
+This method needs to be implemented only if you want to create new results from a \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Query\+Model}} (which implements \mbox{\hyperlink{classWt}{Wt}}\textquotesingle{}s M\+VC item model). \mbox{\Hypertarget{structWt_1_1Dbo_1_1query__result__traits_ad5ff66197006a5daef3ce806ad29ddf7}\label{structWt_1_1Dbo_1_1query__result__traits_ad5ff66197006a5daef3ce806ad29ddf7}} 
+\index{Wt::Dbo::query\_result\_traits$<$ Result $>$@{Wt::Dbo::query\_result\_traits$<$ Result $>$}!create@{create}}
+\index{create@{create}!Wt::Dbo::query\_result\_traits$<$ Result $>$@{Wt::Dbo::query\_result\_traits$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily template$<$typename Result $>$ \\
+Result \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits}{Wt\+::\+Dbo\+::query\+\_\+result\+\_\+traits}}$<$ Result $>$\+::create\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a new result. 
+
+Creates a new result. This should initialize a result so that its values can be set using \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_afd928ae3f5216574125647063135cc3a}{set\+Value()}} or read using \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_a9e28304a061c7ad52cb34e34fc410759}{get\+Values()}}.
+
+The result should not yet be associated with a session.
+
+This method needs to be implemented only if you want to create new results from a \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Query\+Model}} (which implements \mbox{\hyperlink{classWt}{Wt}}\textquotesingle{}s M\+VC item model). \mbox{\Hypertarget{structWt_1_1Dbo_1_1query__result__traits_a45cf741a8090502f234fadfbad05819e}\label{structWt_1_1Dbo_1_1query__result__traits_a45cf741a8090502f234fadfbad05819e}} 
+\index{Wt::Dbo::query\_result\_traits$<$ Result $>$@{Wt::Dbo::query\_result\_traits$<$ Result $>$}!findById@{findById}}
+\index{findById@{findById}!Wt::Dbo::query\_result\_traits$<$ Result $>$@{Wt::Dbo::query\_result\_traits$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{findById()}{findById()}}
+{\footnotesize\ttfamily template$<$typename Result $>$ \\
+Result \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits}{Wt\+::\+Dbo\+::query\+\_\+result\+\_\+traits}}$<$ Result $>$\+::find\+By\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} \&}]{session,  }\item[{long long}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Find a result by id. 
+
+This needs to be inverse of \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_a23408463cc4a22d49fc8cc6328391fae}{id()}} \mbox{\Hypertarget{structWt_1_1Dbo_1_1query__result__traits_a15021d5b70cb03ee08b39f0c45b02572}\label{structWt_1_1Dbo_1_1query__result__traits_a15021d5b70cb03ee08b39f0c45b02572}} 
+\index{Wt::Dbo::query\_result\_traits$<$ Result $>$@{Wt::Dbo::query\_result\_traits$<$ Result $>$}!getFields@{getFields}}
+\index{getFields@{getFields}!Wt::Dbo::query\_result\_traits$<$ Result $>$@{Wt::Dbo::query\_result\_traits$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{getFields()}{getFields()}}
+{\footnotesize\ttfamily template$<$typename Result $>$ \\
+void \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits}{Wt\+::\+Dbo\+::query\+\_\+result\+\_\+traits}}$<$ Result $>$\+::get\+Fields (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} \&}]{session,  }\item[{std\+::vector$<$ std\+::string $>$ $\ast$}]{aliases,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1FieldInfo}{Field\+Info}} $>$ \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obtains the list of fields in this result. 
+
+This is used to build the {\itshape select} clause of an Sql query.
+
+The given {\ttfamily aliases} may be used to qualify fields that correspond to entire tables (popping values from the front of this vector). An exception is thrown if not enough aliases were provided.
+
+This method is needed when you want to use Result as the result of query. \mbox{\Hypertarget{structWt_1_1Dbo_1_1query__result__traits_a9e28304a061c7ad52cb34e34fc410759}\label{structWt_1_1Dbo_1_1query__result__traits_a9e28304a061c7ad52cb34e34fc410759}} 
+\index{Wt::Dbo::query\_result\_traits$<$ Result $>$@{Wt::Dbo::query\_result\_traits$<$ Result $>$}!getValues@{getValues}}
+\index{getValues@{getValues}!Wt::Dbo::query\_result\_traits$<$ Result $>$@{Wt::Dbo::query\_result\_traits$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{getValues()}{getValues()}}
+{\footnotesize\ttfamily template$<$typename Result $>$ \\
+void \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits}{Wt\+::\+Dbo\+::query\+\_\+result\+\_\+traits}}$<$ Result $>$\+::get\+Values (\begin{DoxyParamCaption}\item[{const Result \&}]{result,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} $>$ \&}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns result values. 
+
+This returns the individual field values in the given {\ttfamily result}.
+
+This method needs to be implemented only if you want to display the result in a \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Query\+Model}} (which implements \mbox{\hyperlink{classWt}{Wt}}\textquotesingle{}s M\+VC item model). \mbox{\Hypertarget{structWt_1_1Dbo_1_1query__result__traits_a23408463cc4a22d49fc8cc6328391fae}\label{structWt_1_1Dbo_1_1query__result__traits_a23408463cc4a22d49fc8cc6328391fae}} 
+\index{Wt::Dbo::query\_result\_traits$<$ Result $>$@{Wt::Dbo::query\_result\_traits$<$ Result $>$}!id@{id}}
+\index{id@{id}!Wt::Dbo::query\_result\_traits$<$ Result $>$@{Wt::Dbo::query\_result\_traits$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily template$<$typename Result $>$ \\
+long long \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits}{Wt\+::\+Dbo\+::query\+\_\+result\+\_\+traits}}$<$ Result $>$\+::id (\begin{DoxyParamCaption}\item[{const Result \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns a unique id for a result. 
+
+This method needs to be implemented to return a unique id for a result which can later be used to find the result.
+
+If not supported, return -\/1.
+
+\begin{DoxySeeAlso}{See also}
+findby\+Id() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structWt_1_1Dbo_1_1query__result__traits_a24228c4fbd6fd851a44c7aaf3416d0b3}\label{structWt_1_1Dbo_1_1query__result__traits_a24228c4fbd6fd851a44c7aaf3416d0b3}} 
+\index{Wt::Dbo::query\_result\_traits$<$ Result $>$@{Wt::Dbo::query\_result\_traits$<$ Result $>$}!load@{load}}
+\index{load@{load}!Wt::Dbo::query\_result\_traits$<$ Result $>$@{Wt::Dbo::query\_result\_traits$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$typename Result $>$ \\
+Result \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits}{Wt\+::\+Dbo\+::query\+\_\+result\+\_\+traits}}$<$ Result $>$\+::load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} \&}]{session,  }\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} \&}]{statement,  }\item[{int \&}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Reads a result from an executed query. 
+
+This reads the value from the {\ttfamily statement}, starting at column {\ttfamily column}, and advancing the column pointer for as many columns as needed (and according to the number of fields returned by \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_a15021d5b70cb03ee08b39f0c45b02572}{get\+Fields()}}).
+
+This method is needed when you want to use Result as the result of query. \mbox{\Hypertarget{structWt_1_1Dbo_1_1query__result__traits_ae60de38f7bbffad41f60bd80df2ad8ca}\label{structWt_1_1Dbo_1_1query__result__traits_ae60de38f7bbffad41f60bd80df2ad8ca}} 
+\index{Wt::Dbo::query\_result\_traits$<$ Result $>$@{Wt::Dbo::query\_result\_traits$<$ Result $>$}!remove@{remove}}
+\index{remove@{remove}!Wt::Dbo::query\_result\_traits$<$ Result $>$@{Wt::Dbo::query\_result\_traits$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename Result $>$ \\
+void \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits}{Wt\+::\+Dbo\+::query\+\_\+result\+\_\+traits}}$<$ Result $>$\+::remove (\begin{DoxyParamCaption}\item[{Result \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Removes a result from the session. 
+
+This method needs to be implemented only if you want to remove results from a \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Query\+Model}} (which implements \mbox{\hyperlink{classWt}{Wt}}\textquotesingle{}s M\+VC item model). \mbox{\Hypertarget{structWt_1_1Dbo_1_1query__result__traits_afd928ae3f5216574125647063135cc3a}\label{structWt_1_1Dbo_1_1query__result__traits_afd928ae3f5216574125647063135cc3a}} 
+\index{Wt::Dbo::query\_result\_traits$<$ Result $>$@{Wt::Dbo::query\_result\_traits$<$ Result $>$}!setValue@{setValue}}
+\index{setValue@{setValue}!Wt::Dbo::query\_result\_traits$<$ Result $>$@{Wt::Dbo::query\_result\_traits$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily template$<$typename Result $>$ \\
+void \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits}{Wt\+::\+Dbo\+::query\+\_\+result\+\_\+traits}}$<$ Result $>$\+::set\+Value (\begin{DoxyParamCaption}\item[{Result \&}]{result,  }\item[{int \&}]{index,  }\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets a result value. 
+
+Sets the value at {\ttfamily index}, where index indicates the field whose value needs to be updated.
+
+When {\ttfamily index} is out-\/of-\/bounds, it should be decremented with as many fields as there are in this result type. Otherwise, index should be set to -\/1 after the value has been set.
+
+This method needs to be implemented only if you want to modify the result from a \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Query\+Model}} (which implements \mbox{\hyperlink{classWt}{Wt}}\textquotesingle{}s M\+VC item model). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/Sql\+Traits.\+h\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/Sql\+Traits\+\_\+impl.\+h\end{DoxyCompactItemize}

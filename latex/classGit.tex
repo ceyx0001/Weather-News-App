@@ -1,0 +1,266 @@
+\hypertarget{classGit}{}\doxysection{Git Class Reference}
+\label{classGit}\index{Git@{Git}}
+
+
+Git utility class for browsing git archives.  
+
+
+
+
+{\ttfamily \#include $<$Git.\+h$>$}
+
+
+
+Collaboration diagram for Git\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classGit_1_1Exception}{Exception}}
+\begin{DoxyCompactList}\small\item\em Exception class. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structGit_1_1Object}{Object}}
+\begin{DoxyCompactList}\small\item\em Git object. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classGit_1_1ObjectId}{Object\+Id}}
+\begin{DoxyCompactList}\small\item\em Git object Id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGit_ab282f46c36a47ddff9bc7be7c993041a}\label{classGit_ab282f46c36a47ddff9bc7be7c993041a}} 
+enum \mbox{\hyperlink{classGit_ab282f46c36a47ddff9bc7be7c993041a}{Object\+Type}} \{ {\bfseries Tree}, 
+{\bfseries Commit}, 
+{\bfseries Blob}
+ \}
+\begin{DoxyCompactList}\small\item\em Git object type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGit_a23da7b806839f7a482935a44142b04c9}\label{classGit_a23da7b806839f7a482935a44142b04c9}} 
+typedef std\+::list$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ {\bfseries Cache}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGit_afdc93b8c52e55a1977c9333d71561cd5}\label{classGit_afdc93b8c52e55a1977c9333d71561cd5}} 
+\mbox{\hyperlink{classGit_afdc93b8c52e55a1977c9333d71561cd5}{Git}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGit_ab21f8d442557b07321a274b5e976f1ac}{set\+Repository\+Path}} (const std\+::string \&repository)
+\begin{DoxyCompactList}\small\item\em Set the git repository path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGit_1_1ObjectId}{Object\+Id}} \mbox{\hyperlink{classGit_a5827f3d0a56e68107314e4cf8ab2e0ee}{get\+Commit\+Tree}} (const std\+::string \&revision) const
+\begin{DoxyCompactList}\small\item\em Get the tree for a particular revision. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGit_1_1ObjectId}{Object\+Id}} \mbox{\hyperlink{classGit_a8390460439ede19e1a27d3058c0d9b41}{get\+Commit}} (const std\+::string \&revision) const
+\begin{DoxyCompactList}\small\item\em Get the commit for a particular revision. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGit_1_1ObjectId}{Object\+Id}} \mbox{\hyperlink{classGit_a5c2910ff86d1c6a143c3597150fbdc8d}{get\+Tree\+From\+Commit}} (const \mbox{\hyperlink{classGit_1_1ObjectId}{Object\+Id}} \&commit) const
+\begin{DoxyCompactList}\small\item\em Get the tree for a particular commit. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structGit_1_1Object}{Object}} \mbox{\hyperlink{classGit_ad8520526dbc7e0fc3d420a84c3302581}{tree\+Get\+Object}} (const \mbox{\hyperlink{classGit_1_1ObjectId}{Object\+Id}} \&tree, int index) const
+\begin{DoxyCompactList}\small\item\em Get some info on a tree object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classGit_aad89040b27ed54ca3f1cef953a3826c6}{tree\+Size}} (const \mbox{\hyperlink{classGit_1_1ObjectId}{Object\+Id}} \&tree) const
+\begin{DoxyCompactList}\small\item\em Return the number of objects inside a tree object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classGit_a7a5e5071727258f52bfde75a8b67becc}{cat\+File}} (const \mbox{\hyperlink{classGit_1_1ObjectId}{Object\+Id}} \&id) const
+\begin{DoxyCompactList}\small\item\em Return the raw contents of a git object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGit_ac544692d42c0be33635c2c68f1846a7e}\label{classGit_ac544692d42c0be33635c2c68f1846a7e}} 
+std\+::string \mbox{\hyperlink{classGit_ac544692d42c0be33635c2c68f1846a7e}{base\+Cmd}} () const
+\begin{DoxyCompactList}\small\item\em The git base command after which extra arguments are added. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGit_aa2bcacfda57a17736676a7ea679c099a}{check\+Repository}} () const
+\begin{DoxyCompactList}\small\item\em Checks the repository. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGit_aba22521e9b19f414cde1116a30ee6b8b}{get\+Cmd\+Result}} (const std\+::string \&cmd, std\+::string \&result, const std\+::string \&tag) const
+\begin{DoxyCompactList}\small\item\em Returns a line identified by a tag from the output of a git command. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGit_a2a238cf9ceda5ae214d252ad71b726d6}{get\+Cmd\+Result}} (const std\+::string \&cmd, std\+::string \&result, int index) const
+\begin{DoxyCompactList}\small\item\em Returns the {\itshape i}th line from the output of a git command. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classGit_a7d18871ce6c1c8bd80e851eb5a0a95b9}{get\+Cmd\+Result\+Line\+Count}} (const std\+::string \&cmd) const
+\begin{DoxyCompactList}\small\item\em Returns the number of lines in the output of a git command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGit_a87d3a306a1b064902dcce12dd001d0cd}\label{classGit_a87d3a306a1b064902dcce12dd001d0cd}} 
+bool \mbox{\hyperlink{classGit_a87d3a306a1b064902dcce12dd001d0cd}{is\+\_\+bare\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Whether the repositoy is a bare repository. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGit_a5f478cb0fb21487e60f87b93d4277440}\label{classGit_a5f478cb0fb21487e60f87b93d4277440}} 
+std\+::string \mbox{\hyperlink{classGit_a5f478cb0fb21487e60f87b93d4277440}{repository\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The path to the repository. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGit_a0097b8efc1e8530cc11133622684e9ef}\label{classGit_a0097b8efc1e8530cc11133622684e9ef}} 
+Cache \mbox{\hyperlink{classGit_a0097b8efc1e8530cc11133622684e9ef}{cache\+\_\+}}
+\begin{DoxyCompactList}\small\item\em A small L\+RU cache that stores results of git commands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Git utility class for browsing git archives. 
+
+Far from complete! Only browses git revisions. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGit_a7a5e5071727258f52bfde75a8b67becc}\label{classGit_a7a5e5071727258f52bfde75a8b67becc}} 
+\index{Git@{Git}!catFile@{catFile}}
+\index{catFile@{catFile}!Git@{Git}}
+\doxysubsubsection{\texorpdfstring{catFile()}{catFile()}}
+{\footnotesize\ttfamily std\+::string Git\+::cat\+File (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGit_1_1ObjectId}{Object\+Id}} \&}]{id }\end{DoxyParamCaption}) const}
+
+
+
+Return the raw contents of a git object. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classGit_1_1Exception}{Exception}}} & \+: in case of a git error. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classGit_aa2bcacfda57a17736676a7ea679c099a}\label{classGit_aa2bcacfda57a17736676a7ea679c099a}} 
+\index{Git@{Git}!checkRepository@{checkRepository}}
+\index{checkRepository@{checkRepository}!Git@{Git}}
+\doxysubsubsection{\texorpdfstring{checkRepository()}{checkRepository()}}
+{\footnotesize\ttfamily void Git\+::check\+Repository (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checks the repository. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classGit_1_1Exception}{Exception}}} & \+: in case the repository is not a valid. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classGit_aba22521e9b19f414cde1116a30ee6b8b}\label{classGit_aba22521e9b19f414cde1116a30ee6b8b}} 
+\index{Git@{Git}!getCmdResult@{getCmdResult}}
+\index{getCmdResult@{getCmdResult}!Git@{Git}}
+\doxysubsubsection{\texorpdfstring{getCmdResult()}{getCmdResult()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Git\+::get\+Cmd\+Result (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cmd,  }\item[{std\+::string \&}]{result,  }\item[{const std\+::string \&}]{tag }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Returns a line identified by a tag from the output of a git command. 
+
+The line is filled in {\itshape result}. Returns whether a line starting with {\itshape tag} could be found.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classGit_1_1Exception}{Exception}}} & \+: in case the command failed \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classGit_a2a238cf9ceda5ae214d252ad71b726d6}\label{classGit_a2a238cf9ceda5ae214d252ad71b726d6}} 
+\index{Git@{Git}!getCmdResult@{getCmdResult}}
+\index{getCmdResult@{getCmdResult}!Git@{Git}}
+\doxysubsubsection{\texorpdfstring{getCmdResult()}{getCmdResult()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Git\+::get\+Cmd\+Result (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cmd,  }\item[{std\+::string \&}]{result,  }\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Returns the {\itshape i}th line from the output of a git command. 
+
+The line is filled in {\itshape result}. Returns the whole git output if {\itshape index} = -\/1, otherwise the line with line number {\itshape index}.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classGit_1_1Exception}{Exception}}} & \+: in case the command failed \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classGit_a7d18871ce6c1c8bd80e851eb5a0a95b9}\label{classGit_a7d18871ce6c1c8bd80e851eb5a0a95b9}} 
+\index{Git@{Git}!getCmdResultLineCount@{getCmdResultLineCount}}
+\index{getCmdResultLineCount@{getCmdResultLineCount}!Git@{Git}}
+\doxysubsubsection{\texorpdfstring{getCmdResultLineCount()}{getCmdResultLineCount()}}
+{\footnotesize\ttfamily int Git\+::get\+Cmd\+Result\+Line\+Count (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cmd }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Returns the number of lines in the output of a git command. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classGit_1_1Exception}{Exception}}} & \+: in case the command failed \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classGit_a8390460439ede19e1a27d3058c0d9b41}\label{classGit_a8390460439ede19e1a27d3058c0d9b41}} 
+\index{Git@{Git}!getCommit@{getCommit}}
+\index{getCommit@{getCommit}!Git@{Git}}
+\doxysubsubsection{\texorpdfstring{getCommit()}{getCommit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGit_1_1ObjectId}{Object\+Id}} Git\+::get\+Commit (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{revision }\end{DoxyParamCaption}) const}
+
+
+
+Get the commit for a particular revision. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classGit_1_1Exception}{Exception}}} & \+: in case of a git error. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classGit_a5827f3d0a56e68107314e4cf8ab2e0ee}\label{classGit_a5827f3d0a56e68107314e4cf8ab2e0ee}} 
+\index{Git@{Git}!getCommitTree@{getCommitTree}}
+\index{getCommitTree@{getCommitTree}!Git@{Git}}
+\doxysubsubsection{\texorpdfstring{getCommitTree()}{getCommitTree()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGit_1_1ObjectId}{Object\+Id}} Git\+::get\+Commit\+Tree (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{revision }\end{DoxyParamCaption}) const}
+
+
+
+Get the tree for a particular revision. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classGit_1_1Exception}{Exception}}} & \+: in case of a git error. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classGit_a5c2910ff86d1c6a143c3597150fbdc8d}\label{classGit_a5c2910ff86d1c6a143c3597150fbdc8d}} 
+\index{Git@{Git}!getTreeFromCommit@{getTreeFromCommit}}
+\index{getTreeFromCommit@{getTreeFromCommit}!Git@{Git}}
+\doxysubsubsection{\texorpdfstring{getTreeFromCommit()}{getTreeFromCommit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGit_1_1ObjectId}{Object\+Id}} Git\+::get\+Tree\+From\+Commit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGit_1_1ObjectId}{Object\+Id}} \&}]{commit }\end{DoxyParamCaption}) const}
+
+
+
+Get the tree for a particular commit. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classGit_1_1Exception}{Exception}}} & \+: in case of a git error. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classGit_ab21f8d442557b07321a274b5e976f1ac}\label{classGit_ab21f8d442557b07321a274b5e976f1ac}} 
+\index{Git@{Git}!setRepositoryPath@{setRepositoryPath}}
+\index{setRepositoryPath@{setRepositoryPath}!Git@{Git}}
+\doxysubsubsection{\texorpdfstring{setRepositoryPath()}{setRepositoryPath()}}
+{\footnotesize\ttfamily void Git\+::set\+Repository\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{repository }\end{DoxyParamCaption})}
+
+
+
+Set the git repository path. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classGit_1_1Exception}{Exception}}} & \+: if the path does not specify a valid repository. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classGit_ad8520526dbc7e0fc3d420a84c3302581}\label{classGit_ad8520526dbc7e0fc3d420a84c3302581}} 
+\index{Git@{Git}!treeGetObject@{treeGetObject}}
+\index{treeGetObject@{treeGetObject}!Git@{Git}}
+\doxysubsubsection{\texorpdfstring{treeGetObject()}{treeGetObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structGit_1_1Object}{Object}} Git\+::tree\+Get\+Object (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGit_1_1ObjectId}{Object\+Id}} \&}]{tree,  }\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Get some info on a tree object. 
+
+The object is specified based on its index in the parent tree object.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classGit_1_1Exception}{Exception}}} & \+: in case of a git error. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classGit_aad89040b27ed54ca3f1cef953a3826c6}\label{classGit_aad89040b27ed54ca3f1cef953a3826c6}} 
+\index{Git@{Git}!treeSize@{treeSize}}
+\index{treeSize@{treeSize}!Git@{Git}}
+\doxysubsubsection{\texorpdfstring{treeSize()}{treeSize()}}
+{\footnotesize\ttfamily int Git\+::tree\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGit_1_1ObjectId}{Object\+Id}} \&}]{tree }\end{DoxyParamCaption}) const}
+
+
+
+Return the number of objects inside a tree object. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classGit_1_1Exception}{Exception}}} & \+: in case of a git error. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/gitmodel/Git.\+h\end{DoxyCompactItemize}

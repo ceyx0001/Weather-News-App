@@ -1,0 +1,147 @@
+\hypertarget{classTreeNode}{}\doxysection{Tree\+Node Class Reference}
+\label{classTreeNode}\index{TreeNode@{TreeNode}}
+
+
+Example implementation of a single tree list node.  
+
+
+
+
+{\ttfamily \#include $<$Tree\+Node.\+h$>$}
+
+
+
+Inheritance diagram for Tree\+Node\+:
+% FIG 0
+
+
+Collaboration diagram for Tree\+Node\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTreeNode_a7bc8b46a8281fed4088b9e48bad7edcb}{Tree\+Node}} (const std\+::string label\+Text, Text\+Format label\+Format, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classIconPair}{Icon\+Pair}} $>$ label\+Icon)
+\begin{DoxyCompactList}\small\item\em Construct a tree node with the given label. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTreeNode_ac4d02871a933d31572d6d2f32b23ecd2}\label{classTreeNode_ac4d02871a933d31572d6d2f32b23ecd2}} 
+void \mbox{\hyperlink{classTreeNode_ac4d02871a933d31572d6d2f32b23ecd2}{add\+Child\+Node}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTreeNode}{Tree\+Node}} $>$ node)
+\begin{DoxyCompactList}\small\item\em Adds a child node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTreeNode_a196041e584c026c92e3f8fa741100b81}\label{classTreeNode_a196041e584c026c92e3f8fa741100b81}} 
+void \mbox{\hyperlink{classTreeNode_a196041e584c026c92e3f8fa741100b81}{remove\+Child\+Node}} (\mbox{\hyperlink{classTreeNode}{Tree\+Node}} $\ast$node, int index)
+\begin{DoxyCompactList}\small\item\em Removes a child node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTreeNode_adc73c112cc03ad772556fe337a2df983}\label{classTreeNode_adc73c112cc03ad772556fe337a2df983}} 
+const std\+::vector$<$ \mbox{\hyperlink{classTreeNode}{Tree\+Node}} $\ast$ $>$ \& \mbox{\hyperlink{classTreeNode_adc73c112cc03ad772556fe337a2df983}{child\+Nodes}} () const
+\begin{DoxyCompactList}\small\item\em Returns the list of children. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTreeNode_a7c38a975e8b3a31932b8409fa4231bc4}\label{classTreeNode_a7c38a975e8b3a31932b8409fa4231bc4}} 
+void \mbox{\hyperlink{classTreeNode_a7c38a975e8b3a31932b8409fa4231bc4}{collapse}} ()
+\begin{DoxyCompactList}\small\item\em Collapses this node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTreeNode_abac0f39de477ab6f8d3373ae9f900652}\label{classTreeNode_abac0f39de477ab6f8d3373ae9f900652}} 
+void \mbox{\hyperlink{classTreeNode_abac0f39de477ab6f8d3373ae9f900652}{expand}} ()
+\begin{DoxyCompactList}\small\item\em Expands this node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTreeNode_a8ec244c77c2d4cd7335340dead3ff6e5}\label{classTreeNode_a8ec244c77c2d4cd7335340dead3ff6e5}} 
+enum \mbox{\hyperlink{classTreeNode_a8ec244c77c2d4cd7335340dead3ff6e5}{Image\+Index}} \{ {\bfseries Middle} = 0, 
+{\bfseries Last} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Two sets of images, for a normal node, and for the last node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTreeNode_adaba65c9268249f665d548082d94b930}\label{classTreeNode_adaba65c9268249f665d548082d94b930}} 
+void \mbox{\hyperlink{classTreeNode_adaba65c9268249f665d548082d94b930}{adjust\+Expand\+Icon}} ()
+\begin{DoxyCompactList}\small\item\em Adjust the expand icon. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTreeNode_a7cd7213c7c7143d2b4571f71f2615d99}\label{classTreeNode_a7cd7213c7c7143d2b4571f71f2615d99}} 
+bool \mbox{\hyperlink{classTreeNode_a7cd7213c7c7143d2b4571f71f2615d99}{is\+Last\+Child\+Node}} () const
+\begin{DoxyCompactList}\small\item\em Returns if is the last child within its parent (is rendered differently) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTreeNode_a3e45cd3a50ee872dcff38b27c41b42fb}\label{classTreeNode_a3e45cd3a50ee872dcff38b27c41b42fb}} 
+void \mbox{\hyperlink{classTreeNode_a3e45cd3a50ee872dcff38b27c41b42fb}{child\+Nodes\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Rerender when children have changed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTreeNode_a0dadb29c855289ba6adaabed4ba86990}\label{classTreeNode_a0dadb29c855289ba6adaabed4ba86990}} 
+void \mbox{\hyperlink{classTreeNode_a0dadb29c855289ba6adaabed4ba86990}{undo\+Collapse}} ()
+\begin{DoxyCompactList}\small\item\em Undo function for prelearning \mbox{\hyperlink{classTreeNode_a7c38a975e8b3a31932b8409fa4231bc4}{collapse()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTreeNode_a353196fdcb63d58e6a1a007a81bb81ee}\label{classTreeNode_a353196fdcb63d58e6a1a007a81bb81ee}} 
+void \mbox{\hyperlink{classTreeNode_a353196fdcb63d58e6a1a007a81bb81ee}{undo\+Expand}} ()
+\begin{DoxyCompactList}\small\item\em Undo function for prelearning \mbox{\hyperlink{classTreeNode_abac0f39de477ab6f8d3373ae9f900652}{expand()}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTreeNode_a34d25e9f0be4f1ed6535d3f47dbec443}\label{classTreeNode_a34d25e9f0be4f1ed6535d3f47dbec443}} 
+std\+::vector$<$ \mbox{\hyperlink{classTreeNode}{Tree\+Node}} $\ast$ $>$ \mbox{\hyperlink{classTreeNode_a34d25e9f0be4f1ed6535d3f47dbec443}{child\+Nodes\+\_\+}}
+\begin{DoxyCompactList}\small\item\em List of child nodes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTreeNode_acbb1649a75a11ed3dee8022bfdf53b6c}\label{classTreeNode_acbb1649a75a11ed3dee8022bfdf53b6c}} 
+\mbox{\hyperlink{classTreeNode}{Tree\+Node}} $\ast$ \mbox{\hyperlink{classTreeNode_acbb1649a75a11ed3dee8022bfdf53b6c}{parent\+Node\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The parent node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTreeNode_a66a918bf154469b3a5e6042fd0791d07}\label{classTreeNode_a66a918bf154469b3a5e6042fd0791d07}} 
+\mbox{\hyperlink{classWt_1_1WTable}{W\+Table}} $\ast$ \mbox{\hyperlink{classTreeNode_a66a918bf154469b3a5e6042fd0791d07}{layout\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classLayout}{Layout}} (2x2 table). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTreeNode_a61266475f7f53fa8e43410f0fdb96fc0}\label{classTreeNode_a61266475f7f53fa8e43410f0fdb96fc0}} 
+\mbox{\hyperlink{classIconPair}{Icon\+Pair}} $\ast$ \mbox{\hyperlink{classTreeNode_a61266475f7f53fa8e43410f0fdb96fc0}{expand\+Icon\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The icon for expanding or collapsing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTreeNode_af8a295e37e972f85189c11fee3cbd7ca}\label{classTreeNode_af8a295e37e972f85189c11fee3cbd7ca}} 
+\mbox{\hyperlink{classWt_1_1WImage}{W\+Image}} $\ast$ \mbox{\hyperlink{classTreeNode_af8a295e37e972f85189c11fee3cbd7ca}{no\+Expand\+Icon\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The single image shown instead of the expand/collapse icon when no children. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTreeNode_aeb5228e3bfb5f8f210ef7ff62da5ec7f}\label{classTreeNode_aeb5228e3bfb5f8f210ef7ff62da5ec7f}} 
+\mbox{\hyperlink{classIconPair}{Icon\+Pair}} $\ast$ \mbox{\hyperlink{classTreeNode_aeb5228e3bfb5f8f210ef7ff62da5ec7f}{label\+Icon\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The icon next to the label. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTreeNode_a94b2f078cb3e998e203869ca9f2595ec}\label{classTreeNode_a94b2f078cb3e998e203869ca9f2595ec}} 
+\mbox{\hyperlink{classWt_1_1WText}{W\+Text}} $\ast$ \mbox{\hyperlink{classTreeNode_a94b2f078cb3e998e203869ca9f2595ec}{child\+Count\+Label\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The children count \textquotesingle{}(x)\textquotesingle{} for x children. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTreeNode_a7ec37eca38de16a91c047d08cfe46631}\label{classTreeNode_a7ec37eca38de16a91c047d08cfe46631}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ \mbox{\hyperlink{classTreeNode_a7ec37eca38de16a91c047d08cfe46631}{expanded\+Content\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The container in which the children are managed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTreeNode_a650686b10a2f2cdb815462dbf030c204}\label{classTreeNode_a650686b10a2f2cdb815462dbf030c204}} 
+bool \mbox{\hyperlink{classTreeNode_a650686b10a2f2cdb815462dbf030c204}{was\+Collapsed\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Was collapsed (for undo of prelearned \mbox{\hyperlink{classTreeNode_a7c38a975e8b3a31932b8409fa4231bc4}{collapse()}} and \mbox{\hyperlink{classTreeNode_abac0f39de477ab6f8d3373ae9f900652}{expand()}} slots. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTreeNode_a91b30e4c172d4dc00fdefdb6cf050943}\label{classTreeNode_a91b30e4c172d4dc00fdefdb6cf050943}} 
+static std\+::string {\bfseries image\+Line\+\_\+} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{classTreeNode_aec778d5a3f33c0e146039893c63ed33a}\label{classTreeNode_aec778d5a3f33c0e146039893c63ed33a}} 
+static std\+::string {\bfseries image\+Plus\+\_\+} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{classTreeNode_a14012121c532822c4b78178a92a28988}\label{classTreeNode_a14012121c532822c4b78178a92a28988}} 
+static std\+::string {\bfseries image\+Min\+\_\+} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Example implementation of a single tree list node. 
+
+{\itshape This is an example of a basic treelist implementation. As of version 1.\+1.\+8, a more flexible treenode implementation is included as part of the library\+: W\+Tree\+Node.}
+
+A tree list is constructed by nesting \mbox{\hyperlink{classTreeNode}{Tree\+Node}} objects in a tree hierarchy.
+
+A \mbox{\hyperlink{classTreeNode}{Tree\+Node}} has a label, and optionally a two-\/state label icon, which defines a different image depending on the state of the node (expanded or collapsed). When the node has any children, a child count is also indicated.
+
+Next to the icons, two style classes determine the look of a \mbox{\hyperlink{classTreeNode}{Tree\+Node}}\+: the label has style \char`\"{}treenodelabel\char`\"{}, and the child count has as style \char`\"{}treenodechildcount\char`\"{}.
+
+Use C\+SS nested selectors to apply different styles to different treenodes. For example, to style the treenode with style class \char`\"{}mynode\char`\"{}\+:
+
+The behaviour of the tree node is to collapse all children when the node is expanded (this is similar to how most tree node implementations work).
+
+The widget uses a number of images which must be available in an \char`\"{}icons/\char`\"{} folder (see the Wt treelist examples).
+
+This widget is part of the Wt treelist example. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTreeNode_a7bc8b46a8281fed4088b9e48bad7edcb}\label{classTreeNode_a7bc8b46a8281fed4088b9e48bad7edcb}} 
+\index{TreeNode@{TreeNode}!TreeNode@{TreeNode}}
+\index{TreeNode@{TreeNode}!TreeNode@{TreeNode}}
+\doxysubsubsection{\texorpdfstring{TreeNode()}{TreeNode()}}
+{\footnotesize\ttfamily Tree\+Node\+::\+Tree\+Node (\begin{DoxyParamCaption}\item[{const std\+::string}]{label\+Text,  }\item[{Text\+Format}]{label\+Format,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classIconPair}{Icon\+Pair}} $>$}]{label\+Icon }\end{DoxyParamCaption})}
+
+
+
+Construct a tree node with the given label. 
+
+The label is formatted in a W\+Text with the given formatting. The label\+Icon (if not 0) will appear next to the label and its state will reflect the expand/collapse state of the node.
+
+Optionally, a user\+Content widget may be associated with the node. When expanded, this widget will be shown below the widget, but above any of the children nodes. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/treelist/Tree\+Node.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,698 @@
+\hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{}\doxysection{Wt\+::Auth\+::Dbo\+::User\+Database$<$ Dbo\+Type $>$ Class Template Reference}
+\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+
+
+A default implementation for an authentication user database.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Auth/\+Dbo/\+User\+Database.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Auth\+::Dbo\+::User\+Database$<$ Dbo\+Type $>$\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Auth\+::Dbo\+::User\+Database$<$ Dbo\+Type $>$\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1Auth_1_1Dbo_1_1UserDatabase_1_1TransactionImpl}{Transaction\+Impl}}
+\item 
+struct \mbox{\hyperlink{structWt_1_1Auth_1_1Dbo_1_1UserDatabase_1_1WithUser}{With\+User}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ac9e4b943a7543b2f7f707c3b12339f23}{User\+Database}} (\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Wt\+::\+Dbo\+::\+Session}} \&session, const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} $\ast$auth\+Service=0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ada021f98054b5f81323ac5f45991c2f8}{set\+New\+User\+Status}} (\mbox{\hyperlink{namespaceWt_1_1Auth_a70a1c0094c0dbc4731b3fd0dae143034}{Account\+Status}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a51a74ecf3fdfd396190865032e731a3b}{status}})
+\begin{DoxyCompactList}\small\item\em Sets the initial status for a new user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_1_1Transaction}{Transaction}} $\ast$ \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a7fb294733cf95dfc75e939df92b95b05}{start\+Transaction}} () override
+\begin{DoxyCompactList}\small\item\em Creates a new database transaction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a79ed5585c4e182b1e2865b91abb6e1bc}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a79ed5585c4e182b1e2865b91abb6e1bc}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{Wt\+::\+Dbo\+::ptr}}$<$ Dbo\+Type $>$ \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a79ed5585c4e182b1e2865b91abb6e1bc}{find}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user) const
+\begin{DoxyCompactList}\small\item\em Returns the Dbo user type corresponding to an \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Auth\+::\+User}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a419bf479f30aa45d3ccd5fc1c194cd62}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a419bf479f30aa45d3ccd5fc1c194cd62}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a419bf479f30aa45d3ccd5fc1c194cd62}{find}} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{Wt\+::\+Dbo\+::ptr}}$<$ Dbo\+Type $>$ user) const
+\begin{DoxyCompactList}\small\item\em Returns the \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Auth\+::\+User}} corresponding to a Dbo user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_adb82ec180e4453fe7eaf0da359c52054}{find\+With\+Id}} (const std\+::string \&id) const override
+\begin{DoxyCompactList}\small\item\em Finds a user with a given id. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a1bc0c38a3c270ef0fb574431478eb8d2}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a1bc0c38a3c270ef0fb574431478eb8d2}} 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} {\bfseries find\+With\+Identity} (const std\+::string \&provider, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a9d2767d4d7582e4088a98a02f6ed9569}{identity}}) const override
+\item 
+virtual \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a9d2767d4d7582e4088a98a02f6ed9569}{identity}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, const std\+::string \&provider) const override
+\begin{DoxyCompactList}\small\item\em Returns a user identity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a925bfd622fc6beacaab613338574daff}{remove\+Identity}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, const std\+::string \&provider) override
+\begin{DoxyCompactList}\small\item\em Removes a user identity. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a2a35576e876a57f9c841b31fec3c5905}{register\+New}} () override
+\begin{DoxyCompactList}\small\item\em Registers a new user. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a958d51f9185206367cfdd70e9b8cc095}{delete\+User}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user) override
+\begin{DoxyCompactList}\small\item\em Delete a user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespaceWt_1_1Auth_a70a1c0094c0dbc4731b3fd0dae143034}{Account\+Status}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a51a74ecf3fdfd396190865032e731a3b}{status}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user) const override
+\begin{DoxyCompactList}\small\item\em Returns the status for a user. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ae338cd99945018f2865aad2e81921b35}{set\+Status}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, \mbox{\hyperlink{namespaceWt_1_1Auth_a70a1c0094c0dbc4731b3fd0dae143034}{Account\+Status}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a51a74ecf3fdfd396190865032e731a3b}{status}}) override
+\begin{DoxyCompactList}\small\item\em Sets the user status. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ae320a9d160420d51c29ed68c212c1281}{set\+Password}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, const \mbox{\hyperlink{classWt_1_1Auth_1_1PasswordHash}{Password\+Hash}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a0d04fb5547e5b75120e2f78dbb50f030}{password}}) override
+\begin{DoxyCompactList}\small\item\em Sets a new user password. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1PasswordHash}{Password\+Hash}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a0d04fb5547e5b75120e2f78dbb50f030}{password}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user) const override
+\begin{DoxyCompactList}\small\item\em Returns a user password. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a19a6dda10932ed3111918ba9d587aa86}{add\+Identity}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, const std\+::string \&provider, const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&\mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a9d2767d4d7582e4088a98a02f6ed9569}{identity}}) override
+\begin{DoxyCompactList}\small\item\em Adds an identify for the user. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a408ce6e4d22da518bffd50bd5ab5a6ce}{set\+Identity}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, const std\+::string \&provider, const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&\mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a9d2767d4d7582e4088a98a02f6ed9569}{identity}}) override
+\begin{DoxyCompactList}\small\item\em Changes an identity for a user. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a8f619bdbc1105f3f82e45289c79692ca}{set\+Email}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, const std\+::string \&address) override
+\begin{DoxyCompactList}\small\item\em Sets a user\textquotesingle{}s email address. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a3257b202a6e2025a2e6a33be810a47ac}{email}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user) const override
+\begin{DoxyCompactList}\small\item\em Returns a user\textquotesingle{}s email address. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a1d4e03fc24dc08f415d1194bf143dcba}{set\+Unverified\+Email}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, const std\+::string \&address) override
+\begin{DoxyCompactList}\small\item\em Sets a user\textquotesingle{}s unverified email address. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ae40eae45eb362c513c0db725e2051721}{unverified\+Email}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user) const override
+\begin{DoxyCompactList}\small\item\em Returns a user\textquotesingle{}s unverified email address. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ac85e15703313216eeaca5cabcb020758}{find\+With\+Email}} (const std\+::string \&address) const override
+\begin{DoxyCompactList}\small\item\em Finds a user with a given email address. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a2af01633b4d092b72f33fd4c9b5d6d4b}{set\+Email\+Token}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, const \mbox{\hyperlink{classWt_1_1Auth_1_1Token}{Token}} \&token, \mbox{\hyperlink{namespaceWt_1_1Auth_abfeea7e2d9573be8c3e081cc6cd70b5d}{Email\+Token\+Role}} role) override
+\begin{DoxyCompactList}\small\item\em Sets a new email token for a user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1Token}{Token}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a4fdb7cf0ba0648321da80c8b91e48d87}{email\+Token}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user) const override
+\begin{DoxyCompactList}\small\item\em Returns an email token. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespaceWt_1_1Auth_abfeea7e2d9573be8c3e081cc6cd70b5d}{Email\+Token\+Role}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a63a8211fec604c0073b3105c8fc97f10}{email\+Token\+Role}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user) const override
+\begin{DoxyCompactList}\small\item\em Returns the role of the current email token. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a08b4678adb8a8040c9b5256ceed332be}{find\+With\+Email\+Token}} (const std\+::string \&hash) const override
+\begin{DoxyCompactList}\small\item\em Finds a user with a given email token. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_abcf3530c09451863b9bef31d5c027b21}{add\+Auth\+Token}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, const \mbox{\hyperlink{classWt_1_1Auth_1_1Token}{Token}} \&token) override
+\begin{DoxyCompactList}\small\item\em Adds an authentication token to a user. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a2ad29a29dd3129809757112810096af8}{remove\+Auth\+Token}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, const std\+::string \&hash) override
+\begin{DoxyCompactList}\small\item\em Deletes an authentication token. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_af21c1c29e5fcfb9733a88532d5cafe34}{update\+Auth\+Token}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, const std\+::string \&hash, const std\+::string \&new\+Hash) override
+\begin{DoxyCompactList}\small\item\em Updates the authentication token with a new hash. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ab08c726d1feb17529aa423b4d374d4a0}{find\+With\+Auth\+Token}} (const std\+::string \&hash) const override
+\begin{DoxyCompactList}\small\item\em Finds a user with an authentication token. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a35381548862c470f2be5fd00a2739572}{set\+Failed\+Login\+Attempts}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, int count) override
+\begin{DoxyCompactList}\small\item\em Sets the number of consecutive authentication failures. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a45f8638766b638810b8535c839e171ac}{failed\+Login\+Attempts}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user) const override
+\begin{DoxyCompactList}\small\item\em Returns the number of consecutive authentication failures. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_af58463b64381c707aa3d6f857e3e423a}{set\+Last\+Login\+Attempt}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, const \mbox{\hyperlink{classWt_1_1WDateTime}{W\+Date\+Time}} \&t) override
+\begin{DoxyCompactList}\small\item\em Sets the time of the last login attempt. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WDateTime}{W\+Date\+Time}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a7c861b960da89cf87f36174765e7c644}{last\+Login\+Attempt}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user) const override
+\begin{DoxyCompactList}\small\item\em Returns the time of the last login. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ada6a1e880184bbf719ad4735c969cb0f}{max\+Auth\+Tokens\+Per\+User}} () const
+\begin{DoxyCompactList}\small\item\em Returns max number of tokens user can have in the database. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a34cc61d1dec830c6db684c89afcae79c}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a34cc61d1dec830c6db684c89afcae79c}} 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a34cc61d1dec830c6db684c89afcae79c}{set\+Max\+Auth\+Tokens\+Per\+User}} (unsigned \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ada6a1e880184bbf719ad4735c969cb0f}{max\+Auth\+Tokens\+Per\+User}})
+\begin{DoxyCompactList}\small\item\em Sets max number of tokens user can have in the database. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a469e7fca5b24bf9aaf997ddc61282078}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a469e7fca5b24bf9aaf997ddc61282078}} 
+typedef Dbo\+Type\+::\+Auth\+Token\+Type {\bfseries Auth\+Token\+Type}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_adb1489b056a3fc6e46b1cf7ad4513002}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_adb1489b056a3fc6e46b1cf7ad4513002}} 
+typedef \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Wt\+::\+Dbo\+::collection}}$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{Wt\+::\+Dbo\+::ptr}}$<$ Auth\+Token\+Type $>$ $>$ {\bfseries Auth\+Tokens}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a22e155b6f30f14b7079f9dd89e541b0d}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a22e155b6f30f14b7079f9dd89e541b0d}} 
+typedef Dbo\+Type\+::\+Auth\+Identity\+Type {\bfseries Auth\+Identity\+Type}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_aaf1ba5ea43c08cb945ddcf4be2907ad3}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_aaf1ba5ea43c08cb945ddcf4be2907ad3}} 
+typedef \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{Wt\+::\+Dbo\+::collection}}$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{Wt\+::\+Dbo\+::ptr}}$<$ Auth\+Identity\+Type $>$ $>$ {\bfseries Auth\+Identities}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ae88a61f7196f089c790eb9bcf1cce746}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ae88a61f7196f089c790eb9bcf1cce746}} 
+void {\bfseries get\+User} (const std\+::string \&id, bool reread) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_aceaa67319f85e5811b3e01a19509e53d}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_aceaa67319f85e5811b3e01a19509e53d}} 
+void {\bfseries set\+User} (\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{Wt\+::\+Dbo\+::ptr}}$<$ Dbo\+Type $>$ user) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a1e11f9bedc779fa482d05ee1d017a77d}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a1e11f9bedc779fa482d05ee1d017a77d}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Wt\+::\+Dbo\+::\+Session}} \& {\bfseries session\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_aff2acb65750f356a3bb41f7bc75f2845}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_aff2acb65750f356a3bb41f7bc75f2845}} 
+\mbox{\hyperlink{namespaceWt_1_1Auth_a70a1c0094c0dbc4731b3fd0dae143034}{Account\+Status}} {\bfseries new\+User\+Status\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a1a571863506483c2233f457841de8f9a}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a1a571863506483c2233f457841de8f9a}} 
+const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} $\ast$ {\bfseries auth\+Service\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a37f5673a6286e43f26e2a8cec0de8aa2}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a37f5673a6286e43f26e2a8cec0de8aa2}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{Wt\+::\+Dbo\+::ptr}}$<$ Dbo\+Type $>$ {\bfseries user\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a4bf9478b255a9e97eee0e33bf8f1925b}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a4bf9478b255a9e97eee0e33bf8f1925b}} 
+std\+::string {\bfseries user\+Provider\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a5ef7dea8c70acb6f9812df7c58c7a791}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a5ef7dea8c70acb6f9812df7c58c7a791}} 
+\mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} {\bfseries user\+Identity\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a17002fa10415c555956a9a12df7aaff2}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a17002fa10415c555956a9a12df7aaff2}} 
+unsigned {\bfseries max\+Auth\+Tokens\+Per\+User\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Dbo\+Type$>$\newline
+class Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database$<$ Dbo\+Type $>$}
+
+A default implementation for an authentication user database. 
+
+This is a template class, and needs as parameter the \mbox{\hyperlink{namespaceWt_1_1Dbo}{Dbo}} type which models the authentication information. A suitable implementation, which stores authentication information outside the \char`\"{}user\char`\"{} class, is provided by \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1AuthInfo}{Auth\+Info}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1AuthInfo}{Auth\+Info}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ac9e4b943a7543b2f7f707c3b12339f23}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ac9e4b943a7543b2f7f707c3b12339f23}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!UserDatabase@{UserDatabase}}
+\index{UserDatabase@{UserDatabase}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{UserDatabase()}{UserDatabase()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+\mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::\mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{User\+Database}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Wt\+::\+Dbo\+::\+Session}} \&}]{session,  }\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} $\ast$}]{auth\+Service = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+The \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} parameter is optional, and decides some of the \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{User\+Database}}\textquotesingle{}s behaviour. Currently, this decides whether find\+With\+Identity() should be case sensitive or not. If the identity policy of the \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} is Email\+Address\+Identity, then find\+With\+Identity() will be case insensitive. Otherwise it is case sensitive. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_abcf3530c09451863b9bef31d5c027b21}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_abcf3530c09451863b9bef31d5c027b21}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!addAuthToken@{addAuthToken}}
+\index{addAuthToken@{addAuthToken}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{addAuthToken()}{addAuthToken()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::add\+Auth\+Token (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1Token}{Token}} \&}]{token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds an authentication token to a user. 
+
+Unless you want a user to only have remember-\/me support from a single computer at a time, you should support multiple authentication tokens per user. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a980983064d3831064b5c3ce1279ee2ed}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a19a6dda10932ed3111918ba9d587aa86}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a19a6dda10932ed3111918ba9d587aa86}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!addIdentity@{addIdentity}}
+\index{addIdentity@{addIdentity}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{addIdentity()}{addIdentity()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::add\+Identity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{const std\+::string \&}]{provider,  }\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds an identify for the user. 
+
+This adds an identity to the user.
+
+You are free to support only one identity per user, e.\+g. if you only use password-\/based authentication. But you may also want to support more than one if you allow the user to login using multiple methods (e.\+g. name/password, O\+Auth from one or more providers, L\+D\+AP, ...). 
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ab4321d345f129c1ac60740900f1b761f}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a958d51f9185206367cfdd70e9b8cc095}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a958d51f9185206367cfdd70e9b8cc095}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!deleteUser@{deleteUser}}
+\index{deleteUser@{deleteUser}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{deleteUser()}{deleteUser()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::delete\+User (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Delete a user. 
+
+This deletes a user from the database. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ac2121cfc82b80fa3a7190d364380ce69}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a3257b202a6e2025a2e6a33be810a47ac}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a3257b202a6e2025a2e6a33be810a47ac}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!email@{email}}
+\index{email@{email}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{email()}{email()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::email (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a user\textquotesingle{}s email address. 
+
+This may be an unverified or verified email address, depending on whether email address verification is enabled in the model classes.
+
+This is an optional method, and currently not used by any of the included models or views. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ab54b93ae853c44553ee4343870cc1a21}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a4fdb7cf0ba0648321da80c8b91e48d87}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a4fdb7cf0ba0648321da80c8b91e48d87}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!emailToken@{emailToken}}
+\index{emailToken@{emailToken}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{emailToken()}{emailToken()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1Token}{Token}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::email\+Token (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns an email token. 
+
+This is only used when email verification is enabled and for lost password functionality. It should return the email token previously set with \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a2af01633b4d092b72f33fd4c9b5d6d4b}{set\+Email\+Token()}} 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a6150d907bed1c9aa0c313bba7e7e4d99}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a63a8211fec604c0073b3105c8fc97f10}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a63a8211fec604c0073b3105c8fc97f10}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!emailTokenRole@{emailTokenRole}}
+\index{emailTokenRole@{emailTokenRole}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{emailTokenRole()}{emailTokenRole()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual \mbox{\hyperlink{namespaceWt_1_1Auth_abfeea7e2d9573be8c3e081cc6cd70b5d}{Email\+Token\+Role}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::email\+Token\+Role (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the role of the current email token. 
+
+This is only used when email verification is enabled or for lost password functionality. It should return the role previously set with set\+Eail\+Token(). 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a98bb5c2c10caf820ece6d32ce660c064}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a45f8638766b638810b8535c839e171ac}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a45f8638766b638810b8535c839e171ac}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!failedLoginAttempts@{failedLoginAttempts}}
+\index{failedLoginAttempts@{failedLoginAttempts}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{failedLoginAttempts()}{failedLoginAttempts()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual int \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::failed\+Login\+Attempts (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of consecutive authentication failures. 
+
+{\itshape \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a35381548862c470f2be5fd00a2739572}{set\+Failed\+Login\+Attempts()}}} 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_aafa098c42c9c94fb0fcd2af9539043cb}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ab08c726d1feb17529aa423b4d374d4a0}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ab08c726d1feb17529aa423b4d374d4a0}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!findWithAuthToken@{findWithAuthToken}}
+\index{findWithAuthToken@{findWithAuthToken}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{findWithAuthToken()}{findWithAuthToken()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::find\+With\+Auth\+Token (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hash }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finds a user with an authentication token. 
+
+Returns a user with an authentication token.
+
+This should find the user associated with a particular token hash, or return an invalid user if no user with that token hash exists. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a9d9bca9ea7d7a91f9b45b7e69a71cb85}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ac85e15703313216eeaca5cabcb020758}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ac85e15703313216eeaca5cabcb020758}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!findWithEmail@{findWithEmail}}
+\index{findWithEmail@{findWithEmail}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{findWithEmail()}{findWithEmail()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::find\+With\+Email (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finds a user with a given email address. 
+
+This is used to verify that a email addresses are unique, and to implement lost password functionality. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ad3a42de93467a6a945bcf3de2b595e55}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a08b4678adb8a8040c9b5256ceed332be}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a08b4678adb8a8040c9b5256ceed332be}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!findWithEmailToken@{findWithEmailToken}}
+\index{findWithEmailToken@{findWithEmailToken}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{findWithEmailToken()}{findWithEmailToken()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::find\+With\+Email\+Token (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hash }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finds a user with a given email token. 
+
+This is only used when email verification is enabled or for lost password functionality. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_aa152e91ba468236e592b668413ce1519}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_adb82ec180e4453fe7eaf0da359c52054}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_adb82ec180e4453fe7eaf0da359c52054}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!findWithId@{findWithId}}
+\index{findWithId@{findWithId}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{findWithId()}{findWithId()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::find\+With\+Id (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finds a user with a given id. 
+
+The id uniquely identifies a user.
+
+This should find the user with the given {\ttfamily id}, or return an invalid user if no user with that id exists. 
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_afe820eed084f426a89cc7276d5db3e0f}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a9d2767d4d7582e4088a98a02f6ed9569}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a9d2767d4d7582e4088a98a02f6ed9569}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!identity@{identity}}
+\index{identity@{identity}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{identity()}{identity()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::identity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{const std\+::string \&}]{provider }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a user identity. 
+
+Returns a user identity for the given provider, or an empty string if the user has no identitfy set for this provider.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a19a6dda10932ed3111918ba9d587aa86}{add\+Identity()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_abd937e6e3a59a142988a2d1b78963607}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a7c861b960da89cf87f36174765e7c644}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a7c861b960da89cf87f36174765e7c644}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!lastLoginAttempt@{lastLoginAttempt}}
+\index{lastLoginAttempt@{lastLoginAttempt}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{lastLoginAttempt()}{lastLoginAttempt()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual \mbox{\hyperlink{classWt_1_1WDateTime}{W\+Date\+Time}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::last\+Login\+Attempt (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the time of the last login. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_af58463b64381c707aa3d6f857e3e423a}{set\+Last\+Login\+Attempt()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ad94521b769f7149caf0756e3f96f6f27}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ada6a1e880184bbf719ad4735c969cb0f}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ada6a1e880184bbf719ad4735c969cb0f}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!maxAuthTokensPerUser@{maxAuthTokensPerUser}}
+\index{maxAuthTokensPerUser@{maxAuthTokensPerUser}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{maxAuthTokensPerUser()}{maxAuthTokensPerUser()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+unsigned \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::max\+Auth\+Tokens\+Per\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns max number of tokens user can have in the database. 
+
+Default value is 50. \mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a0d04fb5547e5b75120e2f78dbb50f030}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a0d04fb5547e5b75120e2f78dbb50f030}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!password@{password}}
+\index{password@{password}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{password()}{password()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1PasswordHash}{Password\+Hash}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::password (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a user password. 
+
+This returns the stored password for a user, or a default constructed password hash if the user does not yet have password credentials.
+
+This is used only by \mbox{\hyperlink{classWt_1_1Auth_1_1PasswordService}{Password\+Service}}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a8343af7b2561734b907472346e324cb5}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a2a35576e876a57f9c841b31fec3c5905}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a2a35576e876a57f9c841b31fec3c5905}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!registerNew@{registerNew}}
+\index{registerNew@{registerNew}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{registerNew()}{registerNew()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::register\+New (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Registers a new user. 
+
+This adds a new user.
+
+This method is only used by view classes involved with registration (\mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationWidget}{Registration\+Widget}}). 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a78c9e140f0d57a199db3b6c15b86a381}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a2ad29a29dd3129809757112810096af8}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a2ad29a29dd3129809757112810096af8}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!removeAuthToken@{removeAuthToken}}
+\index{removeAuthToken@{removeAuthToken}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{removeAuthToken()}{removeAuthToken()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::remove\+Auth\+Token (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{const std\+::string \&}]{hash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Deletes an authentication token. 
+
+Deletes an authentication token previously added with \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_abcf3530c09451863b9bef31d5c027b21}{add\+Auth\+Token()}} 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a418a1ddb2f8c3e9c87fa6eb76cb6bfb3}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a925bfd622fc6beacaab613338574daff}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a925bfd622fc6beacaab613338574daff}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!removeIdentity@{removeIdentity}}
+\index{removeIdentity@{removeIdentity}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{removeIdentity()}{removeIdentity()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::remove\+Identity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{const std\+::string \&}]{provider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Removes a user identity. 
+
+This removes all identities of a {\ttfamily provider} from the {\ttfamily user}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a19a6dda10932ed3111918ba9d587aa86}{add\+Identity()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a09dbc8bf6ef4f8d367c4bc471c9d780d}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a8f619bdbc1105f3f82e45289c79692ca}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a8f619bdbc1105f3f82e45289c79692ca}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!setEmail@{setEmail}}
+\index{setEmail@{setEmail}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{setEmail()}{setEmail()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual bool \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::set\+Email (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets a user\textquotesingle{}s email address. 
+
+This is used only when email verification is enabled, or as a result of a 3rd party \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} Provider based registration process, if the provider also provides email address information with the identiy.
+
+Returns whether the user\textquotesingle{}s email address could be set. This may fail when there is already a user registered that email address.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ac85e15703313216eeaca5cabcb020758}{find\+With\+Email()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ab7f95375f23fad770d757126d6235cae}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a2af01633b4d092b72f33fd4c9b5d6d4b}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a2af01633b4d092b72f33fd4c9b5d6d4b}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!setEmailToken@{setEmailToken}}
+\index{setEmailToken@{setEmailToken}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{setEmailToken()}{setEmailToken()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::set\+Email\+Token (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1Token}{Token}} \&}]{token,  }\item[{\mbox{\hyperlink{namespaceWt_1_1Auth_abfeea7e2d9573be8c3e081cc6cd70b5d}{Email\+Token\+Role}}}]{role }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets a new email token for a user. 
+
+This is only used when email verification is enabled or for lost password functionality. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a7f1e40d0b6293b9a28c24bcf70d245ca}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a35381548862c470f2be5fd00a2739572}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a35381548862c470f2be5fd00a2739572}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!setFailedLoginAttempts@{setFailedLoginAttempts}}
+\index{setFailedLoginAttempts@{setFailedLoginAttempts}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{setFailedLoginAttempts()}{setFailedLoginAttempts()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::set\+Failed\+Login\+Attempts (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{int}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the number of consecutive authentication failures. 
+
+This sets the number of consecutive authentication failures since the last valid login.
+
+This is used by the throttling logic to determine how much time a user needs to wait before he can do a new login attempt. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ad1d701f369ba97e37bccede4e5a0307d}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a408ce6e4d22da518bffd50bd5ab5a6ce}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a408ce6e4d22da518bffd50bd5ab5a6ce}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!setIdentity@{setIdentity}}
+\index{setIdentity@{setIdentity}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{setIdentity()}{setIdentity()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::set\+Identity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{const std\+::string \&}]{provider,  }\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Changes an identity for a user. 
+
+The base implementation calls \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a925bfd622fc6beacaab613338574daff}{remove\+Identity()}} followed by \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a19a6dda10932ed3111918ba9d587aa86}{add\+Identity()}}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a95993394657a086b274902036010542f}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_af58463b64381c707aa3d6f857e3e423a}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_af58463b64381c707aa3d6f857e3e423a}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!setLastLoginAttempt@{setLastLoginAttempt}}
+\index{setLastLoginAttempt@{setLastLoginAttempt}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{setLastLoginAttempt()}{setLastLoginAttempt()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::set\+Last\+Login\+Attempt (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{const \mbox{\hyperlink{classWt_1_1WDateTime}{W\+Date\+Time}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the time of the last login attempt. 
+
+This sets the time at which the user attempted to login. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a53f4486844da577d385770dacb8981b2}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ada021f98054b5f81323ac5f45991c2f8}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ada021f98054b5f81323ac5f45991c2f8}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!setNewUserStatus@{setNewUserStatus}}
+\index{setNewUserStatus@{setNewUserStatus}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{setNewUserStatus()}{setNewUserStatus()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::set\+New\+User\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWt_1_1Auth_a70a1c0094c0dbc4731b3fd0dae143034}{Account\+Status}}}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the initial status for a new user. 
+
+This status is set on a user that just registered.
+
+The default value is \mbox{\hyperlink{namespaceWt_1_1Auth_a70a1c0094c0dbc4731b3fd0dae143034a960b44c579bc2f6818d2daaf9e4c16f0}{Account\+Status\+::\+Normal}}. \mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ae320a9d160420d51c29ed68c212c1281}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ae320a9d160420d51c29ed68c212c1281}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!setPassword@{setPassword}}
+\index{setPassword@{setPassword}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{setPassword()}{setPassword()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::set\+Password (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1PasswordHash}{Password\+Hash}} \&}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets a new user password. 
+
+This updates the password for a user.
+
+This is used only by \mbox{\hyperlink{classWt_1_1Auth_1_1PasswordService}{Password\+Service}}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a50849af8aefa9b74c5881a1eccbcc211}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ae338cd99945018f2865aad2e81921b35}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ae338cd99945018f2865aad2e81921b35}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!setStatus@{setStatus}}
+\index{setStatus@{setStatus}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{setStatus()}{setStatus()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::set\+Status (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{\mbox{\hyperlink{namespaceWt_1_1Auth_a70a1c0094c0dbc4731b3fd0dae143034}{Account\+Status}}}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the user status. 
+
+This sets the status for a user (if supported). 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a6a164f70cb02cac0997e20b7f08e1e7b}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a1d4e03fc24dc08f415d1194bf143dcba}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a1d4e03fc24dc08f415d1194bf143dcba}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!setUnverifiedEmail@{setUnverifiedEmail}}
+\index{setUnverifiedEmail@{setUnverifiedEmail}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{setUnverifiedEmail()}{setUnverifiedEmail()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::set\+Unverified\+Email (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{const std\+::string \&}]{address }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets a user\textquotesingle{}s unverified email address. 
+
+This is only used when email verification is enabled. It holds the currently unverified email address, while a mail is being sent for the user to confirm this email address. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a0c284fbcd4e29a6ae60c544289302a35}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a7fb294733cf95dfc75e939df92b95b05}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a7fb294733cf95dfc75e939df92b95b05}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!startTransaction@{startTransaction}}
+\index{startTransaction@{startTransaction}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{startTransaction()}{startTransaction()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_1_1Transaction}{Transaction}}$\ast$ \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::start\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a new database transaction. 
+
+If the underlying database does not support transactions, you can return {\ttfamily nullptr}.
+
+Ownership of the transaction is transferred, and the transaction must be deleted after it has been committed or rolled back.
+
+The default implementation returns {\ttfamily nullptr} (no transaction support). 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a916289c27997a0d8d8608d59eccc71d4}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a51a74ecf3fdfd396190865032e731a3b}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_a51a74ecf3fdfd396190865032e731a3b}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!status@{status}}
+\index{status@{status}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{status()}{status()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual \mbox{\hyperlink{namespaceWt_1_1Auth_a70a1c0094c0dbc4731b3fd0dae143034}{Account\+Status}} \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::status (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the status for a user. 
+
+If there is support for suspending accounts, then this method may be implemented to return whether a user account is disabled.
+
+The default implementation always returns \mbox{\hyperlink{namespaceWt_1_1Auth_a70a1c0094c0dbc4731b3fd0dae143034a960b44c579bc2f6818d2daaf9e4c16f0}{Account\+Status\+::\+Normal}}.
+
+\begin{DoxySeeAlso}{See also}
+Login\+::login\+State() 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ac9f5e9db5ffc59ca89435b82c2f2ceb0}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ae40eae45eb362c513c0db725e2051721}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_ae40eae45eb362c513c0db725e2051721}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!unverifiedEmail@{unverifiedEmail}}
+\index{unverifiedEmail@{unverifiedEmail}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{unverifiedEmail()}{unverifiedEmail()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::unverified\+Email (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a user\textquotesingle{}s unverified email address. 
+
+This is an optional method, and currently not used by any of the included models or views. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_aa64f7c08b99810ca0c5474335c9fd53b}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_af21c1c29e5fcfb9733a88532d5cafe34}\label{classWt_1_1Auth_1_1Dbo_1_1UserDatabase_af21c1c29e5fcfb9733a88532d5cafe34}} 
+\index{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}!updateAuthToken@{updateAuthToken}}
+\index{updateAuthToken@{updateAuthToken}!Wt::Auth::Dbo::UserDatabase$<$ DboType $>$@{Wt::Auth::Dbo::UserDatabase$<$ DboType $>$}}
+\doxysubsubsection{\texorpdfstring{updateAuthToken()}{updateAuthToken()}}
+{\footnotesize\ttfamily template$<$class Dbo\+Type $>$ \\
+virtual int \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1UserDatabase}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database}}$<$ Dbo\+Type $>$\+::update\+Auth\+Token (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{const std\+::string \&}]{oldhash,  }\item[{const std\+::string \&}]{newhash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the authentication token with a new hash. 
+
+If successful, returns the validity of the updated token in seconds.
+
+Returns 0 if the token could not be updated because it wasn\textquotesingle{}t found or is expired.
+
+Returns -\/1 if not implemented. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ac5b9a6ffc139ad83d5648b9aeecae4ce}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/\+Dbo/User\+Database.\+h\end{DoxyCompactItemize}

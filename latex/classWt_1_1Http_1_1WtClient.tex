@@ -1,0 +1,71 @@
+\hypertarget{classWt_1_1Http_1_1WtClient}{}\doxysection{Wt\+::Http\+::Wt\+Client Class Reference}
+\label{classWt_1_1Http_1_1WtClient}\index{Wt::Http::WtClient@{Wt::Http::WtClient}}
+
+
+Support for a Wt web application client.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Http/\+Wt\+Client.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classWt_1_1Http_1_1WtClient_ad924da5532738ae76afd94d315bd3177}{Client\+Option}} \{ \mbox{\hyperlink{classWt_1_1Http_1_1WtClient_ad924da5532738ae76afd94d315bd3177adee872af37acccac718993f8ebdb72d2}{Client\+Option\+::\+Supports\+Ajax}} = 0x1
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for client user-\/agent options. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classWt_1_1Http_1_1WtClient_a94b9e863bb2f216f1501314c20ab9760}{start\+Wt\+Session}} (const std\+::string \&host, const std\+::string \&port, const std\+::string \&path, const std\+::string \&query=std\+::string(), \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_1_1Http_1_1WtClient_ad924da5532738ae76afd94d315bd3177}{Client\+Option}} $>$ flags=\mbox{\hyperlink{classWt_1_1Http_1_1WtClient_ad924da5532738ae76afd94d315bd3177adee872af37acccac718993f8ebdb72d2}{Client\+Option\+::\+Supports\+Ajax}})
+\begin{DoxyCompactList}\small\item\em Starts a Wt session. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Support for a Wt web application client. 
+
+\begin{DoxyNote}{Note}
+This class provides a utility to bootstrap a Wt session, but does not deal with new developments related to the bootstrap procedure such as progressive bootstrap. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classWt_1_1Http_1_1WtClient_ad924da5532738ae76afd94d315bd3177}\label{classWt_1_1Http_1_1WtClient_ad924da5532738ae76afd94d315bd3177}} 
+\index{Wt::Http::WtClient@{Wt::Http::WtClient}!ClientOption@{ClientOption}}
+\index{ClientOption@{ClientOption}!Wt::Http::WtClient@{Wt::Http::WtClient}}
+\doxysubsubsection{\texorpdfstring{ClientOption}{ClientOption}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classWt_1_1Http_1_1WtClient_ad924da5532738ae76afd94d315bd3177}{Wt\+::\+Http\+::\+Wt\+Client\+::\+Client\+Option}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration for client user-\/agent options. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SupportsAjax@{SupportsAjax}!Wt::Http::WtClient@{Wt::Http::WtClient}}\index{Wt::Http::WtClient@{Wt::Http::WtClient}!SupportsAjax@{SupportsAjax}}}\mbox{\Hypertarget{classWt_1_1Http_1_1WtClient_ad924da5532738ae76afd94d315bd3177adee872af37acccac718993f8ebdb72d2}\label{classWt_1_1Http_1_1WtClient_ad924da5532738ae76afd94d315bd3177adee872af37acccac718993f8ebdb72d2}} 
+Supports\+Ajax&Flag that indicates supports for A\+J\+AX. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Http_1_1WtClient_a94b9e863bb2f216f1501314c20ab9760}\label{classWt_1_1Http_1_1WtClient_a94b9e863bb2f216f1501314c20ab9760}} 
+\index{Wt::Http::WtClient@{Wt::Http::WtClient}!startWtSession@{startWtSession}}
+\index{startWtSession@{startWtSession}!Wt::Http::WtClient@{Wt::Http::WtClient}}
+\doxysubsubsection{\texorpdfstring{startWtSession()}{startWtSession()}}
+{\footnotesize\ttfamily static void Wt\+::\+Http\+::\+Wt\+Client\+::start\+Wt\+Session (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{host,  }\item[{const std\+::string \&}]{port,  }\item[{const std\+::string \&}]{path,  }\item[{const std\+::string \&}]{query = {\ttfamily std\+:\+:string()},  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_1_1Http_1_1WtClient_ad924da5532738ae76afd94d315bd3177}{Client\+Option}} $>$}]{flags = {\ttfamily \mbox{\hyperlink{classWt_1_1Http_1_1WtClient_ad924da5532738ae76afd94d315bd3177adee872af37acccac718993f8ebdb72d2}{Client\+Option\+::\+Supports\+Ajax}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Starts a Wt session. 
+
+A Wt application uses a bootstrap procedure during which it collects information on user agent capabilities (unless the progressive bootstrap method is enabled). Therefore a session is not spawned after the first request, but only after these capabilities have been collected by a second request.
+
+This function starts a session on the specific {\ttfamily host}, {\ttfamily port}, {\ttfamily path}, and optional {\ttfamily query}. These correspond to the different parts of a url\+:
+
+{\ttfamily \href{http://}{\texttt{ http\+://}}}{\itshape host}{\ttfamily \+:}{\itshape port}/{\itshape path}{\ttfamily ?}{\ttfamily query}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Http/Wt\+Client.\+h\end{DoxyCompactItemize}

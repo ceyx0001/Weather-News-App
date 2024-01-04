@@ -1,0 +1,14 @@
+This is an example that illustrates the real-\/time interactivity between multiple users, using server-\/push.
+
+It shows an online editor, where multiple observers may observe another person editing code.\hypertarget{md_wt-4_88_82_examples_codeview_README_autotoc_md38}{}\doxysection{How to run}\label{md_wt-4_88_82_examples_codeview_README_autotoc_md38}
+See the R\+E\+A\+D\+ME in the parent directory.
+
+When a user accesses the application, a new \textquotesingle{}session\textquotesingle{} is generated which is identified by a unique internal path, and the user will be the \textquotesingle{}Coder\textquotesingle{}. Other users which access this U\+RL will become \textquotesingle{}Observers\textquotesingle{} for that session.
+
+You may want to deploy the application at a particular path, e.\+g. {\ttfamily /code}, because the application uses internal paths\+: {\ttfamily -\/-\/deploy-\/path=/code}, and you may also want to enable web sockets using a custom wt\+\_\+config.\+xml file.\hypertarget{md_wt-4_88_82_examples_codeview_README_autotoc_md39}{}\doxysection{What it illustrates}\label{md_wt-4_88_82_examples_codeview_README_autotoc_md39}
+
+\begin{DoxyItemize}
+\item the use of server-\/push, using {\ttfamily W\+Server\+::post()} to post events to a session
+\item embedding server ({\ttfamily \mbox{\hyperlink{classCodeSession}{Code\+Session}}}) and client ({\ttfamily Code\+Widget}) functionality in a single process
+\item the use of internal paths 
+\end{DoxyItemize}

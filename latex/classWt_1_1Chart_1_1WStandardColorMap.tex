@@ -1,0 +1,152 @@
+\hypertarget{classWt_1_1Chart_1_1WStandardColorMap}{}\doxysection{Wt\+::Chart\+::W\+Standard\+Color\+Map Class Reference}
+\label{classWt_1_1Chart_1_1WStandardColorMap}\index{Wt::Chart::WStandardColorMap@{Wt::Chart::WStandardColorMap}}
+
+
+Standard color\+Map.  
+
+
+
+
+{\ttfamily \#include $<$W\+Standard\+Color\+Map.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Chart\+::W\+Standard\+Color\+Map\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Chart\+::W\+Standard\+Color\+Map\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardColorMap_1_1Pair}{Pair}}
+\begin{DoxyCompactList}\small\item\em Contains a pair of a numerical value and a \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Chart_1_1WStandardColorMap_afc857b0fc469c0db002b974c1602677d}{W\+Standard\+Color\+Map}} (double min, double max, bool continuous)
+\begin{DoxyCompactList}\small\item\em Construct a default colormap. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Chart_1_1WStandardColorMap_ae883d14a83a9b3cb0a671dbbbfed3f11}{W\+Standard\+Color\+Map}} (double min, double max, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardColorMap_1_1Pair}{W\+Standard\+Color\+Map\+::\+Pair}} $>$ \&colors, bool continuous)
+\begin{DoxyCompactList}\small\item\em Construct a custom colormap. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardColorMap_a39cfdfa352116ee10e544ca8f684596a}{discretise}} (int number\+Of\+Bands)
+\begin{DoxyCompactList}\small\item\em Utility method to discretise a continuous colormap in a number of equally sized bands. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WStandardColorMap_a7d7dfe1dec50a10ae7e20922b58d2e57}\label{classWt_1_1Chart_1_1WStandardColorMap_a7d7dfe1dec50a10ae7e20922b58d2e57}} 
+bool {\bfseries continuous} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WStandardColorMap_abb5082ce4d793947566f12d6fe12f8b8}\label{classWt_1_1Chart_1_1WStandardColorMap_abb5082ce4d793947566f12d6fe12f8b8}} 
+const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardColorMap_1_1Pair}{W\+Standard\+Color\+Map\+::\+Pair}} $>$ \& {\bfseries color\+Value\+Pairs} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WStandardColorMap_a5e06f91dcc2e6c045f35c0864a07a61e}\label{classWt_1_1Chart_1_1WStandardColorMap_a5e06f91dcc2e6c045f35c0864a07a61e}} 
+virtual \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardColorMap_a5e06f91dcc2e6c045f35c0864a07a61e}{to\+Color}} (double value) const override
+\begin{DoxyCompactList}\small\item\em Converts a numerical value to a \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardColorMap_a853786132b346d719ce6e6f029dbb6b9}{create\+Strip}} (\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} $\ast$painter, const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&area=\mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}}()) const override
+\begin{DoxyCompactList}\small\item\em Paints the colormap as a colored strip. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardColorMap_a1823407ef62c908d3686a71d2221979d}{paint\+Legend}} (\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} $\ast$painter, const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&area=\mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}}()) const override
+\begin{DoxyCompactList}\small\item\em Paints the colormap as a legend. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WStandardColorMap_a556535d49a4190fa0c0e7c2e106330d7}\label{classWt_1_1Chart_1_1WStandardColorMap_a556535d49a4190fa0c0e7c2e106330d7}} 
+\mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} {\bfseries interpolate} (const \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \&color1, const \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \&color2, double factor) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WStandardColorMap_af60305776b059f23df55002a27057537}\label{classWt_1_1Chart_1_1WStandardColorMap_af60305776b059f23df55002a27057537}} 
+bool {\bfseries continuous\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WStandardColorMap_aeaff781da1f798bbdd776dd6aac414f9}\label{classWt_1_1Chart_1_1WStandardColorMap_aeaff781da1f798bbdd776dd6aac414f9}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardColorMap_1_1Pair}{W\+Standard\+Color\+Map\+::\+Pair}} $>$ {\bfseries colors\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Standard color\+Map. 
+
+The W\+Standard\+Color\+Map is defined by a list of value-\/to-\/color pairs. The W\+Standard\+Color\+Map has two modes\+: a continuous mode, in which the colors are linearly interpolated in between the pair values, and a non-\/continuous mode, where the values are not interpolated, so that the colormap has a banded effect. In non-\/continuous mode, the color of a given point P is the color of the pair with the largest value smaller than P.
+
+Numerical values above the maximum value in the list map to the maximum value\textquotesingle{}s color, all values below the minimum value in the list map to the minimum value\textquotesingle{}s color. The range indicated by the minimum and maximum passed to the constructor determines which part of the colormap is drawn by \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardColorMap_a853786132b346d719ce6e6f029dbb6b9}{create\+Strip()}} or \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardColorMap_a1823407ef62c908d3686a71d2221979d}{paint\+Legend()}}.
+
+The figure below illustrates the possible colormaps that can be constructed from the list \{\char`\"{}0.\+0 -\/ Standard\+Color\+::\+Dark\+Red\char`\"{}, \char`\"{}1.\+0 -\/ Standard\+Color\+::\+Red\char`\"{}, \char`\"{}2.\+0 -\/ Standard\+Color\+::\+Gray\char`\"{}\}. The discrete map (on the left) has the range \mbox{[}0, 3\mbox{]}, the continuous map (on the right) has the range \mbox{[}0, 2\mbox{]}. The utility method \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardColorMap_a39cfdfa352116ee10e544ca8f684596a}{discretise()}} is also applied to the continuous colormap to obtain a colormap with 5 bands in the same range.
+
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WStandardColorMap_afc857b0fc469c0db002b974c1602677d}\label{classWt_1_1Chart_1_1WStandardColorMap_afc857b0fc469c0db002b974c1602677d}} 
+\index{Wt::Chart::WStandardColorMap@{Wt::Chart::WStandardColorMap}!WStandardColorMap@{WStandardColorMap}}
+\index{WStandardColorMap@{WStandardColorMap}!Wt::Chart::WStandardColorMap@{Wt::Chart::WStandardColorMap}}
+\doxysubsubsection{\texorpdfstring{WStandardColorMap()}{WStandardColorMap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wt\+::\+Chart\+::\+W\+Standard\+Color\+Map\+::\+W\+Standard\+Color\+Map (\begin{DoxyParamCaption}\item[{double}]{min,  }\item[{double}]{max,  }\item[{bool}]{continuous }\end{DoxyParamCaption})}
+
+
+
+Construct a default colormap. 
+
+The default colormap is a transition from yellow to red. The color-\/scheme was taken from \href{http://www.personal.psu.edu/faculty/c/a/cab38/ColorBrewer/ColorBrewer.html}{\texttt{ Color\+Brewer}}, which contains lots of useful info and example schemes you might want to use for your custom colormaps. \mbox{\Hypertarget{classWt_1_1Chart_1_1WStandardColorMap_ae883d14a83a9b3cb0a671dbbbfed3f11}\label{classWt_1_1Chart_1_1WStandardColorMap_ae883d14a83a9b3cb0a671dbbbfed3f11}} 
+\index{Wt::Chart::WStandardColorMap@{Wt::Chart::WStandardColorMap}!WStandardColorMap@{WStandardColorMap}}
+\index{WStandardColorMap@{WStandardColorMap}!Wt::Chart::WStandardColorMap@{Wt::Chart::WStandardColorMap}}
+\doxysubsubsection{\texorpdfstring{WStandardColorMap()}{WStandardColorMap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wt\+::\+Chart\+::\+W\+Standard\+Color\+Map\+::\+W\+Standard\+Color\+Map (\begin{DoxyParamCaption}\item[{double}]{min,  }\item[{double}]{max,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardColorMap_1_1Pair}{W\+Standard\+Color\+Map\+::\+Pair}} $>$ \&}]{colors,  }\item[{bool}]{continuous }\end{DoxyParamCaption})}
+
+
+
+Construct a custom colormap. 
+
+This constructor allows you to pass a list of value-\/to-\/color pairs that define a colormap as described in the class description. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WStandardColorMap_a853786132b346d719ce6e6f029dbb6b9}\label{classWt_1_1Chart_1_1WStandardColorMap_a853786132b346d719ce6e6f029dbb6b9}} 
+\index{Wt::Chart::WStandardColorMap@{Wt::Chart::WStandardColorMap}!createStrip@{createStrip}}
+\index{createStrip@{createStrip}!Wt::Chart::WStandardColorMap@{Wt::Chart::WStandardColorMap}}
+\doxysubsubsection{\texorpdfstring{createStrip()}{createStrip()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Chart\+::\+W\+Standard\+Color\+Map\+::create\+Strip (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} $\ast$}]{painter,  }\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{area = {\ttfamily \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Paints the colormap as a colored strip. 
+
+This paints the colormap from the minimum to the maximum value in the provided area (default = fill the entire paintdevice). This is no legend with ticks and labels, only the colors are painted.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WStandardColorMap_a1823407ef62c908d3686a71d2221979d}{paint\+Legend()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a67a26a302d735efeb310a9e4f7eb32ae}{Wt\+::\+Chart\+::\+W\+Abstract\+Color\+Map}}.
+
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WStandardColorMap_a39cfdfa352116ee10e544ca8f684596a}\label{classWt_1_1Chart_1_1WStandardColorMap_a39cfdfa352116ee10e544ca8f684596a}} 
+\index{Wt::Chart::WStandardColorMap@{Wt::Chart::WStandardColorMap}!discretise@{discretise}}
+\index{discretise@{discretise}!Wt::Chart::WStandardColorMap@{Wt::Chart::WStandardColorMap}}
+\doxysubsubsection{\texorpdfstring{discretise()}{discretise()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Standard\+Color\+Map\+::discretise (\begin{DoxyParamCaption}\item[{int}]{number\+Of\+Bands }\end{DoxyParamCaption})}
+
+
+
+Utility method to discretise a continuous colormap in a number of equally sized bands. 
+
+This method makes a new list of value-\/to-\/color pairs by discretising the linear interpolation of the previous one into number\+Of\+Bands equally sized colorbands. This method only has effect if the colormap is continuous. \mbox{\Hypertarget{classWt_1_1Chart_1_1WStandardColorMap_a1823407ef62c908d3686a71d2221979d}\label{classWt_1_1Chart_1_1WStandardColorMap_a1823407ef62c908d3686a71d2221979d}} 
+\index{Wt::Chart::WStandardColorMap@{Wt::Chart::WStandardColorMap}!paintLegend@{paintLegend}}
+\index{paintLegend@{paintLegend}!Wt::Chart::WStandardColorMap@{Wt::Chart::WStandardColorMap}}
+\doxysubsubsection{\texorpdfstring{paintLegend()}{paintLegend()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Chart\+::\+W\+Standard\+Color\+Map\+::paint\+Legend (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} $\ast$}]{painter,  }\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{area = {\ttfamily \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Paints the colormap as a legend. 
+
+The colormap is painted as a legend with ticks and value-\/labels. The parameter area can be used to specify a part of the paintdevice where the legend should be drawn. When drawing the legend, the tickspacing, labelformat and labelfont are taken into account.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a73fd72a38644e08cf322bb5bd7123d12}{set\+Tick\+Spacing()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_aa07ac0cd56150e40baa41f842402d357}{set\+Format\+String()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a21b6e7edc9867c4f3e5baaffc4092ff5}{set\+Label\+Font()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a227ff91954cbe8caaa1f8c6f026af6a6}{Wt\+::\+Chart\+::\+W\+Abstract\+Color\+Map}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Chart/W\+Standard\+Color\+Map.\+h\end{DoxyCompactItemize}

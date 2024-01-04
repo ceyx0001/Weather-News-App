@@ -1,0 +1,145 @@
+\hypertarget{classWt_1_1WVideo}{}\doxysection{Wt\+::W\+Video Class Reference}
+\label{classWt_1_1WVideo}\index{Wt::WVideo@{Wt::WVideo}}
+
+
+A video-\/playing widget.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Video.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Video\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Video\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WVideo_a0ae8df2f41ccc239fbf3178af6a60a6a}{W\+Video}} ()
+\begin{DoxyCompactList}\small\item\em Creates a video widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WVideo_af6f41366921bb28377375df9e11edc9d}{set\+Poster}} (const std\+::string \&url)
+\begin{DoxyCompactList}\small\item\em Set the poster image. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1WVideo_a5a15887e0567a4621034c6f2d1148c4f}{js\+Video\+Ref}} () const
+\begin{DoxyCompactList}\small\item\em Returns the Java\+Script reference to the video object, or null. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WVideo_a2e43084f2c093079136f4646dff7fcc0}{resize}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WWebWidget_a3e1a8d2d95fa92763e2e3a0ee520468f}{width}}, const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WWebWidget_ae0c87ae7cae2379eebbbb7df06e07a2c}{height}}) override
+\begin{DoxyCompactList}\small\item\em Resizes the widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WVideo_ad78629a69f06a754fd13b96051bea057}\label{classWt_1_1WVideo_ad78629a69f06a754fd13b96051bea057}} 
+virtual \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ {\bfseries create\+Media\+Dom\+Element} () override
+\item 
+\mbox{\Hypertarget{classWt_1_1WVideo_a89319bb73c39f56ddfe9b643ada18b3e}\label{classWt_1_1WVideo_a89319bb73c39f56ddfe9b643ada18b3e}} 
+virtual \mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} {\bfseries dom\+Element\+Type} () const override
+\item 
+\mbox{\Hypertarget{classWt_1_1WVideo_a7c1eef514bdfec735792b416c756d224}\label{classWt_1_1WVideo_a7c1eef514bdfec735792b416c756d224}} 
+virtual void {\bfseries update\+Media\+Dom} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&element, bool all) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WVideo_a5d231ce0c7bd823a62222406893b5ec6}\label{classWt_1_1WVideo_a5d231ce0c7bd823a62222406893b5ec6}} 
+std\+::string {\bfseries poster\+Url\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WVideo_a8353282071f420a663485af61738a400}\label{classWt_1_1WVideo_a8353282071f420a663485af61738a400}} 
+bool {\bfseries size\+Changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WVideo_a963e20010016130f3b72d2636a83c5e7}\label{classWt_1_1WVideo_a963e20010016130f3b72d2636a83c5e7}} 
+bool {\bfseries poster\+Changed\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A video-\/playing widget. 
+
+This is a low-\/level widget, mapping directly onto a {\ttfamily $<$video$>$} element available in H\+T\+M\+L5 compliant browsers.
+
+In almost every situation you should use the \mbox{\hyperlink{classWt_1_1WMediaPlayer}{W\+Media\+Player}} widget instead, which has fallback and flexible user-\/interface options.
+
+Usage of the video element consists of adding one or more video sources and setting some options. Since not every browser supports H\+T\+M\+L5 video, the class provides a mechanism to display alternative content in browsers that cannot play the video.
+
+There are two reasons why the a browser may use the alternative content\+: either because the browser does not support the H\+T\+M\+L5 video tag (alternative content is displayed even when Java\+Script is not available), or because none of the specified sources contain a video format that is understood by the browser (requires Java\+Script to display the alternative content).
+
+The \mbox{\hyperlink{classWt_1_1WAbstractMedia_a93f26fe0f97cd34fc8592915871b3a7d}{add\+Source()}} and \mbox{\hyperlink{classWt_1_1WAbstractMedia_a7d69e914ce3286638869f161418c62fb}{set\+Alternative\+Content()}} may not be called after the widget is rendered.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMediaPlayer}{W\+Media\+Player}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WVideo_a0ae8df2f41ccc239fbf3178af6a60a6a}\label{classWt_1_1WVideo_a0ae8df2f41ccc239fbf3178af6a60a6a}} 
+\index{Wt::WVideo@{Wt::WVideo}!WVideo@{WVideo}}
+\index{WVideo@{WVideo}!Wt::WVideo@{Wt::WVideo}}
+\doxysubsubsection{\texorpdfstring{WVideo()}{WVideo()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Video\+::\+W\+Video (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a video widget. 
+
+The constructor sets the \textquotesingle{}controls\textquotesingle{} option, which causes the browser to display a bar with play/pauze/volume/... controls.
+
+A freshly constructed video widget has no poster image, no media sources, has preload mode set to Preload\+Auto, and only the Controls flag is set. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WVideo_a5a15887e0567a4621034c6f2d1148c4f}\label{classWt_1_1WVideo_a5a15887e0567a4621034c6f2d1148c4f}} 
+\index{Wt::WVideo@{Wt::WVideo}!jsVideoRef@{jsVideoRef}}
+\index{jsVideoRef@{jsVideoRef}!Wt::WVideo@{Wt::WVideo}}
+\doxysubsubsection{\texorpdfstring{jsVideoRef()}{jsVideoRef()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+W\+Video\+::js\+Video\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the Java\+Script reference to the video object, or null. 
+
+It is possible, for compatibility reasons, that \mbox{\hyperlink{classWt_1_1WWidget_a83a186d2feacfbfbdb5b54f4cefc6735}{js\+Ref()}} is not the video element. \mbox{\hyperlink{classWt_1_1WVideo_a5a15887e0567a4621034c6f2d1148c4f}{js\+Video\+Ref()}} is guaranteed to be an expression that evaluates to the video object. This expression may yield null, if the video object is not rendered at all (e.\+g. on older versions of Internet Explorer). \mbox{\Hypertarget{classWt_1_1WVideo_a2e43084f2c093079136f4646dff7fcc0}\label{classWt_1_1WVideo_a2e43084f2c093079136f4646dff7fcc0}} 
+\index{Wt::WVideo@{Wt::WVideo}!resize@{resize}}
+\index{resize@{resize}!Wt::WVideo@{Wt::WVideo}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Video\+::resize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{width,  }\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Resizes the widget. 
+
+Specifies a fixed size for this widget, setting C\+SS {\ttfamily width} and {\ttfamily height} properties. By default a widget has automatic width and height, which sets a size for the widget following C\+SS rules.
+
+When the widget is not managed by a layout manager, the automatic (natural) size of a widget depends on whether they widget is a {\itshape block} or {\itshape inline} widget\+:
+\begin{DoxyItemize}
+\item a {\itshape block} widget takes by default the width of the parent, and the height that it needs based on its contents
+\item an {\itshape inline} widget takes the width and height that it needs based on its contents (possibly wrapping over multiple lines). The width and height of an inline widget cannot be changed (by the letter of C\+SS, although most browsers will react to it in varying ways).
+\end{DoxyItemize}
+
+When inserted in a layout manager, the size set will be used as a widget\textquotesingle{}s preferred size, but the widget may be given a different size by the layout manager based on available space and stretch factors. The actual size given by a layout manager may be retrieved by making the widget \char`\"{}layout size aware\char`\"{}, using \mbox{\hyperlink{classWt_1_1WWidget_a4f83592912a7f8fa4fd35dadde78ee74}{set\+Layout\+Size\+Aware()}}. If you have defined a {\ttfamily \char`\"{}wt\+Resize()\char`\"{}} Java\+Script method for the widget, then this method will also be called.
+
+The default width and height of a widget is \mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWebWidget_a3e1a8d2d95fa92763e2e3a0ee520468f}{width()}}, \mbox{\hyperlink{classWt_1_1WWebWidget_ae0c87ae7cae2379eebbbb7df06e07a2c}{height()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a5113267dfd734df27d4b1c76e7d23abb}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WVideo_af6f41366921bb28377375df9e11edc9d}\label{classWt_1_1WVideo_af6f41366921bb28377375df9e11edc9d}} 
+\index{Wt::WVideo@{Wt::WVideo}!setPoster@{setPoster}}
+\index{setPoster@{setPoster}!Wt::WVideo@{Wt::WVideo}}
+\doxysubsubsection{\texorpdfstring{setPoster()}{setPoster()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Video\+::set\+Poster (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url }\end{DoxyParamCaption})}
+
+
+
+Set the poster image. 
+
+On browsers that support it, the poster image is displayed before the video is playing. Some browsers display the first frame of the video stream once the video stream is loaded; it is therefore a good idea to include the poster image as first frame in the video feed too. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Video.\+h\end{DoxyCompactItemize}

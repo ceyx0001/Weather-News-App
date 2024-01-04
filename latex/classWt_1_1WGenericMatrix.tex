@@ -1,0 +1,224 @@
+\hypertarget{classWt_1_1WGenericMatrix}{}\doxysection{Wt\+::W\+Generic\+Matrix$<$ T, Rows, Cols $>$ Class Template Reference}
+\label{classWt_1_1WGenericMatrix}\index{Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}}
+
+
+A value class that describes a matrix.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Generic\+Matrix.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WGenericMatrix_a4a8f7f76173c169c1627e85092ed56cf}\label{classWt_1_1WGenericMatrix_a4a8f7f76173c169c1627e85092ed56cf}} 
+using {\bfseries Matrix\+Type} = std\+::array$<$ T, Rows $\ast$Cols $>$
+\item 
+\mbox{\Hypertarget{classWt_1_1WGenericMatrix_ae83da79e6c024ce5a36dc6e9d7557187}\label{classWt_1_1WGenericMatrix_ae83da79e6c024ce5a36dc6e9d7557187}} 
+using {\bfseries Array\+Type} = std\+::array$<$ T, Rows $\ast$Cols $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WGenericMatrix_a5fc110fa4b41c04fd76318d8d30ce2f2}{W\+Generic\+Matrix}} ()
+\begin{DoxyCompactList}\small\item\em Construct a identity matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGenericMatrix_ae63c07b13313cb5035e725e251d2be31}\label{classWt_1_1WGenericMatrix_ae63c07b13313cb5035e725e251d2be31}} 
+\mbox{\hyperlink{classWt_1_1WGenericMatrix_ae63c07b13313cb5035e725e251d2be31}{W\+Generic\+Matrix}} (const \mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$ \&other)
+\begin{DoxyCompactList}\small\item\em Copy Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WGenericMatrix_a8752490de727d5ce6dd3120da518f49d}{W\+Generic\+Matrix}} (const T $\ast$elements)
+\begin{DoxyCompactList}\small\item\em Constructs a matrix from an array of elements. \end{DoxyCompactList}\item 
+const Array\+Type \& \mbox{\hyperlink{classWt_1_1WGenericMatrix_ab9de6c54dacce35c34fe4f97312a50c8}{const\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Returns a const pointer to the internal data store. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGenericMatrix_ade63e535a39caa2560a60dd7c969098d}{copy\+Data\+To}} (T $\ast$\mbox{\hyperlink{classWt_1_1WGenericMatrix_a4e9300685974b67610b9f6ad437a5ab4}{data}})
+\begin{DoxyCompactList}\small\item\em Export the matrix data. \end{DoxyCompactList}\item 
+Array\+Type \& \mbox{\hyperlink{classWt_1_1WGenericMatrix_a4e9300685974b67610b9f6ad437a5ab4}{data}} ()
+\begin{DoxyCompactList}\small\item\em Returns a reference to the internal data store. \end{DoxyCompactList}\item 
+const Array\+Type \& \mbox{\hyperlink{classWt_1_1WGenericMatrix_a48a9ea1c86c951cca890f87e501f8fa2}{data}} () const
+\begin{DoxyCompactList}\small\item\em Returns a const reference to the internal data store. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGenericMatrix_aaf623a4a2a09bc9c853774c77daca3b4}\label{classWt_1_1WGenericMatrix_aaf623a4a2a09bc9c853774c77daca3b4}} 
+void \mbox{\hyperlink{classWt_1_1WGenericMatrix_aaf623a4a2a09bc9c853774c77daca3b4}{fill}} (T value)
+\begin{DoxyCompactList}\small\item\em Fills every element of the matrix with the given value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WGenericMatrix_a9dc23d4f0013584db75fb1019b533419}{is\+Identity}} () const
+\begin{DoxyCompactList}\small\item\em Identity check. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGenericMatrix_a665f5d9bb6ed06aabfacadbf27e9e8be}{set\+To\+Identity}} ()
+\begin{DoxyCompactList}\small\item\em Set this matrix to the identity matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGenericMatrix_adfec7b4863f000c5b0fa3c6e7df18867}\label{classWt_1_1WGenericMatrix_adfec7b4863f000c5b0fa3c6e7df18867}} 
+\mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}$<$ T, Cols, Rows $>$ \mbox{\hyperlink{classWt_1_1WGenericMatrix_adfec7b4863f000c5b0fa3c6e7df18867}{transposed}} () const
+\begin{DoxyCompactList}\small\item\em Returns the transposed of the matrix. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WGenericMatrix_a2a3d98bb322b67da650c97b2a7c6b12a}{operator==}} (const \mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$ \&rhs) const
+\begin{DoxyCompactList}\small\item\em Equality operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WGenericMatrix_a0c37fe26d486f5da922ed42b76613fbb}{operator!=}} (const \mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$ \&rhs) const
+\begin{DoxyCompactList}\small\item\em Inequality operator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGenericMatrix_a6547f897526f07276f76841810e1b13f}\label{classWt_1_1WGenericMatrix_a6547f897526f07276f76841810e1b13f}} 
+const T \& \mbox{\hyperlink{classWt_1_1WGenericMatrix_a6547f897526f07276f76841810e1b13f}{operator()}} (int row, int column) const
+\begin{DoxyCompactList}\small\item\em Returns the element at the given position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGenericMatrix_a475533c4b5f89995053f2954557bde0b}\label{classWt_1_1WGenericMatrix_a475533c4b5f89995053f2954557bde0b}} 
+T \& \mbox{\hyperlink{classWt_1_1WGenericMatrix_a475533c4b5f89995053f2954557bde0b}{operator()}} (int row, int column)
+\begin{DoxyCompactList}\small\item\em Returns the element at the given position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGenericMatrix_a7e6f1b072eb43d4d36e5ba14eae9b80e}\label{classWt_1_1WGenericMatrix_a7e6f1b072eb43d4d36e5ba14eae9b80e}} 
+const T \& \mbox{\hyperlink{classWt_1_1WGenericMatrix_a7e6f1b072eb43d4d36e5ba14eae9b80e}{at}} (int row, int column) const
+\begin{DoxyCompactList}\small\item\em Returns the element at the given position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGenericMatrix_ae50f45593fa06e24b265302d6f15597b}\label{classWt_1_1WGenericMatrix_ae50f45593fa06e24b265302d6f15597b}} 
+T \& \mbox{\hyperlink{classWt_1_1WGenericMatrix_ae50f45593fa06e24b265302d6f15597b}{at}} (int row, int column)
+\begin{DoxyCompactList}\small\item\em Returns the element at the given position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGenericMatrix_acb15e0a9486e0986e3572e5fb5ce6f9f}\label{classWt_1_1WGenericMatrix_acb15e0a9486e0986e3572e5fb5ce6f9f}} 
+\mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$ \& \mbox{\hyperlink{classWt_1_1WGenericMatrix_acb15e0a9486e0986e3572e5fb5ce6f9f}{operator$\ast$=}} (const T \&factor)
+\begin{DoxyCompactList}\small\item\em Multiply every element of the matrix with the given factor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGenericMatrix_a23bd0e7f286f42c83a4c47cf6e857b57}\label{classWt_1_1WGenericMatrix_a23bd0e7f286f42c83a4c47cf6e857b57}} 
+\mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$ \& \mbox{\hyperlink{classWt_1_1WGenericMatrix_a23bd0e7f286f42c83a4c47cf6e857b57}{operator/=}} (const T \&factor)
+\begin{DoxyCompactList}\small\item\em Divide every element of the matrix by the given factor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGenericMatrix_ab91384a67a371d98ba2b39abdefa5b03}\label{classWt_1_1WGenericMatrix_ab91384a67a371d98ba2b39abdefa5b03}} 
+\mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$ \& \mbox{\hyperlink{classWt_1_1WGenericMatrix_ab91384a67a371d98ba2b39abdefa5b03}{operator+=}} (const \mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Add the given matrix to this matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGenericMatrix_ace9cd1cfb0da44619c9a60abd5979b37}\label{classWt_1_1WGenericMatrix_ace9cd1cfb0da44619c9a60abd5979b37}} 
+\mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$ \& \mbox{\hyperlink{classWt_1_1WGenericMatrix_ace9cd1cfb0da44619c9a60abd5979b37}{operator-\/=}} (const \mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$ \&rhs)
+\begin{DoxyCompactList}\small\item\em Substract the given matrix from this matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGenericMatrix_ab7ae386cb795d24bffa58695f2808670}\label{classWt_1_1WGenericMatrix_ab7ae386cb795d24bffa58695f2808670}} 
+Matrix\+Type \& {\bfseries impl} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WGenericMatrix_a3412b3dd5c7a17a2aa0de2a097edabe2}\label{classWt_1_1WGenericMatrix_a3412b3dd5c7a17a2aa0de2a097edabe2}} 
+const Matrix\+Type \& {\bfseries impl} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WGenericMatrix_ada257d037fc0685c8627f0b6d65b283c}\label{classWt_1_1WGenericMatrix_ada257d037fc0685c8627f0b6d65b283c}} 
+{\bfseries W\+Generic\+Matrix} (const Matrix\+Type \&m)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WGenericMatrix_ade91f7298dd79bd062bb08a4e4f20520}\label{classWt_1_1WGenericMatrix_ade91f7298dd79bd062bb08a4e4f20520}} 
+Matrix\+Type {\bfseries m\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, std\+::size\+\_\+t Rows, std\+::size\+\_\+t Cols$>$\newline
+class Wt\+::\+W\+Generic\+Matrix$<$ T, Rows, Cols $>$}
+
+A value class that describes a matrix. 
+
+This class represents a fixed-\/size dense (!= sparse) matrix. It can be templatized to the number of rows and columns, and to the datatype stored (integer types, floatin point types, complex types, ...)
+
+The row order of this matrix class is row-\/major. This means that when accessing the raw data store linearly, you will first encounter all elements of the first row, then the second row, and so on.
+
+This template class is used in \mbox{\hyperlink{classWt}{Wt}} as base class for transformation matrices, but can also be used as a general matrix class. Efficiency for this use case was considered when this class was implemented, but we recommend that you use a more specialized matrix class library if the algorithms you need exceed what\textquotesingle{}s offered here (for example, if you intend to do many linear algebra computations, you may consider boost ublass, M\+TL, ...). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WGenericMatrix_a5fc110fa4b41c04fd76318d8d30ce2f2}\label{classWt_1_1WGenericMatrix_a5fc110fa4b41c04fd76318d8d30ce2f2}} 
+\index{Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}!WGenericMatrix@{WGenericMatrix}}
+\index{WGenericMatrix@{WGenericMatrix}!Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}}
+\doxysubsubsection{\texorpdfstring{WGenericMatrix()}{WGenericMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Rows, std\+::size\+\_\+t Cols$>$ \\
+\mbox{\hyperlink{classWt_1_1WGenericMatrix}{Wt\+::\+W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$\+::\mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a identity matrix. 
+
+An identity matrix in this context is a matrix where m(i,i) = 1 and m(i,j) = 0, for i != j. \mbox{\Hypertarget{classWt_1_1WGenericMatrix_a8752490de727d5ce6dd3120da518f49d}\label{classWt_1_1WGenericMatrix_a8752490de727d5ce6dd3120da518f49d}} 
+\index{Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}!WGenericMatrix@{WGenericMatrix}}
+\index{WGenericMatrix@{WGenericMatrix}!Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}}
+\doxysubsubsection{\texorpdfstring{WGenericMatrix()}{WGenericMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Rows, std\+::size\+\_\+t Cols$>$ \\
+\mbox{\hyperlink{classWt_1_1WGenericMatrix}{Wt\+::\+W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$\+::\mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}} (\begin{DoxyParamCaption}\item[{const T $\ast$}]{elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructs a matrix from an array of elements. 
+
+The input array is assumed to be in row-\/major order. If elements is 0, the matrix data is not initialized. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WGenericMatrix_ab9de6c54dacce35c34fe4f97312a50c8}\label{classWt_1_1WGenericMatrix_ab9de6c54dacce35c34fe4f97312a50c8}} 
+\index{Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}!constData@{constData}}
+\index{constData@{constData}!Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}}
+\doxysubsubsection{\texorpdfstring{constData()}{constData()}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Rows, std\+::size\+\_\+t Cols$>$ \\
+const Array\+Type\& \mbox{\hyperlink{classWt_1_1WGenericMatrix}{Wt\+::\+W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$\+::const\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a const pointer to the internal data store. 
+
+The array can be indexed with \mbox{[}\mbox{]}. You can iterate over the entire data store by using begin() and end() iterators. The row order of the data is row major. \mbox{\Hypertarget{classWt_1_1WGenericMatrix_ade63e535a39caa2560a60dd7c969098d}\label{classWt_1_1WGenericMatrix_ade63e535a39caa2560a60dd7c969098d}} 
+\index{Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}!copyDataTo@{copyDataTo}}
+\index{copyDataTo@{copyDataTo}!Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}}
+\doxysubsubsection{\texorpdfstring{copyDataTo()}{copyDataTo()}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Rows, std\+::size\+\_\+t Cols$>$ \\
+void \mbox{\hyperlink{classWt_1_1WGenericMatrix}{Wt\+::\+W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$\+::copy\+Data\+To (\begin{DoxyParamCaption}\item[{T $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Export the matrix data. 
+
+Stores the matrix in an array of Rows$\ast$\+Cols elements of type T, pointed to by data. The data will be stored in row major order. \mbox{\Hypertarget{classWt_1_1WGenericMatrix_a4e9300685974b67610b9f6ad437a5ab4}\label{classWt_1_1WGenericMatrix_a4e9300685974b67610b9f6ad437a5ab4}} 
+\index{Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}!data@{data}}
+\index{data@{data}!Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Rows, std\+::size\+\_\+t Cols$>$ \\
+Array\+Type\& \mbox{\hyperlink{classWt_1_1WGenericMatrix}{Wt\+::\+W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a reference to the internal data store. 
+
+The array can be indexed with \mbox{[}\mbox{]}. You can iterate over the entire data store by using begin() and end() iterators. The row order of the data is row major. \mbox{\Hypertarget{classWt_1_1WGenericMatrix_a48a9ea1c86c951cca890f87e501f8fa2}\label{classWt_1_1WGenericMatrix_a48a9ea1c86c951cca890f87e501f8fa2}} 
+\index{Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}!data@{data}}
+\index{data@{data}!Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Rows, std\+::size\+\_\+t Cols$>$ \\
+const Array\+Type\& \mbox{\hyperlink{classWt_1_1WGenericMatrix}{Wt\+::\+W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a const reference to the internal data store. 
+
+The array can be indexed with \mbox{[}\mbox{]}. You can iterate over the entire data store by using begin() and end() iterators. The row order of the data is row major. \mbox{\Hypertarget{classWt_1_1WGenericMatrix_a9dc23d4f0013584db75fb1019b533419}\label{classWt_1_1WGenericMatrix_a9dc23d4f0013584db75fb1019b533419}} 
+\index{Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}!isIdentity@{isIdentity}}
+\index{isIdentity@{isIdentity}!Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}}
+\doxysubsubsection{\texorpdfstring{isIdentity()}{isIdentity()}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Rows, std\+::size\+\_\+t Cols$>$ \\
+bool \mbox{\hyperlink{classWt_1_1WGenericMatrix}{Wt\+::\+W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$\+::is\+Identity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Identity check. 
+
+Returns true if the transform represents an identity transformation. \mbox{\Hypertarget{classWt_1_1WGenericMatrix_a0c37fe26d486f5da922ed42b76613fbb}\label{classWt_1_1WGenericMatrix_a0c37fe26d486f5da922ed42b76613fbb}} 
+\index{Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Rows, std\+::size\+\_\+t Cols$>$ \\
+bool \mbox{\hyperlink{classWt_1_1WGenericMatrix}{Wt\+::\+W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inequality operator. 
+
+Returns {\ttfamily true} if the transforms are different. \mbox{\Hypertarget{classWt_1_1WGenericMatrix_a2a3d98bb322b67da650c97b2a7c6b12a}\label{classWt_1_1WGenericMatrix_a2a3d98bb322b67da650c97b2a7c6b12a}} 
+\index{Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Rows, std\+::size\+\_\+t Cols$>$ \\
+bool \mbox{\hyperlink{classWt_1_1WGenericMatrix}{Wt\+::\+W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Equality operator. 
+
+Returns {\ttfamily true} if the matrices are exactly the same. \mbox{\Hypertarget{classWt_1_1WGenericMatrix_a665f5d9bb6ed06aabfacadbf27e9e8be}\label{classWt_1_1WGenericMatrix_a665f5d9bb6ed06aabfacadbf27e9e8be}} 
+\index{Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}!setToIdentity@{setToIdentity}}
+\index{setToIdentity@{setToIdentity}!Wt::WGenericMatrix$<$ T, Rows, Cols $>$@{Wt::WGenericMatrix$<$ T, Rows, Cols $>$}}
+\doxysubsubsection{\texorpdfstring{setToIdentity()}{setToIdentity()}}
+{\footnotesize\ttfamily template$<$typename T , std\+::size\+\_\+t Rows, std\+::size\+\_\+t Cols$>$ \\
+void \mbox{\hyperlink{classWt_1_1WGenericMatrix}{Wt\+::\+W\+Generic\+Matrix}}$<$ T, Rows, Cols $>$\+::set\+To\+Identity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set this matrix to the identity matrix. 
+
+An identity matrix is in this context a matrix where m(i,i) = 1 and m(i,j) = 0, for i != j. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Generic\+Matrix.\+h\end{DoxyCompactItemize}

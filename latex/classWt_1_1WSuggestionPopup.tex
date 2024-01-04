@@ -1,0 +1,585 @@
+\hypertarget{classWt_1_1WSuggestionPopup}{}\doxysection{Wt\+::W\+Suggestion\+Popup Class Reference}
+\label{classWt_1_1WSuggestionPopup}\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+
+
+A widget which popups to assist in editing a textarea or lineedit.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Suggestion\+Popup.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Suggestion\+Popup\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Suggestion\+Popup\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WSuggestionPopup_1_1Options}{Options}}
+\begin{DoxyCompactList}\small\item\em A configuration object to generate a matcher and replacer Java\+Script function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a7bf9776b2cd2054d30c651c64e1f87d9}\label{classWt_1_1WSuggestionPopup_a7bf9776b2cd2054d30c651c64e1f87d9}} 
+typedef \mbox{\hyperlink{classWt_a96fbe5a99e9cedcd4e70f190eb7a1cdf}{Popup\+Trigger}} \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a7bf9776b2cd2054d30c651c64e1f87d9}{Trigger}}
+\begin{DoxyCompactList}\small\item\em Typedef for enum \mbox{\hyperlink{classWt_a96fbe5a99e9cedcd4e70f190eb7a1cdf}{Wt\+::\+Popup\+Trigger}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WSuggestionPopup_a1a7bb55dd66cdcbfb1af8e3af852967f}{W\+Suggestion\+Popup}} (const \mbox{\hyperlink{structWt_1_1WSuggestionPopup_1_1Options}{Options}} \&options)
+\begin{DoxyCompactList}\small\item\em Creates a suggestion popup. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WSuggestionPopup_a316d9f8e16740ba2ededfc800055e1db}{W\+Suggestion\+Popup}} (const std\+::string \&matcher\+JS, const std\+::string \&replacer\+JS)
+\begin{DoxyCompactList}\small\item\em Creates a suggestion popup with given matcher\+JS and replacer\+JS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a7be98d950273e379131aa1210798fd1a}{for\+Edit}} (\mbox{\hyperlink{classWt_1_1WFormWidget}{W\+Form\+Widget}} $\ast$edit, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a96fbe5a99e9cedcd4e70f190eb7a1cdf}{Popup\+Trigger}} $>$ popup\+Triggers=Popup\+Trigger\+::\+Editing)
+\begin{DoxyCompactList}\small\item\em Lets this suggestion popup assist in editing an edit field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSuggestionPopup_ad8e85625b9309639222ed1893c57713a}{remove\+Edit}} (\mbox{\hyperlink{classWt_1_1WFormWidget}{W\+Form\+Widget}} $\ast$edit)
+\begin{DoxyCompactList}\small\item\em Removes the edit field from the list of assisted editors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a0dd2b20a4a1505d464a8213585bbc4d3}{show\+At}} (\mbox{\hyperlink{classWt_1_1WFormWidget}{W\+Form\+Widget}} $\ast$edit)
+\begin{DoxyCompactList}\small\item\em Shows the suggestion popup at an edit field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a0beae292354fa79c2bbe68e9b11c8f01}{clear\+Suggestions}} ()
+\begin{DoxyCompactList}\small\item\em Clears the list of suggestions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSuggestionPopup_aaf9e6a5b8776533768f70a2ff44ab300}{add\+Suggestion}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&suggestion\+Text, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&suggestion\+Value=\mbox{\hyperlink{classWt_1_1WString_a511a12bce677dc733bd7b6b9415bff73}{W\+String\+::\+Empty}})
+\begin{DoxyCompactList}\small\item\em Adds a new suggestion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSuggestionPopup_ad8ddf026a9b11b488199f5225df4e9fa}{set\+Model}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \&\mbox{\hyperlink{classWt_1_1WSuggestionPopup_aa9add86dd6d1d8bd410901734a8db2ee}{model}})
+\begin{DoxyCompactList}\small\item\em Sets the model to be used for the suggestions. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \mbox{\hyperlink{classWt_1_1WSuggestionPopup_aa9add86dd6d1d8bd410901734a8db2ee}{model}} () const
+\begin{DoxyCompactList}\small\item\em Returns the data model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a6616d230bad6511bc40d3bf2c1e4ec84}{set\+Model\+Column}} (int index)
+\begin{DoxyCompactList}\small\item\em Sets the column in the model to be used for the items. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a9ebf63d4048a9662c3e05ae6be162993}{set\+Default\+Index}} (int row)
+\begin{DoxyCompactList}\small\item\em Sets a default selected value. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a7862617bf671b9ec1e5e0913ef9d41d7}{default\+Index}} () const
+\begin{DoxyCompactList}\small\item\em Returns the default value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a8a77e3397fa98db0639fca3b1c94a8a2}{set\+Filter\+Length}} (int count)
+\begin{DoxyCompactList}\small\item\em Sets the minimum input length before showing the popup. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a435ee99263664abf776b576e13e5dc20}{filter\+Length}} () const
+\begin{DoxyCompactList}\small\item\em Returns the filter length. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ W\+T\+\_\+\+U\+S\+T\+R\+I\+NG $>$ \& \mbox{\hyperlink{classWt_1_1WSuggestionPopup_aa68996a7cebbb4eb0b78c99424e9d231}{filter\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Signal that indicates that the model should be filtered. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ int, \mbox{\hyperlink{classWt_1_1WFormWidget}{W\+Form\+Widget}} $\ast$ $>$ \& \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a63f0db2301510404922d7ed1572b92cc}{activated}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when a suggestion was selected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a0395bd5080856eb95ccb50748f25d1c7}{set\+Drop\+Down\+Icon\+Unfiltered}} (bool is\+Unfiltered)
+\begin{DoxyCompactList}\small\item\em When drop down icon is clicked the popup content will be unfiltered. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSuggestionPopup_acf2110ee2b2c13ce14530d3cd1e35328}{set\+Auto\+Select\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em When the popup is opened the first item is automatically selected. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a9e6ca6d273c35a601be67d88baf8f152}{current\+Item}} () const
+\begin{DoxyCompactList}\small\item\em Returns the last activated index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a0abf89a25ea7eece7d36391d56130cf7}{set\+Edit\+Role}} (\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role)
+\begin{DoxyCompactList}\small\item\em Sets the role used for editing the line edit with a chosen item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} \mbox{\hyperlink{classWt_1_1WSuggestionPopup_acba647adde23e76f2ce5446b60145aa0}{edit\+Role}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classWt_1_1WSuggestionPopup_abd240c095d36531f5f8241daec87a405}{generate\+Matcher\+JS}} (const \mbox{\hyperlink{structWt_1_1WSuggestionPopup_1_1Options}{Options}} \&options)
+\begin{DoxyCompactList}\small\item\em Creates a standard matcher Java\+Script function. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a1f2508617174249bcbe644b7c73c4a54}{generate\+Replacer\+JS}} (const \mbox{\hyperlink{structWt_1_1WSuggestionPopup_1_1Options}{Options}} \&options)
+\begin{DoxyCompactList}\small\item\em Creates a standard replacer Java\+Script function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a9d5a02e0693857a0fa7e67d13fcb3934}{render}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$ flags) override
+\begin{DoxyCompactList}\small\item\em Renders the widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a483034153942b84dd2da179107fe2043}\label{classWt_1_1WSuggestionPopup_a483034153942b84dd2da179107fe2043}} 
+void {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a314f81399217914fe00f02f9f3d70ec2}\label{classWt_1_1WSuggestionPopup_a314f81399217914fe00f02f9f3d70ec2}} 
+void {\bfseries schedule\+Filter} (std\+::string input)
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_af10ff04bd5fb4a2573d4e0520777738e}\label{classWt_1_1WSuggestionPopup_af10ff04bd5fb4a2573d4e0520777738e}} 
+void {\bfseries do\+Filter} (std\+::string input)
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a9537e78d3683c1d0b071116d877b61b4}\label{classWt_1_1WSuggestionPopup_a9537e78d3683c1d0b071116d877b61b4}} 
+void {\bfseries do\+Activate} (std\+::string item\+Id, std\+::string edit\+Id)
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_ae290ef12f6f33010d68b17d28470ac52}\label{classWt_1_1WSuggestionPopup_ae290ef12f6f33010d68b17d28470ac52}} 
+void {\bfseries connect\+Obj\+JS} (\mbox{\hyperlink{classWt_1_1EventSignalBase}{Event\+Signal\+Base}} \&s, const std\+::string \&method\+Name)
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_aeda79fd08c54a3cf5696f33b13c2e47a}\label{classWt_1_1WSuggestionPopup_aeda79fd08c54a3cf5696f33b13c2e47a}} 
+void {\bfseries model\+Rows\+Inserted} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a63ad8f5679e7ad1130e00bf5ddac819b}\label{classWt_1_1WSuggestionPopup_a63ad8f5679e7ad1130e00bf5ddac819b}} 
+void {\bfseries model\+Rows\+Removed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a454fd9174e223175b7a7298eaa14472c}\label{classWt_1_1WSuggestionPopup_a454fd9174e223175b7a7298eaa14472c}} 
+void {\bfseries model\+Data\+Changed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&top\+Left, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&bottom\+Right)
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a2d26e9f34b624aba4283c4700bd914ef}\label{classWt_1_1WSuggestionPopup_a2d26e9f34b624aba4283c4700bd914ef}} 
+void {\bfseries model\+Layout\+Changed} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a935def959cb911645f98d30a2facc7ce}\label{classWt_1_1WSuggestionPopup_a935def959cb911645f98d30a2facc7ce}} 
+bool {\bfseries partial\+Results} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a7d1a7b3e6a96fb968cca20f2b297aa7f}\label{classWt_1_1WSuggestionPopup_a7d1a7b3e6a96fb968cca20f2b297aa7f}} 
+void {\bfseries define\+Java\+Script} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_af9aac9024536219b18dd36fb0b34042e}\label{classWt_1_1WSuggestionPopup_af9aac9024536219b18dd36fb0b34042e}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$ {\bfseries impl\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a7c82680859d5b761461eafc1d3de6d2b}\label{classWt_1_1WSuggestionPopup_a7c82680859d5b761461eafc1d3de6d2b}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ {\bfseries model\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_ae5a2bac3665aa10b42381875678bc131}\label{classWt_1_1WSuggestionPopup_ae5a2bac3665aa10b42381875678bc131}} 
+int {\bfseries model\+Column\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a22d5c0c7790e39dfd63af75d4b37ab55}\label{classWt_1_1WSuggestionPopup_a22d5c0c7790e39dfd63af75d4b37ab55}} 
+int {\bfseries filter\+Length\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_aa3899dfb46cda28f34cb8984d7221992}\label{classWt_1_1WSuggestionPopup_aa3899dfb46cda28f34cb8984d7221992}} 
+bool {\bfseries filtering\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_ab702906d7b074df98c9f1007126eb643}\label{classWt_1_1WSuggestionPopup_ab702906d7b074df98c9f1007126eb643}} 
+int {\bfseries default\+Value\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a6c36d7ca69d6d93da567e8f978c282f4}\label{classWt_1_1WSuggestionPopup_a6c36d7ca69d6d93da567e8f978c282f4}} 
+bool {\bfseries is\+Drop\+Down\+Icon\+Unfiltered\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a93dfa0b121acee7b435ee7ec7324c186}\label{classWt_1_1WSuggestionPopup_a93dfa0b121acee7b435ee7ec7324c186}} 
+bool {\bfseries is\+Auto\+Select\+Enabled\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_ac046aac9afb97add0bb0ef03656e744b}\label{classWt_1_1WSuggestionPopup_ac046aac9afb97add0bb0ef03656e744b}} 
+int {\bfseries current\+Item\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_ae1d15a8aaa065eabbaa3f1e016f12d04}\label{classWt_1_1WSuggestionPopup_ae1d15a8aaa065eabbaa3f1e016f12d04}} 
+\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} {\bfseries edit\+Role\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_acc5ff6f7014791b95f0c921b21f571a2}\label{classWt_1_1WSuggestionPopup_acc5ff6f7014791b95f0c921b21f571a2}} 
+std\+::string {\bfseries matcher\+J\+S\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a33085eadb625d576a55531ed730b07e3}\label{classWt_1_1WSuggestionPopup_a33085eadb625d576a55531ed730b07e3}} 
+std\+::string {\bfseries replacer\+J\+S\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a60537396b6c376faf5392057e719ad36}\label{classWt_1_1WSuggestionPopup_a60537396b6c376faf5392057e719ad36}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ W\+T\+\_\+\+U\+S\+T\+R\+I\+NG $>$ {\bfseries filter\+Model\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a33e8b72de31278098d5d256325140e73}\label{classWt_1_1WSuggestionPopup_a33e8b72de31278098d5d256325140e73}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ int, \mbox{\hyperlink{classWt_1_1WFormWidget}{W\+Form\+Widget}} $\ast$ $>$ {\bfseries activated\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a3f459dba119019837af0cc42d55d6698}\label{classWt_1_1WSuggestionPopup_a3f459dba119019837af0cc42d55d6698}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} $>$ {\bfseries model\+Connections\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a05d334f31861b6e502b2ca4b6b98d015}\label{classWt_1_1WSuggestionPopup_a05d334f31861b6e502b2ca4b6b98d015}} 
+std\+::string {\bfseries current\+Input\+Text\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_ac9f6513b6c9cf7713806e35ae1a6107b}\label{classWt_1_1WSuggestionPopup_ac9f6513b6c9cf7713806e35ae1a6107b}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ std\+::string $>$ {\bfseries filter\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a77c62146b57ed51021fc2e01416b8161}\label{classWt_1_1WSuggestionPopup_a77c62146b57ed51021fc2e01416b8161}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ std\+::string, std\+::string $>$ {\bfseries jactivated\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_aea07ceb3aa91f162e8ded5fd8dde1041}\label{classWt_1_1WSuggestionPopup_aea07ceb3aa91f162e8ded5fd8dde1041}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WFormWidget}{W\+Form\+Widget}} $\ast$ $>$ {\bfseries edits\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A widget which popups to assist in editing a textarea or lineedit. 
+
+This widget may be associated with one or more \mbox{\hyperlink{classWt_1_1WFormWidget}{W\+Form\+Widgets}} (typically a \mbox{\hyperlink{classWt_1_1WLineEdit}{W\+Line\+Edit}} or a \mbox{\hyperlink{classWt_1_1WTextArea}{W\+Text\+Area}}).
+
+The popup provides the user with suggestions to enter input. The popup can be used by one or more editors, using \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a7be98d950273e379131aa1210798fd1a}{for\+Edit()}}. The popup will show when the user starts editing the edit field, or when the user opens the suggestions explicitly using a drop down icon or with the down key. The popup positions itself intelligently just below or just on top of the edit field. It offers a list of suggestions that match in some way with the current edit field, and dynamically adjusts this list. The implementation for matching individual suggestions with the current text is provided through a Java\+Script function. This function may also highlight part(s) of the suggestions to provide feed-\/back on how they match.
+
+W\+Suggestion\+Popup is an M\+VC view class, using a simple \mbox{\hyperlink{classWt_1_1WStringListModel}{W\+String\+List\+Model}} by default. You can set a custom model using \mbox{\hyperlink{classWt_1_1WSuggestionPopup_ad8ddf026a9b11b488199f5225df4e9fa}{set\+Model()}}. The model can provide different text for the suggestion text (\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Wt\+::\+Item\+Data\+Role\+::\+Display}}) and value (\mbox{\hyperlink{classWt_1_1WSuggestionPopup_acba647adde23e76f2ce5446b60145aa0}{edit\+Role()}}). The member methods \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a0beae292354fa79c2bbe68e9b11c8f01}{clear\+Suggestions()}} and \mbox{\hyperlink{classWt_1_1WSuggestionPopup_aaf9e6a5b8776533768f70a2ff44ab300}{add\+Suggestion()}} manipulate this model.
+
+By default, the popup implements all filtering client-\/side. To support large datasets, you may enable server-\/side filtering of suggestions based on the input. The server-\/side filtering may provide a coarse filtering using a fixed size prefix of the entered text, and complement the client-\/side filtering. To enable server-\/side filtering, use \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a8a77e3397fa98db0639fca3b1c94a8a2}{set\+Filter\+Length()}} and listen to filter notification using the model\+Filter() signal. Whenever a filter event is generated you can adjust the model\textquotesingle{}s content according to the filter (e.\+g. using a \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel}{W\+Sort\+Filter\+Proxy\+Model}}). By using \mbox{\hyperlink{classWt_1_1WCompositeWidget_a8d6e43eec426afb7d96a200abe246ad7}{set\+Maximum\+Size()}} you can also limit the maximum height of the popup, in which case scrolling is supported (similar to a combo-\/box).
+
+The class is initialized with an \mbox{\hyperlink{structWt_1_1WSuggestionPopup_1_1Options}{Options}} struct which configures how suggestion filtering and result editing is done. Alternatively, you can provide two Java\+Script functions, one for filtering the suggestions, and one for editing the value of the textarea when a suggestion is selected.
+
+The matcher\+JS function must have the following Java\+Script signature\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{function} (editElement) \{}
+\DoxyCodeLine{  \textcolor{comment}{// fetch the location of cursor and current text in the editElement.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \textcolor{comment}{// return a function that matches a given suggestion with the current value of the editElement.}}
+\DoxyCodeLine{  \textcolor{keywordflow}{return} \textcolor{keyword}{function}(suggestion) \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// 1) if suggestion is null, simply return the current text 'value'}}
+\DoxyCodeLine{    \textcolor{comment}{// 2) check suggestion if it matches}}
+\DoxyCodeLine{    \textcolor{comment}{// 3) add highlighting markup to suggestion if necessary}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} \{ match : ...,      \textcolor{comment}{// does the suggestion match ? (boolean)}}
+\DoxyCodeLine{             suggestion : ...  \textcolor{comment}{// modified suggestion with highlighting}}
+\DoxyCodeLine{            \};}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+The replacer\+JS function that edits the value has the following Java\+Script signature.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{function} (editElement, suggestionText, suggestionValue) \{}
+\DoxyCodeLine{  \textcolor{comment}{// editElement is the form element which must be edited.}}
+\DoxyCodeLine{  \textcolor{comment}{// suggestionText is the displayed text for the matched suggestion.}}
+\DoxyCodeLine{  \textcolor{comment}{// suggestionValue is the stored value for the matched suggestion.}}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \textcolor{comment}{// computed modifiedEditValue and modifiedPos ...}}
+\DoxyCodeLine{}
+\DoxyCodeLine{  editElement.value = modifiedEditValue;}
+\DoxyCodeLine{  editElement.selectionStart = edit.selectionEnd = modifiedPos;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+To style the suggestions, you should style the $<$span$>$ element inside this widget, and the $<$span$>$.\char`\"{}sel\char`\"{} element to style the current selection.
+
+Usage example\+:
+
+\begin{DoxyNote}{Note}
+This widget is not supposed to be added explicitly, as it is a global widget (much like \mbox{\hyperlink{classWt_1_1WPopupWidget}{W\+Popup\+Widget}}). Managing its lifetime can be achieved with \mbox{\hyperlink{classWt_1_1WContainerWidget_acf75dda5024db05cf847c282f8a99117}{W\+Container\+Widget\+::add\+New()}} or \mbox{\hyperlink{classWt_1_1WObject_a3de0f0baf35f42aa4e77a90d427f2e11}{W\+Object\+::add\+Child()}}, where the former uses the latter. Do N\+OT bind it to a template using \mbox{\hyperlink{classWt_1_1WTemplate_a06b821ef6d6c684ea7c708a13d66fce7}{W\+Template\+::bind\+Widget()}}, \mbox{\hyperlink{classWt_1_1WTemplate_a240f910cd1e3d5b7876aa20f6b33767c}{W\+Template\+::bind\+New()}} or \mbox{\hyperlink{classWt_1_1WLayout_a0346e81ecebed58c0b11bf037c6fdd73}{W\+Layout\+::add\+Widget()}}. If bound this way, the placeholder is not replaced with the correct list of suggestions, since this causes the widget to be placed into the widget tree twice.
+\end{DoxyNote}
+A screenshot of this example\+: \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+  &   \\\cline{1-2}
+\end{longtabu}
+
+
+When using the Drop\+Down\+Icon trigger, an additional style class is provided for the edit field\+: {\ttfamily Wt-\/suggest-\/dropdown}, which renders the icon to the right inside the edit field. This class may be used to customize how the drop down icon is rendered.
+
+\begin{DoxyNote}{Note}
+This widget requires Java\+Script support. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a1a7bb55dd66cdcbfb1af8e3af852967f}\label{classWt_1_1WSuggestionPopup_a1a7bb55dd66cdcbfb1af8e3af852967f}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!WSuggestionPopup@{WSuggestionPopup}}
+\index{WSuggestionPopup@{WSuggestionPopup}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{WSuggestionPopup()}{WSuggestionPopup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Suggestion\+Popup\+::\+W\+Suggestion\+Popup (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structWt_1_1WSuggestionPopup_1_1Options}{Options}} \&}]{options }\end{DoxyParamCaption})}
+
+
+
+Creates a suggestion popup. 
+
+The popup using a standard matcher and replacer implementation that is configured using the provided {\ttfamily options}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSuggestionPopup_abd240c095d36531f5f8241daec87a405}{generate\+Matcher\+J\+S()}}, \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a1f2508617174249bcbe644b7c73c4a54}{generate\+Replacer\+J\+S()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a316d9f8e16740ba2ededfc800055e1db}\label{classWt_1_1WSuggestionPopup_a316d9f8e16740ba2ededfc800055e1db}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!WSuggestionPopup@{WSuggestionPopup}}
+\index{WSuggestionPopup@{WSuggestionPopup}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{WSuggestionPopup()}{WSuggestionPopup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Suggestion\+Popup\+::\+W\+Suggestion\+Popup (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{matcher\+JS,  }\item[{const std\+::string \&}]{replacer\+JS }\end{DoxyParamCaption})}
+
+
+
+Creates a suggestion popup with given matcher\+JS and replacer\+JS. 
+
+See supra for the expected signature of the matcher and replace Java\+Script functions. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a63f0db2301510404922d7ed1572b92cc}\label{classWt_1_1WSuggestionPopup_a63f0db2301510404922d7ed1572b92cc}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!activated@{activated}}
+\index{activated@{activated}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{activated()}{activated()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$int, \mbox{\hyperlink{classWt_1_1WFormWidget}{W\+Form\+Widget}} $\ast$$>$\& Wt\+::\+W\+Suggestion\+Popup\+::activated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when a suggestion was selected. 
+
+The selected item is passed as the first argument and the editor as the second. \mbox{\Hypertarget{classWt_1_1WSuggestionPopup_aaf9e6a5b8776533768f70a2ff44ab300}\label{classWt_1_1WSuggestionPopup_aaf9e6a5b8776533768f70a2ff44ab300}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!addSuggestion@{addSuggestion}}
+\index{addSuggestion@{addSuggestion}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{addSuggestion()}{addSuggestion()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Suggestion\+Popup\+::add\+Suggestion (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{suggestion\+Text,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{suggestion\+Value = {\ttfamily \mbox{\hyperlink{classWt_1_1WString_a511a12bce677dc733bd7b6b9415bff73}{W\+String\+::\+Empty}}} }\end{DoxyParamCaption})}
+
+
+
+Adds a new suggestion. 
+
+This adds an entry to the underlying model. The {\ttfamily suggestion\+Text} is set as \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Wt\+::\+Item\+Data\+Role\+::\+Display}} and the {\ttfamily suggestion\+Value} (which is inserted into the edit field on selection) is set as \mbox{\hyperlink{classWt_1_1WSuggestionPopup_acba647adde23e76f2ce5446b60145aa0}{edit\+Role()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSuggestionPopup_a0beae292354fa79c2bbe68e9b11c8f01}{clear\+Suggestions()}}, \mbox{\hyperlink{classWt_1_1WSuggestionPopup_ad8ddf026a9b11b488199f5225df4e9fa}{set\+Model()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a0beae292354fa79c2bbe68e9b11c8f01}\label{classWt_1_1WSuggestionPopup_a0beae292354fa79c2bbe68e9b11c8f01}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!clearSuggestions@{clearSuggestions}}
+\index{clearSuggestions@{clearSuggestions}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{clearSuggestions()}{clearSuggestions()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Suggestion\+Popup\+::clear\+Suggestions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the list of suggestions. 
+
+This clears the underlying model.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSuggestionPopup_aaf9e6a5b8776533768f70a2ff44ab300}{add\+Suggestion()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a9e6ca6d273c35a601be67d88baf8f152}\label{classWt_1_1WSuggestionPopup_a9e6ca6d273c35a601be67d88baf8f152}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!currentItem@{currentItem}}
+\index{currentItem@{currentItem}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{currentItem()}{currentItem()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Suggestion\+Popup\+::current\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the last activated index. 
+
+Returns -\/1 if the popup hasn\textquotesingle{}t been activated yet.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSuggestionPopup_a63f0db2301510404922d7ed1572b92cc}{activated()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a7862617bf671b9ec1e5e0913ef9d41d7}\label{classWt_1_1WSuggestionPopup_a7862617bf671b9ec1e5e0913ef9d41d7}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!defaultIndex@{defaultIndex}}
+\index{defaultIndex@{defaultIndex}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{defaultIndex()}{defaultIndex()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Suggestion\+Popup\+::default\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the default value. 
+
+\begin{DoxySeeAlso}{See also}
+set\+Default\+Value() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_acba647adde23e76f2ce5446b60145aa0}\label{classWt_1_1WSuggestionPopup_acba647adde23e76f2ce5446b60145aa0}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!editRole@{editRole}}
+\index{editRole@{editRole}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{editRole()}{editRole()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} Wt\+::\+W\+Suggestion\+Popup\+::edit\+Role (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the role used for editing the line edit.
+
+{\itshape \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a0abf89a25ea7eece7d36391d56130cf7}{set\+Edit\+Role()}}} \mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a435ee99263664abf776b576e13e5dc20}\label{classWt_1_1WSuggestionPopup_a435ee99263664abf776b576e13e5dc20}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!filterLength@{filterLength}}
+\index{filterLength@{filterLength}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{filterLength()}{filterLength()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Suggestion\+Popup\+::filter\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the filter length. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSuggestionPopup_a8a77e3397fa98db0639fca3b1c94a8a2}{set\+Filter\+Length()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_aa68996a7cebbb4eb0b78c99424e9d231}\label{classWt_1_1WSuggestionPopup_aa68996a7cebbb4eb0b78c99424e9d231}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!filterModel@{filterModel}}
+\index{filterModel@{filterModel}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{filterModel()}{filterModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$W\+T\+\_\+\+U\+S\+T\+R\+I\+NG$>$\& Wt\+::\+W\+Suggestion\+Popup\+::filter\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal that indicates that the model should be filtered. 
+
+The argument is the initial input. When \mbox{\hyperlink{}{Editing}} is used as edit trigger, its length will always equal the \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a435ee99263664abf776b576e13e5dc20}{filter\+Length()}}. When \mbox{\hyperlink{}{Drop\+Down\+Icon}} is used as edit trigger, the input length may be less than \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a435ee99263664abf776b576e13e5dc20}{filter\+Length()}}, and the the signal will be called repeatedly as the user provides more input.
+
+For example, if you are using a \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel}{W\+Sort\+Filter\+Proxy\+Model}}, you could react to this signal with\+: \mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a7be98d950273e379131aa1210798fd1a}\label{classWt_1_1WSuggestionPopup_a7be98d950273e379131aa1210798fd1a}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!forEdit@{forEdit}}
+\index{forEdit@{forEdit}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{forEdit()}{forEdit()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Suggestion\+Popup\+::for\+Edit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormWidget}{W\+Form\+Widget}} $\ast$}]{edit,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a96fbe5a99e9cedcd4e70f190eb7a1cdf}{Popup\+Trigger}} $>$}]{popup\+Triggers = {\ttfamily PopupTrigger\+:\+:Editing} }\end{DoxyParamCaption})}
+
+
+
+Lets this suggestion popup assist in editing an edit field. 
+
+A single suggestion popup may assist in several edits by repeated calls of this method.
+
+The {\ttfamily popup\+Triggers} control how editing is triggered (either by the user editing the field by entering keys or by an explicit drop down menu that is shown inside the edit).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSuggestionPopup_ad8e85625b9309639222ed1893c57713a}{remove\+Edit()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_abd240c095d36531f5f8241daec87a405}\label{classWt_1_1WSuggestionPopup_abd240c095d36531f5f8241daec87a405}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!generateMatcherJS@{generateMatcherJS}}
+\index{generateMatcherJS@{generateMatcherJS}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{generateMatcherJS()}{generateMatcherJS()}}
+{\footnotesize\ttfamily static std\+::string Wt\+::\+W\+Suggestion\+Popup\+::generate\+Matcher\+JS (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structWt_1_1WSuggestionPopup_1_1Options}{Options}} \&}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a standard matcher Java\+Script function. 
+
+This returns a Java\+Script function that provides a standard implementation for the matching input, based on the given {\ttfamily options}. \mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a1f2508617174249bcbe644b7c73c4a54}\label{classWt_1_1WSuggestionPopup_a1f2508617174249bcbe644b7c73c4a54}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!generateReplacerJS@{generateReplacerJS}}
+\index{generateReplacerJS@{generateReplacerJS}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{generateReplacerJS()}{generateReplacerJS()}}
+{\footnotesize\ttfamily static std\+::string Wt\+::\+W\+Suggestion\+Popup\+::generate\+Replacer\+JS (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structWt_1_1WSuggestionPopup_1_1Options}{Options}} \&}]{options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a standard replacer Java\+Script function. 
+
+This returns a Java\+Script function that provides a standard implementation for reacting to a match activation, editing the line edit text. \mbox{\Hypertarget{classWt_1_1WSuggestionPopup_aa9add86dd6d1d8bd410901734a8db2ee}\label{classWt_1_1WSuggestionPopup_aa9add86dd6d1d8bd410901734a8db2ee}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!model@{model}}
+\index{model@{model}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{model()}{model()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}}$>$ Wt\+::\+W\+Suggestion\+Popup\+::model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the data model. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSuggestionPopup_ad8ddf026a9b11b488199f5225df4e9fa}{set\+Model()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_ad8e85625b9309639222ed1893c57713a}\label{classWt_1_1WSuggestionPopup_ad8e85625b9309639222ed1893c57713a}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!removeEdit@{removeEdit}}
+\index{removeEdit@{removeEdit}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{removeEdit()}{removeEdit()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Suggestion\+Popup\+::remove\+Edit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormWidget}{W\+Form\+Widget}} $\ast$}]{edit }\end{DoxyParamCaption})}
+
+
+
+Removes the edit field from the list of assisted editors. 
+
+The editor will no longer be assisted by this popup widget.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSuggestionPopup_a7be98d950273e379131aa1210798fd1a}{for\+Edit()}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a9d5a02e0693857a0fa7e67d13fcb3934}\label{classWt_1_1WSuggestionPopup_a9d5a02e0693857a0fa7e67d13fcb3934}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!render@{render}}
+\index{render@{render}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Suggestion\+Popup\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Renders the widget. 
+
+This function renders the widget (or an update for the widget), after this has been scheduled using \mbox{\hyperlink{classWt_1_1WWidget_a5d3d4edaafa2d7c892a5078f3df4cf11}{schedule\+Render()}}.
+
+The default implementation will render the widget by serializing changes to Java\+Script and H\+T\+ML. You may want to reimplement this widget if you have been postponing some of the layout / rendering implementation until the latest moment possible. In that case you should make sure you call the base implementation however. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WPopupWidget_a0274232e09629de47a12eb57ff8c1bc0}{Wt\+::\+W\+Popup\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_acf2110ee2b2c13ce14530d3cd1e35328}\label{classWt_1_1WSuggestionPopup_acf2110ee2b2c13ce14530d3cd1e35328}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!setAutoSelectEnabled@{setAutoSelectEnabled}}
+\index{setAutoSelectEnabled@{setAutoSelectEnabled}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{setAutoSelectEnabled()}{setAutoSelectEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Suggestion\+Popup\+::set\+Auto\+Select\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+When the popup is opened the first item is automatically selected. 
+
+This cannot be changed after the widget is rendered. The default value is true. \mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a9ebf63d4048a9662c3e05ae6be162993}\label{classWt_1_1WSuggestionPopup_a9ebf63d4048a9662c3e05ae6be162993}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!setDefaultIndex@{setDefaultIndex}}
+\index{setDefaultIndex@{setDefaultIndex}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{setDefaultIndex()}{setDefaultIndex()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Suggestion\+Popup\+::set\+Default\+Index (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})}
+
+
+
+Sets a default selected value. 
+
+{\ttfamily row} is the model row that is selected by default (only if it matches the current input).
+
+The default value is -\/1, indicating no default. \mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a0395bd5080856eb95ccb50748f25d1c7}\label{classWt_1_1WSuggestionPopup_a0395bd5080856eb95ccb50748f25d1c7}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!setDropDownIconUnfiltered@{setDropDownIconUnfiltered}}
+\index{setDropDownIconUnfiltered@{setDropDownIconUnfiltered}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{setDropDownIconUnfiltered()}{setDropDownIconUnfiltered()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Suggestion\+Popup\+::set\+Drop\+Down\+Icon\+Unfiltered (\begin{DoxyParamCaption}\item[{bool}]{is\+Unfiltered }\end{DoxyParamCaption})}
+
+
+
+When drop down icon is clicked the popup content will be unfiltered. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSuggestionPopup_a7be98d950273e379131aa1210798fd1a}{for\+Edit()}} and enum \mbox{\hyperlink{classWt_a96fbe5a99e9cedcd4e70f190eb7a1cdf}{Popup\+Trigger}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a0abf89a25ea7eece7d36391d56130cf7}\label{classWt_1_1WSuggestionPopup_a0abf89a25ea7eece7d36391d56130cf7}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!setEditRole@{setEditRole}}
+\index{setEditRole@{setEditRole}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{setEditRole()}{setEditRole()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Suggestion\+Popup\+::set\+Edit\+Role (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the role used for editing the line edit with a chosen item. 
+
+The default value is \mbox{\hyperlink{classWt_1_1ItemDataRole_a599e420c7dc508cebf6586628e218992}{Item\+Data\+Role\+::\+User}}. \mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a8a77e3397fa98db0639fca3b1c94a8a2}\label{classWt_1_1WSuggestionPopup_a8a77e3397fa98db0639fca3b1c94a8a2}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!setFilterLength@{setFilterLength}}
+\index{setFilterLength@{setFilterLength}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{setFilterLength()}{setFilterLength()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Suggestion\+Popup\+::set\+Filter\+Length (\begin{DoxyParamCaption}\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Sets the minimum input length before showing the popup. 
+
+When the user has typed this much characters, \mbox{\hyperlink{classWt_1_1WSuggestionPopup_aa68996a7cebbb4eb0b78c99424e9d231}{filter\+Model()}} is emitted which allows you to filter the model based on the initial input. The filtering is done as long as the model indicates that results are partial by setting a \mbox{\hyperlink{classWt_1_1ItemDataRole_ac91a7ef0ee5b9c13fd74ce2a1c57ecb9}{Item\+Data\+Role\+::\+Style\+Class}} of \char`\"{}\+Wt-\/more-\/data\char`\"{} on the last item.
+
+The default value is 0.
+
+A value of -\/1 is a equivalent to 0 but filtering is always applied as if the last item always has \char`\"{}\+Wt-\/more-\/data\char`\"{} (for backwards compatibility)
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSuggestionPopup_aa68996a7cebbb4eb0b78c99424e9d231}{filter\+Model()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_ad8ddf026a9b11b488199f5225df4e9fa}\label{classWt_1_1WSuggestionPopup_ad8ddf026a9b11b488199f5225df4e9fa}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!setModel@{setModel}}
+\index{setModel@{setModel}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{setModel()}{setModel()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Suggestion\+Popup\+::set\+Model (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \&}]{model }\end{DoxyParamCaption})}
+
+
+
+Sets the model to be used for the suggestions. 
+
+The {\ttfamily model} may not be {\ttfamily 0}.
+
+The default value is a \mbox{\hyperlink{classWt_1_1WStringListModel}{W\+String\+List\+Model}} that is owned by the suggestion popup.
+
+The \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Wt\+::\+Item\+Data\+Role\+::\+Display}} is used for the suggestion text. The \mbox{\hyperlink{classWt_1_1WSuggestionPopup_acba647adde23e76f2ce5446b60145aa0}{edit\+Role()}} is used for the suggestion value, unless empty, in which case the suggestion text is used as value.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSuggestionPopup_a6616d230bad6511bc40d3bf2c1e4ec84}{set\+Model\+Column(int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a6616d230bad6511bc40d3bf2c1e4ec84}\label{classWt_1_1WSuggestionPopup_a6616d230bad6511bc40d3bf2c1e4ec84}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!setModelColumn@{setModelColumn}}
+\index{setModelColumn@{setModelColumn}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{setModelColumn()}{setModelColumn()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Suggestion\+Popup\+::set\+Model\+Column (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Sets the column in the model to be used for the items. 
+
+The column {\ttfamily index} in the model will be used to retrieve data.
+
+The default value is 0.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSuggestionPopup_ad8ddf026a9b11b488199f5225df4e9fa}{set\+Model()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSuggestionPopup_a0dd2b20a4a1505d464a8213585bbc4d3}\label{classWt_1_1WSuggestionPopup_a0dd2b20a4a1505d464a8213585bbc4d3}} 
+\index{Wt::WSuggestionPopup@{Wt::WSuggestionPopup}!showAt@{showAt}}
+\index{showAt@{showAt}!Wt::WSuggestionPopup@{Wt::WSuggestionPopup}}
+\doxysubsubsection{\texorpdfstring{showAt()}{showAt()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Suggestion\+Popup\+::show\+At (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormWidget}{W\+Form\+Widget}} $\ast$}]{edit }\end{DoxyParamCaption})}
+
+
+
+Shows the suggestion popup at an edit field. 
+
+This is equivalent to the user triggering the suggestion popup to be shown. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Suggestion\+Popup.\+h\end{DoxyCompactItemize}

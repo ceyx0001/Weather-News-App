@@ -1,0 +1,562 @@
+\hypertarget{classWt_1_1Auth_1_1AuthWidget}{}\doxysection{Wt\+::Auth\+::Auth\+Widget Class Reference}
+\label{classWt_1_1Auth_1_1AuthWidget}\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+
+
+An authentication widget.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Auth/\+Auth\+Widget.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Auth\+::Auth\+Widget\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Auth\+::Auth\+Widget\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a90ffdf515a53e24b6b545bf6b9e1bcc9}{Auth\+Widget}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} \&base\+Auth, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&users, \mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_ada371aafa2d133314decb29f4520b75e}{login}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a37c7b8bf18ccf5fb14a570a923807ee4}{Auth\+Widget}} (\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_ada371aafa2d133314decb29f4520b75e}{login}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a93036a2d6cb7b39fa5101172591a717c}{set\+Model}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel}{Auth\+Model}} $>$ \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a976da62e6cde8e5ef132b1caaaecd80b}{model}})
+\begin{DoxyCompactList}\small\item\em Sets a model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel}{Auth\+Model}} $\ast$ \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a976da62e6cde8e5ef132b1caaaecd80b}{model}} () const
+\begin{DoxyCompactList}\small\item\em Returns the model. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \& \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_ada371aafa2d133314decb29f4520b75e}{login}} ()
+\begin{DoxyCompactList}\small\item\em Returns the login object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a3d8e977c355660bcc2441ac11b42f97a}{set\+Internal\+Base\+Path}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Sets an internal path for authentication services. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_aa5c848614e0ad2fb4c5a8ba168e55337}{internal\+Base\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Returns the internal path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a155794d70cfd4c07c44b0efdd7dec341}{set\+Registration\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Configures registration capabilities. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_af39805f0625f450368250fed8fe7a244}{register\+New\+User}} ()
+\begin{DoxyCompactList}\small\item\em Starts a new registration process. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_accff77c9e5da1cfe35a9f4b40912c549}{register\+New\+User}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} \&oauth)
+\begin{DoxyCompactList}\small\item\em Starts a new registration process. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_ad8f632750848aff23e6b5e0cc339fd6a}{process\+Environment}} ()
+\begin{DoxyCompactList}\small\item\em Processes the (initial) environment. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a329e19c031931985754a167d4548cc73}{let\+Update\+Password}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, bool prompt\+Password)
+\begin{DoxyCompactList}\small\item\em Lets the user update his password. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a535362e830906146d03196c53d091e57}{handle\+Lost\+Password}} ()
+\begin{DoxyCompactList}\small\item\em Lets the user \char`\"{}recover\char`\"{} a lost password. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a03a7561dea01e05ae40d3cd6878def3c}{create\+Lost\+Password\+View}} ()
+\begin{DoxyCompactList}\small\item\em Creates a lost password view. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a3418753815e2e9e985b8949c0ca5a8b4}{create\+Registration\+View}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} \&\mbox{\hyperlink{classWt_1_1WWebWidget_ab438c51f9184d0ed37d01b15f07355d6}{id}})
+\begin{DoxyCompactList}\small\item\em Creates a registration view. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_ab3bb51abf888ba41eadb43b2a7a83a47}{create\+Update\+Password\+View}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, bool prompt\+Password)
+\begin{DoxyCompactList}\small\item\em Creates a view to update a user\textquotesingle{}s password. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WDialog}{W\+Dialog}} $>$ \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a5f933e20250589dbdfd263b523e43d7d}{create\+Password\+Prompt\+Dialog}} (\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_ada371aafa2d133314decb29f4520b75e}{login}})
+\begin{DoxyCompactList}\small\item\em Creates a password prompt dialog. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_ad1ffae28b0ac13a3261a6b696a865bb9}\label{classWt_1_1Auth_1_1AuthWidget_ad1ffae28b0ac13a3261a6b696a865bb9}} 
+void {\bfseries attempt\+Password\+Login} ()
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a74db7514fae746b38c740f0f84f2a5ed}{display\+Error}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&error)
+\begin{DoxyCompactList}\small\item\em Displays the error message. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_ac6b2b426b98b80242e694f9c8abe2cf3}{display\+Info}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&message)
+\begin{DoxyCompactList}\small\item\em Displays the info message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a72aac864739c3f40d89f16ca755b6558}{create}} ()
+\begin{DoxyCompactList}\small\item\em Creates the user-\/interface. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a1a49d9d960a47a9fa76d18019c1131e9}{create\+Login\+View}} ()
+\begin{DoxyCompactList}\small\item\em Creates the login view. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a64104075278ad82fcdff3cb773433d6f}{create\+Logged\+In\+View}} ()
+\begin{DoxyCompactList}\small\item\em Creates the view shown when the user is logged in. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a577fcd126234d449affd90d91e8faa52}{create\+Password\+Login\+View}} ()
+\begin{DoxyCompactList}\small\item\em Creates a password login view. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_abaf26ea2fc953484c939b22b1c12b9bc}{create\+O\+Auth\+Login\+View}} ()
+\begin{DoxyCompactList}\small\item\em Creates a widget to login using O\+Auth. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WDialog}{W\+Dialog}} $\ast$ \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_aa9c74b352db29938b69714e976b201b9}{show\+Dialog}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&title, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ contents)
+\begin{DoxyCompactList}\small\item\em Shows a dialog. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel}{Registration\+Model}} $>$ \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a9e37d14c54f17647d07cbadb465b1366}{create\+Registration\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Creates a registration model. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_aec7a212242995cb2bb977cc63d875dd7}\label{classWt_1_1Auth_1_1AuthWidget_aec7a212242995cb2bb977cc63d875dd7}} 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ {\bfseries create\+Form\+Widget} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Auth\+Model\+::\+Field}} field) override
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a5470adb0b8ee27dbcb189b87f0980d35}{render}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$ flags) override
+\begin{DoxyCompactList}\small\item\em Renders the widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a20dcccd1e8924675b866157d0d4b28ef}\label{classWt_1_1Auth_1_1AuthWidget_a20dcccd1e8924675b866157d0d4b28ef}} 
+void {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_ad09f8337125bac9037f92cc0d95d9c61}\label{classWt_1_1Auth_1_1AuthWidget_ad09f8337125bac9037f92cc0d95d9c61}} 
+void {\bfseries logout} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a4187287d2dbe4b29a9dd3a6ddea1b62c}\label{classWt_1_1Auth_1_1AuthWidget_a4187287d2dbe4b29a9dd3a6ddea1b62c}} 
+void {\bfseries login\+Throttle} (int delay)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a8295bf812ade1cb8c4630454a6ca92f9}\label{classWt_1_1Auth_1_1AuthWidget_a8295bf812ade1cb8c4630454a6ca92f9}} 
+void {\bfseries close\+Dialog} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_ad42e797fb26361e8d07aed4568cd7b4e}\label{classWt_1_1Auth_1_1AuthWidget_ad42e797fb26361e8d07aed4568cd7b4e}} 
+void {\bfseries on\+Login\+Change} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_ac9280108ec419366e5c9709652c2c9ed}\label{classWt_1_1Auth_1_1AuthWidget_ac9280108ec419366e5c9709652c2c9ed}} 
+void {\bfseries on\+Path\+Change} (const std\+::string \&path)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a90b64ca09a35ea26f59cab7c4e827d91}\label{classWt_1_1Auth_1_1AuthWidget_a90b64ca09a35ea26f59cab7c4e827d91}} 
+bool {\bfseries handle\+Registration\+Path} (const std\+::string \&path)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a68267ee0fa2eaca7b54f86b25cca21d8}\label{classWt_1_1Auth_1_1AuthWidget_a68267ee0fa2eaca7b54f86b25cca21d8}} 
+void {\bfseries o\+Auth\+State\+Change} (\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess}{O\+Auth\+Process}} $\ast$process)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_ae04c3bcba34c112cd4e064df32798f63}\label{classWt_1_1Auth_1_1AuthWidget_ae04c3bcba34c112cd4e064df32798f63}} 
+void {\bfseries o\+Auth\+Done} (\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess}{O\+Auth\+Process}} $\ast$process, const \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} \&identity)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a4684be22bb613e68a8d2b40bce66dcf4}\label{classWt_1_1Auth_1_1AuthWidget_a4684be22bb613e68a8d2b40bce66dcf4}} 
+void {\bfseries update\+Password\+Login\+View} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_aeb1811bdc6cac1c3d9f308b661f02a37}\label{classWt_1_1Auth_1_1AuthWidget_aeb1811bdc6cac1c3d9f308b661f02a37}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel}{Auth\+Model}} $>$ {\bfseries model\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a72bdc4f59200559013534188a5d89aaf}\label{classWt_1_1Auth_1_1AuthWidget_a72bdc4f59200559013534188a5d89aaf}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel}{Registration\+Model}} $>$ {\bfseries registration\+Model\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a339354804123b64939597276548a4d45}\label{classWt_1_1Auth_1_1AuthWidget_a339354804123b64939597276548a4d45}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \& {\bfseries login\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_afbbbdbffab1e8ca65fe1a91e2780560b}\label{classWt_1_1Auth_1_1AuthWidget_afbbbdbffab1e8ca65fe1a91e2780560b}} 
+std\+::string {\bfseries base\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a4ac4ba648249e5e14057438ac4a66aab}\label{classWt_1_1Auth_1_1AuthWidget_a4ac4ba648249e5e14057438ac4a66aab}} 
+bool {\bfseries registration\+Enabled\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a0756bed06d9552779f7deaba962e5d0d}\label{classWt_1_1Auth_1_1AuthWidget_a0756bed06d9552779f7deaba962e5d0d}} 
+bool {\bfseries created\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a2ff2f099bda2ffdaa8ac5db6774aa25f}\label{classWt_1_1Auth_1_1AuthWidget_a2ff2f099bda2ffdaa8ac5db6774aa25f}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WDialog}{W\+Dialog}} $>$ {\bfseries dialog\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a7efeba0d43fa7a3a52c56b1a52b54069}\label{classWt_1_1Auth_1_1AuthWidget_a7efeba0d43fa7a3a52c56b1a52b54069}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WMessageBox}{W\+Message\+Box}} $>$ {\bfseries message\+Box\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An authentication widget. 
+
+The authentication widget is a widget that provides a login or logout function (depending on whether the user is currently logged in). You can use it for either or both purposes.
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} or logout events are signalled to a \mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} object on which this widget acts.
+
+The widget also processes environmental information related to authentication\+:
+
+
+\begin{DoxyItemize}
+\item email tokens, which are indicated in an internal path. The widget uses dialogs (by default) to interact with the user to act on the token.
+\item authentication tokens, which are stored in browser cookies, to implement remember-\/me functionality.
+\end{DoxyItemize}
+
+The \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_ad8f632750848aff23e6b5e0cc339fd6a}{process\+Environment()}} method initiates this process, and should typically be called only at application startup time.
+
+The authentication widget is implemented as a View for an \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel}{Auth\+Model}}, which can be set using \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a93036a2d6cb7b39fa5101172591a717c}{set\+Model()}}. The login logic (at this moment only for password-\/based authentication) is handled by this model.
+
+It is very likely that the off-\/the shelf authentication widget does not satisfy entirely to your taste or functional requirements. The widget uses three methods to allow customization\+:
+
+
+\begin{DoxyItemize}
+\item as a \mbox{\hyperlink{classWt_1_1WTemplateFormView}{W\+Template\+Form\+View}}, you may change the layout and styling of to your liking.
+\item the authentication logic is delegated to an \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel}{Auth\+Model}} and can can be specialized or can be used with a custom view altogether.
+\item the views are created using virtual methods, which may be specialized to create a customized view or to apply changes to the default view. 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a90ffdf515a53e24b6b545bf6b9e1bcc9}\label{classWt_1_1Auth_1_1AuthWidget_a90ffdf515a53e24b6b545bf6b9e1bcc9}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!AuthWidget@{AuthWidget}}
+\index{AuthWidget@{AuthWidget}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{AuthWidget()}{AuthWidget()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wt\+::\+Auth\+::\+Auth\+Widget\+::\+Auth\+Widget (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} \&}]{base\+Auth,  }\item[{\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&}]{users,  }\item[{\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \&}]{login }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Creates a new authentication widget. This creates an \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel}{Auth\+Model}} using the given authentication service {\ttfamily base\+Auth} and user database {\ttfamily users}.
+
+The result of authentication changes is propagated to the rest of the application using a {\ttfamily login} object.
+
+Authentication services need to be configured in the \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a976da62e6cde8e5ef132b1caaaecd80b}{model()}}. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a37c7b8bf18ccf5fb14a570a923807ee4}\label{classWt_1_1Auth_1_1AuthWidget_a37c7b8bf18ccf5fb14a570a923807ee4}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!AuthWidget@{AuthWidget}}
+\index{AuthWidget@{AuthWidget}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{AuthWidget()}{AuthWidget()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wt\+::\+Auth\+::\+Auth\+Widget\+::\+Auth\+Widget (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \&}]{login }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Creates a new authentication widget.
+
+The result of authentication changes is propagated to the rest of the application using a {\ttfamily login} object.
+
+You need to call \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a93036a2d6cb7b39fa5101172591a717c}{set\+Model()}} to configure a model for this view. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a72aac864739c3f40d89f16ca755b6558}\label{classWt_1_1Auth_1_1AuthWidget_a72aac864739c3f40d89f16ca755b6558}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!create@{create}}
+\index{create@{create}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Widget\+::create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates the user-\/interface. 
+
+This method is called just before an initial rendering, and creates the initial view.
+
+The default implementation calls \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a1a49d9d960a47a9fa76d18019c1131e9}{create\+Login\+View()}} or \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a64104075278ad82fcdff3cb773433d6f}{create\+Logged\+In\+View()}} depending on whether a user is currently logged in. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a64104075278ad82fcdff3cb773433d6f}\label{classWt_1_1Auth_1_1AuthWidget_a64104075278ad82fcdff3cb773433d6f}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!createLoggedInView@{createLoggedInView}}
+\index{createLoggedInView@{createLoggedInView}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{createLoggedInView()}{createLoggedInView()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Widget\+::create\+Logged\+In\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates the view shown when the user is logged in. 
+
+The default implementation renders the {\ttfamily \char`\"{}\+Wt.\+Auth.\+template.\+logged-\/in\char`\"{}} template. 
+
+Reimplemented in \mbox{\hyperlink{classBlogLoginWidget_a30ae3c2324c49c3541abedafee5728e9}{Blog\+Login\+Widget}}, and \mbox{\hyperlink{classOAuthWidget_a855fe19b486d39310ea2709e842f6897}{O\+Auth\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a1a49d9d960a47a9fa76d18019c1131e9}\label{classWt_1_1Auth_1_1AuthWidget_a1a49d9d960a47a9fa76d18019c1131e9}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!createLoginView@{createLoginView}}
+\index{createLoginView@{createLoginView}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{createLoginView()}{createLoginView()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Widget\+::create\+Login\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates the login view. 
+
+This creates a view that allows the user to login, and is shown when no user is current logged in.
+
+The default implementation renders the {\ttfamily \char`\"{}\+Wt.\+Auth.\+template.\+login\char`\"{}} template, and binds fields using \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a577fcd126234d449affd90d91e8faa52}{create\+Password\+Login\+View()}} and \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_abaf26ea2fc953484c939b22b1c12b9bc}{create\+O\+Auth\+Login\+View()}}. 
+
+Reimplemented in \mbox{\hyperlink{classBlogLoginWidget_a72b083fbf08fc5975f6a86477e9ba8e0}{Blog\+Login\+Widget}}, and \mbox{\hyperlink{classQRAuthWidget_a3476f3b626cea3680abfbaa37e6ab8e3}{Q\+R\+Auth\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a03a7561dea01e05ae40d3cd6878def3c}\label{classWt_1_1Auth_1_1AuthWidget_a03a7561dea01e05ae40d3cd6878def3c}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!createLostPasswordView@{createLostPasswordView}}
+\index{createLostPasswordView@{createLostPasswordView}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{createLostPasswordView()}{createLostPasswordView()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$>$ Wt\+::\+Auth\+::\+Auth\+Widget\+::create\+Lost\+Password\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a lost password view. 
+
+When email verification has been enabled, the user may indicate that he has lost his password -- then proof of controlling the same email address that had associated with his account is sufficient to allow him to enter a new password.
+
+This creates the widget used to let the user enter his email address. The default implementation creates a new \mbox{\hyperlink{classWt_1_1Auth_1_1LostPasswordWidget}{Lost\+Password\+Widget}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a535362e830906146d03196c53d091e57}{handle\+Lost\+Password()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_abaf26ea2fc953484c939b22b1c12b9bc}\label{classWt_1_1Auth_1_1AuthWidget_abaf26ea2fc953484c939b22b1c12b9bc}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!createOAuthLoginView@{createOAuthLoginView}}
+\index{createOAuthLoginView@{createOAuthLoginView}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{createOAuthLoginView()}{createOAuthLoginView()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Widget\+::create\+O\+Auth\+Login\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates a widget to login using O\+Auth. 
+
+The default implementation adds an icon for each O\+Auth service provider available. The icon that will be used for each service is a P\+NG file with a path based on the \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a5718ddabc7de591b5f056daf1f17701e}{name }} of the service. If the name is is \char`\"{}my\+Service\char`\"{}, then the icon path will be \char`\"{}css/oauth-\/my\+Service.\+png\char`\"{}. \mbox{\hyperlink{classWt}{Wt}} does not bundle any icons by default, so you should make sure that the icon is in place.
+
+There\textquotesingle{}s a lot to say about making a usable login mechanism for O\+Auth (and federated login services in general), see \href{https://sites.google.com/site/oauthgoog/UXFedLogin}{\texttt{ https\+://sites.\+google.\+com/site/oauthgoog/\+U\+X\+Fed\+Login}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a1a49d9d960a47a9fa76d18019c1131e9}{create\+Login\+View()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a577fcd126234d449affd90d91e8faa52}\label{classWt_1_1Auth_1_1AuthWidget_a577fcd126234d449affd90d91e8faa52}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!createPasswordLoginView@{createPasswordLoginView}}
+\index{createPasswordLoginView@{createPasswordLoginView}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{createPasswordLoginView()}{createPasswordLoginView()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Widget\+::create\+Password\+Login\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates a password login view. 
+
+This is used by the default implementation of \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a1a49d9d960a47a9fa76d18019c1131e9}{create\+Login\+View()}} to prompt for the information needed for logging in using a username and password. The default implementation implements a view guided by the \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a976da62e6cde8e5ef132b1caaaecd80b}{model()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a1a49d9d960a47a9fa76d18019c1131e9}{create\+Login\+View()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a5f933e20250589dbdfd263b523e43d7d}\label{classWt_1_1Auth_1_1AuthWidget_a5f933e20250589dbdfd263b523e43d7d}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!createPasswordPromptDialog@{createPasswordPromptDialog}}
+\index{createPasswordPromptDialog@{createPasswordPromptDialog}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{createPasswordPromptDialog()}{createPasswordPromptDialog()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WDialog}{W\+Dialog}}$>$ Wt\+::\+Auth\+::\+Auth\+Widget\+::create\+Password\+Prompt\+Dialog (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \&}]{login }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a password prompt dialog. 
+
+This creates a dialog password. The user is taken from the {\ttfamily login} object, which also signals an eventual success using its \mbox{\hyperlink{classWt_1_1Auth_1_1Login_aafb1d791aeee8b59d28faeda88e8392b}{Login\+::changed()}} signal.
+
+The default implementation instantiates a \mbox{\hyperlink{classWt_1_1Auth_1_1PasswordPromptDialog}{Password\+Prompt\+Dialog}}. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a9e37d14c54f17647d07cbadb465b1366}\label{classWt_1_1Auth_1_1AuthWidget_a9e37d14c54f17647d07cbadb465b1366}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!createRegistrationModel@{createRegistrationModel}}
+\index{createRegistrationModel@{createRegistrationModel}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{createRegistrationModel()}{createRegistrationModel()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel}{Registration\+Model}}$>$ Wt\+::\+Auth\+::\+Auth\+Widget\+::create\+Registration\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates a registration model. 
+
+This method creates a registration model. The default implementation creates a Registration\+Model() but you may want to reimplement this function to return a specialized registration model (complementing a specialized registration view).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_af39805f0625f450368250fed8fe7a244}{register\+New\+User()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a3418753815e2e9e985b8949c0ca5a8b4}\label{classWt_1_1Auth_1_1AuthWidget_a3418753815e2e9e985b8949c0ca5a8b4}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!createRegistrationView@{createRegistrationView}}
+\index{createRegistrationView@{createRegistrationView}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{createRegistrationView()}{createRegistrationView()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$>$ Wt\+::\+Auth\+::\+Auth\+Widget\+::create\+Registration\+View (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a registration view. 
+
+This creates a registration view, optionally using information already obtained from a third party identification service (such as an O\+Auth provider).
+
+The default implementation creates a new \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationWidget}{Registration\+Widget}} with a model created using \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a9e37d14c54f17647d07cbadb465b1366}{create\+Registration\+Model()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_af39805f0625f450368250fed8fe7a244}{register\+New\+User()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classOAuthWidget_a74c4d30680e212e1a065949b57a58c3d}{O\+Auth\+Widget}}, and \mbox{\hyperlink{classAuthWidget_a4df96f24867868140d9ed4d06bb93511}{Auth\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_ab3bb51abf888ba41eadb43b2a7a83a47}\label{classWt_1_1Auth_1_1AuthWidget_ab3bb51abf888ba41eadb43b2a7a83a47}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!createUpdatePasswordView@{createUpdatePasswordView}}
+\index{createUpdatePasswordView@{createUpdatePasswordView}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{createUpdatePasswordView()}{createUpdatePasswordView()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$>$ Wt\+::\+Auth\+::\+Auth\+Widget\+::create\+Update\+Password\+View (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{bool}]{prompt\+Password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a view to update a user\textquotesingle{}s password. 
+
+If {\ttfamily prompt\+Password} is {\ttfamily true}, the user has to enter his current password in addition to a new password.
+
+This creates the widget used to let the user chose a new password. The default implementation instantiates an \mbox{\hyperlink{classWt_1_1Auth_1_1UpdatePasswordWidget}{Update\+Password\+Widget}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a329e19c031931985754a167d4548cc73}{let\+Update\+Password()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a74db7514fae746b38c740f0f84f2a5ed}\label{classWt_1_1Auth_1_1AuthWidget_a74db7514fae746b38c740f0f84f2a5ed}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!displayError@{displayError}}
+\index{displayError@{displayError}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{displayError()}{displayError()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Widget\+::display\+Error (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Displays the error message. 
+
+This method display an dialog showing the error \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_ac6b2b426b98b80242e694f9c8abe2cf3}\label{classWt_1_1Auth_1_1AuthWidget_ac6b2b426b98b80242e694f9c8abe2cf3}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!displayInfo@{displayInfo}}
+\index{displayInfo@{displayInfo}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{displayInfo()}{displayInfo()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Widget\+::display\+Info (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Displays the info message. 
+
+This method display an dialog showing the info \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a535362e830906146d03196c53d091e57}\label{classWt_1_1Auth_1_1AuthWidget_a535362e830906146d03196c53d091e57}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!handleLostPassword@{handleLostPassword}}
+\index{handleLostPassword@{handleLostPassword}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{handleLostPassword()}{handleLostPassword()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Widget\+::handle\+Lost\+Password (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Lets the user \char`\"{}recover\char`\"{} a lost password. 
+
+This creates a view to let the user enter his email address, used to send an email containing instructions to enter a new password.
+
+The default implementation creates a new view using \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a03a7561dea01e05ae40d3cd6878def3c}{create\+Lost\+Password\+View()}} and shows it in a dialog using \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_aa9c74b352db29938b69714e976b201b9}{show\+Dialog()}}. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_aa5c848614e0ad2fb4c5a8ba168e55337}\label{classWt_1_1Auth_1_1AuthWidget_aa5c848614e0ad2fb4c5a8ba168e55337}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!internalBasePath@{internalBasePath}}
+\index{internalBasePath@{internalBasePath}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{internalBasePath()}{internalBasePath()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Auth\+::\+Auth\+Widget\+::internal\+Base\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the internal path. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a3d8e977c355660bcc2441ac11b42f97a}{set\+Internal\+Base\+Path()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a329e19c031931985754a167d4548cc73}\label{classWt_1_1Auth_1_1AuthWidget_a329e19c031931985754a167d4548cc73}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!letUpdatePassword@{letUpdatePassword}}
+\index{letUpdatePassword@{letUpdatePassword}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{letUpdatePassword()}{letUpdatePassword()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Widget\+::let\+Update\+Password (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{bool}]{prompt\+Password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Lets the user update his password. 
+
+This creates a view to let the user enter his new password.
+
+The default implementation creates a new view using \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_ab3bb51abf888ba41eadb43b2a7a83a47}{create\+Update\+Password\+View()}} and shows it in a dialog using \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_aa9c74b352db29938b69714e976b201b9}{show\+Dialog()}}. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_ada371aafa2d133314decb29f4520b75e}\label{classWt_1_1Auth_1_1AuthWidget_ada371aafa2d133314decb29f4520b75e}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!login@{login}}
+\index{login@{login}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}}\& Wt\+::\+Auth\+::\+Auth\+Widget\+::login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the login object. 
+
+This login object is used to keep track of the user currently authenticated. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a976da62e6cde8e5ef132b1caaaecd80b}\label{classWt_1_1Auth_1_1AuthWidget_a976da62e6cde8e5ef132b1caaaecd80b}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!model@{model}}
+\index{model@{model}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{model()}{model()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel}{Auth\+Model}}$\ast$ Wt\+::\+Auth\+::\+Auth\+Widget\+::model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the model. 
+
+The model is used only for the login function.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a93036a2d6cb7b39fa5101172591a717c}{set\+Model()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_ad8f632750848aff23e6b5e0cc339fd6a}\label{classWt_1_1Auth_1_1AuthWidget_ad8f632750848aff23e6b5e0cc339fd6a}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!processEnvironment@{processEnvironment}}
+\index{processEnvironment@{processEnvironment}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{processEnvironment()}{processEnvironment()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Widget\+::process\+Environment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Processes the (initial) environment. 
+
+This method process environmental information that may be relevant to authentication\+:
+
+
+\begin{DoxyItemize}
+\item email tokens, which are indicated through an internal path. The widget uses dialogs (by default) to interact with the user to act on the token.
+\item authentication tokens, which are stored in browser cookies, to implement remember-\/me functionality. When logging in using an authentication token, the login is considered \char`\"{}weak\char`\"{} (since a user may have inadvertently forgotten to logout from a public computer). You should let the user authenticate using another, primary method before doing sensitive operations. The \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a5f933e20250589dbdfd263b523e43d7d}{create\+Password\+Prompt\+Dialog()}} method may be useful for this.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a329e19c031931985754a167d4548cc73}{let\+Update\+Password()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classQRAuthWidget_a9882b59e0ae0f6b4516fa7928e96a3c5}{Q\+R\+Auth\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_af39805f0625f450368250fed8fe7a244}\label{classWt_1_1Auth_1_1AuthWidget_af39805f0625f450368250fed8fe7a244}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!registerNewUser@{registerNewUser}}
+\index{registerNewUser@{registerNewUser}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{registerNewUser()}{registerNewUser()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Auth\+Widget\+::register\+New\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts a new registration process. 
+
+This calls {\ttfamily register\+New\+User(0)}. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_accff77c9e5da1cfe35a9f4b40912c549}\label{classWt_1_1Auth_1_1AuthWidget_accff77c9e5da1cfe35a9f4b40912c549}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!registerNewUser@{registerNewUser}}
+\index{registerNewUser@{registerNewUser}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{registerNewUser()}{registerNewUser()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Widget\+::register\+New\+User (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} \&}]{oauth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Starts a new registration process. 
+
+This starts a new registration process, and may be called in response to a user action, an internal path change, or an \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService}{O\+Auth\+Service}} login procedure which identified a new user. In the latter case, the O\+Auth-\/provided information is passed as parameter {\ttfamily oauth}.
+
+The default implementation creates a view using \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a3418753815e2e9e985b8949c0ca5a8b4}{create\+Registration\+View()}}, and shows it in a dialog using \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_aa9c74b352db29938b69714e976b201b9}{show\+Dialog()}}. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a5470adb0b8ee27dbcb189b87f0980d35}\label{classWt_1_1Auth_1_1AuthWidget_a5470adb0b8ee27dbcb189b87f0980d35}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!render@{render}}
+\index{render@{render}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Widget\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Renders the widget. 
+
+This function renders the widget (or an update for the widget), after this has been scheduled using \mbox{\hyperlink{classWt_1_1WWidget_a5d3d4edaafa2d7c892a5078f3df4cf11}{schedule\+Render()}}.
+
+The default implementation will render the widget by serializing changes to Java\+Script and H\+T\+ML. You may want to reimplement this widget if you have been postponing some of the layout / rendering implementation until the latest moment possible. In that case you should make sure you call the base implementation however. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a5ca222ef9275cfd6d0005c63197d40a0}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a3d8e977c355660bcc2441ac11b42f97a}\label{classWt_1_1Auth_1_1AuthWidget_a3d8e977c355660bcc2441ac11b42f97a}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!setInternalBasePath@{setInternalBasePath}}
+\index{setInternalBasePath@{setInternalBasePath}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{setInternalBasePath()}{setInternalBasePath()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Auth\+Widget\+::set\+Internal\+Base\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Sets an internal path for authentication services. 
+
+Only the registration function is made available through an internal path (so that one can redirect a user to the registration page). Other internal paths involved in authentication are configured in the service classes\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_ac1ce625114817d88f32b041473e5cfcf}{Auth\+Service\+::set\+Email\+Redirect\+Internal\+Path()}}\+: email tokens
+\item O\+Auth\+Service\+::redirect\+Internal\+Path()\+: an internal path used during the oauth process. 
+\end{DoxyItemize}\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a93036a2d6cb7b39fa5101172591a717c}\label{classWt_1_1Auth_1_1AuthWidget_a93036a2d6cb7b39fa5101172591a717c}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!setModel@{setModel}}
+\index{setModel@{setModel}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{setModel()}{setModel()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Auth\+Widget\+::set\+Model (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1AuthModel}{Auth\+Model}} $>$}]{model }\end{DoxyParamCaption})}
+
+
+
+Sets a model. 
+
+This sets a model to be used for authentication. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_a155794d70cfd4c07c44b0efdd7dec341}\label{classWt_1_1Auth_1_1AuthWidget_a155794d70cfd4c07c44b0efdd7dec341}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!setRegistrationEnabled@{setRegistrationEnabled}}
+\index{setRegistrationEnabled@{setRegistrationEnabled}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{setRegistrationEnabled()}{setRegistrationEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Auth\+Widget\+::set\+Registration\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Configures registration capabilities. 
+
+Although the \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget}{Auth\+Widget}} itself does not implement a registration view, it may offer a button/link to do so, and calls \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_af39805f0625f450368250fed8fe7a244}{register\+New\+User()}} when a user wishes to register.
+
+Even if registration is not enabled, the result of an \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService}{O\+Auth\+Service}} login process may be that a new user is identified. Then the \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a3418753815e2e9e985b8949c0ca5a8b4}{create\+Registration\+View()}} is also used to present this new user with a registration view, passing the information obtained through O\+Auth. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthWidget_aa9c74b352db29938b69714e976b201b9}\label{classWt_1_1Auth_1_1AuthWidget_aa9c74b352db29938b69714e976b201b9}} 
+\index{Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}!showDialog@{showDialog}}
+\index{showDialog@{showDialog}!Wt::Auth::AuthWidget@{Wt::Auth::AuthWidget}}
+\doxysubsubsection{\texorpdfstring{showDialog()}{showDialog()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WDialog}{W\+Dialog}}$\ast$ Wt\+::\+Auth\+::\+Auth\+Widget\+::show\+Dialog (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{title,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$}]{contents }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Shows a dialog. 
+
+This shows a dialog. The default method creates a standard \mbox{\hyperlink{classWt_1_1WDialog}{W\+Dialog}}, with the given {\ttfamily title} and {\ttfamily contents} as central widget.
+
+When the central widget is deleted, it deletes the dialog. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/Auth\+Widget.\+h\end{DoxyCompactItemize}

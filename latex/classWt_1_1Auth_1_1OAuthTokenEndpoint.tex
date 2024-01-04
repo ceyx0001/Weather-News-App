@@ -1,0 +1,132 @@
+\hypertarget{classWt_1_1Auth_1_1OAuthTokenEndpoint}{}\doxysection{Wt\+::Auth\+::O\+Auth\+Token\+Endpoint Class Reference}
+\label{classWt_1_1Auth_1_1OAuthTokenEndpoint}\index{Wt::Auth::OAuthTokenEndpoint@{Wt::Auth::OAuthTokenEndpoint}}
+
+
+Endpoint to retrieve an access token.  
+
+
+
+
+{\ttfamily \#include $<$O\+Auth\+Token\+Endpoint.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Auth\+::O\+Auth\+Token\+Endpoint\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Auth\+::O\+Auth\+Token\+Endpoint\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthTokenEndpoint_a5dd3800e03fa5af253380be320f45bd5}{O\+Auth\+Token\+Endpoint}} (\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&db, std\+::string issuer)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthTokenEndpoint_a648b1ccc8b2a54a16457d819cee305a5}{handle\+Request}} (const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&request, \mbox{\hyperlink{classWt_1_1Http_1_1Response}{Http\+::\+Response}} \&response) override
+\begin{DoxyCompactList}\small\item\em Handles a request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthTokenEndpoint_a1fe06232ec1b3a101efef693222e62b1}{set\+Access\+Exp\+Secs}} (int seconds)
+\begin{DoxyCompactList}\small\item\em Sets the amount of seconds after which generated access tokens expire. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthTokenEndpoint_aa04d278762dee4c557e31abb19bfc12a}{set\+Id\+Exp\+Secs}} (int seconds)
+\begin{DoxyCompactList}\small\item\em Sets the amount of seconds after which generated id tokens expire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthTokenEndpoint_ac475d566bbbdacb4c960beed4d5392f4}\label{classWt_1_1Auth_1_1OAuthTokenEndpoint_ac475d566bbbdacb4c960beed4d5392f4}} 
+virtual const std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthTokenEndpoint_ac475d566bbbdacb4c960beed4d5392f4}{id\+Token\+Payload}} (const std\+::string \&client\+Id, const std\+::string \&scope, const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user)
+\begin{DoxyCompactList}\small\item\em Is only called when scope contains openid. Generates a J\+S\+ON Web \mbox{\hyperlink{classWt_1_1Auth_1_1Token}{Token}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthTokenEndpoint_a413c68e0a0bc0e55ae22e5d1e725164b}\label{classWt_1_1Auth_1_1OAuthTokenEndpoint_a413c68e0a0bc0e55ae22e5d1e725164b}} 
+static std\+::string {\bfseries method\+To\+String} (\mbox{\hyperlink{namespaceWt_1_1Auth_a4e55a92c5ff4dd9bbd74439868b8400d}{Client\+Secret\+Method}} method)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthTokenEndpoint_af454ee76b89836f76ee74529093923db}\label{classWt_1_1Auth_1_1OAuthTokenEndpoint_af454ee76b89836f76ee74529093923db}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} $\ast$ {\bfseries db\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthTokenEndpoint_a62db9122fa5a4c492d9ab30ca9799de8}\label{classWt_1_1Auth_1_1OAuthTokenEndpoint_a62db9122fa5a4c492d9ab30ca9799de8}} 
+int {\bfseries access\+Exp\+Secs\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthTokenEndpoint_a30569fa7813d2d238f830736022c67d1}\label{classWt_1_1Auth_1_1OAuthTokenEndpoint_a30569fa7813d2d238f830736022c67d1}} 
+int {\bfseries id\+Exp\+Secs\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthTokenEndpoint_a2f17441d0e0886fb5646aa0fbdf7b159}\label{classWt_1_1Auth_1_1OAuthTokenEndpoint_a2f17441d0e0886fb5646aa0fbdf7b159}} 
+std\+::string {\bfseries iss\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Endpoint to retrieve an access token. 
+
+The token endpoint is used by the client to obtain an \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAccessToken}{O\+Auth\+Access\+Token}} by presenting its authorization grant. This implementation only supports the \char`\"{}authorization\+\_\+code\char`\"{} grant type. The client ID and secret can be passed with Basic auth or by P\+O\+ST request parameters. When something goes wrong, the reply will include a J\+S\+ON object with an \char`\"{}error\char`\"{} attribute.
+
+This endpoint is implemented as a \mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}}, so it\textquotesingle{}s usually deployed using \mbox{\hyperlink{classWt_1_1WServer_a3c5c323a9bccf591b63c9fb3f40e8b59}{W\+Server\+::add\+Resource}}.
+
+For more information refer to the specification\+: \href{https://tools.ietf.org/rfc/rfc6749.txt}{\texttt{ https\+://tools.\+ietf.\+org/rfc/rfc6749.\+txt}}
+
+When the scope includes \char`\"{}openid\char`\"{} an ID \mbox{\hyperlink{classWt_1_1Auth_1_1Token}{Token}} will be included as specified by the Open\+ID Connect standard.
+
+This class relies on a correct implementation of several function in the \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}}. Namely \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ac21618ad3ebc7b234f23ddfff2e1bcd3}{Abstract\+User\+Database\+::idp\+Client\+Find\+With\+Id}}, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_af1896d497ca63e7163001ca4d9584e5f}{Abstract\+User\+Database\+::idp\+Client\+Auth\+Method}}, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_afce1446dd9c28b9b3a6da88a81cc1c57}{Abstract\+User\+Database\+::idp\+Verify\+Secret}}, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_aa3c713440663c29e1b03da3d9bd49c61}{Abstract\+User\+Database\+::idp\+Client\+Id}}, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a0ff39c79cf392aac7d3f9c6357fc8872}{Abstract\+User\+Database\+::idp\+Token\+Find\+With\+Value}}, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_aa3af13034323439708bf30f6177bfca3}{Abstract\+User\+Database\+::idp\+Token\+Add}}, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a9d9235585b83269f89a3d3ebd61f526a}{Abstract\+User\+Database\+::idp\+Token\+Remove}}, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a3524821e057963250395a552d89b97fd}{Abstract\+User\+Database\+::idp\+Token\+Redirect\+Uri}}, Abstract\+User\+Database\+::idp\+Token\+Auth\+Client, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_acbf9e7f2a1f511ae740bf1e00c0e2ab6}{Abstract\+User\+Database\+::idp\+Token\+User}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a9e480167530f3df98dbee974dd62305c}{Abstract\+User\+Database\+::idp\+Token\+Scope}}.
+
+Must be deployed using T\+LS. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthTokenEndpoint_a5dd3800e03fa5af253380be320f45bd5}\label{classWt_1_1Auth_1_1OAuthTokenEndpoint_a5dd3800e03fa5af253380be320f45bd5}} 
+\index{Wt::Auth::OAuthTokenEndpoint@{Wt::Auth::OAuthTokenEndpoint}!OAuthTokenEndpoint@{OAuthTokenEndpoint}}
+\index{OAuthTokenEndpoint@{OAuthTokenEndpoint}!Wt::Auth::OAuthTokenEndpoint@{Wt::Auth::OAuthTokenEndpoint}}
+\doxysubsubsection{\texorpdfstring{OAuthTokenEndpoint()}{OAuthTokenEndpoint()}}
+{\footnotesize\ttfamily Wt\+::\+Auth\+::\+O\+Auth\+Token\+Endpoint\+::\+O\+Auth\+Token\+Endpoint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&}]{db,  }\item[{std\+::string}]{issuer }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The issuer argument is used for the \char`\"{}iss\char`\"{} attribute in the ID \mbox{\hyperlink{classWt_1_1Auth_1_1Token}{Token}} when the scope includes \char`\"{}openid\char`\"{}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthTokenEndpoint_a648b1ccc8b2a54a16457d819cee305a5}\label{classWt_1_1Auth_1_1OAuthTokenEndpoint_a648b1ccc8b2a54a16457d819cee305a5}} 
+\index{Wt::Auth::OAuthTokenEndpoint@{Wt::Auth::OAuthTokenEndpoint}!handleRequest@{handleRequest}}
+\index{handleRequest@{handleRequest}!Wt::Auth::OAuthTokenEndpoint@{Wt::Auth::OAuthTokenEndpoint}}
+\doxysubsubsection{\texorpdfstring{handleRequest()}{handleRequest()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+O\+Auth\+Token\+Endpoint\+::handle\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&}]{request,  }\item[{\mbox{\hyperlink{classWt_1_1Http_1_1Response}{Http\+::\+Response}} \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles a request. 
+
+Reimplement this method so that a proper response is generated for the given request. From the {\ttfamily request} object you can access request parameters and whether the request is a continuation request. In the {\ttfamily response} object, you should set the mime type and stream the output data.
+
+A request may also concern a continuation, indicated in \mbox{\hyperlink{classWt_1_1Http_1_1Request_a9fe40c73e6d2bd3b4fec6f2476d71265}{Http\+::\+Request\+::continuation()}}, in which case the next part for a previously created continuation should be served.
+
+While handling a request, which may happen at any time together with event handling, the library makes sure that the resource is not being concurrently deleted, but multiple requests may happend simultaneously for a single resource. 
+
+Implements \mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{Wt\+::\+W\+Resource}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthTokenEndpoint_a1fe06232ec1b3a101efef693222e62b1}\label{classWt_1_1Auth_1_1OAuthTokenEndpoint_a1fe06232ec1b3a101efef693222e62b1}} 
+\index{Wt::Auth::OAuthTokenEndpoint@{Wt::Auth::OAuthTokenEndpoint}!setAccessExpSecs@{setAccessExpSecs}}
+\index{setAccessExpSecs@{setAccessExpSecs}!Wt::Auth::OAuthTokenEndpoint@{Wt::Auth::OAuthTokenEndpoint}}
+\doxysubsubsection{\texorpdfstring{setAccessExpSecs()}{setAccessExpSecs()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+O\+Auth\+Token\+Endpoint\+::set\+Access\+Exp\+Secs (\begin{DoxyParamCaption}\item[{int}]{seconds }\end{DoxyParamCaption})}
+
+
+
+Sets the amount of seconds after which generated access tokens expire. 
+
+Defaults to 3600 seconds. \mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthTokenEndpoint_aa04d278762dee4c557e31abb19bfc12a}\label{classWt_1_1Auth_1_1OAuthTokenEndpoint_aa04d278762dee4c557e31abb19bfc12a}} 
+\index{Wt::Auth::OAuthTokenEndpoint@{Wt::Auth::OAuthTokenEndpoint}!setIdExpSecs@{setIdExpSecs}}
+\index{setIdExpSecs@{setIdExpSecs}!Wt::Auth::OAuthTokenEndpoint@{Wt::Auth::OAuthTokenEndpoint}}
+\doxysubsubsection{\texorpdfstring{setIdExpSecs()}{setIdExpSecs()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+O\+Auth\+Token\+Endpoint\+::set\+Id\+Exp\+Secs (\begin{DoxyParamCaption}\item[{int}]{seconds }\end{DoxyParamCaption})}
+
+
+
+Sets the amount of seconds after which generated id tokens expire. 
+
+Defaults to 3600 seconds. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/O\+Auth\+Token\+Endpoint.\+h\end{DoxyCompactItemize}

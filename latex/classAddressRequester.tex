@@ -1,0 +1,138 @@
+\hypertarget{classAddressRequester}{}\doxysection{Address\+Requester Class Reference}
+\label{classAddressRequester}\index{AddressRequester@{AddressRequester}}
+
+
+Reverse Geolocation A\+PI requester.  
+
+
+
+
+{\ttfamily \#include $<$Address\+Requester.\+h$>$}
+
+
+
+Inheritance diagram for Address\+Requester\+:
+% FIG 0
+
+
+Collaboration diagram for Address\+Requester\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classAddressRequester_a26728f737f00a40d510da09dc088fbea}{get\+Data}} (\mbox{\hyperlink{classRequest}{Request}} $\ast$request)
+\begin{DoxyCompactList}\small\item\em Get address A\+PI data. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAddressRequester_abc90eca07bc0a74222321b93ddddf65b}{get\+Host}} ()
+\begin{DoxyCompactList}\small\item\em Get host. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAddressRequester_a13ea18841bbe9d4d193bc20c0538d0a8}{Address\+Requester}} (std\+::string lat, std\+::string lon)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAddressRequester_a18040f57cf71b3e720ce41e556b85a72}{$\sim$\+Address\+Requester}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAddressRequester_a82c0fce85d4e8ee4dd7af468a8b0a279}\label{classAddressRequester_a82c0fce85d4e8ee4dd7af468a8b0a279}} 
+std\+::string {\bfseries host}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Reverse Geolocation A\+PI requester. 
+
+Contains the algorithms of sending requests to a reverse geolocation A\+PI and parsing the address data. \begin{DoxyAuthor}{Author}
+Jun Shao 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAddressRequester_a13ea18841bbe9d4d193bc20c0538d0a8}\label{classAddressRequester_a13ea18841bbe9d4d193bc20c0538d0a8}} 
+\index{AddressRequester@{AddressRequester}!AddressRequester@{AddressRequester}}
+\index{AddressRequester@{AddressRequester}!AddressRequester@{AddressRequester}}
+\doxysubsubsection{\texorpdfstring{AddressRequester()}{AddressRequester()}}
+{\footnotesize\ttfamily Address\+Requester\+::\+Address\+Requester (\begin{DoxyParamCaption}\item[{std\+::string}]{lat,  }\item[{std\+::string}]{lon }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor for \mbox{\hyperlink{classAddressRequester}{Address\+Requester}} that initializes all members. 
+\begin{DoxyParams}{Parameters}
+{\em lat} & is the latitude coordinate. \\
+\hline
+{\em lon} & is the longitude coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAddressRequester_a18040f57cf71b3e720ce41e556b85a72}\label{classAddressRequester_a18040f57cf71b3e720ce41e556b85a72}} 
+\index{AddressRequester@{AddressRequester}!````~AddressRequester@{$\sim$AddressRequester}}
+\index{````~AddressRequester@{$\sim$AddressRequester}!AddressRequester@{AddressRequester}}
+\doxysubsubsection{\texorpdfstring{$\sim$AddressRequester()}{~AddressRequester()}}
+{\footnotesize\ttfamily Address\+Requester\+::$\sim$\+Address\+Requester (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default destructor. 
+
+Default destructor for \mbox{\hyperlink{classAddressRequester}{Address\+Requester}} but does nothing. 
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAddressRequester_a26728f737f00a40d510da09dc088fbea}\label{classAddressRequester_a26728f737f00a40d510da09dc088fbea}} 
+\index{AddressRequester@{AddressRequester}!getData@{getData}}
+\index{getData@{getData}!AddressRequester@{AddressRequester}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ string $>$ $>$ Address\+Requester\+::get\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRequest}{Request}} $\ast$}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get address A\+PI data. 
+
+Queries against the host A\+PI endpoint and returns the data that was extracted as a table represented by 2d vector. with columns separated by the data name/type. 
+\begin{DoxyParams}{Parameters}
+{\em request} & is the \mbox{\hyperlink{classRequest}{Request}} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the address data table as 2d vector. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRequester_ae5d5b48330e492f90ce8d6115bc1f2b2}{Requester}}.
+
+\mbox{\Hypertarget{classAddressRequester_abc90eca07bc0a74222321b93ddddf65b}\label{classAddressRequester_abc90eca07bc0a74222321b93ddddf65b}} 
+\index{AddressRequester@{AddressRequester}!getHost@{getHost}}
+\index{getHost@{getHost}!AddressRequester@{AddressRequester}}
+\doxysubsubsection{\texorpdfstring{getHost()}{getHost()}}
+{\footnotesize\ttfamily string Address\+Requester\+::get\+Host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get host. 
+
+Returns the host address of the \mbox{\hyperlink{classAddressRequester}{Address\+Requester}}. 
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the host of the \mbox{\hyperlink{classAddressRequester}{Address\+Requester}} as string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRequester_a84f8b17453ce9ad23144968f2dd4d920}{Requester}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+web/Address\+Requester.\+h\item 
+web/Address\+Requester.\+cpp\end{DoxyCompactItemize}

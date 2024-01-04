@@ -1,0 +1,1024 @@
+\hypertarget{classWt_1_1Chart_1_1WAbstractGridData}{}\doxysection{Wt\+::Chart\+::W\+Abstract\+Grid\+Data Class Reference}
+\label{classWt_1_1Chart_1_1WAbstractGridData}\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+
+
+Class representing grid-\/based data for on a 3D chart.  
+
+
+
+
+{\ttfamily \#include $<$W\+Abstract\+Grid\+Data.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Chart\+::W\+Abstract\+Grid\+Data\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Chart\+::W\+Abstract\+Grid\+Data\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a89ca69c761b35a37c93ed42a695a5f48}\label{classWt_1_1Chart_1_1WAbstractGridData_a89ca69c761b35a37c93ed42a695a5f48}} 
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a89ca69c761b35a37c93ed42a695a5f48}{W\+Abstract\+Grid\+Data}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a39179ec22819e7c95689bd878beffc33}{model}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a0679d73b58f8b9f42d52d04b9127211a}{minimum}} (\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}} axis) const override=0
+\begin{DoxyCompactList}\small\item\em Returns the computed minimum value of this dataseries along the given axis. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a8e761cb3a19340ccd5690bb6d254f196}{maximum}} (\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}} axis) const override=0
+\begin{DoxyCompactList}\small\item\em Returns the computed maximum value of this dataseries along the given axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_aaa3399a1aed5a7b88b69f52d66f63be6}{set\+Type}} (\mbox{\hyperlink{group__charts_gacca4e123c9e4b212050bcfac488fceee}{Series3\+D\+Type}} \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a6f55053a2a5d9d1b935717979ae4b3da}{type}})
+\begin{DoxyCompactList}\small\item\em Sets the type of representation that will be used for the data. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{group__charts_gacca4e123c9e4b212050bcfac488fceee}{Series3\+D\+Type}} \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a6f55053a2a5d9d1b935717979ae4b3da}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the type of representation that will be used for the data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a0ac10568c6c4366be0618b485bd5a034}{set\+Surface\+Mesh\+Enabled}} (bool enabled=true)
+\begin{DoxyCompactList}\small\item\em Enables or disables a mesh for when a surface is drawn. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a90fa00ddeac8c6dd505ee6def9d848ea}{is\+Surface\+Mesh\+Enabled}} ()
+\begin{DoxyCompactList}\small\item\em Returns whether the surface-\/mesh is enabled for this dataseries. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a79fdcfbba4c44ab656ee7a01b5235914}{set\+Bar\+Width}} (double x\+Width, double y\+Width)
+\begin{DoxyCompactList}\small\item\em Sets the bar-\/width. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a60da491b5b72cfbf1256061e2352a866}{bar\+WidthX}} ()
+\begin{DoxyCompactList}\small\item\em Returns the bar-\/width in the X-\/axis direction. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a9debe09245778851b11827f9f63b2b4e}{bar\+WidthY}} ()
+\begin{DoxyCompactList}\small\item\em Returns the bar-\/width in the Y-\/axis direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a31d7fe38ac318b5ca6891d609648a2b3}{set\+Pen}} (const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \&\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a8ffa35b4fa40716d136852184b50aed0}{pen}})
+\begin{DoxyCompactList}\small\item\em Sets the \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} that is used for drawing the mesh. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a8ffa35b4fa40716d136852184b50aed0}{pen}} () const
+\begin{DoxyCompactList}\small\item\em Returns the pen that is used for drawing the mesh. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Chart_1_1WSurfaceSelection}{W\+Surface\+Selection}} $>$ \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a060745d637ac2d49944b97248e091169}{pick\+Surface}} (int x, int y) const
+\begin{DoxyCompactList}\small\item\em Find all points on the surface that are projected to the given pixel. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Chart_1_1WBarSelection}{W\+Bar\+Selection}} \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a156da52a0c9d9b3340c21e14db05ad73}{pick\+Bar}} (int x, int y) const
+\begin{DoxyCompactList}\small\item\em Return the bar that is closest to the look point at the given pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a09c065c802ff9b21d3c2a543e48f58b2}{set\+Iso\+Levels}} (const std\+::vector$<$ double $>$ \&\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a61155ef93da5dcd8aa657a5e4ce000c0}{iso\+Levels}})
+\begin{DoxyCompactList}\small\item\em Set isoline levels. \end{DoxyCompactList}\item 
+const std\+::vector$<$ double $>$ \& \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a61155ef93da5dcd8aa657a5e4ce000c0}{iso\+Levels}} () const
+\begin{DoxyCompactList}\small\item\em Get all of the isoline levels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_ad81635441f90ea60212addd04b9c5bfb}{set\+Iso\+Color\+Map}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap}{W\+Abstract\+Color\+Map}} $>$ \&colormap)
+\begin{DoxyCompactList}\small\item\em Set the color map for the isolines. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap}{W\+Abstract\+Color\+Map}} $>$ \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a3e5350a902b9d62cf07638806a56b45e}{iso\+Color\+Map}} () const
+\begin{DoxyCompactList}\small\item\em Get the color map for the isolines. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a3b26ea3095e5be0017a9b1fe2ea3742a}{set\+Clipping\+Min}} (\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}} axis, float v)
+\begin{DoxyCompactList}\small\item\em Set the value below which the data series will be clipped on the given axis. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a1b463f203a17153e3770d93a01a4a803}{clipping\+Min}} (\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}} axis) const
+\begin{DoxyCompactList}\small\item\em Gets the value below which the data series will be clipped on the given axis. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} \& \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_ab517ba43ef2fa3792f9dfdf692193532}{change\+Clipping\+Min}} (\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}} axis)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} to change the value below which the data series will be clipped on the given axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a9eec119892b92e3e2dcfd5e8009dc9f8}{set\+Clipping\+Max}} (\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}} axis, float v)
+\begin{DoxyCompactList}\small\item\em Set the value above which the data series will be clipped on the given axis. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a516694f610ce6e422cc6f55c184b60d1}{clipping\+Max}} (\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}} axis) const
+\begin{DoxyCompactList}\small\item\em Gets the value above which the data series will be clipped on the given axis. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} \& \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_aa3e7ea6b37d253f15c4ba26c3f05139b}{change\+Clipping\+Max}} (\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}} axis)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} to change the value above which the data series will be clipped on the given axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_ad74945761f9bfcc2ced42487468c5480}{set\+Clipping\+Lines\+Enabled}} (bool \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a3f7773f2d10c35f62013ab8780e64254}{clipping\+Lines\+Enabled}})
+\begin{DoxyCompactList}\small\item\em Sets whether clipping lines should be drawn where a surface is clipped. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a3f7773f2d10c35f62013ab8780e64254}{clipping\+Lines\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether clipping lines are enabled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a2837a58e40805502740fa29b6b73beb5}{set\+Clipping\+Lines\+Color}} (\mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} color)
+\begin{DoxyCompactList}\small\item\em Sets the color of the clipping lines. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a4278ae4155b312cd2e219c739d1cfd8c}{clipping\+Lines\+Color}} () const
+\begin{DoxyCompactList}\small\item\em Gets the color of the clipping lines. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a20d9f813b46076b4bd2fb7b59db2bf07}\label{classWt_1_1Chart_1_1WAbstractGridData_a20d9f813b46076b4bd2fb7b59db2bf07}} 
+virtual int {\bfseries nb\+X\+Points} () const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a4a529cced4df0edd613b6823b8f114fb}\label{classWt_1_1Chart_1_1WAbstractGridData_a4a529cced4df0edd613b6823b8f114fb}} 
+virtual int {\bfseries nb\+Y\+Points} () const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a7712ec52109f0469c04547b1c4d597e3}\label{classWt_1_1Chart_1_1WAbstractGridData_a7712ec52109f0469c04547b1c4d597e3}} 
+virtual \mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries axis\+Label} (int u, \mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}} axis) const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ad6b9ffae3dcd6526c678b29f989dc6bf}\label{classWt_1_1Chart_1_1WAbstractGridData_ad6b9ffae3dcd6526c678b29f989dc6bf}} 
+virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} {\bfseries data} (int i, int j) const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_aa64f5991a3f2af87f593d55c529fd0ec}\label{classWt_1_1Chart_1_1WAbstractGridData_aa64f5991a3f2af87f593d55c529fd0ec}} 
+virtual void {\bfseries set\+Chart} (\mbox{\hyperlink{classWt_1_1Chart_1_1WCartesian3DChart}{W\+Cartesian3\+D\+Chart}} $\ast$\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a139e202dbb24243b0ac1aa2ddcb70180}{chart}}) override
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_aafabaf9315e8aaa46b33a42c4d9cae89}\label{classWt_1_1Chart_1_1WAbstractGridData_aafabaf9315e8aaa46b33a42c4d9cae89}} 
+virtual std\+::vector$<$ \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} $>$ {\bfseries get\+Gl\+Objects} () override
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a47157d5c2756adeb28a26911b2d9b91a}{initialize\+GL}} () override
+\begin{DoxyCompactList}\small\item\em Initialize GL resources. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a074a43efadd7f265185fe9d4ae4edae6}{paint\+GL}} () const override
+\begin{DoxyCompactList}\small\item\em Update the client-\/side painting function. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a49ee94acdbca991ae079b8094e52d533}{update\+GL}} () override
+\begin{DoxyCompactList}\small\item\em Update GL resources. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a8a05b0cc2049ca969ec71d1a0e1ce28a}{resize\+GL}} () override
+\begin{DoxyCompactList}\small\item\em Act on resize events. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a678819da0d189c74ef6a4fc69296a325}{delete\+All\+G\+L\+Resources}} () override
+\begin{DoxyCompactList}\small\item\em Delete GL resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_af87c52e31ff31ef9eede17c610808834}\label{classWt_1_1Chart_1_1WAbstractGridData_af87c52e31ff31ef9eede17c610808834}} 
+static const int {\bfseries S\+U\+R\+F\+A\+C\+E\+\_\+\+S\+I\+D\+E\+\_\+\+L\+I\+M\+IT} = 256
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a452b4205c29fd4f0995a7c635951db62}\label{classWt_1_1Chart_1_1WAbstractGridData_a452b4205c29fd4f0995a7c635951db62}} 
+static const int {\bfseries B\+A\+R\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+I\+M\+IT} = 8190
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a5b53779247cce3a5afc24b13b1caf218}\label{classWt_1_1Chart_1_1WAbstractGridData_a5b53779247cce3a5afc24b13b1caf218}} 
+virtual void {\bfseries point\+Data\+From\+Model} (Float\+Buffer \&simple\+Pts\+Array, Float\+Buffer \&simple\+Pts\+Size, Float\+Buffer \&colored\+Pts\+Array, Float\+Buffer \&colored\+Pts\+Size, Float\+Buffer \&colored\+Pts\+Color) const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a6afe4eb6181f810250cf2ea6752c1123}\label{classWt_1_1Chart_1_1WAbstractGridData_a6afe4eb6181f810250cf2ea6752c1123}} 
+virtual void {\bfseries surface\+Data\+From\+Model} (std\+::vector$<$ Float\+Buffer $>$ \&simple\+Pts\+Arrays) const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ad59725a883ae9de1abd4d1c66213a679}\label{classWt_1_1Chart_1_1WAbstractGridData_ad59725a883ae9de1abd4d1c66213a679}} 
+virtual void {\bfseries bar\+Data\+From\+Model} (std\+::vector$<$ Float\+Buffer $>$ \&simple\+Pts\+Arrays) const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ac524ffe8b4390c9cc56315aad058c1cb}\label{classWt_1_1Chart_1_1WAbstractGridData_ac524ffe8b4390c9cc56315aad058c1cb}} 
+virtual void {\bfseries bar\+Data\+From\+Model} (std\+::vector$<$ Float\+Buffer $>$ \&simple\+Pts\+Arrays, std\+::vector$<$ Float\+Buffer $>$ \&colored\+Pts\+Arrays, std\+::vector$<$ Float\+Buffer $>$ \&colored\+Pts\+Colors) const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_af9cb28331d31197b55dd40c3cf8cd3e4}\label{classWt_1_1Chart_1_1WAbstractGridData_af9cb28331d31197b55dd40c3cf8cd3e4}} 
+virtual int {\bfseries count\+Simple\+Data} () const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a1be9033c920fd76826930cf07473ee0e}\label{classWt_1_1Chart_1_1WAbstractGridData_a1be9033c920fd76826930cf07473ee0e}} 
+float {\bfseries stack\+All\+Values} (std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData}{W\+Abstract\+Grid\+Data}} $\ast$ $>$ dataseries, int i, int j) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a906f24d6d16cff8bf273ee7686f7220e}\label{classWt_1_1Chart_1_1WAbstractGridData_a906f24d6d16cff8bf273ee7686f7220e}} 
+\mbox{\hyperlink{group__charts_gacca4e123c9e4b212050bcfac488fceee}{Series3\+D\+Type}} {\bfseries series\+Type\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a3d50e38e3f1ea7baaabd748b8f9ced2c}\label{classWt_1_1Chart_1_1WAbstractGridData_a3d50e38e3f1ea7baaabd748b8f9ced2c}} 
+bool {\bfseries surface\+Mesh\+Enabled\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a9c174e403ed9c9715f2a128e58cffcbf}\label{classWt_1_1Chart_1_1WAbstractGridData_a9c174e403ed9c9715f2a128e58cffcbf}} 
+bool {\bfseries color\+Role\+Enabled\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a1064462f376adb1536a328eb56e344bc}\label{classWt_1_1Chart_1_1WAbstractGridData_a1064462f376adb1536a328eb56e344bc}} 
+double {\bfseries bar\+Width\+X\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a8adce61fc47781b36769e956ca5a6296}\label{classWt_1_1Chart_1_1WAbstractGridData_a8adce61fc47781b36769e956ca5a6296}} 
+double {\bfseries bar\+Width\+Y\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ad04cfe8c36eaa26688c402e6ba9a0482}\label{classWt_1_1Chart_1_1WAbstractGridData_ad04cfe8c36eaa26688c402e6ba9a0482}} 
+\mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} {\bfseries mesh\+Pen\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a72f21706d2a4d99c21fcbf2640314bb2}\label{classWt_1_1Chart_1_1WAbstractGridData_a72f21706d2a4d99c21fcbf2640314bb2}} 
+static const float {\bfseries zero\+Bar\+Compensation}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a8de33b05cd7cd85dee4162d68344526f}\label{classWt_1_1Chart_1_1WAbstractGridData_a8de33b05cd7cd85dee4162d68344526f}} 
+void {\bfseries init\+Shaders} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_aba02b5f7ff79e0edb817ebea0aaff8a8}\label{classWt_1_1Chart_1_1WAbstractGridData_aba02b5f7ff79e0edb817ebea0aaff8a8}} 
+void {\bfseries initialize\+Point\+Series\+Buffers} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ae3ae4b4fd24a179a2f05f04283a73729}\label{classWt_1_1Chart_1_1WAbstractGridData_ae3ae4b4fd24a179a2f05f04283a73729}} 
+void {\bfseries initialize\+Surface\+Series\+Buffers} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ae44f97e5102e1dd84813d011d007314b}\label{classWt_1_1Chart_1_1WAbstractGridData_ae44f97e5102e1dd84813d011d007314b}} 
+void {\bfseries initialize\+Bar\+Series\+Buffers} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_aafaddb821f9b2df38910f88cb4903bc6}\label{classWt_1_1Chart_1_1WAbstractGridData_aafaddb821f9b2df38910f88cb4903bc6}} 
+void {\bfseries load\+Binary\+Resource} (Float\+Buffer \&, std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WGLWidget_1_1Buffer}{W\+G\+L\+Widget\+::\+Buffer}} $>$ \&buffers)
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_acaacc465fa510da3759cec19f0407b60}\label{classWt_1_1Chart_1_1WAbstractGridData_acaacc465fa510da3759cec19f0407b60}} 
+void {\bfseries bar\+Series\+Vertex\+Data} (Float\+Buffer \&vertices\+IN, Float\+Buffer \&vertices\+O\+UT) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ab7945a5915ed59c74c85d6fd31b14160}\label{classWt_1_1Chart_1_1WAbstractGridData_ab7945a5915ed59c74c85d6fd31b14160}} 
+void {\bfseries generate\+Vertex\+Indices} (Int\+Buffer \&indices\+O\+UT, int Nx, int Ny, int size=0) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a3fbfba1c6e86195369d7102f914fdac4}\label{classWt_1_1Chart_1_1WAbstractGridData_a3fbfba1c6e86195369d7102f914fdac4}} 
+void {\bfseries generate\+Mesh\+Indices} (Int\+Buffer \&indices\+O\+UT, int Nx, int Ny, int size=0)
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a6236a2fa8108cb966c7e98175e88e163}\label{classWt_1_1Chart_1_1WAbstractGridData_a6236a2fa8108cb966c7e98175e88e163}} 
+void {\bfseries generate\+Texture\+Coords} (Float\+Buffer \&coords\+O\+UT, const Float\+Buffer \&data\+Array, int size)
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a34e18ef6ba110070908dafb68a8892c0}\label{classWt_1_1Chart_1_1WAbstractGridData_a34e18ef6ba110070908dafb68a8892c0}} 
+void {\bfseries paint\+G\+L\+Index} (unsigned index) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a7dcf8785b86d2780f88b0a8d15d151e3}\label{classWt_1_1Chart_1_1WAbstractGridData_a7dcf8785b86d2780f88b0a8d15d151e3}} 
+void {\bfseries paint\+G\+L\+Index} (unsigned index, double marginX, double marginY, double marginZ) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_aa795e3d40b06835ecc491364e61d841c}\label{classWt_1_1Chart_1_1WAbstractGridData_aa795e3d40b06835ecc491364e61d841c}} 
+void {\bfseries paint\+G\+L\+Positions} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a1bbefcf311ddfc655aad53d87f03c5c1}\label{classWt_1_1Chart_1_1WAbstractGridData_a1bbefcf311ddfc655aad53d87f03c5c1}} 
+void {\bfseries paint\+G\+L\+Positions} (double marginX, double marginY, double marginZ) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a897e2f3ff45907108b77f51ef29b9384}\label{classWt_1_1Chart_1_1WAbstractGridData_a897e2f3ff45907108b77f51ef29b9384}} 
+double {\bfseries ray\+Triangle\+Intersect} (const \mbox{\hyperlink{classWt_1_1WVector3}{W\+Vector3}} \&re, const \mbox{\hyperlink{classWt_1_1WVector3}{W\+Vector3}} \&rd, const \mbox{\hyperlink{classWt_1_1WVector3}{W\+Vector3}} \&camera, const \mbox{\hyperlink{classWt_1_1WVector3}{W\+Vector3}} \&v0, const \mbox{\hyperlink{classWt_1_1WVector3}{W\+Vector3}} \&v1, const \mbox{\hyperlink{classWt_1_1WVector3}{W\+Vector3}} \&v2, \mbox{\hyperlink{classWt_1_1WVector3}{W\+Vector3}} \&point) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a802ac31ea358c095ec717ee5adafc588}\label{classWt_1_1Chart_1_1WAbstractGridData_a802ac31ea358c095ec717ee5adafc588}} 
+void {\bfseries draw\+Iso\+Lines} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a3037745cdab31d14b9adfe589c9405d4}\label{classWt_1_1Chart_1_1WAbstractGridData_a3037745cdab31d14b9adfe589c9405d4}} 
+void {\bfseries lines\+For\+Iso\+Level} (double z, std\+::vector$<$ float $>$ \&result) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a1ea3d9a49af23e8dc163928e52ec8e86}\label{classWt_1_1Chart_1_1WAbstractGridData_a1ea3d9a49af23e8dc163928e52ec8e86}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Texture}{W\+G\+L\+Widget\+::\+Texture}} {\bfseries iso\+Line\+Color\+Map\+Texture} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ae1b4f7bc991c683c6405955807e865d7}\label{classWt_1_1Chart_1_1WAbstractGridData_ae1b4f7bc991c683c6405955807e865d7}} 
+std\+::vector$<$ int $>$ {\bfseries vertex\+Pos\+Buffer\+Sizes\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a0f1a30788843c5526ade8239385ff39d}\label{classWt_1_1Chart_1_1WAbstractGridData_a0f1a30788843c5526ade8239385ff39d}} 
+std\+::vector$<$ int $>$ {\bfseries vertex\+Pos\+Buffer2\+Sizes\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a3e1dc6c5836f70b44e0d333f1417d07b}\label{classWt_1_1Chart_1_1WAbstractGridData_a3e1dc6c5836f70b44e0d333f1417d07b}} 
+std\+::vector$<$ int $>$ {\bfseries index\+Buffer\+Sizes\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_aee477dbe5a09bca5df44fafec15985dc}\label{classWt_1_1Chart_1_1WAbstractGridData_aee477dbe5a09bca5df44fafec15985dc}} 
+std\+::vector$<$ int $>$ {\bfseries line\+Buffer\+Sizes\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ab4ce18b39d12ee32749f7379048c2a84}\label{classWt_1_1Chart_1_1WAbstractGridData_ab4ce18b39d12ee32749f7379048c2a84}} 
+std\+::vector$<$ int $>$ {\bfseries index\+Buffer\+Sizes2\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a3bbb813bb8222d45b2eddbd604a26f97}\label{classWt_1_1Chart_1_1WAbstractGridData_a3bbb813bb8222d45b2eddbd604a26f97}} 
+std\+::vector$<$ int $>$ {\bfseries line\+Buffer\+Sizes2\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a4c7df1ff8764f8922dceafe5f4946ac1}\label{classWt_1_1Chart_1_1WAbstractGridData_a4c7df1ff8764f8922dceafe5f4946ac1}} 
+std\+::vector$<$ int $>$ {\bfseries iso\+Line\+Buffer\+Sizes\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a5e880c83b19c677e8e7179df10631f74}\label{classWt_1_1Chart_1_1WAbstractGridData_a5e880c83b19c677e8e7179df10631f74}} 
+std\+::vector$<$ double $>$ {\bfseries iso\+Line\+Heights\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a0b834d8b6413899e73a2513e23f20ad1}\label{classWt_1_1Chart_1_1WAbstractGridData_a0b834d8b6413899e73a2513e23f20ad1}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap}{W\+Abstract\+Color\+Map}} $>$ {\bfseries iso\+Line\+Color\+Map\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a3b0a1b1eafcb3282ffd01918d84d20a6}\label{classWt_1_1Chart_1_1WAbstractGridData_a3b0a1b1eafcb3282ffd01918d84d20a6}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WGLWidget_1_1Buffer}{W\+G\+L\+Widget\+::\+Buffer}} $>$ {\bfseries vertex\+Pos\+Buffers\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_af5617003fbdd29673f7707ee20388c2c}\label{classWt_1_1Chart_1_1WAbstractGridData_af5617003fbdd29673f7707ee20388c2c}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WGLWidget_1_1Buffer}{W\+G\+L\+Widget\+::\+Buffer}} $>$ {\bfseries vertex\+Pos\+Buffers2\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a9b4280b3e0969aaa71b8a34fe867df21}\label{classWt_1_1Chart_1_1WAbstractGridData_a9b4280b3e0969aaa71b8a34fe867df21}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WGLWidget_1_1Buffer}{W\+G\+L\+Widget\+::\+Buffer}} $>$ {\bfseries vertex\+Size\+Buffers\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a5f55319a0c474ed9e64e06246cd1eac8}\label{classWt_1_1Chart_1_1WAbstractGridData_a5f55319a0c474ed9e64e06246cd1eac8}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WGLWidget_1_1Buffer}{W\+G\+L\+Widget\+::\+Buffer}} $>$ {\bfseries vertex\+Size\+Buffers2\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a8354c8effae2b8db9fc3a6e36bb72b89}\label{classWt_1_1Chart_1_1WAbstractGridData_a8354c8effae2b8db9fc3a6e36bb72b89}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WGLWidget_1_1Buffer}{W\+G\+L\+Widget\+::\+Buffer}} $>$ {\bfseries vertex\+Color\+Buffers2\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a15719b49f446a9d5a460e874cc72ee80}\label{classWt_1_1Chart_1_1WAbstractGridData_a15719b49f446a9d5a460e874cc72ee80}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WGLWidget_1_1Buffer}{W\+G\+L\+Widget\+::\+Buffer}} $>$ {\bfseries index\+Buffers\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_aa2475a3849ebf959ac7171f868b64441}\label{classWt_1_1Chart_1_1WAbstractGridData_aa2475a3849ebf959ac7171f868b64441}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WGLWidget_1_1Buffer}{W\+G\+L\+Widget\+::\+Buffer}} $>$ {\bfseries index\+Buffers2\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a6769aa6901331b0108e6011f0a509959}\label{classWt_1_1Chart_1_1WAbstractGridData_a6769aa6901331b0108e6011f0a509959}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WGLWidget_1_1Buffer}{W\+G\+L\+Widget\+::\+Buffer}} $>$ {\bfseries overlay\+Lines\+Buffers\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a79b67ca4692df10c5f5abff22e916e19}\label{classWt_1_1Chart_1_1WAbstractGridData_a79b67ca4692df10c5f5abff22e916e19}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WGLWidget_1_1Buffer}{W\+G\+L\+Widget\+::\+Buffer}} $>$ {\bfseries overlay\+Lines\+Buffers2\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a11dc72d048f1bd9cd97a523aef00bfca}\label{classWt_1_1Chart_1_1WAbstractGridData_a11dc72d048f1bd9cd97a523aef00bfca}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WGLWidget_1_1Buffer}{W\+G\+L\+Widget\+::\+Buffer}} $>$ {\bfseries colormap\+Tex\+Buffers\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a938cbe1920e725ebeffb8cbcb5c9d98a}\label{classWt_1_1Chart_1_1WAbstractGridData_a938cbe1920e725ebeffb8cbcb5c9d98a}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WGLWidget_1_1Buffer}{W\+G\+L\+Widget\+::\+Buffer}} $>$ {\bfseries iso\+Line\+Buffers\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_acb4f8ee8a43aa6b9c09d32b2cee76b9e}\label{classWt_1_1Chart_1_1WAbstractGridData_acb4f8ee8a43aa6b9c09d32b2cee76b9e}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WMemoryResource}{W\+Memory\+Resource}} $\ast$ $>$ {\bfseries binary\+Resources\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a55ef33fe13a05ea1854b0f77005b6bb0}\label{classWt_1_1Chart_1_1WAbstractGridData_a55ef33fe13a05ea1854b0f77005b6bb0}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Shader}{W\+G\+L\+Widget\+::\+Shader}} {\bfseries frag\+Shader\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a6cd0e6ec0c26feb3964d1091cbd79588}\label{classWt_1_1Chart_1_1WAbstractGridData_a6cd0e6ec0c26feb3964d1091cbd79588}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Shader}{W\+G\+L\+Widget\+::\+Shader}} {\bfseries col\+Frag\+Shader\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_aa35a9c3b903c838583af56c06b8db5bd}\label{classWt_1_1Chart_1_1WAbstractGridData_aa35a9c3b903c838583af56c06b8db5bd}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Shader}{W\+G\+L\+Widget\+::\+Shader}} {\bfseries mesh\+Frag\+Shader\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a82facfcf5b70835304c4f4066c943c97}\label{classWt_1_1Chart_1_1WAbstractGridData_a82facfcf5b70835304c4f4066c943c97}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Shader}{W\+G\+L\+Widget\+::\+Shader}} {\bfseries single\+Color\+Frag\+Shader\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a9f29c67f23a91bbd2f5630d20bf97e61}\label{classWt_1_1Chart_1_1WAbstractGridData_a9f29c67f23a91bbd2f5630d20bf97e61}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Shader}{W\+G\+L\+Widget\+::\+Shader}} {\bfseries position\+Frag\+Shader\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a09cc46ed9690b0a926f5ea99fdcefee5}\label{classWt_1_1Chart_1_1WAbstractGridData_a09cc46ed9690b0a926f5ea99fdcefee5}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Shader}{W\+G\+L\+Widget\+::\+Shader}} {\bfseries iso\+Line\+Frag\+Shader\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_affadc3f80cc83e7152b5ec4bf74e71ab}\label{classWt_1_1Chart_1_1WAbstractGridData_affadc3f80cc83e7152b5ec4bf74e71ab}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Shader}{W\+G\+L\+Widget\+::\+Shader}} {\bfseries vert\+Shader\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_af23a18468ac20fd1cc56a154426246f1}\label{classWt_1_1Chart_1_1WAbstractGridData_af23a18468ac20fd1cc56a154426246f1}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Shader}{W\+G\+L\+Widget\+::\+Shader}} {\bfseries col\+Vert\+Shader\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a73e159f7cb3c40676004ad6fb624e196}\label{classWt_1_1Chart_1_1WAbstractGridData_a73e159f7cb3c40676004ad6fb624e196}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Shader}{W\+G\+L\+Widget\+::\+Shader}} {\bfseries mesh\+Vert\+Shader\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_adcb655bd1c16b4a321102eebbf08db0c}\label{classWt_1_1Chart_1_1WAbstractGridData_adcb655bd1c16b4a321102eebbf08db0c}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Shader}{W\+G\+L\+Widget\+::\+Shader}} {\bfseries iso\+Line\+Vertex\+Shader\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a024385c4cf080a2394471ff0626f33ea}\label{classWt_1_1Chart_1_1WAbstractGridData_a024385c4cf080a2394471ff0626f33ea}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Program}{W\+G\+L\+Widget\+::\+Program}} {\bfseries series\+Program\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ade273e16e2c1c1de017ff40abdc11c03}\label{classWt_1_1Chart_1_1WAbstractGridData_ade273e16e2c1c1de017ff40abdc11c03}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Program}{W\+G\+L\+Widget\+::\+Program}} {\bfseries col\+Series\+Program\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_af7b8c476ffabea1c6930faf1934a60e6}\label{classWt_1_1Chart_1_1WAbstractGridData_af7b8c476ffabea1c6930faf1934a60e6}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Program}{W\+G\+L\+Widget\+::\+Program}} {\bfseries mesh\+Program\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_abcbbbf4039a4b987cdbd93761469816a}\label{classWt_1_1Chart_1_1WAbstractGridData_abcbbbf4039a4b987cdbd93761469816a}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Program}{W\+G\+L\+Widget\+::\+Program}} {\bfseries single\+Color\+Program\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ab9ef5abe18f27590634168561a515b81}\label{classWt_1_1Chart_1_1WAbstractGridData_ab9ef5abe18f27590634168561a515b81}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Program}{W\+G\+L\+Widget\+::\+Program}} {\bfseries position\+Program\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_add01d90ac5cd7851626b37224e98e778}\label{classWt_1_1Chart_1_1WAbstractGridData_add01d90ac5cd7851626b37224e98e778}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Program}{W\+G\+L\+Widget\+::\+Program}} {\bfseries iso\+Line\+Program\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a0185880c9f9274b9ee5c2ac016ec705b}\label{classWt_1_1Chart_1_1WAbstractGridData_a0185880c9f9274b9ee5c2ac016ec705b}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1AttribLocation}{W\+G\+L\+Widget\+::\+Attrib\+Location}} {\bfseries vertex\+Pos\+Attr\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a34258b91e12d3b52cddd981c7dc4bac0}\label{classWt_1_1Chart_1_1WAbstractGridData_a34258b91e12d3b52cddd981c7dc4bac0}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1AttribLocation}{W\+G\+L\+Widget\+::\+Attrib\+Location}} {\bfseries vertex\+Pos\+Attr2\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ac7cc1ca63095088e189b9b6e70159d53}\label{classWt_1_1Chart_1_1WAbstractGridData_ac7cc1ca63095088e189b9b6e70159d53}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1AttribLocation}{W\+G\+L\+Widget\+::\+Attrib\+Location}} {\bfseries single\+Color\+\_\+vertex\+Pos\+Attr\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a82a0b8fd6aa96276cb55e5d45f50d64c}\label{classWt_1_1Chart_1_1WAbstractGridData_a82a0b8fd6aa96276cb55e5d45f50d64c}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1AttribLocation}{W\+G\+L\+Widget\+::\+Attrib\+Location}} {\bfseries position\+\_\+vertex\+Pos\+Attr\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a9ff53e03356768803d7c694a0ac4c86a}\label{classWt_1_1Chart_1_1WAbstractGridData_a9ff53e03356768803d7c694a0ac4c86a}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1AttribLocation}{W\+G\+L\+Widget\+::\+Attrib\+Location}} {\bfseries mesh\+Vertex\+Pos\+Attr\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a6d630e9f90cd115f17c8fb8fc8124b86}\label{classWt_1_1Chart_1_1WAbstractGridData_a6d630e9f90cd115f17c8fb8fc8124b86}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1AttribLocation}{W\+G\+L\+Widget\+::\+Attrib\+Location}} {\bfseries iso\+Line\+Vertex\+Pos\+Attr\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_af027c15ff34c49b0b18d65d2d8397adf}\label{classWt_1_1Chart_1_1WAbstractGridData_af027c15ff34c49b0b18d65d2d8397adf}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1AttribLocation}{W\+G\+L\+Widget\+::\+Attrib\+Location}} {\bfseries vertex\+Size\+Attr\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a1a964db467d79205582595c019ca8e58}\label{classWt_1_1Chart_1_1WAbstractGridData_a1a964db467d79205582595c019ca8e58}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1AttribLocation}{W\+G\+L\+Widget\+::\+Attrib\+Location}} {\bfseries vertex\+Size\+Attr2\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ad94326931422561458757a0e77898f66}\label{classWt_1_1Chart_1_1WAbstractGridData_ad94326931422561458757a0e77898f66}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1AttribLocation}{W\+G\+L\+Widget\+::\+Attrib\+Location}} {\bfseries vertex\+Col\+Attr2\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_acb531fb0e150134235201bbb137547ca}\label{classWt_1_1Chart_1_1WAbstractGridData_acb531fb0e150134235201bbb137547ca}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1AttribLocation}{W\+G\+L\+Widget\+::\+Attrib\+Location}} {\bfseries bar\+Tex\+Coord\+Attr\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ad4fbb36d7ebd858a7c4338c46977ff03}\label{classWt_1_1Chart_1_1WAbstractGridData_ad4fbb36d7ebd858a7c4338c46977ff03}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries mv\+Matrix\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ac776434ffad9b81ac5567d9f48274513}\label{classWt_1_1Chart_1_1WAbstractGridData_ac776434ffad9b81ac5567d9f48274513}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries mv\+Matrix\+Uniform2\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_abd9c65117bcb5232dd84b0b57de47a94}\label{classWt_1_1Chart_1_1WAbstractGridData_abd9c65117bcb5232dd84b0b57de47a94}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries single\+Color\+\_\+mv\+Matrix\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_aa7b423c20e71806d6ef7e2d6d7bcbcf3}\label{classWt_1_1Chart_1_1WAbstractGridData_aa7b423c20e71806d6ef7e2d6d7bcbcf3}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries position\+\_\+mv\+Matrix\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a87b85e9ffda8aafbff79bb42241f577d}\label{classWt_1_1Chart_1_1WAbstractGridData_a87b85e9ffda8aafbff79bb42241f577d}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries mesh\+\_\+mv\+Matrix\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a2fb903241f6591bdb457a21316ebcbd2}\label{classWt_1_1Chart_1_1WAbstractGridData_a2fb903241f6591bdb457a21316ebcbd2}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries iso\+Line\+\_\+mv\+Matrix\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ab55c9d3ff347bcbfbcc95e29326f06b8}\label{classWt_1_1Chart_1_1WAbstractGridData_ab55c9d3ff347bcbfbcc95e29326f06b8}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries p\+Matrix\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a25f110d4e0d5145f63598fa4af3a874a}\label{classWt_1_1Chart_1_1WAbstractGridData_a25f110d4e0d5145f63598fa4af3a874a}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries p\+Matrix2\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_af03250d21a4e50f868af45f7f4a35599}\label{classWt_1_1Chart_1_1WAbstractGridData_af03250d21a4e50f868af45f7f4a35599}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries single\+Color\+\_\+p\+Matrix\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a1e3c06d7d85135f6c823416b9848588b}\label{classWt_1_1Chart_1_1WAbstractGridData_a1e3c06d7d85135f6c823416b9848588b}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries position\+\_\+p\+Matrix\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ab2cb3eae947c7c77a526f2b3e9a0dd65}\label{classWt_1_1Chart_1_1WAbstractGridData_ab2cb3eae947c7c77a526f2b3e9a0dd65}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries mesh\+\_\+p\+Matrix\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ac80789de786b040ca985f8596cc0ce88}\label{classWt_1_1Chart_1_1WAbstractGridData_ac80789de786b040ca985f8596cc0ce88}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries iso\+Line\+\_\+p\+Matrix\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_aa15e51949b75698ae82f5eb29aaab971}\label{classWt_1_1Chart_1_1WAbstractGridData_aa15e51949b75698ae82f5eb29aaab971}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries c\+Matrix\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a93e299d6997f59523276098337a8b874}\label{classWt_1_1Chart_1_1WAbstractGridData_a93e299d6997f59523276098337a8b874}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries c\+Matrix2\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a3ea938d7c139507ab1a74f6b5f3b6c80}\label{classWt_1_1Chart_1_1WAbstractGridData_a3ea938d7c139507ab1a74f6b5f3b6c80}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries single\+Color\+\_\+c\+Matrix\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ab2d2c0d9d11aad1414ea6fdeb2d979bc}\label{classWt_1_1Chart_1_1WAbstractGridData_ab2d2c0d9d11aad1414ea6fdeb2d979bc}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries position\+\_\+c\+Matrix\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ab3c4c224218f0bea2ba6d6e649d96bbf}\label{classWt_1_1Chart_1_1WAbstractGridData_ab3c4c224218f0bea2ba6d6e649d96bbf}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries mesh\+\_\+c\+Matrix\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a51ee18c18866742fa7b87995d6f07d57}\label{classWt_1_1Chart_1_1WAbstractGridData_a51ee18c18866742fa7b87995d6f07d57}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries iso\+Line\+\_\+c\+Matrix\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a1068edd28352b5e89b06dc5d0386a7ab}\label{classWt_1_1Chart_1_1WAbstractGridData_a1068edd28352b5e89b06dc5d0386a7ab}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries Tex\+Sampler\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_aa5f126a501677e2ce159c793170b13df}\label{classWt_1_1Chart_1_1WAbstractGridData_aa5f126a501677e2ce159c793170b13df}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries iso\+Line\+\_\+\+Tex\+Sampler\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ad76e5a0ca5919dcc7477fdbd7a133b5a}\label{classWt_1_1Chart_1_1WAbstractGridData_ad76e5a0ca5919dcc7477fdbd7a133b5a}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries mesh\+\_\+color\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a52bc6078c506f47ece5b041dd45c9cd2}\label{classWt_1_1Chart_1_1WAbstractGridData_a52bc6078c506f47ece5b041dd45c9cd2}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries single\+Color\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ab533608a25333365d47d0db4b21a69a2}\label{classWt_1_1Chart_1_1WAbstractGridData_ab533608a25333365d47d0db4b21a69a2}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries point\+Sprite\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a1780e8f73b6efaca01de28ae90d675f4}\label{classWt_1_1Chart_1_1WAbstractGridData_a1780e8f73b6efaca01de28ae90d675f4}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries point\+Sprite\+Uniform2\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a55c21d2e33f04294b09a62e43a4c4c81}\label{classWt_1_1Chart_1_1WAbstractGridData_a55c21d2e33f04294b09a62e43a4c4c81}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries vp\+Height\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a0a96a1833b5f2357670f7f48f910d98b}\label{classWt_1_1Chart_1_1WAbstractGridData_a0a96a1833b5f2357670f7f48f910d98b}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries vp\+Height\+Uniform2\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ae162bf2cf39d4e9c1451ba65fdddf20f}\label{classWt_1_1Chart_1_1WAbstractGridData_ae162bf2cf39d4e9c1451ba65fdddf20f}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries offset\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_aae04d271731bf6cb1619cf2b0f6cb55d}\label{classWt_1_1Chart_1_1WAbstractGridData_aae04d271731bf6cb1619cf2b0f6cb55d}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries iso\+Line\+\_\+offset\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ad9909189439e0daa715ffb76bcc352f4}\label{classWt_1_1Chart_1_1WAbstractGridData_ad9909189439e0daa715ffb76bcc352f4}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries scale\+Factor\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_aa4bd14f3f2e6bacb5916e8c5abc6c212}\label{classWt_1_1Chart_1_1WAbstractGridData_aa4bd14f3f2e6bacb5916e8c5abc6c212}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries iso\+Line\+\_\+scale\+Factor\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_aa03ad70809cb3ecd1046dcb203317535}\label{classWt_1_1Chart_1_1WAbstractGridData_aa03ad70809cb3ecd1046dcb203317535}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries min\+Pt\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_abf0eb76108a9a4cdb64d55c01e9b7ca9}\label{classWt_1_1Chart_1_1WAbstractGridData_abf0eb76108a9a4cdb64d55c01e9b7ca9}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries mesh\+\_\+min\+Pt\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a24635429caf2bf21a9227995b6b10ebe}\label{classWt_1_1Chart_1_1WAbstractGridData_a24635429caf2bf21a9227995b6b10ebe}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries single\+Color\+\_\+min\+Pt\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a3313afa1d3b614dd2db83cdd5fdc8e55}\label{classWt_1_1Chart_1_1WAbstractGridData_a3313afa1d3b614dd2db83cdd5fdc8e55}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries position\+\_\+min\+Pt\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a157c1d7339cfdefc3e6871e249f5ed56}\label{classWt_1_1Chart_1_1WAbstractGridData_a157c1d7339cfdefc3e6871e249f5ed56}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries max\+Pt\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a83a6ec906bd7befedb1b2422e85cf4f9}\label{classWt_1_1Chart_1_1WAbstractGridData_a83a6ec906bd7befedb1b2422e85cf4f9}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries mesh\+\_\+max\+Pt\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ae165c3d6c6345405ba7789d22a1131ad}\label{classWt_1_1Chart_1_1WAbstractGridData_ae165c3d6c6345405ba7789d22a1131ad}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries single\+Color\+\_\+max\+Pt\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_acaa00466769972efd7656d4b8f922403}\label{classWt_1_1Chart_1_1WAbstractGridData_acaa00466769972efd7656d4b8f922403}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries position\+\_\+max\+Pt\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ab9fee040104c1f716aece65c61d50dc7}\label{classWt_1_1Chart_1_1WAbstractGridData_ab9fee040104c1f716aece65c61d50dc7}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries data\+Min\+Pt\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a8cce21729036a2a8c964d1f21122a71b}\label{classWt_1_1Chart_1_1WAbstractGridData_a8cce21729036a2a8c964d1f21122a71b}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries mesh\+\_\+data\+Min\+Pt\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a84b51708a3000e4db4e2c040b9ef9c51}\label{classWt_1_1Chart_1_1WAbstractGridData_a84b51708a3000e4db4e2c040b9ef9c51}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries single\+Color\+\_\+data\+Min\+Pt\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ad5279935f954b9ab531cb3d9b03c2c42}\label{classWt_1_1Chart_1_1WAbstractGridData_ad5279935f954b9ab531cb3d9b03c2c42}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries position\+\_\+data\+Min\+Pt\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ab0f7ea040dd55cd548fcb631352a7815}\label{classWt_1_1Chart_1_1WAbstractGridData_ab0f7ea040dd55cd548fcb631352a7815}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries data\+Max\+Pt\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a1517acad8a1cb6c24b0d7fa060c2f246}\label{classWt_1_1Chart_1_1WAbstractGridData_a1517acad8a1cb6c24b0d7fa060c2f246}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries mesh\+\_\+data\+Max\+Pt\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_aa119c3b119e2d8e75751ccb83d50a38f}\label{classWt_1_1Chart_1_1WAbstractGridData_aa119c3b119e2d8e75751ccb83d50a38f}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries single\+Color\+\_\+data\+Max\+Pt\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_aebcbf385bcba7a252dbf70c510b7cbf7}\label{classWt_1_1Chart_1_1WAbstractGridData_aebcbf385bcba7a252dbf70c510b7cbf7}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries position\+\_\+data\+Max\+Pt\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a0807d682887b6a62243247b12529f2fc}\label{classWt_1_1Chart_1_1WAbstractGridData_a0807d682887b6a62243247b12529f2fc}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries single\+Color\+\_\+margin\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a4fb6d694f402805b430ce4118287c3c7}\label{classWt_1_1Chart_1_1WAbstractGridData_a4fb6d694f402805b430ce4118287c3c7}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1UniformLocation}{W\+G\+L\+Widget\+::\+Uniform\+Location}} {\bfseries position\+\_\+margin\+Uniform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a91775028ad68f0bf4b0f2affcd6bd085}\label{classWt_1_1Chart_1_1WAbstractGridData_a91775028ad68f0bf4b0f2affcd6bd085}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Texture}{W\+G\+L\+Widget\+::\+Texture}} {\bfseries colormap\+Texture\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a49a9d4175052ab0f13f72166cdfd92f2}\label{classWt_1_1Chart_1_1WAbstractGridData_a49a9d4175052ab0f13f72166cdfd92f2}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Texture}{W\+G\+L\+Widget\+::\+Texture}} {\bfseries iso\+Line\+Color\+Map\+Texture\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_aea0d6e97d59f5f4f235b119ca3a7a079}\label{classWt_1_1Chart_1_1WAbstractGridData_aea0d6e97d59f5f4f235b119ca3a7a079}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Texture}{W\+G\+L\+Widget\+::\+Texture}} {\bfseries point\+Sprite\+Texture\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a9feb2cd512994a4d69dd64d733e39174}\label{classWt_1_1Chart_1_1WAbstractGridData_a9feb2cd512994a4d69dd64d733e39174}} 
+std\+::vector$<$ float $>$ {\bfseries min\+Pt\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a1035b98a1fc2fd0771c2d36203c022e9}\label{classWt_1_1Chart_1_1WAbstractGridData_a1035b98a1fc2fd0771c2d36203c022e9}} 
+std\+::vector$<$ float $>$ {\bfseries max\+Pt\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a797fc32ae156563a5a5dbb2cb39ee227}\label{classWt_1_1Chart_1_1WAbstractGridData_a797fc32ae156563a5a5dbb2cb39ee227}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1JavaScriptVector}{W\+G\+L\+Widget\+::\+Java\+Script\+Vector}} {\bfseries js\+Min\+Pt\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a360fd2b3a42c36bb278568f68af0eb92}\label{classWt_1_1Chart_1_1WAbstractGridData_a360fd2b3a42c36bb278568f68af0eb92}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1JavaScriptVector}{W\+G\+L\+Widget\+::\+Java\+Script\+Vector}} {\bfseries js\+Max\+Pt\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ab18b20ef9a5982bf1efc951c702790e6}\label{classWt_1_1Chart_1_1WAbstractGridData_ab18b20ef9a5982bf1efc951c702790e6}} 
+bool {\bfseries min\+Pt\+Changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a054f051ec777a628416179282a53fd70}\label{classWt_1_1Chart_1_1WAbstractGridData_a054f051ec777a628416179282a53fd70}} 
+bool {\bfseries max\+Pt\+Changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ade75d7fa030e83f858249ded9b38a16f}\label{classWt_1_1Chart_1_1WAbstractGridData_ade75d7fa030e83f858249ded9b38a16f}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries change\+Clipping\+Min\+X\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ad53883185c71a2b4b36ddf8e5b2d1bce}\label{classWt_1_1Chart_1_1WAbstractGridData_ad53883185c71a2b4b36ddf8e5b2d1bce}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries change\+Clipping\+Max\+X\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ac571d814db6997f4390301837aea3740}\label{classWt_1_1Chart_1_1WAbstractGridData_ac571d814db6997f4390301837aea3740}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries change\+Clipping\+Min\+Y\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a30c8038f82829ebb627190a01bb40583}\label{classWt_1_1Chart_1_1WAbstractGridData_a30c8038f82829ebb627190a01bb40583}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries change\+Clipping\+Max\+Y\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a30a4ce5872c047b3d4aea200a48df083}\label{classWt_1_1Chart_1_1WAbstractGridData_a30a4ce5872c047b3d4aea200a48df083}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries change\+Clipping\+Min\+Z\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a279da0b74d975e9005b2160c5864f421}\label{classWt_1_1Chart_1_1WAbstractGridData_a279da0b74d975e9005b2160c5864f421}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries change\+Clipping\+Max\+Z\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a2fdf226206844b13f1c7a154e4f40bee}\label{classWt_1_1Chart_1_1WAbstractGridData_a2fdf226206844b13f1c7a154e4f40bee}} 
+bool {\bfseries clipping\+Lines\+Enabled\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_abc9e9246d09916a49219b29c155263d4}\label{classWt_1_1Chart_1_1WAbstractGridData_abc9e9246d09916a49219b29c155263d4}} 
+\mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} {\bfseries clipping\+Lines\+Color\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a0a51b5aeaade4250a07abe4fcbca89c9}\label{classWt_1_1Chart_1_1WAbstractGridData_a0a51b5aeaade4250a07abe4fcbca89c9}} 
+class {\bfseries W\+Cartesian3\+D\+Chart}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class representing grid-\/based data for on a 3D chart. 
+
+General information can be found at \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D}{W\+Abstract\+Data\+Series3D}}. Information on how the model is structured is provided in the subclasses. Grid\+Data can be represented in three ways. This is indicated by \mbox{\hyperlink{group__charts_gacca4e123c9e4b212050bcfac488fceee}{Series3\+D\+Type}} and can be either \mbox{\hyperlink{group__charts_ggacca4e123c9e4b212050bcfac488fceeea2a3cd5946cfd317eb99c3d32e35e2d4c}{Series3\+D\+Type\+::\+Point}}, \mbox{\hyperlink{group__charts_ggacca4e123c9e4b212050bcfac488fceeeaaa0d528ba11ea1485d466dfe1ea40819}{Series3\+D\+Type\+::\+Surface}} or \mbox{\hyperlink{group__charts_ggacca4e123c9e4b212050bcfac488fceeeaddc35f88fa71b6ef142ae61f35364653}{Series3\+D\+Type\+::\+Bar}}. \mbox{\hyperlink{classNote}{Note}} that points and surfaces can only be added to charts of type \mbox{\hyperlink{group__charts_gga8d63464f873580c77508e1c0c26cbfeaa09870720ca8134284e4e305ac6ce5f19}{Chart\+Type\+::\+Scatter}}, while bars can only be added to charts of type \mbox{\hyperlink{group__charts_gga8d63464f873580c77508e1c0c26cbfeaa3adbdb3ac060038aa0e6e6c138ef9873}{Chart\+Type\+::\+Category}}.
+
+When the data is shown as a surface, a mesh can be added to the surface. This draws lines over the surface at the positions of the x-\/ and y-\/values. For bar-\/series data, it is possible to adjust the width of the bars in both directions.
+
+The three types of data-\/representation are illustrated below.
+
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a60da491b5b72cfbf1256061e2352a866}\label{classWt_1_1Chart_1_1WAbstractGridData_a60da491b5b72cfbf1256061e2352a866}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!barWidthX@{barWidthX}}
+\index{barWidthX@{barWidthX}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{barWidthX()}{barWidthX()}}
+{\footnotesize\ttfamily double Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::bar\+WidthX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the bar-\/width in the X-\/axis direction. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a79fdcfbba4c44ab656ee7a01b5235914}{set\+Bar\+Width()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a9debe09245778851b11827f9f63b2b4e}\label{classWt_1_1Chart_1_1WAbstractGridData_a9debe09245778851b11827f9f63b2b4e}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!barWidthY@{barWidthY}}
+\index{barWidthY@{barWidthY}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{barWidthY()}{barWidthY()}}
+{\footnotesize\ttfamily double Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::bar\+WidthY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the bar-\/width in the Y-\/axis direction. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a79fdcfbba4c44ab656ee7a01b5235914}{set\+Bar\+Width()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_aa3e7ea6b37d253f15c4ba26c3f05139b}\label{classWt_1_1Chart_1_1WAbstractGridData_aa3e7ea6b37d253f15c4ba26c3f05139b}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!changeClippingMax@{changeClippingMax}}
+\index{changeClippingMax@{changeClippingMax}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{changeClippingMax()}{changeClippingMax()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}}\& Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::change\+Clipping\+Max (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}}}]{axis }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} to change the value above which the data series will be clipped on the given axis. 
+
+The \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} takes one extra argument\+: the value to clip below.
+
+The js\+Ref() of this \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} is only valid when this \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData}{W\+Abstract\+Grid\+Data}} has been added to a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesian3DChart}{W\+Cartesian3\+D\+Chart}}. If this \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData}{W\+Abstract\+Grid\+Data}} moves to another \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesian3DChart}{W\+Cartesian3\+D\+Chart}}, the js\+Ref() of the \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} changes.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a9eec119892b92e3e2dcfd5e8009dc9f8}{set\+Clipping\+Max()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ab517ba43ef2fa3792f9dfdf692193532}\label{classWt_1_1Chart_1_1WAbstractGridData_ab517ba43ef2fa3792f9dfdf692193532}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!changeClippingMin@{changeClippingMin}}
+\index{changeClippingMin@{changeClippingMin}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{changeClippingMin()}{changeClippingMin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}}\& Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::change\+Clipping\+Min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}}}]{axis }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} to change the value below which the data series will be clipped on the given axis. 
+
+The \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} takes one extra argument\+: the value to clip below.
+
+The js\+Ref() of this \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} is only valid when this \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData}{W\+Abstract\+Grid\+Data}} has been added to a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesian3DChart}{W\+Cartesian3\+D\+Chart}}. If this \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData}{W\+Abstract\+Grid\+Data}} moves to another \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesian3DChart}{W\+Cartesian3\+D\+Chart}}, the js\+Ref() of the \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} changes.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a3b26ea3095e5be0017a9b1fe2ea3742a}{set\+Clipping\+Min()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a4278ae4155b312cd2e219c739d1cfd8c}\label{classWt_1_1Chart_1_1WAbstractGridData_a4278ae4155b312cd2e219c739d1cfd8c}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!clippingLinesColor@{clippingLinesColor}}
+\index{clippingLinesColor@{clippingLinesColor}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{clippingLinesColor()}{clippingLinesColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::clipping\+Lines\+Color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the color of the clipping lines. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a2837a58e40805502740fa29b6b73beb5}{set\+Clipping\+Lines\+Color()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_ad74945761f9bfcc2ced42487468c5480}{set\+Clipping\+Lines\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a3f7773f2d10c35f62013ab8780e64254}\label{classWt_1_1Chart_1_1WAbstractGridData_a3f7773f2d10c35f62013ab8780e64254}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!clippingLinesEnabled@{clippingLinesEnabled}}
+\index{clippingLinesEnabled@{clippingLinesEnabled}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{clippingLinesEnabled()}{clippingLinesEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::clipping\+Lines\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether clipping lines are enabled. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_ad74945761f9bfcc2ced42487468c5480}{set\+Clipping\+Lines\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a516694f610ce6e422cc6f55c184b60d1}\label{classWt_1_1Chart_1_1WAbstractGridData_a516694f610ce6e422cc6f55c184b60d1}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!clippingMax@{clippingMax}}
+\index{clippingMax@{clippingMax}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{clippingMax()}{clippingMax()}}
+{\footnotesize\ttfamily float Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::clipping\+Max (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}}}]{axis }\end{DoxyParamCaption}) const}
+
+
+
+Gets the value above which the data series will be clipped on the given axis. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a9eec119892b92e3e2dcfd5e8009dc9f8}{set\+Clipping\+Max()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a1b463f203a17153e3770d93a01a4a803}\label{classWt_1_1Chart_1_1WAbstractGridData_a1b463f203a17153e3770d93a01a4a803}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!clippingMin@{clippingMin}}
+\index{clippingMin@{clippingMin}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{clippingMin()}{clippingMin()}}
+{\footnotesize\ttfamily float Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::clipping\+Min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}}}]{axis }\end{DoxyParamCaption}) const}
+
+
+
+Gets the value below which the data series will be clipped on the given axis. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a3b26ea3095e5be0017a9b1fe2ea3742a}{set\+Clipping\+Min()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a678819da0d189c74ef6a4fc69296a325}\label{classWt_1_1Chart_1_1WAbstractGridData_a678819da0d189c74ef6a4fc69296a325}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!deleteAllGLResources@{deleteAllGLResources}}
+\index{deleteAllGLResources@{deleteAllGLResources}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{deleteAllGLResources()}{deleteAllGLResources()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::delete\+All\+G\+L\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Delete GL resources. 
+
+This function is called by \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a49ee94acdbca991ae079b8094e52d533}{update\+G\+L()}} in the chart to which this dataseries was added. 
+
+Implements \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a49434192a0398755cec3bd1760450d46}{Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3D}}.
+
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a47157d5c2756adeb28a26911b2d9b91a}\label{classWt_1_1Chart_1_1WAbstractGridData_a47157d5c2756adeb28a26911b2d9b91a}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!initializeGL@{initializeGL}}
+\index{initializeGL@{initializeGL}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{initializeGL()}{initializeGL()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::initialize\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initialize GL resources. 
+
+This function is called by \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a47157d5c2756adeb28a26911b2d9b91a}{initialize\+G\+L()}} in the chart to which this dataseries was added. 
+
+Implements \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a09f88c47c2fd01d83860dab188cad9b7}{Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3D}}.
+
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a3e5350a902b9d62cf07638806a56b45e}\label{classWt_1_1Chart_1_1WAbstractGridData_a3e5350a902b9d62cf07638806a56b45e}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!isoColorMap@{isoColorMap}}
+\index{isoColorMap@{isoColorMap}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{isoColorMap()}{isoColorMap()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap}{W\+Abstract\+Color\+Map}}$>$ Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::iso\+Color\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the color map for the isolines. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_ad81635441f90ea60212addd04b9c5bfb}{set\+Iso\+Color\+Map()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a61155ef93da5dcd8aa657a5e4ce000c0}\label{classWt_1_1Chart_1_1WAbstractGridData_a61155ef93da5dcd8aa657a5e4ce000c0}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!isoLevels@{isoLevels}}
+\index{isoLevels@{isoLevels}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{isoLevels()}{isoLevels()}}
+{\footnotesize\ttfamily const std\+::vector$<$double$>$\& Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::iso\+Levels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get all of the isoline levels. 
+
+\begin{DoxySeeAlso}{See also}
+add\+Iso\+Level() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a90fa00ddeac8c6dd505ee6def9d848ea}\label{classWt_1_1Chart_1_1WAbstractGridData_a90fa00ddeac8c6dd505ee6def9d848ea}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!isSurfaceMeshEnabled@{isSurfaceMeshEnabled}}
+\index{isSurfaceMeshEnabled@{isSurfaceMeshEnabled}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{isSurfaceMeshEnabled()}{isSurfaceMeshEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::is\+Surface\+Mesh\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the surface-\/mesh is enabled for this dataseries. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a0ac10568c6c4366be0618b485bd5a034}{set\+Surface\+Mesh\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a8e761cb3a19340ccd5690bb6d254f196}\label{classWt_1_1Chart_1_1WAbstractGridData_a8e761cb3a19340ccd5690bb6d254f196}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!maximum@{maximum}}
+\index{maximum@{maximum}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{maximum()}{maximum()}}
+{\footnotesize\ttfamily virtual double Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::maximum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}}}]{axis }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
+
+
+
+Returns the computed maximum value of this dataseries along the given axis. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a0679d73b58f8b9f42d52d04b9127211a}{minimum()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_aa7bf2d8e3bd86b80e96f86ac0c1750a1}{Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3D}}.
+
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1Chart_1_1WGridData_ad17a5b634f810e2ecee2718781b5d7da}{Wt\+::\+Chart\+::\+W\+Grid\+Data}}, and \mbox{\hyperlink{classWt_1_1Chart_1_1WEquidistantGridData_acc7b03c8232c71eec9c42478e35055a8}{Wt\+::\+Chart\+::\+W\+Equidistant\+Grid\+Data}}.
+
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a0679d73b58f8b9f42d52d04b9127211a}\label{classWt_1_1Chart_1_1WAbstractGridData_a0679d73b58f8b9f42d52d04b9127211a}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!minimum@{minimum}}
+\index{minimum@{minimum}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{minimum()}{minimum()}}
+{\footnotesize\ttfamily virtual double Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::minimum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}}}]{axis }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
+
+
+
+Returns the computed minimum value of this dataseries along the given axis. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a8e761cb3a19340ccd5690bb6d254f196}{maximum()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a69a9cdb0827605fbe4dd8472cac24668}{Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3D}}.
+
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1Chart_1_1WGridData_a18efeb4c3003f9d6f68edbafc7f11f77}{Wt\+::\+Chart\+::\+W\+Grid\+Data}}, and \mbox{\hyperlink{classWt_1_1Chart_1_1WEquidistantGridData_a2a1d38c4caaa1b3eabf4ed9d0db78147}{Wt\+::\+Chart\+::\+W\+Equidistant\+Grid\+Data}}.
+
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a074a43efadd7f265185fe9d4ae4edae6}\label{classWt_1_1Chart_1_1WAbstractGridData_a074a43efadd7f265185fe9d4ae4edae6}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!paintGL@{paintGL}}
+\index{paintGL@{paintGL}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{paintGL()}{paintGL()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::paint\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update the client-\/side painting function. 
+
+This function is called by \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a074a43efadd7f265185fe9d4ae4edae6}{paint\+G\+L()}} in the chart to which this dataseries was added. 
+
+Implements \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_ab2965d965dbc6049756033bc40f80025}{Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3D}}.
+
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a8ffa35b4fa40716d136852184b50aed0}\label{classWt_1_1Chart_1_1WAbstractGridData_a8ffa35b4fa40716d136852184b50aed0}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!pen@{pen}}
+\index{pen@{pen}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{pen()}{pen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::pen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the pen that is used for drawing the mesh. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a31d7fe38ac318b5ca6891d609648a2b3}{set\+Pen()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a156da52a0c9d9b3340c21e14db05ad73}\label{classWt_1_1Chart_1_1WAbstractGridData_a156da52a0c9d9b3340c21e14db05ad73}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!pickBar@{pickBar}}
+\index{pickBar@{pickBar}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{pickBar()}{pickBar()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Chart_1_1WBarSelection}{W\+Bar\+Selection}} Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::pick\+Bar (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption}) const}
+
+
+
+Return the bar that is closest to the look point at the given pixel. 
+
+A ray is cast from the given pixel\textquotesingle{}s x,y position (from the top left of the chart, in screen coordinates), and the closest bar on this \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData}{W\+Abstract\+Grid\+Data}} is returned, along with its distance from the look point.
+
+\mbox{\hyperlink{classNote}{Note}} that if this \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData}{W\+Abstract\+Grid\+Data}} is hidden, this method still returns the closest bar as if it was visible. Also, if multiple bars are on the same bar chart, the bar that is returned may be behind another data series. Use the distance field of the returned \mbox{\hyperlink{classWt_1_1Chart_1_1WBarSelection}{W\+Bar\+Selection}} to determine which data series is in front from the given angle.
+
+If there is no bar at the given pixel, then a selection with an invalid \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} is returned. The distance is then set to positive infinity. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a060745d637ac2d49944b97248e091169}\label{classWt_1_1Chart_1_1WAbstractGridData_a060745d637ac2d49944b97248e091169}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!pickSurface@{pickSurface}}
+\index{pickSurface@{pickSurface}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{pickSurface()}{pickSurface()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classWt_1_1Chart_1_1WSurfaceSelection}{W\+Surface\+Selection}}$>$ Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::pick\+Surface (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption}) const}
+
+
+
+Find all points on the surface that are projected to the given pixel. 
+
+A ray is cast from the given pixel\textquotesingle{}s x,y position (from the top left of the chart, in screen coordinates) and every intersection with the surface is returned, along with its distance from the look point. \mbox{\hyperlink{classNote}{Note}} that the coordinates of the intersection points are interpolated between the data points that make up the surface. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a8a05b0cc2049ca969ec71d1a0e1ce28a}\label{classWt_1_1Chart_1_1WAbstractGridData_a8a05b0cc2049ca969ec71d1a0e1ce28a}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!resizeGL@{resizeGL}}
+\index{resizeGL@{resizeGL}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{resizeGL()}{resizeGL()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::resize\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Act on resize events. 
+
+This function is called by \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a8a05b0cc2049ca969ec71d1a0e1ce28a}{resize\+G\+L()}} in the chart to which this dataseries was added. 
+
+Implements \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a77b0cad018156361205753ae16cebfcd}{Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3D}}.
+
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a79fdcfbba4c44ab656ee7a01b5235914}\label{classWt_1_1Chart_1_1WAbstractGridData_a79fdcfbba4c44ab656ee7a01b5235914}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!setBarWidth@{setBarWidth}}
+\index{setBarWidth@{setBarWidth}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{setBarWidth()}{setBarWidth()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::set\+Bar\+Width (\begin{DoxyParamCaption}\item[{double}]{x\+Width,  }\item[{double}]{y\+Width }\end{DoxyParamCaption})}
+
+
+
+Sets the bar-\/width. 
+
+This option only takes effect when the type of this \mbox{\hyperlink{classWt_1_1Chart_1_1WGridData}{W\+Grid\+Data}} is \mbox{\hyperlink{group__charts_ggacca4e123c9e4b212050bcfac488fceeeaddc35f88fa71b6ef142ae61f35364653}{Series3\+D\+Type\+::\+Bar}}. The values provided should be between 0 and 1, where 1 lets the bars each take up 1/(nb of x/y-\/values) of the axis.
+
+The default bar-\/width is 0.\+5 in both directions. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a2837a58e40805502740fa29b6b73beb5}\label{classWt_1_1Chart_1_1WAbstractGridData_a2837a58e40805502740fa29b6b73beb5}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!setClippingLinesColor@{setClippingLinesColor}}
+\index{setClippingLinesColor@{setClippingLinesColor}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{setClippingLinesColor()}{setClippingLinesColor()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::set\+Clipping\+Lines\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WColor}{W\+Color}}}]{color }\end{DoxyParamCaption})}
+
+
+
+Sets the color of the clipping lines. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_ad74945761f9bfcc2ced42487468c5480}{set\+Clipping\+Lines\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ad74945761f9bfcc2ced42487468c5480}\label{classWt_1_1Chart_1_1WAbstractGridData_ad74945761f9bfcc2ced42487468c5480}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!setClippingLinesEnabled@{setClippingLinesEnabled}}
+\index{setClippingLinesEnabled@{setClippingLinesEnabled}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{setClippingLinesEnabled()}{setClippingLinesEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::set\+Clipping\+Lines\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{clipping\+Lines\+Enabled }\end{DoxyParamCaption})}
+
+
+
+Sets whether clipping lines should be drawn where a surface is clipped. 
+
+Clipping lines are disabled by default. \mbox{\hyperlink{classNote}{Note}} that rendering will be significantly slower when enabled. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a9eec119892b92e3e2dcfd5e8009dc9f8}\label{classWt_1_1Chart_1_1WAbstractGridData_a9eec119892b92e3e2dcfd5e8009dc9f8}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!setClippingMax@{setClippingMax}}
+\index{setClippingMax@{setClippingMax}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{setClippingMax()}{setClippingMax()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::set\+Clipping\+Max (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}}}]{axis,  }\item[{float}]{v }\end{DoxyParamCaption})}
+
+
+
+Set the value above which the data series will be clipped on the given axis. 
+
+This only affects data series whose type is \mbox{\hyperlink{group__charts_ggacca4e123c9e4b212050bcfac488fceeeaaa0d528ba11ea1485d466dfe1ea40819}{Series3\+D\+Type\+::\+Surface}}. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a3b26ea3095e5be0017a9b1fe2ea3742a}\label{classWt_1_1Chart_1_1WAbstractGridData_a3b26ea3095e5be0017a9b1fe2ea3742a}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!setClippingMin@{setClippingMin}}
+\index{setClippingMin@{setClippingMin}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{setClippingMin()}{setClippingMin()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::set\+Clipping\+Min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}}}]{axis,  }\item[{float}]{v }\end{DoxyParamCaption})}
+
+
+
+Set the value below which the data series will be clipped on the given axis. 
+
+This only affects data series whose type is \mbox{\hyperlink{group__charts_ggacca4e123c9e4b212050bcfac488fceeeaaa0d528ba11ea1485d466dfe1ea40819}{Series3\+D\+Type\+::\+Surface}}. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_ad81635441f90ea60212addd04b9c5bfb}\label{classWt_1_1Chart_1_1WAbstractGridData_ad81635441f90ea60212addd04b9c5bfb}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!setIsoColorMap@{setIsoColorMap}}
+\index{setIsoColorMap@{setIsoColorMap}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{setIsoColorMap()}{setIsoColorMap()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::set\+Iso\+Color\+Map (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap}{W\+Abstract\+Color\+Map}} $>$ \&}]{colormap }\end{DoxyParamCaption})}
+
+
+
+Set the color map for the isolines. 
+
+When no color map is defined for the isolines, i.\+e. \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a3e5350a902b9d62cf07638806a56b45e}{iso\+Color\+Map()}} is set to N\+U\+LL, the color map of this \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData}{W\+Abstract\+Grid\+Data}} will be used.
+
+The isolines are only drawn if the type is \mbox{\hyperlink{group__charts_ggacca4e123c9e4b212050bcfac488fceeeaaa0d528ba11ea1485d466dfe1ea40819}{Series3\+D\+Type\+::\+Surface}}.
+
+\begin{DoxySeeAlso}{See also}
+add\+Iso\+Level(), \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a05a0b75a253302bfcfc288dbf913351b}{set\+Color\+Map()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a09c065c802ff9b21d3c2a543e48f58b2}\label{classWt_1_1Chart_1_1WAbstractGridData_a09c065c802ff9b21d3c2a543e48f58b2}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!setIsoLevels@{setIsoLevels}}
+\index{setIsoLevels@{setIsoLevels}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{setIsoLevels()}{setIsoLevels()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::set\+Iso\+Levels (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{iso\+Levels }\end{DoxyParamCaption})}
+
+
+
+Set isoline levels. 
+
+Isolines are drawn on the top or ground plane of the chart. Only applies if the type is \mbox{\hyperlink{group__charts_ggacca4e123c9e4b212050bcfac488fceeeaaa0d528ba11ea1485d466dfe1ea40819}{Series3\+D\+Type\+::\+Surface}}.
+
+The isoline levels are set in the coordinate system of the item model. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a31d7fe38ac318b5ca6891d609648a2b3}\label{classWt_1_1Chart_1_1WAbstractGridData_a31d7fe38ac318b5ca6891d609648a2b3}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!setPen@{setPen}}
+\index{setPen@{setPen}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{setPen()}{setPen()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::set\+Pen (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \&}]{pen }\end{DoxyParamCaption})}
+
+
+
+Sets the \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} that is used for drawing the mesh. 
+
+Used when drawing the mesh on a surface or the lines around bars. The default is a default constructed \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} (black and one pixel wide).
+
+\mbox{\hyperlink{classNote}{Note}}\+: only the width and color of this \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} are used.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a0ac10568c6c4366be0618b485bd5a034}{set\+Surface\+Mesh\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a0ac10568c6c4366be0618b485bd5a034}\label{classWt_1_1Chart_1_1WAbstractGridData_a0ac10568c6c4366be0618b485bd5a034}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!setSurfaceMeshEnabled@{setSurfaceMeshEnabled}}
+\index{setSurfaceMeshEnabled@{setSurfaceMeshEnabled}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{setSurfaceMeshEnabled()}{setSurfaceMeshEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::set\+Surface\+Mesh\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Enables or disables a mesh for when a surface is drawn. 
+
+The default value is false. This option only takes effect when the type of this \mbox{\hyperlink{classWt_1_1Chart_1_1WGridData}{W\+Grid\+Data}} is \mbox{\hyperlink{group__charts_ggacca4e123c9e4b212050bcfac488fceeeaaa0d528ba11ea1485d466dfe1ea40819}{Series3\+D\+Type\+::\+Surface}}. The mesh is drawn at the position of the x-\/axis and y-\/axis values. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_aaa3399a1aed5a7b88b69f52d66f63be6}\label{classWt_1_1Chart_1_1WAbstractGridData_aaa3399a1aed5a7b88b69f52d66f63be6}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!setType@{setType}}
+\index{setType@{setType}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::set\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__charts_gacca4e123c9e4b212050bcfac488fceee}{Series3\+D\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Sets the type of representation that will be used for the data. 
+
+All representations in \mbox{\hyperlink{group__charts_gacca4e123c9e4b212050bcfac488fceee}{Series3\+D\+Type}} are possible for the data. \mbox{\hyperlink{classNote}{Note}} that \mbox{\hyperlink{group__charts_ggacca4e123c9e4b212050bcfac488fceeea2a3cd5946cfd317eb99c3d32e35e2d4c}{Series3\+D\+Type\+::\+Point}} and \mbox{\hyperlink{group__charts_ggacca4e123c9e4b212050bcfac488fceeeaaa0d528ba11ea1485d466dfe1ea40819}{Series3\+D\+Type\+::\+Surface}} can only be used on a chart that is configured as a \mbox{\hyperlink{group__charts_gga8d63464f873580c77508e1c0c26cbfeaa09870720ca8134284e4e305ac6ce5f19}{Chart\+Type\+::\+Scatter}} and \mbox{\hyperlink{group__charts_ggacca4e123c9e4b212050bcfac488fceeeaddc35f88fa71b6ef142ae61f35364653}{Series3\+D\+Type\+::\+Bar}} can only be used on a chart that is configured to be a \mbox{\hyperlink{group__charts_gga8d63464f873580c77508e1c0c26cbfeaa3adbdb3ac060038aa0e6e6c138ef9873}{Chart\+Type\+::\+Category}}.
+
+The default value is \mbox{\hyperlink{group__charts_ggacca4e123c9e4b212050bcfac488fceeea2a3cd5946cfd317eb99c3d32e35e2d4c}{Series3\+D\+Type\+::\+Point}}. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a6f55053a2a5d9d1b935717979ae4b3da}\label{classWt_1_1Chart_1_1WAbstractGridData_a6f55053a2a5d9d1b935717979ae4b3da}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!type@{type}}
+\index{type@{type}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{type()}{type()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{group__charts_gacca4e123c9e4b212050bcfac488fceee}{Series3\+D\+Type}} Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the type of representation that will be used for the data. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_aaa3399a1aed5a7b88b69f52d66f63be6}{set\+Type()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractGridData_a49ee94acdbca991ae079b8094e52d533}\label{classWt_1_1Chart_1_1WAbstractGridData_a49ee94acdbca991ae079b8094e52d533}} 
+\index{Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}!updateGL@{updateGL}}
+\index{updateGL@{updateGL}!Wt::Chart::WAbstractGridData@{Wt::Chart::WAbstractGridData}}
+\doxysubsubsection{\texorpdfstring{updateGL()}{updateGL()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data\+::update\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Update GL resources. 
+
+This function is called by \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a49ee94acdbca991ae079b8094e52d533}{update\+G\+L()}} in the chart to which this dataseries was added. Before this function is called, \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a678819da0d189c74ef6a4fc69296a325}{delete\+All\+G\+L\+Resources()}} is called.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a678819da0d189c74ef6a4fc69296a325}{delete\+All\+G\+L\+Resources()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_ab97b255bfc1c4af25da3828c82a8a8c7}{Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3D}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Chart/W\+Abstract\+Grid\+Data.\+h\end{DoxyCompactItemize}

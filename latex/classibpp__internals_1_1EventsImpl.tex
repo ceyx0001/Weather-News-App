@@ -1,0 +1,118 @@
+\hypertarget{classibpp__internals_1_1EventsImpl}{}\doxysection{ibpp\+\_\+internals\+::Events\+Impl Class Reference}
+\label{classibpp__internals_1_1EventsImpl}\index{ibpp\_internals::EventsImpl@{ibpp\_internals::EventsImpl}}
+
+
+Inheritance diagram for ibpp\+\_\+internals\+::Events\+Impl\+:
+% FIG 0
+
+
+Collaboration diagram for ibpp\+\_\+internals\+::Events\+Impl\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a537460847aaff1a2960c3cba0f065a78}\label{classibpp__internals_1_1EventsImpl_a537460847aaff1a2960c3cba0f065a78}} 
+void {\bfseries Attach\+Database\+Impl} (\mbox{\hyperlink{classibpp__internals_1_1DatabaseImpl}{Database\+Impl}} $\ast$)
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_ade1c33e4c3f0f44fd54ced8838c3c3a4}\label{classibpp__internals_1_1EventsImpl_ade1c33e4c3f0f44fd54ced8838c3c3a4}} 
+void {\bfseries Detach\+Database\+Impl} ()
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a262ac0b590ee8f28d971871a258f49f1}\label{classibpp__internals_1_1EventsImpl_a262ac0b590ee8f28d971871a258f49f1}} 
+{\bfseries Events\+Impl} (\mbox{\hyperlink{classibpp__internals_1_1DatabaseImpl}{Database\+Impl}} $\ast$dbi)
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_abb9b3133c7263f0303a74b6ba15440e1}\label{classibpp__internals_1_1EventsImpl_abb9b3133c7263f0303a74b6ba15440e1}} 
+void {\bfseries Add} (const std\+::string \&, \mbox{\hyperlink{classIBPP_1_1EventInterface}{I\+B\+P\+P\+::\+Event\+Interface}} $\ast$)
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_af78f94380dbd37c0611db775c83f018c}\label{classibpp__internals_1_1EventsImpl_af78f94380dbd37c0611db775c83f018c}} 
+void {\bfseries Drop} (const std\+::string \&)
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_ac5ccfd9f1f77393f97da79735f61f504}\label{classibpp__internals_1_1EventsImpl_ac5ccfd9f1f77393f97da79735f61f504}} 
+void {\bfseries List} (std\+::vector$<$ std\+::string $>$ \&)
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a0045f114d08c6c2cb7984641e933f24e}\label{classibpp__internals_1_1EventsImpl_a0045f114d08c6c2cb7984641e933f24e}} 
+void {\bfseries Clear} ()
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a440b8fc6a815bde532e1129f002ddacb}\label{classibpp__internals_1_1EventsImpl_a440b8fc6a815bde532e1129f002ddacb}} 
+void {\bfseries Dispatch} ()
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a74109033aa65cc4af2e4ee016056d899}\label{classibpp__internals_1_1EventsImpl_a74109033aa65cc4af2e4ee016056d899}} 
+\mbox{\hyperlink{classIBPP_1_1Ptr}{I\+B\+P\+P\+::\+Database}} {\bfseries Database\+Ptr} () const
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a8082f543395574a9456802367d32a3c5}\label{classibpp__internals_1_1EventsImpl_a8082f543395574a9456802367d32a3c5}} 
+\mbox{\hyperlink{classIBPP_1_1IEvents}{I\+B\+P\+P\+::\+I\+Events}} $\ast$ {\bfseries Add\+Ref} ()
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_af6fab80a7f55bf93a8602887947d82c3}\label{classibpp__internals_1_1EventsImpl_af6fab80a7f55bf93a8602887947d82c3}} 
+void {\bfseries Release} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a29a812d6b4db72aec2fbda4b840ac073}\label{classibpp__internals_1_1EventsImpl_a29a812d6b4db72aec2fbda4b840ac073}} 
+typedef std\+::vector$<$ \mbox{\hyperlink{classIBPP_1_1EventInterface}{I\+B\+P\+P\+::\+Event\+Interface}} $\ast$ $>$ {\bfseries Obj\+Refs}
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a2496c1d00cbf5a1c9c708ac73c9d872a}\label{classibpp__internals_1_1EventsImpl_a2496c1d00cbf5a1c9c708ac73c9d872a}} 
+typedef std\+::vector$<$ char $>$ {\bfseries Buffer}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a77b015cbf54b2d1d2fa4393e3accc7d0}\label{classibpp__internals_1_1EventsImpl_a77b015cbf54b2d1d2fa4393e3accc7d0}} 
+void {\bfseries Fire\+Actions} ()
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_ab6c9427898ad80f0b08e618e6f8a2966}\label{classibpp__internals_1_1EventsImpl_ab6c9427898ad80f0b08e618e6f8a2966}} 
+void {\bfseries Queue} ()
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a35bf5be3906cea4ed3be8bd6a9ba661f}\label{classibpp__internals_1_1EventsImpl_a35bf5be3906cea4ed3be8bd6a9ba661f}} 
+void {\bfseries Cancel} ()
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_ad49b98e0f06f56f945dd3d1ababe3ff3}\label{classibpp__internals_1_1EventsImpl_ad49b98e0f06f56f945dd3d1ababe3ff3}} 
+\mbox{\hyperlink{classibpp__internals_1_1EventsImpl}{Events\+Impl}} \& {\bfseries operator=} (const \mbox{\hyperlink{classibpp__internals_1_1EventsImpl}{Events\+Impl}} \&)
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_af9869e3317e500d500d51e56c8e25ea4}\label{classibpp__internals_1_1EventsImpl_af9869e3317e500d500d51e56c8e25ea4}} 
+{\bfseries Events\+Impl} (const \mbox{\hyperlink{classibpp__internals_1_1EventsImpl}{Events\+Impl}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a0dc7874ef29375ee9575f17b8bfe3309}\label{classibpp__internals_1_1EventsImpl_a0dc7874ef29375ee9575f17b8bfe3309}} 
+static void {\bfseries Event\+Handler} (const char $\ast$, short, const char $\ast$)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a8377d1da9e9742ce383818f7914a69df}\label{classibpp__internals_1_1EventsImpl_a8377d1da9e9742ce383818f7914a69df}} 
+Obj\+Refs {\bfseries m\+Object\+References}
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a5e6345eae73282fdff01786c3f60edce}\label{classibpp__internals_1_1EventsImpl_a5e6345eae73282fdff01786c3f60edce}} 
+Buffer {\bfseries m\+Event\+Buffer}
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a211edca93a9348f46d618f9356660ee8}\label{classibpp__internals_1_1EventsImpl_a211edca93a9348f46d618f9356660ee8}} 
+Buffer {\bfseries m\+Results\+Buffer}
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a6c05cbdb37519d0f3e3751731c43791d}\label{classibpp__internals_1_1EventsImpl_a6c05cbdb37519d0f3e3751731c43791d}} 
+int {\bfseries m\+Ref\+Count}
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a7cf13b3d3e376afb435db0010b7afcd7}\label{classibpp__internals_1_1EventsImpl_a7cf13b3d3e376afb435db0010b7afcd7}} 
+\mbox{\hyperlink{classibpp__internals_1_1DatabaseImpl}{Database\+Impl}} $\ast$ {\bfseries m\+Database}
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a44bd61093f6ea39efee965686604243c}\label{classibpp__internals_1_1EventsImpl_a44bd61093f6ea39efee965686604243c}} 
+I\+S\+C\+\_\+\+L\+O\+NG {\bfseries m\+Id}
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a9a2bce17f9f2274a867efeadf1785bd8}\label{classibpp__internals_1_1EventsImpl_a9a2bce17f9f2274a867efeadf1785bd8}} 
+bool {\bfseries m\+Queued}
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a055a4cfe89cad49ea18b58f794291635}\label{classibpp__internals_1_1EventsImpl_a055a4cfe89cad49ea18b58f794291635}} 
+bool {\bfseries m\+Trapped}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classibpp__internals_1_1EventsImpl_a5852accd626e0c177dcaa345c13aa2c8}\label{classibpp__internals_1_1EventsImpl_a5852accd626e0c177dcaa345c13aa2c8}} 
+static const size\+\_\+t {\bfseries M\+A\+X\+E\+V\+E\+N\+T\+N\+A\+M\+E\+L\+EN} = 127
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/backend/ibpp/core/\+\_\+ibpp.\+h\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/backend/ibpp/core/events.\+cpp\end{DoxyCompactItemize}

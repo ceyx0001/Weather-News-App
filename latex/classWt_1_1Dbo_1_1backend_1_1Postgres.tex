@@ -1,0 +1,480 @@
+\hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres}{}\doxysection{Wt\+::Dbo\+::backend\+::Postgres Class Reference}
+\label{classWt_1_1Dbo_1_1backend_1_1Postgres}\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+
+
+A Postgre\+S\+QL connection.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Dbo/backend/\+Postgres.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Dbo\+::backend\+::Postgres\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Dbo\+::backend\+::Postgres\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a5699b228685c11aaf3293e1ec6243f35}{Postgres}} ()
+\begin{DoxyCompactList}\small\item\em Creates new Postgre\+S\+QL backend connection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a3fd006b93f9eb7d8c88d9f01d339606d}{Postgres}} (const std\+::string \&db)
+\begin{DoxyCompactList}\small\item\em Opens a new Postgre\+S\+QL backend connection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_ae032939fe1a5e5007179d5c52e9074c1}{Postgres}} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres}{Postgres}} \&other)
+\begin{DoxyCompactList}\small\item\em Copies a Postgre\+S\+QL connection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a6b7dbc604df8610791e6cfdc57b55443}{$\sim$\+Postgres}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a631d80d4ec5299a40edc17f8e6c123b1}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Clones the connection. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a003ae8b797aea816669d4f02a34c6806}{connect}} (const std\+::string \&db)
+\begin{DoxyCompactList}\small\item\em Tries to connect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a28b4cf9f73393f0fbe9f2fbaf06689d0}{disconnect}} ()
+\begin{DoxyCompactList}\small\item\em Disconnects. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a768b932a39a230efac19912af235598d}{reconnect}} ()
+\begin{DoxyCompactList}\small\item\em Reconnect. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a025dd7452d7f25cdca2088999d37e238}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a025dd7452d7f25cdca2088999d37e238}} 
+P\+Gconn $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a025dd7452d7f25cdca2088999d37e238}{connection}} ()
+\begin{DoxyCompactList}\small\item\em Returns the underlying connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_abde27e10f272d0e6b139fa287a8bf35d}{set\+Timeout}} (std\+::chrono\+::microseconds \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a3e9cb3dbec6f84665328e1a289a16103}{timeout}})
+\begin{DoxyCompactList}\small\item\em Sets a timeout. \end{DoxyCompactList}\item 
+std\+::chrono\+::microseconds \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a3e9cb3dbec6f84665328e1a289a16103}{timeout}} () const
+\begin{DoxyCompactList}\small\item\em Returns the timeout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a3fc3e070346245296a90ade9eb133def}{set\+Maximum\+Lifetime}} (std\+::chrono\+::seconds seconds)
+\begin{DoxyCompactList}\small\item\em Sets the maximum lifetime for the underlying connection. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a0d663f57a045c55b72039a1eac34ca5d}{execute\+Sql}} (const std\+::string \&sql) override
+\begin{DoxyCompactList}\small\item\em Executes an S\+QL statement. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a562d382b0ca42bfbeffe2ccc8e1bcad1}{start\+Transaction}} () override
+\begin{DoxyCompactList}\small\item\em Starts a transaction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a153e66dc5f383cffc0e80938843e802e}{commit\+Transaction}} () override
+\begin{DoxyCompactList}\small\item\em Commits a transaction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a624d6ed85d05e957457731f9d47fd15b}{rollback\+Transaction}} () override
+\begin{DoxyCompactList}\small\item\em Rolls back a transaction. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_ac4e2fe27ad9e30500f2eac76ca248e47}{prepare\+Statement}} (const std\+::string \&sql) override
+\begin{DoxyCompactList}\small\item\em Prepares a statement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_aa2de59c9078800a691d36398f6754b4c}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_aa2de59c9078800a691d36398f6754b4c}} 
+void {\bfseries check\+Connection} (std\+::chrono\+::seconds margin)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Methods that return dialect information}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_ac13fcc021ca46b60a8d041882270ef4b}{autoincrement\+Sql}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type modifier. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a22b8ab973f04837231a8e94bb2bebc36}{autoincrement\+Create\+Sequence\+Sql}} (const std\+::string \&table, const std\+::string \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the S\+QL statement(s) required to create an id sequence. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a18b5d8ad81bc884ad7053fb1574785e5}{autoincrement\+Drop\+Sequence\+Sql}} (const std\+::string \&table, const std\+::string \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the S\+QL statement(s) required to drop an id sequence. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a2ed7022162cf42c6163df94445c26421}{autoincrement\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_aee5be53ccdfd504bc5ba17c07cc29c53}{autoincrement\+Insert\+Suffix}} (const std\+::string \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the suffix for an \textquotesingle{}autoincrement\textquotesingle{} insert statement. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_afec9de311600ce98ac3cc8f4a0bca82d}{date\+Time\+Type}} (\mbox{\hyperlink{namespaceWt_1_1Dbo_af213c090c1ccddc36d70d56e0804047f}{Sql\+Date\+Time\+Type}} type) const override
+\begin{DoxyCompactList}\small\item\em Returns the date/time type. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a45bc76755c63a851e31d3f0d16b8e34b}{blob\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the blob type. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_ab9ddebce425f78bda4c6b465cf9969a1}{support\+Alter\+Table}} () const override
+\begin{DoxyCompactList}\small\item\em Returns true if the backend support Alter \mbox{\hyperlink{structTable}{Table}}. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a19226060270eadaec111f784f5488f39}{support\+Deferrable\+F\+K\+Constraint}} () const override
+\begin{DoxyCompactList}\small\item\em Returns true if the backend supports \char`\"{}deferrable initially
+deferred\char`\"{} foreign key constraints. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_ac003ff77a3621dfc254359c97ed7102a}{require\+Subquery\+Alias}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the true if the database require subquery alias. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_aa09a07796fb557b5c1305f25de826c1e}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_aa09a07796fb557b5c1305f25de826c1e}} 
+void {\bfseries exec} (const std\+::string \&sql, bool show\+Query)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a1ede6c9fd40d73e6e652bcce8b41dad2}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a1ede6c9fd40d73e6e652bcce8b41dad2}} 
+std\+::string {\bfseries conn\+Info\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a8d89b0fc5a1679a7e0e68990666389a5}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a8d89b0fc5a1679a7e0e68990666389a5}} 
+P\+Gconn $\ast$ {\bfseries conn\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_ac5b4aa4571a89951a963b0e0cfcd97cf}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_ac5b4aa4571a89951a963b0e0cfcd97cf}} 
+std\+::chrono\+::microseconds {\bfseries timeout\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a3a6d1e30566fcb146ee0a394671e8a1e}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a3a6d1e30566fcb146ee0a394671e8a1e}} 
+std\+::chrono\+::seconds {\bfseries maximum\+Lifetime\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a237d90b8ef5f2a3f28ecb4fd6c7a88c8}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a237d90b8ef5f2a3f28ecb4fd6c7a88c8}} 
+std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point {\bfseries connect\+Time\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A Postgre\+S\+QL connection. 
+
+This class provides the backend implementation for Postgre\+S\+QL databases.
+
+When applicable, exceptions from the backend will return the five-\/character S\+Q\+L\+S\+T\+A\+TE error codes, as in \href{http://www.postgresql.org/docs/8.1/static/errcodes-appendix.html,}{\texttt{ http\+://www.\+postgresql.\+org/docs/8.\+1/static/errcodes-\/appendix.\+html,}} in \mbox{\hyperlink{classWt_1_1Dbo_1_1Exception_aec872dea5420267dc96b1b03c8193c49}{Exception\+::code()}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a5699b228685c11aaf3293e1ec6243f35}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a5699b228685c11aaf3293e1ec6243f35}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!Postgres@{Postgres}}
+\index{Postgres@{Postgres}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{Postgres()}{Postgres()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Wt\+::\+Dbo\+::backend\+::\+Postgres\+::\+Postgres (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates new Postgre\+S\+QL backend connection. 
+
+The connection is not yet open, and requires a \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a003ae8b797aea816669d4f02a34c6806}{connect()}} before it can be used. \mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a3fd006b93f9eb7d8c88d9f01d339606d}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a3fd006b93f9eb7d8c88d9f01d339606d}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!Postgres@{Postgres}}
+\index{Postgres@{Postgres}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{Postgres()}{Postgres()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Wt\+::\+Dbo\+::backend\+::\+Postgres\+::\+Postgres (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{db }\end{DoxyParamCaption})}
+
+
+
+Opens a new Postgre\+S\+QL backend connection. 
+
+The {\ttfamily db} may be any of the values supported by P\+Qconnectdb(). \mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_ae032939fe1a5e5007179d5c52e9074c1}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_ae032939fe1a5e5007179d5c52e9074c1}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!Postgres@{Postgres}}
+\index{Postgres@{Postgres}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{Postgres()}{Postgres()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Wt\+::\+Dbo\+::backend\+::\+Postgres\+::\+Postgres (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres}{Postgres}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copies a Postgre\+S\+QL connection. 
+
+This creates a new connection with the same settings as another connection.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a631d80d4ec5299a40edc17f8e6c123b1}{clone()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a6b7dbc604df8610791e6cfdc57b55443}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a6b7dbc604df8610791e6cfdc57b55443}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!````~Postgres@{$\sim$Postgres}}
+\index{````~Postgres@{$\sim$Postgres}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{$\sim$Postgres()}{~Postgres()}}
+{\footnotesize\ttfamily Wt\+::\+Dbo\+::backend\+::\+Postgres\+::$\sim$\+Postgres (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Closes the connection. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a22b8ab973f04837231a8e94bb2bebc36}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a22b8ab973f04837231a8e94bb2bebc36}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!autoincrementCreateSequenceSql@{autoincrementCreateSequenceSql}}
+\index{autoincrementCreateSequenceSql@{autoincrementCreateSequenceSql}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{autoincrementCreateSequenceSql()}{autoincrementCreateSequenceSql()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ Wt\+::\+Dbo\+::backend\+::\+Postgres\+::autoincrement\+Create\+Sequence\+Sql (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{table,  }\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the S\+QL statement(s) required to create an id sequence. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aba79d84c7c91faae06f954e6d3d390ab}{Session\+::create\+Tables()}} to create the id sequence for a table. The table\textquotesingle{}s name and primary key are passed as arguments to this function and can be used to construct an S\+QL sequence that is unique for the table. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a7922dac3fd8a808dbbeef97a5a772e3f}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a18b5d8ad81bc884ad7053fb1574785e5}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a18b5d8ad81bc884ad7053fb1574785e5}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!autoincrementDropSequenceSql@{autoincrementDropSequenceSql}}
+\index{autoincrementDropSequenceSql@{autoincrementDropSequenceSql}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{autoincrementDropSequenceSql()}{autoincrementDropSequenceSql()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ Wt\+::\+Dbo\+::backend\+::\+Postgres\+::autoincrement\+Drop\+Sequence\+Sql (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{table,  }\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the S\+QL statement(s) required to drop an id sequence. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a4c1fedb21e4e1cc44b182a34e8ebb4ef}{Session\+::drop\+Tables()}} to drop the id sequence for a table. The table\textquotesingle{}s name and primary key are passed as arguments to this function and can be used to construct an S\+QL sequence that is unique for the table. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a188acc931dd1d3dbd3a21e28783f7bd2}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_aee5be53ccdfd504bc5ba17c07cc29c53}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_aee5be53ccdfd504bc5ba17c07cc29c53}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!autoincrementInsertSuffix@{autoincrementInsertSuffix}}
+\index{autoincrementInsertSuffix@{autoincrementInsertSuffix}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{autoincrementInsertSuffix()}{autoincrementInsertSuffix()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Dbo\+::backend\+::\+Postgres\+::autoincrement\+Insert\+Suffix (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the suffix for an \textquotesingle{}autoincrement\textquotesingle{} insert statement. 
+
+This is appended to the {\ttfamily insert} statement, since some back-\/ends need to be indicated that they should return the autoincrement id. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_abda2502e05a08d4728ff8f026663321f}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_ac13fcc021ca46b60a8d041882270ef4b}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_ac13fcc021ca46b60a8d041882270ef4b}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!autoincrementSql@{autoincrementSql}}
+\index{autoincrementSql@{autoincrementSql}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{autoincrementSql()}{autoincrementSql()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Dbo\+::backend\+::\+Postgres\+::autoincrement\+Sql (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type modifier. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aba79d84c7c91faae06f954e6d3d390ab}{Session\+::create\+Tables()}} to create the {\itshape id} column. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a8c00fd64eb82999880cc813ef3866f5d}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a2ed7022162cf42c6163df94445c26421}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a2ed7022162cf42c6163df94445c26421}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!autoincrementType@{autoincrementType}}
+\index{autoincrementType@{autoincrementType}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{autoincrementType()}{autoincrementType()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Dbo\+::backend\+::\+Postgres\+::autoincrement\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aba79d84c7c91faae06f954e6d3d390ab}{Session\+::create\+Tables()}} to create the {\itshape id} column. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_aff293ff5ad586e15143729eb38300ad6}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a45bc76755c63a851e31d3f0d16b8e34b}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a45bc76755c63a851e31d3f0d16b8e34b}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!blobType@{blobType}}
+\index{blobType@{blobType}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{blobType()}{blobType()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Wt\+::\+Dbo\+::backend\+::\+Postgres\+::blob\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the blob type. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_ae2bbddef8fd8c11687d23187920dc4da}{Sql\+Statement\+::bind(int, const std\+::vector$<$unsigned char$>$\&)}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a68a272eaafeef5e04912914f0662da39}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a631d80d4ec5299a40edc17f8e6c123b1}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a631d80d4ec5299a40edc17f8e6c123b1}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!clone@{clone}}
+\index{clone@{clone}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}}$>$ Wt\+::\+Dbo\+::backend\+::\+Postgres\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clones the connection. 
+
+Returns a new connection object that is configured like this object. This is used by connection pool implementations to create its connections. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a71270c0d9258bc6f9f7177799db49083}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a153e66dc5f383cffc0e80938843e802e}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a153e66dc5f383cffc0e80938843e802e}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!commitTransaction@{commitTransaction}}
+\index{commitTransaction@{commitTransaction}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{commitTransaction()}{commitTransaction()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::backend\+::\+Postgres\+::commit\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Commits a transaction. 
+
+This function commits a transaction. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a38ed9ab4831a0bfd8694f250813803bf}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a003ae8b797aea816669d4f02a34c6806}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a003ae8b797aea816669d4f02a34c6806}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!connect@{connect}}
+\index{connect@{connect}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily bool Wt\+::\+Dbo\+::backend\+::\+Postgres\+::connect (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{db }\end{DoxyParamCaption})}
+
+
+
+Tries to connect. 
+
+Throws an exception if there was a problem, otherwise true. An example connecion string could be\+: \char`\"{}host=127.\+0.\+0.\+1 user=test password=test port=5432 dbname=test\char`\"{} \mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_afec9de311600ce98ac3cc8f4a0bca82d}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_afec9de311600ce98ac3cc8f4a0bca82d}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!dateTimeType@{dateTimeType}}
+\index{dateTimeType@{dateTimeType}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{dateTimeType()}{dateTimeType()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Wt\+::\+Dbo\+::backend\+::\+Postgres\+::date\+Time\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWt_1_1Dbo_af213c090c1ccddc36d70d56e0804047f}{Sql\+Date\+Time\+Type}}}]{type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the date/time type. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_afbe4698684c7b9b355748a199e0b0558}{Sql\+Statement\+::bind(int, const std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point\&, Sql\+Date\+Time\+Type)}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_af1f3290a984288175c6d82d088d0636c}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a28b4cf9f73393f0fbe9f2fbaf06689d0}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a28b4cf9f73393f0fbe9f2fbaf06689d0}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily void Wt\+::\+Dbo\+::backend\+::\+Postgres\+::disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Disconnects. 
+
+This disconnects from the server. Any subsequent action on the connection will result in an automatic reconnect.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a768b932a39a230efac19912af235598d}{reconnect()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a0d663f57a045c55b72039a1eac34ca5d}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a0d663f57a045c55b72039a1eac34ca5d}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!executeSql@{executeSql}}
+\index{executeSql@{executeSql}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{executeSql()}{executeSql()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::backend\+::\+Postgres\+::execute\+Sql (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sql }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes an S\+QL statement. 
+
+This is a convenience method for preparing a statement, executing it, and deleting it. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_afe86e3baaffa9276654a4dea9a6830a0}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_ac4e2fe27ad9e30500f2eac76ca248e47}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_ac4e2fe27ad9e30500f2eac76ca248e47}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!prepareStatement@{prepareStatement}}
+\index{prepareStatement@{prepareStatement}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{prepareStatement()}{prepareStatement()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}}$>$ Wt\+::\+Dbo\+::backend\+::\+Postgres\+::prepare\+Statement (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sql }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Prepares a statement. 
+
+Returns the prepared statement. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a4990470cf601ed8b523d97a7f8849210}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a768b932a39a230efac19912af235598d}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a768b932a39a230efac19912af235598d}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!reconnect@{reconnect}}
+\index{reconnect@{reconnect}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{reconnect()}{reconnect()}}
+{\footnotesize\ttfamily bool Wt\+::\+Dbo\+::backend\+::\+Postgres\+::reconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reconnect. 
+
+This will try to reconnect a previously disconnected connection. If the connection is still open, it will first disconnect. \mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_ac003ff77a3621dfc254359c97ed7102a}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_ac003ff77a3621dfc254359c97ed7102a}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!requireSubqueryAlias@{requireSubqueryAlias}}
+\index{requireSubqueryAlias@{requireSubqueryAlias}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{requireSubqueryAlias()}{requireSubqueryAlias()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::backend\+::\+Postgres\+::require\+Subquery\+Alias (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the true if the database require subquery alias. 
+
+This method will return false by default. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a997517374428a3f5d5ea68fa97b4632e}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a624d6ed85d05e957457731f9d47fd15b}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a624d6ed85d05e957457731f9d47fd15b}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!rollbackTransaction@{rollbackTransaction}}
+\index{rollbackTransaction@{rollbackTransaction}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{rollbackTransaction()}{rollbackTransaction()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::backend\+::\+Postgres\+::rollback\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rolls back a transaction. 
+
+This function rolls back a transaction. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_aee5a42b2f3b452d32360a1c31f59f22d}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a3fc3e070346245296a90ade9eb133def}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a3fc3e070346245296a90ade9eb133def}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!setMaximumLifetime@{setMaximumLifetime}}
+\index{setMaximumLifetime@{setMaximumLifetime}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{setMaximumLifetime()}{setMaximumLifetime()}}
+{\footnotesize\ttfamily void Wt\+::\+Dbo\+::backend\+::\+Postgres\+::set\+Maximum\+Lifetime (\begin{DoxyParamCaption}\item[{std\+::chrono\+::seconds}]{seconds }\end{DoxyParamCaption})}
+
+
+
+Sets the maximum lifetime for the underlying connection. 
+
+The maximum lifetime is specified in seconds. If set to a value $>$ 0, then the underlying connection object will be closed and reopened when the connection has been open longer than this lifetime.
+
+The default value is -\/1 (unlimited lifetime). \mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_abde27e10f272d0e6b139fa287a8bf35d}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_abde27e10f272d0e6b139fa287a8bf35d}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!setTimeout@{setTimeout}}
+\index{setTimeout@{setTimeout}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{setTimeout()}{setTimeout()}}
+{\footnotesize\ttfamily void Wt\+::\+Dbo\+::backend\+::\+Postgres\+::set\+Timeout (\begin{DoxyParamCaption}\item[{std\+::chrono\+::microseconds}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Sets a timeout. 
+
+Sets a timeout for queries. When the query exceeds this timeout, the connection is closed using \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a28b4cf9f73393f0fbe9f2fbaf06689d0}{disconnect()}} and an exception is thrown.
+
+In practice, as a result, the connection (and statements) can still be used again when a successful \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_a768b932a39a230efac19912af235598d}{reconnect()}} is performed.
+
+A value of 0 disables the timeout handling, allowing operations to take as much time is they require.
+
+The default value is 0. \mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a562d382b0ca42bfbeffe2ccc8e1bcad1}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a562d382b0ca42bfbeffe2ccc8e1bcad1}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!startTransaction@{startTransaction}}
+\index{startTransaction@{startTransaction}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{startTransaction()}{startTransaction()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::backend\+::\+Postgres\+::start\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Starts a transaction. 
+
+This function starts a transaction. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_abcddbb27f50192113d14c66a5ca10731}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_ab9ddebce425f78bda4c6b465cf9969a1}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_ab9ddebce425f78bda4c6b465cf9969a1}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!supportAlterTable@{supportAlterTable}}
+\index{supportAlterTable@{supportAlterTable}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{supportAlterTable()}{supportAlterTable()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::backend\+::\+Postgres\+::support\+Alter\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns true if the backend support Alter \mbox{\hyperlink{structTable}{Table}}. 
+
+This method will return false by default. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a35bfadac642cc5d6cfbf8c123a8b4a2f}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a19226060270eadaec111f784f5488f39}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a19226060270eadaec111f784f5488f39}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!supportDeferrableFKConstraint@{supportDeferrableFKConstraint}}
+\index{supportDeferrableFKConstraint@{supportDeferrableFKConstraint}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{supportDeferrableFKConstraint()}{supportDeferrableFKConstraint()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::backend\+::\+Postgres\+::support\+Deferrable\+F\+K\+Constraint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns true if the backend supports \char`\"{}deferrable initially
+deferred\char`\"{} foreign key constraints. 
+
+This method will return false by default. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a1225fdf933222ffcd4777bda1e45f4ea}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Postgres_a3e9cb3dbec6f84665328e1a289a16103}\label{classWt_1_1Dbo_1_1backend_1_1Postgres_a3e9cb3dbec6f84665328e1a289a16103}} 
+\index{Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}!timeout@{timeout}}
+\index{timeout@{timeout}!Wt::Dbo::backend::Postgres@{Wt::Dbo::backend::Postgres}}
+\doxysubsubsection{\texorpdfstring{timeout()}{timeout()}}
+{\footnotesize\ttfamily std\+::chrono\+::microseconds Wt\+::\+Dbo\+::backend\+::\+Postgres\+::timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the timeout. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Postgres_abde27e10f272d0e6b139fa287a8bf35d}{set\+Timeout()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/backend/Postgres.\+h\end{DoxyCompactItemize}

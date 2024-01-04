@@ -1,0 +1,800 @@
+\hypertarget{classWt_1_1WMenuItem}{}\doxysection{Wt\+::W\+Menu\+Item Class Reference}
+\label{classWt_1_1WMenuItem}\index{Wt::WMenuItem@{Wt::WMenuItem}}
+
+
+A single item in a menu.  
+
+
+
+
+{\ttfamily \#include $<$W\+Menu\+Item.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Menu\+Item\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Menu\+Item\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WMenuItem_a693f13d84e82901162952ce1a89276fb}{W\+Menu\+Item}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&label, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WMenuItem_aab9f0ad4d4d79c25691b021c34cbc928}{contents}}=nullptr, \mbox{\hyperlink{classWt_af25a7f0bb1d50c5b8bc98c4db9080313}{Content\+Loading}} policy=Content\+Loading\+::\+Lazy)
+\begin{DoxyCompactList}\small\item\em Creates a new item with given label. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_aa29e10fe8938dd0af976707bbd07d78b}\label{classWt_1_1WMenuItem_aa29e10fe8938dd0af976707bbd07d78b}} 
+{\bfseries W\+Menu\+Item} (const std\+::string \&icon\+Path, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&label, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WMenuItem_aab9f0ad4d4d79c25691b021c34cbc928}{contents}}=nullptr, \mbox{\hyperlink{classWt_af25a7f0bb1d50c5b8bc98c4db9080313}{Content\+Loading}} policy=Content\+Loading\+::\+Lazy)
+\item 
+void \mbox{\hyperlink{classWt_1_1WMenuItem_ae9f4792069fcf2f3410c002fdab2d2f1}{set\+Text}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&\mbox{\hyperlink{classWt_1_1WMenuItem_acc7baf68f04e05ff1af7caaf1da33202}{text}})
+\begin{DoxyCompactList}\small\item\em Sets the text for this item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1WMenuItem_acc7baf68f04e05ff1af7caaf1da33202}{text}} () const
+\begin{DoxyCompactList}\small\item\em Returns the text for this item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenuItem_a9ce09c90e5044ef581c46a3a3abad3d2}{set\+Icon}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Sets the item icon path. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1WMenuItem_a74a45744f55b4c7cd1d8f4f200abe956}{icon}} () const
+\begin{DoxyCompactList}\small\item\em Returns the item icon path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenuItem_af99508668e57432c90e1b9bf5d8fadcb}{set\+Checkable}} (bool checkable)
+\begin{DoxyCompactList}\small\item\em Sets if the item is checkable. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WMenuItem_a68887c5fcd07eec2d2b935fe70c9f9ac}{is\+Checkable}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the item is checkable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WMenuItem_a77c17472df7f8625fbb64b171a76bd46}{set\+Path\+Component}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Sets the path component for this item. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WMenuItem_afded7ede14b03c42cfec06f9de515e6d}{path\+Component}} () const
+\begin{DoxyCompactList}\small\item\em Returns the path component for this item. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WMenuItem_a71a36b00b6bd8d146e862fae89ea6517}{set\+Internal\+Path\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Configures internal path support for the item. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WMenuItem_a31d51426375a600e33570d25ef94685c}{internal\+Path\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether an item participates in internal paths. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenuItem_ae5bc878a2caa2461f063bccbea0ce4e0}{set\+Link}} (const \mbox{\hyperlink{classWt_1_1WLink}{W\+Link}} \&\mbox{\hyperlink{classWt_1_1WMenuItem_a41230bd7fe8303b58ab98ef58225e25a}{link}})
+\begin{DoxyCompactList}\small\item\em Sets the associated link. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WLink}{W\+Link}} \mbox{\hyperlink{classWt_1_1WMenuItem_a41230bd7fe8303b58ab98ef58225e25a}{link}} () const
+\begin{DoxyCompactList}\small\item\em Returns the associated link. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenuItem_a747bfc63335118decbf6085d0d61b6e4}{set\+Menu}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} $>$ \mbox{\hyperlink{classWt_1_1WMenuItem_a6f4d08f75031cb3a95875a5494cf7640}{menu}})
+\begin{DoxyCompactList}\small\item\em Sets a sub menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenuItem_a6f4d08f75031cb3a95875a5494cf7640}{menu}} () const
+\begin{DoxyCompactList}\small\item\em Returns the submenu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenuItem_ac5c1314f003fa987335e3d9919bc42fc}{set\+Checked}} (bool checked)
+\begin{DoxyCompactList}\small\item\em Sets the checked state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WMenuItem_a8ee7ddb1371380d3c8f97b703b35099a}{is\+Checked}} () const
+\begin{DoxyCompactList}\small\item\em Returns the checked state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenuItem_a0474c427d515fa4caee5e3d555a711ef}{set\+Selectable}} (bool selectable) override
+\begin{DoxyCompactList}\small\item\em Sets whether the menu item can be selected. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WMenuItem_ab2ca2fd8a6281e1347120bb7d630b3ac}{is\+Selectable}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the menu item can be selected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenuItem_a4857378a84c34edc405086337b24835e}{set\+Data}} (void $\ast$\mbox{\hyperlink{classWt_1_1WMenuItem_a00021189dd72f7e15e75d1d6612d2edf}{data}})
+\begin{DoxyCompactList}\small\item\em Sets associated additional data with the item. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{classWt_1_1WMenuItem_a00021189dd72f7e15e75d1d6612d2edf}{data}} () const
+\begin{DoxyCompactList}\small\item\em Returns additional data of the item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WCheckBox}{W\+Check\+Box}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenuItem_a044ce4035832451da050665014a210db}{check\+Box}} () const
+\begin{DoxyCompactList}\small\item\em Returns the checkbox for a checkable item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenuItem_a59b6dee6c95ae958f0c3b76d5ef7272d}{set\+Closeable}} (bool closeable)
+\begin{DoxyCompactList}\small\item\em Make it possible to close this item interactively or by \mbox{\hyperlink{classWt_1_1WMenuItem_a9da31eaf6a40078207bbf484d21b9285}{close()}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WMenuItem_ad2b9115e5ba70a9aaf0aefc1df196749}{is\+Closeable}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the item is closeable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenuItem_a9da31eaf6a40078207bbf484d21b9285}{close}} ()
+\begin{DoxyCompactList}\small\item\em Closes this item. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a2da837936877d3950c1090b02c2aff88}\label{classWt_1_1WMenuItem_a2da837936877d3950c1090b02c2aff88}} 
+\mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenuItem_a2da837936877d3950c1090b02c2aff88}{parent\+Menu}} () const
+\begin{DoxyCompactList}\small\item\em Returns the menu that contains this item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenuItem_a26dd38b32a52ec57a0d0ffaf82291825}{set\+Contents}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WMenuItem_aab9f0ad4d4d79c25691b021c34cbc928}{contents}}, \mbox{\hyperlink{classWt_af25a7f0bb1d50c5b8bc98c4db9080313}{Content\+Loading}} policy=Content\+Loading\+::\+Lazy)
+\begin{DoxyCompactList}\small\item\em Sets the contents widget for this item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenuItem_aab9f0ad4d4d79c25691b021c34cbc928}{contents}} () const
+\begin{DoxyCompactList}\small\item\em Returns the contents widget for this item. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_aa8a80fdc9541c30d76306955fc00e4e0}\label{classWt_1_1WMenuItem_aa8a80fdc9541c30d76306955fc00e4e0}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WMenuItem_aa8a80fdc9541c30d76306955fc00e4e0}{remove\+Contents}} ()
+\begin{DoxyCompactList}\small\item\em Removes the contents widget from this item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMenuItem_a9acd8465249e221093f87d9a726c33af}{select}} ()
+\begin{DoxyCompactList}\small\item\em Selects this item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ $>$ \& \mbox{\hyperlink{classWt_1_1WMenuItem_a06ceec38d6a866c0a1305f236bd712ef}{triggered}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when an item is activated. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WMenuItem_a1d4f636181b2573d0c11b45a55d29063}{is\+Separator}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this item is a separator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WMenuItem_ae6d32320f29d85cf62bcca31d8efab1d}{is\+Section\+Header}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this item is a section header. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WAnchor}{W\+Anchor}} $\ast$ \mbox{\hyperlink{classWt_1_1WMenuItem_a731823165c33508b36065c1f56d394df}{anchor}} () const
+\begin{DoxyCompactList}\small\item\em Returns the anchor of this menu item. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WMenuItem_aa21d21cc41bf8da336e74eeaa8ac66bf}{render\+Selected}} (bool selected)
+\begin{DoxyCompactList}\small\item\em Renders the item as selected or unselected. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a17ad5e9d66cb43d9d03a7c4916511ef2}\label{classWt_1_1WMenuItem_a17ad5e9d66cb43d9d03a7c4916511ef2}} 
+virtual void {\bfseries set\+From\+Internal\+Path} (const std\+::string \&path)
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WMenuItem_a0d19a2d9d091452626be9e6776fa790c}{enable\+Ajax}} () override
+\begin{DoxyCompactList}\small\item\em Progresses to an Ajax-\/enabled widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WMenuItem_a288ce06a0de2cda2eecfb71d96f21f0e}{set\+Hidden}} (bool hidden, const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&animation=\mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}}()) override
+\begin{DoxyCompactList}\small\item\em Hides or shows the widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WMenuItem_a0a74ca30abe0a1767d94678ea73393e9}{set\+Disabled}} (bool disabled) override
+\begin{DoxyCompactList}\small\item\em Sets whether the widget is disabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WMenuItem_a124243b8a162f186338818357d441883}{render}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$ flags) override
+\begin{DoxyCompactList}\small\item\em Renders the widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a1eb9b4efa9a08a731cc32c1db98bc9c4}\label{classWt_1_1WMenuItem_a1eb9b4efa9a08a731cc32c1db98bc9c4}} 
+{\bfseries W\+Menu\+Item} (bool separator, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&\mbox{\hyperlink{classWt_1_1WMenuItem_acc7baf68f04e05ff1af7caaf1da33202}{text}})
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a4c55048f8f9eacc0dabedb17f655df5c}\label{classWt_1_1WMenuItem_a4c55048f8f9eacc0dabedb17f655df5c}} 
+void {\bfseries create} (const std\+::string \&icon\+Path, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&\mbox{\hyperlink{classWt_1_1WMenuItem_acc7baf68f04e05ff1af7caaf1da33202}{text}}, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WMenuItem_aab9f0ad4d4d79c25691b021c34cbc928}{contents}}, \mbox{\hyperlink{classWt_af25a7f0bb1d50c5b8bc98c4db9080313}{Content\+Loading}} policy)
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a71f227912ee7f51b2dcb170fdf1f79e4}\label{classWt_1_1WMenuItem_a71f227912ee7f51b2dcb170fdf1f79e4}} 
+void {\bfseries purge\+Contents} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a1d34fa4c8de132f8c36d6b55c3478d6f}\label{classWt_1_1WMenuItem_a1d34fa4c8de132f8c36d6b55c3478d6f}} 
+void {\bfseries update\+Internal\+Path} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a1b10843fded63d0e80ad8455990e08ee}\label{classWt_1_1WMenuItem_a1b10843fded63d0e80ad8455990e08ee}} 
+bool {\bfseries contents\+Loaded} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a6ba705d29c7ffea7b3c1a2ef68c998c4}\label{classWt_1_1WMenuItem_a6ba705d29c7ffea7b3c1a2ef68c998c4}} 
+void {\bfseries load\+Contents} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_ac2e16d5de32f992a3b17386ff636429c}\label{classWt_1_1WMenuItem_ac2e16d5de32f992a3b17386ff636429c}} 
+void {\bfseries set\+Parent\+Menu} (\mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} $\ast$\mbox{\hyperlink{classWt_1_1WMenuItem_a6f4d08f75031cb3a95875a5494cf7640}{menu}})
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_adf93a6bcc153bf76abb80a0ec0ee4fda}\label{classWt_1_1WMenuItem_adf93a6bcc153bf76abb80a0ec0ee4fda}} 
+void {\bfseries select\+Not\+Loaded} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a283b135858100984fe7a8e28da3d32d8}\label{classWt_1_1WMenuItem_a283b135858100984fe7a8e28da3d32d8}} 
+void {\bfseries select\+Visual} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_ab702054e52c77e3fd14b51a7186754db}\label{classWt_1_1WMenuItem_ab702054e52c77e3fd14b51a7186754db}} 
+void {\bfseries undo\+Select\+Visual} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a4b6b8c927f635788419405f5275c2331}\label{classWt_1_1WMenuItem_a4b6b8c927f635788419405f5275c2331}} 
+void {\bfseries connect\+Close} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a694244cc745562ecd7fb34dc5bc7c73c}\label{classWt_1_1WMenuItem_a694244cc745562ecd7fb34dc5bc7c73c}} 
+void {\bfseries connect\+Signals} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_ad47497cb9c6eff5968c725338e85a711}\label{classWt_1_1WMenuItem_ad47497cb9c6eff5968c725338e85a711}} 
+void {\bfseries set\+Item\+Padding} (bool \mbox{\hyperlink{classWt_1_1WContainerWidget_ac10d8ea33792bb9b9c80b44fe7db89a8}{padding}})
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a6abb21ccc44022f36bd4b6c04ce24491}\label{classWt_1_1WMenuItem_a6abb21ccc44022f36bd4b6c04ce24491}} 
+void {\bfseries contents\+Destroyed} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a190652891421d245476a7d01c780e047}\label{classWt_1_1WMenuItem_a190652891421d245476a7d01c780e047}} 
+void {\bfseries set\+Check\+Box} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a741667a2165de9912e2cff610344062a}\label{classWt_1_1WMenuItem_a741667a2165de9912e2cff610344062a}} 
+void {\bfseries set\+Un\+Check\+Box} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a95f419bf8a60f551d97aa4afce71ab49}\label{classWt_1_1WMenuItem_a95f419bf8a60f551d97aa4afce71ab49}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ {\bfseries take\+Contents\+For\+Stack} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_ae4d4065d3bb4ecd60496073e383dc01c}\label{classWt_1_1WMenuItem_ae4d4065d3bb4ecd60496073e383dc01c}} 
+\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ {\bfseries contents\+In\+Stack} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a4a2074b5d65ab94df45c8eb5edc88d48}\label{classWt_1_1WMenuItem_a4a2074b5d65ab94df45c8eb5edc88d48}} 
+void {\bfseries return\+Contents\+In\+Stack} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WContainerWidget_a6a769c49b0e4303b1e2af7ec8134d2bf}{widget}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a2a58633a393f4635ee49bfe4ed94d0e5}\label{classWt_1_1WMenuItem_a2a58633a393f4635ee49bfe4ed94d0e5}} 
+\mbox{\hyperlink{classWt_af25a7f0bb1d50c5b8bc98c4db9080313}{Content\+Loading}} {\bfseries load\+Policy\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_ad475e18d4fa2b6b282e1b054fa830bba}\label{classWt_1_1WMenuItem_ad475e18d4fa2b6b282e1b054fa830bba}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ {\bfseries u\+Contents\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_ac7bb91685e7c497c075dff3715b22905}\label{classWt_1_1WMenuItem_ac7bb91685e7c497c075dff3715b22905}} 
+\mbox{\hyperlink{classWt_1_1Core_1_1observing__ptr}{observing\+\_\+ptr}}$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ {\bfseries o\+Contents\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a41646cf89b6adf97f7c4340ee5e84aa3}\label{classWt_1_1WMenuItem_a41646cf89b6adf97f7c4340ee5e84aa3}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $>$ {\bfseries u\+Contents\+Container\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a97b90d7af2603fc3a9413fc12178a879}\label{classWt_1_1WMenuItem_a97b90d7af2603fc3a9413fc12178a879}} 
+\mbox{\hyperlink{classWt_1_1Core_1_1observing__ptr}{observing\+\_\+ptr}}$<$ \mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $>$ {\bfseries o\+Contents\+Container\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a356884ff608a05e20e5674a1b93da784}\label{classWt_1_1WMenuItem_a356884ff608a05e20e5674a1b93da784}} 
+\mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} $\ast$ {\bfseries menu\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a660aaaa9bff6bb92b5947c6fdac67ed8}\label{classWt_1_1WMenuItem_a660aaaa9bff6bb92b5947c6fdac67ed8}} 
+\mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} $\ast$ {\bfseries sub\+Menu\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_aed7be4b0dc1bb3e7ba4eb0813ae67b36}\label{classWt_1_1WMenuItem_aed7be4b0dc1bb3e7ba4eb0813ae67b36}} 
+\mbox{\hyperlink{classWt_1_1WText}{W\+Text}} $\ast$ {\bfseries icon\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a18fe86cef1937378f2942575faa0104c}\label{classWt_1_1WMenuItem_a18fe86cef1937378f2942575faa0104c}} 
+\mbox{\hyperlink{classWt_1_1WLabel}{W\+Label}} $\ast$ {\bfseries text\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a431e5efd3dc68bb42f7bbdf7494238af}\label{classWt_1_1WMenuItem_a431e5efd3dc68bb42f7bbdf7494238af}} 
+\mbox{\hyperlink{classWt_1_1WCheckBox}{W\+Check\+Box}} $\ast$ {\bfseries check\+Box\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_aff7ca8b5e1b9d2353ed8cd2f92b17870}\label{classWt_1_1WMenuItem_aff7ca8b5e1b9d2353ed8cd2f92b17870}} 
+void $\ast$ {\bfseries data\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_ab445005522b04448f55860561702714d}\label{classWt_1_1WMenuItem_ab445005522b04448f55860561702714d}} 
+bool {\bfseries separator\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a1bb449c586d477bdf86c6d5932d62f80}\label{classWt_1_1WMenuItem_a1bb449c586d477bdf86c6d5932d62f80}} 
+bool {\bfseries selectable\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a34336f3e4f3a26403243a0437b368345}\label{classWt_1_1WMenuItem_a34336f3e4f3a26403243a0437b368345}} 
+bool {\bfseries signals\+Connected\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_acbb495b0db218e5565c8db2bdb9de6e7}\label{classWt_1_1WMenuItem_acbb495b0db218e5565c8db2bdb9de6e7}} 
+bool {\bfseries custom\+Link\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a21bb8dcc94570f167f01a5cacb5c882d}\label{classWt_1_1WMenuItem_a21bb8dcc94570f167f01a5cacb5c882d}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$ $>$ {\bfseries triggered\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a5725fee471431324c2e59cd522788afd}\label{classWt_1_1WMenuItem_a5725fee471431324c2e59cd522788afd}} 
+std\+::string {\bfseries path\+Component\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a2460e8f026415813f8df2536e172ea1d}\label{classWt_1_1WMenuItem_a2460e8f026415813f8df2536e172ea1d}} 
+bool {\bfseries custom\+Path\+Component\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_aa4cf8dbc5ccb0d7e0688b6fadefa7085}\label{classWt_1_1WMenuItem_aa4cf8dbc5ccb0d7e0688b6fadefa7085}} 
+bool {\bfseries internal\+Path\+Enabled\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a35d70c84b1b72d9f8e46929a5a1e1496}\label{classWt_1_1WMenuItem_a35d70c84b1b72d9f8e46929a5a1e1496}} 
+bool {\bfseries closeable\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_ad1d89ecaaa1723590e7d05ba597094ea}\label{classWt_1_1WMenuItem_ad1d89ecaaa1723590e7d05ba597094ea}} 
+class {\bfseries W\+Menu}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a4689f7bb87bdc46261944223909ccc90}\label{classWt_1_1WMenuItem_a4689f7bb87bdc46261944223909ccc90}} 
+class {\bfseries W\+Popup\+Menu}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A single item in a menu. 
+
+Since Wt 3.\+3.\+0, this item is now a proper widget, which renders a single item in a menu.
+
+An optional contents item can be associated with a menu item, which is inserted and shown in the widget stack of the menu to which this menu item belongs.
+
+\doxyparagraph*{C\+SS}
+
+A menu item renders as a $>$li\&;lt with additional markup/style classes provided by the theme. Unless you use the bootstrap theme, you will need to provide appropriate C\+SS. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a693f13d84e82901162952ce1a89276fb}\label{classWt_1_1WMenuItem_a693f13d84e82901162952ce1a89276fb}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!WMenuItem@{WMenuItem}}
+\index{WMenuItem@{WMenuItem}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{WMenuItem()}{WMenuItem()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Menu\+Item\+::\+W\+Menu\+Item (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{label,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$}]{contents = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{classWt_af25a7f0bb1d50c5b8bc98c4db9080313}{Content\+Loading}}}]{policy = {\ttfamily ContentLoading\+:\+:Lazy} }\end{DoxyParamCaption})}
+
+
+
+Creates a new item with given label. 
+
+The optional contents is a widget that will be shown in the \mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} contents stack when the item is selected. For this widget, a load {\ttfamily policy} specifies whether the contents widgets is transmitted only when it the item is activated for the first time (Lazy\+Loading) or transmitted prior to first rendering.
+
+If the menu supports internal path navigation, then a default \mbox{\hyperlink{classWt_1_1WMenuItem_afded7ede14b03c42cfec06f9de515e6d}{path\+Component()}} will be derived from the {\ttfamily label}, and can be customized using \mbox{\hyperlink{classWt_1_1WMenuItem_a77c17472df7f8625fbb64b171a76bd46}{set\+Path\+Component()}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a731823165c33508b36065c1f56d394df}\label{classWt_1_1WMenuItem_a731823165c33508b36065c1f56d394df}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!anchor@{anchor}}
+\index{anchor@{anchor}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{anchor()}{anchor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WAnchor}{W\+Anchor}}$\ast$ Wt\+::\+W\+Menu\+Item\+::anchor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the anchor of this menu item. 
+
+Can be used to add widgets to the menu. \mbox{\Hypertarget{classWt_1_1WMenuItem_a044ce4035832451da050665014a210db}\label{classWt_1_1WMenuItem_a044ce4035832451da050665014a210db}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!checkBox@{checkBox}}
+\index{checkBox@{checkBox}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{checkBox()}{checkBox()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WCheckBox}{W\+Check\+Box}}$\ast$ Wt\+::\+W\+Menu\+Item\+::check\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the checkbox for a checkable item. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_af99508668e57432c90e1b9bf5d8fadcb}{set\+Checkable()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a9da31eaf6a40078207bbf484d21b9285}\label{classWt_1_1WMenuItem_a9da31eaf6a40078207bbf484d21b9285}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!close@{close}}
+\index{close@{close}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+Item\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Closes this item. 
+
+Hides the item widget and emits \mbox{\hyperlink{classWt_1_1WMenu_ab9fa68e381972fb5385478b1e9eb6c78}{W\+Menu\+::item\+Closed()}} signal. Only closeable items can be closed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_a59b6dee6c95ae958f0c3b76d5ef7272d}{set\+Closeable()}}, \mbox{\hyperlink{classWt_1_1WWidget_a0825c3ccbd4999afc1a88fafa6aa6fc7}{hide()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_aab9f0ad4d4d79c25691b021c34cbc928}\label{classWt_1_1WMenuItem_aab9f0ad4d4d79c25691b021c34cbc928}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!contents@{contents}}
+\index{contents@{contents}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{contents()}{contents()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$\ast$ Wt\+::\+W\+Menu\+Item\+::contents (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the contents widget for this item. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_a26dd38b32a52ec57a0d0ffaf82291825}{set\+Contents()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a00021189dd72f7e15e75d1d6612d2edf}\label{classWt_1_1WMenuItem_a00021189dd72f7e15e75d1d6612d2edf}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!data@{data}}
+\index{data@{data}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily void$\ast$ Wt\+::\+W\+Menu\+Item\+::data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns additional data of the item. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_a4857378a84c34edc405086337b24835e}{set\+Data()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a0d19a2d9d091452626be9e6776fa790c}\label{classWt_1_1WMenuItem_a0d19a2d9d091452626be9e6776fa790c}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!enableAjax@{enableAjax}}
+\index{enableAjax@{enableAjax}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{enableAjax()}{enableAjax()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Menu\+Item\+::enable\+Ajax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Progresses to an Ajax-\/enabled widget. 
+
+This method is called when the progressive bootstrap method is used, and support for A\+J\+AX has been detected. The default behavior will upgrade the widget\textquotesingle{}s event handling to use A\+J\+AX instead of full page reloads, and propagate the call to its children.
+
+You may want to reimplement this method if you want to make changes to widget when A\+J\+AX is enabled. You should always call the base implementation.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_a46c573a3cd370cb2f83250c99d42b575}{W\+Application\+::enable\+Ajax()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_af717033681b5cbe5857c88b65558e10c}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a74a45744f55b4c7cd1d8f4f200abe956}\label{classWt_1_1WMenuItem_a74a45744f55b4c7cd1d8f4f200abe956}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!icon@{icon}}
+\index{icon@{icon}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{icon()}{icon()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+W\+Menu\+Item\+::icon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the item icon path. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_a9ce09c90e5044ef581c46a3a3abad3d2}{set\+Icon()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a31d51426375a600e33570d25ef94685c}\label{classWt_1_1WMenuItem_a31d51426375a600e33570d25ef94685c}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!internalPathEnabled@{internalPathEnabled}}
+\index{internalPathEnabled@{internalPathEnabled}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{internalPathEnabled()}{internalPathEnabled()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Menu\+Item\+::internal\+Path\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns whether an item participates in internal paths. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_a71a36b00b6bd8d146e862fae89ea6517}{set\+Internal\+Path\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a68887c5fcd07eec2d2b935fe70c9f9ac}\label{classWt_1_1WMenuItem_a68887c5fcd07eec2d2b935fe70c9f9ac}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!isCheckable@{isCheckable}}
+\index{isCheckable@{isCheckable}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{isCheckable()}{isCheckable()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Menu\+Item\+::is\+Checkable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the item is checkable. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_af99508668e57432c90e1b9bf5d8fadcb}{set\+Checkable()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a8ee7ddb1371380d3c8f97b703b35099a}\label{classWt_1_1WMenuItem_a8ee7ddb1371380d3c8f97b703b35099a}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!isChecked@{isChecked}}
+\index{isChecked@{isChecked}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{isChecked()}{isChecked()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Menu\+Item\+::is\+Checked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the checked state. 
+
+This is only used when \mbox{\hyperlink{classWt_1_1WMenuItem_a68887c5fcd07eec2d2b935fe70c9f9ac}{is\+Checkable()}} == {\ttfamily true}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_ac5c1314f003fa987335e3d9919bc42fc}{set\+Checked(bool)}}, \mbox{\hyperlink{classWt_1_1WMenuItem_a68887c5fcd07eec2d2b935fe70c9f9ac}{is\+Checkable()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_ad2b9115e5ba70a9aaf0aefc1df196749}\label{classWt_1_1WMenuItem_ad2b9115e5ba70a9aaf0aefc1df196749}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!isCloseable@{isCloseable}}
+\index{isCloseable@{isCloseable}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{isCloseable()}{isCloseable()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Menu\+Item\+::is\+Closeable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the item is closeable. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_a59b6dee6c95ae958f0c3b76d5ef7272d}{set\+Closeable()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_ae6d32320f29d85cf62bcca31d8efab1d}\label{classWt_1_1WMenuItem_ae6d32320f29d85cf62bcca31d8efab1d}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!isSectionHeader@{isSectionHeader}}
+\index{isSectionHeader@{isSectionHeader}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{isSectionHeader()}{isSectionHeader()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Menu\+Item\+::is\+Section\+Header (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether this item is a section header. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_a3c09f45358d3107038050bdb2182272b}{W\+Menu\+::add\+Section\+Header()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_ab2ca2fd8a6281e1347120bb7d630b3ac}\label{classWt_1_1WMenuItem_ab2ca2fd8a6281e1347120bb7d630b3ac}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!isSelectable@{isSelectable}}
+\index{isSelectable@{isSelectable}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{isSelectable()}{isSelectable()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Menu\+Item\+::is\+Selectable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the menu item can be selected. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_a0474c427d515fa4caee5e3d555a711ef}{set\+Selectable()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a1d4f636181b2573d0c11b45a55d29063}\label{classWt_1_1WMenuItem_a1d4f636181b2573d0c11b45a55d29063}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!isSeparator@{isSeparator}}
+\index{isSeparator@{isSeparator}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{isSeparator()}{isSeparator()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Menu\+Item\+::is\+Separator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether this item is a separator. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_a8a88b41240358b6003a94b04d4f96cdf}{W\+Menu\+::add\+Separator()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a41230bd7fe8303b58ab98ef58225e25a}\label{classWt_1_1WMenuItem_a41230bd7fe8303b58ab98ef58225e25a}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!link@{link}}
+\index{link@{link}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{link()}{link()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WLink}{W\+Link}} Wt\+::\+W\+Menu\+Item\+::link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the associated link. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_ae5bc878a2caa2461f063bccbea0ce4e0}{set\+Link()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a6f4d08f75031cb3a95875a5494cf7640}\label{classWt_1_1WMenuItem_a6f4d08f75031cb3a95875a5494cf7640}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!menu@{menu}}
+\index{menu@{menu}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}}$\ast$ Wt\+::\+W\+Menu\+Item\+::menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the submenu. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_a747bfc63335118decbf6085d0d61b6e4}{set\+Menu()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_afded7ede14b03c42cfec06f9de515e6d}\label{classWt_1_1WMenuItem_afded7ede14b03c42cfec06f9de515e6d}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!pathComponent@{pathComponent}}
+\index{pathComponent@{pathComponent}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{pathComponent()}{pathComponent()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+W\+Menu\+Item\+::path\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the path component for this item. 
+
+You may want to reimplement this to customize the path component set by the item in the application internal path.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_a77c17472df7f8625fbb64b171a76bd46}{set\+Path\+Component()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a124243b8a162f186338818357d441883}\label{classWt_1_1WMenuItem_a124243b8a162f186338818357d441883}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!render@{render}}
+\index{render@{render}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Menu\+Item\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Renders the widget. 
+
+This function renders the widget (or an update for the widget), after this has been scheduled using \mbox{\hyperlink{classWt_1_1WWidget_a5d3d4edaafa2d7c892a5078f3df4cf11}{schedule\+Render()}}.
+
+The default implementation will render the widget by serializing changes to Java\+Script and H\+T\+ML. You may want to reimplement this widget if you have been postponing some of the layout / rendering implementation until the latest moment possible. In that case you should make sure you call the base implementation however. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a5ca222ef9275cfd6d0005c63197d40a0}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WMenuItem_aa21d21cc41bf8da336e74eeaa8ac66bf}\label{classWt_1_1WMenuItem_aa21d21cc41bf8da336e74eeaa8ac66bf}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!renderSelected@{renderSelected}}
+\index{renderSelected@{renderSelected}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{renderSelected()}{renderSelected()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Menu\+Item\+::render\+Selected (\begin{DoxyParamCaption}\item[{bool}]{selected }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders the item as selected or unselected. 
+
+The default implementation sets the styleclass for item\+Widget() to \textquotesingle{}item\textquotesingle{} for an unselected not closeable, \textquotesingle{}itemselected\textquotesingle{} for selected not closeable, \textquotesingle{}citem\textquotesingle{} for an unselected closeable and \textquotesingle{}citemselected\textquotesingle{} for selected closeable item.
+
+\mbox{\hyperlink{classNote}{Note}} that this method is called from within a stateless slot implementation, and thus should be stateless as well. \mbox{\Hypertarget{classWt_1_1WMenuItem_a9acd8465249e221093f87d9a726c33af}\label{classWt_1_1WMenuItem_a9acd8465249e221093f87d9a726c33af}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!select@{select}}
+\index{select@{select}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{select()}{select()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+Item\+::select (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Selects this item. 
+
+If the item was previously closed it will be shown.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_a9da31eaf6a40078207bbf484d21b9285}{close()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_af99508668e57432c90e1b9bf5d8fadcb}\label{classWt_1_1WMenuItem_af99508668e57432c90e1b9bf5d8fadcb}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!setCheckable@{setCheckable}}
+\index{setCheckable@{setCheckable}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{setCheckable()}{setCheckable()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+Item\+::set\+Checkable (\begin{DoxyParamCaption}\item[{bool}]{checkable }\end{DoxyParamCaption})}
+
+
+
+Sets if the item is checkable. 
+
+When an item is checkable, a checkbox is displayed to the left of the item text (instead of an icon).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_ac5c1314f003fa987335e3d9919bc42fc}{set\+Checked()}}, \mbox{\hyperlink{classWt_1_1WMenuItem_a8ee7ddb1371380d3c8f97b703b35099a}{is\+Checked()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_ac5c1314f003fa987335e3d9919bc42fc}\label{classWt_1_1WMenuItem_ac5c1314f003fa987335e3d9919bc42fc}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!setChecked@{setChecked}}
+\index{setChecked@{setChecked}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{setChecked()}{setChecked()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+Item\+::set\+Checked (\begin{DoxyParamCaption}\item[{bool}]{checked }\end{DoxyParamCaption})}
+
+
+
+Sets the checked state. 
+
+This is only used when \mbox{\hyperlink{classWt_1_1WMenuItem_a68887c5fcd07eec2d2b935fe70c9f9ac}{is\+Checkable()}} == {\ttfamily true}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_af99508668e57432c90e1b9bf5d8fadcb}{set\+Checkable(bool)}}, \mbox{\hyperlink{classWt_1_1WMenuItem_a68887c5fcd07eec2d2b935fe70c9f9ac}{is\+Checkable()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a59b6dee6c95ae958f0c3b76d5ef7272d}\label{classWt_1_1WMenuItem_a59b6dee6c95ae958f0c3b76d5ef7272d}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!setCloseable@{setCloseable}}
+\index{setCloseable@{setCloseable}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{setCloseable()}{setCloseable()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+Item\+::set\+Closeable (\begin{DoxyParamCaption}\item[{bool}]{closeable }\end{DoxyParamCaption})}
+
+
+
+Make it possible to close this item interactively or by \mbox{\hyperlink{classWt_1_1WMenuItem_a9da31eaf6a40078207bbf484d21b9285}{close()}}. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_a9da31eaf6a40078207bbf484d21b9285}{close()}}, \mbox{\hyperlink{classWt_1_1WMenuItem_ad2b9115e5ba70a9aaf0aefc1df196749}{is\+Closeable()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a26dd38b32a52ec57a0d0ffaf82291825}\label{classWt_1_1WMenuItem_a26dd38b32a52ec57a0d0ffaf82291825}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!setContents@{setContents}}
+\index{setContents@{setContents}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{setContents()}{setContents()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+Item\+::set\+Contents (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$}]{contents,  }\item[{\mbox{\hyperlink{classWt_af25a7f0bb1d50c5b8bc98c4db9080313}{Content\+Loading}}}]{policy = {\ttfamily ContentLoading\+:\+:Lazy} }\end{DoxyParamCaption})}
+
+
+
+Sets the contents widget for this item. 
+
+The contents is a widget that will be shown in the \mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} contents stack when the item is selected. For this widget, the load {\ttfamily policy} specifies whether the contents widgets is transmitted only when it the item is activated for the first time (Lazy\+Loading) or transmitted prior to first rendering. \mbox{\Hypertarget{classWt_1_1WMenuItem_a4857378a84c34edc405086337b24835e}\label{classWt_1_1WMenuItem_a4857378a84c34edc405086337b24835e}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!setData@{setData}}
+\index{setData@{setData}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+Item\+::set\+Data (\begin{DoxyParamCaption}\item[{void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets associated additional data with the item. 
+
+You can use this to associate model information with a menu item. \mbox{\Hypertarget{classWt_1_1WMenuItem_a0a74ca30abe0a1767d94678ea73393e9}\label{classWt_1_1WMenuItem_a0a74ca30abe0a1767d94678ea73393e9}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!setDisabled@{setDisabled}}
+\index{setDisabled@{setDisabled}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{setDisabled()}{setDisabled()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Menu\+Item\+::set\+Disabled (\begin{DoxyParamCaption}\item[{bool}]{disabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets whether the widget is disabled. 
+
+Enables or disables the widget (including all its descendant widgets). set\+Disabled(false) will enable this widget and all descendant widgets that are not disabled. A widget is only enabled if it and all its ancestors in the widget tree are disabled.
+
+Typically, a disabled form widget will not allow changing the value, and disabled widgets will not react to mouse click events.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a5f68ea0ab29adfb8e559153fca281e03}{disable()}}, \mbox{\hyperlink{classWt_1_1WWidget_ae6935d8baca9d37dd1d080b4383da87c}{enable()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a87ad1dbe635cb0b52bd491d8108d55cf}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a288ce06a0de2cda2eecfb71d96f21f0e}\label{classWt_1_1WMenuItem_a288ce06a0de2cda2eecfb71d96f21f0e}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!setHidden@{setHidden}}
+\index{setHidden@{setHidden}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{setHidden()}{setHidden()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Menu\+Item\+::set\+Hidden (\begin{DoxyParamCaption}\item[{bool}]{hidden,  }\item[{const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&}]{animation = {\ttfamily \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Hides or shows the widget. 
+
+Hides or show the widget (including all its descendant widgets). When setting {\ttfamily hidden} = {\ttfamily false}, this widget and all descendant widgets that are not hidden will be shown. A widget is only visible if it and all its ancestors in the widget tree are visible, which may be checked using \mbox{\hyperlink{classWt_1_1WWebWidget_a676dd25f88061270f7c6a84c2c202952}{is\+Visible()}}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a9adb6f6fe79146883c423f4b5684aa40}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a9ce09c90e5044ef581c46a3a3abad3d2}\label{classWt_1_1WMenuItem_a9ce09c90e5044ef581c46a3a3abad3d2}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!setIcon@{setIcon}}
+\index{setIcon@{setIcon}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{setIcon()}{setIcon()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+Item\+::set\+Icon (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Sets the item icon path. 
+
+The icon should have a width of 16 pixels.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_ae9f4792069fcf2f3410c002fdab2d2f1}{set\+Text()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a71a36b00b6bd8d146e862fae89ea6517}\label{classWt_1_1WMenuItem_a71a36b00b6bd8d146e862fae89ea6517}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!setInternalPathEnabled@{setInternalPathEnabled}}
+\index{setInternalPathEnabled@{setInternalPathEnabled}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{setInternalPathEnabled()}{setInternalPathEnabled()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Menu\+Item\+::set\+Internal\+Path\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Configures internal path support for the item. 
+
+This configures whether the item supports internal paths (in a menu which supports internal paths).
+
+The default value is {\ttfamily true} for all items but section headers and separators.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu_ae1807eba0b1002808dbec779d00a79dc}{W\+Menu\+::set\+Internal\+Path\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_ae5bc878a2caa2461f063bccbea0ce4e0}\label{classWt_1_1WMenuItem_ae5bc878a2caa2461f063bccbea0ce4e0}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!setLink@{setLink}}
+\index{setLink@{setLink}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{setLink()}{setLink()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+Item\+::set\+Link (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLink}{W\+Link}} \&}]{link }\end{DoxyParamCaption})}
+
+
+
+Sets the associated link. 
+
+\begin{DoxySeeAlso}{See also}
+Link() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a747bfc63335118decbf6085d0d61b6e4}\label{classWt_1_1WMenuItem_a747bfc63335118decbf6085d0d61b6e4}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!setMenu@{setMenu}}
+\index{setMenu@{setMenu}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{setMenu()}{setMenu()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+Item\+::set\+Menu (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} $>$}]{menu }\end{DoxyParamCaption})}
+
+
+
+Sets a sub menu. 
+
+In most cases, the sub menu would use the same contents stack as the parent menu.
+
+\mbox{\hyperlink{classNote}{Note}} that adding a submenu makes this item not \mbox{\hyperlink{classWt_1_1WMenuItem_ab2ca2fd8a6281e1347120bb7d630b3ac}{selectable}} by default.
+
+\begin{DoxyNote}{Note}
+If the \mbox{\hyperlink{classWt_1_1WMenuItem_a2da837936877d3950c1090b02c2aff88}{parent menu}} is a \mbox{\hyperlink{classWt_1_1WPopupMenu}{W\+Popup\+Menu}}, the submenu should also be a \mbox{\hyperlink{classWt_1_1WPopupMenu}{W\+Popup\+Menu}}.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_a0474c427d515fa4caee5e3d555a711ef}{set\+Selectable()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a77c17472df7f8625fbb64b171a76bd46}\label{classWt_1_1WMenuItem_a77c17472df7f8625fbb64b171a76bd46}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!setPathComponent@{setPathComponent}}
+\index{setPathComponent@{setPathComponent}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{setPathComponent()}{setPathComponent()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Menu\+Item\+::set\+Path\+Component (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the path component for this item. 
+
+The path component is used by the menu item in the application internal path (see \mbox{\hyperlink{classWt_1_1WApplication_a2c1a10aadc0d7ed877b5715b42ca4911}{W\+Application\+::set\+Internal\+Path()}}), when internal paths are enabled (see \mbox{\hyperlink{classWt_1_1WMenu_ae1807eba0b1002808dbec779d00a79dc}{W\+Menu\+::set\+Internal\+Path\+Enabled()}}) for the menu.
+
+You may specify an empty {\ttfamily path} to let a menu item be the \char`\"{}default\char`\"{} menu option.
+
+For example, if \mbox{\hyperlink{classWt_1_1WMenu_a534df522539f1f7c5a1a224acda48d56}{W\+Menu\+::internal\+Base\+Path()}} is {\ttfamily \char`\"{}/examples/\char`\"{}} and \mbox{\hyperlink{classWt_1_1WMenuItem_afded7ede14b03c42cfec06f9de515e6d}{path\+Component()}} for is {\ttfamily \char`\"{}charts/\char`\"{}}, then the internal path for the item will be {\ttfamily \char`\"{}/examples/charts/\char`\"{}}.
+
+By default, the path is automatically derived from \mbox{\hyperlink{classWt_1_1WMenuItem_acc7baf68f04e05ff1af7caaf1da33202}{text()}}. If a \mbox{\hyperlink{classWt_1_1WString_a30835c468542b83d3d0a78a01e113669}{literal text}} is used, the path is based on the text itself, otherwise on the \mbox{\hyperlink{classWt_1_1WString_af9f2ed20d12c17f32c7c29683a326525}{key}}. It is converted to lower case, and replacing whitespace and special characters with \textquotesingle{}\+\_\+\textquotesingle{}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_ae9f4792069fcf2f3410c002fdab2d2f1}{set\+Text()}}, \mbox{\hyperlink{classWt_1_1WMenu_ae1807eba0b1002808dbec779d00a79dc}{W\+Menu\+::set\+Internal\+Path\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a0474c427d515fa4caee5e3d555a711ef}\label{classWt_1_1WMenuItem_a0474c427d515fa4caee5e3d555a711ef}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!setSelectable@{setSelectable}}
+\index{setSelectable@{setSelectable}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{setSelectable()}{setSelectable()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+Item\+::set\+Selectable (\begin{DoxyParamCaption}\item[{bool}]{selectable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets whether the menu item can be selected. 
+
+Only a menu item that can be selected can be the result of a popup menu selection.
+
+The default value is {\ttfamily true} for a normal menu item, and {\ttfamily false} for a menu item that has a popup submenu.
+
+An item that is selectable but is disabled can still not be selected. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a76fd9cb9ed25a0a01f1b574da64cd264}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WMenuItem_ae9f4792069fcf2f3410c002fdab2d2f1}\label{classWt_1_1WMenuItem_ae9f4792069fcf2f3410c002fdab2d2f1}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!setText@{setText}}
+\index{setText@{setText}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{setText()}{setText()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Menu\+Item\+::set\+Text (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Sets the text for this item. 
+
+Unless a custom path component was defined, the \mbox{\hyperlink{classWt_1_1WMenuItem_afded7ede14b03c42cfec06f9de515e6d}{path\+Component()}} is also updated based on the new text.
+
+The item widget is updated using update\+Item\+Widget().
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_a77c17472df7f8625fbb64b171a76bd46}{set\+Path\+Component()}}; 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_acc7baf68f04e05ff1af7caaf1da33202}\label{classWt_1_1WMenuItem_acc7baf68f04e05ff1af7caaf1da33202}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!text@{text}}
+\index{text@{text}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{text()}{text()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WString}{W\+String}} Wt\+::\+W\+Menu\+Item\+::text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the text for this item. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenuItem_ae9f4792069fcf2f3410c002fdab2d2f1}{set\+Text()}}; 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMenuItem_a06ceec38d6a866c0a1305f236bd712ef}\label{classWt_1_1WMenuItem_a06ceec38d6a866c0a1305f236bd712ef}} 
+\index{Wt::WMenuItem@{Wt::WMenuItem}!triggered@{triggered}}
+\index{triggered@{triggered}!Wt::WMenuItem@{Wt::WMenuItem}}
+\doxysubsubsection{\texorpdfstring{triggered()}{triggered()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} $\ast$$>$\& Wt\+::\+W\+Menu\+Item\+::triggered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when an item is activated. 
+
+Returns this item as argument.
+
+\begin{DoxySeeAlso}{See also}
+W\+Menu\+::triggered() 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Menu\+Item.\+h\end{DoxyCompactItemize}

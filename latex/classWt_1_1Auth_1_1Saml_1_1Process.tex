@@ -1,0 +1,178 @@
+\hypertarget{classWt_1_1Auth_1_1Saml_1_1Process}{}\doxysection{Wt\+::Auth\+::Saml\+::Process Class Reference}
+\label{classWt_1_1Auth_1_1Saml_1_1Process}\index{Wt::Auth::Saml::Process@{Wt::Auth::Saml::Process}}
+
+
+A S\+A\+ML authentication process.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Auth/\+Saml/\+Process.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Auth\+::Saml\+::Process\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Auth\+::Saml\+::Process\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}} \& \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Process_a5d192375fbbe2694a77c1f74de5c1b88}{service}} () const
+\begin{DoxyCompactList}\small\item\em Returns the S\+A\+ML service which spawned this process. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \& \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Process_a3bfda85bc0689434f38142dd703105df}{error}} () const
+\begin{DoxyCompactList}\small\item\em Error information, in case authentication or identification failed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Process_a97cbd062f6532598b84ae3733371c7b2}{start\+Authenticate}} ()
+\begin{DoxyCompactList}\small\item\em Starts an authorization and authentication process. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} $>$ \& \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Process_a04ee05528c578fc65c43213348d271e2}{authenticated}} ()
+\begin{DoxyCompactList}\small\item\em Authentication signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Process_a04374e15b623896963d98dfe8e319b64}{Process}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Process_a5d192375fbbe2694a77c1f74de5c1b88}{service}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_a56a0a83504b65c0ece413b6505a49fc3}\label{classWt_1_1Auth_1_1Saml_1_1Process_a56a0a83504b65c0ece413b6505a49fc3}} 
+bool {\bfseries create\+Authn\+Request} (\mbox{\hyperlink{classWt_1_1Http_1_1Response}{Http\+::\+Response}} \&response)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_a140c8eeeceeef014fe1746ae0d845c3d}\label{classWt_1_1Auth_1_1Saml_1_1Process_a140c8eeeceeef014fe1746ae0d845c3d}} 
+bool {\bfseries handle\+Response} (const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&request)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_a59a014fdb97b80238986daf74dd5c3fd}\label{classWt_1_1Auth_1_1Saml_1_1Process_a59a014fdb97b80238986daf74dd5c3fd}} 
+void {\bfseries on\+Saml\+Done} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_a2db2e8a9671608043561c6bd986cc00a}\label{classWt_1_1Auth_1_1Saml_1_1Process_a2db2e8a9671608043561c6bd986cc00a}} 
+std\+::string {\bfseries private\+Acs\+Resource\+Url} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_aad563e9c92d4d39fe2a7dc77767c0da0}\label{classWt_1_1Auth_1_1Saml_1_1Process_aad563e9c92d4d39fe2a7dc77767c0da0}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1ProcessImpl}{Process\+Impl}} $>$ {\bfseries impl\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_a067f2300f5867a806ea6951e89f1cd23}\label{classWt_1_1Auth_1_1Saml_1_1Process_a067f2300f5867a806ea6951e89f1cd23}} 
+const \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}} \& {\bfseries service\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_a4da5228f3720d55886535c0f9d3a6c3d}\label{classWt_1_1Auth_1_1Saml_1_1Process_a4da5228f3720d55886535c0f9d3a6c3d}} 
+std\+::unique\+\_\+ptr$<$ Authn\+Request\+Resource $>$ {\bfseries authn\+Request\+Resource\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_adbac30aaf4f688172ccee47fac25f872}\label{classWt_1_1Auth_1_1Saml_1_1Process_adbac30aaf4f688172ccee47fac25f872}} 
+std\+::unique\+\_\+ptr$<$ Private\+Acs\+Resource $>$ {\bfseries private\+Acs\+Resource\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_a1f9938e8606a9aac78dd4a1ff60329f5}\label{classWt_1_1Auth_1_1Saml_1_1Process_a1f9938e8606a9aac78dd4a1ff60329f5}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} $>$ {\bfseries authenticated\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_a770c691c62ea11d1c92ab50b298347ed}\label{classWt_1_1Auth_1_1Saml_1_1Process_a770c691c62ea11d1c92ab50b298347ed}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}} {\bfseries redirected\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_a6b40ebe387f6f7119e4d8fb62bc39394}\label{classWt_1_1Auth_1_1Saml_1_1Process_a6b40ebe387f6f7119e4d8fb62bc39394}} 
+std\+::string {\bfseries request\+Identifier\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_a88e4fd75be2f8991b6e4290044cb41ec}\label{classWt_1_1Auth_1_1Saml_1_1Process_a88e4fd75be2f8991b6e4290044cb41ec}} 
+\mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion}{Assertion}} {\bfseries assertion\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_ae00df5baab2608eb25d146de87a34ac9}\label{classWt_1_1Auth_1_1Saml_1_1Process_ae00df5baab2608eb25d146de87a34ac9}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries error\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_ad34b1e9de7dbcdf1f0c74f29c729b882}\label{classWt_1_1Auth_1_1Saml_1_1Process_ad34b1e9de7dbcdf1f0c74f29c729b882}} 
+std\+::string {\bfseries start\+Internal\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_a9e04b0ee1e1261f7f6280afe4052dcbf}\label{classWt_1_1Auth_1_1Saml_1_1Process_a9e04b0ee1e1261f7f6280afe4052dcbf}} 
+\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} {\bfseries done\+Callback\+Connection\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_ad7daaaeec47657a292560487f965c021}\label{classWt_1_1Auth_1_1Saml_1_1Process_ad7daaaeec47657a292560487f965c021}} 
+class {\bfseries Process\+Impl}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_a6474ceb8669761e879329b39c3afb899}\label{classWt_1_1Auth_1_1Saml_1_1Process_a6474ceb8669761e879329b39c3afb899}} 
+class {\bfseries Service}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A S\+A\+ML authentication process. 
+
+The process implements the state machine that is needed to complete a S\+A\+ML authentication cycle. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_a04374e15b623896963d98dfe8e319b64}\label{classWt_1_1Auth_1_1Saml_1_1Process_a04374e15b623896963d98dfe8e319b64}} 
+\index{Wt::Auth::Saml::Process@{Wt::Auth::Saml::Process}!Process@{Process}}
+\index{Process@{Process}!Wt::Auth::Saml::Process@{Wt::Auth::Saml::Process}}
+\doxysubsubsection{\texorpdfstring{Process()}{Process()}}
+{\footnotesize\ttfamily Wt\+::\+Auth\+::\+Saml\+::\+Process\+::\+Process (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}} \&}]{service }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+
+
+Constructor. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a7df79dd776525f4b11ccf355ea31c7f8}{Service\+::create\+Process()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_a04ee05528c578fc65c43213348d271e2}\label{classWt_1_1Auth_1_1Saml_1_1Process_a04ee05528c578fc65c43213348d271e2}} 
+\index{Wt::Auth::Saml::Process@{Wt::Auth::Saml::Process}!authenticated@{authenticated}}
+\index{authenticated@{authenticated}!Wt::Auth::Saml::Process@{Wt::Auth::Saml::Process}}
+\doxysubsubsection{\texorpdfstring{authenticated()}{authenticated()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}}$>$\& Wt\+::\+Auth\+::\+Saml\+::\+Process\+::authenticated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Authentication signal. 
+
+This signal indicates the end of an authentication process. If the authentication process was successful, then the parameter is a valid and authentic identity. If the authentication process failed then the identity parameter is invalid, and you can get more information using \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Process_a3bfda85bc0689434f38142dd703105df}{error()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Process_a97cbd062f6532598b84ae3733371c7b2}{start\+Authenticate()}}, Service\+::get\+Identity(), \mbox{\hyperlink{classWt_1_1Auth_1_1Identity_a0cecd842fd6235d55bd43ff00adc555a}{Identity\+::is\+Valid()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_a3bfda85bc0689434f38142dd703105df}\label{classWt_1_1Auth_1_1Saml_1_1Process_a3bfda85bc0689434f38142dd703105df}} 
+\index{Wt::Auth::Saml::Process@{Wt::Auth::Saml::Process}!error@{error}}
+\index{error@{error}!Wt::Auth::Saml::Process@{Wt::Auth::Saml::Process}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WString}{W\+String}}\& Wt\+::\+Auth\+::\+Saml\+::\+Process\+::error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Error information, in case authentication or identification failed. 
+
+The error message contains details when the \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Process_a04ee05528c578fc65c43213348d271e2}{authenticated()}} signal indicates an invalid identity. \mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_a5d192375fbbe2694a77c1f74de5c1b88}\label{classWt_1_1Auth_1_1Saml_1_1Process_a5d192375fbbe2694a77c1f74de5c1b88}} 
+\index{Wt::Auth::Saml::Process@{Wt::Auth::Saml::Process}!service@{service}}
+\index{service@{service}!Wt::Auth::Saml::Process@{Wt::Auth::Saml::Process}}
+\doxysubsubsection{\texorpdfstring{service()}{service()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}}\& Wt\+::\+Auth\+::\+Saml\+::\+Process\+::service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the S\+A\+ML service which spawned this process. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a7df79dd776525f4b11ccf355ea31c7f8}{Service\+::create\+Process()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Process_a97cbd062f6532598b84ae3733371c7b2}\label{classWt_1_1Auth_1_1Saml_1_1Process_a97cbd062f6532598b84ae3733371c7b2}} 
+\index{Wt::Auth::Saml::Process@{Wt::Auth::Saml::Process}!startAuthenticate@{startAuthenticate}}
+\index{startAuthenticate@{startAuthenticate}!Wt::Auth::Saml::Process@{Wt::Auth::Saml::Process}}
+\doxysubsubsection{\texorpdfstring{startAuthenticate()}{startAuthenticate()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Process\+::start\+Authenticate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts an authorization and authentication process. 
+
+The authentication process ends with the \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Process_a04ee05528c578fc65c43213348d271e2}{authenticated()}} signal which signals the obtained identity.
+
+\begin{DoxyNote}{Note}
+To be able to use a popup (instead of a page redirect), you should connect this method directly to an event signal, since popup windows are blocked in most web browsers unless they are the direct consequence of an event. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/\+Saml/Process.\+h\end{DoxyCompactItemize}

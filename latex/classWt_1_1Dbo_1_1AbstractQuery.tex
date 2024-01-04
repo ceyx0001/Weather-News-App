@@ -1,0 +1,329 @@
+\hypertarget{classWt_1_1Dbo_1_1AbstractQuery}{}\doxysection{Wt\+::Dbo\+::Abstract\+Query Class Reference}
+\label{classWt_1_1Dbo_1_1AbstractQuery}\index{Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}}
+
+
+An abstract dynamic database query.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Dbo/\+Query.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Dbo\+::Abstract\+Query\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Dbo\+::Abstract\+Query\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}} \& \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_aaaa2d59ac4afee71920e336e41440128}{bind}} (const T \&value)
+\begin{DoxyCompactList}\small\item\em Binds a value to the next positional marker. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_a94f6e798d318813f3ba22ffa7e3d41a0}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets bound values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}} \& \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_a55417ce3b0b627d8247add64dd1d62ac}{join}} (const std\+::string \&other)
+\begin{DoxyCompactList}\small\item\em Adds a join. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}} \& \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_a23777bd996f0c058c90c7b858886c1f9}{left\+Join}} (const std\+::string \&other)
+\begin{DoxyCompactList}\small\item\em Adds a left join. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}} \& \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_a67b1e2f0f4cb505450ea2b87e6db99e0}{right\+Join}} (const std\+::string \&other)
+\begin{DoxyCompactList}\small\item\em Adds a right join. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}} \& \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_a7eff29d6f7478047d8d01751692dd1a7}{where}} (const std\+::string \&condition)
+\begin{DoxyCompactList}\small\item\em Adds a query condition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}} \& \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_a1114844685fc80d01c2367a06f4a6110}{or\+Where}} (const std\+::string \&condition)
+\begin{DoxyCompactList}\small\item\em Adds a query condition. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}} \& \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_ac5977c513d47cb524a83edfe3f2ab359}{order\+By}} (const std\+::string \&field\+Name)
+\begin{DoxyCompactList}\small\item\em Sets the result order. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}} \& \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_a359072eeeead6d0ed767903bf6804493}{group\+By}} (const std\+::string \&fields)
+\begin{DoxyCompactList}\small\item\em Sets the grouping field(s). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}} \& \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_abc645753ac9d8a64c07851650e6feea8}{having}} (const std\+::string \&fields)
+\begin{DoxyCompactList}\small\item\em Sets the grouping filter(s). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}} \& \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_a1bdc4c78b5dbea37025e7196856d6c93}{offset}} (int count)
+\begin{DoxyCompactList}\small\item\em Sets a result offset. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_afec1324d45b35ec906ec92c92d414b25}{offset}} () const
+\begin{DoxyCompactList}\small\item\em Returns an offset set for this query. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}} \& \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_afa0a382ea43b7255419b95c21e06457f}{limit}} (int count)
+\begin{DoxyCompactList}\small\item\em Sets a result limit. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_abf6dc6a6d2401a8ebb3faf73cddffd8a}{limit}} () const
+\begin{DoxyCompactList}\small\item\em Returns a limit set for this query. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_a68a59af6c01f27b12581e0248c083fd1}\label{classWt_1_1Dbo_1_1AbstractQuery_a68a59af6c01f27b12581e0248c083fd1}} 
+{\bfseries Abstract\+Query} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}} \&other)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_ad3134f819b2ea797e9eafb14f4334a6e}\label{classWt_1_1Dbo_1_1AbstractQuery_ad3134f819b2ea797e9eafb14f4334a6e}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}} \& {\bfseries operator=} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}} \&other)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_a9b4c54740046425a34f27e5982300f66}\label{classWt_1_1Dbo_1_1AbstractQuery_a9b4c54740046425a34f27e5982300f66}} 
+void {\bfseries bind\+Parameters} (\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} $\ast$session, \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $\ast$statement) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_a50b8d9f8eb961ec2ff353f5aa607abc1}\label{classWt_1_1Dbo_1_1AbstractQuery_a50b8d9f8eb961ec2ff353f5aa607abc1}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}} \& {\bfseries bind\+Subquery\+Values} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}} \&other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_a1120dcafa410c9271b712fcfbe79d5c9}\label{classWt_1_1Dbo_1_1AbstractQuery_a1120dcafa410c9271b712fcfbe79d5c9}} 
+std\+::string {\bfseries join\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_a68dfb1ab836dd79214d3e3a05200971c}\label{classWt_1_1Dbo_1_1AbstractQuery_a68dfb1ab836dd79214d3e3a05200971c}} 
+std\+::string {\bfseries where\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_ab2d3912db7ea3dc550f7c2c6a30e0322}\label{classWt_1_1Dbo_1_1AbstractQuery_ab2d3912db7ea3dc550f7c2c6a30e0322}} 
+std\+::string {\bfseries group\+By\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_aee2d9ff04fffae4c04a068940b4cafbc}\label{classWt_1_1Dbo_1_1AbstractQuery_aee2d9ff04fffae4c04a068940b4cafbc}} 
+std\+::string {\bfseries having\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_a6b0ba580d93b622171d5162a403feb3e}\label{classWt_1_1Dbo_1_1AbstractQuery_a6b0ba580d93b622171d5162a403feb3e}} 
+std\+::string {\bfseries order\+By\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_a1a70a60d2651ea82200fb3c6241552b8}\label{classWt_1_1Dbo_1_1AbstractQuery_a1a70a60d2651ea82200fb3c6241552b8}} 
+int {\bfseries limit\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_aef2c495ad4d090c89671fb870c53e244}\label{classWt_1_1Dbo_1_1AbstractQuery_aef2c495ad4d090c89671fb870c53e244}} 
+int {\bfseries offset\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_a5b04a41b6a67cbd1188a8e910434a2eb}\label{classWt_1_1Dbo_1_1AbstractQuery_a5b04a41b6a67cbd1188a8e910434a2eb}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1Dbo_1_1Impl_1_1ParameterBase}{Impl\+::\+Parameter\+Base}} $\ast$ $>$ {\bfseries parameters\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An abstract dynamic database query. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_aaaa2d59ac4afee71920e336e41440128}\label{classWt_1_1Dbo_1_1AbstractQuery_aaaa2d59ac4afee71920e336e41440128}} 
+\index{Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}!bind@{bind}}
+\index{bind@{bind}!Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}} \& Wt\+::\+Dbo\+::\+Abstract\+Query\+::bind (\begin{DoxyParamCaption}\item[{const T \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Binds a value to the next positional marker. 
+
+This binds the {\ttfamily value} to the next positional marker in the query condition. \mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_a359072eeeead6d0ed767903bf6804493}\label{classWt_1_1Dbo_1_1AbstractQuery_a359072eeeead6d0ed767903bf6804493}} 
+\index{Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}!groupBy@{groupBy}}
+\index{groupBy@{groupBy}!Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}}
+\doxysubsubsection{\texorpdfstring{groupBy()}{groupBy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}}\& Wt\+::\+Dbo\+::\+Abstract\+Query\+::group\+By (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{fields }\end{DoxyParamCaption})}
+
+
+
+Sets the grouping field(s). 
+
+This is a convenience method for creating a S\+QL query, and sets a {\itshape group by} field expression for the current query.
+
+Groups results based on unique values of the indicated field(s), which is a comma separated list of fields. Only fields on which you group and aggregate functions can be selected by a query.
+
+A field that refers to a database object that is selected by the query is expanded to all the corresponding fields of that database object (as in the select statement). \mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_abc645753ac9d8a64c07851650e6feea8}\label{classWt_1_1Dbo_1_1AbstractQuery_abc645753ac9d8a64c07851650e6feea8}} 
+\index{Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}!having@{having}}
+\index{having@{having}!Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}}
+\doxysubsubsection{\texorpdfstring{having()}{having()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}}\& Wt\+::\+Dbo\+::\+Abstract\+Query\+::having (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{fields }\end{DoxyParamCaption})}
+
+
+
+Sets the grouping filter(s). 
+
+It\textquotesingle{}s like \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_a7eff29d6f7478047d8d01751692dd1a7}{where()}}, but for aggregate fields.
+
+For example you can\textquotesingle{}t go\+:
+
+select department.\+name, count(employees) from department where count(employees) $>$ 5 group by count(employees);
+
+Because you can\textquotesingle{}t have aggregate fields in a where clause, but you can go\+:
+
+select department.\+name, count(employees) from department group by count(employees) having count(employees) $>$ 5;
+
+This will of course return all the departments with more than 5 employees (and their employee count).
+
+\begin{DoxyNote}{Note}
+You must have a group by clause, in order to have a \textquotesingle{}having\textquotesingle{} clause 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_a55417ce3b0b627d8247add64dd1d62ac}\label{classWt_1_1Dbo_1_1AbstractQuery_a55417ce3b0b627d8247add64dd1d62ac}} 
+\index{Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}!join@{join}}
+\index{join@{join}!Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}}
+\doxysubsubsection{\texorpdfstring{join()}{join()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}}\& Wt\+::\+Dbo\+::\+Abstract\+Query\+::join (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Adds a join. 
+
+This is a convenience method for creating a S\+QL query, and concatenates a new {\itshape join} to the current query.
+
+The join should be a valid S\+QL join expression, e.\+g. \char`\"{}customer c on o.\+customer\+\_\+id = c.\+id\char`\"{}
+
+\begin{DoxyNote}{Note}
+This method is not available when using a \mbox{\hyperlink{structWt_1_1Dbo_1_1DirectBinding}{Direct\+Binding}} binding strategy. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_a23777bd996f0c058c90c7b858886c1f9}\label{classWt_1_1Dbo_1_1AbstractQuery_a23777bd996f0c058c90c7b858886c1f9}} 
+\index{Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}!leftJoin@{leftJoin}}
+\index{leftJoin@{leftJoin}!Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}}
+\doxysubsubsection{\texorpdfstring{leftJoin()}{leftJoin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}}\& Wt\+::\+Dbo\+::\+Abstract\+Query\+::left\+Join (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Adds a left join. 
+
+This is a convenience method for creating a S\+QL query, and concatenates a new {\itshape left join} to the current query.
+
+The join should be a valid S\+QL join expression, e.\+g. \char`\"{}customer c on o.\+customer\+\_\+id = c.\+id\char`\"{}
+
+\begin{DoxyNote}{Note}
+This method is not available when using a \mbox{\hyperlink{structWt_1_1Dbo_1_1DirectBinding}{Direct\+Binding}} binding strategy. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_abf6dc6a6d2401a8ebb3faf73cddffd8a}\label{classWt_1_1Dbo_1_1AbstractQuery_abf6dc6a6d2401a8ebb3faf73cddffd8a}} 
+\index{Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}!limit@{limit}}
+\index{limit@{limit}!Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}}
+\doxysubsubsection{\texorpdfstring{limit()}{limit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Wt\+::\+Dbo\+::\+Abstract\+Query\+::limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a limit set for this query. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_afa0a382ea43b7255419b95c21e06457f}{limit(int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_afa0a382ea43b7255419b95c21e06457f}\label{classWt_1_1Dbo_1_1AbstractQuery_afa0a382ea43b7255419b95c21e06457f}} 
+\index{Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}!limit@{limit}}
+\index{limit@{limit}!Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}}
+\doxysubsubsection{\texorpdfstring{limit()}{limit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}}\& Wt\+::\+Dbo\+::\+Abstract\+Query\+::limit (\begin{DoxyParamCaption}\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Sets a result limit. 
+
+Sets a result limit. This has the effect that the next result\+List() call will return up to {\ttfamily count} results. Use -\/1 to indicate no limit.
+
+This provides the (non standard) {\itshape limit} part of an S\+QL query.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_a1bdc4c78b5dbea37025e7196856d6c93}{offset()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_afec1324d45b35ec906ec92c92d414b25}\label{classWt_1_1Dbo_1_1AbstractQuery_afec1324d45b35ec906ec92c92d414b25}} 
+\index{Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}!offset@{offset}}
+\index{offset@{offset}!Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}}
+\doxysubsubsection{\texorpdfstring{offset()}{offset()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Wt\+::\+Dbo\+::\+Abstract\+Query\+::offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns an offset set for this query. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_a1bdc4c78b5dbea37025e7196856d6c93}{offset(int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_a1bdc4c78b5dbea37025e7196856d6c93}\label{classWt_1_1Dbo_1_1AbstractQuery_a1bdc4c78b5dbea37025e7196856d6c93}} 
+\index{Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}!offset@{offset}}
+\index{offset@{offset}!Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}}
+\doxysubsubsection{\texorpdfstring{offset()}{offset()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}}\& Wt\+::\+Dbo\+::\+Abstract\+Query\+::offset (\begin{DoxyParamCaption}\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Sets a result offset. 
+
+Sets a result offset. This has the effect that the next result\+List() call will skip as many results as the offset indicates. Use -\/1 to indicate no offset.
+
+This provides the (non standard) {\itshape offset} part of an S\+QL query.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_afa0a382ea43b7255419b95c21e06457f}{limit()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_ac5977c513d47cb524a83edfe3f2ab359}\label{classWt_1_1Dbo_1_1AbstractQuery_ac5977c513d47cb524a83edfe3f2ab359}} 
+\index{Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}!orderBy@{orderBy}}
+\index{orderBy@{orderBy}!Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}}
+\doxysubsubsection{\texorpdfstring{orderBy()}{orderBy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}}\& Wt\+::\+Dbo\+::\+Abstract\+Query\+::order\+By (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{field\+Name }\end{DoxyParamCaption})}
+
+
+
+Sets the result order. 
+
+This is a convenience method for creating a S\+QL query, and sets an {\itshape order by} field expression for the current query.
+
+Orders the results based on the given field name (or multiple names, comma-\/separated). \mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_a1114844685fc80d01c2367a06f4a6110}\label{classWt_1_1Dbo_1_1AbstractQuery_a1114844685fc80d01c2367a06f4a6110}} 
+\index{Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}!orWhere@{orWhere}}
+\index{orWhere@{orWhere}!Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}}
+\doxysubsubsection{\texorpdfstring{orWhere()}{orWhere()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}}\& Wt\+::\+Dbo\+::\+Abstract\+Query\+::or\+Where (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{condition }\end{DoxyParamCaption})}
+
+
+
+Adds a query condition. 
+
+This is a convenience method for creating a S\+QL query, and concatenates a new {\itshape where} condition expression to the current query.
+
+The condition must be a valid S\+QL condition expression.
+
+Multiple conditions may be provided by successive calls to \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_a1114844685fc80d01c2367a06f4a6110}{or\+Where()}}, and are concatenated together using \textquotesingle{}or\textquotesingle{}. Previous conditions will be surrounded by brackets and the new condition will be concatenated using \textquotesingle{}or\textquotesingle{}. For example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{namespaceGetRequest_afcf3b12fe772b330baf0e4be878ea394}{query}}.where(\textcolor{stringliteral}{"column\_a = ?"}).bind(\textcolor{stringliteral}{"A"})}
+\DoxyCodeLine{  .where(\textcolor{stringliteral}{"column\_b = ?"}).bind(\textcolor{stringliteral}{"B"})}
+\DoxyCodeLine{  .orWhere(\textcolor{stringliteral}{"column\_c = ?"}).bind(\textcolor{stringliteral}{"C"});}
+\end{DoxyCode}
+ results in\+: \char`\"{}where ((column\+\_\+a = \textquotesingle{}\+A\textquotesingle{}) and (column\+\_\+b = \textquotesingle{}\+B\textquotesingle{})) or column\+\_\+c = \textquotesingle{}\+C\textquotesingle{}\char`\"{}
+
+As with any part of the S\+QL query, a condition may contain positional markers \textquotesingle{}?\textquotesingle{} to which values may be bound using \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_aaaa2d59ac4afee71920e336e41440128}{bind()}}. \mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_a94f6e798d318813f3ba22ffa7e3d41a0}\label{classWt_1_1Dbo_1_1AbstractQuery_a94f6e798d318813f3ba22ffa7e3d41a0}} 
+\index{Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}!reset@{reset}}
+\index{reset@{reset}!Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Wt\+::\+Dbo\+::\+Abstract\+Query\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets bound values. 
+
+This undoes all previous calls to \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_aaaa2d59ac4afee71920e336e41440128}{bind()}}. \mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_a67b1e2f0f4cb505450ea2b87e6db99e0}\label{classWt_1_1Dbo_1_1AbstractQuery_a67b1e2f0f4cb505450ea2b87e6db99e0}} 
+\index{Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}!rightJoin@{rightJoin}}
+\index{rightJoin@{rightJoin}!Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}}
+\doxysubsubsection{\texorpdfstring{rightJoin()}{rightJoin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}}\& Wt\+::\+Dbo\+::\+Abstract\+Query\+::right\+Join (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Adds a right join. 
+
+This is a convenience method for creating a S\+QL query, and concatenates a new {\itshape right join} to the current query.
+
+The join should be a valid S\+QL join expression, e.\+g. \char`\"{}customer c on o.\+customer\+\_\+id = c.\+id\char`\"{}
+
+\begin{DoxyNote}{Note}
+This method is not available when using a \mbox{\hyperlink{structWt_1_1Dbo_1_1DirectBinding}{Direct\+Binding}} binding strategy. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1AbstractQuery_a7eff29d6f7478047d8d01751692dd1a7}\label{classWt_1_1Dbo_1_1AbstractQuery_a7eff29d6f7478047d8d01751692dd1a7}} 
+\index{Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}!where@{where}}
+\index{where@{where}!Wt::Dbo::AbstractQuery@{Wt::Dbo::AbstractQuery}}
+\doxysubsubsection{\texorpdfstring{where()}{where()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery}{Abstract\+Query}}\& Wt\+::\+Dbo\+::\+Abstract\+Query\+::where (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{condition }\end{DoxyParamCaption})}
+
+
+
+Adds a query condition. 
+
+This is a convenience method for creating a S\+QL query, and concatenates a new {\itshape where} condition expression to the current query.
+
+The condition must be a valid S\+QL condition expression.
+
+Multiple conditions may be provided by successive calls to \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_a7eff29d6f7478047d8d01751692dd1a7}{where()}}, which must each be fulfilled, and are concatenated together using \textquotesingle{}and\textquotesingle{}.
+
+As with any part of the S\+QL query, a condition may contain positional markers \textquotesingle{}?\textquotesingle{} to which values may be bound using \mbox{\hyperlink{classWt_1_1Dbo_1_1AbstractQuery_aaaa2d59ac4afee71920e336e41440128}{bind()}}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/Query.\+h\end{DoxyCompactItemize}

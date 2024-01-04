@@ -1,0 +1,70 @@
+\hypertarget{classTopicTemplate}{}\doxysection{Topic\+Template Class Reference}
+\label{classTopicTemplate}\index{TopicTemplate@{TopicTemplate}}
+
+
+Inheritance diagram for Topic\+Template\+:
+% FIG 0
+
+
+Collaboration diagram for Topic\+Template\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTopicTemplate_a0110ae18c78cb5a6f45ebaa8f131cfb2}\label{classTopicTemplate_a0110ae18c78cb5a6f45ebaa8f131cfb2}} 
+{\bfseries Topic\+Template} (const char $\ast$tr\+Key)
+\item 
+virtual void \mbox{\hyperlink{classTopicTemplate_ada6c620d9bb71de1c2a24f8eaa164655}{resolve\+String}} (const std\+::string \&var\+Name, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} $>$ \&args, std\+::ostream \&result)
+\begin{DoxyCompactList}\small\item\em Resolves the string value for a variable name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTopicTemplate_ae2d6ed0ca968378a8d5807b1ab48e873}\label{classTopicTemplate_ae2d6ed0ca968378a8d5807b1ab48e873}} 
+std\+::string {\bfseries doc\+Url} (const std\+::string \&class\+Name)
+\item 
+\mbox{\Hypertarget{classTopicTemplate_aed8754842a944bd186a479452403762d}\label{classTopicTemplate_aed8754842a944bd186a479452403762d}} 
+std\+::string {\bfseries get\+String} (const std\+::string \&var\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTopicTemplate_aa837cae84b8f82f93b725ee08523bcf3}\label{classTopicTemplate_aa837cae84b8f82f93b725ee08523bcf3}} 
+static std\+::string {\bfseries escape} (const std\+::string \&name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTopicTemplate_ada6c620d9bb71de1c2a24f8eaa164655}\label{classTopicTemplate_ada6c620d9bb71de1c2a24f8eaa164655}} 
+\index{TopicTemplate@{TopicTemplate}!resolveString@{resolveString}}
+\index{resolveString@{resolveString}!TopicTemplate@{TopicTemplate}}
+\doxysubsubsection{\texorpdfstring{resolveString()}{resolveString()}}
+{\footnotesize\ttfamily virtual void Topic\+Template\+::resolve\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{var\+Name,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} $>$ \&}]{args,  }\item[{std\+::ostream \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resolves the string value for a variable name. 
+
+This is the main method used to resolve variables in the template text, during rendering.
+
+The default implementation considers first whether a string was bound using \mbox{\hyperlink{classWt_1_1WTemplate_a16e6f5aa8a866d95cb68a6ab8fbe753d}{bind\+String()}}. If so, that string is returned. If not, it will attempt to resolve a widget with that variable name using \mbox{\hyperlink{classWt_1_1WTemplate_a65fd50e2e83ef594b41a97b5a3f70588}{resolve\+Widget()}}, and render it as X\+H\+T\+ML. If that fails too, \mbox{\hyperlink{classWt_1_1WTemplate_a42a3a48a1f8c88af9e489b1e83e78c5f}{handle\+Unresolved\+Variable()}} is called, passing the initial arguments.
+
+You may want to reimplement this method to provide on-\/demand loading of strings for your template.
+
+The result stream expects a U\+T\+F-\/8 encoded string value.
+
+\begin{DoxyWarning}{Warning}
+When specializing this class, you need to make sure that you append proper X\+H\+T\+ML to the {\ttfamily result}, without unsafe active contents. The \mbox{\hyperlink{classWt_1_1WTemplate_adbe6894922347552f121e8356096d006}{format()}} methods may be used for this purpose.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_a08d6d360e0dea5fbf0afb513a7b928b2}{render\+Template()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WTemplate_a1b41ce6236c27e91bfffb2d0686ac556}{Wt\+::\+W\+Template}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/widgetgallery/Topic\+Template.\+h\end{DoxyCompactItemize}

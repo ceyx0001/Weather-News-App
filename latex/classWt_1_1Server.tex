@@ -1,0 +1,104 @@
+\hypertarget{classWt_1_1Server}{}\doxysection{Wt\+::Server Class Reference}
+\label{classWt_1_1Server}\index{Wt::Server@{Wt::Server}}
+
+
+Collaboration diagram for Wt\+::Server\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_a840a364b9453b2b723337d8c5c16b61a}\label{classWt_1_1Server_a840a364b9453b2b723337d8c5c16b61a}} 
+{\bfseries Server} (\mbox{\hyperlink{classWt_1_1WServer}{W\+Server}} \&wt, const std\+::string \&application\+Name, const std\+::vector$<$ std\+::string $>$ \&args)
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_a70d017635f8194840864f0349862d152}\label{classWt_1_1Server_a70d017635f8194840864f0349862d152}} 
+int {\bfseries run} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_a6961d1c6eecdef80bb5badd59e310348}\label{classWt_1_1Server_a6961d1c6eecdef80bb5badd59e310348}} 
+void {\bfseries handle\+Sig\+Chld} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_a109373c1fd9d7aa8a6fb355a8f505c0a}\label{classWt_1_1Server_a109373c1fd9d7aa8a6fb355a8f505c0a}} 
+void {\bfseries handle\+Signal} (const char $\ast$signal)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_ae4e7eb09e01ad94dbfa14edc22543d7f}\label{classWt_1_1Server_ae4e7eb09e01ad94dbfa14edc22543d7f}} 
+static bool {\bfseries bind\+U\+D\+Sto\+Stdin} (const std\+::string \&socket\+Path, \mbox{\hyperlink{classWt_1_1WServer}{Wt\+::\+W\+Server}} \&server)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_acd5cc0e61328ba9c2fc9b71401091dcc}\label{classWt_1_1Server_acd5cc0e61328ba9c2fc9b71401091dcc}} 
+static \mbox{\hyperlink{classWt_1_1Server}{Server}} $\ast$ {\bfseries instance}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_a221d7882b31bfe03b267dc3ac6f4ad07}\label{classWt_1_1Server_a221d7882b31bfe03b267dc3ac6f4ad07}} 
+typedef std\+::map$<$ std\+::string, \mbox{\hyperlink{classWt_1_1SessionInfo}{Session\+Info}} $\ast$ $>$ {\bfseries Session\+Map}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_a689450ea337af4e4ad2409a446265249}\label{classWt_1_1Server_a689450ea337af4e4ad2409a446265249}} 
+void {\bfseries check\+And\+Queue\+Sig\+Chld} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_aabbfe34f804dcca277cf2b96d89c86b1}\label{classWt_1_1Server_aabbfe34f804dcca277cf2b96d89c86b1}} 
+void {\bfseries do\+Handle\+Sig\+Chld} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_a1c711251482ddfbee469f33be9d14f81}\label{classWt_1_1Server_a1c711251482ddfbee469f33be9d14f81}} 
+void {\bfseries spawn\+Shared\+Process} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_ad1209069868bff57846c3b701c94fd7b}\label{classWt_1_1Server_ad1209069868bff57846c3b701c94fd7b}} 
+void {\bfseries exec\+Child} (bool debug, const std\+::string \&extra\+Arg)
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_a0d1a21c60526c5acbafc5aed282301c8}\label{classWt_1_1Server_a0d1a21c60526c5acbafc5aed282301c8}} 
+int {\bfseries connect\+To\+Session} (const std\+::string \&session\+Id, const std\+::string \&socket\+Path, int max\+Tries)
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_a619f545f142513792366ca9e259c7090}\label{classWt_1_1Server_a619f545f142513792366ca9e259c7090}} 
+bool {\bfseries get\+Session\+From\+Query\+String} (const std\+::string \&uri, std\+::string \&session\+Id)
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_a968813224d56be0fa0641c2f3094a0f3}\label{classWt_1_1Server_a968813224d56be0fa0641c2f3094a0f3}} 
+void {\bfseries check\+Config} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_a99173114a8f08a543b62c1f827e68802}\label{classWt_1_1Server_a99173114a8f08a543b62c1f827e68802}} 
+bool {\bfseries write\+To\+Socket} (int socket, const unsigned char $\ast$buf, int bufsize)
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_a9c8649f581370288d1e70ddd0c139663}\label{classWt_1_1Server_a9c8649f581370288d1e70ddd0c139663}} 
+void {\bfseries handle\+Request\+Threaded} (int server\+Socket)
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_a618b7ff980b36649a8c1e40607186643}\label{classWt_1_1Server_a618b7ff980b36649a8c1e40607186643}} 
+void {\bfseries handle\+Request} (int server\+Socket)
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_ace17bde33d0d72eca25e84a576c73544}\label{classWt_1_1Server_ace17bde33d0d72eca25e84a576c73544}} 
+const std\+::string {\bfseries socket\+Path} (const std\+::string \&session\+Id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_a2b499d767cd92dd77e06672ebbbb5255}\label{classWt_1_1Server_a2b499d767cd92dd77e06672ebbbb5255}} 
+\mbox{\hyperlink{classWt_1_1WServer}{W\+Server}} \& {\bfseries wt\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_ab4310c828b1883b58e60aec65d42db95}\label{classWt_1_1Server_ab4310c828b1883b58e60aec65d42db95}} 
+std\+::string {\bfseries application\+Name\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_a265cae1a4a35d084b3b846896333bcb2}\label{classWt_1_1Server_a265cae1a4a35d084b3b846896333bcb2}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries args\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_a611e3ce214f5a3c6ac7862cde6829797}\label{classWt_1_1Server_a611e3ce214f5a3c6ac7862cde6829797}} 
+int {\bfseries children\+Died\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_ad0af91f222c0b56f5e5b82ec7b923bd4}\label{classWt_1_1Server_ad0af91f222c0b56f5e5b82ec7b923bd4}} 
+volatile sig\+\_\+atomic\+\_\+t {\bfseries handle\+Sig\+Chld\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_af20667acdd453271040639001bd43de5}\label{classWt_1_1Server_af20667acdd453271040639001bd43de5}} 
+Session\+Map {\bfseries sessions\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Server_abdb3da2e112b6e4d98d2cda5dd5ee49f}\label{classWt_1_1Server_abdb3da2e112b6e4d98d2cda5dd5ee49f}} 
+std\+::vector$<$ int $>$ {\bfseries session\+Process\+Pids\+\_\+}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/fcgi/Server.\+h\end{DoxyCompactItemize}

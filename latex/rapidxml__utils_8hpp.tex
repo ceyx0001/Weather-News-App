@@ -1,0 +1,52 @@
+\hypertarget{rapidxml__utils_8hpp}{}\doxysection{wt-\/4.8.2/src/3rdparty/rapidxml/rapidxml\+\_\+utils.hpp File Reference}
+\label{rapidxml__utils_8hpp}\index{wt-\/4.8.2/src/3rdparty/rapidxml/rapidxml\_utils.hpp@{wt-\/4.8.2/src/3rdparty/rapidxml/rapidxml\_utils.hpp}}
+{\ttfamily \#include \char`\"{}rapidxml.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+Include dependency graph for rapidxml\+\_\+utils.\+hpp\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWt_1_1rapidxml_1_1file}{Wt\+::rapidxml\+::file$<$ Ch $>$}}
+\begin{DoxyCompactList}\small\item\em Represents data loaded from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceWt}{Wt}}
+\begin{DoxyCompactList}\small\item\em The namespace for Wt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Ch $>$ }\\std\+::size\+\_\+t \mbox{\hyperlink{rapidxml__utils_8hpp_acc1c073fa5a07e2faea6aef9401e0bd5}{Wt\+::rapidxml\+::count\+\_\+children}} (xml\+\_\+node$<$ Ch $>$ $\ast$node)
+\item 
+{\footnotesize template$<$class Ch $>$ }\\std\+::size\+\_\+t \mbox{\hyperlink{rapidxml__utils_8hpp_ae985498ea48a73979e13f5711a1c6c99}{Wt\+::rapidxml\+::count\+\_\+attributes}} (xml\+\_\+node$<$ Ch $>$ $\ast$node)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains high-\/level rapidxml utilities that can be useful in certain simple scenarios. They should probably not be used if maximizing performance is the main objective. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{rapidxml__utils_8hpp_ae985498ea48a73979e13f5711a1c6c99}\label{rapidxml__utils_8hpp_ae985498ea48a73979e13f5711a1c6c99}} 
+\index{rapidxml\_utils.hpp@{rapidxml\_utils.hpp}!count\_attributes@{count\_attributes}}
+\index{count\_attributes@{count\_attributes}!rapidxml\_utils.hpp@{rapidxml\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{count\_attributes()}{count\_attributes()}}
+{\footnotesize\ttfamily template$<$class Ch $>$ \\
+std\+::size\+\_\+t Wt\+::rapidxml\+::count\+\_\+attributes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1rapidxml_1_1xml__node}{xml\+\_\+node}}$<$ Ch $>$ $\ast$}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Counts attributes of node. \mbox{\hyperlink{structTime}{Time}} complexity is O(n). \begin{DoxyReturn}{Returns}
+Number of attributes of node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{rapidxml__utils_8hpp_acc1c073fa5a07e2faea6aef9401e0bd5}\label{rapidxml__utils_8hpp_acc1c073fa5a07e2faea6aef9401e0bd5}} 
+\index{rapidxml\_utils.hpp@{rapidxml\_utils.hpp}!count\_children@{count\_children}}
+\index{count\_children@{count\_children}!rapidxml\_utils.hpp@{rapidxml\_utils.hpp}}
+\doxysubsubsection{\texorpdfstring{count\_children()}{count\_children()}}
+{\footnotesize\ttfamily template$<$class Ch $>$ \\
+std\+::size\+\_\+t Wt\+::rapidxml\+::count\+\_\+children (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1rapidxml_1_1xml__node}{xml\+\_\+node}}$<$ Ch $>$ $\ast$}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Counts children of node. \mbox{\hyperlink{structTime}{Time}} complexity is O(n). \begin{DoxyReturn}{Returns}
+Number of children of node 
+\end{DoxyReturn}

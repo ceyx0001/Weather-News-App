@@ -1,0 +1,312 @@
+\hypertarget{classWt_1_1WLogger}{}\doxysection{Wt\+::W\+Logger Class Reference}
+\label{classWt_1_1WLogger}\index{Wt::WLogger@{Wt::WLogger}}
+
+
+A simple logging class.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Logger.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::W\+Logger\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWt_1_1WLogger_1_1Field}{Field}}
+\begin{DoxyCompactList}\small\item\em Class that holds the configuration for a single field. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structWt_1_1WLogger_1_1Rule}{Rule}}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WLogger_1_1Sep}{Sep}}
+\begin{DoxyCompactList}\small\item\em Class that indicates a field separator. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structWt_1_1WLogger_1_1TimeStamp}{Time\+Stamp}}
+\begin{DoxyCompactList}\small\item\em Class that indicates a time stamp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WLogger_aa2eef50d172fa9766e3500675c814535}{W\+Logger}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new logger. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WLogger_acb96bbbeede82e03a9489f0fb1c43e38}\label{classWt_1_1WLogger_acb96bbbeede82e03a9489f0fb1c43e38}} 
+\mbox{\hyperlink{classWt_1_1WLogger_acb96bbbeede82e03a9489f0fb1c43e38}{$\sim$\+W\+Logger}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WLogger_ae851860f76c299bca96321b7d867a503}{set\+Stream}} (std\+::ostream \&o)
+\begin{DoxyCompactList}\small\item\em Sets the output stream. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WLogger_a6d8a07bc92824fe32a123094e7516544}{set\+File}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Sets the output file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WLogger_a567c5b28fee703e37523898d30016f40}{configure}} (const std\+::string \&config)
+\begin{DoxyCompactList}\small\item\em Configures what things are logged. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WLogger_a8287b40a0699797f63de2fe5deaaae9a}{add\+Field}} (const std\+::string \&name, bool is\+String)
+\begin{DoxyCompactList}\small\item\em Adds a field. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WLogger_ab533581fd76bad1b63615729ab78d432}\label{classWt_1_1WLogger_ab533581fd76bad1b63615729ab78d432}} 
+const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WLogger_1_1Field}{Field}} $>$ \& \mbox{\hyperlink{classWt_1_1WLogger_ab533581fd76bad1b63615729ab78d432}{fields}} () const
+\begin{DoxyCompactList}\small\item\em Returns the field list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WLogEntry}{W\+Log\+Entry}} \mbox{\hyperlink{classWt_1_1WLogger_ad807be272b8acd4d01f5be3a601386b6}{entry}} (const std\+::string \&type) const
+\begin{DoxyCompactList}\small\item\em Starts a new log entry. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WLogger_a36eaf24e5c4dbd7c6238c371ef3aeb06}{logging}} (const std\+::string \&type) const
+\begin{DoxyCompactList}\small\item\em Returns whether messages of a given type are logged. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WLogger_ad76f7d996e44a8f0227efa0571f3af21}{logging}} (const char $\ast$type) const
+\begin{DoxyCompactList}\small\item\em Returns whether messages of a given type are logged. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WLogger_a900c63d94155a20b8a8863ab9bbc3f04}{logging}} (const std\+::string \&type, const std\+::string \&scope) const
+\begin{DoxyCompactList}\small\item\em Returns whether messages of a given type and scope are logged. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const \mbox{\hyperlink{structWt_1_1WLogger_1_1Sep}{Sep}} \mbox{\hyperlink{classWt_1_1WLogger_a1c6aa0c0eff56a81806fe7036ffcbc50}{sep}}
+\begin{DoxyCompactList}\small\item\em Field separator constant. \end{DoxyCompactList}\item 
+static const \mbox{\hyperlink{structWt_1_1WLogger_1_1TimeStamp}{Time\+Stamp}} \mbox{\hyperlink{classWt_1_1WLogger_a2953220f5147910c59ad5ad49d031c00}{timestamp}}
+\begin{DoxyCompactList}\small\item\em Timestamp field constant. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLogger_adb2ed5a8a963c7fd1cc3f5727109585d}\label{classWt_1_1WLogger_adb2ed5a8a963c7fd1cc3f5727109585d}} 
+void {\bfseries add\+Line} (const std\+::string \&type, const std\+::string \&scope, const \mbox{\hyperlink{classWt_1_1WStringStream}{W\+String\+Stream}} \&s) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLogger_ac4287bcb7c86a6f87c1f0a4a36e9e696}\label{classWt_1_1WLogger_ac4287bcb7c86a6f87c1f0a4a36e9e696}} 
+std\+::ostream $\ast$ {\bfseries o\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLogger_aa08ace937ceab34ec37eba052c85a5f0}\label{classWt_1_1WLogger_aa08ace937ceab34ec37eba052c85a5f0}} 
+bool {\bfseries own\+Stream\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLogger_aa625c743df86a735af0b6fa2824dad6a}\label{classWt_1_1WLogger_aa625c743df86a735af0b6fa2824dad6a}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WLogger_1_1Field}{Field}} $>$ {\bfseries fields\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLogger_aae77db80748d56036e7030dbb1415c94}\label{classWt_1_1WLogger_aae77db80748d56036e7030dbb1415c94}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1WLogger_1_1Rule}{Rule}} $>$ {\bfseries rules\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLogger_a9767fbbf04eedf0c20855ff24e057b71}\label{classWt_1_1WLogger_a9767fbbf04eedf0c20855ff24e057b71}} 
+class {\bfseries W\+Log\+Entry}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A simple logging class. 
+
+This class logs events to a stream in a flexible way. It allows to create log files using the commonly used \href{http://www.w3.org/Daemon/User/Config/Logging.html\#common-logfile-format}{\texttt{ Common Log Format}} or \href{http://httpd.apache.org/docs/1.3/logs.html\#combined}{\texttt{ Combined Log Format}}, but provides a general way for logging entries that consists of a fixed number of fields.
+
+It is used by Wt to create the application log (\mbox{\hyperlink{classWt_1_1WApplication_aa806c98262a4d5c4d4d0537da59cdf1d}{W\+Application\+::log()}}), and built-\/in httpd access log.
+
+To use this class for custom logging, you should instantiate a logger, add one or more field definitions using \mbox{\hyperlink{classWt_1_1WLogger_a8287b40a0699797f63de2fe5deaaae9a}{add\+Field()}}, and set an output stream using \mbox{\hyperlink{classWt_1_1WLogger_ae851860f76c299bca96321b7d867a503}{set\+Stream()}} or \mbox{\hyperlink{classWt_1_1WLogger_a6d8a07bc92824fe32a123094e7516544}{set\+File()}}. To stream data to the logger, use \mbox{\hyperlink{classWt_1_1WLogger_ad807be272b8acd4d01f5be3a601386b6}{entry()}} to start formatting a new entry.
+
+Usage example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// Setup the logger}}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WLogger}{Wt::WLogger}} logger;}
+\DoxyCodeLine{logger.\mbox{\hyperlink{classWt_1_1WLogger_a8287b40a0699797f63de2fe5deaaae9a}{addField}}(\textcolor{stringliteral}{"datetime"}, \textcolor{keyword}{false});}
+\DoxyCodeLine{logger.\mbox{\hyperlink{classWt_1_1WLogger_a8287b40a0699797f63de2fe5deaaae9a}{addField}}(\textcolor{stringliteral}{"session"}, \textcolor{keyword}{false});}
+\DoxyCodeLine{logger.\mbox{\hyperlink{classWt_1_1WLogger_a8287b40a0699797f63de2fe5deaaae9a}{addField}}(\textcolor{stringliteral}{"type"}, \textcolor{keyword}{false});}
+\DoxyCodeLine{logger.\mbox{\hyperlink{classWt_1_1WLogger_a8287b40a0699797f63de2fe5deaaae9a}{addField}}(\textcolor{stringliteral}{"message"}, \textcolor{keyword}{true});}
+\DoxyCodeLine{}
+\DoxyCodeLine{logger.\mbox{\hyperlink{classWt_1_1WLogger_a6d8a07bc92824fe32a123094e7516544}{setFile}}(\textcolor{stringliteral}{"/tmp/mylog.txt"});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{// Add an entry}}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WLogEntry}{Wt::WLogEntry}} \mbox{\hyperlink{classWt_1_1WLogger_ad807be272b8acd4d01f5be3a601386b6}{entry}} = logger.\mbox{\hyperlink{classWt_1_1WLogger_ad807be272b8acd4d01f5be3a601386b6}{entry}}();}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WLogger_ad807be272b8acd4d01f5be3a601386b6}{entry}} << \mbox{\hyperlink{classWt_1_1WLogger_a2953220f5147910c59ad5ad49d031c00}{Wt::WLogger::timestamp}} << \mbox{\hyperlink{classWt_1_1WLogger_a1c6aa0c0eff56a81806fe7036ffcbc50}{Wt::WLogger::sep}}}
+\DoxyCodeLine{      << \textcolor{charliteral}{'['} << wApp-\/>sessionId() << \textcolor{charliteral}{']'} << \mbox{\hyperlink{classWt_1_1WLogger_a1c6aa0c0eff56a81806fe7036ffcbc50}{Wt::WLogger::sep}}}
+\DoxyCodeLine{      << \textcolor{charliteral}{'['} << \textcolor{stringliteral}{"notice"} << \textcolor{charliteral}{']'} << \mbox{\hyperlink{classWt_1_1WLogger_a1c6aa0c0eff56a81806fe7036ffcbc50}{Wt::WLogger::sep}}}
+\DoxyCodeLine{      << \textcolor{stringliteral}{"Succesfully started."};}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_aa806c98262a4d5c4d4d0537da59cdf1d}{W\+Application\+::log()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WLogger_aa2eef50d172fa9766e3500675c814535}\label{classWt_1_1WLogger_aa2eef50d172fa9766e3500675c814535}} 
+\index{Wt::WLogger@{Wt::WLogger}!WLogger@{WLogger}}
+\index{WLogger@{WLogger}!Wt::WLogger@{Wt::WLogger}}
+\doxysubsubsection{\texorpdfstring{WLogger()}{WLogger()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Logger\+::\+W\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new logger. 
+
+This creates a new logger, which defaults to logging to stderr. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WLogger_a8287b40a0699797f63de2fe5deaaae9a}\label{classWt_1_1WLogger_a8287b40a0699797f63de2fe5deaaae9a}} 
+\index{Wt::WLogger@{Wt::WLogger}!addField@{addField}}
+\index{addField@{addField}!Wt::WLogger@{Wt::WLogger}}
+\doxysubsubsection{\texorpdfstring{addField()}{addField()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Logger\+::add\+Field (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{bool}]{is\+String }\end{DoxyParamCaption})}
+
+
+
+Adds a field. 
+
+Add a field to the logger. When {\ttfamily is\+String} is {\ttfamily true}, values will be quoted. \mbox{\Hypertarget{classWt_1_1WLogger_a567c5b28fee703e37523898d30016f40}\label{classWt_1_1WLogger_a567c5b28fee703e37523898d30016f40}} 
+\index{Wt::WLogger@{Wt::WLogger}!configure@{configure}}
+\index{configure@{configure}!Wt::WLogger@{Wt::WLogger}}
+\doxysubsubsection{\texorpdfstring{configure()}{configure()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Logger\+::configure (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{config }\end{DoxyParamCaption})}
+
+
+
+Configures what things are logged. 
+
+The configuration is a string that defines rules for enabling or disabling certain logging. It is a white-\/space delimited list of rules, and each rule is of the form\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \mbox{[}-\/\mbox{]}level} \+: enables (or disables) logging of messages of the given level; \textquotesingle{}$\ast$\textquotesingle{} is a wild-\/card that matches all levels
+\item {\ttfamily \mbox{[}-\/\mbox{]}level\+:scope} \+: enables (or disables) logging of messages of the given level and scope; \textquotesingle{}$\ast$\textquotesingle{} is a wild-\/card that matches all levels or scopes.
+\end{DoxyItemize}
+
+The default configuration is {\ttfamily \char`\"{}$\ast$ -\/debug\char`\"{}}, i.\+e. by default everything is logged, except for \char`\"{}debug\char`\"{} messages.
+
+Some other examples\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily \char`\"{}$\ast$ -\/debug debug\+:wthttp\char`\"{}}\+: logs everything, including debugging messages of scope \char`\"{}wthttp\char`\"{}, but no other debugging messages.
+\item {\ttfamily \char`\"{}$\ast$ -\/info -\/debug\char`\"{}}\+: disables logging of info messages in addition to debugging messages.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+The standard logging is typically configured in the configuration file, in the $<$log-\/config$>$ block. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WLogger_ad807be272b8acd4d01f5be3a601386b6}\label{classWt_1_1WLogger_ad807be272b8acd4d01f5be3a601386b6}} 
+\index{Wt::WLogger@{Wt::WLogger}!entry@{entry}}
+\index{entry@{entry}!Wt::WLogger@{Wt::WLogger}}
+\doxysubsubsection{\texorpdfstring{entry()}{entry()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WLogEntry}{W\+Log\+Entry}} Wt\+::\+W\+Logger\+::entry (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type }\end{DoxyParamCaption}) const}
+
+
+
+Starts a new log entry. 
+
+Returns a new entry. The entry is logged in the destructor of the entry (i.\+e. when the entry goes out of scope).
+
+The {\ttfamily type} reflects a logging level. You can freely choose a type, but these are commonly used inside the library\+:
+\begin{DoxyItemize}
+\item \char`\"{}debug\char`\"{}\+: debugging info (suppressed by default)
+\item \char`\"{}info\char`\"{}\+: informational notices
+\item \char`\"{}warning\char`\"{}\+: warnings (potentially wrong A\+PI use)
+\item \char`\"{}secure\char`\"{}\+: security-\/related events
+\item \char`\"{}error\char`\"{}\+: errors (wrong A\+PI use, unexpected protocol messages)
+\item \char`\"{}fatal\char`\"{}\+: fatal errors (terminate the session) 
+\end{DoxyItemize}\mbox{\Hypertarget{classWt_1_1WLogger_ad76f7d996e44a8f0227efa0571f3af21}\label{classWt_1_1WLogger_ad76f7d996e44a8f0227efa0571f3af21}} 
+\index{Wt::WLogger@{Wt::WLogger}!logging@{logging}}
+\index{logging@{logging}!Wt::WLogger@{Wt::WLogger}}
+\doxysubsubsection{\texorpdfstring{logging()}{logging()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Logger\+::logging (\begin{DoxyParamCaption}\item[{const char $\ast$}]{type }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether messages of a given type are logged. 
+
+Returns {\ttfamily true} if messages of the given type are logged. It may be that not messages of all scopes are logged.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLogger_a567c5b28fee703e37523898d30016f40}{configure()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WLogger_a36eaf24e5c4dbd7c6238c371ef3aeb06}\label{classWt_1_1WLogger_a36eaf24e5c4dbd7c6238c371ef3aeb06}} 
+\index{Wt::WLogger@{Wt::WLogger}!logging@{logging}}
+\index{logging@{logging}!Wt::WLogger@{Wt::WLogger}}
+\doxysubsubsection{\texorpdfstring{logging()}{logging()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Logger\+::logging (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether messages of a given type are logged. 
+
+Returns {\ttfamily true} if messages of the given type are logged. It may be that not messages of all scopes are logged.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLogger_a567c5b28fee703e37523898d30016f40}{configure()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WLogger_a900c63d94155a20b8a8863ab9bbc3f04}\label{classWt_1_1WLogger_a900c63d94155a20b8a8863ab9bbc3f04}} 
+\index{Wt::WLogger@{Wt::WLogger}!logging@{logging}}
+\index{logging@{logging}!Wt::WLogger@{Wt::WLogger}}
+\doxysubsubsection{\texorpdfstring{logging()}{logging()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Logger\+::logging (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{type,  }\item[{const std\+::string \&}]{scope }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether messages of a given type and scope are logged. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLogger_a567c5b28fee703e37523898d30016f40}{configure()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WLogger_a6d8a07bc92824fe32a123094e7516544}\label{classWt_1_1WLogger_a6d8a07bc92824fe32a123094e7516544}} 
+\index{Wt::WLogger@{Wt::WLogger}!setFile@{setFile}}
+\index{setFile@{setFile}!Wt::WLogger@{Wt::WLogger}}
+\doxysubsubsection{\texorpdfstring{setFile()}{setFile()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Logger\+::set\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Sets the output file. 
+
+Opens a file output stream for {\ttfamily path}. The default logger outputs to stderr.
+
+This logs a message notifying the user whether the file was successfully opened for writing to the previous ostream (usually std\+::cerr).
+
+If you want to suppress the info message, you can configure the logger with \char`\"{}-\/info\+:\+W\+Logger\char`\"{}. The error when the file was not successfully opened is logged at the error log level.
+
+\begin{DoxyNote}{Note}
+If the previous ostream was a file set with this method, the message will be logged to std\+::cerr instead of the previous file, because the previous file is closed first.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLogger_ae851860f76c299bca96321b7d867a503}{set\+Stream()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WLogger_ae851860f76c299bca96321b7d867a503}\label{classWt_1_1WLogger_ae851860f76c299bca96321b7d867a503}} 
+\index{Wt::WLogger@{Wt::WLogger}!setStream@{setStream}}
+\index{setStream@{setStream}!Wt::WLogger@{Wt::WLogger}}
+\doxysubsubsection{\texorpdfstring{setStream()}{setStream()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Logger\+::set\+Stream (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{o }\end{DoxyParamCaption})}
+
+
+
+Sets the output stream. 
+
+The default logger outputs to stderr.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLogger_a6d8a07bc92824fe32a123094e7516544}{set\+File()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classWt_1_1WLogger_a1c6aa0c0eff56a81806fe7036ffcbc50}\label{classWt_1_1WLogger_a1c6aa0c0eff56a81806fe7036ffcbc50}} 
+\index{Wt::WLogger@{Wt::WLogger}!sep@{sep}}
+\index{sep@{sep}!Wt::WLogger@{Wt::WLogger}}
+\doxysubsubsection{\texorpdfstring{sep}{sep}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structWt_1_1WLogger_1_1Sep}{Sep}} Wt\+::\+W\+Logger\+::sep\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Field separator constant. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLogEntry_a7c9bd0a0615dba04d16ecd1db7a69111}{W\+Log\+Entry\+::operator$<$$<$(const W\+Logger\+::\+Sep\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WLogger_a2953220f5147910c59ad5ad49d031c00}\label{classWt_1_1WLogger_a2953220f5147910c59ad5ad49d031c00}} 
+\index{Wt::WLogger@{Wt::WLogger}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!Wt::WLogger@{Wt::WLogger}}
+\doxysubsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structWt_1_1WLogger_1_1TimeStamp}{Time\+Stamp}} Wt\+::\+W\+Logger\+::timestamp\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Timestamp field constant. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLogEntry_a2194498f5d76cff08191f2d9a245b50b}{W\+Log\+Entry\+::operator$<$$<$(const W\+Logger\+::\+Time\+Stamp\&)}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Logger.\+h\end{DoxyCompactItemize}

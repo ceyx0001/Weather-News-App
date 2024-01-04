@@ -1,0 +1,113 @@
+\hypertarget{classCommentView}{}\doxysection{Comment\+View Class Reference}
+\label{classCommentView}\index{CommentView@{CommentView}}
+
+
+Inheritance diagram for Comment\+View\+:
+% FIG 0
+
+
+Collaboration diagram for Comment\+View\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCommentView_a76fb10b96d08b1dc51d44a2014b07932}\label{classCommentView_a76fb10b96d08b1dc51d44a2014b07932}} 
+{\bfseries Comment\+View} (\mbox{\hyperlink{classBlogSession}{Blog\+Session}} \&session, long long parent\+Id)
+\item 
+\mbox{\Hypertarget{classCommentView_aa338b3ff5d4e39253e2d4291a33a41b8}\label{classCommentView_aa338b3ff5d4e39253e2d4291a33a41b8}} 
+{\bfseries Comment\+View} (\mbox{\hyperlink{classBlogSession}{Blog\+Session}} \&session, \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{dbo\+::ptr}}$<$ \mbox{\hyperlink{classComment}{Comment}} $>$ comment)
+\item 
+virtual void \mbox{\hyperlink{classCommentView_a2cc4d4739445c73c54b81c67ccacec93}{resolve\+String}} (const std\+::string \&var\+Name, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} $>$ \&args, std\+::ostream \&result)
+\begin{DoxyCompactList}\small\item\em Resolves the string value for a variable name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classCommentView_acf50fd1ffd737f82ca682e4203872498}{render\+Template}} (std\+::ostream \&result)
+\begin{DoxyCompactList}\small\item\em Renders the template into the given result stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCommentView_a869e3fd0f3cc26ee166ec6011e174598}\label{classCommentView_a869e3fd0f3cc26ee166ec6011e174598}} 
+void {\bfseries reply} ()
+\item 
+\mbox{\Hypertarget{classCommentView_add22e50885a7f1282cf25d8bbbb89c86}\label{classCommentView_add22e50885a7f1282cf25d8bbbb89c86}} 
+void {\bfseries edit} ()
+\item 
+\mbox{\Hypertarget{classCommentView_a4530e500b9d71bd883bdef68fae4558a}\label{classCommentView_a4530e500b9d71bd883bdef68fae4558a}} 
+void {\bfseries rm} ()
+\item 
+\mbox{\Hypertarget{classCommentView_a6d1c9432cd56df4458eeae5142779e29}\label{classCommentView_a6d1c9432cd56df4458eeae5142779e29}} 
+void {\bfseries save} ()
+\item 
+\mbox{\Hypertarget{classCommentView_af30790fb36e19ac832faafc5d3e137f7}\label{classCommentView_af30790fb36e19ac832faafc5d3e137f7}} 
+void {\bfseries cancel} ()
+\item 
+\mbox{\Hypertarget{classCommentView_ab790468527bd20e167f63c6886ea060a}\label{classCommentView_ab790468527bd20e167f63c6886ea060a}} 
+bool {\bfseries is\+New} () const
+\item 
+\mbox{\Hypertarget{classCommentView_afec59fc05680b8d8e4ad539828628a58}\label{classCommentView_afec59fc05680b8d8e4ad539828628a58}} 
+void {\bfseries render\+View} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCommentView_aea0042b97428cdb94f05b3b48dd2b61a}\label{classCommentView_aea0042b97428cdb94f05b3b48dd2b61a}} 
+\mbox{\hyperlink{classBlogSession}{Blog\+Session}} \& {\bfseries session\+\_\+}
+\item 
+\mbox{\Hypertarget{classCommentView_a4f8f06288b25930c9b8c9ceb2d28ab62}\label{classCommentView_a4f8f06288b25930c9b8c9ceb2d28ab62}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{dbo\+::ptr}}$<$ \mbox{\hyperlink{classComment}{Comment}} $>$ {\bfseries comment\+\_\+}
+\item 
+\mbox{\Hypertarget{classCommentView_a835c87eda68468a723b17e4d8eab7fc9}\label{classCommentView_a835c87eda68468a723b17e4d8eab7fc9}} 
+\mbox{\hyperlink{classWt_1_1WTextArea}{Wt\+::\+W\+Text\+Area}} $\ast$ {\bfseries edit\+Area\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCommentView_acf50fd1ffd737f82ca682e4203872498}\label{classCommentView_acf50fd1ffd737f82ca682e4203872498}} 
+\index{CommentView@{CommentView}!renderTemplate@{renderTemplate}}
+\index{renderTemplate@{renderTemplate}!CommentView@{CommentView}}
+\doxysubsubsection{\texorpdfstring{renderTemplate()}{renderTemplate()}}
+{\footnotesize\ttfamily virtual void Comment\+View\+::render\+Template (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Renders the template into the given result stream. 
+
+The default implementation will call \mbox{\hyperlink{classWt_1_1WTemplate_ad3e74189683016b05f5736219538551c}{render\+Template\+Text()}} with the \mbox{\hyperlink{classWt_1_1WTemplate_ac8e2f6e8b1d5c46c2d3128ae51b892a0}{template\+Text()}}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WTemplate_a08d6d360e0dea5fbf0afb513a7b928b2}{Wt\+::\+W\+Template}}.
+
+\mbox{\Hypertarget{classCommentView_a2cc4d4739445c73c54b81c67ccacec93}\label{classCommentView_a2cc4d4739445c73c54b81c67ccacec93}} 
+\index{CommentView@{CommentView}!resolveString@{resolveString}}
+\index{resolveString@{resolveString}!CommentView@{CommentView}}
+\doxysubsubsection{\texorpdfstring{resolveString()}{resolveString()}}
+{\footnotesize\ttfamily virtual void Comment\+View\+::resolve\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{var\+Name,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} $>$ \&}]{args,  }\item[{std\+::ostream \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resolves the string value for a variable name. 
+
+This is the main method used to resolve variables in the template text, during rendering.
+
+The default implementation considers first whether a string was bound using \mbox{\hyperlink{classWt_1_1WTemplate_a16e6f5aa8a866d95cb68a6ab8fbe753d}{bind\+String()}}. If so, that string is returned. If not, it will attempt to resolve a widget with that variable name using \mbox{\hyperlink{classWt_1_1WTemplate_a65fd50e2e83ef594b41a97b5a3f70588}{resolve\+Widget()}}, and render it as X\+H\+T\+ML. If that fails too, \mbox{\hyperlink{classWt_1_1WTemplate_a42a3a48a1f8c88af9e489b1e83e78c5f}{handle\+Unresolved\+Variable()}} is called, passing the initial arguments.
+
+You may want to reimplement this method to provide on-\/demand loading of strings for your template.
+
+The result stream expects a U\+T\+F-\/8 encoded string value.
+
+\begin{DoxyWarning}{Warning}
+When specializing this class, you need to make sure that you append proper X\+H\+T\+ML to the {\ttfamily result}, without unsafe active contents. The \mbox{\hyperlink{classWt_1_1WTemplate_adbe6894922347552f121e8356096d006}{format()}} methods may be used for this purpose.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classCommentView_acf50fd1ffd737f82ca682e4203872498}{render\+Template()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WTemplate_a1b41ce6236c27e91bfffb2d0686ac556}{Wt\+::\+W\+Template}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/blog/view/Comment\+View.\+h\end{DoxyCompactItemize}

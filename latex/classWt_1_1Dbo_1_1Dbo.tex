@@ -1,0 +1,143 @@
+\hypertarget{classWt_1_1Dbo_1_1Dbo}{}\doxysection{Wt\+::Dbo\+::Dbo$<$ C $>$ Class Template Reference}
+\label{classWt_1_1Dbo_1_1Dbo}\index{Wt::Dbo::Dbo$<$ C $>$@{Wt::Dbo::Dbo$<$ C $>$}}
+
+
+A base class for database objects.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Dbo_a8f4aadc99b20bfccbeb446ae0eac312f}\label{classWt_1_1Dbo_1_1Dbo_a8f4aadc99b20bfccbeb446ae0eac312f}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo_a8f4aadc99b20bfccbeb446ae0eac312f}{Dbo}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Dbo_aea653a2a9810f2a90d5c934ad69dd8cd}\label{classWt_1_1Dbo_1_1Dbo_aea653a2a9810f2a90d5c934ad69dd8cd}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo_aea653a2a9810f2a90d5c934ad69dd8cd}{Dbo}} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo}{Dbo}}$<$ C $>$ \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structWt_1_1Dbo_1_1dbo__traits}{dbo\+\_\+traits}}$<$ C $>$\+::Id\+Type \mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo_ad2949fe9c49d634857a4851e41d4175a}{id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the database id. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo_a0ecc76a58123e62842720445608d22df}{session}} () const
+\begin{DoxyCompactList}\small\item\em Returns the session. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo_a5083ea4d43e159632f147ba056f9d5ea}{set\+Dirty}} ()
+\begin{DoxyCompactList}\small\item\em Marks the object as modified. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo_a92090e4f4e5802074de78300996089c2}{is\+Dirty}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this object is dirty. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo_a4d1e5adb0e03766b76aef26b430906ae}{self}} () const
+\begin{DoxyCompactList}\small\item\em Returns a dbo\+::ptr to this object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Dbo_a9b4ef9cc821f71a797e6c79ea572fc2a}\label{classWt_1_1Dbo_1_1Dbo_a9b4ef9cc821f71a797e6c79ea572fc2a}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1MetaDbo}{Meta\+Dbo}}$<$ C $>$ $\ast$ {\bfseries meta\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Dbo_abe9f75c4ef39360348d93c3ee4f35d2f}\label{classWt_1_1Dbo_1_1Dbo_abe9f75c4ef39360348d93c3ee4f35d2f}} 
+{\footnotesize template$<$class D , class Enable $>$ }\\struct {\bfseries Dbo\+Helper}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class C$>$\newline
+class Wt\+::\+Dbo\+::\+Dbo$<$ C $>$}
+
+A base class for database objects. 
+
+The only requirement for a class to be be persisted is to have a {\ttfamily persist()} method. In some cases however, it may be convenient to be able to access database information of an object, such as its database id and its session, from the object itself.
+
+By deriving your database class directly or indirectly from this class, you can have access to its \mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo_ad2949fe9c49d634857a4851e41d4175a}{id()}} and \mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo_a0ecc76a58123e62842720445608d22df}{session()}}. This will increase the size of your object with one pointer.
+
+The following example shows a skeleton for a database object which has access to its own id and session information\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }Cat : \textcolor{keyword}{public} \mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo}{Wt::Dbo::Dbo}}<Cat> \{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{  \textcolor{keyword}{template} <\textcolor{keyword}{class} Action>}
+\DoxyCodeLine{  \textcolor{keywordtype}{void} persist(Action\& a) \{ \}}
+\DoxyCodeLine{\};}
+\end{DoxyCode}
+
+
+Compare this to the skeleton for a minimum valid database class\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }Cat \{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{  \textcolor{keyword}{template} <\textcolor{keyword}{class} Action>}
+\DoxyCodeLine{  \textcolor{keywordtype}{void} persist(Action\& a) \{ \}}
+\DoxyCodeLine{\};}
+\end{DoxyCode}
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Dbo_ad2949fe9c49d634857a4851e41d4175a}\label{classWt_1_1Dbo_1_1Dbo_ad2949fe9c49d634857a4851e41d4175a}} 
+\index{Wt::Dbo::Dbo$<$ C $>$@{Wt::Dbo::Dbo$<$ C $>$}!id@{id}}
+\index{id@{id}!Wt::Dbo::Dbo$<$ C $>$@{Wt::Dbo::Dbo$<$ C $>$}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+\mbox{\hyperlink{structWt_1_1Dbo_1_1dbo__traits}{dbo\+\_\+traits}}$<$ C $>$\+::Id\+Type \mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo}{Wt\+::\+Dbo\+::\+Dbo}}$<$ C $>$\+::id}
+
+
+
+Returns the database id. 
+
+Returns the database id of this object, or \mbox{\hyperlink{structWt_1_1Dbo_1_1dbo__default__traits_a6bb01d0dc6a5bbd25481fa16b642b996}{Wt\+::\+Dbo\+::dbo\+\_\+traits$<$\+C$>$\+::invalid\+Id()}} if the object is associated with a session or not yet stored in the database. \mbox{\Hypertarget{classWt_1_1Dbo_1_1Dbo_a92090e4f4e5802074de78300996089c2}\label{classWt_1_1Dbo_1_1Dbo_a92090e4f4e5802074de78300996089c2}} 
+\index{Wt::Dbo::Dbo$<$ C $>$@{Wt::Dbo::Dbo$<$ C $>$}!isDirty@{isDirty}}
+\index{isDirty@{isDirty}!Wt::Dbo::Dbo$<$ C $>$@{Wt::Dbo::Dbo$<$ C $>$}}
+\doxysubsubsection{\texorpdfstring{isDirty()}{isDirty()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+bool \mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo}{Wt\+::\+Dbo\+::\+Dbo}}$<$ C $>$\+::is\+Dirty}
+
+
+
+Returns whether this object is dirty. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo_a5083ea4d43e159632f147ba056f9d5ea}{set\+Dirty()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Dbo_a4d1e5adb0e03766b76aef26b430906ae}\label{classWt_1_1Dbo_1_1Dbo_a4d1e5adb0e03766b76aef26b430906ae}} 
+\index{Wt::Dbo::Dbo$<$ C $>$@{Wt::Dbo::Dbo$<$ C $>$}!self@{self}}
+\index{self@{self}!Wt::Dbo::Dbo$<$ C $>$@{Wt::Dbo::Dbo$<$ C $>$}}
+\doxysubsubsection{\texorpdfstring{self()}{self()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ C $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo}{Wt\+::\+Dbo\+::\+Dbo}}$<$ C $>$\+::self}
+
+
+
+Returns a dbo\+::ptr to this object. 
+
+The returned pointer points to the current object only if there exists at least one other pointer to the object. Otherwise it returns a {\ttfamily null} ptr.
+
+This means that in practice you should adopt the habit of wrapping a newly created database object directly in a ptr (and perhaps also add it to a session)\+: \mbox{\Hypertarget{classWt_1_1Dbo_1_1Dbo_a0ecc76a58123e62842720445608d22df}\label{classWt_1_1Dbo_1_1Dbo_a0ecc76a58123e62842720445608d22df}} 
+\index{Wt::Dbo::Dbo$<$ C $>$@{Wt::Dbo::Dbo$<$ C $>$}!session@{session}}
+\index{session@{session}!Wt::Dbo::Dbo$<$ C $>$@{Wt::Dbo::Dbo$<$ C $>$}}
+\doxysubsubsection{\texorpdfstring{session()}{session()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo}{Wt\+::\+Dbo\+::\+Dbo}}$<$ C $>$\+::session}
+
+
+
+Returns the session. 
+
+Returns the session to which this object belongs, or {\ttfamily nullptr} if the object is not associated with a session. \mbox{\Hypertarget{classWt_1_1Dbo_1_1Dbo_a5083ea4d43e159632f147ba056f9d5ea}\label{classWt_1_1Dbo_1_1Dbo_a5083ea4d43e159632f147ba056f9d5ea}} 
+\index{Wt::Dbo::Dbo$<$ C $>$@{Wt::Dbo::Dbo$<$ C $>$}!setDirty@{setDirty}}
+\index{setDirty@{setDirty}!Wt::Dbo::Dbo$<$ C $>$@{Wt::Dbo::Dbo$<$ C $>$}}
+\doxysubsubsection{\texorpdfstring{setDirty()}{setDirty()}}
+{\footnotesize\ttfamily template$<$class C $>$ \\
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo}{Wt\+::\+Dbo\+::\+Dbo}}$<$ C $>$\+::set\+Dirty}
+
+
+
+Marks the object as modified. 
+
+When accessing a database object using \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr_aed605599617e3ae02d9e92b1daafa8e7}{ptr.\+modify()}}, the object is marked as dirty. Any intermediate query will however flush the current transaction and other changes within a member method will not be recorded.
+
+You can call this method to achieve the same as \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr_aed605599617e3ae02d9e92b1daafa8e7}{ptr.\+modify()}} but from within member methods. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/ptr.\+h\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/ptr\+\_\+impl.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,118 @@
+\hypertarget{classWt_1_1WLayoutItem}{}\doxysection{Wt\+::W\+Layout\+Item Class Reference}
+\label{classWt_1_1WLayoutItem}\index{Wt::WLayoutItem@{Wt::WLayoutItem}}
+
+
+An abstract base class for items that can participate in a layout.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Layout\+Item.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Layout\+Item\+:
+% FIG 0
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayoutItem_a6acbe4637265837612ec7e44394cc52d}\label{classWt_1_1WLayoutItem_a6acbe4637265837612ec7e44394cc52d}} 
+typedef std\+::function$<$ void(\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$)$>$ {\bfseries Handle\+Widget\+Method}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayoutItem_a25118264b2bfaf9a5fdb956b6eb17d34}\label{classWt_1_1WLayoutItem_a25118264b2bfaf9a5fdb956b6eb17d34}} 
+virtual \mbox{\hyperlink{classWt_1_1WLayoutItem_a25118264b2bfaf9a5fdb956b6eb17d34}{$\sim$\+W\+Layout\+Item}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WWidgetItem}{W\+Widget\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WLayoutItem_a95f14880009c9121d2f2d06cdf3204f0}{find\+Widget\+Item}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$\mbox{\hyperlink{classWt_1_1WLayoutItem_a06b127060eaf8a0b87a994b483d493e1}{widget}})=0
+\begin{DoxyCompactList}\small\item\em Finds the widget item corresponding to the given {\itshape widget} \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}} $\ast$ \mbox{\hyperlink{classWt_1_1WLayoutItem_a3f81b4d198401ae493276a61be6784cf}{layout}} ()=0
+\begin{DoxyCompactList}\small\item\em Returns the layout that implements this \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WLayoutItem_a06b127060eaf8a0b87a994b483d493e1}{widget}} ()=0
+\begin{DoxyCompactList}\small\item\em Returns the widget that is held by this \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WLayoutItem_a05a18a6a59ef9e36bcb5d47199b18ba1}\label{classWt_1_1WLayoutItem_a05a18a6a59ef9e36bcb5d47199b18ba1}} 
+virtual \mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}} $\ast$ \mbox{\hyperlink{classWt_1_1WLayoutItem_a05a18a6a59ef9e36bcb5d47199b18ba1}{parent\+Layout}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the layout in which this item is contained. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WLayoutItem_a34b3e12a5a73f42e91e07b2db5d8cd0a}\label{classWt_1_1WLayoutItem_a34b3e12a5a73f42e91e07b2db5d8cd0a}} 
+virtual \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ {\bfseries parent\+Widget} () const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayoutItem_ab2f17122cf9589657bc0e6fa5e3ea560}\label{classWt_1_1WLayoutItem_ab2f17122cf9589657bc0e6fa5e3ea560}} 
+virtual \mbox{\hyperlink{classWt_1_1WLayoutItemImpl}{W\+Layout\+Item\+Impl}} $\ast$ {\bfseries impl} () const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayoutItem_add305bed3cc6450eea068ea5b4f50ab7}\label{classWt_1_1WLayoutItem_add305bed3cc6450eea068ea5b4f50ab7}} 
+virtual void {\bfseries iterate\+Widgets} (const Handle\+Widget\+Method \&method) const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayoutItem_a4d2c60ec55048746b9f197d9b5de2a0f}\label{classWt_1_1WLayoutItem_a4d2c60ec55048746b9f197d9b5de2a0f}} 
+virtual void \mbox{\hyperlink{classWt_1_1WLayoutItem_a4d2c60ec55048746b9f197d9b5de2a0f}{set\+Parent\+Widget}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$parent)=0
+\begin{DoxyCompactList}\small\item\em Internal method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WLayoutItem_ad810fbebeb2dce998e538eb31c060430}\label{classWt_1_1WLayoutItem_ad810fbebeb2dce998e538eb31c060430}} 
+virtual void \mbox{\hyperlink{classWt_1_1WLayoutItem_ad810fbebeb2dce998e538eb31c060430}{set\+Parent\+Layout}} (\mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}} $\ast$\mbox{\hyperlink{classWt_1_1WLayoutItem_a05a18a6a59ef9e36bcb5d47199b18ba1}{parent\+Layout}})=0
+\begin{DoxyCompactList}\small\item\em Internal method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayoutItem_ad896ab0cd7a34896c4501dcc66850579}\label{classWt_1_1WLayoutItem_ad896ab0cd7a34896c4501dcc66850579}} 
+class {\bfseries W\+Layout}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An abstract base class for items that can participate in a layout. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WLayoutItem_a95f14880009c9121d2f2d06cdf3204f0}\label{classWt_1_1WLayoutItem_a95f14880009c9121d2f2d06cdf3204f0}} 
+\index{Wt::WLayoutItem@{Wt::WLayoutItem}!findWidgetItem@{findWidgetItem}}
+\index{findWidgetItem@{findWidgetItem}!Wt::WLayoutItem@{Wt::WLayoutItem}}
+\doxysubsubsection{\texorpdfstring{findWidgetItem()}{findWidgetItem()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WWidgetItem}{W\+Widget\+Item}}$\ast$ Wt\+::\+W\+Layout\+Item\+::find\+Widget\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Finds the widget item corresponding to the given {\itshape widget} 
+
+The widget is searched for recursively inside nested layouts. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WLayout_a26692c31cf192c42bf73ce05fd6fe714}{Wt\+::\+W\+Layout}}, and \mbox{\hyperlink{classWt_1_1WWidgetItem_a981c72b5873a3bd16fd9abd0d2748608}{Wt\+::\+W\+Widget\+Item}}.
+
+\mbox{\Hypertarget{classWt_1_1WLayoutItem_a3f81b4d198401ae493276a61be6784cf}\label{classWt_1_1WLayoutItem_a3f81b4d198401ae493276a61be6784cf}} 
+\index{Wt::WLayoutItem@{Wt::WLayoutItem}!layout@{layout}}
+\index{layout@{layout}!Wt::WLayoutItem@{Wt::WLayoutItem}}
+\doxysubsubsection{\texorpdfstring{layout()}{layout()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}}$\ast$ Wt\+::\+W\+Layout\+Item\+::layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the layout that implements this \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}}. 
+
+This implements a type-\/safe upcasting mechanism to a \mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}}. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WLayout_aa880d7b97d507600941ed6d782c2cccd}{Wt\+::\+W\+Layout}}, and \mbox{\hyperlink{classWt_1_1WWidgetItem_ac2fed4289b0948270c17da4f7b2b1b5e}{Wt\+::\+W\+Widget\+Item}}.
+
+\mbox{\Hypertarget{classWt_1_1WLayoutItem_a06b127060eaf8a0b87a994b483d493e1}\label{classWt_1_1WLayoutItem_a06b127060eaf8a0b87a994b483d493e1}} 
+\index{Wt::WLayoutItem@{Wt::WLayoutItem}!widget@{widget}}
+\index{widget@{widget}!Wt::WLayoutItem@{Wt::WLayoutItem}}
+\doxysubsubsection{\texorpdfstring{widget()}{widget()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$\ast$ Wt\+::\+W\+Layout\+Item\+::widget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the widget that is held by this \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}}. 
+
+This implements a type-\/safe upcasting mechanism to a \mbox{\hyperlink{classWt_1_1WWidgetItem}{W\+Widget\+Item}}. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{Wt\+::\+W\+Layout}}, and \mbox{\hyperlink{classWt_1_1WWidgetItem_a7b0b0383dc4e17f5d5885fa1d72cfd20}{Wt\+::\+W\+Widget\+Item}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Layout\+Item.\+h\end{DoxyCompactItemize}

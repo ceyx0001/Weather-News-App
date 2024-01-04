@@ -1,0 +1,503 @@
+\hypertarget{classWt_1_1WPaintedWidget}{}\doxysection{Wt\+::W\+Painted\+Widget Class Reference}
+\label{classWt_1_1WPaintedWidget}\index{Wt::WPaintedWidget@{Wt::WPaintedWidget}}
+
+
+A widget that is painted using vector graphics.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Painted\+Widget.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Painted\+Widget\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Painted\+Widget\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a8ef1657d6f14984dcfd62fa540cbf91d}\label{classWt_1_1WPaintedWidget_a8ef1657d6f14984dcfd62fa540cbf91d}} 
+\mbox{\hyperlink{classWt_1_1WPaintedWidget_a8ef1657d6f14984dcfd62fa540cbf91d}{W\+Painted\+Widget}} ()
+\begin{DoxyCompactList}\small\item\em Create a new painted widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a3e28c52034a50cb9c2c2e7a9e979a90c}\label{classWt_1_1WPaintedWidget_a3e28c52034a50cb9c2c2e7a9e979a90c}} 
+\mbox{\hyperlink{classWt_1_1WPaintedWidget_a3e28c52034a50cb9c2c2e7a9e979a90c}{$\sim$\+W\+Painted\+Widget}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPaintedWidget_a18d1ee409a269274335d377fb17ba74d}{set\+Preferred\+Method}} (\mbox{\hyperlink{classWt_a4dc7ede22254adefe0115e2ce4100f49}{Render\+Method}} method)
+\begin{DoxyCompactList}\small\item\em Sets the preferred rendering method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_a4dc7ede22254adefe0115e2ce4100f49}{Render\+Method}} \mbox{\hyperlink{classWt_1_1WPaintedWidget_acb362c868d76b506aff5a2b3b794dcc5}{preferred\+Method}} () const
+\begin{DoxyCompactList}\small\item\em Returns the preferred rendering method. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPaintedWidget_ab4bcfb99b24bcc629be79750fa98f983}{update}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a23a1002020ee93ed4679d351b7350de3}{Paint\+Flag}} $>$ flags=None)
+\begin{DoxyCompactList}\small\item\em Lets the widget repaint itself. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WPaintedWidget_a4dc70782b6804671589e8f0c94e16e63}{resize}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WWebWidget_a3e1a8d2d95fa92763e2e3a0ee520468f}{width}}, const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WWebWidget_ae0c87ae7cae2379eebbbb7df06e07a2c}{height}}) override
+\begin{DoxyCompactList}\small\item\em Resizes the widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPaintedWidget_aeb55926a5ab07a9db69ac3992c9328cc}{add\+Area}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractArea}{W\+Abstract\+Area}} $>$ \mbox{\hyperlink{classWt_1_1WPaintedWidget_a5511a54500b184c54ff87d477fedba3b}{area}})
+\begin{DoxyCompactList}\small\item\em Adds an interactive area. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPaintedWidget_a8ee3528550957d913e0f2f3740a31fe7}{insert\+Area}} (int index, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractArea}{W\+Abstract\+Area}} $>$ \mbox{\hyperlink{classWt_1_1WPaintedWidget_a5511a54500b184c54ff87d477fedba3b}{area}})
+\begin{DoxyCompactList}\small\item\em Inserts an interactive area. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractArea}{W\+Abstract\+Area}} $>$ \mbox{\hyperlink{classWt_1_1WPaintedWidget_a37dc4c61f96b08f28fc98230d907bba4}{remove\+Area}} (\mbox{\hyperlink{classWt_1_1WAbstractArea}{W\+Abstract\+Area}} $\ast$\mbox{\hyperlink{classWt_1_1WPaintedWidget_a5511a54500b184c54ff87d477fedba3b}{area}})
+\begin{DoxyCompactList}\small\item\em Removes an interactive area. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WAbstractArea}{W\+Abstract\+Area}} $\ast$ \mbox{\hyperlink{classWt_1_1WPaintedWidget_a5511a54500b184c54ff87d477fedba3b}{area}} (int index) const
+\begin{DoxyCompactList}\small\item\em Returns the interactive area at the given index. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WAbstractArea}{W\+Abstract\+Area}} $\ast$ $>$ \mbox{\hyperlink{classWt_1_1WPaintedWidget_af00079a6763c6c5089ba856a288af5a0}{areas}} () const
+\begin{DoxyCompactList}\small\item\em Returns the interactive areas set for this widget. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} \& \mbox{\hyperlink{classWt_1_1WPaintedWidget_a4b36f95fcbc263c99fc92d24d2df8560}{repaint\+Slot}} ()
+\begin{DoxyCompactList}\small\item\em A Java\+Script slot that repaints the widget when triggered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a02669e4ba26dfca24d834a239e0cf6d6}\label{classWt_1_1WPaintedWidget_a02669e4ba26dfca24d834a239e0cf6d6}} 
+\mbox{\hyperlink{classWt_1_1WJavaScriptHandle}{W\+Java\+Script\+Handle}}$<$ \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} $>$ \mbox{\hyperlink{classWt_1_1WPaintedWidget_a02669e4ba26dfca24d834a239e0cf6d6}{create\+J\+S\+Transform}} ()
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} that is accessible from Java\+Script, associated with this W\+Painted\+Widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a2bc2b67abbf4b6d7df9924a4d14d555d}\label{classWt_1_1WPaintedWidget_a2bc2b67abbf4b6d7df9924a4d14d555d}} 
+\mbox{\hyperlink{classWt_1_1WJavaScriptHandle}{W\+Java\+Script\+Handle}}$<$ \mbox{\hyperlink{classWt_1_1WBrush}{W\+Brush}} $>$ \mbox{\hyperlink{classWt_1_1WPaintedWidget_a2bc2b67abbf4b6d7df9924a4d14d555d}{create\+J\+S\+Brush}} ()
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classWt_1_1WBrush}{W\+Brush}} that is accessible from Java\+Script, associated with this W\+Painted\+Widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_ae774b955fe89334906e5d0a28ac92b64}\label{classWt_1_1WPaintedWidget_ae774b955fe89334906e5d0a28ac92b64}} 
+\mbox{\hyperlink{classWt_1_1WJavaScriptHandle}{W\+Java\+Script\+Handle}}$<$ \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} $>$ \mbox{\hyperlink{classWt_1_1WPaintedWidget_ae774b955fe89334906e5d0a28ac92b64}{create\+J\+S\+Pen}} ()
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} that is accessible from Java\+Script, associated with this W\+Painted\+Widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a89be0a2ace6474553a5656d1b376d516}\label{classWt_1_1WPaintedWidget_a89be0a2ace6474553a5656d1b376d516}} 
+\mbox{\hyperlink{classWt_1_1WJavaScriptHandle}{W\+Java\+Script\+Handle}}$<$ \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} $>$ \mbox{\hyperlink{classWt_1_1WPaintedWidget_a89be0a2ace6474553a5656d1b376d516}{create\+J\+S\+Painter\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} that is accessible from Java\+Script, associated with this W\+Painted\+Widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a769d78e6e4bff4fc8461910e58582fb4}\label{classWt_1_1WPaintedWidget_a769d78e6e4bff4fc8461910e58582fb4}} 
+\mbox{\hyperlink{classWt_1_1WJavaScriptHandle}{W\+Java\+Script\+Handle}}$<$ \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} $>$ \mbox{\hyperlink{classWt_1_1WPaintedWidget_a769d78e6e4bff4fc8461910e58582fb4}{create\+J\+S\+Rect}} ()
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} that is accessible from Java\+Script, associated with this W\+Painted\+Widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a163cb8a638afa5e50289dd2fabaa82d1}\label{classWt_1_1WPaintedWidget_a163cb8a638afa5e50289dd2fabaa82d1}} 
+\mbox{\hyperlink{classWt_1_1WJavaScriptHandle}{W\+Java\+Script\+Handle}}$<$ \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} $>$ \mbox{\hyperlink{classWt_1_1WPaintedWidget_a163cb8a638afa5e50289dd2fabaa82d1}{create\+J\+S\+Point}} ()
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} that is accessible from Java\+Script, associated with this W\+Painted\+Widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WPaintedWidget_a21875c95bf05a3e6ee9928a9d990aabf}{layout\+Size\+Changed}} (int \mbox{\hyperlink{classWt_1_1WWebWidget_a3e1a8d2d95fa92763e2e3a0ee520468f}{width}}, int \mbox{\hyperlink{classWt_1_1WWebWidget_ae0c87ae7cae2379eebbbb7df06e07a2c}{height}}) override
+\begin{DoxyCompactList}\small\item\em Virtual method that indicates a size change. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_a4dc7ede22254adefe0115e2ce4100f49}{Render\+Method}} \mbox{\hyperlink{classWt_1_1WPaintedWidget_a587a7c5d2d7c15149ea8d5164268a7e0}{get\+Method}} () const
+\begin{DoxyCompactList}\small\item\em Returns the actual method used for rendering. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WPaintedWidget_ad8ce22eff41754c8616f45851f57fb1a}{paint\+Event}} (\mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}} $\ast$paint\+Device)=0
+\begin{DoxyCompactList}\small\item\em Paints the widget. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}} $>$ \mbox{\hyperlink{classWt_1_1WPaintedWidget_a8f0741d6e183db086f7246801bf28390}{create\+Paint\+Device}} () const
+\begin{DoxyCompactList}\small\item\em Creates a paint device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_adb0ca6a0c097941a6b7dd5e2826cb96c}\label{classWt_1_1WPaintedWidget_adb0ca6a0c097941a6b7dd5e2826cb96c}} 
+virtual \mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} {\bfseries dom\+Element\+Type} () const override
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a4c1f50720c53ee8cfb548720f7ac0562}\label{classWt_1_1WPaintedWidget_a4c1f50720c53ee8cfb548720f7ac0562}} 
+virtual void {\bfseries update\+Dom} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&element, bool all) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a781688a3f15393a8b206a4ed57ca824d}\label{classWt_1_1WPaintedWidget_a781688a3f15393a8b206a4ed57ca824d}} 
+virtual \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ {\bfseries create\+Dom\+Element} (\mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a53b3260465165e58b37f0fb05b7a668e}\label{classWt_1_1WPaintedWidget_a53b3260465165e58b37f0fb05b7a668e}} 
+virtual void {\bfseries get\+Dom\+Changes} (std\+::vector$<$ \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ $>$ \&result, \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a05a4c2e837f12664583c35097f95959f}\label{classWt_1_1WPaintedWidget_a05a4c2e837f12664583c35097f95959f}} 
+virtual void {\bfseries propagate\+Render\+Ok} (bool deep) override
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WPaintedWidget_a4c4843727f3f3b6d3e401b465d878d66}{enable\+Ajax}} () override
+\begin{DoxyCompactList}\small\item\em Progresses to an Ajax-\/enabled widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WPaintedWidget_ab268e85a9ecfb97c9a743a1f9c5ec6c9}{render}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$ flags) override
+\begin{DoxyCompactList}\small\item\em Renders the widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a96b47eb305973ebbe2a3c951d1231578}\label{classWt_1_1WPaintedWidget_a96b47eb305973ebbe2a3c951d1231578}} 
+virtual void {\bfseries set\+Form\+Data} (const \mbox{\hyperlink{structWt_1_1WObject_1_1FormData}{Form\+Data}} \&form\+Data) override
+\item 
+std\+::string \mbox{\hyperlink{classWt_1_1WPaintedWidget_af4b78fffd072fbdeea178bb865cec036}{obj\+Js\+Ref}} () const
+\begin{DoxyCompactList}\small\item\em Returns a Java\+Script reference to the client side representation of the \mbox{\hyperlink{classWt_1_1WPaintedWidget}{W\+Painted\+Widget}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a4faa6c7c8e5c298ec7d83f548306bfc1}\label{classWt_1_1WPaintedWidget_a4faa6c7c8e5c298ec7d83f548306bfc1}} 
+void {\bfseries define\+Java\+Script} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_ab973ccc812649c129ef5b49bc7cdae21}\label{classWt_1_1WPaintedWidget_ab973ccc812649c129ef5b49bc7cdae21}} 
+void {\bfseries resize\+Canvas} (int \mbox{\hyperlink{classWt_1_1WWebWidget_a3e1a8d2d95fa92763e2e3a0ee520468f}{width}}, int \mbox{\hyperlink{classWt_1_1WWebWidget_ae0c87ae7cae2379eebbbb7df06e07a2c}{height}})
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_aa044cdc991bf676d9c3779ff42567c03}\label{classWt_1_1WPaintedWidget_aa044cdc991bf676d9c3779ff42567c03}} 
+bool {\bfseries create\+Painter} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a1aabac4aedae43a52545f13862c0e242}\label{classWt_1_1WPaintedWidget_a1aabac4aedae43a52545f13862c0e242}} 
+void {\bfseries create\+Area\+Image} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_ad6339704eedc11f167acb5291c95fbca}\label{classWt_1_1WPaintedWidget_ad6339704eedc11f167acb5291c95fbca}} 
+\mbox{\hyperlink{classWt_a4dc7ede22254adefe0115e2ce4100f49}{Render\+Method}} {\bfseries preferred\+Method\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a27f5c1f5fba095c915ac3bf5b7eeacc9}\label{classWt_1_1WPaintedWidget_a27f5c1f5fba095c915ac3bf5b7eeacc9}} 
+std\+::unique\+\_\+ptr$<$ W\+Widget\+Painter $>$ {\bfseries painter\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_ab359469eb473b0118fbd7f8abc8b282c}\label{classWt_1_1WPaintedWidget_ab359469eb473b0118fbd7f8abc8b282c}} 
+bool {\bfseries need\+Repaint\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a2e0c953107beaffe6369beca8d70b702}\label{classWt_1_1WPaintedWidget_a2e0c953107beaffe6369beca8d70b702}} 
+bool {\bfseries size\+Changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a7b7b69eb6082d7481a473d6007aabf04}\label{classWt_1_1WPaintedWidget_a7b7b69eb6082d7481a473d6007aabf04}} 
+bool {\bfseries area\+Image\+Added\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_ad6dac0bb5a512c9506041d3645d11508}\label{classWt_1_1WPaintedWidget_ad6dac0bb5a512c9506041d3645d11508}} 
+\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a23a1002020ee93ed4679d351b7350de3}{Paint\+Flag}} $>$ {\bfseries repaint\+Flags\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a4e20601b30b49601698043f607a52c13}\label{classWt_1_1WPaintedWidget_a4e20601b30b49601698043f607a52c13}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WImage}{W\+Image}} $>$ {\bfseries area\+Image\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a538488ded65382973c6e675eecc2f346}\label{classWt_1_1WPaintedWidget_a538488ded65382973c6e675eecc2f346}} 
+int {\bfseries render\+Width\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a64a3ae1fe5848b480a4c1691a069c3d2}\label{classWt_1_1WPaintedWidget_a64a3ae1fe5848b480a4c1691a069c3d2}} 
+int {\bfseries render\+Height\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a3d876c59f245b1288b2ae0f07d81c07d}\label{classWt_1_1WPaintedWidget_a3d876c59f245b1288b2ae0f07d81c07d}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries repaint\+Slot\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a84d34a77a9672ecadbe17b60840ecbcc}\label{classWt_1_1WPaintedWidget_a84d34a77a9672ecadbe17b60840ecbcc}} 
+\mbox{\hyperlink{classWt_1_1WJavaScriptObjectStorage}{W\+Java\+Script\+Object\+Storage}} {\bfseries js\+Objects\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a403a8a666b9240c58c179fe793e39ca7}\label{classWt_1_1WPaintedWidget_a403a8a666b9240c58c179fe793e39ca7}} 
+bool {\bfseries js\+Defined\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a0c945f7bcb42a4eb26dc673da6a3a20f}\label{classWt_1_1WPaintedWidget_a0c945f7bcb42a4eb26dc673da6a3a20f}} 
+class {\bfseries W\+Widget\+Vector\+Painter}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a40a20bb3942b974b42aacc1737ad1281}\label{classWt_1_1WPaintedWidget_a40a20bb3942b974b42aacc1737ad1281}} 
+class {\bfseries W\+Widget\+Canvas\+Painter}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_ad18069bf2e8bc07f0df1d567696b9465}\label{classWt_1_1WPaintedWidget_ad18069bf2e8bc07f0df1d567696b9465}} 
+class {\bfseries W\+Widget\+Raster\+Painter}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A widget that is painted using vector graphics. 
+
+A painted widget is rendered from basic drawing primitives. Rendering is done not on the server but on the browser, using different rendering methods\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+{\bfseries{Browser}}&{\bfseries{Methods}} &{\bfseries{Default method}} \\\cline{1-3}
+Firefox 1.\+5+&Html\+Canvas, Inline\+S\+VG, Png\+Image &Html\+Canvas \\\cline{1-3}
+Internet Explorer 6.\+0+&Inline\+V\+ML, Png\+Image &Inline\+V\+ML \\\cline{1-3}
+Internet Explorer 9+&Html\+Canvas, Inline\+S\+VG, Png\+Image &Html\+Canvas \\\cline{1-3}
+Safari&Html\+Canvas, Inline\+S\+VG, Png\+Image &Html\+Canvas \\\cline{1-3}
+Opera&Inline\+S\+VG, Html\+Canvas$\ast$, Png\+Image &Inline\+S\+VG \\\cline{1-3}
+other&?&Html\+Canvas, Png\+Image \\\cline{1-3}
+\end{longtabu}
+
+
+{\itshape $\ast$ Html\+Canvas occasionally suffers from rendering artefacts in Opera.}
+
+The different rendering methods correspond to different \mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}} implementations, from which this widget choses a suitable one depending on the browser capabilities and configuration.
+
+If no Java\+Script is available, the Java\+Script-\/based Html\+Canvas will not be used, and Inline\+S\+VG will be used instead. The method used may be changed by using \mbox{\hyperlink{classWt_1_1WPaintedWidget_a18d1ee409a269274335d377fb17ba74d}{set\+Preferred\+Method()}}.
+
+In some browsers, Inline\+S\+VG requires that the document is rendered as X\+H\+T\+ML. This must be enabled in the configuration file using the {\ttfamily $<$send-\/xhtml-\/mime-\/type$>$} option. By default, this option is off. Firefox 4 and Chrome do support svg in normal html mode.
+
+The Png\+Image is the most portable rendering method, and may be the fastest if the painting is of high complexity and/or the image is fairly small.
+
+To use a W\+Painted\+Widget, you must derive from it and reimplement \mbox{\hyperlink{classWt_1_1WPaintedWidget_ad8ce22eff41754c8616f45851f57fb1a}{paint\+Event(\+W\+Paint\+Device $\ast$paint\+Device)}}. To paint on a \mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}}, you will need to use a \mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}}. Repainting is triggered by calling the \mbox{\hyperlink{classWt_1_1WPaintedWidget_ab4bcfb99b24bcc629be79750fa98f983}{update()}} method.
+
+\doxyparagraph*{C\+SS}
+
+Styling through C\+SS is not applicable.
+
+\begin{DoxyNote}{Note}
+A W\+Painted\+Widget requires that it is given a size using \mbox{\hyperlink{classWt_1_1WPaintedWidget_a4dc70782b6804671589e8f0c94e16e63}{resize()}} or by a layout manager.
+\end{DoxyNote}
+\doxyparagraph*{Client side interaction and repainting}
+
+If the widget is drawn as an H\+T\+ML canvas element, i.\+e. the \mbox{\hyperlink{classWt_1_1WPaintedWidget_a587a7c5d2d7c15149ea8d5164268a7e0}{method}} is Html\+Canvas, a W\+Painted\+Widget can expose certain objects to be modified client side.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WJavaScriptHandle}{W\+Java\+Script\+Handle}}, \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject}{W\+Java\+Script\+Exposable\+Object}}
+
+\mbox{\hyperlink{classWt_1_1WImage}{W\+Image}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_aeb55926a5ab07a9db69ac3992c9328cc}\label{classWt_1_1WPaintedWidget_aeb55926a5ab07a9db69ac3992c9328cc}} 
+\index{Wt::WPaintedWidget@{Wt::WPaintedWidget}!addArea@{addArea}}
+\index{addArea@{addArea}!Wt::WPaintedWidget@{Wt::WPaintedWidget}}
+\doxysubsubsection{\texorpdfstring{addArea()}{addArea()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painted\+Widget\+::add\+Area (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractArea}{W\+Abstract\+Area}} $>$}]{area }\end{DoxyParamCaption})}
+
+
+
+Adds an interactive area. 
+
+Adds the {\ttfamily area} which listens to events in a specific region of the widget. Areas are organized in a list, to which the given {\ttfamily area} is appended. When areas overlap, the area with the lowest index receives the event.
+
+\begin{DoxyNote}{Note}
+When defining at least one area, no more events will propagate to the widget itself. As a work-\/around, you can emulate this by listening for events on a \mbox{\hyperlink{classWt_1_1WRectArea}{W\+Rect\+Area}} that corresponds to the whole widget, and which is added as the last area (catching all events that were not caught by preceding areas).
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+insert\+Area(int, W\+Abstract\+Area $\ast$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a5511a54500b184c54ff87d477fedba3b}\label{classWt_1_1WPaintedWidget_a5511a54500b184c54ff87d477fedba3b}} 
+\index{Wt::WPaintedWidget@{Wt::WPaintedWidget}!area@{area}}
+\index{area@{area}!Wt::WPaintedWidget@{Wt::WPaintedWidget}}
+\doxysubsubsection{\texorpdfstring{area()}{area()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WAbstractArea}{W\+Abstract\+Area}}$\ast$ Wt\+::\+W\+Painted\+Widget\+::area (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Returns the interactive area at the given index. 
+
+Returns {\ttfamily 0} if {\ttfamily index} was invalid.
+
+\begin{DoxySeeAlso}{See also}
+insert\+Area(int, W\+Abstract\+Area $\ast$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_af00079a6763c6c5089ba856a288af5a0}\label{classWt_1_1WPaintedWidget_af00079a6763c6c5089ba856a288af5a0}} 
+\index{Wt::WPaintedWidget@{Wt::WPaintedWidget}!areas@{areas}}
+\index{areas@{areas}!Wt::WPaintedWidget@{Wt::WPaintedWidget}}
+\doxysubsubsection{\texorpdfstring{areas()}{areas()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{classWt_1_1WAbstractArea}{W\+Abstract\+Area}} $\ast$$>$ Wt\+::\+W\+Painted\+Widget\+::areas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the interactive areas set for this widget. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPaintedWidget_aeb55926a5ab07a9db69ac3992c9328cc}{add\+Area()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a8f0741d6e183db086f7246801bf28390}\label{classWt_1_1WPaintedWidget_a8f0741d6e183db086f7246801bf28390}} 
+\index{Wt::WPaintedWidget@{Wt::WPaintedWidget}!createPaintDevice@{createPaintDevice}}
+\index{createPaintDevice@{createPaintDevice}!Wt::WPaintedWidget@{Wt::WPaintedWidget}}
+\doxysubsubsection{\texorpdfstring{createPaintDevice()}{createPaintDevice()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}}$>$ Wt\+::\+W\+Painted\+Widget\+::create\+Paint\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates a paint device. 
+
+Although it\textquotesingle{}s usually not necessary to call this function, you may want to reimplement this function to customize or specialize the device used for painting the widget. \mbox{\Hypertarget{classWt_1_1WPaintedWidget_a4c4843727f3f3b6d3e401b465d878d66}\label{classWt_1_1WPaintedWidget_a4c4843727f3f3b6d3e401b465d878d66}} 
+\index{Wt::WPaintedWidget@{Wt::WPaintedWidget}!enableAjax@{enableAjax}}
+\index{enableAjax@{enableAjax}!Wt::WPaintedWidget@{Wt::WPaintedWidget}}
+\doxysubsubsection{\texorpdfstring{enableAjax()}{enableAjax()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Painted\+Widget\+::enable\+Ajax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Progresses to an Ajax-\/enabled widget. 
+
+This method is called when the progressive bootstrap method is used, and support for A\+J\+AX has been detected. The default behavior will upgrade the widget\textquotesingle{}s event handling to use A\+J\+AX instead of full page reloads, and propagate the call to its children.
+
+You may want to reimplement this method if you want to make changes to widget when A\+J\+AX is enabled. You should always call the base implementation.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_a46c573a3cd370cb2f83250c99d42b575}{W\+Application\+::enable\+Ajax()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_af717033681b5cbe5857c88b65558e10c}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a587a7c5d2d7c15149ea8d5164268a7e0}\label{classWt_1_1WPaintedWidget_a587a7c5d2d7c15149ea8d5164268a7e0}} 
+\index{Wt::WPaintedWidget@{Wt::WPaintedWidget}!getMethod@{getMethod}}
+\index{getMethod@{getMethod}!Wt::WPaintedWidget@{Wt::WPaintedWidget}}
+\doxysubsubsection{\texorpdfstring{getMethod()}{getMethod()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_a4dc7ede22254adefe0115e2ce4100f49}{Render\+Method}} Wt\+::\+W\+Painted\+Widget\+::get\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Returns the actual method used for rendering. 
+
+The default method considers browser capabilites and the preferred method to make an actual choice for the implementation.
+
+You may want to reimplement this method to override this choice. \mbox{\Hypertarget{classWt_1_1WPaintedWidget_a8ee3528550957d913e0f2f3740a31fe7}\label{classWt_1_1WPaintedWidget_a8ee3528550957d913e0f2f3740a31fe7}} 
+\index{Wt::WPaintedWidget@{Wt::WPaintedWidget}!insertArea@{insertArea}}
+\index{insertArea@{insertArea}!Wt::WPaintedWidget@{Wt::WPaintedWidget}}
+\doxysubsubsection{\texorpdfstring{insertArea()}{insertArea()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painted\+Widget\+::insert\+Area (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractArea}{W\+Abstract\+Area}} $>$}]{area }\end{DoxyParamCaption})}
+
+
+
+Inserts an interactive area. 
+
+Inserts the {\ttfamily area} which listens to events in the coresponding area of the widget. Areas are organized in a list, and the {\itshape area} is inserted at index {\ttfamily index}. When areas overlap, the area with the lowest index receives the event.
+
+\begin{DoxyNote}{Note}
+When defining at least one area, no more events will propagate to the widget itself. As a work-\/around, you can emulate this by listening for events on a \mbox{\hyperlink{classWt_1_1WRectArea}{W\+Rect\+Area}} that corresponds to the whole widget, and which is added as the last area (catching all events that were not caught by preceding areas).
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+add\+Area(\+W\+Abstract\+Area $\ast$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a21875c95bf05a3e6ee9928a9d990aabf}\label{classWt_1_1WPaintedWidget_a21875c95bf05a3e6ee9928a9d990aabf}} 
+\index{Wt::WPaintedWidget@{Wt::WPaintedWidget}!layoutSizeChanged@{layoutSizeChanged}}
+\index{layoutSizeChanged@{layoutSizeChanged}!Wt::WPaintedWidget@{Wt::WPaintedWidget}}
+\doxysubsubsection{\texorpdfstring{layoutSizeChanged()}{layoutSizeChanged()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Painted\+Widget\+::layout\+Size\+Changed (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method that indicates a size change. 
+
+This method propagates the client-\/side width and height of the widget when the widget is contained by a layout manager and set\+Layout\+Size\+Aware(true) was called.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a4f83592912a7f8fa4fd35dadde78ee74}{set\+Layout\+Size\+Aware()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWidget_a1a4397e904a92b833fad8526d645f7ab}{Wt\+::\+W\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_af4b78fffd072fbdeea178bb865cec036}\label{classWt_1_1WPaintedWidget_af4b78fffd072fbdeea178bb865cec036}} 
+\index{Wt::WPaintedWidget@{Wt::WPaintedWidget}!objJsRef@{objJsRef}}
+\index{objJsRef@{objJsRef}!Wt::WPaintedWidget@{Wt::WPaintedWidget}}
+\doxysubsubsection{\texorpdfstring{objJsRef()}{objJsRef()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+W\+Painted\+Widget\+::obj\+Js\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Returns a Java\+Script reference to the client side representation of the \mbox{\hyperlink{classWt_1_1WPaintedWidget}{W\+Painted\+Widget}}. 
+
+The client side representation exposes the following interface\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  canvas: exposes \mbox{\hyperlink{classthe}{the}} underlying HTML canvas element}
+\DoxyCodeLine{  repaint: a \textcolor{keyword}{function} that, when called, will repaint \mbox{\hyperlink{classthe}{the}} widget without a server roundtrip}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+\begin{DoxyNote}{Note}
+The \mbox{\hyperlink{classWt_1_1WPaintedWidget_a587a7c5d2d7c15149ea8d5164268a7e0}{method}} should be Html\+Canvas and there has to be at least one \mbox{\hyperlink{classWt_1_1WJavaScriptHandle}{W\+Java\+Script\+Handle}} associated with this \mbox{\hyperlink{classWt_1_1WPaintedWidget}{W\+Painted\+Widget}} in order for this reference to be valid. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_ad8ce22eff41754c8616f45851f57fb1a}\label{classWt_1_1WPaintedWidget_ad8ce22eff41754c8616f45851f57fb1a}} 
+\index{Wt::WPaintedWidget@{Wt::WPaintedWidget}!paintEvent@{paintEvent}}
+\index{paintEvent@{paintEvent}!Wt::WPaintedWidget@{Wt::WPaintedWidget}}
+\doxysubsubsection{\texorpdfstring{paintEvent()}{paintEvent()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Painted\+Widget\+::paint\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}} $\ast$}]{paint\+Device }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Paints the widget. 
+
+You should reimplement this method to paint the contents of the widget, using the given paint\+Device. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Chart_1_1WPieChart_a572e1f2e6cf48efee839bffef33de286}{Wt\+::\+Chart\+::\+W\+Pie\+Chart}}, \mbox{\hyperlink{classPaintingInteractiveWidget_a17d170470eab6d545622dd0236528f73}{Painting\+Interactive\+Widget}}, \mbox{\hyperlink{classPaintBrush_aa65e70c04b68764769cfff56d399d889}{Paint\+Brush}}, \mbox{\hyperlink{classColorMapTest_acd6ccb48e702f19bab9409d1d9a31114}{Color\+Map\+Test}}, \mbox{\hyperlink{classClippingWidget_a8365eb9f9756dcd3cbd6fe76c53bde3a}{Clipping\+Widget}}, \mbox{\hyperlink{classMyPaintedWidget_a4c0869373c80244eeee75903c3ffd246}{My\+Painted\+Widget}}, \mbox{\hyperlink{classPaintingImagesWidget_af601d0f29f4c9784e1a81ba4f4e96060}{Painting\+Images\+Widget}}, \mbox{\hyperlink{classStyleWidget_a8ca008470b105ca0597df65f5119ede9}{Style\+Widget}}, \mbox{\hyperlink{classTransformationsWidget_a5c327067d704b551f58e16edcea70bf4}{Transformations\+Widget}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart_1_1IconWidget_a4fc625063f481d9f7bd5ad2b0ed481e6}{Wt\+::\+Chart\+::\+W\+Cartesian\+Chart\+::\+Icon\+Widget}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart_a80e290b028f2e38e548a51621b6fa0f5}{Wt\+::\+Chart\+::\+W\+Cartesian\+Chart}}, and \mbox{\hyperlink{classWt_1_1Chart_1_1WAxisSliderWidget_a1b72a23361c289cae5e931a9134b766f}{Wt\+::\+Chart\+::\+W\+Axis\+Slider\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_acb362c868d76b506aff5a2b3b794dcc5}\label{classWt_1_1WPaintedWidget_acb362c868d76b506aff5a2b3b794dcc5}} 
+\index{Wt::WPaintedWidget@{Wt::WPaintedWidget}!preferredMethod@{preferredMethod}}
+\index{preferredMethod@{preferredMethod}!Wt::WPaintedWidget@{Wt::WPaintedWidget}}
+\doxysubsubsection{\texorpdfstring{preferredMethod()}{preferredMethod()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_a4dc7ede22254adefe0115e2ce4100f49}{Render\+Method}} Wt\+::\+W\+Painted\+Widget\+::preferred\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the preferred rendering method. 
+
+\begin{DoxySeeAlso}{See also}
+set\+Preferred\+Method(\+Method) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a37dc4c61f96b08f28fc98230d907bba4}\label{classWt_1_1WPaintedWidget_a37dc4c61f96b08f28fc98230d907bba4}} 
+\index{Wt::WPaintedWidget@{Wt::WPaintedWidget}!removeArea@{removeArea}}
+\index{removeArea@{removeArea}!Wt::WPaintedWidget@{Wt::WPaintedWidget}}
+\doxysubsubsection{\texorpdfstring{removeArea()}{removeArea()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WAbstractArea}{W\+Abstract\+Area}}$>$ Wt\+::\+W\+Painted\+Widget\+::remove\+Area (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WAbstractArea}{W\+Abstract\+Area}} $\ast$}]{area }\end{DoxyParamCaption})}
+
+
+
+Removes an interactive area. 
+
+Removes the {\ttfamily area} from this widget.
+
+\begin{DoxySeeAlso}{See also}
+add\+Area(\+W\+Abstract\+Area $\ast$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_ab268e85a9ecfb97c9a743a1f9c5ec6c9}\label{classWt_1_1WPaintedWidget_ab268e85a9ecfb97c9a743a1f9c5ec6c9}} 
+\index{Wt::WPaintedWidget@{Wt::WPaintedWidget}!render@{render}}
+\index{render@{render}!Wt::WPaintedWidget@{Wt::WPaintedWidget}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Painted\+Widget\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Renders the widget. 
+
+This function renders the widget (or an update for the widget), after this has been scheduled using \mbox{\hyperlink{classWt_1_1WWidget_a5d3d4edaafa2d7c892a5078f3df4cf11}{schedule\+Render()}}.
+
+The default implementation will render the widget by serializing changes to Java\+Script and H\+T\+ML. You may want to reimplement this widget if you have been postponing some of the layout / rendering implementation until the latest moment possible. In that case you should make sure you call the base implementation however. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a5ca222ef9275cfd6d0005c63197d40a0}{Wt\+::\+W\+Web\+Widget}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart_aab19ac7fa211d60dfa64808e882fc866}{Wt\+::\+Chart\+::\+W\+Cartesian\+Chart}}, and \mbox{\hyperlink{classWt_1_1Chart_1_1WAxisSliderWidget_aa3772cb0da603e6728ef3d292f98e273}{Wt\+::\+Chart\+::\+W\+Axis\+Slider\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a4b36f95fcbc263c99fc92d24d2df8560}\label{classWt_1_1WPaintedWidget_a4b36f95fcbc263c99fc92d24d2df8560}} 
+\index{Wt::WPaintedWidget@{Wt::WPaintedWidget}!repaintSlot@{repaintSlot}}
+\index{repaintSlot@{repaintSlot}!Wt::WPaintedWidget@{Wt::WPaintedWidget}}
+\doxysubsubsection{\texorpdfstring{repaintSlot()}{repaintSlot()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}}\& Wt\+::\+W\+Painted\+Widget\+::repaint\+Slot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A Java\+Script slot that repaints the widget when triggered. 
+
+This is useful for client-\/side initiated repaints. You may want to use this if you want to add interaction or animation to your \mbox{\hyperlink{classWt_1_1WPaintedWidget}{W\+Painted\+Widget}}.
+
+\begin{DoxyNote}{Note}
+This feature is currently only supported if the \mbox{\hyperlink{classWt_1_1WPaintedWidget_a587a7c5d2d7c15149ea8d5164268a7e0}{method}} is Html\+Canvas. This will not cause a server roundtrip. Instead, the resulting Java\+Script of \mbox{\hyperlink{classWt_1_1WPaintedWidget_ad8ce22eff41754c8616f45851f57fb1a}{paint\+Event()}} will be re-\/executed on the client side.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPaintedWidget_af4b78fffd072fbdeea178bb865cec036}{obj\+Js\+Ref()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a4dc70782b6804671589e8f0c94e16e63}\label{classWt_1_1WPaintedWidget_a4dc70782b6804671589e8f0c94e16e63}} 
+\index{Wt::WPaintedWidget@{Wt::WPaintedWidget}!resize@{resize}}
+\index{resize@{resize}!Wt::WPaintedWidget@{Wt::WPaintedWidget}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Painted\+Widget\+::resize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{width,  }\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Resizes the widget. 
+
+Specifies a fixed size for this widget, setting C\+SS {\ttfamily width} and {\ttfamily height} properties. By default a widget has automatic width and height, which sets a size for the widget following C\+SS rules.
+
+When the widget is not managed by a layout manager, the automatic (natural) size of a widget depends on whether they widget is a {\itshape block} or {\itshape inline} widget\+:
+\begin{DoxyItemize}
+\item a {\itshape block} widget takes by default the width of the parent, and the height that it needs based on its contents
+\item an {\itshape inline} widget takes the width and height that it needs based on its contents (possibly wrapping over multiple lines). The width and height of an inline widget cannot be changed (by the letter of C\+SS, although most browsers will react to it in varying ways).
+\end{DoxyItemize}
+
+When inserted in a layout manager, the size set will be used as a widget\textquotesingle{}s preferred size, but the widget may be given a different size by the layout manager based on available space and stretch factors. The actual size given by a layout manager may be retrieved by making the widget \char`\"{}layout size aware\char`\"{}, using \mbox{\hyperlink{classWt_1_1WWidget_a4f83592912a7f8fa4fd35dadde78ee74}{set\+Layout\+Size\+Aware()}}. If you have defined a {\ttfamily \char`\"{}wt\+Resize()\char`\"{}} Java\+Script method for the widget, then this method will also be called.
+
+The default width and height of a widget is \mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWebWidget_a3e1a8d2d95fa92763e2e3a0ee520468f}{width()}}, \mbox{\hyperlink{classWt_1_1WWebWidget_ae0c87ae7cae2379eebbbb7df06e07a2c}{height()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a5113267dfd734df27d4b1c76e7d23abb}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WPaintedWidget_a18d1ee409a269274335d377fb17ba74d}\label{classWt_1_1WPaintedWidget_a18d1ee409a269274335d377fb17ba74d}} 
+\index{Wt::WPaintedWidget@{Wt::WPaintedWidget}!setPreferredMethod@{setPreferredMethod}}
+\index{setPreferredMethod@{setPreferredMethod}!Wt::WPaintedWidget@{Wt::WPaintedWidget}}
+\doxysubsubsection{\texorpdfstring{setPreferredMethod()}{setPreferredMethod()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painted\+Widget\+::set\+Preferred\+Method (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a4dc7ede22254adefe0115e2ce4100f49}{Render\+Method}}}]{method }\end{DoxyParamCaption})}
+
+
+
+Sets the preferred rendering method. 
+
+When {\ttfamily method} is supported by the browser, then it is chosen for rendering. \mbox{\Hypertarget{classWt_1_1WPaintedWidget_ab4bcfb99b24bcc629be79750fa98f983}\label{classWt_1_1WPaintedWidget_ab4bcfb99b24bcc629be79750fa98f983}} 
+\index{Wt::WPaintedWidget@{Wt::WPaintedWidget}!update@{update}}
+\index{update@{update}!Wt::WPaintedWidget@{Wt::WPaintedWidget}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painted\+Widget\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a23a1002020ee93ed4679d351b7350de3}{Paint\+Flag}} $>$}]{flags = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Lets the widget repaint itself. 
+
+Repainting is not immediate, but happens after when the event loop is exited.
+
+Unless a Wt\+::\+Paint\+Flag\+::\+Update paint flag is set, the widget is first cleared. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Painted\+Widget.\+h\end{DoxyCompactItemize}

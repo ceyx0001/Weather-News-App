@@ -1,0 +1,285 @@
+\hypertarget{classWt_1_1WCssTheme}{}\doxysection{Wt\+::W\+Css\+Theme Class Reference}
+\label{classWt_1_1WCssTheme}\index{Wt::WCssTheme@{Wt::WCssTheme}}
+
+
+{\ttfamily \#include $<$Wt/\+W\+Css\+Theme.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Css\+Theme\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Css\+Theme\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WCssTheme_a3ff86b4b8333dfa9cd2904414614185e}{W\+Css\+Theme}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1WCssTheme_adc1088100f9c4669e535318d0be61d82}{name}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WCssTheme_adc1088100f9c4669e535318d0be61d82}{name}} () const override
+\begin{DoxyCompactList}\small\item\em Returns a theme name. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WLinkedCssStyleSheet}{W\+Linked\+Css\+Style\+Sheet}} $>$ \mbox{\hyperlink{classWt_1_1WCssTheme_a99a791d632f0aa6734456b635bd2dae9}{style\+Sheets}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the stylesheets. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WCssTheme_ab027ea4909799fabf22eea6757de5138}{apply}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$widget, \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$child, int widget\+Role) const override
+\begin{DoxyCompactList}\small\item\em Applies the theme to a child of a composite widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WCssTheme_a1fce033bd27bd6f4ab58bb6ebb451902}{apply}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$widget, \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&element, int element\+Role) const override
+\begin{DoxyCompactList}\small\item\em Applies the theme to a D\+OM element that renders a widget. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WCssTheme_a1d04f48007ad745979486141baea1b8e}{disabled\+Class}} () const override
+\begin{DoxyCompactList}\small\item\em Returns a generic C\+SS class name for a disabled element. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WCssTheme_abdc0a57ff5746699048281f8ca30e160}{active\+Class}} () const override
+\begin{DoxyCompactList}\small\item\em Returns a generic C\+SS class name for an active element. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WCssTheme_a738936c6550045bca88ed5e06dfdf00f}{utility\+Css\+Class}} (int utility\+Css\+Class\+Role) const override
+\begin{DoxyCompactList}\small\item\em Returns a generic C\+SS class name for the chosen role. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WCssTheme_a06f2d373a217cf824cad866f39c7314d}{can\+Style\+Anchor\+As\+Button}} () const override
+\begin{DoxyCompactList}\small\item\em Returns whether the theme allows for an anchor to be styled as a button. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WCssTheme_ac96c2193fd05868049f26063bd302904}\label{classWt_1_1WCssTheme_ac96c2193fd05868049f26063bd302904}} 
+virtual void \mbox{\hyperlink{classWt_1_1WCssTheme_ac96c2193fd05868049f26063bd302904}{apply\+Validation\+Style}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$widget, const \mbox{\hyperlink{classWt_1_1WValidator_1_1Result}{Wt\+::\+W\+Validator\+::\+Result}} \&validation, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a3da96fc8830c0022e6b3ba6b2069d2cb}{Validation\+Style\+Flag}} $>$ styles) const override
+\begin{DoxyCompactList}\small\item\em Applies a style that indicates the result of validation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WCssTheme_a9b6dc287080b68922bff64b8fabcb85a}\label{classWt_1_1WCssTheme_a9b6dc287080b68922bff64b8fabcb85a}} 
+virtual bool {\bfseries can\+Border\+Box\+Element} (const \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&element) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WCssTheme_ab5f8df1bd19d099dacc406efedcadeb0}\label{classWt_1_1WCssTheme_ab5f8df1bd19d099dacc406efedcadeb0}} 
+std\+::string {\bfseries name\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+C\+S\+S-\/based theme support. This implements the classic Wt themes, which were available before theme support was customized with the addition of the \mbox{\hyperlink{classWt_1_1WTheme}{W\+Theme}} class.
+
+The following table shows which style classes are applied by this theme.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\multirow{12}{*}{\mbox{\hyperlink{classWt_1_1WAbstractItemView}{W\+Abstract\+Item\+View}} $\ast$ }&.Wt-\/itemview &\\\cline{2-3}
+&.Wt-\/itemview .Wt-\/headerdiv &the header container  \\\cline{2-3}
+&.Wt-\/itemview .Wt-\/header &the header  \\\cline{2-3}
+&.Wt-\/itemview .Wt-\/header .Wt-\/label &a header label  \\\cline{2-3}
+&.Wt-\/itemview .Wt-\/header .Wt-\/label &a header label  \\\cline{2-3}
+&.Wt-\/itemview .Wt-\/tv-\/rh &resize handle  \\\cline{2-3}
+&.Wt-\/itemview .Wt-\/tv-\/sh &sort handle  \\\cline{2-3}
+&.Wt-\/itemview .Wt-\/tv-\/sh-\/none &sort handle, unsorted  \\\cline{2-3}
+&.Wt-\/itemview .Wt-\/tv-\/sh-\/down &sort handle, descending sort  \\\cline{2-3}
+&.Wt-\/itemview .Wt-\/tv-\/sh-\/up &sort handle, ascending sort  \\\cline{2-3}
+&.Wt-\/itemview .Wt-\/selected &selected item (or row)  \\\cline{2-3}
+&.Wt-\/itemview .Wt-\/spacer &spacer (briefly visible during scrolling)  \\\cline{1-3}
+\mbox{\hyperlink{classWt_1_1WAbstractSpinBox}{W\+Abstract\+Spin\+Box}} &.Wt-\/spinbox &(for the H\+T\+M\+L4 implementation)  \\\cline{1-3}
+\multirow{11}{*}{\mbox{\hyperlink{classWt_1_1WCalendar}{W\+Calendar}} $\ast$ }&.Wt-\/cal &\\\cline{2-3}
+&.Wt-\/cal table.\+d1 &the table (single letter days)  \\\cline{2-3}
+&.Wt-\/cal table.\+d3 &the table (three letter days)  \\\cline{2-3}
+&.Wt-\/cal table.\+dlong &the table (ful day names)  \\\cline{2-3}
+&.Wt-\/cal th.\+caption &a caption cell (containing month/year navigation)  \\\cline{2-3}
+&.Wt-\/cal th &week day header cell  \\\cline{2-3}
+&.Wt-\/cal td &day cell  \\\cline{2-3}
+&.Wt-\/cal-\/oom &out-\/of-\/month day  \\\cline{2-3}
+&.Wt-\/cal-\/oom &out-\/of-\/range day (ray $<$ bottom or day $>$ top)  \\\cline{2-3}
+&.Wt-\/cal-\/sel &selected day  \\\cline{2-3}
+&.Wt-\/cal-\/now &today  \\\cline{1-3}
+\multirow{2}{*}{\mbox{\hyperlink{classWt_1_1WDateEdit}{W\+Date\+Edit}} }&.Wt-\/dateedit &\\\cline{2-3}
+&.Wt-\/datepicker &the popup  \\\cline{1-3}
+\mbox{\hyperlink{classWt_1_1WDatePicker}{W\+Date\+Picker}} &.Wt-\/datepicker &the popup  \\\cline{1-3}
+\multirow{5}{*}{\mbox{\hyperlink{classWt_1_1WDialog}{W\+Dialog}} }&.Wt-\/dialog &the dialog  \\\cline{2-3}
+&.Wt-\/dialog .closeicon &the close icon in the titlebar  \\\cline{2-3}
+&.Wt-\/dialog .titlebar &the titlebar  \\\cline{2-3}
+&.Wt-\/dialog .body &the dialog body  \\\cline{2-3}
+&.Wt-\/dialog .footer &the dialog footer  \\\cline{1-3}
+\multirow{8}{*}{\mbox{\hyperlink{classWt_1_1WMenuItem}{W\+Menu\+Item}} }&.item &an unselected item  \\\cline{2-3}
+&.itemselected &a selected item  \\\cline{2-3}
+&.item.\+Wt-\/closable &a closable item   \\\cline{2-3}
+&.item.\+Wt-\/separator &a separator item  \\\cline{2-3}
+&.item.\+Wt-\/sectheader &a section header item  \\\cline{2-3}
+&.item .Wt-\/icon &the item\textquotesingle{}s icon  \\\cline{2-3}
+&.item .Wt-\/chkbox &the item\textquotesingle{}s checkbox  \\\cline{2-3}
+&.item .closeicon &the item\textquotesingle{}s close icon  \\\cline{1-3}
+\mbox{\hyperlink{classWt_1_1WMessageBox}{W\+Message\+Box}} &.Wt-\/dialog &see supra (W\+Dialog)  \\\cline{1-3}
+\multirow{3}{*}{\mbox{\hyperlink{classWt_1_1WPanel}{W\+Panel}} }&.Wt-\/panel &\\\cline{2-3}
+&.Wt-\/panel .titlebar &the titlebar  \\\cline{2-3}
+&.Wt-\/panel .body &the body  \\\cline{1-3}
+\mbox{\hyperlink{classWt_1_1WPopupMenu}{W\+Popup\+Menu}} &.Wt-\/popupmenu &the popup menu; for the items, see supra (W\+Menu\+Item)  \\\cline{1-3}
+\mbox{\hyperlink{classWt_1_1WPopupWidget}{W\+Popup\+Widget}} &.Wt-\/outset &\\\cline{1-3}
+\multirow{3}{*}{\mbox{\hyperlink{classWt_1_1WProgressBar}{W\+Progress\+Bar}} }&.Wt-\/progressbar &\\\cline{2-3}
+&.Wt-\/progressbar .Wt-\/pgb-\/bar &the bar  \\\cline{2-3}
+&.Wt-\/progressbar .Wt-\/pgb-\/label &the value label  \\\cline{1-3}
+\mbox{\hyperlink{classWt_1_1WPushButton}{W\+Push\+Button}} &.Wt-\/btn &\\\cline{1-3}
+\multirow{6}{*}{\mbox{\hyperlink{classWt_1_1WSlider}{W\+Slider}} $\ast$ }&.Wt-\/slider-\/h {\itshape or} .Wt-\/slider-\/v &for horizontal or vertical slider  \\\cline{2-3}
+&.Wt-\/slider-\/\mbox{[}hv\mbox{]} .Wt-\/slider-\/bg &background element  \\\cline{2-3}
+&.Wt-\/slider-\/\mbox{[}hv\mbox{]} .fill &fill to the current value  \\\cline{2-3}
+&.Wt-\/slider-\/\mbox{[}hv\mbox{]} .handle &the slider handle  \\\cline{2-3}
+&.Wt-\/slider-\/\mbox{[}hv\mbox{]} .Wt-\/w &an additional element for styling  \\\cline{2-3}
+&.Wt-\/slider-\/\mbox{[}hv\mbox{]} .Wt-\/e &an additional element for styling  \\\cline{1-3}
+\multirow{3}{*}{\mbox{\hyperlink{classWt_1_1WSuggestionPopup}{W\+Suggestion\+Popup}} }&.Wt-\/suggest &\\\cline{2-3}
+&.Wt-\/suggest li &an item  \\\cline{2-3}
+&.Wt-\/suggest .active &an active item  \\\cline{1-3}
+\mbox{\hyperlink{classWt_1_1WTabWidget}{W\+Tab\+Widget}} &.Wt-\/tabs &the header, which is a \mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}}  \\\cline{1-3}
+\multirow{3}{*}{\mbox{\hyperlink{classWt_1_1WTableView}{W\+Table\+View}} $\ast$ }&.Wt-\/tableview &see supra (W\+Abstract\+Item\+View)  \\\cline{2-3}
+&.Wt-\/tableview .Wt-\/contents &the contents area  \\\cline{2-3}
+&.Wt-\/tableview .Wt-\/contents .Wt-\/tv-\/c &a contents cell  \\\cline{1-3}
+\multirow{10}{*}{\mbox{\hyperlink{classWt_1_1WTreeNode}{W\+Tree\+Node}} $\ast$ }&.Wt-\/tree &a tree node  \\\cline{2-3}
+&.Wt-\/tree.\+Wt-\/trunk &a trunk node  \\\cline{2-3}
+&.Wt-\/tree.\+Wt-\/end &an end node (last node within parent)  \\\cline{2-3}
+&.Wt-\/tree ul &children list  \\\cline{2-3}
+&.Wt-\/tree .Wt-\/ctrl &collapse/expand control  \\\cline{2-3}
+&.Wt-\/tree .Wt-\/ctrl.\+expand &expand control  \\\cline{2-3}
+&.Wt-\/tree .Wt-\/ctrl.\+collapse &collapse control  \\\cline{2-3}
+&.Wt-\/tree .Wt-\/ctrl.\+noexpand &an item that cannot be expanded  \\\cline{2-3}
+&.Wt-\/tree .Wt-\/selected &a selected node  \\\cline{2-3}
+&.Wt-\/tree .Wt-\/label &the label  \\\cline{1-3}
+\multirow{10}{*}{\mbox{\hyperlink{classWt_1_1WTreeView}{W\+Tree\+View}} $\ast$ }&.Wt-\/treeview &see supra (W\+Abstract\+Item\+View)  \\\cline{2-3}
+&.Wt-\/treeview ul &a node  \\\cline{2-3}
+&.Wt-\/treeview ul.\+Wt-\/tv-\/root &the root node  \\\cline{2-3}
+&.Wt-\/treeview .Wt-\/tv-\/row &a row of additional cells  \\\cline{2-3}
+&.Wt-\/treeview .Wt-\/trunk &a trunk node  \\\cline{2-3}
+&.Wt-\/treeview .Wt-\/end &an end node (last node within parent)  \\\cline{2-3}
+&.Wt-\/treeview .Wt-\/ctrl &collapse/expand control  \\\cline{2-3}
+&.Wt-\/treeview .Wt-\/ctrl.\+expand &expand control  \\\cline{2-3}
+&.Wt-\/treeview .Wt-\/ctrl.\+collapse &collapse control  \\\cline{2-3}
+&.Wt-\/treeview .Wt-\/ctrl.\+noexpand &an item that cannot be expanded  \\\cline{1-3}
+\end{longtabu}
+
+
+{\ttfamily $\ast$} C\+SS selectors for these widgets are currently still hard-\/coded in the widget itself.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_a70d17661dfc5a1fdc0af44da2d9edaee}{W\+Application\+::set\+Theme()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WCssTheme_a3ff86b4b8333dfa9cd2904414614185e}\label{classWt_1_1WCssTheme_a3ff86b4b8333dfa9cd2904414614185e}} 
+\index{Wt::WCssTheme@{Wt::WCssTheme}!WCssTheme@{WCssTheme}}
+\index{WCssTheme@{WCssTheme}!Wt::WCssTheme@{Wt::WCssTheme}}
+\doxysubsubsection{\texorpdfstring{WCssTheme()}{WCssTheme()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Css\+Theme\+::\+W\+Css\+Theme (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Creates a classic Wt theme. Wt comes with two C\+SS themes\+: \char`\"{}polished\char`\"{} and default. For the bootstrap theme, use \mbox{\hyperlink{classWt_1_1WBootstrapTheme}{W\+Bootstrap\+Theme}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WCssTheme_abdc0a57ff5746699048281f8ca30e160}\label{classWt_1_1WCssTheme_abdc0a57ff5746699048281f8ca30e160}} 
+\index{Wt::WCssTheme@{Wt::WCssTheme}!activeClass@{activeClass}}
+\index{activeClass@{activeClass}!Wt::WCssTheme@{Wt::WCssTheme}}
+\doxysubsubsection{\texorpdfstring{activeClass()}{activeClass()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+W\+Css\+Theme\+::active\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a generic C\+SS class name for an active element. 
+
+The C\+SS class Wt-\/selected is applied to active classes. 
+
+Implements \mbox{\hyperlink{classWt_1_1WTheme_a6375e31e7190bbdf60c8446edea89e65}{Wt\+::\+W\+Theme}}.
+
+\mbox{\Hypertarget{classWt_1_1WCssTheme_a1fce033bd27bd6f4ab58bb6ebb451902}\label{classWt_1_1WCssTheme_a1fce033bd27bd6f4ab58bb6ebb451902}} 
+\index{Wt::WCssTheme@{Wt::WCssTheme}!apply@{apply}}
+\index{apply@{apply}!Wt::WCssTheme@{Wt::WCssTheme}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Css\+Theme\+::apply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{widget,  }\item[{\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&}]{element,  }\item[{int}]{element\+Role }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the theme to a D\+OM element that renders a widget. 
+
+The {\ttfamily element} is a rendered representation of the {\ttfamily widget}, and may be further customized to reflect the theme. 
+
+Implements \mbox{\hyperlink{classWt_1_1WTheme_ac6beaa06b78379c9dcf0b1676150cf94}{Wt\+::\+W\+Theme}}.
+
+\mbox{\Hypertarget{classWt_1_1WCssTheme_ab027ea4909799fabf22eea6757de5138}\label{classWt_1_1WCssTheme_ab027ea4909799fabf22eea6757de5138}} 
+\index{Wt::WCssTheme@{Wt::WCssTheme}!apply@{apply}}
+\index{apply@{apply}!Wt::WCssTheme@{Wt::WCssTheme}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Css\+Theme\+::apply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{widget,  }\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{child,  }\item[{int}]{widget\+Role }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies the theme to a child of a composite widget. 
+
+The {\ttfamily widget\+Role} indicates the role that {\ttfamily child} has within the implementation of the {\ttfamily widget}. 
+
+Implements \mbox{\hyperlink{classWt_1_1WTheme_a93d3dc6cfbde95bcd3c3b359d074fc9d}{Wt\+::\+W\+Theme}}.
+
+\mbox{\Hypertarget{classWt_1_1WCssTheme_a06f2d373a217cf824cad866f39c7314d}\label{classWt_1_1WCssTheme_a06f2d373a217cf824cad866f39c7314d}} 
+\index{Wt::WCssTheme@{Wt::WCssTheme}!canStyleAnchorAsButton@{canStyleAnchorAsButton}}
+\index{canStyleAnchorAsButton@{canStyleAnchorAsButton}!Wt::WCssTheme@{Wt::WCssTheme}}
+\doxysubsubsection{\texorpdfstring{canStyleAnchorAsButton()}{canStyleAnchorAsButton()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Css\+Theme\+::can\+Style\+Anchor\+As\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns whether the theme allows for an anchor to be styled as a button. 
+
+Returns false. 
+
+Implements \mbox{\hyperlink{classWt_1_1WTheme_ab4df8922e22f6c650c11548811a44dec}{Wt\+::\+W\+Theme}}.
+
+\mbox{\Hypertarget{classWt_1_1WCssTheme_a1d04f48007ad745979486141baea1b8e}\label{classWt_1_1WCssTheme_a1d04f48007ad745979486141baea1b8e}} 
+\index{Wt::WCssTheme@{Wt::WCssTheme}!disabledClass@{disabledClass}}
+\index{disabledClass@{disabledClass}!Wt::WCssTheme@{Wt::WCssTheme}}
+\doxysubsubsection{\texorpdfstring{disabledClass()}{disabledClass()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+W\+Css\+Theme\+::disabled\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a generic C\+SS class name for a disabled element. 
+
+The C\+SS class Wt-\/disabled is applied to disabled classes. 
+
+Implements \mbox{\hyperlink{classWt_1_1WTheme_a46ec2ccecb625cd4cde82553e08411fb}{Wt\+::\+W\+Theme}}.
+
+\mbox{\Hypertarget{classWt_1_1WCssTheme_adc1088100f9c4669e535318d0be61d82}\label{classWt_1_1WCssTheme_adc1088100f9c4669e535318d0be61d82}} 
+\index{Wt::WCssTheme@{Wt::WCssTheme}!name@{name}}
+\index{name@{name}!Wt::WCssTheme@{Wt::WCssTheme}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+W\+Css\+Theme\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a theme name. 
+
+Returns a unique name for the theme. This name is used by the default implementation of \mbox{\hyperlink{classWt_1_1WTheme_acd72f7a87128d1204f42a20edbf5d065}{resources\+Url()}} to compute a location for the theme\textquotesingle{}s resources. 
+
+Implements \mbox{\hyperlink{classWt_1_1WTheme_a8642dafe569763cbf2bd1a3c51edf302}{Wt\+::\+W\+Theme}}.
+
+\mbox{\Hypertarget{classWt_1_1WCssTheme_a99a791d632f0aa6734456b635bd2dae9}\label{classWt_1_1WCssTheme_a99a791d632f0aa6734456b635bd2dae9}} 
+\index{Wt::WCssTheme@{Wt::WCssTheme}!styleSheets@{styleSheets}}
+\index{styleSheets@{styleSheets}!Wt::WCssTheme@{Wt::WCssTheme}}
+\doxysubsubsection{\texorpdfstring{styleSheets()}{styleSheets()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$\mbox{\hyperlink{classWt_1_1WLinkedCssStyleSheet}{W\+Linked\+Css\+Style\+Sheet}}$>$ Wt\+::\+W\+Css\+Theme\+::style\+Sheets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the stylesheets. 
+
+Returns wt.\+css, plus on IE wt\+\_\+ie.\+css, plus on I\+E6 wt\+\_\+ie6.\+css. The style sheets are located in the theme directory in the resources folder. 
+
+Implements \mbox{\hyperlink{classWt_1_1WTheme_a7c1826d52efba8d2b17f3652c04afebd}{Wt\+::\+W\+Theme}}.
+
+\mbox{\Hypertarget{classWt_1_1WCssTheme_a738936c6550045bca88ed5e06dfdf00f}\label{classWt_1_1WCssTheme_a738936c6550045bca88ed5e06dfdf00f}} 
+\index{Wt::WCssTheme@{Wt::WCssTheme}!utilityCssClass@{utilityCssClass}}
+\index{utilityCssClass@{utilityCssClass}!Wt::WCssTheme@{Wt::WCssTheme}}
+\doxysubsubsection{\texorpdfstring{utilityCssClass()}{utilityCssClass()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+W\+Css\+Theme\+::utility\+Css\+Class (\begin{DoxyParamCaption}\item[{int}]{utility\+Css\+Class\+Role }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a generic C\+SS class name for the chosen role. 
+
+\begin{DoxySeeAlso}{See also}
+W\+Theme\+::utility\+Css\+Class\+Role 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WTheme_acfa44ba1e10bbb7d67f3610f85329cd4}{Wt\+::\+W\+Theme}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Css\+Theme.\+h\end{DoxyCompactItemize}

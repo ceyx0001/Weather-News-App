@@ -1,0 +1,63 @@
+\hypertarget{classBlogRSSFeed}{}\doxysection{Blog\+R\+S\+S\+Feed Class Reference}
+\label{classBlogRSSFeed}\index{BlogRSSFeed@{BlogRSSFeed}}
+
+
+Inheritance diagram for Blog\+R\+S\+S\+Feed\+:
+% FIG 0
+
+
+Collaboration diagram for Blog\+R\+S\+S\+Feed\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBlogRSSFeed_aa46c450852e4ed26064886b8949da687}\label{classBlogRSSFeed_aa46c450852e4ed26064886b8949da687}} 
+{\bfseries Blog\+R\+S\+S\+Feed} (\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnectionPool}{Wt\+::\+Dbo\+::\+Sql\+Connection\+Pool}} \&connection\+Pool, const std\+::string \&title, const std\+::string \&\mbox{\hyperlink{classWt_1_1WResource_a03872ea6bf9fc0dcaeaea7541f2c7217}{url}}, const std\+::string \&description)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classBlogRSSFeed_a53be07389449119f7ef4a712fbe5b189}{handle\+Request}} (const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Wt\+::\+Http\+::\+Request}} \&request, \mbox{\hyperlink{classWt_1_1Http_1_1Response}{Wt\+::\+Http\+::\+Response}} \&response)
+\begin{DoxyCompactList}\small\item\em Handles a request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBlogRSSFeed_ab3f1d9b4a25a8b779f112441832432e5}\label{classBlogRSSFeed_ab3f1d9b4a25a8b779f112441832432e5}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnectionPool}{Wt\+::\+Dbo\+::\+Sql\+Connection\+Pool}} \& {\bfseries connection\+Pool\+\_\+}
+\item 
+\mbox{\Hypertarget{classBlogRSSFeed_a098fc3b4a903190e4b086ed4d64f0e5f}\label{classBlogRSSFeed_a098fc3b4a903190e4b086ed4d64f0e5f}} 
+std\+::string {\bfseries title\+\_\+}
+\item 
+\mbox{\Hypertarget{classBlogRSSFeed_a1d7f036df3f87f79ba7c3485cf500055}\label{classBlogRSSFeed_a1d7f036df3f87f79ba7c3485cf500055}} 
+std\+::string {\bfseries url\+\_\+}
+\item 
+\mbox{\Hypertarget{classBlogRSSFeed_a01442c9b0d350630a147024b1f340a62}\label{classBlogRSSFeed_a01442c9b0d350630a147024b1f340a62}} 
+std\+::string {\bfseries description\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBlogRSSFeed_a53be07389449119f7ef4a712fbe5b189}\label{classBlogRSSFeed_a53be07389449119f7ef4a712fbe5b189}} 
+\index{BlogRSSFeed@{BlogRSSFeed}!handleRequest@{handleRequest}}
+\index{handleRequest@{handleRequest}!BlogRSSFeed@{BlogRSSFeed}}
+\doxysubsubsection{\texorpdfstring{handleRequest()}{handleRequest()}}
+{\footnotesize\ttfamily virtual void Blog\+R\+S\+S\+Feed\+::handle\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Wt\+::\+Http\+::\+Request}} \&}]{request,  }\item[{\mbox{\hyperlink{classWt_1_1Http_1_1Response}{Wt\+::\+Http\+::\+Response}} \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Handles a request. 
+
+Reimplement this method so that a proper response is generated for the given request. From the {\ttfamily request} object you can access request parameters and whether the request is a continuation request. In the {\ttfamily response} object, you should set the mime type and stream the output data.
+
+A request may also concern a continuation, indicated in Http\+::\+Request\+::continuation(), in which case the next part for a previously created continuation should be served.
+
+While handling a request, which may happen at any time together with event handling, the library makes sure that the resource is not being concurrently deleted, but multiple requests may happend simultaneously for a single resource. 
+
+Implements \mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{Wt\+::\+W\+Resource}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/blog/Blog\+R\+S\+S\+Feed.\+h\end{DoxyCompactItemize}

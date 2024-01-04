@@ -1,0 +1,70 @@
+\hypertarget{structWt_1_1Dbo_1_1dbo__traits}{}\doxysection{Wt\+::Dbo\+::dbo\+\_\+traits$<$ C $>$ Class Template Reference}
+\label{structWt_1_1Dbo_1_1dbo__traits}\index{Wt::Dbo::dbo\_traits$<$ C $>$@{Wt::Dbo::dbo\_traits$<$ C $>$}}
+
+
+Traits for a class mapped with Wt\+::Dbo.  
+
+
+
+
+Inheritance diagram for Wt\+::Dbo\+::dbo\+\_\+traits$<$ C $>$\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Dbo\+::dbo\+\_\+traits$<$ C $>$\+:
+% FIG 1
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class C$>$\newline
+class Wt\+::\+Dbo\+::dbo\+\_\+traits$<$ C $>$}
+
+Traits for a class mapped with Wt\+::Dbo. 
+
+The traits class provides some of the mapping properties related to the primary key and optimistic concurrency locking using a version field.
+
+See \mbox{\hyperlink{structWt_1_1Dbo_1_1dbo__default__traits}{dbo\+\_\+default\+\_\+traits}} for default values.
+
+The following example changes the surrogate id field name for a class {\ttfamily Foo} from the default {\ttfamily \char`\"{}id\char`\"{}} to {\ttfamily \char`\"{}foo\+\_\+id\char`\"{}}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceWt}{Wt}} \{}
+\DoxyCodeLine{  \textcolor{keyword}{namespace }Dbo \{}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keyword}{template}<>}
+\DoxyCodeLine{    \textcolor{keyword}{struct }dbo\_traits<Foo> : dbo\_default\_traits}
+\DoxyCodeLine{    \{}
+\DoxyCodeLine{       \textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{structWt_1_1Dbo_1_1dbo__default__traits_a0c092c6b045f77d4fc04b5360b762b7f}{surrogateIdField}}() \{ \textcolor{keywordflow}{return} \textcolor{stringliteral}{"foo\_id"}; \}}
+\DoxyCodeLine{    \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// Necessary if you want to use ptr<const Foo>}}
+\DoxyCodeLine{    \textcolor{keyword}{template}<> \textcolor{keyword}{struct }dbo\_traits<const Foo> : dbo\_traits<Foo> \{\};}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+\begin{DoxyNote}{Note}
+The safe pattern to define traits is before the class definition, based on a forward declaration. This is necessary since the persist() function relies on this specialization\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }Foo;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceWt}{Wt}} \{}
+\DoxyCodeLine{  \textcolor{keyword}{namespace }Dbo \{}
+\DoxyCodeLine{    \textcolor{keyword}{template}<> \textcolor{keyword}{struct }dbo\_traits<Foo> : ... \{ \};}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{class }Foo \{}
+\DoxyCodeLine{  \textcolor{comment}{// definition here, including the persist() function}}
+\DoxyCodeLine{\};}
+\end{DoxyCode}
+ 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/ptr.\+h\end{DoxyCompactItemize}

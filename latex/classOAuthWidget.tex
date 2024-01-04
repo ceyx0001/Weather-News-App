@@ -1,0 +1,70 @@
+\hypertarget{classOAuthWidget}{}\doxysection{O\+Auth\+Widget Class Reference}
+\label{classOAuthWidget}\index{OAuthWidget@{OAuthWidget}}
+
+
+Inheritance diagram for O\+Auth\+Widget\+:
+% FIG 0
+
+
+Collaboration diagram for O\+Auth\+Widget\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classOAuthWidget_a2dde2c9723f5bdf9554a59593dffa168}\label{classOAuthWidget_a2dde2c9723f5bdf9554a59593dffa168}} 
+{\bfseries O\+Auth\+Widget} (\mbox{\hyperlink{classSession}{Session}} \&session)
+\item 
+virtual void \mbox{\hyperlink{classOAuthWidget_a855fe19b486d39310ea2709e842f6897}{create\+Logged\+In\+View}} () override
+\begin{DoxyCompactList}\small\item\em Creates the view shown when the user is logged in. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ W\+Widget $>$ \mbox{\hyperlink{classOAuthWidget_a74c4d30680e212e1a065949b57a58c3d}{create\+Registration\+View}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Wt\+::\+Auth\+::\+Identity}} \&\mbox{\hyperlink{classWt_1_1WWebWidget_ab438c51f9184d0ed37d01b15f07355d6}{id}}) override
+\begin{DoxyCompactList}\small\item\em Creates a registration view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classOAuthWidget_a868b9dc342720f3920d034a534ac23a7}\label{classOAuthWidget_a868b9dc342720f3920d034a534ac23a7}} 
+\mbox{\hyperlink{classSession}{Session}} \& {\bfseries session\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classOAuthWidget_a855fe19b486d39310ea2709e842f6897}\label{classOAuthWidget_a855fe19b486d39310ea2709e842f6897}} 
+\index{OAuthWidget@{OAuthWidget}!createLoggedInView@{createLoggedInView}}
+\index{createLoggedInView@{createLoggedInView}!OAuthWidget@{OAuthWidget}}
+\doxysubsubsection{\texorpdfstring{createLoggedInView()}{createLoggedInView()}}
+{\footnotesize\ttfamily virtual void O\+Auth\+Widget\+::create\+Logged\+In\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates the view shown when the user is logged in. 
+
+The default implementation renders the {\ttfamily \char`\"{}\+Wt.\+Auth.\+template.\+logged-\/in\char`\"{}} template. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a64104075278ad82fcdff3cb773433d6f}{Wt\+::\+Auth\+::\+Auth\+Widget}}.
+
+\mbox{\Hypertarget{classOAuthWidget_a74c4d30680e212e1a065949b57a58c3d}\label{classOAuthWidget_a74c4d30680e212e1a065949b57a58c3d}} 
+\index{OAuthWidget@{OAuthWidget}!createRegistrationView@{createRegistrationView}}
+\index{createRegistrationView@{createRegistrationView}!OAuthWidget@{OAuthWidget}}
+\doxysubsubsection{\texorpdfstring{createRegistrationView()}{createRegistrationView()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$W\+Widget$>$ O\+Auth\+Widget\+::create\+Registration\+View (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Wt\+::\+Auth\+::\+Identity}} \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a registration view. 
+
+This creates a registration view, optionally using information already obtained from a third party identification service (such as an O\+Auth provider).
+
+The default implementation creates a new Registration\+Widget with a model created using \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a9e37d14c54f17647d07cbadb465b1366}{create\+Registration\+Model()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_af39805f0625f450368250fed8fe7a244}{register\+New\+User()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a3418753815e2e9e985b8949c0ca5a8b4}{Wt\+::\+Auth\+::\+Auth\+Widget}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/feature/oidc/O\+Auth\+Widget.\+h\end{DoxyCompactItemize}

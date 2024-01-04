@@ -1,0 +1,190 @@
+\hypertarget{classWt_1_1WFitLayout}{}\doxysection{Wt\+::W\+Fit\+Layout Class Reference}
+\label{classWt_1_1WFitLayout}\index{Wt::WFitLayout@{Wt::WFitLayout}}
+
+
+A layout manager which spans a single widget to all available space.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Fit\+Layout.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Fit\+Layout\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Fit\+Layout\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFitLayout_a45ab4d9543a057a386b3eb8f478903e2}\label{classWt_1_1WFitLayout_a45ab4d9543a057a386b3eb8f478903e2}} 
+\mbox{\hyperlink{classWt_1_1WFitLayout_a45ab4d9543a057a386b3eb8f478903e2}{W\+Fit\+Layout}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new fit layout. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Widget $>$ }\\Widget $\ast$ \mbox{\hyperlink{classWt_1_1WFitLayout_a071ea55ea16e71213b3bbd2f5f497932}{add\+Widget}} (std\+::unique\+\_\+ptr$<$ Widget $>$ \mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}})
+\begin{DoxyCompactList}\small\item\em Adds a widget to the layout, returning a raw pointer. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WFitLayout_a2880bd2f01c3a4288c16f103bb8c4219}{add\+Item}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $>$ item) override
+\begin{DoxyCompactList}\small\item\em Adds a layout {\itshape item}. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $>$ \mbox{\hyperlink{classWt_1_1WFitLayout_af9a2a15ea30d80764de1af4393951d84}{remove\+Item}} (\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$item) override
+\begin{DoxyCompactList}\small\item\em Removes a layout {\itshape item} (widget or nested layout). \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WFitLayout_a58dc4822006ba201063864a6412c0588}{item\+At}} (int index) const override
+\begin{DoxyCompactList}\small\item\em Returns the layout item at a specific {\itshape index}. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WFitLayout_a8011cef2f368c5d8d35f9f65457f2465}{index\+Of}} (\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$item) const override
+\begin{DoxyCompactList}\small\item\em Returns the index of a given {\itshape item}. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WFitLayout_afcdbdc9c3ec07eb6691ed67e74e18ae1}{count}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the number of items in this layout. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WFitLayout_a59f87dfcaa7c4f829826dd1fab501780}\label{classWt_1_1WFitLayout_a59f87dfcaa7c4f829826dd1fab501780}} 
+virtual void {\bfseries iterate\+Widgets} (const Handle\+Widget\+Method \&method) const override
+\item 
+\mbox{\Hypertarget{classWt_1_1WFitLayout_a456fc5e96a39a4c18f2bd3cabd368498}\label{classWt_1_1WFitLayout_a456fc5e96a39a4c18f2bd3cabd368498}} 
+virtual bool {\bfseries implementation\+Is\+Flex\+Layout} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFitLayout_a352d5637fdccb1fbc237e5cbe38f8ab5}\label{classWt_1_1WFitLayout_a352d5637fdccb1fbc237e5cbe38f8ab5}} 
+static void {\bfseries fit\+Widget} (\mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} $\ast$container, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFitLayout_ae4734d77811dc4115bbff53c8a2f2293}\label{classWt_1_1WFitLayout_ae4734d77811dc4115bbff53c8a2f2293}} 
+virtual void {\bfseries update\+Implementation} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFitLayout_a2780d02184c2793d3e32b83268fd627d}\label{classWt_1_1WFitLayout_a2780d02184c2793d3e32b83268fd627d}} 
+virtual void \mbox{\hyperlink{classWt_1_1WFitLayout_a2780d02184c2793d3e32b83268fd627d}{set\+Parent\+Widget}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$parent) override
+\begin{DoxyCompactList}\small\item\em Internal method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFitLayout_a612b3ba8eefdd7d7ed521b490ed50877}\label{classWt_1_1WFitLayout_a612b3ba8eefdd7d7ed521b490ed50877}} 
+\mbox{\hyperlink{structWt_1_1Impl_1_1Grid}{Impl\+::\+Grid}} {\bfseries grid\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A layout manager which spans a single widget to all available space. 
+
+This layout manager may manage only a single child widget, and sizes that widget so that it uses all space available in the parent. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WFitLayout_a2880bd2f01c3a4288c16f103bb8c4219}\label{classWt_1_1WFitLayout_a2880bd2f01c3a4288c16f103bb8c4219}} 
+\index{Wt::WFitLayout@{Wt::WFitLayout}!addItem@{addItem}}
+\index{addItem@{addItem}!Wt::WFitLayout@{Wt::WFitLayout}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Fit\+Layout\+::add\+Item (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $>$}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds a layout {\itshape item}. 
+
+The item may be a widget or nested layout.
+
+How the item is layed out with respect to siblings is implementation specific to the layout manager. In some cases, a layout manager will overload this method with extra arguments that specify layout options.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFitLayout_af9a2a15ea30d80764de1af4393951d84}{remove\+Item(\+W\+Layout\+Item $\ast$)}}, add\+Widget(\+W\+Widget $\ast$) 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WLayout_a8cd69b5eb41376e6e7ab0dd97a2ab2b5}{Wt\+::\+W\+Layout}}.
+
+\mbox{\Hypertarget{classWt_1_1WFitLayout_a071ea55ea16e71213b3bbd2f5f497932}\label{classWt_1_1WFitLayout_a071ea55ea16e71213b3bbd2f5f497932}} 
+\index{Wt::WFitLayout@{Wt::WFitLayout}!addWidget@{addWidget}}
+\index{addWidget@{addWidget}!Wt::WFitLayout@{Wt::WFitLayout}}
+\doxysubsubsection{\texorpdfstring{addWidget()}{addWidget()}}
+{\footnotesize\ttfamily template$<$typename Widget $>$ \\
+Widget$\ast$ Wt\+::\+W\+Fit\+Layout\+::add\+Widget (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ Widget $>$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a widget to the layout, returning a raw pointer. 
+
+This is implemented as\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Widget *result = \mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}}.get();}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WLayout_a0346e81ecebed58c0b11bf037c6fdd73}{WLayout::addWidget}}(std::unique\_ptr<WWidget>(std::move(\mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}})));}
+\DoxyCodeLine{\textcolor{keywordflow}{return} result;}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1WFitLayout_afcdbdc9c3ec07eb6691ed67e74e18ae1}\label{classWt_1_1WFitLayout_afcdbdc9c3ec07eb6691ed67e74e18ae1}} 
+\index{Wt::WFitLayout@{Wt::WFitLayout}!count@{count}}
+\index{count@{count}!Wt::WFitLayout@{Wt::WFitLayout}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Fit\+Layout\+::count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of items in this layout. 
+
+This may be a theoretical number, which is greater than the actual number of items. It can be used to iterate over the items in the layout, in conjunction with \mbox{\hyperlink{classWt_1_1WFitLayout_a58dc4822006ba201063864a6412c0588}{item\+At()}}. 
+
+Implements \mbox{\hyperlink{classWt_1_1WLayout_a799b3cce5c1717b18e54c14471e84033}{Wt\+::\+W\+Layout}}.
+
+\mbox{\Hypertarget{classWt_1_1WFitLayout_a8011cef2f368c5d8d35f9f65457f2465}\label{classWt_1_1WFitLayout_a8011cef2f368c5d8d35f9f65457f2465}} 
+\index{Wt::WFitLayout@{Wt::WFitLayout}!indexOf@{indexOf}}
+\index{indexOf@{indexOf}!Wt::WFitLayout@{Wt::WFitLayout}}
+\doxysubsubsection{\texorpdfstring{indexOf()}{indexOf()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Fit\+Layout\+::index\+Of (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$}]{item }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the index of a given {\itshape item}. 
+
+The default implementation loops over all items, and returns the index for which item\+At(index) equals {\ttfamily item}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFitLayout_a58dc4822006ba201063864a6412c0588}{item\+At(int) const}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WLayout_a1ddb82c4f7d5ded93793af6eb3d0f2df}{Wt\+::\+W\+Layout}}.
+
+\mbox{\Hypertarget{classWt_1_1WFitLayout_a58dc4822006ba201063864a6412c0588}\label{classWt_1_1WFitLayout_a58dc4822006ba201063864a6412c0588}} 
+\index{Wt::WFitLayout@{Wt::WFitLayout}!itemAt@{itemAt}}
+\index{itemAt@{itemAt}!Wt::WFitLayout@{Wt::WFitLayout}}
+\doxysubsubsection{\texorpdfstring{itemAt()}{itemAt()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}}$\ast$ Wt\+::\+W\+Fit\+Layout\+::item\+At (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the layout item at a specific {\itshape index}. 
+
+If there is no item at the {\ttfamily index}, {\ttfamily 0} is returned.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFitLayout_a8011cef2f368c5d8d35f9f65457f2465}{index\+Of(\+W\+Layout\+Item $\ast$) const}}, \mbox{\hyperlink{classWt_1_1WFitLayout_afcdbdc9c3ec07eb6691ed67e74e18ae1}{count()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WLayout_a3d48e5e4f56ad5d1b0e60180ebc91442}{Wt\+::\+W\+Layout}}.
+
+\mbox{\Hypertarget{classWt_1_1WFitLayout_af9a2a15ea30d80764de1af4393951d84}\label{classWt_1_1WFitLayout_af9a2a15ea30d80764de1af4393951d84}} 
+\index{Wt::WFitLayout@{Wt::WFitLayout}!removeItem@{removeItem}}
+\index{removeItem@{removeItem}!Wt::WFitLayout@{Wt::WFitLayout}}
+\doxysubsubsection{\texorpdfstring{removeItem()}{removeItem()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}}$>$ Wt\+::\+W\+Fit\+Layout\+::remove\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Removes a layout {\itshape item} (widget or nested layout). 
+
+\begin{DoxySeeAlso}{See also}
+add\+Item(\+W\+Layout\+Item $\ast$), \mbox{\hyperlink{classWt_1_1WLayout_adfff15c9ebcb28d8f152b6b754544988}{remove\+Widget(\+W\+Widget $\ast$)}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WLayout_a0647c62081611a0ef0135ff2e62341be}{Wt\+::\+W\+Layout}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Fit\+Layout.\+h\end{DoxyCompactItemize}

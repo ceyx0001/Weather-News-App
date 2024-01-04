@@ -1,0 +1,639 @@
+\hypertarget{classWt_1_1Auth_1_1AuthService}{}\doxysection{Wt\+::Auth\+::Auth\+Service Class Reference}
+\label{classWt_1_1Auth_1_1AuthService}\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+
+
+Basic authentication service.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Auth/\+Auth\+Service.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::Auth\+::Auth\+Service\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a9e2bcf05b58e1b2b9282b04f731cc2a1}\label{classWt_1_1Auth_1_1AuthService_a9e2bcf05b58e1b2b9282b04f731cc2a1}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a9e2bcf05b58e1b2b9282b04f731cc2a1}{Auth\+Service}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a89b10517b459b948bdcbc2f99a710231}\label{classWt_1_1Auth_1_1AuthService_a89b10517b459b948bdcbc2f99a710231}} 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a89b10517b459b948bdcbc2f99a710231}{$\sim$\+Auth\+Service}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_aa53b495589aeb0618125faccddbce891}{set\+Random\+Token\+Length}} (int length)
+\begin{DoxyCompactList}\small\item\em Sets the token length. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a73bd9b3c7c057494be3a04f9bcbd72b6}{random\+Token\+Length}} () const
+\begin{DoxyCompactList}\small\item\em Returns the token length. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_aefb84d11c1dbc0c335b406ca9d3e3572}{set\+Identity\+Policy}} (\mbox{\hyperlink{namespaceWt_1_1Auth_a8ce12bbc04d68d5687f08abf2a209436}{Identity\+Policy}} policy)
+\begin{DoxyCompactList}\small\item\em Configures the identity policy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceWt_1_1Auth_a8ce12bbc04d68d5687f08abf2a209436}{Identity\+Policy}} \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_abd8b9eeb457aba6acb8e8fb5ce42bdf4}{identity\+Policy}} () const
+\begin{DoxyCompactList}\small\item\em Returns the identity policy. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a6b263569c71ec9e14871976348cc1971}{identify\+User}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} \&identity, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&users) const
+\begin{DoxyCompactList}\small\item\em Tries to match the identity to an existing user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Authentication token support}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_adf5b811cbedec93de7d4b97950565af3}{set\+Auth\+Tokens\+Enabled}} (bool enabled, const std\+::string \&cookie\+Name=\char`\"{}wtauth\char`\"{}, const std\+::string \&cookie\+Domain=std\+::string())
+\begin{DoxyCompactList}\small\item\em Configures authentication token support. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a4fcb5dbd78c66ca4e88ba34d8bc595af}{auth\+Tokens\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether authentication tokens are enabled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_aee229af97b12975d00e7448e486f9cb2}{set\+Auth\+Token\+Update\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Set whether \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_afa24e731e80bedc299d2560efbcb0c34}{process\+Auth\+Token()}} updates the auth token. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a6b0904b340b82c111a78aadf43e4fa89}{auth\+Token\+Update\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the auth token is updated. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a14681ebd1a116357762b577f9b770149}{auth\+Token\+Cookie\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the authentication token cookie name. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a38c3fa6b8f0ebdd58263f1ca23ef722f}{auth\+Token\+Cookie\+Domain}} () const
+\begin{DoxyCompactList}\small\item\em Returns the authentication token cookie domain. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a87578d5b56f0ad4d3c768d4dbe43ef38}{set\+Token\+Hash\+Function}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1HashFunction}{Hash\+Function}} $>$ function)
+\begin{DoxyCompactList}\small\item\em Sets the token hash function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1HashFunction}{Hash\+Function}} $\ast$ \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a53087d1e393c96a50cc9eb8fa71a4ba1}{token\+Hash\+Function}} () const
+\begin{DoxyCompactList}\small\item\em Returns the token hash function. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_ac794d5e37386427d4923982c3c5fa468}{create\+Auth\+Token}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user) const
+\begin{DoxyCompactList}\small\item\em Creates and stores an authentication token for the user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1AuthTokenResult}{Auth\+Token\+Result}} \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_afa24e731e80bedc299d2560efbcb0c34}{process\+Auth\+Token}} (const std\+::string \&token, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&users) const
+\begin{DoxyCompactList}\small\item\em Processes an authentication token. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a53c56267c8588a58affe3d6ed66edeb6}{set\+Auth\+Token\+Validity}} (int minutes)
+\begin{DoxyCompactList}\small\item\em Configures the duration for an authenticaton to remain valid. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_acba63e9762d76c6db4f54673a3535b4b}{auth\+Token\+Validity}} () const
+\begin{DoxyCompactList}\small\item\em Returns the authentication token validity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Email verification}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a545208b47b73bc8f4d736753fd967eec}{set\+Email\+Verification\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Configures email verification. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_abe67d8a15464f55ed91d380376e114bb}{email\+Verification\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether email verification is configured. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a2dcdb5d4a23e22389823c55aee91cbc4}{set\+Email\+Verification\+Required}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Configure email verificiation to be required for login. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a6250ffb2a3eb06e7783961861a3d89d7}{email\+Verification\+Required}} () const
+\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_ac1ce625114817d88f32b041473e5cfcf}{set\+Email\+Redirect\+Internal\+Path}} (const std\+::string \&internal\+Path)
+\begin{DoxyCompactList}\small\item\em Sets the internal path used to present tokens in emails. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a94f811133e4b2d4dc71d150a0ccd450c}{email\+Redirect\+Internal\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Returns the internal path used for email tokens. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a5a093ea3e42da38660214cf60ff4caa7}{parse\+Email\+Token}} (const std\+::string \&internal\+Path) const
+\begin{DoxyCompactList}\small\item\em Parses the emailtoken from an internal path. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a69c557a27ab51108055de4ff1bf92f14}{verify\+Email\+Address}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, const std\+::string \&email\+Address) const
+\begin{DoxyCompactList}\small\item\em Verifies an email address. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_ac6d9e43cfbf657c4781f15466d222abc}{lost\+Password}} (const std\+::string \&email\+Address, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&users) const
+\begin{DoxyCompactList}\small\item\em Implements lost password functionality. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1EmailTokenResult}{Email\+Token\+Result}} \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a7b3e02441e619e9adc64588fe7a7536c}{process\+Email\+Token}} (const std\+::string \&token, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&users) const
+\begin{DoxyCompactList}\small\item\em Processes an email token. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_ad184b5136649e3af107dab3153eb9374}{set\+Email\+Token\+Validity}} (int minutes)
+\begin{DoxyCompactList}\small\item\em Configures the duration for an email token to remain valid. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a3c17b53e96796e64ab687a329ce4e875}{email\+Token\+Validity}} () const
+\begin{DoxyCompactList}\small\item\em Returns the duration for an email token to remain valid. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a07ab10ccd63ff7b547ccfba484f87e05}{send\+Mail}} (const \mbox{\hyperlink{classWt_1_1Mail_1_1Message}{Mail\+::\+Message}} \&message) const
+\begin{DoxyCompactList}\small\item\em Sends an email. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_aa2749268a5e27a6bf7fe4aef915bf352}{send\+Confirm\+Mail}} (const std\+::string \&address, const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, const std\+::string \&token) const
+\begin{DoxyCompactList}\small\item\em Sends a confirmation email to the user to verify his email address. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a25d25d6495203c7a629dd5425b2b93a6}{send\+Lost\+Password\+Mail}} (const std\+::string \&address, const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, const std\+::string \&token) const
+\begin{DoxyCompactList}\small\item\em Sends an email to the user to enter a new password. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a8d0cbe4bb95434da30f658253b6d86ce}\label{classWt_1_1Auth_1_1AuthService_a8d0cbe4bb95434da30f658253b6d86ce}} 
+virtual std\+::string {\bfseries create\+Redirect\+Url} (const std\+::string \&token) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a5bb64c1edeeddc7e9f930c59a018b9be}\label{classWt_1_1Auth_1_1AuthService_a5bb64c1edeeddc7e9f930c59a018b9be}} 
+{\bfseries Auth\+Service} (const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_ab8aade81a0e4a21959c2f6efa0f1bb30}\label{classWt_1_1Auth_1_1AuthService_ab8aade81a0e4a21959c2f6efa0f1bb30}} 
+\mbox{\hyperlink{namespaceWt_1_1Auth_a8ce12bbc04d68d5687f08abf2a209436}{Identity\+Policy}} {\bfseries identity\+Policy\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a7cc70bba7bb18c2a292321c7f1c21a1e}\label{classWt_1_1Auth_1_1AuthService_a7cc70bba7bb18c2a292321c7f1c21a1e}} 
+int {\bfseries minimum\+Login\+Name\+Length\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a92deb2b794ec153f9af0c7fc1f24f6fb}\label{classWt_1_1Auth_1_1AuthService_a92deb2b794ec153f9af0c7fc1f24f6fb}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1HashFunction}{Hash\+Function}} $>$ {\bfseries token\+Hash\+Function\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_adeb7589b9188387d0b7dbee81542e8a2}\label{classWt_1_1Auth_1_1AuthService_adeb7589b9188387d0b7dbee81542e8a2}} 
+int {\bfseries token\+Length\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a51479ec0ff3d02b7bc0dfa698f288193}\label{classWt_1_1Auth_1_1AuthService_a51479ec0ff3d02b7bc0dfa698f288193}} 
+bool {\bfseries email\+Verification\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a74aadfac40a21dc3f5a228bdf3d41920}\label{classWt_1_1Auth_1_1AuthService_a74aadfac40a21dc3f5a228bdf3d41920}} 
+bool {\bfseries email\+Verification\+Req\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_ad89468950bb730be4e4f6b09079ae3e1}\label{classWt_1_1Auth_1_1AuthService_ad89468950bb730be4e4f6b09079ae3e1}} 
+int {\bfseries email\+Token\+Validity\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_adfafd21c9b1d05f5684e76bf9d454c7f}\label{classWt_1_1Auth_1_1AuthService_adfafd21c9b1d05f5684e76bf9d454c7f}} 
+std\+::string {\bfseries redirect\+Internal\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a0b3ce14b0e51d9b4ad2f0a5afc5f4c85}\label{classWt_1_1Auth_1_1AuthService_a0b3ce14b0e51d9b4ad2f0a5afc5f4c85}} 
+bool {\bfseries auth\+Tokens\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_ae9c20ed7cb0f5d1603c6a50518263705}\label{classWt_1_1Auth_1_1AuthService_ae9c20ed7cb0f5d1603c6a50518263705}} 
+bool {\bfseries auth\+Token\+Update\+Enabled\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a03b850e8656bf4f52af75d94e274a9ef}\label{classWt_1_1Auth_1_1AuthService_a03b850e8656bf4f52af75d94e274a9ef}} 
+int {\bfseries auth\+Token\+Validity\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a2fece9fb62062c1fab6750a498ca52fc}\label{classWt_1_1Auth_1_1AuthService_a2fece9fb62062c1fab6750a498ca52fc}} 
+std\+::string {\bfseries auth\+Token\+Cookie\+Name\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a9334d5d7e0144281b5656b09cff5ce11}\label{classWt_1_1Auth_1_1AuthService_a9334d5d7e0144281b5656b09cff5ce11}} 
+std\+::string {\bfseries auth\+Token\+Cookie\+Domain\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Basic authentication service. 
+
+This class presents an basic authentication service, which offers authentication functionality that is not specific to an authentication mechanism (such as password authentication or O\+Auth authentication).
+
+Like all {\bfseries{service classes}}, this class holds only configuration state. Thus, once configured, it can be safely shared between multiple sessions since its state (the configuration) is read-\/only.
+
+The class provides the following services (and relevant configuration)\+:
+
+
+\begin{DoxyItemize}
+\item settings for generating random tokens\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_aa53b495589aeb0618125faccddbce891}{set\+Random\+Token\+Length()}}
+\end{DoxyItemize}
+\item authentication tokens, used by e.\+g. remember-\/me functionality\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_adf5b811cbedec93de7d4b97950565af3}{set\+Auth\+Tokens\+Enabled()}}
+\item \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_afa24e731e80bedc299d2560efbcb0c34}{process\+Auth\+Token()}}
+\end{DoxyItemize}
+\item email tokens, for email verification and lost password functions\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a545208b47b73bc8f4d736753fd967eec}{set\+Email\+Verification\+Enabled()}}
+\item \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_ac6d9e43cfbf657c4781f15466d222abc}{lost\+Password()}}
+\item \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a69c557a27ab51108055de4ff1bf92f14}{verify\+Email\+Address()}}
+\item \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a7b3e02441e619e9adc64588fe7a7536c}{process\+Email\+Token()}} 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a38c3fa6b8f0ebdd58263f1ca23ef722f}\label{classWt_1_1Auth_1_1AuthService_a38c3fa6b8f0ebdd58263f1ca23ef722f}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!authTokenCookieDomain@{authTokenCookieDomain}}
+\index{authTokenCookieDomain@{authTokenCookieDomain}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{authTokenCookieDomain()}{authTokenCookieDomain()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Auth\+::\+Auth\+Service\+::auth\+Token\+Cookie\+Domain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the authentication token cookie domain. 
+
+This is the domain used for the authentication cookie. By default this is empty, which means that a cookie will be set for this application.
+
+You may want to set a more general domain if you are sharing the authentication with multiple applications.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_adf5b811cbedec93de7d4b97950565af3}{set\+Auth\+Tokens\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a14681ebd1a116357762b577f9b770149}\label{classWt_1_1Auth_1_1AuthService_a14681ebd1a116357762b577f9b770149}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!authTokenCookieName@{authTokenCookieName}}
+\index{authTokenCookieName@{authTokenCookieName}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{authTokenCookieName()}{authTokenCookieName()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Auth\+::\+Auth\+Service\+::auth\+Token\+Cookie\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the authentication token cookie name. 
+
+This is the default cookie name used for storing the authentication token in the user\textquotesingle{}s browser.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_adf5b811cbedec93de7d4b97950565af3}{set\+Auth\+Tokens\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a4fcb5dbd78c66ca4e88ba34d8bc595af}\label{classWt_1_1Auth_1_1AuthService_a4fcb5dbd78c66ca4e88ba34d8bc595af}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!authTokensEnabled@{authTokensEnabled}}
+\index{authTokensEnabled@{authTokensEnabled}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{authTokensEnabled()}{authTokensEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+Auth\+::\+Auth\+Service\+::auth\+Tokens\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether authentication tokens are enabled. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_adf5b811cbedec93de7d4b97950565af3}{set\+Auth\+Tokens\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a6b0904b340b82c111a78aadf43e4fa89}\label{classWt_1_1Auth_1_1AuthService_a6b0904b340b82c111a78aadf43e4fa89}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!authTokenUpdateEnabled@{authTokenUpdateEnabled}}
+\index{authTokenUpdateEnabled@{authTokenUpdateEnabled}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{authTokenUpdateEnabled()}{authTokenUpdateEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+Auth\+::\+Auth\+Service\+::auth\+Token\+Update\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the auth token is updated. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_aee229af97b12975d00e7448e486f9cb2}{set\+Auth\+Token\+Update\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_acba63e9762d76c6db4f54673a3535b4b}\label{classWt_1_1Auth_1_1AuthService_acba63e9762d76c6db4f54673a3535b4b}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!authTokenValidity@{authTokenValidity}}
+\index{authTokenValidity@{authTokenValidity}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{authTokenValidity()}{authTokenValidity()}}
+{\footnotesize\ttfamily int Wt\+::\+Auth\+::\+Auth\+Service\+::auth\+Token\+Validity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the authentication token validity. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a53c56267c8588a58affe3d6ed66edeb6}{set\+Auth\+Token\+Validity()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_ac794d5e37386427d4923982c3c5fa468}\label{classWt_1_1Auth_1_1AuthService_ac794d5e37386427d4923982c3c5fa468}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!createAuthToken@{createAuthToken}}
+\index{createAuthToken@{createAuthToken}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{createAuthToken()}{createAuthToken()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Auth\+::\+Auth\+Service\+::create\+Auth\+Token (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user }\end{DoxyParamCaption}) const}
+
+
+
+Creates and stores an authentication token for the user. 
+
+This creates and stores a new authentication token for the given user.
+
+The returned value is the token that may be used to re-\/identify the user in \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_afa24e731e80bedc299d2560efbcb0c34}{process\+Auth\+Token()}}. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a94f811133e4b2d4dc71d150a0ccd450c}\label{classWt_1_1Auth_1_1AuthService_a94f811133e4b2d4dc71d150a0ccd450c}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!emailRedirectInternalPath@{emailRedirectInternalPath}}
+\index{emailRedirectInternalPath@{emailRedirectInternalPath}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{emailRedirectInternalPath()}{emailRedirectInternalPath()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Auth\+::\+Auth\+Service\+::email\+Redirect\+Internal\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the internal path used for email tokens. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_ac1ce625114817d88f32b041473e5cfcf}{set\+Email\+Redirect\+Internal\+Path()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a3c17b53e96796e64ab687a329ce4e875}\label{classWt_1_1Auth_1_1AuthService_a3c17b53e96796e64ab687a329ce4e875}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!emailTokenValidity@{emailTokenValidity}}
+\index{emailTokenValidity@{emailTokenValidity}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{emailTokenValidity()}{emailTokenValidity()}}
+{\footnotesize\ttfamily int Wt\+::\+Auth\+::\+Auth\+Service\+::email\+Token\+Validity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the duration for an email token to remain valid. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_ad184b5136649e3af107dab3153eb9374}{set\+Email\+Token\+Validity()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_abe67d8a15464f55ed91d380376e114bb}\label{classWt_1_1Auth_1_1AuthService_abe67d8a15464f55ed91d380376e114bb}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!emailVerificationEnabled@{emailVerificationEnabled}}
+\index{emailVerificationEnabled@{emailVerificationEnabled}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{emailVerificationEnabled()}{emailVerificationEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+Auth\+::\+Auth\+Service\+::email\+Verification\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether email verification is configured. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a545208b47b73bc8f4d736753fd967eec}{set\+Email\+Verification\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a6250ffb2a3eb06e7783961861a3d89d7}\label{classWt_1_1Auth_1_1AuthService_a6250ffb2a3eb06e7783961861a3d89d7}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!emailVerificationRequired@{emailVerificationRequired}}
+\index{emailVerificationRequired@{emailVerificationRequired}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{emailVerificationRequired()}{emailVerificationRequired()}}
+{\footnotesize\ttfamily bool Wt\+::\+Auth\+::\+Auth\+Service\+::email\+Verification\+Required (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\textbackslash{} Returns whether email verification is required for login.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a2dcdb5d4a23e22389823c55aee91cbc4}{set\+Email\+Verification\+Required()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a6b263569c71ec9e14871976348cc1971}\label{classWt_1_1Auth_1_1AuthService_a6b263569c71ec9e14871976348cc1971}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!identifyUser@{identifyUser}}
+\index{identifyUser@{identifyUser}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{identifyUser()}{identifyUser()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} Wt\+::\+Auth\+::\+Auth\+Service\+::identify\+User (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} \&}]{identity,  }\item[{\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&}]{users }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Tries to match the identity to an existing user. 
+
+When authenticating using a 3rd party \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} Provider, the identity is matched against the existing users, based on the id (with \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ab7ddfb543a9fe53a12bad8ddd565ac41}{Abstract\+User\+Database\+::find\+With\+Identity()}}), or if not matched, based on whether there is a user with the same verified email address as the one indicated by the identity. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_abd8b9eeb457aba6acb8e8fb5ce42bdf4}\label{classWt_1_1Auth_1_1AuthService_abd8b9eeb457aba6acb8e8fb5ce42bdf4}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!identityPolicy@{identityPolicy}}
+\index{identityPolicy@{identityPolicy}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{identityPolicy()}{identityPolicy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceWt_1_1Auth_a8ce12bbc04d68d5687f08abf2a209436}{Identity\+Policy}} Wt\+::\+Auth\+::\+Auth\+Service\+::identity\+Policy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the identity policy. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_aefb84d11c1dbc0c335b406ca9d3e3572}{set\+Identity\+Policy()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_ac6d9e43cfbf657c4781f15466d222abc}\label{classWt_1_1Auth_1_1AuthService_ac6d9e43cfbf657c4781f15466d222abc}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!lostPassword@{lostPassword}}
+\index{lostPassword@{lostPassword}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{lostPassword()}{lostPassword()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Service\+::lost\+Password (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{email\+Address,  }\item[{\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&}]{users }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Implements lost password functionality. 
+
+If email address verification is enabled, then a user may recover his password (or rather, chose a new password) using a procedure which involves sending an email to a verified email address.
+
+This method triggers this process, starting from an email address, if this email address corresponds to a verified email address in the database. The current password is not invalidated.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a7b3e02441e619e9adc64588fe7a7536c}{process\+Email\+Token()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a5a093ea3e42da38660214cf60ff4caa7}\label{classWt_1_1Auth_1_1AuthService_a5a093ea3e42da38660214cf60ff4caa7}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!parseEmailToken@{parseEmailToken}}
+\index{parseEmailToken@{parseEmailToken}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{parseEmailToken()}{parseEmailToken()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+Auth\+Service\+::parse\+Email\+Token (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{internal\+Path }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Parses the emailtoken from an internal path. 
+
+This method parses an internal path and if it matches the email redirection path, it returns the token contained.
+
+It returns an empty string if the internal path does not contain an email token. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_afa24e731e80bedc299d2560efbcb0c34}\label{classWt_1_1Auth_1_1AuthService_afa24e731e80bedc299d2560efbcb0c34}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!processAuthToken@{processAuthToken}}
+\index{processAuthToken@{processAuthToken}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{processAuthToken()}{processAuthToken()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Auth_1_1AuthTokenResult}{Auth\+Token\+Result}} Wt\+::\+Auth\+::\+Auth\+Service\+::process\+Auth\+Token (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{token,  }\item[{\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&}]{users }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Processes an authentication token. 
+
+This verifies an authentication token, and considers whether it matches with a token hash value stored in database. If it matches and auth token update is enabled, the token is updated with a new hash.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_aee229af97b12975d00e7448e486f9cb2}{set\+Auth\+Token\+Update\+Enabled()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ac5b9a6ffc139ad83d5648b9aeecae4ce}{Abstract\+User\+Database\+::update\+Auth\+Token()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a7b3e02441e619e9adc64588fe7a7536c}\label{classWt_1_1Auth_1_1AuthService_a7b3e02441e619e9adc64588fe7a7536c}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!processEmailToken@{processEmailToken}}
+\index{processEmailToken@{processEmailToken}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{processEmailToken()}{processEmailToken()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Auth_1_1EmailTokenResult}{Email\+Token\+Result}} Wt\+::\+Auth\+::\+Auth\+Service\+::process\+Email\+Token (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{token,  }\item[{\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&}]{users }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Processes an email token. 
+
+This processes a token received through an email. If it is an email verification token, the token is removed from the database.
+
+This may return two successful results\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{namespaceWt_1_1Auth_a1f693bf075f6b95a12af48a8896ee949a8e3780e7013a5ae9a7a9a42f8a7cec32}{Email\+Token\+State\+::\+Email\+Confirmed}}\+: a token was presented which proves that the user is tied to the email address.
+\item \mbox{\hyperlink{namespaceWt_1_1Auth_a1f693bf075f6b95a12af48a8896ee949adc4acdfcdf7610ed96c0ae9107f5b6ac}{Email\+Token\+State\+::\+Update\+Password}}\+: a token was presented which requires the user to enter a new password.
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Since \mbox{\hyperlink{classWt}{Wt}} 4.\+3.\+0, the behavior of this function changed. The lost password token is no longer removed by \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a7b3e02441e619e9adc64588fe7a7536c}{process\+Email\+Token()}}. Instead, it is now removed in \mbox{\hyperlink{classWt_1_1Auth_1_1User_a7ba540783ef86d9f756d812939138e25}{User\+::set\+Password()}}.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a69c557a27ab51108055de4ff1bf92f14}{verify\+Email\+Address()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_ac6d9e43cfbf657c4781f15466d222abc}{lost\+Password()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a73bd9b3c7c057494be3a04f9bcbd72b6}\label{classWt_1_1Auth_1_1AuthService_a73bd9b3c7c057494be3a04f9bcbd72b6}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!randomTokenLength@{randomTokenLength}}
+\index{randomTokenLength@{randomTokenLength}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{randomTokenLength()}{randomTokenLength()}}
+{\footnotesize\ttfamily int Wt\+::\+Auth\+::\+Auth\+Service\+::random\+Token\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the token length. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_aa53b495589aeb0618125faccddbce891}{set\+Random\+Token\+Length()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_aa2749268a5e27a6bf7fe4aef915bf352}\label{classWt_1_1Auth_1_1AuthService_aa2749268a5e27a6bf7fe4aef915bf352}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!sendConfirmMail@{sendConfirmMail}}
+\index{sendConfirmMail@{sendConfirmMail}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{sendConfirmMail()}{sendConfirmMail()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Service\+::send\+Confirm\+Mail (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address,  }\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{const std\+::string \&}]{token }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Sends a confirmation email to the user to verify his email address. 
+
+Sends a confirmation email to the given address.
+
+The email content is provided by the following string keys\+:
+\begin{DoxyItemize}
+\item subject\+: tr(\char`\"{}\+Wt.\+auth.\+verification-\/mail.\+subject\char`\"{})
+\item body\+: tr(\char`\"{}\+Wt.\+auth.\+verification-\/mail.\+body\char`\"{}) with \{1\} a place holder for the identity, and \{2\} a placeholder for the redirection U\+RL.
+\item H\+T\+ML body\+: tr(\char`\"{}\+Wt.\+auth.\+verification-\/mail.\+htmlbody\char`\"{}) with the same place holders. 
+\end{DoxyItemize}\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a25d25d6495203c7a629dd5425b2b93a6}\label{classWt_1_1Auth_1_1AuthService_a25d25d6495203c7a629dd5425b2b93a6}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!sendLostPasswordMail@{sendLostPasswordMail}}
+\index{sendLostPasswordMail@{sendLostPasswordMail}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{sendLostPasswordMail()}{sendLostPasswordMail()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Service\+::send\+Lost\+Password\+Mail (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{address,  }\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{const std\+::string \&}]{token }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Sends an email to the user to enter a new password. 
+
+This sends a lost password email to the given {\ttfamily address}, with a given {\ttfamily token}.
+
+The default implementation will call \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a07ab10ccd63ff7b547ccfba484f87e05}{send\+Mail()}} with the following message\+:
+\begin{DoxyItemize}
+\item tr(\char`\"{}\+Wt.\+Auth.\+lost-\/password-\/mail.\+subject\char`\"{}) as subject,
+\item tr(\char`\"{}\+Wt.\+Auth.\+lost-\/password-\/mail.\+body\char`\"{}) as body to which it passes user.\+identity() and token as arguments.
+\item tr(\char`\"{}\+Wt.\+Auth.\+lost-\/password-\/mail.\+htmlbody\char`\"{}) as H\+T\+ML body to which it passes user.\+identity() and token as arguments. 
+\end{DoxyItemize}\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a07ab10ccd63ff7b547ccfba484f87e05}\label{classWt_1_1Auth_1_1AuthService_a07ab10ccd63ff7b547ccfba484f87e05}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!sendMail@{sendMail}}
+\index{sendMail@{sendMail}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{sendMail()}{sendMail()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Service\+::send\+Mail (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Mail_1_1Message}{Mail\+::\+Message}} \&}]{message }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sends an email. 
+
+Sends an email to the given address with subject and body.
+
+The default implementation will consult configuration properties to add a sender address if it hasn\textquotesingle{}t already been set\+:
+\begin{DoxyItemize}
+\item \char`\"{}auth-\/mail-\/sender-\/name\char`\"{}\+: the sender name, with default value \char`\"{}\+Wt Auth module\char`\"{}
+\item \char`\"{}auth-\/mail-\/sender-\/address\char`\"{}\+: the sender email address, with default value \char`\"{}noreply-\/auth@www.\+webtoolkit.\+eu\char`\"{} 
+\end{DoxyItemize}\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_adf5b811cbedec93de7d4b97950565af3}\label{classWt_1_1Auth_1_1AuthService_adf5b811cbedec93de7d4b97950565af3}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!setAuthTokensEnabled@{setAuthTokensEnabled}}
+\index{setAuthTokensEnabled@{setAuthTokensEnabled}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{setAuthTokensEnabled()}{setAuthTokensEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Auth\+Service\+::set\+Auth\+Tokens\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled,  }\item[{const std\+::string \&}]{cookie\+Name = {\ttfamily \char`\"{}wtauth\char`\"{}},  }\item[{const std\+::string \&}]{cookie\+Domain = {\ttfamily std\+:\+:string()} }\end{DoxyParamCaption})}
+
+
+
+Configures authentication token support. 
+
+This method allows you to configure whether authentication tokens are in use. Authentication tokens are used for the user to bypass a more elaborate authentication method, and are a secret shared with the user\textquotesingle{}s user agent, usually in a cookie. They are typically presented in the user interfaces as a \char`\"{}remember me\char`\"{} option.
+
+Whenever a valid authentication token is presented in process\+Token(), it is invalidated a new token is generated and stored for the user.
+
+The tokens are generated and subsequently hashed using the token hash function. Only the hash values are stored in the user database so that a compromised user database does not compromise these tokens.
+
+Authentication tokens are disabled by default.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a87578d5b56f0ad4d3c768d4dbe43ef38}{set\+Token\+Hash\+Function()}}, \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a53c56267c8588a58affe3d6ed66edeb6}{set\+Auth\+Token\+Validity()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_aee229af97b12975d00e7448e486f9cb2}\label{classWt_1_1Auth_1_1AuthService_aee229af97b12975d00e7448e486f9cb2}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!setAuthTokenUpdateEnabled@{setAuthTokenUpdateEnabled}}
+\index{setAuthTokenUpdateEnabled@{setAuthTokenUpdateEnabled}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{setAuthTokenUpdateEnabled()}{setAuthTokenUpdateEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Auth\+Service\+::set\+Auth\+Token\+Update\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Set whether \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_afa24e731e80bedc299d2560efbcb0c34}{process\+Auth\+Token()}} updates the auth token. 
+
+If this option is enabled, \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_afa24e731e80bedc299d2560efbcb0c34}{process\+Auth\+Token()}} will replace the auth token with a new token. This is a bit more secure, because an auth token can only be used once. This is enabled by default.
+
+However, this means that if a user concurrently opens multiple sessions within the same browsers (e.\+g. multiple tabs being restored at the same time) or refreshes before they receive the new cookie, the user will be logged out, unless the \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} implementation takes this into account (e.\+g. keeps the old token valid for a little bit longer)
+
+The default \mbox{\hyperlink{namespaceWt_1_1Dbo}{Dbo}} User\+Database does not handle concurrent token updates well, so disable this option if you want to prevent that issue.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_afa24e731e80bedc299d2560efbcb0c34}{process\+Auth\+Token()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a6b0904b340b82c111a78aadf43e4fa89}{auth\+Token\+Update\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a53c56267c8588a58affe3d6ed66edeb6}\label{classWt_1_1Auth_1_1AuthService_a53c56267c8588a58affe3d6ed66edeb6}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!setAuthTokenValidity@{setAuthTokenValidity}}
+\index{setAuthTokenValidity@{setAuthTokenValidity}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{setAuthTokenValidity()}{setAuthTokenValidity()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Auth\+Service\+::set\+Auth\+Token\+Validity (\begin{DoxyParamCaption}\item[{int}]{minutes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Configures the duration for an authenticaton to remain valid. 
+
+The default duration is two weeks (14 $\ast$ 24 $\ast$ 60 minutes). \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_ac1ce625114817d88f32b041473e5cfcf}\label{classWt_1_1Auth_1_1AuthService_ac1ce625114817d88f32b041473e5cfcf}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!setEmailRedirectInternalPath@{setEmailRedirectInternalPath}}
+\index{setEmailRedirectInternalPath@{setEmailRedirectInternalPath}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{setEmailRedirectInternalPath()}{setEmailRedirectInternalPath()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Auth\+Service\+::set\+Email\+Redirect\+Internal\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{internal\+Path }\end{DoxyParamCaption})}
+
+
+
+Sets the internal path used to present tokens in emails. 
+
+The default path is \char`\"{}/auth/mail/\char`\"{}. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_ad184b5136649e3af107dab3153eb9374}\label{classWt_1_1Auth_1_1AuthService_ad184b5136649e3af107dab3153eb9374}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!setEmailTokenValidity@{setEmailTokenValidity}}
+\index{setEmailTokenValidity@{setEmailTokenValidity}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{setEmailTokenValidity()}{setEmailTokenValidity()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Auth\+Service\+::set\+Email\+Token\+Validity (\begin{DoxyParamCaption}\item[{int}]{minutes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Configures the duration for an email token to remain valid. 
+
+The default duration is three days (3 $\ast$ 24 $\ast$ 60 minutes). Three is a divine number. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a545208b47b73bc8f4d736753fd967eec}\label{classWt_1_1Auth_1_1AuthService_a545208b47b73bc8f4d736753fd967eec}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!setEmailVerificationEnabled@{setEmailVerificationEnabled}}
+\index{setEmailVerificationEnabled@{setEmailVerificationEnabled}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{setEmailVerificationEnabled()}{setEmailVerificationEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Auth\+Service\+::set\+Email\+Verification\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Configures email verification. 
+
+Email verification is useful for a user to recover a lost password, or to be able to confidently confirm other events with this user (such as order processing). \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a2dcdb5d4a23e22389823c55aee91cbc4}\label{classWt_1_1Auth_1_1AuthService_a2dcdb5d4a23e22389823c55aee91cbc4}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!setEmailVerificationRequired@{setEmailVerificationRequired}}
+\index{setEmailVerificationRequired@{setEmailVerificationRequired}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{setEmailVerificationRequired()}{setEmailVerificationRequired()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Auth\+Service\+::set\+Email\+Verification\+Required (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Configure email verificiation to be required for login. 
+
+When enabled, a user will not be able to login if the email-\/address was not verified. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_aefb84d11c1dbc0c335b406ca9d3e3572}\label{classWt_1_1Auth_1_1AuthService_aefb84d11c1dbc0c335b406ca9d3e3572}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!setIdentityPolicy@{setIdentityPolicy}}
+\index{setIdentityPolicy@{setIdentityPolicy}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{setIdentityPolicy()}{setIdentityPolicy()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Auth\+Service\+::set\+Identity\+Policy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWt_1_1Auth_a8ce12bbc04d68d5687f08abf2a209436}{Identity\+Policy}}}]{policy }\end{DoxyParamCaption})}
+
+
+
+Configures the identity policy. 
+
+The identity policy has an impact on the login and registration procedure. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_aa53b495589aeb0618125faccddbce891}\label{classWt_1_1Auth_1_1AuthService_aa53b495589aeb0618125faccddbce891}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!setRandomTokenLength@{setRandomTokenLength}}
+\index{setRandomTokenLength@{setRandomTokenLength}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{setRandomTokenLength()}{setRandomTokenLength()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Auth\+Service\+::set\+Random\+Token\+Length (\begin{DoxyParamCaption}\item[{int}]{length }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the token length. 
+
+Configures the length used for random tokens. Random tokens are generated for authentication tokens, and email tokens.
+
+The default length is 32 characters.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WRandom_a6cb7dbd1eed02edf15cc514d811700a5}{W\+Random\+::generate\+Id()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a87578d5b56f0ad4d3c768d4dbe43ef38}\label{classWt_1_1Auth_1_1AuthService_a87578d5b56f0ad4d3c768d4dbe43ef38}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!setTokenHashFunction@{setTokenHashFunction}}
+\index{setTokenHashFunction@{setTokenHashFunction}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{setTokenHashFunction()}{setTokenHashFunction()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Auth\+Service\+::set\+Token\+Hash\+Function (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1HashFunction}{Hash\+Function}} $>$}]{function }\end{DoxyParamCaption})}
+
+
+
+Sets the token hash function. 
+
+Sets the hash function used to safely store authentication tokens in the database. Ownership of the hash function is transferred.
+
+The default token hash function is an \mbox{\hyperlink{classWt_1_1Auth_1_1MD5HashFunction}{M\+D5\+Hash\+Function}}. \mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a53087d1e393c96a50cc9eb8fa71a4ba1}\label{classWt_1_1Auth_1_1AuthService_a53087d1e393c96a50cc9eb8fa71a4ba1}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!tokenHashFunction@{tokenHashFunction}}
+\index{tokenHashFunction@{tokenHashFunction}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{tokenHashFunction()}{tokenHashFunction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Auth_1_1HashFunction}{Hash\+Function}}$\ast$ Wt\+::\+Auth\+::\+Auth\+Service\+::token\+Hash\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the token hash function. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a87578d5b56f0ad4d3c768d4dbe43ef38}{set\+Token\+Hash\+Function()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AuthService_a69c557a27ab51108055de4ff1bf92f14}\label{classWt_1_1Auth_1_1AuthService_a69c557a27ab51108055de4ff1bf92f14}} 
+\index{Wt::Auth::AuthService@{Wt::Auth::AuthService}!verifyEmailAddress@{verifyEmailAddress}}
+\index{verifyEmailAddress@{verifyEmailAddress}!Wt::Auth::AuthService@{Wt::Auth::AuthService}}
+\doxysubsubsection{\texorpdfstring{verifyEmailAddress()}{verifyEmailAddress()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Auth\+Service\+::verify\+Email\+Address (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{const std\+::string \&}]{email\+Address }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Verifies an email address. 
+
+This registers a new email token with the user.
+
+Then it sends an email to the user\textquotesingle{}s unverified email address with instructions that redirect him to this site, using send\+Confirm\+Email().
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService_a7b3e02441e619e9adc64588fe7a7536c}{process\+Email\+Token()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/Auth\+Service.\+h\end{DoxyCompactItemize}

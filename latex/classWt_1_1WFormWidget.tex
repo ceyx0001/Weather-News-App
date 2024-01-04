@@ -1,0 +1,531 @@
+\hypertarget{classWt_1_1WFormWidget}{}\doxysection{Wt\+::W\+Form\+Widget Class Reference}
+\label{classWt_1_1WFormWidget}\index{Wt::WFormWidget@{Wt::WFormWidget}}
+
+
+An abstract widget that corresponds to an H\+T\+ML form element.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Form\+Widget.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Form\+Widget\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Form\+Widget\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a55fce4a09b58ae9d308cc9a2ad2e0265}\label{classWt_1_1WFormWidget_a55fce4a09b58ae9d308cc9a2ad2e0265}} 
+\mbox{\hyperlink{classWt_1_1WFormWidget_a55fce4a09b58ae9d308cc9a2ad2e0265}{W\+Form\+Widget}} ()
+\begin{DoxyCompactList}\small\item\em Creates a W\+Form\+Widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_af9027662449d08a70e361611f6fcf4c7}\label{classWt_1_1WFormWidget_af9027662449d08a70e361611f6fcf4c7}} 
+\mbox{\hyperlink{classWt_1_1WFormWidget_af9027662449d08a70e361611f6fcf4c7}{$\sim$\+W\+Form\+Widget}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WLabel}{W\+Label}} $\ast$ \mbox{\hyperlink{classWt_1_1WFormWidget_a71e7a278888ebe7857c89de55e16ee0e}{label}} () const
+\begin{DoxyCompactList}\small\item\em Returns the label associated with this widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WFormWidget_a4f84feb567f0d56c07e9dfdb3b84512e}{set\+Hidden}} (bool hidden, const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&animation=\mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}}()) override
+\begin{DoxyCompactList}\small\item\em Sets the hidden state of this widget. \end{DoxyCompactList}\item 
+virtual W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \mbox{\hyperlink{classWt_1_1WFormWidget_a25b8021f41f8e52dcc584a043e6524b0}{value\+Text}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the current value. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WFormWidget_aed21609b20a93ad5eefe27dc27ac7ba7}{set\+Value\+Text}} (const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&value)=0
+\begin{DoxyCompactList}\small\item\em Sets the value text. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WFormWidget_a8b5fa8567e930691b95f1d0fa69359f1}{set\+Validator}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WValidator}{W\+Validator}} $>$ \&\mbox{\hyperlink{classWt_1_1WFormWidget_a0d362bbeea8f4da4617b24757772a996}{validator}})
+\begin{DoxyCompactList}\small\item\em Sets a validator for this field. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a0d362bbeea8f4da4617b24757772a996}\label{classWt_1_1WFormWidget_a0d362bbeea8f4da4617b24757772a996}} 
+virtual std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WValidator}{W\+Validator}} $>$ \mbox{\hyperlink{classWt_1_1WFormWidget_a0d362bbeea8f4da4617b24757772a996}{validator}} () const
+\begin{DoxyCompactList}\small\item\em Returns the validator. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_a06744b1cf5fdeae2a8a6c0d0084fdf25}{Validation\+State}} \mbox{\hyperlink{classWt_1_1WFormWidget_ac895d6b344fa12d175b90f56f69ae0bb}{validate}} ()
+\begin{DoxyCompactList}\small\item\em Validates the field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WFormWidget_ad26d15f452d47832a4467608977f03f5}{set\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Sets whether the widget is enabled. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WFormWidget_a061c6fe9607c18ecb786572400a74102}{set\+Read\+Only}} (bool read\+Only)
+\begin{DoxyCompactList}\small\item\em Sets the element read-\/only. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WFormWidget_a308ae2b05ee007bea4637b1539ce251e}{is\+Read\+Only}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the form element is read-\/only. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WFormWidget_a0ea06bae6cd120c8977709d68901bf01}{set\+Placeholder\+Text}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&placeholder)
+\begin{DoxyCompactList}\small\item\em Sets the placeholder text. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \& \mbox{\hyperlink{classWt_1_1WFormWidget_a75425fe7a19d61dbdf17492d3c7d4628}{placeholder\+Text}} () const
+\begin{DoxyCompactList}\small\item\em Returns the placeholder text. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}} \& \mbox{\hyperlink{classWt_1_1WFormWidget_a880589c79f1b93e7f38330e28cf6f5e2}{changed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the value was changed. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WValidator_1_1Result}{W\+Validator\+::\+Result}} $>$ \& \mbox{\hyperlink{classWt_1_1WFormWidget_af4c1e4155ed71cf5f147b77d4869dd2b}{validated}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the widget is being validated. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WFormWidget_aed20a1f447d252388b50bbd8aa847824}{refresh}} () override
+\begin{DoxyCompactList}\small\item\em Refresh the widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WFormWidget_ae4f81e36fefb003420b9d93e5642ba91}{set\+Tool\+Tip}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text, \mbox{\hyperlink{classWt_a140dea437d52d3d7c438ea3bd16a1480}{Text\+Format}} text\+Format=Text\+Format\+::\+Plain) override
+\begin{DoxyCompactList}\small\item\em Sets a tooltip. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WFormWidget_a0389f78346d99b825fefdda83784efc5}{can\+Receive\+Focus}} () const override
+\begin{DoxyCompactList}\small\item\em Returns whether the widget can receive focus. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WFormWidget_aa9e8ce2337f74cfec840fdfb7789b398}{tab\+Index}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the tab index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a72ddb069e9f146ea71263fd55b4e6180}\label{classWt_1_1WFormWidget_a72ddb069e9f146ea71263fd55b4e6180}} 
+void {\bfseries apply\+Empty\+Text} ()
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WFormWidget_ac484b43590f7797fbd744219144ef28e}{enable\+Ajax}} () override
+\begin{DoxyCompactList}\small\item\em Progresses to an Ajax-\/enabled widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a253dd20509b6f4638ea2c9d343a3ae08}\label{classWt_1_1WFormWidget_a253dd20509b6f4638ea2c9d343a3ae08}} 
+virtual void {\bfseries validator\+Changed} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a134111b2e4b46f9ec5326cfb969b9cce}\label{classWt_1_1WFormWidget_a134111b2e4b46f9ec5326cfb969b9cce}} 
+virtual void {\bfseries update\+Dom} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&element, bool all) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a149cb0098c4fbf77ed1fdaadd911b7fb}\label{classWt_1_1WFormWidget_a149cb0098c4fbf77ed1fdaadd911b7fb}} 
+virtual void {\bfseries propagate\+Render\+Ok} (bool deep) override
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WFormWidget_a8c9e7e6fac2c0e69725c7efc6f94053b}{render}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$ flags) override
+\begin{DoxyCompactList}\small\item\em Renders the widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WFormWidget_af4ce565ee432956562fc25fb4e64109f}{propagate\+Set\+Enabled}} (bool enabled) override
+\begin{DoxyCompactList}\small\item\em Propagates that a widget was enabled or disabled through children. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a19f03995b44cc8015cf8a2d3488fafbc}\label{classWt_1_1WFormWidget_a19f03995b44cc8015cf8a2d3488fafbc}} 
+virtual std\+::string {\bfseries form\+Name} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a5910e08aa68fe4a3a081424a4efb1215}\label{classWt_1_1WFormWidget_a5910e08aa68fe4a3a081424a4efb1215}} 
+\mbox{\hyperlink{classWt_1_1WLabel}{W\+Label}} $\ast$ {\bfseries label\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_ace5270090ec8966a00c6a468953a7a8f}\label{classWt_1_1WFormWidget_ace5270090ec8966a00c6a468953a7a8f}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WValidator}{W\+Validator}} $>$ {\bfseries validator\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a74373d37b100f24a233babc09acb560e}\label{classWt_1_1WFormWidget_a74373d37b100f24a233babc09acb560e}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} $>$ {\bfseries validate\+Js\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a9f8d31aa90798396dbeca5ad589dbf52}\label{classWt_1_1WFormWidget_a9f8d31aa90798396dbeca5ad589dbf52}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} $>$ {\bfseries filter\+Input\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a6d07fb3723d532867473422dd9e29c17}\label{classWt_1_1WFormWidget_a6d07fb3723d532867473422dd9e29c17}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} $>$ {\bfseries remove\+Empty\+Text\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a5f90b34a762773c1f5a7ed1e299f55de}\label{classWt_1_1WFormWidget_a5f90b34a762773c1f5a7ed1e299f55de}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries empty\+Text\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_ace389f0ef4f912cb9b866b7f4b8fe714}\label{classWt_1_1WFormWidget_ace389f0ef4f912cb9b866b7f4b8fe714}} 
+static const char $\ast$ {\bfseries C\+H\+A\+N\+G\+E\+\_\+\+S\+I\+G\+N\+AL}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_aa9c81a54be4ab85f88418b7cf401cf06}\label{classWt_1_1WFormWidget_aa9c81a54be4ab85f88418b7cf401cf06}} 
+void {\bfseries set\+Label} (\mbox{\hyperlink{classWt_1_1WLabel}{W\+Label}} $\ast$\mbox{\hyperlink{classWt_1_1WFormWidget_a71e7a278888ebe7857c89de55e16ee0e}{label}})
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a7f4520d50a5922d18eccbed5fa6064ff}\label{classWt_1_1WFormWidget_a7f4520d50a5922d18eccbed5fa6064ff}} 
+void {\bfseries define\+Java\+Script} (bool force=false)
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_aafb0e780419ba32944a8abbc05d3c591}\label{classWt_1_1WFormWidget_aafb0e780419ba32944a8abbc05d3c591}} 
+void {\bfseries update\+Empty\+Text} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_aae93227358352ec890e2ebb1519ca935}\label{classWt_1_1WFormWidget_aae93227358352ec890e2ebb1519ca935}} 
+std\+::bitset$<$ 6 $>$ {\bfseries flags\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a8c02dc9cb5ea1772d13a49e9304a284d}\label{classWt_1_1WFormWidget_a8c02dc9cb5ea1772d13a49e9304a284d}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WValidator_1_1Result}{W\+Validator\+::\+Result}} $>$ {\bfseries validated\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a2e49456f98a7be3533ff61c4eaa1ab25}\label{classWt_1_1WFormWidget_a2e49456f98a7be3533ff61c4eaa1ab25}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries validation\+Tool\+Tip\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a30c7dba63d2561c1534e13b55f1c2987}\label{classWt_1_1WFormWidget_a30c7dba63d2561c1534e13b55f1c2987}} 
+static const int {\bfseries B\+I\+T\+\_\+\+E\+N\+A\+B\+L\+E\+D\+\_\+\+C\+H\+A\+N\+G\+ED} = 0
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_ac660552943d2e8ca591c215c15132c30}\label{classWt_1_1WFormWidget_ac660552943d2e8ca591c215c15132c30}} 
+static const int {\bfseries B\+I\+T\+\_\+\+R\+E\+A\+D\+O\+N\+LY} = 1
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a4d67caf1f502e5347e416e86891efbc3}\label{classWt_1_1WFormWidget_a4d67caf1f502e5347e416e86891efbc3}} 
+static const int {\bfseries B\+I\+T\+\_\+\+R\+E\+A\+D\+O\+N\+L\+Y\+\_\+\+C\+H\+A\+N\+G\+ED} = 2
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_ad67ac090dfe2e1d95935b6bdc45701de}\label{classWt_1_1WFormWidget_ad67ac090dfe2e1d95935b6bdc45701de}} 
+static const int {\bfseries B\+I\+T\+\_\+\+J\+S\+\_\+\+O\+B\+J\+E\+CT} = 3
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_ab9e24962ad306761a9a83c04a3c88fde}\label{classWt_1_1WFormWidget_ab9e24962ad306761a9a83c04a3c88fde}} 
+static const int {\bfseries B\+I\+T\+\_\+\+V\+A\+L\+I\+D\+A\+T\+I\+O\+N\+\_\+\+C\+H\+A\+N\+G\+ED} = 4
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a70fab436e4f3d0fa6d34df1bc9a9c7cf}\label{classWt_1_1WFormWidget_a70fab436e4f3d0fa6d34df1bc9a9c7cf}} 
+static const int {\bfseries B\+I\+T\+\_\+\+P\+L\+A\+C\+E\+H\+O\+L\+D\+E\+R\+\_\+\+C\+H\+A\+N\+G\+ED} = 5
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a9c158828d86f129a1f2fc5cb0d2412b2}\label{classWt_1_1WFormWidget_a9c158828d86f129a1f2fc5cb0d2412b2}} 
+class {\bfseries W\+Label}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_ab3ad77eb99b917e4c3e6c1e4b44e2847}\label{classWt_1_1WFormWidget_ab3ad77eb99b917e4c3e6c1e4b44e2847}} 
+class {\bfseries W\+Validator}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a8248f10e62aee707eabe43458855d835}\label{classWt_1_1WFormWidget_a8248f10e62aee707eabe43458855d835}} 
+class {\bfseries Web\+Session}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An abstract widget that corresponds to an H\+T\+ML form element. 
+
+A W\+Form\+Widget may receive focus (see \mbox{\hyperlink{classWt_1_1WFormWidget_a0389f78346d99b825fefdda83784efc5}{can\+Receive\+Focus()}}), can be disabled, and can have a label that acts as proxy for getting focus. It provides signals which reflect changes to its value, or changes to its focus.
+
+\mbox{\hyperlink{namespaceWt_1_1Form}{Form}} widgets also have built-\/in support for validation, using \mbox{\hyperlink{classWt_1_1WFormWidget_a8b5fa8567e930691b95f1d0fa69359f1}{set\+Validator(const std\+::shared\+\_\+ptr$<$\+W\+Validator$>$ \&)}}. If the validator provide client-\/side validation, then an invalid validation state is reflected using the style class {\ttfamily \char`\"{}\+Wt-\/invalid\char`\"{}}. All validators provided by Wt implement client-\/side validation.
+
+On the server-\/side, use \mbox{\hyperlink{classWt_1_1WFormWidget_ac895d6b344fa12d175b90f56f69ae0bb}{validate()}} method to validate the content using a validator previously set. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a0389f78346d99b825fefdda83784efc5}\label{classWt_1_1WFormWidget_a0389f78346d99b825fefdda83784efc5}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!canReceiveFocus@{canReceiveFocus}}
+\index{canReceiveFocus@{canReceiveFocus}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{canReceiveFocus()}{canReceiveFocus()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Form\+Widget\+::can\+Receive\+Focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns whether the widget can receive focus. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWebWidget_a5671b3e4c1e2fb3b848809e43953aa12}{set\+Can\+Receive\+Focus()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a74d5aedc1f32c0c00c7d8905011cbd41}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a880589c79f1b93e7f38330e28cf6f5e2}\label{classWt_1_1WFormWidget_a880589c79f1b93e7f38330e28cf6f5e2}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!changed@{changed}}
+\index{changed@{changed}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{changed()}{changed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}\& Wt\+::\+W\+Form\+Widget\+::changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Signal emitted when the value was changed. 
+
+For a keyboard input, the signal is only emitted when the focus is lost \mbox{\Hypertarget{classWt_1_1WFormWidget_ac484b43590f7797fbd744219144ef28e}\label{classWt_1_1WFormWidget_ac484b43590f7797fbd744219144ef28e}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!enableAjax@{enableAjax}}
+\index{enableAjax@{enableAjax}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{enableAjax()}{enableAjax()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Form\+Widget\+::enable\+Ajax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Progresses to an Ajax-\/enabled widget. 
+
+This method is called when the progressive bootstrap method is used, and support for A\+J\+AX has been detected. The default behavior will upgrade the widget\textquotesingle{}s event handling to use A\+J\+AX instead of full page reloads, and propagate the call to its children.
+
+You may want to reimplement this method if you want to make changes to widget when A\+J\+AX is enabled. You should always call the base implementation.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_a46c573a3cd370cb2f83250c99d42b575}{W\+Application\+::enable\+Ajax()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_af717033681b5cbe5857c88b65558e10c}{Wt\+::\+W\+Web\+Widget}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WPushButton_aaf33f6ec6ae321e88195cf9d249a952d}{Wt\+::\+W\+Push\+Button}}, and \mbox{\hyperlink{classWt_1_1WSlider_ac78960637792be6cef0e876193969c25}{Wt\+::\+W\+Slider}}.
+
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a308ae2b05ee007bea4637b1539ce251e}\label{classWt_1_1WFormWidget_a308ae2b05ee007bea4637b1539ce251e}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!isReadOnly@{isReadOnly}}
+\index{isReadOnly@{isReadOnly}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{isReadOnly()}{isReadOnly()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Form\+Widget\+::is\+Read\+Only (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the form element is read-\/only. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormWidget_a061c6fe9607c18ecb786572400a74102}{set\+Read\+Only()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a71e7a278888ebe7857c89de55e16ee0e}\label{classWt_1_1WFormWidget_a71e7a278888ebe7857c89de55e16ee0e}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!label@{label}}
+\index{label@{label}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{label()}{label()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WLabel}{W\+Label}}$\ast$ Wt\+::\+W\+Form\+Widget\+::label (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the label associated with this widget. 
+
+Returns the label (if there is one) that acts as a proxy for this widget.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLabel_af468c613eab7d184c68fd6ae20978de5}{W\+Label\+::set\+Buddy(\+W\+Form\+Widget $\ast$)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a75425fe7a19d61dbdf17492d3c7d4628}\label{classWt_1_1WFormWidget_a75425fe7a19d61dbdf17492d3c7d4628}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!placeholderText@{placeholderText}}
+\index{placeholderText@{placeholderText}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{placeholderText()}{placeholderText()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WString}{W\+String}}\& Wt\+::\+W\+Form\+Widget\+::placeholder\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the placeholder text. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormWidget_a0ea06bae6cd120c8977709d68901bf01}{set\+Placeholder\+Text()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFormWidget_af4ce565ee432956562fc25fb4e64109f}\label{classWt_1_1WFormWidget_af4ce565ee432956562fc25fb4e64109f}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!propagateSetEnabled@{propagateSetEnabled}}
+\index{propagateSetEnabled@{propagateSetEnabled}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{propagateSetEnabled()}{propagateSetEnabled()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Form\+Widget\+::propagate\+Set\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Propagates that a widget was enabled or disabled through children. 
+
+When enabling or disabling a widget, you usually also want to disable contained children. This method is called by \mbox{\hyperlink{classWt_1_1WWebWidget_a87ad1dbe635cb0b52bd491d8108d55cf}{set\+Disabled()}} to propagate its state to all children.
+
+You may want to reimplement this method if they wish to render differently when a widget is disabled. The default implementation will propagate the signal to all children. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WInteractWidget_a8c757a7ae882a94735c2b7344285ed50}{Wt\+::\+W\+Interact\+Widget}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WPushButton_a45085dfbcee7ac1bd2d6e13bee199dee}{Wt\+::\+W\+Push\+Button}}, \mbox{\hyperlink{classWt_1_1WTextEdit_ad4b2541a5e0e9e0bd8cca633b4aa3442}{Wt\+::\+W\+Text\+Edit}}, \mbox{\hyperlink{classWt_1_1WDateEdit_aeba50297b5334a4c07196f51df5c4f4b}{Wt\+::\+W\+Date\+Edit}}, and \mbox{\hyperlink{classWt_1_1WTimeEdit_a324c2d2e942fd2b992e3c4942eca1c8e}{Wt\+::\+W\+Time\+Edit}}.
+
+\mbox{\Hypertarget{classWt_1_1WFormWidget_aed20a1f447d252388b50bbd8aa847824}\label{classWt_1_1WFormWidget_aed20a1f447d252388b50bbd8aa847824}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!refresh@{refresh}}
+\index{refresh@{refresh}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Form\+Widget\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Refresh the widget. 
+
+The refresh method is invoked when the locale is changed using \mbox{\hyperlink{classWt_1_1WApplication_ac0af7e0131c926c77b207595c8c6e283}{W\+Application\+::set\+Locale()}} or when the user hit the refresh button.
+
+The widget must actualize its contents in response.
+
+\begin{DoxyNote}{Note}
+This does {\bfseries{not}} rerender the widget! Calling \mbox{\hyperlink{classWt_1_1WFormWidget_aed20a1f447d252388b50bbd8aa847824}{refresh()}} usually does not have any effect (unless you\textquotesingle{}ve reimplemented \mbox{\hyperlink{classWt_1_1WFormWidget_aed20a1f447d252388b50bbd8aa847824}{refresh()}} to attach to it an effect). 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a6cfacec8220f5063817e22506057a5dd}{Wt\+::\+W\+Web\+Widget}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WPushButton_a1b6446202655a5954d53cd6fc4791789}{Wt\+::\+W\+Push\+Button}}, \mbox{\hyperlink{classWt_1_1WComboBox_a969699f02f5e0a48c4424f15b4151b1f}{Wt\+::\+W\+Combo\+Box}}, \mbox{\hyperlink{classWt_1_1WAbstractToggleButton_aa95d52c20890e2e711e9f259355ac29b}{Wt\+::\+W\+Abstract\+Toggle\+Button}}, \mbox{\hyperlink{classWt_1_1WDateEdit_ad1f48fe007ba644d3f1b0acdbc2e61e9}{Wt\+::\+W\+Date\+Edit}}, \mbox{\hyperlink{classWt_1_1WDoubleSpinBox_ade90e5d1a49826333fe6e5e149b51249}{Wt\+::\+W\+Double\+Spin\+Box}}, and \mbox{\hyperlink{classWt_1_1WAbstractSpinBox_a354129d20d0b4c3d86b603f38404ae7a}{Wt\+::\+W\+Abstract\+Spin\+Box}}.
+
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a8c9e7e6fac2c0e69725c7efc6f94053b}\label{classWt_1_1WFormWidget_a8c9e7e6fac2c0e69725c7efc6f94053b}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!render@{render}}
+\index{render@{render}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Form\+Widget\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Renders the widget. 
+
+This function renders the widget (or an update for the widget), after this has been scheduled using \mbox{\hyperlink{classWt_1_1WWidget_a5d3d4edaafa2d7c892a5078f3df4cf11}{schedule\+Render()}}.
+
+The default implementation will render the widget by serializing changes to Java\+Script and H\+T\+ML. You may want to reimplement this widget if you have been postponing some of the layout / rendering implementation until the latest moment possible. In that case you should make sure you call the base implementation however. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a5ca222ef9275cfd6d0005c63197d40a0}{Wt\+::\+W\+Web\+Widget}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WLineEdit_ae3524d7b4a1b29e98976d73c802c0e84}{Wt\+::\+W\+Line\+Edit}}, \mbox{\hyperlink{classWt_1_1WSlider_aa1be2224372e9cf444f21c42dc15cbf0}{Wt\+::\+W\+Slider}}, \mbox{\hyperlink{classWt_1_1WDateEdit_ae4205b6e25f59df190925d5bdbbaefea}{Wt\+::\+W\+Date\+Edit}}, \mbox{\hyperlink{classWt_1_1WDoubleSpinBox_a3cedd3224a0494c830f4e887c0cf09c5}{Wt\+::\+W\+Double\+Spin\+Box}}, \mbox{\hyperlink{classWt_1_1WTimeEdit_af6e16523e153b4f0c4287fae18455bc0}{Wt\+::\+W\+Time\+Edit}}, and \mbox{\hyperlink{classWt_1_1WAbstractSpinBox_a4285a583fdd8b8994c5f368d1b6f244f}{Wt\+::\+W\+Abstract\+Spin\+Box}}.
+
+\mbox{\Hypertarget{classWt_1_1WFormWidget_ad26d15f452d47832a4467608977f03f5}\label{classWt_1_1WFormWidget_ad26d15f452d47832a4467608977f03f5}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!setEnabled@{setEnabled}}
+\index{setEnabled@{setEnabled}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{setEnabled()}{setEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Form\+Widget\+::set\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Sets whether the widget is enabled. 
+
+A widget that is disabled cannot receive focus or user interaction.
+
+This is the opposite of \mbox{\hyperlink{classWt_1_1WWebWidget_a87ad1dbe635cb0b52bd491d8108d55cf}{set\+Disabled()}}. \mbox{\Hypertarget{classWt_1_1WFormWidget_a4f84feb567f0d56c07e9dfdb3b84512e}\label{classWt_1_1WFormWidget_a4f84feb567f0d56c07e9dfdb3b84512e}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!setHidden@{setHidden}}
+\index{setHidden@{setHidden}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{setHidden()}{setHidden()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Form\+Widget\+::set\+Hidden (\begin{DoxyParamCaption}\item[{bool}]{hidden,  }\item[{const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&}]{animation = {\ttfamily \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the hidden state of this widget. 
+
+If the widget has a label, it is hidden and shown together with this widget. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a9adb6f6fe79146883c423f4b5684aa40}{Wt\+::\+W\+Web\+Widget}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WDateEdit_aaa34f03860ab1e4099203cfe521c1f16}{Wt\+::\+W\+Date\+Edit}}, \mbox{\hyperlink{classWt_1_1WTimeEdit_ae132039a83dae4299a0667d0f91fad20}{Wt\+::\+W\+Time\+Edit}}, and \mbox{\hyperlink{classAddresseeEdit_ac85375f2f0716c10742daf777ed1ae83}{Addressee\+Edit}}.
+
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a0ea06bae6cd120c8977709d68901bf01}\label{classWt_1_1WFormWidget_a0ea06bae6cd120c8977709d68901bf01}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!setPlaceholderText@{setPlaceholderText}}
+\index{setPlaceholderText@{setPlaceholderText}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{setPlaceholderText()}{setPlaceholderText()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Form\+Widget\+::set\+Placeholder\+Text (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{placeholder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the placeholder text. 
+
+This sets the text that is shown when the field is empty. 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WTextEdit_afab6e68e27e44c3c1fb2ce45a6834580}{Wt\+::\+W\+Text\+Edit}}.
+
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a061c6fe9607c18ecb786572400a74102}\label{classWt_1_1WFormWidget_a061c6fe9607c18ecb786572400a74102}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!setReadOnly@{setReadOnly}}
+\index{setReadOnly@{setReadOnly}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{setReadOnly()}{setReadOnly()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Form\+Widget\+::set\+Read\+Only (\begin{DoxyParamCaption}\item[{bool}]{read\+Only }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the element read-\/only. 
+
+A read-\/only form element cannot be edited, but the contents can still be selected.
+
+By default, a form element area is not read-\/only.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormWidget_ad26d15f452d47832a4467608977f03f5}{set\+Enabled()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WTextEdit_a2cd403e153848194bc86b016e233af64}{Wt\+::\+W\+Text\+Edit}}.
+
+\mbox{\Hypertarget{classWt_1_1WFormWidget_ae4f81e36fefb003420b9d93e5642ba91}\label{classWt_1_1WFormWidget_ae4f81e36fefb003420b9d93e5642ba91}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!setToolTip@{setToolTip}}
+\index{setToolTip@{setToolTip}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{setToolTip()}{setToolTip()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Form\+Widget\+::set\+Tool\+Tip (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text,  }\item[{\mbox{\hyperlink{classWt_a140dea437d52d3d7c438ea3bd16a1480}{Text\+Format}}}]{text\+Format = {\ttfamily TextFormat\+:\+:Plain} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets a tooltip. 
+
+The tooltip is displayed when the cursor hovers over the widget.
+
+When {\ttfamily text\+Format} is Text\+Format\+::\+X\+H\+T\+ML, the tooltip may contain any valid X\+H\+T\+ML snippet. The tooltip will then be rendered using Java\+Script.
+
+\mbox{\hyperlink{classNote}{Note}}\+: This will set deferred tooltip to false.
+
+\begin{DoxySeeAlso}{See also}
+set\+Deferred\+Tooltip() 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a62210b8b33c0b92e1e9a552ab259f533}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a8b5fa8567e930691b95f1d0fa69359f1}\label{classWt_1_1WFormWidget_a8b5fa8567e930691b95f1d0fa69359f1}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!setValidator@{setValidator}}
+\index{setValidator@{setValidator}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{setValidator()}{setValidator()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Form\+Widget\+::set\+Validator (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WValidator}{W\+Validator}} $>$ \&}]{validator }\end{DoxyParamCaption})}
+
+
+
+Sets a validator for this field. 
+
+The validator is used to validate the current input.
+
+The default value is {\ttfamily 0}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormWidget_ac895d6b344fa12d175b90f56f69ae0bb}{validate()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFormWidget_aed21609b20a93ad5eefe27dc27ac7ba7}\label{classWt_1_1WFormWidget_aed21609b20a93ad5eefe27dc27ac7ba7}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!setValueText@{setValueText}}
+\index{setValueText@{setValueText}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{setValueText()}{setValueText()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Form\+Widget\+::set\+Value\+Text (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the value text. 
+
+This sets the current value from a string value. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WSlider_ab8b1b509888a1c95162ef81d83e22d5f}{Wt\+::\+W\+Slider}}, \mbox{\hyperlink{classWt_1_1WPushButton_ae11a3ad191e3df9a54ebfd8ecde538b1}{Wt\+::\+W\+Push\+Button}}, \mbox{\hyperlink{classWt_1_1WLineEdit_ad12c910cf55c9d3487544d1b4fb7fde3}{Wt\+::\+W\+Line\+Edit}}, \mbox{\hyperlink{classWt_1_1WComboBox_a47f48724fbaa0e2d6d7f0cc518e8afe2}{Wt\+::\+W\+Combo\+Box}}, \mbox{\hyperlink{classWt_1_1WColorPicker_a852c0cb7f2221f52f561614e97a82922}{Wt\+::\+W\+Color\+Picker}}, \mbox{\hyperlink{classWt_1_1WTextArea_ae3692475766e398eaed9e99b8be1d1ed}{Wt\+::\+W\+Text\+Area}}, and \mbox{\hyperlink{classWt_1_1WAbstractToggleButton_a52b241c22dae8bfeee2ff2d08235d1fa}{Wt\+::\+W\+Abstract\+Toggle\+Button}}.
+
+\mbox{\Hypertarget{classWt_1_1WFormWidget_aa9e8ce2337f74cfec840fdfb7789b398}\label{classWt_1_1WFormWidget_aa9e8ce2337f74cfec840fdfb7789b398}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!tabIndex@{tabIndex}}
+\index{tabIndex@{tabIndex}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{tabIndex()}{tabIndex()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Form\+Widget\+::tab\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the tab index. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWebWidget_a1cb80e4884f2f80abd297d6102bcb679}{set\+Tab\+Index()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a1f7beb14ac5ba5d08a0af1e117416301}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WFormWidget_ac895d6b344fa12d175b90f56f69ae0bb}\label{classWt_1_1WFormWidget_ac895d6b344fa12d175b90f56f69ae0bb}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!validate@{validate}}
+\index{validate@{validate}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_a06744b1cf5fdeae2a8a6c0d0084fdf25}{Validation\+State}} Wt\+::\+W\+Form\+Widget\+::validate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Validates the field. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormWidget_af4c1e4155ed71cf5f147b77d4869dd2b}{validated()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WLineEdit_ac07b136a2c39130731ef79de9b0a1f5c}{Wt\+::\+W\+Line\+Edit}}, and \mbox{\hyperlink{classWt_1_1WAbstractSpinBox_a312b58515cf821d70148bae92cd3628c}{Wt\+::\+W\+Abstract\+Spin\+Box}}.
+
+\mbox{\Hypertarget{classWt_1_1WFormWidget_af4c1e4155ed71cf5f147b77d4869dd2b}\label{classWt_1_1WFormWidget_af4c1e4155ed71cf5f147b77d4869dd2b}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!validated@{validated}}
+\index{validated@{validated}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{validated()}{validated()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WValidator_1_1Result}{W\+Validator\+::\+Result}}$>$\& Wt\+::\+W\+Form\+Widget\+::validated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when the widget is being validated. 
+
+This signal may be useful to react to a changed validation state.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormWidget_ac895d6b344fa12d175b90f56f69ae0bb}{validate()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFormWidget_a25b8021f41f8e52dcc584a043e6524b0}\label{classWt_1_1WFormWidget_a25b8021f41f8e52dcc584a043e6524b0}} 
+\index{Wt::WFormWidget@{Wt::WFormWidget}!valueText@{valueText}}
+\index{valueText@{valueText}!Wt::WFormWidget@{Wt::WFormWidget}}
+\doxysubsubsection{\texorpdfstring{valueText()}{valueText()}}
+{\footnotesize\ttfamily virtual W\+T\+\_\+\+U\+S\+T\+R\+I\+NG Wt\+::\+W\+Form\+Widget\+::value\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the current value. 
+
+This returns the current value as a string. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WSlider_a17b865b6cff3925522ec353e8e2e2873}{Wt\+::\+W\+Slider}}, \mbox{\hyperlink{classWt_1_1WPushButton_ae9f529ca8d1fc9857454d4beda5753f8}{Wt\+::\+W\+Push\+Button}}, \mbox{\hyperlink{classWt_1_1WLineEdit_aa875501053b6afda8db33639966ca4b7}{Wt\+::\+W\+Line\+Edit}}, \mbox{\hyperlink{classWt_1_1WComboBox_a913034ee43d8a7757499a5a66d9bf9b9}{Wt\+::\+W\+Combo\+Box}}, \mbox{\hyperlink{classWt_1_1WTextArea_af2c771902ddb4f7611f7f6e24fd955d7}{Wt\+::\+W\+Text\+Area}}, \mbox{\hyperlink{classWt_1_1WAbstractToggleButton_a33dea3e8ac3a32e6a278573a8abaa80b}{Wt\+::\+W\+Abstract\+Toggle\+Button}}, and \mbox{\hyperlink{classWt_1_1WColorPicker_acd6e5bfde7caf8da3dc1ee55587ba17d}{Wt\+::\+W\+Color\+Picker}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Form\+Widget.\+h\end{DoxyCompactItemize}

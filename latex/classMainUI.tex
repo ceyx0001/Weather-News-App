@@ -1,0 +1,129 @@
+\hypertarget{classMainUI}{}\doxysection{Main\+UI Class Reference}
+\label{classMainUI}\index{MainUI@{MainUI}}
+
+
+Main User Interface.  
+
+
+
+
+{\ttfamily \#include $<$Main\+U\+I.\+h$>$}
+
+
+
+Inheritance diagram for Main\+UI\+:
+% FIG 0
+
+
+Collaboration diagram for Main\+UI\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMainUI_a0fef153784e56476c2336391511c56cd}{Main\+UI}} (string username)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMainUI_a83a3f365a153da764fc38260eeafc652}{$\sim$\+Main\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMainUI_a2f2982b7ad168c73a9affd92a209452c}{handle\+Path\+Change}} ()
+\begin{DoxyCompactList}\small\item\em Handle intenral path changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainUI_abc6bb93bc0c8a13f331d6e9ec965248b}{notify}} ()
+\begin{DoxyCompactList}\small\item\em Notify method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMainUI_a9dbbe32448ce966f4d2c98f5e68ead59}\label{classMainUI_a9dbbe32448ce966f4d2c98f5e68ead59}} 
+\mbox{\hyperlink{classWeatherUI}{Weather\+UI}} $\ast$ {\bfseries weather}
+\item 
+\mbox{\Hypertarget{classMainUI_aeadb57a4b9ce002f6927ab7eec7035df}\label{classMainUI_aeadb57a4b9ce002f6927ab7eec7035df}} 
+Wt\+::\+W\+Application $\ast$ {\bfseries app}
+\item 
+\mbox{\Hypertarget{classMainUI_ae369f11acef7feca7f3dcc6e8a666105}\label{classMainUI_ae369f11acef7feca7f3dcc6e8a666105}} 
+std\+::string {\bfseries username}
+\item 
+\mbox{\Hypertarget{classMainUI_a9710f6c7a3d3b323ccccd74883c2b444}\label{classMainUI_a9710f6c7a3d3b323ccccd74883c2b444}} 
+bool {\bfseries side\+Closed}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main User Interface. 
+
+Contains the main user interface after loggin in, displays news, weather, and buttons for accessing other components of the program. \begin{DoxyAuthor}{Author}
+Jun Shao 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classMainUI_a0fef153784e56476c2336391511c56cd}\label{classMainUI_a0fef153784e56476c2336391511c56cd}} 
+\index{MainUI@{MainUI}!MainUI@{MainUI}}
+\index{MainUI@{MainUI}!MainUI@{MainUI}}
+\doxysubsubsection{\texorpdfstring{MainUI()}{MainUI()}}
+{\footnotesize\ttfamily Main\+U\+I\+::\+Main\+UI (\begin{DoxyParamCaption}\item[{string}]{username }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor for \mbox{\hyperlink{classMainUI}{Main\+UI}}, initializes variables and creates user interface, adds widgets for displaying weather and news, as well as accessing other modules and components of the software. 
+\begin{DoxyParams}{Parameters}
+{\em username} & is a string represnting the logged in user\textquotesingle{}s username \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMainUI_a83a3f365a153da764fc38260eeafc652}\label{classMainUI_a83a3f365a153da764fc38260eeafc652}} 
+\index{MainUI@{MainUI}!````~MainUI@{$\sim$MainUI}}
+\index{````~MainUI@{$\sim$MainUI}!MainUI@{MainUI}}
+\doxysubsubsection{\texorpdfstring{$\sim$MainUI()}{~MainUI()}}
+{\footnotesize\ttfamily Main\+U\+I\+::$\sim$\+Main\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Default Destructor for \mbox{\hyperlink{classMainUI}{Main\+UI}}, is empty. \begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classMainUI_a2f2982b7ad168c73a9affd92a209452c}\label{classMainUI_a2f2982b7ad168c73a9affd92a209452c}} 
+\index{MainUI@{MainUI}!handlePathChange@{handlePathChange}}
+\index{handlePathChange@{handlePathChange}!MainUI@{MainUI}}
+\doxysubsubsection{\texorpdfstring{handlePathChange()}{handlePathChange()}}
+{\footnotesize\ttfamily void Main\+U\+I\+::handle\+Path\+Change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Handle intenral path changes. 
+
+Handler which is called whenever the internal path is changed in the program for certain modules/components, adds their respective interfaces when the path is changed. \begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMainUI_abc6bb93bc0c8a13f331d6e9ec965248b}\label{classMainUI_abc6bb93bc0c8a13f331d6e9ec965248b}} 
+\index{MainUI@{MainUI}!notify@{notify}}
+\index{notify@{notify}!MainUI@{MainUI}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily void Main\+U\+I\+::notify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Notify method. 
+
+Notifies weather widget when location is updated. \begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classObserver}{Observer}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+gui/main/Main\+U\+I.\+h\item 
+gui/main/Main\+U\+I.\+cpp\end{DoxyCompactItemize}

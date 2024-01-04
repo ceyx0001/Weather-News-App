@@ -1,0 +1,54 @@
+\hypertarget{classEvent__alarm__manager}{}\doxysection{Event\+\_\+alarm\+\_\+manager Class Reference}
+\label{classEvent__alarm__manager}\index{Event\_alarm\_manager@{Event\_alarm\_manager}}
+
+
+Collaboration diagram for Event\+\_\+alarm\+\_\+manager\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEvent__alarm__manager_af0ab1a829e81d12d5a6a8b16ac4c73cd}\label{classEvent__alarm__manager_af0ab1a829e81d12d5a6a8b16ac4c73cd}} 
+void {\bfseries create\+\_\+event\+\_\+alarm} (const char $\ast$alarm\+\_\+time\+\_\+s, std\+::string new\+\_\+message)
+\item 
+\mbox{\Hypertarget{classEvent__alarm__manager_aeac2890e660ab1f3cc6b49dfaefc10d9}\label{classEvent__alarm__manager_aeac2890e660ab1f3cc6b49dfaefc10d9}} 
+void {\bfseries delete\+\_\+event\+\_\+alarm} (const char $\ast$alarm\+\_\+time\+\_\+s, std\+::string new\+\_\+message)
+\item 
+\mbox{\Hypertarget{classEvent__alarm__manager_a732d5cec99b05005c8b08ebf1d8a8be2}\label{classEvent__alarm__manager_a732d5cec99b05005c8b08ebf1d8a8be2}} 
+void {\bfseries check\+\_\+if\+\_\+event\+\_\+alarm\+\_\+time} ()
+\item 
+\mbox{\Hypertarget{classEvent__alarm__manager_adeef5a2096cae191a491a0bde66d886d}\label{classEvent__alarm__manager_adeef5a2096cae191a491a0bde66d886d}} 
+void {\bfseries refresh\+\_\+pq\+\_\+from\+\_\+db} ()
+\item 
+\mbox{\Hypertarget{classEvent__alarm__manager_ac65b30f7e1446b48ae051ea82f13e892}\label{classEvent__alarm__manager_ac65b30f7e1446b48ae051ea82f13e892}} 
+void {\bfseries start} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classEvent__alarm__manager_aa3eb6c4cb19948d3d180a5f87997ad82}\label{classEvent__alarm__manager_aa3eb6c4cb19948d3d180a5f87997ad82}} 
+std\+::string {\bfseries name\+\_\+of\+\_\+table}
+\item 
+\mbox{\Hypertarget{classEvent__alarm__manager_a7c38413fcf797c89d8480828fd411ae4}\label{classEvent__alarm__manager_a7c38413fcf797c89d8480828fd411ae4}} 
+char $\ast$ {\bfseries error}
+\item 
+\mbox{\Hypertarget{classEvent__alarm__manager_a98c2fe5269b3563ae4b316f819e1a116}\label{classEvent__alarm__manager_a98c2fe5269b3563ae4b316f819e1a116}} 
+sqlite3 $\ast$ {\bfseries sql\+\_\+db}
+\item 
+\mbox{\Hypertarget{classEvent__alarm__manager_a42eeb59963ab3b8bf03e7d8ac0056eee}\label{classEvent__alarm__manager_a42eeb59963ab3b8bf03e7d8ac0056eee}} 
+std\+::string {\bfseries db\+\_\+name}
+\item 
+\mbox{\Hypertarget{classEvent__alarm__manager_a336345bd47e013f23cfc6c82f8d20c86}\label{classEvent__alarm__manager_a336345bd47e013f23cfc6c82f8d20c86}} 
+std\+::string {\bfseries db\+\_\+extension}
+\item 
+\mbox{\Hypertarget{classEvent__alarm__manager_a708185e3b285949c02e76e8e90c8aec6}\label{classEvent__alarm__manager_a708185e3b285949c02e76e8e90c8aec6}} 
+std\+::string {\bfseries sql\+\_\+create\+\_\+command}
+\item 
+\mbox{\Hypertarget{classEvent__alarm__manager_a5df474f9edfdf07320942a8d2e4d86a3}\label{classEvent__alarm__manager_a5df474f9edfdf07320942a8d2e4d86a3}} 
+std\+::priority\+\_\+queue$<$ \mbox{\hyperlink{structEvent__alarm}{Event\+\_\+alarm}}, std\+::vector$<$ \mbox{\hyperlink{structEvent__alarm}{Event\+\_\+alarm}} $>$, \mbox{\hyperlink{structCompare__alarm__time__ascending}{Compare\+\_\+alarm\+\_\+time\+\_\+ascending}} $>$ {\bfseries pq}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+time/event\+\_\+alarm\+\_\+manager.\+h\item 
+time/event\+\_\+alarm\+\_\+manager.\+cpp\end{DoxyCompactItemize}

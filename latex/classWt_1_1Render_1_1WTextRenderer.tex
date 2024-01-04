@@ -1,0 +1,381 @@
+\hypertarget{classWt_1_1Render_1_1WTextRenderer}{}\doxysection{Wt\+::Render\+::W\+Text\+Renderer Class Reference}
+\label{classWt_1_1Render_1_1WTextRenderer}\index{Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}}
+
+
+An X\+H\+T\+ML renderering engine.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Render/\+W\+Text\+Renderer.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Render\+::W\+Text\+Renderer\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Render\+::W\+Text\+Renderer\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_1_1Node}{Node}}
+\begin{DoxyCompactList}\small\item\em A rendering box of a layed out D\+OM node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_acececb16b172edd843db40aec1a896a9}\label{classWt_1_1Render_1_1WTextRenderer_acececb16b172edd843db40aec1a896a9}} 
+virtual \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_acececb16b172edd843db40aec1a896a9}{$\sim$\+W\+Text\+Renderer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_ada84c9867c07a60c54e3f51e4b6426f5}{render}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text, double y=0)
+\begin{DoxyCompactList}\small\item\em Renders an X\+H\+T\+ML fragment. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a8d915e0103401786b41543dfcedec662}{set\+Style\+Sheet\+Text}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&contents)
+\begin{DoxyCompactList}\small\item\em Sets the contents of a cascading style sheet (C\+SS). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a1c5942debfac76ffd6c59b6c8a4b8cd4}{use\+Style\+Sheet}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&filename)
+\begin{DoxyCompactList}\small\item\em Appends an external cascading style sheet (C\+SS). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_adb8c6448b971c4e9bec4b269143390e6}{clear\+Style\+Sheet}} ()
+\begin{DoxyCompactList}\small\item\em Clears the used stylesheet. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_ad6d474add8dce00888bad012b3617966}{style\+Sheet\+Text}} () const
+\begin{DoxyCompactList}\small\item\em Returns the C\+SS in use. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a433efdc142b6b193f38fd849e49a6e48}{get\+Style\+Sheet\+Parse\+Errors}} () const
+\begin{DoxyCompactList}\small\item\em Returns all parse error information of the last call to set\+Style\+Sheet\+Text. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a089769491ecd582e354406d38aeb4009}{text\+Width}} (int page) const
+\begin{DoxyCompactList}\small\item\em Returns the page text width. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_afc15c6f8448d14c52815b06590f791f4}{text\+Height}} (int page) const
+\begin{DoxyCompactList}\small\item\em Returns the page text height. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a2ca18a73ebbe013b6913a277408eb2a6}{set\+Font\+Scale}} (double scale)
+\begin{DoxyCompactList}\small\item\em Sets the scaling factor used for font rendering. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_ad8520e2224d3a7963dbb003a94897f4d}{font\+Scale}} () const
+\begin{DoxyCompactList}\small\item\em Returns the font scaling factor. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a49c53f92c778a63da84d8fd8dc0d876d}{page\+Width}} (int page) const =0
+\begin{DoxyCompactList}\small\item\em Returns the page width. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a86a2e5a8042e5ea8d50593597e332791}{page\+Height}} (int page) const =0
+\begin{DoxyCompactList}\small\item\em Returns the page height. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a8a81ceb767658e5b378c885b6a1fbf30}{margin}} (\mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} side) const =0
+\begin{DoxyCompactList}\small\item\em Returns the margin. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}} $\ast$ \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a9b9230eb8210d5bb2408321ebc88c07d}{start\+Page}} (int page)=0
+\begin{DoxyCompactList}\small\item\em Returns a paint device to render a given page. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_a1e83e81ed5a0d822fb6863cfec59cc1d}\label{classWt_1_1Render_1_1WTextRenderer_a1e83e81ed5a0d822fb6863cfec59cc1d}} 
+virtual void \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a1e83e81ed5a0d822fb6863cfec59cc1d}{end\+Page}} (\mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}} $\ast$device)=0
+\begin{DoxyCompactList}\small\item\em Stops painting on the given page. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_a9137acf83205dbeac1a6e4a136aab3cd}\label{classWt_1_1Render_1_1WTextRenderer_a9137acf83205dbeac1a6e4a136aab3cd}} 
+virtual \mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} $\ast$ \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a9137acf83205dbeac1a6e4a136aab3cd}{get\+Painter}} (\mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}} $\ast$device)=0
+\begin{DoxyCompactList}\small\item\em Returns a painter for the current page. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_ad2e5ca7968d1f7763a407e5b47f6a2c0}{paint\+Node}} (\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} \&painter, const \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_1_1Node}{Node}} \&node)
+\begin{DoxyCompactList}\small\item\em Paints an X\+H\+T\+ML node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_ae7c7ee983b5261db20ee79389f9a4de0}\label{classWt_1_1Render_1_1WTextRenderer_ae7c7ee983b5261db20ee79389f9a4de0}} 
+\mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_ae7c7ee983b5261db20ee79389f9a4de0}{W\+Text\+Renderer}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_aa8ae43766f9a4c6bf5cb33bba1b50dd9}\label{classWt_1_1Render_1_1WTextRenderer_aa8ae43766f9a4c6bf5cb33bba1b50dd9}} 
+\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} $\ast$ {\bfseries painter} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_a488ffe143ab469ec7426834032fada90}\label{classWt_1_1Render_1_1WTextRenderer_a488ffe143ab469ec7426834032fada90}} 
+\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} $\ast$ {\bfseries painter\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_a0333e00d99a7d83ffa8f1b175ee649e4}\label{classWt_1_1Render_1_1WTextRenderer_a0333e00d99a7d83ffa8f1b175ee649e4}} 
+\mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}} $\ast$ {\bfseries device\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_a7c1ee5d75346c304b1a2f788f9f0d8be}\label{classWt_1_1Render_1_1WTextRenderer_a7c1ee5d75346c304b1a2f788f9f0d8be}} 
+double {\bfseries font\+Scale\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_a1add757037832290bef2ced4c6f2f50c}\label{classWt_1_1Render_1_1WTextRenderer_a1add757037832290bef2ced4c6f2f50c}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries style\+Sheet\+Text\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_aeaf50c853124e116006f034786ba194b}\label{classWt_1_1Render_1_1WTextRenderer_aeaf50c853124e116006f034786ba194b}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Render_1_1StyleSheet}{Style\+Sheet}} $>$ {\bfseries style\+Sheet\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_a5cc6a72319cc4ee9a80ebc4fc91815b4}\label{classWt_1_1Render_1_1WTextRenderer_a5cc6a72319cc4ee9a80ebc4fc91815b4}} 
+std\+::string {\bfseries error\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_ac2af81cbc457d21a00f09f5e7e5c4ddf}\label{classWt_1_1Render_1_1WTextRenderer_ac2af81cbc457d21a00f09f5e7e5c4ddf}} 
+class {\bfseries Block}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An X\+H\+T\+ML renderering engine. 
+
+This class implements a rendering engine for a (subset of) X\+H\+T\+M\+L/\+C\+SS. Its intended use is to be able to accurately render the output of the \mbox{\hyperlink{classWt_1_1WTextEdit}{W\+Text\+Edit}} widget (although it handles a more general subset of X\+H\+T\+M\+L/\+C\+SS than is required to do just that). Its focus is on high-\/quality rendering of text-\/like contents.
+
+The following are the main features\+:
+\begin{DoxyItemize}
+\item decent rendering of inline (text) contents, floats, tables, images, ordered lists, unordered lists, in any arbitrary combination, with mixtures of font sizes, etc...
+\item C\+SS stylesheet support using in-\/document $<$style$>$, inline style attributes or using \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a8d915e0103401786b41543dfcedec662}{set\+Style\+Sheet\+Text()}}.
+\item support for relative and absolute positioned layout contexts
+\item support for (true type) fonts, font styles, font sizes and text decorations
+\item support for text alignment options, padding, margins, borders, background color (only on block elements) and text colors
+\item supports automatic and C\+SS page breaks (page-\/break-\/after or page-\/break-\/before)
+\item supports font scaling (rendering text at another D\+PI than the rest)
+\item can be used in conjunction with other drawing instructions to the same paint device.
+\end{DoxyItemize}
+
+Some of the main limitations are\+:
+\begin{DoxyItemize}
+\item only \char`\"{}display\+: inline\char`\"{} or \char`\"{}display\+: block\char`\"{} elements are supported. \char`\"{}display\+: none\char`\"{} and \char`\"{}display\+: inline-\/block\char`\"{} are not (yet) recognized.
+\item only colors defined in terms of R\+GB values are supported\+: C\+SS named colors (e.\+g. \textquotesingle{}blue\textquotesingle{}) are not allowed.
+\item Bidi (Right-\/to-\/\+Left) text rendering is not supported
+\end{DoxyItemize}
+
+The renderer is not C\+SS compliant (simply because it is still lacking alot of features), but the subset of C\+SS that is supported is a pragmatic choice. If things are lacking, let us known in the bug tracker.
+
+This class is an abstract class. A concrete class implements the pure virtual methods to create an appropriate \mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}} for each page and to provide page dimension information.
+
+All coordinates and dimensions in the A\+PI below are pixel coordinates. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_adb8c6448b971c4e9bec4b269143390e6}\label{classWt_1_1Render_1_1WTextRenderer_adb8c6448b971c4e9bec4b269143390e6}} 
+\index{Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}!clearStyleSheet@{clearStyleSheet}}
+\index{clearStyleSheet@{clearStyleSheet}!Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}}
+\doxysubsubsection{\texorpdfstring{clearStyleSheet()}{clearStyleSheet()}}
+{\footnotesize\ttfamily void Wt\+::\+Render\+::\+W\+Text\+Renderer\+::clear\+Style\+Sheet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the used stylesheet. 
+
+This is an overloaded member, provided for convenience. Equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a8d915e0103401786b41543dfcedec662}{setStyleSheetText}}(\textcolor{stringliteral}{""})}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a8d915e0103401786b41543dfcedec662}{set\+Style\+Sheet\+Text()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_ad8520e2224d3a7963dbb003a94897f4d}\label{classWt_1_1Render_1_1WTextRenderer_ad8520e2224d3a7963dbb003a94897f4d}} 
+\index{Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}!fontScale@{fontScale}}
+\index{fontScale@{fontScale}!Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}}
+\doxysubsubsection{\texorpdfstring{fontScale()}{fontScale()}}
+{\footnotesize\ttfamily double Wt\+::\+Render\+::\+W\+Text\+Renderer\+::font\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the font scaling factor. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a2ca18a73ebbe013b6913a277408eb2a6}{set\+Font\+Scale()}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_a433efdc142b6b193f38fd849e49a6e48}\label{classWt_1_1Render_1_1WTextRenderer_a433efdc142b6b193f38fd849e49a6e48}} 
+\index{Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}!getStyleSheetParseErrors@{getStyleSheetParseErrors}}
+\index{getStyleSheetParseErrors@{getStyleSheetParseErrors}!Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}}
+\doxysubsubsection{\texorpdfstring{getStyleSheetParseErrors()}{getStyleSheetParseErrors()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Render\+::\+W\+Text\+Renderer\+::get\+Style\+Sheet\+Parse\+Errors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns all parse error information of the last call to set\+Style\+Sheet\+Text. 
+
+set\+Style\+Sheet\+Text stores all parse errors inside. Use get\+Style\+Sheet\+Parse\+Errors to access information about them. Information is newline(\textbackslash{} n) separated.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a8d915e0103401786b41543dfcedec662}{set\+Style\+Sheet\+Text(const W\+String\& contents)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_a8a81ceb767658e5b378c885b6a1fbf30}\label{classWt_1_1Render_1_1WTextRenderer_a8a81ceb767658e5b378c885b6a1fbf30}} 
+\index{Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}!margin@{margin}}
+\index{margin@{margin}!Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}}
+\doxysubsubsection{\texorpdfstring{margin()}{margin()}}
+{\footnotesize\ttfamily virtual double Wt\+::\+Render\+::\+W\+Text\+Renderer\+::margin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}}}]{side }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the margin. 
+
+Returns the margin at given side (in pixel units). 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_a4e702ff3d62d3d6b1d5d28540cede72d}{Wt\+::\+Render\+::\+W\+Pdf\+Renderer}}.
+
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_a86a2e5a8042e5ea8d50593597e332791}\label{classWt_1_1Render_1_1WTextRenderer_a86a2e5a8042e5ea8d50593597e332791}} 
+\index{Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}!pageHeight@{pageHeight}}
+\index{pageHeight@{pageHeight}!Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}}
+\doxysubsubsection{\texorpdfstring{pageHeight()}{pageHeight()}}
+{\footnotesize\ttfamily virtual double Wt\+::\+Render\+::\+W\+Text\+Renderer\+::page\+Height (\begin{DoxyParamCaption}\item[{int}]{page }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the page height. 
+
+Returns the total page height (in pixel units), including vertical margins. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_ac206f10a47692911b35fdca090e67220}{Wt\+::\+Render\+::\+W\+Pdf\+Renderer}}.
+
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_a49c53f92c778a63da84d8fd8dc0d876d}\label{classWt_1_1Render_1_1WTextRenderer_a49c53f92c778a63da84d8fd8dc0d876d}} 
+\index{Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}!pageWidth@{pageWidth}}
+\index{pageWidth@{pageWidth}!Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}}
+\doxysubsubsection{\texorpdfstring{pageWidth()}{pageWidth()}}
+{\footnotesize\ttfamily virtual double Wt\+::\+Render\+::\+W\+Text\+Renderer\+::page\+Width (\begin{DoxyParamCaption}\item[{int}]{page }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the page width. 
+
+Returns the total page width (in pixel units), including horizontal margins. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_a6e7e64ed692a8cee627308fb427623dd}{Wt\+::\+Render\+::\+W\+Pdf\+Renderer}}.
+
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_ad2e5ca7968d1f7763a407e5b47f6a2c0}\label{classWt_1_1Render_1_1WTextRenderer_ad2e5ca7968d1f7763a407e5b47f6a2c0}} 
+\index{Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}!paintNode@{paintNode}}
+\index{paintNode@{paintNode}!Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}}
+\doxysubsubsection{\texorpdfstring{paintNode()}{paintNode()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Render\+::\+W\+Text\+Renderer\+::paint\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} \&}]{painter,  }\item[{const \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_1_1Node}{Node}} \&}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Paints an X\+H\+T\+ML node. 
+
+The default implementation paints the node conforming to the X\+H\+T\+ML specification.
+
+You may want to specialize this method if you wish to customize (or ignore) the rendering for certain nodes or node types, or if you want to capture the actual layout positions for other processing.
+
+The node information contains the layout position at which the node is being painted. \mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_ada84c9867c07a60c54e3f51e4b6426f5}\label{classWt_1_1Render_1_1WTextRenderer_ada84c9867c07a60c54e3f51e4b6426f5}} 
+\index{Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}!render@{render}}
+\index{render@{render}!Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily double Wt\+::\+Render\+::\+W\+Text\+Renderer\+::render (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text,  }\item[{double}]{y = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Renders an X\+H\+T\+ML fragment. 
+
+The text is rendered, starting at position {\ttfamily y}, and flowing down the page. New pages are created using {\ttfamily \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a9b9230eb8210d5bb2408321ebc88c07d}{start\+Page()}}} to render more contents on a next page. The return value is the position at which rendering stopped on the last page on which was rendered.
+
+This {\ttfamily y} position and returned position are {\itshape text coordinates}, which differ from page coordinates in that they exclude margins.
+
+The function returns the end position. You may call this function multiple times.
+
+Each invocation to \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_ada84c9867c07a60c54e3f51e4b6426f5}{render()}} has the effect of resetting the logical page numbering used by \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a49c53f92c778a63da84d8fd8dc0d876d}{page\+Width()}}, \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a86a2e5a8042e5ea8d50593597e332791}{page\+Height()}} and \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a9b9230eb8210d5bb2408321ebc88c07d}{start\+Page()}} so that the current page is page 0. \mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_a2ca18a73ebbe013b6913a277408eb2a6}\label{classWt_1_1Render_1_1WTextRenderer_a2ca18a73ebbe013b6913a277408eb2a6}} 
+\index{Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}!setFontScale@{setFontScale}}
+\index{setFontScale@{setFontScale}!Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}}
+\doxysubsubsection{\texorpdfstring{setFontScale()}{setFontScale()}}
+{\footnotesize\ttfamily void Wt\+::\+Render\+::\+W\+Text\+Renderer\+::set\+Font\+Scale (\begin{DoxyParamCaption}\item[{double}]{scale }\end{DoxyParamCaption})}
+
+
+
+Sets the scaling factor used for font rendering. 
+
+A scaling can be set for text. The scaling factor has as effect that text font sizes are modified by the scale. Also C\+SS length units that are defined in terms of font units (\char`\"{}em\char`\"{} and \char`\"{}ex\char`\"{}) are scaled accordingly.
+
+The default value is 1. \mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_a8d915e0103401786b41543dfcedec662}\label{classWt_1_1Render_1_1WTextRenderer_a8d915e0103401786b41543dfcedec662}} 
+\index{Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}!setStyleSheetText@{setStyleSheetText}}
+\index{setStyleSheetText@{setStyleSheetText}!Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}}
+\doxysubsubsection{\texorpdfstring{setStyleSheetText()}{setStyleSheetText()}}
+{\footnotesize\ttfamily bool Wt\+::\+Render\+::\+W\+Text\+Renderer\+::set\+Style\+Sheet\+Text (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{contents }\end{DoxyParamCaption})}
+
+
+
+Sets the contents of a cascading style sheet (C\+SS). 
+
+This sets the text {\ttfamily contents} to be used as C\+SS. Any previous C\+SS declarations are discarded. Returns true if parsing was successful, false if otherwise. If parsing failed, the stylesheet text that was already in use will not have been changed. Use get\+Style\+Sheet\+Parse\+Errors to access parse error information.
+
+\begin{DoxyWarning}{Warning}
+Only the following C\+SS selector features are supported\+:
+\begin{DoxyItemize}
+\item tag selectors\+: e.\+g. span or $\ast$
+\item class name selectors\+: .class
+\item id selectors\+: \#id
+\item descendant selectors\+: h1 h2 h3 \{\}
+\item multiples\+: h1, h2, h3 \{\} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{h1.a1\#one.a2 h3\#two.c \{\}}
+\end{DoxyCode}
+
+\end{DoxyItemize}
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a433efdc142b6b193f38fd849e49a6e48}{get\+Style\+Sheet\+Parse\+Errors()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_a9b9230eb8210d5bb2408321ebc88c07d}\label{classWt_1_1Render_1_1WTextRenderer_a9b9230eb8210d5bb2408321ebc88c07d}} 
+\index{Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}!startPage@{startPage}}
+\index{startPage@{startPage}!Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}}
+\doxysubsubsection{\texorpdfstring{startPage()}{startPage()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}}$\ast$ Wt\+::\+Render\+::\+W\+Text\+Renderer\+::start\+Page (\begin{DoxyParamCaption}\item[{int}]{page }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns a paint device to render a given page. 
+
+The \mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_ada84c9867c07a60c54e3f51e4b6426f5}{render()}} method calls this function once for each page it wants to render. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Render_1_1WPdfRenderer_aa59c3f4fbae343018c8fe2de7987aa13}{Wt\+::\+Render\+::\+W\+Pdf\+Renderer}}.
+
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_ad6d474add8dce00888bad012b3617966}\label{classWt_1_1Render_1_1WTextRenderer_ad6d474add8dce00888bad012b3617966}} 
+\index{Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}!styleSheetText@{styleSheetText}}
+\index{styleSheetText@{styleSheetText}!Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}}
+\doxysubsubsection{\texorpdfstring{styleSheetText()}{styleSheetText()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WString}{W\+String}} Wt\+::\+Render\+::\+W\+Text\+Renderer\+::style\+Sheet\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the C\+SS in use. 
+
+This returns all the C\+SS declarations in use.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a8d915e0103401786b41543dfcedec662}{set\+Style\+Sheet\+Text()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_afc15c6f8448d14c52815b06590f791f4}\label{classWt_1_1Render_1_1WTextRenderer_afc15c6f8448d14c52815b06590f791f4}} 
+\index{Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}!textHeight@{textHeight}}
+\index{textHeight@{textHeight}!Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}}
+\doxysubsubsection{\texorpdfstring{textHeight()}{textHeight()}}
+{\footnotesize\ttfamily double Wt\+::\+Render\+::\+W\+Text\+Renderer\+::text\+Height (\begin{DoxyParamCaption}\item[{int}]{page }\end{DoxyParamCaption}) const}
+
+
+
+Returns the page text height. 
+
+This returns the height of the page in which text needs to be rendered, excluding vertical margins, in pixels.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a089769491ecd582e354406d38aeb4009}{text\+Width()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_a089769491ecd582e354406d38aeb4009}\label{classWt_1_1Render_1_1WTextRenderer_a089769491ecd582e354406d38aeb4009}} 
+\index{Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}!textWidth@{textWidth}}
+\index{textWidth@{textWidth}!Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}}
+\doxysubsubsection{\texorpdfstring{textWidth()}{textWidth()}}
+{\footnotesize\ttfamily double Wt\+::\+Render\+::\+W\+Text\+Renderer\+::text\+Width (\begin{DoxyParamCaption}\item[{int}]{page }\end{DoxyParamCaption}) const}
+
+
+
+Returns the page text width. 
+
+This returns the width of the page in which text needs to be rendered, excluding horizontal margins, in pixels.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_afc15c6f8448d14c52815b06590f791f4}{text\+Height()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Render_1_1WTextRenderer_a1c5942debfac76ffd6c59b6c8a4b8cd4}\label{classWt_1_1Render_1_1WTextRenderer_a1c5942debfac76ffd6c59b6c8a4b8cd4}} 
+\index{Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}!useStyleSheet@{useStyleSheet}}
+\index{useStyleSheet@{useStyleSheet}!Wt::Render::WTextRenderer@{Wt::Render::WTextRenderer}}
+\doxysubsubsection{\texorpdfstring{useStyleSheet()}{useStyleSheet()}}
+{\footnotesize\ttfamily bool Wt\+::\+Render\+::\+W\+Text\+Renderer\+::use\+Style\+Sheet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Appends an external cascading style sheet (C\+SS). 
+
+This is an overloaded member, provided for convenience. Equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a8d915e0103401786b41543dfcedec662}{setStyleSheetText}}(\mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_ad6d474add8dce00888bad012b3617966}{styleSheetText}}() + <filename\_contents>)}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Render_1_1WTextRenderer_a8d915e0103401786b41543dfcedec662}{set\+Style\+Sheet\+Text()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Render/W\+Text\+Renderer.\+h\end{DoxyCompactItemize}

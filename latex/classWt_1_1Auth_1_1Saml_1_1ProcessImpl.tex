@@ -1,0 +1,47 @@
+\hypertarget{classWt_1_1Auth_1_1Saml_1_1ProcessImpl}{}\doxysection{Wt\+::Auth\+::Saml\+::Process\+Impl Class Reference}
+\label{classWt_1_1Auth_1_1Saml_1_1ProcessImpl}\index{Wt::Auth::Saml::ProcessImpl@{Wt::Auth::Saml::ProcessImpl}}
+
+
+Collaboration diagram for Wt\+::Auth\+::Saml\+::Process\+Impl\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1ProcessImpl_ae9264653743b249405c7854cc08155bc}\label{classWt_1_1Auth_1_1Saml_1_1ProcessImpl_ae9264653743b249405c7854cc08155bc}} 
+{\bfseries Process\+Impl} (\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Process}{Process}} \&process)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1ProcessImpl_a187b7bd80d8335d791c8fdbbdef6507d}\label{classWt_1_1Auth_1_1Saml_1_1ProcessImpl_a187b7bd80d8335d791c8fdbbdef6507d}} 
+bool {\bfseries create\+Authn\+Request} (\mbox{\hyperlink{classWt_1_1Http_1_1Response}{Http\+::\+Response}} \&response)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1ProcessImpl_a1f3e7c49d71a8484a9498dda94e2793a}\label{classWt_1_1Auth_1_1Saml_1_1ProcessImpl_a1f3e7c49d71a8484a9498dda94e2793a}} 
+bool {\bfseries handle\+Response} (const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&request)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1ProcessImpl_a57a7b71bf281ebcfce6eccf1e18875f3}\label{classWt_1_1Auth_1_1Saml_1_1ProcessImpl_a57a7b71bf281ebcfce6eccf1e18875f3}} 
+std\+::unique\+\_\+ptr$<$ opensaml\+::saml2p\+::\+Response $>$ {\bfseries decode\+Response} (const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&request)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1ProcessImpl_ac5a4a3ad40842e9adb4b658833709736}\label{classWt_1_1Auth_1_1Saml_1_1ProcessImpl_ac5a4a3ad40842e9adb4b658833709736}} 
+std\+::unique\+\_\+ptr$<$ opensaml\+::saml2\+::\+S\+A\+M\+L2\+Assertion\+Policy $>$ {\bfseries create\+Policy} (const char16\+\_\+t $\ast$idp\+Entity\+Id, const char16\+\_\+t $\ast$sp\+Entity\+Id, const char16\+\_\+t $\ast$in\+Response\+To)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1ProcessImpl_a8e69ef63afd9bafd270314e4aa69ee9b}\label{classWt_1_1Auth_1_1Saml_1_1ProcessImpl_a8e69ef63afd9bafd270314e4aa69ee9b}} 
+std\+::pair$<$ const opensaml\+::saml2\+::\+Assertion $\ast$, std\+::unique\+\_\+ptr$<$ opensaml\+::saml2\+::\+Assertion $>$ $>$ {\bfseries get\+Assertion} (const char16\+\_\+t $\ast$sp\+Entity\+Id, const opensaml\+::saml2p\+::\+Response \&response)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1ProcessImpl_aca838c4d4be25a8cf97717b112c3543c}\label{classWt_1_1Auth_1_1Saml_1_1ProcessImpl_aca838c4d4be25a8cf97717b112c3543c}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Subject}{Subject}} $>$ {\bfseries get\+Subject} (const char16\+\_\+t $\ast$sp\+Entity\+Id, const opensaml\+::saml2\+::\+Assertion \&assertion)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1ProcessImpl_a043a971e0d058daec0f62497668ef5c5}\label{classWt_1_1Auth_1_1Saml_1_1ProcessImpl_a043a971e0d058daec0f62497668ef5c5}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Attribute}{Attribute}} $>$ {\bfseries get\+Attributes} (const char16\+\_\+t $\ast$sp\+Entity\+Id, const opensaml\+::saml2\+::\+Assertion \&assertion)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1ProcessImpl_a7bceb681e175aea8afb8b3210160a28f}\label{classWt_1_1Auth_1_1Saml_1_1ProcessImpl_a7bceb681e175aea8afb8b3210160a28f}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Process}{Process}} \& {\bfseries process\+\_\+}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/\+Saml/Process\+Impl.\+h\end{DoxyCompactItemize}

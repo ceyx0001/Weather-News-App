@@ -1,0 +1,361 @@
+\hypertarget{classWt_1_1Auth_1_1RegistrationModel}{}\doxysection{Wt\+::Auth\+::Registration\+Model Class Reference}
+\label{classWt_1_1Auth_1_1RegistrationModel}\index{Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}}
+
+
+Model for implementing a registration view.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Auth/\+Registration\+Model.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Auth\+::Registration\+Model\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Auth\+::Registration\+Model\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_ad36a32900fc223f197ba03bbf50a42c8}{Registration\+Model}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a37e8facdc2ea29975c948567b5d8192f}{base\+Auth}}, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a28037bb9c5b0ef277b3832b4f823ae11}{users}}, \mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a99bfd95211b3d072d44cd56f9e7a409c}{login}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a16b90f3eadc459b345cfbf79de499897}{reset}} () override
+\begin{DoxyCompactList}\small\item\em Resets the model. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_a99bfd95211b3d072d44cd56f9e7a409c}\label{classWt_1_1Auth_1_1RegistrationModel_a99bfd95211b3d072d44cd56f9e7a409c}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \& \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a99bfd95211b3d072d44cd56f9e7a409c}{login}} ()
+\begin{DoxyCompactList}\small\item\em Returns the login object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a594097839ba087e8dbab4eaee6900bdd}{set\+Min\+Login\+Name\+Length}} (int chars)
+\begin{DoxyCompactList}\small\item\em Configures a minimum length for a login name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_aa4029a778230e9acea63be8e4c6103a7}{min\+Login\+Name\+Length}} () const
+\begin{DoxyCompactList}\small\item\em Returns the minimum length for a login name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_ad880d6c99a03b1521edc6f49e516ac6a}{set\+Email\+Policy}} (\mbox{\hyperlink{namespaceWt_1_1Auth_a0874d6434c0be04eb91be3574320585b}{Email\+Policy}} policy)
+\begin{DoxyCompactList}\small\item\em Configures whether an email address needs to be entered. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceWt_1_1Auth_a0874d6434c0be04eb91be3574320585b}{Email\+Policy}} \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_adc5b810d0e870b8c7760621658b2a492}{email\+Policy}} () const
+\begin{DoxyCompactList}\small\item\em Returns the email policy. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a9ed6f669cc27fac0fdbacc1f3461b9d0}{register\+Identified}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} \&identity)
+\begin{DoxyCompactList}\small\item\em Register a user authenticated by an identity provider. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_af9901c56a062bbed3aec0367a94e1c5e}{existing\+User}} () const
+\begin{DoxyCompactList}\small\item\em Returns the existing user that needs to be confirmed. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespaceWt_1_1Auth_a3e8db9f7b1ee55b3af10e8205c4dbf7d}{Identity\+Confirmation\+Method}} \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_acfcbcb6150c4528d4a8de3dc63f50a94}{confirm\+Is\+Existing\+User}} () const
+\begin{DoxyCompactList}\small\item\em Returns the method to be used to confirm to be an existing user. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a78e673a4574c13bb7010b6693d58a501}{existing\+User\+Confirmed}} ()
+\begin{DoxyCompactList}\small\item\em Confirms that the user is indeed an existing user. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a8117d42365931d2c5e7419d21037103d}{validate\+Login\+Name}} (const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&user\+Name) const
+\begin{DoxyCompactList}\small\item\em Validates the login name. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_ad14a813d7cb02860a7764e608ac5b62a}{check\+User\+Exists}} (const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&user\+Name)
+\begin{DoxyCompactList}\small\item\em Verifies that a user with that name does not yet exist. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_a4ff3453f43ecc967535b7cadd990dd95}\label{classWt_1_1Auth_1_1RegistrationModel_a4ff3453f43ecc967535b7cadd990dd95}} 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a4ff3453f43ecc967535b7cadd990dd95}{do\+Register}} ()
+\begin{DoxyCompactList}\small\item\em Performs the registration process. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a2a45028b3977304f1b267f77c0156d68}{is\+Visible}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field) const override
+\begin{DoxyCompactList}\small\item\em Returns whether a field is visible. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a36f5f8c93ca87b05c292d808c5d780e8}{is\+Read\+Only}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field) const override
+\begin{DoxyCompactList}\small\item\em Returns whether a field is read only. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a3b4daa7064955447d02911cfc5e501dd}{validate\+Field}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field) override
+\begin{DoxyCompactList}\small\item\em Validates a field. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_aaf93eb12dcf6c254cac6546b92c8bea7}{is\+Confirm\+User\+Button\+Visible}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether an existing user needs to be confirmed. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_abe0fc557f3c0a659eea0354177627a59}{is\+Federated\+Login\+Visible}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether federated login options can be shown. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_ae050fdde83850d1e8ac099736810cc30}\label{classWt_1_1Auth_1_1RegistrationModel_ae050fdde83850d1e8ac099736810cc30}} 
+static void {\bfseries validate\+Passwords\+Match\+JS} (\mbox{\hyperlink{classWt_1_1WLineEdit}{W\+Line\+Edit}} $\ast$password, \mbox{\hyperlink{classWt_1_1WLineEdit}{W\+Line\+Edit}} $\ast$password2, \mbox{\hyperlink{classWt_1_1WText}{W\+Text}} $\ast$info2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_a60f199cbb91bfabfa32af00c183a1104}\label{classWt_1_1Auth_1_1RegistrationModel_a60f199cbb91bfabfa32af00c183a1104}} 
+static const \mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a60f199cbb91bfabfa32af00c183a1104}{Choose\+Password\+Field}}
+\begin{DoxyCompactList}\small\item\em Choose Password field. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_ac86d7f7b7636590564aa0a9864755ff8}\label{classWt_1_1Auth_1_1RegistrationModel_ac86d7f7b7636590564aa0a9864755ff8}} 
+static const \mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_ac86d7f7b7636590564aa0a9864755ff8}{Repeat\+Password\+Field}}
+\begin{DoxyCompactList}\small\item\em Repeat password field. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_a5ef320fe95877e1253ca3378b5917e8e}\label{classWt_1_1Auth_1_1RegistrationModel_a5ef320fe95877e1253ca3378b5917e8e}} 
+static const \mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a5ef320fe95877e1253ca3378b5917e8e}{Email\+Field}}
+\begin{DoxyCompactList}\small\item\em Email field (if login name is not email) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_a1c7cb9d81ab843b565bcce4bb5f1eaf1}\label{classWt_1_1Auth_1_1RegistrationModel_a1c7cb9d81ab843b565bcce4bb5f1eaf1}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \& {\bfseries login\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_a734655322c149c98aba67ae455f5564f}\label{classWt_1_1Auth_1_1RegistrationModel_a734655322c149c98aba67ae455f5564f}} 
+int {\bfseries min\+Login\+Name\+Length\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_afd976b3a8f577cf04b286a7a163bd364}\label{classWt_1_1Auth_1_1RegistrationModel_afd976b3a8f577cf04b286a7a163bd364}} 
+\mbox{\hyperlink{namespaceWt_1_1Auth_a0874d6434c0be04eb91be3574320585b}{Email\+Policy}} {\bfseries email\+Policy\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_a34041ae07894c516031de4b423926e40}\label{classWt_1_1Auth_1_1RegistrationModel_a34041ae07894c516031de4b423926e40}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} {\bfseries idp\+Identity\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_ae09c0075f4d85535ce0b647f840b7b2d}\label{classWt_1_1Auth_1_1RegistrationModel_ae09c0075f4d85535ce0b647f840b7b2d}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} {\bfseries existing\+User\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Model for implementing a registration view. 
+
+This model implements the logic for the registration of a new user. It can deal with traditional username/password registration, or registration of pre-\/identified users using federated login.
+
+The model exposes four fields\+:
+\begin{DoxyItemize}
+\item Login\+Name\+Field\+: the login name (used as an identity for the \mbox{\hyperlink{classWt_1_1Auth_1_1Identity_a1d680fd0dbf7a12684a511d74081eb06}{Identity\+::\+Login\+Name}} provider) -- this can be an email if the \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} is configured to use email addresses as identity
+\item Choose\+Password\+Field\+: the password
+\item Repeat\+Password\+Field\+: the password (repeated)
+\item Email\+Field\+: if an email address is to be asked (and is not used as identity).
+\end{DoxyItemize}
+
+The largest complexity is in the handling of third party identity providers, which is initiated with a call to \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a9ed6f669cc27fac0fdbacc1f3461b9d0}{register\+Identified()}}.
+
+When a user is re-\/identified with the same identity, then the model may require that the (original) user confirms this new identity. The model indicates that this button should be made visible with \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_aaf93eb12dcf6c254cac6546b92c8bea7}{is\+Confirm\+User\+Button\+Visible()}}, the action to take is determined by \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_acfcbcb6150c4528d4a8de3dc63f50a94}{confirm\+Is\+Existing\+User()}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a78e673a4574c13bb7010b6693d58a501}{existing\+User\+Confirmed()}} ends this process by merging the new identity into the existing user.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationWidget}{Registration\+Widget}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_ad36a32900fc223f197ba03bbf50a42c8}\label{classWt_1_1Auth_1_1RegistrationModel_ad36a32900fc223f197ba03bbf50a42c8}} 
+\index{Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}!RegistrationModel@{RegistrationModel}}
+\index{RegistrationModel@{RegistrationModel}!Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}}
+\doxysubsubsection{\texorpdfstring{RegistrationModel()}{RegistrationModel()}}
+{\footnotesize\ttfamily Wt\+::\+Auth\+::\+Registration\+Model\+::\+Registration\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} \&}]{base\+Auth,  }\item[{\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&}]{users,  }\item[{\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \&}]{login }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Creates a new registration model, using a basic authentication service and user database.
+
+The {\ttfamily login} object is used to indicate that an existing user was re-\/identified, and thus the registration process may be aborted. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_ad14a813d7cb02860a7764e608ac5b62a}\label{classWt_1_1Auth_1_1RegistrationModel_ad14a813d7cb02860a7764e608ac5b62a}} 
+\index{Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}!checkUserExists@{checkUserExists}}
+\index{checkUserExists@{checkUserExists}!Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}}
+\doxysubsubsection{\texorpdfstring{checkUserExists()}{checkUserExists()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Registration\+Model\+::check\+User\+Exists (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{user\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Verifies that a user with that name does not yet exist. 
+
+If a user with that name already exists, it may in fact be the same user that is trying to register again (perhaps using a different identification method). If possible, we allow the user to confirm his identity. \mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_acfcbcb6150c4528d4a8de3dc63f50a94}\label{classWt_1_1Auth_1_1RegistrationModel_acfcbcb6150c4528d4a8de3dc63f50a94}} 
+\index{Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}!confirmIsExistingUser@{confirmIsExistingUser}}
+\index{confirmIsExistingUser@{confirmIsExistingUser}!Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}}
+\doxysubsubsection{\texorpdfstring{confirmIsExistingUser()}{confirmIsExistingUser()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespaceWt_1_1Auth_a3e8db9f7b1ee55b3af10e8205c4dbf7d}{Identity\+Confirmation\+Method}} Wt\+::\+Auth\+::\+Registration\+Model\+::confirm\+Is\+Existing\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the method to be used to confirm to be an existing user. 
+
+When the Confirm\+Existing field is visible, this returns an appropriate method to use to let the user confirm that he is indeed the identified existing user.
+
+The outcome of this method (if it is an online method, like a password prompt), if successful, should be indicated using \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a78e673a4574c13bb7010b6693d58a501}{existing\+User\+Confirmed()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a78e673a4574c13bb7010b6693d58a501}{existing\+User\+Confirmed()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_adc5b810d0e870b8c7760621658b2a492}\label{classWt_1_1Auth_1_1RegistrationModel_adc5b810d0e870b8c7760621658b2a492}} 
+\index{Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}!emailPolicy@{emailPolicy}}
+\index{emailPolicy@{emailPolicy}!Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}}
+\doxysubsubsection{\texorpdfstring{emailPolicy()}{emailPolicy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceWt_1_1Auth_a0874d6434c0be04eb91be3574320585b}{Email\+Policy}} Wt\+::\+Auth\+::\+Registration\+Model\+::email\+Policy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the email policy. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_ad880d6c99a03b1521edc6f49e516ac6a}{set\+Email\+Policy()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_af9901c56a062bbed3aec0367a94e1c5e}\label{classWt_1_1Auth_1_1RegistrationModel_af9901c56a062bbed3aec0367a94e1c5e}} 
+\index{Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}!existingUser@{existingUser}}
+\index{existingUser@{existingUser}!Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}}
+\doxysubsubsection{\texorpdfstring{existingUser()}{existingUser()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} Wt\+::\+Auth\+::\+Registration\+Model\+::existing\+User (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the existing user that needs to be confirmed. 
+
+When a user wishes to register with an identity that corresponds to an existing user, he may be allowd to confirm that he is in fact this existing user.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_acfcbcb6150c4528d4a8de3dc63f50a94}{confirm\+Is\+Existing\+User()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_a78e673a4574c13bb7010b6693d58a501}\label{classWt_1_1Auth_1_1RegistrationModel_a78e673a4574c13bb7010b6693d58a501}} 
+\index{Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}!existingUserConfirmed@{existingUserConfirmed}}
+\index{existingUserConfirmed@{existingUserConfirmed}!Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}}
+\doxysubsubsection{\texorpdfstring{existingUserConfirmed()}{existingUserConfirmed()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Registration\+Model\+::existing\+User\+Confirmed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Confirms that the user is indeed an existing user. 
+
+The new identity is added to this existing user (if applicable), and the user is logged in. \mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_aaf93eb12dcf6c254cac6546b92c8bea7}\label{classWt_1_1Auth_1_1RegistrationModel_aaf93eb12dcf6c254cac6546b92c8bea7}} 
+\index{Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}!isConfirmUserButtonVisible@{isConfirmUserButtonVisible}}
+\index{isConfirmUserButtonVisible@{isConfirmUserButtonVisible}!Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}}
+\doxysubsubsection{\texorpdfstring{isConfirmUserButtonVisible()}{isConfirmUserButtonVisible()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Auth\+::\+Registration\+Model\+::is\+Confirm\+User\+Button\+Visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns whether an existing user needs to be confirmed. 
+
+This returns whether the user is being identified as an existing user and he can confirm that he is in fact the same user. \mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_abe0fc557f3c0a659eea0354177627a59}\label{classWt_1_1Auth_1_1RegistrationModel_abe0fc557f3c0a659eea0354177627a59}} 
+\index{Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}!isFederatedLoginVisible@{isFederatedLoginVisible}}
+\index{isFederatedLoginVisible@{isFederatedLoginVisible}!Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}}
+\doxysubsubsection{\texorpdfstring{isFederatedLoginVisible()}{isFederatedLoginVisible()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Auth\+::\+Registration\+Model\+::is\+Federated\+Login\+Visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns whether federated login options can be shown. 
+
+This returns whether fields for federated login (such as O\+Auth) should be shown. These are typically buttons corresponding to identity providers.
+
+The result of a federated authentication procedure should be indicated to \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a9ed6f669cc27fac0fdbacc1f3461b9d0}{register\+Identified()}}. \mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_a36f5f8c93ca87b05c292d808c5d780e8}\label{classWt_1_1Auth_1_1RegistrationModel_a36f5f8c93ca87b05c292d808c5d780e8}} 
+\index{Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}!isReadOnly@{isReadOnly}}
+\index{isReadOnly@{isReadOnly}!Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}}
+\doxysubsubsection{\texorpdfstring{isReadOnly()}{isReadOnly()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Auth\+::\+Registration\+Model\+::is\+Read\+Only (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns whether a field is read only. 
+
+The default implementation returns the value set by \mbox{\hyperlink{classWt_1_1WFormModel_adfa51b8bcebd7a75db93b8e1293114e7}{set\+Read\+Only()}} 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WFormModel_a618f005896c66f9d276d4f1eac068aba}{Wt\+::\+W\+Form\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_a2a45028b3977304f1b267f77c0156d68}\label{classWt_1_1Auth_1_1RegistrationModel_a2a45028b3977304f1b267f77c0156d68}} 
+\index{Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}!isVisible@{isVisible}}
+\index{isVisible@{isVisible}!Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}}
+\doxysubsubsection{\texorpdfstring{isVisible()}{isVisible()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Auth\+::\+Registration\+Model\+::is\+Visible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns whether a field is visible. 
+
+In some cases not all fields of the model need to be shown. This may depend on values input for certain fields, and thus change dynamically. You may specialize this method to indicate that a certain field should be invisible.
+
+The default implementation returns the value set by \mbox{\hyperlink{classWt_1_1WFormModel_a465d3ee3dd6c074c52dadc2167cd4437}{set\+Visible()}}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WFormModel_a57c318f268ec74825b49068644a77c8c}{Wt\+::\+W\+Form\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_aa4029a778230e9acea63be8e4c6103a7}\label{classWt_1_1Auth_1_1RegistrationModel_aa4029a778230e9acea63be8e4c6103a7}} 
+\index{Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}!minLoginNameLength@{minLoginNameLength}}
+\index{minLoginNameLength@{minLoginNameLength}!Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}}
+\doxysubsubsection{\texorpdfstring{minLoginNameLength()}{minLoginNameLength()}}
+{\footnotesize\ttfamily int Wt\+::\+Auth\+::\+Registration\+Model\+::min\+Login\+Name\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the minimum length for a login name. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a594097839ba087e8dbab4eaee6900bdd}{set\+Min\+Login\+Name\+Length()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_a9ed6f669cc27fac0fdbacc1f3461b9d0}\label{classWt_1_1Auth_1_1RegistrationModel_a9ed6f669cc27fac0fdbacc1f3461b9d0}} 
+\index{Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}!registerIdentified@{registerIdentified}}
+\index{registerIdentified@{registerIdentified}!Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}}
+\doxysubsubsection{\texorpdfstring{registerIdentified()}{registerIdentified()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Auth\+::\+Registration\+Model\+::register\+Identified (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} \&}]{identity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Register a user authenticated by an identity provider. 
+
+Using a 3rd party authentication service such as O\+Auth, a user may be identified which is not yet registered with the web application.
+
+Then, you may still need to allow the user to complete registration, but because the user already is identified and authenticated, this simplifies the registration form, since fields related to authentication can be dropped.
+
+Returns {\ttfamily true} if the given identity was already registered, and has been logged in. \mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_a16b90f3eadc459b345cfbf79de499897}\label{classWt_1_1Auth_1_1RegistrationModel_a16b90f3eadc459b345cfbf79de499897}} 
+\index{Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}!reset@{reset}}
+\index{reset@{reset}!Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Registration\+Model\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Resets the model. 
+
+This resets the model to initial values, clearing any entered information (login name, password, pre-\/identified identity). 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WFormModel_aa20f1efb3766f39ccee0e5179d921362}{Wt\+::\+W\+Form\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_ad880d6c99a03b1521edc6f49e516ac6a}\label{classWt_1_1Auth_1_1RegistrationModel_ad880d6c99a03b1521edc6f49e516ac6a}} 
+\index{Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}!setEmailPolicy@{setEmailPolicy}}
+\index{setEmailPolicy@{setEmailPolicy}!Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}}
+\doxysubsubsection{\texorpdfstring{setEmailPolicy()}{setEmailPolicy()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Registration\+Model\+::set\+Email\+Policy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWt_1_1Auth_a0874d6434c0be04eb91be3574320585b}{Email\+Policy}}}]{policy }\end{DoxyParamCaption})}
+
+
+
+Configures whether an email address needs to be entered. 
+
+You may specify whether you want the user to enter an email address.
+
+This has no effect when the Identity\+Policy is \mbox{\hyperlink{namespaceWt_1_1Auth_a8ce12bbc04d68d5687f08abf2a209436a1e674f0dd1434f2bb3fe5d645b0f9cc3}{Identity\+Policy\+::\+Email\+Address}}.
+
+The default policy is\+:
+\begin{DoxyItemize}
+\item Email\+Optional when email address verification is enabled
+\item Email\+Disabled otherwise 
+\end{DoxyItemize}\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_a594097839ba087e8dbab4eaee6900bdd}\label{classWt_1_1Auth_1_1RegistrationModel_a594097839ba087e8dbab4eaee6900bdd}} 
+\index{Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}!setMinLoginNameLength@{setMinLoginNameLength}}
+\index{setMinLoginNameLength@{setMinLoginNameLength}!Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}}
+\doxysubsubsection{\texorpdfstring{setMinLoginNameLength()}{setMinLoginNameLength()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Registration\+Model\+::set\+Min\+Login\+Name\+Length (\begin{DoxyParamCaption}\item[{int}]{chars }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Configures a minimum length for a login name. 
+
+The default value is 4. \mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_a3b4daa7064955447d02911cfc5e501dd}\label{classWt_1_1Auth_1_1RegistrationModel_a3b4daa7064955447d02911cfc5e501dd}} 
+\index{Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}!validateField@{validateField}}
+\index{validateField@{validateField}!Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}}
+\doxysubsubsection{\texorpdfstring{validateField()}{validateField()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Auth\+::\+Registration\+Model\+::validate\+Field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Validates a field. 
+
+The default implementation uses the validator configured for the field to validate the field contents, or if no validator has been configured assumes that the field is valid.
+
+You will typically customize this method for more complex validation cases.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormModel_a12a89c233490127f4a12ebf275e25e3a}{validate()}}, validation\+Result() 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WFormModel_adf8060e571433e5f225ba2b60f3deefa}{Wt\+::\+W\+Form\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1RegistrationModel_a8117d42365931d2c5e7419d21037103d}\label{classWt_1_1Auth_1_1RegistrationModel_a8117d42365931d2c5e7419d21037103d}} 
+\index{Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}!validateLoginName@{validateLoginName}}
+\index{validateLoginName@{validateLoginName}!Wt::Auth::RegistrationModel@{Wt::Auth::RegistrationModel}}
+\doxysubsubsection{\texorpdfstring{validateLoginName()}{validateLoginName()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WString}{W\+String}} Wt\+::\+Auth\+::\+Registration\+Model\+::validate\+Login\+Name (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{user\+Name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Validates the login name. 
+
+This verifies that the login name is adequate (see also \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationModel_a594097839ba087e8dbab4eaee6900bdd}{set\+Min\+Login\+Name\+Length()}}). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/Registration\+Model.\+h\end{DoxyCompactItemize}

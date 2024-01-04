@@ -1,0 +1,97 @@
+\hypertarget{classWt_1_1Http_1_1UploadedFile}{}\doxysection{Wt\+::Http\+::Uploaded\+File Class Reference}
+\label{classWt_1_1Http_1_1UploadedFile}\index{Wt::Http::UploadedFile@{Wt::Http::UploadedFile}}
+
+
+Details about a file uploaded with a request to a resource.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Http/\+Request.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1Http_1_1UploadedFile_1_1Impl}{Impl}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1UploadedFile_a807a475add306f8c17234f60518fa6cb}\label{classWt_1_1Http_1_1UploadedFile_a807a475add306f8c17234f60518fa6cb}} 
+{\bfseries Uploaded\+File} (const std\+::string \&\mbox{\hyperlink{classWt_1_1Http_1_1UploadedFile_afa18576f12e348b4d1dae33ef43416a5}{spool\+File\+Name}}, const std\+::string \&\mbox{\hyperlink{classWt_1_1Http_1_1UploadedFile_abefc60da1bd5ca366d5012017bc6ba65}{client\+File\+Name}}, const std\+::string \&\mbox{\hyperlink{classWt_1_1Http_1_1UploadedFile_acc429445863a0174163943ab45c81ea8}{content\+Type}})
+\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Http_1_1UploadedFile_afa18576f12e348b4d1dae33ef43416a5}{spool\+File\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Return the spool file name. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Http_1_1UploadedFile_abefc60da1bd5ca366d5012017bc6ba65}{client\+File\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the client file name. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Http_1_1UploadedFile_acc429445863a0174163943ab45c81ea8}{content\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the file content type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1UploadedFile_a7351e345154910a57a925fecb4524dfd}{steal\+Spool\+File}} () const
+\begin{DoxyCompactList}\small\item\em Steals the uploaded spool file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1UploadedFile_a16be7a376579b28839acedea31d11b67}\label{classWt_1_1Http_1_1UploadedFile_a16be7a376579b28839acedea31d11b67}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structWt_1_1Http_1_1UploadedFile_1_1Impl}{Impl}} $>$ {\bfseries file\+Info\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Details about a file uploaded with a request to a resource. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{W\+Resource\+::handle\+Request()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Http_1_1UploadedFile_abefc60da1bd5ca366d5012017bc6ba65}\label{classWt_1_1Http_1_1UploadedFile_abefc60da1bd5ca366d5012017bc6ba65}} 
+\index{Wt::Http::UploadedFile@{Wt::Http::UploadedFile}!clientFileName@{clientFileName}}
+\index{clientFileName@{clientFileName}!Wt::Http::UploadedFile@{Wt::Http::UploadedFile}}
+\doxysubsubsection{\texorpdfstring{clientFileName()}{clientFileName()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+Http\+::\+Uploaded\+File\+::client\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the client file name. 
+
+This is the location that was indicated by the browser.
+
+\begin{DoxyNote}{Note}
+Depending on the browser this is an absolute path or only the file name. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1Http_1_1UploadedFile_acc429445863a0174163943ab45c81ea8}\label{classWt_1_1Http_1_1UploadedFile_acc429445863a0174163943ab45c81ea8}} 
+\index{Wt::Http::UploadedFile@{Wt::Http::UploadedFile}!contentType@{contentType}}
+\index{contentType@{contentType}!Wt::Http::UploadedFile@{Wt::Http::UploadedFile}}
+\doxysubsubsection{\texorpdfstring{contentType()}{contentType()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+Http\+::\+Uploaded\+File\+::content\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the file content type. 
+
+Returns the content mime-\/type that was sent along with the uploaded file. \mbox{\Hypertarget{classWt_1_1Http_1_1UploadedFile_afa18576f12e348b4d1dae33ef43416a5}\label{classWt_1_1Http_1_1UploadedFile_afa18576f12e348b4d1dae33ef43416a5}} 
+\index{Wt::Http::UploadedFile@{Wt::Http::UploadedFile}!spoolFileName@{spoolFileName}}
+\index{spoolFileName@{spoolFileName}!Wt::Http::UploadedFile@{Wt::Http::UploadedFile}}
+\doxysubsubsection{\texorpdfstring{spoolFileName()}{spoolFileName()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+Http\+::\+Uploaded\+File\+::spool\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the spool file name. 
+
+This is the location on the local (server) filesystem where the uploaded file is temporarily stored. Unless you call \mbox{\hyperlink{classWt_1_1Http_1_1UploadedFile_a7351e345154910a57a925fecb4524dfd}{steal\+Spool\+File()}}, this file is deleted automatically. \mbox{\Hypertarget{classWt_1_1Http_1_1UploadedFile_a7351e345154910a57a925fecb4524dfd}\label{classWt_1_1Http_1_1UploadedFile_a7351e345154910a57a925fecb4524dfd}} 
+\index{Wt::Http::UploadedFile@{Wt::Http::UploadedFile}!stealSpoolFile@{stealSpoolFile}}
+\index{stealSpoolFile@{stealSpoolFile}!Wt::Http::UploadedFile@{Wt::Http::UploadedFile}}
+\doxysubsubsection{\texorpdfstring{stealSpoolFile()}{stealSpoolFile()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Uploaded\+File\+::steal\+Spool\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Steals the uploaded spool file. 
+
+By stealing the spooled file, it is no longer automatically deleted by Wt. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Http/Request.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,134 @@
+\hypertarget{classWt_1_1Payment_1_1Result}{}\doxysection{Wt\+::Payment\+::Result Class Reference}
+\label{classWt_1_1Payment_1_1Result}\index{Wt::Payment::Result@{Wt::Payment::Result}}
+
+
+A class that represents the result of a payment A\+PI call.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Payment/\+Result.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Payment\+::Result\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Payment\+::Result\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Payment_1_1Result_a261f3807dc0f5997ebfca8b359ad95dc}{Result}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Payment_1_1Result_ac50e1bd60c6b261ad1e891946d313691}{Result}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&\mbox{\hyperlink{classWt_1_1Payment_1_1Result_a93b7d7a3ab8e94eecadffad7896f137e}{error\+Message}})
+\begin{DoxyCompactList}\small\item\em Constructor with an error message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1Result_aceadb6ddd35c866c68ba4cf81e769e25}\label{classWt_1_1Payment_1_1Result_aceadb6ddd35c866c68ba4cf81e769e25}} 
+bool \mbox{\hyperlink{classWt_1_1Payment_1_1Result_aceadb6ddd35c866c68ba4cf81e769e25}{error}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the result indicates success. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1Result_a93b7d7a3ab8e94eecadffad7896f137e}\label{classWt_1_1Payment_1_1Result_a93b7d7a3ab8e94eecadffad7896f137e}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1Payment_1_1Result_a93b7d7a3ab8e94eecadffad7896f137e}{error\+Message}} () const
+\begin{DoxyCompactList}\small\item\em Returns the error message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Payment_1_1Result_a063d96edb669ad9389581d399c4c3e76}{set\+Request\+Message}} (const std\+::map$<$ std\+::string, std\+::string $>$ \&msg)
+\begin{DoxyCompactList}\small\item\em Sets the request parameters. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classWt_1_1Payment_1_1Result_a1e765b8de2e7bbb4c857f54a3c82fa7b}{request\+Message}} () const
+\begin{DoxyCompactList}\small\item\em Returns the request parameters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Payment_1_1Result_a7c37f883313502ddae4497d3f9e93099}{set\+Response\+Message}} (const std\+::map$<$ std\+::string, std\+::string $>$ \&msg)
+\begin{DoxyCompactList}\small\item\em Sets the response parameters. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classWt_1_1Payment_1_1Result_a8726f8ce76210d4983cf1bc5a5e79942}{response\+Message}} () const
+\begin{DoxyCompactList}\small\item\em Returns the response parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1Result_a9dc4840c44bb8e884466eadb2e57ea1d}\label{classWt_1_1Payment_1_1Result_a9dc4840c44bb8e884466eadb2e57ea1d}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries error\+Message\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1Result_a5a07fd0be707eb343f5b773fd5e127cb}\label{classWt_1_1Payment_1_1Result_a5a07fd0be707eb343f5b773fd5e127cb}} 
+std\+::map$<$ std\+::string, std\+::string $>$ {\bfseries response\+Message\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Payment_1_1Result_adec38055f1239f045c854d6efc3d29fd}\label{classWt_1_1Payment_1_1Result_adec38055f1239f045c854d6efc3d29fd}} 
+std\+::map$<$ std\+::string, std\+::string $>$ {\bfseries request\+Message\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that represents the result of a payment A\+PI call. 
+
+This class indicates the result of an asynchronous call\+: \mbox{\hyperlink{classWt_1_1Payment_1_1Result_aceadb6ddd35c866c68ba4cf81e769e25}{error()}} indicates whether there was an error. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Payment_1_1Result_a261f3807dc0f5997ebfca8b359ad95dc}\label{classWt_1_1Payment_1_1Result_a261f3807dc0f5997ebfca8b359ad95dc}} 
+\index{Wt::Payment::Result@{Wt::Payment::Result}!Result@{Result}}
+\index{Result@{Result}!Wt::Payment::Result@{Wt::Payment::Result}}
+\doxysubsubsection{\texorpdfstring{Result()}{Result()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wt\+::\+Payment\+::\+Result\+::\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor. 
+
+This creates a successful result. \mbox{\Hypertarget{classWt_1_1Payment_1_1Result_ac50e1bd60c6b261ad1e891946d313691}\label{classWt_1_1Payment_1_1Result_ac50e1bd60c6b261ad1e891946d313691}} 
+\index{Wt::Payment::Result@{Wt::Payment::Result}!Result@{Result}}
+\index{Result@{Result}!Wt::Payment::Result@{Wt::Payment::Result}}
+\doxysubsubsection{\texorpdfstring{Result()}{Result()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wt\+::\+Payment\+::\+Result\+::\+Result (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{error\+Message }\end{DoxyParamCaption})}
+
+
+
+Constructor with an error message. 
+
+This creates an unsuccessful result. The error message cannot be empty. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Payment_1_1Result_a1e765b8de2e7bbb4c857f54a3c82fa7b}\label{classWt_1_1Payment_1_1Result_a1e765b8de2e7bbb4c857f54a3c82fa7b}} 
+\index{Wt::Payment::Result@{Wt::Payment::Result}!requestMessage@{requestMessage}}
+\index{requestMessage@{requestMessage}!Wt::Payment::Result@{Wt::Payment::Result}}
+\doxysubsubsection{\texorpdfstring{requestMessage()}{requestMessage()}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::string$>$ Wt\+::\+Payment\+::\+Result\+::request\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the request parameters. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Payment_1_1Result_a063d96edb669ad9389581d399c4c3e76}{set\+Request\+Message()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Payment_1_1Result_a8726f8ce76210d4983cf1bc5a5e79942}\label{classWt_1_1Payment_1_1Result_a8726f8ce76210d4983cf1bc5a5e79942}} 
+\index{Wt::Payment::Result@{Wt::Payment::Result}!responseMessage@{responseMessage}}
+\index{responseMessage@{responseMessage}!Wt::Payment::Result@{Wt::Payment::Result}}
+\doxysubsubsection{\texorpdfstring{responseMessage()}{responseMessage()}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, std\+::string$>$ Wt\+::\+Payment\+::\+Result\+::response\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the response parameters. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Payment_1_1Result_a7c37f883313502ddae4497d3f9e93099}{set\+Response\+Message()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Payment_1_1Result_a063d96edb669ad9389581d399c4c3e76}\label{classWt_1_1Payment_1_1Result_a063d96edb669ad9389581d399c4c3e76}} 
+\index{Wt::Payment::Result@{Wt::Payment::Result}!setRequestMessage@{setRequestMessage}}
+\index{setRequestMessage@{setRequestMessage}!Wt::Payment::Result@{Wt::Payment::Result}}
+\doxysubsubsection{\texorpdfstring{setRequestMessage()}{setRequestMessage()}}
+{\footnotesize\ttfamily void Wt\+::\+Payment\+::\+Result\+::set\+Request\+Message (\begin{DoxyParamCaption}\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Sets the request parameters. 
+
+For an asynchronous A\+PI call that uses name value pairs, this sets the underlying values that were sent in the request. \mbox{\Hypertarget{classWt_1_1Payment_1_1Result_a7c37f883313502ddae4497d3f9e93099}\label{classWt_1_1Payment_1_1Result_a7c37f883313502ddae4497d3f9e93099}} 
+\index{Wt::Payment::Result@{Wt::Payment::Result}!setResponseMessage@{setResponseMessage}}
+\index{setResponseMessage@{setResponseMessage}!Wt::Payment::Result@{Wt::Payment::Result}}
+\doxysubsubsection{\texorpdfstring{setResponseMessage()}{setResponseMessage()}}
+{\footnotesize\ttfamily void Wt\+::\+Payment\+::\+Result\+::set\+Response\+Message (\begin{DoxyParamCaption}\item[{const std\+::map$<$ std\+::string, std\+::string $>$ \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+Sets the response parameters. 
+
+For an asynchronous A\+PI call that uses name value pairs, this sets the underlying values that were returned in the response. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Payment/Result.\+h\end{DoxyCompactItemize}

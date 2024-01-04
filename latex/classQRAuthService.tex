@@ -1,0 +1,53 @@
+\hypertarget{classQRAuthService}{}\doxysection{Q\+R\+Auth\+Service Class Reference}
+\label{classQRAuthService}\index{QRAuthService@{QRAuthService}}
+
+
+Collaboration diagram for Q\+R\+Auth\+Service\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQRAuthService_a85e3981f09d5c6d213090e0c10b6b938}\label{classQRAuthService_a85e3981f09d5c6d213090e0c10b6b938}} 
+{\bfseries Q\+R\+Auth\+Service} (const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+::\+Auth\+Service}} \&base\+Auth)
+\item 
+\mbox{\Hypertarget{classQRAuthService_a59916d87f31bd006392a448061e43060}\label{classQRAuthService_a59916d87f31bd006392a448061e43060}} 
+const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+::\+Auth\+Service}} \& {\bfseries base\+Auth} () const
+\item 
+\mbox{\Hypertarget{classQRAuthService_a8f46db208603c05be8b527a52db4ba8d}\label{classQRAuthService_a8f46db208603c05be8b527a52db4ba8d}} 
+void {\bfseries set\+Redirect\+Parameter} (const std\+::string \&parameter)
+\item 
+\mbox{\Hypertarget{classQRAuthService_a0f9b3e798946ce1aaa9033e5798cfa5d}\label{classQRAuthService_a0f9b3e798946ce1aaa9033e5798cfa5d}} 
+std\+::string {\bfseries redirect\+Parameter} () const
+\item 
+\mbox{\Hypertarget{classQRAuthService_a899c50eee38d20e61af70c78ee00c2c6}\label{classQRAuthService_a899c50eee38d20e61af70c78ee00c2c6}} 
+std\+::string {\bfseries parse\+Q\+R\+Token} (const \mbox{\hyperlink{classWt_1_1WEnvironment}{W\+Environment}} \&env) const
+\item 
+\mbox{\Hypertarget{classQRAuthService_a1fdb6bab4040117ad9cb02f924bffa5e}\label{classQRAuthService_a1fdb6bab4040117ad9cb02f924bffa5e}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}} $>$ {\bfseries create\+Login\+Resource} (\mbox{\hyperlink{classQRTokenDatabase}{Q\+R\+Token\+Database}} \&database, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Auth\+::\+Abstract\+User\+Database}} \&users, \mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Auth\+::\+Login}} \&login) const
+\item 
+\mbox{\Hypertarget{classQRAuthService_ad40052b123f5f842218c064202abc620}\label{classQRAuthService_ad40052b123f5f842218c064202abc620}} 
+std\+::string {\bfseries create\+Q\+R\+Token} (\mbox{\hyperlink{classQRTokenDatabase}{Q\+R\+Token\+Database}} \&database, \mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}} $\ast$resource) const
+\item 
+\mbox{\Hypertarget{classQRAuthService_ae103423bb52ddb0b3dc5a3cee9958d58}\label{classQRAuthService_ae103423bb52ddb0b3dc5a3cee9958d58}} 
+void {\bfseries remote\+Login} (\mbox{\hyperlink{classQRTokenDatabase}{Q\+R\+Token\+Database}} \&database, const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Auth\+::\+User}} \&user, const std\+::string \&token) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQRAuthService_a145f2e1f923c7653662e26793ac08c1f}\label{classQRAuthService_a145f2e1f923c7653662e26793ac08c1f}} 
+void {\bfseries handle\+Http\+Response} (Wt\+::\+Asio\+Wrapper\+::error\+\_\+code err, const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Http\+::\+Message}} \&response, \mbox{\hyperlink{classWt_1_1Http_1_1Client}{Http\+::\+Client}} $\ast$client) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQRAuthService_adef0427ecff15e414c1ff40a22010d1c}\label{classQRAuthService_adef0427ecff15e414c1ff40a22010d1c}} 
+const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+::\+Auth\+Service}} \& {\bfseries base\+Auth\+\_\+}
+\item 
+\mbox{\Hypertarget{classQRAuthService_a06565e867e3d367286d12df4683e7fe4}\label{classQRAuthService_a06565e867e3d367286d12df4683e7fe4}} 
+std\+::string {\bfseries redirect\+Parameter\+\_\+}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/qrlogin/model/Q\+R\+Auth\+Service.\+h\end{DoxyCompactItemize}

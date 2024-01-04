@@ -1,0 +1,317 @@
+\hypertarget{classWt_1_1WMatrix4x4}{}\doxysection{Wt\+::W\+Matrix4x4 Class Reference}
+\label{classWt_1_1WMatrix4x4}\index{Wt::WMatrix4x4@{Wt::WMatrix4x4}}
+
+
+A value class that describes a 3D affine transformation matrix.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Matrix4x4.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Matrix4x4\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Matrix4x4\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WMatrix4x4_a04573deca065c719da5933a5370e2d91}{W\+Matrix4x4}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMatrix4x4_a1a85e8ec8c8f80ea1643b0bc72006c63}\label{classWt_1_1WMatrix4x4_a1a85e8ec8c8f80ea1643b0bc72006c63}} 
+\mbox{\hyperlink{classWt_1_1WMatrix4x4_a1a85e8ec8c8f80ea1643b0bc72006c63}{W\+Matrix4x4}} (const \mbox{\hyperlink{classWt_1_1WMatrix4x4}{W\+Matrix4x4}} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMatrix4x4_ac7fe5e762e4a3dd96f8861855cb3768b}\label{classWt_1_1WMatrix4x4_ac7fe5e762e4a3dd96f8861855cb3768b}} 
+{\bfseries W\+Matrix4x4} (const \mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}$<$ double, 4, 4 $>$\+::Matrix\+Type \&m)
+\item 
+\mbox{\hyperlink{classWt_1_1WMatrix4x4_a179ae2bb8dcf43871511e2386e920465}{W\+Matrix4x4}} (const \mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}$<$ double, 4, 4 $>$ \&other)
+\begin{DoxyCompactList}\small\item\em Construct for a \mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMatrix4x4_ae7bb65db266e934915fe8b1ce126eff8}{W\+Matrix4x4}} (double $\ast$d)
+\begin{DoxyCompactList}\small\item\em Constructs a matrix from an array of elements. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMatrix4x4_a3e09a062ad58e4ea5a153baddec50621}{W\+Matrix4x4}} (double m11, double m12, double m13, double m14, double m21, double m22, double m23, double m24, double m31, double m32, double m33, double m34, double m41, double m42, double m43, double m44)
+\begin{DoxyCompactList}\small\item\em Construct a custom matrix by specifying the parameters. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMatrix4x4_a2a5b3e0644ca445bb1b83210905fdeb8}\label{classWt_1_1WMatrix4x4_a2a5b3e0644ca445bb1b83210905fdeb8}} 
+double \mbox{\hyperlink{classWt_1_1WMatrix4x4_a2a5b3e0644ca445bb1b83210905fdeb8}{determinant}} () const
+\begin{DoxyCompactList}\small\item\em Returns the determinant. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMatrix4x4_a271c40069f274452261ca0f0e328700a}{flip\+Coordinates}} ()
+\begin{DoxyCompactList}\small\item\em Switch between left-\/hand and right-\/hand side coordinate systems. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMatrix4x4_ab428d169951872f940bfbd05b6223575}{frustum}} (double left, double right, double bottom, double top, double near\+Plane, double far\+Plane)
+\begin{DoxyCompactList}\small\item\em Construct a perspective projection matrix. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMatrix4x4}{W\+Matrix4x4}} \mbox{\hyperlink{classWt_1_1WMatrix4x4_afc2dc04720e17bd8a0827918322fc6f4}{inverted}} (bool $\ast$invertible=nullptr) const
+\begin{DoxyCompactList}\small\item\em Returns the inversion of this matrix, if invertible. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMatrix4x4_acc42a660a8a642498c5e88581238767a}{look\+At}} (double eyeX, double eyeY, double eyeZ, double centerX, double centerY, double centerZ, double upX, double upY, double upZ)
+\begin{DoxyCompactList}\small\item\em Apply a transformation to position a camera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMatrix4x4_afefea18793b3437191410a31bd7717e3}{ortho}} (double left, double right, double bottom, double top, double near\+Plane, double far\+Plane)
+\begin{DoxyCompactList}\small\item\em Create an orhtographic projection matrix for use in Open\+GL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMatrix4x4_a82082588cf44d60636cd934a598743d4}{perspective}} (double angle, double aspect, double near\+Plane, double far\+Plane)
+\begin{DoxyCompactList}\small\item\em Construct a perspective projection matrix for use in Open\+GL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMatrix4x4_a018751f0f4359ccf43fe3e4ca53f20eb}{rotate}} (double angle, double x, double y, double z)
+\begin{DoxyCompactList}\small\item\em Rotates the transformation around a random axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMatrix4x4_a2cd4dd1510fd69374b8a6bdf4cdffebd}{scale}} (double x\+Factor, double y\+Factor)
+\begin{DoxyCompactList}\small\item\em Scales the transformation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMatrix4x4_a8074ced26218dd52541abd094faf9815}{scale}} (double x, double y, double z)
+\begin{DoxyCompactList}\small\item\em Scales the transformation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMatrix4x4_adba26fe582056591d246e8cbea8cdba7}{scale}} (double factor)
+\begin{DoxyCompactList}\small\item\em Scales the transformation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMatrix4x4_a65cea270b294bcf2db233d1f6113cdd0}{translate}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Translates the transformation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMatrix4x4_a598fe5520127436df6fdfdf833b8b869}{translate}} (double x, double y, double z)
+\begin{DoxyCompactList}\small\item\em Translates the transformation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMatrix4x4_a80b1f25ccc98c1c97dd79bb9f7e56209}\label{classWt_1_1WMatrix4x4_a80b1f25ccc98c1c97dd79bb9f7e56209}} 
+\mbox{\hyperlink{classWt_1_1WMatrix4x4}{W\+Matrix4x4}} \mbox{\hyperlink{classWt_1_1WMatrix4x4_a80b1f25ccc98c1c97dd79bb9f7e56209}{operator$\ast$}} (const \mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}$<$ double, 4, 4 $>$ \&r) const
+\begin{DoxyCompactList}\small\item\em Multiply two matrices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A value class that describes a 3D affine transformation matrix. 
+
+The matrix is a 4x4 matrix encoded using 16 parameters. The matrix stores its data internally in row order.
+
+Normally, a transformation matrix (composed translation/rotation/scale, but without perspective) is of this form\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{m00 m01 m02 dx}
+\DoxyCodeLine{m10 m11 m12 dy}
+\DoxyCodeLine{m20 m21 m22 dz}
+\DoxyCodeLine{0   0   0   1}
+\end{DoxyCode}
+
+
+In this representation, dx, dy and dz (= m(0, 3), m(1, 3) and m(2, 3)) represent the translation components, and m({\itshape x, y}) represent a 3D matrix that contains the scale, rotation (and skew) components. The matrix is also capable of representing perspective projections. In that case, the matrix will not match the form depicted above.
+
+In order to calculate the transformed vector w of a 3D vector v by the transformation contained in matrix T, v will be left-\/multiplied by T\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{w = T * v;}
+\end{DoxyCode}
+ In the formula above, v and w are homogenous 3D column vectors (x, y, z, w), equal to (x/w, y/w, z/w, 1). In normal use cases w is 1, except for vectors that were transformed by a perspective projection matrix.
+
+The transformation is used to represent a tansformed coordinate system, and provides methods to \mbox{\hyperlink{classWt_1_1WMatrix4x4_a018751f0f4359ccf43fe3e4ca53f20eb}{rotate()}}, \mbox{\hyperlink{classWt_1_1WMatrix4x4_a2cd4dd1510fd69374b8a6bdf4cdffebd}{scale()}} or \mbox{\hyperlink{classWt_1_1WMatrix4x4_a65cea270b294bcf2db233d1f6113cdd0}{translate()}} this coordinate system.
+
+This matrix class is matched to Open\+GL\textquotesingle{}s coordinate system and matrix notation. The rotate, translate, scale, look\+At, perspective, frustum and ortho methods of this class behave exactly like their Open\+GL equivalents. The only difference is that the storage of this matrix is row-\/major, while Open\+GL uses column-\/major. This should only be a concern if you need to access the raw data of the matrix, in which case you should use \mbox{\hyperlink{classWt_1_1WGenericMatrix_adfec7b4863f000c5b0fa3c6e7df18867}{transposed()}}.\mbox{\hyperlink{classWt_1_1WGenericMatrix_a4e9300685974b67610b9f6ad437a5ab4}{data()}} instead. When W\+Web\+GL uses this class, it sends the data in the correct order to the client. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WMatrix4x4_a04573deca065c719da5933a5370e2d91}\label{classWt_1_1WMatrix4x4_a04573deca065c719da5933a5370e2d91}} 
+\index{Wt::WMatrix4x4@{Wt::WMatrix4x4}!WMatrix4x4@{WMatrix4x4}}
+\index{WMatrix4x4@{WMatrix4x4}!Wt::WMatrix4x4@{Wt::WMatrix4x4}}
+\doxysubsubsection{\texorpdfstring{WMatrix4x4()}{WMatrix4x4()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Matrix4x4\+::\+W\+Matrix4x4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Creates the identity transformation matrix. \mbox{\Hypertarget{classWt_1_1WMatrix4x4_a179ae2bb8dcf43871511e2386e920465}\label{classWt_1_1WMatrix4x4_a179ae2bb8dcf43871511e2386e920465}} 
+\index{Wt::WMatrix4x4@{Wt::WMatrix4x4}!WMatrix4x4@{WMatrix4x4}}
+\index{WMatrix4x4@{WMatrix4x4}!Wt::WMatrix4x4@{Wt::WMatrix4x4}}
+\doxysubsubsection{\texorpdfstring{WMatrix4x4()}{WMatrix4x4()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Matrix4x4\+::\+W\+Matrix4x4 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}$<$ double, 4, 4 $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Construct for a \mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}. 
+
+Creates the identity transformation matrix. As we inherit from \mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}, most overloaded operators create a \mbox{\hyperlink{classWt_1_1WGenericMatrix}{W\+Generic\+Matrix}}. This implicit constructor ensures that you will not notice this. \mbox{\Hypertarget{classWt_1_1WMatrix4x4_ae7bb65db266e934915fe8b1ce126eff8}\label{classWt_1_1WMatrix4x4_ae7bb65db266e934915fe8b1ce126eff8}} 
+\index{Wt::WMatrix4x4@{Wt::WMatrix4x4}!WMatrix4x4@{WMatrix4x4}}
+\index{WMatrix4x4@{WMatrix4x4}!Wt::WMatrix4x4@{Wt::WMatrix4x4}}
+\doxysubsubsection{\texorpdfstring{WMatrix4x4()}{WMatrix4x4()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Matrix4x4\+::\+W\+Matrix4x4 (\begin{DoxyParamCaption}\item[{double $\ast$}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a matrix from an array of elements. 
+
+The input array is assumed to be in row-\/major order. If elements is 0, the matrix is not initialized. \mbox{\Hypertarget{classWt_1_1WMatrix4x4_a3e09a062ad58e4ea5a153baddec50621}\label{classWt_1_1WMatrix4x4_a3e09a062ad58e4ea5a153baddec50621}} 
+\index{Wt::WMatrix4x4@{Wt::WMatrix4x4}!WMatrix4x4@{WMatrix4x4}}
+\index{WMatrix4x4@{WMatrix4x4}!Wt::WMatrix4x4@{Wt::WMatrix4x4}}
+\doxysubsubsection{\texorpdfstring{WMatrix4x4()}{WMatrix4x4()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Matrix4x4\+::\+W\+Matrix4x4 (\begin{DoxyParamCaption}\item[{double}]{m11,  }\item[{double}]{m12,  }\item[{double}]{m13,  }\item[{double}]{m14,  }\item[{double}]{m21,  }\item[{double}]{m22,  }\item[{double}]{m23,  }\item[{double}]{m24,  }\item[{double}]{m31,  }\item[{double}]{m32,  }\item[{double}]{m33,  }\item[{double}]{m34,  }\item[{double}]{m41,  }\item[{double}]{m42,  }\item[{double}]{m43,  }\item[{double}]{m44 }\end{DoxyParamCaption})}
+
+
+
+Construct a custom matrix by specifying the parameters. 
+
+Creates a matrix from the specified parameters. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WMatrix4x4_a271c40069f274452261ca0f0e328700a}\label{classWt_1_1WMatrix4x4_a271c40069f274452261ca0f0e328700a}} 
+\index{Wt::WMatrix4x4@{Wt::WMatrix4x4}!flipCoordinates@{flipCoordinates}}
+\index{flipCoordinates@{flipCoordinates}!Wt::WMatrix4x4@{Wt::WMatrix4x4}}
+\doxysubsubsection{\texorpdfstring{flipCoordinates()}{flipCoordinates()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Matrix4x4\+::flip\+Coordinates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Switch between left-\/hand and right-\/hand side coordinate systems. 
+
+Equivalent to scale(1, -\/1, -\/1) \mbox{\Hypertarget{classWt_1_1WMatrix4x4_ab428d169951872f940bfbd05b6223575}\label{classWt_1_1WMatrix4x4_ab428d169951872f940bfbd05b6223575}} 
+\index{Wt::WMatrix4x4@{Wt::WMatrix4x4}!frustum@{frustum}}
+\index{frustum@{frustum}!Wt::WMatrix4x4@{Wt::WMatrix4x4}}
+\doxysubsubsection{\texorpdfstring{frustum()}{frustum()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Matrix4x4\+::frustum (\begin{DoxyParamCaption}\item[{double}]{left,  }\item[{double}]{right,  }\item[{double}]{bottom,  }\item[{double}]{top,  }\item[{double}]{near\+Plane,  }\item[{double}]{far\+Plane }\end{DoxyParamCaption})}
+
+
+
+Construct a perspective projection matrix. 
+
+This function constructs a perspective projection where the camera is located in the origin. The visible volume is determined by whatever that is visible when looking from the origin through the rectangular \textquotesingle{}window\textquotesingle{} defined by the coordinates (l, b, n) and (r, t, n) (parallel to the XY plane). The zone is further delimited by the near and the far clipping planes.
+
+The perspective matrix (P) is right-\/multiplied with the current transformation matrix (M)\+: M $\ast$ P. Usually, you will want M to be the identity matrix when using this method. \mbox{\Hypertarget{classWt_1_1WMatrix4x4_afc2dc04720e17bd8a0827918322fc6f4}\label{classWt_1_1WMatrix4x4_afc2dc04720e17bd8a0827918322fc6f4}} 
+\index{Wt::WMatrix4x4@{Wt::WMatrix4x4}!inverted@{inverted}}
+\index{inverted@{inverted}!Wt::WMatrix4x4@{Wt::WMatrix4x4}}
+\doxysubsubsection{\texorpdfstring{inverted()}{inverted()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WMatrix4x4}{W\+Matrix4x4}} Wt\+::\+W\+Matrix4x4\+::inverted (\begin{DoxyParamCaption}\item[{bool $\ast$}]{invertible = {\ttfamily nullptr} }\end{DoxyParamCaption}) const}
+
+
+
+Returns the inversion of this matrix, if invertible. 
+
+If invertible is not 0, it will contain a bool that indicates if the operation succeeded and the inverse matrix is returned. Else, this method returns the unit matrix. \mbox{\Hypertarget{classWt_1_1WMatrix4x4_acc42a660a8a642498c5e88581238767a}\label{classWt_1_1WMatrix4x4_acc42a660a8a642498c5e88581238767a}} 
+\index{Wt::WMatrix4x4@{Wt::WMatrix4x4}!lookAt@{lookAt}}
+\index{lookAt@{lookAt}!Wt::WMatrix4x4@{Wt::WMatrix4x4}}
+\doxysubsubsection{\texorpdfstring{lookAt()}{lookAt()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Matrix4x4\+::look\+At (\begin{DoxyParamCaption}\item[{double}]{eyeX,  }\item[{double}]{eyeY,  }\item[{double}]{eyeZ,  }\item[{double}]{centerX,  }\item[{double}]{centerY,  }\item[{double}]{centerZ,  }\item[{double}]{upX,  }\item[{double}]{upY,  }\item[{double}]{upZ }\end{DoxyParamCaption})}
+
+
+
+Apply a transformation to position a camera. 
+
+(eyeX, eyeY, eyeZ) is the position of the camera.
+
+The camera looks at (centerX, centerY, centerZ).
+
+(upX, upY, upZ) is a vector that is the direction of the up vector.
+
+This method applies a rotation and translation transformation to the current matrix so that the given eye becomes (0, 0, 0), the center point is on the negative Z axis, and the up vector lies in the X=0 plane, with its Y component in the positive Y axis direction.
+
+The up vector must not be parallel to the line between eye and center. The vectors will be normalized and are not required to be perpendicular.
+
+If the lookat transformation matrix is M, and the current value of the Matrix4x4 matrix is T, the resulting matrix after look\+At returns will be T $\ast$ M.
+
+This matrix is often used in conjunction with the \mbox{\hyperlink{classWt_1_1WMatrix4x4_a82082588cf44d60636cd934a598743d4}{perspective()}} method\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// First, apply the lookAt transformation}}
+\DoxyCodeLine{projectionMatrix.lookAt(1, 1, 1, 0, 0, 0, 0, 1, 0);}
+\DoxyCodeLine{\textcolor{comment}{// Then apply some perspective}}
+\DoxyCodeLine{projectionMatrix.perspective(90, aspect, 0.1, 10);}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1WMatrix4x4_afefea18793b3437191410a31bd7717e3}\label{classWt_1_1WMatrix4x4_afefea18793b3437191410a31bd7717e3}} 
+\index{Wt::WMatrix4x4@{Wt::WMatrix4x4}!ortho@{ortho}}
+\index{ortho@{ortho}!Wt::WMatrix4x4@{Wt::WMatrix4x4}}
+\doxysubsubsection{\texorpdfstring{ortho()}{ortho()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Matrix4x4\+::ortho (\begin{DoxyParamCaption}\item[{double}]{left,  }\item[{double}]{right,  }\item[{double}]{bottom,  }\item[{double}]{top,  }\item[{double}]{near\+Plane,  }\item[{double}]{far\+Plane }\end{DoxyParamCaption})}
+
+
+
+Create an orhtographic projection matrix for use in Open\+GL. 
+
+Create an orthographic projection matrix. The given left, right, bottom, top, near and far points will be linearly mapped to the Open\+GL unit cube ((1,1,1) to (-\/1,-\/1,-\/1)).
+
+The orthographic matrix (O) is right-\/multiplied with the current transformation matrix (M)\+: M $\ast$ O. Usually, you will want M to be the identity matrix when using this method. \mbox{\Hypertarget{classWt_1_1WMatrix4x4_a82082588cf44d60636cd934a598743d4}\label{classWt_1_1WMatrix4x4_a82082588cf44d60636cd934a598743d4}} 
+\index{Wt::WMatrix4x4@{Wt::WMatrix4x4}!perspective@{perspective}}
+\index{perspective@{perspective}!Wt::WMatrix4x4@{Wt::WMatrix4x4}}
+\doxysubsubsection{\texorpdfstring{perspective()}{perspective()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Matrix4x4\+::perspective (\begin{DoxyParamCaption}\item[{double}]{angle,  }\item[{double}]{aspect,  }\item[{double}]{near\+Plane,  }\item[{double}]{far\+Plane }\end{DoxyParamCaption})}
+
+
+
+Construct a perspective projection matrix for use in Open\+GL. 
+
+The camera is located in the origin and look in the direction of the negative Z axis.
+
+Angle is the vertical view angle, in degrees. Aspect is the aspect ratio of the viewport, and near and far are the distances of the front and rear clipping plane from the camera.
+
+The perspective matrix (P) is right-\/multiplied with the current transformation matrix (M)\+: M $\ast$ P. Usually, you will want M to be the identity matrix when using this method. \mbox{\Hypertarget{classWt_1_1WMatrix4x4_a018751f0f4359ccf43fe3e4ca53f20eb}\label{classWt_1_1WMatrix4x4_a018751f0f4359ccf43fe3e4ca53f20eb}} 
+\index{Wt::WMatrix4x4@{Wt::WMatrix4x4}!rotate@{rotate}}
+\index{rotate@{rotate}!Wt::WMatrix4x4@{Wt::WMatrix4x4}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Matrix4x4\+::rotate (\begin{DoxyParamCaption}\item[{double}]{angle,  }\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{z }\end{DoxyParamCaption})}
+
+
+
+Rotates the transformation around a random axis. 
+
+Applies a rotation to the current transformation matrix, over {\ttfamily angle} degrees. The current matrix (M) is right-\/multiplied by the rotation matrix\+: M = M $\ast$ R \mbox{\Hypertarget{classWt_1_1WMatrix4x4_adba26fe582056591d246e8cbea8cdba7}\label{classWt_1_1WMatrix4x4_adba26fe582056591d246e8cbea8cdba7}} 
+\index{Wt::WMatrix4x4@{Wt::WMatrix4x4}!scale@{scale}}
+\index{scale@{scale}!Wt::WMatrix4x4@{Wt::WMatrix4x4}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Matrix4x4\+::scale (\begin{DoxyParamCaption}\item[{double}]{factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Scales the transformation. 
+
+Equivalent to scale(factor, factor, factor);
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMatrix4x4_a8074ced26218dd52541abd094faf9815}{scale(double, double, double)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMatrix4x4_a8074ced26218dd52541abd094faf9815}\label{classWt_1_1WMatrix4x4_a8074ced26218dd52541abd094faf9815}} 
+\index{Wt::WMatrix4x4@{Wt::WMatrix4x4}!scale@{scale}}
+\index{scale@{scale}!Wt::WMatrix4x4@{Wt::WMatrix4x4}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Matrix4x4\+::scale (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Scales the transformation. 
+
+Equivalent to M $\ast$ S where M is the current transformation and S is 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{x 0 0 0}
+\DoxyCodeLine{0 y 0 0}
+\DoxyCodeLine{0 0 z 0}
+\DoxyCodeLine{0 0 0 1}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1WMatrix4x4_a2cd4dd1510fd69374b8a6bdf4cdffebd}\label{classWt_1_1WMatrix4x4_a2cd4dd1510fd69374b8a6bdf4cdffebd}} 
+\index{Wt::WMatrix4x4@{Wt::WMatrix4x4}!scale@{scale}}
+\index{scale@{scale}!Wt::WMatrix4x4@{Wt::WMatrix4x4}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Matrix4x4\+::scale (\begin{DoxyParamCaption}\item[{double}]{x\+Factor,  }\item[{double}]{y\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Scales the transformation. 
+
+Equivalent to scale(x\+Factor, y\+Factor, 1);
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMatrix4x4_a8074ced26218dd52541abd094faf9815}{scale(double, double, double)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WMatrix4x4_a65cea270b294bcf2db233d1f6113cdd0}\label{classWt_1_1WMatrix4x4_a65cea270b294bcf2db233d1f6113cdd0}} 
+\index{Wt::WMatrix4x4@{Wt::WMatrix4x4}!translate@{translate}}
+\index{translate@{translate}!Wt::WMatrix4x4@{Wt::WMatrix4x4}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Matrix4x4\+::translate (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Translates the transformation. 
+
+Equivalent to translate(x, y, 0) \mbox{\Hypertarget{classWt_1_1WMatrix4x4_a598fe5520127436df6fdfdf833b8b869}\label{classWt_1_1WMatrix4x4_a598fe5520127436df6fdfdf833b8b869}} 
+\index{Wt::WMatrix4x4@{Wt::WMatrix4x4}!translate@{translate}}
+\index{translate@{translate}!Wt::WMatrix4x4@{Wt::WMatrix4x4}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Matrix4x4\+::translate (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{z }\end{DoxyParamCaption})}
+
+
+
+Translates the transformation. 
+
+Translates the current transformation.
+
+Equivalent to M $\ast$ T where M is the current transformation matrix and T is\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 0 0 x}
+\DoxyCodeLine{0 1 0 y}
+\DoxyCodeLine{0 0 1 z}
+\DoxyCodeLine{0 0 0 1}
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Matrix4x4.\+h\end{DoxyCompactItemize}

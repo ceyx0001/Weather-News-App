@@ -1,0 +1,122 @@
+\hypertarget{classCodeSession}{}\doxysection{Code\+Session Class Reference}
+\label{classCodeSession}\index{CodeSession@{CodeSession}}
+
+
+Collaboration diagram for Code\+Session\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCodeSession_1_1Buffer}{Buffer}}
+\item 
+struct \mbox{\hyperlink{structCodeSession_1_1Coder}{Coder}}
+\item 
+struct \mbox{\hyperlink{structCodeSession_1_1Observer}{Observer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCodeSession_ac82dc435d559d9ffe27574fcc1cc0c53}\label{classCodeSession_ac82dc435d559d9ffe27574fcc1cc0c53}} 
+enum {\bfseries Buffer\+Update} \{ {\bfseries Inserted}, 
+{\bfseries Deleted}, 
+{\bfseries Changed}
+ \}
+\item 
+\mbox{\Hypertarget{classCodeSession_a05fa1a9dc96e7ee9fb2fd52ff0e509f8}\label{classCodeSession_a05fa1a9dc96e7ee9fb2fd52ff0e509f8}} 
+typedef std\+::function$<$ void(int, Buffer\+Update)$>$ {\bfseries Buffer\+Callback}
+\item 
+\mbox{\Hypertarget{classCodeSession_ad8b70768e311d15d7778d29896b58c25}\label{classCodeSession_ad8b70768e311d15d7778d29896b58c25}} 
+typedef std\+::function$<$ void(void)$>$ {\bfseries Coder\+Callback}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCodeSession_a5358aab94d1b68405b29005c450468ca}\label{classCodeSession_a5358aab94d1b68405b29005c450468ca}} 
+{\bfseries Code\+Session} (const Coder\+Callback \&coder\+Callback)
+\item 
+\mbox{\Hypertarget{classCodeSession_a678ae035298c4f90834bd3b33740bf6e}\label{classCodeSession_a678ae035298c4f90834bd3b33740bf6e}} 
+std\+::string {\bfseries id} () const
+\item 
+\mbox{\Hypertarget{classCodeSession_aeb7123de157843c7c1e41f564e7c8714}\label{classCodeSession_aeb7123de157843c7c1e41f564e7c8714}} 
+void {\bfseries remove\+Observer} ()
+\item 
+\mbox{\Hypertarget{classCodeSession_a965fe96e73750dbbbc712c66d0f1b573}\label{classCodeSession_a965fe96e73750dbbbc712c66d0f1b573}} 
+void {\bfseries remove\+Coder} ()
+\item 
+\mbox{\Hypertarget{classCodeSession_a9ab3ed67fe1c5009b26ec4f64a8f6849}\label{classCodeSession_a9ab3ed67fe1c5009b26ec4f64a8f6849}} 
+void {\bfseries insert\+Buffer} (int index)
+\item 
+\mbox{\Hypertarget{classCodeSession_af33d78d9d612b6775694339711e7d565}\label{classCodeSession_af33d78d9d612b6775694339711e7d565}} 
+void {\bfseries update\+Buffer} (int buffer, const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&name, const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&text)
+\item 
+\mbox{\Hypertarget{classCodeSession_a77f8e12465d2248152214f1ea39a459b}\label{classCodeSession_a77f8e12465d2248152214f1ea39a459b}} 
+std\+::vector$<$ \mbox{\hyperlink{structCodeSession_1_1Buffer}{Buffer}} $>$ {\bfseries buffers} () const
+\item 
+\mbox{\Hypertarget{classCodeSession_a6bc0b3a44b08fd5a6ed142fe323557a5}\label{classCodeSession_a6bc0b3a44b08fd5a6ed142fe323557a5}} 
+\mbox{\hyperlink{structCodeSession_1_1Buffer}{Buffer}} {\bfseries buffer} (int buffer) const
+\item 
+\mbox{\Hypertarget{classCodeSession_acab334b6373f12d6cd6eb96e1ed8fc3b}\label{classCodeSession_acab334b6373f12d6cd6eb96e1ed8fc3b}} 
+int {\bfseries observer\+Count} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCodeSession_a4aaa3a10fc3898d361fc4987160ab418}\label{classCodeSession_a4aaa3a10fc3898d361fc4987160ab418}} 
+static void {\bfseries add\+Session} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCodeSession}{Code\+Session}} $>$ \&session)
+\item 
+\mbox{\Hypertarget{classCodeSession_ad0884ecf0cede41c6d406dd613a36327}\label{classCodeSession_ad0884ecf0cede41c6d406dd613a36327}} 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classCodeSession}{Code\+Session}} $>$ {\bfseries add\+Observer} (const std\+::string \&id, const Buffer\+Callback \&buffer\+Callback)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCodeSession_ab107bcd3fe7d5e836bcc6dba14b3f3f2}\label{classCodeSession_ab107bcd3fe7d5e836bcc6dba14b3f3f2}} 
+typedef std\+::unique\+\_\+lock$<$ std\+::recursive\+\_\+mutex $>$ {\bfseries Lock}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCodeSession_aa46ad02cf5089134970bb36bef790a4e}\label{classCodeSession_aa46ad02cf5089134970bb36bef790a4e}} 
+void {\bfseries generate\+Id} ()
+\item 
+\mbox{\Hypertarget{classCodeSession_a540dc7e00c1dbdf6652b66f7d069a185}\label{classCodeSession_a540dc7e00c1dbdf6652b66f7d069a185}} 
+void {\bfseries post\+Session\+Changed} ()
+\item 
+\mbox{\Hypertarget{classCodeSession_a9a0f2e8b45a83a3dc048ecb54b478a62}\label{classCodeSession_a9a0f2e8b45a83a3dc048ecb54b478a62}} 
+void {\bfseries post\+Buffer\+Changed} (int buffer, Buffer\+Update update)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCodeSession_affe55174b114b8e4f5cfbc2a9afa835f}\label{classCodeSession_affe55174b114b8e4f5cfbc2a9afa835f}} 
+static void {\bfseries clean\+Expired\+Sessions} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCodeSession_a059b87a0f3a43b92980d21917d7ee4da}\label{classCodeSession_a059b87a0f3a43b92980d21917d7ee4da}} 
+std\+::string {\bfseries id\+\_\+}
+\item 
+\mbox{\Hypertarget{classCodeSession_ad4559ce9409c70b0943c57595308a7b6}\label{classCodeSession_ad4559ce9409c70b0943c57595308a7b6}} 
+std\+::vector$<$ \mbox{\hyperlink{structCodeSession_1_1Buffer}{Buffer}} $>$ {\bfseries buffers\+\_\+}
+\item 
+\mbox{\Hypertarget{classCodeSession_acd8620c99e9ae0f4ff07726b76c94082}\label{classCodeSession_acd8620c99e9ae0f4ff07726b76c94082}} 
+std\+::vector$<$ \mbox{\hyperlink{structCodeSession_1_1Observer}{Observer}} $>$ {\bfseries observers\+\_\+}
+\item 
+\mbox{\Hypertarget{classCodeSession_a17618db013c96bab72361fc075e77e8e}\label{classCodeSession_a17618db013c96bab72361fc075e77e8e}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structCodeSession_1_1Coder}{Coder}} $>$ {\bfseries coder\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCodeSession_a686cdb5d0933bca7668eba1efae29bc3}\label{classCodeSession_a686cdb5d0933bca7668eba1efae29bc3}} 
+static std\+::vector$<$ std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{classCodeSession}{Code\+Session}} $>$ $>$ {\bfseries sessions\+\_\+}
+\item 
+\mbox{\Hypertarget{classCodeSession_a4ea01d41de40b19eeaf1d381edcb5f2a}\label{classCodeSession_a4ea01d41de40b19eeaf1d381edcb5f2a}} 
+static std\+::recursive\+\_\+mutex {\bfseries mutex\+\_\+}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/codeview/Code\+Session.\+h\end{DoxyCompactItemize}

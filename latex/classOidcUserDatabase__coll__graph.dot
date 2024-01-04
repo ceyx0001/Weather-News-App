@@ -1,0 +1,54 @@
+digraph "OidcUserDatabase"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="OidcUserDatabase",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Wt::Auth::Dbo::UserDatabase\l\< Wt::Auth::Dbo::AuthInfo\l\< User \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Auth_1_1Dbo_1_1UserDatabase.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Wt::Auth::AbstractUserDatabase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Auth_1_1AbstractUserDatabase.html",tooltip="Abstract interface for an authentication user database."];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" userIdentity_" ];
+  Node4 [label="Wt::WString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WString.html",tooltip="A value class which describes a locale-aware unicode string."];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" impl_" ];
+  Node5 [label="Wt::WString::Impl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1WString_1_1Impl.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" key_" ];
+  Node6 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" utf8_" ];
+  Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Empty" ];
+  Node7 [label="const",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" userProvider_" ];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" user_" ];
+  Node8 [label="Wt::Dbo::ptr\< Wt::Auth\l::Dbo::AuthInfo\< User \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Dbo_1_1ptr.html",tooltip=" "];
+  Node9 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" obj_" ];
+  Node9 [label="Wt::Dbo::MetaDbo\< MutC \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Dbo_1_1MetaDbo.html",tooltip=" "];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="Wt::Dbo::MetaDboBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Dbo_1_1MetaDboBase.html",tooltip=" "];
+  Node11 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" refCount_\nstate_\nversion_" ];
+  Node11 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node12 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" session_" ];
+  Node12 [label="Wt::Dbo::Session",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Dbo_1_1Session.html",tooltip="A database session."];
+  Node13 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" transaction_" ];
+  Node13 [label="Wt::Dbo::Transaction\l::Impl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1Dbo_1_1Transaction_1_1Impl.html",tooltip=" "];
+  Node11 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" transactionCount_" ];
+  Node12 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" session_" ];
+  Node6 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" longlongType_\nintType_" ];
+  Node7 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" const_typeinfo_ptr" ];
+  Node14 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" connectionPool_" ];
+  Node14 [label="Wt::Dbo::SqlConnectionPool",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Dbo_1_1SqlConnectionPool.html",tooltip="Abstract base class for a SQL connection pool."];
+  Node15 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" id_" ];
+  Node15 [label="Wt::Dbo::dbo_traits\l\< MutC \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1Dbo_1_1dbo__traits.html",tooltip=" "];
+  Node16 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="Wt::Dbo::dbo_default\l_traits",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1Dbo_1_1dbo__default__traits.html",tooltip="Default traits for a class mapped with Wt::Dbo."];
+  Node12 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" session_" ];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" authService_" ];
+  Node17 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" issuedToken_" ];
+  Node17 [label="Wt::Dbo::ptr\< IssuedToken \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Dbo_1_1ptr.html",tooltip=" "];
+  Node9 -> Node17 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" obj_" ];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" user_" ];
+  Node18 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" authClient_" ];
+  Node18 [label="Wt::Dbo::ptr\< OAuthClient \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Dbo_1_1ptr.html",tooltip=" "];
+  Node9 -> Node18 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" obj_" ];
+  Node12 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" session_" ];
+}

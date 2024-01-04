@@ -1,0 +1,460 @@
+\hypertarget{group__modelview}{}\doxysection{Model/view system}
+\label{group__modelview}\index{Model/view system@{Model/view system}}
+
+
+Classes that implement Wt\textquotesingle{}s model/view system.  
+
+
+Collaboration diagram for Model/view system\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1any__traits}{Wt\+::any\+\_\+traits$<$ Type $>$}}
+\begin{DoxyCompactList}\small\item\em A traits class for a type stored in a cpp17\+::any. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1ItemDataRole}{Wt\+::\+Item\+Data\+Role}}
+\begin{DoxyCompactList}\small\item\em Enumeration that indicates a role for a data item. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractChart}{Wt\+::\+Chart\+::\+W\+Abstract\+Chart}}
+\begin{DoxyCompactList}\small\item\em Abstract base class for M\+V\+C-\/based charts. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{Wt\+::\+Chart\+::\+W\+Cartesian\+Chart}}
+\begin{DoxyCompactList}\small\item\em A cartesian chart. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WPieChart}{Wt\+::\+Chart\+::\+W\+Pie\+Chart}}
+\begin{DoxyCompactList}\small\item\em A pie chart. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model$<$ Result $>$}}
+\begin{DoxyCompactList}\small\item\em A Wt M\+VC Model to view/edit query results. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{Wt\+::\+W\+Abstract\+Item\+Delegate}}
+\begin{DoxyCompactList}\small\item\em Abstract delegate class for rendering an item in an item view. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{Wt\+::\+W\+Abstract\+Item\+Model}}
+\begin{DoxyCompactList}\small\item\em An abstract model for use with Wt\textquotesingle{}s view classes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WAbstractItemView}{Wt\+::\+W\+Abstract\+Item\+View}}
+\begin{DoxyCompactList}\small\item\em An abstract base class for item Views. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WAbstractListModel}{Wt\+::\+W\+Abstract\+List\+Model}}
+\begin{DoxyCompactList}\small\item\em An abstract list model for use with Wt\textquotesingle{}s view classes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WAbstractProxyModel}{Wt\+::\+W\+Abstract\+Proxy\+Model}}
+\begin{DoxyCompactList}\small\item\em An abstract proxy model for Wt\textquotesingle{}s item models. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WAbstractTableModel}{Wt\+::\+W\+Abstract\+Table\+Model}}
+\begin{DoxyCompactList}\small\item\em An abstract table model for use with Wt\textquotesingle{}s view classes. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WAggregateProxyModel}{Wt\+::\+W\+Aggregate\+Proxy\+Model}}
+\begin{DoxyCompactList}\small\item\em A proxy model for Wt\textquotesingle{}s item models that provides column aggregation. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel}{Wt\+::\+W\+Batch\+Edit\+Proxy\+Model}}
+\begin{DoxyCompactList}\small\item\em A proxy model for Wt\textquotesingle{}s item models that provides batch editing. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WComboBox}{Wt\+::\+W\+Combo\+Box}}
+\begin{DoxyCompactList}\small\item\em A widget that provides a drop-\/down combo-\/box control. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WItemDelegate}{Wt\+::\+W\+Item\+Delegate}}
+\begin{DoxyCompactList}\small\item\em Standard delegate class for rendering a view item. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WItemSelectionModel}{Wt\+::\+W\+Item\+Selection\+Model}}
+\begin{DoxyCompactList}\small\item\em A class that represents a selection for a \mbox{\hyperlink{classWt_1_1WAbstractItemView}{W\+Abstract\+Item\+View}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}}
+\begin{DoxyCompactList}\small\item\em A value class that describes an index to an item in a data model. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel}{Wt\+::\+W\+Read\+Only\+Proxy\+Model}}
+\begin{DoxyCompactList}\small\item\em A read-\/only wrapper for a source model. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WSelectionBox}{Wt\+::\+W\+Selection\+Box}}
+\begin{DoxyCompactList}\small\item\em A selection box allows selection from a list of options. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel}{Wt\+::\+W\+Sort\+Filter\+Proxy\+Model}}
+\begin{DoxyCompactList}\small\item\em A proxy model for Wt\textquotesingle{}s item models that provides filtering and/or sorting. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WStandardItem}{Wt\+::\+W\+Standard\+Item}}
+\begin{DoxyCompactList}\small\item\em An item in a \mbox{\hyperlink{classWt_1_1WStandardItemModel}{W\+Standard\+Item\+Model}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WStandardItemModel}{Wt\+::\+W\+Standard\+Item\+Model}}
+\begin{DoxyCompactList}\small\item\em A standard data model, which stores its data in memory. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WStringListModel}{Wt\+::\+W\+String\+List\+Model}}
+\begin{DoxyCompactList}\small\item\em An model that manages a list of strings. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WSuggestionPopup}{Wt\+::\+W\+Suggestion\+Popup}}
+\begin{DoxyCompactList}\small\item\em A widget which popups to assist in editing a textarea or lineedit. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WTableView}{Wt\+::\+W\+Table\+View}}
+\begin{DoxyCompactList}\small\item\em An M\+VC View widget for tabular data. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1WTreeView}{Wt\+::\+W\+Tree\+View}}
+\begin{DoxyCompactList}\small\item\em A view class that displays a model as a tree or tree table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__modelview_gaad8dd5072a40c11a34ee548bfb20b2ba}{Wt\+::\+Match\+Flag}} \{ \newline
+\mbox{\hyperlink{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baa32f01c1611a4a80b752afe034a7210a5}{Wt\+::\+Match\+Flag\+::\+Exactly}} = 0x0, 
+\mbox{\hyperlink{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baad0ecff5cd025e541622d4e6e44526b85}{Wt\+::\+Match\+Flag\+::\+String\+Exactly}} = 0x1, 
+\mbox{\hyperlink{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baa9d1a2cba952f9245c54397bbbf3e8183}{Wt\+::\+Match\+Flag\+::\+Starts\+With}} = 0x2, 
+\mbox{\hyperlink{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baa213068b7e25d045126e9b1702fae80db}{Wt\+::\+Match\+Flag\+::\+Ends\+With}} = 0x3, 
+\newline
+\mbox{\hyperlink{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baab87b7d0627a8afcc083f4e4b8280303d}{Wt\+::\+Match\+Flag\+::\+Reg\+Exp}} = 0x4, 
+\mbox{\hyperlink{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baa6cbd53d8f1cfcd6f888bd346941bf021}{Wt\+::\+Match\+Flag\+::\+Wild\+Card}} = 0x5, 
+\mbox{\hyperlink{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baaaef186eb5e4f306317a661d4b96e397d}{Wt\+::\+Match\+Flag\+::\+Case\+Sensitive}} = 0x10, 
+\mbox{\hyperlink{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baaa212b19ef5f2fb30acf92e6cbccc1f2d}{Wt\+::\+Match\+Flag\+::\+Wrap}} = 0x20
+ \}
+\begin{DoxyCompactList}\small\item\em Flags that specify how to match two values. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__modelview_gafb18b4339442f1327c2a65850f3d8a53}{Wt\+::\+Header\+Flag}} \{ \newline
+\mbox{\hyperlink{group__modelview_ggafb18b4339442f1327c2a65850f3d8a53afb64af9fa20e84a2b6eedf61b449c26f}{Wt\+::\+Header\+Flag\+::\+Column\+Is\+Collapsed}} = 0x1, 
+\mbox{\hyperlink{group__modelview_ggafb18b4339442f1327c2a65850f3d8a53a0c14cf328f658e1680fdd2b05ccf2619}{Wt\+::\+Header\+Flag\+::\+Column\+Is\+Expanded\+Left}} = 0x2, 
+\mbox{\hyperlink{group__modelview_ggafb18b4339442f1327c2a65850f3d8a53a23c4f661badabe6447fde2ac4a7583d6}{Wt\+::\+Header\+Flag\+::\+Column\+Is\+Expanded\+Right}} = 0x4, 
+\mbox{\hyperlink{group__modelview_ggafb18b4339442f1327c2a65850f3d8a53a28647ff63d9d1642a2e58bd74b981407}{Wt\+::\+Header\+Flag\+::\+User\+Checkable}} = 0x8, 
+\newline
+\mbox{\hyperlink{group__modelview_ggafb18b4339442f1327c2a65850f3d8a53a1e12ce0c312e7dd542b46ed8e35a8902}{Wt\+::\+Header\+Flag\+::\+Tristate}} = 0x10, 
+\mbox{\hyperlink{group__modelview_ggafb18b4339442f1327c2a65850f3d8a53a3bc0ca65c47e38227ca94d349943f103}{Wt\+::\+Header\+Flag\+::\+X\+H\+T\+M\+L\+Text}} = 0x40
+ \}
+\begin{DoxyCompactList}\small\item\em Flags that indicate table header options. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Wt\+::\+Item\+Flag}} \{ \newline
+\mbox{\hyperlink{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a8318ce1c96df6ce21eb2ed428c6d0f85}{Wt\+::\+Item\+Flag\+::\+Selectable}} = 0x1, 
+\mbox{\hyperlink{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a2c09e798bf8c5a82d211331c82893a0f}{Wt\+::\+Item\+Flag\+::\+Editable}} = 0x2, 
+\mbox{\hyperlink{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a28647ff63d9d1642a2e58bd74b981407}{Wt\+::\+Item\+Flag\+::\+User\+Checkable}} = 0x4, 
+\mbox{\hyperlink{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a08ab0b568328fb06a466be97d62f5649}{Wt\+::\+Item\+Flag\+::\+Drag\+Enabled}} = 0x8, 
+\newline
+\mbox{\hyperlink{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a915a7e426b17cec6d169b8ce9733a6e3}{Wt\+::\+Item\+Flag\+::\+Drop\+Enabled}} = 0x10, 
+\mbox{\hyperlink{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a1e12ce0c312e7dd542b46ed8e35a8902}{Wt\+::\+Item\+Flag\+::\+Tristate}} = 0x20, 
+\mbox{\hyperlink{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a3bc0ca65c47e38227ca94d349943f103}{Wt\+::\+Item\+Flag\+::\+X\+H\+T\+M\+L\+Text}} = 0x40, 
+\mbox{\hyperlink{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a99feffc57dae9a01652065178fae5b19}{Wt\+::\+Item\+Flag\+::\+Dirty}} = 0x80, 
+\newline
+\mbox{\hyperlink{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0afca59884c1b09b37301a866c10c1263c}{Wt\+::\+Item\+Flag\+::\+Deferred\+Tool\+Tip}} = 0x100
+ \}
+\begin{DoxyCompactList}\small\item\em Flags that indicate data item options. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Wt\+::\+Sort\+Order}} \{ \mbox{\hyperlink{group__modelview_gga4173856040cf108a9c7360927a43ebacacf3fb1ff52ea1eed3347ac5401ee7f0c}{Wt\+::\+Sort\+Order\+::\+Ascending}}, 
+\mbox{\hyperlink{group__modelview_gga4173856040cf108a9c7360927a43ebacae3cf5ac19407b1a62c6fccaff675a53b}{Wt\+::\+Sort\+Order\+::\+Descending}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration that indicates a sort order. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__modelview_gaca801bdfb957c360c5f8709cc46949aa}{Wt\+::\+Drop\+Action}} \{ \mbox{\hyperlink{group__modelview_ggaca801bdfb957c360c5f8709cc46949aaa5fb63579fc981698f97d55bfecb213ea}{Wt\+::\+Drop\+Action\+::\+Copy}} = 0x1, 
+\mbox{\hyperlink{group__modelview_ggaca801bdfb957c360c5f8709cc46949aaa6bc362dbf494c61ea117fe3c71ca48a5}{Wt\+::\+Drop\+Action\+::\+Move}} = 0x2
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration that indicates a drop action. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+W\+T\+\_\+\+A\+PI \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{group__modelview_ga2f96ad66a5212499e5b4d08609800a64}{Wt\+::as\+String}} (const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&v, const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&format\+String=W\+T\+\_\+\+U\+S\+T\+R\+I\+NG())
+\begin{DoxyCompactList}\small\item\em Interprets a cpp17\+::any as a string value. \end{DoxyCompactList}\item 
+W\+T\+\_\+\+A\+PI double \mbox{\hyperlink{group__modelview_ga48a507458cc9f4754fe8b6459f4ad3d1}{Wt\+::as\+Number}} (const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&v)
+\begin{DoxyCompactList}\small\item\em Interprets a cpp17\+::any as a number value. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Type $>$ }\\void \mbox{\hyperlink{group__modelview_gaeb2f9c583490833afd55d65402b4fea9}{Wt\+::register\+Type}} ()
+\begin{DoxyCompactList}\small\item\em Registers M\+V\+C-\/support for a type passed in a cpp17\+::any. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classes that implement Wt\textquotesingle{}s model/view system. 
+
+\doxysubsubsection*{1. Models}
+
+The library provides support for tabular, tree-\/like and tree-\/table like models. All of these implement \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}}.
+
+\doxyparagraph*{Concrete model implementations}
+
+The following concrete model implementations are provided\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classWt_1_1WStandardItemModel}{Wt\+::\+W\+Standard\+Item\+Model}}\+: a full general purpose model, which stores data in memory.
+\item \mbox{\hyperlink{classWt_1_1WStringListModel}{Wt\+::\+W\+String\+List\+Model}}\+: a low-\/height single column model, useful for simple list views
+\item \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}\+: a database query backed model
+\end{DoxyItemize}
+
+\doxyparagraph*{Proxy model implementations}
+
+Proxy models are helper models which wrap around another model, to provide additional functionality on top of the existing model. The following propy models\+:
+
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel}{Wt\+::\+W\+Sort\+Filter\+Proxy\+Model}}\+: provides sorting and filtering support
+\item \mbox{\hyperlink{classWt_1_1WAggregateProxyModel}{Wt\+::\+W\+Aggregate\+Proxy\+Model}}\+: provides column aggregation (useful only for views that implement column aggregation such as \mbox{\hyperlink{classWt_1_1WAbstractItemView}{W\+Abstract\+Item\+View}}\textquotesingle{}s).
+\end{DoxyItemize}
+
+\doxyparagraph*{Abstract models}
+
+Abstract models cannot be instantiated as such, but are the base point for custom model implementations\+:
+
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{Wt\+::\+W\+Abstract\+Item\+Model}}\+: abstract base class of all models
+\item \mbox{\hyperlink{classWt_1_1WAbstractTableModel}{Wt\+::\+W\+Abstract\+Table\+Model}}\+: abstract base class for tabular models
+\item \mbox{\hyperlink{classWt_1_1WAbstractProxyModel}{Wt\+::\+W\+Abstract\+Proxy\+Model}}\+: abstract base class for proxy models.
+\end{DoxyItemize}
+
+\doxysubsubsection*{2. Views}
+
+\doxyparagraph*{Item-\/based views}
+
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classWt_1_1WComboBox}{W\+Combo\+Box}}\+: a combo box
+\item \mbox{\hyperlink{classWt_1_1WSelectionBox}{W\+Selection\+Box}}\+: a selection box
+\item \mbox{\hyperlink{classWt_1_1WTableView}{W\+Table\+View}}\+: a table view (with editing support)
+\item \mbox{\hyperlink{classWt_1_1WTreeView}{W\+Tree\+View}}\+: a tree(-\/table) view (with editing support)
+\item \mbox{\hyperlink{classWt_1_1WSuggestionPopup}{W\+Suggestion\+Popup}}\+: an intelligent input-\/driven combo box
+\end{DoxyItemize}
+
+\doxyparagraph*{Graphical views}
+
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{Chart\+::\+W\+Cartesian\+Chart}}\+: 2D cartesian chart
+\item \mbox{\hyperlink{classWt_1_1Chart_1_1WPieChart}{Chart\+::\+W\+Pie\+Chart}}\+: pie charts
+\end{DoxyItemize}
+
+\doxysubsubsection*{3. Helper classes}
+
+\doxyparagraph*{Model indexes}
+
+\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} represents an index to an item of a \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}}, identified by a row, column and parent node.
+
+\doxyparagraph*{Item delegates}
+
+Item delegates are used by \mbox{\hyperlink{classWt_1_1WTableView}{W\+Table\+View}} and \mbox{\hyperlink{classWt_1_1WTreeView}{W\+Tree\+View}} to render a single item and to provide editing support.
+
+The abstract base class is \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate}{W\+Abstract\+Item\+Delegate}}, and a default implementation is provided by \mbox{\hyperlink{classWt_1_1WItemDelegate}{W\+Item\+Delegate}}. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__modelview_gaca801bdfb957c360c5f8709cc46949aa}\label{group__modelview_gaca801bdfb957c360c5f8709cc46949aa}} 
+\index{Model/view system@{Model/view system}!DropAction@{DropAction}}
+\index{DropAction@{DropAction}!Model/view system@{Model/view system}}
+\doxysubsubsection{\texorpdfstring{DropAction}{DropAction}}
+{\footnotesize\ttfamily enum Wt\+::\+Drop\+Action\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration that indicates a drop action. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a7478161267bcd2d4c7fccd83363074f8}{W\+Abstract\+Item\+Model\+::drop\+Event()}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Copy@{Copy}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!Copy@{Copy}}}\mbox{\Hypertarget{group__modelview_ggaca801bdfb957c360c5f8709cc46949aaa5fb63579fc981698f97d55bfecb213ea}\label{group__modelview_ggaca801bdfb957c360c5f8709cc46949aaa5fb63579fc981698f97d55bfecb213ea}} 
+Copy&Copy the selection. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Move@{Move}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!Move@{Move}}}\mbox{\Hypertarget{group__modelview_ggaca801bdfb957c360c5f8709cc46949aaa6bc362dbf494c61ea117fe3c71ca48a5}\label{group__modelview_ggaca801bdfb957c360c5f8709cc46949aaa6bc362dbf494c61ea117fe3c71ca48a5}} 
+Move&Move the selection (deleting originals) \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__modelview_gafb18b4339442f1327c2a65850f3d8a53}\label{group__modelview_gafb18b4339442f1327c2a65850f3d8a53}} 
+\index{Model/view system@{Model/view system}!HeaderFlag@{HeaderFlag}}
+\index{HeaderFlag@{HeaderFlag}!Model/view system@{Model/view system}}
+\doxysubsubsection{\texorpdfstring{HeaderFlag}{HeaderFlag}}
+{\footnotesize\ttfamily enum Wt\+::\+Header\+Flag\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Flags that indicate table header options. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_aba71f1fcdae2ada51ad7144f9dd3c228}{W\+Abstract\+Item\+Model\+::header\+Flags()}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ColumnIsCollapsed@{ColumnIsCollapsed}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!ColumnIsCollapsed@{ColumnIsCollapsed}}}\mbox{\Hypertarget{group__modelview_ggafb18b4339442f1327c2a65850f3d8a53afb64af9fa20e84a2b6eedf61b449c26f}\label{group__modelview_ggafb18b4339442f1327c2a65850f3d8a53afb64af9fa20e84a2b6eedf61b449c26f}} 
+Column\+Is\+Collapsed&Flag that indicates that the column can be expanded. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ae420dad3a27a35014570daa27377be1d}{W\+Abstract\+Item\+Model\+::expand\+Column()}} 
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ColumnIsExpandedLeft@{ColumnIsExpandedLeft}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!ColumnIsExpandedLeft@{ColumnIsExpandedLeft}}}\mbox{\Hypertarget{group__modelview_ggafb18b4339442f1327c2a65850f3d8a53a0c14cf328f658e1680fdd2b05ccf2619}\label{group__modelview_ggafb18b4339442f1327c2a65850f3d8a53a0c14cf328f658e1680fdd2b05ccf2619}} 
+Column\+Is\+Expanded\+Left&Flag that indicates that the column was expanded to the left. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_aa20428eef993a233aff90ff953a3fe0b}{W\+Abstract\+Item\+Model\+::collapse\+Column()}} 
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ColumnIsExpandedRight@{ColumnIsExpandedRight}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!ColumnIsExpandedRight@{ColumnIsExpandedRight}}}\mbox{\Hypertarget{group__modelview_ggafb18b4339442f1327c2a65850f3d8a53a23c4f661badabe6447fde2ac4a7583d6}\label{group__modelview_ggafb18b4339442f1327c2a65850f3d8a53a23c4f661badabe6447fde2ac4a7583d6}} 
+Column\+Is\+Expanded\+Right&Flag that indicates that the column was expanded to the right. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_aa20428eef993a233aff90ff953a3fe0b}{W\+Abstract\+Item\+Model\+::collapse\+Column()}} 
+\end{DoxySeeAlso}
+\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UserCheckable@{UserCheckable}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!UserCheckable@{UserCheckable}}}\mbox{\Hypertarget{group__modelview_ggafb18b4339442f1327c2a65850f3d8a53a28647ff63d9d1642a2e58bd74b981407}\label{group__modelview_ggafb18b4339442f1327c2a65850f3d8a53a28647ff63d9d1642a2e58bd74b981407}} 
+User\+Checkable&Flag that indicates that the header can be checked. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Tristate@{Tristate}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!Tristate@{Tristate}}}\mbox{\Hypertarget{group__modelview_ggafb18b4339442f1327c2a65850f3d8a53a1e12ce0c312e7dd542b46ed8e35a8902}\label{group__modelview_ggafb18b4339442f1327c2a65850f3d8a53a1e12ce0c312e7dd542b46ed8e35a8902}} 
+Tristate&Flag that indicates that the item has three states. When set, \mbox{\hyperlink{classWt_1_1ItemDataRole_af9f0b694aa760202db896dda696bf55f}{Wt\+::\+Item\+Data\+Role\+::\+Checked}} data is of type \mbox{\hyperlink{classWt_a59dae4dad2967d1d0f9b765f468442fb}{Wt\+::\+Check\+State}} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XHTMLText@{XHTMLText}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!XHTMLText@{XHTMLText}}}\mbox{\Hypertarget{group__modelview_ggafb18b4339442f1327c2a65850f3d8a53a3bc0ca65c47e38227ca94d349943f103}\label{group__modelview_ggafb18b4339442f1327c2a65850f3d8a53a3bc0ca65c47e38227ca94d349943f103}} 
+X\+H\+T\+M\+L\+Text&Flag that indicates that the item text (\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}, \mbox{\hyperlink{classWt_1_1ItemDataRole_a9013847e572f2b118b5b1a6fa74691a6}{Item\+Data\+Role\+::\+Tool\+Tip}}) is H\+T\+ML. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}\label{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}} 
+\index{Model/view system@{Model/view system}!ItemFlag@{ItemFlag}}
+\index{ItemFlag@{ItemFlag}!Model/view system@{Model/view system}}
+\doxysubsubsection{\texorpdfstring{ItemFlag}{ItemFlag}}
+{\footnotesize\ttfamily enum Wt\+::\+Item\+Flag\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Flags that indicate data item options. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WModelIndex_ad7beb87e0f534cbf521196ac4806694f}{W\+Model\+Index\+::flags()}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Selectable@{Selectable}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!Selectable@{Selectable}}}\mbox{\Hypertarget{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a8318ce1c96df6ce21eb2ed428c6d0f85}\label{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a8318ce1c96df6ce21eb2ed428c6d0f85}} 
+Selectable&Item can be selected. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Editable@{Editable}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!Editable@{Editable}}}\mbox{\Hypertarget{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a2c09e798bf8c5a82d211331c82893a0f}\label{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a2c09e798bf8c5a82d211331c82893a0f}} 
+Editable&Item can be edited. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UserCheckable@{UserCheckable}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!UserCheckable@{UserCheckable}}}\mbox{\Hypertarget{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a28647ff63d9d1642a2e58bd74b981407}\label{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a28647ff63d9d1642a2e58bd74b981407}} 
+User\+Checkable&Item can be checked (checkbox is enabled) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DragEnabled@{DragEnabled}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!DragEnabled@{DragEnabled}}}\mbox{\Hypertarget{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a08ab0b568328fb06a466be97d62f5649}\label{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a08ab0b568328fb06a466be97d62f5649}} 
+Drag\+Enabled&Item can be dragged. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DropEnabled@{DropEnabled}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!DropEnabled@{DropEnabled}}}\mbox{\Hypertarget{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a915a7e426b17cec6d169b8ce9733a6e3}\label{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a915a7e426b17cec6d169b8ce9733a6e3}} 
+Drop\+Enabled&Item can be a drop target. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Tristate@{Tristate}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!Tristate@{Tristate}}}\mbox{\Hypertarget{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a1e12ce0c312e7dd542b46ed8e35a8902}\label{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a1e12ce0c312e7dd542b46ed8e35a8902}} 
+Tristate&Item has tree states.
+
+When set, \mbox{\hyperlink{classWt_1_1ItemDataRole_af9f0b694aa760202db896dda696bf55f}{Wt\+::\+Item\+Data\+Role\+::\+Checked}} data is of type \mbox{\hyperlink{classWt_a59dae4dad2967d1d0f9b765f468442fb}{Wt\+::\+Check\+State}} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XHTMLText@{XHTMLText}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!XHTMLText@{XHTMLText}}}\mbox{\Hypertarget{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a3bc0ca65c47e38227ca94d349943f103}\label{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a3bc0ca65c47e38227ca94d349943f103}} 
+X\+H\+T\+M\+L\+Text&Item\textquotesingle{}s text (\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}, \mbox{\hyperlink{classWt_1_1ItemDataRole_a9013847e572f2b118b5b1a6fa74691a6}{Item\+Data\+Role\+::\+Tool\+Tip}}) is H\+T\+ML. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Dirty@{Dirty}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!Dirty@{Dirty}}}\mbox{\Hypertarget{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a99feffc57dae9a01652065178fae5b19}\label{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0a99feffc57dae9a01652065178fae5b19}} 
+Dirty&Item\textquotesingle{}s value has been modified. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DeferredToolTip@{DeferredToolTip}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!DeferredToolTip@{DeferredToolTip}}}\mbox{\Hypertarget{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0afca59884c1b09b37301a866c10c1263c}\label{group__modelview_gga1d77c4de293aebfacbdde124de06b8b0afca59884c1b09b37301a866c10c1263c}} 
+Deferred\+Tool\+Tip&Item\textquotesingle{}s tooltip is deferred. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__modelview_gaad8dd5072a40c11a34ee548bfb20b2ba}\label{group__modelview_gaad8dd5072a40c11a34ee548bfb20b2ba}} 
+\index{Model/view system@{Model/view system}!MatchFlag@{MatchFlag}}
+\index{MatchFlag@{MatchFlag}!Model/view system@{Model/view system}}
+\doxysubsubsection{\texorpdfstring{MatchFlag}{MatchFlag}}
+{\footnotesize\ttfamily enum Wt\+::\+Match\+Flag\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Flags that specify how to match two values. 
+
+Except when Match\+Flag\+::\+Exactly, the lexical matching is done (by comparing string representations of the value with the query). This is by default case insensitive, unless Match\+Flag\+::\+Case\+Sensitive is OR\textquotesingle{}ed. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Exactly@{Exactly}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!Exactly@{Exactly}}}\mbox{\Hypertarget{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baa32f01c1611a4a80b752afe034a7210a5}\label{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baa32f01c1611a4a80b752afe034a7210a5}} 
+Exactly&Same type and value. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{StringExactly@{StringExactly}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!StringExactly@{StringExactly}}}\mbox{\Hypertarget{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baad0ecff5cd025e541622d4e6e44526b85}\label{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baad0ecff5cd025e541622d4e6e44526b85}} 
+String\+Exactly&Lexical match. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{StartsWith@{StartsWith}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!StartsWith@{StartsWith}}}\mbox{\Hypertarget{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baa9d1a2cba952f9245c54397bbbf3e8183}\label{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baa9d1a2cba952f9245c54397bbbf3e8183}} 
+Starts\+With&Match start with query. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EndsWith@{EndsWith}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!EndsWith@{EndsWith}}}\mbox{\Hypertarget{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baa213068b7e25d045126e9b1702fae80db}\label{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baa213068b7e25d045126e9b1702fae80db}} 
+Ends\+With&Match end with query. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RegExp@{RegExp}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!RegExp@{RegExp}}}\mbox{\Hypertarget{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baab87b7d0627a8afcc083f4e4b8280303d}\label{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baab87b7d0627a8afcc083f4e4b8280303d}} 
+Reg\+Exp&Regular expression match. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WildCard@{WildCard}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!WildCard@{WildCard}}}\mbox{\Hypertarget{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baa6cbd53d8f1cfcd6f888bd346941bf021}\label{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baa6cbd53d8f1cfcd6f888bd346941bf021}} 
+Wild\+Card&Wildcard match. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CaseSensitive@{CaseSensitive}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!CaseSensitive@{CaseSensitive}}}\mbox{\Hypertarget{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baaaef186eb5e4f306317a661d4b96e397d}\label{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baaaef186eb5e4f306317a661d4b96e397d}} 
+Case\+Sensitive&Case sensitive. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Wrap@{Wrap}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!Wrap@{Wrap}}}\mbox{\Hypertarget{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baaa212b19ef5f2fb30acf92e6cbccc1f2d}\label{group__modelview_ggaad8dd5072a40c11a34ee548bfb20b2baaa212b19ef5f2fb30acf92e6cbccc1f2d}} 
+Wrap&Wrap around whole model. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__modelview_ga4173856040cf108a9c7360927a43ebac}\label{group__modelview_ga4173856040cf108a9c7360927a43ebac}} 
+\index{Model/view system@{Model/view system}!SortOrder@{SortOrder}}
+\index{SortOrder@{SortOrder}!Model/view system@{Model/view system}}
+\doxysubsubsection{\texorpdfstring{SortOrder}{SortOrder}}
+{\footnotesize\ttfamily enum Wt\+::\+Sort\+Order\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration that indicates a sort order. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ascending@{Ascending}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!Ascending@{Ascending}}}\mbox{\Hypertarget{group__modelview_gga4173856040cf108a9c7360927a43ebacacf3fb1ff52ea1eed3347ac5401ee7f0c}\label{group__modelview_gga4173856040cf108a9c7360927a43ebacacf3fb1ff52ea1eed3347ac5401ee7f0c}} 
+Ascending&Ascending sort order. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Descending@{Descending}!Model/view system@{Model/view system}}\index{Model/view system@{Model/view system}!Descending@{Descending}}}\mbox{\Hypertarget{group__modelview_gga4173856040cf108a9c7360927a43ebacae3cf5ac19407b1a62c6fccaff675a53b}\label{group__modelview_gga4173856040cf108a9c7360927a43ebacae3cf5ac19407b1a62c6fccaff675a53b}} 
+Descending&Descending sort order. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__modelview_ga48a507458cc9f4754fe8b6459f4ad3d1}\label{group__modelview_ga48a507458cc9f4754fe8b6459f4ad3d1}} 
+\index{Model/view system@{Model/view system}!asNumber@{asNumber}}
+\index{asNumber@{asNumber}!Model/view system@{Model/view system}}
+\doxysubsubsection{\texorpdfstring{asNumber()}{asNumber()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+A\+PI double Wt\+::as\+Number (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{v }\end{DoxyParamCaption})}
+
+
+
+Interprets a cpp17\+::any as a number value. 
+
+The conversion works as follows\+:
+\begin{DoxyItemize}
+\item A cpp17\+::any without a value, or a string that does not represent a number, is converted to a {\itshape NaN}.
+\item A string is lexically casted to a double
+\item \mbox{\hyperlink{classData}{Data}} of type \mbox{\hyperlink{classWt_1_1WDate}{W\+Date}} is converted to an integer number using \mbox{\hyperlink{classWt_1_1WDate_a89855250cec72c1a2d199602db786089}{W\+Date\+::to\+Julian\+Day()}}.
+\item \mbox{\hyperlink{classData}{Data}} of type \mbox{\hyperlink{classWt_1_1WDateTime}{W\+Date\+Time}} is converted to an integer number using \mbox{\hyperlink{classWt_1_1WDateTime_a5c40513f1f92e93e3fbcbe3c92142032}{W\+Date\+Time\+::to\+Time\+\_\+t()}}.
+\item \mbox{\hyperlink{classData}{Data}} of type \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} is converted to an integer number as the number of milliseconds since midnight.
+\end{DoxyItemize}
+
+Other types are converted according to \mbox{\hyperlink{structWt_1_1any__traits_ad294344c847931e451a60dc7e065a18a}{Wt\+::any\+\_\+traits$<$\+Type$>$\+::as\+Number()}}. For these other types, you need to register their support first using \mbox{\hyperlink{group__modelview_gaeb2f9c583490833afd55d65402b4fea9}{Wt\+::register\+Type$<$\+Type$>$()}} and you may want to specialize Wt\+::any\+\_\+traits$<$\+Type$>$ for a custom handling of their conversions.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__modelview_ga2f96ad66a5212499e5b4d08609800a64}{as\+String()}}, \mbox{\hyperlink{structWt_1_1any__traits}{any\+\_\+traits}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__modelview_ga2f96ad66a5212499e5b4d08609800a64}\label{group__modelview_ga2f96ad66a5212499e5b4d08609800a64}} 
+\index{Model/view system@{Model/view system}!asString@{asString}}
+\index{asString@{asString}!Model/view system@{Model/view system}}
+\doxysubsubsection{\texorpdfstring{asString()}{asString()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+A\+PI \mbox{\hyperlink{classWt_1_1WString}{W\+String}} Wt\+::as\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{v,  }\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{format\+String = {\ttfamily WT\+\_\+USTRING()} }\end{DoxyParamCaption})}
+
+
+
+Interprets a cpp17\+::any as a string value. 
+
+The conversion works as follows\+:
+\begin{DoxyItemize}
+\item A cpp17\+::any without a value is converted to an empty string
+\item Number values (integers and doubles) are formatted using the format string with {\itshape snprintf()}, or with {\itshape std\+::stod()} if the format string is empty.
+\item \mbox{\hyperlink{classData}{Data}} of type \mbox{\hyperlink{classWt_1_1WDate}{W\+Date}} is converted with \mbox{\hyperlink{classWt_1_1WDate_a8fb0648e3910ee4fc68a55e245f86463}{W\+Date\+::to\+String()}} using the indicated format string. If the format string is empty, W\+Localce\+::current\+Locale().date\+Format() is assumed.
+\item \mbox{\hyperlink{classData}{Data}} of type \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} is converted with \mbox{\hyperlink{classWt_1_1WTime_a2f0fae3bf317c98830f3075f022d2071}{W\+Time\+::to\+String()}} using the indicated format string. If the format string is emtpy, \mbox{\hyperlink{classWt_1_1WLocale_a6835ad168c75e8ac235637034e876ff1}{W\+Locale\+::current\+Locale()}}.time\+Format() is assumed.
+\item \mbox{\hyperlink{classData}{Data}} of type \mbox{\hyperlink{classWt_1_1WDateTime}{W\+Date\+Time}} is converted with \mbox{\hyperlink{classWt_1_1WDateTime_a2269c77624781225e7ea63322be767d0}{W\+Date\+Time\+::to\+String()}} using the indicated format string. If the format string is empty, \mbox{\hyperlink{classWt_1_1WLocale_a6835ad168c75e8ac235637034e876ff1}{W\+Locale\+::current\+Locale()}}.date\+Time\+Format() is assumed.
+\end{DoxyItemize}
+
+Other types are converted according to \mbox{\hyperlink{structWt_1_1any__traits_a4308aa7ddee4785e2d4a22c84aee4b49}{Wt\+::any\+\_\+traits$<$\+Type$>$\+::as\+String()}}. For these other types, you need to register their support first using \mbox{\hyperlink{group__modelview_gaeb2f9c583490833afd55d65402b4fea9}{Wt\+::register\+Type$<$\+Type$>$()}} and you may want to specialize Wt\+::any\+\_\+traits$<$\+Type$>$ for a custom handling of their conversions.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__modelview_ga48a507458cc9f4754fe8b6459f4ad3d1}{as\+Number()}}, \mbox{\hyperlink{structWt_1_1any__traits}{any\+\_\+traits}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__modelview_gaeb2f9c583490833afd55d65402b4fea9}\label{group__modelview_gaeb2f9c583490833afd55d65402b4fea9}} 
+\index{Model/view system@{Model/view system}!registerType@{registerType}}
+\index{registerType@{registerType}!Model/view system@{Model/view system}}
+\doxysubsubsection{\texorpdfstring{registerType()}{registerType()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+void Wt\+::register\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Registers M\+V\+C-\/support for a type passed in a cpp17\+::any. 
+
+By registering a type using this method, the global function \mbox{\hyperlink{group__modelview_ga2f96ad66a5212499e5b4d08609800a64}{Wt\+::as\+String()}}, which converts a cpp17\+::any to a string, will know how to interpret a cpp17\+::any holding a value of type {\ttfamily Type} using \mbox{\hyperlink{structWt_1_1any__traits_a4308aa7ddee4785e2d4a22c84aee4b49}{Wt\+::any\+\_\+traits$<$\+Type$>$\+::as\+String()}}. This gives Wt\textquotesingle{}s built-\/in standard View classes the ability to display \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Wt\+::\+Item\+Data\+Role\+::\+Display}} data of a \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{Wt\+::\+W\+Abstract\+Item\+Model}} model.
+
+Similarly, \mbox{\hyperlink{group__modelview_ga48a507458cc9f4754fe8b6459f4ad3d1}{Wt\+::as\+Number()}} uses \mbox{\hyperlink{structWt_1_1any__traits_ad294344c847931e451a60dc7e065a18a}{Wt\+::any\+\_\+traits$<$\+Type$>$\+::as\+Number()}} for use by \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{Wt\+::\+Chart\+::\+W\+Cartesian\+Chart}} and \mbox{\hyperlink{classWt_1_1Chart_1_1WPieChart}{Wt\+::\+Chart\+::\+W\+Pie\+Chart}} as numerical data.
+
+The default implementation of Wt\+::any\+\_\+traits$<$\+Type$>$ converts a value {\ttfamily t} to a \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} by using std\+::ostream$<$$<$, expecting a U\+T\+F-\/8 string. This conversion thus relies on the std\+::ostream$<$$<$ operator to be overloaded for the type. You may want to specialize \mbox{\hyperlink{structWt_1_1any__traits}{Wt\+::any\+\_\+traits}} to provide a custom conversion for a type, or if you want to take into account the format string.
+
+The following types are registered by Wt itself\+:
+\begin{DoxyItemize}
+\item strings of type \mbox{\hyperlink{classWt_1_1WString}{W\+String}} or std\+::string
+\item \mbox{\hyperlink{classWt_1_1WDate}{W\+Date}}, \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}}, \mbox{\hyperlink{classWt_1_1WDateTime}{W\+Date\+Time}}
+\item standard C++ numeric types (int, double, etc...)
+\item bool
+\end{DoxyItemize}
+
+This method is thread-\/safe, and it is not an error to register the same type multiple times. 

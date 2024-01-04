@@ -1,0 +1,713 @@
+\hypertarget{classWt_1_1WPainterPath}{}\doxysection{Wt\+::W\+Painter\+Path Class Reference}
+\label{classWt_1_1WPainterPath}\index{Wt::WPainterPath@{Wt::WPainterPath}}
+
+
+A path defining a shape.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Painter\+Path.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Painter\+Path\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Painter\+Path\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWt_1_1WPainterPath_1_1Segment}{Segment}}
+\begin{DoxyCompactList}\small\item\em A segment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WPainterPath_ace0add71a1ebc8b45a821aa8d70d3e3f}{W\+Painter\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WPainterPath_a364b46c7a45bcb18e235ec0b41268a15}{W\+Painter\+Path}} (const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&start\+Point)
+\begin{DoxyCompactList}\small\item\em Construct a new path, and set the initial position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPainterPath_abea96512cd12bc8630f81b2ed91deb80}\label{classWt_1_1WPainterPath_abea96512cd12bc8630f81b2ed91deb80}} 
+\mbox{\hyperlink{classWt_1_1WPainterPath_abea96512cd12bc8630f81b2ed91deb80}{W\+Painter\+Path}} (const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&path)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPainterPath_ac4a31415ea62cb22645f08e2f7cf0a6e}\label{classWt_1_1WPainterPath_ac4a31415ea62cb22645f08e2f7cf0a6e}} 
+\mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \& \mbox{\hyperlink{classWt_1_1WPainterPath_ac4a31415ea62cb22645f08e2f7cf0a6e}{operator=}} (const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&path)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \mbox{\hyperlink{classWt_1_1WPainterPath_a48d9c7a609c89586994417781958d562}{current\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current position. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WPainterPath_a1b52e2020b3bd8cd5c8920435d95162a}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the path is empty. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WPainterPath_a6bea4a60141e2fa67182e4f43432bcf6}{operator==}} (const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&path) const
+\begin{DoxyCompactList}\small\item\em Comparison operator. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WPainterPath_a3628947c19c248bb6b498fc872430eb0}{operator!=}} (const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&path) const
+\begin{DoxyCompactList}\small\item\em Comparison operator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_a9db15664f1cea3f12a2c7ab1337a343b}{close\+Sub\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Closes the last sub path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_a9801a3988b2a57c412ba175142d2e3ff}{move\+To}} (const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&point)
+\begin{DoxyCompactList}\small\item\em Moves the current position to a new location. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_a2cdd1952ade53cc4b2f2a0146fc8c00f}{move\+To}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Moves the current position to a new location. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_ac52bacd9bb3b07043e56be2af56f7f66}{line\+To}} (const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&point)
+\begin{DoxyCompactList}\small\item\em Draws a straight line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_aafdba97cf01c017fa9e8f18169c7a205}{line\+To}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Draws a straight line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_ac5a13ec3faf642cd05a57988366e005f}{cubic\+To}} (const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&c1, const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&c2, const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&end\+Point)
+\begin{DoxyCompactList}\small\item\em Draws a cubic bezier curve. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_ad751c7f66795ecdbe1fc7098dc11977b}{cubic\+To}} (double c1x, double c1y, double c2x, double c2y, double end\+Pointx, double end\+Pointy)
+\begin{DoxyCompactList}\small\item\em Draws a cubic bezier curve. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_aa32b8c9d89712a5cad37325cbba099c0}{arc\+To}} (double cx, double cy, double radius, double start\+Angle, double span\+Angle)
+\begin{DoxyCompactList}\small\item\em Draws an arc. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_a6e4d29695685a08198be2c2dff53e49c}{arc\+Move\+To}} (double cx, double cy, double radius, double angle)
+\begin{DoxyCompactList}\small\item\em Moves to a point on an arc. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_a366810aa107d35409f9fbd33b8e91dbb}{arc\+Move\+To}} (double x, double y, double width, double height, double angle)
+\begin{DoxyCompactList}\small\item\em Move to a point on an arc. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_a5cf7125271a74e15a52db05876b8c878}{quad\+To}} (const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&c, const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&end\+Point)
+\begin{DoxyCompactList}\small\item\em Draws a quadratic bezier curve. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_a2eaf3d30b6cf1590a3f368b8b94d49ca}{quad\+To}} (double cx, double cy, double end\+Pointx, double end\+Pointy)
+\begin{DoxyCompactList}\small\item\em Draws a quadratic bezier curve. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_ae8783aad1c538e0180b2323a3a926999}{add\+Ellipse}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&bounding\+Rectangle)
+\begin{DoxyCompactList}\small\item\em Draws an ellipse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_a3dadfaa8235becb01221431d1f1a97d6}{add\+Ellipse}} (double x, double y, double width, double height)
+\begin{DoxyCompactList}\small\item\em Draws an ellipse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_a52f1c2008c15cd133e8fb405d8b0466b}{add\+Rect}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rectangle)
+\begin{DoxyCompactList}\small\item\em Draws a rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_ab5b658698acf7a87948e7c0adf6c1151}{add\+Rect}} (double x, double y, double width, double height)
+\begin{DoxyCompactList}\small\item\em Draws a rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_abb60a8df2d09df52f8ece78be06bda14}{add\+Polygon}} (const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} $>$ \&points)
+\begin{DoxyCompactList}\small\item\em Adds a polygon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_a8f2e9933f699b967fe5776c98080a410}{add\+Path}} (const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&path)
+\begin{DoxyCompactList}\small\item\em Adds a path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_a7a5d7f8d62eda600ab05926c8f8014be}{connect\+Path}} (const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&path)
+\begin{DoxyCompactList}\small\item\em Adds a path, connecting. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a8ab4939db7f8644bb5411130a0152878}\label{classWt_1_1WPainterPath_a8ab4939db7f8644bb5411130a0152878}} 
+const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WPainterPath_1_1Segment}{Segment}} $>$ \& {\bfseries segments} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a1c12df062045ed109249048aad73a057}\label{classWt_1_1WPainterPath_a1c12df062045ed109249048aad73a057}} 
+\mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} {\bfseries position\+At\+Segment} (int i) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainterPath_ae1f1ea1786f591f22979d5883db2c440}\label{classWt_1_1WPainterPath_ae1f1ea1786f591f22979d5883db2c440}} 
+bool {\bfseries as\+Rect} (\mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&result) const
+\item 
+\mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \mbox{\hyperlink{classWt_1_1WPainterPath_a7cb87a938181fa55f248725853108c9d}{control\+Point\+Rect}} (const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \&transform=\mbox{\hyperlink{classWt_1_1WTransform_a32281880ff4f50a1aa6b07477f779da0}{W\+Transform\+::\+Identity}}) const
+\begin{DoxyCompactList}\small\item\em Returns the bounding box of the control points. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \mbox{\hyperlink{classWt_1_1WPainterPath_a8d6ae1ecfa27a32c7f313a18e68478fd}{crisp}} () const
+\begin{DoxyCompactList}\small\item\em Returns a copy of the path where straight lines are moved to be rendered crisply. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainterPath_a7485cf1701e51823d1f4a6f689425ac1}{set\+Open\+Sub\+Paths\+Enabled}} (bool enabled=true)
+\begin{DoxyCompactList}\small\item\em Disables automatically closing subpaths on move\+To. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WPainterPath_a22b738f79b130b5867bd93cb2b79c7b8}{open\+Sub\+Paths\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether open subpaths are enabled. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a783a8c068e63eca4d13ef296b91201b1}\label{classWt_1_1WPainterPath_a783a8c068e63eca4d13ef296b91201b1}} 
+bool {\bfseries is\+Point\+In\+Path} (const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&p) const
+\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WPainterPath_a86dd72fd0e5acd4a6b3657d2c9cb9bba}{js\+Value}} () const override
+\begin{DoxyCompactList}\small\item\em Returns a Java\+Script representation of the value of this object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainterPath_ae81afbee92516d09f2dca3015ddae083}\label{classWt_1_1WPainterPath_ae81afbee92516d09f2dca3015ddae083}} 
+virtual void {\bfseries assign\+From\+J\+S\+ON} (const \mbox{\hyperlink{classWt_1_1Json_1_1Value}{Json\+::\+Value}} \&value) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainterPath_ae261e47bf846ee279a16ee0ae86b0634}\label{classWt_1_1WPainterPath_ae261e47bf846ee279a16ee0ae86b0634}} 
+\mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} {\bfseries get\+Sub\+Path\+Start} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a6b6b503e698ee3ab9a76f7e584e0b499}\label{classWt_1_1WPainterPath_a6b6b503e698ee3ab9a76f7e584e0b499}} 
+\mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} {\bfseries begin\+Position} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a50f747fedf14299411e7d087ec4db49b}\label{classWt_1_1WPainterPath_a50f747fedf14299411e7d087ec4db49b}} 
+void {\bfseries arc\+To} (double x, double y, double width, double height, double start\+Angle, double sweep\+Length)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a1f88057b9763980eedf40b07d27fed12}\label{classWt_1_1WPainterPath_a1f88057b9763980eedf40b07d27fed12}} 
+static \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} {\bfseries get\+Arc\+Position} (double cx, double cy, double rx, double ry, double angle)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a02a28b4618d090910678af7610e52ce4}\label{classWt_1_1WPainterPath_a02a28b4618d090910678af7610e52ce4}} 
+bool {\bfseries is\+Rect\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a490fff8b3579244462c8343091dcb767}\label{classWt_1_1WPainterPath_a490fff8b3579244462c8343091dcb767}} 
+bool {\bfseries open\+Sub\+Paths\+Enabled\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a1fda81cb7d0e76f250e67c6191a6ae8c}\label{classWt_1_1WPainterPath_a1fda81cb7d0e76f250e67c6191a6ae8c}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WPainterPath_1_1Segment}{Segment}} $>$ {\bfseries segments\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a4aaf28521f00b062e97a66528979f2ff}\label{classWt_1_1WPainterPath_a4aaf28521f00b062e97a66528979f2ff}} 
+class {\bfseries W\+Svg\+Image}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a89e285150322e3c7f8a5d687ae332d99}\label{classWt_1_1WPainterPath_a89e285150322e3c7f8a5d687ae332d99}} 
+\mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} {\bfseries W\+Transform\+::map} (const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&path) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A path defining a shape. 
+
+A painter path represents a (complex) path that may be composed of lines, arcs and bezier curve segments, and painted onto a paint device using \mbox{\hyperlink{classWt_1_1WPainter_a2ef57868d6fbf99a901cbe1f29723b50}{W\+Painter\+::draw\+Path()}}.
+
+The path that is composed in a painter path may consist of multiple closed sub-\/paths. Only the last sub-\/path can be left open.
+
+To compose a path, this class maintains a current position, which is the starting point for the next drawing operation. An operation may draw a line (see \mbox{\hyperlink{classWt_1_1WPainterPath_ac52bacd9bb3b07043e56be2af56f7f66}{line\+To()}}), arc (see \mbox{\hyperlink{classWt_1_1WPainterPath_aa32b8c9d89712a5cad37325cbba099c0}{arc\+To()}}), or bezier curve (see \mbox{\hyperlink{classWt_1_1WPainterPath_a5cf7125271a74e15a52db05876b8c878}{quad\+To()}} and \mbox{\hyperlink{classWt_1_1WPainterPath_ac5a13ec3faf642cd05a57988366e005f}{cubic\+To()}}) from the current position to a new position. A new sub path may be started by moving the current position to a new location (see \mbox{\hyperlink{classWt_1_1WPainterPath_a9801a3988b2a57c412ba175142d2e3ff}{move\+To()}}), which automatically closes the previous sub path.
+
+When sub paths overlap, the result is undefined (it is dependent on the underlying painting device).
+
+Usage example\+:
+
+\doxyparagraph*{Java\+Script exposability}
+
+A W\+Painter\+Path is Java\+Script exposable. If a W\+Painter\+Path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}, it can be accessed in your custom Java\+Script code through \mbox{\hyperlink{classWt_1_1WJavaScriptHandle_a0d0bc00f0bcafb596c3f6c96c4241ded}{its handle\textquotesingle{}s js\+Ref()}}.
+
+A W\+Painter\+Path is represented in Java\+Script as an array of segments, where each segment is defined by a three element array\+: \mbox{[}x,y,type\mbox{]}, where type is the integer representation of the type of a segment.
+
+For example, a 10 by 10 square with the top left at (10,10) is represented as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{[}
+\DoxyCodeLine{ [10,10,0], \textcolor{comment}{// move to (10,10)}}
+\DoxyCodeLine{ [20,10,1], \textcolor{comment}{// line to (20,10)}}
+\DoxyCodeLine{ [20,20,1], \textcolor{comment}{// line to (20,20)}}
+\DoxyCodeLine{ [10,20,1], \textcolor{comment}{// line to (10,20)}}
+\DoxyCodeLine{ [10,10,1]  \textcolor{comment}{// line to (10,10)}}
+\DoxyCodeLine{]}
+\end{DoxyCode}
+
+
+\begin{DoxyWarning}{Warning}
+A W\+Painter\+Path that is Java\+Script exposed should be modified only through its \mbox{\hyperlink{classWt_1_1WJavaScriptHandle}{handle}}. Any attempt at modifying it will cause an exception to be thrown.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a2ef57868d6fbf99a901cbe1f29723b50}{W\+Painter\+::draw\+Path()}}, \mbox{\hyperlink{classWt_1_1WPaintedWidget_a89be0a2ace6474553a5656d1b376d516}{W\+Painted\+Widget\+::create\+J\+S\+Painter\+Path()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_ace0add71a1ebc8b45a821aa8d70d3e3f}\label{classWt_1_1WPainterPath_ace0add71a1ebc8b45a821aa8d70d3e3f}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!WPainterPath@{WPainterPath}}
+\index{WPainterPath@{WPainterPath}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{WPainterPath()}{WPainterPath()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Painter\+Path\+::\+W\+Painter\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Creates an empty path, and sets the current position to (0, 0). \mbox{\Hypertarget{classWt_1_1WPainterPath_a364b46c7a45bcb18e235ec0b41268a15}\label{classWt_1_1WPainterPath_a364b46c7a45bcb18e235ec0b41268a15}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!WPainterPath@{WPainterPath}}
+\index{WPainterPath@{WPainterPath}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{WPainterPath()}{WPainterPath()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Painter\+Path\+::\+W\+Painter\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&}]{start\+Point }\end{DoxyParamCaption})}
+
+
+
+Construct a new path, and set the initial position. 
+
+Creates an empty path, and sets the current position to {\ttfamily start\+Point}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_ae8783aad1c538e0180b2323a3a926999}\label{classWt_1_1WPainterPath_ae8783aad1c538e0180b2323a3a926999}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!addEllipse@{addEllipse}}
+\index{addEllipse@{addEllipse}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{addEllipse()}{addEllipse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::add\+Ellipse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{bounding\+Rectangle }\end{DoxyParamCaption})}
+
+
+
+Draws an ellipse. 
+
+This method closes the current sub path, and adds an ellipse that is bounded by the rectangle {\ttfamily bounding\+Rectangle}.
+
+{\ttfamily \mbox{\hyperlink{classNote}{Note}}\+:} some renderers only support circles (width == height)
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_a3dadfaa8235becb01221431d1f1a97d6}{add\+Ellipse(double, double, double, double)}}, \mbox{\hyperlink{classWt_1_1WPainterPath_aa32b8c9d89712a5cad37325cbba099c0}{arc\+To()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a3dadfaa8235becb01221431d1f1a97d6}\label{classWt_1_1WPainterPath_a3dadfaa8235becb01221431d1f1a97d6}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!addEllipse@{addEllipse}}
+\index{addEllipse@{addEllipse}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{addEllipse()}{addEllipse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::add\+Ellipse (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{width,  }\item[{double}]{height }\end{DoxyParamCaption})}
+
+
+
+Draws an ellipse. 
+
+This method closes the current sub path, and adds an ellipse that is bounded by the rectangle defined by top left position ({\ttfamily x}, {\itshape y}), and size {\itshape width} x {\ttfamily height}.
+
+\begin{DoxyNote}{Note}
+Some renderers only support circles (width == height)
+\end{DoxyNote}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_ae8783aad1c538e0180b2323a3a926999}{add\+Ellipse(const W\+Rect\+F\&)}}, \mbox{\hyperlink{classWt_1_1WPainterPath_aa32b8c9d89712a5cad37325cbba099c0}{arc\+To()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a8f2e9933f699b967fe5776c98080a410}\label{classWt_1_1WPainterPath_a8f2e9933f699b967fe5776c98080a410}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!addPath@{addPath}}
+\index{addPath@{addPath}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{addPath()}{addPath()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::add\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Adds a path. 
+
+Adds an entire {\ttfamily path} to the current path. If the path\textquotesingle{}s begin position is different from the current position, the last sub path is first closed, unless \mbox{\hyperlink{classWt_1_1WPainterPath_a22b738f79b130b5867bd93cb2b79c7b8}{open subpaths are enabled}}, otherwise the last sub path is extended with the path\textquotesingle{}s first sub path.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_a7a5d7f8d62eda600ab05926c8f8014be}{connect\+Path(const W\+Painter\+Path\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_abb60a8df2d09df52f8ece78be06bda14}\label{classWt_1_1WPainterPath_abb60a8df2d09df52f8ece78be06bda14}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!addPolygon@{addPolygon}}
+\index{addPolygon@{addPolygon}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{addPolygon()}{addPolygon()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::add\+Polygon (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} $>$ \&}]{points }\end{DoxyParamCaption})}
+
+
+
+Adds a polygon. 
+
+If the first point is different from the current position, the last sub path is first closed, unless \mbox{\hyperlink{classWt_1_1WPainterPath_a22b738f79b130b5867bd93cb2b79c7b8}{open subpaths are enabled}}, otherwise the last sub path is extended with the polygon.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_a9801a3988b2a57c412ba175142d2e3ff}{move\+To()}}, \mbox{\hyperlink{classWt_1_1WPainterPath_ac52bacd9bb3b07043e56be2af56f7f66}{line\+To()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a52f1c2008c15cd133e8fb405d8b0466b}\label{classWt_1_1WPainterPath_a52f1c2008c15cd133e8fb405d8b0466b}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!addRect@{addRect}}
+\index{addRect@{addRect}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{addRect()}{addRect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::add\+Rect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rectangle }\end{DoxyParamCaption})}
+
+
+
+Draws a rectangle. 
+
+This method closes the current sub path, unless \mbox{\hyperlink{classWt_1_1WPainterPath_a22b738f79b130b5867bd93cb2b79c7b8}{open subpaths are enabled}}, and adds a rectangle that is defined by {\ttfamily rectangle}.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_ab5b658698acf7a87948e7c0adf6c1151}{add\+Rect(double, double, double, double)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_ab5b658698acf7a87948e7c0adf6c1151}\label{classWt_1_1WPainterPath_ab5b658698acf7a87948e7c0adf6c1151}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!addRect@{addRect}}
+\index{addRect@{addRect}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{addRect()}{addRect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::add\+Rect (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{width,  }\item[{double}]{height }\end{DoxyParamCaption})}
+
+
+
+Draws a rectangle. 
+
+This method closes the current sub path, unless \mbox{\hyperlink{classWt_1_1WPainterPath_a22b738f79b130b5867bd93cb2b79c7b8}{open subpaths are enabled}}, and adds a rectangle that is defined by top left position ({\itshape x}, {\ttfamily y}), and size {\itshape width} x {\ttfamily height}.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_a52f1c2008c15cd133e8fb405d8b0466b}{add\+Rect(const W\+Rect\+F\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a6e4d29695685a08198be2c2dff53e49c}\label{classWt_1_1WPainterPath_a6e4d29695685a08198be2c2dff53e49c}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!arcMoveTo@{arcMoveTo}}
+\index{arcMoveTo@{arcMoveTo}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{arcMoveTo()}{arcMoveTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::arc\+Move\+To (\begin{DoxyParamCaption}\item[{double}]{cx,  }\item[{double}]{cy,  }\item[{double}]{radius,  }\item[{double}]{angle }\end{DoxyParamCaption})}
+
+
+
+Moves to a point on an arc. 
+
+Moves to a point on a circle. The circle is defined with center ({\itshape cx}, {\itshape cy}) and {\ttfamily radius}, and the point is at {\ttfamily angle} degrees measured counter-\/clockwise starting from the 3 o\textquotesingle{}clock position.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_aa32b8c9d89712a5cad37325cbba099c0}{arc\+To()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a366810aa107d35409f9fbd33b8e91dbb}\label{classWt_1_1WPainterPath_a366810aa107d35409f9fbd33b8e91dbb}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!arcMoveTo@{arcMoveTo}}
+\index{arcMoveTo@{arcMoveTo}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{arcMoveTo()}{arcMoveTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::arc\+Move\+To (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{width,  }\item[{double}]{height,  }\item[{double}]{angle }\end{DoxyParamCaption})}
+
+
+
+Move to a point on an arc. 
+
+Moves to a point on an ellipse. The ellipse fits in the rectangle defined by top left position ({\ttfamily x}, {\itshape y}), and size {\itshape width} x {\ttfamily height}, and the point is at {\ttfamily angle} degrees measured counter-\/clockwise starting from the 3 o\textquotesingle{}clock position.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_aa32b8c9d89712a5cad37325cbba099c0}{arc\+To()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_aa32b8c9d89712a5cad37325cbba099c0}\label{classWt_1_1WPainterPath_aa32b8c9d89712a5cad37325cbba099c0}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!arcTo@{arcTo}}
+\index{arcTo@{arcTo}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{arcTo()}{arcTo()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::arc\+To (\begin{DoxyParamCaption}\item[{double}]{cx,  }\item[{double}]{cy,  }\item[{double}]{radius,  }\item[{double}]{start\+Angle,  }\item[{double}]{span\+Angle }\end{DoxyParamCaption})}
+
+
+
+Draws an arc. 
+
+Draws an arc which is a segment of a circle. The circle is defined with center ({\itshape cx}, {\itshape cy}) and {\ttfamily radius}. The segment starts at {\ttfamily start\+Angle}, and spans an angle given by {\ttfamily span\+Angle}. These angles are expressed in degrees, and are measured counter-\/clockwise starting from the 3 o\textquotesingle{}clock position.
+
+Implicitly draws a line from the current position to the start of the arc, if the current position is different from the start.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_a6e4d29695685a08198be2c2dff53e49c}{arc\+Move\+To()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a9db15664f1cea3f12a2c7ab1337a343b}\label{classWt_1_1WPainterPath_a9db15664f1cea3f12a2c7ab1337a343b}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!closeSubPath@{closeSubPath}}
+\index{closeSubPath@{closeSubPath}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{closeSubPath()}{closeSubPath()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::close\+Sub\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Closes the last sub path. 
+
+Draws a line from the current position to the start position of the last sub path (which is the end point of the last move operation), and sets the current position to (0, 0).
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}} \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a7a5d7f8d62eda600ab05926c8f8014be}\label{classWt_1_1WPainterPath_a7a5d7f8d62eda600ab05926c8f8014be}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!connectPath@{connectPath}}
+\index{connectPath@{connectPath}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{connectPath()}{connectPath()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::connect\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Adds a path, connecting. 
+
+Adds an entire {\ttfamily path} to the current path. If the path\textquotesingle{}s begin position is different from the current position, the last sub path is first closed, unless \mbox{\hyperlink{classWt_1_1WPainterPath_a22b738f79b130b5867bd93cb2b79c7b8}{open subpaths are enabled}}, otherwise the last sub path is extended with the path\textquotesingle{}s first sub path.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_a7a5d7f8d62eda600ab05926c8f8014be}{connect\+Path(const W\+Painter\+Path\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a7cb87a938181fa55f248725853108c9d}\label{classWt_1_1WPainterPath_a7cb87a938181fa55f248725853108c9d}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!controlPointRect@{controlPointRect}}
+\index{controlPointRect@{controlPointRect}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{controlPointRect()}{controlPointRect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} Wt\+::\+W\+Painter\+Path\+::control\+Point\+Rect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \&}]{transform = {\ttfamily \mbox{\hyperlink{classWt_1_1WTransform_a32281880ff4f50a1aa6b07477f779da0}{W\+Transform\+::\+Identity}}} }\end{DoxyParamCaption}) const}
+
+
+
+Returns the bounding box of the control points. 
+
+Returns the bounding box of all control points. This is guaranteed to be a superset of the actual bounding box.
+
+The {\ttfamily transform} is applied to the path first. \mbox{\Hypertarget{classWt_1_1WPainterPath_a8d6ae1ecfa27a32c7f313a18e68478fd}\label{classWt_1_1WPainterPath_a8d6ae1ecfa27a32c7f313a18e68478fd}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!crisp@{crisp}}
+\index{crisp@{crisp}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{crisp()}{crisp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} Wt\+::\+W\+Painter\+Path\+::crisp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a copy of the path where straight lines are moved to be rendered crisply. 
+
+This is intended to be used on rectangles, or other paths consisting of only straight line, and will nudge every edge a little bit, so that 1px straight lines are rendered as a crisp line.
+
+This will also work if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}. \mbox{\Hypertarget{classWt_1_1WPainterPath_ac5a13ec3faf642cd05a57988366e005f}\label{classWt_1_1WPainterPath_ac5a13ec3faf642cd05a57988366e005f}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!cubicTo@{cubicTo}}
+\index{cubicTo@{cubicTo}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{cubicTo()}{cubicTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::cubic\+To (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&}]{c1,  }\item[{const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&}]{c2,  }\item[{const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&}]{end\+Point }\end{DoxyParamCaption})}
+
+
+
+Draws a cubic bezier curve. 
+
+Draws a cubic bezier curve from the current position to {\ttfamily end\+Point}, which becomes the new current position. The bezier curve uses the two control points {\itshape c1} and {\ttfamily c2}.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_ad751c7f66795ecdbe1fc7098dc11977b}{cubic\+To(double, double, double, double, double, double)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_ad751c7f66795ecdbe1fc7098dc11977b}\label{classWt_1_1WPainterPath_ad751c7f66795ecdbe1fc7098dc11977b}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!cubicTo@{cubicTo}}
+\index{cubicTo@{cubicTo}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{cubicTo()}{cubicTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::cubic\+To (\begin{DoxyParamCaption}\item[{double}]{c1x,  }\item[{double}]{c1y,  }\item[{double}]{c2x,  }\item[{double}]{c2y,  }\item[{double}]{end\+Pointx,  }\item[{double}]{end\+Pointy }\end{DoxyParamCaption})}
+
+
+
+Draws a cubic bezier curve. 
+
+This is an overloaded method provided for convenience.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_ac5a13ec3faf642cd05a57988366e005f}{cubic\+To(const W\+Point\+F\&, const W\+Point\+F\&, const W\+Point\+F\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a48d9c7a609c89586994417781958d562}\label{classWt_1_1WPainterPath_a48d9c7a609c89586994417781958d562}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!currentPosition@{currentPosition}}
+\index{currentPosition@{currentPosition}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{currentPosition()}{currentPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} Wt\+::\+W\+Painter\+Path\+::current\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the current position. 
+
+Returns the current position, which is the end point of the last move or draw operation, and which well be the start point of the next draw operation. \mbox{\Hypertarget{classWt_1_1WPainterPath_a1b52e2020b3bd8cd5c8920435d95162a}\label{classWt_1_1WPainterPath_a1b52e2020b3bd8cd5c8920435d95162a}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Painter\+Path\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the path is empty. 
+
+Returns {\ttfamily true} if the path contains no drawing operations. \mbox{\hyperlink{classNote}{Note}} that move operations are not considered drawing operations. \mbox{\Hypertarget{classWt_1_1WPainterPath_a86dd72fd0e5acd4a6b3657d2c9cb9bba}\label{classWt_1_1WPainterPath_a86dd72fd0e5acd4a6b3657d2c9cb9bba}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!jsValue@{jsValue}}
+\index{jsValue@{jsValue}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{jsValue()}{jsValue()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+W\+Painter\+Path\+::js\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a Java\+Script representation of the value of this object. 
+
+\begin{DoxyNote}{Note}
+The value returned will reflect the current server side value of the object. If this object is Java\+Script bound, this value may not reflect the actual client side value. If you need access to the client side value, use \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_aee9bb7156b269529a7a750745c1a4690}{js\+Ref()}} intead. 
+\end{DoxyNote}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a629c537a37b1c669c96d519360b53d14}{Wt\+::\+W\+Java\+Script\+Exposable\+Object}}.
+
+\mbox{\Hypertarget{classWt_1_1WPainterPath_ac52bacd9bb3b07043e56be2af56f7f66}\label{classWt_1_1WPainterPath_ac52bacd9bb3b07043e56be2af56f7f66}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!lineTo@{lineTo}}
+\index{lineTo@{lineTo}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{lineTo()}{lineTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::line\+To (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&}]{point }\end{DoxyParamCaption})}
+
+
+
+Draws a straight line. 
+
+Draws a straight line from the current position to {\ttfamily point}, which becomes the new current position.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_aafdba97cf01c017fa9e8f18169c7a205}{line\+To(double, double)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_aafdba97cf01c017fa9e8f18169c7a205}\label{classWt_1_1WPainterPath_aafdba97cf01c017fa9e8f18169c7a205}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!lineTo@{lineTo}}
+\index{lineTo@{lineTo}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{lineTo()}{lineTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::line\+To (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+
+
+Draws a straight line. 
+
+Draws a straight line from the current position to ({\ttfamily x}, {\ttfamily y}), which becomes the new current position.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_ac52bacd9bb3b07043e56be2af56f7f66}{line\+To(const W\+Point\+F\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a9801a3988b2a57c412ba175142d2e3ff}\label{classWt_1_1WPainterPath_a9801a3988b2a57c412ba175142d2e3ff}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!moveTo@{moveTo}}
+\index{moveTo@{moveTo}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{moveTo()}{moveTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::move\+To (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&}]{point }\end{DoxyParamCaption})}
+
+
+
+Moves the current position to a new location. 
+
+Moves the current position to a new point, implicitly closing the last sub path, unless \mbox{\hyperlink{classWt_1_1WPainterPath_a22b738f79b130b5867bd93cb2b79c7b8}{open subpaths are enabled}}.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_a9db15664f1cea3f12a2c7ab1337a343b}{close\+Sub\+Path()}}, \mbox{\hyperlink{classWt_1_1WPainterPath_a2cdd1952ade53cc4b2f2a0146fc8c00f}{move\+To(double, double)}}, \mbox{\hyperlink{classWt_1_1WPainterPath_a7485cf1701e51823d1f4a6f689425ac1}{set\+Open\+Sub\+Paths\+Enabled(bool)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a2cdd1952ade53cc4b2f2a0146fc8c00f}\label{classWt_1_1WPainterPath_a2cdd1952ade53cc4b2f2a0146fc8c00f}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!moveTo@{moveTo}}
+\index{moveTo@{moveTo}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{moveTo()}{moveTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::move\+To (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+
+
+Moves the current position to a new location. 
+
+Moves the current position to a new point, implicitly closing the last sub path, unless \mbox{\hyperlink{classWt_1_1WPainterPath_a22b738f79b130b5867bd93cb2b79c7b8}{open subpaths are enabled}}.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_a9db15664f1cea3f12a2c7ab1337a343b}{close\+Sub\+Path()}}, \mbox{\hyperlink{classWt_1_1WPainterPath_a9801a3988b2a57c412ba175142d2e3ff}{move\+To(const W\+Point\+F\&)}}, \mbox{\hyperlink{classWt_1_1WPainterPath_a7485cf1701e51823d1f4a6f689425ac1}{set\+Open\+Sub\+Paths\+Enabled(bool)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a22b738f79b130b5867bd93cb2b79c7b8}\label{classWt_1_1WPainterPath_a22b738f79b130b5867bd93cb2b79c7b8}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!openSubPathsEnabled@{openSubPathsEnabled}}
+\index{openSubPathsEnabled@{openSubPathsEnabled}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{openSubPathsEnabled()}{openSubPathsEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Painter\+Path\+::open\+Sub\+Paths\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether open subpaths are enabled. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_a7485cf1701e51823d1f4a6f689425ac1}{set\+Open\+Sub\+Paths\+Enabled(bool)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a3628947c19c248bb6b498fc872430eb0}\label{classWt_1_1WPainterPath_a3628947c19c248bb6b498fc872430eb0}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Painter\+Path\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&}]{path }\end{DoxyParamCaption}) const}
+
+
+
+Comparison operator. 
+
+Returns {\ttfamily true} if the paths are different. \mbox{\Hypertarget{classWt_1_1WPainterPath_a6bea4a60141e2fa67182e4f43432bcf6}\label{classWt_1_1WPainterPath_a6bea4a60141e2fa67182e4f43432bcf6}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!operator==@{operator==}}
+\index{operator==@{operator==}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Painter\+Path\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&}]{path }\end{DoxyParamCaption}) const}
+
+
+
+Comparison operator. 
+
+Returns {\ttfamily true} if the paths are exactly the same. \mbox{\Hypertarget{classWt_1_1WPainterPath_a5cf7125271a74e15a52db05876b8c878}\label{classWt_1_1WPainterPath_a5cf7125271a74e15a52db05876b8c878}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!quadTo@{quadTo}}
+\index{quadTo@{quadTo}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{quadTo()}{quadTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::quad\+To (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&}]{c,  }\item[{const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&}]{end\+Point }\end{DoxyParamCaption})}
+
+
+
+Draws a quadratic bezier curve. 
+
+Draws a quadratic bezier curve from the current position to {\ttfamily end\+Point}, which becomes the new current position. The bezier curve uses the single control point {\ttfamily c}.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_a2eaf3d30b6cf1590a3f368b8b94d49ca}{quad\+To(double, double, double, double)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a2eaf3d30b6cf1590a3f368b8b94d49ca}\label{classWt_1_1WPainterPath_a2eaf3d30b6cf1590a3f368b8b94d49ca}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!quadTo@{quadTo}}
+\index{quadTo@{quadTo}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{quadTo()}{quadTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::quad\+To (\begin{DoxyParamCaption}\item[{double}]{cx,  }\item[{double}]{cy,  }\item[{double}]{end\+Pointx,  }\item[{double}]{end\+Pointy }\end{DoxyParamCaption})}
+
+
+
+Draws a quadratic bezier curve. 
+
+This is an overloaded method provided for convenience.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the path \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{is Java\+Script bound}}\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_a5cf7125271a74e15a52db05876b8c878}{quad\+To(const W\+Point\+F\&, const W\+Point\+F\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainterPath_a7485cf1701e51823d1f4a6f689425ac1}\label{classWt_1_1WPainterPath_a7485cf1701e51823d1f4a6f689425ac1}} 
+\index{Wt::WPainterPath@{Wt::WPainterPath}!setOpenSubPathsEnabled@{setOpenSubPathsEnabled}}
+\index{setOpenSubPathsEnabled@{setOpenSubPathsEnabled}!Wt::WPainterPath@{Wt::WPainterPath}}
+\doxysubsubsection{\texorpdfstring{setOpenSubPathsEnabled()}{setOpenSubPathsEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+Path\+::set\+Open\+Sub\+Paths\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Disables automatically closing subpaths on move\+To. 
+
+By default, open sub paths are disabled, and move\+To and any operation that relies on move\+To will automatically close the last subpath. Enabling this option disables that feature.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainterPath_a9801a3988b2a57c412ba175142d2e3ff}{move\+To()}}, \mbox{\hyperlink{classWt_1_1WPainterPath_a8f2e9933f699b967fe5776c98080a410}{add\+Path()}}, \mbox{\hyperlink{classWt_1_1WPainterPath_a7a5d7f8d62eda600ab05926c8f8014be}{connect\+Path()}}, \mbox{\hyperlink{classWt_1_1WPainterPath_a52f1c2008c15cd133e8fb405d8b0466b}{add\+Rect()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Painter\+Path.\+h\end{DoxyCompactItemize}

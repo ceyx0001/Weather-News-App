@@ -1,0 +1,86 @@
+\hypertarget{classWt_1_1Auth_1_1Token}{}\doxysection{Wt\+::Auth\+::Token Class Reference}
+\label{classWt_1_1Auth_1_1Token}\index{Wt::Auth::Token@{Wt::Auth::Token}}
+
+
+An authentication token hash.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Auth/\+Token.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::Auth\+::Token\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1Token_af17a97cf7ce495042af69ac2c6a4b778}{Token}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Token_a5bf32ee0c0ef469fd90cc0ed3d0c3842}\label{classWt_1_1Auth_1_1Token_a5bf32ee0c0ef469fd90cc0ed3d0c3842}} 
+{\bfseries Token} (const std\+::string \&\mbox{\hyperlink{classWt_1_1Auth_1_1Token_a08e4395d3679c238bc488edba4c5b068}{hash}}, const \mbox{\hyperlink{classWt_1_1WDateTime}{W\+Date\+Time}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1Token_affd550dea77a49c89e8b8052746390b7}{expiration\+Time}})
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Token_a89856e32202e47f3263c372eb41d871c}\label{classWt_1_1Auth_1_1Token_a89856e32202e47f3263c372eb41d871c}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1Token_a89856e32202e47f3263c372eb41d871c}{Token}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1Auth_1_1Token_a08e4395d3679c238bc488edba4c5b068}{hash}}, const \mbox{\hyperlink{classWt_1_1WDateTime}{W\+Date\+Time}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1Token_affd550dea77a49c89e8b8052746390b7}{expiration\+Time}}, const std\+::string \&purpose, const std\+::string \&scope, const std\+::string \&redirect\+Uri)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Auth_1_1Token_a1303edcf79304de3791118e5862be465}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the token is empty. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Token_a08e4395d3679c238bc488edba4c5b068}\label{classWt_1_1Auth_1_1Token_a08e4395d3679c238bc488edba4c5b068}} 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Auth_1_1Token_a08e4395d3679c238bc488edba4c5b068}{hash}} () const
+\begin{DoxyCompactList}\small\item\em Returns the hash. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Token_affd550dea77a49c89e8b8052746390b7}\label{classWt_1_1Auth_1_1Token_affd550dea77a49c89e8b8052746390b7}} 
+const \mbox{\hyperlink{classWt_1_1WDateTime}{W\+Date\+Time}} \& \mbox{\hyperlink{classWt_1_1Auth_1_1Token_affd550dea77a49c89e8b8052746390b7}{expiration\+Time}} () const
+\begin{DoxyCompactList}\small\item\em Returns the expiration time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Token_a2f9593b95bbe44ad299ab65f8d9a9aa5}\label{classWt_1_1Auth_1_1Token_a2f9593b95bbe44ad299ab65f8d9a9aa5}} 
+std\+::string {\bfseries hash\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Token_afe73ac30a671d0a880207eb445994f27}\label{classWt_1_1Auth_1_1Token_afe73ac30a671d0a880207eb445994f27}} 
+\mbox{\hyperlink{classWt_1_1WDateTime}{W\+Date\+Time}} {\bfseries expiration\+Time\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An authentication token hash. 
+
+An authentication token is a surrogate for identification or authentication. When a random authentication token is generated, it is a good practice to hash it using a cryptographic hash function, and only save this hash in the session or database for later verification. This avoids that a compromised database would leak all the authentication tokens.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1User_aa576bdc3a8be09b36e5016a627ee7128}{User\+::add\+Auth\+Token()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1User_a05514b34296051941d47dabfea21592c}{User\+::set\+Email\+Token()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Token_af17a97cf7ce495042af69ac2c6a4b778}\label{classWt_1_1Auth_1_1Token_af17a97cf7ce495042af69ac2c6a4b778}} 
+\index{Wt::Auth::Token@{Wt::Auth::Token}!Token@{Token}}
+\index{Token@{Token}!Wt::Auth::Token@{Wt::Auth::Token}}
+\doxysubsubsection{\texorpdfstring{Token()}{Token()}}
+{\footnotesize\ttfamily Wt\+::\+Auth\+::\+Token\+::\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Creates an empty token. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Token_a1303edcf79304de3791118e5862be465}\label{classWt_1_1Auth_1_1Token_a1303edcf79304de3791118e5862be465}} 
+\index{Wt::Auth::Token@{Wt::Auth::Token}!empty@{empty}}
+\index{empty@{empty}!Wt::Auth::Token@{Wt::Auth::Token}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool Wt\+::\+Auth\+::\+Token\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the token is empty. 
+
+An empty token is default constructed. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/Token.\+h\end{DoxyCompactItemize}

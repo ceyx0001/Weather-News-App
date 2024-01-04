@@ -1,0 +1,94 @@
+\hypertarget{classWt_1_1CgiParser}{}\doxysection{Wt\+::Cgi\+Parser Class Reference}
+\label{classWt_1_1CgiParser}\index{Wt::CgiParser@{Wt::CgiParser}}
+
+
+Collaboration diagram for Wt\+::Cgi\+Parser\+:
+% FIG 0
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_a7bb13fa319cc26462507cf4e172f762f}\label{classWt_1_1CgiParser_a7bb13fa319cc26462507cf4e172f762f}} 
+enum {\bfseries Read\+Option} \{ {\bfseries Read\+Default}, 
+{\bfseries Read\+Headers\+Only}, 
+{\bfseries Read\+Body\+Anyway}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_abd2453d6681a2d1397ed45c9eb822d10}\label{classWt_1_1CgiParser_abd2453d6681a2d1397ed45c9eb822d10}} 
+{\bfseries Cgi\+Parser} (\+::int64\+\_\+t max\+Request\+Size, \+::int64\+\_\+t max\+Form\+Data)
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_abd8eb60d4601be0947f5d751e1961441}\label{classWt_1_1CgiParser_abd8eb60d4601be0947f5d751e1961441}} 
+void {\bfseries parse} (\mbox{\hyperlink{classWt_1_1WebRequest}{Web\+Request}} \&request, Read\+Option option)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_a16924f90574de41ebe203805782fde38}\label{classWt_1_1CgiParser_a16924f90574de41ebe203805782fde38}} 
+static void {\bfseries init} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_adbf4cc629e319110ad900803a0b0b672}\label{classWt_1_1CgiParser_adbf4cc629e319110ad900803a0b0b672}} 
+enum \{ {\bfseries B\+U\+F\+S\+I\+ZE} = 8192
+ \}
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_a15c87d1163425516aa36a4ffb9241cc9}\label{classWt_1_1CgiParser_a15c87d1163425516aa36a4ffb9241cc9}} 
+enum \{ {\bfseries M\+A\+X\+B\+O\+U\+ND} = 100
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_a4b7b2cb14de3bd694e4dfc4898a88976}\label{classWt_1_1CgiParser_a4b7b2cb14de3bd694e4dfc4898a88976}} 
+void {\bfseries read\+Multipart\+Data} (\mbox{\hyperlink{classWt_1_1WebRequest}{Web\+Request}} \&request, const std\+::string type, \+::int64\+\_\+t len)
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_a9f8988970f0d84f171c3b5595b508a59}\label{classWt_1_1CgiParser_a9f8988970f0d84f171c3b5595b508a59}} 
+bool {\bfseries parse\+Body} (\mbox{\hyperlink{classWt_1_1WebRequest}{Web\+Request}} \&request, const std\+::string boundary)
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_a7ed07a81a86b720160fa9f00da8e2e6d}\label{classWt_1_1CgiParser_a7ed07a81a86b720160fa9f00da8e2e6d}} 
+bool {\bfseries parse\+Head} (\mbox{\hyperlink{classWt_1_1WebRequest}{Web\+Request}} \&request)
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_a7b5537a3c3d7fb6c0b3cec105d5eff16}\label{classWt_1_1CgiParser_a7b5537a3c3d7fb6c0b3cec105d5eff16}} 
+void {\bfseries read\+Until\+Boundary} (\mbox{\hyperlink{classWt_1_1WebRequest}{Web\+Request}} \&request, const std\+::string boundary, int toss\+At\+Boundary, std\+::string $\ast$result\+String, std\+::ostream $\ast$result\+File)
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_af13f7c0e2b426c9bfa750b1f915be155}\label{classWt_1_1CgiParser_af13f7c0e2b426c9bfa750b1f915be155}} 
+void {\bfseries wind\+Buffer} (int offset)
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_ace4696eaa07804e54f5ef8d61a6ee289}\label{classWt_1_1CgiParser_ace4696eaa07804e54f5ef8d61a6ee289}} 
+int {\bfseries index} (const std\+::string search)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_a01556a4f71f010afcdf7fe635a646e06}\label{classWt_1_1CgiParser_a01556a4f71f010afcdf7fe635a646e06}} 
+\+::int64\+\_\+t {\bfseries max\+Form\+Data\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_a769f5789e77b0d6ad082a5cddbee0f00}\label{classWt_1_1CgiParser_a769f5789e77b0d6ad082a5cddbee0f00}} 
+\+::int64\+\_\+t {\bfseries max\+Request\+Size\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_a6c9a714c928b4a74946557c6cf522d60}\label{classWt_1_1CgiParser_a6c9a714c928b4a74946557c6cf522d60}} 
+\+::int64\+\_\+t {\bfseries left\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_a3d99f3b8898e2931a027a0d94046dad2}\label{classWt_1_1CgiParser_a3d99f3b8898e2931a027a0d94046dad2}} 
+std\+::ostream $\ast$ {\bfseries spool\+Stream\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_a1e4158a1bd985e01d1756ed64375123e}\label{classWt_1_1CgiParser_a1e4158a1bd985e01d1756ed64375123e}} 
+\mbox{\hyperlink{classWt_1_1WebRequest}{Web\+Request}} $\ast$ {\bfseries request\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_a5b6f8faa8c5b848cee909df537940b52}\label{classWt_1_1CgiParser_a5b6f8faa8c5b848cee909df537940b52}} 
+std\+::string {\bfseries current\+Key\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_a3c9aed9e395c77126c59e8613007cd75}\label{classWt_1_1CgiParser_a3c9aed9e395c77126c59e8613007cd75}} 
+int {\bfseries buflen\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1CgiParser_ac51f1e8b5bf64ef493312f1752e2fb6c}\label{classWt_1_1CgiParser_ac51f1e8b5bf64ef493312f1752e2fb6c}} 
+char {\bfseries buf\+\_\+} \mbox{[}B\+U\+F\+S\+I\+ZE+M\+A\+X\+B\+O\+U\+ND\mbox{]}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/web/Cgi\+Parser.\+h\end{DoxyCompactItemize}

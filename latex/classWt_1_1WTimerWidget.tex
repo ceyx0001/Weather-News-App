@@ -1,0 +1,87 @@
+\hypertarget{classWt_1_1WTimerWidget}{}\doxysection{Wt\+::W\+Timer\+Widget Class Reference}
+\label{classWt_1_1WTimerWidget}\index{Wt::WTimerWidget@{Wt::WTimerWidget}}
+
+
+Inheritance diagram for Wt\+::W\+Timer\+Widget\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Timer\+Widget\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTimerWidget_a4fdf812e58953f28b2109f5a87beced3}\label{classWt_1_1WTimerWidget_a4fdf812e58953f28b2109f5a87beced3}} 
+{\bfseries W\+Timer\+Widget} (\mbox{\hyperlink{classWt_1_1WTimer}{W\+Timer}} $\ast$timer)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTimerWidget_a0f54fd34b0bbd2b76a45c05582b5747e}\label{classWt_1_1WTimerWidget_a0f54fd34b0bbd2b76a45c05582b5747e}} 
+void {\bfseries timer\+Start} (bool js\+Repeat)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTimerWidget_af0d25255cc496b3c3429b094b2d5014d}\label{classWt_1_1WTimerWidget_af0d25255cc496b3c3429b094b2d5014d}} 
+bool {\bfseries timer\+Expired} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WTimerWidget_a4b8473a1e7ac0a610c011c5dc350a5cb}\label{classWt_1_1WTimerWidget_a4b8473a1e7ac0a610c011c5dc350a5cb}} 
+bool {\bfseries js\+Repeat} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTimerWidget_ab2b1199c58c81eb5876bea155ef9a154}\label{classWt_1_1WTimerWidget_ab2b1199c58c81eb5876bea155ef9a154}} 
+virtual void {\bfseries update\+Dom} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&element, bool all) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTimerWidget_a225921483dc936a650372f0038239efe}\label{classWt_1_1WTimerWidget_a225921483dc936a650372f0038239efe}} 
+virtual \mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} {\bfseries dom\+Element\+Type} () const override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTimerWidget_a22c9550b4cf8e48eb5bc9514cb7ffb8a}\label{classWt_1_1WTimerWidget_a22c9550b4cf8e48eb5bc9514cb7ffb8a}} 
+virtual std\+::string {\bfseries render\+Remove\+Js} (bool recursive) override
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTimerWidget_aaca34776bd10a0b5b6ce0a83288b5a06}{enable\+Ajax}} () override
+\begin{DoxyCompactList}\small\item\em Progresses to an Ajax-\/enabled widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTimerWidget_afd46ac3f4e82c2b9f520670a0ff6cd64}\label{classWt_1_1WTimerWidget_afd46ac3f4e82c2b9f520670a0ff6cd64}} 
+\mbox{\hyperlink{classWt_1_1WTimer}{W\+Timer}} $\ast$ {\bfseries timer\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTimerWidget_af6a88b502c65dade8e694611d76048bd}\label{classWt_1_1WTimerWidget_af6a88b502c65dade8e694611d76048bd}} 
+bool {\bfseries timer\+Started\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTimerWidget_a0e0e753abf19b6e001ecc0ddada77e5b}\label{classWt_1_1WTimerWidget_a0e0e753abf19b6e001ecc0ddada77e5b}} 
+bool {\bfseries js\+Repeat\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTimerWidget_a8248f10e62aee707eabe43458855d835}\label{classWt_1_1WTimerWidget_a8248f10e62aee707eabe43458855d835}} 
+class {\bfseries Web\+Session}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WTimerWidget_aaca34776bd10a0b5b6ce0a83288b5a06}\label{classWt_1_1WTimerWidget_aaca34776bd10a0b5b6ce0a83288b5a06}} 
+\index{Wt::WTimerWidget@{Wt::WTimerWidget}!enableAjax@{enableAjax}}
+\index{enableAjax@{enableAjax}!Wt::WTimerWidget@{Wt::WTimerWidget}}
+\doxysubsubsection{\texorpdfstring{enableAjax()}{enableAjax()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Timer\+Widget\+::enable\+Ajax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Progresses to an Ajax-\/enabled widget. 
+
+This method is called when the progressive bootstrap method is used, and support for A\+J\+AX has been detected. The default behavior will upgrade the widget\textquotesingle{}s event handling to use A\+J\+AX instead of full page reloads, and propagate the call to its children.
+
+You may want to reimplement this method if you want to make changes to widget when A\+J\+AX is enabled. You should always call the base implementation.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_a46c573a3cd370cb2f83250c99d42b575}{W\+Application\+::enable\+Ajax()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_af717033681b5cbe5857c88b65558e10c}{Wt\+::\+W\+Web\+Widget}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Timer\+Widget.\+h\end{DoxyCompactItemize}

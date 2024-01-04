@@ -1,0 +1,202 @@
+\hypertarget{classWt_1_1WTheme}{}\doxysection{Wt\+::W\+Theme Class Reference}
+\label{classWt_1_1WTheme}\index{Wt::WTheme@{Wt::WTheme}}
+
+
+{\ttfamily \#include $<$Wt/\+W\+Theme.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Theme\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Theme\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTheme_aeac1a9c271806d342f875d09cbe4eecf}\label{classWt_1_1WTheme_aeac1a9c271806d342f875d09cbe4eecf}} 
+\mbox{\hyperlink{classWt_1_1WTheme_aeac1a9c271806d342f875d09cbe4eecf}{W\+Theme}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTheme_a550fc69407b31fe334daccd73a1a0a47}\label{classWt_1_1WTheme_a550fc69407b31fe334daccd73a1a0a47}} 
+virtual \mbox{\hyperlink{classWt_1_1WTheme_a550fc69407b31fe334daccd73a1a0a47}{$\sim$\+W\+Theme}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WTheme_a8642dafe569763cbf2bd1a3c51edf302}{name}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns a theme name. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WTheme_acd72f7a87128d1204f42a20edbf5d065}{resources\+Url}} () const
+\begin{DoxyCompactList}\small\item\em Returns the U\+RL where theme-\/related resources are stored. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTheme_a3b440b9160fb92514a3847fac2360271}{serve\+Css}} (\mbox{\hyperlink{classWt_1_1WStringStream}{W\+String\+Stream}} \&out) const
+\begin{DoxyCompactList}\small\item\em Serves the C\+SS for the theme. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WLinkedCssStyleSheet}{W\+Linked\+Css\+Style\+Sheet}} $>$ \mbox{\hyperlink{classWt_1_1WTheme_a7c1826d52efba8d2b17f3652c04afebd}{style\+Sheets}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns a vector with stylesheets for the theme. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTheme_a6c5d28613ac258803795c9fbe6b85409}{init}} (\mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app) const
+\begin{DoxyCompactList}\small\item\em Called when the theme is assigned to a \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTheme_a93d3dc6cfbde95bcd3c3b359d074fc9d}{apply}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$widget, \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$child, int widget\+Role) const =0
+\begin{DoxyCompactList}\small\item\em Applies the theme to a child of a composite widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTheme_ac6beaa06b78379c9dcf0b1676150cf94}{apply}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$widget, \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&element, int element\+Role) const =0
+\begin{DoxyCompactList}\small\item\em Applies the theme to a D\+OM element that renders a widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTheme_a3adb35d1940d7e5afaee33100894e0c4}{set\+Data\+Target}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$widget, \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$target) const
+\begin{DoxyCompactList}\small\item\em Sets the data target for a widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTheme_a46ec2ccecb625cd4cde82553e08411fb}\label{classWt_1_1WTheme_a46ec2ccecb625cd4cde82553e08411fb}} 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WTheme_a46ec2ccecb625cd4cde82553e08411fb}{disabled\+Class}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns a generic C\+SS class name for a disabled element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTheme_a6375e31e7190bbdf60c8446edea89e65}\label{classWt_1_1WTheme_a6375e31e7190bbdf60c8446edea89e65}} 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WTheme_a6375e31e7190bbdf60c8446edea89e65}{active\+Class}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns a generic C\+SS class name for an active element. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WTheme_acfa44ba1e10bbb7d67f3610f85329cd4}{utility\+Css\+Class}} (int utility\+Css\+Class\+Role) const =0
+\begin{DoxyCompactList}\small\item\em Returns a generic C\+SS class name for the chosen role. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTheme_ab4df8922e22f6c650c11548811a44dec}\label{classWt_1_1WTheme_ab4df8922e22f6c650c11548811a44dec}} 
+virtual bool \mbox{\hyperlink{classWt_1_1WTheme_ab4df8922e22f6c650c11548811a44dec}{can\+Style\+Anchor\+As\+Button}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns whether the theme allows for an anchor to be styled as a button. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTheme_a3591ef941779f7b722f5f113603c894f}\label{classWt_1_1WTheme_a3591ef941779f7b722f5f113603c894f}} 
+virtual void \mbox{\hyperlink{classWt_1_1WTheme_a3591ef941779f7b722f5f113603c894f}{apply\+Validation\+Style}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$widget, const \mbox{\hyperlink{classWt_1_1WValidator_1_1Result}{Wt\+::\+W\+Validator\+::\+Result}} \&validation, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a3da96fc8830c0022e6b3ba6b2069d2cb}{Validation\+Style\+Flag}} $>$ flags) const =0
+\begin{DoxyCompactList}\small\item\em Applies a style that indicates the result of validation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTheme_a730a5ceb19184efa0e20c302ace90903}\label{classWt_1_1WTheme_a730a5ceb19184efa0e20c302ace90903}} 
+virtual bool {\bfseries can\+Border\+Box\+Element} (const \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&element) const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for themes in Wt.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_a70d17661dfc5a1fdc0af44da2d9edaee}{W\+Application\+::set\+Theme()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WTheme_ac6beaa06b78379c9dcf0b1676150cf94}\label{classWt_1_1WTheme_ac6beaa06b78379c9dcf0b1676150cf94}} 
+\index{Wt::WTheme@{Wt::WTheme}!apply@{apply}}
+\index{apply@{apply}!Wt::WTheme@{Wt::WTheme}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Theme\+::apply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{widget,  }\item[{\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&}]{element,  }\item[{int}]{element\+Role }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Applies the theme to a D\+OM element that renders a widget. 
+
+The {\ttfamily element} is a rendered representation of the {\ttfamily widget}, and may be further customized to reflect the theme. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WCssTheme_a1fce033bd27bd6f4ab58bb6ebb451902}{Wt\+::\+W\+Css\+Theme}}, \mbox{\hyperlink{classWt_1_1WBootstrapTheme_a892c352896c1926a7460ceb972c012bd}{Wt\+::\+W\+Bootstrap\+Theme}}, \mbox{\hyperlink{classWt_1_1WBootstrap3Theme_ac4fcdbd90cc4adb5189676fa123a93a1}{Wt\+::\+W\+Bootstrap3\+Theme}}, \mbox{\hyperlink{classWt_1_1WBootstrap2Theme_a956f9aa01e7ba5982fdcb0575567698f}{Wt\+::\+W\+Bootstrap2\+Theme}}, and \mbox{\hyperlink{classWt_1_1WBootstrap5Theme_ac478aaabf0b35ac8d11e6a207e991cc6}{Wt\+::\+W\+Bootstrap5\+Theme}}.
+
+\mbox{\Hypertarget{classWt_1_1WTheme_a93d3dc6cfbde95bcd3c3b359d074fc9d}\label{classWt_1_1WTheme_a93d3dc6cfbde95bcd3c3b359d074fc9d}} 
+\index{Wt::WTheme@{Wt::WTheme}!apply@{apply}}
+\index{apply@{apply}!Wt::WTheme@{Wt::WTheme}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Theme\+::apply (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{widget,  }\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{child,  }\item[{int}]{widget\+Role }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Applies the theme to a child of a composite widget. 
+
+The {\ttfamily widget\+Role} indicates the role that {\ttfamily child} has within the implementation of the {\ttfamily widget}. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WCssTheme_ab027ea4909799fabf22eea6757de5138}{Wt\+::\+W\+Css\+Theme}}, \mbox{\hyperlink{classWt_1_1WBootstrapTheme_aafd0775ddbeaaeb0028dd157406b55ae}{Wt\+::\+W\+Bootstrap\+Theme}}, \mbox{\hyperlink{classWt_1_1WBootstrap3Theme_ad599be3214a5d2ce7be094aee880c684}{Wt\+::\+W\+Bootstrap3\+Theme}}, \mbox{\hyperlink{classWt_1_1WBootstrap2Theme_a923b6d7f1468f48e33a230252a68e194}{Wt\+::\+W\+Bootstrap2\+Theme}}, and \mbox{\hyperlink{classWt_1_1WBootstrap5Theme_a0add65a793c2d275d1b85d2c77acb6d5}{Wt\+::\+W\+Bootstrap5\+Theme}}.
+
+\mbox{\Hypertarget{classWt_1_1WTheme_a6c5d28613ac258803795c9fbe6b85409}\label{classWt_1_1WTheme_a6c5d28613ac258803795c9fbe6b85409}} 
+\index{Wt::WTheme@{Wt::WTheme}!init@{init}}
+\index{init@{init}!Wt::WTheme@{Wt::WTheme}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Theme\+::init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$}]{app }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called when the theme is assigned to a \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}}. 
+
+This allows the theme to do things like load resource bundles when it is added to an application using \mbox{\hyperlink{classWt_1_1WApplication_a70d17661dfc5a1fdc0af44da2d9edaee}{W\+Application\+::set\+Theme()}}.
+
+The default implementation does nothing. 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WBootstrapTheme_aba4b88221d4a99384e569c43b4a5821c}{Wt\+::\+W\+Bootstrap\+Theme}}, \mbox{\hyperlink{classWt_1_1WBootstrap3Theme_a0e0a16851696353ada62ec3cdd42642d}{Wt\+::\+W\+Bootstrap3\+Theme}}, \mbox{\hyperlink{classWt_1_1WBootstrap2Theme_af8b2fdf947d621f832f7df49d1b4e878}{Wt\+::\+W\+Bootstrap2\+Theme}}, and \mbox{\hyperlink{classWt_1_1WBootstrap5Theme_a96496fce4df174ba4a07e6244d016760}{Wt\+::\+W\+Bootstrap5\+Theme}}.
+
+\mbox{\Hypertarget{classWt_1_1WTheme_a8642dafe569763cbf2bd1a3c51edf302}\label{classWt_1_1WTheme_a8642dafe569763cbf2bd1a3c51edf302}} 
+\index{Wt::WTheme@{Wt::WTheme}!name@{name}}
+\index{name@{name}!Wt::WTheme@{Wt::WTheme}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+W\+Theme\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns a theme name. 
+
+Returns a unique name for the theme. This name is used by the default implementation of \mbox{\hyperlink{classWt_1_1WTheme_acd72f7a87128d1204f42a20edbf5d065}{resources\+Url()}} to compute a location for the theme\textquotesingle{}s resources. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WCssTheme_adc1088100f9c4669e535318d0be61d82}{Wt\+::\+W\+Css\+Theme}}, \mbox{\hyperlink{classWt_1_1WBootstrapTheme_a705cfab5c09524da79996d2fa0c2532a}{Wt\+::\+W\+Bootstrap\+Theme}}, \mbox{\hyperlink{classWt_1_1WBootstrap3Theme_a40b1645676ce57d7511b4eeae764b692}{Wt\+::\+W\+Bootstrap3\+Theme}}, \mbox{\hyperlink{classWt_1_1WBootstrap2Theme_a0ef8053f51b3edb36c1e2dc3709be345}{Wt\+::\+W\+Bootstrap2\+Theme}}, and \mbox{\hyperlink{classWt_1_1WBootstrap5Theme_a0acfcff34447978d9c3ca10257b81fc5}{Wt\+::\+W\+Bootstrap5\+Theme}}.
+
+\mbox{\Hypertarget{classWt_1_1WTheme_acd72f7a87128d1204f42a20edbf5d065}\label{classWt_1_1WTheme_acd72f7a87128d1204f42a20edbf5d065}} 
+\index{Wt::WTheme@{Wt::WTheme}!resourcesUrl@{resourcesUrl}}
+\index{resourcesUrl@{resourcesUrl}!Wt::WTheme@{Wt::WTheme}}
+\doxysubsubsection{\texorpdfstring{resourcesUrl()}{resourcesUrl()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+W\+Theme\+::resources\+Url (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the U\+RL where theme-\/related resources are stored. 
+
+The default implementation considers a folder within Wt\textquotesingle{}s resource directory, based on the theme \mbox{\hyperlink{classWt_1_1WTheme_a8642dafe569763cbf2bd1a3c51edf302}{name()}}. 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WBootstrapTheme_a2146a79d94a73ac4833cbfa2a1de669d}{Wt\+::\+W\+Bootstrap\+Theme}}, \mbox{\hyperlink{classWt_1_1WBootstrap3Theme_ad53632992e35f37bd71fd7cabb6d136f}{Wt\+::\+W\+Bootstrap3\+Theme}}, \mbox{\hyperlink{classWt_1_1WBootstrap2Theme_a273a813646f1e0dd3860d3663ef84d97}{Wt\+::\+W\+Bootstrap2\+Theme}}, and \mbox{\hyperlink{classWt_1_1WBootstrap5Theme_ada2c1b20cf393a2a31345ce17416eecb}{Wt\+::\+W\+Bootstrap5\+Theme}}.
+
+\mbox{\Hypertarget{classWt_1_1WTheme_a3b440b9160fb92514a3847fac2360271}\label{classWt_1_1WTheme_a3b440b9160fb92514a3847fac2360271}} 
+\index{Wt::WTheme@{Wt::WTheme}!serveCss@{serveCss}}
+\index{serveCss@{serveCss}!Wt::WTheme@{Wt::WTheme}}
+\doxysubsubsection{\texorpdfstring{serveCss()}{serveCss()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Theme\+::serve\+Css (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WStringStream}{W\+String\+Stream}} \&}]{out }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Serves the C\+SS for the theme. 
+
+This must serve C\+SS declarations for the theme.
+
+The default implementation serves all the \mbox{\hyperlink{classWt_1_1WTheme_a7c1826d52efba8d2b17f3652c04afebd}{style\+Sheets()}}. \mbox{\Hypertarget{classWt_1_1WTheme_a3adb35d1940d7e5afaee33100894e0c4}\label{classWt_1_1WTheme_a3adb35d1940d7e5afaee33100894e0c4}} 
+\index{Wt::WTheme@{Wt::WTheme}!setDataTarget@{setDataTarget}}
+\index{setDataTarget@{setDataTarget}!Wt::WTheme@{Wt::WTheme}}
+\doxysubsubsection{\texorpdfstring{setDataTarget()}{setDataTarget()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Theme\+::set\+Data\+Target (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{widget,  }\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{target }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Sets the data target for a widget. 
+
+The {\ttfamily widget} is a bootstrap element that requires a data-\/bs-\/target attribute to function (with Bootstrap JS). The {\ttfamily target} is the element that is targeted by the {\ttfamily widget}. 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WBootstrap5Theme_a3d04175e430324073effd153a0ec6667}{Wt\+::\+W\+Bootstrap5\+Theme}}.
+
+\mbox{\Hypertarget{classWt_1_1WTheme_a7c1826d52efba8d2b17f3652c04afebd}\label{classWt_1_1WTheme_a7c1826d52efba8d2b17f3652c04afebd}} 
+\index{Wt::WTheme@{Wt::WTheme}!styleSheets@{styleSheets}}
+\index{styleSheets@{styleSheets}!Wt::WTheme@{Wt::WTheme}}
+\doxysubsubsection{\texorpdfstring{styleSheets()}{styleSheets()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$\mbox{\hyperlink{classWt_1_1WLinkedCssStyleSheet}{W\+Linked\+Css\+Style\+Sheet}}$>$ Wt\+::\+W\+Theme\+::style\+Sheets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns a vector with stylesheets for the theme. 
+
+This should return a vector with stylesheets that implement the theme. This list may be tailored to the current user agent, which is read from the application environment. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WCssTheme_a99a791d632f0aa6734456b635bd2dae9}{Wt\+::\+W\+Css\+Theme}}, \mbox{\hyperlink{classWt_1_1WBootstrapTheme_a15a55b34b60578af1360cffce6543e3f}{Wt\+::\+W\+Bootstrap\+Theme}}, \mbox{\hyperlink{classWt_1_1WBootstrap3Theme_a6951894506c7142959e3bb723688de71}{Wt\+::\+W\+Bootstrap3\+Theme}}, \mbox{\hyperlink{classWt_1_1WBootstrap2Theme_a4e5494898f780d5669d1afef0767279d}{Wt\+::\+W\+Bootstrap2\+Theme}}, and \mbox{\hyperlink{classWt_1_1WBootstrap5Theme_acf061ac4968014a7188d248edbda7ef1}{Wt\+::\+W\+Bootstrap5\+Theme}}.
+
+\mbox{\Hypertarget{classWt_1_1WTheme_acfa44ba1e10bbb7d67f3610f85329cd4}\label{classWt_1_1WTheme_acfa44ba1e10bbb7d67f3610f85329cd4}} 
+\index{Wt::WTheme@{Wt::WTheme}!utilityCssClass@{utilityCssClass}}
+\index{utilityCssClass@{utilityCssClass}!Wt::WTheme@{Wt::WTheme}}
+\doxysubsubsection{\texorpdfstring{utilityCssClass()}{utilityCssClass()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+W\+Theme\+::utility\+Css\+Class (\begin{DoxyParamCaption}\item[{int}]{utility\+Css\+Class\+Role }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns a generic C\+SS class name for the chosen role. 
+
+\begin{DoxySeeAlso}{See also}
+W\+Theme\+::utility\+Css\+Class\+Role 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WCssTheme_a738936c6550045bca88ed5e06dfdf00f}{Wt\+::\+W\+Css\+Theme}}, \mbox{\hyperlink{classWt_1_1WBootstrapTheme_a8fb31eed86a5b0b5255983befbd3655d}{Wt\+::\+W\+Bootstrap\+Theme}}, \mbox{\hyperlink{classWt_1_1WBootstrap3Theme_a98f3cced74cf98559a3077fa835c2213}{Wt\+::\+W\+Bootstrap3\+Theme}}, \mbox{\hyperlink{classWt_1_1WBootstrap2Theme_a92f48e1a71244b955b84c8b95e27bf53}{Wt\+::\+W\+Bootstrap2\+Theme}}, and \mbox{\hyperlink{classWt_1_1WBootstrap5Theme_a3d8ec1ae2e81f977c887ebed96aa5bd9}{Wt\+::\+W\+Bootstrap5\+Theme}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Theme.\+h\end{DoxyCompactItemize}

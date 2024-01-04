@@ -1,0 +1,12 @@
+This is a implementation of \href{http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html}{\texttt{ N4562}} std\+::experimental\+::any (merged into C++17) for C++11 compilers.
+
+It contains a small object optimization for objects with a size of up to 2 words (such as {\ttfamily int}, {\ttfamily float} and {\ttfamily std\+::shared\+\_\+ptr}). Storing those objects in the container will not trigger a dynamic allocation.
+
+For a easy to understand documentation, see \href{http://en.cppreference.com/w/cpp/utility/any}{\texttt{ cppreference}}, except our namespace is {\ttfamily linb}.\hypertarget{md_wt-4_88_82_src_Wt_cpp17_any_README_autotoc_md150}{}\doxysection{Defines}\label{md_wt-4_88_82_src_Wt_cpp17_any_README_autotoc_md150}
+You may additionally define the following preprocessor symbols (making the implementation non-\/standard)\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily A\+N\+Y\+\_\+\+I\+M\+P\+L\+\_\+\+A\+N\+Y\+\_\+\+C\+A\+S\+T\+\_\+\+M\+O\+V\+E\+A\+B\+LE}\+: This implements a fix proposed in \href{https://cplusplus.github.io/LWG/lwg-active.html\#2509}{\texttt{ L\+WG Defect 2509}}. This will cause the expressions {\ttfamily T x = any\+\_\+cast$<$T$>$(any(\+T()))} and {\ttfamily T x = any\+\_\+cast$<$T\&\&$>$(any(\+T()))}to perform a move into {\ttfamily x} instead of a copy.
+\item {\ttfamily A\+N\+Y\+\_\+\+I\+M\+P\+L\+\_\+\+F\+A\+S\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+F\+O\+\_\+\+C\+O\+M\+P\+A\+RE}\+: When checking if two {\ttfamily typeid} are the same, performs just a pointer comparision instead of the actual {\ttfamily type\+\_\+info\+::operator==} comparision. Be aware this isn\textquotesingle{}t recommended unless you know what you\textquotesingle{}re doing. 
+\end{DoxyItemize}

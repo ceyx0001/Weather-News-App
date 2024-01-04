@@ -1,0 +1,426 @@
+\hypertarget{classWt_1_1WFileDropWidget}{}\doxysection{Wt\+::W\+File\+Drop\+Widget Class Reference}
+\label{classWt_1_1WFileDropWidget}\index{Wt::WFileDropWidget@{Wt::WFileDropWidget}}
+
+
+A widget that allows dropping files for upload.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+File\+Drop\+Widget.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+File\+Drop\+Widget\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+File\+Drop\+Widget\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}}
+\begin{DoxyCompactList}\small\item\em A nested class of \mbox{\hyperlink{classWt_1_1WFileDropWidget}{W\+File\+Drop\+Widget}} representing a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_ae57cc7bf4185d38adc00a17dcf4f4a4d}\label{classWt_1_1WFileDropWidget_ae57cc7bf4185d38adc00a17dcf4f4a4d}} 
+\mbox{\hyperlink{classWt_1_1WFileDropWidget_ae57cc7bf4185d38adc00a17dcf4f4a4d}{W\+File\+Drop\+Widget}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_af8df1f0dc8fff956de0084dd2db0cd03}\label{classWt_1_1WFileDropWidget_af8df1f0dc8fff956de0084dd2db0cd03}} 
+\mbox{\hyperlink{classWt_1_1WFileDropWidget_af8df1f0dc8fff956de0084dd2db0cd03}{$\sim$\+W\+File\+Drop\+Widget}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}} $\ast$ $>$ \mbox{\hyperlink{classWt_1_1WFileDropWidget_a7f3d726659f522331ceff2b5836836d1}{uploads}} () const
+\begin{DoxyCompactList}\small\item\em Returns the vector of uploads managed by this widget. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WFileDropWidget_a3c4d94ceab18b60f7118d70ff9698596}{current\+Index}} () const
+\begin{DoxyCompactList}\small\item\em Return the index of the file that is currently being handled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WFileDropWidget_a87cdffe00e1a7d5ad23ed277ed67b6d1}{cancel\+Upload}} (\mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}} $\ast$file)
+\begin{DoxyCompactList}\small\item\em Cancels the upload of a file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WFileDropWidget_a83fd2ee5ffc90f22cf66d8e7f9b87b99}{remove}} (\mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}} $\ast$file)
+\begin{DoxyCompactList}\small\item\em Removes the file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a4032057631d756628f27b6546eeaa7bb}\label{classWt_1_1WFileDropWidget_a4032057631d756628f27b6546eeaa7bb}} 
+void \mbox{\hyperlink{classWt_1_1WFileDropWidget_a4032057631d756628f27b6546eeaa7bb}{set\+Accept\+Drops}} (bool \mbox{\hyperlink{classWt_1_1WWidget_ae6935d8baca9d37dd1d080b4383da87c}{enable}})
+\begin{DoxyCompactList}\small\item\em When set to false, the widget no longer accepts any files. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WFileDropWidget_a4fb8e92c328f4fe4a79f749b187e66f4}{set\+Hover\+Style\+Class}} (const std\+::string \&class\+Name)
+\begin{DoxyCompactList}\small\item\em Set the style class that is applied when a file is hovered over the widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WFileDropWidget_a5d36310701fb392cc35a181d4ef4a4ac}{set\+Filters}} (const std\+::string \&accept\+Attributes)
+\begin{DoxyCompactList}\small\item\em Sets input accept attributes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WFileDropWidget_a0c1400a6f7f63eec4bb1cfe30807538e}{set\+Drop\+Indication\+Enabled}} (bool \mbox{\hyperlink{classWt_1_1WWidget_ae6935d8baca9d37dd1d080b4383da87c}{enable}})
+\begin{DoxyCompactList}\small\item\em Highlight widget if a file is dragged anywhere on the page. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WFileDropWidget_ad29d5b464be843706c6f0d9c58bc9fb0}{drop\+Indication\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns if the widget is highlighted for drags anywhere on the page. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WFileDropWidget_a051b4928cb26446de1eb3617d0f8c954}{set\+Global\+Drop\+Enabled}} (bool \mbox{\hyperlink{classWt_1_1WWidget_ae6935d8baca9d37dd1d080b4383da87c}{enable}})
+\begin{DoxyCompactList}\small\item\em Allow dropping the files anywhere on the page. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WFileDropWidget_a9dbb9a04deff48e2295fb92af5551ab2}{global\+Drop\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns if all drops are forwarded to this widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a75e947a7ceaf0a63e04b4db10a9e0013}\label{classWt_1_1WFileDropWidget_a75e947a7ceaf0a63e04b4db10a9e0013}} 
+void \mbox{\hyperlink{classWt_1_1WFileDropWidget_a75e947a7ceaf0a63e04b4db10a9e0013}{set\+Java\+Script\+Filter}} (const std\+::string \&filter\+Fn, \+::uint64\+\_\+t chunksize=0, const std\+::vector$<$ std\+::string $>$ \&imports=std\+::vector$<$ std\+::string $>$())
+\begin{DoxyCompactList}\small\item\em Supply a function to process file data before it is uploaded to the server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_ac446e916f56adfc4a7f58957767dbe18}\label{classWt_1_1WFileDropWidget_ac446e916f56adfc4a7f58957767dbe18}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}} $\ast$ $>$ $>$ \& \mbox{\hyperlink{classWt_1_1WFileDropWidget_ac446e916f56adfc4a7f58957767dbe18}{drop}} ()
+\begin{DoxyCompactList}\small\item\em The signal triggers if one or more files are dropped. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}} $\ast$ $>$ \& \mbox{\hyperlink{classWt_1_1WFileDropWidget_a3d2505800ef4aa3a4d705ac8c7aca6e5}{new\+Upload}} ()
+\begin{DoxyCompactList}\small\item\em The signal triggers when the upload of a file is about to begin. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_abc5cec6a85e9694b67eb023553513260}\label{classWt_1_1WFileDropWidget_abc5cec6a85e9694b67eb023553513260}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}} $\ast$ $>$ \& \mbox{\hyperlink{classWt_1_1WFileDropWidget_abc5cec6a85e9694b67eb023553513260}{uploaded}} ()
+\begin{DoxyCompactList}\small\item\em The signal is triggered if any file finished uploading. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}} $\ast$, \+::uint64\+\_\+t $>$ \& \mbox{\hyperlink{classWt_1_1WFileDropWidget_ac79f9e7915e274b30a14c9c8e8c6cdd7}{too\+Large}} ()
+\begin{DoxyCompactList}\small\item\em The signal triggers when a file is too large for upload. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}} $\ast$ $>$ \& \mbox{\hyperlink{classWt_1_1WFileDropWidget_ab7c7a17534b2809398d49f293616d9d5}{upload\+Failed}} ()
+\begin{DoxyCompactList}\small\item\em The signal triggers when an upload failed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_aff66ebea5a3ffe7785ce7ae60a7d8c68}\label{classWt_1_1WFileDropWidget_aff66ebea5a3ffe7785ce7ae60a7d8c68}} 
+virtual std\+::string {\bfseries render\+Remove\+Js} (bool recursive) override
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WFileDropWidget_a5df654484bf71d149ef6650aa76c3921}{enable\+Ajax}} () override
+\begin{DoxyCompactList}\small\item\em Progresses to an Ajax-\/enabled widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a632a46b41bc135c3a281425a431d7641}\label{classWt_1_1WFileDropWidget_a632a46b41bc135c3a281425a431d7641}} 
+virtual void {\bfseries update\+Dom} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&element, bool all) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a891ecf9905398550d8f534e57c5889a8}\label{classWt_1_1WFileDropWidget_a891ecf9905398550d8f534e57c5889a8}} 
+void {\bfseries setup} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a2eeaa4aaf952fefe574fd8c07a4b5179}\label{classWt_1_1WFileDropWidget_a2eeaa4aaf952fefe574fd8c07a4b5179}} 
+void {\bfseries handle\+Drop} (const std\+::string \&new\+Drops)
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_acedf7f45b03bb61321025e9adc6485ae}\label{classWt_1_1WFileDropWidget_acedf7f45b03bb61321025e9adc6485ae}} 
+void {\bfseries handle\+Too\+Large} (\+::uint64\+\_\+t size)
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a724c858d2f914c8de34ad8e5503b9d41}\label{classWt_1_1WFileDropWidget_a724c858d2f914c8de34ad8e5503b9d41}} 
+void {\bfseries handle\+Send\+Request} (int \mbox{\hyperlink{classWt_1_1WWebWidget_ab438c51f9184d0ed37d01b15f07355d6}{id}})
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_abf3498047aedc6cb7accc72604a098de}\label{classWt_1_1WFileDropWidget_abf3498047aedc6cb7accc72604a098de}} 
+void {\bfseries emit\+Uploaded} (int \mbox{\hyperlink{classWt_1_1WWebWidget_ab438c51f9184d0ed37d01b15f07355d6}{id}})
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a172b8fb3bf4a0583f207a365d8c0b181}\label{classWt_1_1WFileDropWidget_a172b8fb3bf4a0583f207a365d8c0b181}} 
+void {\bfseries stop\+Receiving} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_ac8e4f7964ce010c2fb84061680f55e71}\label{classWt_1_1WFileDropWidget_ac8e4f7964ce010c2fb84061680f55e71}} 
+void {\bfseries on\+Data} (\+::uint64\+\_\+t current, \+::uint64\+\_\+t total)
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_ab03537dea18e87decb0adae4ee58099d}\label{classWt_1_1WFileDropWidget_ab03537dea18e87decb0adae4ee58099d}} 
+void {\bfseries on\+Data\+Exceeded} (\+::uint64\+\_\+t data\+Exceeded)
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_afab5fc2ec53235b41cb7f12f50a3ce90}\label{classWt_1_1WFileDropWidget_afab5fc2ec53235b41cb7f12f50a3ce90}} 
+void {\bfseries create\+Worker\+Resource} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_afb381fab3f38551b0609077fcd636a8d}\label{classWt_1_1WFileDropWidget_afb381fab3f38551b0609077fcd636a8d}} 
+void {\bfseries disable\+Java\+Script\+Filter} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a051f2a96534bf47d4b298f16babf9b11}\label{classWt_1_1WFileDropWidget_a051f2a96534bf47d4b298f16babf9b11}} 
+void {\bfseries proceed\+To\+Next\+File} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_abe15f141c7a618367136adb1933cd7cf}\label{classWt_1_1WFileDropWidget_abe15f141c7a618367136adb1933cd7cf}} 
+bool {\bfseries incoming\+Id\+Check} (int \mbox{\hyperlink{classWt_1_1WWebWidget_ab438c51f9184d0ed37d01b15f07355d6}{id}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a3d248374d567272fe174914959875e0c}\label{classWt_1_1WFileDropWidget_a3d248374d567272fe174914959875e0c}} 
+\mbox{\hyperlink{classWt_1_1WMemoryResource}{W\+Memory\+Resource}} $\ast$ {\bfseries upload\+Worker\+Resource\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a6938aca2a1cc63bdb777c27e9db6f705}\label{classWt_1_1WFileDropWidget_a6938aca2a1cc63bdb777c27e9db6f705}} 
+std\+::unique\+\_\+ptr$<$ W\+File\+Drop\+Upload\+Resource $>$ {\bfseries resource\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a886ce8c7f0a8af4055222f742a89b6c1}\label{classWt_1_1WFileDropWidget_a886ce8c7f0a8af4055222f742a89b6c1}} 
+unsigned {\bfseries current\+File\+Idx\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a9ee4caa09e3ac4a57f4247e511377880}\label{classWt_1_1WFileDropWidget_a9ee4caa09e3ac4a57f4247e511377880}} 
+std\+::string {\bfseries js\+Filter\+Fn\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a2cdd429c835c4ee9f4a8e0af286b9f07}\label{classWt_1_1WFileDropWidget_a2cdd429c835c4ee9f4a8e0af286b9f07}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries js\+Filter\+Imports\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a12575912bc5e65a04e3601a6d5f348d6}\label{classWt_1_1WFileDropWidget_a12575912bc5e65a04e3601a6d5f348d6}} 
+\+::uint64\+\_\+t {\bfseries chunk\+Size\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_ae54fc3bef2057f59a099781a62fb1901}\label{classWt_1_1WFileDropWidget_ae54fc3bef2057f59a099781a62fb1901}} 
+bool {\bfseries filter\+Supported\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a463b376a88eabf4d33dd808f544b71f0}\label{classWt_1_1WFileDropWidget_a463b376a88eabf4d33dd808f544b71f0}} 
+std\+::string {\bfseries hover\+Style\+Class\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a793d42e09427352fa51e61232f5ada3c}\label{classWt_1_1WFileDropWidget_a793d42e09427352fa51e61232f5ada3c}} 
+bool {\bfseries accept\+Drops\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_ad63f0d11e9ed8a8c02261b57df542156}\label{classWt_1_1WFileDropWidget_ad63f0d11e9ed8a8c02261b57df542156}} 
+std\+::string {\bfseries accept\+Attributes\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_aaa79522f6e9edac1fd1373c1c44a7705}\label{classWt_1_1WFileDropWidget_aaa79522f6e9edac1fd1373c1c44a7705}} 
+bool {\bfseries drop\+Indication\+Enabled\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a8d1cb03423744d4c376e8fab85c4b814}\label{classWt_1_1WFileDropWidget_a8d1cb03423744d4c376e8fab85c4b814}} 
+bool {\bfseries global\+Drop\+Enabled\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_ae08a56bec9b5f9298d97ae6052f6de0b}\label{classWt_1_1WFileDropWidget_ae08a56bec9b5f9298d97ae6052f6de0b}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ std\+::string $>$ {\bfseries drop\+Signal\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_aa0a4f26175bba0930d45112cf8874319}\label{classWt_1_1WFileDropWidget_aa0a4f26175bba0930d45112cf8874319}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ int $>$ {\bfseries request\+Send\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a349368c4e208e13ffc7dca8e9b9d8b0e}\label{classWt_1_1WFileDropWidget_a349368c4e208e13ffc7dca8e9b9d8b0e}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ \+::uint64\+\_\+t $>$ {\bfseries file\+Too\+Large\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a671ab057a3a1853dea2ccbaf1adc8c4a}\label{classWt_1_1WFileDropWidget_a671ab057a3a1853dea2ccbaf1adc8c4a}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ int $>$ {\bfseries upload\+Finished\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a6ac58642ec88d00166322621916e5519}\label{classWt_1_1WFileDropWidget_a6ac58642ec88d00166322621916e5519}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}} {\bfseries done\+Sending\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_ad4820c8454b44e5c3dcb5083d411e655}\label{classWt_1_1WFileDropWidget_ad4820c8454b44e5c3dcb5083d411e655}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}} {\bfseries js\+Filter\+Not\+Supported\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a3e99145ffd94818a472fb38095e33d01}\label{classWt_1_1WFileDropWidget_a3e99145ffd94818a472fb38095e33d01}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}} $\ast$ $>$ $>$ {\bfseries drop\+Event\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_aba839642c6fe623c62c189f3d0fab0c3}\label{classWt_1_1WFileDropWidget_aba839642c6fe623c62c189f3d0fab0c3}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}} $\ast$ $>$ {\bfseries upload\+Start\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a5ea3aec23424b11d171c7a44a1e0d918}\label{classWt_1_1WFileDropWidget_a5ea3aec23424b11d171c7a44a1e0d918}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}} $\ast$ $>$ {\bfseries uploaded\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_aa13badc8b96237747551bf821baacd11}\label{classWt_1_1WFileDropWidget_aa13badc8b96237747551bf821baacd11}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}} $\ast$, \+::uint64\+\_\+t $>$ {\bfseries too\+Large\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_adff35c0d985a7e932960cb92f329fda6}\label{classWt_1_1WFileDropWidget_adff35c0d985a7e932960cb92f329fda6}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}} $\ast$ $>$ {\bfseries upload\+Failed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_abe6fe38f4269ee018861ad484de74bb8}\label{classWt_1_1WFileDropWidget_abe6fe38f4269ee018861ad484de74bb8}} 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}} $>$ $>$ {\bfseries uploads\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a7cae1ec849d2e819ee91eb10901e176f}\label{classWt_1_1WFileDropWidget_a7cae1ec849d2e819ee91eb10901e176f}} 
+std\+::bitset$<$ 5 $>$ {\bfseries update\+Flags\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a919e6e56227811cb5de34fbb56a76f73}\label{classWt_1_1WFileDropWidget_a919e6e56227811cb5de34fbb56a76f73}} 
+bool {\bfseries updates\+Enabled\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a071a5995479ca9c26283f6d7c60b171f}\label{classWt_1_1WFileDropWidget_a071a5995479ca9c26283f6d7c60b171f}} 
+static const std\+::string {\bfseries W\+O\+R\+K\+E\+R\+\_\+\+JS}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a69ea033f004a59c4a6a7d50a47048d2a}\label{classWt_1_1WFileDropWidget_a69ea033f004a59c4a6a7d50a47048d2a}} 
+static const int {\bfseries B\+I\+T\+\_\+\+H\+O\+V\+E\+R\+S\+T\+Y\+L\+E\+\_\+\+C\+H\+A\+N\+G\+ED} = 0
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a312b2f4e558581ecbb1dfd374da730ba}\label{classWt_1_1WFileDropWidget_a312b2f4e558581ecbb1dfd374da730ba}} 
+static const int {\bfseries B\+I\+T\+\_\+\+A\+C\+C\+E\+P\+T\+D\+R\+O\+P\+S\+\_\+\+C\+H\+A\+N\+G\+ED} = 1
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a3ce8d9e0ef115c1bf43422d7e7d02fbd}\label{classWt_1_1WFileDropWidget_a3ce8d9e0ef115c1bf43422d7e7d02fbd}} 
+static const int {\bfseries B\+I\+T\+\_\+\+F\+I\+L\+T\+E\+R\+S\+\_\+\+C\+H\+A\+N\+G\+ED} = 2
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a3dffb4b5f2923bca1895f0a492d2d739}\label{classWt_1_1WFileDropWidget_a3dffb4b5f2923bca1895f0a492d2d739}} 
+static const int {\bfseries B\+I\+T\+\_\+\+D\+R\+A\+G\+O\+P\+T\+I\+O\+N\+S\+\_\+\+C\+H\+A\+N\+G\+ED} = 3
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a09321c3fc5e64d779d427cf99e2b33f6}\label{classWt_1_1WFileDropWidget_a09321c3fc5e64d779d427cf99e2b33f6}} 
+static const int {\bfseries B\+I\+T\+\_\+\+J\+S\+F\+I\+L\+T\+E\+R\+\_\+\+C\+H\+A\+N\+G\+ED} = 4
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_ab6b696a16734e3df5b05acf4d4f6f9aa}\label{classWt_1_1WFileDropWidget_ab6b696a16734e3df5b05acf4d4f6f9aa}} 
+class {\bfseries W\+File\+Drop\+Upload\+Resource}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A widget that allows dropping files for upload. 
+
+This widget accepts files that are dropped into it. A signal is triggered whenever one or more files are dropped. The filename, type and size of these files is immediately available through the \mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{W\+File\+Drop\+Widget\+::\+File}} interface.
+
+The file upload is done sequentially. All files before the \mbox{\hyperlink{classWt_1_1WFileDropWidget_a3c4d94ceab18b60f7118d70ff9698596}{current\+Index()}} have either finished, failed or have been cancelled.
+
+The widget has the default style-\/class \textquotesingle{}Wt-\/filedropzone\textquotesingle{}. The style-\/class \textquotesingle{}Wt-\/dropzone-\/hover\textquotesingle{} is added when files are hovered over the widget. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a87cdffe00e1a7d5ad23ed277ed67b6d1}\label{classWt_1_1WFileDropWidget_a87cdffe00e1a7d5ad23ed277ed67b6d1}} 
+\index{Wt::WFileDropWidget@{Wt::WFileDropWidget}!cancelUpload@{cancelUpload}}
+\index{cancelUpload@{cancelUpload}!Wt::WFileDropWidget@{Wt::WFileDropWidget}}
+\doxysubsubsection{\texorpdfstring{cancelUpload()}{cancelUpload()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+File\+Drop\+Widget\+::cancel\+Upload (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}} $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Cancels the upload of a file. 
+
+If you cancel a file that is still waiting to be uploaded, it will stay in the \mbox{\hyperlink{classWt_1_1WFileDropWidget_a7f3d726659f522331ceff2b5836836d1}{uploads()}} vector, but it will be skipped. \mbox{\Hypertarget{classWt_1_1WFileDropWidget_a3c4d94ceab18b60f7118d70ff9698596}\label{classWt_1_1WFileDropWidget_a3c4d94ceab18b60f7118d70ff9698596}} 
+\index{Wt::WFileDropWidget@{Wt::WFileDropWidget}!currentIndex@{currentIndex}}
+\index{currentIndex@{currentIndex}!Wt::WFileDropWidget@{Wt::WFileDropWidget}}
+\doxysubsubsection{\texorpdfstring{currentIndex()}{currentIndex()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+File\+Drop\+Widget\+::current\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the index of the file that is currently being handled. 
+
+If nothing is to be done, this will return the size of the vector returned by \mbox{\hyperlink{classWt_1_1WFileDropWidget_a7f3d726659f522331ceff2b5836836d1}{uploads()}}. \mbox{\Hypertarget{classWt_1_1WFileDropWidget_ad29d5b464be843706c6f0d9c58bc9fb0}\label{classWt_1_1WFileDropWidget_ad29d5b464be843706c6f0d9c58bc9fb0}} 
+\index{Wt::WFileDropWidget@{Wt::WFileDropWidget}!dropIndicationEnabled@{dropIndicationEnabled}}
+\index{dropIndicationEnabled@{dropIndicationEnabled}!Wt::WFileDropWidget@{Wt::WFileDropWidget}}
+\doxysubsubsection{\texorpdfstring{dropIndicationEnabled()}{dropIndicationEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+File\+Drop\+Widget\+::drop\+Indication\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns if the widget is highlighted for drags anywhere on the page. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFileDropWidget_a0c1400a6f7f63eec4bb1cfe30807538e}{set\+Drop\+Indication\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a5df654484bf71d149ef6650aa76c3921}\label{classWt_1_1WFileDropWidget_a5df654484bf71d149ef6650aa76c3921}} 
+\index{Wt::WFileDropWidget@{Wt::WFileDropWidget}!enableAjax@{enableAjax}}
+\index{enableAjax@{enableAjax}!Wt::WFileDropWidget@{Wt::WFileDropWidget}}
+\doxysubsubsection{\texorpdfstring{enableAjax()}{enableAjax()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+File\+Drop\+Widget\+::enable\+Ajax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Progresses to an Ajax-\/enabled widget. 
+
+This method is called when the progressive bootstrap method is used, and support for A\+J\+AX has been detected. The default behavior will upgrade the widget\textquotesingle{}s event handling to use A\+J\+AX instead of full page reloads, and propagate the call to its children.
+
+You may want to reimplement this method if you want to make changes to widget when A\+J\+AX is enabled. You should always call the base implementation.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_a46c573a3cd370cb2f83250c99d42b575}{W\+Application\+::enable\+Ajax()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_af717033681b5cbe5857c88b65558e10c}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a9dbb9a04deff48e2295fb92af5551ab2}\label{classWt_1_1WFileDropWidget_a9dbb9a04deff48e2295fb92af5551ab2}} 
+\index{Wt::WFileDropWidget@{Wt::WFileDropWidget}!globalDropEnabled@{globalDropEnabled}}
+\index{globalDropEnabled@{globalDropEnabled}!Wt::WFileDropWidget@{Wt::WFileDropWidget}}
+\doxysubsubsection{\texorpdfstring{globalDropEnabled()}{globalDropEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+File\+Drop\+Widget\+::global\+Drop\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns if all drops are forwarded to this widget. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFileDropWidget_a051b4928cb26446de1eb3617d0f8c954}{set\+Global\+Drop\+Enabled}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a3d2505800ef4aa3a4d705ac8c7aca6e5}\label{classWt_1_1WFileDropWidget_a3d2505800ef4aa3a4d705ac8c7aca6e5}} 
+\index{Wt::WFileDropWidget@{Wt::WFileDropWidget}!newUpload@{newUpload}}
+\index{newUpload@{newUpload}!Wt::WFileDropWidget@{Wt::WFileDropWidget}}
+\doxysubsubsection{\texorpdfstring{newUpload()}{newUpload()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}}$\ast$$>$\& Wt\+::\+W\+File\+Drop\+Widget\+::new\+Upload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The signal triggers when the upload of a file is about to begin. 
+
+After this signal is triggered, the upload automatically starts. The upload can still fail if the file is too large or if there is a network error. \mbox{\Hypertarget{classWt_1_1WFileDropWidget_a83fd2ee5ffc90f22cf66d8e7f9b87b99}\label{classWt_1_1WFileDropWidget_a83fd2ee5ffc90f22cf66d8e7f9b87b99}} 
+\index{Wt::WFileDropWidget@{Wt::WFileDropWidget}!remove@{remove}}
+\index{remove@{remove}!Wt::WFileDropWidget@{Wt::WFileDropWidget}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+File\+Drop\+Widget\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}} $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+Removes the file. 
+
+This can be used to free resources of files that were already uploaded. A file can only be removed if its index in \mbox{\hyperlink{classWt_1_1WFileDropWidget_a7f3d726659f522331ceff2b5836836d1}{uploads()}} is before the current index. \mbox{\Hypertarget{classWt_1_1WFileDropWidget_a0c1400a6f7f63eec4bb1cfe30807538e}\label{classWt_1_1WFileDropWidget_a0c1400a6f7f63eec4bb1cfe30807538e}} 
+\index{Wt::WFileDropWidget@{Wt::WFileDropWidget}!setDropIndicationEnabled@{setDropIndicationEnabled}}
+\index{setDropIndicationEnabled@{setDropIndicationEnabled}!Wt::WFileDropWidget@{Wt::WFileDropWidget}}
+\doxysubsubsection{\texorpdfstring{setDropIndicationEnabled()}{setDropIndicationEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+File\+Drop\+Widget\+::set\+Drop\+Indication\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+Highlight widget if a file is dragged anywhere on the page. 
+
+As soon as a drag enters anywhere on the page the styleclass \textquotesingle{}Wt-\/dropzone-\/indication\textquotesingle{} is added to this widget. This can be useful to point the user to the correct place to drop the file. Once the user drags a file over the widget itself, the styleclass \textquotesingle{}hover-\/style\textquotesingle{} is also added. This can be enabled for multiple dropwidgets if only one of them is visible at the same time.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFileDropWidget_a051b4928cb26446de1eb3617d0f8c954}{set\+Global\+Drop\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a5d36310701fb392cc35a181d4ef4a4ac}\label{classWt_1_1WFileDropWidget_a5d36310701fb392cc35a181d4ef4a4ac}} 
+\index{Wt::WFileDropWidget@{Wt::WFileDropWidget}!setFilters@{setFilters}}
+\index{setFilters@{setFilters}!Wt::WFileDropWidget@{Wt::WFileDropWidget}}
+\doxysubsubsection{\texorpdfstring{setFilters()}{setFilters()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+File\+Drop\+Widget\+::set\+Filters (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{accept\+Attributes }\end{DoxyParamCaption})}
+
+
+
+Sets input accept attributes. 
+
+The accept attribute may be specified to provide user agents with a hint of what file types will be accepted. Use html input accept attributes as input. This only affects the popup that is shown when users click on the widget. A user can still drop any file type. \mbox{\Hypertarget{classWt_1_1WFileDropWidget_a051b4928cb26446de1eb3617d0f8c954}\label{classWt_1_1WFileDropWidget_a051b4928cb26446de1eb3617d0f8c954}} 
+\index{Wt::WFileDropWidget@{Wt::WFileDropWidget}!setGlobalDropEnabled@{setGlobalDropEnabled}}
+\index{setGlobalDropEnabled@{setGlobalDropEnabled}!Wt::WFileDropWidget@{Wt::WFileDropWidget}}
+\doxysubsubsection{\texorpdfstring{setGlobalDropEnabled()}{setGlobalDropEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+File\+Drop\+Widget\+::set\+Global\+Drop\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+Allow dropping the files anywhere on the page. 
+
+If enabled, a drop anywhere on the page will be forwarded to this widget.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFileDropWidget_a0c1400a6f7f63eec4bb1cfe30807538e}{set\+Drop\+Indication\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_a4fb8e92c328f4fe4a79f749b187e66f4}\label{classWt_1_1WFileDropWidget_a4fb8e92c328f4fe4a79f749b187e66f4}} 
+\index{Wt::WFileDropWidget@{Wt::WFileDropWidget}!setHoverStyleClass@{setHoverStyleClass}}
+\index{setHoverStyleClass@{setHoverStyleClass}!Wt::WFileDropWidget@{Wt::WFileDropWidget}}
+\doxysubsubsection{\texorpdfstring{setHoverStyleClass()}{setHoverStyleClass()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+File\+Drop\+Widget\+::set\+Hover\+Style\+Class (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{class\+Name }\end{DoxyParamCaption})}
+
+
+
+Set the style class that is applied when a file is hovered over the widget. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000014}{Deprecated}}]Override the css rule \textquotesingle{}.Wt-\/filedropzone.\+Wt-\/dropzone-\/hover\textquotesingle{} instead. \end{DoxyRefDesc}
+\mbox{\Hypertarget{classWt_1_1WFileDropWidget_ac79f9e7915e274b30a14c9c8e8c6cdd7}\label{classWt_1_1WFileDropWidget_ac79f9e7915e274b30a14c9c8e8c6cdd7}} 
+\index{Wt::WFileDropWidget@{Wt::WFileDropWidget}!tooLarge@{tooLarge}}
+\index{tooLarge@{tooLarge}!Wt::WFileDropWidget@{Wt::WFileDropWidget}}
+\doxysubsubsection{\texorpdfstring{tooLarge()}{tooLarge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}}$\ast$, \+::uint64\+\_\+t$>$\& Wt\+::\+W\+File\+Drop\+Widget\+::too\+Large (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The signal triggers when a file is too large for upload. 
+
+This signal is triggered when the widget attempts to upload the file.
+
+The second argument is the size of the file in bytes. \mbox{\Hypertarget{classWt_1_1WFileDropWidget_ab7c7a17534b2809398d49f293616d9d5}\label{classWt_1_1WFileDropWidget_ab7c7a17534b2809398d49f293616d9d5}} 
+\index{Wt::WFileDropWidget@{Wt::WFileDropWidget}!uploadFailed@{uploadFailed}}
+\index{uploadFailed@{uploadFailed}!Wt::WFileDropWidget@{Wt::WFileDropWidget}}
+\doxysubsubsection{\texorpdfstring{uploadFailed()}{uploadFailed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}}$\ast$$>$\& Wt\+::\+W\+File\+Drop\+Widget\+::upload\+Failed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The signal triggers when an upload failed. 
+
+This signal will trigger when the widget skips over one of the files in the list for an unknown reason (e.\+g. happens when you drop a folder). \mbox{\Hypertarget{classWt_1_1WFileDropWidget_a7f3d726659f522331ceff2b5836836d1}\label{classWt_1_1WFileDropWidget_a7f3d726659f522331ceff2b5836836d1}} 
+\index{Wt::WFileDropWidget@{Wt::WFileDropWidget}!uploads@{uploads}}
+\index{uploads@{uploads}!Wt::WFileDropWidget@{Wt::WFileDropWidget}}
+\doxysubsubsection{\texorpdfstring{uploads()}{uploads()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{File}}$\ast$$>$ Wt\+::\+W\+File\+Drop\+Widget\+::uploads (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the vector of uploads managed by this widget. 
+
+The files in this vector are handled sequentially by the widget. All \mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File}{W\+File\+Drop\+Widget\+::\+File}} objects in this vector have either finished or failed if they are before the \mbox{\hyperlink{classWt_1_1WFileDropWidget_a3c4d94ceab18b60f7118d70ff9698596}{current\+Index()}}, depending on the return value of \mbox{\hyperlink{classWt_1_1WFileDropWidget_1_1File_a07fc8b308117991516b7c8ac1d5d7404}{W\+File\+Drop\+Widget\+::\+File\+::upload\+Finished()}}. The other files are still being handled.
+
+\begin{DoxyRemark}{Remarks}
+Since version 4.\+7.\+0, this method returns a copy of the vector because we changed the internal vector to hold values of type std\+::unique\+\_\+ptr.
+\end{DoxyRemark}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFileDropWidget_a3c4d94ceab18b60f7118d70ff9698596}{current\+Index()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+File\+Drop\+Widget.\+h\end{DoxyCompactItemize}

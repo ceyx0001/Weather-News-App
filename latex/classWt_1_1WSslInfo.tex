@@ -1,0 +1,85 @@
+\hypertarget{classWt_1_1WSslInfo}{}\doxysection{Wt\+::W\+Ssl\+Info Class Reference}
+\label{classWt_1_1WSslInfo}\index{Wt::WSslInfo@{Wt::WSslInfo}}
+
+
+Provides S\+SL information about the current session.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Ssl\+Info.\+h.\+C$>$}
+
+
+
+Collaboration diagram for Wt\+::W\+Ssl\+Info\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSslInfo_a8a4c95a582eac6b5249a8297a48662a1}\label{classWt_1_1WSslInfo_a8a4c95a582eac6b5249a8297a48662a1}} 
+{\bfseries W\+Ssl\+Info} (const \mbox{\hyperlink{classWt_1_1WSslCertificate}{W\+Ssl\+Certificate}} \&\mbox{\hyperlink{classWt_1_1WSslInfo_a592715e1782268b82fc4493e9ad03c1d}{client\+Certificate}}, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WSslCertificate}{W\+Ssl\+Certificate}} $>$ \&client\+Certificate\+Chain, \mbox{\hyperlink{classWt_1_1WValidator_1_1Result}{W\+Validator\+::\+Result}} \mbox{\hyperlink{classWt_1_1WSslInfo_a1f89fbb138034ae3b012f4b470ad30ae}{client\+Verification\+Result}})
+\item 
+\mbox{\Hypertarget{classWt_1_1WSslInfo_a592715e1782268b82fc4493e9ad03c1d}\label{classWt_1_1WSslInfo_a592715e1782268b82fc4493e9ad03c1d}} 
+const \mbox{\hyperlink{classWt_1_1WSslCertificate}{W\+Ssl\+Certificate}} \& \mbox{\hyperlink{classWt_1_1WSslInfo_a592715e1782268b82fc4493e9ad03c1d}{client\+Certificate}} () const
+\begin{DoxyCompactList}\small\item\em Returns the certificate used by the client for authentication. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WSslCertificate}{W\+Ssl\+Certificate}} $>$ \& \mbox{\hyperlink{classWt_1_1WSslInfo_ab9c9aebe71d242158af815a3631979ba}{client\+Pem\+Certificate\+Chain}} () const
+\begin{DoxyCompactList}\small\item\em Returns the certificate chain used for client authentication. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WValidator_1_1Result}{W\+Validator\+::\+Result}} \mbox{\hyperlink{classWt_1_1WSslInfo_a1f89fbb138034ae3b012f4b470ad30ae}{client\+Verification\+Result}} () const
+\begin{DoxyCompactList}\small\item\em Returns the result of the client certificate verification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSslInfo_a20dd87b80cc9a17b0442182e22a37551}\label{classWt_1_1WSslInfo_a20dd87b80cc9a17b0442182e22a37551}} 
+std\+::string {\bfseries gdb} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSslInfo_a83fee5380e7b77243cb524063ff4e6a2}\label{classWt_1_1WSslInfo_a83fee5380e7b77243cb524063ff4e6a2}} 
+\mbox{\hyperlink{classWt_1_1WSslCertificate}{W\+Ssl\+Certificate}} {\bfseries client\+Certificate\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSslInfo_af6a195f841b7fc33ecd7dcc163b91b93}\label{classWt_1_1WSslInfo_af6a195f841b7fc33ecd7dcc163b91b93}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WSslCertificate}{W\+Ssl\+Certificate}} $>$ {\bfseries client\+Certificate\+Chain\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSslInfo_a657247ba059058b741b3f3854b88a9fc}\label{classWt_1_1WSslInfo_a657247ba059058b741b3f3854b88a9fc}} 
+\mbox{\hyperlink{classWt_1_1WValidator_1_1Result}{W\+Validator\+::\+Result}} {\bfseries client\+Verification\+Result\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides S\+SL information about the current session. 
+
+This class provides an interface to the S\+SL information related to the current session. This class is returned by \mbox{\hyperlink{classWt_1_1WEnvironment_a04b65c4f7fe6e3b0bd652e2580b4f62e}{W\+Environment\+::ssl\+Info()}}.
+
+Probably the most important use of this class is that it provides access to the client certificate which was presented by the client during an https handshake to authenticate the S\+SL session. This class collects the information on the verification that was performed by the connector (F\+C\+GI, I\+S\+A\+PI, the built-\/in webserver, ...) and presents it to the application programmer.
+
+The verification and the acceptance of the certificate has to be configured in the web server (built-\/in httpd, Apache, I\+IS, ...). When \mbox{\hyperlink{classWt_1_1WEnvironment_a04b65c4f7fe6e3b0bd652e2580b4f62e}{W\+Environment\+::ssl\+Info()}} returns a \mbox{\hyperlink{classWt_1_1WSslInfo}{W\+Ssl\+Info}} object, this means that the client verification has already passed the verification procedures in the webserver. This does not mean that the certificate is valid; depending on the configuration of your web server, this verification may be weak. Always check the verification result with \mbox{\hyperlink{classWt_1_1WSslInfo_a1f89fbb138034ae3b012f4b470ad30ae}{client\+Verification\+Result()}}.
+
+This class is only available when Wt was compiled with S\+SL support. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WSslInfo_ab9c9aebe71d242158af815a3631979ba}\label{classWt_1_1WSslInfo_ab9c9aebe71d242158af815a3631979ba}} 
+\index{Wt::WSslInfo@{Wt::WSslInfo}!clientPemCertificateChain@{clientPemCertificateChain}}
+\index{clientPemCertificateChain@{clientPemCertificateChain}!Wt::WSslInfo@{Wt::WSslInfo}}
+\doxysubsubsection{\texorpdfstring{clientPemCertificateChain()}{clientPemCertificateChain()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{classWt_1_1WSslCertificate}{W\+Ssl\+Certificate}}$>$\& Wt\+::\+W\+Ssl\+Info\+::client\+Pem\+Certificate\+Chain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the certificate chain used for client authentication. 
+
+Warning\+: for the I\+S\+A\+PI connector, the certificate chain will always be empty. \mbox{\Hypertarget{classWt_1_1WSslInfo_a1f89fbb138034ae3b012f4b470ad30ae}\label{classWt_1_1WSslInfo_a1f89fbb138034ae3b012f4b470ad30ae}} 
+\index{Wt::WSslInfo@{Wt::WSslInfo}!clientVerificationResult@{clientVerificationResult}}
+\index{clientVerificationResult@{clientVerificationResult}!Wt::WSslInfo@{Wt::WSslInfo}}
+\doxysubsubsection{\texorpdfstring{clientVerificationResult()}{clientVerificationResult()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WValidator_1_1Result}{W\+Validator\+::\+Result}} Wt\+::\+W\+Ssl\+Info\+::client\+Verification\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the result of the client certificate verification. 
+
+\mbox{\hyperlink{classWt_1_1WSslInfo}{W\+Ssl\+Info}} (and thus \mbox{\hyperlink{classWt}{Wt}}) by itself does not perform any validation\+: this task is entirely up to the web server, and this class merely reports the validation status reported by the webserver. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Ssl\+Info.\+h\end{DoxyCompactItemize}

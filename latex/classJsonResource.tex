@@ -1,0 +1,42 @@
+\hypertarget{classJsonResource}{}\doxysection{Json\+Resource Class Reference}
+\label{classJsonResource}\index{JsonResource@{JsonResource}}
+
+
+Inheritance diagram for Json\+Resource\+:
+% FIG 0
+
+
+Collaboration diagram for Json\+Resource\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classJsonResource_aa31f455231406f80960abfd90e03dd1f}{handle\+Request}} (const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Wt\+::\+Http\+::\+Request}} \&request, \mbox{\hyperlink{classWt_1_1Http_1_1Response}{Wt\+::\+Http\+::\+Response}} \&response)
+\begin{DoxyCompactList}\small\item\em Handles a request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classJsonResource_aa31f455231406f80960abfd90e03dd1f}\label{classJsonResource_aa31f455231406f80960abfd90e03dd1f}} 
+\index{JsonResource@{JsonResource}!handleRequest@{handleRequest}}
+\index{handleRequest@{handleRequest}!JsonResource@{JsonResource}}
+\doxysubsubsection{\texorpdfstring{handleRequest()}{handleRequest()}}
+{\footnotesize\ttfamily virtual void Json\+Resource\+::handle\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Wt\+::\+Http\+::\+Request}} \&}]{request,  }\item[{\mbox{\hyperlink{classWt_1_1Http_1_1Response}{Wt\+::\+Http\+::\+Response}} \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Handles a request. 
+
+Reimplement this method so that a proper response is generated for the given request. From the {\ttfamily request} object you can access request parameters and whether the request is a continuation request. In the {\ttfamily response} object, you should set the mime type and stream the output data.
+
+A request may also concern a continuation, indicated in Http\+::\+Request\+::continuation(), in which case the next part for a previously created continuation should be served.
+
+While handling a request, which may happen at any time together with event handling, the library makes sure that the resource is not being concurrently deleted, but multiple requests may happend simultaneously for a single resource. 
+
+Implements \mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{Wt\+::\+W\+Resource}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/te-\/benchmark/benchmark.\+cpp\end{DoxyCompactItemize}

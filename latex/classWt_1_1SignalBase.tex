@@ -1,0 +1,82 @@
+\hypertarget{classWt_1_1SignalBase}{}\doxysection{Wt\+::Signal\+Base Class Reference}
+\label{classWt_1_1SignalBase}\index{Wt::SignalBase@{Wt::SignalBase}}
+
+
+Abstract base class of a signal.  
+
+
+
+
+{\ttfamily \#include $<$W\+Signal.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Signal\+Base\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classWt_1_1SignalBase_a13a3106be8949b273edc74aa61be14ce}{is\+Connected}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns whether this signal is connected. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} \mbox{\hyperlink{classWt_1_1SignalBase_ae43b51490db269a8a3b2356b218222d6}{connect}} (\mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} $\ast$target, \mbox{\hyperlink{classWt_1_1WObject_aec904644d278b09d3f7e568fd2efd400}{W\+Object\+::\+Method}} method)=0
+\begin{DoxyCompactList}\small\item\em Connects to a slot. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T , class V $>$ }\\\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} \mbox{\hyperlink{classWt_1_1SignalBase_a1f4178f19a827a31454d948e503848ad}{connect}} (T $\ast$target, void(V\+::$\ast$method)())
+\begin{DoxyCompactList}\small\item\em Connects to a slot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1SignalBase_a8407ddaae93a0ca9349f0de1754decbd}\label{classWt_1_1SignalBase_a8407ddaae93a0ca9349f0de1754decbd}} 
+{\bfseries Signal\+Base} (const \mbox{\hyperlink{classWt_1_1SignalBase}{Signal\+Base}} \&other)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class of a signal. 
+
+Base class for all signals. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1SignalBase_a1f4178f19a827a31454d948e503848ad}\label{classWt_1_1SignalBase_a1f4178f19a827a31454d948e503848ad}} 
+\index{Wt::SignalBase@{Wt::SignalBase}!connect@{connect}}
+\index{connect@{connect}!Wt::SignalBase@{Wt::SignalBase}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , class V $>$ \\
+\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} Wt\+::\+Signal\+Base\+::connect (\begin{DoxyParamCaption}\item[{T $\ast$}]{target,  }\item[{void(V\+::$\ast$)()}]{method }\end{DoxyParamCaption})}
+
+
+
+Connects to a slot. 
+
+Every signal can be connected to a slot which does not take any arguments (and may thus ignore signal arguments). \mbox{\Hypertarget{classWt_1_1SignalBase_ae43b51490db269a8a3b2356b218222d6}\label{classWt_1_1SignalBase_ae43b51490db269a8a3b2356b218222d6}} 
+\index{Wt::SignalBase@{Wt::SignalBase}!connect@{connect}}
+\index{connect@{connect}!Wt::SignalBase@{Wt::SignalBase}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} Wt\+::\+Signal\+Base\+::connect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} $\ast$}]{target,  }\item[{\mbox{\hyperlink{classWt_1_1WObject_aec904644d278b09d3f7e568fd2efd400}{W\+Object\+::\+Method}}}]{method }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Connects to a slot. 
+
+Every signal can be connected to a slot which does not take any arguments (and may thus ignore signal arguments). 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ A $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+W\+Model\+Index, Wt\+::\+W\+Mouse\+Event $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+W\+File\+Drop\+Widget\+::\+File $\ast$, \+::uint64\+\_\+t $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+Http\+::\+Message $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+W\+Widget $\ast$, bool $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+Auth\+::\+O\+Auth\+Process $\ast$, Wt\+::\+Auth\+::\+Identity $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+W\+Model\+Index $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ double $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+W\+Standard\+Item $\ast$ $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ std\+::string $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Orientation, int, int $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ int, Wt\+::\+W\+Length $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ std\+::vector$<$ Wt\+::\+W\+File\+Drop\+Widget\+::\+File $\ast$ $>$ $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ int, int $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ int64\+\_\+t, int64\+\_\+t $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+Auth\+::\+Saml\+::\+Process $\ast$, Wt\+::\+Auth\+::\+Identity $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ int $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+W\+Model\+Index, Wt\+::\+W\+Touch\+Event $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+W\+Model\+Index, int, int $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+Auth\+::\+Identity $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+W\+Popup\+Menu $\ast$ $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ double, double $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+Asio\+Wrapper\+::error\+\_\+code, Wt\+::\+Http\+::\+Message $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ std\+::vector$<$ Wt\+::\+W\+Model\+Index $>$, Wt\+::\+W\+Touch\+Event $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+W\+Date $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ int, Wt\+::\+W\+Form\+Widget $\ast$ $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Standard\+Button $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ \+::uint64\+\_\+t $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ W\+String $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ char $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+Auth\+::\+O\+Auth\+Access\+Token $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ bool $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+Dbo\+::ptr$<$ Comment $>$ $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Dialog\+Code $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+W\+Validator\+::\+Result $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ W\+T\+\_\+\+U\+S\+T\+R\+I\+N\+G $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+W\+Model\+Index, Wt\+::\+W\+Model\+Index $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ \+::uint64\+\_\+t, \+::uint64\+\_\+t $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ \+::int64\+\_\+t $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ int, Wt\+::\+W\+Mouse\+Event $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+W\+String $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D $\ast$ $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+W\+Dialog $\ast$ $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ const Wt\+::\+Chart\+::\+W\+Data\+Series $\ast$, Wt\+::\+W\+Point\+F $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+W\+Radio\+Button $\ast$ $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+W\+File\+Drop\+Widget\+::\+File $\ast$ $>$}}, \mbox{\hyperlink{classWt_1_1Signal_aa43a3b3569b31617cbd43087b0f32de5}{Wt\+::\+Signal$<$ Wt\+::\+W\+Menu\+Item $\ast$ $>$}}, \mbox{\hyperlink{classWt_1_1JSignal_ad8779cd000919968e6f693c57a7da6fd}{Wt\+::\+J\+Signal$<$ A $>$}}, \mbox{\hyperlink{classWt_1_1JSignal_ad8779cd000919968e6f693c57a7da6fd}{Wt\+::\+J\+Signal$<$ double $>$}}, \mbox{\hyperlink{classWt_1_1JSignal_ad8779cd000919968e6f693c57a7da6fd}{Wt\+::\+J\+Signal$<$ std\+::string $>$}}, \mbox{\hyperlink{classWt_1_1JSignal_ad8779cd000919968e6f693c57a7da6fd}{Wt\+::\+J\+Signal$<$ int, int $>$}}, \mbox{\hyperlink{classWt_1_1JSignal_ad8779cd000919968e6f693c57a7da6fd}{Wt\+::\+J\+Signal$<$ int, int, std\+::string, std\+::string, Wt\+::\+W\+Mouse\+Event $>$}}, \mbox{\hyperlink{classWt_1_1JSignal_ad8779cd000919968e6f693c57a7da6fd}{Wt\+::\+J\+Signal$<$ Wt\+::\+W\+Google\+Map\+::\+Coordinate $>$}}, \mbox{\hyperlink{classWt_1_1JSignal_ad8779cd000919968e6f693c57a7da6fd}{Wt\+::\+J\+Signal$<$ int $>$}}, \mbox{\hyperlink{classWt_1_1JSignal_ad8779cd000919968e6f693c57a7da6fd}{Wt\+::\+J\+Signal$<$ int, int, std\+::string, std\+::string, std\+::string, Wt\+::\+W\+Mouse\+Event $>$}}, \mbox{\hyperlink{classWt_1_1JSignal_ad8779cd000919968e6f693c57a7da6fd}{Wt\+::\+J\+Signal$<$ double, double $>$}}, \mbox{\hyperlink{classWt_1_1JSignal_ad8779cd000919968e6f693c57a7da6fd}{Wt\+::\+J\+Signal$<$ std\+::string, std\+::string, Wt\+::\+W\+Touch\+Event $>$}}, \mbox{\hyperlink{classWt_1_1JSignal_ad8779cd000919968e6f693c57a7da6fd}{Wt\+::\+J\+Signal$<$ \+::uint64\+\_\+t $>$}}, \mbox{\hyperlink{classWt_1_1JSignal_ad8779cd000919968e6f693c57a7da6fd}{Wt\+::\+J\+Signal$<$ Wt\+::\+W\+Touch\+Event $>$}}, \mbox{\hyperlink{classWt_1_1JSignal_ad8779cd000919968e6f693c57a7da6fd}{Wt\+::\+J\+Signal$<$ \+::int64\+\_\+t $>$}}, \mbox{\hyperlink{classWt_1_1JSignal_ad8779cd000919968e6f693c57a7da6fd}{Wt\+::\+J\+Signal$<$ std\+::string, std\+::string, std\+::string, std\+::string, Wt\+::\+W\+Mouse\+Event $>$}}, \mbox{\hyperlink{classWt_1_1JSignal_ad8779cd000919968e6f693c57a7da6fd}{Wt\+::\+J\+Signal$<$ std\+::string, std\+::string $>$}}, and \mbox{\hyperlink{classWt_1_1JSignal_ad8779cd000919968e6f693c57a7da6fd}{Wt\+::\+J\+Signal$<$ int, int, int, int $>$}}.
+
+\mbox{\Hypertarget{classWt_1_1SignalBase_a13a3106be8949b273edc74aa61be14ce}\label{classWt_1_1SignalBase_a13a3106be8949b273edc74aa61be14ce}} 
+\index{Wt::SignalBase@{Wt::SignalBase}!isConnected@{isConnected}}
+\index{isConnected@{isConnected}!Wt::SignalBase@{Wt::SignalBase}}
+\doxysubsubsection{\texorpdfstring{isConnected()}{isConnected()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Signal\+Base\+::is\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns whether this signal is connected. 
+
+Returns true when the signal was connected to to at least one slot. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1EventSignalBase_ab8ca6e4fa3748797d27fc571eb6f305d}{Wt\+::\+Event\+Signal\+Base}}, \mbox{\hyperlink{classWt_1_1Signal_a827b191b5d299911e731e18a91b20e9e}{Wt\+::\+Signal$<$ A $>$}}, and \mbox{\hyperlink{classWt_1_1JSignal_aa1ca52a2197cbb9d9c6bd818c2e3b719}{Wt\+::\+J\+Signal$<$ A $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Signal.\+h\end{DoxyCompactItemize}

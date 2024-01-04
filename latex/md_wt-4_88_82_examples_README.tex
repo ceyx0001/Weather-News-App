@@ -1,0 +1,20 @@
+The examples that come with the library will by default be linked against the built-\/in httpd. In any case, we recommend this way of exploring the examples and trying them out, even if you\textquotesingle{}ll end up deploying using Fast\+C\+GI or I\+S\+A\+PI.
+
+You typically need the following commands to run an example ({\ttfamily foobar})\+: \begin{DoxyVerb}cd foobar # source directory for example foobar
+../../build/examples/foobar/foobar.wt --docroot . --http-address 0.0.0.0 --http-port 8080 --resources-dir=../../resources
+\end{DoxyVerb}
+
+
+By running the examples from within their source directory, in this way the examples will find the auxiliary files in the expected places.
+
+Some examples may need additional command line arguments, which are detailed in the R\+E\+A\+D\+M\+E.\+md for each example.
+
+Some examples need third-\/party Java\+Script libraries (Ext\+JS or Tiny\+M\+CE).
+
+
+\begin{DoxyItemize}
+\item Download \href{http://yogurtearl.com/ext-2.0.2.zip}{\texttt{ Ext\+JS}}, and install it according to \href{http://www.webtoolkit.eu/wt/doc/reference/html/group__ext.html}{\texttt{ these instructions}}
+\item Download \href{http://tinymce.moxiecode.com/}{\texttt{ Tiny\+M\+CE}} and install its tiny\+\_\+mce folder into the resources/ folder.
+\end{DoxyItemize}
+
+You will notice 404 File not Found errors for {\ttfamily ext/} or {\ttfamily resources/tiny\+\_\+mce/} if you are missing these Java\+Script libraries. 

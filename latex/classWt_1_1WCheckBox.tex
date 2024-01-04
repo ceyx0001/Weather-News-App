@@ -1,0 +1,184 @@
+\hypertarget{classWt_1_1WCheckBox}{}\doxysection{Wt\+::W\+Check\+Box Class Reference}
+\label{classWt_1_1WCheckBox}\index{Wt::WCheckBox@{Wt::WCheckBox}}
+
+
+A user control that represents a check box.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Check\+Box.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Check\+Box\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Check\+Box\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WCheckBox_a42ce84bb48c2250d9a818042eac0b122}{W\+Check\+Box}} ()
+\begin{DoxyCompactList}\small\item\em Creates a checkbox without label. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WCheckBox_a2a1baf8097dab386eb7af418161eae64}\label{classWt_1_1WCheckBox_a2a1baf8097dab386eb7af418161eae64}} 
+\mbox{\hyperlink{classWt_1_1WCheckBox_a2a1baf8097dab386eb7af418161eae64}{W\+Check\+Box}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&\mbox{\hyperlink{classWt_1_1WAbstractToggleButton_accaccfb1066b8a7d69cd608354718b3f}{text}})
+\begin{DoxyCompactList}\small\item\em Creates a checkbox with given label. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WCheckBox_aaa80606e36bfd34a73f6b58dc6cac926}{set\+Tristate}} (bool tristate=true)
+\begin{DoxyCompactList}\small\item\em Makes a tristate checkbox. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WCheckBox_a2d741874682e9a683d40527b03615d32}{set\+Partial\+State\+Selectable}} (bool b)
+\begin{DoxyCompactList}\small\item\em enable or disable cycling throught partial state \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WCheckBox_abde010dedede8179824a126d0d673140}{is\+Partial\+State\+Selectable}} ()
+\begin{DoxyCompactList}\small\item\em return partial state cycling \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WCheckBox_a86d271e97fc98b33b6075afec02e9ea2}{is\+Tristate}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the checkbox is tristate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WCheckBox_a293d15f49d36587b55a04216322083d8}{set\+Check\+State}} (\mbox{\hyperlink{classWt_a59dae4dad2967d1d0f9b765f468442fb}{Check\+State}} state)
+\begin{DoxyCompactList}\small\item\em Sets the check state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_a59dae4dad2967d1d0f9b765f468442fb}{Check\+State}} \mbox{\hyperlink{classWt_1_1WCheckBox_ad006879a9fb12a6eb6dc52a63922505b}{check\+State}} () const
+\begin{DoxyCompactList}\small\item\em Returns the check state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WCheckBox_ad56b4135efb24adcbd5e8c1a9fee6295}\label{classWt_1_1WCheckBox_ad56b4135efb24adcbd5e8c1a9fee6295}} 
+virtual void {\bfseries update\+Input} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&input, bool all) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WCheckBox_a467604a15215602710f85321eaea4858}\label{classWt_1_1WCheckBox_a467604a15215602710f85321eaea4858}} 
+void {\bfseries update\+J\+Slot} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WCheckBox_a87dd685459fddab33bb96dd185d7d3a9}\label{classWt_1_1WCheckBox_a87dd685459fddab33bb96dd185d7d3a9}} 
+void {\bfseries update\+Next\+State} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WCheckBox_aa76279af92d0ffdf5d821298c586c0ab}\label{classWt_1_1WCheckBox_aa76279af92d0ffdf5d821298c586c0ab}} 
+bool {\bfseries tri\+State\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WCheckBox_a7296c00c829736fa641c69bc597f0e4d}\label{classWt_1_1WCheckBox_a7296c00c829736fa641c69bc597f0e4d}} 
+bool {\bfseries partial\+State\+Selectable\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WCheckBox_a448c62913fb560f6d1d27ba58df0a4f0}\label{classWt_1_1WCheckBox_a448c62913fb560f6d1d27ba58df0a4f0}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} $>$ {\bfseries jslot\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A user control that represents a check box. 
+
+By default, a checkbox can have two states\+: Wt\+::\+Check\+State\+::\+Checked or Wt\+::\+Check\+State\+::\+Unchecked, which can be inspected using \mbox{\hyperlink{classWt_1_1WAbstractToggleButton_a59099827039002a45133d4c7bad5310f}{is\+Checked()}}, and set using \mbox{\hyperlink{classWt_1_1WAbstractToggleButton_a549d62ab1ca78a3dfb65c19bedd79773}{set\+Checked()}}.
+
+A checkbox may also provide a third state, Wt\+::\+Check\+State\+::\+Partially\+Checked, which is useful to indicate that it is neither checked nor unchecked. Wt will use native browser support for this H\+T\+M\+L5 extension when available (Safari and MS IE), and use an image-\/based workaround otherwise. You may enable support for the third state using \mbox{\hyperlink{classWt_1_1WCheckBox_aaa80606e36bfd34a73f6b58dc6cac926}{set\+Tristate()}}, and use \mbox{\hyperlink{classWt_1_1WCheckBox_a293d15f49d36587b55a04216322083d8}{set\+Check\+State()}} and \mbox{\hyperlink{classWt_1_1WCheckBox_ad006879a9fb12a6eb6dc52a63922505b}{check\+State()}} to read all three states. Once a tri-\/state checkbox is clicked, it cycles through the states Wt\+::\+Check\+State\+::\+Checked and Wt\+::\+Check\+State\+::\+Unchecked.
+
+A label is added as a sibling of the checkbox to the same parent.
+
+Usage example\+:
+
+W\+Check\+Box is an \mbox{\hyperlink{classWt_1_1WWidget_ac78e3af143883334c82031790c87416e}{inline }} widget.
+
+\doxyparagraph*{C\+SS}
+
+This widget is rendered using an H\+T\+ML {\ttfamily $<$input type=\char`\"{}checkbox\char`\"{}$>$} tag. When a label is specified, the input element is nested in a {\ttfamily $<$label$>$}.
+
+This widget does not provide styling, and can be styled using inline or external C\+SS as appropriate.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractToggleButton}{W\+Abstract\+Toggle\+Button}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WCheckBox_a42ce84bb48c2250d9a818042eac0b122}\label{classWt_1_1WCheckBox_a42ce84bb48c2250d9a818042eac0b122}} 
+\index{Wt::WCheckBox@{Wt::WCheckBox}!WCheckBox@{WCheckBox}}
+\index{WCheckBox@{WCheckBox}!Wt::WCheckBox@{Wt::WCheckBox}}
+\doxysubsubsection{\texorpdfstring{WCheckBox()}{WCheckBox()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Check\+Box\+::\+W\+Check\+Box (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a checkbox without label. 
+
+A checkbox created by this constructor will not contain a placeholder for a label, and therefore it is not possible to assign a label to it later through \mbox{\hyperlink{classWt_1_1WAbstractToggleButton_a7a75e3b2585124eefdea57c9bf9a7696}{set\+Text()}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WCheckBox_ad006879a9fb12a6eb6dc52a63922505b}\label{classWt_1_1WCheckBox_ad006879a9fb12a6eb6dc52a63922505b}} 
+\index{Wt::WCheckBox@{Wt::WCheckBox}!checkState@{checkState}}
+\index{checkState@{checkState}!Wt::WCheckBox@{Wt::WCheckBox}}
+\doxysubsubsection{\texorpdfstring{checkState()}{checkState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_a59dae4dad2967d1d0f9b765f468442fb}{Check\+State}} Wt\+::\+W\+Check\+Box\+::check\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the check state. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WCheckBox_a293d15f49d36587b55a04216322083d8}{set\+Check\+State()}}, \mbox{\hyperlink{classWt_1_1WAbstractToggleButton_a59099827039002a45133d4c7bad5310f}{is\+Checked()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WCheckBox_abde010dedede8179824a126d0d673140}\label{classWt_1_1WCheckBox_abde010dedede8179824a126d0d673140}} 
+\index{Wt::WCheckBox@{Wt::WCheckBox}!isPartialStateSelectable@{isPartialStateSelectable}}
+\index{isPartialStateSelectable@{isPartialStateSelectable}!Wt::WCheckBox@{Wt::WCheckBox}}
+\doxysubsubsection{\texorpdfstring{isPartialStateSelectable()}{isPartialStateSelectable()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Check\+Box\+::is\+Partial\+State\+Selectable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return partial state cycling 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WCheckBox_a2d741874682e9a683d40527b03615d32}{set\+Partial\+State\+Selectable()}}; 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WCheckBox_a86d271e97fc98b33b6075afec02e9ea2}\label{classWt_1_1WCheckBox_a86d271e97fc98b33b6075afec02e9ea2}} 
+\index{Wt::WCheckBox@{Wt::WCheckBox}!isTristate@{isTristate}}
+\index{isTristate@{isTristate}!Wt::WCheckBox@{Wt::WCheckBox}}
+\doxysubsubsection{\texorpdfstring{isTristate()}{isTristate()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Check\+Box\+::is\+Tristate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the checkbox is tristate. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WCheckBox_aaa80606e36bfd34a73f6b58dc6cac926}{set\+Tristate()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WCheckBox_a293d15f49d36587b55a04216322083d8}\label{classWt_1_1WCheckBox_a293d15f49d36587b55a04216322083d8}} 
+\index{Wt::WCheckBox@{Wt::WCheckBox}!setCheckState@{setCheckState}}
+\index{setCheckState@{setCheckState}!Wt::WCheckBox@{Wt::WCheckBox}}
+\doxysubsubsection{\texorpdfstring{setCheckState()}{setCheckState()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Check\+Box\+::set\+Check\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a59dae4dad2967d1d0f9b765f468442fb}{Check\+State}}}]{state }\end{DoxyParamCaption})}
+
+
+
+Sets the check state. 
+
+Unless it is a tri-\/state checkbox, only Wt\+::\+Check\+State\+::\+Checked and Wt\+::\+Check\+State\+::\+Unchecked are valid states. \mbox{\Hypertarget{classWt_1_1WCheckBox_a2d741874682e9a683d40527b03615d32}\label{classWt_1_1WCheckBox_a2d741874682e9a683d40527b03615d32}} 
+\index{Wt::WCheckBox@{Wt::WCheckBox}!setPartialStateSelectable@{setPartialStateSelectable}}
+\index{setPartialStateSelectable@{setPartialStateSelectable}!Wt::WCheckBox@{Wt::WCheckBox}}
+\doxysubsubsection{\texorpdfstring{setPartialStateSelectable()}{setPartialStateSelectable()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Check\+Box\+::set\+Partial\+State\+Selectable (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})}
+
+
+
+enable or disable cycling throught partial state 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WCheckBox_abde010dedede8179824a126d0d673140}{is\+Partial\+State\+Selectable()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WCheckBox_aaa80606e36bfd34a73f6b58dc6cac926}\label{classWt_1_1WCheckBox_aaa80606e36bfd34a73f6b58dc6cac926}} 
+\index{Wt::WCheckBox@{Wt::WCheckBox}!setTristate@{setTristate}}
+\index{setTristate@{setTristate}!Wt::WCheckBox@{Wt::WCheckBox}}
+\doxysubsubsection{\texorpdfstring{setTristate()}{setTristate()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Check\+Box\+::set\+Tristate (\begin{DoxyParamCaption}\item[{bool}]{tristate = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Makes a tristate checkbox. 
+
+\begin{DoxyNote}{Note}
+You should enable tristate functionality right after construction and this cannot be modified later. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Check\+Box.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,91 @@
+\href{https://travis-ci.org/HowardHinnant/date}{\texttt{ }} \href{https://gitter.im/HowardHinnant/date?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge}{\texttt{ }}
+
+\DoxyHorRuler{0}
+
+
+{\bfseries{\href{https://wandbox.org/permlink/oyXjibyF680HHoyS}{\texttt{ Try it out on wandbox!}}}}\hypertarget{md_wt-4_88_82_src_Wt_Date_README_autotoc_md153}{}\doxysection{Summary}\label{md_wt-4_88_82_src_Wt_Date_README_autotoc_md153}
+This is actually several separate C++11/\+C++14/\+C++17 libraries\+:
+
+
+\begin{DoxyEnumerate}
+\item {\ttfamily \char`\"{}date.\+h\char`\"{}} is a header-\/only library which builds upon {\ttfamily $<$chrono$>$}. It adds some new {\ttfamily duration} types, and new {\ttfamily time\+\_\+point} types. It also adds \char`\"{}field\char`\"{} types such as {\ttfamily year\+\_\+month\+\_\+day} which is a struct {\ttfamily \{year, month, day\}}. And it provides convenient means to convert between the \char`\"{}field\char`\"{} types and the {\ttfamily time\+\_\+point} types.
+\begin{DoxyItemize}
+\item Documentation\+: \href{http://howardhinnant.github.io/date/date.html}{\texttt{ http\+://howardhinnant.\+github.\+io/date/date.\+html}}
+\item Video\+: \href{https://www.youtube.com/watch?v=tzyGjOm8AKo}{\texttt{ https\+://www.\+youtube.\+com/watch?v=tzy\+Gj\+Om8\+A\+Ko}}
+\item Slides\+: \href{http://schd.ws/hosted_files/cppcon2015/43/hinnant_dates.pdf}{\texttt{ http\+://schd.\+ws/hosted\+\_\+files/cppcon2015/43/hinnant\+\_\+dates.\+pdf}}
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item {\ttfamily \char`\"{}tz.\+h\char`\"{}} / {\ttfamily \char`\"{}tz.\+cpp\char`\"{}} are a timezone library built on top of the {\ttfamily \char`\"{}date.\+h\char`\"{}} library. This timezone library is a complete parser of the I\+A\+NA timezone database. It provides for an easy way to access all of the data in this database, using the types from {\ttfamily \char`\"{}date.\+h\char`\"{}} and {\ttfamily $<$chrono$>$}. The I\+A\+NA database also includes data on leap seconds, and this library provides utilities to compute with that information as well.
+\begin{DoxyItemize}
+\item Documentation\+: \href{http://howardhinnant.github.io/date/tz.html}{\texttt{ http\+://howardhinnant.\+github.\+io/date/tz.\+html}}
+\item Video\+: \href{https://www.youtube.com/watch?v=Vwd3pduVGKY}{\texttt{ https\+://www.\+youtube.\+com/watch?v=\+Vwd3pdu\+V\+G\+KY}}
+\item Slides\+: \href{http://schd.ws/hosted_files/cppcon2016/0f/Welcome\%20To\%20The\%20Time\%20Zone\%20-\%20Howard\%20Hinnant\%20-\%20CppCon\%202016.pdf}{\texttt{ http\+://schd.\+ws/hosted\+\_\+files/cppcon2016/0f/\+Welcome\%20\+To\%20\+The\%20\+Time\%20\+Zone\%20-\/\%20\+Howard\%20\+Hinnant\%20-\/\%20\+Cpp\+Con\%202016.\+pdf}}
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item {\ttfamily \char`\"{}iso\+\_\+week.\+h\char`\"{}} is a header-\/only library built on top of the {\ttfamily \char`\"{}date.\+h\char`\"{}} library which implements the I\+SO week date calendar.
+\begin{DoxyItemize}
+\item Documentation\+: \href{http://howardhinnant.github.io/date/iso_week.html}{\texttt{ http\+://howardhinnant.\+github.\+io/date/iso\+\_\+week.\+html}}
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item {\ttfamily \char`\"{}julian.\+h\char`\"{}} is a header-\/only library built on top of the {\ttfamily \char`\"{}date.\+h\char`\"{}} library which implements a proleptic Julian calendar which is fully interoperable with everything above.
+\begin{DoxyItemize}
+\item Documentation\+: \href{http://howardhinnant.github.io/date/julian.html}{\texttt{ http\+://howardhinnant.\+github.\+io/date/julian.\+html}}
+\end{DoxyItemize}
+\end{DoxyEnumerate}
+\begin{DoxyEnumerate}
+\item {\ttfamily \char`\"{}islamic.\+h\char`\"{}} is a header-\/only library built on top of the {\ttfamily \char`\"{}date.\+h\char`\"{}} library which implements a proleptic Islamic calendar which is fully interoperable with everything above.
+\begin{DoxyItemize}
+\item Documentation\+: \href{http://howardhinnant.github.io/date/islamic.html}{\texttt{ http\+://howardhinnant.\+github.\+io/date/islamic.\+html}}
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{md_wt-4_88_82_src_Wt_Date_README_autotoc_md154}{}\doxysection{Standardization}\label{md_wt-4_88_82_src_Wt_Date_README_autotoc_md154}
+Slightly modified versions of {\ttfamily \char`\"{}date.\+h\char`\"{}} and {\ttfamily \char`\"{}tz.\+h\char`\"{}} were voted into the C++20 working draft at the Jacksonville FL meeting on 2018-\/03-\/17\+:
+
+
+\begin{DoxyItemize}
+\item \href{http://howardhinnant.github.io/date/d0355r7.html}{\texttt{ http\+://howardhinnant.\+github.\+io/date/d0355r7.\+html}}
+\end{DoxyItemize}\hypertarget{md_wt-4_88_82_src_Wt_Date_README_autotoc_md155}{}\doxysection{Build \& Test}\label{md_wt-4_88_82_src_Wt_Date_README_autotoc_md155}
+The recommended way to use any of these libraries besides {\ttfamily \char`\"{}tz.\+h\char`\"{}} is to just include it. These are header-\/only libraries (except {\ttfamily \char`\"{}tz.\+h\char`\"{}}).
+
+To use {\ttfamily \char`\"{}tz.\+h\char`\"{}}, there is a single source file ({\ttfamily src/tz.\+cpp}) that needs to be compiled. Here are the recommended directions\+: \href{https://howardhinnant.github.io/date/tz.html\#Installation}{\texttt{ https\+://howardhinnant.\+github.\+io/date/tz.\+html\#\+Installation}}.
+
+One can run tests by cd\textquotesingle{}ing into the {\ttfamily test} subdirectory and running {\ttfamily testit}. There are known failures on all platforms except for mac\+OS. And even on mac\+OS if C++11 is used. If any of these failures present problems for you, there exist workarounds.
+
+Additionally there is {\itshape unsupported} support for \href{https://github.com/Microsoft/vcpkg}{\texttt{ vcpkg}} and \href{https://cmake.org/}{\texttt{ C\+Make}}. I don\textquotesingle{}t personally use or maintain these systems as for me they cause more problems than they solve (for this small project). If you would like to contribute to these build systems please feel free to file a PR.
+
+You can download and install Date using the \href{https://github.com/Microsoft/vcpkg}{\texttt{ vcpkg}} dependency manager\+: \begin{DoxyVerb}git clone https://github.com/Microsoft/vcpkg.git
+cd vcpkg
+./bootstrap-vcpkg.sh
+./vcpkg integrate install
+vcpkg install date
+\end{DoxyVerb}
+
+
+The Date port in vcpkg is updated by Microsoft team members and community contributors. If the version falls behind, please \href{https://github.com/Microsoft/vcpkg}{\texttt{ create an issue or pull request}} on the vcpkg repository.
+
+You can optionally build using \href{https://cmake.org/}{\texttt{ C\+Make}}. Here is a guide of how to build and test using the C\+Make Makefile generator.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir build}
+\DoxyCodeLine{cd build}
+\DoxyCodeLine{cmake -\/DENABLE\_DATE\_TESTING=ON -\/DBUILD\_TZ\_LIB=ON ../}
+\DoxyCodeLine{cmake -\/-\/build . -\/-\/target testit \# Consider '-\/-\/ -\/j4' for multithreading}
+\end{DoxyCode}
+\hypertarget{md_wt-4_88_82_src_Wt_Date_README_autotoc_md156}{}\doxysection{Projects using this library}\label{md_wt-4_88_82_src_Wt_Date_README_autotoc_md156}
+
+\begin{DoxyItemize}
+\item www.\+safe.\+com
+\item www.\+webtoolkit.\+eu/wt
+\item \href{https://github.com/ViewTouch/viewtouch}{\texttt{ https\+://github.\+com/\+View\+Touch/viewtouch}}
+\item \href{https://routinghub.com}{\texttt{ https\+://routinghub.\+com}}
+\item \href{https://github.com/valhalla}{\texttt{ https\+://github.\+com/valhalla}}
+\item \href{https://github.com/siodb/siodb}{\texttt{ https\+://github.\+com/siodb/siodb}}
+\item \href{https://github.com/KomodoPlatform/atomicDEX-Pro}{\texttt{ https\+://github.\+com/\+Komodo\+Platform/atomic\+D\+E\+X-\/\+Pro}}
+\item \href{https://github.com/Kotlin/kotlinx-datetime}{\texttt{ https\+://github.\+com/\+Kotlin/kotlinx-\/datetime}}
+\item \href{https://github.com/royalbee/jewish_date}{\texttt{ https\+://github.\+com/royalbee/jewish\+\_\+date}}
+\end{DoxyItemize}
+
+If you would like your project (or product) on this list, just let me know. 

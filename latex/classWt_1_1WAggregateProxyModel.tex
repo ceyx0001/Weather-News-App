@@ -1,0 +1,443 @@
+\hypertarget{classWt_1_1WAggregateProxyModel}{}\doxysection{Wt\+::W\+Aggregate\+Proxy\+Model Class Reference}
+\label{classWt_1_1WAggregateProxyModel}\index{Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}}
+
+
+A proxy model for Wt\textquotesingle{}s item models that provides column aggregation.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Aggregate\+Proxy\+Model.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Aggregate\+Proxy\+Model\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Aggregate\+Proxy\+Model\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WAggregateProxyModel_1_1Aggregate}{Aggregate}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_af57b9cf5338bf2f90e96c46842b7cd49}{W\+Aggregate\+Proxy\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_adbbeb8e11c73775b199bb546aed4d895}\label{classWt_1_1WAggregateProxyModel_adbbeb8e11c73775b199bb546aed4d895}} 
+virtual \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_adbbeb8e11c73775b199bb546aed4d895}{$\sim$\+W\+Aggregate\+Proxy\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_add590f7e0789812c73874ab2bd4161bf}{add\+Aggregate}} (int parent\+Column, int first\+Column, int last\+Column)
+\begin{DoxyCompactList}\small\item\em Adds a new column aggregation definition. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a8635c4d15d4660f6ebd4acb5b68e92b2}{map\+From\+Source}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&source\+Index) const override
+\begin{DoxyCompactList}\small\item\em Maps a source model index to the proxy model. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a9f15487d6a826d15f07d01fcae117bd3}{map\+To\+Source}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&proxy\+Index) const override
+\begin{DoxyCompactList}\small\item\em Maps a proxy model index to the source model. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a115b5c3431c1b86ac175efe49e13f89e}{set\+Source\+Model}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \&\mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a7e92d9d2b91f852286b7d49d08a88d5e}{source\+Model}}) override
+\begin{DoxyCompactList}\small\item\em Sets the source model. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a9f9f0b69ac4c68f736ca0c1627d26be8}{expand\+Column}} (int column) override
+\begin{DoxyCompactList}\small\item\em Expands a column. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a5999b2e18c05eceb6062c821a6643948}{collapse\+Column}} (int column) override
+\begin{DoxyCompactList}\small\item\em Collapses a column. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a83477a6dc7bd2428a736e378a5269034}{column\+Count}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a989086a6975e1fd7eecd0ca5efca5973}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const override
+\begin{DoxyCompactList}\small\item\em Returns the number of columns. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_adb9d29bb0aaec71e602e287fb5e4c0aa}{row\+Count}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a989086a6975e1fd7eecd0ca5efca5973}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const override
+\begin{DoxyCompactList}\small\item\em Returns the number of rows. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_gafb18b4339442f1327c2a65850f3d8a53}{Header\+Flag}} $>$ \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a1bfe4369432a62832bcc6fdf1d81bac6}{header\+Flags}} (int section, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation=Orientation\+::\+Horizontal) const override
+\begin{DoxyCompactList}\small\item\em Returns the flags for a header. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a68edc8a2284422eef0eb22c4d48ceaa5}{set\+Header\+Data}} (int section, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}) override
+\begin{DoxyCompactList}\small\item\em Sets header data for a column or row. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a61eece6fe6d0e3d43e11915e09d89cfb}{header\+Data}} (int section, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation=Orientation\+::\+Horizontal, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the row or column header data. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a989086a6975e1fd7eecd0ca5efca5973}{parent}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_ace1e816f4cb5b8bf858d526f01bddfd4}{index}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the parent for a model index. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_ace1e816f4cb5b8bf858d526f01bddfd4}{index}} (int row, int column, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a989086a6975e1fd7eecd0ca5efca5973}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const override
+\begin{DoxyCompactList}\small\item\em Returns the child index for the given row and column. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a0171d3c8f8425ad64c2fad94d58fc3d8}{sort}} (int column, \mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Sort\+Order}} order=Sort\+Order\+::\+Ascending) override
+\begin{DoxyCompactList}\small\item\em Sorts the model according to a particular column. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a04f7336e293b76376795cb76179d9a4f}\label{classWt_1_1WAggregateProxyModel_a04f7336e293b76376795cb76179d9a4f}} 
+void {\bfseries expand} (\mbox{\hyperlink{structWt_1_1WAggregateProxyModel_1_1Aggregate}{Aggregate}} \&aggregate)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a063f3dfff0d5e45f22a3b3c8d9034fe2}\label{classWt_1_1WAggregateProxyModel_a063f3dfff0d5e45f22a3b3c8d9034fe2}} 
+void {\bfseries collapse} (\mbox{\hyperlink{structWt_1_1WAggregateProxyModel_1_1Aggregate}{Aggregate}} \&aggregate)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a344a76478c37077decbb1572acbe0fa8}\label{classWt_1_1WAggregateProxyModel_a344a76478c37077decbb1572acbe0fa8}} 
+void {\bfseries propagate\+Begin\+Remove} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&proxy\+Index, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a9afb9573d2a6e77ac1962d8f8ef12453}\label{classWt_1_1WAggregateProxyModel_a9afb9573d2a6e77ac1962d8f8ef12453}} 
+void {\bfseries propagate\+End\+Remove} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&proxy\+Index, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a0323eaf317e765e56babbce192484a9b}\label{classWt_1_1WAggregateProxyModel_a0323eaf317e765e56babbce192484a9b}} 
+void {\bfseries propagate\+Begin\+Insert} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&proxy\+Index, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a083f36b86c50a2c47317783d1d2af4d4}\label{classWt_1_1WAggregateProxyModel_a083f36b86c50a2c47317783d1d2af4d4}} 
+void {\bfseries propagate\+End\+Insert} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&proxy\+Index, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_adb088fb88595fecb784be1382ef85c04}\label{classWt_1_1WAggregateProxyModel_adb088fb88595fecb784be1382ef85c04}} 
+int {\bfseries last\+Visible\+Source\+Not\+After} (int source\+Column) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a7ec57a861d979b002c3bb0f7e9647414}\label{classWt_1_1WAggregateProxyModel_a7ec57a861d979b002c3bb0f7e9647414}} 
+int {\bfseries first\+Visible\+Source\+Not\+Before} (int source\+Column) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_ab95bc4347ec329822abb335abf7596b8}\label{classWt_1_1WAggregateProxyModel_ab95bc4347ec329822abb335abf7596b8}} 
+void {\bfseries source\+Columns\+About\+To\+Be\+Inserted} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a989086a6975e1fd7eecd0ca5efca5973}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a69f94a6f5b41a1eb5e538cc8d621362e}\label{classWt_1_1WAggregateProxyModel_a69f94a6f5b41a1eb5e538cc8d621362e}} 
+void {\bfseries source\+Columns\+Inserted} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a989086a6975e1fd7eecd0ca5efca5973}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a30bd027652b8c73bc7e409cd3f0efa9c}\label{classWt_1_1WAggregateProxyModel_a30bd027652b8c73bc7e409cd3f0efa9c}} 
+void {\bfseries source\+Columns\+About\+To\+Be\+Removed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a989086a6975e1fd7eecd0ca5efca5973}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a0b8c3ce3178460baa632291786567358}\label{classWt_1_1WAggregateProxyModel_a0b8c3ce3178460baa632291786567358}} 
+void {\bfseries source\+Columns\+Removed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a989086a6975e1fd7eecd0ca5efca5973}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a3cb576cf4f4727b5eb81928eadd4dc72}\label{classWt_1_1WAggregateProxyModel_a3cb576cf4f4727b5eb81928eadd4dc72}} 
+void {\bfseries source\+Rows\+About\+To\+Be\+Inserted} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a989086a6975e1fd7eecd0ca5efca5973}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_ae046f3e129a08d682658be4c1b099f27}\label{classWt_1_1WAggregateProxyModel_ae046f3e129a08d682658be4c1b099f27}} 
+void {\bfseries source\+Rows\+Inserted} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a989086a6975e1fd7eecd0ca5efca5973}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a1d23c26a12d2e06d4a14e088fc471221}\label{classWt_1_1WAggregateProxyModel_a1d23c26a12d2e06d4a14e088fc471221}} 
+void {\bfseries source\+Rows\+About\+To\+Be\+Removed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a989086a6975e1fd7eecd0ca5efca5973}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_abbb04b7d6d580b3ecf35e7f2a643d648}\label{classWt_1_1WAggregateProxyModel_abbb04b7d6d580b3ecf35e7f2a643d648}} 
+void {\bfseries source\+Rows\+Removed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a989086a6975e1fd7eecd0ca5efca5973}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a0b926afa99cb79abf9f7238739d09caa}\label{classWt_1_1WAggregateProxyModel_a0b926afa99cb79abf9f7238739d09caa}} 
+void {\bfseries source\+Data\+Changed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&top\+Left, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&bottom\+Right)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_ac5c44a4970487808a2d3b2540a60a87d}\label{classWt_1_1WAggregateProxyModel_ac5c44a4970487808a2d3b2540a60a87d}} 
+void {\bfseries source\+Header\+Data\+Changed} (\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a0fc7f84cc085c0f3a8536c1fb3f094a9}\label{classWt_1_1WAggregateProxyModel_a0fc7f84cc085c0f3a8536c1fb3f094a9}} 
+void {\bfseries source\+Layout\+About\+To\+Be\+Changed} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_ab15e6d0b70c9e04928d049e1308214a2}\label{classWt_1_1WAggregateProxyModel_ab15e6d0b70c9e04928d049e1308214a2}} 
+void {\bfseries source\+Layout\+Changed} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a20473c2be402ad441394e19d70ccb726}\label{classWt_1_1WAggregateProxyModel_a20473c2be402ad441394e19d70ccb726}} 
+void {\bfseries source\+Model\+Reset} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a0867cea3884d99ea08b7aea5d070cd3d}\label{classWt_1_1WAggregateProxyModel_a0867cea3884d99ea08b7aea5d070cd3d}} 
+\mbox{\hyperlink{structWt_1_1WAggregateProxyModel_1_1Aggregate}{Aggregate}} {\bfseries top\+Level\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a6b255afcc07da773bdff6838e99024cd}\label{classWt_1_1WAggregateProxyModel_a6b255afcc07da773bdff6838e99024cd}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} $>$ {\bfseries model\+Connections\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A proxy model for Wt\textquotesingle{}s item models that provides column aggregation. 
+
+This proxy model does not store data itself, but presents data from a source model, and presents methods to organize columns using aggregation, through which a user may navigate (usually to obtain more detailed results related to a single aggregate quantity).
+
+To use this proxy model, you should provide a source model using \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a115b5c3431c1b86ac175efe49e13f89e}{set\+Source\+Model()}}, and define column ranges that can be aggregated using \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_add590f7e0789812c73874ab2bd4161bf}{add\+Aggregate()}}.
+
+This example would render like this\+:
+
+
+
+\begin{DoxyNote}{Note}
+This model does not support dynamic changes to the column definition of the source model (i.\+e. insertions or deletions of source model columns). 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_af57b9cf5338bf2f90e96c46842b7cd49}\label{classWt_1_1WAggregateProxyModel_af57b9cf5338bf2f90e96c46842b7cd49}} 
+\index{Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}!WAggregateProxyModel@{WAggregateProxyModel}}
+\index{WAggregateProxyModel@{WAggregateProxyModel}!Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}}
+\doxysubsubsection{\texorpdfstring{WAggregateProxyModel()}{WAggregateProxyModel()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Aggregate\+Proxy\+Model\+::\+W\+Aggregate\+Proxy\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Sets up the proxy without aggregation functionality. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_add590f7e0789812c73874ab2bd4161bf}\label{classWt_1_1WAggregateProxyModel_add590f7e0789812c73874ab2bd4161bf}} 
+\index{Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}!addAggregate@{addAggregate}}
+\index{addAggregate@{addAggregate}!Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}}
+\doxysubsubsection{\texorpdfstring{addAggregate()}{addAggregate()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Aggregate\+Proxy\+Model\+::add\+Aggregate (\begin{DoxyParamCaption}\item[{int}]{parent\+Column,  }\item[{int}]{first\+Column,  }\item[{int}]{last\+Column }\end{DoxyParamCaption})}
+
+
+
+Adds a new column aggregation definition. 
+
+The {\ttfamily parent\+Column} is the column index in the source model that acts as an aggregate for columns {\ttfamily first\+Column} to {\ttfamily last\+Column}. {\ttfamily parent\+Column} must border the range defined by {\ttfamily first\+Column} to {\ttfamily last\+Column\+:} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{parentColumn == firstColumn -\/ 1 || parentColumn == lastColumn + 1}
+\end{DoxyCode}
+
+
+\mbox{\hyperlink{classNote}{Note}} that column parameters reference column indexes in the source model.
+
+Aggregation definitions can be nested, but should be strictly hierarchical.
+
+The aggregate column will initially be collapsed.
+
+Only one aggregate can be defined per {\ttfamily parent\+Column}. \mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a5999b2e18c05eceb6062c821a6643948}\label{classWt_1_1WAggregateProxyModel_a5999b2e18c05eceb6062c821a6643948}} 
+\index{Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}!collapseColumn@{collapseColumn}}
+\index{collapseColumn@{collapseColumn}!Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}}
+\doxysubsubsection{\texorpdfstring{collapseColumn()}{collapseColumn()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Aggregate\+Proxy\+Model\+::collapse\+Column (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Collapses a column. 
+
+Collapses a column. This may only be called by a view when the Wt\+::\+Header\+Flag\+::\+Column\+Is\+Expanded\+Left or Wt\+::\+Header\+Flag\+::\+Column\+Is\+Expanded\+Right flag is set.
+
+The default implementation does nothing.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAggregateProxyModel}{W\+Aggregate\+Proxy\+Model}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aa20428eef993a233aff90ff953a3fe0b}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a83477a6dc7bd2428a736e378a5269034}\label{classWt_1_1WAggregateProxyModel_a83477a6dc7bd2428a736e378a5269034}} 
+\index{Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}!columnCount@{columnCount}}
+\index{columnCount@{columnCount}!Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}}
+\doxysubsubsection{\texorpdfstring{columnCount()}{columnCount()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Aggregate\+Proxy\+Model\+::column\+Count (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of columns. 
+
+This returns the number of columns at index {\ttfamily parent}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_adb9d29bb0aaec71e602e287fb5e4c0aa}{row\+Count()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_abcf7912a95a0a60f8e9b1c37d30b8383}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a9f9f0b69ac4c68f736ca0c1627d26be8}\label{classWt_1_1WAggregateProxyModel_a9f9f0b69ac4c68f736ca0c1627d26be8}} 
+\index{Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}!expandColumn@{expandColumn}}
+\index{expandColumn@{expandColumn}!Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}}
+\doxysubsubsection{\texorpdfstring{expandColumn()}{expandColumn()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Aggregate\+Proxy\+Model\+::expand\+Column (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Expands a column. 
+
+Expands a column. This may only be called by a view when the Wt\+::\+Header\+Flag\+::\+Column\+Is\+Collapsed flag is set.
+
+The default implementation does nothing.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAggregateProxyModel}{W\+Aggregate\+Proxy\+Model}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ae420dad3a27a35014570daa27377be1d}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a61eece6fe6d0e3d43e11915e09d89cfb}\label{classWt_1_1WAggregateProxyModel_a61eece6fe6d0e3d43e11915e09d89cfb}} 
+\index{Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}!headerData@{headerData}}
+\index{headerData@{headerData}!Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}}
+\doxysubsubsection{\texorpdfstring{headerData()}{headerData()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} Wt\+::\+W\+Aggregate\+Proxy\+Model\+::header\+Data (\begin{DoxyParamCaption}\item[{int}]{section,  }\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation = {\ttfamily Orientation\+:\+:Horizontal},  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the row or column header data. 
+
+The default proxy implementation constructs a dummy \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} with the row set to 0 and column set to {\ttfamily section} if the orientation is Wt\+::\+Orientation\+::\+Horizontal, or with the row set to {\ttfamily section} and the column set to 0 if the orientation is Wt\+::\+Orientation\+::\+Vertical.
+
+The resulting section that is forwarded to \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a7e92d9d2b91f852286b7d49d08a88d5e}{source\+Model()}}-\/$>$\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a61eece6fe6d0e3d43e11915e09d89cfb}{header\+Data()}} depends on how the \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} is transformed with \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a9f15487d6a826d15f07d01fcae117bd3}{map\+To\+Source()}}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_aa1d16a5336bd1a75023b1b20f63708a2}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a1bfe4369432a62832bcc6fdf1d81bac6}\label{classWt_1_1WAggregateProxyModel_a1bfe4369432a62832bcc6fdf1d81bac6}} 
+\index{Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}!headerFlags@{headerFlags}}
+\index{headerFlags@{headerFlags}!Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}}
+\doxysubsubsection{\texorpdfstring{headerFlags()}{headerFlags()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$\mbox{\hyperlink{group__modelview_gafb18b4339442f1327c2a65850f3d8a53}{Header\+Flag}}$>$ Wt\+::\+W\+Aggregate\+Proxy\+Model\+::header\+Flags (\begin{DoxyParamCaption}\item[{int}]{section,  }\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation = {\ttfamily Orientation\+:\+:Horizontal} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the flags for a header. 
+
+The default proxy implementation constructs a dummy \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} with the row set to 0 and column set to {\ttfamily section} if the orientation is Wt\+::\+Orientation\+::\+Horizontal, or with the row set to {\ttfamily section} and the column set to 0 if the orientation is Wt\+::\+Orientation\+::\+Vertical.
+
+The resulting section that is forwarded to \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a7e92d9d2b91f852286b7d49d08a88d5e}{source\+Model()}}-\/$>$\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a1bfe4369432a62832bcc6fdf1d81bac6}{header\+Flags()}} depends on how the \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} is transformed with \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a9f15487d6a826d15f07d01fcae117bd3}{map\+To\+Source()}}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a89eb0b330b49faf718f10fc8e5081ccd}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_ace1e816f4cb5b8bf858d526f01bddfd4}\label{classWt_1_1WAggregateProxyModel_ace1e816f4cb5b8bf858d526f01bddfd4}} 
+\index{Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}!index@{index}}
+\index{index@{index}!Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Aggregate\+Proxy\+Model\+::index (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the child index for the given row and column. 
+
+When implementing this method, you can use \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af9b04fdec198dfbc1c9297ead93c8930}{create\+Index()}} to create an index that corresponds to the item at {\ttfamily row} and {\ttfamily column} within {\ttfamily parent}.
+
+If the location is invalid (out of bounds at the parent), then an invalid index must be returned.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a989086a6975e1fd7eecd0ca5efca5973}{parent()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a8635c4d15d4660f6ebd4acb5b68e92b2}\label{classWt_1_1WAggregateProxyModel_a8635c4d15d4660f6ebd4acb5b68e92b2}} 
+\index{Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}!mapFromSource@{mapFromSource}}
+\index{mapFromSource@{mapFromSource}!Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}}
+\doxysubsubsection{\texorpdfstring{mapFromSource()}{mapFromSource()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Aggregate\+Proxy\+Model\+::map\+From\+Source (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{source\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Maps a source model index to the proxy model. 
+
+This method returns a model index in the proxy model that corresponds to the model index {\ttfamily source\+Index} in the source model. This method must only be implemented for source model indexes that are mapped and thus are the result of \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a9f15487d6a826d15f07d01fcae117bd3}{map\+To\+Source()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a9f15487d6a826d15f07d01fcae117bd3}{map\+To\+Source()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a856d190cc66edcf05462e2476f43b01d}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a9f15487d6a826d15f07d01fcae117bd3}\label{classWt_1_1WAggregateProxyModel_a9f15487d6a826d15f07d01fcae117bd3}} 
+\index{Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}!mapToSource@{mapToSource}}
+\index{mapToSource@{mapToSource}!Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}}
+\doxysubsubsection{\texorpdfstring{mapToSource()}{mapToSource()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Aggregate\+Proxy\+Model\+::map\+To\+Source (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{proxy\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Maps a proxy model index to the source model. 
+
+This method returns a model index in the source model that corresponds to the proxy model index {\ttfamily proxy\+Index}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a8635c4d15d4660f6ebd4acb5b68e92b2}{map\+From\+Source()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_ac36b0ee3110073578da8b999d1882bf7}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a989086a6975e1fd7eecd0ca5efca5973}\label{classWt_1_1WAggregateProxyModel_a989086a6975e1fd7eecd0ca5efca5973}} 
+\index{Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}!parent@{parent}}
+\index{parent@{parent}!Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}}
+\doxysubsubsection{\texorpdfstring{parent()}{parent()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Aggregate\+Proxy\+Model\+::parent (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the parent for a model index. 
+
+An implementation should use \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af9b04fdec198dfbc1c9297ead93c8930}{create\+Index()}} to create a model index that corresponds to the parent of a given index.
+
+\mbox{\hyperlink{classNote}{Note}} that the index itself may be stale (referencing a row/column within the parent that is outside the model geometry), but its parent (identified by the \mbox{\hyperlink{classWt_1_1WModelIndex_a870e6637b7beebef4f4dfaec9f08e0a2}{W\+Model\+Index\+::internal\+Pointer()}}) is referencing an existing parent. A stale index can only be used while the model geometry is being updated, i.\+e. during the emission of the corresponding \mbox{[}rows/columns\mbox{]}(Being)\mbox{[}Removed/\+Inserted\mbox{]}() signals.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_ace1e816f4cb5b8bf858d526f01bddfd4}{index()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_adb9d29bb0aaec71e602e287fb5e4c0aa}\label{classWt_1_1WAggregateProxyModel_adb9d29bb0aaec71e602e287fb5e4c0aa}} 
+\index{Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}!rowCount@{rowCount}}
+\index{rowCount@{rowCount}!Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}}
+\doxysubsubsection{\texorpdfstring{rowCount()}{rowCount()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Aggregate\+Proxy\+Model\+::row\+Count (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of rows. 
+
+This returns the number of rows at index {\ttfamily parent}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a83477a6dc7bd2428a736e378a5269034}{column\+Count()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab0709a8f71fd5df882f29bb29fd055f0}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a68edc8a2284422eef0eb22c4d48ceaa5}\label{classWt_1_1WAggregateProxyModel_a68edc8a2284422eef0eb22c4d48ceaa5}} 
+\index{Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}!setHeaderData@{setHeaderData}}
+\index{setHeaderData@{setHeaderData}!Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}}
+\doxysubsubsection{\texorpdfstring{setHeaderData()}{setHeaderData()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Aggregate\+Proxy\+Model\+::set\+Header\+Data (\begin{DoxyParamCaption}\item[{int}]{section,  }\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation,  }\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{value,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets header data for a column or row. 
+
+Returns {\ttfamily true} if the operation was successful.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a61eece6fe6d0e3d43e11915e09d89cfb}{header\+Data()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a3c4a0ffe050bc0d11feeac4749dde784}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a115b5c3431c1b86ac175efe49e13f89e}\label{classWt_1_1WAggregateProxyModel_a115b5c3431c1b86ac175efe49e13f89e}} 
+\index{Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}!setSourceModel@{setSourceModel}}
+\index{setSourceModel@{setSourceModel}!Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}}
+\doxysubsubsection{\texorpdfstring{setSourceModel()}{setSourceModel()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Aggregate\+Proxy\+Model\+::set\+Source\+Model (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \&}]{source\+Model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the source model. 
+
+The source model provides the actual data for the proxy model.
+
+Ownership of the source model is {\itshape not} transferred.
+
+\mbox{\hyperlink{classNote}{Note}} that the source model\textquotesingle{}s signals are not forwarded to the proxy model by default, but some specializations, like \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel}{W\+Batch\+Edit\+Proxy\+Model}} and \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel}{W\+Sort\+Filter\+Proxy\+Model}} do. If you want to reimplement \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a8e938b2a268c99bf17f0529cfffc322e}{data()}} with no changes to row or column indices, consider the use of \mbox{\hyperlink{classWt_1_1WIdentityProxyModel}{W\+Identity\+Proxy\+Model}}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a213dfe399091f8134657436de86efca7}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAggregateProxyModel_a0171d3c8f8425ad64c2fad94d58fc3d8}\label{classWt_1_1WAggregateProxyModel_a0171d3c8f8425ad64c2fad94d58fc3d8}} 
+\index{Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}!sort@{sort}}
+\index{sort@{sort}!Wt::WAggregateProxyModel@{Wt::WAggregateProxyModel}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Aggregate\+Proxy\+Model\+::sort (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{\mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Sort\+Order}}}]{order = {\ttfamily SortOrder\+:\+:Ascending} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sorts the model according to a particular column. 
+
+If the model supports sorting, then it should emit the \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab377ac2fcb9de9d191bd1353665d1389}{layout\+About\+To\+Be\+Changed()}} signal, rearrange its items, and afterwards emit the \mbox{\hyperlink{classWt_1_1WAbstractItemModel_afe7cb1d5186881f83aa8f0e452aaef66}{layout\+Changed()}} signal.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab377ac2fcb9de9d191bd1353665d1389}{layout\+About\+To\+Be\+Changed()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_afe7cb1d5186881f83aa8f0e452aaef66}{layout\+Changed()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab044b92afa69282ea2e351bcdfd7c0c7}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Aggregate\+Proxy\+Model.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,288 @@
+\hypertarget{classWt_1_1WSslCertificate}{}\doxysection{Wt\+::W\+Ssl\+Certificate Class Reference}
+\label{classWt_1_1WSslCertificate}\index{Wt::WSslCertificate@{Wt::WSslCertificate}}
+
+
+An interface to an S\+SL certificate.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Ssl\+Certificate.\+h.\+C$>$}
+
+
+
+Collaboration diagram for Wt\+::W\+Ssl\+Certificate\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWt_1_1WSslCertificate_1_1DnAttribute}{Dn\+Attribute}}
+\begin{DoxyCompactList}\small\item\em Distinguished name attribute (also known as relative distinguished name) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279c}{Dn\+Attribute\+Name}} \{ \newline
+\mbox{\hyperlink{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca939eeac58af5950502449d2741401e49}{Country\+Name}}, 
+\mbox{\hyperlink{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca54f0764783584365ce4aced0985c649c}{Common\+Name}}, 
+\mbox{\hyperlink{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279cad886c7e2ac995ba72b282878c18fd8c6}{Locality\+Name}}, 
+\mbox{\hyperlink{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca9a7e41ab9525b264555ff79089c3accd}{Surname}}, 
+\newline
+\mbox{\hyperlink{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca67691ac8d417d645ffa6a2076411a39b}{Given\+Name}}, 
+\mbox{\hyperlink{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca84c281f422bff90987d2708577b1eef8}{Serial\+Number}}, 
+\mbox{\hyperlink{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca889054da6ec43ff363954c178803ee32}{Title}}, 
+\mbox{\hyperlink{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca500a615b345af88717a7364f32ce6bdc}{Initials}}, 
+\newline
+\mbox{\hyperlink{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca9a5cc76a93cbf5c61b0f399d9f4aed3c}{Organization\+Name}}, 
+\mbox{\hyperlink{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca65be7b3275f066564593086dd164b62b}{Organizational\+Unit\+Name}}, 
+\mbox{\hyperlink{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca63b00bd007645139ba8fe87a7befa689}{State\+Or\+Province\+Name}}, 
+\mbox{\hyperlink{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca84e78cb58beaca69b674b9866759a2dd}{Pseudonym}}, 
+\newline
+{\bfseries Dn\+Attribute\+Name\+Count}
+ \}
+\begin{DoxyCompactList}\small\item\em Distinguished name\textquotesingle{}s attribute name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSslCertificate_a0aed9cac25097de18c117281c8fc8426}\label{classWt_1_1WSslCertificate_a0aed9cac25097de18c117281c8fc8426}} 
+{\bfseries W\+Ssl\+Certificate} (const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WSslCertificate_1_1DnAttribute}{Dn\+Attribute}} $>$ \&\mbox{\hyperlink{classWt_1_1WSslCertificate_a2e37f1f543e878e13973ca44bb42e479}{subject\+Dn}}, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WSslCertificate_1_1DnAttribute}{Dn\+Attribute}} $>$ \&\mbox{\hyperlink{classWt_1_1WSslCertificate_a05e2315184c818ffa478763153dff3ac}{issuer\+Dn}}, const \mbox{\hyperlink{classWt_1_1WDateTime}{Wt\+::\+W\+Date\+Time}} \&\mbox{\hyperlink{classWt_1_1WSslCertificate_a1bdcab6f8f951335e9a2350b63ac191f}{validity\+Start}}, const \mbox{\hyperlink{classWt_1_1WDateTime}{Wt\+::\+W\+Date\+Time}} \&\mbox{\hyperlink{classWt_1_1WSslCertificate_ac4f168a728f5db77c278a773be337cc0}{validity\+End}}, const std\+::string \&pem\+Cert)
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WSslCertificate_1_1DnAttribute}{Dn\+Attribute}} $>$ \& \mbox{\hyperlink{classWt_1_1WSslCertificate_a2e37f1f543e878e13973ca44bb42e479}{subject\+Dn}} () const
+\begin{DoxyCompactList}\small\item\em Returns the distinguished name attributes of the subject. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1WSslCertificate_a51e9e4949280302323ec60eed1d20271}{subject\+Dn\+String}} () const
+\begin{DoxyCompactList}\small\item\em Returns the distinguished name of the subject in string format. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WSslCertificate_1_1DnAttribute}{Dn\+Attribute}} $>$ \& \mbox{\hyperlink{classWt_1_1WSslCertificate_a05e2315184c818ffa478763153dff3ac}{issuer\+Dn}} () const
+\begin{DoxyCompactList}\small\item\em Returns the distinguished name attributes of the issuer. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1WSslCertificate_a593558143bdb4d27808356a955ba01e2}{issuer\+Dn\+String}} () const
+\begin{DoxyCompactList}\small\item\em Returns the distinguished name of the issuer in string format. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WDateTime}{Wt\+::\+W\+Date\+Time}} \& \mbox{\hyperlink{classWt_1_1WSslCertificate_a1bdcab6f8f951335e9a2350b63ac191f}{validity\+Start}} () const
+\begin{DoxyCompactList}\small\item\em Returns the start time of the validity period of the certificate. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WDateTime}{Wt\+::\+W\+Date\+Time}} \& \mbox{\hyperlink{classWt_1_1WSslCertificate_ac4f168a728f5db77c278a773be337cc0}{validity\+End}} () const
+\begin{DoxyCompactList}\small\item\em Returns the end time of the validity period of the certificate. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1WSslCertificate_a8a1a8317bf14e3016b6fffcf5d82887a}{to\+Pem}} () const
+\begin{DoxyCompactList}\small\item\em Returns the textual P\+E\+M-\/encoded certificate. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1WSslCertificate_a05c8c39762b2651a5133b596bb71a56f}{to\+Der}} () const
+\begin{DoxyCompactList}\small\item\em Returns the binary D\+E\+R-\/encoded certificate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WSslCertificate_a9eaac134bdb1cfd725281a29f8cde866}\label{classWt_1_1WSslCertificate_a9eaac134bdb1cfd725281a29f8cde866}} 
+std\+::string {\bfseries gdb} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classWt_1_1WSslCertificate_ad1c646d1494c6198c3671dee32475c9a}{pem\+To\+Der}} (const std\+::string \&pem)
+\begin{DoxyCompactList}\small\item\em Convert a certificate from P\+EM encoding (textual) to D\+ER encoding (binary). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WSslCertificate_a7e2cda673bb1604c6e6f0ef56cfc932d}\label{classWt_1_1WSslCertificate_a7e2cda673bb1604c6e6f0ef56cfc932d}} 
+static std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WSslCertificate_1_1DnAttribute}{Dn\+Attribute}} $>$ {\bfseries dn\+From\+String} (const std\+::string \&dn\+Str)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSslCertificate_aa99207939b4dc81e4e8c2618e493df0f}\label{classWt_1_1WSslCertificate_aa99207939b4dc81e4e8c2618e493df0f}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WSslCertificate_1_1DnAttribute}{Dn\+Attribute}} $>$ {\bfseries subject\+Dn\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSslCertificate_ae24ee5de1e3236b14f618c673bbcdc24}\label{classWt_1_1WSslCertificate_ae24ee5de1e3236b14f618c673bbcdc24}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WSslCertificate_1_1DnAttribute}{Dn\+Attribute}} $>$ {\bfseries issuer\+Dn\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSslCertificate_a5c19bad67f45846772c26f3d95809845}\label{classWt_1_1WSslCertificate_a5c19bad67f45846772c26f3d95809845}} 
+\mbox{\hyperlink{classWt_1_1WDateTime}{Wt\+::\+W\+Date\+Time}} {\bfseries validity\+Start\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSslCertificate_aea84caa193743b121346eff38e189cca}\label{classWt_1_1WSslCertificate_aea84caa193743b121346eff38e189cca}} 
+\mbox{\hyperlink{classWt_1_1WDateTime}{Wt\+::\+W\+Date\+Time}} {\bfseries validity\+End\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSslCertificate_a3ceb596c4adf29783e6a1037c420efa2}\label{classWt_1_1WSslCertificate_a3ceb596c4adf29783e6a1037c420efa2}} 
+std\+::string {\bfseries pem\+Cert\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An interface to an S\+SL certificate. 
+
+This class provides an interface to an X.\+509 certificate, as used by S\+SL (server and client cert). The certificates are usually obtained by calling methods of class \mbox{\hyperlink{classWt_1_1WSslInfo}{W\+Ssl\+Info}}.
+
+This class offers you an interface to the raw (P\+E\+M/\+D\+ER) certificate, as well as a convenient interface to the most common attribute fields. The attributes interpreted by Wt are limited to those listed in enum Dn\+Attribute\+Name.
+
+The raw certificate can be queried in P\+E\+M/\+D\+ER format, and a function is provided to convert P\+EM (textual format) to D\+ER (binary format).
+
+This class is only available when Wt was compiled with S\+SL support. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279c}\label{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279c}} 
+\index{Wt::WSslCertificate@{Wt::WSslCertificate}!DnAttributeName@{DnAttributeName}}
+\index{DnAttributeName@{DnAttributeName}!Wt::WSslCertificate@{Wt::WSslCertificate}}
+\doxysubsubsection{\texorpdfstring{DnAttributeName}{DnAttributeName}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279c}{Wt\+::\+W\+Ssl\+Certificate\+::\+Dn\+Attribute\+Name}}}
+
+
+
+Distinguished name\textquotesingle{}s attribute name. 
+
+\mbox{\hyperlink{classNote}{Note}}\+: The values of this enum have no relation with the numerical ID used in the X.\+509 certificate.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSslCertificate_1_1DnAttribute}{Dn\+Attribute}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CountryName@{CountryName}!Wt::WSslCertificate@{Wt::WSslCertificate}}\index{Wt::WSslCertificate@{Wt::WSslCertificate}!CountryName@{CountryName}}}\mbox{\Hypertarget{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca939eeac58af5950502449d2741401e49}\label{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca939eeac58af5950502449d2741401e49}} 
+Country\+Name&Country name. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CommonName@{CommonName}!Wt::WSslCertificate@{Wt::WSslCertificate}}\index{Wt::WSslCertificate@{Wt::WSslCertificate}!CommonName@{CommonName}}}\mbox{\Hypertarget{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca54f0764783584365ce4aced0985c649c}\label{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca54f0764783584365ce4aced0985c649c}} 
+Common\+Name&Common name. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LocalityName@{LocalityName}!Wt::WSslCertificate@{Wt::WSslCertificate}}\index{Wt::WSslCertificate@{Wt::WSslCertificate}!LocalityName@{LocalityName}}}\mbox{\Hypertarget{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279cad886c7e2ac995ba72b282878c18fd8c6}\label{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279cad886c7e2ac995ba72b282878c18fd8c6}} 
+Locality\+Name&Locality name. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Surname@{Surname}!Wt::WSslCertificate@{Wt::WSslCertificate}}\index{Wt::WSslCertificate@{Wt::WSslCertificate}!Surname@{Surname}}}\mbox{\Hypertarget{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca9a7e41ab9525b264555ff79089c3accd}\label{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca9a7e41ab9525b264555ff79089c3accd}} 
+Surname&Surname. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GivenName@{GivenName}!Wt::WSslCertificate@{Wt::WSslCertificate}}\index{Wt::WSslCertificate@{Wt::WSslCertificate}!GivenName@{GivenName}}}\mbox{\Hypertarget{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca67691ac8d417d645ffa6a2076411a39b}\label{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca67691ac8d417d645ffa6a2076411a39b}} 
+Given\+Name&Given name. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SerialNumber@{SerialNumber}!Wt::WSslCertificate@{Wt::WSslCertificate}}\index{Wt::WSslCertificate@{Wt::WSslCertificate}!SerialNumber@{SerialNumber}}}\mbox{\Hypertarget{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca84c281f422bff90987d2708577b1eef8}\label{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca84c281f422bff90987d2708577b1eef8}} 
+Serial\+Number&Serial number. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Title@{Title}!Wt::WSslCertificate@{Wt::WSslCertificate}}\index{Wt::WSslCertificate@{Wt::WSslCertificate}!Title@{Title}}}\mbox{\Hypertarget{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca889054da6ec43ff363954c178803ee32}\label{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca889054da6ec43ff363954c178803ee32}} 
+Title&Title. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Initials@{Initials}!Wt::WSslCertificate@{Wt::WSslCertificate}}\index{Wt::WSslCertificate@{Wt::WSslCertificate}!Initials@{Initials}}}\mbox{\Hypertarget{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca500a615b345af88717a7364f32ce6bdc}\label{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca500a615b345af88717a7364f32ce6bdc}} 
+Initials&Initials. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OrganizationName@{OrganizationName}!Wt::WSslCertificate@{Wt::WSslCertificate}}\index{Wt::WSslCertificate@{Wt::WSslCertificate}!OrganizationName@{OrganizationName}}}\mbox{\Hypertarget{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca9a5cc76a93cbf5c61b0f399d9f4aed3c}\label{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca9a5cc76a93cbf5c61b0f399d9f4aed3c}} 
+Organization\+Name&Name of the organization. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OrganizationalUnitName@{OrganizationalUnitName}!Wt::WSslCertificate@{Wt::WSslCertificate}}\index{Wt::WSslCertificate@{Wt::WSslCertificate}!OrganizationalUnitName@{OrganizationalUnitName}}}\mbox{\Hypertarget{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca65be7b3275f066564593086dd164b62b}\label{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca65be7b3275f066564593086dd164b62b}} 
+Organizational\+Unit\+Name&Name of the organizational unit. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{StateOrProvinceName@{StateOrProvinceName}!Wt::WSslCertificate@{Wt::WSslCertificate}}\index{Wt::WSslCertificate@{Wt::WSslCertificate}!StateOrProvinceName@{StateOrProvinceName}}}\mbox{\Hypertarget{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca63b00bd007645139ba8fe87a7befa689}\label{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca63b00bd007645139ba8fe87a7befa689}} 
+State\+Or\+Province\+Name&Name of the state or province. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Pseudonym@{Pseudonym}!Wt::WSslCertificate@{Wt::WSslCertificate}}\index{Wt::WSslCertificate@{Wt::WSslCertificate}!Pseudonym@{Pseudonym}}}\mbox{\Hypertarget{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca84e78cb58beaca69b674b9866759a2dd}\label{classWt_1_1WSslCertificate_ad0679e3369ab814ad97367ba24de279ca84e78cb58beaca69b674b9866759a2dd}} 
+Pseudonym&Pseudonym. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WSslCertificate_a05e2315184c818ffa478763153dff3ac}\label{classWt_1_1WSslCertificate_a05e2315184c818ffa478763153dff3ac}} 
+\index{Wt::WSslCertificate@{Wt::WSslCertificate}!issuerDn@{issuerDn}}
+\index{issuerDn@{issuerDn}!Wt::WSslCertificate@{Wt::WSslCertificate}}
+\doxysubsubsection{\texorpdfstring{issuerDn()}{issuerDn()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{classWt_1_1WSslCertificate_1_1DnAttribute}{Dn\+Attribute}}$>$\& Wt\+::\+W\+Ssl\+Certificate\+::issuer\+Dn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the distinguished name attributes of the issuer. 
+
+The distinguished name (DN) of the authority that signed and therefore issued the certificate. This is the Certification Authority (CA), unless a certificate chain is used. \mbox{\Hypertarget{classWt_1_1WSslCertificate_a593558143bdb4d27808356a955ba01e2}\label{classWt_1_1WSslCertificate_a593558143bdb4d27808356a955ba01e2}} 
+\index{Wt::WSslCertificate@{Wt::WSslCertificate}!issuerDnString@{issuerDnString}}
+\index{issuerDnString@{issuerDnString}!Wt::WSslCertificate@{Wt::WSslCertificate}}
+\doxysubsubsection{\texorpdfstring{issuerDnString()}{issuerDnString()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+W\+Ssl\+Certificate\+::issuer\+Dn\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the distinguished name of the issuer in string format. 
+
+An example\+: CN=Pietje Puk,OU=Development,O=Emweb \mbox{\Hypertarget{classWt_1_1WSslCertificate_ad1c646d1494c6198c3671dee32475c9a}\label{classWt_1_1WSslCertificate_ad1c646d1494c6198c3671dee32475c9a}} 
+\index{Wt::WSslCertificate@{Wt::WSslCertificate}!pemToDer@{pemToDer}}
+\index{pemToDer@{pemToDer}!Wt::WSslCertificate@{Wt::WSslCertificate}}
+\doxysubsubsection{\texorpdfstring{pemToDer()}{pemToDer()}}
+{\footnotesize\ttfamily static std\+::string Wt\+::\+W\+Ssl\+Certificate\+::pem\+To\+Der (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{pem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Convert a certificate from P\+EM encoding (textual) to D\+ER encoding (binary). 
+
+This function throws an \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}} when the input string is not in the expected format. \mbox{\Hypertarget{classWt_1_1WSslCertificate_a2e37f1f543e878e13973ca44bb42e479}\label{classWt_1_1WSslCertificate_a2e37f1f543e878e13973ca44bb42e479}} 
+\index{Wt::WSslCertificate@{Wt::WSslCertificate}!subjectDn@{subjectDn}}
+\index{subjectDn@{subjectDn}!Wt::WSslCertificate@{Wt::WSslCertificate}}
+\doxysubsubsection{\texorpdfstring{subjectDn()}{subjectDn()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{classWt_1_1WSslCertificate_1_1DnAttribute}{Dn\+Attribute}}$>$\& Wt\+::\+W\+Ssl\+Certificate\+::subject\+Dn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the distinguished name attributes of the subject. 
+
+A distinguished name (DN) defining the entity associated with this certificate. Only the fields listed in enum Dn\+Attribute\+Name are decoded from the certificate. \mbox{\Hypertarget{classWt_1_1WSslCertificate_a51e9e4949280302323ec60eed1d20271}\label{classWt_1_1WSslCertificate_a51e9e4949280302323ec60eed1d20271}} 
+\index{Wt::WSslCertificate@{Wt::WSslCertificate}!subjectDnString@{subjectDnString}}
+\index{subjectDnString@{subjectDnString}!Wt::WSslCertificate@{Wt::WSslCertificate}}
+\doxysubsubsection{\texorpdfstring{subjectDnString()}{subjectDnString()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+W\+Ssl\+Certificate\+::subject\+Dn\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the distinguished name of the subject in string format. 
+
+For example\+: CN=Pietje Puk,OU=Development,O=Emweb \mbox{\Hypertarget{classWt_1_1WSslCertificate_a05c8c39762b2651a5133b596bb71a56f}\label{classWt_1_1WSslCertificate_a05c8c39762b2651a5133b596bb71a56f}} 
+\index{Wt::WSslCertificate@{Wt::WSslCertificate}!toDer@{toDer}}
+\index{toDer@{toDer}!Wt::WSslCertificate@{Wt::WSslCertificate}}
+\doxysubsubsection{\texorpdfstring{toDer()}{toDer()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+W\+Ssl\+Certificate\+::to\+Der (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the binary D\+E\+R-\/encoded certificate. 
+
+This function returns W\+Ssl\+Certificate\+::pem\+To\+Der(to\+Pem()). It will therefore throw a \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}} if the conversion fails.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSslCertificate_ad1c646d1494c6198c3671dee32475c9a}{pem\+To\+Der()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSslCertificate_a8a1a8317bf14e3016b6fffcf5d82887a}\label{classWt_1_1WSslCertificate_a8a1a8317bf14e3016b6fffcf5d82887a}} 
+\index{Wt::WSslCertificate@{Wt::WSslCertificate}!toPem@{toPem}}
+\index{toPem@{toPem}!Wt::WSslCertificate@{Wt::WSslCertificate}}
+\doxysubsubsection{\texorpdfstring{toPem()}{toPem()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+W\+Ssl\+Certificate\+::to\+Pem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the textual P\+E\+M-\/encoded certificate. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSslCertificate_ad1c646d1494c6198c3671dee32475c9a}{pem\+To\+Der()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSslCertificate_ac4f168a728f5db77c278a773be337cc0}\label{classWt_1_1WSslCertificate_ac4f168a728f5db77c278a773be337cc0}} 
+\index{Wt::WSslCertificate@{Wt::WSslCertificate}!validityEnd@{validityEnd}}
+\index{validityEnd@{validityEnd}!Wt::WSslCertificate@{Wt::WSslCertificate}}
+\doxysubsubsection{\texorpdfstring{validityEnd()}{validityEnd()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WDateTime}{Wt\+::\+W\+Date\+Time}}\& Wt\+::\+W\+Ssl\+Certificate\+::validity\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the end time of the validity period of the certificate. 
+
+The returned date may be invalid if not provided in the certificate.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSslCertificate_a1bdcab6f8f951335e9a2350b63ac191f}{validity\+Start()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSslCertificate_a1bdcab6f8f951335e9a2350b63ac191f}\label{classWt_1_1WSslCertificate_a1bdcab6f8f951335e9a2350b63ac191f}} 
+\index{Wt::WSslCertificate@{Wt::WSslCertificate}!validityStart@{validityStart}}
+\index{validityStart@{validityStart}!Wt::WSslCertificate@{Wt::WSslCertificate}}
+\doxysubsubsection{\texorpdfstring{validityStart()}{validityStart()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WDateTime}{Wt\+::\+W\+Date\+Time}}\& Wt\+::\+W\+Ssl\+Certificate\+::validity\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the start time of the validity period of the certificate. 
+
+The returned date may be invalid if not provided in the certificate.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSslCertificate_ac4f168a728f5db77c278a773be337cc0}{validity\+End()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Ssl\+Certificate.\+h\end{DoxyCompactItemize}

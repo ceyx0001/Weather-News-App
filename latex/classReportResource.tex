@@ -1,0 +1,52 @@
+\hypertarget{classReportResource}{}\doxysection{Report\+Resource Class Reference}
+\label{classReportResource}\index{ReportResource@{ReportResource}}
+
+
+Inheritance diagram for Report\+Resource\+:
+% FIG 0
+
+
+Collaboration diagram for Report\+Resource\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classReportResource_a0cd624e760199392c15282c779e27ab2}{handle\+Request}} (const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Wt\+::\+Http\+::\+Request}} \&request, \mbox{\hyperlink{classWt_1_1Http_1_1Response}{Wt\+::\+Http\+::\+Response}} \&response)
+\begin{DoxyCompactList}\small\item\em Handles a request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classReportResource_afc1ddb43e3c2564dbe08733cc8cb20ec}\label{classReportResource_afc1ddb43e3c2564dbe08733cc8cb20ec}} 
+void {\bfseries render\+Report} (H\+P\+D\+F\+\_\+\+Doc pdf)
+\item 
+\mbox{\Hypertarget{classReportResource_a03161d51d6b688dd4060279b0311e70a}\label{classReportResource_a03161d51d6b688dd4060279b0311e70a}} 
+void {\bfseries render\+Pdf} (const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&html, H\+P\+D\+F\+\_\+\+Doc pdf)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classReportResource_a0cd624e760199392c15282c779e27ab2}\label{classReportResource_a0cd624e760199392c15282c779e27ab2}} 
+\index{ReportResource@{ReportResource}!handleRequest@{handleRequest}}
+\index{handleRequest@{handleRequest}!ReportResource@{ReportResource}}
+\doxysubsubsection{\texorpdfstring{handleRequest()}{handleRequest()}}
+{\footnotesize\ttfamily virtual void Report\+Resource\+::handle\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Wt\+::\+Http\+::\+Request}} \&}]{request,  }\item[{\mbox{\hyperlink{classWt_1_1Http_1_1Response}{Wt\+::\+Http\+::\+Response}} \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Handles a request. 
+
+Reimplement this method so that a proper response is generated for the given request. From the {\ttfamily request} object you can access request parameters and whether the request is a continuation request. In the {\ttfamily response} object, you should set the mime type and stream the output data.
+
+A request may also concern a continuation, indicated in Http\+::\+Request\+::continuation(), in which case the next part for a previously created continuation should be served.
+
+While handling a request, which may happen at any time together with event handling, the library makes sure that the resource is not being concurrently deleted, but multiple requests may happend simultaneously for a single resource. 
+
+Implements \mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{Wt\+::\+W\+Resource}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/widgetgallery/examples/Java\+Pdf\+Renderer.\+cpp\item 
+wt-\/4.\+8.\+2/examples/widgetgallery/examples/Pdf\+Renderer.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,56 @@
+digraph "Wt::WFlashObject"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Wt::WFlashObject",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="A widget that renders a Flash object (also known as Flash movie)."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Wt::WWebWidget",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WWebWidget.html",tooltip="A base class for widgets with an HTML counterpart."];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Wt::WWidget",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WWidget.html",tooltip="The abstract base class for a user-interface component."];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Wt::WObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WObject.html",tooltip="A base class for objects that participate in the signal/slot system."];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Wt::Core::observable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Core_1_1observable.html",tooltip="A base class for objects whose life-time can be tracked."];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name_" ];
+  Node6 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" id_" ];
+  Node7 [label="const",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" parent_" ];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" BIT_RESIZE_AWARE\nBIT_WAS_DISABLED\nBIT_SCROLL_VISIBILITY\l_ENABLED\nWT_GETPS_JS\nBIT_NEED_RERENDER\l_SIZE_CHANGE\nBIT_GLOBAL_WIDGET\nWT_RESIZE_JS\nBIT_NEED_RERENDER\nBIT_HAS_PARENT\nBIT_WAS_HIDDEN\n..." ];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" elementTagName_" ];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" BIT_HIDE_WITH_OFFSETS\nBIT_GEOMETRY_CHANGED\nBIT_IS_SCROLL_VISIBLE\nBIT_SCROLL_VISIBILITY\l_LOADED\nBIT_GOT_FOCUS\nBIT_HIDDEN_CHANGED\nBIT_ENABLED\nAllChangeFlags\nBIT_SCROLL_VISIBILITY\l_ENABLED\nBIT_REPAINT_TO_AJAX\n..." ];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ieRendersAlternative_" ];
+  Node8 [label="Wt::JSignal\< A \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1JSignal.html",tooltip="A signal to relay JavaScript to C++ calls."];
+  Node9 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="Wt::EventSignalBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1EventSignalBase.html",tooltip="Abstract base class of an event signal."];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="Wt::SignalBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1SignalBase.html",tooltip="Abstract base class of a signal."];
+  Node4 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" owner_" ];
+  Node11 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" dummy_" ];
+  Node11 [label="Wt::Signals::Signal\l\< Args \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1Signals_1_1Signal.html",tooltip=" "];
+  Node12 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="Wt::Signals::Impl::\lProtoSignal\< Args... \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Signals_1_1Impl_1_1ProtoSignal.html",tooltip=" "];
+  Node13 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" callback_ring_" ];
+  Node13 [label="Wt::Signals::Impl::\lProtoSignal\< Args \>\l::SignalLink",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1Signals_1_1Impl_1_1ProtoSignal_1_1SignalLink.html",tooltip=" "];
+  Node14 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="Wt::Signals::Impl::\lSignalLinkBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Signals_1_1Impl_1_1SignalLinkBase.html",tooltip=" "];
+  Node15 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" unlink_callback_" ];
+  Node15 [label="void",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node16 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" obj_" ];
+  Node16 [label="Wt::Core::observing\l_ptr\< const Wt::Core\l::observable \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Core_1_1observing__ptr.html",tooltip=" "];
+  Node17 -> Node16 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" impl_" ];
+  Node17 [label="Wt::Core::Impl::observing\l_ptr_base",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1Core_1_1Impl_1_1observing__ptr__base.html",tooltip=" "];
+  Node5 -> Node17 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" observed_" ];
+  Node7 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" connection_ring_" ];
+  Node18 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ref_count" ];
+  Node18 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node13 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" prev\nnext" ];
+  Node7 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" BIT_EXPOSED\nBIT_SERVER_EVENT\nBIT_PREVENT_PROPAGATION\nBIT_SIGNAL_SERVER_ANYWAY\nBIT_CAN_AUTOLEARN\nBIT_PREVENT_DEFAULT\nname_\nid_\nBIT_NEED_UPDATE" ];
+  Node6 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name_" ];
+  Node19 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" impl_" ];
+  Node19 [label="Wt::Signals::Signal\l\< A... \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1Signals_1_1Signal.html",tooltip=" "];
+  Node12 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" url_" ];
+}

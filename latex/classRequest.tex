@@ -1,0 +1,159 @@
+\hypertarget{classRequest}{}\doxysection{Request Class Reference}
+\label{classRequest}\index{Request@{Request}}
+
+
+Collaboration diagram for Request\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRequest_abf5b2fe5fdae41e9f3ce48b23789ae27}\label{classRequest_abf5b2fe5fdae41e9f3ce48b23789ae27}} 
+{\bfseries Request} (std\+::string host, \mbox{\hyperlink{classRequester}{Requester}} $\ast$)
+\item 
+\mbox{\Hypertarget{classRequest_a4f1d966f1c8468e1ca0e21401798c281}\label{classRequest_a4f1d966f1c8468e1ca0e21401798c281}} 
+{\bfseries Request} (std\+::string host, std\+::list$<$ std\+::string $>$ headers, \mbox{\hyperlink{classRequester}{Requester}} $\ast$)
+\item 
+\mbox{\hyperlink{classRequest_a4d57c725686701f773eb3630630a7ea2}{$\sim$\+Request}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRequest_ad9aa9c24276f7d65c8e4fa6a650d984e}{set\+Requester}} (\mbox{\hyperlink{classRequester}{Requester}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Set a \mbox{\hyperlink{classRequester}{Requester}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRequest_a2a93ea2997b17264e52645605491ef4e}{set\+Host}} (std\+::string host)
+\begin{DoxyCompactList}\small\item\em Set host. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classRequest_a1117c974325de7ed26ee2c49422a16e5}{set\+Headers}} (std\+::list$<$ std\+::string $>$ headers)
+\begin{DoxyCompactList}\small\item\em Set headers. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classRequest_a3ecd6076c84820a92f2047d6226d74cd}{get\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Get data. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classRequest_a21d09b75213eb0acced16c0c009989ea}{get\+Host}} ()
+\begin{DoxyCompactList}\small\item\em Get host. \end{DoxyCompactList}\item 
+std\+::list$<$ std\+::string $>$ \mbox{\hyperlink{classRequest_a40e98e60b2b299a679105190241e83bb}{get\+Headers}} ()
+\begin{DoxyCompactList}\small\item\em Get headers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRequest_ad2eaec63a9e7259713435c6c07f2f2a1}\label{classRequest_ad2eaec63a9e7259713435c6c07f2f2a1}} 
+std\+::string {\bfseries \+\_\+host}
+\item 
+\mbox{\Hypertarget{classRequest_ab4aa72e2b872b4ae6e0f7440e25d9eec}\label{classRequest_ab4aa72e2b872b4ae6e0f7440e25d9eec}} 
+\mbox{\hyperlink{classRequester}{Requester}} $\ast$ {\bfseries \+\_\+requester}
+\item 
+\mbox{\Hypertarget{classRequest_a71fb5b13b193a1df507306f56b293d41}\label{classRequest_a71fb5b13b193a1df507306f56b293d41}} 
+std\+::list$<$ std\+::string $>$ {\bfseries \+\_\+headers}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRequest_a4d57c725686701f773eb3630630a7ea2}\label{classRequest_a4d57c725686701f773eb3630630a7ea2}} 
+\index{Request@{Request}!````~Request@{$\sim$Request}}
+\index{````~Request@{$\sim$Request}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{$\sim$Request()}{~Request()}}
+{\footnotesize\ttfamily Request\+::$\sim$\+Request (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default destructor. 
+
+Default destructor for \mbox{\hyperlink{classRequest}{Request}} that deletes its \mbox{\hyperlink{classRequester}{Requester}}. \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRequest_a3ecd6076c84820a92f2047d6226d74cd}\label{classRequest_a3ecd6076c84820a92f2047d6226d74cd}} 
+\index{Request@{Request}!getData@{getData}}
+\index{getData@{getData}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ string $>$ $>$ Request\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get data. 
+
+Returns the result of the A\+PI request to a host endpoint as a data table represented by a 2d vector. \begin{DoxyReturn}{Returns}
+The resulting A\+PI request data in a table as 2d vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRequest_a40e98e60b2b299a679105190241e83bb}\label{classRequest_a40e98e60b2b299a679105190241e83bb}} 
+\index{Request@{Request}!getHeaders@{getHeaders}}
+\index{getHeaders@{getHeaders}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{getHeaders()}{getHeaders()}}
+{\footnotesize\ttfamily list$<$ std\+::string $>$ Request\+::get\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get headers. 
+
+Returns the headers of the \mbox{\hyperlink{classRequest}{Request}} \begin{DoxyReturn}{Returns}
+The headers of \mbox{\hyperlink{classRequest}{Request}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRequest_a21d09b75213eb0acced16c0c009989ea}\label{classRequest_a21d09b75213eb0acced16c0c009989ea}} 
+\index{Request@{Request}!getHost@{getHost}}
+\index{getHost@{getHost}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{getHost()}{getHost()}}
+{\footnotesize\ttfamily string Request\+::get\+Host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get host. 
+
+Returns the host address of the \mbox{\hyperlink{classRequest}{Request}} \begin{DoxyReturn}{Returns}
+The host address of \mbox{\hyperlink{classRequest}{Request}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRequest_a1117c974325de7ed26ee2c49422a16e5}\label{classRequest_a1117c974325de7ed26ee2c49422a16e5}} 
+\index{Request@{Request}!setHeaders@{setHeaders}}
+\index{setHeaders@{setHeaders}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{setHeaders()}{setHeaders()}}
+{\footnotesize\ttfamily void Request\+::set\+Headers (\begin{DoxyParamCaption}\item[{std\+::list$<$ std\+::string $>$}]{headers }\end{DoxyParamCaption})}
+
+
+
+Set headers. 
+
+Changes the headers of \mbox{\hyperlink{classRequest}{Request}} 
+\begin{DoxyParams}{Parameters}
+{\em headers} & is the list of new headers required for the A\+PI request. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRequest_a2a93ea2997b17264e52645605491ef4e}\label{classRequest_a2a93ea2997b17264e52645605491ef4e}} 
+\index{Request@{Request}!setHost@{setHost}}
+\index{setHost@{setHost}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{setHost()}{setHost()}}
+{\footnotesize\ttfamily void Request\+::set\+Host (\begin{DoxyParamCaption}\item[{std\+::string}]{host }\end{DoxyParamCaption})}
+
+
+
+Set host. 
+
+Changes the host of \mbox{\hyperlink{classRequest}{Request}} 
+\begin{DoxyParams}{Parameters}
+{\em host} & is the new host address. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRequest_ad9aa9c24276f7d65c8e4fa6a650d984e}\label{classRequest_ad9aa9c24276f7d65c8e4fa6a650d984e}} 
+\index{Request@{Request}!setRequester@{setRequester}}
+\index{setRequester@{setRequester}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{setRequester()}{setRequester()}}
+{\footnotesize\ttfamily void Request\+::set\+Requester (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRequester}{Requester}} $\ast$}]{requester }\end{DoxyParamCaption})}
+
+
+
+Set a \mbox{\hyperlink{classRequester}{Requester}}. 
+
+Changes the \mbox{\hyperlink{classRequester}{Requester}} of the \mbox{\hyperlink{classRequest}{Request}} which functionally means that the algorithm used by \mbox{\hyperlink{classRequest}{Request}} is updated. 
+\begin{DoxyParams}{Parameters}
+{\em requester} & is the new \mbox{\hyperlink{classRequester}{Requester}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+web/Request.\+h\item 
+web/Request.\+cpp\end{DoxyCompactItemize}

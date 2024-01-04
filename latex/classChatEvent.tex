@@ -1,0 +1,93 @@
+\hypertarget{classChatEvent}{}\doxysection{Chat\+Event Class Reference}
+\label{classChatEvent}\index{ChatEvent@{ChatEvent}}
+
+
+Encapsulate a chat event.  
+
+
+
+
+{\ttfamily \#include $<$Simple\+Chat\+Server.\+h$>$}
+
+
+
+Collaboration diagram for Chat\+Event\+:
+% FIG 0
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classChatEvent_afa84446dae17c08fe15cf932fc0b7d61}\label{classChatEvent_afa84446dae17c08fe15cf932fc0b7d61}} 
+enum \mbox{\hyperlink{classChatEvent_afa84446dae17c08fe15cf932fc0b7d61}{Type}} \{ {\bfseries Login}, 
+{\bfseries Logout}, 
+{\bfseries Rename}, 
+{\bfseries Message}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for the event type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classChatEvent_aa5df88cfd032535def7663d133cbed24}\label{classChatEvent_aa5df88cfd032535def7663d133cbed24}} 
+\mbox{\hyperlink{classChatEvent_afa84446dae17c08fe15cf932fc0b7d61}{Type}} \mbox{\hyperlink{classChatEvent_aa5df88cfd032535def7663d133cbed24}{type}} () const
+\begin{DoxyCompactList}\small\item\em Get the event type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classChatEvent_a252ea5c330c2499e55789a7916257dfe}\label{classChatEvent_a252ea5c330c2499e55789a7916257dfe}} 
+const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \& \mbox{\hyperlink{classChatEvent_a252ea5c330c2499e55789a7916257dfe}{user}} () const
+\begin{DoxyCompactList}\small\item\em Get the user who caused the event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classChatEvent_a702c3b911aa8060ccf38312c5a9a6e30}\label{classChatEvent_a702c3b911aa8060ccf38312c5a9a6e30}} 
+const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \& \mbox{\hyperlink{classChatEvent_a702c3b911aa8060ccf38312c5a9a6e30}{message}} () const
+\begin{DoxyCompactList}\small\item\em Get the message of the event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classChatEvent_a533ac4e610584de0d9d4f2dd9d4c5ebe}\label{classChatEvent_a533ac4e610584de0d9d4f2dd9d4c5ebe}} 
+const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \& \mbox{\hyperlink{classChatEvent_a533ac4e610584de0d9d4f2dd9d4c5ebe}{data}} () const
+\begin{DoxyCompactList}\small\item\em Get the extra data for this event. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \mbox{\hyperlink{classChatEvent_a8f46031d69d8794ee36e35962babaa70}{formatted\+H\+T\+ML}} (const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&\mbox{\hyperlink{classChatEvent_a252ea5c330c2499e55789a7916257dfe}{user}}, \mbox{\hyperlink{classWt_a140dea437d52d3d7c438ea3bd16a1480}{Wt\+::\+Text\+Format}} format) const
+\begin{DoxyCompactList}\small\item\em Get the message formatted as H\+T\+ML, rendered for the given user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classChatEvent_a87e8c95da862b11466c9de1c9039cf6b}\label{classChatEvent_a87e8c95da862b11466c9de1c9039cf6b}} 
+{\bfseries Chat\+Event} (const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&\mbox{\hyperlink{classChatEvent_a252ea5c330c2499e55789a7916257dfe}{user}}, const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&\mbox{\hyperlink{classChatEvent_a702c3b911aa8060ccf38312c5a9a6e30}{message}})
+\item 
+\mbox{\Hypertarget{classChatEvent_a78a7f54e8a39eb3448197461bcc7b125}\label{classChatEvent_a78a7f54e8a39eb3448197461bcc7b125}} 
+{\bfseries Chat\+Event} (\mbox{\hyperlink{classChatEvent_afa84446dae17c08fe15cf932fc0b7d61}{Type}} \mbox{\hyperlink{classChatEvent_aa5df88cfd032535def7663d133cbed24}{type}}, const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&\mbox{\hyperlink{classChatEvent_a252ea5c330c2499e55789a7916257dfe}{user}}, const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&\mbox{\hyperlink{classChatEvent_a533ac4e610584de0d9d4f2dd9d4c5ebe}{data}}=\mbox{\hyperlink{classWt_1_1WString_a511a12bce677dc733bd7b6b9415bff73}{Wt\+::\+W\+String\+::\+Empty}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classChatEvent_a8a55c20da17f812694469924b04bfd4c}\label{classChatEvent_a8a55c20da17f812694469924b04bfd4c}} 
+\mbox{\hyperlink{classChatEvent_afa84446dae17c08fe15cf932fc0b7d61}{Type}} {\bfseries type\+\_\+}
+\item 
+\mbox{\Hypertarget{classChatEvent_a3e2d08dca6b95343ad494e796a320eec}\label{classChatEvent_a3e2d08dca6b95343ad494e796a320eec}} 
+\mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} {\bfseries user\+\_\+}
+\item 
+\mbox{\Hypertarget{classChatEvent_af24b35a3833777adff7e149383225e41}\label{classChatEvent_af24b35a3833777adff7e149383225e41}} 
+\mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} {\bfseries data\+\_\+}
+\item 
+\mbox{\Hypertarget{classChatEvent_ad51677c773550286593db4793dae62eb}\label{classChatEvent_ad51677c773550286593db4793dae62eb}} 
+\mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} {\bfseries message\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classChatEvent_ac99c17370c25b3c92dbb0578e4298ade}\label{classChatEvent_ac99c17370c25b3c92dbb0578e4298ade}} 
+class {\bfseries Simple\+Chat\+Server}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Encapsulate a chat event. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classChatEvent_a8f46031d69d8794ee36e35962babaa70}\label{classChatEvent_a8f46031d69d8794ee36e35962babaa70}} 
+\index{ChatEvent@{ChatEvent}!formattedHTML@{formattedHTML}}
+\index{formattedHTML@{formattedHTML}!ChatEvent@{ChatEvent}}
+\doxysubsubsection{\texorpdfstring{formattedHTML()}{formattedHTML()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} Chat\+Event\+::formatted\+H\+T\+ML (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&}]{user,  }\item[{\mbox{\hyperlink{classWt_a140dea437d52d3d7c438ea3bd16a1480}{Wt\+::\+Text\+Format}}}]{format }\end{DoxyParamCaption}) const}
+
+
+
+Get the message formatted as H\+T\+ML, rendered for the given user. 
+
+The {\ttfamily format} indicates how the message should be formatted. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/simplechat/Simple\+Chat\+Server.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,259 @@
+\hypertarget{classWt_1_1Mail_1_1Client}{}\doxysection{Wt\+::Mail\+::Client Class Reference}
+\label{classWt_1_1Mail_1_1Client}\index{Wt::Mail::Client@{Wt::Mail::Client}}
+
+
+An S\+M\+TP mail client.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Mail/\+Client.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::Mail\+::Client\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1Mail_1_1Client_1_1Configuration}{Configuration}}
+\item 
+class \mbox{\hyperlink{classWt_1_1Mail_1_1Client_1_1Impl}{Impl}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Mail_1_1Client_a564f5bfd10f9ae1c4c783c9e8a6b54a0}{Client}} (const std\+::string \&self\+Host=std\+::string())
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Mail_1_1Client_ab28a973133a812d556e121a5020be932}{$\sim$\+Client}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Mail_1_1Client_a4861b5d0157663d803a3edcb97f651f4}{enable\+Authentication}} (const std\+::string \&username, const std\+::string \&password, \mbox{\hyperlink{namespaceWt_1_1Mail_a2e673920327e6df099fe3ec0191fdc93}{Authentication\+Method}} method=\mbox{\hyperlink{namespaceWt_1_1Mail_a2e673920327e6df099fe3ec0191fdc93a4cd8413207629a963225f4314b53adcd}{Authentication\+Method\+::\+Plain}})
+\begin{DoxyCompactList}\small\item\em Enables authentication. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceWt_1_1Mail_a2e673920327e6df099fe3ec0191fdc93}{Authentication\+Method}} \mbox{\hyperlink{classWt_1_1Mail_1_1Client_a2d2d96b7dda28a26f26a5c9671570a18}{authentication\+Method}} () const
+\begin{DoxyCompactList}\small\item\em Returns the authentication method. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Mail_1_1Client_a23f2a1dadb45dc4aaf14db9208a428d0}{authentication\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether authentication is enabled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Mail_1_1Client_af3c7e902b51760be9a29efd75a15fc59}{set\+Ssl\+Certificate\+Verification\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Sets whether S\+SL certificate verification is enabled. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Mail_1_1Client_af1adb5000a02917fa701e51e72414789}{is\+Ssl\+Certificate\+Verification\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Gets whether S\+SL certificate verification is enabled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Mail_1_1Client_a170288f392a84a1e4e560422843c9a74}{set\+Transport\+Encryption}} (\mbox{\hyperlink{namespaceWt_1_1Mail_a55d819f240a3553f33e6416ecd05b91f}{Transport\+Encryption}} method)
+\begin{DoxyCompactList}\small\item\em Sets the transport encryption method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceWt_1_1Mail_a55d819f240a3553f33e6416ecd05b91f}{Transport\+Encryption}} \mbox{\hyperlink{classWt_1_1Mail_1_1Client_adb629ce1fa076187de2883c72aafbea3}{transport\+Encryption}} () const
+\begin{DoxyCompactList}\small\item\em Get the encryption method. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Mail_1_1Client_a25527078ad8fdc02707f09623da61c85}{connect}} ()
+\begin{DoxyCompactList}\small\item\em Connects to the default S\+M\+TP server. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Mail_1_1Client_af7bf43e793d265034c6cb343636b4024}{connect}} (const std\+::string \&smtp\+Host, int smtp\+Port=25)
+\begin{DoxyCompactList}\small\item\em Connects to a given S\+T\+MP server and port. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Client_aa48da8e0c3e301da9d2ca8e566ea83f8}\label{classWt_1_1Mail_1_1Client_aa48da8e0c3e301da9d2ca8e566ea83f8}} 
+void \mbox{\hyperlink{classWt_1_1Mail_1_1Client_aa48da8e0c3e301da9d2ca8e566ea83f8}{disconnect}} ()
+\begin{DoxyCompactList}\small\item\em Disconnects the client from the S\+M\+TP server. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Mail_1_1Client_a958089e2b169f9baed3107b40b958bb9}{send}} (const \mbox{\hyperlink{classWt_1_1Mail_1_1Message}{Message}} \&message)
+\begin{DoxyCompactList}\small\item\em Sends a message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Client_ad261f2820f369c56df9976caffd01fd7}\label{classWt_1_1Mail_1_1Client_ad261f2820f369c56df9976caffd01fd7}} 
+{\bfseries Client} (const \mbox{\hyperlink{classWt_1_1Mail_1_1Client}{Client}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Client_abd52b5677939e016f7a0e1a11fac55db}\label{classWt_1_1Mail_1_1Client_abd52b5677939e016f7a0e1a11fac55db}} 
+std\+::unique\+\_\+ptr$<$ Base\+Impl $>$ {\bfseries impl\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Client_abad6711cc2b984284203c85f533acf16}\label{classWt_1_1Mail_1_1Client_abad6711cc2b984284203c85f533acf16}} 
+\mbox{\hyperlink{structWt_1_1Mail_1_1Client_1_1Configuration}{Configuration}} {\bfseries configuration\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An S\+M\+TP mail client. 
+
+The S\+M\+TP client can send one or more mail messages to an S\+M\+TP host.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <Wt/Mail/Client>}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include <Wt/Mail/Message>}}
+\DoxyCodeLine{}
+\DoxyCodeLine{Mail::Message message;}
+\DoxyCodeLine{message.setFrom(Mail::Mailbox(\textcolor{stringliteral}{"kudos@corp.org"}, \textcolor{stringliteral}{"Kudos Dukos"});}
+\DoxyCodeLine{message.addRecipient(\mbox{\hyperlink{namespaceWt_1_1Mail_a787e77713f5f302a3bbba194ee2a1c3bae12167aa0a7698e6ebc92b4ce3909b53}{Mail::RecipientType::To}}, Mail::Mailbox(\textcolor{stringliteral}{"koen@emweb.be"}, \textcolor{stringliteral}{"Koen Deforche"});}
+\DoxyCodeLine{message.setSubject(\textcolor{stringliteral}{"Hey there, koen!"});}
+\DoxyCodeLine{message.setBody(\textcolor{stringliteral}{"That mail client seems to be working."});}
+\DoxyCodeLine{message.addHtmlBody (\textcolor{stringliteral}{"<p>"}}
+\DoxyCodeLine{     \textcolor{stringliteral}{"<a href=\(\backslash\)"http://www.webtoolkit.eu/wt\(\backslash\)">That mail client</a>"}}
+\DoxyCodeLine{     \textcolor{stringliteral}{" seems to be working just great!</p>"});}
+\DoxyCodeLine{}
+\DoxyCodeLine{Mail::Client client;}
+\DoxyCodeLine{client.connect(\textcolor{stringliteral}{"localhost"});}
+\DoxyCodeLine{client.send(message);}
+\end{DoxyCode}
+
+
+Only the bare essentials of the S\+M\+TP protocol are current implemented, although the \mbox{\hyperlink{classWt_1_1Mail_1_1Message}{Message}} itself supports proper unicode handling.
+
+\begin{DoxyNote}{Note}
+Currently the client sends an email synchronously, and thus a slow connection to the S\+M\+TP server may block the current thread. We plan to change this in the future. It is thus beneficial to connect to a local S\+M\+TP daemon to minimize this deficiency. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Client_a564f5bfd10f9ae1c4c783c9e8a6b54a0}\label{classWt_1_1Mail_1_1Client_a564f5bfd10f9ae1c4c783c9e8a6b54a0}} 
+\index{Wt::Mail::Client@{Wt::Mail::Client}!Client@{Client}}
+\index{Client@{Client}!Wt::Mail::Client@{Wt::Mail::Client}}
+\doxysubsubsection{\texorpdfstring{Client()}{Client()}}
+{\footnotesize\ttfamily Wt\+::\+Mail\+::\+Client\+::\+Client (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{self\+Host = {\ttfamily std\+:\+:string()} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The {\ttfamily self\+Host} is how the mail client will identify itself to the mail server, in the E\+H\+LO command.
+
+If not defined, the \char`\"{}smtp-\/self-\/host\char`\"{} configuration property is used, and if that property is not defined, it defaults to \char`\"{}localhost\char`\"{}. \mbox{\Hypertarget{classWt_1_1Mail_1_1Client_ab28a973133a812d556e121a5020be932}\label{classWt_1_1Mail_1_1Client_ab28a973133a812d556e121a5020be932}} 
+\index{Wt::Mail::Client@{Wt::Mail::Client}!````~Client@{$\sim$Client}}
+\index{````~Client@{$\sim$Client}!Wt::Mail::Client@{Wt::Mail::Client}}
+\doxysubsubsection{\texorpdfstring{$\sim$Client()}{~Client()}}
+{\footnotesize\ttfamily Wt\+::\+Mail\+::\+Client\+::$\sim$\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+If the client is still connected, this disconnects the client. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Client_a23f2a1dadb45dc4aaf14db9208a428d0}\label{classWt_1_1Mail_1_1Client_a23f2a1dadb45dc4aaf14db9208a428d0}} 
+\index{Wt::Mail::Client@{Wt::Mail::Client}!authenticationEnabled@{authenticationEnabled}}
+\index{authenticationEnabled@{authenticationEnabled}!Wt::Mail::Client@{Wt::Mail::Client}}
+\doxysubsubsection{\texorpdfstring{authenticationEnabled()}{authenticationEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+Mail\+::\+Client\+::authentication\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether authentication is enabled. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Mail_1_1Client_a4861b5d0157663d803a3edcb97f651f4}{enable\+Authentication}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Client_a2d2d96b7dda28a26f26a5c9671570a18}\label{classWt_1_1Mail_1_1Client_a2d2d96b7dda28a26f26a5c9671570a18}} 
+\index{Wt::Mail::Client@{Wt::Mail::Client}!authenticationMethod@{authenticationMethod}}
+\index{authenticationMethod@{authenticationMethod}!Wt::Mail::Client@{Wt::Mail::Client}}
+\doxysubsubsection{\texorpdfstring{authenticationMethod()}{authenticationMethod()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceWt_1_1Mail_a2e673920327e6df099fe3ec0191fdc93}{Authentication\+Method}} Wt\+::\+Mail\+::\+Client\+::authentication\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the authentication method. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Mail_1_1Client_a4861b5d0157663d803a3edcb97f651f4}{enable\+Authentication}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Client_a25527078ad8fdc02707f09623da61c85}\label{classWt_1_1Mail_1_1Client_a25527078ad8fdc02707f09623da61c85}} 
+\index{Wt::Mail::Client@{Wt::Mail::Client}!connect@{connect}}
+\index{connect@{connect}!Wt::Mail::Client@{Wt::Mail::Client}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Wt\+::\+Mail\+::\+Client\+::connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Connects to the default S\+M\+TP server. 
+
+This connects to the S\+M\+TP server defined by the \char`\"{}smtp-\/host\char`\"{} property, on port defined by the \char`\"{}smtp-\/port\char`\"{} property. If these properties are not set, \char`\"{}localhost\char`\"{} and 25 are used as defaults respectively.
+
+Returns whether the connection could be established and the S\+M\+TP hand-\/shake was successful. \mbox{\Hypertarget{classWt_1_1Mail_1_1Client_af7bf43e793d265034c6cb343636b4024}\label{classWt_1_1Mail_1_1Client_af7bf43e793d265034c6cb343636b4024}} 
+\index{Wt::Mail::Client@{Wt::Mail::Client}!connect@{connect}}
+\index{connect@{connect}!Wt::Mail::Client@{Wt::Mail::Client}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Wt\+::\+Mail\+::\+Client\+::connect (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{smtp\+Host,  }\item[{int}]{smtp\+Port = {\ttfamily 25} }\end{DoxyParamCaption})}
+
+
+
+Connects to a given S\+T\+MP server and port. 
+
+Returns whether the connection could be established and the S\+M\+TP hand-\/shake was successful. \mbox{\Hypertarget{classWt_1_1Mail_1_1Client_a4861b5d0157663d803a3edcb97f651f4}\label{classWt_1_1Mail_1_1Client_a4861b5d0157663d803a3edcb97f651f4}} 
+\index{Wt::Mail::Client@{Wt::Mail::Client}!enableAuthentication@{enableAuthentication}}
+\index{enableAuthentication@{enableAuthentication}!Wt::Mail::Client@{Wt::Mail::Client}}
+\doxysubsubsection{\texorpdfstring{enableAuthentication()}{enableAuthentication()}}
+{\footnotesize\ttfamily void Wt\+::\+Mail\+::\+Client\+::enable\+Authentication (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{username,  }\item[{const std\+::string \&}]{password,  }\item[{\mbox{\hyperlink{namespaceWt_1_1Mail_a2e673920327e6df099fe3ec0191fdc93}{Authentication\+Method}}}]{method = {\ttfamily \mbox{\hyperlink{namespaceWt_1_1Mail_a2e673920327e6df099fe3ec0191fdc93a4cd8413207629a963225f4314b53adcd}{Authentication\+Method\+::\+Plain}}} }\end{DoxyParamCaption})}
+
+
+
+Enables authentication. 
+
+Enable authentication either through this method, or by specifying the following configuration properties\+:
+
+
+\begin{DoxyItemize}
+\item smtp-\/auth-\/username
+\item smtp-\/auth-\/password
+\item smtp-\/auth-\/method
+\end{DoxyItemize}
+
+\char`\"{}smtp-\/auth-\/method\char`\"{} can be one of\+: \char`\"{}none\char`\"{}, \char`\"{}plain\char`\"{}, or \char`\"{}login\char`\"{}. \mbox{\Hypertarget{classWt_1_1Mail_1_1Client_af1adb5000a02917fa701e51e72414789}\label{classWt_1_1Mail_1_1Client_af1adb5000a02917fa701e51e72414789}} 
+\index{Wt::Mail::Client@{Wt::Mail::Client}!isSslCertificateVerificationEnabled@{isSslCertificateVerificationEnabled}}
+\index{isSslCertificateVerificationEnabled@{isSslCertificateVerificationEnabled}!Wt::Mail::Client@{Wt::Mail::Client}}
+\doxysubsubsection{\texorpdfstring{isSslCertificateVerificationEnabled()}{isSslCertificateVerificationEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+Mail\+::\+Client\+::is\+Ssl\+Certificate\+Verification\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets whether S\+SL certificate verification is enabled. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Mail_1_1Client_af3c7e902b51760be9a29efd75a15fc59}{set\+Ssl\+Certificate\+Verification\+Enabled}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Mail_1_1Client_a958089e2b169f9baed3107b40b958bb9}\label{classWt_1_1Mail_1_1Client_a958089e2b169f9baed3107b40b958bb9}} 
+\index{Wt::Mail::Client@{Wt::Mail::Client}!send@{send}}
+\index{send@{send}!Wt::Mail::Client@{Wt::Mail::Client}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}}
+{\footnotesize\ttfamily bool Wt\+::\+Mail\+::\+Client\+::send (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Mail_1_1Message}{Message}} \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Sends a message. 
+
+The client must be connected before messages can be sent.
+
+The function returns true on success, false on error. The reason for the error is logged in the log file. \mbox{\Hypertarget{classWt_1_1Mail_1_1Client_af3c7e902b51760be9a29efd75a15fc59}\label{classWt_1_1Mail_1_1Client_af3c7e902b51760be9a29efd75a15fc59}} 
+\index{Wt::Mail::Client@{Wt::Mail::Client}!setSslCertificateVerificationEnabled@{setSslCertificateVerificationEnabled}}
+\index{setSslCertificateVerificationEnabled@{setSslCertificateVerificationEnabled}!Wt::Mail::Client@{Wt::Mail::Client}}
+\doxysubsubsection{\texorpdfstring{setSslCertificateVerificationEnabled()}{setSslCertificateVerificationEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+Mail\+::\+Client\+::set\+Ssl\+Certificate\+Verification\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Sets whether S\+SL certificate verification is enabled. 
+
+Defaults to true \mbox{\Hypertarget{classWt_1_1Mail_1_1Client_a170288f392a84a1e4e560422843c9a74}\label{classWt_1_1Mail_1_1Client_a170288f392a84a1e4e560422843c9a74}} 
+\index{Wt::Mail::Client@{Wt::Mail::Client}!setTransportEncryption@{setTransportEncryption}}
+\index{setTransportEncryption@{setTransportEncryption}!Wt::Mail::Client@{Wt::Mail::Client}}
+\doxysubsubsection{\texorpdfstring{setTransportEncryption()}{setTransportEncryption()}}
+{\footnotesize\ttfamily void Wt\+::\+Mail\+::\+Client\+::set\+Transport\+Encryption (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWt_1_1Mail_a55d819f240a3553f33e6416ecd05b91f}{Transport\+Encryption}}}]{method }\end{DoxyParamCaption})}
+
+
+
+Sets the transport encryption method. 
+
+The default is \mbox{\hyperlink{namespaceWt_1_1Mail_a55d819f240a3553f33e6416ecd05b91fa6adf97f83acf6453d4a6a4b1070f3754}{Transport\+Encryption\+::\+None}}
+
+Enable transport encryption either through this method, or by specifying the \char`\"{}smtp-\/transport-\/encryption\char`\"{} configuration property. Its value can be one of\+: \char`\"{}none\char`\"{}, \char`\"{}starttls\char`\"{}, or \char`\"{}tls\char`\"{}. \mbox{\Hypertarget{classWt_1_1Mail_1_1Client_adb629ce1fa076187de2883c72aafbea3}\label{classWt_1_1Mail_1_1Client_adb629ce1fa076187de2883c72aafbea3}} 
+\index{Wt::Mail::Client@{Wt::Mail::Client}!transportEncryption@{transportEncryption}}
+\index{transportEncryption@{transportEncryption}!Wt::Mail::Client@{Wt::Mail::Client}}
+\doxysubsubsection{\texorpdfstring{transportEncryption()}{transportEncryption()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceWt_1_1Mail_a55d819f240a3553f33e6416ecd05b91f}{Transport\+Encryption}} Wt\+::\+Mail\+::\+Client\+::transport\+Encryption (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get the encryption method. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Mail_1_1Client_a170288f392a84a1e4e560422843c9a74}{set\+Transport\+Encryption}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Mail/Client.\+h\end{DoxyCompactItemize}

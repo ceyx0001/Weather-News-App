@@ -1,0 +1,644 @@
+\hypertarget{classWt_1_1DomElement}{}\doxysection{Wt\+::Dom\+Element Class Reference}
+\label{classWt_1_1DomElement}\index{Wt::DomElement@{Wt::DomElement}}
+
+
+Class to represent a client-\/side D\+OM element (proxy).  
+
+
+
+
+Collaboration diagram for Wt\+::Dom\+Element\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1DomElement_1_1ChildInsertion}{Child\+Insertion}}
+\item 
+struct \mbox{\hyperlink{structWt_1_1DomElement_1_1EventAction}{Event\+Action}}
+\begin{DoxyCompactList}\small\item\em A data-\/structure for an aggregated event handler. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structWt_1_1DomElement_1_1EventHandler}{Event\+Handler}}
+\item 
+struct \mbox{\hyperlink{structWt_1_1DomElement_1_1TimeoutEvent}{Timeout\+Event}}
+\begin{DoxyCompactList}\small\item\em Structure for keeping track of timers attached to this element. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a1c5ce5f37501019e28470a28af164980}\label{classWt_1_1DomElement_a1c5ce5f37501019e28470a28af164980}} 
+enum \mbox{\hyperlink{classWt_1_1DomElement_a1c5ce5f37501019e28470a28af164980}{Mode}} \{ {\bfseries Create}, 
+{\bfseries Update}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for the access mode (creation or update) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_acc6b0a5da92686dc8d133a25aad027b4}\label{classWt_1_1DomElement_acc6b0a5da92686dc8d133a25aad027b4}} 
+enum \mbox{\hyperlink{classWt_1_1DomElement_acc6b0a5da92686dc8d133a25aad027b4}{Priority}} \{ {\bfseries Delete}, 
+{\bfseries Create}, 
+{\bfseries Update}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration for an update rendering phase. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_af9504607c64b16c95571d9f3b6f1e592}\label{classWt_1_1DomElement_af9504607c64b16c95571d9f3b6f1e592}} 
+typedef std\+::map$<$ \mbox{\hyperlink{classWt_aeb01f25d7c9d4a4498fb3dadc8d168c5}{Wt\+::\+Property}}, std\+::string $>$ \mbox{\hyperlink{classWt_1_1DomElement_af9504607c64b16c95571d9f3b6f1e592}{Property\+Map}}
+\begin{DoxyCompactList}\small\item\em A map for property values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a7eaddab8ab997eae0d15950c5a7f0cd8}\label{classWt_1_1DomElement_a7eaddab8ab997eae0d15950c5a7f0cd8}} 
+typedef std\+::vector$<$ \mbox{\hyperlink{structWt_1_1DomElement_1_1TimeoutEvent}{Timeout\+Event}} $>$ \mbox{\hyperlink{classWt_1_1DomElement_a7eaddab8ab997eae0d15950c5a7f0cd8}{Timeout\+List}}
+\begin{DoxyCompactList}\small\item\em A list of timeouts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1DomElement_ab7cf03188b10c8fe05b7805e6b4c6043}{Dom\+Element}} (\mbox{\hyperlink{classWt_1_1DomElement_a1c5ce5f37501019e28470a28af164980}{Mode}} \mbox{\hyperlink{classWt_1_1DomElement_aacbbef999d62fc496149ee8bb263e2bd}{mode}}, \mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} \mbox{\hyperlink{classWt_1_1DomElement_a97e5b357576a91d7d922abb1b1128857}{type}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_ab64fd2b0d7f0e0f613d8b97743087e0f}\label{classWt_1_1DomElement_ab64fd2b0d7f0e0f613d8b97743087e0f}} 
+\mbox{\hyperlink{classWt_1_1DomElement_ab64fd2b0d7f0e0f613d8b97743087e0f}{$\sim$\+Dom\+Element}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a2b2bd6bd639721416be1cd944a1cee44}\label{classWt_1_1DomElement_a2b2bd6bd639721416be1cd944a1cee44}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_a2b2bd6bd639721416be1cd944a1cee44}{set\+Dom\+Element\+Tag\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em set dom element custom tag name \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_aacbbef999d62fc496149ee8bb263e2bd}\label{classWt_1_1DomElement_aacbbef999d62fc496149ee8bb263e2bd}} 
+\mbox{\hyperlink{classWt_1_1DomElement_a1c5ce5f37501019e28470a28af164980}{Mode}} \mbox{\hyperlink{classWt_1_1DomElement_aacbbef999d62fc496149ee8bb263e2bd}{mode}} () const
+\begin{DoxyCompactList}\small\item\em Returns the mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a75dce5563643e5d0c99e8c1ec906fedf}\label{classWt_1_1DomElement_a75dce5563643e5d0c99e8c1ec906fedf}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_a75dce5563643e5d0c99e8c1ec906fedf}{set\+Type}} (\mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} \mbox{\hyperlink{classWt_1_1DomElement_a97e5b357576a91d7d922abb1b1128857}{type}})
+\begin{DoxyCompactList}\small\item\em Sets the element type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a97e5b357576a91d7d922abb1b1128857}\label{classWt_1_1DomElement_a97e5b357576a91d7d922abb1b1128857}} 
+\mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} \mbox{\hyperlink{classWt_1_1DomElement_a97e5b357576a91d7d922abb1b1128857}{type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the element type. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1DomElement_ac1fdc4afc7030cf44c427b1fd21a210a}{var}} ()
+\begin{DoxyCompactList}\small\item\em Returns the Java\+Script variable name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1DomElement_a9477f9bc7f6eabeb42f5f098bfbaabf6}{set\+Was\+Empty}} (bool how)
+\begin{DoxyCompactList}\small\item\em Sets whether the element was initially empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1DomElement_a97f5ea81d743d69e68f5f47b73325c8b}{add\+Child}} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$child)
+\begin{DoxyCompactList}\small\item\em Adds a child. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1DomElement_abe1a8f0117d701629ffa9001b3997f4f}{insert\+Child\+At}} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$child, int pos)
+\begin{DoxyCompactList}\small\item\em Inserts a child. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1DomElement_a1a7612999c9b74ac20a74c2a49a3c126}{save\+Child}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1DomElement_a782e9f673bcf9ec48c3917a4ac4b1ac4}{id}})
+\begin{DoxyCompactList}\small\item\em Saves an existing child. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_ad985f6288a98f6ff37eea10cbbcebff2}\label{classWt_1_1DomElement_ad985f6288a98f6ff37eea10cbbcebff2}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_ad985f6288a98f6ff37eea10cbbcebff2}{set\+Attribute}} (const std\+::string \&attribute, const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Sets an attribute value. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1DomElement_a86edc99c09015430132322c109f3e699}{get\+Attribute}} (const std\+::string \&attribute) const
+\begin{DoxyCompactList}\small\item\em Returns an attribute value set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a07a21ab605f0cf82430af407a8dc914b}\label{classWt_1_1DomElement_a07a21ab605f0cf82430af407a8dc914b}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_a07a21ab605f0cf82430af407a8dc914b}{remove\+Attribute}} (const std\+::string \&attribute)
+\begin{DoxyCompactList}\small\item\em Removes an attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_ad7053166ff7724b432a4741c1113601b}\label{classWt_1_1DomElement_ad7053166ff7724b432a4741c1113601b}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_ad7053166ff7724b432a4741c1113601b}{set\+Property}} (\mbox{\hyperlink{classWt_aeb01f25d7c9d4a4498fb3dadc8d168c5}{Wt\+::\+Property}} property, const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Sets a property. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1DomElement_a5ee6061254c40e0575ea9af8144eb3fd}{add\+Property\+Word}} (\mbox{\hyperlink{classWt_aeb01f25d7c9d4a4498fb3dadc8d168c5}{Wt\+::\+Property}} property, const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Adds a \textquotesingle{}word\textquotesingle{} to a property. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1DomElement_a78fc2ce1a1fa27c6f50f3990f60fa62d}{get\+Property}} (\mbox{\hyperlink{classWt_aeb01f25d7c9d4a4498fb3dadc8d168c5}{Wt\+::\+Property}} property) const
+\begin{DoxyCompactList}\small\item\em Returns a property value set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a215dd7f3da8b4ecd723e0183b79f8d42}\label{classWt_1_1DomElement_a215dd7f3da8b4ecd723e0183b79f8d42}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_a215dd7f3da8b4ecd723e0183b79f8d42}{remove\+Property}} (\mbox{\hyperlink{classWt_aeb01f25d7c9d4a4498fb3dadc8d168c5}{Wt\+::\+Property}} property)
+\begin{DoxyCompactList}\small\item\em Removes a property. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_af82d4572f074eae5638b38e00a888ae9}\label{classWt_1_1DomElement_af82d4572f074eae5638b38e00a888ae9}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_af82d4572f074eae5638b38e00a888ae9}{set\+Properties}} (const \mbox{\hyperlink{classWt_1_1DomElement_af9504607c64b16c95571d9f3b6f1e592}{Property\+Map}} \&\mbox{\hyperlink{classWt_1_1DomElement_a0b29fb8c4709ab6fd445c5d5dda26cb1}{properties}})
+\begin{DoxyCompactList}\small\item\em Sets a whole map of properties. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a0b29fb8c4709ab6fd445c5d5dda26cb1}\label{classWt_1_1DomElement_a0b29fb8c4709ab6fd445c5d5dda26cb1}} 
+const \mbox{\hyperlink{classWt_1_1DomElement_af9504607c64b16c95571d9f3b6f1e592}{Property\+Map}} \& \mbox{\hyperlink{classWt_1_1DomElement_a0b29fb8c4709ab6fd445c5d5dda26cb1}{properties}} () const
+\begin{DoxyCompactList}\small\item\em Returns all properties currently set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a2e37b56c89d32c2cecd77e3d462d9223}\label{classWt_1_1DomElement_a2e37b56c89d32c2cecd77e3d462d9223}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_a2e37b56c89d32c2cecd77e3d462d9223}{clear\+Properties}} ()
+\begin{DoxyCompactList}\small\item\em Clears all properties. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a0bbbae1ffb7f9766945a8aeb103684ab}\label{classWt_1_1DomElement_a0bbbae1ffb7f9766945a8aeb103684ab}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_a0bbbae1ffb7f9766945a8aeb103684ab}{set\+Event\+Signal}} (const char $\ast$event\+Name, const \mbox{\hyperlink{classWt_1_1EventSignalBase}{Event\+Signal\+Base}} \&signal)
+\begin{DoxyCompactList}\small\item\em Sets an event handler based on a signal\textquotesingle{}s connections. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1DomElement_a0436dd897d8aa1a49d943c16572fecf6}{set\+Event}} (const char $\ast$event\+Name, const std\+::string \&js\+Code, const std\+::string \&signal\+Name, bool is\+Exposed=false)
+\begin{DoxyCompactList}\small\item\em Sets an event handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1DomElement_ae601efee23eedd2da95efe4a58dab92e}{set\+Event}} (const char $\ast$event\+Name, const std\+::string \&js\+Code)
+\begin{DoxyCompactList}\small\item\em Sets an event handler. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a5aedc9a0aae410cec225fa20516c2802}\label{classWt_1_1DomElement_a5aedc9a0aae410cec225fa20516c2802}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_a5aedc9a0aae410cec225fa20516c2802}{add\+Event}} (const char $\ast$event\+Name, const std\+::string \&js\+Code)
+\begin{DoxyCompactList}\small\item\em This adds more Java\+Script to an event handler. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_aeaf5ac8fc95abf2c619e2fee1a916099}\label{classWt_1_1DomElement_aeaf5ac8fc95abf2c619e2fee1a916099}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_aeaf5ac8fc95abf2c619e2fee1a916099}{set\+Event}} (const char $\ast$event\+Name, const std\+::vector$<$ \mbox{\hyperlink{structWt_1_1DomElement_1_1EventAction}{Event\+Action}} $>$ \&actions)
+\begin{DoxyCompactList}\small\item\em Sets an aggregated event handler. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_ae9aa66aaf4fa5503e9410432ebc9369a}\label{classWt_1_1DomElement_ae9aa66aaf4fa5503e9410432ebc9369a}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_ae9aa66aaf4fa5503e9410432ebc9369a}{set\+Id}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1DomElement_a782e9f673bcf9ec48c3917a4ac4b1ac4}{id}})
+\begin{DoxyCompactList}\small\item\em Sets the D\+OM element id. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_aaba49f646c7020e33db7ce0648fa29c4}\label{classWt_1_1DomElement_aaba49f646c7020e33db7ce0648fa29c4}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_aaba49f646c7020e33db7ce0648fa29c4}{set\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets a D\+OM element name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a3b6ebc26cefcb923788695255364dbd0}\label{classWt_1_1DomElement_a3b6ebc26cefcb923788695255364dbd0}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_a3b6ebc26cefcb923788695255364dbd0}{set\+Timeout}} (int msec, bool js\+Repeat)
+\begin{DoxyCompactList}\small\item\em Configures the D\+OM element as a source for timed events. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a9ef19ae5a6dfc8153e8aa841de980425}\label{classWt_1_1DomElement_a9ef19ae5a6dfc8153e8aa841de980425}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_a9ef19ae5a6dfc8153e8aa841de980425}{set\+Timeout}} (int delay, int interval)
+\begin{DoxyCompactList}\small\item\em Configures the D\+OM element as a source for timed events, with given initial delay and interval, always repeating. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_aa06765cbb373956e9ae9a2a707a68fd7}\label{classWt_1_1DomElement_aa06765cbb373956e9ae9a2a707a68fd7}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_aa06765cbb373956e9ae9a2a707a68fd7}{call\+Method}} (const std\+::string \&method)
+\begin{DoxyCompactList}\small\item\em Calls a Java\+Script method on the D\+OM element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a76e75e4259fee4d00f15170eb464682e}\label{classWt_1_1DomElement_a76e75e4259fee4d00f15170eb464682e}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_a76e75e4259fee4d00f15170eb464682e}{call\+Java\+Script}} (const std\+::string \&javascript, bool even\+When\+Deleted=false)
+\begin{DoxyCompactList}\small\item\em Calls Java\+Script (related to the D\+OM element). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a782e9f673bcf9ec48c3917a4ac4b1ac4}\label{classWt_1_1DomElement_a782e9f673bcf9ec48c3917a4ac4b1ac4}} 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1DomElement_a782e9f673bcf9ec48c3917a4ac4b1ac4}{id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the id. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1DomElement_a0db82d40e191015d2e1ffed13c5132fb}{remove\+All\+Children}} (int first\+Child=0)
+\begin{DoxyCompactList}\small\item\em Removes all children. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_af2e6a415e039de60835136d5401b386a}\label{classWt_1_1DomElement_af2e6a415e039de60835136d5401b386a}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_af2e6a415e039de60835136d5401b386a}{remove\+From\+Parent}} ()
+\begin{DoxyCompactList}\small\item\em Removes the element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a678359a74d49159e968559cb092a421b}\label{classWt_1_1DomElement_a678359a74d49159e968559cb092a421b}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_a678359a74d49159e968559cb092a421b}{replace\+With}} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$new\+Element)
+\begin{DoxyCompactList}\small\item\em Replaces the element by another element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1DomElement_a375e6ce034f56980002b97be693e1d02}{unstub\+With}} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$new\+Element, bool hide\+With\+Display)
+\begin{DoxyCompactList}\small\item\em Unstubs an element by another element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a885dec0124ff03caec8ab7b2c9a9b9dc}\label{classWt_1_1DomElement_a885dec0124ff03caec8ab7b2c9a9b9dc}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_a885dec0124ff03caec8ab7b2c9a9b9dc}{insert\+Before}} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$sibling)
+\begin{DoxyCompactList}\small\item\em Inserts the element in the D\+OM as a new sibling. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1DomElement_a71eb9b71169d68cce20f596f5ec72867}{unwrap}} ()
+\begin{DoxyCompactList}\small\item\em Unwraps an element to progress to Ajax support. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a2d88b1d5d23132a89465812225821151}\label{classWt_1_1DomElement_a2d88b1d5d23132a89465812225821151}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_a2d88b1d5d23132a89465812225821151}{as\+Java\+Script}} (\mbox{\hyperlink{classWt_1_1WStringStream}{W\+String\+Stream}} \&out)
+\begin{DoxyCompactList}\small\item\em Renders the element as Java\+Script. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1DomElement_ac792fe8da2a48cacf75ba655ad285982}{as\+Java\+Script}} (E\+Stream \&out, \mbox{\hyperlink{classWt_1_1DomElement_acc6b0a5da92686dc8d133a25aad027b4}{Priority}} priority) const
+\begin{DoxyCompactList}\small\item\em Renders the element as Java\+Script, by phase. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1DomElement_a39325a0abbbd28e438d980f6f5057369}{as\+H\+T\+ML}} (E\+Stream \&out, E\+Stream \&\mbox{\hyperlink{classWt_1_1DomElement_a5ba072ab3beda98b1d9ed3344119487a}{java\+Script}}, \mbox{\hyperlink{classWt_1_1DomElement_a7eaddab8ab997eae0d15950c5a7f0cd8}{Timeout\+List}} \&timeouts, bool opening\+Tag\+Only=false) const
+\begin{DoxyCompactList}\small\item\em Renders the element as H\+T\+ML. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1DomElement_af09e1b576dcbec40c781644b3b60ab4d}{is\+Default\+Inline}} () const
+\begin{DoxyCompactList}\small\item\em Returns the default display property for this element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1DomElement_a90ae962d3bd184d0335b2124eb94e68e}{declare}} (E\+Stream \&out) const
+\begin{DoxyCompactList}\small\item\em Declares the element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_afcff4bca0b0778453802038b2b6a6a2c}\label{classWt_1_1DomElement_afcff4bca0b0778453802038b2b6a6a2c}} 
+std\+::string \mbox{\hyperlink{classWt_1_1DomElement_afcff4bca0b0778453802038b2b6a6a2c}{css\+Style}} () const
+\begin{DoxyCompactList}\small\item\em Renders properties and attributes into C\+SS. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a5ba072ab3beda98b1d9ed3344119487a}\label{classWt_1_1DomElement_a5ba072ab3beda98b1d9ed3344119487a}} 
+std\+::string \mbox{\hyperlink{classWt_1_1DomElement_a5ba072ab3beda98b1d9ed3344119487a}{java\+Script}} () const
+\begin{DoxyCompactList}\small\item\em Returns all custom Java\+Script collected in this element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a7803a2e63e259dbf66911f7faf329d0f}\label{classWt_1_1DomElement_a7803a2e63e259dbf66911f7faf329d0f}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_a7803a2e63e259dbf66911f7faf329d0f}{update\+Inner\+Html\+Only}} ()
+\begin{DoxyCompactList}\small\item\em Something to do with broken IE Mobile 5 browsers... \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1DomElement_a49fd65cf314bc901d9656e449d80a976}{add\+To\+Parent}} (\mbox{\hyperlink{classWt_1_1WStringStream}{W\+String\+Stream}} \&out, const std\+::string \&parent\+Var, int pos, \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app)
+\begin{DoxyCompactList}\small\item\em Adds an element to a parent, using suitable methods. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_ad2063733f8e62129491af86718972e69}\label{classWt_1_1DomElement_ad2063733f8e62129491af86718972e69}} 
+void \mbox{\hyperlink{classWt_1_1DomElement_ad2063733f8e62129491af86718972e69}{create\+Element}} (\mbox{\hyperlink{classWt_1_1WStringStream}{W\+String\+Stream}} \&out, \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app, const std\+::string \&dom\+Insert\+JS)
+\begin{DoxyCompactList}\small\item\em Renders the element as Java\+Script, and inserts it in the D\+OM. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a83b8ec4e3f30cb448375d738fa1ef474}\label{classWt_1_1DomElement_a83b8ec4e3f30cb448375d738fa1ef474}} 
+std\+::string \mbox{\hyperlink{classWt_1_1DomElement_a83b8ec4e3f30cb448375d738fa1ef474}{create\+Var}} () const
+\begin{DoxyCompactList}\small\item\em Allocates a Java\+Script variable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a599bcde866dbc149a35884f6e4ca5d1b}\label{classWt_1_1DomElement_a599bcde866dbc149a35884f6e4ca5d1b}} 
+void {\bfseries set\+Global\+Unfocused} (bool b)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_abfad0cd270060cd8b9af1cd75752e8b8}\label{classWt_1_1DomElement_abfad0cd270060cd8b9af1cd75752e8b8}} 
+static std\+::string \mbox{\hyperlink{classWt_1_1DomElement_abfad0cd270060cd8b9af1cd75752e8b8}{url\+EncodeS}} (const std\+::string \&url)
+\begin{DoxyCompactList}\small\item\em Low-\/level U\+RL encoding function. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{classWt_1_1DomElement_af449a3110675c7c4ff3ba09c7e93ebdc}{url\+EncodeS}} (const std\+::string \&url, const std\+::string \&allowed)
+\begin{DoxyCompactList}\small\item\em Low-\/level U\+RL encoding function. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a0ed99e5a572d1fe3f09a2bfe2314f85d}\label{classWt_1_1DomElement_a0ed99e5a572d1fe3f09a2bfe2314f85d}} 
+static \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ \mbox{\hyperlink{classWt_1_1DomElement_a0ed99e5a572d1fe3f09a2bfe2314f85d}{create\+New}} (\mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} \mbox{\hyperlink{classWt_1_1DomElement_a97e5b357576a91d7d922abb1b1128857}{type}})
+\begin{DoxyCompactList}\small\item\em Creates a reference to a new element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a44fee29aedaebe11b1a8479f7a5d43ae}\label{classWt_1_1DomElement_a44fee29aedaebe11b1a8479f7a5d43ae}} 
+static \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ \mbox{\hyperlink{classWt_1_1DomElement_a44fee29aedaebe11b1a8479f7a5d43ae}{get\+For\+Update}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1DomElement_a782e9f673bcf9ec48c3917a4ac4b1ac4}{id}}, \mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} \mbox{\hyperlink{classWt_1_1DomElement_a97e5b357576a91d7d922abb1b1128857}{type}})
+\begin{DoxyCompactList}\small\item\em Creates a reference to an existing element, using its ID. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ \mbox{\hyperlink{classWt_1_1DomElement_a8d0792300357008c1faa1c4fcb832008}{get\+For\+Update}} (const \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} $\ast$object, \mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} \mbox{\hyperlink{classWt_1_1DomElement_a97e5b357576a91d7d922abb1b1128857}{type}})
+\begin{DoxyCompactList}\small\item\em Creates a reference to an existing element, deriving the ID from an object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_ac57939e4d71269ba6f44960e198595f3}\label{classWt_1_1DomElement_ac57939e4d71269ba6f44960e198595f3}} 
+static \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ \mbox{\hyperlink{classWt_1_1DomElement_ac57939e4d71269ba6f44960e198595f3}{update\+Given}} (const std\+::string \&el, \mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} \mbox{\hyperlink{classWt_1_1DomElement_a97e5b357576a91d7d922abb1b1128857}{type}})
+\begin{DoxyCompactList}\small\item\em Creates a reference to an existing element, using an expression to access the element. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a4e12dee7e18c1f4104a807860ec0ad93}\label{classWt_1_1DomElement_a4e12dee7e18c1f4104a807860ec0ad93}} 
+static void \mbox{\hyperlink{classWt_1_1DomElement_a4e12dee7e18c1f4104a807860ec0ad93}{create\+Timeout\+Js}} (\mbox{\hyperlink{classWt_1_1WStringStream}{W\+String\+Stream}} \&out, const \mbox{\hyperlink{classWt_1_1DomElement_a7eaddab8ab997eae0d15950c5a7f0cd8}{Timeout\+List}} \&timeouts, \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app)
+\begin{DoxyCompactList}\small\item\em Creates the Java\+Script statements for timer rendering. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classWt_1_1DomElement_a1b707224a9c445d334442ef8fb7a89a0}{fast\+Js\+String\+Literal}} (E\+Stream \&out\+Raw, const E\+Stream \&out\+Escaped, const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Utility for rapid rendering of Java\+Script strings. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a61b44f0049e17b37dd0f1c56a25095c3}\label{classWt_1_1DomElement_a61b44f0049e17b37dd0f1c56a25095c3}} 
+static void \mbox{\hyperlink{classWt_1_1DomElement_a61b44f0049e17b37dd0f1c56a25095c3}{js\+String\+Literal}} (E\+Stream \&out, const std\+::string \&s, char delimiter)
+\begin{DoxyCompactList}\small\item\em Utility that renders a string as Java\+Script literal. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_ad274ec20ebe89f4265f9df3896476d4f}\label{classWt_1_1DomElement_ad274ec20ebe89f4265f9df3896476d4f}} 
+static void \mbox{\hyperlink{classWt_1_1DomElement_ad274ec20ebe89f4265f9df3896476d4f}{js\+String\+Literal}} (\mbox{\hyperlink{classWt_1_1WStringStream}{W\+String\+Stream}} \&out, const std\+::string \&s, char delimiter)
+\begin{DoxyCompactList}\small\item\em Utility that renders a string as Java\+Script literal. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classWt_1_1DomElement_a54e78ede6b13ea42d7e4e20efcd6f056}{fast\+Html\+Attribute\+Value}} (E\+Stream \&out\+Raw, const E\+Stream \&out\+Escaped, const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Utility for rapid rendering of H\+T\+ML attribute values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_ad1e8c2d0ba6bb304aab3a75ee2422638}\label{classWt_1_1DomElement_ad1e8c2d0ba6bb304aab3a75ee2422638}} 
+static void \mbox{\hyperlink{classWt_1_1DomElement_ad1e8c2d0ba6bb304aab3a75ee2422638}{html\+Attribute\+Value}} (\mbox{\hyperlink{classWt_1_1WStringStream}{W\+String\+Stream}} \&out, const std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Utility that renders a string as H\+T\+ML attribute. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a1419c404512d2729dc891d9dbcd463d5}\label{classWt_1_1DomElement_a1419c404512d2729dc891d9dbcd463d5}} 
+static bool \mbox{\hyperlink{classWt_1_1DomElement_a1419c404512d2729dc891d9dbcd463d5}{is\+Self\+Closing\+Tag}} (const std\+::string \&tag)
+\begin{DoxyCompactList}\small\item\em Returns whether a tag is self-\/closing in H\+T\+ML. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_aed270d65c52f634082dda02b499358ff}\label{classWt_1_1DomElement_aed270d65c52f634082dda02b499358ff}} 
+static bool \mbox{\hyperlink{classWt_1_1DomElement_aed270d65c52f634082dda02b499358ff}{is\+Self\+Closing\+Tag}} (\mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} element)
+\begin{DoxyCompactList}\small\item\em Returns whether a tag is self-\/closing in H\+T\+ML. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a72bd31408f2a00adda7cd01a546f80fb}\label{classWt_1_1DomElement_a72bd31408f2a00adda7cd01a546f80fb}} 
+static \mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} \mbox{\hyperlink{classWt_1_1DomElement_a72bd31408f2a00adda7cd01a546f80fb}{parse\+Tag\+Name}} (const std\+::string \&tag)
+\begin{DoxyCompactList}\small\item\em Parses a tag name to a D\+O\+M\+Element type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a7c9f6e2bb17331756fe2f8c28c435f10}\label{classWt_1_1DomElement_a7c9f6e2bb17331756fe2f8c28c435f10}} 
+static std\+::string \mbox{\hyperlink{classWt_1_1DomElement_a7c9f6e2bb17331756fe2f8c28c435f10}{tag\+Name}} (\mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} \mbox{\hyperlink{classWt_1_1DomElement_a97e5b357576a91d7d922abb1b1128857}{type}})
+\begin{DoxyCompactList}\small\item\em Returns the tag name for a D\+O\+M\+Element type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_aa56d59be26afb9a0a875880560891dbe}\label{classWt_1_1DomElement_aa56d59be26afb9a0a875880560891dbe}} 
+static const std\+::string \& \mbox{\hyperlink{classWt_1_1DomElement_aa56d59be26afb9a0a875880560891dbe}{css\+Name}} (\mbox{\hyperlink{classWt_aeb01f25d7c9d4a4498fb3dadc8d168c5}{Property}} property)
+\begin{DoxyCompactList}\small\item\em Returns the name for a C\+SS property, as a string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a2e618b4c0ebfc1f2c1adb8b8d8d4fc6f}\label{classWt_1_1DomElement_a2e618b4c0ebfc1f2c1adb8b8d8d4fc6f}} 
+static bool \mbox{\hyperlink{classWt_1_1DomElement_a2e618b4c0ebfc1f2c1adb8b8d8d4fc6f}{is\+Default\+Inline}} (\mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} \mbox{\hyperlink{classWt_1_1DomElement_a97e5b357576a91d7d922abb1b1128857}{type}})
+\begin{DoxyCompactList}\small\item\em Returns whether a paritcular element is by default inline. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_aef0dd9f4248bf2d05512bebffa219011}\label{classWt_1_1DomElement_aef0dd9f4248bf2d05512bebffa219011}} 
+typedef std\+::map$<$ std\+::string, std\+::string $>$ {\bfseries Attribute\+Map}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a64ca0acff58138ce72ea1659eb7bcdfc}\label{classWt_1_1DomElement_a64ca0acff58138ce72ea1659eb7bcdfc}} 
+typedef std\+::set$<$ std\+::string $>$ {\bfseries Attribute\+Set}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a78c7aecddb5c9310e4624534ca21ea26}\label{classWt_1_1DomElement_a78c7aecddb5c9310e4624534ca21ea26}} 
+typedef std\+::map$<$ const char $\ast$, \mbox{\hyperlink{structWt_1_1DomElement_1_1EventHandler}{Event\+Handler}} $>$ {\bfseries Event\+Handler\+Map}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a8de0bfa57b0660dd628b7a1e698aaff0}\label{classWt_1_1DomElement_a8de0bfa57b0660dd628b7a1e698aaff0}} 
+bool {\bfseries will\+Render\+Inner\+Html\+JS} (\mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app) const
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a0d01ac03ca42d7d1a4aa8207910417f4}\label{classWt_1_1DomElement_a0d01ac03ca42d7d1a4aa8207910417f4}} 
+bool {\bfseries can\+Write\+Inner\+H\+T\+ML} (\mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app) const
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a6ae69e0d27648966be350f50ec5f968e}\label{classWt_1_1DomElement_a6ae69e0d27648966be350f50ec5f968e}} 
+bool {\bfseries contains\+Element} (\mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} \mbox{\hyperlink{classWt_1_1DomElement_a97e5b357576a91d7d922abb1b1128857}{type}}) const
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a57fda3165a85573a30e6a98b744d5fca}\label{classWt_1_1DomElement_a57fda3165a85573a30e6a98b744d5fca}} 
+void {\bfseries process\+Events} (\mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app) const
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_ab0ad0f4944ee7e4699128ce24c5874e2}\label{classWt_1_1DomElement_ab0ad0f4944ee7e4699128ce24c5874e2}} 
+void {\bfseries process\+Properties} (\mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app) const
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_aa3765b8970392b318ef89552e74da7e0}\label{classWt_1_1DomElement_aa3765b8970392b318ef89552e74da7e0}} 
+void {\bfseries set\+Java\+Script\+Properties} (E\+Stream \&out, \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app) const
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a7c354c2cb7bfab523deb60d530b14f0e}\label{classWt_1_1DomElement_a7c354c2cb7bfab523deb60d530b14f0e}} 
+void {\bfseries set\+Java\+Script\+Attributes} (E\+Stream \&out) const
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a69f5ef2a0d402cc293c71bc3eca0bfc4}\label{classWt_1_1DomElement_a69f5ef2a0d402cc293c71bc3eca0bfc4}} 
+void {\bfseries set\+Java\+Script\+Event} (E\+Stream \&out, const char $\ast$event\+Name, const \mbox{\hyperlink{structWt_1_1DomElement_1_1EventHandler}{Event\+Handler}} \&handler, \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app) const
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a7bd0fe1e4d1b82d5f88e3fb7f95646fb}\label{classWt_1_1DomElement_a7bd0fe1e4d1b82d5f88e3fb7f95646fb}} 
+void {\bfseries create\+Element} (E\+Stream \&out, \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app, const std\+::string \&dom\+Insert\+JS)
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_af056860922c653b81e9c5eb7bf412558}\label{classWt_1_1DomElement_af056860922c653b81e9c5eb7bf412558}} 
+std\+::string {\bfseries add\+To\+Parent} (E\+Stream \&out, const std\+::string \&parent\+Var, int pos, \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app)
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_af3e661aed64b2ee47777634149f3db00}\label{classWt_1_1DomElement_af3e661aed64b2ee47777634149f3db00}} 
+std\+::string {\bfseries create\+As\+Java\+Script} (E\+Stream \&out, const std\+::string \&parent\+Var, int pos, \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app)
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a9bc89b87b3170e9abb689d19becc28a3}\label{classWt_1_1DomElement_a9bc89b87b3170e9abb689d19becc28a3}} 
+void {\bfseries render\+Inner\+Html\+JS} (E\+Stream \&out, \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app) const
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a21fee92c02982ba5297fb65f7b65672f}\label{classWt_1_1DomElement_a21fee92c02982ba5297fb65f7b65672f}} 
+void {\bfseries render\+Deferred\+Java\+Script} (E\+Stream \&out) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a9e3d57c4df95fc89e82954f6e8422c83}\label{classWt_1_1DomElement_a9e3d57c4df95fc89e82954f6e8422c83}} 
+\mbox{\hyperlink{classWt_1_1DomElement_a1c5ce5f37501019e28470a28af164980}{Mode}} {\bfseries mode\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a33f8b1cadb7442a8c3c0a4be4d3ea1f1}\label{classWt_1_1DomElement_a33f8b1cadb7442a8c3c0a4be4d3ea1f1}} 
+bool {\bfseries was\+Empty\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a1c4d3ff3244c983ee832295ec30dc225}\label{classWt_1_1DomElement_a1c4d3ff3244c983ee832295ec30dc225}} 
+int {\bfseries remove\+All\+Children\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_ae2d769970f7b99217be79f50ad6dcecb}\label{classWt_1_1DomElement_ae2d769970f7b99217be79f50ad6dcecb}} 
+bool {\bfseries hide\+With\+Display\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a70702306b6b14aeaa43b9a8ebe4a4182}\label{classWt_1_1DomElement_a70702306b6b14aeaa43b9a8ebe4a4182}} 
+bool {\bfseries min\+Max\+Size\+Properties\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_ac611be0028b398c1ea2fc6b7f6775ade}\label{classWt_1_1DomElement_ac611be0028b398c1ea2fc6b7f6775ade}} 
+bool {\bfseries unstubbed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_ab36eb4a65a3d4b79d52deb8469fbac74}\label{classWt_1_1DomElement_ab36eb4a65a3d4b79d52deb8469fbac74}} 
+bool {\bfseries unwrapped\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_af262029be604d139a79d662b7a7d6e23}\label{classWt_1_1DomElement_af262029be604d139a79d662b7a7d6e23}} 
+\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ {\bfseries replaced\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a33dff07e3af257973d7906b8a14941fa}\label{classWt_1_1DomElement_a33dff07e3af257973d7906b8a14941fa}} 
+\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ {\bfseries insert\+Before\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a82ffd6e953c700b6932770c2b97255db}\label{classWt_1_1DomElement_a82ffd6e953c700b6932770c2b97255db}} 
+\mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} {\bfseries type\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_afe2bb7f4d5224894186b8653ea0096f1}\label{classWt_1_1DomElement_afe2bb7f4d5224894186b8653ea0096f1}} 
+std\+::string {\bfseries id\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_ac0052d60d0578f22e196e30cfc0b8f94}\label{classWt_1_1DomElement_ac0052d60d0578f22e196e30cfc0b8f94}} 
+int {\bfseries num\+Manipulations\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a3274042cfaa84c6a80387ed484ecd47f}\label{classWt_1_1DomElement_a3274042cfaa84c6a80387ed484ecd47f}} 
+int {\bfseries time\+Out\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a8b73dcebf10f9ef9cf0e4187c898edbe}\label{classWt_1_1DomElement_a8b73dcebf10f9ef9cf0e4187c898edbe}} 
+int {\bfseries time\+Out\+J\+S\+Repeat\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a5c7e6fff6fce1ed5c305ab66e4520831}\label{classWt_1_1DomElement_a5c7e6fff6fce1ed5c305ab66e4520831}} 
+E\+Stream {\bfseries java\+Script\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a319b32a5c7e52f94921405368f97df2f}\label{classWt_1_1DomElement_a319b32a5c7e52f94921405368f97df2f}} 
+std\+::string {\bfseries java\+Script\+Even\+When\+Deleted\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_ad94d038944f91249c53d1bb581024de7}\label{classWt_1_1DomElement_ad94d038944f91249c53d1bb581024de7}} 
+std\+::string {\bfseries var\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a15df796f517f686bc99410ef69ec97f0}\label{classWt_1_1DomElement_a15df796f517f686bc99410ef69ec97f0}} 
+bool {\bfseries declared\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a47d79eb4786721e5c57ed6b293074494}\label{classWt_1_1DomElement_a47d79eb4786721e5c57ed6b293074494}} 
+bool {\bfseries global\+Unfocused\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a4570c2d7794ef5a81917d2f6c707bb66}\label{classWt_1_1DomElement_a4570c2d7794ef5a81917d2f6c707bb66}} 
+Attribute\+Map {\bfseries attributes\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a777f0dbd9d8b736e3101bbefb517dae4}\label{classWt_1_1DomElement_a777f0dbd9d8b736e3101bbefb517dae4}} 
+Attribute\+Set {\bfseries removed\+Attributes\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_ab33d7ab46910ade5d221fda9aa85dea7}\label{classWt_1_1DomElement_ab33d7ab46910ade5d221fda9aa85dea7}} 
+\mbox{\hyperlink{classWt_1_1DomElement_af9504607c64b16c95571d9f3b6f1e592}{Property\+Map}} {\bfseries properties\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a72cc6fad9ed8acf9708f74fec2a1305a}\label{classWt_1_1DomElement_a72cc6fad9ed8acf9708f74fec2a1305a}} 
+Event\+Handler\+Map {\bfseries event\+Handlers\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_ae4e97c8344af3e60eea7f7975b9b0cbb}\label{classWt_1_1DomElement_ae4e97c8344af3e60eea7f7975b9b0cbb}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1DomElement_1_1ChildInsertion}{Child\+Insertion}} $>$ {\bfseries children\+To\+Add\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_aa7c59456202dda73c498d83cffe326dc}\label{classWt_1_1DomElement_aa7c59456202dda73c498d83cffe326dc}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries children\+To\+Save\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_add6d7db4d336c8eb82f92053ff9dd853}\label{classWt_1_1DomElement_add6d7db4d336c8eb82f92053ff9dd853}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ $>$ {\bfseries updated\+Children\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a886f7d5dcef139d0a17478d36728a526}\label{classWt_1_1DomElement_a886f7d5dcef139d0a17478d36728a526}} 
+E\+Stream {\bfseries children\+Html\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_ac8c229270bcc299ef63329f0e6dffaa4}\label{classWt_1_1DomElement_ac8c229270bcc299ef63329f0e6dffaa4}} 
+\mbox{\hyperlink{classWt_1_1DomElement_a7eaddab8ab997eae0d15950c5a7f0cd8}{Timeout\+List}} {\bfseries timeouts\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_a6d7f56062d15638f6b8f08a630fedc36}\label{classWt_1_1DomElement_a6d7f56062d15638f6b8f08a630fedc36}} 
+std\+::string {\bfseries element\+Tag\+Name\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_ac8f01ef751d825bd4ee53fe93e7f3d81}\label{classWt_1_1DomElement_ac8f01ef751d825bd4ee53fe93e7f3d81}} 
+static unsigned {\bfseries next\+Id\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1DomElement_aa576559cc0691103904d6a46727c400d}\label{classWt_1_1DomElement_aa576559cc0691103904d6a46727c400d}} 
+class {\bfseries W\+Css\+Decoration\+Style}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to represent a client-\/side D\+OM element (proxy). 
+
+The D\+OM element proxy object is used as an intermediate layer to render the creation of new D\+OM elements or updates to existing D\+OM elements. A D\+OM element can be serialized to H\+T\+ML or to Java\+Script manipulations, and therefore is the main abstraction layer to avoid hard-\/coding Java\+Script-\/based rendering within the library while still allowing fine-\/grained Ajax updates or large-\/scale H\+T\+ML changes.
+
+This is an internal A\+PI, subject to change. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1DomElement_ab7cf03188b10c8fe05b7805e6b4c6043}\label{classWt_1_1DomElement_ab7cf03188b10c8fe05b7805e6b4c6043}} 
+\index{Wt::DomElement@{Wt::DomElement}!DomElement@{DomElement}}
+\index{DomElement@{DomElement}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{DomElement()}{DomElement()}}
+{\footnotesize\ttfamily Wt\+::\+Dom\+Element\+::\+Dom\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1DomElement_a1c5ce5f37501019e28470a28af164980}{Mode}}}]{mode,  }\item[{\mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+This constructs a \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} reference, with a given mode and element type. \mbox{\hyperlink{classNote}{Note}} that even when updating an existing element, the type is taken into account for information on what kind of operations are allowed (workarounds for IE deficiencies for examples) or to infer some basic C\+SS defaults for it (whether it is inline or a block element).
+
+Typically, elements are created using one of the \textquotesingle{}named\textquotesingle{} constructors\+: \mbox{\hyperlink{classWt_1_1DomElement_a0ed99e5a572d1fe3f09a2bfe2314f85d}{create\+New()}}, \mbox{\hyperlink{classWt_1_1DomElement_a44fee29aedaebe11b1a8479f7a5d43ae}{get\+For\+Update()}} or \mbox{\hyperlink{classWt_1_1DomElement_ac57939e4d71269ba6f44960e198595f3}{update\+Given()}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1DomElement_a97f5ea81d743d69e68f5f47b73325c8b}\label{classWt_1_1DomElement_a97f5ea81d743d69e68f5f47b73325c8b}} 
+\index{Wt::DomElement@{Wt::DomElement}!addChild@{addChild}}
+\index{addChild@{addChild}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{addChild()}{addChild()}}
+{\footnotesize\ttfamily void Wt\+::\+Dom\+Element\+::add\+Child (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$}]{child }\end{DoxyParamCaption})}
+
+
+
+Adds a child. 
+
+Ownership of the child is transferred to this element, and the child should not be manipulated after the call, since it could be that it gets directly converted into H\+T\+ML and deleted. \mbox{\Hypertarget{classWt_1_1DomElement_a5ee6061254c40e0575ea9af8144eb3fd}\label{classWt_1_1DomElement_a5ee6061254c40e0575ea9af8144eb3fd}} 
+\index{Wt::DomElement@{Wt::DomElement}!addPropertyWord@{addPropertyWord}}
+\index{addPropertyWord@{addPropertyWord}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{addPropertyWord()}{addPropertyWord()}}
+{\footnotesize\ttfamily void Wt\+::\+Dom\+Element\+::add\+Property\+Word (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_aeb01f25d7c9d4a4498fb3dadc8d168c5}{Wt\+::\+Property}}}]{property,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Adds a \textquotesingle{}word\textquotesingle{} to a property. 
+
+This adds a word (delimited by a space) to an existing property value. \mbox{\Hypertarget{classWt_1_1DomElement_a49fd65cf314bc901d9656e449d80a976}\label{classWt_1_1DomElement_a49fd65cf314bc901d9656e449d80a976}} 
+\index{Wt::DomElement@{Wt::DomElement}!addToParent@{addToParent}}
+\index{addToParent@{addToParent}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{addToParent()}{addToParent()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Dom\+Element\+::add\+To\+Parent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WStringStream}{W\+String\+Stream}} \&}]{out,  }\item[{const std\+::string \&}]{parent\+Var,  }\item[{int}]{pos,  }\item[{\mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$}]{app }\end{DoxyParamCaption})}
+
+
+
+Adds an element to a parent, using suitable methods. 
+
+Depending on the type, different D\+OM methods are needed. In particular for table cells, some browsers require dedicated A\+PI instead of generic insert\+At() or append\+Child() functions. \mbox{\Hypertarget{classWt_1_1DomElement_a39325a0abbbd28e438d980f6f5057369}\label{classWt_1_1DomElement_a39325a0abbbd28e438d980f6f5057369}} 
+\index{Wt::DomElement@{Wt::DomElement}!asHTML@{asHTML}}
+\index{asHTML@{asHTML}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{asHTML()}{asHTML()}}
+{\footnotesize\ttfamily void Wt\+::\+Dom\+Element\+::as\+H\+T\+ML (\begin{DoxyParamCaption}\item[{E\+Stream \&}]{out,  }\item[{E\+Stream \&}]{java\+Script,  }\item[{\mbox{\hyperlink{classWt_1_1DomElement_a7eaddab8ab997eae0d15950c5a7f0cd8}{Timeout\+List}} \&}]{timeouts,  }\item[{bool}]{opening\+Tag\+Only = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+
+
+Renders the element as H\+T\+ML. 
+
+Anything that cannot be rendered as H\+T\+ML is rendered as java\+Script as a by-\/product. \mbox{\Hypertarget{classWt_1_1DomElement_ac792fe8da2a48cacf75ba655ad285982}\label{classWt_1_1DomElement_ac792fe8da2a48cacf75ba655ad285982}} 
+\index{Wt::DomElement@{Wt::DomElement}!asJavaScript@{asJavaScript}}
+\index{asJavaScript@{asJavaScript}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{asJavaScript()}{asJavaScript()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Dom\+Element\+::as\+Java\+Script (\begin{DoxyParamCaption}\item[{E\+Stream \&}]{out,  }\item[{\mbox{\hyperlink{classWt_1_1DomElement_acc6b0a5da92686dc8d133a25aad027b4}{Priority}}}]{priority }\end{DoxyParamCaption}) const}
+
+
+
+Renders the element as Java\+Script, by phase. 
+
+To avoid temporarily having dupliate I\+Ds as elements move around in the page, rendering is ordered in a number of phases \+: first deleting existing elements, then creating new elements, and finally updates to existing elements. \mbox{\Hypertarget{classWt_1_1DomElement_a90ae962d3bd184d0335b2124eb94e68e}\label{classWt_1_1DomElement_a90ae962d3bd184d0335b2124eb94e68e}} 
+\index{Wt::DomElement@{Wt::DomElement}!declare@{declare}}
+\index{declare@{declare}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{declare()}{declare()}}
+{\footnotesize\ttfamily void Wt\+::\+Dom\+Element\+::declare (\begin{DoxyParamCaption}\item[{E\+Stream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Declares the element. 
+
+Only after the element has been declared, \mbox{\hyperlink{classWt_1_1DomElement_ac1fdc4afc7030cf44c427b1fd21a210a}{var()}} returns a useful Java\+Script reference. \mbox{\Hypertarget{classWt_1_1DomElement_a54e78ede6b13ea42d7e4e20efcd6f056}\label{classWt_1_1DomElement_a54e78ede6b13ea42d7e4e20efcd6f056}} 
+\index{Wt::DomElement@{Wt::DomElement}!fastHtmlAttributeValue@{fastHtmlAttributeValue}}
+\index{fastHtmlAttributeValue@{fastHtmlAttributeValue}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{fastHtmlAttributeValue()}{fastHtmlAttributeValue()}}
+{\footnotesize\ttfamily static void Wt\+::\+Dom\+Element\+::fast\+Html\+Attribute\+Value (\begin{DoxyParamCaption}\item[{E\+Stream \&}]{out\+Raw,  }\item[{const E\+Stream \&}]{out\+Escaped,  }\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Utility for rapid rendering of H\+T\+ML attribute values. 
+
+It uses pre-\/computed mixing rules for escaping of the attribute value. \mbox{\Hypertarget{classWt_1_1DomElement_a1b707224a9c445d334442ef8fb7a89a0}\label{classWt_1_1DomElement_a1b707224a9c445d334442ef8fb7a89a0}} 
+\index{Wt::DomElement@{Wt::DomElement}!fastJsStringLiteral@{fastJsStringLiteral}}
+\index{fastJsStringLiteral@{fastJsStringLiteral}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{fastJsStringLiteral()}{fastJsStringLiteral()}}
+{\footnotesize\ttfamily static void Wt\+::\+Dom\+Element\+::fast\+Js\+String\+Literal (\begin{DoxyParamCaption}\item[{E\+Stream \&}]{out\+Raw,  }\item[{const E\+Stream \&}]{out\+Escaped,  }\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Utility for rapid rendering of Java\+Script strings. 
+
+It uses pre-\/computed mixing rules for escaping of the string. \mbox{\Hypertarget{classWt_1_1DomElement_a86edc99c09015430132322c109f3e699}\label{classWt_1_1DomElement_a86edc99c09015430132322c109f3e699}} 
+\index{Wt::DomElement@{Wt::DomElement}!getAttribute@{getAttribute}}
+\index{getAttribute@{getAttribute}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{getAttribute()}{getAttribute()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Dom\+Element\+::get\+Attribute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{attribute }\end{DoxyParamCaption}) const}
+
+
+
+Returns an attribute value set. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1DomElement_ad985f6288a98f6ff37eea10cbbcebff2}{set\+Attribute()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1DomElement_a8d0792300357008c1faa1c4fcb832008}\label{classWt_1_1DomElement_a8d0792300357008c1faa1c4fcb832008}} 
+\index{Wt::DomElement@{Wt::DomElement}!getForUpdate@{getForUpdate}}
+\index{getForUpdate@{getForUpdate}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{getForUpdate()}{getForUpdate()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}}$\ast$ Wt\+::\+Dom\+Element\+::get\+For\+Update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WObject}{W\+Object}} $\ast$}]{object,  }\item[{\mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Creates a reference to an existing element, deriving the ID from an object. 
+
+This uses object-\/$>$\mbox{\hyperlink{classWt_1_1DomElement_a782e9f673bcf9ec48c3917a4ac4b1ac4}{id()}} as the id. \mbox{\Hypertarget{classWt_1_1DomElement_a78fc2ce1a1fa27c6f50f3990f60fa62d}\label{classWt_1_1DomElement_a78fc2ce1a1fa27c6f50f3990f60fa62d}} 
+\index{Wt::DomElement@{Wt::DomElement}!getProperty@{getProperty}}
+\index{getProperty@{getProperty}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{getProperty()}{getProperty()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Dom\+Element\+::get\+Property (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_aeb01f25d7c9d4a4498fb3dadc8d168c5}{Wt\+::\+Property}}}]{property }\end{DoxyParamCaption}) const}
+
+
+
+Returns a property value set. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1DomElement_ad7053166ff7724b432a4741c1113601b}{set\+Property()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1DomElement_abe1a8f0117d701629ffa9001b3997f4f}\label{classWt_1_1DomElement_abe1a8f0117d701629ffa9001b3997f4f}} 
+\index{Wt::DomElement@{Wt::DomElement}!insertChildAt@{insertChildAt}}
+\index{insertChildAt@{insertChildAt}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{insertChildAt()}{insertChildAt()}}
+{\footnotesize\ttfamily void Wt\+::\+Dom\+Element\+::insert\+Child\+At (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$}]{child,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Inserts a child. 
+
+Ownership of the child is transferred to this element, and the child should not be manipulated after the call. \mbox{\Hypertarget{classWt_1_1DomElement_af09e1b576dcbec40c781644b3b60ab4d}\label{classWt_1_1DomElement_af09e1b576dcbec40c781644b3b60ab4d}} 
+\index{Wt::DomElement@{Wt::DomElement}!isDefaultInline@{isDefaultInline}}
+\index{isDefaultInline@{isDefaultInline}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{isDefaultInline()}{isDefaultInline()}}
+{\footnotesize\ttfamily bool Wt\+::\+Dom\+Element\+::is\+Default\+Inline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the default display property for this element. 
+
+This returns whether the element is by default an inline or block element. \mbox{\Hypertarget{classWt_1_1DomElement_a0db82d40e191015d2e1ffed13c5132fb}\label{classWt_1_1DomElement_a0db82d40e191015d2e1ffed13c5132fb}} 
+\index{Wt::DomElement@{Wt::DomElement}!removeAllChildren@{removeAllChildren}}
+\index{removeAllChildren@{removeAllChildren}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{removeAllChildren()}{removeAllChildren()}}
+{\footnotesize\ttfamily void Wt\+::\+Dom\+Element\+::remove\+All\+Children (\begin{DoxyParamCaption}\item[{int}]{first\+Child = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Removes all children. 
+
+If first\+Child != 0, then only children starting from first\+Child are removed. \mbox{\Hypertarget{classWt_1_1DomElement_a1a7612999c9b74ac20a74c2a49a3c126}\label{classWt_1_1DomElement_a1a7612999c9b74ac20a74c2a49a3c126}} 
+\index{Wt::DomElement@{Wt::DomElement}!saveChild@{saveChild}}
+\index{saveChild@{saveChild}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{saveChild()}{saveChild()}}
+{\footnotesize\ttfamily void Wt\+::\+Dom\+Element\+::save\+Child (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})}
+
+
+
+Saves an existing child. 
+
+This detaches the child from the parent, allowing the manipulation of the inner\+H\+T\+ML without deleting the child. Stubs in the the new H\+T\+ML that reference the same id will be replaced with the saved child. \mbox{\Hypertarget{classWt_1_1DomElement_ae601efee23eedd2da95efe4a58dab92e}\label{classWt_1_1DomElement_ae601efee23eedd2da95efe4a58dab92e}} 
+\index{Wt::DomElement@{Wt::DomElement}!setEvent@{setEvent}}
+\index{setEvent@{setEvent}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{setEvent()}{setEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+Dom\+Element\+::set\+Event (\begin{DoxyParamCaption}\item[{const char $\ast$}]{event\+Name,  }\item[{const std\+::string \&}]{js\+Code }\end{DoxyParamCaption})}
+
+
+
+Sets an event handler. 
+
+This sets a Java\+Script event handler. \mbox{\Hypertarget{classWt_1_1DomElement_a0436dd897d8aa1a49d943c16572fecf6}\label{classWt_1_1DomElement_a0436dd897d8aa1a49d943c16572fecf6}} 
+\index{Wt::DomElement@{Wt::DomElement}!setEvent@{setEvent}}
+\index{setEvent@{setEvent}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{setEvent()}{setEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+Dom\+Element\+::set\+Event (\begin{DoxyParamCaption}\item[{const char $\ast$}]{event\+Name,  }\item[{const std\+::string \&}]{js\+Code,  }\item[{const std\+::string \&}]{signal\+Name,  }\item[{bool}]{is\+Exposed = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Sets an event handler. 
+
+This sets an event handler by a combination of client-\/side Java\+Script code and a server-\/side signal to emit. \mbox{\Hypertarget{classWt_1_1DomElement_a9477f9bc7f6eabeb42f5f098bfbaabf6}\label{classWt_1_1DomElement_a9477f9bc7f6eabeb42f5f098bfbaabf6}} 
+\index{Wt::DomElement@{Wt::DomElement}!setWasEmpty@{setWasEmpty}}
+\index{setWasEmpty@{setWasEmpty}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{setWasEmpty()}{setWasEmpty()}}
+{\footnotesize\ttfamily void Wt\+::\+Dom\+Element\+::set\+Was\+Empty (\begin{DoxyParamCaption}\item[{bool}]{how }\end{DoxyParamCaption})}
+
+
+
+Sets whether the element was initially empty. 
+
+Knowing that an element was empty allows optimization of \mbox{\hyperlink{classWt_1_1DomElement_a97f5ea81d743d69e68f5f47b73325c8b}{add\+Child()}} \mbox{\Hypertarget{classWt_1_1DomElement_a375e6ce034f56980002b97be693e1d02}\label{classWt_1_1DomElement_a375e6ce034f56980002b97be693e1d02}} 
+\index{Wt::DomElement@{Wt::DomElement}!unstubWith@{unstubWith}}
+\index{unstubWith@{unstubWith}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{unstubWith()}{unstubWith()}}
+{\footnotesize\ttfamily void Wt\+::\+Dom\+Element\+::unstub\+With (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$}]{new\+Element,  }\item[{bool}]{hide\+With\+Display }\end{DoxyParamCaption})}
+
+
+
+Unstubs an element by another element. 
+
+Stubs are used to render hidden elements initially and update them in the background. This is almost the same as \mbox{\hyperlink{classWt_1_1DomElement_a678359a74d49159e968559cb092a421b}{replace\+With()}} except that some style properties are copied over (most importantly its visibility). \mbox{\Hypertarget{classWt_1_1DomElement_a71eb9b71169d68cce20f596f5ec72867}\label{classWt_1_1DomElement_a71eb9b71169d68cce20f596f5ec72867}} 
+\index{Wt::DomElement@{Wt::DomElement}!unwrap@{unwrap}}
+\index{unwrap@{unwrap}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{unwrap()}{unwrap()}}
+{\footnotesize\ttfamily void Wt\+::\+Dom\+Element\+::unwrap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unwraps an element to progress to Ajax support. 
+
+In plain H\+T\+ML mode, some elements are rendered wrapped in or as another element, to provide more interactivity in the absense of Java\+Script. \mbox{\Hypertarget{classWt_1_1DomElement_af449a3110675c7c4ff3ba09c7e93ebdc}\label{classWt_1_1DomElement_af449a3110675c7c4ff3ba09c7e93ebdc}} 
+\index{Wt::DomElement@{Wt::DomElement}!urlEncodeS@{urlEncodeS}}
+\index{urlEncodeS@{urlEncodeS}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{urlEncodeS()}{urlEncodeS()}}
+{\footnotesize\ttfamily static std\+::string Wt\+::\+Dom\+Element\+::url\+EncodeS (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{const std\+::string \&}]{allowed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Low-\/level U\+RL encoding function. 
+
+This variant allows the exclusion of certain characters from U\+RL encoding. \mbox{\Hypertarget{classWt_1_1DomElement_ac1fdc4afc7030cf44c427b1fd21a210a}\label{classWt_1_1DomElement_ac1fdc4afc7030cf44c427b1fd21a210a}} 
+\index{Wt::DomElement@{Wt::DomElement}!var@{var}}
+\index{var@{var}!Wt::DomElement@{Wt::DomElement}}
+\doxysubsubsection{\texorpdfstring{var()}{var()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Dom\+Element\+::var (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Java\+Script variable name. 
+
+This variable name is only defined when the element is being rendered using Java\+Script, after \mbox{\hyperlink{classWt_1_1DomElement_a90ae962d3bd184d0335b2124eb94e68e}{declare()}} has been called. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/web/Dom\+Element.\+h\end{DoxyCompactItemize}

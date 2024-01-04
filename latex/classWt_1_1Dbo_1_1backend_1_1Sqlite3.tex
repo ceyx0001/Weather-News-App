@@ -1,0 +1,318 @@
+\hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3}{}\doxysection{Wt\+::Dbo\+::backend\+::Sqlite3 Class Reference}
+\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3}\index{Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}}
+
+
+An S\+Q\+Lite3 connection.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Dbo/backend/\+Sqlite3.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Dbo\+::backend\+::Sqlite3\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Dbo\+::backend\+::Sqlite3\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_ad392317a2278c700364f6096fcf12e67}{Sqlite3}} (const std\+::string \&db)
+\begin{DoxyCompactList}\small\item\em Opens a new S\+Q\+Lite3 backend connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a292580940953e8fea523144db1087766}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a292580940953e8fea523144db1087766}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a292580940953e8fea523144db1087766}{Sqlite3}} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3}{Sqlite3}} \&other)
+\begin{DoxyCompactList}\small\item\em Copies an S\+Q\+Lite3 connection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a8cdca9bc5d744a76663d14d1255af483}{$\sim$\+Sqlite3}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a3ba6e4b90555de5e55c4a8cf7bf7eb08}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Clones the connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a89c9fd929b5e051d187dabfb2f238ffc}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a89c9fd929b5e051d187dabfb2f238ffc}} 
+\mbox{\hyperlink{structsqlite3}{sqlite3}} $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a89c9fd929b5e051d187dabfb2f238ffc}{connection}} ()
+\begin{DoxyCompactList}\small\item\em Returns the underlying connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a720823b4e4e9bfba9f732988bcd9a465}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a720823b4e4e9bfba9f732988bcd9a465}} 
+std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a720823b4e4e9bfba9f732988bcd9a465}{connection\+String}} ()
+\begin{DoxyCompactList}\small\item\em Returns the underlying connection string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a571f4019950aafc2b855d46d4e7072d5}{set\+Date\+Time\+Storage}} (\mbox{\hyperlink{namespaceWt_1_1Dbo_af213c090c1ccddc36d70d56e0804047f}{Sql\+Date\+Time\+Type}} type, Date\+Time\+Storage format)
+\begin{DoxyCompactList}\small\item\em Configures how to store date or date time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_af5389671d6e3648d919234a778eb7859}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_af5389671d6e3648d919234a778eb7859}} 
+Date\+Time\+Storage \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_af5389671d6e3648d919234a778eb7859}{date\+Time\+Storage}} (\mbox{\hyperlink{namespaceWt_1_1Dbo_af213c090c1ccddc36d70d56e0804047f}{Sql\+Date\+Time\+Type}} type) const
+\begin{DoxyCompactList}\small\item\em Returns the date time storage. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a5156cd2b81ce4b74ade53ed471a4eef6}{start\+Transaction}} () override
+\begin{DoxyCompactList}\small\item\em Starts a transaction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_aca4b1503a2fa6b3f0eee1caf6499f370}{commit\+Transaction}} () override
+\begin{DoxyCompactList}\small\item\em Commits a transaction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a8ebe4596d98f9799ef8f43dad5f27264}{rollback\+Transaction}} () override
+\begin{DoxyCompactList}\small\item\em Rolls back a transaction. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a3d365826315e6b77e67981a6cfd72b56}{prepare\+Statement}} (const std\+::string \&sql) override
+\begin{DoxyCompactList}\small\item\em Prepares a statement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Methods that return dialect information}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a40d600f40f52796e00e6c5451fb6c706}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a40d600f40f52796e00e6c5451fb6c706}} 
+Date\+Time\+Storage {\bfseries date\+Time\+Storage\+\_\+} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a2abc6fbbc962941fe000f333b17619cf}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a2abc6fbbc962941fe000f333b17619cf}} 
+std\+::string {\bfseries conn\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_adc84636455a35f7917bd4c7ed7cb5022}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_adc84636455a35f7917bd4c7ed7cb5022}} 
+\mbox{\hyperlink{structsqlite3}{sqlite3}} $\ast$ {\bfseries db\+\_\+}
+\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_ae18f2b4ab814fc7d56827f86a87cb735}{autoincrement\+Sql}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type modifier. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a36fb6e530fb03acff76c60e6f9c319a7}{autoincrement\+Create\+Sequence\+Sql}} (const std\+::string \&table, const std\+::string \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the S\+QL statement(s) required to create an id sequence. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a4fc823295a8834918cbadc495eadf5bf}{autoincrement\+Drop\+Sequence\+Sql}} (const std\+::string \&table, const std\+::string \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the S\+QL statement(s) required to drop an id sequence. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a76d1cd7ae3f9c9de7a7cb55a97d4046d}{autoincrement\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a2bdff7f82f45bc27e4109f5cdc239987}{autoincrement\+Insert\+Suffix}} (const std\+::string \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the suffix for an \textquotesingle{}autoincrement\textquotesingle{} insert statement. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a708dea3f370a5635f769259e30a93a0d}{date\+Time\+Type}} (\mbox{\hyperlink{namespaceWt_1_1Dbo_af213c090c1ccddc36d70d56e0804047f}{Sql\+Date\+Time\+Type}} type) const override
+\begin{DoxyCompactList}\small\item\em Returns the date/time type. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_afa4e28f5aaf8172791038328f8787a3c}{blob\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the blob type. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1Sqlite3_aab925d522b311dddc30adc4dda74ae25}{support\+Deferrable\+F\+K\+Constraint}} () const override
+\begin{DoxyCompactList}\small\item\em Returns true if the backend supports \char`\"{}deferrable initially
+deferred\char`\"{} foreign key constraints. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a897d1a771a4a3605bb9a4d8ab412688c}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a897d1a771a4a3605bb9a4d8ab412688c}} 
+void {\bfseries init} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An S\+Q\+Lite3 connection. 
+
+This class provides the backend implementation for S\+Q\+Lite3 databases. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_ad392317a2278c700364f6096fcf12e67}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_ad392317a2278c700364f6096fcf12e67}} 
+\index{Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}!Sqlite3@{Sqlite3}}
+\index{Sqlite3@{Sqlite3}!Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}}
+\doxysubsubsection{\texorpdfstring{Sqlite3()}{Sqlite3()}}
+{\footnotesize\ttfamily Wt\+::\+Dbo\+::backend\+::\+Sqlite3\+::\+Sqlite3 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{db }\end{DoxyParamCaption})}
+
+
+
+Opens a new S\+Q\+Lite3 backend connection. 
+
+The {\ttfamily db} may be any of the values supported by sqlite3\+\_\+open(). \mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a8cdca9bc5d744a76663d14d1255af483}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a8cdca9bc5d744a76663d14d1255af483}} 
+\index{Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}!````~Sqlite3@{$\sim$Sqlite3}}
+\index{````~Sqlite3@{$\sim$Sqlite3}!Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}}
+\doxysubsubsection{\texorpdfstring{$\sim$Sqlite3()}{~Sqlite3()}}
+{\footnotesize\ttfamily Wt\+::\+Dbo\+::backend\+::\+Sqlite3\+::$\sim$\+Sqlite3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Closes the connection. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a36fb6e530fb03acff76c60e6f9c319a7}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a36fb6e530fb03acff76c60e6f9c319a7}} 
+\index{Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}!autoincrementCreateSequenceSql@{autoincrementCreateSequenceSql}}
+\index{autoincrementCreateSequenceSql@{autoincrementCreateSequenceSql}!Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}}
+\doxysubsubsection{\texorpdfstring{autoincrementCreateSequenceSql()}{autoincrementCreateSequenceSql()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ Wt\+::\+Dbo\+::backend\+::\+Sqlite3\+::autoincrement\+Create\+Sequence\+Sql (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{table,  }\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the S\+QL statement(s) required to create an id sequence. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aba79d84c7c91faae06f954e6d3d390ab}{Session\+::create\+Tables()}} to create the id sequence for a table. The table\textquotesingle{}s name and primary key are passed as arguments to this function and can be used to construct an S\+QL sequence that is unique for the table. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a7922dac3fd8a808dbbeef97a5a772e3f}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a4fc823295a8834918cbadc495eadf5bf}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a4fc823295a8834918cbadc495eadf5bf}} 
+\index{Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}!autoincrementDropSequenceSql@{autoincrementDropSequenceSql}}
+\index{autoincrementDropSequenceSql@{autoincrementDropSequenceSql}!Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}}
+\doxysubsubsection{\texorpdfstring{autoincrementDropSequenceSql()}{autoincrementDropSequenceSql()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ Wt\+::\+Dbo\+::backend\+::\+Sqlite3\+::autoincrement\+Drop\+Sequence\+Sql (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{table,  }\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the S\+QL statement(s) required to drop an id sequence. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a4c1fedb21e4e1cc44b182a34e8ebb4ef}{Session\+::drop\+Tables()}} to drop the id sequence for a table. The table\textquotesingle{}s name and primary key are passed as arguments to this function and can be used to construct an S\+QL sequence that is unique for the table. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a188acc931dd1d3dbd3a21e28783f7bd2}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a2bdff7f82f45bc27e4109f5cdc239987}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a2bdff7f82f45bc27e4109f5cdc239987}} 
+\index{Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}!autoincrementInsertSuffix@{autoincrementInsertSuffix}}
+\index{autoincrementInsertSuffix@{autoincrementInsertSuffix}!Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}}
+\doxysubsubsection{\texorpdfstring{autoincrementInsertSuffix()}{autoincrementInsertSuffix()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Dbo\+::backend\+::\+Sqlite3\+::autoincrement\+Insert\+Suffix (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the suffix for an \textquotesingle{}autoincrement\textquotesingle{} insert statement. 
+
+This is appended to the {\ttfamily insert} statement, since some back-\/ends need to be indicated that they should return the autoincrement id. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_abda2502e05a08d4728ff8f026663321f}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_ae18f2b4ab814fc7d56827f86a87cb735}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_ae18f2b4ab814fc7d56827f86a87cb735}} 
+\index{Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}!autoincrementSql@{autoincrementSql}}
+\index{autoincrementSql@{autoincrementSql}!Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}}
+\doxysubsubsection{\texorpdfstring{autoincrementSql()}{autoincrementSql()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Dbo\+::backend\+::\+Sqlite3\+::autoincrement\+Sql (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type modifier. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aba79d84c7c91faae06f954e6d3d390ab}{Session\+::create\+Tables()}} to create the {\itshape id} column. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a8c00fd64eb82999880cc813ef3866f5d}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a76d1cd7ae3f9c9de7a7cb55a97d4046d}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a76d1cd7ae3f9c9de7a7cb55a97d4046d}} 
+\index{Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}!autoincrementType@{autoincrementType}}
+\index{autoincrementType@{autoincrementType}!Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}}
+\doxysubsubsection{\texorpdfstring{autoincrementType()}{autoincrementType()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Dbo\+::backend\+::\+Sqlite3\+::autoincrement\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aba79d84c7c91faae06f954e6d3d390ab}{Session\+::create\+Tables()}} to create the {\itshape id} column. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_aff293ff5ad586e15143729eb38300ad6}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_afa4e28f5aaf8172791038328f8787a3c}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_afa4e28f5aaf8172791038328f8787a3c}} 
+\index{Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}!blobType@{blobType}}
+\index{blobType@{blobType}!Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}}
+\doxysubsubsection{\texorpdfstring{blobType()}{blobType()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Wt\+::\+Dbo\+::backend\+::\+Sqlite3\+::blob\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the blob type. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_ae2bbddef8fd8c11687d23187920dc4da}{Sql\+Statement\+::bind(int, const std\+::vector$<$unsigned char$>$\&)}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a68a272eaafeef5e04912914f0662da39}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a3ba6e4b90555de5e55c4a8cf7bf7eb08}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a3ba6e4b90555de5e55c4a8cf7bf7eb08}} 
+\index{Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}!clone@{clone}}
+\index{clone@{clone}!Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}}$>$ Wt\+::\+Dbo\+::backend\+::\+Sqlite3\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Clones the connection. 
+
+Returns a new connection object that is configured like this object. This is used by connection pool implementations to create its connections. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a71270c0d9258bc6f9f7177799db49083}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_aca4b1503a2fa6b3f0eee1caf6499f370}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_aca4b1503a2fa6b3f0eee1caf6499f370}} 
+\index{Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}!commitTransaction@{commitTransaction}}
+\index{commitTransaction@{commitTransaction}!Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}}
+\doxysubsubsection{\texorpdfstring{commitTransaction()}{commitTransaction()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::backend\+::\+Sqlite3\+::commit\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Commits a transaction. 
+
+This function commits a transaction. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a38ed9ab4831a0bfd8694f250813803bf}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a708dea3f370a5635f769259e30a93a0d}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a708dea3f370a5635f769259e30a93a0d}} 
+\index{Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}!dateTimeType@{dateTimeType}}
+\index{dateTimeType@{dateTimeType}!Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}}
+\doxysubsubsection{\texorpdfstring{dateTimeType()}{dateTimeType()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Wt\+::\+Dbo\+::backend\+::\+Sqlite3\+::date\+Time\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWt_1_1Dbo_af213c090c1ccddc36d70d56e0804047f}{Sql\+Date\+Time\+Type}}}]{type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the date/time type. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_afbe4698684c7b9b355748a199e0b0558}{Sql\+Statement\+::bind(int, const std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point\&, Sql\+Date\+Time\+Type)}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_af1f3290a984288175c6d82d088d0636c}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a3d365826315e6b77e67981a6cfd72b56}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a3d365826315e6b77e67981a6cfd72b56}} 
+\index{Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}!prepareStatement@{prepareStatement}}
+\index{prepareStatement@{prepareStatement}!Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}}
+\doxysubsubsection{\texorpdfstring{prepareStatement()}{prepareStatement()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}}$>$ Wt\+::\+Dbo\+::backend\+::\+Sqlite3\+::prepare\+Statement (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sql }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Prepares a statement. 
+
+Returns the prepared statement. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a4990470cf601ed8b523d97a7f8849210}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a8ebe4596d98f9799ef8f43dad5f27264}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a8ebe4596d98f9799ef8f43dad5f27264}} 
+\index{Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}!rollbackTransaction@{rollbackTransaction}}
+\index{rollbackTransaction@{rollbackTransaction}!Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}}
+\doxysubsubsection{\texorpdfstring{rollbackTransaction()}{rollbackTransaction()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::backend\+::\+Sqlite3\+::rollback\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rolls back a transaction. 
+
+This function rolls back a transaction. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_aee5a42b2f3b452d32360a1c31f59f22d}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a571f4019950aafc2b855d46d4e7072d5}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a571f4019950aafc2b855d46d4e7072d5}} 
+\index{Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}!setDateTimeStorage@{setDateTimeStorage}}
+\index{setDateTimeStorage@{setDateTimeStorage}!Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}}
+\doxysubsubsection{\texorpdfstring{setDateTimeStorage()}{setDateTimeStorage()}}
+{\footnotesize\ttfamily void Wt\+::\+Dbo\+::backend\+::\+Sqlite3\+::set\+Date\+Time\+Storage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWt_1_1Dbo_af213c090c1ccddc36d70d56e0804047f}{Sql\+Date\+Time\+Type}}}]{type,  }\item[{Date\+Time\+Storage}]{format }\end{DoxyParamCaption})}
+
+
+
+Configures how to store date or date time. 
+
+The default format is I\+S\+O8601\+As\+Text. \mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a5156cd2b81ce4b74ade53ed471a4eef6}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_a5156cd2b81ce4b74ade53ed471a4eef6}} 
+\index{Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}!startTransaction@{startTransaction}}
+\index{startTransaction@{startTransaction}!Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}}
+\doxysubsubsection{\texorpdfstring{startTransaction()}{startTransaction()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::backend\+::\+Sqlite3\+::start\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Starts a transaction. 
+
+This function starts a transaction. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_abcddbb27f50192113d14c66a5ca10731}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1Sqlite3_aab925d522b311dddc30adc4dda74ae25}\label{classWt_1_1Dbo_1_1backend_1_1Sqlite3_aab925d522b311dddc30adc4dda74ae25}} 
+\index{Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}!supportDeferrableFKConstraint@{supportDeferrableFKConstraint}}
+\index{supportDeferrableFKConstraint@{supportDeferrableFKConstraint}!Wt::Dbo::backend::Sqlite3@{Wt::Dbo::backend::Sqlite3}}
+\doxysubsubsection{\texorpdfstring{supportDeferrableFKConstraint()}{supportDeferrableFKConstraint()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::backend\+::\+Sqlite3\+::support\+Deferrable\+F\+K\+Constraint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns true if the backend supports \char`\"{}deferrable initially
+deferred\char`\"{} foreign key constraints. 
+
+This method will return false by default. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a1225fdf933222ffcd4777bda1e45f4ea}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/backend/Sqlite3.\+h\end{DoxyCompactItemize}

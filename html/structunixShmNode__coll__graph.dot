@@ -1,0 +1,27 @@
+digraph "unixShmNode"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="unixShmNode",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pShmMutex" ,fontname="Helvetica"];
+  Node2 [label="sqlite3_mutex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsqlite3__mutex.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pFirst" ,fontname="Helvetica"];
+  Node3 [label="unixShm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structunixShm.html",tooltip=" "];
+  Node3 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pNext" ,fontname="Helvetica"];
+  Node1 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pShmNode" ,fontname="Helvetica"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" hShm\naLock\nnRef\nszRegion" ,fontname="Helvetica"];
+  Node4 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pInode" ,fontname="Helvetica"];
+  Node5 [label="unixInodeInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structunixInodeInfo.html",tooltip=" "];
+  Node2 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pLockMutex" ,fontname="Helvetica"];
+  Node4 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" nLock\nnShared\nnRef" ,fontname="Helvetica"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pUnused" ,fontname="Helvetica"];
+  Node6 [label="UnixUnusedFd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structUnixUnusedFd.html",tooltip=" "];
+  Node4 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" flags\nfd" ,fontname="Helvetica"];
+  Node6 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pNext" ,fontname="Helvetica"];
+  Node5 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pPrev\npNext" ,fontname="Helvetica"];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fileId" ,fontname="Helvetica"];
+  Node7 [label="unixFileId",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structunixFileId.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pShmNode" ,fontname="Helvetica"];
+}

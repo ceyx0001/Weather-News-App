@@ -1,0 +1,1338 @@
+\hypertarget{classWt_1_1WAbstractItemModel}{}\doxysection{Wt\+::W\+Abstract\+Item\+Model Class Reference}
+\label{classWt_1_1WAbstractItemModel}\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+
+
+An abstract model for use with Wt\textquotesingle{}s view classes.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Abstract\+Item\+Model.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Abstract\+Item\+Model\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Abstract\+Item\+Model\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}, \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} $>$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a1f5858f68611d651fc15e35f64171911}{Data\+Map}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classData}{Data}} map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a834feffd1eab95577689b01af4098326}\label{classWt_1_1WAbstractItemModel_a834feffd1eab95577689b01af4098326}} 
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a834feffd1eab95577689b01af4098326}{W\+Abstract\+Item\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new data model. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WAbstractItemModel_abcf7912a95a0a60f8e9b1c37d30b8383}{column\+Count}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const =0
+\begin{DoxyCompactList}\small\item\em Returns the number of columns. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab0709a8f71fd5df882f29bb29fd055f0}{row\+Count}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const =0
+\begin{DoxyCompactList}\small\item\em Returns the number of rows. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_aac66d657dada8c06c336e4dcca0333fc}\label{classWt_1_1WAbstractItemModel_aac66d657dada8c06c336e4dcca0333fc}} 
+virtual bool {\bfseries can\+Fetch\+More} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a8f372ebe181dbb01d761a284685e1aac}\label{classWt_1_1WAbstractItemModel_a8f372ebe181dbb01d761a284685e1aac}} 
+virtual void {\bfseries fetch\+More} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}})
+\item 
+virtual \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}} $>$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ad65561084d42facbde3e075801ed2e4d}{flags}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{index}}) const
+\begin{DoxyCompactList}\small\item\em Returns the flags for an item. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_gafb18b4339442f1327c2a65850f3d8a53}{Header\+Flag}} $>$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aba71f1fcdae2ada51ad7144f9dd3c228}{header\+Flags}} (int section, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation=Orientation\+::\+Horizontal) const
+\begin{DoxyCompactList}\small\item\em Returns the flags for a header. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a2cec7c8c40b26246b14c31fe6f7fc950}{has\+Children}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{index}}) const
+\begin{DoxyCompactList}\small\item\em Returns if there are children at an index. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{index}}) const =0
+\begin{DoxyCompactList}\small\item\em Returns the parent for a model index. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af77f707dd2340652717e7122cd7f4ffd}{data}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{index}}, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}) const =0
+\begin{DoxyCompactList}\small\item\em Returns data at a specified model index for the given role. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a1f5858f68611d651fc15e35f64171911}{Data\+Map}} \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab48f2d554813d916d6277dcfd9c277b8}{item\+Data}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{index}}) const
+\begin{DoxyCompactList}\small\item\em Returns all data at a specific index. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a37fa8987a50f8a10b5ffb123a84e3f3c}{header\+Data}} (int section, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation=Orientation\+::\+Horizontal, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}) const
+\begin{DoxyCompactList}\small\item\em Returns the row or column header data. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{index}} (int row, int column, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const =0
+\begin{DoxyCompactList}\small\item\em Returns the child index for the given row and column. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_aa6e2ba5849e4d179cd03bef189cb8b55}{W\+Model\+Index\+List}} \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab3b3b88b9606c57d8d3e9defa3253dd3}{match}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&start, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, int hits=-\/1, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_gaad8dd5072a40c11a34ee548bfb20b2ba}{Match\+Flag}} $>$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ad65561084d42facbde3e075801ed2e4d}{flags}}=\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_gaad8dd5072a40c11a34ee548bfb20b2ba}{Match\+Flag}} $>$(Match\+Flag\+::\+Starts\+With$\vert$Match\+Flag\+::\+Wrap)) const
+\begin{DoxyCompactList}\small\item\em Returns an index list for data items that match. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a5fc67e5fbb584cd1c6e6108ad07ff484}{data}} (int row, int column, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const
+\begin{DoxyCompactList}\small\item\em Returns the data item at the given column and row. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aba45ca928d04d269be72ebd5491ecabc}{has\+Index}} (int row, int column, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const
+\begin{DoxyCompactList}\small\item\em Returns if an index at the given position is valid (i.\+e. falls within the column-\/row bounds). \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WAbstractItemModel_acbad59b06e90753f5e5e83de82ccd166}{insert\+Columns}} (int column, int count, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}())
+\begin{DoxyCompactList}\small\item\em Inserts one or more columns. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a59b5169e158b4cbfb1ec98df67c87200}{insert\+Rows}} (int row, int count, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}())
+\begin{DoxyCompactList}\small\item\em Inserts one or more rows. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a18d68ce5450fb7e55f4f47d99c9e7414}{remove\+Columns}} (int column, int count, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}())
+\begin{DoxyCompactList}\small\item\em Removes columns. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ad1788e38e96df5795fc453f63d557ba2}{remove\+Rows}} (int row, int count, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}())
+\begin{DoxyCompactList}\small\item\em Removes rows. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab72f9eac35b1852e3b86273016a7f27e}{set\+Data}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{index}}, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}})
+\begin{DoxyCompactList}\small\item\em Sets data at the given model index. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aed31141a35361c75cc9741b7764ee1fe}{set\+Item\+Data}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{index}}, const \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a1f5858f68611d651fc15e35f64171911}{Data\+Map}} \&values)
+\begin{DoxyCompactList}\small\item\em Sets data at the given model index. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a3c4a0ffe050bc0d11feeac4749dde784}{set\+Header\+Data}} (int section, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}})
+\begin{DoxyCompactList}\small\item\em Sets header data for a column or row. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a0bccbb4373b4c1e8bce85573b933d53d}{set\+Header\+Data}} (int section, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value)
+\begin{DoxyCompactList}\small\item\em Sets column header data. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab044b92afa69282ea2e351bcdfd7c0c7}{sort}} (int column, \mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Sort\+Order}} order=Sort\+Order\+::\+Ascending)
+\begin{DoxyCompactList}\small\item\em Sorts the model according to a particular column. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ae420dad3a27a35014570daa27377be1d}{expand\+Column}} (int column)
+\begin{DoxyCompactList}\small\item\em Expands a column. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aa20428eef993a233aff90ff953a3fe0b}{collapse\+Column}} (int column)
+\begin{DoxyCompactList}\small\item\em Collapses a column. \end{DoxyCompactList}\item 
+virtual void $\ast$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aa5b86f5b8e68bd5149d50b5c101855d9}{to\+Raw\+Index}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{index}}) const
+\begin{DoxyCompactList}\small\item\em Converts a model index to a raw pointer that remains valid while the model\textquotesingle{}s layout is changed. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a56f6aa462a2707cfb8697b8b31a8ca1f}{from\+Raw\+Index}} (void $\ast$raw\+Index) const
+\begin{DoxyCompactList}\small\item\em Converts a raw pointer to a model index. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a22a6c0dc9f4c9a6259a2daac07b78f61}{mime\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Returns a mime-\/type for dragging a set of indexes. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aba657722e361087a00cbe8b961bbe624}{accept\+Drop\+Mime\+Types}} () const
+\begin{DoxyCompactList}\small\item\em Returns a list of mime-\/types that could be accepted for a drop event. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a7478161267bcd2d4c7fccd83363074f8}{drop\+Event}} (const \mbox{\hyperlink{classWt_1_1WDropEvent}{W\+Drop\+Event}} \&e, \mbox{\hyperlink{group__modelview_gaca801bdfb957c360c5f8709cc46949aa}{Drop\+Action}} action, int row, int column, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}})
+\begin{DoxyCompactList}\small\item\em Handles a drop event. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a882b8b42754036492f47f8bd05510cdd}{drop\+Event}} (const \mbox{\hyperlink{classWt_1_1WDropEvent}{W\+Drop\+Event}} \&e, \mbox{\hyperlink{group__modelview_gaca801bdfb957c360c5f8709cc46949aa}{Drop\+Action}} action, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{index}}, \mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Wt\+::\+Side}} side)
+\begin{DoxyCompactList}\small\item\em Handles a drop event. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ad0e634e9fb1276703e41438e8aa50cca}{insert\+Column}} (int column, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}())
+\begin{DoxyCompactList}\small\item\em Inserts one column. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af4a389e8544fc887a24099c506c8bd7b}{insert\+Row}} (int row, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}())
+\begin{DoxyCompactList}\small\item\em Inserts one row. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a7b46c63a32eb9ca9838a1a7cd5853552}{remove\+Column}} (int column, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}())
+\begin{DoxyCompactList}\small\item\em Removes one column. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada64c5f4d4eba6cecab2c1e443372cb3}{remove\+Row}} (int row, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}())
+\begin{DoxyCompactList}\small\item\em Removes one row. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aae463d7040f364ffcc008997f8e387a2}{set\+Data}} (int row, int column, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}())
+\begin{DoxyCompactList}\small\item\em Sets data at the given row and column. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a750a7bcd42edf3475de6dc5bf7f1ef03}{columns\+About\+To\+Be\+Inserted}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted before a number of columns will be inserted. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab7c59263c680974b9b226cacb612b107}{columns\+About\+To\+Be\+Removed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted before a number of columns will be removed. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ac56221d07f5ef246f10dccc93756cb3c}{columns\+Inserted}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted after a number of columns were inserted. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a2aecbfc4363903aed6d3ce4d176c82d0}{columns\+Removed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted after a number of columns were removed. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a8c0a94560a23519cac3e7cfb983af525}{rows\+About\+To\+Be\+Inserted}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted before a number of rows will be inserted. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a530ab7bb31240fafe0a3c88c9f4efc4f}{rows\+About\+To\+Be\+Removed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted before a number of rows will be removed. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a54c971088bb9b424f97fe31c17f8f12f}{rows\+Inserted}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted after a number of rows were inserted. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a0f73bbfb08f2739ac12881f62a61bc7f}{rows\+Removed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted after a number of rows were removed. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aa074e5bc55394252a609ef17d071b563}{data\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when some data was changed. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}, int, int $>$ \& \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ade8f3edbd36f170c6e1199222802de0d}{header\+Data\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when some header data was changed. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}} \& \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab377ac2fcb9de9d191bd1353665d1389}{layout\+About\+To\+Be\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the layout is about to be changed. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}} \& \mbox{\hyperlink{classWt_1_1WAbstractItemModel_afe7cb1d5186881f83aa8f0e452aaef66}{layout\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the layout is changed. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}} \& \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ae28a4ba2ce1dd93e7479dfa152a65efc}{model\+Reset}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the model was reset. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ae5ef6b96132d87e8310dcb22deedcd48}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Resets the model and invalidate any data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af9b04fdec198dfbc1c9297ead93c8930}{create\+Index}} (int row, int column, void $\ast$ptr) const
+\begin{DoxyCompactList}\small\item\em Creates a model index for the given row and column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ac0a27f162222b0230af0be0c7098882b}{create\+Index}} (int row, int column, \+::uint64\+\_\+t \mbox{\hyperlink{classWt_1_1WObject_a9f34b0c9ec343cf467f8b237d3256792}{id}}) const
+\begin{DoxyCompactList}\small\item\em Creates a model index for the given row and column. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a1b0c2b404763032e48637a2a3615b2b6}{begin\+Insert\+Columns}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}, int first, int last)
+\begin{DoxyCompactList}\small\item\em Method to be called before inserting columns. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a91e52898a805996aee496877cd090eb4}{begin\+Insert\+Rows}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}, int first, int last)
+\begin{DoxyCompactList}\small\item\em Method to be called before inserting rows. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a8dbef6f3633812d2df7289cb7cfb192b}{begin\+Remove\+Columns}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}, int first, int last)
+\begin{DoxyCompactList}\small\item\em Method to be called before removing columns. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a5286cc70219c8d8d720abc255b0183f5}{begin\+Remove\+Rows}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}, int first, int last)
+\begin{DoxyCompactList}\small\item\em Method to be called before removing rows. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a2422779ff8af9d19c6bfd3e169c84422}{end\+Insert\+Columns}} ()
+\begin{DoxyCompactList}\small\item\em Method to be called after inserting columns. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ace03c0bc5b0b57b6add882aaf444b62f}{end\+Insert\+Rows}} ()
+\begin{DoxyCompactList}\small\item\em Method to be called after inserting rows. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a840b32221ade669cb4e987f86203d1d3}{end\+Remove\+Columns}} ()
+\begin{DoxyCompactList}\small\item\em Method to be called after removing columns. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WAbstractItemModel_afceaf639f2a5088f45c00f03d550f262}{end\+Remove\+Rows}} ()
+\begin{DoxyCompactList}\small\item\em Method to be called after removing rows. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af05f40b64de575104da940d497d900c6}{copy\+Data}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&s\+Index, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&d\+Index)
+\begin{DoxyCompactList}\small\item\em Copy data to an index in this model. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a46474d91a3dd0ab1fad9ec6dbf73044a}\label{classWt_1_1WAbstractItemModel_a46474d91a3dd0ab1fad9ec6dbf73044a}} 
+int {\bfseries first\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ac4003fa823130b98c88b9eebb4925b6b}\label{classWt_1_1WAbstractItemModel_ac4003fa823130b98c88b9eebb4925b6b}} 
+int {\bfseries last\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a13fba6432b4499d7ac301113b50df151}\label{classWt_1_1WAbstractItemModel_a13fba6432b4499d7ac301113b50df151}} 
+\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} {\bfseries parent\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a6cbe854b380008715dee1ad9239d960c}\label{classWt_1_1WAbstractItemModel_a6cbe854b380008715dee1ad9239d960c}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int $>$ {\bfseries columns\+About\+To\+Be\+Inserted\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ab31cae52b532089f4559aaed1e43ccc4}\label{classWt_1_1WAbstractItemModel_ab31cae52b532089f4559aaed1e43ccc4}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int $>$ {\bfseries columns\+About\+To\+Be\+Removed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a82957a521a62bb698b520ee1a87590df}\label{classWt_1_1WAbstractItemModel_a82957a521a62bb698b520ee1a87590df}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int $>$ {\bfseries columns\+Inserted\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ab1bd836ad62374784c294209869b8954}\label{classWt_1_1WAbstractItemModel_ab1bd836ad62374784c294209869b8954}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int $>$ {\bfseries columns\+Removed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ae287cb924a9215342be825ecfba9a6f6}\label{classWt_1_1WAbstractItemModel_ae287cb924a9215342be825ecfba9a6f6}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int $>$ {\bfseries rows\+About\+To\+Be\+Inserted\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a7a1ff3c5ff07fee8bfaac669717c33a8}\label{classWt_1_1WAbstractItemModel_a7a1ff3c5ff07fee8bfaac669717c33a8}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int $>$ {\bfseries rows\+About\+To\+Be\+Removed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a4bb8f08ba4a72fc97f99d6dcf3308436}\label{classWt_1_1WAbstractItemModel_a4bb8f08ba4a72fc97f99d6dcf3308436}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int $>$ {\bfseries rows\+Inserted\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a62a29bae355906f0647b423ad8ba39c9}\label{classWt_1_1WAbstractItemModel_a62a29bae355906f0647b423ad8ba39c9}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int $>$ {\bfseries rows\+Removed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ad7a8d0a20476c6201d6ab28a49824bb2}\label{classWt_1_1WAbstractItemModel_ad7a8d0a20476c6201d6ab28a49824bb2}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} $>$ {\bfseries data\+Changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a954e31172d104ca85fd9fcdc4b082fc3}\label{classWt_1_1WAbstractItemModel_a954e31172d104ca85fd9fcdc4b082fc3}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}, int, int $>$ {\bfseries header\+Data\+Changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_aa09c582110998bd99f27f616fa20554f}\label{classWt_1_1WAbstractItemModel_aa09c582110998bd99f27f616fa20554f}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} {\bfseries layout\+About\+To\+Be\+Changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_aa76a50a02148388ec484abc90902a087}\label{classWt_1_1WAbstractItemModel_aa76a50a02148388ec484abc90902a087}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} {\bfseries layout\+Changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a1e16f69961c3f8603845f49a92f0c6fd}\label{classWt_1_1WAbstractItemModel_a1e16f69961c3f8603845f49a92f0c6fd}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} {\bfseries model\+Reset\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_aecb4f5bb07b0f37321bde0870cdf95c2}\label{classWt_1_1WAbstractItemModel_aecb4f5bb07b0f37321bde0870cdf95c2}} 
+class {\bfseries W\+Abstract\+Proxy\+Model}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An abstract model for use with Wt\textquotesingle{}s view classes. 
+
+This abstract model is used by several Wt view widgets as data models.
+
+It may model data for both tree-\/like and table-\/like view widgets. \mbox{\hyperlink{classData}{Data}} is therefore organized in a hierarchical structure of tables, where every item stores data and items in column 0 can be the parent of a nested table of data. Every data item is uniquely identified by their row, column and parent index, and items may be referenced using the helper class \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}.
+
+Each item may provide data for one or more \mbox{\hyperlink{classWt_1_1ItemDataRole}{roles}}, and indicate options using \mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{flags}}. The different roles can be used to model different aspects of an item (its text value, an icon, style class), or to hold auxiliary custom information. The flags provide information to the View on possible interactivity.
+
+To implement a custom model, you need to reimplement the following methods\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{index()}} and \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent()}} methods that allow one to navigate the model
+\item \mbox{\hyperlink{classWt_1_1WAbstractItemModel_abcf7912a95a0a60f8e9b1c37d30b8383}{column\+Count()}} and \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab0709a8f71fd5df882f29bb29fd055f0}{row\+Count()}} to specify the top level geometry and the nested geometry at every item
+\item \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af77f707dd2340652717e7122cd7f4ffd}{data()}} to return the data for an item
+\item optionally, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a37fa8987a50f8a10b5ffb123a84e3f3c}{header\+Data()}} to return row and column header data
+\item optionally, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ad65561084d42facbde3e075801ed2e4d}{flags()}} to indicate data options
+\end{DoxyItemize}
+
+If you want to support editing of the model, then you need to indicate this support using a Wt\+::\+Item\+Flag\+::\+Editable flag, and reimplement \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab72f9eac35b1852e3b86273016a7f27e}{set\+Data()}}. View classes will use the \mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}} to read and update the data for the editor.
+
+When the model\textquotesingle{}s data has been changed, the model must emit the \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aa074e5bc55394252a609ef17d071b563}{data\+Changed()}} signal.
+
+Finally, there is a generic interface for insertion of new data or removal of data (changing the geometry), although this interface is not yet used by any View class\+:
+
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a59b5169e158b4cbfb1ec98df67c87200}{insert\+Rows()}}
+\item \mbox{\hyperlink{classWt_1_1WAbstractItemModel_acbad59b06e90753f5e5e83de82ccd166}{insert\+Columns()}}
+\item \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ad1788e38e96df5795fc453f63d557ba2}{remove\+Rows()}}
+\item \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a18d68ce5450fb7e55f4f47d99c9e7414}{remove\+Columns()}}
+\end{DoxyItemize}
+
+Alternatively, you can provide your own A\+PI for changing the model. In either case it is important that you call the corresponding protected member functions which will emit the relevant signals so that views can adapt themselves to the new geometry. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a1f5858f68611d651fc15e35f64171911}\label{classWt_1_1WAbstractItemModel_a1f5858f68611d651fc15e35f64171911}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!DataMap@{DataMap}}
+\index{DataMap@{DataMap}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{DataMap}{DataMap}}
+{\footnotesize\ttfamily typedef std\+::map$<$\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}, \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}}$>$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a1f5858f68611d651fc15e35f64171911}{Wt\+::\+W\+Abstract\+Item\+Model\+::\+Data\+Map}}}
+
+
+
+\mbox{\hyperlink{classData}{Data}} map. 
+
+A map of data, indexed by a role. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_aba657722e361087a00cbe8b961bbe624}\label{classWt_1_1WAbstractItemModel_aba657722e361087a00cbe8b961bbe624}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!acceptDropMimeTypes@{acceptDropMimeTypes}}
+\index{acceptDropMimeTypes@{acceptDropMimeTypes}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{acceptDropMimeTypes()}{acceptDropMimeTypes()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ Wt\+::\+W\+Abstract\+Item\+Model\+::accept\+Drop\+Mime\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a list of mime-\/types that could be accepted for a drop event. 
+
+The default implementation only accepts drag\&drop support between abstract item models.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a22a6c0dc9f4c9a6259a2daac07b78f61}{mime\+Type()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_ab868d9804e158e61fd07dce52bdb7c67}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a1b0c2b404763032e48637a2a3615b2b6}\label{classWt_1_1WAbstractItemModel_a1b0c2b404763032e48637a2a3615b2b6}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!beginInsertColumns@{beginInsertColumns}}
+\index{beginInsertColumns@{beginInsertColumns}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{beginInsertColumns()}{beginInsertColumns()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+Model\+::begin\+Insert\+Columns (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent,  }\item[{int}]{first,  }\item[{int}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method to be called before inserting columns. 
+
+If your model supports insertion of columns, then you should call this method before inserting one or more columns, and \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a2422779ff8af9d19c6bfd3e169c84422}{end\+Insert\+Columns()}} afterwards. These methods emit the necessary signals to allow view classes to update themselves.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a2422779ff8af9d19c6bfd3e169c84422}{end\+Insert\+Columns()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_acbad59b06e90753f5e5e83de82ccd166}{insert\+Columns()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a750a7bcd42edf3475de6dc5bf7f1ef03}{columns\+About\+To\+Be\+Inserted}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a91e52898a805996aee496877cd090eb4}\label{classWt_1_1WAbstractItemModel_a91e52898a805996aee496877cd090eb4}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!beginInsertRows@{beginInsertRows}}
+\index{beginInsertRows@{beginInsertRows}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{beginInsertRows()}{beginInsertRows()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+Model\+::begin\+Insert\+Rows (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent,  }\item[{int}]{first,  }\item[{int}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method to be called before inserting rows. 
+
+If your model supports insertion of rows, then you should call this method before inserting one or more rows, and \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ace03c0bc5b0b57b6add882aaf444b62f}{end\+Insert\+Rows()}} afterwards. These methods emit the necessary signals to allow view classes to update themselves.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ace03c0bc5b0b57b6add882aaf444b62f}{end\+Insert\+Rows()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a59b5169e158b4cbfb1ec98df67c87200}{insert\+Rows()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a8c0a94560a23519cac3e7cfb983af525}{rows\+About\+To\+Be\+Inserted}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a8dbef6f3633812d2df7289cb7cfb192b}\label{classWt_1_1WAbstractItemModel_a8dbef6f3633812d2df7289cb7cfb192b}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!beginRemoveColumns@{beginRemoveColumns}}
+\index{beginRemoveColumns@{beginRemoveColumns}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{beginRemoveColumns()}{beginRemoveColumns()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+Model\+::begin\+Remove\+Columns (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent,  }\item[{int}]{first,  }\item[{int}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method to be called before removing columns. 
+
+If your model supports removal of columns, then you should call this method before removing one or more columns, and \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a840b32221ade669cb4e987f86203d1d3}{end\+Remove\+Columns()}} afterwards. These methods emit the necessary signals to allow view classes to update themselves.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a840b32221ade669cb4e987f86203d1d3}{end\+Remove\+Columns()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a18d68ce5450fb7e55f4f47d99c9e7414}{remove\+Columns()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab7c59263c680974b9b226cacb612b107}{columns\+About\+To\+Be\+Removed}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a5286cc70219c8d8d720abc255b0183f5}\label{classWt_1_1WAbstractItemModel_a5286cc70219c8d8d720abc255b0183f5}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!beginRemoveRows@{beginRemoveRows}}
+\index{beginRemoveRows@{beginRemoveRows}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{beginRemoveRows()}{beginRemoveRows()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+Model\+::begin\+Remove\+Rows (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent,  }\item[{int}]{first,  }\item[{int}]{last }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method to be called before removing rows. 
+
+If your model supports removal of rows, then you should call this method before removing one or more rows, and \mbox{\hyperlink{classWt_1_1WAbstractItemModel_afceaf639f2a5088f45c00f03d550f262}{end\+Remove\+Rows()}} afterwards. These methods emit the necessary signals to allow view classes to update themselves.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_afceaf639f2a5088f45c00f03d550f262}{end\+Remove\+Rows()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ad1788e38e96df5795fc453f63d557ba2}{remove\+Rows()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a530ab7bb31240fafe0a3c88c9f4efc4f}{rows\+About\+To\+Be\+Removed}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_aa20428eef993a233aff90ff953a3fe0b}\label{classWt_1_1WAbstractItemModel_aa20428eef993a233aff90ff953a3fe0b}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!collapseColumn@{collapseColumn}}
+\index{collapseColumn@{collapseColumn}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{collapseColumn()}{collapseColumn()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+Model\+::collapse\+Column (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Collapses a column. 
+
+Collapses a column. This may only be called by a view when the Wt\+::\+Header\+Flag\+::\+Column\+Is\+Expanded\+Left or Wt\+::\+Header\+Flag\+::\+Column\+Is\+Expanded\+Right flag is set.
+
+The default implementation does nothing.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAggregateProxyModel}{W\+Aggregate\+Proxy\+Model}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a5999b2e18c05eceb6062c821a6643948}{Wt\+::\+W\+Aggregate\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_abcf7912a95a0a60f8e9b1c37d30b8383}\label{classWt_1_1WAbstractItemModel_abcf7912a95a0a60f8e9b1c37d30b8383}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!columnCount@{columnCount}}
+\index{columnCount@{columnCount}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{columnCount()}{columnCount()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Abstract\+Item\+Model\+::column\+Count (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the number of columns. 
+
+This returns the number of columns at index {\ttfamily parent}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab0709a8f71fd5df882f29bb29fd055f0}{row\+Count()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classParabola_a231c00cd60ebcda455fc39ee86278e0a}{Parabola}}, \mbox{\hyperlink{classPointsData_ab26610c2c94c23138f566ad62a127320}{Points\+Data}}, \mbox{\hyperlink{classPlaneData_ac5000cbaf516a965650e386122523709}{Plane\+Data}}, \mbox{\hyperlink{classSombreroData_aadccf93dfa5b93739a14aff283ed8d71}{Sombrero\+Data}}, \mbox{\hyperlink{classGitModel_a4fed87a983c6d21d3667bd9030361398}{Git\+Model}}, \mbox{\hyperlink{classVirtualModel_a82379da0f296d2cf91ae1f39bc4d527b}{Virtual\+Model}}, \mbox{\hyperlink{classWt_1_1WStandardItemModel_afa104893ffdc100f0ef4c965ff18f0ed}{Wt\+::\+W\+Standard\+Item\+Model}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a29437ef2d5883e0f8a3e492b86c38456}{Wt\+::\+Dbo\+::\+Query\+Model$<$ Result $>$}}, \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a8537cff99904d1f1ddfd6ca68a6ef0f1}{Wt\+::\+W\+Sort\+Filter\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a83477a6dc7bd2428a736e378a5269034}{Wt\+::\+W\+Aggregate\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a0f9e3da833c5b369e0a7b26e86cc43a1}{Wt\+::\+W\+Batch\+Edit\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_aa424914d848a9824d3911df1facf00fa}{Wt\+::\+W\+Read\+Only\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WAbstractListModel_a4f90e4a2a6d5d7cc0454591bb04662af}{Wt\+::\+W\+Abstract\+List\+Model}}, \mbox{\hyperlink{classWt_1_1WIdentityProxyModel_a2fe917431ec020507bb56b6dd370856f}{Wt\+::\+W\+Identity\+Proxy\+Model}}, and \mbox{\hyperlink{classGitModel_ad022d1baeb5c4550676aa3a5ef226bf0}{Git\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a750a7bcd42edf3475de6dc5bf7f1ef03}\label{classWt_1_1WAbstractItemModel_a750a7bcd42edf3475de6dc5bf7f1ef03}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!columnsAboutToBeInserted@{columnsAboutToBeInserted}}
+\index{columnsAboutToBeInserted@{columnsAboutToBeInserted}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{columnsAboutToBeInserted()}{columnsAboutToBeInserted()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int$>$\& Wt\+::\+W\+Abstract\+Item\+Model\+::columns\+About\+To\+Be\+Inserted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Signal emitted before a number of columns will be inserted. 
+
+The first argument is the parent index. The two integer arguments are the column numbers that the first and last column will have when inserted.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ac56221d07f5ef246f10dccc93756cb3c}{columns\+Inserted()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a1b0c2b404763032e48637a2a3615b2b6}{begin\+Insert\+Columns()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ab7c59263c680974b9b226cacb612b107}\label{classWt_1_1WAbstractItemModel_ab7c59263c680974b9b226cacb612b107}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!columnsAboutToBeRemoved@{columnsAboutToBeRemoved}}
+\index{columnsAboutToBeRemoved@{columnsAboutToBeRemoved}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{columnsAboutToBeRemoved()}{columnsAboutToBeRemoved()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int$>$\& Wt\+::\+W\+Abstract\+Item\+Model\+::columns\+About\+To\+Be\+Removed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Signal emitted before a number of columns will be removed. 
+
+The first argument is the parent index. The two integer arguments are the column numbers of the first and last column that will be removed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a2aecbfc4363903aed6d3ce4d176c82d0}{columns\+Removed()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a8dbef6f3633812d2df7289cb7cfb192b}{begin\+Remove\+Columns()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ac56221d07f5ef246f10dccc93756cb3c}\label{classWt_1_1WAbstractItemModel_ac56221d07f5ef246f10dccc93756cb3c}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!columnsInserted@{columnsInserted}}
+\index{columnsInserted@{columnsInserted}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{columnsInserted()}{columnsInserted()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int$>$\& Wt\+::\+W\+Abstract\+Item\+Model\+::columns\+Inserted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Signal emitted after a number of columns were inserted. 
+
+The first argument is the parent index. The two integer arguments are the column numbers of the first and last column that were inserted.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a750a7bcd42edf3475de6dc5bf7f1ef03}{columns\+About\+To\+Be\+Inserted()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a2422779ff8af9d19c6bfd3e169c84422}{end\+Insert\+Columns()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a2aecbfc4363903aed6d3ce4d176c82d0}\label{classWt_1_1WAbstractItemModel_a2aecbfc4363903aed6d3ce4d176c82d0}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!columnsRemoved@{columnsRemoved}}
+\index{columnsRemoved@{columnsRemoved}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{columnsRemoved()}{columnsRemoved()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int$>$\& Wt\+::\+W\+Abstract\+Item\+Model\+::columns\+Removed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Signal emitted after a number of columns were removed. 
+
+The first argument is the parent index. The two integer arguments are the column numbers of the first and last column that were removed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab7c59263c680974b9b226cacb612b107}{columns\+About\+To\+Be\+Removed()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a840b32221ade669cb4e987f86203d1d3}{end\+Remove\+Columns()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_af05f40b64de575104da940d497d900c6}\label{classWt_1_1WAbstractItemModel_af05f40b64de575104da940d497d900c6}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!copyData@{copyData}}
+\index{copyData@{copyData}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{copyData()}{copyData()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+Model\+::copy\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{s\+Index,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{d\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Copy data to an index in this model. 
+
+The source index can be any valid index. The destination index must be part of this model. 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WStandardItemModel_ad0e8e570ff23ea29bdcaad897c51f010}{Wt\+::\+W\+Standard\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ac0a27f162222b0230af0be0c7098882b}\label{classWt_1_1WAbstractItemModel_ac0a27f162222b0230af0be0c7098882b}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!createIndex@{createIndex}}
+\index{createIndex@{createIndex}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{createIndex()}{createIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Abstract\+Item\+Model\+::create\+Index (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column,  }\item[{\+::uint64\+\_\+t}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Creates a model index for the given row and column. 
+
+Use this method to create a model index. {\ttfamily id} is an internal id that may be used to identify the {\bfseries{parent}} of the corresponding item. For a flat table model, {\ttfamily ptr} can thus always be 0.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WModelIndex_aa1373ac26110e15238bd8379fdb04c3b}{W\+Model\+Index\+::internal\+Id()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_af9b04fdec198dfbc1c9297ead93c8930}\label{classWt_1_1WAbstractItemModel_af9b04fdec198dfbc1c9297ead93c8930}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!createIndex@{createIndex}}
+\index{createIndex@{createIndex}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{createIndex()}{createIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Abstract\+Item\+Model\+::create\+Index (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column,  }\item[{void $\ast$}]{ptr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Creates a model index for the given row and column. 
+
+Use this method to create a model index. {\ttfamily ptr} is an internal pointer that may be used to identify the {\bfseries{parent}} of the corresponding item. For a flat table model, {\ttfamily ptr} can thus always be 0.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WModelIndex_a870e6637b7beebef4f4dfaec9f08e0a2}{W\+Model\+Index\+::internal\+Pointer()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_af77f707dd2340652717e7122cd7f4ffd}\label{classWt_1_1WAbstractItemModel_af77f707dd2340652717e7122cd7f4ffd}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!data@{data}}
+\index{data@{data}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} Wt\+::\+W\+Abstract\+Item\+Model\+::data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns data at a specified model index for the given role. 
+
+You should check the {\ttfamily role} to decide what data to return. Usually a View class will ask for data for several roles which affect not only the contents (\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Wt\+::\+Item\+Data\+Role\+::\+Display}}) but also icons (\mbox{\hyperlink{classWt_1_1ItemDataRole_a9db6daf35b3c68db6df624411420d4b7}{Wt\+::\+Item\+Data\+Role\+::\+Decoration}}), U\+R\+Ls (\mbox{\hyperlink{classWt_1_1ItemDataRole_ae478217452f058add8fd204ddacde8ae}{Wt\+::\+Item\+Data\+Role\+::\+Link}}), and other visual aspects. If your item does not specify data for a particular role, it should simply return a Wt\+::cpp17\+::any().
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ad65561084d42facbde3e075801ed2e4d}{flags()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a37fa8987a50f8a10b5ffb123a84e3f3c}{header\+Data()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab72f9eac35b1852e3b86273016a7f27e}{set\+Data()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classParabola_a43b4d56c1ea48c59cfdee33bf3f2e544}{Parabola}}, \mbox{\hyperlink{classPointsData_af84cf0fd8f259b9eab1369742325c7b1}{Points\+Data}}, \mbox{\hyperlink{classPlaneData_a74a647c9d55609545830a4e105a4f91a}{Plane\+Data}}, \mbox{\hyperlink{classSpiralData_a2eb5d9d910749bde9312f64231f3bac2}{Spiral\+Data}}, \mbox{\hyperlink{classHorizontalPlaneData_a287b108a4faafc0d55cfbd6910dc4db5}{Horizontal\+Plane\+Data}}, \mbox{\hyperlink{classPlaneData_a74a647c9d55609545830a4e105a4f91a}{Plane\+Data}}, \mbox{\hyperlink{classSombreroData_a202ae99d9ab5f1f066dcbab5f3292285}{Sombrero\+Data}}, \mbox{\hyperlink{classSombreroData_a202ae99d9ab5f1f066dcbab5f3292285}{Sombrero\+Data}}, \mbox{\hyperlink{classGitModel_a9bb0a0fe25931df447c508d8b1ad9673}{Git\+Model}}, \mbox{\hyperlink{classVirtualModel_a264e29772a11d143f5e755d8d97b38a1}{Virtual\+Model}}, \mbox{\hyperlink{classWt_1_1WStandardItemModel_adaef355b579045cd4158f09bd283e2b5}{Wt\+::\+W\+Standard\+Item\+Model}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ab51eb60e26b58aa538964bf1a5a4bcd8}{Wt\+::\+Dbo\+::\+Query\+Model$<$ Result $>$}}, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a92af6a61b59f27abe3c88f0bfa71443c}{Wt\+::\+W\+Batch\+Edit\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WStringListModel_afc0d4b27b43b3e945190cfd8faaaf8c4}{Wt\+::\+W\+String\+List\+Model}}, \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a8e938b2a268c99bf17f0529cfffc322e}{Wt\+::\+W\+Abstract\+Proxy\+Model}}, and \mbox{\hyperlink{classGitModel_a76bda9f3fd7f0427a1d674ac85e13c1c}{Git\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a5fc67e5fbb584cd1c6e6108ad07ff484}\label{classWt_1_1WAbstractItemModel_a5fc67e5fbb584cd1c6e6108ad07ff484}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!data@{data}}
+\index{data@{data}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} Wt\+::\+W\+Abstract\+Item\+Model\+::data (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}},  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const}
+
+
+
+Returns the data item at the given column and row. 
+
+This is a convenience method, and is equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{index}}(row, column, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}).\mbox{\hyperlink{classWt_1_1WModelIndex_ada1e81484925d24df6081bf4fa6b7dc4}{data}}(role)}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{index()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af77f707dd2340652717e7122cd7f4ffd}{data()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_aa074e5bc55394252a609ef17d071b563}\label{classWt_1_1WAbstractItemModel_aa074e5bc55394252a609ef17d071b563}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!dataChanged@{dataChanged}}
+\index{dataChanged@{dataChanged}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{dataChanged()}{dataChanged()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}$>$\& Wt\+::\+W\+Abstract\+Item\+Model\+::data\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Signal emitted when some data was changed. 
+
+The two arguments are the model indexes of the top-\/left and bottom-\/right data items that span the rectangle of changed data items.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab72f9eac35b1852e3b86273016a7f27e}{set\+Data()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a882b8b42754036492f47f8bd05510cdd}\label{classWt_1_1WAbstractItemModel_a882b8b42754036492f47f8bd05510cdd}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!dropEvent@{dropEvent}}
+\index{dropEvent@{dropEvent}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{dropEvent()}{dropEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+Model\+::drop\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WDropEvent}{W\+Drop\+Event}} \&}]{e,  }\item[{\mbox{\hyperlink{group__modelview_gaca801bdfb957c360c5f8709cc46949aa}{Drop\+Action}}}]{action,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{\mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Wt\+::\+Side}}}]{side }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles a drop event. 
+
+The default implementation only handles generic drag\&drop between abstract item models. Source item data is copied (but not the source item\textquotesingle{}s flags).
+
+This method is overloaded for handling drop events on top of items or drop events between items. This overload handles drops between items. The drop was received relative to the {\ttfamily index} item and the {\ttfamily side} parameter will only be Wt\+::\+Top or Wt\+::\+Bottom.
+
+You may want to reimplement this method if you want to handle other mime-\/type data, or if you want to refine how the drop event of an item selection must be interpreted.
+
+\begin{DoxyNote}{Note}
+Currently, only row selections are handled by the default implementation.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a22a6c0dc9f4c9a6259a2daac07b78f61}{mime\+Type()}}, \mbox{\hyperlink{classWt_1_1WItemSelectionModel}{W\+Item\+Selection\+Model}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a7478161267bcd2d4c7fccd83363074f8}\label{classWt_1_1WAbstractItemModel_a7478161267bcd2d4c7fccd83363074f8}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!dropEvent@{dropEvent}}
+\index{dropEvent@{dropEvent}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{dropEvent()}{dropEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+Model\+::drop\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WDropEvent}{W\+Drop\+Event}} \&}]{e,  }\item[{\mbox{\hyperlink{group__modelview_gaca801bdfb957c360c5f8709cc46949aa}{Drop\+Action}}}]{action,  }\item[{int}]{row,  }\item[{int}]{column,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles a drop event. 
+
+The default implementation only handles generic drag\&drop between abstract item models. Source item data is copied (but not the source item\textquotesingle{}s flags).
+
+This method is overloaded for handling drop events on top of items or drop events between items (see \mbox{\hyperlink{classWt_a46e584f830f2d8c9f5b16fcee7affc9b}{Wt\+::\+Drop\+Location}}). This overload handles drops on top of items, but note that due to historical reasons it will also insert the items in between when called with Drop\+Action\+::\+Move.
+
+The location in the model is indicated by the {\ttfamily row} and {\ttfamily column} within the {\ttfamily parent} index. If {\ttfamily row} is -\/1, then the item is appended to the {\ttfamily parent}. Otherwise, the item is inserted at or copied over the indicated item (and subsequent rows). When {\ttfamily action} is a \mbox{\hyperlink{}{Drop\+Action\+::\+Move}}, the original items are deleted from the source model.
+
+You may want to reimplement this method if you want to handle other mime-\/type data, or if you want to refine how the drop event of an item selection must be interpreted.
+
+\begin{DoxyNote}{Note}
+Currently, only row selections are handled by the default implementation.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a22a6c0dc9f4c9a6259a2daac07b78f61}{mime\+Type()}}, \mbox{\hyperlink{classWt_1_1WItemSelectionModel}{W\+Item\+Selection\+Model}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WStandardItemModel_a592868c6609de91c220de6cae3e7daa7}{Wt\+::\+W\+Standard\+Item\+Model}}, \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a9305c3624e67fa2485c6809b1c0cd791}{Wt\+::\+W\+Abstract\+Proxy\+Model}}, and \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a561591c79e9a94aa0e84ffa56238db5b}{Wt\+::\+W\+Read\+Only\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a2422779ff8af9d19c6bfd3e169c84422}\label{classWt_1_1WAbstractItemModel_a2422779ff8af9d19c6bfd3e169c84422}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!endInsertColumns@{endInsertColumns}}
+\index{endInsertColumns@{endInsertColumns}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{endInsertColumns()}{endInsertColumns()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+Model\+::end\+Insert\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method to be called after inserting columns. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a1b0c2b404763032e48637a2a3615b2b6}{begin\+Insert\+Columns()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ace03c0bc5b0b57b6add882aaf444b62f}\label{classWt_1_1WAbstractItemModel_ace03c0bc5b0b57b6add882aaf444b62f}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!endInsertRows@{endInsertRows}}
+\index{endInsertRows@{endInsertRows}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{endInsertRows()}{endInsertRows()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+Model\+::end\+Insert\+Rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method to be called after inserting rows. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a91e52898a805996aee496877cd090eb4}{begin\+Insert\+Rows()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a840b32221ade669cb4e987f86203d1d3}\label{classWt_1_1WAbstractItemModel_a840b32221ade669cb4e987f86203d1d3}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!endRemoveColumns@{endRemoveColumns}}
+\index{endRemoveColumns@{endRemoveColumns}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{endRemoveColumns()}{endRemoveColumns()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+Model\+::end\+Remove\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method to be called after removing columns. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a8dbef6f3633812d2df7289cb7cfb192b}{begin\+Remove\+Columns()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_afceaf639f2a5088f45c00f03d550f262}\label{classWt_1_1WAbstractItemModel_afceaf639f2a5088f45c00f03d550f262}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!endRemoveRows@{endRemoveRows}}
+\index{endRemoveRows@{endRemoveRows}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{endRemoveRows()}{endRemoveRows()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+Model\+::end\+Remove\+Rows (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Method to be called after removing rows. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a5286cc70219c8d8d720abc255b0183f5}{begin\+Remove\+Rows()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ae420dad3a27a35014570daa27377be1d}\label{classWt_1_1WAbstractItemModel_ae420dad3a27a35014570daa27377be1d}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!expandColumn@{expandColumn}}
+\index{expandColumn@{expandColumn}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{expandColumn()}{expandColumn()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+Model\+::expand\+Column (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Expands a column. 
+
+Expands a column. This may only be called by a view when the Wt\+::\+Header\+Flag\+::\+Column\+Is\+Collapsed flag is set.
+
+The default implementation does nothing.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAggregateProxyModel}{W\+Aggregate\+Proxy\+Model}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a9f9f0b69ac4c68f736ca0c1627d26be8}{Wt\+::\+W\+Aggregate\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ad65561084d42facbde3e075801ed2e4d}\label{classWt_1_1WAbstractItemModel_ad65561084d42facbde3e075801ed2e4d}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!flags@{flags}}
+\index{flags@{flags}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{flags()}{flags()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$\mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}}$>$ Wt\+::\+W\+Abstract\+Item\+Model\+::flags (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the flags for an item. 
+
+The default implementation returns \mbox{\hyperlink{}{Item\+Flag\+::\+Selectable}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Wt\+::\+Item\+Flag}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WStandardItemModel_a8343269ea4747dff927d6f397bc80407}{Wt\+::\+W\+Standard\+Item\+Model}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ad3d740e4e4192a1fced556f3ab1f8da7}{Wt\+::\+Dbo\+::\+Query\+Model$<$ Result $>$}}, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ab1c93e0bc8166574389411a235d071aa}{Wt\+::\+W\+Batch\+Edit\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a49f6f19f4e31826df9b528e1fbece53b}{Wt\+::\+W\+Abstract\+Proxy\+Model}}, and \mbox{\hyperlink{classWt_1_1WStringListModel_a2fc8d14ffb14f811323a74b317ef7b86}{Wt\+::\+W\+String\+List\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a56f6aa462a2707cfb8697b8b31a8ca1f}\label{classWt_1_1WAbstractItemModel_a56f6aa462a2707cfb8697b8b31a8ca1f}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!fromRawIndex@{fromRawIndex}}
+\index{fromRawIndex@{fromRawIndex}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{fromRawIndex()}{fromRawIndex()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Abstract\+Item\+Model\+::from\+Raw\+Index (\begin{DoxyParamCaption}\item[{void $\ast$}]{raw\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Converts a raw pointer to a model index. 
+
+Use this method to create model index from temporary raw pointers. It is the reciproce method of \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aa5b86f5b8e68bd5149d50b5c101855d9}{to\+Raw\+Index()}}.
+
+You can return an invalid modelindex if the raw\+Index no longer points to a valid item because of the layout change.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_aa5b86f5b8e68bd5149d50b5c101855d9}{to\+Raw\+Index()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WStandardItemModel_a6dc190b870ea9d389e565fe5158e9754}{Wt\+::\+W\+Standard\+Item\+Model}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ab37663d60be859adf5d8aceaffc0b430}{Wt\+::\+Dbo\+::\+Query\+Model$<$ Result $>$}}, and \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a1e8aa750990f41ade53c55efe3f869c6}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a2cec7c8c40b26246b14c31fe6f7fc950}\label{classWt_1_1WAbstractItemModel_a2cec7c8c40b26246b14c31fe6f7fc950}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!hasChildren@{hasChildren}}
+\index{hasChildren@{hasChildren}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{hasChildren()}{hasChildren()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Abstract\+Item\+Model\+::has\+Children (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns if there are children at an index. 
+
+Returns {\ttfamily true} when row\+Count(index) $>$ 0 and column\+Count(index) $>$ 0.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab0709a8f71fd5df882f29bb29fd055f0}{row\+Count()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_abcf7912a95a0a60f8e9b1c37d30b8383}{column\+Count()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_aba45ca928d04d269be72ebd5491ecabc}\label{classWt_1_1WAbstractItemModel_aba45ca928d04d269be72ebd5491ecabc}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!hasIndex@{hasIndex}}
+\index{hasIndex@{hasIndex}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{hasIndex()}{hasIndex()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Abstract\+Item\+Model\+::has\+Index (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns if an index at the given position is valid (i.\+e. falls within the column-\/row bounds). 
+
+Equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{return} row >= 0 \&\& column >= 0}
+\DoxyCodeLine{       \&\& row < \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab0709a8f71fd5df882f29bb29fd055f0}{rowCount}}(\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}) \&\& column < \mbox{\hyperlink{classWt_1_1WAbstractItemModel_abcf7912a95a0a60f8e9b1c37d30b8383}{columnCount}}(\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}});}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab0709a8f71fd5df882f29bb29fd055f0}{row\+Count()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_abcf7912a95a0a60f8e9b1c37d30b8383}{column\+Count()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a37fa8987a50f8a10b5ffb123a84e3f3c}\label{classWt_1_1WAbstractItemModel_a37fa8987a50f8a10b5ffb123a84e3f3c}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!headerData@{headerData}}
+\index{headerData@{headerData}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{headerData()}{headerData()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} Wt\+::\+W\+Abstract\+Item\+Model\+::header\+Data (\begin{DoxyParamCaption}\item[{int}]{section,  }\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation = {\ttfamily Orientation\+:\+:Horizontal},  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the row or column header data. 
+
+When {\ttfamily orientation} is \mbox{\hyperlink{}{Orientation\+::\+Horizontal}}, {\ttfamily section} is a column number, when {\ttfamily orientation} is \mbox{\hyperlink{}{Orientation\+::\+Vertical}}, {\ttfamily section} is a row number.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_af77f707dd2340652717e7122cd7f4ffd}{data()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a3c4a0ffe050bc0d11feeac4749dde784}{set\+Header\+Data()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ab75f1e62214463001b2d15f6b428224d}{Wt\+::\+Dbo\+::\+Query\+Model$<$ Result $>$}}, \mbox{\hyperlink{classWt_1_1WStandardItemModel_af49782a34c024576f9ff336478ed9b5c}{Wt\+::\+W\+Standard\+Item\+Model}}, \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a6df6b8712ffc0c9effee44115e55f8b5}{Wt\+::\+W\+Sort\+Filter\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a61eece6fe6d0e3d43e11915e09d89cfb}{Wt\+::\+W\+Aggregate\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_af1d098537cadf57b2116ab69d64ada53}{Wt\+::\+W\+Batch\+Edit\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_aa1d16a5336bd1a75023b1b20f63708a2}{Wt\+::\+W\+Abstract\+Proxy\+Model}}, and \mbox{\hyperlink{classGitModel_a9e855b5ee02c038637496ee14a15e096}{Git\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ade8f3edbd36f170c6e1199222802de0d}\label{classWt_1_1WAbstractItemModel_ade8f3edbd36f170c6e1199222802de0d}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!headerDataChanged@{headerDataChanged}}
+\index{headerDataChanged@{headerDataChanged}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{headerDataChanged()}{headerDataChanged()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}, int, int$>$\& Wt\+::\+W\+Abstract\+Item\+Model\+::header\+Data\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Signal emitted when some header data was changed. 
+
+The first argument indicates the orientation of the header, and the two integer arguments are the row or column numbers of the first and last header item of which the value was changed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a3c4a0ffe050bc0d11feeac4749dde784}{set\+Header\+Data()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_aba71f1fcdae2ada51ad7144f9dd3c228}\label{classWt_1_1WAbstractItemModel_aba71f1fcdae2ada51ad7144f9dd3c228}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!headerFlags@{headerFlags}}
+\index{headerFlags@{headerFlags}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{headerFlags()}{headerFlags()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$\mbox{\hyperlink{group__modelview_gafb18b4339442f1327c2a65850f3d8a53}{Header\+Flag}}$>$ Wt\+::\+W\+Abstract\+Item\+Model\+::header\+Flags (\begin{DoxyParamCaption}\item[{int}]{section,  }\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation = {\ttfamily Orientation\+:\+:Horizontal} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the flags for a header. 
+
+The default implementation returns no flags set.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__modelview_gafb18b4339442f1327c2a65850f3d8a53}{Wt\+::\+Header\+Flag}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WStandardItemModel_a412edc9a08e5b92363b20b0a888bdc28}{Wt\+::\+W\+Standard\+Item\+Model}}, \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_aaccc1dbd57c47c3a2f32af5801f87c8d}{Wt\+::\+W\+Sort\+Filter\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a1bfe4369432a62832bcc6fdf1d81bac6}{Wt\+::\+W\+Aggregate\+Proxy\+Model}}, and \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a89eb0b330b49faf718f10fc8e5081ccd}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}\label{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!index@{index}}
+\index{index@{index}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Abstract\+Item\+Model\+::index (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the child index for the given row and column. 
+
+When implementing this method, you can use \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af9b04fdec198dfbc1c9297ead93c8930}{create\+Index()}} to create an index that corresponds to the item at {\ttfamily row} and {\ttfamily column} within {\ttfamily parent}.
+
+If the location is invalid (out of bounds at the parent), then an invalid index must be returned.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WAbstractListModel_a26f1b86b9075a3546dba1bd6e5e4b7b3}{Wt\+::\+W\+Abstract\+List\+Model}}, \mbox{\hyperlink{classGitModel_a058abed04e3d44424286dac82d9ca0fe}{Git\+Model}}, \mbox{\hyperlink{classWt_1_1WStandardItemModel_ac57f57986a5ff20a1f37ed2eb707cd59}{Wt\+::\+W\+Standard\+Item\+Model}}, \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a5d469babd3d0b593d0eb43c3eeee3ad2}{Wt\+::\+W\+Sort\+Filter\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_ace1e816f4cb5b8bf858d526f01bddfd4}{Wt\+::\+W\+Aggregate\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}{Wt\+::\+W\+Batch\+Edit\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_aacd2a17450cc44f5fe59fb134da95abf}{Wt\+::\+W\+Read\+Only\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WIdentityProxyModel_af530b2710306b60c7d35c6de73c7dc67}{Wt\+::\+W\+Identity\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WAbstractTableModel_a4b4e9f572cf9cf271a5459859a047a1b}{Wt\+::\+W\+Abstract\+Table\+Model}}, and \mbox{\hyperlink{classGitModel_ae0e7f28a71de090019580831ff7bda60}{Git\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ad0e634e9fb1276703e41438e8aa50cca}\label{classWt_1_1WAbstractItemModel_ad0e634e9fb1276703e41438e8aa50cca}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!insertColumn@{insertColumn}}
+\index{insertColumn@{insertColumn}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{insertColumn()}{insertColumn()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Abstract\+Item\+Model\+::insert\+Column (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption})}
+
+
+
+Inserts one column. 
+
+This is a convenience method that adds a single column, and is equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WAbstractItemModel_acbad59b06e90753f5e5e83de82ccd166}{insertColumns}}(column, 1, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}});}
+\end{DoxyCode}
+
+
+Returns {\ttfamily true} if the operation was successful.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_acbad59b06e90753f5e5e83de82ccd166}{insert\+Columns()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_acbad59b06e90753f5e5e83de82ccd166}\label{classWt_1_1WAbstractItemModel_acbad59b06e90753f5e5e83de82ccd166}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!insertColumns@{insertColumns}}
+\index{insertColumns@{insertColumns}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{insertColumns()}{insertColumns()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Abstract\+Item\+Model\+::insert\+Columns (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{int}]{count,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Inserts one or more columns. 
+
+In models that support column insertion, this inserts {\ttfamily count} columns, starting at {\ttfamily column}, and returns {\ttfamily true} if the operation was successful. The new columns are inserted under {\ttfamily parent}.
+
+The default implementation returns {\ttfamily false}.
+
+The model implementation must call \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a1b0c2b404763032e48637a2a3615b2b6}{begin\+Insert\+Columns()}} and \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a2422779ff8af9d19c6bfd3e169c84422}{end\+Insert\+Columns()}} before and after the operation whenever its geometry is changed by inserting columns. This emits signals for views to properly react to these changes.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a59b5169e158b4cbfb1ec98df67c87200}{insert\+Rows()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a18d68ce5450fb7e55f4f47d99c9e7414}{remove\+Columns()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a1b0c2b404763032e48637a2a3615b2b6}{begin\+Insert\+Columns()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a2422779ff8af9d19c6bfd3e169c84422}{end\+Insert\+Columns()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WStandardItemModel_a7fdda6af2b8b8344d44857bdb136f5b7}{Wt\+::\+W\+Standard\+Item\+Model}}, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_aec93869a809eacdd77328c5e9a6d3873}{Wt\+::\+W\+Batch\+Edit\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_aaebad5ac17bf55e04dced5b70be325c7}{Wt\+::\+W\+Abstract\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WIdentityProxyModel_af3db1123d3b462bc2c7e261db5dd25eb}{Wt\+::\+W\+Identity\+Proxy\+Model}}, and \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a00c437a8bfa364c6956b4ea310e34d8e}{Wt\+::\+W\+Read\+Only\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_af4a389e8544fc887a24099c506c8bd7b}\label{classWt_1_1WAbstractItemModel_af4a389e8544fc887a24099c506c8bd7b}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!insertRow@{insertRow}}
+\index{insertRow@{insertRow}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{insertRow()}{insertRow()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Abstract\+Item\+Model\+::insert\+Row (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption})}
+
+
+
+Inserts one row. 
+
+This is a convenience method that adds a single row, and is equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a59b5169e158b4cbfb1ec98df67c87200}{insertRows}}(row, 1, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}});}
+\end{DoxyCode}
+
+
+Returns {\ttfamily true} if the operation was successful.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a59b5169e158b4cbfb1ec98df67c87200}{insert\+Rows()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a59b5169e158b4cbfb1ec98df67c87200}\label{classWt_1_1WAbstractItemModel_a59b5169e158b4cbfb1ec98df67c87200}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!insertRows@{insertRows}}
+\index{insertRows@{insertRows}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{insertRows()}{insertRows()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Abstract\+Item\+Model\+::insert\+Rows (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{count,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Inserts one or more rows. 
+
+In models that support row insertion, this inserts {\ttfamily count} rows, starting at {\ttfamily row}, and returns {\ttfamily true} if the operation was successful. The new rows are inserted under {\ttfamily parent}.
+
+If parent had no children, then a single column is added with {\ttfamily count} rows.
+
+The default implementation returns {\ttfamily false}.
+
+The model implementation must call \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a91e52898a805996aee496877cd090eb4}{begin\+Insert\+Rows()}} and \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ace03c0bc5b0b57b6add882aaf444b62f}{end\+Insert\+Rows()}} before and after the operation whenever its geometry is changed by inserting rows. This emits signals for views to properly react to these changes.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_acbad59b06e90753f5e5e83de82ccd166}{insert\+Columns()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ad1788e38e96df5795fc453f63d557ba2}{remove\+Rows()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a91e52898a805996aee496877cd090eb4}{begin\+Insert\+Rows()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ace03c0bc5b0b57b6add882aaf444b62f}{end\+Insert\+Rows()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WStandardItemModel_ae71e512fe87f7d4b2f0460f580bc03f0}{Wt\+::\+W\+Standard\+Item\+Model}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a8a3b084964b3e20e3d83a938e3ba5024}{Wt\+::\+Dbo\+::\+Query\+Model$<$ Result $>$}}, \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a4cbaf47c168933f218ab1d4035d3974c}{Wt\+::\+W\+Sort\+Filter\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_afeb080c0fd326ef69e25978834853e0a}{Wt\+::\+W\+Batch\+Edit\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WIdentityProxyModel_ad58d2d78f835ffc7d265257bdf852a16}{Wt\+::\+W\+Identity\+Proxy\+Model}}, and \mbox{\hyperlink{classWt_1_1WStringListModel_ab89a2d42280c92629d170b86f5e26ec8}{Wt\+::\+W\+String\+List\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ab48f2d554813d916d6277dcfd9c277b8}\label{classWt_1_1WAbstractItemModel_ab48f2d554813d916d6277dcfd9c277b8}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!itemData@{itemData}}
+\index{itemData@{itemData}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{itemData()}{itemData()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a1f5858f68611d651fc15e35f64171911}{Data\+Map}} Wt\+::\+W\+Abstract\+Item\+Model\+::item\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns all data at a specific index. 
+
+This is a convenience function that returns a map with data corresponding to all standard roles.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_af77f707dd2340652717e7122cd7f4ffd}{data()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ab377ac2fcb9de9d191bd1353665d1389}\label{classWt_1_1WAbstractItemModel_ab377ac2fcb9de9d191bd1353665d1389}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!layoutAboutToBeChanged@{layoutAboutToBeChanged}}
+\index{layoutAboutToBeChanged@{layoutAboutToBeChanged}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{layoutAboutToBeChanged()}{layoutAboutToBeChanged()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}\& Wt\+::\+W\+Abstract\+Item\+Model\+::layout\+About\+To\+Be\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Signal emitted when the layout is about to be changed. 
+
+A layout change may reorder or add/remove rows in the model, but columns are preserved. Model indexes are invalidated by a layout change, but indexes may be ported across a layout change by using the \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aa5b86f5b8e68bd5149d50b5c101855d9}{to\+Raw\+Index()}} and \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a56f6aa462a2707cfb8697b8b31a8ca1f}{from\+Raw\+Index()}} methods.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_afe7cb1d5186881f83aa8f0e452aaef66}{layout\+Changed()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aa5b86f5b8e68bd5149d50b5c101855d9}{to\+Raw\+Index()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a56f6aa462a2707cfb8697b8b31a8ca1f}{from\+Raw\+Index()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_afe7cb1d5186881f83aa8f0e452aaef66}\label{classWt_1_1WAbstractItemModel_afe7cb1d5186881f83aa8f0e452aaef66}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!layoutChanged@{layoutChanged}}
+\index{layoutChanged@{layoutChanged}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{layoutChanged()}{layoutChanged()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}\& Wt\+::\+W\+Abstract\+Item\+Model\+::layout\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Signal emitted when the layout is changed. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab377ac2fcb9de9d191bd1353665d1389}{layout\+About\+To\+Be\+Changed()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ab3b3b88b9606c57d8d3e9defa3253dd3}\label{classWt_1_1WAbstractItemModel_ab3b3b88b9606c57d8d3e9defa3253dd3}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!match@{match}}
+\index{match@{match}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{match()}{match()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_aa6e2ba5849e4d179cd03bef189cb8b55}{W\+Model\+Index\+List}} Wt\+::\+W\+Abstract\+Item\+Model\+::match (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{start,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role,  }\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{value,  }\item[{int}]{hits = {\ttfamily -\/1},  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_gaad8dd5072a40c11a34ee548bfb20b2ba}{Match\+Flag}} $>$}]{flags = {\ttfamily \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$~\mbox{\hyperlink{group__modelview_gaad8dd5072a40c11a34ee548bfb20b2ba}{Match\+Flag}}~$>$(MatchFlag\+:\+:StartsWith$\vert$MatchFlag\+:\+:Wrap)} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns an index list for data items that match. 
+
+Returns an index list of data items that match, starting at start, and searching further in that column. If flags specifies \mbox{\hyperlink{}{Match\+Flag\+::\+Wrap }} then the search wraps around from the start. If hits is not -\/1, then at most that number of hits are returned. \mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a22a6c0dc9f4c9a6259a2daac07b78f61}\label{classWt_1_1WAbstractItemModel_a22a6c0dc9f4c9a6259a2daac07b78f61}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!mimeType@{mimeType}}
+\index{mimeType@{mimeType}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{mimeType()}{mimeType()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+W\+Abstract\+Item\+Model\+::mime\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a mime-\/type for dragging a set of indexes. 
+
+This method returns a mime-\/type that describes dragging of a selection of items.
+
+The drop event will indicate a \mbox{\hyperlink{classWt_1_1WItemSelectionModel}{selection model}} for this abstract item model as \mbox{\hyperlink{classWt_1_1WDropEvent_aa3979c47968c99b3bb81d0d3574acb38}{source}}.
+
+The default implementation returns a mime-\/type for generic drag\&drop support between abstract item models.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_aba657722e361087a00cbe8b961bbe624}{accept\+Drop\+Mime\+Types()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a092ac114dfaf5c35892c4c0f8b2d38f8}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ae28a4ba2ce1dd93e7479dfa152a65efc}\label{classWt_1_1WAbstractItemModel_ae28a4ba2ce1dd93e7479dfa152a65efc}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!modelReset@{modelReset}}
+\index{modelReset@{modelReset}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{modelReset()}{modelReset()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}\& Wt\+::\+W\+Abstract\+Item\+Model\+::model\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Signal emitted when the model was reset. 
+
+A model reset invalidates all existing data, and the model may change its entire geometry (column count, row count).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ae5ef6b96132d87e8310dcb22deedcd48}{reset()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}\label{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!parent@{parent}}
+\index{parent@{parent}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{parent()}{parent()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Abstract\+Item\+Model\+::parent (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the parent for a model index. 
+
+An implementation should use \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af9b04fdec198dfbc1c9297ead93c8930}{create\+Index()}} to create a model index that corresponds to the parent of a given index.
+
+\mbox{\hyperlink{classNote}{Note}} that the index itself may be stale (referencing a row/column within the parent that is outside the model geometry), but its parent (identified by the \mbox{\hyperlink{classWt_1_1WModelIndex_a870e6637b7beebef4f4dfaec9f08e0a2}{W\+Model\+Index\+::internal\+Pointer()}}) is referencing an existing parent. A stale index can only be used while the model geometry is being updated, i.\+e. during the emission of the corresponding \mbox{[}rows/columns\mbox{]}(Being)\mbox{[}Removed/\+Inserted\mbox{]}() signals.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{index()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classGitModel_a3a7a048a7db45add8971d666716bc091}{Git\+Model}}, \mbox{\hyperlink{classWt_1_1WStandardItemModel_a2a6861751d01c24df2c4e69ab7552964}{Wt\+::\+W\+Standard\+Item\+Model}}, \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a7e8e9bf57c94f7637129f553b50f200f}{Wt\+::\+W\+Sort\+Filter\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a989086a6975e1fd7eecd0ca5efca5973}{Wt\+::\+W\+Aggregate\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{Wt\+::\+W\+Batch\+Edit\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a8e0f32b79a35d265ec7f2af0fa2fe21f}{Wt\+::\+W\+Read\+Only\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WAbstractListModel_a3010cedec820ce2c882acdbd97bb5125}{Wt\+::\+W\+Abstract\+List\+Model}}, \mbox{\hyperlink{classWt_1_1WAbstractTableModel_a9210f95262d308580fc2a278bb205259}{Wt\+::\+W\+Abstract\+Table\+Model}}, \mbox{\hyperlink{classGitModel_a50195f285c3712db0164f1ec33dcde82}{Git\+Model}}, and \mbox{\hyperlink{classWt_1_1WIdentityProxyModel_a1e07be373a42101ae3248de8f58015e9}{Wt\+::\+W\+Identity\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a7b46c63a32eb9ca9838a1a7cd5853552}\label{classWt_1_1WAbstractItemModel_a7b46c63a32eb9ca9838a1a7cd5853552}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!removeColumn@{removeColumn}}
+\index{removeColumn@{removeColumn}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{removeColumn()}{removeColumn()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Abstract\+Item\+Model\+::remove\+Column (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption})}
+
+
+
+Removes one column. 
+
+This is a convenience method that removes a single column, and is equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a18d68ce5450fb7e55f4f47d99c9e7414}{removeColumns}}(column, 1, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}});}
+\end{DoxyCode}
+
+
+Returns {\ttfamily true} if the operation was successful.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a18d68ce5450fb7e55f4f47d99c9e7414}{remove\+Columns()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a18d68ce5450fb7e55f4f47d99c9e7414}\label{classWt_1_1WAbstractItemModel_a18d68ce5450fb7e55f4f47d99c9e7414}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!removeColumns@{removeColumns}}
+\index{removeColumns@{removeColumns}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{removeColumns()}{removeColumns()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Abstract\+Item\+Model\+::remove\+Columns (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{int}]{count,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Removes columns. 
+
+Returns {\ttfamily true} if the operation was successful.
+
+The default implementation returns {\ttfamily false}.
+
+The model implementation must call \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a8dbef6f3633812d2df7289cb7cfb192b}{begin\+Remove\+Columns()}} and \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a840b32221ade669cb4e987f86203d1d3}{end\+Remove\+Columns()}} before and after the operation whenever its geometry is changed by removing columns. This emits signals for views to properly react to these changes.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ad1788e38e96df5795fc453f63d557ba2}{remove\+Rows()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_acbad59b06e90753f5e5e83de82ccd166}{insert\+Columns()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a8dbef6f3633812d2df7289cb7cfb192b}{begin\+Remove\+Columns()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a840b32221ade669cb4e987f86203d1d3}{end\+Remove\+Columns()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WStandardItemModel_a559c22d4e6b1bfd8c5f142c8034530d5}{Wt\+::\+W\+Standard\+Item\+Model}}, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a6e946309c3182628faa412e28df2841c}{Wt\+::\+W\+Batch\+Edit\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_aa23f7c2609618c4d3f7bd08d73ab8088}{Wt\+::\+W\+Abstract\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WIdentityProxyModel_a232a14fbad28b386b52a979ae01bdbfe}{Wt\+::\+W\+Identity\+Proxy\+Model}}, and \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_ae2e6d2baa7eb2fca90555079aaaf3f46}{Wt\+::\+W\+Read\+Only\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ada64c5f4d4eba6cecab2c1e443372cb3}\label{classWt_1_1WAbstractItemModel_ada64c5f4d4eba6cecab2c1e443372cb3}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!removeRow@{removeRow}}
+\index{removeRow@{removeRow}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{removeRow()}{removeRow()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Abstract\+Item\+Model\+::remove\+Row (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption})}
+
+
+
+Removes one row. 
+
+This is a convenience method that removes a single row, and is equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ad1788e38e96df5795fc453f63d557ba2}{removeRows}}(row, 1, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}});}
+\end{DoxyCode}
+
+
+Returns {\ttfamily true} if the operation was successful.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ad1788e38e96df5795fc453f63d557ba2}{remove\+Rows()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ad1788e38e96df5795fc453f63d557ba2}\label{classWt_1_1WAbstractItemModel_ad1788e38e96df5795fc453f63d557ba2}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!removeRows@{removeRows}}
+\index{removeRows@{removeRows}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{removeRows()}{removeRows()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Abstract\+Item\+Model\+::remove\+Rows (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{count,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Removes rows. 
+
+Returns {\ttfamily true} if the operation was successful.
+
+The default implementation returns {\ttfamily false}.
+
+The model implementation must call \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a5286cc70219c8d8d720abc255b0183f5}{begin\+Remove\+Rows()}} and \mbox{\hyperlink{classWt_1_1WAbstractItemModel_afceaf639f2a5088f45c00f03d550f262}{end\+Remove\+Rows()}} before and after the operation whenever its geometry is changed by removing rows. This emits signals for views to properly react to these changes.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a18d68ce5450fb7e55f4f47d99c9e7414}{remove\+Columns()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a59b5169e158b4cbfb1ec98df67c87200}{insert\+Rows()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a5286cc70219c8d8d720abc255b0183f5}{begin\+Remove\+Rows()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_afceaf639f2a5088f45c00f03d550f262}{end\+Remove\+Rows()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WStandardItemModel_a19048dda54493728bcb7c04c1e55ac2a}{Wt\+::\+W\+Standard\+Item\+Model}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a8a868c84e6637e744e2dd976f65e94d6}{Wt\+::\+Dbo\+::\+Query\+Model$<$ Result $>$}}, \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a00f1b0eacdcb152b0873b9d3a13eca56}{Wt\+::\+W\+Sort\+Filter\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a2e3d079691b71538eb123bbe22270b50}{Wt\+::\+W\+Batch\+Edit\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WIdentityProxyModel_a6f165a23593887042c076dbfddfc7636}{Wt\+::\+W\+Identity\+Proxy\+Model}}, and \mbox{\hyperlink{classWt_1_1WStringListModel_a9bf4499ba3ff4f1489d962bc0d1d40d9}{Wt\+::\+W\+String\+List\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ae5ef6b96132d87e8310dcb22deedcd48}\label{classWt_1_1WAbstractItemModel_ae5ef6b96132d87e8310dcb22deedcd48}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!reset@{reset}}
+\index{reset@{reset}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Abstract\+Item\+Model\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Resets the model and invalidate any data. 
+
+Informs any attached view that all data in the model was invalidated, and the model\textquotesingle{}s data should be reread.
+
+This causes the \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ae28a4ba2ce1dd93e7479dfa152a65efc}{model\+Reset()}} signal to be emitted. \mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ab0709a8f71fd5df882f29bb29fd055f0}\label{classWt_1_1WAbstractItemModel_ab0709a8f71fd5df882f29bb29fd055f0}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!rowCount@{rowCount}}
+\index{rowCount@{rowCount}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{rowCount()}{rowCount()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Abstract\+Item\+Model\+::row\+Count (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the number of rows. 
+
+This returns the number of rows at index {\ttfamily parent}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_abcf7912a95a0a60f8e9b1c37d30b8383}{column\+Count()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classParabola_ad2e557f70255a2461d98b4e8f97790a7}{Parabola}}, \mbox{\hyperlink{classPointsData_a8ba442a009d5ecf923926752f6220897}{Points\+Data}}, \mbox{\hyperlink{classPlaneData_a536c01f2fc735ed263cc3a0f58e6ea27}{Plane\+Data}}, \mbox{\hyperlink{classSombreroData_ab3a14738e174302cf4a6ee902d02b932}{Sombrero\+Data}}, \mbox{\hyperlink{classGitModel_acc61b368ac78cb6fb219f31f03167789}{Git\+Model}}, \mbox{\hyperlink{classVirtualModel_aafe74c6db15c72ad3f8b5d4058bc4ba7}{Virtual\+Model}}, \mbox{\hyperlink{classWt_1_1WStandardItemModel_a37be62de327d772b25ad4070fb255f0b}{Wt\+::\+W\+Standard\+Item\+Model}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_abad12ccb058ef3ecd3c0db9d5f56783b}{Wt\+::\+Dbo\+::\+Query\+Model$<$ Result $>$}}, \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_aa083a80f5979b5c32793d8b008abb09f}{Wt\+::\+W\+Sort\+Filter\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_adb9d29bb0aaec71e602e287fb5e4c0aa}{Wt\+::\+W\+Aggregate\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a37731de25e829c50bbe1f3989d3efc63}{Wt\+::\+W\+Batch\+Edit\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WStringListModel_ae76f5aef62f5742f5ab3a0683972c076}{Wt\+::\+W\+String\+List\+Model}}, \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a2a0cc6017963467c86055e77cdc8cea7}{Wt\+::\+W\+Read\+Only\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WIdentityProxyModel_ae88b8c458cd6160afcfc25143d500097}{Wt\+::\+W\+Identity\+Proxy\+Model}}, and \mbox{\hyperlink{classGitModel_a629cde94d1861ea3d1e5e01e123ab60e}{Git\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a8c0a94560a23519cac3e7cfb983af525}\label{classWt_1_1WAbstractItemModel_a8c0a94560a23519cac3e7cfb983af525}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!rowsAboutToBeInserted@{rowsAboutToBeInserted}}
+\index{rowsAboutToBeInserted@{rowsAboutToBeInserted}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{rowsAboutToBeInserted()}{rowsAboutToBeInserted()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int$>$\& Wt\+::\+W\+Abstract\+Item\+Model\+::rows\+About\+To\+Be\+Inserted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Signal emitted before a number of rows will be inserted. 
+
+The first argument is the parent index. The two integer arguments are the row numbers that the first and last row will have when inserted.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a54c971088bb9b424f97fe31c17f8f12f}{rows\+Inserted()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a91e52898a805996aee496877cd090eb4}{begin\+Insert\+Rows()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a530ab7bb31240fafe0a3c88c9f4efc4f}\label{classWt_1_1WAbstractItemModel_a530ab7bb31240fafe0a3c88c9f4efc4f}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!rowsAboutToBeRemoved@{rowsAboutToBeRemoved}}
+\index{rowsAboutToBeRemoved@{rowsAboutToBeRemoved}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{rowsAboutToBeRemoved()}{rowsAboutToBeRemoved()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int$>$\& Wt\+::\+W\+Abstract\+Item\+Model\+::rows\+About\+To\+Be\+Removed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Signal emitted before a number of rows will be removed. 
+
+The first argument is the parent index. The two integer arguments are the row numbers of the first and last row that will be removed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a0f73bbfb08f2739ac12881f62a61bc7f}{rows\+Removed()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a5286cc70219c8d8d720abc255b0183f5}{begin\+Remove\+Rows()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a54c971088bb9b424f97fe31c17f8f12f}\label{classWt_1_1WAbstractItemModel_a54c971088bb9b424f97fe31c17f8f12f}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!rowsInserted@{rowsInserted}}
+\index{rowsInserted@{rowsInserted}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{rowsInserted()}{rowsInserted()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int$>$\& Wt\+::\+W\+Abstract\+Item\+Model\+::rows\+Inserted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Signal emitted after a number of rows were inserted. 
+
+The first argument is the parent index. The two integer arguments are the row numbers of the first and last row that were inserted.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a8c0a94560a23519cac3e7cfb983af525}{rows\+About\+To\+Be\+Inserted()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ace03c0bc5b0b57b6add882aaf444b62f}{end\+Insert\+Rows()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a0f73bbfb08f2739ac12881f62a61bc7f}\label{classWt_1_1WAbstractItemModel_a0f73bbfb08f2739ac12881f62a61bc7f}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!rowsRemoved@{rowsRemoved}}
+\index{rowsRemoved@{rowsRemoved}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{rowsRemoved()}{rowsRemoved()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}, int, int$>$\& Wt\+::\+W\+Abstract\+Item\+Model\+::rows\+Removed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Signal emitted after a number of rows were removed. 
+
+The first argument is the parent index. The two integer arguments are the row numbers of the first and last row that were removed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a530ab7bb31240fafe0a3c88c9f4efc4f}{rows\+About\+To\+Be\+Removed()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_afceaf639f2a5088f45c00f03d550f262}{end\+Remove\+Rows()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ab72f9eac35b1852e3b86273016a7f27e}\label{classWt_1_1WAbstractItemModel_ab72f9eac35b1852e3b86273016a7f27e}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!setData@{setData}}
+\index{setData@{setData}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Abstract\+Item\+Model\+::set\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{value,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets data at the given model index. 
+
+Returns {\ttfamily true} if the operation was successful.
+
+The default implementation returns {\ttfamily false}.
+
+The model implementation must emit the \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aa074e5bc55394252a609ef17d071b563}{data\+Changed()}} signal after data was changed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_af77f707dd2340652717e7122cd7f4ffd}{data()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WStandardItemModel_a0e29d5439549eb9ea9742c841d6f86e3}{Wt\+::\+W\+Standard\+Item\+Model}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ae1575222c8b1da8ea910d19190290a4c}{Wt\+::\+Dbo\+::\+Query\+Model$<$ Result $>$}}, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a5505c912ab3c9e05de23b45968c11ec4}{Wt\+::\+W\+Batch\+Edit\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_ae3048edb65f43f893331edee48ca0a57}{Wt\+::\+W\+Abstract\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WStringListModel_a2a1c0fd999847cd4b32fab690ff150a9}{Wt\+::\+W\+String\+List\+Model}}, and \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a4bf6d3905826b16bc4d272aef386707d}{Wt\+::\+W\+Read\+Only\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_aae463d7040f364ffcc008997f8e387a2}\label{classWt_1_1WAbstractItemModel_aae463d7040f364ffcc008997f8e387a2}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!setData@{setData}}
+\index{setData@{setData}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Abstract\+Item\+Model\+::set\+Data (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column,  }\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{value,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}},  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption})}
+
+
+
+Sets data at the given row and column. 
+
+This is a convience method, and is equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab72f9eac35b1852e3b86273016a7f27e}{setData}}(\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{index}}(row, column, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{parent}}), value, role);}
+\end{DoxyCode}
+
+
+Returns {\ttfamily true} if the operation was successful.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab72f9eac35b1852e3b86273016a7f27e}{set\+Data()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{index()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a0bccbb4373b4c1e8bce85573b933d53d}\label{classWt_1_1WAbstractItemModel_a0bccbb4373b4c1e8bce85573b933d53d}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!setHeaderData@{setHeaderData}}
+\index{setHeaderData@{setHeaderData}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{setHeaderData()}{setHeaderData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Abstract\+Item\+Model\+::set\+Header\+Data (\begin{DoxyParamCaption}\item[{int}]{section,  }\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets column header data. 
+
+Returns {\ttfamily true} if the operation was successful.
+
+\begin{DoxySeeAlso}{See also}
+set\+Header\+Data(int, Orientation, const cpp17\+::any\&, int) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_a3c4a0ffe050bc0d11feeac4749dde784}\label{classWt_1_1WAbstractItemModel_a3c4a0ffe050bc0d11feeac4749dde784}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!setHeaderData@{setHeaderData}}
+\index{setHeaderData@{setHeaderData}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{setHeaderData()}{setHeaderData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Abstract\+Item\+Model\+::set\+Header\+Data (\begin{DoxyParamCaption}\item[{int}]{section,  }\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation,  }\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{value,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets header data for a column or row. 
+
+Returns {\ttfamily true} if the operation was successful.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_a37fa8987a50f8a10b5ffb123a84e3f3c}{header\+Data()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WStandardItemModel_ab4a6868d6b540812b5a5fd53aa9a99ef}{Wt\+::\+W\+Standard\+Item\+Model}}, \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_af6c4b785d95569ff7c3fd87b9b78a910}{Wt\+::\+W\+Sort\+Filter\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a68edc8a2284422eef0eb22c4d48ceaa5}{Wt\+::\+W\+Aggregate\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a3eb8cf81091f5f7dba813b260e71b2dd}{Wt\+::\+W\+Read\+Only\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WIdentityProxyModel_acfa2c2b201f8919e462e1a2d498b75ab}{Wt\+::\+W\+Identity\+Proxy\+Model}}, and \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a5c6b5753338158eb9b245f1f6a0d3aa8}{Wt\+::\+Dbo\+::\+Query\+Model$<$ Result $>$}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_aed31141a35361c75cc9741b7764ee1fe}\label{classWt_1_1WAbstractItemModel_aed31141a35361c75cc9741b7764ee1fe}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!setItemData@{setItemData}}
+\index{setItemData@{setItemData}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{setItemData()}{setItemData()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Abstract\+Item\+Model\+::set\+Item\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{const \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a1f5858f68611d651fc15e35f64171911}{Data\+Map}} \&}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets data at the given model index. 
+
+This is a convenience function that sets data for all roles at once.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab72f9eac35b1852e3b86273016a7f27e}{set\+Data()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_af93b802821e236481bf3705e38311a43}{Wt\+::\+W\+Abstract\+Proxy\+Model}}, and \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a1fa386bd1804875d2d0d52bd76ae0a1b}{Wt\+::\+W\+Read\+Only\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_ab044b92afa69282ea2e351bcdfd7c0c7}\label{classWt_1_1WAbstractItemModel_ab044b92afa69282ea2e351bcdfd7c0c7}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!sort@{sort}}
+\index{sort@{sort}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Abstract\+Item\+Model\+::sort (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{\mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Sort\+Order}}}]{order = {\ttfamily SortOrder\+:\+:Ascending} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sorts the model according to a particular column. 
+
+If the model supports sorting, then it should emit the \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab377ac2fcb9de9d191bd1353665d1389}{layout\+About\+To\+Be\+Changed()}} signal, rearrange its items, and afterwards emit the \mbox{\hyperlink{classWt_1_1WAbstractItemModel_afe7cb1d5186881f83aa8f0e452aaef66}{layout\+Changed()}} signal.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab377ac2fcb9de9d191bd1353665d1389}{layout\+About\+To\+Be\+Changed()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_afe7cb1d5186881f83aa8f0e452aaef66}{layout\+Changed()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WStandardItemModel_a53bdc88628c9b48c2ef3ef4fa4712fc5}{Wt\+::\+W\+Standard\+Item\+Model}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_aea2518aea6f73ce38366baf545d65290}{Wt\+::\+Dbo\+::\+Query\+Model$<$ Result $>$}}, \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_af6bab4995d859f96c0bc4233f83dc6d9}{Wt\+::\+W\+Sort\+Filter\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WAggregateProxyModel_a0171d3c8f8425ad64c2fad94d58fc3d8}{Wt\+::\+W\+Aggregate\+Proxy\+Model}}, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a0772da892b3ce93122928d7601848392}{Wt\+::\+W\+Batch\+Edit\+Proxy\+Model}}, and \mbox{\hyperlink{classWt_1_1WStringListModel_a6ed98f553297e19a8693661df90ac29f}{Wt\+::\+W\+String\+List\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WAbstractItemModel_aa5b86f5b8e68bd5149d50b5c101855d9}\label{classWt_1_1WAbstractItemModel_aa5b86f5b8e68bd5149d50b5c101855d9}} 
+\index{Wt::WAbstractItemModel@{Wt::WAbstractItemModel}!toRawIndex@{toRawIndex}}
+\index{toRawIndex@{toRawIndex}!Wt::WAbstractItemModel@{Wt::WAbstractItemModel}}
+\doxysubsubsection{\texorpdfstring{toRawIndex()}{toRawIndex()}}
+{\footnotesize\ttfamily virtual void$\ast$ Wt\+::\+W\+Abstract\+Item\+Model\+::to\+Raw\+Index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Converts a model index to a raw pointer that remains valid while the model\textquotesingle{}s layout is changed. 
+
+Use this method to temporarily save model indexes while the model\textquotesingle{}s layout is changed by for example a sorting operation.
+
+The default implementation returns {\ttfamily 0}, which indicates that the index cannot be converted to a raw pointer. If you reimplement this method, you also need to reimplemnt \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a56f6aa462a2707cfb8697b8b31a8ca1f}{from\+Raw\+Index()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab377ac2fcb9de9d191bd1353665d1389}{layout\+About\+To\+Be\+Changed}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab044b92afa69282ea2e351bcdfd7c0c7}{sort()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a56f6aa462a2707cfb8697b8b31a8ca1f}{from\+Raw\+Index()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WStandardItemModel_aa06ea7f96c68f3616cd1308c8b3d818a}{Wt\+::\+W\+Standard\+Item\+Model}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a8962a6f30f6039adf75bac99d07420d7}{Wt\+::\+Dbo\+::\+Query\+Model$<$ Result $>$}}, and \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a1c3ce0e52c454c5e1467d730dc9b2ddb}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Abstract\+Item\+Model.\+h\end{DoxyCompactItemize}

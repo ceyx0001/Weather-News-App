@@ -1,0 +1,59 @@
+\mbox{\hyperlink{classWt}{Wt}} is a C++ library for developing web applications. It consists of\+:
+
+
+\begin{DoxyItemize}
+\item libwt, a widget/rendering library
+\item libwthttp, an (async I/O) H\+T\+T\+P/\+Web\+Sockets server
+\item libwtfcgi, a Fast\+C\+GI connector library (Unix)
+\item libwtisapi, an I\+S\+A\+PI connector library (Windows)
+\item libwttest, a test connector environment
+\end{DoxyItemize}
+
+It also contains a C++ O\+RM, which can be used in a web application (obviously), but can also be used on its own\+:
+
+
+\begin{DoxyItemize}
+\item libwtdbo, a C++ O\+RM
+\item libwtdbopostgres, Postgre\+S\+QL backend
+\item libwtdbosqlite3, Sqlite3 backend
+\item libwtdbomysql, My\+S\+QL and Maria\+DB backend
+\item libwtdbomssqlserver, Microsoft S\+QL Server backend
+\item libwtdbofirebird, Firebird backend
+\end{DoxyItemize}
+
+For more information, see \href{http://www.webtoolkit.eu/wt}{\texttt{ the homepage}}.\hypertarget{md_wt-4_88_82_README_autotoc_md138}{}\doxysection{Dependencies}\label{md_wt-4_88_82_README_autotoc_md138}
+To build \mbox{\hyperlink{classWt}{Wt}} from source you will need at least \href{https://cmake.org/}{\texttt{ C\+Make}}, \href{http://www.boost.org}{\texttt{ boost}}, and a C++ compiler like G\+CC, Clang or M\+S\+VC. See the minimum dependency versions for an explanation about which versions \mbox{\hyperlink{classWt}{Wt}} supports.
+
+Optionally, you may want to add\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://www.openssl.org}{\texttt{ Open\+S\+SL}} for S\+SL and Web\+Sockets support in the built-\/in httpd, the H\+T\+T\+P(\+S) client, and additional cryptographic hashes in the authentication module
+\item \href{http://libharu.org}{\texttt{ Haru P\+DF library}} which is used for painting to P\+DF
+\item \href{http://www.graphicsmagick.org/}{\texttt{ Graphics\+Magick}} which is used for painting to P\+NG, G\+IF (on Windows, Direct2D can be used instead)
+\item \href{https://www.postgresql.org/}{\texttt{ Postgre\+S\+QL}} for the Postgre\+S\+QL Dbo backend
+\item \href{https://www.mysql.com}{\texttt{ My\+S\+QL}} or \href{https://mariadb.org/}{\texttt{ Maria\+DB}} for the My\+S\+QL Dbo backend
+\item An \href{https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server}{\texttt{ O\+D\+BC driver}} for the Microsoft S\+QL Server Dbo backend, and \href{http://www.unixodbc.org/}{\texttt{ unix\+O\+D\+BC}} on Unix-\/like platforms
+\item \href{http://www.firebirdsql.org/}{\texttt{ Firebird}} for the Firebird Dbo backend
+\item \href{http://www.pango.org/}{\texttt{ Pango}} for improved font support in P\+DF and raster image painting. On Windows, Direct\+Write can be used instead.
+\item \href{https://zlib.net/}{\texttt{ Z\+Lib}} for compression in the built-\/in httpd.
+\end{DoxyItemize}
+
+For the Fast\+C\+GI connector, you also need\+:
+
+
+\begin{DoxyItemize}
+\item \href{http://www.fastcgi.com/}{\texttt{ Fast\+C\+GI development kit}}\+: you need the C/\+C++ library (libfcgi++)
+\end{DoxyItemize}\hypertarget{md_wt-4_88_82_README_autotoc_md139}{}\doxysection{Building}\label{md_wt-4_88_82_README_autotoc_md139}
+Generic instructions for \href{https://www.webtoolkit.eu/wt/doc/reference/html/InstallationUnix.html}{\texttt{ Unix-\/like platforms}} or \href{https://www.webtoolkit.eu/wt/doc/reference/html/InstallationWindows.html}{\texttt{ Windows platforms}}.\hypertarget{md_wt-4_88_82_README_autotoc_md140}{}\doxysection{Bug Reporting}\label{md_wt-4_88_82_README_autotoc_md140}
+Bugs can be reported here \href{http://redmine.webtoolkit.eu/projects/wt/issues/new}{\texttt{ http\+://redmine.\+webtoolkit.\+eu/projects/wt/issues/new}}\hypertarget{md_wt-4_88_82_README_autotoc_md141}{}\doxysection{Demos, examples}\label{md_wt-4_88_82_README_autotoc_md141}
+\href{https://www.webtoolkit.eu/wt}{\texttt{ The homepage}}, itself a \mbox{\hyperlink{classWt}{Wt}} application, contains also \href{https://www.webtoolkit.eu/wt/documentation/examples}{\texttt{ various examples}}.\hypertarget{md_wt-4_88_82_README_autotoc_md142}{}\doxysection{License}\label{md_wt-4_88_82_README_autotoc_md142}
+\mbox{\hyperlink{classWt}{Wt}} is available under two licenses\+:
+
+
+\begin{DoxyItemize}
+\item the G\+NU General Public License, Version 2, with Open\+S\+SL exception. Only version 2 of the G\+PL applies. See the \mbox{[}{\ttfamily L\+I\+C\+E\+N\+SE}\mbox{]}(L\+I\+C\+E\+N\+SE) file for more information.
+\item a \href{https://www.webtoolkit.eu/wt/license/Wt\%20License\%20Agreement.pdf}{\texttt{ commercial license}}, which does not require you to distribute the source code of your application. \mbox{\hyperlink{classRequest}{Request}} a quotation \href{https://www.webtoolkit.eu/wt/download}{\texttt{ online}} or contact \href{mailto:sales@emweb.be}{\texttt{ sales@emweb.\+be}} for more information.
+\end{DoxyItemize}
+
+See \`{}doc/licenses.md\`{} for an exhaustive list of the licenses used by \mbox{\hyperlink{classWt}{Wt}}, source code from external sources included in \mbox{\hyperlink{classWt}{Wt}} and common (optional) external dependencies. 

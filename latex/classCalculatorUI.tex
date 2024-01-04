@@ -1,0 +1,215 @@
+\hypertarget{classCalculatorUI}{}\doxysection{Calculator\+UI Class Reference}
+\label{classCalculatorUI}\index{CalculatorUI@{CalculatorUI}}
+
+
+\mbox{\hyperlink{classCalculator}{Calculator}} User Interface.  
+
+
+
+
+{\ttfamily \#include $<$Calculator\+U\+I.\+h$>$}
+
+
+
+Inheritance diagram for Calculator\+UI\+:
+% FIG 0
+
+
+Collaboration diagram for Calculator\+UI\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCalculatorUI_a0731c7dfe151824169dd6b0dd41765a0}{Calculator\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCalculatorUI_ac552b741ef0bb1f23f3969471fafb985}{$\sim$\+Calculator\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classCalculatorUI_a6914b3d6e7068abbd511e10df882a080}{append}} (std\+::string s)
+\begin{DoxyCompactList}\small\item\em Appends provided string to input text field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCalculatorUI_a9d38e75c12b366fe3f6d11b00fd0088c}{operate}} (std\+::string btn)
+\begin{DoxyCompactList}\small\item\em Contains logic for when an operand button is pressed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCalculatorUI_a3ba3b81a49c042bc892ae058e65097e3}{compute}} ()
+\begin{DoxyCompactList}\small\item\em Computes the result after the equal sign is pressed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCalculatorUI_adb33209638f5240b267beaebae29cd8c}{create\+Operand}} (std\+::string type)
+\begin{DoxyCompactList}\small\item\em Creates an operand button. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCalculatorUI_a9b9272384cb969bd067863458d787464}{create\+Num}} (std\+::string val)
+\begin{DoxyCompactList}\small\item\em Creates a number button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCalculatorUI_a03d1b12d4bef37aa62a3a56f44c9da63}\label{classCalculatorUI_a03d1b12d4bef37aa62a3a56f44c9da63}} 
+\mbox{\hyperlink{classCalculator}{Calculator}} {\bfseries calc}
+\item 
+\mbox{\Hypertarget{classCalculatorUI_a4700d4be32026bc1a14a119f5681f29c}\label{classCalculatorUI_a4700d4be32026bc1a14a119f5681f29c}} 
+double {\bfseries first}
+\item 
+\mbox{\Hypertarget{classCalculatorUI_a591d1f9b643f2818e383cba28ad55975}\label{classCalculatorUI_a591d1f9b643f2818e383cba28ad55975}} 
+double {\bfseries second}
+\item 
+\mbox{\Hypertarget{classCalculatorUI_a8946cecb16ff40658fefd9c1fb67baeb}\label{classCalculatorUI_a8946cecb16ff40658fefd9c1fb67baeb}} 
+Wt\+::\+W\+Line\+Edit $\ast$ {\bfseries input}
+\item 
+\mbox{\Hypertarget{classCalculatorUI_a0e9193094f60a3c44684212c224ddeba}\label{classCalculatorUI_a0e9193094f60a3c44684212c224ddeba}} 
+Wt\+::\+W\+Container\+Widget $\ast$ {\bfseries btn\+Area}
+\item 
+\mbox{\Hypertarget{classCalculatorUI_a39725476cf8ada2dc60bf324d0a6dbb3}\label{classCalculatorUI_a39725476cf8ada2dc60bf324d0a6dbb3}} 
+Wt\+::\+W\+Push\+Button $\ast$ {\bfseries operand}
+\item 
+\mbox{\Hypertarget{classCalculatorUI_a01850d9bf205aa8dbe5def43631d0564}\label{classCalculatorUI_a01850d9bf205aa8dbe5def43631d0564}} 
+std\+::unordered\+\_\+map$<$ std\+::string, Wt\+::\+W\+Push\+Button $\ast$ $>$ {\bfseries btns}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classCalculator}{Calculator}} User Interface. 
+
+Contains the user interface as well as the main logic for the calculator. \begin{DoxyAuthor}{Author}
+Jun Shao, Anthony Tam 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCalculatorUI_a0731c7dfe151824169dd6b0dd41765a0}\label{classCalculatorUI_a0731c7dfe151824169dd6b0dd41765a0}} 
+\index{CalculatorUI@{CalculatorUI}!CalculatorUI@{CalculatorUI}}
+\index{CalculatorUI@{CalculatorUI}!CalculatorUI@{CalculatorUI}}
+\doxysubsubsection{\texorpdfstring{CalculatorUI()}{CalculatorUI()}}
+{\footnotesize\ttfamily Calculator\+U\+I\+::\+Calculator\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor for \mbox{\hyperlink{classCalculatorUI}{Calculator\+UI}}, creates the user interface for the calculator, intitalizes fields, creates interactable buttons. \begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Jun Shao 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classCalculatorUI_ac552b741ef0bb1f23f3969471fafb985}\label{classCalculatorUI_ac552b741ef0bb1f23f3969471fafb985}} 
+\index{CalculatorUI@{CalculatorUI}!````~CalculatorUI@{$\sim$CalculatorUI}}
+\index{````~CalculatorUI@{$\sim$CalculatorUI}!CalculatorUI@{CalculatorUI}}
+\doxysubsubsection{\texorpdfstring{$\sim$CalculatorUI()}{~CalculatorUI()}}
+{\footnotesize\ttfamily Calculator\+U\+I\+::$\sim$\+Calculator\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Default destructor for the \mbox{\hyperlink{classCalculatorUI}{Calculator\+UI}} class. \begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Jun Shao 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCalculatorUI_a6914b3d6e7068abbd511e10df882a080}\label{classCalculatorUI_a6914b3d6e7068abbd511e10df882a080}} 
+\index{CalculatorUI@{CalculatorUI}!append@{append}}
+\index{append@{append}!CalculatorUI@{CalculatorUI}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily void Calculator\+U\+I\+::append (\begin{DoxyParamCaption}\item[{std\+::string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Appends provided string to input text field. 
+
+Aopends a provided string to the input text field, which will be a digit from one of the numbered buttons, if the current contents of the text field is just \char`\"{}0\char`\"{} then replace the number with the new string instead of appending it. 
+\begin{DoxyParams}{Parameters}
+{\em s} & which is a string representing a number from one of the numbered buttons \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Jun Shao 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classCalculatorUI_a3ba3b81a49c042bc892ae058e65097e3}\label{classCalculatorUI_a3ba3b81a49c042bc892ae058e65097e3}} 
+\index{CalculatorUI@{CalculatorUI}!compute@{compute}}
+\index{compute@{compute}!CalculatorUI@{CalculatorUI}}
+\doxysubsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily void Calculator\+U\+I\+::compute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Computes the result after the equal sign is pressed. 
+
+Computes the result after the equal sign is pressed, looks at current input and previous input as well as most recent operand button pressed, \begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Anthony Tam 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classCalculatorUI_a9b9272384cb969bd067863458d787464}\label{classCalculatorUI_a9b9272384cb969bd067863458d787464}} 
+\index{CalculatorUI@{CalculatorUI}!createNum@{createNum}}
+\index{createNum@{createNum}!CalculatorUI@{CalculatorUI}}
+\doxysubsubsection{\texorpdfstring{createNum()}{createNum()}}
+{\footnotesize\ttfamily void Calculator\+U\+I\+::create\+Num (\begin{DoxyParamCaption}\item[{std\+::string}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Creates a number button. 
+
+Creates a number button using string input for type of button, adds it to UI and gives it functionality by calling \mbox{\hyperlink{classCalculatorUI_a6914b3d6e7068abbd511e10df882a080}{append()}} function 
+\begin{DoxyParams}{Parameters}
+{\em val} & representing the type of button \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Jun Shao 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classCalculatorUI_adb33209638f5240b267beaebae29cd8c}\label{classCalculatorUI_adb33209638f5240b267beaebae29cd8c}} 
+\index{CalculatorUI@{CalculatorUI}!createOperand@{createOperand}}
+\index{createOperand@{createOperand}!CalculatorUI@{CalculatorUI}}
+\doxysubsubsection{\texorpdfstring{createOperand()}{createOperand()}}
+{\footnotesize\ttfamily void Calculator\+U\+I\+::create\+Operand (\begin{DoxyParamCaption}\item[{std\+::string}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Creates an operand button. 
+
+Creates an operand button using string input for type of button, adds it to UI and gives it functionality by calling \mbox{\hyperlink{classCalculatorUI_a9d38e75c12b366fe3f6d11b00fd0088c}{operate()}} function 
+\begin{DoxyParams}{Parameters}
+{\em type} & is a string representing the type of button and its label \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Jun Shao 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classCalculatorUI_a9d38e75c12b366fe3f6d11b00fd0088c}\label{classCalculatorUI_a9d38e75c12b366fe3f6d11b00fd0088c}} 
+\index{CalculatorUI@{CalculatorUI}!operate@{operate}}
+\index{operate@{operate}!CalculatorUI@{CalculatorUI}}
+\doxysubsubsection{\texorpdfstring{operate()}{operate()}}
+{\footnotesize\ttfamily void Calculator\+U\+I\+::operate (\begin{DoxyParamCaption}\item[{std\+::string}]{btn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Contains logic for when an operand button is pressed. 
+
+Function which is called when an operand button is pressed, saves the current input, clears the input field back to \char`\"{}0\char`\"{}, and sets most recent operand variable to whatever operand button was pressed for later use in \mbox{\hyperlink{classCalculatorUI_a3ba3b81a49c042bc892ae058e65097e3}{compute()}}. 
+\begin{DoxyParams}{Parameters}
+{\em btn} & is a string representing the button pressed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Anthony Tam 
+\end{DoxyAuthor}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+gui/math/Calculator\+U\+I.\+h\item 
+gui/math/Calculator\+U\+I.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,827 @@
+\hypertarget{classWt_1_1Dbo_1_1QueryModel}{}\doxysection{Wt\+::Dbo\+::Query\+Model$<$ Result $>$ Class Template Reference}
+\label{classWt_1_1Dbo_1_1QueryModel}\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+
+
+A Wt M\+VC Model to view/edit query results.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Dbo/\+Query\+Model.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Dbo\+::Query\+Model$<$ Result $>$\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Dbo\+::Query\+Model$<$ Result $>$\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a0d72641c8a3ce28662a9e231a2a6171a}{Query\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new query model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a9453700573e37d02a69a77ac6f57dfa5}{set\+Query}} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}}$<$ Result $>$ \&\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a6b53b9460e09c4208c9b0d737e390164}{query}}, bool keep\+Columns=false)
+\begin{DoxyCompactList}\small\item\em Sets the query. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}}$<$ Result $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a6b53b9460e09c4208c9b0d737e390164}{query}} () const
+\begin{DoxyCompactList}\small\item\em Returns the query. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a41e5e15eebba8157890b1372c4c41312}{add\+Column}} (const std\+::string \&field, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&header, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ad3d740e4e4192a1fced556f3ab1f8da7}{flags}}=Item\+Flag\+::\+Selectable)
+\begin{DoxyCompactList}\small\item\em Adds a column. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_aba33e9979267a1a1150718523c02bfc3}{add\+Column}} (const std\+::string \&field, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ad3d740e4e4192a1fced556f3ab1f8da7}{flags}}=Item\+Flag\+::\+Selectable)
+\begin{DoxyCompactList}\small\item\em Adds a column. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a6448c762a7e8e28051d21d58b600e5ca}{set\+Column\+Flags}} (int column, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ad3d740e4e4192a1fced556f3ab1f8da7}{flags}})
+\begin{DoxyCompactList}\small\item\em Sets column item flags. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a3821cecfc2662476aee02c0c5a853c46}{column\+Flags}} (int column) const
+\begin{DoxyCompactList}\small\item\em Returns column item flags. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a8e39f6b1860a0e669328786fe97c9270}\label{classWt_1_1Dbo_1_1QueryModel_a8e39f6b1860a0e669328786fe97c9270}} 
+int {\bfseries add\+Column} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryColumn}{Query\+Column}} \&column)
+\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_afa1bbf12d2b58ae91481f6d09c1dd8db}{add\+All\+Fields\+As\+Columns}} ()
+\begin{DoxyCompactList}\small\item\em Adds all the columns from the field list. \end{DoxyCompactList}\item 
+Result \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ade86cb8bbcf23e2532b91687f1e685e0}{stable\+Result\+Row}} (int row) const
+\begin{DoxyCompactList}\small\item\em Returns a stable result row. \end{DoxyCompactList}\item 
+const Result \& \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_afaec30850c8094e9e23395de7de49f3d}{result\+Row}} (int row) const
+\begin{DoxyCompactList}\small\item\em Returns a result row. \end{DoxyCompactList}\item 
+virtual Result \& \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a08c73dc6b9e382a46e7bda2ffe01376a}{result\+Row}} (int row)
+\begin{DoxyCompactList}\small\item\em Returns a result row. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a717e6040c21f964fd34e9c18c6afaf54}{index\+Of}} (const Result \&row) const
+\begin{DoxyCompactList}\small\item\em Returns the index of row. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ade0f8644e13de16e326b7d679f87add1}{reload}} ()
+\begin{DoxyCompactList}\small\item\em Rereads the data from the database. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a6871c2e7be184bfd2339320812387f81}{set\+Batch\+Size}} (int count)
+\begin{DoxyCompactList}\small\item\em Sets the batch size for fetching results. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ade6d4f3be01c5c6470c3b215e4387025}{batch\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the batch size for fetching results. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1FieldInfo}{Field\+Info}} $>$ \& \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a70882eeace9adfc71e80680057324b28}{fields}} () const
+\begin{DoxyCompactList}\small\item\em Returns the query field list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a46cd33a2db37226ce0f46ac95bae3d14}\label{classWt_1_1Dbo_1_1QueryModel_a46cd33a2db37226ce0f46ac95bae3d14}} 
+const \mbox{\hyperlink{classWt_1_1Dbo_1_1FieldInfo}{Field\+Info}} \& \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a46cd33a2db37226ce0f46ac95bae3d14}{field\+Info}} (int column) const
+\begin{DoxyCompactList}\small\item\em Returns the \mbox{\hyperlink{classWt_1_1Dbo_1_1FieldInfo}{Field\+Info}} structure for a column. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a17444723d099ba74a3d8e7d274bb28c1}\label{classWt_1_1Dbo_1_1QueryModel_a17444723d099ba74a3d8e7d274bb28c1}} 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a17444723d099ba74a3d8e7d274bb28c1}{field\+Name}} (int column) const
+\begin{DoxyCompactList}\small\item\em Returns the field name for the a column. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a29437ef2d5883e0f8a3e492b86c38456}{column\+Count}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractTableModel_a9210f95262d308580fc2a278bb205259}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const override
+\begin{DoxyCompactList}\small\item\em Returns the number of columns. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_abad12ccb058ef3ecd3c0db9d5f56783b}{row\+Count}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractTableModel_a9210f95262d308580fc2a278bb205259}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const override
+\begin{DoxyCompactList}\small\item\em Returns the number of rows. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ad3d740e4e4192a1fced556f3ab1f8da7}{flags}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractTableModel_a4b4e9f572cf9cf271a5459859a047a1b}{index}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the flags for an item. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ab51eb60e26b58aa538964bf1a5a4bcd8}{data}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractTableModel_a4b4e9f572cf9cf271a5459859a047a1b}{index}}, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the data for an item. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ae1575222c8b1da8ea910d19190290a4c}{set\+Data}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractTableModel_a4b4e9f572cf9cf271a5459859a047a1b}{index}}, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}) override
+\begin{DoxyCompactList}\small\item\em Sets data at the given model index. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_aea2518aea6f73ce38366baf545d65290}{sort}} (int column, \mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Sort\+Order}} order=Sort\+Order\+::\+Ascending) override
+\begin{DoxyCompactList}\small\item\em Sorts the model according to a particular column. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_adbb35efc5a4c46f9eef934bca0927068}{create\+Order\+By}} (int column, \mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Sort\+Order}} order)
+\begin{DoxyCompactList}\small\item\em Create specialized order\+By clause for sort. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a8a3b084964b3e20e3d83a938e3ba5024}{insert\+Rows}} (int row, int count, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractTableModel_a9210f95262d308580fc2a278bb205259}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) override
+\begin{DoxyCompactList}\small\item\em Inserts one or more rows. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a8a868c84e6637e744e2dd976f65e94d6}{remove\+Rows}} (int row, int count, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractTableModel_a9210f95262d308580fc2a278bb205259}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) override
+\begin{DoxyCompactList}\small\item\em Removes one or more rows. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a5c6b5753338158eb9b245f1f6a0d3aa8}{set\+Header\+Data}} (int column, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}) override
+\begin{DoxyCompactList}\small\item\em Sets header data for a column. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ab75f1e62214463001b2d15f6b428224d}{header\+Data}} (int section, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation=Orientation\+::\+Horizontal, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}) const override
+\begin{DoxyCompactList}\small\item\em Returns header data. \end{DoxyCompactList}\item 
+virtual void $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a8962a6f30f6039adf75bac99d07420d7}{to\+Raw\+Index}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractTableModel_a4b4e9f572cf9cf271a5459859a047a1b}{index}}) const override
+\begin{DoxyCompactList}\small\item\em Converts a model index to a raw pointer that remains valid while the model\textquotesingle{}s layout is changed. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ab37663d60be859adf5d8aceaffc0b430}{from\+Raw\+Index}} (void $\ast$raw\+Index) const override
+\begin{DoxyCompactList}\small\item\em Converts a raw pointer to a model index. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a837660e348a3c61c3919c238bf11eb29}{data}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractTableModel_a4b4e9f572cf9cf271a5459859a047a1b}{index}}, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}) const=0
+\begin{DoxyCompactList}\small\item\em Returns data at a specified model index for the given role. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a5fc67e5fbb584cd1c6e6108ad07ff484}{data}} (int row, int column, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractTableModel_a9210f95262d308580fc2a278bb205259}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const
+\begin{DoxyCompactList}\small\item\em Returns the data item at the given column and row. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ab72f9eac35b1852e3b86273016a7f27e}{set\+Data}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractTableModel_a4b4e9f572cf9cf271a5459859a047a1b}{index}}, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}})
+\begin{DoxyCompactList}\small\item\em Sets data at the given model index. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_aae463d7040f364ffcc008997f8e387a2}{set\+Data}} (int row, int column, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WAbstractTableModel_a9210f95262d308580fc2a278bb205259}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}())
+\begin{DoxyCompactList}\small\item\em Sets data at the given row and column. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual Result \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a122165a0eaad6573172181d5eeefcbe0}{create\+Row}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new row. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a76080f5f01a7404d525259b352e7829b}{add\+Row}} (Result \&result)
+\begin{DoxyCompactList}\small\item\em Adds a row to the session. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a4a6c45d5b17f382f2e0927490107208b}{delete\+Row}} (Result \&result)
+\begin{DoxyCompactList}\small\item\em Deletes a row from the session. \end{DoxyCompactList}\item 
+virtual long long \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a50e3ac385ea4a3f9508229fe2306a8d7}{result\+Id}} (const Result \&result) const
+\begin{DoxyCompactList}\small\item\em Returns a unique id for a result. \end{DoxyCompactList}\item 
+virtual Result \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a7ddede1b7bf921e9a9fa8865b01cc147}{result\+By\+Id}} (long long \mbox{\hyperlink{classWt_1_1WObject_a9f34b0c9ec343cf467f8b237d3256792}{id}}) const
+\begin{DoxyCompactList}\small\item\em Returns a result by id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a0a12b63566d92a17b089e25bae9d0acc}\label{classWt_1_1Dbo_1_1QueryModel_a0a12b63566d92a17b089e25bae9d0acc}} 
+typedef std\+::vector$<$ \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} $>$ {\bfseries Any\+List}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_aa056fcec0cba53cc60831820ff8f5541}\label{classWt_1_1Dbo_1_1QueryModel_aa056fcec0cba53cc60831820ff8f5541}} 
+typedef std\+::map$<$ int, long long $>$ {\bfseries Stable\+Result\+Id\+Map}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_adec6f1f9ed045f86634611f0715b16e7}\label{classWt_1_1Dbo_1_1QueryModel_adec6f1f9ed045f86634611f0715b16e7}} 
+void {\bfseries cache\+Row} (int row) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a35cac3ded11e787c31e3c8f717c5bb02}\label{classWt_1_1Dbo_1_1QueryModel_a35cac3ded11e787c31e3c8f717c5bb02}} 
+int {\bfseries get\+Field\+Index} (const std\+::string \&field)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a4966680f94659c44cb86c760c409e7e4}\label{classWt_1_1Dbo_1_1QueryModel_a4966680f94659c44cb86c760c409e7e4}} 
+void {\bfseries set\+Current\+Row} (int row) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_ab2728fc48e33dca8048ae2b8a1b4cc33}\label{classWt_1_1Dbo_1_1QueryModel_ab2728fc48e33dca8048ae2b8a1b4cc33}} 
+void {\bfseries invalidate\+Data} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_ac76c0644d815ae600cc3761cd9847fe0}\label{classWt_1_1Dbo_1_1QueryModel_ac76c0644d815ae600cc3761cd9847fe0}} 
+void {\bfseries invalidate\+Row} (int row)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a4d5063996ff58fcec24c8c330287b43a}\label{classWt_1_1Dbo_1_1QueryModel_a4d5063996ff58fcec24c8c330287b43a}} 
+void {\bfseries data\+Reloaded} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a7ae7af034b912a0de052e21aecb5ca59}\label{classWt_1_1Dbo_1_1QueryModel_a7ae7af034b912a0de052e21aecb5ca59}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryColumn}{Query\+Column}} $>$ {\bfseries columns\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_accc67310667ef054ce9255dcf1453768}\label{classWt_1_1Dbo_1_1QueryModel_accc67310667ef054ce9255dcf1453768}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}}$<$ Result $>$ {\bfseries query\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a619404244be0c4225bc552baf4e15595}\label{classWt_1_1Dbo_1_1QueryModel_a619404244be0c4225bc552baf4e15595}} 
+int {\bfseries query\+Limit\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a1d3c31054eb564ed0f1b78141f5c33c2}\label{classWt_1_1Dbo_1_1QueryModel_a1d3c31054eb564ed0f1b78141f5c33c2}} 
+int {\bfseries query\+Offset\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a96be318011906290691fe9bde20beeec}\label{classWt_1_1Dbo_1_1QueryModel_a96be318011906290691fe9bde20beeec}} 
+int {\bfseries batch\+Size\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a4290d6a4130bf63fe491aaf8756cef01}\label{classWt_1_1Dbo_1_1QueryModel_a4290d6a4130bf63fe491aaf8756cef01}} 
+std\+::string {\bfseries sort\+Order\+By\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a7199ab49aeeed03263c9ba74c10afb84}\label{classWt_1_1Dbo_1_1QueryModel_a7199ab49aeeed03263c9ba74c10afb84}} 
+int {\bfseries cached\+Row\+Count\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a41a427d4016cce6a335ec3fe6903ef23}\label{classWt_1_1Dbo_1_1QueryModel_a41a427d4016cce6a335ec3fe6903ef23}} 
+int {\bfseries cache\+Start\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_aca369cc30f62ec137fbc4fb9505363d4}\label{classWt_1_1Dbo_1_1QueryModel_aca369cc30f62ec137fbc4fb9505363d4}} 
+std\+::vector$<$ Result $>$ {\bfseries cache\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a20054d30b0e61f9dedd10d3d729456fe}\label{classWt_1_1Dbo_1_1QueryModel_a20054d30b0e61f9dedd10d3d729456fe}} 
+int {\bfseries current\+Row\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a922a30a08a3799696614c7764c813e5f}\label{classWt_1_1Dbo_1_1QueryModel_a922a30a08a3799696614c7764c813e5f}} 
+Any\+List {\bfseries row\+Values\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a2b704e3602d4d3993434c0f9ecbf25b1}\label{classWt_1_1Dbo_1_1QueryModel_a2b704e3602d4d3993434c0f9ecbf25b1}} 
+Stable\+Result\+Id\+Map {\bfseries stable\+Ids\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a2d54747a56ffd21df8c8d6cda15fc2f5}\label{classWt_1_1Dbo_1_1QueryModel_a2d54747a56ffd21df8c8d6cda15fc2f5}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1FieldInfo}{Field\+Info}} $>$ {\bfseries fields\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class Result$>$\newline
+class Wt\+::\+Dbo\+::\+Query\+Model$<$ Result $>$}
+
+A Wt M\+VC Model to view/edit query results. 
+
+The model fetches results from the query and presents the data in a table. It supports sorting the underlying S\+QL query using Query\+::order\+By().
+
+The default implementation of \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ab51eb60e26b58aa538964bf1a5a4bcd8}{data()}} converts Query results to model data using \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_a9e28304a061c7ad52cb34e34fc410759}{query\+\_\+result\+\_\+traits$<$\+Result$>$\+::get\+Values()}}. You may define your own data presentation using the underlying {\ttfamily Result} by specializing \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ab51eb60e26b58aa538964bf1a5a4bcd8}{data()}} and accessing data from \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_afaec30850c8094e9e23395de7de49f3d}{result\+Row()}}.
+
+You may selectively add fields that you want to display using \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a41e5e15eebba8157890b1372c4c41312}{add\+Column()}}, or you can also add all columns based on the query using \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_afa1bbf12d2b58ae91481f6d09c1dd8db}{add\+All\+Fields\+As\+Columns()}}.
+
+The model supports editing of the underlying data (even if the underlying query fetches results from multiple tables!). Values in columns that correspond to fields that have been mapped (and are writable) in a \mbox{\hyperlink{classDatabase}{Database}} Object can be edited. The default implementation of \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ae1575222c8b1da8ea910d19190290a4c}{set\+Data()}} uses \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_afd928ae3f5216574125647063135cc3a}{query\+\_\+result\+\_\+traits$<$\+Result$>$\+::set\+Value()}} to manipulate the database object, and thus uses the same write-\/behind properties as \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr_aed605599617e3ae02d9e92b1daafa8e7}{ptr$<$\+C$>$\+::modify()}}. To customize editing, you can specialize \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ae1575222c8b1da8ea910d19190290a4c}{set\+Data()}} and use \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_afaec30850c8094e9e23395de7de49f3d}{result\+Row()}} to modify the result object directly.
+
+The model supports also inserting rows (only at the end), and removing rows, which are reflected in object additions and removals from the \mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}}.
+
+Editing is directly to the underlying database objects (change, insert and remove). \mbox{\hyperlink{classNote}{Note}} that these changes will be flushed to the database whenever a transaction is committed, or before a query is run. The model will not explicitly create a transaction for the modification, but since the model uses a query for reading data, the change may be committed to the database depending on how the model is loading data. Still, this implies that usually inserting a row and setting its data happens within a single S\+QL {\ttfamily \char`\"{}insert\char`\"{}} statement.
+
+To get good performance, the model keeps the following data cached\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_abad12ccb058ef3ecd3c0db9d5f56783b}{row\+Count()}}
+\item a batch of data, controlled by \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a6871c2e7be184bfd2339320812387f81}{set\+Batch\+Size()}}
+\end{DoxyItemize}
+
+Moreover, the model will try to fetch a batch of data even if you ask for the \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_abad12ccb058ef3ecd3c0db9d5f56783b}{row\+Count()}}, which may provide the row count as a side-\/effect if the query returns less results than a single batch size. If you do not want this behaviour (which might be the case if you are only interested in \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_abad12ccb058ef3ecd3c0db9d5f56783b}{row\+Count()}}, not the actual data) then you can avoid this behaviour by setting batch\+Size to 0. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a0d72641c8a3ce28662a9e231a2a6171a}\label{classWt_1_1Dbo_1_1QueryModel_a0d72641c8a3ce28662a9e231a2a6171a}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!QueryModel@{QueryModel}}
+\index{QueryModel@{QueryModel}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{QueryModel()}{QueryModel()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Query\+Model}}}
+
+
+
+Creates a new query model. 
+
+You need to seed the model with a query using \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a9453700573e37d02a69a77ac6f57dfa5}{set\+Query()}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_afa1bbf12d2b58ae91481f6d09c1dd8db}\label{classWt_1_1Dbo_1_1QueryModel_afa1bbf12d2b58ae91481f6d09c1dd8db}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!addAllFieldsAsColumns@{addAllFieldsAsColumns}}
+\index{addAllFieldsAsColumns@{addAllFieldsAsColumns}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{addAllFieldsAsColumns()}{addAllFieldsAsColumns()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::add\+All\+Fields\+As\+Columns}
+
+
+
+Adds all the columns from the field list. 
+
+All fields are added as columns. Fields that are mutable are marked as editable columns.
+
+This is a convenient alternative to selectively adding columns using \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a41e5e15eebba8157890b1372c4c41312}{add\+Column()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a70882eeace9adfc71e80680057324b28}{fields()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a41e5e15eebba8157890b1372c4c41312}\label{classWt_1_1Dbo_1_1QueryModel_a41e5e15eebba8157890b1372c4c41312}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!addColumn@{addColumn}}
+\index{addColumn@{addColumn}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{addColumn()}{addColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+int \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::add\+Column (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{field,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{header,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}} $>$}]{flags = {\ttfamily ItemFlag\+:\+:Selectable} }\end{DoxyParamCaption})}
+
+
+
+Adds a column. 
+
+The {\ttfamily field} name may be a qualified or unqualified field name. The list of available fields can be inspected using \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a70882eeace9adfc71e80680057324b28}{fields()}}.
+
+The {\ttfamily header} is used as \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Wt\+::\+Item\+Data\+Role\+::\+Display}} for the column header data.
+
+For the column items, \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ad3d740e4e4192a1fced556f3ab1f8da7}{flags()}} will returned the given {\ttfamily flags}. For example, to indicate that a field is editable, you can set the Wt\+::\+Item\+Flag\+::\+Editable flag.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a70882eeace9adfc71e80680057324b28}{fields()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_aba33e9979267a1a1150718523c02bfc3}\label{classWt_1_1Dbo_1_1QueryModel_aba33e9979267a1a1150718523c02bfc3}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!addColumn@{addColumn}}
+\index{addColumn@{addColumn}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{addColumn()}{addColumn()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+int \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::add\+Column (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{field,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}} $>$}]{flags = {\ttfamily ItemFlag\+:\+:Selectable} }\end{DoxyParamCaption})}
+
+
+
+Adds a column. 
+
+This is an overloaded function for convenience, which uses the field name as the header value.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a5c6b5753338158eb9b245f1f6a0d3aa8}{set\+Header\+Data()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a76080f5f01a7404d525259b352e7829b}\label{classWt_1_1Dbo_1_1QueryModel_a76080f5f01a7404d525259b352e7829b}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!addRow@{addRow}}
+\index{addRow@{addRow}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{addRow()}{addRow()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::add\+Row (\begin{DoxyParamCaption}\item[{Result \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Adds a row to the session. 
+
+This method is called from within \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a8a3b084964b3e20e3d83a938e3ba5024}{insert\+Rows()}} to add (and save) a new result row to the \mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo}{Dbo}} session.
+
+The default implementation uses \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_af54fbd95d2319077cacbb718d6f33f1b}{query\+\_\+result\+\_\+traits$<$\+Result$>$\+::add()}}. \mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_ade6d4f3be01c5c6470c3b215e4387025}\label{classWt_1_1Dbo_1_1QueryModel_ade6d4f3be01c5c6470c3b215e4387025}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!batchSize@{batchSize}}
+\index{batchSize@{batchSize}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{batchSize()}{batchSize()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+int \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::batch\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the batch size for fetching results. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a6871c2e7be184bfd2339320812387f81}{set\+Batch\+Size()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a29437ef2d5883e0f8a3e492b86c38456}\label{classWt_1_1Dbo_1_1QueryModel_a29437ef2d5883e0f8a3e492b86c38456}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!columnCount@{columnCount}}
+\index{columnCount@{columnCount}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{columnCount()}{columnCount()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+int \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::column\+Count (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of columns. 
+
+Returns the number of columns that have been added using \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a41e5e15eebba8157890b1372c4c41312}{add\+Column()}} or \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_afa1bbf12d2b58ae91481f6d09c1dd8db}{add\+All\+Fields\+As\+Columns()}}.
+
+Since the query model implements a flat table model, this returns 0 when {\ttfamily parent} is valid. 
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_abcf7912a95a0a60f8e9b1c37d30b8383}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a3821cecfc2662476aee02c0c5a853c46}\label{classWt_1_1Dbo_1_1QueryModel_a3821cecfc2662476aee02c0c5a853c46}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!columnFlags@{columnFlags}}
+\index{columnFlags@{columnFlags}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{columnFlags()}{columnFlags()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::column\+Flags (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption}) const}
+
+
+
+Returns column item flags. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a6448c762a7e8e28051d21d58b600e5ca}{set\+Column\+Flags()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_adbb35efc5a4c46f9eef934bca0927068}\label{classWt_1_1Dbo_1_1QueryModel_adbb35efc5a4c46f9eef934bca0927068}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!createOrderBy@{createOrderBy}}
+\index{createOrderBy@{createOrderBy}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{createOrderBy()}{createOrderBy()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::create\+Order\+By (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{\mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Sort\+Order}}}]{order }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Create specialized order\+By clause for sort. 
+
+The \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_aea2518aea6f73ce38366baf545d65290}{sort()}} method calls \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_adbb35efc5a4c46f9eef934bca0927068}{create\+Order\+By()}} to format a S\+QL clause for use in Query$<$\+Bind\+Strategy$>$\+::order\+By(). The default is to return a string that will sort on a single column in the specified order.
+
+Customize this method if you need a more complex order\+By clause, e.\+g. to break ties consistently.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_aea2518aea6f73ce38366baf545d65290}{sort()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a122165a0eaad6573172181d5eeefcbe0}\label{classWt_1_1Dbo_1_1QueryModel_a122165a0eaad6573172181d5eeefcbe0}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!createRow@{createRow}}
+\index{createRow@{createRow}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{createRow()}{createRow()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+Result \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::create\+Row\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates a new row. 
+
+This method is called from within \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a8a3b084964b3e20e3d83a938e3ba5024}{insert\+Rows()}} to create a new row.
+
+The default implementation uses \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_ad5ff66197006a5daef3ce806ad29ddf7}{query\+\_\+result\+\_\+traits$<$\+Result$>$\+::create()}}. \mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_ab51eb60e26b58aa538964bf1a5a4bcd8}\label{classWt_1_1Dbo_1_1QueryModel_ab51eb60e26b58aa538964bf1a5a4bcd8}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!data@{data}}
+\index{data@{data}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+\mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the data for an item. 
+
+Returns data of type \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Wt\+::\+Item\+Data\+Role\+::\+Display}} or \mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Wt\+::\+Item\+Data\+Role\+::\+Edit}} based on the field value corresponding to the index. If necessary, this fetches a batch of results from the underlying database.
+
+The default implementation of \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ab51eb60e26b58aa538964bf1a5a4bcd8}{data()}} converts Query results to model data using \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_a9e28304a061c7ad52cb34e34fc410759}{query\+\_\+result\+\_\+traits$<$\+Result$>$\+::get\+Values()}}. You may define your own data presentation using the underlying {\ttfamily Result} by specializing \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ab51eb60e26b58aa538964bf1a5a4bcd8}{data()}} and accessing data from \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_afaec30850c8094e9e23395de7de49f3d}{result\+Row()}}. 
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af77f707dd2340652717e7122cd7f4ffd}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a837660e348a3c61c3919c238bf11eb29}\label{classWt_1_1Dbo_1_1QueryModel_a837660e348a3c61c3919c238bf11eb29}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!data@{data}}
+\index{data@{data}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} Wt\+::\+W\+Abstract\+Item\+Model\+::data}
+
+
+
+Returns data at a specified model index for the given role. 
+
+You should check the {\ttfamily role} to decide what data to return. Usually a View class will ask for data for several roles which affect not only the contents (\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Wt\+::\+Item\+Data\+Role\+::\+Display}}) but also icons (\mbox{\hyperlink{classWt_1_1ItemDataRole_a9db6daf35b3c68db6df624411420d4b7}{Wt\+::\+Item\+Data\+Role\+::\+Decoration}}), U\+R\+Ls (\mbox{\hyperlink{classWt_1_1ItemDataRole_ae478217452f058add8fd204ddacde8ae}{Wt\+::\+Item\+Data\+Role\+::\+Link}}), and other visual aspects. If your item does not specify data for a particular role, it should simply return a Wt\+::cpp17\+::any().
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ad3d740e4e4192a1fced556f3ab1f8da7}{flags()}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ab75f1e62214463001b2d15f6b428224d}{header\+Data()}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ae1575222c8b1da8ea910d19190290a4c}{set\+Data()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a5fc67e5fbb584cd1c6e6108ad07ff484}\label{classWt_1_1Dbo_1_1QueryModel_a5fc67e5fbb584cd1c6e6108ad07ff484}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!data@{data}}
+\index{data@{data}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+\mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} Wt\+::\+W\+Abstract\+Item\+Model\+::data}
+
+
+
+Returns the data item at the given column and row. 
+
+This is a convenience method, and is equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WAbstractTableModel_a4b4e9f572cf9cf271a5459859a047a1b}{index}}(row, column, \mbox{\hyperlink{classWt_1_1WAbstractTableModel_a9210f95262d308580fc2a278bb205259}{parent}}).\mbox{\hyperlink{classWt_1_1WModelIndex_ada1e81484925d24df6081bf4fa6b7dc4}{data}}(role)}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractTableModel_a4b4e9f572cf9cf271a5459859a047a1b}{index()}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ab51eb60e26b58aa538964bf1a5a4bcd8}{data()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a4a6c45d5b17f382f2e0927490107208b}\label{classWt_1_1Dbo_1_1QueryModel_a4a6c45d5b17f382f2e0927490107208b}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!deleteRow@{deleteRow}}
+\index{deleteRow@{deleteRow}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{deleteRow()}{deleteRow()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::delete\+Row (\begin{DoxyParamCaption}\item[{Result \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Deletes a row from the session. 
+
+This method is called from within \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a8a868c84e6637e744e2dd976f65e94d6}{remove\+Rows()}} to remove (and delete) a new result row from the \mbox{\hyperlink{classWt_1_1Dbo_1_1Dbo}{Dbo}} session.
+
+The default implementation uses \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_ae60de38f7bbffad41f60bd80df2ad8ca}{query\+\_\+result\+\_\+traits$<$\+Result$>$\+::remove()}}. \mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a70882eeace9adfc71e80680057324b28}\label{classWt_1_1Dbo_1_1QueryModel_a70882eeace9adfc71e80680057324b28}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!fields@{fields}}
+\index{fields@{fields}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{fields()}{fields()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1FieldInfo}{Field\+Info}} $>$ \& \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::fields}
+
+
+
+Returns the query field list. 
+
+This returns the field list from the underlying query. \mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_ad3d740e4e4192a1fced556f3ab1f8da7}\label{classWt_1_1Dbo_1_1QueryModel_ad3d740e4e4192a1fced556f3ab1f8da7}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!flags@{flags}}
+\index{flags@{flags}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{flags()}{flags()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::flags (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the flags for an item. 
+
+Returns the flags set for the column using \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a6448c762a7e8e28051d21d58b600e5ca}{set\+Column\+Flags()}}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ad65561084d42facbde3e075801ed2e4d}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_ab37663d60be859adf5d8aceaffc0b430}\label{classWt_1_1Dbo_1_1QueryModel_ab37663d60be859adf5d8aceaffc0b430}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!fromRawIndex@{fromRawIndex}}
+\index{fromRawIndex@{fromRawIndex}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{fromRawIndex()}{fromRawIndex()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::from\+Raw\+Index (\begin{DoxyParamCaption}\item[{void $\ast$}]{raw\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Converts a raw pointer to a model index. 
+
+Use this method to create model index from temporary raw pointers. It is the reciproce method of \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a8962a6f30f6039adf75bac99d07420d7}{to\+Raw\+Index()}}.
+
+You can return an invalid modelindex if the raw\+Index no longer points to a valid item because of the layout change.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a8962a6f30f6039adf75bac99d07420d7}{to\+Raw\+Index()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a56f6aa462a2707cfb8697b8b31a8ca1f}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_ab75f1e62214463001b2d15f6b428224d}\label{classWt_1_1Dbo_1_1QueryModel_ab75f1e62214463001b2d15f6b428224d}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!headerData@{headerData}}
+\index{headerData@{headerData}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{headerData()}{headerData()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+\mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::header\+Data (\begin{DoxyParamCaption}\item[{int}]{section,  }\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation = {\ttfamily Orientation\+:\+:Horizontal},  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns header data. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a5c6b5753338158eb9b245f1f6a0d3aa8}{set\+Header\+Data()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a37fa8987a50f8a10b5ffb123a84e3f3c}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a717e6040c21f964fd34e9c18c6afaf54}\label{classWt_1_1Dbo_1_1QueryModel_a717e6040c21f964fd34e9c18c6afaf54}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!indexOf@{indexOf}}
+\index{indexOf@{indexOf}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{indexOf()}{indexOf()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+int \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::index\+Of (\begin{DoxyParamCaption}\item[{const Result \&}]{row }\end{DoxyParamCaption}) const}
+
+
+
+Returns the index of row. 
+
+If the row isn\textquotesingle{}t contained in the model, returns -\/1. \mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a8a3b084964b3e20e3d83a938e3ba5024}\label{classWt_1_1Dbo_1_1QueryModel_a8a3b084964b3e20e3d83a938e3ba5024}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!insertRows@{insertRows}}
+\index{insertRows@{insertRows}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{insertRows()}{insertRows()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+bool \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::insert\+Rows (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{count,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inserts one or more rows. 
+
+Row insertions are only supported at the end ({\ttfamily row} == \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_abad12ccb058ef3ecd3c0db9d5f56783b}{row\+Count()}}). For each added row, a new result is added to the underlying database. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a59b5169e158b4cbfb1ec98df67c87200}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a6b53b9460e09c4208c9b0d737e390164}\label{classWt_1_1Dbo_1_1QueryModel_a6b53b9460e09c4208c9b0d737e390164}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!query@{query}}
+\index{query@{query}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{query()}{query()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}}$<$ Result $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::query}
+
+
+
+Returns the query. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a9453700573e37d02a69a77ac6f57dfa5}{set\+Query()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_ade0f8644e13de16e326b7d679f87add1}\label{classWt_1_1Dbo_1_1QueryModel_ade0f8644e13de16e326b7d679f87add1}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!reload@{reload}}
+\index{reload@{reload}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{reload()}{reload()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::reload}
+
+
+
+Rereads the data from the database. 
+
+This invalidates the current (cached) data and informs views that they should rerender. This emits the \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab377ac2fcb9de9d191bd1353665d1389}{layout\+About\+To\+Be\+Changed()}} signal to inform the views that data and perhaps also row count was changed. \mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a8a868c84e6637e744e2dd976f65e94d6}\label{classWt_1_1Dbo_1_1QueryModel_a8a868c84e6637e744e2dd976f65e94d6}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!removeRows@{removeRows}}
+\index{removeRows@{removeRows}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{removeRows()}{removeRows()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+bool \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::remove\+Rows (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{count,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Removes one or more rows. 
+
+For each removed row, the result is removed from the underlying database. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ad1788e38e96df5795fc453f63d557ba2}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a7ddede1b7bf921e9a9fa8865b01cc147}\label{classWt_1_1Dbo_1_1QueryModel_a7ddede1b7bf921e9a9fa8865b01cc147}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!resultById@{resultById}}
+\index{resultById@{resultById}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{resultById()}{resultById()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+Result \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::result\+By\+Id (\begin{DoxyParamCaption}\item[{long long}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Returns a result by id. 
+
+This should be the inverse of the \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a50e3ac385ea4a3f9508229fe2306a8d7}{result\+Id()}} function.
+
+The default implementation uses \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_a45cf741a8090502f234fadfbad05819e}{query\+\_\+result\+\_\+traits$<$\+Result$>$\+::find\+By\+Id()}}. \mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a50e3ac385ea4a3f9508229fe2306a8d7}\label{classWt_1_1Dbo_1_1QueryModel_a50e3ac385ea4a3f9508229fe2306a8d7}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!resultId@{resultId}}
+\index{resultId@{resultId}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{resultId()}{resultId()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+long long \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::result\+Id (\begin{DoxyParamCaption}\item[{const Result \&}]{result }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Returns a unique id for a result. 
+
+This should, if possible, identify the result using a unique long long id, and otherwise return -\/1.
+
+The default implementation uses \mbox{\hyperlink{structWt_1_1Dbo_1_1query__result__traits_a23408463cc4a22d49fc8cc6328391fae}{query\+\_\+result\+\_\+traits$<$\+Result$>$\+::id()}}.
+
+This is required for a working \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ade86cb8bbcf23e2532b91687f1e685e0}{stable\+Result\+Row()}} implementation.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a7ddede1b7bf921e9a9fa8865b01cc147}{result\+By\+Id()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a08c73dc6b9e382a46e7bda2ffe01376a}\label{classWt_1_1Dbo_1_1QueryModel_a08c73dc6b9e382a46e7bda2ffe01376a}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!resultRow@{resultRow}}
+\index{resultRow@{resultRow}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{resultRow()}{resultRow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+Result \& \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::result\+Row (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a result row. 
+
+This returns the result corresponding to a particular row, and could be used to customize the model behaviour, e.\+g. by specializing \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ae1575222c8b1da8ea910d19190290a4c}{set\+Data()}} for certain columns.
+
+Returns a reference to an entry in the result cache.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_afaec30850c8094e9e23395de7de49f3d}{result\+Row(int row) const}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_afaec30850c8094e9e23395de7de49f3d}\label{classWt_1_1Dbo_1_1QueryModel_afaec30850c8094e9e23395de7de49f3d}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!resultRow@{resultRow}}
+\index{resultRow@{resultRow}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{resultRow()}{resultRow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+const Result \& \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::result\+Row (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption}) const}
+
+
+
+Returns a result row. 
+
+This returns the result corresponding to a particular row, and could be used to customize the model behaviour, e.\+g. by specializing \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ab51eb60e26b58aa538964bf1a5a4bcd8}{data()}} for certain columns.
+
+Returns a const reference to an entry in the result cache. \mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_abad12ccb058ef3ecd3c0db9d5f56783b}\label{classWt_1_1Dbo_1_1QueryModel_abad12ccb058ef3ecd3c0db9d5f56783b}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!rowCount@{rowCount}}
+\index{rowCount@{rowCount}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{rowCount()}{rowCount()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+int \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::row\+Count (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of rows. 
+
+Returns the number of rows returned from the underlying query.
+
+Since the query model implements a flat table model, this returns 0 when {\ttfamily parent} is valid. 
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab0709a8f71fd5df882f29bb29fd055f0}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a6871c2e7be184bfd2339320812387f81}\label{classWt_1_1Dbo_1_1QueryModel_a6871c2e7be184bfd2339320812387f81}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!setBatchSize@{setBatchSize}}
+\index{setBatchSize@{setBatchSize}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{setBatchSize()}{setBatchSize()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::set\+Batch\+Size (\begin{DoxyParamCaption}\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Sets the batch size for fetching results. 
+
+The model fetches results from the query in batch, and caches these in memory to avoid repetitive querying of the database.
+
+The default batch size is 40. \mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a6448c762a7e8e28051d21d58b600e5ca}\label{classWt_1_1Dbo_1_1QueryModel_a6448c762a7e8e28051d21d58b600e5ca}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!setColumnFlags@{setColumnFlags}}
+\index{setColumnFlags@{setColumnFlags}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{setColumnFlags()}{setColumnFlags()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::set\+Column\+Flags (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}} $>$}]{flags }\end{DoxyParamCaption})}
+
+
+
+Sets column item flags. 
+
+For items in column {\ttfamily column}, \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ad3d740e4e4192a1fced556f3ab1f8da7}{flags()}} will returned the given {\ttfamily flags}. For example, to indicate that a field is editable, you can set the Wt\+::\+Item\+Flag\+::\+Editable flag. \mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_ab72f9eac35b1852e3b86273016a7f27e}\label{classWt_1_1Dbo_1_1QueryModel_ab72f9eac35b1852e3b86273016a7f27e}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!setData@{setData}}
+\index{setData@{setData}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+virtual bool Wt\+::\+W\+Abstract\+Item\+Model\+::set\+Data}
+
+
+
+Sets data at the given model index. 
+
+Returns {\ttfamily true} if the operation was successful.
+
+The default implementation returns {\ttfamily false}.
+
+The model implementation must emit the \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aa074e5bc55394252a609ef17d071b563}{data\+Changed()}} signal after data was changed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ab51eb60e26b58aa538964bf1a5a4bcd8}{data()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_ae1575222c8b1da8ea910d19190290a4c}\label{classWt_1_1Dbo_1_1QueryModel_ae1575222c8b1da8ea910d19190290a4c}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!setData@{setData}}
+\index{setData@{setData}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+bool \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::set\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{value,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets data at the given model index. 
+
+If {\ttfamily role} = \mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Wt\+::\+Item\+Data\+Role\+::\+Edit}}, sets the value for the field corresponding to the index. All other editing is ignored.
+
+\begin{DoxySeeAlso}{See also}
+set\+Cached\+Result() 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab72f9eac35b1852e3b86273016a7f27e}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_aae463d7040f364ffcc008997f8e387a2}\label{classWt_1_1Dbo_1_1QueryModel_aae463d7040f364ffcc008997f8e387a2}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!setData@{setData}}
+\index{setData@{setData}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+bool Wt\+::\+W\+Abstract\+Item\+Model\+::set\+Data}
+
+
+
+Sets data at the given row and column. 
+
+This is a convience method, and is equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ae1575222c8b1da8ea910d19190290a4c}{setData}}(\mbox{\hyperlink{classWt_1_1WAbstractTableModel_a4b4e9f572cf9cf271a5459859a047a1b}{index}}(row, column, \mbox{\hyperlink{classWt_1_1WAbstractTableModel_a9210f95262d308580fc2a278bb205259}{parent}}), value, role);}
+\end{DoxyCode}
+
+
+Returns {\ttfamily true} if the operation was successful.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ae1575222c8b1da8ea910d19190290a4c}{set\+Data()}}, \mbox{\hyperlink{classWt_1_1WAbstractTableModel_a4b4e9f572cf9cf271a5459859a047a1b}{index()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a5c6b5753338158eb9b245f1f6a0d3aa8}\label{classWt_1_1Dbo_1_1QueryModel_a5c6b5753338158eb9b245f1f6a0d3aa8}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!setHeaderData@{setHeaderData}}
+\index{setHeaderData@{setHeaderData}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{setHeaderData()}{setHeaderData()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+bool \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::set\+Header\+Data (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation,  }\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{value,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets header data for a column. 
+
+The model will return this data in \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ab75f1e62214463001b2d15f6b428224d}{header\+Data()}}. Only column headers are supported (orientation == Wt\+::\+Orientation\+::\+Horizontal). 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a3c4a0ffe050bc0d11feeac4749dde784}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a9453700573e37d02a69a77ac6f57dfa5}\label{classWt_1_1Dbo_1_1QueryModel_a9453700573e37d02a69a77ac6f57dfa5}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!setQuery@{setQuery}}
+\index{setQuery@{setQuery}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{setQuery()}{setQuery()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::set\+Query (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Dbo_1_1Query}{Query}}$<$ Result $>$ \&}]{query,  }\item[{bool}]{keep\+Columns = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Sets the query. 
+
+The {\ttfamily query} is used to query the database.
+
+Unless {\ttfamily keep\+Columns} is {\ttfamily true}, this resets the column list, so you will need to (re-\/)add one or more columns using \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a41e5e15eebba8157890b1372c4c41312}{add\+Column()}}.
+
+When keeping the current columns, a Layout\+Change rather than a Reset is emitted by the model, allowing views to keep their column geometry as well. \mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_aea2518aea6f73ce38366baf545d65290}\label{classWt_1_1Dbo_1_1QueryModel_aea2518aea6f73ce38366baf545d65290}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!sort@{sort}}
+\index{sort@{sort}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::sort (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{\mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Sort\+Order}}}]{order = {\ttfamily SortOrder\+:\+:Ascending} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sorts the model according to a particular column. 
+
+This sorts the model by changing the query using Query$<$\+Bind\+Strategy$>$\+::order\+By().
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_adbb35efc5a4c46f9eef934bca0927068}{create\+Order\+By()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab044b92afa69282ea2e351bcdfd7c0c7}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_ade86cb8bbcf23e2532b91687f1e685e0}\label{classWt_1_1Dbo_1_1QueryModel_ade86cb8bbcf23e2532b91687f1e685e0}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!stableResultRow@{stableResultRow}}
+\index{stableResultRow@{stableResultRow}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{stableResultRow()}{stableResultRow()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+Result \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::stable\+Result\+Row (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption}) const}
+
+
+
+Returns a stable result row. 
+
+This return the same result row as was previously returned by \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_afaec30850c8094e9e23395de7de49f3d}{result\+Row()}}, even if there were database inserts going on.
+
+This requires suitable implementations for \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a50e3ac385ea4a3f9508229fe2306a8d7}{result\+Id()}} and \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_a7ddede1b7bf921e9a9fa8865b01cc147}{result\+By\+Id()}} functions.
+
+If the row wasn\textquotesingle{}t fetched before (or since a \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ade0f8644e13de16e326b7d679f87add1}{reload()}}), then the result of \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_afaec30850c8094e9e23395de7de49f3d}{result\+Row()}} is returned instead. \mbox{\Hypertarget{classWt_1_1Dbo_1_1QueryModel_a8962a6f30f6039adf75bac99d07420d7}\label{classWt_1_1Dbo_1_1QueryModel_a8962a6f30f6039adf75bac99d07420d7}} 
+\index{Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}!toRawIndex@{toRawIndex}}
+\index{toRawIndex@{toRawIndex}!Wt::Dbo::QueryModel$<$ Result $>$@{Wt::Dbo::QueryModel$<$ Result $>$}}
+\doxysubsubsection{\texorpdfstring{toRawIndex()}{toRawIndex()}}
+{\footnotesize\ttfamily template$<$class Result $>$ \\
+void $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel}{Wt\+::\+Dbo\+::\+Query\+Model}}$<$ Result $>$\+::to\+Raw\+Index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Converts a model index to a raw pointer that remains valid while the model\textquotesingle{}s layout is changed. 
+
+Use this method to temporarily save model indexes while the model\textquotesingle{}s layout is changed by for example a sorting operation.
+
+The default implementation returns {\ttfamily 0}, which indicates that the index cannot be converted to a raw pointer. If you reimplement this method, you also need to reimplemnt \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ab37663d60be859adf5d8aceaffc0b430}{from\+Raw\+Index()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab377ac2fcb9de9d191bd1353665d1389}{layout\+About\+To\+Be\+Changed}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_aea2518aea6f73ce38366baf545d65290}{sort()}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1QueryModel_ab37663d60be859adf5d8aceaffc0b430}{from\+Raw\+Index()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aa5b86f5b8e68bd5149d50b5c101855d9}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/Query\+Model.\+h\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/Query\+Model\+\_\+impl.\+h\end{DoxyCompactItemize}

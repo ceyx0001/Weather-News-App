@@ -1,0 +1,125 @@
+\hypertarget{classWt_1_1WLocalizedStrings}{}\doxysection{Wt\+::W\+Localized\+Strings Class Reference}
+\label{classWt_1_1WLocalizedStrings}\index{Wt::WLocalizedStrings@{Wt::WLocalizedStrings}}
+
+
+An abstract class that provides support for localized strings.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Localized\+Strings.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Localized\+Strings\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLocalizedStrings_a5deeed3bbca9d3c4bd88879adcbf95da}\label{classWt_1_1WLocalizedStrings_a5deeed3bbca9d3c4bd88879adcbf95da}} 
+virtual \mbox{\hyperlink{classWt_1_1WLocalizedStrings_a5deeed3bbca9d3c4bd88879adcbf95da}{$\sim$\+W\+Localized\+Strings}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WLocalizedStrings_a745e30f22017ed72662c056838f79bcb}{hibernate}} ()
+\begin{DoxyCompactList}\small\item\em Purges memory resources, if possible. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structWt_1_1LocalizedString}{Localized\+String}} \mbox{\hyperlink{classWt_1_1WLocalizedStrings_a5dec0a1491724fac1e174f9c0f2651bd}{resolve\+Key}} (const \mbox{\hyperlink{classWt_1_1WLocale}{W\+Locale}} \&locale, const std\+::string \&key)=0
+\begin{DoxyCompactList}\small\item\em Resolves a key in the given locale. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structWt_1_1LocalizedString}{Localized\+String}} \mbox{\hyperlink{classWt_1_1WLocalizedStrings_a66141dedd459037656e6774d7f460fa3}{resolve\+Plural\+Key}} (const \mbox{\hyperlink{classWt_1_1WLocale}{W\+Locale}} \&locale, const std\+::string \&key, \+::uint64\+\_\+t amount)
+\begin{DoxyCompactList}\small\item\em Resolves the plural form of a key in the given locale. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classWt_1_1WLocalizedStrings_a00a83bbcce55b304a07674af24e14dc5}{evaluate\+Plural\+Expression}} (const std\+::string \&expression, \+::uint64\+\_\+t n)
+\begin{DoxyCompactList}\small\item\em Utility method to evaluate a plural expression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An abstract class that provides support for localized strings. 
+
+This abstract class provides the content to localized W\+Strings, by resolving the key to a string using the current application locale.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WString_adf1e7e5fc3c7199563a69bf07d77e571}{W\+String\+::tr()}}, \mbox{\hyperlink{classWt_1_1WApplication_a3392f7263ed7a2cf22286834c0b2e1ab}{W\+Application\+::set\+Localized\+Strings()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WLocalizedStrings_a00a83bbcce55b304a07674af24e14dc5}\label{classWt_1_1WLocalizedStrings_a00a83bbcce55b304a07674af24e14dc5}} 
+\index{Wt::WLocalizedStrings@{Wt::WLocalizedStrings}!evaluatePluralExpression@{evaluatePluralExpression}}
+\index{evaluatePluralExpression@{evaluatePluralExpression}!Wt::WLocalizedStrings@{Wt::WLocalizedStrings}}
+\doxysubsubsection{\texorpdfstring{evaluatePluralExpression()}{evaluatePluralExpression()}}
+{\footnotesize\ttfamily static int Wt\+::\+W\+Localized\+Strings\+::evaluate\+Plural\+Expression (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{expression,  }\item[{\+::uint64\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Utility method to evaluate a plural expression. 
+
+This evaluates C expressions such as used by ngettext for a particular value, which can be useful to implement plural key resolution.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLocalizedStrings_a66141dedd459037656e6774d7f460fa3}{resolve\+Plural\+Key()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WLocalizedStrings_a745e30f22017ed72662c056838f79bcb}\label{classWt_1_1WLocalizedStrings_a745e30f22017ed72662c056838f79bcb}} 
+\index{Wt::WLocalizedStrings@{Wt::WLocalizedStrings}!hibernate@{hibernate}}
+\index{hibernate@{hibernate}!Wt::WLocalizedStrings@{Wt::WLocalizedStrings}}
+\doxysubsubsection{\texorpdfstring{hibernate()}{hibernate()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Localized\+Strings\+::hibernate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Purges memory resources, if possible. 
+
+This is called afer event handling, and is an opportunity to conserve memory inbetween events, by freeing memory used for cached key/value bindings, if applicable.
+
+The default implementation does nothing. 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WMessageResourceBundle_aa5b2b105b9c1496db0f9f4479f9f7f03}{Wt\+::\+W\+Message\+Resource\+Bundle}}, and \mbox{\hyperlink{classWt_1_1WCombinedLocalizedStrings_a597c9816e08fbda8fc844ea5d68bd6dc}{Wt\+::\+W\+Combined\+Localized\+Strings}}.
+
+\mbox{\Hypertarget{classWt_1_1WLocalizedStrings_a5dec0a1491724fac1e174f9c0f2651bd}\label{classWt_1_1WLocalizedStrings_a5dec0a1491724fac1e174f9c0f2651bd}} 
+\index{Wt::WLocalizedStrings@{Wt::WLocalizedStrings}!resolveKey@{resolveKey}}
+\index{resolveKey@{resolveKey}!Wt::WLocalizedStrings@{Wt::WLocalizedStrings}}
+\doxysubsubsection{\texorpdfstring{resolveKey()}{resolveKey()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWt_1_1LocalizedString}{Localized\+String}} Wt\+::\+W\+Localized\+Strings\+::resolve\+Key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLocale}{W\+Locale}} \&}]{locale,  }\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Resolves a key in the given locale. 
+
+This method is used by \mbox{\hyperlink{classWt_1_1WString}{W\+String}} to obtain the U\+T\+F-\/8 value corresponding to a key in the given locale.
+
+Returns a successful \mbox{\hyperlink{structWt_1_1LocalizedString}{Localized\+String}} if the key could be resolved.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WString_adf1e7e5fc3c7199563a69bf07d77e571}{W\+String\+::tr()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WMessageResourceBundle_a75525f6586d534486a79c2b7e18a6169}{Wt\+::\+W\+Message\+Resource\+Bundle}}, and \mbox{\hyperlink{classWt_1_1WCombinedLocalizedStrings_af7a2e82890d39a9753985330d6f6386d}{Wt\+::\+W\+Combined\+Localized\+Strings}}.
+
+\mbox{\Hypertarget{classWt_1_1WLocalizedStrings_a66141dedd459037656e6774d7f460fa3}\label{classWt_1_1WLocalizedStrings_a66141dedd459037656e6774d7f460fa3}} 
+\index{Wt::WLocalizedStrings@{Wt::WLocalizedStrings}!resolvePluralKey@{resolvePluralKey}}
+\index{resolvePluralKey@{resolvePluralKey}!Wt::WLocalizedStrings@{Wt::WLocalizedStrings}}
+\doxysubsubsection{\texorpdfstring{resolvePluralKey()}{resolvePluralKey()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWt_1_1LocalizedString}{Localized\+String}} Wt\+::\+W\+Localized\+Strings\+::resolve\+Plural\+Key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLocale}{W\+Locale}} \&}]{locale,  }\item[{const std\+::string \&}]{key,  }\item[{\+::uint64\+\_\+t}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resolves the plural form of a key in the given locale. 
+
+This method is used by \mbox{\hyperlink{classWt_1_1WString}{W\+String}} to obtain the U\+T\+F-\/8 value corresponding to a key in the current locale, taking into account the possibility of multiple plural forms, and chosing the right plural form based on the {\ttfamily amount} passed.
+
+Throws a std\+::logic\+\_\+error if the underlying implementation does not provide support for plural internationalized strings.
+
+Returns a successful \mbox{\hyperlink{structWt_1_1LocalizedString}{Localized\+String}} if the key could be resolved.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WString_af43284d8db7ade763739ac11555bae3b}{W\+String\+::trn()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WMessageResourceBundle_a80bccbf38eb6be6a7653954d88b16197}{Wt\+::\+W\+Message\+Resource\+Bundle}}, and \mbox{\hyperlink{classWt_1_1WCombinedLocalizedStrings_adabc80cf555399f0a20931d033136c76}{Wt\+::\+W\+Combined\+Localized\+Strings}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Localized\+Strings.\+h\end{DoxyCompactItemize}

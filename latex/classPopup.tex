@@ -1,0 +1,119 @@
+\hypertarget{classPopup}{}\doxysection{Popup Class Reference}
+\label{classPopup}\index{Popup@{Popup}}
+
+
+A Java\+Script based popup window, encapsulating the Javascript functions alert(), confirm(), and prompt().  
+
+
+
+
+{\ttfamily \#include $<$Popup.\+h$>$}
+
+
+
+Inheritance diagram for Popup\+:
+% FIG 0
+
+
+Collaboration diagram for Popup\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPopup_ac396e0200d1839ece9e43bb97ba38c6d}\label{classPopup_ac396e0200d1839ece9e43bb97ba38c6d}} 
+enum \mbox{\hyperlink{classPopup_ac396e0200d1839ece9e43bb97ba38c6d}{Type}} \{ {\bfseries Confirm}, 
+{\bfseries Alert}, 
+{\bfseries Prompt}
+ \}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classPopup}{Popup}} type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPopup_a6b975c90fc7c5b3623f5ad54101a36b8}\label{classPopup_a6b975c90fc7c5b3623f5ad54101a36b8}} 
+\mbox{\hyperlink{classPopup_a6b975c90fc7c5b3623f5ad54101a36b8}{Popup}} (\mbox{\hyperlink{classPopup_ac396e0200d1839ece9e43bb97ba38c6d}{Type}} t, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&\mbox{\hyperlink{classPopup_a3f4e151526109a19542227a01d9f9adc}{message}}, const std\+::string \mbox{\hyperlink{classPopup_a6118276d1654327e2f6253bd1baa484a}{default\+Value}})
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classPopup}{Popup}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPopup_a29f79258a69ee042dbf970b7883b2b97}\label{classPopup_a29f79258a69ee042dbf970b7883b2b97}} 
+void \mbox{\hyperlink{classPopup_a29f79258a69ee042dbf970b7883b2b97}{set\+Message}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&\mbox{\hyperlink{classPopup_a3f4e151526109a19542227a01d9f9adc}{message}})
+\begin{DoxyCompactList}\small\item\em Change the message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPopup_a97c14de0bcf9ca764b29eceb7627f14c}\label{classPopup_a97c14de0bcf9ca764b29eceb7627f14c}} 
+void \mbox{\hyperlink{classPopup_a97c14de0bcf9ca764b29eceb7627f14c}{set\+Default\+Value}} (const std\+::string \mbox{\hyperlink{classPopup_a6118276d1654327e2f6253bd1baa484a}{default\+Value}})
+\begin{DoxyCompactList}\small\item\em Change the default value for a prompt dialog. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPopup_a3f4e151526109a19542227a01d9f9adc}\label{classPopup_a3f4e151526109a19542227a01d9f9adc}} 
+const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \& \mbox{\hyperlink{classPopup_a3f4e151526109a19542227a01d9f9adc}{message}} () const
+\begin{DoxyCompactList}\small\item\em Get the current message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPopup_a6118276d1654327e2f6253bd1baa484a}\label{classPopup_a6118276d1654327e2f6253bd1baa484a}} 
+const std\+::string \& \mbox{\hyperlink{classPopup_a6118276d1654327e2f6253bd1baa484a}{default\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Get the default value for a prompt dialog. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPopup_a3705ac1c6feedfbf737ae729ec097bab}\label{classPopup_a3705ac1c6feedfbf737ae729ec097bab}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ std\+::string $>$ \& \mbox{\hyperlink{classPopup_a3705ac1c6feedfbf737ae729ec097bab}{ok\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when ok pressed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPopup_a8a77dc16b10c3ab1ee7bb0745555b11e}\label{classPopup_a8a77dc16b10c3ab1ee7bb0745555b11e}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}} \& \mbox{\hyperlink{classPopup_a8a77dc16b10c3ab1ee7bb0745555b11e}{cancel\+Pressed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when cancel is pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPopup_ab99a13a5962dd75a4aa53777db9495c3}\label{classPopup_ab99a13a5962dd75a4aa53777db9495c3}} 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPopup}{Popup}} $>$ \mbox{\hyperlink{classPopup_ab99a13a5962dd75a4aa53777db9495c3}{create\+Confirm}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&\mbox{\hyperlink{classPopup_a3f4e151526109a19542227a01d9f9adc}{message}})
+\begin{DoxyCompactList}\small\item\em Create a confirm dialog. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPopup_afbcfa9d932c9d426606d1a3e15751595}\label{classPopup_afbcfa9d932c9d426606d1a3e15751595}} 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPopup}{Popup}} $>$ \mbox{\hyperlink{classPopup_afbcfa9d932c9d426606d1a3e15751595}{create\+Prompt}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&\mbox{\hyperlink{classPopup_a3f4e151526109a19542227a01d9f9adc}{message}}, const std\+::string \mbox{\hyperlink{classPopup_a6118276d1654327e2f6253bd1baa484a}{default\+Value}})
+\begin{DoxyCompactList}\small\item\em Create a prompt dialog with the given default value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPopup_a7053a6efef98f5ee490703b5f520e451}\label{classPopup_a7053a6efef98f5ee490703b5f520e451}} 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPopup}{Popup}} $>$ \mbox{\hyperlink{classPopup_a7053a6efef98f5ee490703b5f520e451}{create\+Alert}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&\mbox{\hyperlink{classPopup_a3f4e151526109a19542227a01d9f9adc}{message}})
+\begin{DoxyCompactList}\small\item\em Create an alert dialog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} \mbox{\hyperlink{classPopup_a4fba40d8284a8022842f523dfa6318fa}{show}}
+\begin{DoxyCompactList}\small\item\em Show the dialog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPopup_aeff3dfbced8f5d33b383940533ea4b58}\label{classPopup_aeff3dfbced8f5d33b383940533ea4b58}} 
+void \mbox{\hyperlink{classPopup_aeff3dfbced8f5d33b383940533ea4b58}{set\+Java\+Script}} ()
+\begin{DoxyCompactList}\small\item\em Update the javascript code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPopup_ad9472a44db701b362c0e5c883b88d430}\label{classPopup_ad9472a44db701b362c0e5c883b88d430}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ std\+::string $>$ {\bfseries ok\+Pressed\+\_\+}
+\item 
+\mbox{\Hypertarget{classPopup_a44d40ec07b5c05def917c586a27a16ae}\label{classPopup_a44d40ec07b5c05def917c586a27a16ae}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}} {\bfseries cancel\+Pressed\+\_\+}
+\item 
+\mbox{\Hypertarget{classPopup_a6fc4373c05e651c9d071cbbb3b089dfb}\label{classPopup_a6fc4373c05e651c9d071cbbb3b089dfb}} 
+\mbox{\hyperlink{classPopup_ac396e0200d1839ece9e43bb97ba38c6d}{Type}} {\bfseries t\+\_\+}
+\item 
+\mbox{\Hypertarget{classPopup_a7e69edf1f3b9ce51b625214a2225d374}\label{classPopup_a7e69edf1f3b9ce51b625214a2225d374}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries message\+\_\+}
+\item 
+\mbox{\Hypertarget{classPopup_ab6ea80a8a874b3be156ce3bb79377392}\label{classPopup_ab6ea80a8a874b3be156ce3bb79377392}} 
+std\+::string {\bfseries default\+Value\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A Java\+Script based popup window, encapsulating the Javascript functions alert(), confirm(), and prompt(). 
+
+Use one of the create static methods to create a popup. This will not display the popup, until either the show slot is triggered from an event handler, or is executed using it\textquotesingle{}s exec() method.
+
+When the user closes the popup, either the ok\+Pressed or cancel\+Pressed signal is emitted. For a prompt dialog, the value is passed as a parameter to the ok\+Pressed signal. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classPopup_a4fba40d8284a8022842f523dfa6318fa}\label{classPopup_a4fba40d8284a8022842f523dfa6318fa}} 
+\index{Popup@{Popup}!show@{show}}
+\index{show@{show}!Popup@{Popup}}
+\doxysubsubsection{\texorpdfstring{show}{show}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} Popup\+::show}
+
+
+
+Show the dialog. 
+
+Use show.\+exec() to show the dialog, or connect the slot to an Event\+Signal to directly show the dialog without a server round trip. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/javascript/Popup.\+h\end{DoxyCompactItemize}

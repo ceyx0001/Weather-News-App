@@ -1,0 +1,121 @@
+\hypertarget{classWt_1_1WKeyEvent}{}\doxysection{Wt\+::W\+Key\+Event Class Reference}
+\label{classWt_1_1WKeyEvent}\index{Wt::WKeyEvent@{Wt::WKeyEvent}}
+
+
+A class providing details for a keyboard event.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Event.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::W\+Key\+Event\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WKeyEvent_a93efdf1091659752a18f107f2c7612e8}\label{classWt_1_1WKeyEvent_a93efdf1091659752a18f107f2c7612e8}} 
+\mbox{\hyperlink{classWt_1_1WKeyEvent_a93efdf1091659752a18f107f2c7612e8}{W\+Key\+Event}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__signalslot_ga34e65660d30e69c56aa636a8856aa52d}{Key}} \mbox{\hyperlink{classWt_1_1WKeyEvent_ad69f2c0f6ea4f4189e2db028be031254}{key}} () const
+\begin{DoxyCompactList}\small\item\em Returns the key code key that was pressed or released. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__signalslot_ga50f91169486bada5931f3adc3a623091}{Keyboard\+Modifier}} $>$ \mbox{\hyperlink{classWt_1_1WKeyEvent_abbb3876c3e1f91e07dfd905e206caafc}{modifiers}} () const
+\begin{DoxyCompactList}\small\item\em Returns keyboard modifiers. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WKeyEvent_a0685e315762ae3641c13e5e211a7af67}{char\+Code}} () const
+\begin{DoxyCompactList}\small\item\em Returns the unicode character code. \end{DoxyCompactList}\item 
+W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \mbox{\hyperlink{classWt_1_1WKeyEvent_a024ce06d04d522b00fab4f2847477303}{text}} () const
+\begin{DoxyCompactList}\small\item\em The (unicode) text that this key generated. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WKeyEvent_a2d364ddec06e0f23694973ee4c51db4a}\label{classWt_1_1WKeyEvent_a2d364ddec06e0f23694973ee4c51db4a}} 
+{\bfseries W\+Key\+Event} (const \mbox{\hyperlink{classWt_1_1JavaScriptEvent}{Java\+Script\+Event}} \&js\+Event)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WKeyEvent_a6ed8fccf414665fd1965a8d836f35e42}\label{classWt_1_1WKeyEvent_a6ed8fccf414665fd1965a8d836f35e42}} 
+\mbox{\hyperlink{classWt_1_1JavaScriptEvent}{Java\+Script\+Event}} {\bfseries js\+Event\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class providing details for a keyboard event. 
+
+A key event is associated with the \mbox{\hyperlink{classWt_1_1WInteractWidget_a639e4f54902b864f211e2e6cf9f80dc7}{W\+Interact\+Widget\+::key\+Went\+Down()}}, \mbox{\hyperlink{classWt_1_1WInteractWidget_aed28d2568889f54a4809250ae265a08b}{W\+Interact\+Widget\+::key\+Went\+Up()}} and \mbox{\hyperlink{classWt_1_1WInteractWidget_a9ddbec77fbb35319948fa8436f1aa2d4}{W\+Interact\+Widget\+::key\+Pressed()}} signals. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WKeyEvent_a0685e315762ae3641c13e5e211a7af67}\label{classWt_1_1WKeyEvent_a0685e315762ae3641c13e5e211a7af67}} 
+\index{Wt::WKeyEvent@{Wt::WKeyEvent}!charCode@{charCode}}
+\index{charCode@{charCode}!Wt::WKeyEvent@{Wt::WKeyEvent}}
+\doxysubsubsection{\texorpdfstring{charCode()}{charCode()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Key\+Event\+::char\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the unicode character code. 
+
+This is only defined for a \mbox{\hyperlink{classWt_1_1WInteractWidget_a9ddbec77fbb35319948fa8436f1aa2d4}{key\+Pressed }} event, and returns the unicode character code point of a character that is entered.
+
+For the \mbox{\hyperlink{classWt_1_1WInteractWidget_a639e4f54902b864f211e2e6cf9f80dc7}{key\+Went\+Down }} and \mbox{\hyperlink{classWt_1_1WInteractWidget_aed28d2568889f54a4809250ae265a08b}{key\+Went\+Up }} events, \textquotesingle{}0\textquotesingle{} is returned.
+
+The \mbox{\hyperlink{classWt_1_1WKeyEvent_a0685e315762ae3641c13e5e211a7af67}{char\+Code()}} may be different from \mbox{\hyperlink{classWt_1_1WKeyEvent_ad69f2c0f6ea4f4189e2db028be031254}{key()}}. For example, a \mbox{\hyperlink{}{Key\+::M}} key may correspond to \textquotesingle{}m\textquotesingle{} or \textquotesingle{}M\textquotesingle{} character, depending on whether the shift key is pressed simultaneously.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WKeyEvent_ad69f2c0f6ea4f4189e2db028be031254}{key()}}, \mbox{\hyperlink{classWt_1_1WKeyEvent_a024ce06d04d522b00fab4f2847477303}{text()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WKeyEvent_ad69f2c0f6ea4f4189e2db028be031254}\label{classWt_1_1WKeyEvent_ad69f2c0f6ea4f4189e2db028be031254}} 
+\index{Wt::WKeyEvent@{Wt::WKeyEvent}!key@{key}}
+\index{key@{key}!Wt::WKeyEvent@{Wt::WKeyEvent}}
+\doxysubsubsection{\texorpdfstring{key()}{key()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__signalslot_ga34e65660d30e69c56aa636a8856aa52d}{Key}} Wt\+::\+W\+Key\+Event\+::key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the key code key that was pressed or released. 
+
+The key code corresponds to the actual key on the keyboard, rather than the generated character.
+
+All three types of key events provide this information.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WKeyEvent_abbb3876c3e1f91e07dfd905e206caafc}{modifiers()}}, \mbox{\hyperlink{classWt_1_1WKeyEvent_a0685e315762ae3641c13e5e211a7af67}{char\+Code()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WKeyEvent_abbb3876c3e1f91e07dfd905e206caafc}\label{classWt_1_1WKeyEvent_abbb3876c3e1f91e07dfd905e206caafc}} 
+\index{Wt::WKeyEvent@{Wt::WKeyEvent}!modifiers@{modifiers}}
+\index{modifiers@{modifiers}!Wt::WKeyEvent@{Wt::WKeyEvent}}
+\doxysubsubsection{\texorpdfstring{modifiers()}{modifiers()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$\mbox{\hyperlink{group__signalslot_ga50f91169486bada5931f3adc3a623091}{Keyboard\+Modifier}}$>$ Wt\+::\+W\+Key\+Event\+::modifiers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns keyboard modifiers. 
+
+The result is a logical OR of \mbox{\hyperlink{group__signalslot_ga50f91169486bada5931f3adc3a623091}{Keyboard\+Modifier}} flags.
+
+All three types of key events provide this information.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WKeyEvent_ad69f2c0f6ea4f4189e2db028be031254}{key()}}, \mbox{\hyperlink{classWt_1_1WKeyEvent_a0685e315762ae3641c13e5e211a7af67}{char\+Code()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WKeyEvent_a024ce06d04d522b00fab4f2847477303}\label{classWt_1_1WKeyEvent_a024ce06d04d522b00fab4f2847477303}} 
+\index{Wt::WKeyEvent@{Wt::WKeyEvent}!text@{text}}
+\index{text@{text}!Wt::WKeyEvent@{Wt::WKeyEvent}}
+\doxysubsubsection{\texorpdfstring{text()}{text()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+U\+S\+T\+R\+I\+NG Wt\+::\+W\+Key\+Event\+::text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+The (unicode) text that this key generated. 
+
+This is only defined for a \mbox{\hyperlink{classWt_1_1WInteractWidget_a9ddbec77fbb35319948fa8436f1aa2d4}{key\+Pressed }} event, and returns a string that holds exactly one unicode character, which corresponds to \mbox{\hyperlink{classWt_1_1WKeyEvent_a0685e315762ae3641c13e5e211a7af67}{char\+Code()}}.
+
+For the \mbox{\hyperlink{classWt_1_1WInteractWidget_a639e4f54902b864f211e2e6cf9f80dc7}{key\+Went\+Down }} and \mbox{\hyperlink{classWt_1_1WInteractWidget_aed28d2568889f54a4809250ae265a08b}{key\+Went\+Up }} events, an empty string is returned.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WKeyEvent_a0685e315762ae3641c13e5e211a7af67}{char\+Code()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Event.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,132 @@
+\hypertarget{classLogger}{}\doxysection{Logger Class Reference}
+\label{classLogger}\index{Logger@{Logger}}
+
+
+Manages \mbox{\hyperlink{classLogMessage}{Log\+Message}} objects.  
+
+
+
+
+{\ttfamily \#include $<$Logger.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classLogger_a2aa660e693bcd2688c239d8f8a76f8f0}{log}} (std\+::string msg)
+\begin{DoxyCompactList}\small\item\em Logs a message. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classLogMessage}{Log\+Message}} $>$ \mbox{\hyperlink{classLogger_a2cf71bcc35d8b51ba563cc8495cdd59c}{read\+\_\+all}} ()
+\begin{DoxyCompactList}\small\item\em Load all log messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classLogger}{Logger}} \& \mbox{\hyperlink{classLogger_a4aa4d7c3b98f6e12e7ea8253da5ea0cd}{instance}} ()
+\begin{DoxyCompactList}\small\item\em Singleton instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLogger_abc41bfb031d896170c7675fa96a6b30c}{Logger}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLogger_acb668a9e186a25fbaad2e4af6d1ed00a}{$\sim$\+Logger}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLogger_add0f34d4c753c86af8074840a72366b3}\label{classLogger_add0f34d4c753c86af8074840a72366b3}} 
+{\bfseries Logger} (const \mbox{\hyperlink{classLogger}{Logger}} \&)=delete
+\item 
+\mbox{\Hypertarget{classLogger_a21dc953ea7e5c00656e75a2b4b7ec5cc}\label{classLogger_a21dc953ea7e5c00656e75a2b4b7ec5cc}} 
+\mbox{\hyperlink{classLogger}{Logger}} \& {\bfseries operator=} (const \mbox{\hyperlink{classLogger}{Logger}} \&)=delete
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLogger_a8405884bd01e9da02e99e4ac01a77558}\label{classLogger_a8405884bd01e9da02e99e4ac01a77558}} 
+sqlite3 $\ast$ {\bfseries \+\_\+db}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages \mbox{\hyperlink{classLogMessage}{Log\+Message}} objects. 
+
+The \mbox{\hyperlink{classLogger}{Logger}} object saves log messages to a database and also is able to load all stored log messages from the database. It is a singleton using Scott Meyer\textquotesingle{}s implementation that allows only one instance of the object globally. \begin{DoxyAuthor}{Author}
+Jun Shao 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLogger_abc41bfb031d896170c7675fa96a6b30c}\label{classLogger_abc41bfb031d896170c7675fa96a6b30c}} 
+\index{Logger@{Logger}!Logger@{Logger}}
+\index{Logger@{Logger}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{Logger()}{Logger()}}
+{\footnotesize\ttfamily Logger\+::\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Default constructor. 
+
+Default constructor for a \mbox{\hyperlink{classLogger}{Logger}} object that initializes the db connection. \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLogger_acb668a9e186a25fbaad2e4af6d1ed00a}\label{classLogger_acb668a9e186a25fbaad2e4af6d1ed00a}} 
+\index{Logger@{Logger}!````~Logger@{$\sim$Logger}}
+\index{````~Logger@{$\sim$Logger}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{$\sim$Logger()}{~Logger()}}
+{\footnotesize\ttfamily Logger\+::$\sim$\+Logger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Default destructor. 
+
+Default destructor for a \mbox{\hyperlink{classLogger}{Logger}} object that closes the db connection. \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLogger_a4aa4d7c3b98f6e12e7ea8253da5ea0cd}\label{classLogger_a4aa4d7c3b98f6e12e7ea8253da5ea0cd}} 
+\index{Logger@{Logger}!instance@{instance}}
+\index{instance@{instance}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLogger}{Logger}} \& Logger\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Singleton instance. 
+
+Returns the instance of the \mbox{\hyperlink{classLogger}{Logger}} object that is shared globally. \begin{DoxyReturn}{Returns}
+The instance of the \mbox{\hyperlink{classLogger}{Logger}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLogger_a2aa660e693bcd2688c239d8f8a76f8f0}\label{classLogger_a2aa660e693bcd2688c239d8f8a76f8f0}} 
+\index{Logger@{Logger}!log@{log}}
+\index{log@{log}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily void Logger\+::log (\begin{DoxyParamCaption}\item[{std\+::string}]{msg }\end{DoxyParamCaption})}
+
+
+
+Logs a message. 
+
+Inserts a message as a string into the db. 
+\begin{DoxyParams}{Parameters}
+{\em msg} & is the message as a string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLogger_a2cf71bcc35d8b51ba563cc8495cdd59c}\label{classLogger_a2cf71bcc35d8b51ba563cc8495cdd59c}} 
+\index{Logger@{Logger}!read\_all@{read\_all}}
+\index{read\_all@{read\_all}!Logger@{Logger}}
+\doxysubsubsection{\texorpdfstring{read\_all()}{read\_all()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classLogMessage}{Log\+Message}} $>$ Logger\+::read\+\_\+all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load all log messages. 
+
+Loads all log messages as \mbox{\hyperlink{classLogMessage}{Log\+Message}} objects into a vector. \begin{DoxyReturn}{Returns}
+A vector containing all stored log messages in the db. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+data/logger/Logger.\+h\item 
+data/logger/Logger.\+cpp\end{DoxyCompactItemize}

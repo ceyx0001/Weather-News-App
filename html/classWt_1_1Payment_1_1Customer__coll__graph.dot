@@ -1,0 +1,21 @@
+digraph "Wt::Payment::Customer"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Wt::Payment::Customer",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Contains customer information."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" lastName_\nfirstName_" ,fontname="Helvetica"];
+  Node2 [label="Wt::WString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WString.html",tooltip="A value class which describes a locale-aware unicode string."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" impl_" ,fontname="Helvetica"];
+  Node3 [label="Wt::WString::Impl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1WString_1_1Impl.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" key_" ,fontname="Helvetica"];
+  Node4 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" utf8_" ,fontname="Helvetica"];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Empty" ,fontname="Helvetica"];
+  Node5 [label="const",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" shippingAddress_" ,fontname="Helvetica"];
+  Node6 [label="Wt::Payment::Address",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Payment_1_1Address.html",tooltip="Contains address information."];
+  Node2 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" zip_\nstreet2_\nstreet1_\nstate_\nname_\ncity_" ,fontname="Helvetica"];
+  Node4 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" countryCode_\nphoneNumber_" ,fontname="Helvetica"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" locale_\nemail_\npayerId_" ,fontname="Helvetica"];
+}

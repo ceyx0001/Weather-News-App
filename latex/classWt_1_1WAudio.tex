@@ -1,0 +1,85 @@
+\hypertarget{classWt_1_1WAudio}{}\doxysection{Wt\+::W\+Audio Class Reference}
+\label{classWt_1_1WAudio}\index{Wt::WAudio@{Wt::WAudio}}
+
+
+A widget that plays audio.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Audio.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Audio\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Audio\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WAudio_a1e6625c3c47b72354225fcf576047f67}{W\+Audio}} ()
+\begin{DoxyCompactList}\small\item\em Creates a audio widget. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1WAudio_a6357ccaf4894a096f935f80b90e4a93f}{js\+Audio\+Ref}} () const
+\begin{DoxyCompactList}\small\item\em Returns the Java\+Script reference to the audio object, or null. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WAudio_a9b23209ddd9ec1943a9899e036d257e0}\label{classWt_1_1WAudio_a9b23209ddd9ec1943a9899e036d257e0}} 
+virtual \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ {\bfseries create\+Media\+Dom\+Element} () override
+\item 
+\mbox{\Hypertarget{classWt_1_1WAudio_a2fba583a580ac47ad2b6e587ceb0017a}\label{classWt_1_1WAudio_a2fba583a580ac47ad2b6e587ceb0017a}} 
+\mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} {\bfseries dom\+Element\+Type} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A widget that plays audio. 
+
+This is a low-\/level widget, mapping directly onto a {\ttfamily $<$audio$>$} element available in H\+T\+M\+L5 compliant browsers.
+
+In almost every situation you should use the \mbox{\hyperlink{classWt_1_1WMediaPlayer}{W\+Media\+Player}} widget if you want the user to be able to interact with the audio, or \mbox{\hyperlink{classWt_1_1WSound}{W\+Sound}} for simple sound feed-\/back.
+
+Usage of the audio element consists of adding one or more audio sources and setting some options. Since not every browser supports H\+T\+M\+L5 audio, the class provides a mechanism to display alternative content in browsers that cannot play the video.
+
+There are two reasons why the a browser may use the alternative content\+: either because the browser does not support the H\+T\+M\+L5 audio tag (alternative content is displayed even when Java\+Script is not available), or because none of the specified sources contain an audio format that is understood by the browser (requires Java\+Script to display the alternative content).
+
+The \mbox{\hyperlink{classWt_1_1WAbstractMedia_a93f26fe0f97cd34fc8592915871b3a7d}{add\+Source()}} and \mbox{\hyperlink{classWt_1_1WAbstractMedia_a7d69e914ce3286638869f161418c62fb}{set\+Alternative\+Content()}} may not be called after the widget is rendered.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMediaPlayer}{W\+Media\+Player}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WAudio_a1e6625c3c47b72354225fcf576047f67}\label{classWt_1_1WAudio_a1e6625c3c47b72354225fcf576047f67}} 
+\index{Wt::WAudio@{Wt::WAudio}!WAudio@{WAudio}}
+\index{WAudio@{WAudio}!Wt::WAudio@{Wt::WAudio}}
+\doxysubsubsection{\texorpdfstring{WAudio()}{WAudio()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Audio\+::\+W\+Audio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a audio widget. 
+
+A freshly constructed Audio widget has no media sources, no options, and has preload mode set to Preload\+Auto. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WAudio_a6357ccaf4894a096f935f80b90e4a93f}\label{classWt_1_1WAudio_a6357ccaf4894a096f935f80b90e4a93f}} 
+\index{Wt::WAudio@{Wt::WAudio}!jsAudioRef@{jsAudioRef}}
+\index{jsAudioRef@{jsAudioRef}!Wt::WAudio@{Wt::WAudio}}
+\doxysubsubsection{\texorpdfstring{jsAudioRef()}{jsAudioRef()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+W\+Audio\+::js\+Audio\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the Java\+Script reference to the audio object, or null. 
+
+It is possible, for browser compatibility reasons, that \mbox{\hyperlink{classWt_1_1WWidget_a83a186d2feacfbfbdb5b54f4cefc6735}{js\+Ref()}} is not the H\+T\+M\+L5 audio element. \mbox{\hyperlink{classWt_1_1WAudio_a6357ccaf4894a096f935f80b90e4a93f}{js\+Audio\+Ref()}} is guaranteed to be an expression that evaluates to the media object. This expression may yield null, if the video object is not rendered at all (e.\+g. on older versions of Internet Explorer). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Audio.\+h\end{DoxyCompactItemize}

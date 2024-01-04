@@ -1,0 +1,21 @@
+This is the \href{https://www.webtoolkit.eu/widgets}{\texttt{ widget gallery}}, which serves more as a directory of widgets available in \mbox{\hyperlink{classWt}{Wt}}.\hypertarget{md_wt-4_88_82_examples_widgetgallery_README_autotoc_md131}{}\doxysection{How to run}\label{md_wt-4_88_82_examples_widgetgallery_README_autotoc_md131}
+This application illustrates a recommended deployment setup for a more involved application, separating\+:
+\begin{DoxyItemize}
+\item docroot\+: these are publicly available files for the browser to download through the web server (e.\+g. css, resources, ...)
+\item approot\+: these are private application files opened by the application (e.\+g. resource files, config files, etc...) and not deployed in your document root
+\end{DoxyItemize}
+
+To run the application using the built-\/in httpd, you thus need to\+: \begin{DoxyVerb}cd widgetgallery/docroot
+ln -s ../../../resources . # include standard Wt resource files in docroot
+cd ..
+../../build/examples/widgetgallery/widgetgallery.wt \
+      --docroot docroot --approot approot \
+      --http-address 0.0.0.0 --http-port 8080
+\end{DoxyVerb}
+\hypertarget{md_wt-4_88_82_examples_widgetgallery_README_autotoc_md132}{}\doxysection{What it illustrates}\label{md_wt-4_88_82_examples_widgetgallery_README_autotoc_md132}
+
+\begin{DoxyItemize}
+\item most widgets in \mbox{\hyperlink{classWt}{Wt}} in some form or another, in combination with the bootstrap theme (you can actually trigger the use of another theme using ?theme=default or ?theme=polished parameters)
+\item lots of small examples
+\item internal path handling and cross referencing 
+\end{DoxyItemize}

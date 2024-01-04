@@ -1,0 +1,12 @@
+This is an example that illustrates the use of the {\ttfamily W\+Ssl\+Info} and \textquotesingle{}W\+Ssl\+Certificate\textquotesingle{} to authenticate clients based on S\+SL certificates. The example also demonstrates how this S\+SL based authentication can be combined with \mbox{\hyperlink{classWt}{Wt}}\textquotesingle{}s authentication framework.\hypertarget{md_wt-4_88_82_examples_feature_client-ssl-auth_README_autotoc_md52}{}\doxysection{How to run}\label{md_wt-4_88_82_examples_feature_client-ssl-auth_README_autotoc_md52}
+See the R\+E\+A\+D\+ME in the parent directory.
+
+S\+SL certificates should be obtained (purchased) from Certificate Authorities, but for testing you can use Open\+S\+SL to generate your own test certificates. This example requires CA public keys, server public and private keys, and client public and private keys.
+
+You will need to configure your webserver to work with these keys. A sample configuration for the built-\/in \mbox{\hyperlink{classWt}{Wt}} httpd is\+:
+
+docroot=. http-\/address=0.\+0.\+0.\+0 http-\/port=8080 https-\/address=0.\+0.\+0.\+0 https-\/port=4430 ssl-\/certificate=projects/ssl/my\+C\+A/certs/server.\+crt ssl-\/private-\/key=projects/ssl/my\+C\+A/private/server.\+key ssl-\/tmp-\/dh=projects/ssl/dh2048.\+pem ssl-\/client-\/verification=required ssl-\/verify-\/depth=15 ssl-\/ca-\/certificates=projects/ssl/my\+C\+A/certs/myca.\+crt\hypertarget{md_wt-4_88_82_examples_feature_client-ssl-auth_README_autotoc_md53}{}\doxysection{What it illustrates}\label{md_wt-4_88_82_examples_feature_client-ssl-auth_README_autotoc_md53}
+
+\begin{DoxyItemize}
+\item the use of client certificates for authentication 
+\end{DoxyItemize}

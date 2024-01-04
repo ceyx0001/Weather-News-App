@@ -1,0 +1,133 @@
+\hypertarget{classWt_1_1Chart_1_1SeriesIterator}{}\doxysection{Wt\+::Chart\+::Series\+Iterator Class Reference}
+\label{classWt_1_1Chart_1_1SeriesIterator}\index{Wt::Chart::SeriesIterator@{Wt::Chart::SeriesIterator}}
+
+
+Abstract base class for iterating over series data in a chart.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Chart/\+W\+Cartesian\+Chart.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Chart\+::Series\+Iterator\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Chart\+::Series\+Iterator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1SeriesIterator_a871da064e15fb30f55b1808ea55289a5}\label{classWt_1_1Chart_1_1SeriesIterator_a871da064e15fb30f55b1808ea55289a5}} 
+virtual \mbox{\hyperlink{classWt_1_1Chart_1_1SeriesIterator_a871da064e15fb30f55b1808ea55289a5}{$\sim$\+Series\+Iterator}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Chart_1_1SeriesIterator_afbfb4a8b7241a1922544742609546555}{start\+Segment}} (int \mbox{\hyperlink{classWt_1_1Chart_1_1SeriesIterator_ad0c695448bfe6fa659168cfb490d868c}{current\+X\+Segment}}, int \mbox{\hyperlink{classWt_1_1Chart_1_1SeriesIterator_a4761b7b34587a7958cd72fec69390b44}{current\+Y\+Segment}}, const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&current\+Segment\+Area)
+\begin{DoxyCompactList}\small\item\em Start handling a new segment. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Chart_1_1SeriesIterator_a30472a51e3919fc07ddef7d9a7bbef1c}{end\+Segment}} ()
+\begin{DoxyCompactList}\small\item\em End handling a particular segment. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Chart_1_1SeriesIterator_a9c564f234636c54a185a9f294324dcf9}{start\+Series}} (const \mbox{\hyperlink{classWt_1_1Chart_1_1WDataSeries}{W\+Data\+Series}} \&series, double group\+Width, int num\+Bar\+Groups, int current\+Bar\+Group)
+\begin{DoxyCompactList}\small\item\em Start iterating a particular series. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1SeriesIterator_a3832373d23555ccb9081163e06525b30}\label{classWt_1_1Chart_1_1SeriesIterator_a3832373d23555ccb9081163e06525b30}} 
+virtual void \mbox{\hyperlink{classWt_1_1Chart_1_1SeriesIterator_a3832373d23555ccb9081163e06525b30}{end\+Series}} ()
+\begin{DoxyCompactList}\small\item\em End iterating a particular series. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Chart_1_1SeriesIterator_a03ad6b06ba8ec872e5bab15942d5f0d2}{new\+Value}} (const \mbox{\hyperlink{classWt_1_1Chart_1_1WDataSeries}{W\+Data\+Series}} \&series, double x, double y, double stackY, int x\+Row, int x\+Column, int y\+Row, int y\+Column)
+\begin{DoxyCompactList}\small\item\em Process a value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1SeriesIterator_ad0c695448bfe6fa659168cfb490d868c}\label{classWt_1_1Chart_1_1SeriesIterator_ad0c695448bfe6fa659168cfb490d868c}} 
+int \mbox{\hyperlink{classWt_1_1Chart_1_1SeriesIterator_ad0c695448bfe6fa659168cfb490d868c}{current\+X\+Segment}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current X segment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1SeriesIterator_a4761b7b34587a7958cd72fec69390b44}\label{classWt_1_1Chart_1_1SeriesIterator_a4761b7b34587a7958cd72fec69390b44}} 
+int \mbox{\hyperlink{classWt_1_1Chart_1_1SeriesIterator_a4761b7b34587a7958cd72fec69390b44}{current\+Y\+Segment}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current Y segment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1SeriesIterator_ab126862711900af838b88d113e119a0e}\label{classWt_1_1Chart_1_1SeriesIterator_ab126862711900af838b88d113e119a0e}} 
+static void {\bfseries set\+Pen\+Color} (\mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \&pen, const \mbox{\hyperlink{classWt_1_1Chart_1_1WDataSeries}{W\+Data\+Series}} \&series, int x\+Row, int x\+Column, int y\+Row, int y\+Column, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} color\+Role)
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1SeriesIterator_a8aca9f6961832f168f5a7f4df08db568}\label{classWt_1_1Chart_1_1SeriesIterator_a8aca9f6961832f168f5a7f4df08db568}} 
+static void {\bfseries set\+Brush\+Color} (\mbox{\hyperlink{classWt_1_1WBrush}{W\+Brush}} \&brush, const \mbox{\hyperlink{classWt_1_1Chart_1_1WDataSeries}{W\+Data\+Series}} \&series, int x\+Row, int x\+Column, int y\+Row, int y\+Column, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} color\+Role)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1SeriesIterator_ab481fd0838457e9edde7caf4624c28e3}\label{classWt_1_1Chart_1_1SeriesIterator_ab481fd0838457e9edde7caf4624c28e3}} 
+int {\bfseries current\+X\+Segment\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1SeriesIterator_ac2ea5d6e9959cb1a98f1bbbd3b05a236}\label{classWt_1_1Chart_1_1SeriesIterator_ac2ea5d6e9959cb1a98f1bbbd3b05a236}} 
+int {\bfseries current\+Y\+Segment\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for iterating over series data in a chart. 
+
+This class is specialized for rendering series data.
+
+\begin{DoxySeeAlso}{See also}
+W\+Cartesian\+Chart\+::iterate\+Series() 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1SeriesIterator_a30472a51e3919fc07ddef7d9a7bbef1c}\label{classWt_1_1Chart_1_1SeriesIterator_a30472a51e3919fc07ddef7d9a7bbef1c}} 
+\index{Wt::Chart::SeriesIterator@{Wt::Chart::SeriesIterator}!endSegment@{endSegment}}
+\index{endSegment@{endSegment}!Wt::Chart::SeriesIterator@{Wt::Chart::SeriesIterator}}
+\doxysubsubsection{\texorpdfstring{endSegment()}{endSegment()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Chart\+::\+Series\+Iterator\+::end\+Segment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+End handling a particular segment. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1SeriesIterator_afbfb4a8b7241a1922544742609546555}{start\+Segment()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1SeriesIterator_a03ad6b06ba8ec872e5bab15942d5f0d2}\label{classWt_1_1Chart_1_1SeriesIterator_a03ad6b06ba8ec872e5bab15942d5f0d2}} 
+\index{Wt::Chart::SeriesIterator@{Wt::Chart::SeriesIterator}!newValue@{newValue}}
+\index{newValue@{newValue}!Wt::Chart::SeriesIterator@{Wt::Chart::SeriesIterator}}
+\doxysubsubsection{\texorpdfstring{newValue()}{newValue()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Chart\+::\+Series\+Iterator\+::new\+Value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Chart_1_1WDataSeries}{W\+Data\+Series}} \&}]{series,  }\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{stackY,  }\item[{int}]{x\+Row,  }\item[{int}]{x\+Column,  }\item[{int}]{y\+Row,  }\item[{int}]{y\+Column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Process a value. 
+
+Processes a value with model coordinates ({\itshape x}, {\itshape y}). The y value may differ from the model\textquotesingle{}s y value, because of stacked series. The y value here corresponds to the location on the chart, after stacking.
+
+The {\itshape stackY} argument is the y value from the previous series (also after stacking). It will be 0, unless this series is stacked. 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1Chart_1_1ExtremesIterator_a8d451389f9301c43566121167e4b42bb}{Wt\+::\+Chart\+::\+Extremes\+Iterator}}.
+
+\mbox{\Hypertarget{classWt_1_1Chart_1_1SeriesIterator_afbfb4a8b7241a1922544742609546555}\label{classWt_1_1Chart_1_1SeriesIterator_afbfb4a8b7241a1922544742609546555}} 
+\index{Wt::Chart::SeriesIterator@{Wt::Chart::SeriesIterator}!startSegment@{startSegment}}
+\index{startSegment@{startSegment}!Wt::Chart::SeriesIterator@{Wt::Chart::SeriesIterator}}
+\doxysubsubsection{\texorpdfstring{startSegment()}{startSegment()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Chart\+::\+Series\+Iterator\+::start\+Segment (\begin{DoxyParamCaption}\item[{int}]{current\+X\+Segment,  }\item[{int}]{current\+Y\+Segment,  }\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{current\+Segment\+Area }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Start handling a new segment. 
+
+Because of a \textquotesingle{}break\textquotesingle{} specified in an axis, axes may be divided in one or two segments (in fact only the A\+PI limits this now to two). The iterator will iterate all segments separately, but each time with a different clipping region specified in the painter, corresponding to that segment.
+
+The {\itshape current\+Segment\+Area} specifies the clipping area. \mbox{\Hypertarget{classWt_1_1Chart_1_1SeriesIterator_a9c564f234636c54a185a9f294324dcf9}\label{classWt_1_1Chart_1_1SeriesIterator_a9c564f234636c54a185a9f294324dcf9}} 
+\index{Wt::Chart::SeriesIterator@{Wt::Chart::SeriesIterator}!startSeries@{startSeries}}
+\index{startSeries@{startSeries}!Wt::Chart::SeriesIterator@{Wt::Chart::SeriesIterator}}
+\doxysubsubsection{\texorpdfstring{startSeries()}{startSeries()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Chart\+::\+Series\+Iterator\+::start\+Series (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Chart_1_1WDataSeries}{W\+Data\+Series}} \&}]{series,  }\item[{double}]{group\+Width,  }\item[{int}]{num\+Bar\+Groups,  }\item[{int}]{current\+Bar\+Group }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Start iterating a particular series. 
+
+Returns whether the series values should be iterated. The {\itshape group\+Width} is the width (in pixels) of a single bar group. The chart contains {\itshape num\+Bar\+Groups}, and the current series is in the {\itshape current\+Bar\+Group}\textquotesingle{}th group. 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1Chart_1_1ExtremesIterator_aece71337b8f6859e92846aedf018a22e}{Wt\+::\+Chart\+::\+Extremes\+Iterator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Chart/W\+Cartesian\+Chart.\+h\end{DoxyCompactItemize}

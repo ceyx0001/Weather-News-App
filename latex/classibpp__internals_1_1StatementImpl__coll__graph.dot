@@ -1,0 +1,43 @@
+digraph "ibpp_internals::StatementImpl"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ibpp_internals::StatementImpl",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="IBPP::IStatement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIBPP_1_1IStatement.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mInRow\nmOutRow" ];
+  Node3 [label="ibpp_internals::RowImpl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classibpp__internals_1_1RowImpl.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="IBPP::IRow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIBPP_1_1IRow.html",tooltip=" "];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mDatabase" ];
+  Node5 [label="ibpp_internals::DatabaseImpl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classibpp__internals_1_1DatabaseImpl.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="IBPP::IDatabase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIBPP_1_1IDatabase.html",tooltip=" "];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mHandle" ];
+  Node7 [label="void",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node8 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mDialect\nmRefCount" ];
+  Node8 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node9 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mServerName\nmCharSet\nmUserPassword\nmDatabaseName\nmCreateParams\nmRoleName\nmUserName" ];
+  Node9 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node10 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mDescrArea" ];
+  Node10 [label="XSQLDA",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structXSQLDA.html",tooltip=" "];
+  Node11 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sqlvar" ];
+  Node11 [label="XSQLVAR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structXSQLVAR.html",tooltip=" "];
+  Node12 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sqlsubtype\nownname_length\nsqlscale\naliasname_length\nrelname_length\nsqlname_length\nsqllen\nsqltype" ];
+  Node12 [label="signed",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node12 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sqln\nsqldabc\nsqld\nversion" ];
+  Node13 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mTransaction" ];
+  Node13 [label="ibpp_internals::TransactionImpl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classibpp__internals_1_1TransactionImpl.html",tooltip=" "];
+  Node14 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="IBPP::ITransaction",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIBPP_1_1ITransaction.html",tooltip=" "];
+  Node7 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mHandle" ];
+  Node8 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mRefCount" ];
+  Node8 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mDialect\nmRefCount" ];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mDatabase" ];
+  Node13 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mTransaction" ];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mHandle" ];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mRefCount" ];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mSql" ];
+}

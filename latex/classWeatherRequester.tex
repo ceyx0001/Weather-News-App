@@ -1,0 +1,114 @@
+\hypertarget{classWeatherRequester}{}\doxysection{Weather\+Requester Class Reference}
+\label{classWeatherRequester}\index{WeatherRequester@{WeatherRequester}}
+
+
+Inheritance diagram for Weather\+Requester\+:
+% FIG 0
+
+
+Collaboration diagram for Weather\+Requester\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classWeatherRequester_a244450ab357f348edd9856d64296e5b4}{get\+Data}} (\mbox{\hyperlink{classRequest}{Request}} $\ast$request)
+\begin{DoxyCompactList}\small\item\em Get weather A\+PI data. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWeatherRequester_a3e282e52e6bbf1dac66e10b10f3b0da4}{get\+Host}} ()
+\begin{DoxyCompactList}\small\item\em Get host. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWeatherRequester_a0049f87d04af354c2394a2533e288911}{Weather\+Requester}} (std\+::string lat, std\+::string lon)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWeatherRequester_ac4dce1286692e054b8b95cc8d59cbc31}{$\sim$\+Weather\+Requester}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWeatherRequester_a7cc9789bb604f245fa958707065d6f96}\label{classWeatherRequester_a7cc9789bb604f245fa958707065d6f96}} 
+std\+::string {\bfseries host}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWeatherRequester_a0049f87d04af354c2394a2533e288911}\label{classWeatherRequester_a0049f87d04af354c2394a2533e288911}} 
+\index{WeatherRequester@{WeatherRequester}!WeatherRequester@{WeatherRequester}}
+\index{WeatherRequester@{WeatherRequester}!WeatherRequester@{WeatherRequester}}
+\doxysubsubsection{\texorpdfstring{WeatherRequester()}{WeatherRequester()}}
+{\footnotesize\ttfamily Weather\+Requester\+::\+Weather\+Requester (\begin{DoxyParamCaption}\item[{std\+::string}]{lat,  }\item[{std\+::string}]{lon }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor for \mbox{\hyperlink{classWeatherRequester}{Weather\+Requester}} that initializes all members. \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWeatherRequester_ac4dce1286692e054b8b95cc8d59cbc31}\label{classWeatherRequester_ac4dce1286692e054b8b95cc8d59cbc31}} 
+\index{WeatherRequester@{WeatherRequester}!````~WeatherRequester@{$\sim$WeatherRequester}}
+\index{````~WeatherRequester@{$\sim$WeatherRequester}!WeatherRequester@{WeatherRequester}}
+\doxysubsubsection{\texorpdfstring{$\sim$WeatherRequester()}{~WeatherRequester()}}
+{\footnotesize\ttfamily Weather\+Requester\+::$\sim$\+Weather\+Requester (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default destructor. 
+
+Default destructor for \mbox{\hyperlink{classWeatherRequester}{Weather\+Requester}} but does nothing. 
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWeatherRequester_a244450ab357f348edd9856d64296e5b4}\label{classWeatherRequester_a244450ab357f348edd9856d64296e5b4}} 
+\index{WeatherRequester@{WeatherRequester}!getData@{getData}}
+\index{getData@{getData}!WeatherRequester@{WeatherRequester}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ string $>$ $>$ Weather\+Requester\+::get\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRequest}{Request}} $\ast$}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get weather A\+PI data. 
+
+Queries against the host A\+PI endpoint and returns the data that was extracted as a table represented by 2d vector. with columns separated by the data name/type. 
+\begin{DoxyParams}{Parameters}
+{\em request} & is the \mbox{\hyperlink{classRequest}{Request}} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the weather data table as 2d vector. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRequester_ae5d5b48330e492f90ce8d6115bc1f2b2}{Requester}}.
+
+\mbox{\Hypertarget{classWeatherRequester_a3e282e52e6bbf1dac66e10b10f3b0da4}\label{classWeatherRequester_a3e282e52e6bbf1dac66e10b10f3b0da4}} 
+\index{WeatherRequester@{WeatherRequester}!getHost@{getHost}}
+\index{getHost@{getHost}!WeatherRequester@{WeatherRequester}}
+\doxysubsubsection{\texorpdfstring{getHost()}{getHost()}}
+{\footnotesize\ttfamily string Weather\+Requester\+::get\+Host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get host. 
+
+Returns the host address of the \mbox{\hyperlink{classWeatherRequester}{Weather\+Requester}}. 
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the host of the \mbox{\hyperlink{classWeatherRequester}{Weather\+Requester}} as string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRequester_a84f8b17453ce9ad23144968f2dd4d920}{Requester}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+web/Weather\+Requester.\+h\item 
+web/Weather\+Requester.\+cpp\end{DoxyCompactItemize}

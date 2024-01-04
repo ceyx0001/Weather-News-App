@@ -1,0 +1,77 @@
+\hypertarget{classWt_1_1WLoadingIndicator}{}\doxysection{Wt\+::W\+Loading\+Indicator Class Reference}
+\label{classWt_1_1WLoadingIndicator}\index{Wt::WLoadingIndicator@{Wt::WLoadingIndicator}}
+
+
+An abstract interface for a loading indicator.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Loading\+Indicator.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Loading\+Indicator\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Loading\+Indicator\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLoadingIndicator_ae8e332a25243ef8d6d9ab800a44f65d3}\label{classWt_1_1WLoadingIndicator_ae8e332a25243ef8d6d9ab800a44f65d3}} 
+\mbox{\hyperlink{classWt_1_1WLoadingIndicator_ae8e332a25243ef8d6d9ab800a44f65d3}{W\+Loading\+Indicator}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLoadingIndicator_af0b770b42b8649f30e9d904bc244c88e}{$\sim$\+W\+Loading\+Indicator}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WLoadingIndicator_a33f6df2d9f56e8431874b2a0efc70ab0}{set\+Message}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text)=0
+\begin{DoxyCompactList}\small\item\em Sets the message that you want to be displayed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An abstract interface for a loading indicator. 
+
+The loading indicator displays a message while a response from the server is pending.
+
+The widget will be shown and hidden using \mbox{\hyperlink{classWt_1_1WWidget_a52dcef5a385ddfa0a8c3e6c20000f181}{W\+Widget\+::show()}} and \mbox{\hyperlink{classWt_1_1WWidget_a0825c3ccbd4999afc1a88fafa6aa6fc7}{W\+Widget\+::hide()}}. If you want to customize this behaviour, you should reimplement the \mbox{\hyperlink{classWt_1_1WWidget_a66bdda41220267a8c7ff9865996e2675}{W\+Widget\+::set\+Hidden()}} method.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_ab31ce845ad428af3cb7fd927ad8a0efb}{W\+Application\+::set\+Loading\+Indicator()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WLoadingIndicator_af0b770b42b8649f30e9d904bc244c88e}\label{classWt_1_1WLoadingIndicator_af0b770b42b8649f30e9d904bc244c88e}} 
+\index{Wt::WLoadingIndicator@{Wt::WLoadingIndicator}!````~WLoadingIndicator@{$\sim$WLoadingIndicator}}
+\index{````~WLoadingIndicator@{$\sim$WLoadingIndicator}!Wt::WLoadingIndicator@{Wt::WLoadingIndicator}}
+\doxysubsubsection{\texorpdfstring{$\sim$WLoadingIndicator()}{~WLoadingIndicator()}}
+{\footnotesize\ttfamily virtual Wt\+::\+W\+Loading\+Indicator\+::$\sim$\+W\+Loading\+Indicator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+The destructor must delete the widget(). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WLoadingIndicator_a33f6df2d9f56e8431874b2a0efc70ab0}\label{classWt_1_1WLoadingIndicator_a33f6df2d9f56e8431874b2a0efc70ab0}} 
+\index{Wt::WLoadingIndicator@{Wt::WLoadingIndicator}!setMessage@{setMessage}}
+\index{setMessage@{setMessage}!Wt::WLoadingIndicator@{Wt::WLoadingIndicator}}
+\doxysubsubsection{\texorpdfstring{setMessage()}{setMessage()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Loading\+Indicator\+::set\+Message (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the message that you want to be displayed. 
+
+If the indicator is capable of displaying a text message, then you should reimplement this method to allow this message to be modified. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WOverlayLoadingIndicator_abd65b652a677648b35459150d8b6063f}{Wt\+::\+W\+Overlay\+Loading\+Indicator}}, and \mbox{\hyperlink{classWt_1_1WDefaultLoadingIndicator_a52594e48ca958d783e439f49eade4bdc}{Wt\+::\+W\+Default\+Loading\+Indicator}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Loading\+Indicator.\+h\end{DoxyCompactItemize}

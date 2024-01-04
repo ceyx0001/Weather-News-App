@@ -1,0 +1,533 @@
+\hypertarget{classWt_1_1WBoxLayout}{}\doxysection{Wt\+::W\+Box\+Layout Class Reference}
+\label{classWt_1_1WBoxLayout}\index{Wt::WBoxLayout@{Wt::WBoxLayout}}
+
+
+A layout manager which arranges widgets horizontally or vertically.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Box\+Layout.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Box\+Layout\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Box\+Layout\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WBoxLayout_a3e549614ef0a6b3c6f5cc9667e35ad22}{W\+Box\+Layout}} (\mbox{\hyperlink{classWt_a23d3bcd7b697ff12d031b2d232f8704a}{Layout\+Direction}} dir)
+\begin{DoxyCompactList}\small\item\em Creates a new box layout. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WBoxLayout_a7c56ff7009773a2ad5ae809171421897}{add\+Item}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $>$ item) override
+\begin{DoxyCompactList}\small\item\em Adds a layout {\itshape item}. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $>$ \mbox{\hyperlink{classWt_1_1WBoxLayout_a9f521de344ca325f9838b99973b73773}{remove\+Item}} (\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$item) override
+\begin{DoxyCompactList}\small\item\em Removes a layout {\itshape item} (widget or nested layout). \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WBoxLayout_a011c2a0ad13e25d3871e58d5bfc827c2}{item\+At}} (int index) const override
+\begin{DoxyCompactList}\small\item\em Returns the layout item at a specific {\itshape index}. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WBoxLayout_a24edc3c1eec5583b0e0e9d926161846c}{count}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the number of items in this layout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WBoxLayout_ae521270da7b4b96c110084bd6500be5f}{set\+Direction}} (\mbox{\hyperlink{classWt_a23d3bcd7b697ff12d031b2d232f8704a}{Layout\+Direction}} \mbox{\hyperlink{classWt_1_1WBoxLayout_a21a0e52ebfc54d42ead68507e1dd1288}{direction}})
+\begin{DoxyCompactList}\small\item\em Sets the layout direction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_a23d3bcd7b697ff12d031b2d232f8704a}{Layout\+Direction}} \mbox{\hyperlink{classWt_1_1WBoxLayout_a21a0e52ebfc54d42ead68507e1dd1288}{direction}} () const
+\begin{DoxyCompactList}\small\item\em Returns the layout direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WBoxLayout_a34d544a1a2bd8beffa6b8e5e84fbc19b}{set\+Spacing}} (int size)
+\begin{DoxyCompactList}\small\item\em Sets spacing between each item. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WBoxLayout_a6c6cfb60ecfb811c059955cb7f4c2d20}{spacing}} () const
+\begin{DoxyCompactList}\small\item\em Returns the spacing between each item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WBoxLayout_a2e3e6bcd3a059fd9780ac2b584a9e07b}{add\+Widget}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}}, int stretch, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment)
+\begin{DoxyCompactList}\small\item\em Adds a widget to the layout. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Widget $>$ }\\Widget $\ast$ \mbox{\hyperlink{classWt_1_1WBoxLayout_a4d13c4c40ab06d7a59b2675f1b86d437}{add\+Widget}} (std\+::unique\+\_\+ptr$<$ Widget $>$ \mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}}, int stretch=0, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment=None)
+\begin{DoxyCompactList}\small\item\em Adds a widget to the layout, returning a raw pointer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WBoxLayout_a1c1e7041b5cd133446c3d61661473f82}{add\+Layout}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}} $>$ \mbox{\hyperlink{classWt_1_1WLayout_aa880d7b97d507600941ed6d782c2cccd}{layout}}, int stretch, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment)
+\begin{DoxyCompactList}\small\item\em Adds a nested layout to the layout. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Layout $>$ }\\\mbox{\hyperlink{classLayout}{Layout}} $\ast$ \mbox{\hyperlink{classWt_1_1WBoxLayout_a79bc02b5f307c12a8ab57416cc7c48c4}{add\+Layout}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classLayout}{Layout}} $>$ \mbox{\hyperlink{classWt_1_1WLayout_aa880d7b97d507600941ed6d782c2cccd}{layout}}, int stretch=0, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment=None)
+\item 
+void \mbox{\hyperlink{classWt_1_1WBoxLayout_a3cbd78251252e724d01937e2f6cc803d}{add\+Spacing}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&size)
+\begin{DoxyCompactList}\small\item\em Adds extra spacing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WBoxLayout_a811708ce9336d753c20aaedc14b00d5f}{add\+Stretch}} (int stretch=0)
+\begin{DoxyCompactList}\small\item\em Adds a stretch element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WBoxLayout_af133226e0d67ae8e2f9aa485033435ac}{insert\+Widget}} (int index, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}}, int stretch=0, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment=None)
+\begin{DoxyCompactList}\small\item\em Inserts a widget in the layout. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Widget $>$ }\\Widget $\ast$ \mbox{\hyperlink{classWt_1_1WBoxLayout_a31f821f13614c83dd6144a85bc77d032}{insert\+Widget}} (int index, std\+::unique\+\_\+ptr$<$ Widget $>$ \mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}}, int stretch=0, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment=None)
+\begin{DoxyCompactList}\small\item\em Inserts a widget in the layout, returning a raw pointer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WBoxLayout_ad74396028a898a0ac3518c0362f48e6e}{insert\+Layout}} (int index, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}} $>$ \mbox{\hyperlink{classWt_1_1WLayout_aa880d7b97d507600941ed6d782c2cccd}{layout}}, int stretch=0, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment=None)
+\begin{DoxyCompactList}\small\item\em Inserts a nested layout in the layout. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Layout $>$ }\\\mbox{\hyperlink{classLayout}{Layout}} $\ast$ \mbox{\hyperlink{classWt_1_1WBoxLayout_a89de619a39b566efd1aa5ce2b044e3d6}{insert\+Layout}} (int index, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classLayout}{Layout}} $>$ \mbox{\hyperlink{classWt_1_1WLayout_aa880d7b97d507600941ed6d782c2cccd}{layout}}, int stretch=0, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment=None)
+\item 
+void \mbox{\hyperlink{classWt_1_1WBoxLayout_a0d5d6a9e408c6bc7e25020f8c85cb4cf}{insert\+Spacing}} (int index, const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&size)
+\begin{DoxyCompactList}\small\item\em Inserts extra spacing in the layout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WBoxLayout_a0174de2ae36e2992b7209cf789d85271}{insert\+Stretch}} (int index, int stretch=0)
+\begin{DoxyCompactList}\small\item\em Inserts a stretch element in the layout. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WBoxLayout_a47182ea3c459afdadb3cc03232a8d110}{set\+Stretch\+Factor}} (\mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}} $\ast$\mbox{\hyperlink{classWt_1_1WLayout_aa880d7b97d507600941ed6d782c2cccd}{layout}}, int stretch)
+\begin{DoxyCompactList}\small\item\em Sets the stretch factor for a nested layout. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WBoxLayout_af5ce73d289874c80e88ed6fd9934bb39}{set\+Stretch\+Factor}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$\mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}}, int stretch)
+\begin{DoxyCompactList}\small\item\em Sets the stretch factor for a widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WBoxLayout_ac2628c9ddfb9b6c079a8b5d5261b94c2}{set\+Resizable}} (int index, bool enabled=true, const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&initial\+Size=\mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}})
+\begin{DoxyCompactList}\small\item\em Sets whether the use may drag a particular border. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WBoxLayout_a09592488b9a64d4800cae7c8bba6e00e}{is\+Resizable}} (int index) const
+\begin{DoxyCompactList}\small\item\em Returns whether the user may drag a particular border. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_aa2384a81738a96bdb96747b78536e3ef}\label{classWt_1_1WBoxLayout_aa2384a81738a96bdb96747b78536e3ef}} 
+virtual void {\bfseries iterate\+Widgets} (const Handle\+Widget\+Method \&method) const override
+\item 
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a8e4257344611575f8662bfbed1c19935}\label{classWt_1_1WBoxLayout_a8e4257344611575f8662bfbed1c19935}} 
+virtual bool {\bfseries implementation\+Is\+Flex\+Layout} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a45dc1f59dca6f2e21a987b464245f712}\label{classWt_1_1WBoxLayout_a45dc1f59dca6f2e21a987b464245f712}} 
+void {\bfseries insert\+Item} (int index, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $>$ item, int stretch, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_ab42040aad35d53158cc525d68039fa5a}\label{classWt_1_1WBoxLayout_ab42040aad35d53158cc525d68039fa5a}} 
+virtual void {\bfseries update\+Implementation} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a9063cb49afcda1934aee6df4b2ec37c9}\label{classWt_1_1WBoxLayout_a9063cb49afcda1934aee6df4b2ec37c9}} 
+void {\bfseries set\+Stretch\+Factor} (int index, int stretch)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a56a1410dd1a21fbea18123fc5437651e}\label{classWt_1_1WBoxLayout_a56a1410dd1a21fbea18123fc5437651e}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ {\bfseries create\+Spacer} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&size)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a632b86b8a61e8bb2d08e94668173d765}\label{classWt_1_1WBoxLayout_a632b86b8a61e8bb2d08e94668173d765}} 
+virtual void \mbox{\hyperlink{classWt_1_1WBoxLayout_a632b86b8a61e8bb2d08e94668173d765}{set\+Parent\+Widget}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$parent) override
+\begin{DoxyCompactList}\small\item\em Internal method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_ac5ec367fc836b8ad87e230884318f676}\label{classWt_1_1WBoxLayout_ac5ec367fc836b8ad87e230884318f676}} 
+void {\bfseries set\+Implementation} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a0072e740920c9850321be074ba1d5acf}\label{classWt_1_1WBoxLayout_a0072e740920c9850321be074ba1d5acf}} 
+\mbox{\hyperlink{classWt_a23d3bcd7b697ff12d031b2d232f8704a}{Layout\+Direction}} {\bfseries direction\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_ad3c9d83d2d51b2f34c33c8e97c1f5928}\label{classWt_1_1WBoxLayout_ad3c9d83d2d51b2f34c33c8e97c1f5928}} 
+\mbox{\hyperlink{structWt_1_1Impl_1_1Grid}{Impl\+::\+Grid}} {\bfseries grid\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A layout manager which arranges widgets horizontally or vertically. 
+
+This layout manager arranges widgets horizontally or vertically inside the parent container.
+
+The space is divided so that each widget is given its preferred size, and remaining space is divided according to stretch factors among widgets. If not all widgets can be given their preferred size (there is not enough room), then widgets are given a smaller size (down to their minimum size). If necessary, the container (or parent layout) of this layout is resized to meet minimum size requirements.
+
+The preferred width or height of a widget is based on its natural size, where it presents its contents without overflowing. \mbox{\hyperlink{classWt_1_1WWidget_a54365f7acdc237895328be54969165f4}{W\+Widget\+::resize()}} or (C\+SS {\ttfamily width}, {\ttfamily height} properties) can be used to adjust the preferred size of a widget.
+
+The minimum width or height of a widget is based on the minimum dimensions of the widget or the nested layout. The default minimum height or width for a widget is 0. It can be specified using \mbox{\hyperlink{classWt_1_1WWidget_a092c7d1ecfde7f004ef120389d91775d}{W\+Widget\+::set\+Minimum\+Size()}} or using C\+SS {\ttfamily min-\/width} or {\ttfamily min-\/height} properties.
+
+You should use \mbox{\hyperlink{classWt_1_1WContainerWidget_af3d9510f569deed060689aa509ecc831}{W\+Container\+Widget\+::set\+Overflow(\+Overflow\+Auto) }} to automatically show scrollbars for widgets inserted in the layout to cope with a size set by the layout manager that is smaller than the preferred size.
+
+When the container of a layout manager does not have a defined size (by having an explicit size, or by being inside a layout manager), or has has only a maximum size set using \mbox{\hyperlink{classWt_1_1WWidget_af023064cf8007bda6baeb5277d79bbd9}{W\+Widget\+::set\+Maximum\+Size()}}, then the size of the container will be based on the preferred size of the contents, up to this maximum size, instead of the default behaviour of constraining the size of the children based on the size of the container. \mbox{\hyperlink{classNote}{Note}} that because of the C\+SS defaults, a W\+Container has by default no height, but inherits the width of its parent widget. The width is thus by default defined.
+
+A layout manager may provide resize handles between items which allow the user to change the automatic layout provided by the layout manager (see \mbox{\hyperlink{classWt_1_1WBoxLayout_ac2628c9ddfb9b6c079a8b5d5261b94c2}{set\+Resizable()}}).
+
+Each item is separated using a constant spacing, which defaults to 6 pixels, and can be changed using \mbox{\hyperlink{classWt_1_1WBoxLayout_a34d544a1a2bd8beffa6b8e5e84fbc19b}{set\+Spacing()}}. In addition, when this layout is a top-\/level layout (i.\+e. is not nested inside another layout), a margin is set around the contents. This margin defaults to 9 pixels, and can be changed using \mbox{\hyperlink{classWt_1_1WLayout_af18bae8c743c9f9a5cabee58826ffb45}{set\+Contents\+Margins()}}. You can add more space between two widgets using \mbox{\hyperlink{classWt_1_1WBoxLayout_a3cbd78251252e724d01937e2f6cc803d}{add\+Spacing()}}.
+
+For each item a stretch factor may be defined, which controls how remaining space is used. Each item is stretched using the stretch factor to fill the remaining space.
+
+\begin{DoxyNote}{Note}
+When Java\+Script support is not available, not all functionality of the layout is available. In particular, vertical size management is not available.
+
+When a layout is used on a first page with progressive bootstrap, then the layout will progress only in a limited way to a full Java\+Script-\/based layout. You can thus not rely on it to behave properly for example when dynamically adding or removing widgets. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a3e549614ef0a6b3c6f5cc9667e35ad22}\label{classWt_1_1WBoxLayout_a3e549614ef0a6b3c6f5cc9667e35ad22}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!WBoxLayout@{WBoxLayout}}
+\index{WBoxLayout@{WBoxLayout}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{WBoxLayout()}{WBoxLayout()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Box\+Layout\+::\+W\+Box\+Layout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a23d3bcd7b697ff12d031b2d232f8704a}{Layout\+Direction}}}]{dir }\end{DoxyParamCaption})}
+
+
+
+Creates a new box layout. 
+
+This constructor is rarely used. Instead, use the convenient constructors of the specialized \mbox{\hyperlink{classWt_1_1WHBoxLayout}{W\+H\+Box\+Layout}} or \mbox{\hyperlink{classWt_1_1WVBoxLayout}{W\+V\+Box\+Layout}} classes.
+
+Use {\ttfamily parent} = {\ttfamily 0} to created a layout manager that can be nested inside other layout managers. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a7c56ff7009773a2ad5ae809171421897}\label{classWt_1_1WBoxLayout_a7c56ff7009773a2ad5ae809171421897}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!addItem@{addItem}}
+\index{addItem@{addItem}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Box\+Layout\+::add\+Item (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $>$}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds a layout {\itshape item}. 
+
+The item may be a widget or nested layout.
+
+How the item is layed out with respect to siblings is implementation specific to the layout manager. In some cases, a layout manager will overload this method with extra arguments that specify layout options.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBoxLayout_a9f521de344ca325f9838b99973b73773}{remove\+Item(\+W\+Layout\+Item $\ast$)}}, add\+Widget(\+W\+Widget $\ast$) 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WLayout_a8cd69b5eb41376e6e7ab0dd97a2ab2b5}{Wt\+::\+W\+Layout}}.
+
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a79bc02b5f307c12a8ab57416cc7c48c4}\label{classWt_1_1WBoxLayout_a79bc02b5f307c12a8ab57416cc7c48c4}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!addLayout@{addLayout}}
+\index{addLayout@{addLayout}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{addLayout()}{addLayout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Layout $>$ \\
+\mbox{\hyperlink{classLayout}{Layout}}$\ast$ Wt\+::\+W\+Box\+Layout\+::add\+Layout (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classLayout}{Layout}} $>$}]{layout,  }\item[{int}]{stretch = {\ttfamily 0},  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment = {\ttfamily None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\textbackslash{}briefs Adds a nested layout to the layout, returning a raw pointer.
+
+This is implemented as\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classLayout}{Layout}} *result = \mbox{\hyperlink{classWt_1_1WLayout_aa880d7b97d507600941ed6d782c2cccd}{layout}}.get();}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WBoxLayout_a1c1e7041b5cd133446c3d61661473f82}{addLayout}}(std::unique\_ptr<WLayout>(std::move(\mbox{\hyperlink{classWt_1_1WLayout_aa880d7b97d507600941ed6d782c2cccd}{layout}})), stretch, alignment);}
+\DoxyCodeLine{\textcolor{keywordflow}{return} result;}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1WBoxLayout_a1c1e7041b5cd133446c3d61661473f82}\label{classWt_1_1WBoxLayout_a1c1e7041b5cd133446c3d61661473f82}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!addLayout@{addLayout}}
+\index{addLayout@{addLayout}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{addLayout()}{addLayout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Box\+Layout\+::add\+Layout (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}} $>$}]{layout,  }\item[{int}]{stretch,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment }\end{DoxyParamCaption})}
+
+
+
+Adds a nested layout to the layout. 
+
+Adds a nested layout, with given {\ttfamily stretch} factor.
+
+\begin{DoxySeeAlso}{See also}
+add\+Widget(\+W\+Widget $\ast$, int, W\+Flags$<$\+Alignment\+Flag$>$), \mbox{\hyperlink{classWt_1_1WBoxLayout_ad74396028a898a0ac3518c0362f48e6e}{insert\+Layout()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a3cbd78251252e724d01937e2f6cc803d}\label{classWt_1_1WBoxLayout_a3cbd78251252e724d01937e2f6cc803d}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!addSpacing@{addSpacing}}
+\index{addSpacing@{addSpacing}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{addSpacing()}{addSpacing()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Box\+Layout\+::add\+Spacing (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{size }\end{DoxyParamCaption})}
+
+
+
+Adds extra spacing. 
+
+Adds extra spacing to the layout.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBoxLayout_a811708ce9336d753c20aaedc14b00d5f}{add\+Stretch()}}, \mbox{\hyperlink{classWt_1_1WBoxLayout_a0174de2ae36e2992b7209cf789d85271}{insert\+Stretch()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a811708ce9336d753c20aaedc14b00d5f}\label{classWt_1_1WBoxLayout_a811708ce9336d753c20aaedc14b00d5f}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!addStretch@{addStretch}}
+\index{addStretch@{addStretch}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{addStretch()}{addStretch()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Box\+Layout\+::add\+Stretch (\begin{DoxyParamCaption}\item[{int}]{stretch = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Adds a stretch element. 
+
+Adds a stretch element to the layout. This adds an empty space that stretches as needed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBoxLayout_a3cbd78251252e724d01937e2f6cc803d}{add\+Spacing()}}, \mbox{\hyperlink{classWt_1_1WBoxLayout_a0174de2ae36e2992b7209cf789d85271}{insert\+Stretch()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a4d13c4c40ab06d7a59b2675f1b86d437}\label{classWt_1_1WBoxLayout_a4d13c4c40ab06d7a59b2675f1b86d437}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!addWidget@{addWidget}}
+\index{addWidget@{addWidget}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{addWidget()}{addWidget()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Widget $>$ \\
+Widget$\ast$ Wt\+::\+W\+Box\+Layout\+::add\+Widget (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ Widget $>$}]{widget,  }\item[{int}]{stretch = {\ttfamily 0},  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment = {\ttfamily None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a widget to the layout, returning a raw pointer. 
+
+This is implemented as\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Widget *result = \mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}}.get();}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WBoxLayout_a2e3e6bcd3a059fd9780ac2b584a9e07b}{addWidget}}(std::unique\_ptr<WWidget>(std::move(\mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}})), stretch, alignment);}
+\DoxyCodeLine{\textcolor{keywordflow}{return} result;}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1WBoxLayout_a2e3e6bcd3a059fd9780ac2b584a9e07b}\label{classWt_1_1WBoxLayout_a2e3e6bcd3a059fd9780ac2b584a9e07b}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!addWidget@{addWidget}}
+\index{addWidget@{addWidget}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{addWidget()}{addWidget()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Box\+Layout\+::add\+Widget (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$}]{widget,  }\item[{int}]{stretch,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment }\end{DoxyParamCaption})}
+
+
+
+Adds a widget to the layout. 
+
+Adds a widget to the layout, with given {\ttfamily stretch} factor. When the stretch factor is 0, the widget will not be resized by the layout manager (stretched to take excess space).
+
+The {\ttfamily alignment} parameter is a combination of a horizontal and/or a vertical Alignment\+Flag OR\textquotesingle{}ed together.
+
+The {\ttfamily alignment} specifies the vertical and horizontal alignment of the item. The default value 0 indicates that the item is stretched to fill the entire column or row. The alignment can be specified as a logical combination of a horizontal alignment (Wt\+::\+Alignment\+Flag\+::\+Left, Wt\+::\+Alignment\+Flag\+::\+Center, or Wt\+::\+Alignment\+Flag\+::\+Right) and a vertical alignment (Wt\+::\+Alignment\+Flag\+::\+Top, Wt\+::\+Alignment\+Flag\+::\+Middle, or Wt\+::\+Alignment\+Flag\+::\+Bottom).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBoxLayout_a1c1e7041b5cd133446c3d61661473f82}{add\+Layout()}}, \mbox{\hyperlink{classWt_1_1WBoxLayout_af133226e0d67ae8e2f9aa485033435ac}{insert\+Widget()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a24edc3c1eec5583b0e0e9d926161846c}\label{classWt_1_1WBoxLayout_a24edc3c1eec5583b0e0e9d926161846c}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!count@{count}}
+\index{count@{count}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Box\+Layout\+::count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of items in this layout. 
+
+This may be a theoretical number, which is greater than the actual number of items. It can be used to iterate over the items in the layout, in conjunction with \mbox{\hyperlink{classWt_1_1WBoxLayout_a011c2a0ad13e25d3871e58d5bfc827c2}{item\+At()}}. 
+
+Implements \mbox{\hyperlink{classWt_1_1WLayout_a799b3cce5c1717b18e54c14471e84033}{Wt\+::\+W\+Layout}}.
+
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a21a0e52ebfc54d42ead68507e1dd1288}\label{classWt_1_1WBoxLayout_a21a0e52ebfc54d42ead68507e1dd1288}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!direction@{direction}}
+\index{direction@{direction}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{direction()}{direction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_a23d3bcd7b697ff12d031b2d232f8704a}{Layout\+Direction}} Wt\+::\+W\+Box\+Layout\+::direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the layout direction. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBoxLayout_ae521270da7b4b96c110084bd6500be5f}{set\+Direction()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a89de619a39b566efd1aa5ce2b044e3d6}\label{classWt_1_1WBoxLayout_a89de619a39b566efd1aa5ce2b044e3d6}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!insertLayout@{insertLayout}}
+\index{insertLayout@{insertLayout}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{insertLayout()}{insertLayout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Layout $>$ \\
+\mbox{\hyperlink{classLayout}{Layout}}$\ast$ Wt\+::\+W\+Box\+Layout\+::insert\+Layout (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classLayout}{Layout}} $>$}]{layout,  }\item[{int}]{stretch = {\ttfamily 0},  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment = {\ttfamily None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\textbackslash{}briefs Inserts a nested layout in the layout, returning a raw pointer.
+
+This is implemented as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classLayout}{Layout}} *result = \mbox{\hyperlink{classWt_1_1WLayout_aa880d7b97d507600941ed6d782c2cccd}{layout}}.get();}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WBoxLayout_a1c1e7041b5cd133446c3d61661473f82}{addLayout}}(index, std::unique\_ptr<WLayout>(std::move(\mbox{\hyperlink{classWt_1_1WLayout_aa880d7b97d507600941ed6d782c2cccd}{layout}})), stretch, alignment);}
+\DoxyCodeLine{\textcolor{keywordflow}{return} result;}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1WBoxLayout_ad74396028a898a0ac3518c0362f48e6e}\label{classWt_1_1WBoxLayout_ad74396028a898a0ac3518c0362f48e6e}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!insertLayout@{insertLayout}}
+\index{insertLayout@{insertLayout}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{insertLayout()}{insertLayout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Box\+Layout\+::insert\+Layout (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}} $>$}]{layout,  }\item[{int}]{stretch = {\ttfamily 0},  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Inserts a nested layout in the layout. 
+
+Inserts a nested layout in the layout at position{\ttfamily index}, with given {\ttfamily stretch} factor.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBoxLayout_af133226e0d67ae8e2f9aa485033435ac}{insert\+Widget()}}, \mbox{\hyperlink{classWt_1_1WBoxLayout_a1c1e7041b5cd133446c3d61661473f82}{add\+Layout()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a0d5d6a9e408c6bc7e25020f8c85cb4cf}\label{classWt_1_1WBoxLayout_a0d5d6a9e408c6bc7e25020f8c85cb4cf}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!insertSpacing@{insertSpacing}}
+\index{insertSpacing@{insertSpacing}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{insertSpacing()}{insertSpacing()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Box\+Layout\+::insert\+Spacing (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{size }\end{DoxyParamCaption})}
+
+
+
+Inserts extra spacing in the layout. 
+
+Inserts extra spacing in the layout at position {\ttfamily index}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBoxLayout_a0174de2ae36e2992b7209cf789d85271}{insert\+Stretch()}}, \mbox{\hyperlink{classWt_1_1WBoxLayout_a3cbd78251252e724d01937e2f6cc803d}{add\+Spacing()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a0174de2ae36e2992b7209cf789d85271}\label{classWt_1_1WBoxLayout_a0174de2ae36e2992b7209cf789d85271}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!insertStretch@{insertStretch}}
+\index{insertStretch@{insertStretch}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{insertStretch()}{insertStretch()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Box\+Layout\+::insert\+Stretch (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{stretch = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Inserts a stretch element in the layout. 
+
+Inserts a stretch element in the layout at position {\ttfamily index}. This adds an empty space that stretches as needed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBoxLayout_a0d5d6a9e408c6bc7e25020f8c85cb4cf}{insert\+Spacing()}}, \mbox{\hyperlink{classWt_1_1WBoxLayout_a811708ce9336d753c20aaedc14b00d5f}{add\+Stretch()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a31f821f13614c83dd6144a85bc77d032}\label{classWt_1_1WBoxLayout_a31f821f13614c83dd6144a85bc77d032}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!insertWidget@{insertWidget}}
+\index{insertWidget@{insertWidget}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{insertWidget()}{insertWidget()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Widget $>$ \\
+Widget$\ast$ Wt\+::\+W\+Box\+Layout\+::insert\+Widget (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{std\+::unique\+\_\+ptr$<$ Widget $>$}]{widget,  }\item[{int}]{stretch = {\ttfamily 0},  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment = {\ttfamily None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inserts a widget in the layout, returning a raw pointer. 
+
+This is implemented as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Widget *result = \mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}}.get();}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WBoxLayout_af133226e0d67ae8e2f9aa485033435ac}{insertWidget}}(index, std::unique\_ptr<WWidget>(std::move(\mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}})), stretch, alignment);}
+\DoxyCodeLine{\textcolor{keywordflow}{return} result;}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1WBoxLayout_af133226e0d67ae8e2f9aa485033435ac}\label{classWt_1_1WBoxLayout_af133226e0d67ae8e2f9aa485033435ac}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!insertWidget@{insertWidget}}
+\index{insertWidget@{insertWidget}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{insertWidget()}{insertWidget()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Box\+Layout\+::insert\+Widget (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$}]{widget,  }\item[{int}]{stretch = {\ttfamily 0},  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment = {\ttfamily None} }\end{DoxyParamCaption})}
+
+
+
+Inserts a widget in the layout. 
+
+Inserts a widget in the layout at position {\ttfamily index}, with given {\ttfamily stretch} factor. When the stretch factor is 0, the widget will not be resized by the layout manager (stretched to take excess space).
+
+The {\ttfamily alignment} specifies the vertical and horizontal alignment of the item. The default value None indicates that the item is stretched to fill the entire column or row. The alignment can be specified as a logical combination of a horizontal alignment (Wt\+::\+Alignment\+Flag\+::\+Left, Wt\+::\+Alignment\+Flag\+::\+Center, or Wt\+::\+Alignment\+Flag\+::\+Right) and a vertical alignment (Wt\+::\+Alignment\+Flag\+::\+Top, Wt\+::\+Alignment\+Flag\+::\+Middle, or Wt\+::\+Alignment\+Flag\+::\+Align\+Bottom).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBoxLayout_ad74396028a898a0ac3518c0362f48e6e}{insert\+Layout()}}, add\+Widget(\+W\+Widget $\ast$, int, W\+Flags$<$\+Alignment\+Flag$>$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a09592488b9a64d4800cae7c8bba6e00e}\label{classWt_1_1WBoxLayout_a09592488b9a64d4800cae7c8bba6e00e}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!isResizable@{isResizable}}
+\index{isResizable@{isResizable}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{isResizable()}{isResizable()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Box\+Layout\+::is\+Resizable (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the user may drag a particular border. 
+
+This method returns whether the border that separates item {\itshape index} from the next item may be resized by the user.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBoxLayout_ac2628c9ddfb9b6c079a8b5d5261b94c2}{set\+Resizable()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a011c2a0ad13e25d3871e58d5bfc827c2}\label{classWt_1_1WBoxLayout_a011c2a0ad13e25d3871e58d5bfc827c2}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!itemAt@{itemAt}}
+\index{itemAt@{itemAt}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{itemAt()}{itemAt()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}}$\ast$ Wt\+::\+W\+Box\+Layout\+::item\+At (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the layout item at a specific {\itshape index}. 
+
+If there is no item at the {\ttfamily index}, {\ttfamily 0} is returned.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLayout_a1ddb82c4f7d5ded93793af6eb3d0f2df}{index\+Of(\+W\+Layout\+Item $\ast$) const}}, \mbox{\hyperlink{classWt_1_1WBoxLayout_a24edc3c1eec5583b0e0e9d926161846c}{count()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WLayout_a3d48e5e4f56ad5d1b0e60180ebc91442}{Wt\+::\+W\+Layout}}.
+
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_a9f521de344ca325f9838b99973b73773}\label{classWt_1_1WBoxLayout_a9f521de344ca325f9838b99973b73773}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!removeItem@{removeItem}}
+\index{removeItem@{removeItem}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{removeItem()}{removeItem()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}}$>$ Wt\+::\+W\+Box\+Layout\+::remove\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Removes a layout {\itshape item} (widget or nested layout). 
+
+\begin{DoxySeeAlso}{See also}
+add\+Item(\+W\+Layout\+Item $\ast$), \mbox{\hyperlink{classWt_1_1WLayout_adfff15c9ebcb28d8f152b6b754544988}{remove\+Widget(\+W\+Widget $\ast$)}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WLayout_a0647c62081611a0ef0135ff2e62341be}{Wt\+::\+W\+Layout}}.
+
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_ae521270da7b4b96c110084bd6500be5f}\label{classWt_1_1WBoxLayout_ae521270da7b4b96c110084bd6500be5f}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!setDirection@{setDirection}}
+\index{setDirection@{setDirection}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{setDirection()}{setDirection()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Box\+Layout\+::set\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a23d3bcd7b697ff12d031b2d232f8704a}{Layout\+Direction}}}]{direction }\end{DoxyParamCaption})}
+
+
+
+Sets the layout direction. 
+
+\begin{DoxyNote}{Note}
+Changing the layout direction after something (a widget or nested layout) has been added is not supported.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBoxLayout_a21a0e52ebfc54d42ead68507e1dd1288}{direction()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WBoxLayout_ac2628c9ddfb9b6c079a8b5d5261b94c2}\label{classWt_1_1WBoxLayout_ac2628c9ddfb9b6c079a8b5d5261b94c2}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!setResizable@{setResizable}}
+\index{setResizable@{setResizable}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{setResizable()}{setResizable()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Box\+Layout\+::set\+Resizable (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{bool}]{enabled = {\ttfamily true},  }\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{initial\+Size = {\ttfamily \mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}}} }\end{DoxyParamCaption})}
+
+
+
+Sets whether the use may drag a particular border. 
+
+This method sets whether the border that separates item {\itshape index} from the next item may be resized by the user, depending on the value of {\itshape enabled}.
+
+The default value is {\itshape false}.
+
+If an {\ttfamily initial\+Size} is given (that is not \mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}}), then this size is used for the size of the item, overriding the size it would be given by the layout manager. \mbox{\Hypertarget{classWt_1_1WBoxLayout_a34d544a1a2bd8beffa6b8e5e84fbc19b}\label{classWt_1_1WBoxLayout_a34d544a1a2bd8beffa6b8e5e84fbc19b}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!setSpacing@{setSpacing}}
+\index{setSpacing@{setSpacing}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{setSpacing()}{setSpacing()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Box\+Layout\+::set\+Spacing (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Sets spacing between each item. 
+
+The default spacing is 6 pixels. \mbox{\Hypertarget{classWt_1_1WBoxLayout_a47182ea3c459afdadb3cc03232a8d110}\label{classWt_1_1WBoxLayout_a47182ea3c459afdadb3cc03232a8d110}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!setStretchFactor@{setStretchFactor}}
+\index{setStretchFactor@{setStretchFactor}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{setStretchFactor()}{setStretchFactor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Box\+Layout\+::set\+Stretch\+Factor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}} $\ast$}]{layout,  }\item[{int}]{stretch }\end{DoxyParamCaption})}
+
+
+
+Sets the stretch factor for a nested layout. 
+
+The {\ttfamily layout} must have previously been added to this layout using \mbox{\hyperlink{classWt_1_1WBoxLayout_ad74396028a898a0ac3518c0362f48e6e}{insert\+Layout()}} or \mbox{\hyperlink{classWt_1_1WBoxLayout_a1c1e7041b5cd133446c3d61661473f82}{add\+Layout()}}.
+
+Returns whether the {\ttfamily stretch} could be set. \mbox{\Hypertarget{classWt_1_1WBoxLayout_af5ce73d289874c80e88ed6fd9934bb39}\label{classWt_1_1WBoxLayout_af5ce73d289874c80e88ed6fd9934bb39}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!setStretchFactor@{setStretchFactor}}
+\index{setStretchFactor@{setStretchFactor}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{setStretchFactor()}{setStretchFactor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Box\+Layout\+::set\+Stretch\+Factor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{widget,  }\item[{int}]{stretch }\end{DoxyParamCaption})}
+
+
+
+Sets the stretch factor for a widget. 
+
+The {\ttfamily widget} must have previously been added to this layout using \mbox{\hyperlink{classWt_1_1WBoxLayout_af133226e0d67ae8e2f9aa485033435ac}{insert\+Widget()}} or \mbox{\hyperlink{classWt_1_1WBoxLayout_a2e3e6bcd3a059fd9780ac2b584a9e07b}{add\+Widget()}}.
+
+Returns whether the {\ttfamily stretch} could be set. \mbox{\Hypertarget{classWt_1_1WBoxLayout_a6c6cfb60ecfb811c059955cb7f4c2d20}\label{classWt_1_1WBoxLayout_a6c6cfb60ecfb811c059955cb7f4c2d20}} 
+\index{Wt::WBoxLayout@{Wt::WBoxLayout}!spacing@{spacing}}
+\index{spacing@{spacing}!Wt::WBoxLayout@{Wt::WBoxLayout}}
+\doxysubsubsection{\texorpdfstring{spacing()}{spacing()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Box\+Layout\+::spacing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the spacing between each item. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBoxLayout_a34d544a1a2bd8beffa6b8e5e84fbc19b}{set\+Spacing()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Box\+Layout.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,211 @@
+\hypertarget{classWt_1_1WQApplication}{}\doxysection{Wt\+::W\+Q\+Application Class Reference}
+\label{classWt_1_1WQApplication}\index{Wt::WQApplication@{Wt::WQApplication}}
+
+
+An application class that provides interopability between \mbox{\hyperlink{classWt}{Wt}} and Qt.  
+
+
+
+
+Inheritance diagram for Wt\+::W\+Q\+Application\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Q\+Application\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WQApplication_a536a3264d57ea4a172d60fa512730246}{W\+Q\+Application}} (const \mbox{\hyperlink{classWt_1_1WEnvironment}{W\+Environment}} \&env, bool enable\+Qt\+Event\+Loop=false)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WQApplication_a24e8eb2fb76c86055b0f929fef2bc82d}{create}} ()=0
+\begin{DoxyCompactList}\small\item\em Initialize Qt objects in your application within the Q\+Thread context. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WQApplication_a4411aa6864ed40133173055de6474df0}{destroy}} ()=0
+\begin{DoxyCompactList}\small\item\em Finalize your application within the Q\+Thread context. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WQApplication_a1271403886cb02387a5a7868eb11e61e}{real\+Notify}} (const \mbox{\hyperlink{classWt_1_1WEvent}{W\+Event}} \&e)
+\begin{DoxyCompactList}\small\item\em Notify an event to the application within the Q\+Thread context. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WQApplication_a8f2f632ab37b0a1614b779cd369131ad}{notify}} (const \mbox{\hyperlink{classWt_1_1WEvent}{W\+Event}} \&e)
+\begin{DoxyCompactList}\small\item\em Notifies an event to the application. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WQApplication_a1bb9db8451921ab9dd866062bbf6c19b}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the application, post-\/construction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WQApplication_a8cf7dea0cc3b5f82214d6426f1eb4a3f}{finalize}} ()
+\begin{DoxyCompactList}\small\item\em Finalizes the application, pre-\/destruction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WQApplication_a705137a6a1836b7a0f90e0d4a9a2aa3d}{wait\+For\+Event}} ()
+\begin{DoxyCompactList}\small\item\em Blocks the thread, waiting for an UI event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WQApplication_a0a11ebc857a9f00d0363ed7aa1a3724d}\label{classWt_1_1WQApplication_a0a11ebc857a9f00d0363ed7aa1a3724d}} 
+bool {\bfseries with\+Event\+Loop\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WQApplication_a68d934afaee50959b568b6c8ede8ef3f}\label{classWt_1_1WQApplication_a68d934afaee50959b568b6c8ede8ef3f}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1DispatchThread}{Dispatch\+Thread}} $>$ {\bfseries thread\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WQApplication_a20514927d565a957458b4689f9139432}\label{classWt_1_1WQApplication_a20514927d565a957458b4689f9139432}} 
+bool {\bfseries finalized\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WQApplication_af04c5924894c4d1db4c383839a8bfcc6}\label{classWt_1_1WQApplication_af04c5924894c4d1db4c383839a8bfcc6}} 
+bool {\bfseries recursive\+Event\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WQApplication_ad4b9843a01c3ec8b5aad9d39024fd314}\label{classWt_1_1WQApplication_ad4b9843a01c3ec8b5aad9d39024fd314}} 
+class {\bfseries Dispatch\+Thread}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An application class that provides interopability between \mbox{\hyperlink{classWt}{Wt}} and Qt. 
+
+This class provides interopability between the \mbox{\hyperlink{classWt}{Wt}}\textquotesingle{}s multi threading model and Qt\textquotesingle{}s threading requirements for Q\+Object. This is needed because Qt\textquotesingle{}s object model, which defines a hierarchy of Q\+Objects, requires that every Q\+Object in the hierarchy is created from within the same thread. In addition, Qt\textquotesingle{}s signal/slot system is thread-\/aware and behaves very differently when a signal is emitted from within a different thread than the thread in which the receiver object lives.
+
+\mbox{\hyperlink{classWt}{Wt}} on the other hand does not guarantee that every event is dispatched within the same thread. This is a side effect of the fact that \mbox{\hyperlink{classWt}{Wt}} uses thread pools in combination with asynchronous I/O to be able to serve multiple connections simultaneously without requiring a high number of threads.
+
+Therefore, you cannot manipulate a Q\+Object hierarchy, or propagate events using Qt\textquotesingle{}s signal/slot system, in a multi-\/threaded \mbox{\hyperlink{classWt}{Wt}} application server, since this is likely to violate Qt\textquotesingle{}s thread/object assumptions, without taking precautions (as are implemented in this application class).
+
+This class spawns a Q\+Thread that is dedicated to a single application instance, and used for event handling, after your application is constructed. You should not create any Qt objects from the constructor, but rather from the \mbox{\hyperlink{classWt_1_1WQApplication_a24e8eb2fb76c86055b0f929fef2bc82d}{create()}} method, which runs within the context of this thread. Likewise, you should not destroy Qt objects from the application destructor, but from the \mbox{\hyperlink{classWt_1_1WQApplication_a4411aa6864ed40133173055de6474df0}{destroy()}} method, which also runs in this thread.
+
+You may enable a Qt event loop in this Q\+Thread, by setting the option in the constructor. In this way, you can use Q\+Tcp\+Socket and other Qt classes which rely on the presence of an event loop. \mbox{\hyperlink{classNote}{Note}} that Qt requires that you instantiate a Q\+Application object before you can use a Qt event loop (only one is needed per process, so it may be shared between multiple \mbox{\hyperlink{classWt}{Wt}} sessions). You need to do this yourself, and a convenient location could be within your main() function. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WQApplication_a536a3264d57ea4a172d60fa512730246}\label{classWt_1_1WQApplication_a536a3264d57ea4a172d60fa512730246}} 
+\index{Wt::WQApplication@{Wt::WQApplication}!WQApplication@{WQApplication}}
+\index{WQApplication@{WQApplication}!Wt::WQApplication@{Wt::WQApplication}}
+\doxysubsubsection{\texorpdfstring{WQApplication()}{WQApplication()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Q\+Application\+::\+W\+Q\+Application (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WEnvironment}{W\+Environment}} \&}]{env,  }\item[{bool}]{enable\+Qt\+Event\+Loop = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Create a new application with Qt threading support.
+
+Set {\itshape enable\+Qt\+Event\+Loop} if you wish to enable a Qt event loop within the thread context, e.\+g. when you wish to use certain non-\/\+G\+UI classes that require the presence of an event loop (such as Q\+Timer, Q\+Tcp\+Socket, ...).
+
+\mbox{\hyperlink{classNote}{Note}}\+: you should not create Qt objects from within the constructor. Instead, reimplement \mbox{\hyperlink{classWt_1_1WQApplication_a24e8eb2fb76c86055b0f929fef2bc82d}{create()}}, which is called after construction, from within the Q\+Thread. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WQApplication_a24e8eb2fb76c86055b0f929fef2bc82d}\label{classWt_1_1WQApplication_a24e8eb2fb76c86055b0f929fef2bc82d}} 
+\index{Wt::WQApplication@{Wt::WQApplication}!create@{create}}
+\index{create@{create}!Wt::WQApplication@{Wt::WQApplication}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Q\+Application\+::create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Initialize Qt objects in your application within the Q\+Thread context. 
+
+Reimplement this method to construct your \mbox{\hyperlink{classWt}{Wt}} widget and Qt object hierarchy within the context of the dedicatd Q\+Thread.
+
+This method is called from within the library after your application is created. 
+
+Implemented in \mbox{\hyperlink{classDictionary_a9ac870265d78a4a89be12c53725b4c79}{Dictionary}}.
+
+\mbox{\Hypertarget{classWt_1_1WQApplication_a4411aa6864ed40133173055de6474df0}\label{classWt_1_1WQApplication_a4411aa6864ed40133173055de6474df0}} 
+\index{Wt::WQApplication@{Wt::WQApplication}!destroy@{destroy}}
+\index{destroy@{destroy}!Wt::WQApplication@{Wt::WQApplication}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Q\+Application\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Finalize your application within the Q\+Thread context. 
+
+Reimplement this method to safely destroy Qt object hierarchy.
+
+This method is called from within the library before your application is deleted. 
+
+Implemented in \mbox{\hyperlink{classDictionary_a622a847a3f50786982043948b2081941}{Dictionary}}.
+
+\mbox{\Hypertarget{classWt_1_1WQApplication_a8cf7dea0cc3b5f82214d6426f1eb4a3f}\label{classWt_1_1WQApplication_a8cf7dea0cc3b5f82214d6426f1eb4a3f}} 
+\index{Wt::WQApplication@{Wt::WQApplication}!finalize@{finalize}}
+\index{finalize@{finalize}!Wt::WQApplication@{Wt::WQApplication}}
+\doxysubsubsection{\texorpdfstring{finalize()}{finalize()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Q\+Application\+::finalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Finalizes the application, pre-\/destruction. 
+
+This method is invoked by the Wt library before destruction of a new application. You may reimplement this method to do additional finalization that is not possible from the destructor (e.\+g. which uses virtual methods). 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WApplication_a71c5f7dc7ca9d848348d6df556bfbe91}{Wt\+::\+W\+Application}}.
+
+\mbox{\Hypertarget{classWt_1_1WQApplication_a1bb9db8451921ab9dd866062bbf6c19b}\label{classWt_1_1WQApplication_a1bb9db8451921ab9dd866062bbf6c19b}} 
+\index{Wt::WQApplication@{Wt::WQApplication}!initialize@{initialize}}
+\index{initialize@{initialize}!Wt::WQApplication@{Wt::WQApplication}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Q\+Application\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the application, post-\/construction. 
+
+This method is invoked by the Wt library after construction of a new application. You may reimplement this method to do additional initialization that is not possible from the constructor (e.\+g. which uses virtual methods). 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WApplication_a52515e6ea3e4ae0add087c3a1c11815f}{Wt\+::\+W\+Application}}.
+
+\mbox{\Hypertarget{classWt_1_1WQApplication_a8f2f632ab37b0a1614b779cd369131ad}\label{classWt_1_1WQApplication_a8f2f632ab37b0a1614b779cd369131ad}} 
+\index{Wt::WQApplication@{Wt::WQApplication}!notify@{notify}}
+\index{notify@{notify}!Wt::WQApplication@{Wt::WQApplication}}
+\doxysubsubsection{\texorpdfstring{notify()}{notify()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Q\+Application\+::notify (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WEvent}{W\+Event}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Notifies an event to the application. 
+
+This method is called by the event loop for propagating an event to the application. It provides a single point of entry for events to the application, besides the application constructor.
+
+You may want to reimplement this method for two reasons\+:
+
+
+\begin{DoxyItemize}
+\item for having a single point for exception handling\+: while you may want to catch recoverable exceptions in a more appropriate place, general (usually fatal) exceptions may be caught here. You will probably want to catch the same exceptions in the application constructor in the same way.
+\item you want to manage resource usage during requests. For example, at the end of request handling, you want to return a database session back to the pool. Since notify() is also used for rendering right after the application is created, this will also clean up resources after application construction.
+\end{DoxyItemize}
+
+In either case, you will need to call the base class implementation of notify(), as otherwise no events will be delivered to your application.
+
+The following shows a generic template for reimplementhing this method for both managing request resources and generic exception handling.
+
+\mbox{\hyperlink{classNote}{Note}} that any uncaught exception throw during event handling terminates the session. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WApplication_a1887c4240d619abd3a01ab1b94002cbb}{Wt\+::\+W\+Application}}.
+
+\mbox{\Hypertarget{classWt_1_1WQApplication_a1271403886cb02387a5a7868eb11e61e}\label{classWt_1_1WQApplication_a1271403886cb02387a5a7868eb11e61e}} 
+\index{Wt::WQApplication@{Wt::WQApplication}!realNotify@{realNotify}}
+\index{realNotify@{realNotify}!Wt::WQApplication@{Wt::WQApplication}}
+\doxysubsubsection{\texorpdfstring{realNotify()}{realNotify()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Q\+Application\+::real\+Notify (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WEvent}{W\+Event}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Notify an event to the application within the Q\+Thread context. 
+
+This method is the equivalent of \mbox{\hyperlink{classWt_1_1WApplication_a1887c4240d619abd3a01ab1b94002cbb}{W\+Application\+::notify()}}, but runs inside the Q\+Thread context. The default implementation simply calls \mbox{\hyperlink{classWt_1_1WApplication_a1887c4240d619abd3a01ab1b94002cbb}{W\+Application\+::notify()}}. \mbox{\Hypertarget{classWt_1_1WQApplication_a705137a6a1836b7a0f90e0d4a9a2aa3d}\label{classWt_1_1WQApplication_a705137a6a1836b7a0f90e0d4a9a2aa3d}} 
+\index{Wt::WQApplication@{Wt::WQApplication}!waitForEvent@{waitForEvent}}
+\index{waitForEvent@{waitForEvent}!Wt::WQApplication@{Wt::WQApplication}}
+\doxysubsubsection{\texorpdfstring{waitForEvent()}{waitForEvent()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Q\+Application\+::wait\+For\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Blocks the thread, waiting for an UI event. 
+
+This function is used by functions like \mbox{\hyperlink{classWt_1_1WDialog_a223f8635e38a6e9809b867f247b2185f}{W\+Dialog\+::exec()}} or W\+Popup\+Menu\+::exec(), to block the current thread waiting for a new event.
+
+This requires that at least one additional thread is available to process incoming requests, and is not scalable when working with a fixed size thread pools. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WApplication_a11d72cc684e3cbe2df9100b8ef82b901}{Wt\+::\+W\+Application}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/wtwithqt/lib/W\+Q\+Application.\+h\end{DoxyCompactItemize}

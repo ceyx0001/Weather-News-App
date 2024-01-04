@@ -1,0 +1,200 @@
+\hypertarget{classWt_1_1WColorPicker}{}\doxysection{Wt\+::W\+Color\+Picker Class Reference}
+\label{classWt_1_1WColorPicker}\index{Wt::WColorPicker@{Wt::WColorPicker}}
+
+
+A widget that provides a browser-\/native color picker.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Color\+Picker.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Color\+Picker\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Color\+Picker\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WColorPicker_afc43b4285f2dffc41457bd5e520e5c3b}\label{classWt_1_1WColorPicker_afc43b4285f2dffc41457bd5e520e5c3b}} 
+\mbox{\hyperlink{classWt_1_1WColorPicker_afc43b4285f2dffc41457bd5e520e5c3b}{W\+Color\+Picker}} ()
+\begin{DoxyCompactList}\small\item\em Creates a color picker with the default color of black (\#000000). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WColorPicker_ac2a7df543b85711baa4afaf726b5848b}{W\+Color\+Picker}} (const \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \&\mbox{\hyperlink{classWt_1_1WColorPicker_a37a46881db650c31b45fcb75a9c386de}{color}})
+\begin{DoxyCompactList}\small\item\em Creates a color picker with the given color value. Ensure the color has valid R\+GB values, or the color will be reset to \#000000. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \mbox{\hyperlink{classWt_1_1WColorPicker_a37a46881db650c31b45fcb75a9c386de}{color}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current value of the color picker as a \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WColorPicker_a45ee16e70bd269e233f63c8509c5a784}{set\+Color}} (const \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \&value)
+\begin{DoxyCompactList}\small\item\em Sets the selected color. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}} \& \mbox{\hyperlink{classWt_1_1WColorPicker_a935fe2494566aa8b38092cac73c30b3c}{color\+Input}} ()
+\begin{DoxyCompactList}\small\item\em Event signal emitted when the selected color is changed. \end{DoxyCompactList}\item 
+virtual W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \mbox{\hyperlink{classWt_1_1WColorPicker_acd6e5bfde7caf8da3dc1ee55587ba17d}{value\+Text}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the current value of the color picker as a string. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WColorPicker_a852c0cb7f2221f52f561614e97a82922}{set\+Value\+Text}} (const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&value) override
+\begin{DoxyCompactList}\small\item\em Sets the current value of the color picker as a string. The string must be in a format from which \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} can determine R\+GB values (i.\+e. not a C\+SS color name), or the value will be set to \#000000. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WColorPicker_acdd94d3703a2c99673d32f7d4971ea1f}\label{classWt_1_1WColorPicker_acdd94d3703a2c99673d32f7d4971ea1f}} 
+virtual void {\bfseries update\+Dom} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&element, bool all) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WColorPicker_ab1df277e6c541af85adb6e99f649809e}\label{classWt_1_1WColorPicker_ab1df277e6c541af85adb6e99f649809e}} 
+virtual \mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} {\bfseries dom\+Element\+Type} () const override
+\item 
+\mbox{\Hypertarget{classWt_1_1WColorPicker_a73a29ecc74e0e91f038f81a411b70ac3}\label{classWt_1_1WColorPicker_a73a29ecc74e0e91f038f81a411b70ac3}} 
+virtual void {\bfseries propagate\+Render\+Ok} (bool deep) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WColorPicker_a4cb7944636df372fec5b5ce572be86e5}\label{classWt_1_1WColorPicker_a4cb7944636df372fec5b5ce572be86e5}} 
+virtual void {\bfseries set\+Form\+Data} (const \mbox{\hyperlink{structWt_1_1WObject_1_1FormData}{Form\+Data}} \&form\+Data) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WColorPicker_a35f4720dc2efbf3aab413cec6d481516}\label{classWt_1_1WColorPicker_a35f4720dc2efbf3aab413cec6d481516}} 
+\mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} {\bfseries color\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WColorPicker_a309a333611495ea72f1c0a0a771baad8}\label{classWt_1_1WColorPicker_a309a333611495ea72f1c0a0a771baad8}} 
+bool {\bfseries color\+Changed\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WColorPicker_aaa827d7f9fcf6d299b6c220c310a560a}\label{classWt_1_1WColorPicker_aaa827d7f9fcf6d299b6c220c310a560a}} 
+static const char $\ast$ {\bfseries I\+N\+P\+U\+T\+\_\+\+S\+I\+G\+N\+AL}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A widget that provides a browser-\/native color picker. 
+
+To act upon color value changes, connect a slot to the \mbox{\hyperlink{classWt_1_1WFormWidget_a880589c79f1b93e7f38330e28cf6f5e2}{changed()}} signal. This signal is emitted when the user changes the selected color, and subsequently closes the color picker.
+
+To act upon any color change, connect a slot to the \mbox{\hyperlink{classWt_1_1WColorPicker_a935fe2494566aa8b38092cac73c30b3c}{color\+Input()}} signal. \mbox{\hyperlink{classNote}{Note}} that this signal may fire very quickly depending on how the browser\textquotesingle{}s color picker works.
+
+At all times, the currently selected color may be accessed with the value() method.
+
+The widget corresponds to the H\+T\+ML {\ttfamily $<$input type=\char`\"{}color\char`\"{}$>$} tag. \mbox{\hyperlink{classNote}{Note}} that this element does not support C\+SS color names. When manipulating this widget with \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} values, ensure they have valid R\+GB values or the color picker will reset to \#000000.
+
+W\+Color\+Picker is an \mbox{\hyperlink{classWt_1_1WWidget_ac78e3af143883334c82031790c87416e}{inline }} widget.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WColorPicker_ac2a7df543b85711baa4afaf726b5848b}\label{classWt_1_1WColorPicker_ac2a7df543b85711baa4afaf726b5848b}} 
+\index{Wt::WColorPicker@{Wt::WColorPicker}!WColorPicker@{WColorPicker}}
+\index{WColorPicker@{WColorPicker}!Wt::WColorPicker@{Wt::WColorPicker}}
+\doxysubsubsection{\texorpdfstring{WColorPicker()}{WColorPicker()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Color\+Picker\+::\+W\+Color\+Picker (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \&}]{color }\end{DoxyParamCaption})}
+
+
+
+Creates a color picker with the given color value. Ensure the color has valid R\+GB values, or the color will be reset to \#000000. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WColor_a00336e4511fb1fd68f3c66d58c30a4c1}{W\+Color\+::\+W\+Color(const W\+String\&)}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WColorPicker_a37a46881db650c31b45fcb75a9c386de}\label{classWt_1_1WColorPicker_a37a46881db650c31b45fcb75a9c386de}} 
+\index{Wt::WColorPicker@{Wt::WColorPicker}!color@{color}}
+\index{color@{color}!Wt::WColorPicker@{Wt::WColorPicker}}
+\doxysubsubsection{\texorpdfstring{color()}{color()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} Wt\+::\+W\+Color\+Picker\+::color (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the current value of the color picker as a \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} object. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WColorPicker_a45ee16e70bd269e233f63c8509c5a784}{set\+Color(const W\+Color\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WColorPicker_a935fe2494566aa8b38092cac73c30b3c}\label{classWt_1_1WColorPicker_a935fe2494566aa8b38092cac73c30b3c}} 
+\index{Wt::WColorPicker@{Wt::WColorPicker}!colorInput@{colorInput}}
+\index{colorInput@{colorInput}!Wt::WColorPicker@{Wt::WColorPicker}}
+\doxysubsubsection{\texorpdfstring{colorInput()}{colorInput()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}\& Wt\+::\+W\+Color\+Picker\+::color\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Event signal emitted when the selected color is changed. 
+
+This signal is emitted whenever the selected color has changed. Unlike the \mbox{\hyperlink{classWt_1_1WFormWidget_a880589c79f1b93e7f38330e28cf6f5e2}{changed()}} signal, this signal is fired on every change, not only when the color picker is closed.
+
+In particular, on browsers with a draggable color picker (i.\+e. most common browsers), this signal fires every time the position changes. Use with caution.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormWidget_a880589c79f1b93e7f38330e28cf6f5e2}{changed()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WColorPicker_a45ee16e70bd269e233f63c8509c5a784}\label{classWt_1_1WColorPicker_a45ee16e70bd269e233f63c8509c5a784}} 
+\index{Wt::WColorPicker@{Wt::WColorPicker}!setColor@{setColor}}
+\index{setColor@{setColor}!Wt::WColorPicker@{Wt::WColorPicker}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Color\+Picker\+::set\+Color (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the selected color. 
+
+The default value is \#000000 (black).
+
+Ensure the color has valid R\+GB values, or the color will be reset to \#000000.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WColorPicker_a37a46881db650c31b45fcb75a9c386de}{color()}} 
+
+\mbox{\hyperlink{classWt_1_1WColor_a00336e4511fb1fd68f3c66d58c30a4c1}{W\+Color\+::\+W\+Color(const W\+String\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WColorPicker_a852c0cb7f2221f52f561614e97a82922}\label{classWt_1_1WColorPicker_a852c0cb7f2221f52f561614e97a82922}} 
+\index{Wt::WColorPicker@{Wt::WColorPicker}!setValueText@{setValueText}}
+\index{setValueText@{setValueText}!Wt::WColorPicker@{Wt::WColorPicker}}
+\doxysubsubsection{\texorpdfstring{setValueText()}{setValueText()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Color\+Picker\+::set\+Value\+Text (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the current value of the color picker as a string. The string must be in a format from which \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} can determine R\+GB values (i.\+e. not a C\+SS color name), or the value will be set to \#000000. 
+
+This is implemented as 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WColorPicker_a45ee16e70bd269e233f63c8509c5a784}{setColor}}(WColor(value));}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WColor_a00336e4511fb1fd68f3c66d58c30a4c1}{W\+Color\+::\+W\+Color(const W\+String\&)}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WFormWidget_aed21609b20a93ad5eefe27dc27ac7ba7}{Wt\+::\+W\+Form\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WColorPicker_acd6e5bfde7caf8da3dc1ee55587ba17d}\label{classWt_1_1WColorPicker_acd6e5bfde7caf8da3dc1ee55587ba17d}} 
+\index{Wt::WColorPicker@{Wt::WColorPicker}!valueText@{valueText}}
+\index{valueText@{valueText}!Wt::WColorPicker@{Wt::WColorPicker}}
+\doxysubsubsection{\texorpdfstring{valueText()}{valueText()}}
+{\footnotesize\ttfamily virtual W\+T\+\_\+\+U\+S\+T\+R\+I\+NG Wt\+::\+W\+Color\+Picker\+::value\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the current value of the color picker as a string. 
+
+This is implemented as 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{return} \mbox{\hyperlink{classWt_1_1WColorPicker_a37a46881db650c31b45fcb75a9c386de}{color}}().\mbox{\hyperlink{classWt_1_1WColor_a738c53d744ed38a448d1554f2a2f42cf}{cssText}}();}
+\end{DoxyCode}
+ 
+
+Implements \mbox{\hyperlink{classWt_1_1WFormWidget_a25b8021f41f8e52dcc584a043e6524b0}{Wt\+::\+W\+Form\+Widget}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Color\+Picker.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,62 @@
+\hypertarget{structWt_1_1WAbstractProxyModel_1_1BaseItem}{}\doxysection{Wt\+::W\+Abstract\+Proxy\+Model\+::Base\+Item Struct Reference}
+\label{structWt_1_1WAbstractProxyModel_1_1BaseItem}\index{Wt::WAbstractProxyModel::BaseItem@{Wt::WAbstractProxyModel::BaseItem}}
+
+
+A base class for an item modeling a source index parent.  
+
+
+
+
+{\ttfamily \#include $<$W\+Abstract\+Proxy\+Model.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Abstract\+Proxy\+Model\+::Base\+Item\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Abstract\+Proxy\+Model\+::Base\+Item\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structWt_1_1WAbstractProxyModel_1_1BaseItem_aafa7dca61e51d29f3f8d3ae0c89e60a9}\label{structWt_1_1WAbstractProxyModel_1_1BaseItem_aafa7dca61e51d29f3f8d3ae0c89e60a9}} 
+\mbox{\hyperlink{structWt_1_1WAbstractProxyModel_1_1BaseItem_aafa7dca61e51d29f3f8d3ae0c89e60a9}{Base\+Item}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&source\+Index)
+\begin{DoxyCompactList}\small\item\em Create a \mbox{\hyperlink{structWt_1_1WAbstractProxyModel_1_1BaseItem}{Base\+Item}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{structWt_1_1WAbstractProxyModel_1_1BaseItem_a135d8a4d32a468703e29bf60cbdcadfd}{source\+Index\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The source model index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A base class for an item modeling a source index parent. 
+
+Many mplementations of a proxy model will need to maintain a data structure per source model indexes, where they relate source rows or columns to proxy rows or columns, per hierarchical parent.
+
+It may be convenient to start from this item class as a base class so that shift\+Model\+Indexes() can be used to update this data structure when the source model adds or removes rows.
+
+You will typically use your derived class of this item as the internal pointer for proxy model indexes\+: a proxy model index will have an item as internal pointer whose source\+Index\+\_\+ corresponds to the source equivalent of the proxy model index parent.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_af9b04fdec198dfbc1c9297ead93c8930}{create\+Index()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structWt_1_1WAbstractProxyModel_1_1BaseItem_a135d8a4d32a468703e29bf60cbdcadfd}\label{structWt_1_1WAbstractProxyModel_1_1BaseItem_a135d8a4d32a468703e29bf60cbdcadfd}} 
+\index{Wt::WAbstractProxyModel::BaseItem@{Wt::WAbstractProxyModel::BaseItem}!sourceIndex\_@{sourceIndex\_}}
+\index{sourceIndex\_@{sourceIndex\_}!Wt::WAbstractProxyModel::BaseItem@{Wt::WAbstractProxyModel::BaseItem}}
+\doxysubsubsection{\texorpdfstring{sourceIndex\_}{sourceIndex\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Abstract\+Proxy\+Model\+::\+Base\+Item\+::source\+Index\+\_\+}
+
+
+
+The source model index. 
+
+The source model index for this item. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Abstract\+Proxy\+Model.\+h\end{DoxyCompactItemize}

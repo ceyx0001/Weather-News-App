@@ -1,0 +1,718 @@
+\hypertarget{classWt_1_1WBatchEditProxyModel}{}\doxysection{Wt\+::W\+Batch\+Edit\+Proxy\+Model Class Reference}
+\label{classWt_1_1WBatchEditProxyModel}\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+
+
+A proxy model for Wt\textquotesingle{}s item models that provides batch editing.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Batch\+Edit\+Proxy\+Model.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Batch\+Edit\+Proxy\+Model\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Batch\+Edit\+Proxy\+Model\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WBatchEditProxyModel_1_1Cell}{Cell}}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WBatchEditProxyModel_1_1Item}{Item}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a0877a5b1d68438f536e51138c1243d22}\label{classWt_1_1WBatchEditProxyModel_a0877a5b1d68438f536e51138c1243d22}} 
+\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a0877a5b1d68438f536e51138c1243d22}{W\+Batch\+Edit\+Proxy\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a526bb7b100aa0ddf0cc67438d890f0ca}\label{classWt_1_1WBatchEditProxyModel_a526bb7b100aa0ddf0cc67438d890f0ca}} 
+virtual \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a526bb7b100aa0ddf0cc67438d890f0ca}{$\sim$\+W\+Batch\+Edit\+Proxy\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a4405c67065e8175010b21051240df4c2}{is\+Dirty}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether changes have not yet been committed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a54c22faab062ba9fed79409f4cacdbe9}{commit\+All}} ()
+\begin{DoxyCompactList}\small\item\em Commits changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a0ec1198073cb711cce9505c9fe4b3a3f}{revert\+All}} ()
+\begin{DoxyCompactList}\small\item\em Reverts changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a4244ecdf05fc753ac8d0a0ef5c8d9e6a}{set\+New\+Row\+Data}} (int column, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a92af6a61b59f27abe3c88f0bfa71443c}{data}}, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}})
+\begin{DoxyCompactList}\small\item\em Sets default data for a newly inserted row. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a8dd7cfe1c12f4dc8f61106d63e9fe0e7}{set\+New\+Row\+Flags}} (int column, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}} $>$ \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ab1c93e0bc8166574389411a235d071aa}{flags}})
+\begin{DoxyCompactList}\small\item\em Sets the item flags for items in a newly inserted row. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_aed1e35dea8fe90acfb46f3b8cae69daf}{set\+Dirty\+Indication}} (\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a92af6a61b59f27abe3c88f0bfa71443c}{data}})
+\begin{DoxyCompactList}\small\item\em Configures data used to indicate a modified item. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_aa1926ca65715fad04e88eda511d9b172}{map\+From\+Source}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&source\+Index) const override
+\begin{DoxyCompactList}\small\item\em Maps a source model index to the proxy model. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_aedeb7c89d15a3ff3b8563ce91df430bf}{map\+To\+Source}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&proxy\+Index) const override
+\begin{DoxyCompactList}\small\item\em Maps a proxy model index to the source model. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ab809b356fb23d0b5f3acac4f20433130}{set\+Source\+Model}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \&\mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a7e92d9d2b91f852286b7d49d08a88d5e}{source\+Model}}) override
+\begin{DoxyCompactList}\small\item\em Sets the source model. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a0f9e3da833c5b369e0a7b26e86cc43a1}{column\+Count}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const override
+\begin{DoxyCompactList}\small\item\em Returns the number of columns. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a37731de25e829c50bbe1f3989d3efc63}{row\+Count}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const override
+\begin{DoxyCompactList}\small\item\em Returns the number of rows. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}{index}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the parent for a model index. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}{index}} (int row, int column, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const override
+\begin{DoxyCompactList}\small\item\em Returns the child index for the given row and column. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a92af6a61b59f27abe3c88f0bfa71443c}{data}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}{index}}, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the data at a specific model index. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a5505c912ab3c9e05de23b45968c11ec4}{set\+Data}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}{index}}, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}) override
+\begin{DoxyCompactList}\small\item\em Sets item data. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}} $>$ \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ab1c93e0bc8166574389411a235d071aa}{flags}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}{index}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the flags for an item. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_af1d098537cadf57b2116ab69d64ada53}{header\+Data}} (int section, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation=Orientation\+::\+Horizontal, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the row or column header data. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_afeb080c0fd326ef69e25978834853e0a}{insert\+Rows}} (int row, int count, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) override
+\begin{DoxyCompactList}\small\item\em Inserts one or more rows. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a2e3d079691b71538eb123bbe22270b50}{remove\+Rows}} (int row, int count, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) override
+\begin{DoxyCompactList}\small\item\em Removes rows. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_aec93869a809eacdd77328c5e9a6d3873}{insert\+Columns}} (int column, int count, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) override
+\begin{DoxyCompactList}\small\item\em Inserts one or more columns. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a6e946309c3182628faa412e28df2841c}{remove\+Columns}} (int column, int count, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) override
+\begin{DoxyCompactList}\small\item\em Removes columns. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a0772da892b3ce93122928d7601848392}{sort}} (int column, \mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Sort\+Order}} order=Sort\+Order\+::\+Ascending) override
+\begin{DoxyCompactList}\small\item\em Sorts the model according to a particular column. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ab72f9eac35b1852e3b86273016a7f27e}{set\+Data}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}{index}}, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}})
+\begin{DoxyCompactList}\small\item\em Sets data at the given model index. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_aae463d7040f364ffcc008997f8e387a2}{set\+Data}} (int row, int column, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}())
+\begin{DoxyCompactList}\small\item\em Sets data at the given row and column. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a837660e348a3c61c3919c238bf11eb29}{data}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}{index}}, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}) const=0
+\begin{DoxyCompactList}\small\item\em Returns data at a specified model index for the given role. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a5fc67e5fbb584cd1c6e6108ad07ff484}{data}} (int row, int column, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const
+\begin{DoxyCompactList}\small\item\em Returns the data item at the given column and row. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a3c4a0ffe050bc0d11feeac4749dde784}{set\+Header\+Data}} (int section, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}})
+\begin{DoxyCompactList}\small\item\em Sets header data for a column or row. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a0bccbb4373b4c1e8bce85573b933d53d}{set\+Header\+Data}} (int section, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value)
+\begin{DoxyCompactList}\small\item\em Sets column header data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a626d94d8e4ceeaada61ecabdc0c6fba4}\label{classWt_1_1WBatchEditProxyModel_a626d94d8e4ceeaada61ecabdc0c6fba4}} 
+typedef std\+::map$<$ \mbox{\hyperlink{structWt_1_1WBatchEditProxyModel_1_1Cell}{Cell}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a1f5858f68611d651fc15e35f64171911}{Data\+Map}} $>$ {\bfseries Value\+Map}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a39cffac70f8575ead2bd1458573dc384}\label{classWt_1_1WBatchEditProxyModel_a39cffac70f8575ead2bd1458573dc384}} 
+void {\bfseries source\+Columns\+About\+To\+Be\+Inserted} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a90c554a93c81c9966d7f54fbd3b23fce}\label{classWt_1_1WBatchEditProxyModel_a90c554a93c81c9966d7f54fbd3b23fce}} 
+void {\bfseries source\+Columns\+Inserted} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_acbfde96a642fa6cb1286214818b33459}\label{classWt_1_1WBatchEditProxyModel_acbfde96a642fa6cb1286214818b33459}} 
+void {\bfseries source\+Columns\+About\+To\+Be\+Removed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a78dfe6cade0544653cea2306d4044fe4}\label{classWt_1_1WBatchEditProxyModel_a78dfe6cade0544653cea2306d4044fe4}} 
+void {\bfseries source\+Columns\+Removed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a64ce3cae65e5fd5872e7b353c043df73}\label{classWt_1_1WBatchEditProxyModel_a64ce3cae65e5fd5872e7b353c043df73}} 
+void {\bfseries source\+Rows\+About\+To\+Be\+Inserted} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a8f39318b5822d49bdebf119738ead5a1}\label{classWt_1_1WBatchEditProxyModel_a8f39318b5822d49bdebf119738ead5a1}} 
+void {\bfseries source\+Rows\+Inserted} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a66b3f9d37a1316908fae1b76d6543f32}\label{classWt_1_1WBatchEditProxyModel_a66b3f9d37a1316908fae1b76d6543f32}} 
+void {\bfseries source\+Rows\+About\+To\+Be\+Removed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a59301ea13b75932c2952ba3935c9aa38}\label{classWt_1_1WBatchEditProxyModel_a59301ea13b75932c2952ba3935c9aa38}} 
+void {\bfseries source\+Rows\+Removed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a88d25f23d8039138a77bceb16061ef98}\label{classWt_1_1WBatchEditProxyModel_a88d25f23d8039138a77bceb16061ef98}} 
+void {\bfseries source\+Data\+Changed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&top\+Left, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&bottom\+Right)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a730a945339c347627698e670d29fad80}\label{classWt_1_1WBatchEditProxyModel_a730a945339c347627698e670d29fad80}} 
+void {\bfseries source\+Header\+Data\+Changed} (\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_accf7f1feb826a51c02b75a2b727683f4}\label{classWt_1_1WBatchEditProxyModel_accf7f1feb826a51c02b75a2b727683f4}} 
+void {\bfseries source\+Layout\+About\+To\+Be\+Changed} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_aab388cdc5ddacb66158ec72cf3d1f8a9}\label{classWt_1_1WBatchEditProxyModel_aab388cdc5ddacb66158ec72cf3d1f8a9}} 
+void {\bfseries source\+Layout\+Changed} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_ac9b9181a7c1a8e111daaedc3f23a72b8}\label{classWt_1_1WBatchEditProxyModel_ac9b9181a7c1a8e111daaedc3f23a72b8}} 
+void {\bfseries source\+Model\+Reset} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a108f33bf9fd3c6511fabe6798d7388da}\label{classWt_1_1WBatchEditProxyModel_a108f33bf9fd3c6511fabe6798d7388da}} 
+\mbox{\hyperlink{structWt_1_1WBatchEditProxyModel_1_1Item}{Item}} $\ast$ {\bfseries item\+From\+Source\+Index} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&source\+Index, bool auto\+Create=true) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_ae9ef7edb5f3efb4be4e09f5552ced6f9}\label{classWt_1_1WBatchEditProxyModel_ae9ef7edb5f3efb4be4e09f5552ced6f9}} 
+\mbox{\hyperlink{structWt_1_1WBatchEditProxyModel_1_1Item}{Item}} $\ast$ {\bfseries item\+From\+Inserted\+Row} (\mbox{\hyperlink{structWt_1_1WBatchEditProxyModel_1_1Item}{Item}} $\ast$parent\+Item, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}{index}}, bool auto\+Create=true) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_ad5d0470b2bbc2540775ebbcb620b6fe4}\label{classWt_1_1WBatchEditProxyModel_ad5d0470b2bbc2540775ebbcb620b6fe4}} 
+\mbox{\hyperlink{structWt_1_1WBatchEditProxyModel_1_1Item}{Item}} $\ast$ {\bfseries parent\+Item\+From\+Index} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}{index}}) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a522bc21dfdbf192d91102bd5abd7b27f}\label{classWt_1_1WBatchEditProxyModel_a522bc21dfdbf192d91102bd5abd7b27f}} 
+\mbox{\hyperlink{structWt_1_1WBatchEditProxyModel_1_1Item}{Item}} $\ast$ {\bfseries item\+From\+Index} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}{index}}, bool auto\+Create=true) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a3e086987588f3c5aadd7ffd07710bcc7}\label{classWt_1_1WBatchEditProxyModel_a3e086987588f3c5aadd7ffd07710bcc7}} 
+bool {\bfseries is\+Removed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&source\+Index) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a5d0e5bfaa2ace63754a629b35285ed51}\label{classWt_1_1WBatchEditProxyModel_a5d0e5bfaa2ace63754a629b35285ed51}} 
+int {\bfseries adjusted\+Proxy\+Row} (\mbox{\hyperlink{structWt_1_1WBatchEditProxyModel_1_1Item}{Item}} $\ast$item, int source\+Row) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_aff389cbca1912d17f9909e8ace3463e8}\label{classWt_1_1WBatchEditProxyModel_aff389cbca1912d17f9909e8ace3463e8}} 
+int {\bfseries adjusted\+Source\+Row} (\mbox{\hyperlink{structWt_1_1WBatchEditProxyModel_1_1Item}{Item}} $\ast$item, int proxy\+Row) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a1f237eb577d6368a4b2550c1fd2ec548}\label{classWt_1_1WBatchEditProxyModel_a1f237eb577d6368a4b2550c1fd2ec548}} 
+int {\bfseries adjusted\+Proxy\+Column} (\mbox{\hyperlink{structWt_1_1WBatchEditProxyModel_1_1Item}{Item}} $\ast$item, int source\+Column) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a554b4eb11d462f5dc51c4c275cc4727f}\label{classWt_1_1WBatchEditProxyModel_a554b4eb11d462f5dc51c4c275cc4727f}} 
+int {\bfseries adjusted\+Source\+Column} (\mbox{\hyperlink{structWt_1_1WBatchEditProxyModel_1_1Item}{Item}} $\ast$item, int proxy\+Column) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_ad9f760cbbd53e24ee2cf1709c8142e94}\label{classWt_1_1WBatchEditProxyModel_ad9f760cbbd53e24ee2cf1709c8142e94}} 
+int {\bfseries adjusted\+Proxy\+Index} (int source\+Index, const std\+::vector$<$ int $>$ \&ins, const std\+::vector$<$ int $>$ \&rem) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a9a5cf254a1680ca3559ed7f39b8718c0}\label{classWt_1_1WBatchEditProxyModel_a9a5cf254a1680ca3559ed7f39b8718c0}} 
+int {\bfseries adjusted\+Source\+Index} (int proxy\+Index, const std\+::vector$<$ int $>$ \&ins, const std\+::vector$<$ int $>$ \&rem) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a26e10b72617e576965cdfb59050c7bd9}\label{classWt_1_1WBatchEditProxyModel_a26e10b72617e576965cdfb59050c7bd9}} 
+void {\bfseries insert\+Indexes} (\mbox{\hyperlink{structWt_1_1WBatchEditProxyModel_1_1Item}{Item}} $\ast$item, std\+::vector$<$ int $>$ \&ins, std\+::vector$<$ \mbox{\hyperlink{structWt_1_1WBatchEditProxyModel_1_1Item}{Item}} $\ast$ $>$ $\ast$row\+Items, int \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}{index}}, int count)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a936839547b68f45ccfc87d0e73556a75}\label{classWt_1_1WBatchEditProxyModel_a936839547b68f45ccfc87d0e73556a75}} 
+void {\bfseries remove\+Indexes} (\mbox{\hyperlink{structWt_1_1WBatchEditProxyModel_1_1Item}{Item}} $\ast$item, std\+::vector$<$ int $>$ \&ins, std\+::vector$<$ int $>$ \&rem, std\+::vector$<$ \mbox{\hyperlink{structWt_1_1WBatchEditProxyModel_1_1Item}{Item}} $\ast$ $>$ $\ast$row\+Items, int \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}{index}}, int count)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a6b7e3bd78165bd55ea8ad4fd2c9325d0}\label{classWt_1_1WBatchEditProxyModel_a6b7e3bd78165bd55ea8ad4fd2c9325d0}} 
+void {\bfseries delete\+Items\+Under} (\mbox{\hyperlink{structWt_1_1WBatchEditProxyModel_1_1Item}{Item}} $\ast$item, int row)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a8e7e5861691147a84d9f25cf0b74943c}\label{classWt_1_1WBatchEditProxyModel_a8e7e5861691147a84d9f25cf0b74943c}} 
+void {\bfseries shift} (std\+::vector$<$ int $>$ \&v, int row, int count)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a1e59b5b4cc8522aad3bc42fa6fefacd2}\label{classWt_1_1WBatchEditProxyModel_a1e59b5b4cc8522aad3bc42fa6fefacd2}} 
+void {\bfseries shift\+Rows} (Value\+Map \&v, int row, int count)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a3f8d5be727bb7cca4453ff931e7f05b7}\label{classWt_1_1WBatchEditProxyModel_a3f8d5be727bb7cca4453ff931e7f05b7}} 
+void {\bfseries shift\+Rows} (\mbox{\hyperlink{structWt_1_1WBatchEditProxyModel_1_1Item}{Item}} $\ast$item, int row, int count)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a7fc169aa7b626a6add57c30652f5ac41}\label{classWt_1_1WBatchEditProxyModel_a7fc169aa7b626a6add57c30652f5ac41}} 
+void {\bfseries shift\+Columns} (Value\+Map \&v, int column, int count)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a18922f1f16b1091dd0c3c7894d107e85}\label{classWt_1_1WBatchEditProxyModel_a18922f1f16b1091dd0c3c7894d107e85}} 
+void {\bfseries shift\+Columns} (\mbox{\hyperlink{structWt_1_1WBatchEditProxyModel_1_1Item}{Item}} $\ast$item, int column, int count)
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a73d5f3999c1c7881602aa10235aecb4c}\label{classWt_1_1WBatchEditProxyModel_a73d5f3999c1c7881602aa10235aecb4c}} 
+void {\bfseries reset\+Mappings} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a7c4036e8f37eb5c2158123df9ddf219b}\label{classWt_1_1WBatchEditProxyModel_a7c4036e8f37eb5c2158123df9ddf219b}} 
+\mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} {\bfseries indicate\+Dirty} (\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a15007ed675a33243e3e7ed0413178b38}\label{classWt_1_1WBatchEditProxyModel_a15007ed675a33243e3e7ed0413178b38}} 
+bool {\bfseries submitting\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a61288f59ff777ed75b012df6b67f1473}\label{classWt_1_1WBatchEditProxyModel_a61288f59ff777ed75b012df6b67f1473}} 
+std\+::map$<$ int, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a1f5858f68611d651fc15e35f64171911}{Data\+Map}} $>$ {\bfseries new\+Row\+Data\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a2b36873f08655e638bb326e452873543}\label{classWt_1_1WBatchEditProxyModel_a2b36873f08655e638bb326e452873543}} 
+std\+::map$<$ int, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}} $>$ $>$ {\bfseries new\+Row\+Flags\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a1aa06f630a409651912d1fb80ba1f58a}\label{classWt_1_1WBatchEditProxyModel_a1aa06f630a409651912d1fb80ba1f58a}} 
+\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} {\bfseries dirty\+Indication\+Role\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_ae13b2233ea814f5cc45a5407ab8775ae}\label{classWt_1_1WBatchEditProxyModel_ae13b2233ea814f5cc45a5407ab8775ae}} 
+\mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} {\bfseries dirty\+Indication\+Data\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a2d7dabdf09ac87dc9221099fadd8a3d1}\label{classWt_1_1WBatchEditProxyModel_a2d7dabdf09ac87dc9221099fadd8a3d1}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} $>$ {\bfseries model\+Connections\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a96e3c04e00cb46f2a8424ffbfb924cb1}\label{classWt_1_1WBatchEditProxyModel_a96e3c04e00cb46f2a8424ffbfb924cb1}} 
+\mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a272b9667c732a6d2e11e1b6d5d211697}{Item\+Map}} {\bfseries mapped\+Indexes\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A proxy model for Wt\textquotesingle{}s item models that provides batch editing. 
+
+This proxy model presents data from a source model, and caches any editing operation without affecting the underlying source model, until \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a54c22faab062ba9fed79409f4cacdbe9}{commit\+All()}} or \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a0ec1198073cb711cce9505c9fe4b3a3f}{revert\+All()}} is called. In this way, you can commit all the editing in batch to the underlying source model, only when the user confirms the changes.
+
+All editing operations are supported\+:
+\begin{DoxyItemize}
+\item changing data (\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a5505c912ab3c9e05de23b45968c11ec4}{set\+Data()}})
+\item inserting and removing rows (\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_afeb080c0fd326ef69e25978834853e0a}{insert\+Rows()}} and \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a2e3d079691b71538eb123bbe22270b50}{remove\+Rows()}})
+\item inserting and removing columns (\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_aec93869a809eacdd77328c5e9a6d3873}{insert\+Columns()}} and \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a6e946309c3182628faa412e28df2841c}{remove\+Columns()}})
+\end{DoxyItemize}
+
+The model supports both simple tabular models, as well as hierarchical (tree-\/like / treetable-\/like) models, with children under items in the first column.
+
+Default values for a newly inserted row can be set using \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a4244ecdf05fc753ac8d0a0ef5c8d9e6a}{set\+New\+Row\+Data()}} and flags for its items using \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a8dd7cfe1c12f4dc8f61106d63e9fe0e7}{set\+New\+Row\+Flags()}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a0f9e3da833c5b369e0a7b26e86cc43a1}\label{classWt_1_1WBatchEditProxyModel_a0f9e3da833c5b369e0a7b26e86cc43a1}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!columnCount@{columnCount}}
+\index{columnCount@{columnCount}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{columnCount()}{columnCount()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::column\+Count (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of columns. 
+
+This returns the number of columns at index {\ttfamily parent}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a37731de25e829c50bbe1f3989d3efc63}{row\+Count()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_abcf7912a95a0a60f8e9b1c37d30b8383}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a54c22faab062ba9fed79409f4cacdbe9}\label{classWt_1_1WBatchEditProxyModel_a54c22faab062ba9fed79409f4cacdbe9}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!commitAll@{commitAll}}
+\index{commitAll@{commitAll}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{commitAll()}{commitAll()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::commit\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Commits changes. 
+
+This commits all changes to the source model.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a0ec1198073cb711cce9505c9fe4b3a3f}{revert\+All()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a92af6a61b59f27abe3c88f0bfa71443c}\label{classWt_1_1WBatchEditProxyModel_a92af6a61b59f27abe3c88f0bfa71443c}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!data@{data}}
+\index{data@{data}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the data at a specific model index. 
+
+The default proxy implementation translates the index to the source model, and calls \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a7e92d9d2b91f852286b7d49d08a88d5e}{source\+Model()}}-\/$>$\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a92af6a61b59f27abe3c88f0bfa71443c}{data()}} with this index. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a8e938b2a268c99bf17f0529cfffc322e}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a837660e348a3c61c3919c238bf11eb29}\label{classWt_1_1WBatchEditProxyModel_a837660e348a3c61c3919c238bf11eb29}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!data@{data}}
+\index{data@{data}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} Wt\+::\+W\+Abstract\+Item\+Model\+::data}
+
+
+
+Returns data at a specified model index for the given role. 
+
+You should check the {\ttfamily role} to decide what data to return. Usually a View class will ask for data for several roles which affect not only the contents (\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Wt\+::\+Item\+Data\+Role\+::\+Display}}) but also icons (\mbox{\hyperlink{classWt_1_1ItemDataRole_a9db6daf35b3c68db6df624411420d4b7}{Wt\+::\+Item\+Data\+Role\+::\+Decoration}}), U\+R\+Ls (\mbox{\hyperlink{classWt_1_1ItemDataRole_ae478217452f058add8fd204ddacde8ae}{Wt\+::\+Item\+Data\+Role\+::\+Link}}), and other visual aspects. If your item does not specify data for a particular role, it should simply return a Wt\+::cpp17\+::any().
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ab1c93e0bc8166574389411a235d071aa}{flags()}}, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_af1d098537cadf57b2116ab69d64ada53}{header\+Data()}}, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a5505c912ab3c9e05de23b45968c11ec4}{set\+Data()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a5fc67e5fbb584cd1c6e6108ad07ff484}\label{classWt_1_1WBatchEditProxyModel_a5fc67e5fbb584cd1c6e6108ad07ff484}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!data@{data}}
+\index{data@{data}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} Wt\+::\+W\+Abstract\+Item\+Model\+::data}
+
+
+
+Returns the data item at the given column and row. 
+
+This is a convenience method, and is equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}{index}}(row, column, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}}).\mbox{\hyperlink{classWt_1_1WModelIndex_ada1e81484925d24df6081bf4fa6b7dc4}{data}}(role)}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}{index()}}, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a92af6a61b59f27abe3c88f0bfa71443c}{data()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_ab1c93e0bc8166574389411a235d071aa}\label{classWt_1_1WBatchEditProxyModel_ab1c93e0bc8166574389411a235d071aa}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!flags@{flags}}
+\index{flags@{flags}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{flags()}{flags()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$\mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}}$>$ Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::flags (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the flags for an item. 
+
+The default proxy implementation calls \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a7e92d9d2b91f852286b7d49d08a88d5e}{source\+Model()}}-\/$>$flags(map\+To\+Source(index)) 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a49f6f19f4e31826df9b528e1fbece53b}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_af1d098537cadf57b2116ab69d64ada53}\label{classWt_1_1WBatchEditProxyModel_af1d098537cadf57b2116ab69d64ada53}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!headerData@{headerData}}
+\index{headerData@{headerData}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{headerData()}{headerData()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::header\+Data (\begin{DoxyParamCaption}\item[{int}]{section,  }\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation = {\ttfamily Orientation\+:\+:Horizontal},  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the row or column header data. 
+
+The default proxy implementation constructs a dummy \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} with the row set to 0 and column set to {\ttfamily section} if the orientation is Wt\+::\+Orientation\+::\+Horizontal, or with the row set to {\ttfamily section} and the column set to 0 if the orientation is Wt\+::\+Orientation\+::\+Vertical.
+
+The resulting section that is forwarded to \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a7e92d9d2b91f852286b7d49d08a88d5e}{source\+Model()}}-\/$>$\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_af1d098537cadf57b2116ab69d64ada53}{header\+Data()}} depends on how the \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} is transformed with \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_aedeb7c89d15a3ff3b8563ce91df430bf}{map\+To\+Source()}}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_aa1d16a5336bd1a75023b1b20f63708a2}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}\label{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!index@{index}}
+\index{index@{index}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::index (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the child index for the given row and column. 
+
+When implementing this method, you can use \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af9b04fdec198dfbc1c9297ead93c8930}{create\+Index()}} to create an index that corresponds to the item at {\ttfamily row} and {\ttfamily column} within {\ttfamily parent}.
+
+If the location is invalid (out of bounds at the parent), then an invalid index must be returned.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_aec93869a809eacdd77328c5e9a6d3873}\label{classWt_1_1WBatchEditProxyModel_aec93869a809eacdd77328c5e9a6d3873}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!insertColumns@{insertColumns}}
+\index{insertColumns@{insertColumns}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{insertColumns()}{insertColumns()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::insert\+Columns (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{int}]{count,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inserts one or more columns. 
+
+The default proxy implementation calls \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a7e92d9d2b91f852286b7d49d08a88d5e}{source\+Model()}}-\/$>$insert\+Columns(column, count, parent) 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_aaebad5ac17bf55e04dced5b70be325c7}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_afeb080c0fd326ef69e25978834853e0a}\label{classWt_1_1WBatchEditProxyModel_afeb080c0fd326ef69e25978834853e0a}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!insertRows@{insertRows}}
+\index{insertRows@{insertRows}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{insertRows()}{insertRows()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::insert\+Rows (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{count,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inserts one or more rows. 
+
+In models that support row insertion, this inserts {\ttfamily count} rows, starting at {\ttfamily row}, and returns {\ttfamily true} if the operation was successful. The new rows are inserted under {\ttfamily parent}.
+
+If parent had no children, then a single column is added with {\ttfamily count} rows.
+
+The default implementation returns {\ttfamily false}.
+
+The model implementation must call \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a91e52898a805996aee496877cd090eb4}{begin\+Insert\+Rows()}} and \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ace03c0bc5b0b57b6add882aaf444b62f}{end\+Insert\+Rows()}} before and after the operation whenever its geometry is changed by inserting rows. This emits signals for views to properly react to these changes.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_aec93869a809eacdd77328c5e9a6d3873}{insert\+Columns()}}, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a2e3d079691b71538eb123bbe22270b50}{remove\+Rows()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a91e52898a805996aee496877cd090eb4}{begin\+Insert\+Rows()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ace03c0bc5b0b57b6add882aaf444b62f}{end\+Insert\+Rows()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a59b5169e158b4cbfb1ec98df67c87200}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a4405c67065e8175010b21051240df4c2}\label{classWt_1_1WBatchEditProxyModel_a4405c67065e8175010b21051240df4c2}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!isDirty@{isDirty}}
+\index{isDirty@{isDirty}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{isDirty()}{isDirty()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::is\+Dirty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether changes have not yet been committed. 
+
+Returns whether have been made to the proxy model, which could be committed using \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a54c22faab062ba9fed79409f4cacdbe9}{commit\+All()}} or reverted using \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a0ec1198073cb711cce9505c9fe4b3a3f}{revert\+All()}}. \mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_aa1926ca65715fad04e88eda511d9b172}\label{classWt_1_1WBatchEditProxyModel_aa1926ca65715fad04e88eda511d9b172}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!mapFromSource@{mapFromSource}}
+\index{mapFromSource@{mapFromSource}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{mapFromSource()}{mapFromSource()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::map\+From\+Source (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{source\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Maps a source model index to the proxy model. 
+
+This method returns a model index in the proxy model that corresponds to the model index {\ttfamily source\+Index} in the source model. This method must only be implemented for source model indexes that are mapped and thus are the result of \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_aedeb7c89d15a3ff3b8563ce91df430bf}{map\+To\+Source()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_aedeb7c89d15a3ff3b8563ce91df430bf}{map\+To\+Source()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a856d190cc66edcf05462e2476f43b01d}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_aedeb7c89d15a3ff3b8563ce91df430bf}\label{classWt_1_1WBatchEditProxyModel_aedeb7c89d15a3ff3b8563ce91df430bf}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!mapToSource@{mapToSource}}
+\index{mapToSource@{mapToSource}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{mapToSource()}{mapToSource()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::map\+To\+Source (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{proxy\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Maps a proxy model index to the source model. 
+
+This method returns a model index in the source model that corresponds to the proxy model index {\ttfamily proxy\+Index}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_aa1926ca65715fad04e88eda511d9b172}{map\+From\+Source()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_ac36b0ee3110073578da8b999d1882bf7}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}\label{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!parent@{parent}}
+\index{parent@{parent}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{parent()}{parent()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::parent (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the parent for a model index. 
+
+An implementation should use \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af9b04fdec198dfbc1c9297ead93c8930}{create\+Index()}} to create a model index that corresponds to the parent of a given index.
+
+\mbox{\hyperlink{classNote}{Note}} that the index itself may be stale (referencing a row/column within the parent that is outside the model geometry), but its parent (identified by the \mbox{\hyperlink{classWt_1_1WModelIndex_a870e6637b7beebef4f4dfaec9f08e0a2}{W\+Model\+Index\+::internal\+Pointer()}}) is referencing an existing parent. A stale index can only be used while the model geometry is being updated, i.\+e. during the emission of the corresponding \mbox{[}rows/columns\mbox{]}(Being)\mbox{[}Removed/\+Inserted\mbox{]}() signals.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}{index()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a6e946309c3182628faa412e28df2841c}\label{classWt_1_1WBatchEditProxyModel_a6e946309c3182628faa412e28df2841c}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!removeColumns@{removeColumns}}
+\index{removeColumns@{removeColumns}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{removeColumns()}{removeColumns()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::remove\+Columns (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{int}]{count,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Removes columns. 
+
+The default proxy implementation calls \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a7e92d9d2b91f852286b7d49d08a88d5e}{source\+Model()}}-\/$>$remove\+Columns(column, count, parent) 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_aa23f7c2609618c4d3f7bd08d73ab8088}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a2e3d079691b71538eb123bbe22270b50}\label{classWt_1_1WBatchEditProxyModel_a2e3d079691b71538eb123bbe22270b50}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!removeRows@{removeRows}}
+\index{removeRows@{removeRows}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{removeRows()}{removeRows()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::remove\+Rows (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{count,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Removes rows. 
+
+Returns {\ttfamily true} if the operation was successful.
+
+The default implementation returns {\ttfamily false}.
+
+The model implementation must call \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a5286cc70219c8d8d720abc255b0183f5}{begin\+Remove\+Rows()}} and \mbox{\hyperlink{classWt_1_1WAbstractItemModel_afceaf639f2a5088f45c00f03d550f262}{end\+Remove\+Rows()}} before and after the operation whenever its geometry is changed by removing rows. This emits signals for views to properly react to these changes.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a6e946309c3182628faa412e28df2841c}{remove\+Columns()}}, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_afeb080c0fd326ef69e25978834853e0a}{insert\+Rows()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a5286cc70219c8d8d720abc255b0183f5}{begin\+Remove\+Rows()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_afceaf639f2a5088f45c00f03d550f262}{end\+Remove\+Rows()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ad1788e38e96df5795fc453f63d557ba2}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a0ec1198073cb711cce9505c9fe4b3a3f}\label{classWt_1_1WBatchEditProxyModel_a0ec1198073cb711cce9505c9fe4b3a3f}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!revertAll@{revertAll}}
+\index{revertAll@{revertAll}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{revertAll()}{revertAll()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::revert\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reverts changes. 
+
+This reverts all changes.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a54c22faab062ba9fed79409f4cacdbe9}{commit\+All()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a37731de25e829c50bbe1f3989d3efc63}\label{classWt_1_1WBatchEditProxyModel_a37731de25e829c50bbe1f3989d3efc63}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!rowCount@{rowCount}}
+\index{rowCount@{rowCount}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{rowCount()}{rowCount()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::row\+Count (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of rows. 
+
+This returns the number of rows at index {\ttfamily parent}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a0f9e3da833c5b369e0a7b26e86cc43a1}{column\+Count()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab0709a8f71fd5df882f29bb29fd055f0}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_ab72f9eac35b1852e3b86273016a7f27e}\label{classWt_1_1WBatchEditProxyModel_ab72f9eac35b1852e3b86273016a7f27e}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!setData@{setData}}
+\index{setData@{setData}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Abstract\+Item\+Model\+::set\+Data}
+
+
+
+Sets data at the given model index. 
+
+Returns {\ttfamily true} if the operation was successful.
+
+The default implementation returns {\ttfamily false}.
+
+The model implementation must emit the \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aa074e5bc55394252a609ef17d071b563}{data\+Changed()}} signal after data was changed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a92af6a61b59f27abe3c88f0bfa71443c}{data()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a5505c912ab3c9e05de23b45968c11ec4}\label{classWt_1_1WBatchEditProxyModel_a5505c912ab3c9e05de23b45968c11ec4}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!setData@{setData}}
+\index{setData@{setData}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::set\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{value,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets item data. 
+
+The default implementation will copy \mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Wt\+::\+Item\+Data\+Role\+::\+Edit}} data to \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Wt\+::\+Item\+Data\+Role\+::\+Display}}. You may want to specialize the model to provide a more specialized editing behaviour. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_ae3048edb65f43f893331edee48ca0a57}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_aae463d7040f364ffcc008997f8e387a2}\label{classWt_1_1WBatchEditProxyModel_aae463d7040f364ffcc008997f8e387a2}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!setData@{setData}}
+\index{setData@{setData}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Abstract\+Item\+Model\+::set\+Data}
+
+
+
+Sets data at the given row and column. 
+
+This is a convience method, and is equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a5505c912ab3c9e05de23b45968c11ec4}{setData}}(\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}{index}}(row, column, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_abf3cb9ebe0728746bd948f6bfc29e426}{parent}}), value, role);}
+\end{DoxyCode}
+
+
+Returns {\ttfamily true} if the operation was successful.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a5505c912ab3c9e05de23b45968c11ec4}{set\+Data()}}, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ae5008895ae12c48649052c8462752ab9}{index()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_aed1e35dea8fe90acfb46f3b8cae69daf}\label{classWt_1_1WBatchEditProxyModel_aed1e35dea8fe90acfb46f3b8cae69daf}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!setDirtyIndication@{setDirtyIndication}}
+\index{setDirtyIndication@{setDirtyIndication}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{setDirtyIndication()}{setDirtyIndication()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::set\+Dirty\+Indication (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role,  }\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Configures data used to indicate a modified item. 
+
+This sets {\ttfamily data} for item data role {\ttfamily role} to be returned by \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a92af6a61b59f27abe3c88f0bfa71443c}{data()}} for an item that is dirty (e.\+g. because it belongs to a newly inserted row/column, or because new data has been set for it.
+
+When {\ttfamily role} is \mbox{\hyperlink{classWt_1_1ItemDataRole_ac91a7ef0ee5b9c13fd74ce2a1c57ecb9}{Wt\+::\+Item\+Data\+Role\+::\+Style\+Class}}, the style class is appended to any style already returned by the source model or set by \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_a4244ecdf05fc753ac8d0a0ef5c8d9e6a}{set\+New\+Row\+Data()}}.
+
+By default there is no dirty indication. \mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a0bccbb4373b4c1e8bce85573b933d53d}\label{classWt_1_1WBatchEditProxyModel_a0bccbb4373b4c1e8bce85573b933d53d}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!setHeaderData@{setHeaderData}}
+\index{setHeaderData@{setHeaderData}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{setHeaderData()}{setHeaderData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Abstract\+Item\+Model\+::set\+Header\+Data}
+
+
+
+Sets column header data. 
+
+Returns {\ttfamily true} if the operation was successful.
+
+\begin{DoxySeeAlso}{See also}
+set\+Header\+Data(int, Orientation, const cpp17\+::any\&, int) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a3c4a0ffe050bc0d11feeac4749dde784}\label{classWt_1_1WBatchEditProxyModel_a3c4a0ffe050bc0d11feeac4749dde784}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!setHeaderData@{setHeaderData}}
+\index{setHeaderData@{setHeaderData}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{setHeaderData()}{setHeaderData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Abstract\+Item\+Model\+::set\+Header\+Data}
+
+
+
+Sets header data for a column or row. 
+
+Returns {\ttfamily true} if the operation was successful.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_af1d098537cadf57b2116ab69d64ada53}{header\+Data()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a4244ecdf05fc753ac8d0a0ef5c8d9e6a}\label{classWt_1_1WBatchEditProxyModel_a4244ecdf05fc753ac8d0a0ef5c8d9e6a}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!setNewRowData@{setNewRowData}}
+\index{setNewRowData@{setNewRowData}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{setNewRowData()}{setNewRowData()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::set\+New\+Row\+Data (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{data,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}} }\end{DoxyParamCaption})}
+
+
+
+Sets default data for a newly inserted row. 
+
+You can use this method to initialize data for a newly inserted row. \mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a8dd7cfe1c12f4dc8f61106d63e9fe0e7}\label{classWt_1_1WBatchEditProxyModel_a8dd7cfe1c12f4dc8f61106d63e9fe0e7}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!setNewRowFlags@{setNewRowFlags}}
+\index{setNewRowFlags@{setNewRowFlags}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{setNewRowFlags()}{setNewRowFlags()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::set\+New\+Row\+Flags (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_ga1d77c4de293aebfacbdde124de06b8b0}{Item\+Flag}} $>$}]{flags }\end{DoxyParamCaption})}
+
+
+
+Sets the item flags for items in a newly inserted row. 
+
+By default, \mbox{\hyperlink{classWt_1_1WBatchEditProxyModel_ab1c93e0bc8166574389411a235d071aa}{flags()}} will return Item\+Flag\+::\+Selectable. \mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_ab809b356fb23d0b5f3acac4f20433130}\label{classWt_1_1WBatchEditProxyModel_ab809b356fb23d0b5f3acac4f20433130}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!setSourceModel@{setSourceModel}}
+\index{setSourceModel@{setSourceModel}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{setSourceModel()}{setSourceModel()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::set\+Source\+Model (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \&}]{source\+Model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the source model. 
+
+The source model provides the actual data for the proxy model.
+
+Ownership of the source model is {\itshape not} transferred.
+
+All signals of the source model are propagated to the proxy model. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a213dfe399091f8134657436de86efca7}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WBatchEditProxyModel_a0772da892b3ce93122928d7601848392}\label{classWt_1_1WBatchEditProxyModel_a0772da892b3ce93122928d7601848392}} 
+\index{Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}!sort@{sort}}
+\index{sort@{sort}!Wt::WBatchEditProxyModel@{Wt::WBatchEditProxyModel}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Batch\+Edit\+Proxy\+Model\+::sort (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{\mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Sort\+Order}}}]{order = {\ttfamily SortOrder\+:\+:Ascending} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sorts the model according to a particular column. 
+
+If the model supports sorting, then it should emit the \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab377ac2fcb9de9d191bd1353665d1389}{layout\+About\+To\+Be\+Changed()}} signal, rearrange its items, and afterwards emit the \mbox{\hyperlink{classWt_1_1WAbstractItemModel_afe7cb1d5186881f83aa8f0e452aaef66}{layout\+Changed()}} signal.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab377ac2fcb9de9d191bd1353665d1389}{layout\+About\+To\+Be\+Changed()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_afe7cb1d5186881f83aa8f0e452aaef66}{layout\+Changed()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab044b92afa69282ea2e351bcdfd7c0c7}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Batch\+Edit\+Proxy\+Model.\+h\end{DoxyCompactItemize}

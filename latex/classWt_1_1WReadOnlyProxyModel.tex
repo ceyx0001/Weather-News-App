@@ -1,0 +1,321 @@
+\hypertarget{classWt_1_1WReadOnlyProxyModel}{}\doxysection{Wt\+::W\+Read\+Only\+Proxy\+Model Class Reference}
+\label{classWt_1_1WReadOnlyProxyModel}\index{Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}}
+
+
+A read-\/only wrapper for a source model.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Read\+Only\+Proxy\+Model.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Read\+Only\+Proxy\+Model\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Read\+Only\+Proxy\+Model\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WReadOnlyProxyModel_a5995be4fcf4384bb4c01961467568930}\label{classWt_1_1WReadOnlyProxyModel_a5995be4fcf4384bb4c01961467568930}} 
+\mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a5995be4fcf4384bb4c01961467568930}{W\+Read\+Only\+Proxy\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a75e6cb1c701062735072592a6c99523c}{map\+From\+Source}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&source\+Index) const override
+\begin{DoxyCompactList}\small\item\em Maps a source model index to the proxy model. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a05ba9541303c4a5d662fd93e445af6f2}{map\+To\+Source}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&proxy\+Index) const override
+\begin{DoxyCompactList}\small\item\em Maps a proxy model index to the source model. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_aa424914d848a9824d3911df1facf00fa}{column\+Count}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a8e0f32b79a35d265ec7f2af0fa2fe21f}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const override
+\begin{DoxyCompactList}\small\item\em Returns the number of columns. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a2a0cc6017963467c86055e77cdc8cea7}{row\+Count}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a8e0f32b79a35d265ec7f2af0fa2fe21f}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const override
+\begin{DoxyCompactList}\small\item\em Returns the number of rows. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a8e0f32b79a35d265ec7f2af0fa2fe21f}{parent}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_aacd2a17450cc44f5fe59fb134da95abf}{index}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the parent for a model index. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_aacd2a17450cc44f5fe59fb134da95abf}{index}} (int row, int column, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a8e0f32b79a35d265ec7f2af0fa2fe21f}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const override
+\begin{DoxyCompactList}\small\item\em Returns the child index for the given row and column. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a4bf6d3905826b16bc4d272aef386707d}{set\+Data}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_aacd2a17450cc44f5fe59fb134da95abf}{index}}, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}) override
+\begin{DoxyCompactList}\small\item\em Always returns {\ttfamily false} and has no effect. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a1fa386bd1804875d2d0d52bd76ae0a1b}{set\+Item\+Data}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_aacd2a17450cc44f5fe59fb134da95abf}{index}}, const \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a1f5858f68611d651fc15e35f64171911}{Data\+Map}} \&values) override
+\begin{DoxyCompactList}\small\item\em Always returns {\ttfamily false} and has no effect. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a3eb8cf81091f5f7dba813b260e71b2dd}{set\+Header\+Data}} (int section, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}) override
+\begin{DoxyCompactList}\small\item\em Always returns {\ttfamily false} and has no effect. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a00c437a8bfa364c6956b4ea310e34d8e}{insert\+Columns}} (int column, int count, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a8e0f32b79a35d265ec7f2af0fa2fe21f}{parent}}) override
+\begin{DoxyCompactList}\small\item\em Always returns {\ttfamily false} and has no effect. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_ae2e6d2baa7eb2fca90555079aaaf3f46}{remove\+Columns}} (int column, int count, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a8e0f32b79a35d265ec7f2af0fa2fe21f}{parent}}) override
+\begin{DoxyCompactList}\small\item\em Always returns {\ttfamily false} and has no effect. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a561591c79e9a94aa0e84ffa56238db5b}{drop\+Event}} (const \mbox{\hyperlink{classWt_1_1WDropEvent}{W\+Drop\+Event}} \&e, \mbox{\hyperlink{group__modelview_gaca801bdfb957c360c5f8709cc46949aa}{Drop\+Action}} action, int row, int column, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a8e0f32b79a35d265ec7f2af0fa2fe21f}{parent}}) override
+\begin{DoxyCompactList}\small\item\em Has no effect. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_ae3048edb65f43f893331edee48ca0a57}{set\+Data}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_aacd2a17450cc44f5fe59fb134da95abf}{index}}, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}) override
+\begin{DoxyCompactList}\small\item\em Sets the data at the given model index. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_ab72f9eac35b1852e3b86273016a7f27e}{set\+Data}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_aacd2a17450cc44f5fe59fb134da95abf}{index}}, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}})
+\begin{DoxyCompactList}\small\item\em Sets data at the given model index. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_aae463d7040f364ffcc008997f8e387a2}{set\+Data}} (int row, int column, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a8e0f32b79a35d265ec7f2af0fa2fe21f}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}())
+\begin{DoxyCompactList}\small\item\em Sets data at the given row and column. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a3c4a0ffe050bc0d11feeac4749dde784}{set\+Header\+Data}} (int section, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}})
+\begin{DoxyCompactList}\small\item\em Sets header data for a column or row. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a0bccbb4373b4c1e8bce85573b933d53d}{set\+Header\+Data}} (int section, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value)
+\begin{DoxyCompactList}\small\item\em Sets column header data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A read-\/only wrapper for a source model. 
+
+This is a simple proxy model which provides a read-\/only view on a source model. This is convenient for situations where you want to share a common read-\/only source model between different sessions. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WReadOnlyProxyModel_aa424914d848a9824d3911df1facf00fa}\label{classWt_1_1WReadOnlyProxyModel_aa424914d848a9824d3911df1facf00fa}} 
+\index{Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}!columnCount@{columnCount}}
+\index{columnCount@{columnCount}!Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}}
+\doxysubsubsection{\texorpdfstring{columnCount()}{columnCount()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Read\+Only\+Proxy\+Model\+::column\+Count (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of columns. 
+
+This returns the column count of the source model. 
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_abcf7912a95a0a60f8e9b1c37d30b8383}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WReadOnlyProxyModel_a561591c79e9a94aa0e84ffa56238db5b}\label{classWt_1_1WReadOnlyProxyModel_a561591c79e9a94aa0e84ffa56238db5b}} 
+\index{Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}!dropEvent@{dropEvent}}
+\index{dropEvent@{dropEvent}!Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}}
+\doxysubsubsection{\texorpdfstring{dropEvent()}{dropEvent()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Read\+Only\+Proxy\+Model\+::drop\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WDropEvent}{W\+Drop\+Event}} \&}]{e,  }\item[{\mbox{\hyperlink{group__modelview_gaca801bdfb957c360c5f8709cc46949aa}{Drop\+Action}}}]{action,  }\item[{int}]{row,  }\item[{int}]{column,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Has no effect. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a9305c3624e67fa2485c6809b1c0cd791}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WReadOnlyProxyModel_aacd2a17450cc44f5fe59fb134da95abf}\label{classWt_1_1WReadOnlyProxyModel_aacd2a17450cc44f5fe59fb134da95abf}} 
+\index{Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}!index@{index}}
+\index{index@{index}!Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Read\+Only\+Proxy\+Model\+::index (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the child index for the given row and column. 
+
+Returns the index in the source model. 
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WReadOnlyProxyModel_a00c437a8bfa364c6956b4ea310e34d8e}\label{classWt_1_1WReadOnlyProxyModel_a00c437a8bfa364c6956b4ea310e34d8e}} 
+\index{Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}!insertColumns@{insertColumns}}
+\index{insertColumns@{insertColumns}!Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}}
+\doxysubsubsection{\texorpdfstring{insertColumns()}{insertColumns()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Read\+Only\+Proxy\+Model\+::insert\+Columns (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{int}]{count,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Always returns {\ttfamily false} and has no effect. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_aaebad5ac17bf55e04dced5b70be325c7}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WReadOnlyProxyModel_a75e6cb1c701062735072592a6c99523c}\label{classWt_1_1WReadOnlyProxyModel_a75e6cb1c701062735072592a6c99523c}} 
+\index{Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}!mapFromSource@{mapFromSource}}
+\index{mapFromSource@{mapFromSource}!Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}}
+\doxysubsubsection{\texorpdfstring{mapFromSource()}{mapFromSource()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Read\+Only\+Proxy\+Model\+::map\+From\+Source (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{source\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Maps a source model index to the proxy model. 
+
+Returns the source\+Index unmodified. 
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a856d190cc66edcf05462e2476f43b01d}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WReadOnlyProxyModel_a05ba9541303c4a5d662fd93e445af6f2}\label{classWt_1_1WReadOnlyProxyModel_a05ba9541303c4a5d662fd93e445af6f2}} 
+\index{Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}!mapToSource@{mapToSource}}
+\index{mapToSource@{mapToSource}!Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}}
+\doxysubsubsection{\texorpdfstring{mapToSource()}{mapToSource()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Read\+Only\+Proxy\+Model\+::map\+To\+Source (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{proxy\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Maps a proxy model index to the source model. 
+
+Returns the proxy\+Index unmodified. 
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_ac36b0ee3110073578da8b999d1882bf7}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WReadOnlyProxyModel_a8e0f32b79a35d265ec7f2af0fa2fe21f}\label{classWt_1_1WReadOnlyProxyModel_a8e0f32b79a35d265ec7f2af0fa2fe21f}} 
+\index{Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}!parent@{parent}}
+\index{parent@{parent}!Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}}
+\doxysubsubsection{\texorpdfstring{parent()}{parent()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Read\+Only\+Proxy\+Model\+::parent (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the parent for a model index. 
+
+Returns the parent of the given index in the source model. 
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WReadOnlyProxyModel_ae2e6d2baa7eb2fca90555079aaaf3f46}\label{classWt_1_1WReadOnlyProxyModel_ae2e6d2baa7eb2fca90555079aaaf3f46}} 
+\index{Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}!removeColumns@{removeColumns}}
+\index{removeColumns@{removeColumns}!Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}}
+\doxysubsubsection{\texorpdfstring{removeColumns()}{removeColumns()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Read\+Only\+Proxy\+Model\+::remove\+Columns (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{int}]{count,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Always returns {\ttfamily false} and has no effect. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_aa23f7c2609618c4d3f7bd08d73ab8088}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WReadOnlyProxyModel_a2a0cc6017963467c86055e77cdc8cea7}\label{classWt_1_1WReadOnlyProxyModel_a2a0cc6017963467c86055e77cdc8cea7}} 
+\index{Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}!rowCount@{rowCount}}
+\index{rowCount@{rowCount}!Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}}
+\doxysubsubsection{\texorpdfstring{rowCount()}{rowCount()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Read\+Only\+Proxy\+Model\+::row\+Count (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of rows. 
+
+This returns the row count of the source model. 
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab0709a8f71fd5df882f29bb29fd055f0}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WReadOnlyProxyModel_ab72f9eac35b1852e3b86273016a7f27e}\label{classWt_1_1WReadOnlyProxyModel_ab72f9eac35b1852e3b86273016a7f27e}} 
+\index{Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}!setData@{setData}}
+\index{setData@{setData}!Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Abstract\+Item\+Model\+::set\+Data}
+
+
+
+Sets data at the given model index. 
+
+Returns {\ttfamily true} if the operation was successful.
+
+The default implementation returns {\ttfamily false}.
+
+The model implementation must emit the \mbox{\hyperlink{classWt_1_1WAbstractItemModel_aa074e5bc55394252a609ef17d071b563}{data\+Changed()}} signal after data was changed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a8e938b2a268c99bf17f0529cfffc322e}{data()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WReadOnlyProxyModel_ae3048edb65f43f893331edee48ca0a57}\label{classWt_1_1WReadOnlyProxyModel_ae3048edb65f43f893331edee48ca0a57}} 
+\index{Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}!setData@{setData}}
+\index{setData@{setData}!Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Abstract\+Proxy\+Model\+::set\+Data\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Sets the data at the given model index. 
+
+The default proxy implementation calls \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a7e92d9d2b91f852286b7d49d08a88d5e}{source\+Model()}}-\/$>$set\+Data(map\+To\+Source(index), value, role) \mbox{\Hypertarget{classWt_1_1WReadOnlyProxyModel_a4bf6d3905826b16bc4d272aef386707d}\label{classWt_1_1WReadOnlyProxyModel_a4bf6d3905826b16bc4d272aef386707d}} 
+\index{Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}!setData@{setData}}
+\index{setData@{setData}!Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Read\+Only\+Proxy\+Model\+::set\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{value,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Always returns {\ttfamily false} and has no effect. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_ae3048edb65f43f893331edee48ca0a57}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WReadOnlyProxyModel_aae463d7040f364ffcc008997f8e387a2}\label{classWt_1_1WReadOnlyProxyModel_aae463d7040f364ffcc008997f8e387a2}} 
+\index{Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}!setData@{setData}}
+\index{setData@{setData}!Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Abstract\+Item\+Model\+::set\+Data}
+
+
+
+Sets data at the given row and column. 
+
+This is a convience method, and is equivalent to\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a4bf6d3905826b16bc4d272aef386707d}{setData}}(\mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_aacd2a17450cc44f5fe59fb134da95abf}{index}}(row, column, \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a8e0f32b79a35d265ec7f2af0fa2fe21f}{parent}}), value, role);}
+\end{DoxyCode}
+
+
+Returns {\ttfamily true} if the operation was successful.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_a4bf6d3905826b16bc4d272aef386707d}{set\+Data()}}, \mbox{\hyperlink{classWt_1_1WReadOnlyProxyModel_aacd2a17450cc44f5fe59fb134da95abf}{index()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WReadOnlyProxyModel_a0bccbb4373b4c1e8bce85573b933d53d}\label{classWt_1_1WReadOnlyProxyModel_a0bccbb4373b4c1e8bce85573b933d53d}} 
+\index{Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}!setHeaderData@{setHeaderData}}
+\index{setHeaderData@{setHeaderData}!Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}}
+\doxysubsubsection{\texorpdfstring{setHeaderData()}{setHeaderData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Abstract\+Item\+Model\+::set\+Header\+Data}
+
+
+
+Sets column header data. 
+
+Returns {\ttfamily true} if the operation was successful.
+
+\begin{DoxySeeAlso}{See also}
+set\+Header\+Data(int, Orientation, const cpp17\+::any\&, int) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WReadOnlyProxyModel_a3c4a0ffe050bc0d11feeac4749dde784}\label{classWt_1_1WReadOnlyProxyModel_a3c4a0ffe050bc0d11feeac4749dde784}} 
+\index{Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}!setHeaderData@{setHeaderData}}
+\index{setHeaderData@{setHeaderData}!Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}}
+\doxysubsubsection{\texorpdfstring{setHeaderData()}{setHeaderData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Abstract\+Item\+Model\+::set\+Header\+Data}
+
+
+
+Sets header data for a column or row. 
+
+Returns {\ttfamily true} if the operation was successful.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractProxyModel_aa1d16a5336bd1a75023b1b20f63708a2}{header\+Data()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WReadOnlyProxyModel_a3eb8cf81091f5f7dba813b260e71b2dd}\label{classWt_1_1WReadOnlyProxyModel_a3eb8cf81091f5f7dba813b260e71b2dd}} 
+\index{Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}!setHeaderData@{setHeaderData}}
+\index{setHeaderData@{setHeaderData}!Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}}
+\doxysubsubsection{\texorpdfstring{setHeaderData()}{setHeaderData()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Read\+Only\+Proxy\+Model\+::set\+Header\+Data (\begin{DoxyParamCaption}\item[{int}]{section,  }\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation,  }\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{value,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Always returns {\ttfamily false} and has no effect. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a3c4a0ffe050bc0d11feeac4749dde784}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WReadOnlyProxyModel_a1fa386bd1804875d2d0d52bd76ae0a1b}\label{classWt_1_1WReadOnlyProxyModel_a1fa386bd1804875d2d0d52bd76ae0a1b}} 
+\index{Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}!setItemData@{setItemData}}
+\index{setItemData@{setItemData}!Wt::WReadOnlyProxyModel@{Wt::WReadOnlyProxyModel}}
+\doxysubsubsection{\texorpdfstring{setItemData()}{setItemData()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Read\+Only\+Proxy\+Model\+::set\+Item\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{const \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a1f5858f68611d651fc15e35f64171911}{Data\+Map}} \&}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Always returns {\ttfamily false} and has no effect. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_af93b802821e236481bf3705e38311a43}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Read\+Only\+Proxy\+Model.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,2334 @@
+\hypertarget{classWt_1_1WWidget}{}\doxysection{Wt\+::W\+Widget Class Reference}
+\label{classWt_1_1WWidget}\index{Wt::WWidget@{Wt::WWidget}}
+
+
+The abstract base class for a user-\/interface component.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Widget.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Widget\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Widget\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classWt_1_1WWidget_a58295fa7907a775017d0b79dd05b0e81}{$\sim$\+W\+Widget}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}\label{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}} 
+\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent}} () const
+\begin{DoxyCompactList}\small\item\em Returns the parent widget. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ $>$ \mbox{\hyperlink{classWt_1_1WWidget_a898b4fb679877962612e4e4d207a953d}{children}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns child widgets. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a6ab0b1a46d2aeaac584dd054a0e670c8}\label{classWt_1_1WWidget_a6ab0b1a46d2aeaac584dd054a0e670c8}} 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WWidget_a6ab0b1a46d2aeaac584dd054a0e670c8}{remove\+Widget}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$widget)
+\begin{DoxyCompactList}\small\item\em Removes a child widget. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Widget $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ Widget $\ast$, \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ $>$\+::value \&\&!std\+::is\+\_\+same$<$ Widget, \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$\+::value, std\+::unique\+\_\+ptr$<$ Widget $>$ $>$\+::type \mbox{\hyperlink{classWt_1_1WWidget_a7c3d094d6260d10227fddccd13b90def}{remove\+Widget}} (Widget $\ast$widget)
+\begin{DoxyCompactList}\small\item\em Removes a child widget. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WWidget_a5331409ab84a19b6e6461a3f3f387aa6}{remove\+From\+Parent}} ()
+\begin{DoxyCompactList}\small\item\em Removes the widget from its parent. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_ae15ffe92fdc5c394013d61b5bebb2f11}{set\+Position\+Scheme}} (\mbox{\hyperlink{classWt_a2551043da5512cfe7b857c5db6e5ae40}{Position\+Scheme}} scheme)=0
+\begin{DoxyCompactList}\small\item\em Sets the C\+SS position scheme. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_a2551043da5512cfe7b857c5db6e5ae40}{Position\+Scheme}} \mbox{\hyperlink{classWt_1_1WWidget_aea3a7c21d936d34f28b42143aba4edd5}{position\+Scheme}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the C\+SS position scheme. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a730c10f642915f724f616ad4bebd2fca}{set\+Offsets}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WWidget_a08e07b6d0ca355a3fe2c7dead3dde228}{offset}}, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} $>$ sides=All\+Sides)=0
+\begin{DoxyCompactList}\small\item\em Sets C\+SS offsets for a non-\/statically positioned widget. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \mbox{\hyperlink{classWt_1_1WWidget_a08e07b6d0ca355a3fe2c7dead3dde228}{offset}} (\mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} side) const =0
+\begin{DoxyCompactList}\small\item\em Returns a C\+SS offset. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a54365f7acdc237895328be54969165f4}{resize}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WWidget_a3f423e20a9b0792c1bc3d52899065e82}{width}}, const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WWidget_a9454454144fe3729378c87c3b90372b4}{height}})
+\begin{DoxyCompactList}\small\item\em Resizes the widget. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \mbox{\hyperlink{classWt_1_1WWidget_a3f423e20a9b0792c1bc3d52899065e82}{width}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the width. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WWidget_afc4bfcc92fa39010cac8775f3332dfa5}{set\+Width}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WWidget_a3f423e20a9b0792c1bc3d52899065e82}{width}})
+\begin{DoxyCompactList}\small\item\em Sets the width. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \mbox{\hyperlink{classWt_1_1WWidget_a9454454144fe3729378c87c3b90372b4}{height}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the height. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WWidget_a7d82ee32496743fdd28b30461f95d5ec}{set\+Height}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WWidget_a9454454144fe3729378c87c3b90372b4}{height}})
+\begin{DoxyCompactList}\small\item\em Sets the height. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a092c7d1ecfde7f004ef120389d91775d}{set\+Minimum\+Size}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WWidget_a3f423e20a9b0792c1bc3d52899065e82}{width}}, const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WWidget_a9454454144fe3729378c87c3b90372b4}{height}})=0
+\begin{DoxyCompactList}\small\item\em Sets a minimum size. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \mbox{\hyperlink{classWt_1_1WWidget_af5847c8028f501b51d74184107ccdde6}{minimum\+Width}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the minimum width. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \mbox{\hyperlink{classWt_1_1WWidget_a411b6bbac918eeb19946d65c4352beb1}{minimum\+Height}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the minimum height. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_af023064cf8007bda6baeb5277d79bbd9}{set\+Maximum\+Size}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WWidget_a3f423e20a9b0792c1bc3d52899065e82}{width}}, const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WWidget_a9454454144fe3729378c87c3b90372b4}{height}})=0
+\begin{DoxyCompactList}\small\item\em Sets a maximum size. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \mbox{\hyperlink{classWt_1_1WWidget_a733c78b3d54dc355adf6ee05c69bf219}{maximum\+Width}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the maximum width. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \mbox{\hyperlink{classWt_1_1WWidget_af2f6d29c4e5a88bdd12a180e125490cd}{maximum\+Height}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the maximum height. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a8e867e0b40e41b8ffcd66f4dc08fc372}{position\+At}} (const \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$widget, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation=Orientation\+::\+Vertical)
+\begin{DoxyCompactList}\small\item\em Positions a widget next to another widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a0763f0e672e5cf673141405dc8e796bb}\label{classWt_1_1WWidget_a0763f0e672e5cf673141405dc8e796bb}} 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a0763f0e672e5cf673141405dc8e796bb}{set\+Line\+Height}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WWidget_a9454454144fe3729378c87c3b90372b4}{height}})=0
+\begin{DoxyCompactList}\small\item\em Sets the C\+SS line height for contained text. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \mbox{\hyperlink{classWt_1_1WWidget_a162f32ce7482e7c3121d18585555909a}{line\+Height}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the C\+SS line height for contained text. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a2915d313e6934173c087bf8212024289}{set\+Float\+Side}} (\mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} s)=0
+\begin{DoxyCompactList}\small\item\em Specifies a C\+SS float side. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} \mbox{\hyperlink{classWt_1_1WWidget_a78041b1bcd9b811fa4771d19005a585a}{float\+Side}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the C\+SS float side. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a1919e2e3628bb4e4b74517605b5062c5}{set\+Clear\+Sides}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} $>$ sides)=0
+\begin{DoxyCompactList}\small\item\em Sets the sides that should be cleared of floats. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} $>$ \mbox{\hyperlink{classWt_1_1WWidget_a7657fb67f7ec42b7374b7f64f85e6030}{clear\+Sides}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the sides that should remain empty. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a058b4e5641f41d3fa9a50bfa6f339408}{set\+Margin}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WWidget_a8b7c40b966518e22543d290229fbd29f}{margin}}, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} $>$ sides=All\+Sides)=0
+\begin{DoxyCompactList}\small\item\em Sets C\+SS margins around the widget. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \mbox{\hyperlink{classWt_1_1WWidget_a8b7c40b966518e22543d290229fbd29f}{margin}} (\mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} side) const =0
+\begin{DoxyCompactList}\small\item\em Returns a C\+SS margin set. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a8cd985ab1dfcee828c7b6189a7e052a5}{set\+Hidden\+Keeps\+Geometry}} (bool enabled)=0
+\begin{DoxyCompactList}\small\item\em Sets whether the widget keeps its geometry when hidden. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WWidget_ac556bf0e3087b238a98f25b77b9d529c}{hidden\+Keeps\+Geometry}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns whether the widget keeps its geometry when hidden. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a66bdda41220267a8c7ff9865996e2675}{set\+Hidden}} (bool hidden, const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&animation=\mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}}())=0
+\begin{DoxyCompactList}\small\item\em Hides or shows the widget. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WWidget_a76a29fd7fa9fa9a6e15e3a450f24a381}{is\+Hidden}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns whether the widget is set hidden. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WWidget_a450f94dc5a28737625cdb6bde3fdc788}{is\+Visible}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns whether the widget is visible. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_ae29fe35b633ec166f922419cd3ca9d96}{set\+Disabled}} (bool disabled)=0
+\begin{DoxyCompactList}\small\item\em Sets whether the widget is disabled. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WWidget_a8c806a873adad31035122a3b465d3da2}{is\+Disabled}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns whether the widget is set disabled. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WWidget_ae091783ebd393c04f026133069b874d3}{is\+Enabled}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns whether the widget is enabled. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a3890a2ef04571b6d36e7468583457091}{set\+Popup}} (bool popup)=0
+\begin{DoxyCompactList}\small\item\em Lets the widget overlay over other sibling widgets. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WWidget_a29f3361a8c518dabc1251892da55dd6d}{is\+Popup}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns whether the widget is overlayed. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_ac78e3af143883334c82031790c87416e}{set\+Inline}} (bool inlined)=0
+\begin{DoxyCompactList}\small\item\em Sets whether the widget is displayed inline or as a block. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WWidget_afa7a21fbd173d6ee83c2aa9cc11e2ac1}{is\+Inline}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns whether the widget is displayed inline or as block. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a091e1fb88d9bbd8818d061af43c618b4}{set\+Decoration\+Style}} (const \mbox{\hyperlink{classWt_1_1WCssDecorationStyle}{W\+Css\+Decoration\+Style}} \&style)=0
+\begin{DoxyCompactList}\small\item\em Sets a C\+SS decoration style. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WCssDecorationStyle}{W\+Css\+Decoration\+Style}} \& \mbox{\hyperlink{classWt_1_1WWidget_ac1833c7c01599b3733712ab0bf3c3a0a}{decoration\+Style}} ()=0
+\begin{DoxyCompactList}\small\item\em Returns the decoration style of this widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a2d6d4f6be7052260ecdfa04bc840df5c}\label{classWt_1_1WWidget_a2d6d4f6be7052260ecdfa04bc840df5c}} 
+virtual const \mbox{\hyperlink{classWt_1_1WCssDecorationStyle}{W\+Css\+Decoration\+Style}} \& {\bfseries decoration\+Style} () const =0
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a1845d1e92aa82b7772ca2295b8571296}{set\+Style\+Class}} (const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&\mbox{\hyperlink{classWt_1_1WWidget_a4d0fac1bd596983314e50492e50dc1c1}{style\+Class}})=0
+\begin{DoxyCompactList}\small\item\em Sets (one or more) C\+SS style classes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_adf40f32fe39c593b7fcf45bc1342dc4b}\label{classWt_1_1WWidget_adf40f32fe39c593b7fcf45bc1342dc4b}} 
+void {\bfseries set\+Style\+Class} (const char $\ast$\mbox{\hyperlink{classWt_1_1WWidget_a4d0fac1bd596983314e50492e50dc1c1}{style\+Class}})
+\item 
+virtual W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \mbox{\hyperlink{classWt_1_1WWidget_a4d0fac1bd596983314e50492e50dc1c1}{style\+Class}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the C\+SS style class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a8a8f4537dd93462c063cb02cddec2ea3}{add\+Style\+Class}} (const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&\mbox{\hyperlink{classWt_1_1WWidget_a4d0fac1bd596983314e50492e50dc1c1}{style\+Class}}, bool force=false)=0
+\begin{DoxyCompactList}\small\item\em Adds a C\+SS style class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_ad676c439a6f503369fcc41c3ad99a966}\label{classWt_1_1WWidget_ad676c439a6f503369fcc41c3ad99a966}} 
+void {\bfseries add\+Style\+Class} (const char $\ast$\mbox{\hyperlink{classWt_1_1WWidget_a4d0fac1bd596983314e50492e50dc1c1}{style\+Class}}, bool force=false)
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_ac78c5baf021bf6816bf2f7bca21bb968}{remove\+Style\+Class}} (const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&\mbox{\hyperlink{classWt_1_1WWidget_a4d0fac1bd596983314e50492e50dc1c1}{style\+Class}}, bool force=false)=0
+\begin{DoxyCompactList}\small\item\em Removes a C\+SS style class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_add508043d2baec9badf1217453563fc1}\label{classWt_1_1WWidget_add508043d2baec9badf1217453563fc1}} 
+void {\bfseries remove\+Style\+Class} (const char $\ast$\mbox{\hyperlink{classWt_1_1WWidget_a4d0fac1bd596983314e50492e50dc1c1}{style\+Class}}, bool force=false)
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a6dbba6dac95eafbdbcb1c1657cad6cf5}\label{classWt_1_1WWidget_a6dbba6dac95eafbdbcb1c1657cad6cf5}} 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a6dbba6dac95eafbdbcb1c1657cad6cf5}{toggle\+Style\+Class}} (const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&\mbox{\hyperlink{classWt_1_1WWidget_a4d0fac1bd596983314e50492e50dc1c1}{style\+Class}}, bool add, bool force=false)
+\begin{DoxyCompactList}\small\item\em Toggles a C\+SS style class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_af2efc7299e74e120c240bfd0230d3dc6}\label{classWt_1_1WWidget_af2efc7299e74e120c240bfd0230d3dc6}} 
+void {\bfseries toggle\+Style\+Class} (const char $\ast$\mbox{\hyperlink{classWt_1_1WWidget_a4d0fac1bd596983314e50492e50dc1c1}{style\+Class}}, bool add, bool force=false)
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a72437a977b6fbecf117f334596742b90}\label{classWt_1_1WWidget_a72437a977b6fbecf117f334596742b90}} 
+virtual bool \mbox{\hyperlink{classWt_1_1WWidget_a72437a977b6fbecf117f334596742b90}{has\+Style\+Class}} (const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&\mbox{\hyperlink{classWt_1_1WWidget_a4d0fac1bd596983314e50492e50dc1c1}{style\+Class}}) const =0
+\begin{DoxyCompactList}\small\item\em Returns whether the widget has a style class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a4f911e2f62cf35c34cb603eaca0d9a3f}{set\+Vertical\+Alignment}} (\mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} alignment, const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&length=\mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}})=0
+\begin{DoxyCompactList}\small\item\em Sets the vertical alignment. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} \mbox{\hyperlink{classWt_1_1WWidget_a0ae4522f15e80ff00d246a19604f6c7f}{vertical\+Alignment}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the vertical alignment. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \mbox{\hyperlink{classWt_1_1WWidget_a9faaa6c2b46c0adf6606ad1496c4e52b}{vertical\+Alignment\+Length}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the fixed vertical alignment that was set. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a918513c29a40b49e60c5735017db05ed}{set\+Tool\+Tip}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text, \mbox{\hyperlink{classWt_a140dea437d52d3d7c438ea3bd16a1480}{Text\+Format}} text\+Format=Text\+Format\+::\+Plain)=0
+\begin{DoxyCompactList}\small\item\em Sets a tooltip. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_ae67a8d8c573e44f02ab165fe80b2eec6}\label{classWt_1_1WWidget_ae67a8d8c573e44f02ab165fe80b2eec6}} 
+virtual \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1WWidget_ae67a8d8c573e44f02ab165fe80b2eec6}{tool\+Tip}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the tooltip. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a56d7a2d9eb49b14151410e3e894ba74e}{set\+Deferred\+Tool\+Tip}} (bool \mbox{\hyperlink{classWt_1_1WWidget_ae6935d8baca9d37dd1d080b4383da87c}{enable}}, \mbox{\hyperlink{classWt_a140dea437d52d3d7c438ea3bd16a1480}{Text\+Format}} text\+Format=Text\+Format\+::\+Plain)=0
+\begin{DoxyCompactList}\small\item\em Enable deferred tooltip. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a73d5c71f5029c71be8c2b86f2ab22ebb}{refresh}} ()
+\begin{DoxyCompactList}\small\item\em Refresh the widget. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1WWidget_a83a186d2feacfbfbdb5b54f4cefc6735}{js\+Ref}} () const
+\begin{DoxyCompactList}\small\item\em Returns a Java\+Script expression to the corresponding D\+OM node. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a6ba0e86277b861772470d43b16b23615}{set\+Attribute\+Value}} (const std\+::string \&name, const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&value)=0
+\begin{DoxyCompactList}\small\item\em Sets an attribute value. \end{DoxyCompactList}\item 
+virtual W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \mbox{\hyperlink{classWt_1_1WWidget_a05cb074bb98070dbe86bd81d7064a1bd}{attribute\+Value}} (const std\+::string \&name) const =0
+\begin{DoxyCompactList}\small\item\em Returns an attribute value. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_ab876fc1b7d2e4e5dfc631e380d406ae2}{set\+Java\+Script\+Member}} (const std\+::string \&name, const std\+::string \&value)=0
+\begin{DoxyCompactList}\small\item\em Sets a Java\+Script member. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WWidget_a78a539cfd49a8927a196de66362c37e9}{java\+Script\+Member}} (const std\+::string \&name) const =0
+\begin{DoxyCompactList}\small\item\em Returns the value of a Java\+Script member. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_ac9839a243ba5f98e7962d1c0dfc20813}{call\+Java\+Script\+Member}} (const std\+::string \&name, const std\+::string \&args)=0
+\begin{DoxyCompactList}\small\item\em Calls a Java\+Script member. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a1ee433705523b2b79c4c3539e0852c92}{load}} ()=0
+\begin{DoxyCompactList}\small\item\em Loads content just before the widget is used. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WWidget_a1aa5c2496715bb582a584ebcdd97a6d0}{loaded}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns whether this widget has been loaded. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_af8cc593162ec1ace01a0640d0759cc13}{set\+Can\+Receive\+Focus}} (bool enabled)=0
+\begin{DoxyCompactList}\small\item\em Sets whether the widget can receive focus. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WWidget_aa66f7106435c5418ba986909a00ee8f1}{can\+Receive\+Focus}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns whether the widget can receive focus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WWidget_a49b5c27de386b34ab0eecb712864a3a8}{set\+Focus}} ()
+\begin{DoxyCompactList}\small\item\em Sets focus. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_aee0ea3cc14a53876cbae5b4f95813a3a}{set\+Focus}} (bool focus)=0
+\begin{DoxyCompactList}\small\item\em Sets focus. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WWidget_abd90289445621c396c115c1ce432421c}{set\+First\+Focus}} ()=0
+\begin{DoxyCompactList}\small\item\em Set focus on the widget\textquotesingle{}s first descendant. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_aadb0341b96ce0f5adc7cc77607f67791}\label{classWt_1_1WWidget_aadb0341b96ce0f5adc7cc77607f67791}} 
+virtual bool \mbox{\hyperlink{classWt_1_1WWidget_aadb0341b96ce0f5adc7cc77607f67791}{has\+Focus}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns whether the widget currently has the focus. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_aeca7e1e9852d83067b3834078378f22d}{set\+Tab\+Index}} (int index)=0
+\begin{DoxyCompactList}\small\item\em Sets the tab index. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WWidget_ac8e874a86853e3e230e2cee1a7a153c4}{tab\+Index}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the tab index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a6f6412bb4f673c41e68516e4f6f15949}\label{classWt_1_1WWidget_a6f6412bb4f673c41e68516e4f6f15949}} 
+virtual int {\bfseries z\+Index} () const =0
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a18d42a95a4a3ee01b19deb50fcbe37d4}{accept\+Drops}} (const std\+::string \&mime\+Type, const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&hover\+Style\+Class=W\+T\+\_\+\+U\+S\+T\+R\+I\+NG())
+\begin{DoxyCompactList}\small\item\em Sets a mime type to be accepted for dropping. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a04e40616d1dffd7cb109370c18a1bb45}{stop\+Accept\+Drops}} (const std\+::string \&mime\+Type)
+\begin{DoxyCompactList}\small\item\em Indicates that a mime type is no longer accepted for dropping. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a93ff9d1ca04e733cd54cd40a06775f7e}{set\+Id}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1WObject_a9f34b0c9ec343cf467f8b237d3256792}{id}})=0
+\begin{DoxyCompactList}\small\item\em Sets the C\+SS Id. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WWidget_a96e9c88d9ed79acccf3edf2bb00c0126}{find}} (const std\+::string \&name)=0
+\begin{DoxyCompactList}\small\item\em Finds a descendent widget by name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a09f82368dc39c9a67787727798c12004}\label{classWt_1_1WWidget_a09f82368dc39c9a67787727798c12004}} 
+virtual \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WWidget_a09f82368dc39c9a67787727798c12004}{find\+By\+Id}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1WObject_a9f34b0c9ec343cf467f8b237d3256792}{id}})=0
+\begin{DoxyCompactList}\small\item\em Finds a descendent widget by id. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a314baf33da2243947319bf32857f8e78}{html\+Text}} (std\+::ostream \&out)
+\begin{DoxyCompactList}\small\item\em Streams the (X)H\+T\+ML representation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a3ccd308793bbf124aa2aeebfb1b4f42e}{set\+Selectable}} (bool selectable)=0
+\begin{DoxyCompactList}\small\item\em Sets as selectable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a2a8afe6d6f85af864df5cbd49ff6a0c5}{do\+Java\+Script}} (const std\+::string \&js)=0
+\begin{DoxyCompactList}\small\item\em Executes the given Java\+Script statements when the widget is rendered or updated. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WWidget_a7bffb7966160ff8a58fff9d31ef21078}{is\+Rendered}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the widget is rendered. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_abe1c115339d75416a1d6c04403c9f871}\label{classWt_1_1WWidget_abe1c115339d75416a1d6c04403c9f871}} 
+std\+::string {\bfseries inline\+Css\+Style} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a4d8a183b314cddd7836a1d57204258d7}\label{classWt_1_1WWidget_a4d8a183b314cddd7836a1d57204258d7}} 
+std\+::string {\bfseries create\+Java\+Script} (\mbox{\hyperlink{classWt_1_1WStringStream}{W\+String\+Stream}} \&js, std\+::string insert\+JS)
+\item 
+void \mbox{\hyperlink{classWt_1_1WWidget_a0825c3ccbd4999afc1a88fafa6aa6fc7}{hide}} ()
+\begin{DoxyCompactList}\small\item\em Hides the widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WWidget_a0c236e179d5b63c3c6e98cc69e28c9bf}{animate\+Hide}} (const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&animation)
+\begin{DoxyCompactList}\small\item\em Hides the widget using an animation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WWidget_a52dcef5a385ddfa0a8c3e6c20000f181}{show}} ()
+\begin{DoxyCompactList}\small\item\em Shows the widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WWidget_af01fbd9de70abd189c2f86171b6a1e02}{animate\+Show}} (const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&animation)
+\begin{DoxyCompactList}\small\item\em Shows the widget using an animation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WWidget_ae6935d8baca9d37dd1d080b4383da87c}{enable}} ()
+\begin{DoxyCompactList}\small\item\em Enables the widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WWidget_a5f68ea0ab29adfb8e559153fca281e03}{disable}} ()
+\begin{DoxyCompactList}\small\item\em Disable thes widget. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WWidget_a3d97f2ffd0dbc18dff0584b1c32128d6}{layout\+Size\+Aware}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the widget is layout size aware. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WWidget_adda330649cf8a60d61fcf2604c5efcf6}{scroll\+Visibility\+Enabled}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns whether scroll visibility detection is enabled for this widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a5d403e0390841df77a23445b28044d5d}{set\+Scroll\+Visibility\+Enabled}} (bool enabled)=0
+\begin{DoxyCompactList}\small\item\em Sets whether scroll visibility detection is enabled for this widget. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WWidget_a1c96147342b1295e0243b5e2e6e28f66}{scroll\+Visibility\+Margin}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the margin around the viewport within which the widget is considered visible. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a57f77dcf800b37f03cfe7fea0d6f90cc}{set\+Scroll\+Visibility\+Margin}} (int \mbox{\hyperlink{classWt_1_1WWidget_a8b7c40b966518e22543d290229fbd29f}{margin}})=0
+\begin{DoxyCompactList}\small\item\em Sets the margin around the viewport within which the widget is considered visible. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ bool $>$ \& \mbox{\hyperlink{classWt_1_1WWidget_aa5ce605dd465e06f3e3c2dbce2a4098e}{scroll\+Visibility\+Changed}} ()=0
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWt_1_1Signal}{Signal}} triggered when the scroll visibility of this widget changes. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WWidget_a0feab16b8797b4f023aafd7e33ffef26}{is\+Scroll\+Visible}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns whether this widget is currently considered scroll visible. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_ae1e28bff803905ca8625c1fb722f3d21}{set\+Theme\+Style\+Enabled}} (bool enabled)=0
+\begin{DoxyCompactList}\small\item\em Sets whether theme styling for a widget is enabled or disabled. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WWidget_a979e3986782d2106f0f502ae20d08a73}{is\+Theme\+Style\+Enabled}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns whether this widget is currently styled by the chosen theme. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_aac4fa21b27f23f3eb7c2eb465946fb34}\label{classWt_1_1WWidget_aac4fa21b27f23f3eb7c2eb465946fb34}} 
+\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ {\bfseries create\+S\+Dom\+Element} (\mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app)
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_af4ef136b0fc832481cff30a95d0047a6}\label{classWt_1_1WWidget_af4ef136b0fc832481cff30a95d0047a6}} 
+virtual bool {\bfseries is\+Exposed} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$widget)
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_aa38ec5e72100cc79ac4be15a0283fa55}\label{classWt_1_1WWidget_aa38ec5e72100cc79ac4be15a0283fa55}} 
+void {\bfseries add\+J\+Signal} (\mbox{\hyperlink{classWt_1_1EventSignalBase}{Event\+Signal\+Base}} $\ast$signal)
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_ac2005c5d5b810af08f8e9b9731841333}\label{classWt_1_1WWidget_ac2005c5d5b810af08f8e9b9731841333}} 
+virtual int {\bfseries base\+Z\+Index} () const =0
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1WWidget_ab8da3af9cb03eb2f3acf16b8131d84bf}{tr}} (const char $\ast$key)
+\begin{DoxyCompactList}\small\item\em Short hand for \mbox{\hyperlink{classWt_1_1WString_adf1e7e5fc3c7199563a69bf07d77e571}{W\+String\+::tr()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_af911bdec0e711123aa545608a49fad8f}\label{classWt_1_1WWidget_af911bdec0e711123aa545608a49fad8f}} 
+static \mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries tr} (const std\+::string \&key)
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a681e78c0fbf601737413d19b35c1ac4e}\label{classWt_1_1WWidget_a681e78c0fbf601737413d19b35c1ac4e}} 
+static void {\bfseries set\+Tab\+Order} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$first, \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$second)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_af8beae99609d0c554a99f54904c7f70d}\label{classWt_1_1WWidget_af8beae99609d0c554a99f54904c7f70d}} 
+static const char $\ast$ {\bfseries W\+T\+\_\+\+R\+E\+S\+I\+Z\+E\+\_\+\+JS}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_ad1507c2ba28fa4a284a923ba54486b52}\label{classWt_1_1WWidget_ad1507c2ba28fa4a284a923ba54486b52}} 
+typedef std\+::list$<$ \mbox{\hyperlink{classWt_1_1EventSignalBase}{Event\+Signal\+Base}} $\ast$ $>$ {\bfseries Event\+Signal\+List}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classWt_1_1WWidget_a4f83592912a7f8fa4fd35dadde78ee74}{set\+Layout\+Size\+Aware}} (bool size\+Aware)
+\begin{DoxyCompactList}\small\item\em Sets the widget to be aware of its size set by a layout manager. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a1a4397e904a92b833fad8526d645f7ab}{layout\+Size\+Changed}} (int \mbox{\hyperlink{classWt_1_1WWidget_a3f423e20a9b0792c1bc3d52899065e82}{width}}, int \mbox{\hyperlink{classWt_1_1WWidget_a9454454144fe3729378c87c3b90372b4}{height}})
+\begin{DoxyCompactList}\small\item\em Virtual method that indicates a size change. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a01c10ec9ee5b65747d7cc6b87b990b70}\label{classWt_1_1WWidget_a01c10ec9ee5b65747d7cc6b87b990b70}} 
+\mbox{\hyperlink{classWt_1_1WWidget_a01c10ec9ee5b65747d7cc6b87b990b70}{W\+Widget}} ()
+\begin{DoxyCompactList}\small\item\em Creates a widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a76a62215402d25133664ba57185ac357}{drop\+Event}} (\mbox{\hyperlink{classWt_1_1WDropEvent}{W\+Drop\+Event}} drop\+Event)
+\begin{DoxyCompactList}\small\item\em Handles a drop event. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a919a4eaf68ff52f06f6a726d55dfb768}{enable\+Ajax}} ()=0
+\begin{DoxyCompactList}\small\item\em Progresses to an Ajax-\/enabled widget. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WWidget_a09cee5cd79a15e4126049df67e8f0cfa}{box\+Padding}} (\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation) const
+\begin{DoxyCompactList}\small\item\em Returns the widget\textquotesingle{}s built-\/in padding. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WWidget_a62db8e25c0a895e478fb2de33db41b1b}{box\+Border}} (\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation) const
+\begin{DoxyCompactList}\small\item\em Returns the widget\textquotesingle{}s built-\/in border width. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a2ac5699f1624b16d8ce6caf8086d6d31}{propagate\+Set\+Enabled}} (bool enabled)=0
+\begin{DoxyCompactList}\small\item\em Propagates that a widget was enabled or disabled through children. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a557bc235e6e3aef636f7335b7a453568}\label{classWt_1_1WWidget_a557bc235e6e3aef636f7335b7a453568}} 
+virtual void {\bfseries propagate\+Set\+Visible} (bool visible)=0
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a2817a00c1c08cabe52e1db5a21526481}\label{classWt_1_1WWidget_a2817a00c1c08cabe52e1db5a21526481}} 
+void {\bfseries get\+Drop} (const std\+::string source\+Id, const std\+::string mime\+Type, \mbox{\hyperlink{classWt_1_1WMouseEvent}{W\+Mouse\+Event}} event)
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a8628fb00ab5593c6ad3e7b41d4aaef45}\label{classWt_1_1WWidget_a8628fb00ab5593c6ad3e7b41d4aaef45}} 
+void {\bfseries get\+Drop\+Touch} (const std\+::string source\+Id, const std\+::string mime\+Type, \mbox{\hyperlink{classWt_1_1WTouchEvent}{W\+Touch\+Event}} event)
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a4a7a1fc00b1be972a5d3e4edcf35ccda}\label{classWt_1_1WWidget_a4a7a1fc00b1be972a5d3e4edcf35ccda}} 
+virtual void {\bfseries set\+Hide\+With\+Offsets} (bool how=true)=0
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a37481856bf694e7b5ad02904589c0004}\label{classWt_1_1WWidget_a37481856bf694e7b5ad02904589c0004}} 
+virtual bool {\bfseries is\+Stubbed} () const =0
+\item 
+void \mbox{\hyperlink{classWt_1_1WWidget_a5d3d4edaafa2d7c892a5078f3df4cf11}{schedule\+Render}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ Repaint\+Flag $>$ flags=None)
+\begin{DoxyCompactList}\small\item\em Schedules rerendering of the widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WWidget_a1f7fa7f945385d230874fad2facccbf5}{render}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$ flags)
+\begin{DoxyCompactList}\small\item\em Renders the widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a591752bcf8ed08f809c2bd2b2560a2d6}\label{classWt_1_1WWidget_a591752bcf8ed08f809c2bd2b2560a2d6}} 
+virtual void {\bfseries child\+Resized} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$child, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} $>$ directions)
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_ad6d481de40f744b7cfde65bd26a810c3}\label{classWt_1_1WWidget_ad6d481de40f744b7cfde65bd26a810c3}} 
+\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ {\bfseries adam} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a0ebdf985fbda6b705a84be75c7702548}\label{classWt_1_1WWidget_a0ebdf985fbda6b705a84be75c7702548}} 
+void {\bfseries add\+Event\+Signal} (\mbox{\hyperlink{classWt_1_1EventSignalBase}{Event\+Signal\+Base}} \&s)
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_ab8abe2f93bb59049dfc6c1645e4ca2ba}\label{classWt_1_1WWidget_ab8abe2f93bb59049dfc6c1645e4ca2ba}} 
+\mbox{\hyperlink{classWt_1_1EventSignalBase}{Event\+Signal\+Base}} $\ast$ {\bfseries get\+Event\+Signal} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a9e721c3914697fb7cc8c12e7a4e40f12}\label{classWt_1_1WWidget_a9e721c3914697fb7cc8c12e7a4e40f12}} 
+Event\+Signal\+List \& {\bfseries event\+Signals} ()
+\item 
+virtual \mbox{\hyperlink{classWt_1_1WStatelessSlot}{W\+Stateless\+Slot}} $\ast$ \mbox{\hyperlink{classWt_1_1WWidget_af0055d333414c99aee674e13da95f89b}{get\+Stateless}} (\mbox{\hyperlink{classWt_1_1WObject_aec904644d278b09d3f7e568fd2efd400}{Method}} method) override
+\begin{DoxyCompactList}\small\item\em On-\/demand stateless slot implementation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a69198afcfe3a16df8987950f3b7eca5c}\label{classWt_1_1WWidget_a69198afcfe3a16df8987950f3b7eca5c}} 
+void {\bfseries render\+Ok} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_ae500f73310d358340faeb88e826170e6}\label{classWt_1_1WWidget_ae500f73310d358340faeb88e826170e6}} 
+void {\bfseries schedule\+Rerender} (bool later\+Only, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ Repaint\+Flag $>$ flags=None)
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a1b79e923e6891dc23ef4e7cc16a9ce50}\label{classWt_1_1WWidget_a1b79e923e6891dc23ef4e7cc16a9ce50}} 
+bool {\bfseries need\+Rerender} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a40d9501d3f3da5dee6bc384e2dbb1dea}\label{classWt_1_1WWidget_a40d9501d3f3da5dee6bc384e2dbb1dea}} 
+virtual void {\bfseries get\+S\+Dom\+Changes} (std\+::vector$<$ \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ $>$ \&result, \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app)=0
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_af7b4581a581c1776ad2034afa2a9b4ce}\label{classWt_1_1WWidget_af7b4581a581c1776ad2034afa2a9b4ce}} 
+virtual bool {\bfseries needs\+To\+Be\+Rendered} () const =0
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a0d366f927963aa3834134b2cd427e083}\label{classWt_1_1WWidget_a0d366f927963aa3834134b2cd427e083}} 
+bool {\bfseries is\+In\+Layout} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a3c5458c3466de7fb0423f256c0927bef}\label{classWt_1_1WWidget_a3c5458c3466de7fb0423f256c0927bef}} 
+virtual bool {\bfseries has\+Parent} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a185a9467e6a52583a4e57bf332108192}\label{classWt_1_1WWidget_a185a9467e6a52583a4e57bf332108192}} 
+\mbox{\hyperlink{classWt_1_1WCssTextRule}{W\+Css\+Text\+Rule}} $\ast$ {\bfseries add\+Css\+Rule} (const std\+::string \&selector, const std\+::string \&declarations, const std\+::string \&rule\+Name=std\+::string())
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_ad8dd35fdb466888b92a911583703d417}\label{classWt_1_1WWidget_ad8dd35fdb466888b92a911583703d417}} 
+bool {\bfseries is\+Global\+Widget} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a35d22c17ecdfc73c3d715363d83fa326}\label{classWt_1_1WWidget_a35d22c17ecdfc73c3d715363d83fa326}} 
+virtual std\+::string {\bfseries render\+Remove\+Js} (bool recursive)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_abe0ce317e4fdc615fe0f73a9ecb2a142}\label{classWt_1_1WWidget_abe0ce317e4fdc615fe0f73a9ecb2a142}} 
+static const char $\ast$ {\bfseries W\+T\+\_\+\+G\+E\+T\+P\+S\+\_\+\+JS}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a8e0fd13705a0b304dbf5b70f98aba5b9}\label{classWt_1_1WWidget_a8e0fd13705a0b304dbf5b70f98aba5b9}} 
+void {\bfseries set\+Js\+Size} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_ac4d0435dfa14f6d4bc1872a1fef2a3a6}\label{classWt_1_1WWidget_ac4d0435dfa14f6d4bc1872a1fef2a3a6}} 
+void {\bfseries undo\+Hide\+Show} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a393d5acec2d9598d1e8758109fae662e}\label{classWt_1_1WWidget_a393d5acec2d9598d1e8758109fae662e}} 
+void {\bfseries undo\+Disable\+Enable} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_afea3b99264c02662d9fc318ea86d2de8}\label{classWt_1_1WWidget_afea3b99264c02662d9fc318ea86d2de8}} 
+virtual void {\bfseries set\+Parent\+Widget} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$\mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent}})
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a9e21a222b48fc83b76834fb0eb2d276b}\label{classWt_1_1WWidget_a9e21a222b48fc83b76834fb0eb2d276b}} 
+void {\bfseries set\+Global\+Widget} (bool global\+Widget)
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a69c569fa22100b086acabdce86308364}\label{classWt_1_1WWidget_a69c569fa22100b086acabdce86308364}} 
+virtual \mbox{\hyperlink{classWt_1_1WWebWidget}{W\+Web\+Widget}} $\ast$ {\bfseries web\+Widget} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_aa349f140f2afbf8432da39dae48ff33f}\label{classWt_1_1WWidget_aa349f140f2afbf8432da39dae48ff33f}} 
+std\+::bitset$<$ 8 $>$ {\bfseries flags\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_aa2dfca354f2196c5dde97397ea74003e}\label{classWt_1_1WWidget_aa2dfca354f2196c5dde97397ea74003e}} 
+Event\+Signal\+List {\bfseries event\+Signals\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a0b0b074972db161c44087a62829e7043}\label{classWt_1_1WWidget_a0b0b074972db161c44087a62829e7043}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1EventSignalBase}{Event\+Signal\+Base}} $\ast$ $>$ {\bfseries jsignals\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_ad0d70d05e010d4646ef2e22cad6745f1}\label{classWt_1_1WWidget_ad0d70d05e010d4646ef2e22cad6745f1}} 
+\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ {\bfseries parent\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_af4d768f1f43d703dfe929194b42d79ba}\label{classWt_1_1WWidget_af4d768f1f43d703dfe929194b42d79ba}} 
+static const int {\bfseries B\+I\+T\+\_\+\+W\+A\+S\+\_\+\+H\+I\+D\+D\+EN} = 0
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a2187c3bf7f66523613545e092801496b}\label{classWt_1_1WWidget_a2187c3bf7f66523613545e092801496b}} 
+static const int {\bfseries B\+I\+T\+\_\+\+W\+A\+S\+\_\+\+D\+I\+S\+A\+B\+L\+ED} = 1
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a345aa16191477502167a1f3efb435637}\label{classWt_1_1WWidget_a345aa16191477502167a1f3efb435637}} 
+static const int {\bfseries B\+I\+T\+\_\+\+N\+E\+E\+D\+\_\+\+R\+E\+R\+E\+N\+D\+ER} = 2
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a799a5f6227115bffe14a8347eb0115c8}\label{classWt_1_1WWidget_a799a5f6227115bffe14a8347eb0115c8}} 
+static const int {\bfseries B\+I\+T\+\_\+\+N\+E\+E\+D\+\_\+\+R\+E\+R\+E\+N\+D\+E\+R\+\_\+\+S\+I\+Z\+E\+\_\+\+C\+H\+A\+N\+GE} = 3
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a1b601f67e719e5e45827ba4210140416}\label{classWt_1_1WWidget_a1b601f67e719e5e45827ba4210140416}} 
+static const int {\bfseries B\+I\+T\+\_\+\+H\+A\+S\+\_\+\+P\+A\+R\+E\+NT} = 4
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a7d1f8b315dedea059c6082f38c64161e}\label{classWt_1_1WWidget_a7d1f8b315dedea059c6082f38c64161e}} 
+static const int {\bfseries B\+I\+T\+\_\+\+R\+E\+S\+I\+Z\+E\+\_\+\+A\+W\+A\+RE} = 5
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a15b0be206950ebdcc8b3abc43c7e3601}\label{classWt_1_1WWidget_a15b0be206950ebdcc8b3abc43c7e3601}} 
+static const int {\bfseries B\+I\+T\+\_\+\+S\+C\+R\+O\+L\+L\+\_\+\+V\+I\+S\+I\+B\+I\+L\+I\+T\+Y\+\_\+\+E\+N\+A\+B\+L\+ED} = 6
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a08506a6a44baabbdecea7341682bfe89}\label{classWt_1_1WWidget_a08506a6a44baabbdecea7341682bfe89}} 
+static const int {\bfseries B\+I\+T\+\_\+\+G\+L\+O\+B\+A\+L\+\_\+\+W\+I\+D\+G\+ET} = 7
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a2da2051ff31597b74f7d7a63a9b0db5f}\label{classWt_1_1WWidget_a2da2051ff31597b74f7d7a63a9b0db5f}} 
+class {\bfseries Web\+Renderer}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a24160f45551460c84d7fa64dd1b175d0}\label{classWt_1_1WWidget_a24160f45551460c84d7fa64dd1b175d0}} 
+class {\bfseries W\+Abstract\+Area}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a38c70b15e491c8afe3836138e2fe4e90}\label{classWt_1_1WWidget_a38c70b15e491c8afe3836138e2fe4e90}} 
+class {\bfseries W\+Abstract\+Item\+View}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a59f159dd904f669563320a185598a167}\label{classWt_1_1WWidget_a59f159dd904f669563320a185598a167}} 
+class {\bfseries W\+Application}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a48520dcb28d204e9b516ac00546e24ea}\label{classWt_1_1WWidget_a48520dcb28d204e9b516ac00546e24ea}} 
+class {\bfseries W\+Calendar}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a567a8f1bfd41b10f6ceb713366b9c858}\label{classWt_1_1WWidget_a567a8f1bfd41b10f6ceb713366b9c858}} 
+class {\bfseries W\+Container\+Widget}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_ada49b9233cc4cd7c99df72af2352911f}\label{classWt_1_1WWidget_ada49b9233cc4cd7c99df72af2352911f}} 
+class {\bfseries W\+Composite\+Widget}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a3f5fdab2632f348f451ed3234ddf9e77}\label{classWt_1_1WWidget_a3f5fdab2632f348f451ed3234ddf9e77}} 
+class {\bfseries W\+File\+Upload}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a48b3d504158cc4f812c2f682b90c099c}\label{classWt_1_1WWidget_a48b3d504158cc4f812c2f682b90c099c}} 
+class {\bfseries W\+G\+L\+Widget}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a7824b4d6ba82e5b1d6590792f7889b1b}\label{classWt_1_1WWidget_a7824b4d6ba82e5b1d6590792f7889b1b}} 
+class {\bfseries W\+Leaflet\+Map}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a470d2962644cef2cd372edba96a64287}\label{classWt_1_1WWidget_a470d2962644cef2cd372edba96a64287}} 
+class {\bfseries W\+Menu\+Item}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a3f4c06aeee3189073942558eda1fbc97}\label{classWt_1_1WWidget_a3f4c06aeee3189073942558eda1fbc97}} 
+class {\bfseries W\+Painted\+Widget}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a3fdebf41a0ec5d8233e2d13118a72b0e}\label{classWt_1_1WWidget_a3fdebf41a0ec5d8233e2d13118a72b0e}} 
+class {\bfseries W\+Popup\+Widget}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a0e21141bfba91eed3c59279ee3b53a63}\label{classWt_1_1WWidget_a0e21141bfba91eed3c59279ee3b53a63}} 
+class {\bfseries W\+Template}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_ae68df303ac4180b33b94c0e5d6e0a9bb}\label{classWt_1_1WWidget_ae68df303ac4180b33b94c0e5d6e0a9bb}} 
+class {\bfseries W\+View\+Widget}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_afe9120628587e729eba90679b0efdec1}\label{classWt_1_1WWidget_afe9120628587e729eba90679b0efdec1}} 
+class {\bfseries W\+Web\+Widget}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a7614d8c9d7e0e8027ff291e750117747}\label{classWt_1_1WWidget_a7614d8c9d7e0e8027ff291e750117747}} 
+class {\bfseries W\+Widget\+Item}
+\item 
+\mbox{\Hypertarget{classWt_1_1WWidget_a01fd942fdbd0b3e7095b894721a2022a}\label{classWt_1_1WWidget_a01fd942fdbd0b3e7095b894721a2022a}} 
+class {\bfseries Std\+Widget\+Item\+Impl}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The abstract base class for a user-\/interface component. 
+
+The user-\/interface is organized in a tree structure, in which each node is a widget. All widgets, except for the application\textquotesingle{}s root widget and dialogs, have a parent which is usually a \mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}}.
+
+This is an abstract base class. Implementations derive either from the abstract \mbox{\hyperlink{classWt_1_1WWebWidget}{W\+Web\+Widget}} (for basic widgets with a direct H\+T\+ML counter-\/part) or from the abstract \mbox{\hyperlink{classWt_1_1WCompositeWidget}{W\+Composite\+Widget}} (for anything else). To add a W\+Widget to a parent container add the widget to the parent using \mbox{\hyperlink{classWt_1_1WContainerWidget_a800886eb60c904c8d00978cb8ac8d158}{W\+Container\+Widget\+::add\+Widget()}}. Alternatively, you may add the widget to a layout manager set for a W\+Container\+Widget.
+
+A widget provides methods to manage its decorative style base on C\+SS. It also provides access to C\+S\+S-\/based layout, which you may not use when the widget is not inserted into a layout manager. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WWidget_a58295fa7907a775017d0b79dd05b0e81}\label{classWt_1_1WWidget_a58295fa7907a775017d0b79dd05b0e81}} 
+\index{Wt::WWidget@{Wt::WWidget}!````~WWidget@{$\sim$WWidget}}
+\index{````~WWidget@{$\sim$WWidget}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{$\sim$WWidget()}{~WWidget()}}
+{\footnotesize\ttfamily virtual Wt\+::\+W\+Widget\+::$\sim$\+W\+Widget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+Deletes a widget and all contained contents.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a6ab0b1a46d2aeaac584dd054a0e670c8}{W\+Widget\+::remove\+Widget()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WWidget_a18d42a95a4a3ee01b19deb50fcbe37d4}\label{classWt_1_1WWidget_a18d42a95a4a3ee01b19deb50fcbe37d4}} 
+\index{Wt::WWidget@{Wt::WWidget}!acceptDrops@{acceptDrops}}
+\index{acceptDrops@{acceptDrops}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{acceptDrops()}{acceptDrops()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::accept\+Drops (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mime\+Type,  }\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{hover\+Style\+Class = {\ttfamily WT\+\_\+USTRING()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets a mime type to be accepted for dropping. 
+
+You may specify a style class that is applied to the widget when the specified mimetype hovers on top of it.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a76a62215402d25133664ba57185ac357}{drop\+Event()}}, \mbox{\hyperlink{classWt_1_1WInteractWidget_ae9f41b3e4c04f7537d1eb4ee9adb34e9}{W\+Interact\+Widget\+::set\+Draggable()}}, \mbox{\hyperlink{classWt_1_1WWidget_a04e40616d1dffd7cb109370c18a1bb45}{stop\+Accept\+Drops()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WWidget_a8a8f4537dd93462c063cb02cddec2ea3}\label{classWt_1_1WWidget_a8a8f4537dd93462c063cb02cddec2ea3}} 
+\index{Wt::WWidget@{Wt::WWidget}!addStyleClass@{addStyleClass}}
+\index{addStyleClass@{addStyleClass}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{addStyleClass()}{addStyleClass()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::add\+Style\+Class (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{style\+Class,  }\item[{bool}]{force = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Adds a C\+SS style class. 
+
+When {\ttfamily force} = {\ttfamily true}, a Java\+Script call will be used to add the style class to the D\+OM element (if Java\+Script is available). This may be necessary when client-\/side Java\+Script manipulates the same style class.
+
+The {\ttfamily style\+Class} should be a single class (although multiple classes will work for the common case that the additional style classes are all not yet present on the element. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a44c7a2efb7b7d2afa9d561d15d9a7c27}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_afd8be8b9e61d1f638c1fcc0f8ad9b733}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a0c236e179d5b63c3c6e98cc69e28c9bf}\label{classWt_1_1WWidget_a0c236e179d5b63c3c6e98cc69e28c9bf}} 
+\index{Wt::WWidget@{Wt::WWidget}!animateHide@{animateHide}}
+\index{animateHide@{animateHide}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{animateHide()}{animateHide()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Widget\+::animate\+Hide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&}]{animation }\end{DoxyParamCaption})}
+
+
+
+Hides the widget using an animation. 
+
+To hide the widget, the animation is replayed in reverse.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a66bdda41220267a8c7ff9865996e2675}{set\+Hidden()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WWidget_af01fbd9de70abd189c2f86171b6a1e02}\label{classWt_1_1WWidget_af01fbd9de70abd189c2f86171b6a1e02}} 
+\index{Wt::WWidget@{Wt::WWidget}!animateShow@{animateShow}}
+\index{animateShow@{animateShow}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{animateShow()}{animateShow()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Widget\+::animate\+Show (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&}]{animation }\end{DoxyParamCaption})}
+
+
+
+Shows the widget using an animation. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a66bdda41220267a8c7ff9865996e2675}{set\+Hidden()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WWidget_a05cb074bb98070dbe86bd81d7064a1bd}\label{classWt_1_1WWidget_a05cb074bb98070dbe86bd81d7064a1bd}} 
+\index{Wt::WWidget@{Wt::WWidget}!attributeValue@{attributeValue}}
+\index{attributeValue@{attributeValue}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{attributeValue()}{attributeValue()}}
+{\footnotesize\ttfamily virtual W\+T\+\_\+\+U\+S\+T\+R\+I\+NG Wt\+::\+W\+Widget\+::attribute\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns an attribute value. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a6ba0e86277b861772470d43b16b23615}{set\+Attribute\+Value()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_aff11abb2cc4be0d0f9236a7a278c9d5c}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_ae54b572cb93105d1f9668e300c6e47ce}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a62db8e25c0a895e478fb2de33db41b1b}\label{classWt_1_1WWidget_a62db8e25c0a895e478fb2de33db41b1b}} 
+\index{Wt::WWidget@{Wt::WWidget}!boxBorder@{boxBorder}}
+\index{boxBorder@{boxBorder}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{boxBorder()}{boxBorder()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Widget\+::box\+Border (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Returns the widget\textquotesingle{}s built-\/in border width. 
+
+This is used by the layout managers to correct for a built-\/in border which interferes with setting a widget\textquotesingle{}s width (or height) to 100\%.
+
+A layout manager needs to set the width to 100\% only for form widgets (\mbox{\hyperlink{classWt_1_1WTextArea}{W\+Text\+Area}}, \mbox{\hyperlink{classWt_1_1WLineEdit}{W\+Line\+Edit}}, \mbox{\hyperlink{classWt_1_1WComboBox}{W\+Combo\+Box}}, etc...). Therefore, only for those widgets this needs to return the border width (the default implementation returns 0).
+
+For form widgets, the border width depends on the specific browser/platform combination, unless an explicit border is set for the widget.
+
+When setting an explicit border for the widget using a style class, you will want to reimplement this method to return this border width, in case you want to set the widget inside a layout manager.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a09cee5cd79a15e4126049df67e8f0cfa}{box\+Padding()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WLineEdit_a522a6caaa26e2ac72af3235d847bd1ca}{Wt\+::\+W\+Line\+Edit}}, \mbox{\hyperlink{classWt_1_1WCompositeWidget_a9f69b76817d9ae272ea9ec289677d126}{Wt\+::\+W\+Composite\+Widget}}, \mbox{\hyperlink{classWt_1_1WTextEdit_a738d7bdfabe806a8c17b106f334f5be2}{Wt\+::\+W\+Text\+Edit}}, and \mbox{\hyperlink{classWt_1_1WTextArea_a77dd4182761b4a2e5757ebd8e956cb32}{Wt\+::\+W\+Text\+Area}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a09cee5cd79a15e4126049df67e8f0cfa}\label{classWt_1_1WWidget_a09cee5cd79a15e4126049df67e8f0cfa}} 
+\index{Wt::WWidget@{Wt::WWidget}!boxPadding@{boxPadding}}
+\index{boxPadding@{boxPadding}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{boxPadding()}{boxPadding()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Widget\+::box\+Padding (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Returns the widget\textquotesingle{}s built-\/in padding. 
+
+This is used by the layout managers to correct for a built-\/in padding which interferes with setting a widget\textquotesingle{}s width (or height) to 100\%.
+
+A layout manager needs to set the width to 100\% only for form widgets (\mbox{\hyperlink{classWt_1_1WTextArea}{W\+Text\+Area}}, \mbox{\hyperlink{classWt_1_1WLineEdit}{W\+Line\+Edit}}, \mbox{\hyperlink{classWt_1_1WComboBox}{W\+Combo\+Box}}, etc...). Therefore, only for those widgets this needs to return the padding (the default implementation returns 0).
+
+For form widgets, the padding depends on the specific browser/platform combination, unless an explicit padding is set for the widget.
+
+When setting an explicit padding for the widget using a style class, you will want to reimplement this method to return this padding in case you want to set the widget inside a layout manager.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a62db8e25c0a895e478fb2de33db41b1b}{box\+Border()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WLineEdit_ab844b324baabc5e7e921076e1e2f8451}{Wt\+::\+W\+Line\+Edit}}, \mbox{\hyperlink{classWt_1_1WCompositeWidget_acc75e07f215617d54130d2fa9b8a9ff0}{Wt\+::\+W\+Composite\+Widget}}, \mbox{\hyperlink{classWt_1_1WTextEdit_add615813eba8558afbf76a02a71d94fe}{Wt\+::\+W\+Text\+Edit}}, \mbox{\hyperlink{classWt_1_1WTextArea_a694c38429896da3071ef190a72cbe0bd}{Wt\+::\+W\+Text\+Area}}, and \mbox{\hyperlink{classWt_1_1WAbstractSpinBox_a92304fd873f9c02525c22b34a84ca93a}{Wt\+::\+W\+Abstract\+Spin\+Box}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_ac9839a243ba5f98e7962d1c0dfc20813}\label{classWt_1_1WWidget_ac9839a243ba5f98e7962d1c0dfc20813}} 
+\index{Wt::WWidget@{Wt::WWidget}!callJavaScriptMember@{callJavaScriptMember}}
+\index{callJavaScriptMember@{callJavaScriptMember}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{callJavaScriptMember()}{callJavaScriptMember()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::call\+Java\+Script\+Member (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calls a Java\+Script member. 
+
+This calls a Java\+Script member.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_ab876fc1b7d2e4e5dfc631e380d406ae2}{set\+Java\+Script\+Member()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a2c45aef10fc11190d100e2fbcaf7bd72}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a7def2cdc9bc444523f8160dca17ae0ae}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_aa66f7106435c5418ba986909a00ee8f1}\label{classWt_1_1WWidget_aa66f7106435c5418ba986909a00ee8f1}} 
+\index{Wt::WWidget@{Wt::WWidget}!canReceiveFocus@{canReceiveFocus}}
+\index{canReceiveFocus@{canReceiveFocus}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{canReceiveFocus()}{canReceiveFocus()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Widget\+::can\+Receive\+Focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns whether the widget can receive focus. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_af8cc593162ec1ace01a0640d0759cc13}{set\+Can\+Receive\+Focus()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a74d5aedc1f32c0c00c7d8905011cbd41}{Wt\+::\+W\+Web\+Widget}}, \mbox{\hyperlink{classWt_1_1WAnchor_acac4e4e186f328a678ec71e39570125b}{Wt\+::\+W\+Anchor}}, \mbox{\hyperlink{classWt_1_1WFormWidget_a0389f78346d99b825fefdda83784efc5}{Wt\+::\+W\+Form\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_affa7a520a35f4af835303d47a2fdef7a}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a898b4fb679877962612e4e4d207a953d}\label{classWt_1_1WWidget_a898b4fb679877962612e4e4d207a953d}} 
+\index{Wt::WWidget@{Wt::WWidget}!children@{children}}
+\index{children@{children}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{children()}{children()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$$>$ Wt\+::\+W\+Widget\+::children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns child widgets. 
+
+This returns widgets for which widget-\/$>$\mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent()}} == this. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_ade5a1c61384a783299f2196d5e95d396}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a5b984bcef4de4d037ae0252441a755d0}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a7657fb67f7ec42b7374b7f64f85e6030}\label{classWt_1_1WWidget_a7657fb67f7ec42b7374b7f64f85e6030}} 
+\index{Wt::WWidget@{Wt::WWidget}!clearSides@{clearSides}}
+\index{clearSides@{clearSides}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{clearSides()}{clearSides()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$\mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}}$>$ Wt\+::\+W\+Widget\+::clear\+Sides (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the sides that should remain empty. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a1919e2e3628bb4e4b74517605b5062c5}{set\+Clear\+Sides(\+W\+Flags$<$\+Side$>$)}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a25e24a57ff68911224b2c3d7249c1e0c}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a34967f300a429ebc20f8d13c26a18f2e}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_ac1833c7c01599b3733712ab0bf3c3a0a}\label{classWt_1_1WWidget_ac1833c7c01599b3733712ab0bf3c3a0a}} 
+\index{Wt::WWidget@{Wt::WWidget}!decorationStyle@{decorationStyle}}
+\index{decorationStyle@{decorationStyle}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{decorationStyle()}{decorationStyle()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WCssDecorationStyle}{W\+Css\+Decoration\+Style}}\& Wt\+::\+W\+Widget\+::decoration\+Style (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the decoration style of this widget. 
+
+This groups all decorative aspects of the widget, which do not affect the widget layout (except for the border properties which may behave like extra margin around the widget).
+
+When a decoration style has not been previously set, it returns a default decoration style object.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a091e1fb88d9bbd8818d061af43c618b4}{set\+Decoration\+Style()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_aad4f925a956d047d8290b8e485fae96a}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_aab88d1bf1033138dec841815f0f194ff}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a5f68ea0ab29adfb8e559153fca281e03}\label{classWt_1_1WWidget_a5f68ea0ab29adfb8e559153fca281e03}} 
+\index{Wt::WWidget@{Wt::WWidget}!disable@{disable}}
+\index{disable@{disable}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{disable()}{disable()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Widget\+::disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Disable thes widget. 
+
+This calls \mbox{\hyperlink{classWt_1_1WWidget_ae29fe35b633ec166f922419cd3ca9d96}{set\+Disabled(true)}}. \mbox{\Hypertarget{classWt_1_1WWidget_a2a8afe6d6f85af864df5cbd49ff6a0c5}\label{classWt_1_1WWidget_a2a8afe6d6f85af864df5cbd49ff6a0c5}} 
+\index{Wt::WWidget@{Wt::WWidget}!doJavaScript@{doJavaScript}}
+\index{doJavaScript@{doJavaScript}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{doJavaScript()}{doJavaScript()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::do\+Java\+Script (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{js }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Executes the given Java\+Script statements when the widget is rendered or updated. 
+
+Calling \mbox{\hyperlink{classWt_1_1WApplication_a2a92457b9212cef4057cb54e56183967}{W\+Application\+::do\+Java\+Script()}} with Java\+Script code that refers to a widget using \mbox{\hyperlink{classWt_1_1WWidget_a83a186d2feacfbfbdb5b54f4cefc6735}{js\+Ref()}}, that is still to be rendered may cause Java\+Script errors because the corresponding D\+OM node does not exist. This happens for example when a widget is created, but not yet inserted in the widget tree.
+
+This method guarantees that the Java\+Script code is only run when the corresponding D\+OM node (using \mbox{\hyperlink{classWt_1_1WWidget_a83a186d2feacfbfbdb5b54f4cefc6735}{js\+Ref()}}) resolves to a valid D\+OM object.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a83a186d2feacfbfbdb5b54f4cefc6735}{js\+Ref()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WCompositeWidget_af6871ab12defc3efd203cd3dbe5c4e25}{Wt\+::\+W\+Composite\+Widget}}, and \mbox{\hyperlink{classWt_1_1WWebWidget_ae4a3f94e0f2283d77e4d0e97db306ba2}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a76a62215402d25133664ba57185ac357}\label{classWt_1_1WWidget_a76a62215402d25133664ba57185ac357}} 
+\index{Wt::WWidget@{Wt::WWidget}!dropEvent@{dropEvent}}
+\index{dropEvent@{dropEvent}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{dropEvent()}{dropEvent()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::drop\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WDropEvent}{W\+Drop\+Event}}}]{drop\+Event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Handles a drop event. 
+
+Reimplement this method to handle a drop events for mime types you declared to accept using accept\+Drops.
+
+The default implementation simply completes the drag and drop operation as if nothing happened.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a18d42a95a4a3ee01b19deb50fcbe37d4}{accept\+Drops()}}, \mbox{\hyperlink{classWt_1_1WInteractWidget_ae9f41b3e4c04f7537d1eb4ee9adb34e9}{W\+Interact\+Widget\+::set\+Draggable()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classCharacter_abceca830291f8e59e658f182c5ada505}{Character}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_ae6935d8baca9d37dd1d080b4383da87c}\label{classWt_1_1WWidget_ae6935d8baca9d37dd1d080b4383da87c}} 
+\index{Wt::WWidget@{Wt::WWidget}!enable@{enable}}
+\index{enable@{enable}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{enable()}{enable()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Widget\+::enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables the widget. 
+
+This calls \mbox{\hyperlink{classWt_1_1WWidget_ae29fe35b633ec166f922419cd3ca9d96}{set\+Disabled(false)}}. \mbox{\Hypertarget{classWt_1_1WWidget_a919a4eaf68ff52f06f6a726d55dfb768}\label{classWt_1_1WWidget_a919a4eaf68ff52f06f6a726d55dfb768}} 
+\index{Wt::WWidget@{Wt::WWidget}!enableAjax@{enableAjax}}
+\index{enableAjax@{enableAjax}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{enableAjax()}{enableAjax()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::enable\+Ajax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Progresses to an Ajax-\/enabled widget. 
+
+This method is called when the progressive bootstrap method is used, and support for A\+J\+AX has been detected. The default behavior will upgrade the widget\textquotesingle{}s event handling to use A\+J\+AX instead of full page reloads, and propagate the call to its children.
+
+You may want to reimplement this method if you want to make changes to widget when A\+J\+AX is enabled. You should always call the base implementation.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_a46c573a3cd370cb2f83250c99d42b575}{W\+Application\+::enable\+Ajax()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WAbstractItemView_a6530f83b0ed33f0d8d292bae5e46191e}{Wt\+::\+W\+Abstract\+Item\+View}}, \mbox{\hyperlink{classWt_1_1WTemplate_abeab4e0a1d5addf6bfaa085210176b97}{Wt\+::\+W\+Template}}, \mbox{\hyperlink{classWt_1_1WMenuItem_a0d19a2d9d091452626be9e6776fa790c}{Wt\+::\+W\+Menu\+Item}}, \mbox{\hyperlink{classWt_1_1WWebWidget_af717033681b5cbe5857c88b65558e10c}{Wt\+::\+W\+Web\+Widget}}, \mbox{\hyperlink{classWt_1_1WFileUpload_ace76eeca336313905f431e151db46fd6}{Wt\+::\+W\+File\+Upload}}, \mbox{\hyperlink{classWt_1_1WPaintedWidget_a4c4843727f3f3b6d3e401b465d878d66}{Wt\+::\+W\+Painted\+Widget}}, \mbox{\hyperlink{classWt_1_1WCalendar_acb4aa255bf142f24264c7e7cbf33442c}{Wt\+::\+W\+Calendar}}, \mbox{\hyperlink{classWt_1_1WPushButton_aaf33f6ec6ae321e88195cf9d249a952d}{Wt\+::\+W\+Push\+Button}}, \mbox{\hyperlink{classWt_1_1WFileDropWidget_a5df654484bf71d149ef6650aa76c3921}{Wt\+::\+W\+File\+Drop\+Widget}}, \mbox{\hyperlink{classWt_1_1WSlider_ac78960637792be6cef0e876193969c25}{Wt\+::\+W\+Slider}}, \mbox{\hyperlink{classWt_1_1WTreeView_aa337178a9fa888530c4ff8ba84c3adf9}{Wt\+::\+W\+Tree\+View}}, \mbox{\hyperlink{classWt_1_1WAnchor_a8a1861fe5835fc5ad2a11ef4e1d017a8}{Wt\+::\+W\+Anchor}}, \mbox{\hyperlink{classWt_1_1WAbstractMedia_a66e4718005760f1fa172d4d7aa341483}{Wt\+::\+W\+Abstract\+Media}}, \mbox{\hyperlink{classWt_1_1WCompositeWidget_aa2a6573b9c57db68758e4273c2bc5830}{Wt\+::\+W\+Composite\+Widget}}, \mbox{\hyperlink{classWt_1_1WTableView_a7d9f1c86de739fc69f64908657f6dbf4}{Wt\+::\+W\+Table\+View}}, \mbox{\hyperlink{classWt_1_1WFormWidget_ac484b43590f7797fbd744219144ef28e}{Wt\+::\+W\+Form\+Widget}}, and \mbox{\hyperlink{classWt_1_1WTimerWidget_aaca34776bd10a0b5b6ce0a83288b5a06}{Wt\+::\+W\+Timer\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a96e9c88d9ed79acccf3edf2bb00c0126}\label{classWt_1_1WWidget_a96e9c88d9ed79acccf3edf2bb00c0126}} 
+\index{Wt::WWidget@{Wt::WWidget}!find@{find}}
+\index{find@{find}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$\ast$ Wt\+::\+W\+Widget\+::find (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Finds a descendent widget by name. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WObject_a875fda02eff6260ab665647f7215e262}{set\+Object\+Name()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_afef6d7f455e171f9c57e3243d10ebbec}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_aae8a91421ff66d04d228130d5ed17c25}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a78041b1bcd9b811fa4771d19005a585a}\label{classWt_1_1WWidget_a78041b1bcd9b811fa4771d19005a585a}} 
+\index{Wt::WWidget@{Wt::WWidget}!floatSide@{floatSide}}
+\index{floatSide@{floatSide}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{floatSide()}{floatSide()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} Wt\+::\+W\+Widget\+::float\+Side (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the C\+SS float side. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a2915d313e6934173c087bf8212024289}{set\+Float\+Side(\+Side)}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_aace8c4a540bdc306c097982805bd836e}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_ade3f31502973cfd52bed58ff59eae494}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_af0055d333414c99aee674e13da95f89b}\label{classWt_1_1WWidget_af0055d333414c99aee674e13da95f89b}} 
+\index{Wt::WWidget@{Wt::WWidget}!getStateless@{getStateless}}
+\index{getStateless@{getStateless}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{getStateless()}{getStateless()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WStatelessSlot}{W\+Stateless\+Slot}}$\ast$ Wt\+::\+W\+Widget\+::get\+Stateless (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WObject_aec904644d278b09d3f7e568fd2efd400}{Method}}}]{method }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+On-\/demand stateless slot implementation. 
+
+This method returns a stateless slot implementation for the given {\ttfamily method}. To avoid the cost of declaring methods to be stateless when they are not used, you may reimplement this method to provide a stateless implementation for a method only when the method is involved in a slot connection.
+
+Use \mbox{\hyperlink{classWt_1_1WObject_adaa163b9e92933f3b2ff4ec58e2734c6}{implement\+Stateless()}} to provide a stateless implementation of the given {\ttfamily method}, or return the base class implementation otherwise. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WObject_adbed50331d6abf7c19628b3140daa9b4}{Wt\+::\+W\+Object}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a603ed3e92421dab3c96dda05afa47513}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WAbstractToggleButton_adf52bd04a8c10ff6dda2db224e25cb71}{Wt\+::\+W\+Abstract\+Toggle\+Button}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a9454454144fe3729378c87c3b90372b4}\label{classWt_1_1WWidget_a9454454144fe3729378c87c3b90372b4}} 
+\index{Wt::WWidget@{Wt::WWidget}!height@{height}}
+\index{height@{height}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} Wt\+::\+W\+Widget\+::height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the height. 
+
+Returns the height set for this widget. This is not a calculated height, based on layout, but the height as specified previously with \mbox{\hyperlink{classWt_1_1WWidget_a54365f7acdc237895328be54969165f4}{resize(const W\+Length\& width, const W\+Length\& height)}}.
+
+This applies to C\+S\+S-\/based layout.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a54365f7acdc237895328be54969165f4}{resize(const W\+Length\&, const W\+Length\&)}}, \mbox{\hyperlink{classWt_1_1WWidget_a3f423e20a9b0792c1bc3d52899065e82}{width()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_ae0c87ae7cae2379eebbbb7df06e07a2c}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a058e81d74cf5290ad7bd484573d1fadf}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_ac556bf0e3087b238a98f25b77b9d529c}\label{classWt_1_1WWidget_ac556bf0e3087b238a98f25b77b9d529c}} 
+\index{Wt::WWidget@{Wt::WWidget}!hiddenKeepsGeometry@{hiddenKeepsGeometry}}
+\index{hiddenKeepsGeometry@{hiddenKeepsGeometry}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{hiddenKeepsGeometry()}{hiddenKeepsGeometry()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Widget\+::hidden\+Keeps\+Geometry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns whether the widget keeps its geometry when hidden. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a8cd985ab1dfcee828c7b6189a7e052a5}{set\+Hidden\+Keeps\+Geometry()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a855e0e86b90f26e5cb933be33b89fe61}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a9ba3e4a1f46664c1bcbc760104ba614c}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a0825c3ccbd4999afc1a88fafa6aa6fc7}\label{classWt_1_1WWidget_a0825c3ccbd4999afc1a88fafa6aa6fc7}} 
+\index{Wt::WWidget@{Wt::WWidget}!hide@{hide}}
+\index{hide@{hide}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{hide()}{hide()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Widget\+::hide (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Hides the widget. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a66bdda41220267a8c7ff9865996e2675}{set\+Hidden()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WWidget_a314baf33da2243947319bf32857f8e78}\label{classWt_1_1WWidget_a314baf33da2243947319bf32857f8e78}} 
+\index{Wt::WWidget@{Wt::WWidget}!htmlText@{htmlText}}
+\index{htmlText@{htmlText}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{htmlText()}{htmlText()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::html\+Text (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Streams the (X)H\+T\+ML representation. 
+
+Streams the widget as Char\+Encoding\+::\+U\+T\+F8-\/encoded (H\+T\+M\+L-\/compatible) X\+H\+T\+ML.
+
+This may be useful as a debugging tool for the web-\/savvy, or in other rare situations. Usually, you will not deal directly with H\+T\+ML, and calling this method on a widget that is rendered may interfere with the library keeping track of changes to the widget. \mbox{\Hypertarget{classWt_1_1WWidget_a8c806a873adad31035122a3b465d3da2}\label{classWt_1_1WWidget_a8c806a873adad31035122a3b465d3da2}} 
+\index{Wt::WWidget@{Wt::WWidget}!isDisabled@{isDisabled}}
+\index{isDisabled@{isDisabled}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{isDisabled()}{isDisabled()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Widget\+::is\+Disabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns whether the widget is set disabled. 
+
+A widget that is not set disabled may still be disabled when one of its ancestor widgets is set disabled. Use \mbox{\hyperlink{classWt_1_1WWidget_ae091783ebd393c04f026133069b874d3}{is\+Enabled()}} to find out whether a widget is enabled.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_ae29fe35b633ec166f922419cd3ca9d96}{set\+Disabled()}}, \mbox{\hyperlink{classWt_1_1WWidget_ae091783ebd393c04f026133069b874d3}{is\+Enabled()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a1517caba4d0c88e292e7af8ebfb5849e}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a6e3c7ba62e513a0765fba60ada948793}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_ae091783ebd393c04f026133069b874d3}\label{classWt_1_1WWidget_ae091783ebd393c04f026133069b874d3}} 
+\index{Wt::WWidget@{Wt::WWidget}!isEnabled@{isEnabled}}
+\index{isEnabled@{isEnabled}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{isEnabled()}{isEnabled()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Widget\+::is\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns whether the widget is enabled. 
+
+A widget is enabled if it is not disabled, and none of its ancestors are disabled. This method returns whether the widget is rendered as enabled, while \mbox{\hyperlink{classWt_1_1WWidget_a8c806a873adad31035122a3b465d3da2}{is\+Disabled()}} returns whether a widget has been explicitly disabled.
+
+\mbox{\hyperlink{classNote}{Note}} that a widget may be at the same time not enabled, and not disabled, in case one of its ancestors was disabled.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a8c806a873adad31035122a3b465d3da2}{is\+Disabled()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WInteractWidget_a1cbf332b8b718385285ad8a842876d59}{Wt\+::\+W\+Interact\+Widget}}, \mbox{\hyperlink{classWt_1_1WWebWidget_ac42b0fcd53ef77fa297e796cca6d8302}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a48160b7be4cc42a102c2e5af1e6cfe72}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a76a29fd7fa9fa9a6e15e3a450f24a381}\label{classWt_1_1WWidget_a76a29fd7fa9fa9a6e15e3a450f24a381}} 
+\index{Wt::WWidget@{Wt::WWidget}!isHidden@{isHidden}}
+\index{isHidden@{isHidden}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{isHidden()}{isHidden()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Widget\+::is\+Hidden (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns whether the widget is set hidden. 
+
+A widget that is not hidden may still be not visible when one of its ancestor widgets is hidden. Use \mbox{\hyperlink{classWt_1_1WWidget_a450f94dc5a28737625cdb6bde3fdc788}{is\+Visible()}} to check the visibility of a widget.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a66bdda41220267a8c7ff9865996e2675}{set\+Hidden()}}, \mbox{\hyperlink{classWt_1_1WWidget_a450f94dc5a28737625cdb6bde3fdc788}{is\+Visible()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_ae2c8188aaaecbeae4d0441dc921acf20}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a8d4ea40ac4173986cb638d50b2680467}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_afa7a21fbd173d6ee83c2aa9cc11e2ac1}\label{classWt_1_1WWidget_afa7a21fbd173d6ee83c2aa9cc11e2ac1}} 
+\index{Wt::WWidget@{Wt::WWidget}!isInline@{isInline}}
+\index{isInline@{isInline}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{isInline()}{isInline()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Widget\+::is\+Inline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns whether the widget is displayed inline or as block. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_ac78e3af143883334c82031790c87416e}{set\+Inline(bool)}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_af4bee7e8c27c78f153e8be05d271593f}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a5610385d7e9aaf0abcf1353aed482451}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a29f3361a8c518dabc1251892da55dd6d}\label{classWt_1_1WWidget_a29f3361a8c518dabc1251892da55dd6d}} 
+\index{Wt::WWidget@{Wt::WWidget}!isPopup@{isPopup}}
+\index{isPopup@{isPopup}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{isPopup()}{isPopup()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Widget\+::is\+Popup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns whether the widget is overlayed. 
+
+This applies to C\+S\+S-\/based layout.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a3890a2ef04571b6d36e7468583457091}{set\+Popup(bool)}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a551113f578507178286988750ab4cfd1}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_aa29d00ffc5921e774284869cb7eb9d06}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a7bffb7966160ff8a58fff9d31ef21078}\label{classWt_1_1WWidget_a7bffb7966160ff8a58fff9d31ef21078}} 
+\index{Wt::WWidget@{Wt::WWidget}!isRendered@{isRendered}}
+\index{isRendered@{isRendered}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{isRendered()}{isRendered()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Widget\+::is\+Rendered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the widget is rendered. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a83a186d2feacfbfbdb5b54f4cefc6735}{js\+Ref()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WWidget_a0feab16b8797b4f023aafd7e33ffef26}\label{classWt_1_1WWidget_a0feab16b8797b4f023aafd7e33ffef26}} 
+\index{Wt::WWidget@{Wt::WWidget}!isScrollVisible@{isScrollVisible}}
+\index{isScrollVisible@{isScrollVisible}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{isScrollVisible()}{isScrollVisible()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Widget\+::is\+Scroll\+Visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns whether this widget is currently considered scroll visible. 
+
+\mbox{\hyperlink{classWt_1_1WWidget_a0feab16b8797b4f023aafd7e33ffef26}{is\+Scroll\+Visible()}} is initially false.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a5d403e0390841df77a23445b28044d5d}{set\+Scroll\+Visibility\+Enabled()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a209077b839aedbf3c2443aec4de376d6}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a313e4489022e2c4ea15a2c5e0f0509cb}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a979e3986782d2106f0f502ae20d08a73}\label{classWt_1_1WWidget_a979e3986782d2106f0f502ae20d08a73}} 
+\index{Wt::WWidget@{Wt::WWidget}!isThemeStyleEnabled@{isThemeStyleEnabled}}
+\index{isThemeStyleEnabled@{isThemeStyleEnabled}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{isThemeStyleEnabled()}{isThemeStyleEnabled()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Widget\+::is\+Theme\+Style\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns whether this widget is currently styled by the chosen theme. 
+
+is\+Theme\+Enabled() is initially true.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_ae1e28bff803905ca8625c1fb722f3d21}{set\+Theme\+Style\+Enabled()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a691a83bd037f63e4b2ed8e5092a17241}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_af386e3d36330eda9566737e6a45eadda}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a450f94dc5a28737625cdb6bde3fdc788}\label{classWt_1_1WWidget_a450f94dc5a28737625cdb6bde3fdc788}} 
+\index{Wt::WWidget@{Wt::WWidget}!isVisible@{isVisible}}
+\index{isVisible@{isVisible}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{isVisible()}{isVisible()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Widget\+::is\+Visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns whether the widget is visible. 
+
+A widget is visible if it is not hidden, and none of its ancestors are hidden. This method returns the true visibility, while \mbox{\hyperlink{classWt_1_1WWidget_a76a29fd7fa9fa9a6e15e3a450f24a381}{is\+Hidden()}} returns whether a widget has been explicitly hidden.
+
+\mbox{\hyperlink{classNote}{Note}} that a widget may be at the same time not hidden, and not visible, in case one of its ancestors was hidden.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a76a29fd7fa9fa9a6e15e3a450f24a381}{is\+Hidden()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a676dd25f88061270f7c6a84c2c202952}{Wt\+::\+W\+Web\+Widget}}, \mbox{\hyperlink{classWt_1_1WCompositeWidget_a4cc174483fe8bfc1e45639eb0a9c5a03}{Wt\+::\+W\+Composite\+Widget}}, and \mbox{\hyperlink{classWt_1_1WTableCell_a6a3f9a7c0c44387de862d642552626bd}{Wt\+::\+W\+Table\+Cell}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a78a539cfd49a8927a196de66362c37e9}\label{classWt_1_1WWidget_a78a539cfd49a8927a196de66362c37e9}} 
+\index{Wt::WWidget@{Wt::WWidget}!javaScriptMember@{javaScriptMember}}
+\index{javaScriptMember@{javaScriptMember}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{javaScriptMember()}{javaScriptMember()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+W\+Widget\+::java\+Script\+Member (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the value of a Java\+Script member. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_ab876fc1b7d2e4e5dfc631e380d406ae2}{set\+Java\+Script\+Member()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_ad59a1b3d86646fae427b1d83e3fe3edd}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a84f5f25b5f206339ee31eeb9f4e99916}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a83a186d2feacfbfbdb5b54f4cefc6735}\label{classWt_1_1WWidget_a83a186d2feacfbfbdb5b54f4cefc6735}} 
+\index{Wt::WWidget@{Wt::WWidget}!jsRef@{jsRef}}
+\index{jsRef@{jsRef}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{jsRef()}{jsRef()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+W\+Widget\+::js\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a Java\+Script expression to the corresponding D\+OM node. 
+
+You may want to use this in conjunction with \mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} or \mbox{\hyperlink{classWt_1_1WWidget_a2a8afe6d6f85af864df5cbd49ff6a0c5}{do\+Java\+Script()}} in custom Java\+Script code.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a7bffb7966160ff8a58fff9d31ef21078}{is\+Rendered()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WWidget_a3d97f2ffd0dbc18dff0584b1c32128d6}\label{classWt_1_1WWidget_a3d97f2ffd0dbc18dff0584b1c32128d6}} 
+\index{Wt::WWidget@{Wt::WWidget}!layoutSizeAware@{layoutSizeAware}}
+\index{layoutSizeAware@{layoutSizeAware}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{layoutSizeAware()}{layoutSizeAware()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Widget\+::layout\+Size\+Aware (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the widget is layout size aware. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a4f83592912a7f8fa4fd35dadde78ee74}{set\+Layout\+Size\+Aware()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WWidget_a1a4397e904a92b833fad8526d645f7ab}\label{classWt_1_1WWidget_a1a4397e904a92b833fad8526d645f7ab}} 
+\index{Wt::WWidget@{Wt::WWidget}!layoutSizeChanged@{layoutSizeChanged}}
+\index{layoutSizeChanged@{layoutSizeChanged}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{layoutSizeChanged()}{layoutSizeChanged()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::layout\+Size\+Changed (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Virtual method that indicates a size change. 
+
+This method propagates the client-\/side width and height of the widget when the widget is contained by a layout manager and set\+Layout\+Size\+Aware(true) was called.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a4f83592912a7f8fa4fd35dadde78ee74}{set\+Layout\+Size\+Aware()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WGLWidget_af6c1c74069894de36d4ca43981731297}{Wt\+::\+W\+G\+L\+Widget}}, \mbox{\hyperlink{classWt_1_1WSlider_ae95274005a017c0fa19a8a3caecc7c83}{Wt\+::\+W\+Slider}}, and \mbox{\hyperlink{classWt_1_1WPaintedWidget_a21875c95bf05a3e6ee9928a9d990aabf}{Wt\+::\+W\+Painted\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a162f32ce7482e7c3121d18585555909a}\label{classWt_1_1WWidget_a162f32ce7482e7c3121d18585555909a}} 
+\index{Wt::WWidget@{Wt::WWidget}!lineHeight@{lineHeight}}
+\index{lineHeight@{lineHeight}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{lineHeight()}{lineHeight()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} Wt\+::\+W\+Widget\+::line\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the C\+SS line height for contained text. 
+
+sa \mbox{\hyperlink{classWt_1_1WWidget_a0763f0e672e5cf673141405dc8e796bb}{set\+Line\+Height()}} 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a41600eb0b3e43a4edc1563ba70b8d5e7}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_aeaced7b65edac520210766db915089fb}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a1ee433705523b2b79c4c3539e0852c92}\label{classWt_1_1WWidget_a1ee433705523b2b79c4c3539e0852c92}} 
+\index{Wt::WWidget@{Wt::WWidget}!load@{load}}
+\index{load@{load}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Loads content just before the widget is used. 
+
+This function is called when a widget is inserted in the widget hierarchy. Widgets that get inserted in the widget hierarchy will be rendered. Visible widgets are rendered immediately, and invisible widgets in the back-\/ground (or not for a plain H\+T\+ML session). This method is called when the widget is directly or indirectly inserted into the widget tree.
+
+The default implementation simply propagates the load signal to its children. You may want to override this method to delay loading of resource-\/intensive contents.
+
+During the life-\/time of a widget, this method may be called multiple times, so you should make sure that you do a deferred initialization only once. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WMenu_a14a08ca53b34e992a2ac4f3fb2d881db}{Wt\+::\+W\+Menu}}, \mbox{\hyperlink{classWt_1_1WInteractWidget_abaa00219b63361ceede1433ed2cb3dc5}{Wt\+::\+W\+Interact\+Widget}}, \mbox{\hyperlink{classWt_1_1WCalendar_ad48695ea3c33bdbe6531cb2b78210063}{Wt\+::\+W\+Calendar}}, \mbox{\hyperlink{classWt_1_1WWebWidget_a3829020b1c4808c44af304d5d9dce3b3}{Wt\+::\+W\+Web\+Widget}}, \mbox{\hyperlink{classWt_1_1WCompositeWidget_ac8c792d059b81b90a1663d3c46b18854}{Wt\+::\+W\+Composite\+Widget}}, \mbox{\hyperlink{classWt_1_1WDateEdit_add7eb96e2ffbae86e13cac00024daa51}{Wt\+::\+W\+Date\+Edit}}, \mbox{\hyperlink{classWt_1_1WTimeEdit_a555b52cae8abc0702784230b06d9d7a2}{Wt\+::\+W\+Time\+Edit}}, \mbox{\hyperlink{classWt_1_1WViewWidget_a087ed57a0f27ed6d65b780019e3bd208}{Wt\+::\+W\+View\+Widget}}, \mbox{\hyperlink{classDeferredWidget_a26cbcbe066441fb23643709738c844ca}{Deferred\+Widget$<$ Function $>$}}, \mbox{\hyperlink{classNoteUI_a207bc1a4ad8f40eb8730f6b8020d879b}{Note\+UI}}, and \mbox{\hyperlink{classDeferredWidget_a26cbcbe066441fb23643709738c844ca}{Deferred\+Widget$<$ Function $>$}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a1aa5c2496715bb582a584ebcdd97a6d0}\label{classWt_1_1WWidget_a1aa5c2496715bb582a584ebcdd97a6d0}} 
+\index{Wt::WWidget@{Wt::WWidget}!loaded@{loaded}}
+\index{loaded@{loaded}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{loaded()}{loaded()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Widget\+::loaded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns whether this widget has been loaded. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a1ee433705523b2b79c4c3539e0852c92}{load()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a3a825e19ec004ba7be42fc14405177bd}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_ae81f568ada8336b4fb02cd8f2a11120d}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a8b7c40b966518e22543d290229fbd29f}\label{classWt_1_1WWidget_a8b7c40b966518e22543d290229fbd29f}} 
+\index{Wt::WWidget@{Wt::WWidget}!margin@{margin}}
+\index{margin@{margin}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{margin()}{margin()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} Wt\+::\+W\+Widget\+::margin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}}}]{side }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns a C\+SS margin set. 
+
+This applies to C\+S\+S-\/based layout.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a058b4e5641f41d3fa9a50bfa6f339408}{set\+Margin()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_ae98ac2483add8e16fd910145eee2685b}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_ac16d628912b8a1723b5174606e58c8e4}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_af2f6d29c4e5a88bdd12a180e125490cd}\label{classWt_1_1WWidget_af2f6d29c4e5a88bdd12a180e125490cd}} 
+\index{Wt::WWidget@{Wt::WWidget}!maximumHeight@{maximumHeight}}
+\index{maximumHeight@{maximumHeight}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{maximumHeight()}{maximumHeight()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} Wt\+::\+W\+Widget\+::maximum\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the maximum height. 
+
+Returns the minmum height set for this widget with \mbox{\hyperlink{classWt_1_1WWidget_af023064cf8007bda6baeb5277d79bbd9}{set\+Maximum\+Size()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_af023064cf8007bda6baeb5277d79bbd9}{set\+Maximum\+Size()}}, \mbox{\hyperlink{classWt_1_1WWidget_a733c78b3d54dc355adf6ee05c69bf219}{maximum\+Width()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a68b06a561fb1598307b9c1520784c2e8}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a4818dbf1aa07a4a1a9b6a74bba039a73}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a733c78b3d54dc355adf6ee05c69bf219}\label{classWt_1_1WWidget_a733c78b3d54dc355adf6ee05c69bf219}} 
+\index{Wt::WWidget@{Wt::WWidget}!maximumWidth@{maximumWidth}}
+\index{maximumWidth@{maximumWidth}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{maximumWidth()}{maximumWidth()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} Wt\+::\+W\+Widget\+::maximum\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the maximum width. 
+
+Returns the maximum width set for this widget with \mbox{\hyperlink{classWt_1_1WWidget_af023064cf8007bda6baeb5277d79bbd9}{set\+Maximum\+Size()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_af023064cf8007bda6baeb5277d79bbd9}{set\+Maximum\+Size()}}, \mbox{\hyperlink{classWt_1_1WWidget_af2f6d29c4e5a88bdd12a180e125490cd}{maximum\+Height()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_ac3a1d06af121798a3d8bab2459d71343}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a4b13d72f77288cfffe7d2ced713cce1e}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a411b6bbac918eeb19946d65c4352beb1}\label{classWt_1_1WWidget_a411b6bbac918eeb19946d65c4352beb1}} 
+\index{Wt::WWidget@{Wt::WWidget}!minimumHeight@{minimumHeight}}
+\index{minimumHeight@{minimumHeight}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{minimumHeight()}{minimumHeight()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} Wt\+::\+W\+Widget\+::minimum\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the minimum height. 
+
+Returns the minmum height set for this widget with \mbox{\hyperlink{classWt_1_1WWidget_a092c7d1ecfde7f004ef120389d91775d}{set\+Minimum\+Size()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a092c7d1ecfde7f004ef120389d91775d}{set\+Minimum\+Size()}}, \mbox{\hyperlink{classWt_1_1WWidget_af5847c8028f501b51d74184107ccdde6}{minimum\+Width()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a89d4cd4580e4a8972200060de652ace4}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_ad1ed17b90ce00858af97bfd383fc5b8c}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_af5847c8028f501b51d74184107ccdde6}\label{classWt_1_1WWidget_af5847c8028f501b51d74184107ccdde6}} 
+\index{Wt::WWidget@{Wt::WWidget}!minimumWidth@{minimumWidth}}
+\index{minimumWidth@{minimumWidth}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{minimumWidth()}{minimumWidth()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} Wt\+::\+W\+Widget\+::minimum\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the minimum width. 
+
+Returns the minimum width set for this widget with \mbox{\hyperlink{classWt_1_1WWidget_a092c7d1ecfde7f004ef120389d91775d}{set\+Minimum\+Size()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a092c7d1ecfde7f004ef120389d91775d}{set\+Minimum\+Size()}}, \mbox{\hyperlink{classWt_1_1WWidget_a411b6bbac918eeb19946d65c4352beb1}{minimum\+Height()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_afe915e89ffdd712212ad735eaba31208}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_ae9bef220ae2b5a631b7f8ca81387b386}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a08e07b6d0ca355a3fe2c7dead3dde228}\label{classWt_1_1WWidget_a08e07b6d0ca355a3fe2c7dead3dde228}} 
+\index{Wt::WWidget@{Wt::WWidget}!offset@{offset}}
+\index{offset@{offset}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{offset()}{offset()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} Wt\+::\+W\+Widget\+::offset (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}}}]{side }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns a C\+SS offset. 
+
+This applies to C\+S\+S-\/based layout.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a730c10f642915f724f616ad4bebd2fca}{set\+Offsets(const W\+Length\&, W\+Flags$<$\+Side$>$)}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_ad96e113cd0f081888ad6514383241e7a}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_aeb785c682b6644b303e4bee082e35b60}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a8e867e0b40e41b8ffcd66f4dc08fc372}\label{classWt_1_1WWidget_a8e867e0b40e41b8ffcd66f4dc08fc372}} 
+\index{Wt::WWidget@{Wt::WWidget}!positionAt@{positionAt}}
+\index{positionAt@{positionAt}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{positionAt()}{positionAt()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::position\+At (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{widget,  }\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation = {\ttfamily Orientation\+:\+:Vertical} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Positions a widget next to another widget. 
+
+Positions this absolutely positioned widget next to another {\ttfamily widget}. Both widgets must be visible (including all their ancestors). The current widget is shown automatically if needed.
+
+When {\ttfamily orientation} = Wt\+::\+Orientation\+::\+Vertical, the widget is displayed below the other widget (or above in case there is not enough room below). It is aligned so that the left edges align (or the right edges if there is not enough room to the right).
+
+Conversely, when {\ttfamily orientation} = Wt\+::\+Orientation\+::\+Horizontal, the widget is displayed to the right of the other widget (or to the left in case there is not enough room to the right). It is aligned so that the top edges align (or the bottom edges if there is not enough room below).
+
+\begin{DoxyNote}{Note}
+This only works if Java\+Script is available. 
+\end{DoxyNote}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WDialog_a49d7685ad51d9e74334e746af2ccf1c3}{Wt\+::\+W\+Dialog}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_aea3a7c21d936d34f28b42143aba4edd5}\label{classWt_1_1WWidget_aea3a7c21d936d34f28b42143aba4edd5}} 
+\index{Wt::WWidget@{Wt::WWidget}!positionScheme@{positionScheme}}
+\index{positionScheme@{positionScheme}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{positionScheme()}{positionScheme()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_a2551043da5512cfe7b857c5db6e5ae40}{Position\+Scheme}} Wt\+::\+W\+Widget\+::position\+Scheme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the C\+SS position scheme. 
+
+This applies to C\+S\+S-\/based layout.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_a2551043da5512cfe7b857c5db6e5ae40}{Wt\+::\+Position\+Scheme}}, \mbox{\hyperlink{classWt_1_1WWidget_ae15ffe92fdc5c394013d61b5bebb2f11}{set\+Position\+Scheme(\+Position\+Scheme)}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a022891e35f20fb59e44a962521347000}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_aa11e4fbb0d295db0f5c6fc8e48f4fb8e}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a2ac5699f1624b16d8ce6caf8086d6d31}\label{classWt_1_1WWidget_a2ac5699f1624b16d8ce6caf8086d6d31}} 
+\index{Wt::WWidget@{Wt::WWidget}!propagateSetEnabled@{propagateSetEnabled}}
+\index{propagateSetEnabled@{propagateSetEnabled}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{propagateSetEnabled()}{propagateSetEnabled()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::propagate\+Set\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Propagates that a widget was enabled or disabled through children. 
+
+When enabling or disabling a widget, you usually also want to disable contained children. This method is called by \mbox{\hyperlink{classWt_1_1WWidget_ae29fe35b633ec166f922419cd3ca9d96}{set\+Disabled()}} to propagate its state to all children.
+
+You may want to reimplement this method if they wish to render differently when a widget is disabled. The default implementation will propagate the signal to all children. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WFileUpload_af97e6ba26cb4284eaa079a71ae9b3d1f}{Wt\+::\+W\+File\+Upload}}, \mbox{\hyperlink{classWt_1_1WInteractWidget_a8c757a7ae882a94735c2b7344285ed50}{Wt\+::\+W\+Interact\+Widget}}, \mbox{\hyperlink{classWt_1_1WWebWidget_a8aa3f316c46bc18aab72e13e8127d9d8}{Wt\+::\+W\+Web\+Widget}}, \mbox{\hyperlink{classWt_1_1WPushButton_a45085dfbcee7ac1bd2d6e13bee199dee}{Wt\+::\+W\+Push\+Button}}, \mbox{\hyperlink{classWt_1_1WTextEdit_ad4b2541a5e0e9e0bd8cca633b4aa3442}{Wt\+::\+W\+Text\+Edit}}, \mbox{\hyperlink{classWt_1_1WAnchor_a1a2ae049045bcf36f3f003d76ca5901e}{Wt\+::\+W\+Anchor}}, \mbox{\hyperlink{classWt_1_1WFormWidget_af4ce565ee432956562fc25fb4e64109f}{Wt\+::\+W\+Form\+Widget}}, \mbox{\hyperlink{classWt_1_1WLabel_a23c98b31c2c5f3b58972b5ac8a256bf6}{Wt\+::\+W\+Label}}, \mbox{\hyperlink{classWt_1_1WCompositeWidget_a6218e8bef0781bb63d22efb26211b196}{Wt\+::\+W\+Composite\+Widget}}, \mbox{\hyperlink{classWt_1_1WDateEdit_aeba50297b5334a4c07196f51df5c4f4b}{Wt\+::\+W\+Date\+Edit}}, and \mbox{\hyperlink{classWt_1_1WTimeEdit_a324c2d2e942fd2b992e3c4942eca1c8e}{Wt\+::\+W\+Time\+Edit}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a73d5c71f5029c71be8c2b86f2ab22ebb}\label{classWt_1_1WWidget_a73d5c71f5029c71be8c2b86f2ab22ebb}} 
+\index{Wt::WWidget@{Wt::WWidget}!refresh@{refresh}}
+\index{refresh@{refresh}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Refresh the widget. 
+
+The refresh method is invoked when the locale is changed using \mbox{\hyperlink{classWt_1_1WApplication_ac0af7e0131c926c77b207595c8c6e283}{W\+Application\+::set\+Locale()}} or when the user hit the refresh button.
+
+The widget must actualize its contents in response.
+
+\begin{DoxyNote}{Note}
+This does {\bfseries{not}} rerender the widget! Calling \mbox{\hyperlink{classWt_1_1WWidget_a73d5c71f5029c71be8c2b86f2ab22ebb}{refresh()}} usually does not have any effect (unless you\textquotesingle{}ve reimplemented \mbox{\hyperlink{classWt_1_1WWidget_a73d5c71f5029c71be8c2b86f2ab22ebb}{refresh()}} to attach to it an effect). 
+\end{DoxyNote}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WTemplate_a6efbd90522d7df4aa2502e7103fda71b}{Wt\+::\+W\+Template}}, \mbox{\hyperlink{classWt_1_1WMediaPlayer_af4c6b777ac713dcc905b7bee62c1e302}{Wt\+::\+W\+Media\+Player}}, \mbox{\hyperlink{classWt_1_1WText_a3315da48f2dabf97f5d276db6cf984d7}{Wt\+::\+W\+Text}}, \mbox{\hyperlink{classWt_1_1WPushButton_a1b6446202655a5954d53cd6fc4791789}{Wt\+::\+W\+Push\+Button}}, \mbox{\hyperlink{classWt_1_1WComboBox_a969699f02f5e0a48c4424f15b4151b1f}{Wt\+::\+W\+Combo\+Box}}, \mbox{\hyperlink{classWt_1_1WWebWidget_a6cfacec8220f5063817e22506057a5dd}{Wt\+::\+W\+Web\+Widget}}, \mbox{\hyperlink{classWt_1_1WAbstractToggleButton_aa95d52c20890e2e711e9f259355ac29b}{Wt\+::\+W\+Abstract\+Toggle\+Button}}, \mbox{\hyperlink{classWt_1_1WFormWidget_aed20a1f447d252388b50bbd8aa847824}{Wt\+::\+W\+Form\+Widget}}, \mbox{\hyperlink{classWt_1_1WCompositeWidget_a0daded2a4204aaa295072c77f0a03af2}{Wt\+::\+W\+Composite\+Widget}}, \mbox{\hyperlink{classWt_1_1WDateEdit_ad1f48fe007ba644d3f1b0acdbc2e61e9}{Wt\+::\+W\+Date\+Edit}}, \mbox{\hyperlink{classWt_1_1WViewWidget_ab770401a3b71a43f0707768fc454c991}{Wt\+::\+W\+View\+Widget}}, \mbox{\hyperlink{classWt_1_1WDoubleSpinBox_ade90e5d1a49826333fe6e5e149b51249}{Wt\+::\+W\+Double\+Spin\+Box}}, \mbox{\hyperlink{classWt_1_1WGroupBox_ac3d412f4685ba75ce68334c17e884ca5}{Wt\+::\+W\+Group\+Box}}, \mbox{\hyperlink{classWt_1_1WAbstractSpinBox_a354129d20d0b4c3d86b603f38404ae7a}{Wt\+::\+W\+Abstract\+Spin\+Box}}, and \mbox{\hyperlink{classWt_1_1SoundManager_a341e89cf31da83cb862d9e4e4821543e}{Wt\+::\+Sound\+Manager}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a5331409ab84a19b6e6461a3f3f387aa6}\label{classWt_1_1WWidget_a5331409ab84a19b6e6461a3f3f387aa6}} 
+\index{Wt::WWidget@{Wt::WWidget}!removeFromParent@{removeFromParent}}
+\index{removeFromParent@{removeFromParent}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{removeFromParent()}{removeFromParent()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$>$ Wt\+::\+W\+Widget\+::remove\+From\+Parent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes the widget from its parent. 
+
+This is equivalent to \mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent()}}-\/$>$remove\+Widget(this); \mbox{\Hypertarget{classWt_1_1WWidget_ac78c5baf021bf6816bf2f7bca21bb968}\label{classWt_1_1WWidget_ac78c5baf021bf6816bf2f7bca21bb968}} 
+\index{Wt::WWidget@{Wt::WWidget}!removeStyleClass@{removeStyleClass}}
+\index{removeStyleClass@{removeStyleClass}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{removeStyleClass()}{removeStyleClass()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::remove\+Style\+Class (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{style\+Class,  }\item[{bool}]{force = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Removes a C\+SS style class. 
+
+When {\ttfamily force} = {\ttfamily true}, a Java\+Script call will be used to remove the style class from the D\+OM element (if Java\+Script is available). This may be necessary when client-\/side Java\+Script manipulates the same style class.
+
+The {\ttfamily style\+Class} should be a single class 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a6836b48e7c95807c8ff2979c6af881d9}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a36454397cc811d0c0b0d61d226365c0c}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a7c3d094d6260d10227fddccd13b90def}\label{classWt_1_1WWidget_a7c3d094d6260d10227fddccd13b90def}} 
+\index{Wt::WWidget@{Wt::WWidget}!removeWidget@{removeWidget}}
+\index{removeWidget@{removeWidget}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{removeWidget()}{removeWidget()}}
+{\footnotesize\ttfamily template$<$typename Widget $>$ \\
+std\+::enable\+\_\+if$<$std\+::is\+\_\+convertible$<$Widget$\ast$,\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$\ast$$>$\+::value \&\& !std\+::is\+\_\+same$<$Widget,\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$>$\+::value, std\+::unique\+\_\+ptr$<$Widget$>$ $>$\+::type Wt\+::\+W\+Widget\+::remove\+Widget (\begin{DoxyParamCaption}\item[{Widget $\ast$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes a child widget. 
+
+This is an overload that automatically casts the returned value to a unique\+\_\+ptr$<$\+Widget$>$ for convenience
+
+This is implemented as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{return} std::unique\_ptr<Widget>(\textcolor{keyword}{static\_cast<}Widget*\textcolor{keyword}{>}(\mbox{\hyperlink{classWt_1_1WWidget_a6ab0b1a46d2aeaac584dd054a0e670c8}{removeWidget}}(\textcolor{keyword}{static\_cast<}\mbox{\hyperlink{classWt_1_1WWidget_a01c10ec9ee5b65747d7cc6b87b990b70}{WWidget}}*\textcolor{keyword}{>}(widget)).release()));}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1WWidget_a1f7fa7f945385d230874fad2facccbf5}\label{classWt_1_1WWidget_a1f7fa7f945385d230874fad2facccbf5}} 
+\index{Wt::WWidget@{Wt::WWidget}!render@{render}}
+\index{render@{render}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Renders the widget. 
+
+This function renders the widget (or an update for the widget), after this has been scheduled using \mbox{\hyperlink{classWt_1_1WWidget_a5d3d4edaafa2d7c892a5078f3df4cf11}{schedule\+Render()}}.
+
+The default implementation will render the widget by serializing changes to Java\+Script and H\+T\+ML. You may want to reimplement this widget if you have been postponing some of the layout / rendering implementation until the latest moment possible. In that case you should make sure you call the base implementation however. 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WCalendar_afe8fad695cf7243e994ff6f522548d4f}{Wt\+::\+W\+Calendar}}, \mbox{\hyperlink{classWt_1_1WGLWidget_a1175690b649a3107cab1084e770d6ce2}{Wt\+::\+W\+G\+L\+Widget}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart_aab19ac7fa211d60dfa64808e882fc866}{Wt\+::\+Chart\+::\+W\+Cartesian\+Chart}}, \mbox{\hyperlink{classWt_1_1WMenu_ae7c2a1c38cd081d46af2fd3461071a8f}{Wt\+::\+W\+Menu}}, \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a9d5a02e0693857a0fa7e67d13fcb3934}{Wt\+::\+W\+Suggestion\+Popup}}, \mbox{\hyperlink{classWt_1_1WMediaPlayer_a951c2b6094514534666935361b7a7e12}{Wt\+::\+W\+Media\+Player}}, \mbox{\hyperlink{classWt_1_1WDialog_ab2d29f97f95cd7a92e20ec8b3501ffbd}{Wt\+::\+W\+Dialog}}, \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a5470adb0b8ee27dbcb189b87f0980d35}{Wt\+::\+Auth\+::\+Auth\+Widget}}, \mbox{\hyperlink{classWt_1_1WLineEdit_ae3524d7b4a1b29e98976d73c802c0e84}{Wt\+::\+W\+Line\+Edit}}, \mbox{\hyperlink{classWt_1_1WMenuItem_a124243b8a162f186338818357d441883}{Wt\+::\+W\+Menu\+Item}}, \mbox{\hyperlink{classWt_1_1WLeafletMap_ab537daabdb7a0d523d36036c8adec649}{Wt\+::\+W\+Leaflet\+Map}}, \mbox{\hyperlink{classWt_1_1WWebWidget_a5ca222ef9275cfd6d0005c63197d40a0}{Wt\+::\+W\+Web\+Widget}}, \mbox{\hyperlink{classWt_1_1WPaintedWidget_ab268e85a9ecfb97c9a743a1f9c5ec6c9}{Wt\+::\+W\+Painted\+Widget}}, \mbox{\hyperlink{classWt_1_1WText_a768a6a1e134f52fd8316be648aea7d89}{Wt\+::\+W\+Text}}, \mbox{\hyperlink{classWt_1_1WGoogleMap_aee9186b124db81ffe1a7d93f8f78dce3}{Wt\+::\+W\+Google\+Map}}, \mbox{\hyperlink{classWt_1_1WSlider_aa1be2224372e9cf444f21c42dc15cbf0}{Wt\+::\+W\+Slider}}, \mbox{\hyperlink{classWt_1_1WCompositeWidget_aeb7ede8809e2f195a61106a9d5cc9de3}{Wt\+::\+W\+Composite\+Widget}}, \mbox{\hyperlink{classWt_1_1WPopupMenu_a8f6bf29823772a8e30070de944238988}{Wt\+::\+W\+Popup\+Menu}}, \mbox{\hyperlink{classWt_1_1WImage_a11aebfdcc8fb6e13dfcfb9e93e6916b0}{Wt\+::\+W\+Image}}, \mbox{\hyperlink{classWt_1_1WTreeView_a1a427771d3095e6a92addf38b9af82b0}{Wt\+::\+W\+Tree\+View}}, \mbox{\hyperlink{classWt_1_1WDatePicker_a13d0f84d2591d548d384713d21768074}{Wt\+::\+W\+Date\+Picker}}, \mbox{\hyperlink{classWt_1_1WFormWidget_a8c9e7e6fac2c0e69725c7efc6f94053b}{Wt\+::\+W\+Form\+Widget}}, \mbox{\hyperlink{classWt_1_1WTreeTable_aca1929dab902309a743644ee943dcde7}{Wt\+::\+W\+Tree\+Table}}, \mbox{\hyperlink{classWt_1_1WTableView_a4f72ed56e3a6bbc0114cca38ee2a3052}{Wt\+::\+W\+Table\+View}}, \mbox{\hyperlink{classWt_1_1WInPlaceEdit_a7d86d3bf7861d542f649fd102b227fb6}{Wt\+::\+W\+In\+Place\+Edit}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAxisSliderWidget_aa3772cb0da603e6728ef3d292f98e273}{Wt\+::\+Chart\+::\+W\+Axis\+Slider\+Widget}}, \mbox{\hyperlink{classWt_1_1WStackedWidget_a7d711a2c5517b9d86b8ca8d27630965f}{Wt\+::\+W\+Stacked\+Widget}}, \mbox{\hyperlink{classWt_1_1WDateEdit_ae4205b6e25f59df190925d5bdbbaefea}{Wt\+::\+W\+Date\+Edit}}, \mbox{\hyperlink{classWt_1_1WDoubleSpinBox_a3cedd3224a0494c830f4e887c0cf09c5}{Wt\+::\+W\+Double\+Spin\+Box}}, \mbox{\hyperlink{classWt_1_1WTimeEdit_af6e16523e153b4f0c4287fae18455bc0}{Wt\+::\+W\+Time\+Edit}}, \mbox{\hyperlink{classWt_1_1WViewWidget_a3f59b92f2cc731511a39735ceb52eb6f}{Wt\+::\+W\+View\+Widget}}, \mbox{\hyperlink{classWt_1_1WPopupWidget_a0274232e09629de47a12eb57ff8c1bc0}{Wt\+::\+W\+Popup\+Widget}}, \mbox{\hyperlink{classWt_1_1Auth_1_1RegistrationWidget_ae0083ae1acf7966b36d53748200495f7}{Wt\+::\+Auth\+::\+Registration\+Widget}}, and \mbox{\hyperlink{classWt_1_1WAbstractSpinBox_a4285a583fdd8b8994c5f368d1b6f244f}{Wt\+::\+W\+Abstract\+Spin\+Box}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a54365f7acdc237895328be54969165f4}\label{classWt_1_1WWidget_a54365f7acdc237895328be54969165f4}} 
+\index{Wt::WWidget@{Wt::WWidget}!resize@{resize}}
+\index{resize@{resize}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::resize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{width,  }\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resizes the widget. 
+
+Specifies a fixed size for this widget, setting C\+SS {\ttfamily width} and {\ttfamily height} properties. By default a widget has automatic width and height, which sets a size for the widget following C\+SS rules.
+
+When the widget is not managed by a layout manager, the automatic (natural) size of a widget depends on whether they widget is a {\itshape block} or {\itshape inline} widget\+:
+\begin{DoxyItemize}
+\item a {\itshape block} widget takes by default the width of the parent, and the height that it needs based on its contents
+\item an {\itshape inline} widget takes the width and height that it needs based on its contents (possibly wrapping over multiple lines). The width and height of an inline widget cannot be changed (by the letter of C\+SS, although most browsers will react to it in varying ways).
+\end{DoxyItemize}
+
+When inserted in a layout manager, the size set will be used as a widget\textquotesingle{}s preferred size, but the widget may be given a different size by the layout manager based on available space and stretch factors. The actual size given by a layout manager may be retrieved by making the widget \char`\"{}layout size aware\char`\"{}, using \mbox{\hyperlink{classWt_1_1WWidget_a4f83592912a7f8fa4fd35dadde78ee74}{set\+Layout\+Size\+Aware()}}. If you have defined a {\ttfamily \char`\"{}wt\+Resize()\char`\"{}} Java\+Script method for the widget, then this method will also be called.
+
+The default width and height of a widget is \mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a3f423e20a9b0792c1bc3d52899065e82}{width()}}, \mbox{\hyperlink{classWt_1_1WWidget_a9454454144fe3729378c87c3b90372b4}{height()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WGLWidget_abfb8a52fffd71072d98199ef0cd4cd37}{Wt\+::\+W\+G\+L\+Widget}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesian3DChart_abd8ae104045a1243b167aa455d73f1e3}{Wt\+::\+Chart\+::\+W\+Cartesian3\+D\+Chart}}, \mbox{\hyperlink{classWt_1_1WSlider_a2e87d0679b0fcc17216ac7eccf5383aa}{Wt\+::\+W\+Slider}}, \mbox{\hyperlink{classWt_1_1WTextEdit_a74c7a38cc8da7149b12f0bd2621d0fcb}{Wt\+::\+W\+Text\+Edit}}, \mbox{\hyperlink{classWt_1_1WTreeView_afc6d07a4ee9c3a3d979ded4da4253c36}{Wt\+::\+W\+Tree\+View}}, \mbox{\hyperlink{classWt_1_1WPaintedWidget_a4dc70782b6804671589e8f0c94e16e63}{Wt\+::\+W\+Painted\+Widget}}, \mbox{\hyperlink{classWt_1_1WProgressBar_a307825614000a255d7ad5bd40263f09b}{Wt\+::\+W\+Progress\+Bar}}, \mbox{\hyperlink{classWt_1_1WTableView_aefb983487d1cbf0f76def9be472b4caa}{Wt\+::\+W\+Table\+View}}, \mbox{\hyperlink{classWt_1_1WWebWidget_a5113267dfd734df27d4b1c76e7d23abb}{Wt\+::\+W\+Web\+Widget}}, \mbox{\hyperlink{classWt_1_1WVideo_a2e43084f2c093079136f4646dff7fcc0}{Wt\+::\+W\+Video}}, \mbox{\hyperlink{classWt_1_1WCompositeWidget_a95584ea20561ba00e8c58156a24ba238}{Wt\+::\+W\+Composite\+Widget}}, and \mbox{\hyperlink{classWt_1_1WFlashObject_a1dd54a755f527db6912f0094fd177c04}{Wt\+::\+W\+Flash\+Object}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a5d3d4edaafa2d7c892a5078f3df4cf11}\label{classWt_1_1WWidget_a5d3d4edaafa2d7c892a5078f3df4cf11}} 
+\index{Wt::WWidget@{Wt::WWidget}!scheduleRender@{scheduleRender}}
+\index{scheduleRender@{scheduleRender}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{scheduleRender()}{scheduleRender()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Widget\+::schedule\+Render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ Repaint\+Flag $>$}]{flags = {\ttfamily None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Schedules rerendering of the widget. 
+
+This schedules a rendering phase after all events have been processed. This method is used internally whenever a property of a widget has been changed. But you may want to use this if you are deferring actual changes to a widget in response to an event, and instead postpone this until all events have been received.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a1f7fa7f945385d230874fad2facccbf5}{render()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WWidget_aa5ce605dd465e06f3e3c2dbce2a4098e}\label{classWt_1_1WWidget_aa5ce605dd465e06f3e3c2dbce2a4098e}} 
+\index{Wt::WWidget@{Wt::WWidget}!scrollVisibilityChanged@{scrollVisibilityChanged}}
+\index{scrollVisibilityChanged@{scrollVisibilityChanged}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{scrollVisibilityChanged()}{scrollVisibilityChanged()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$bool$>$\& Wt\+::\+W\+Widget\+::scroll\+Visibility\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} triggered when the scroll visibility of this widget changes. 
+
+The boolean parameter indicates whether the widget is currently scroll visible.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a5d403e0390841df77a23445b28044d5d}{set\+Scroll\+Visibility\+Enabled()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a3ac4848c8e5f9c038d37549bfe235b35}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a8298b9b5cfaf6826927331e86f1bde01}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_adda330649cf8a60d61fcf2604c5efcf6}\label{classWt_1_1WWidget_adda330649cf8a60d61fcf2604c5efcf6}} 
+\index{Wt::WWidget@{Wt::WWidget}!scrollVisibilityEnabled@{scrollVisibilityEnabled}}
+\index{scrollVisibilityEnabled@{scrollVisibilityEnabled}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{scrollVisibilityEnabled()}{scrollVisibilityEnabled()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Widget\+::scroll\+Visibility\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns whether scroll visibility detection is enabled for this widget. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a5d403e0390841df77a23445b28044d5d}{set\+Scroll\+Visibility\+Enabled()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a82f56ed2bc37f7e93565bccc6b8fdea0}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a2ea03827993d9112bc542d8f1e9fc2cb}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a1c96147342b1295e0243b5e2e6e28f66}\label{classWt_1_1WWidget_a1c96147342b1295e0243b5e2e6e28f66}} 
+\index{Wt::WWidget@{Wt::WWidget}!scrollVisibilityMargin@{scrollVisibilityMargin}}
+\index{scrollVisibilityMargin@{scrollVisibilityMargin}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{scrollVisibilityMargin()}{scrollVisibilityMargin()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Widget\+::scroll\+Visibility\+Margin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the margin around the viewport within which the widget is considered visible. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a57f77dcf800b37f03cfe7fea0d6f90cc}{set\+Scroll\+Visibility\+Margin()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a4be8e1e673407f04eb2b98ea0487257d}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_aa828a10f3b9d618454ed5fb51caf3b9b}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a6ba0e86277b861772470d43b16b23615}\label{classWt_1_1WWidget_a6ba0e86277b861772470d43b16b23615}} 
+\index{Wt::WWidget@{Wt::WWidget}!setAttributeValue@{setAttributeValue}}
+\index{setAttributeValue@{setAttributeValue}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setAttributeValue()}{setAttributeValue()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Attribute\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets an attribute value. 
+
+Sets the value for an H\+T\+ML attribute.
+
+This is only useful for H\+T\+ML features that are not supported directly in Wt (and beware that browsers have non-\/consistent support for many more exotic H\+T\+ML features).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}}, \mbox{\hyperlink{classWt_1_1WWidget_a2a8afe6d6f85af864df5cbd49ff6a0c5}{do\+Java\+Script()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a2a413a75768da4b05df03057ff9079c6}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_acf3c417e43c440be47514f3d01afceee}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_af8cc593162ec1ace01a0640d0759cc13}\label{classWt_1_1WWidget_af8cc593162ec1ace01a0640d0759cc13}} 
+\index{Wt::WWidget@{Wt::WWidget}!setCanReceiveFocus@{setCanReceiveFocus}}
+\index{setCanReceiveFocus@{setCanReceiveFocus}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setCanReceiveFocus()}{setCanReceiveFocus()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Can\+Receive\+Focus (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets whether the widget can receive focus. 
+
+By default, only form widgets (descendants of \mbox{\hyperlink{classWt_1_1WFormWidget}{W\+Form\+Widget}}), anchors (\mbox{\hyperlink{classWt_1_1WAnchor}{W\+Anchor}}) and buttons (\mbox{\hyperlink{classWt_1_1WPushButton}{W\+Push\+Button}}) can receive focus.
+
+Any other widget can be configured to receive focus however. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a5671b3e4c1e2fb3b848809e43953aa12}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_ad195c35f98d72e8e2fe0a4337adc427a}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a1919e2e3628bb4e4b74517605b5062c5}\label{classWt_1_1WWidget_a1919e2e3628bb4e4b74517605b5062c5}} 
+\index{Wt::WWidget@{Wt::WWidget}!setClearSides@{setClearSides}}
+\index{setClearSides@{setClearSides}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setClearSides()}{setClearSides()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Clear\+Sides (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} $>$}]{sides }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the sides that should be cleared of floats. 
+
+This pushes the widget down until it is not surrounded by floats at the {\ttfamily sides} (which may be a combination of Wt\+::\+Side\+::\+Left and Wt\+::\+Side\+::\+Right).
+
+This applies to C\+S\+S-\/based layout.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a2915d313e6934173c087bf8212024289}{set\+Float\+Side()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_ac69db18bba89eb30a25e9c5723de28b4}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_ae0d3ff3bd03bdb8f1bad56b52f01296a}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a091e1fb88d9bbd8818d061af43c618b4}\label{classWt_1_1WWidget_a091e1fb88d9bbd8818d061af43c618b4}} 
+\index{Wt::WWidget@{Wt::WWidget}!setDecorationStyle@{setDecorationStyle}}
+\index{setDecorationStyle@{setDecorationStyle}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setDecorationStyle()}{setDecorationStyle()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Decoration\+Style (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WCssDecorationStyle}{W\+Css\+Decoration\+Style}} \&}]{style }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets a C\+SS decoration style. 
+
+This copies the style over its current \mbox{\hyperlink{classWt_1_1WWidget_ac1833c7c01599b3733712ab0bf3c3a0a}{decoration\+Style()}} 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_ac7124d5d55c2505683d5330097dcec93}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_ac6ca2544ff37a55a80802436efb2dea4}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a56d7a2d9eb49b14151410e3e894ba74e}\label{classWt_1_1WWidget_a56d7a2d9eb49b14151410e3e894ba74e}} 
+\index{Wt::WWidget@{Wt::WWidget}!setDeferredToolTip@{setDeferredToolTip}}
+\index{setDeferredToolTip@{setDeferredToolTip}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setDeferredToolTip()}{setDeferredToolTip()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Deferred\+Tool\+Tip (\begin{DoxyParamCaption}\item[{bool}]{enable,  }\item[{\mbox{\hyperlink{classWt_a140dea437d52d3d7c438ea3bd16a1480}{Text\+Format}}}]{text\+Format = {\ttfamily TextFormat\+:\+:Plain} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Enable deferred tooltip. 
+
+You may override \mbox{\hyperlink{classWt_1_1WWidget_ae67a8d8c573e44f02ab165fe80b2eec6}{tool\+Tip()}} to read data only when the user hovers over the widget.
+
+When {\ttfamily text\+Format} is Text\+Format\+::\+X\+H\+T\+ML, the tooltip may contain any valid X\+H\+T\+ML snippet. The tooltip will then be rendered using Java\+Script.
+
+\mbox{\hyperlink{classNote}{Note}}\+: To change existing tool\+Tip call \mbox{\hyperlink{classWt_1_1WWidget_a56d7a2d9eb49b14151410e3e894ba74e}{set\+Deferred\+Tool\+Tip()}} again.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_ae67a8d8c573e44f02ab165fe80b2eec6}{tool\+Tip}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a6bcd4bc75d854f818e4a9a732415c9d1}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a69a83211acaadeb7d7ecc317782c8a3e}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_ae29fe35b633ec166f922419cd3ca9d96}\label{classWt_1_1WWidget_ae29fe35b633ec166f922419cd3ca9d96}} 
+\index{Wt::WWidget@{Wt::WWidget}!setDisabled@{setDisabled}}
+\index{setDisabled@{setDisabled}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setDisabled()}{setDisabled()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Disabled (\begin{DoxyParamCaption}\item[{bool}]{disabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets whether the widget is disabled. 
+
+Enables or disables the widget (including all its descendant widgets). set\+Disabled(false) will enable this widget and all descendant widgets that are not disabled. A widget is only enabled if it and all its ancestors in the widget tree are disabled.
+
+Typically, a disabled form widget will not allow changing the value, and disabled widgets will not react to mouse click events.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a5f68ea0ab29adfb8e559153fca281e03}{disable()}}, \mbox{\hyperlink{classWt_1_1WWidget_ae6935d8baca9d37dd1d080b4383da87c}{enable()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WMenuItem_a0a74ca30abe0a1767d94678ea73393e9}{Wt\+::\+W\+Menu\+Item}}, \mbox{\hyperlink{classWt_1_1WSlider_a1e16309075eb8dd47e8fd30a0a34e71b}{Wt\+::\+W\+Slider}}, \mbox{\hyperlink{classWt_1_1WDatePicker_a3857c9acd9bebdb139b31c78ced436ea}{Wt\+::\+W\+Date\+Picker}}, \mbox{\hyperlink{classWt_1_1WWebWidget_a87ad1dbe635cb0b52bd491d8108d55cf}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a578c8fb9c949486af93d7d16b232d6a1}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_abd90289445621c396c115c1ce432421c}\label{classWt_1_1WWidget_abd90289445621c396c115c1ce432421c}} 
+\index{Wt::WWidget@{Wt::WWidget}!setFirstFocus@{setFirstFocus}}
+\index{setFirstFocus@{setFirstFocus}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setFirstFocus()}{setFirstFocus()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Widget\+::set\+First\+Focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Set focus on the widget\textquotesingle{}s first descendant. 
+
+Set focus on the widget itself, or on a first descendant which can receive focus.
+
+Returns whether focus could be set. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a43bf7b82ad6220cc9ef87c06f5744973}{Wt\+::\+W\+Web\+Widget}}, \mbox{\hyperlink{classWt_1_1WPushButton_ad3ef123dc15dc3f9e2ef34786c9e16a2}{Wt\+::\+W\+Push\+Button}}, \mbox{\hyperlink{classWt_1_1WAnchor_a3a7c2a1714ebdb0c9408b1227933a78f}{Wt\+::\+W\+Anchor}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_aa8ecf956029521a8ebc3ad9bc54dea4e}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a2915d313e6934173c087bf8212024289}\label{classWt_1_1WWidget_a2915d313e6934173c087bf8212024289}} 
+\index{Wt::WWidget@{Wt::WWidget}!setFloatSide@{setFloatSide}}
+\index{setFloatSide@{setFloatSide}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setFloatSide()}{setFloatSide()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Float\+Side (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}}}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Specifies a C\+SS float side. 
+
+This only applies to widgets with a Wt\+::\+Position\+Scheme\+::\+Static \mbox{\hyperlink{classWt_1_1WWidget_aea3a7c21d936d34f28b42143aba4edd5}{position\+Scheme()}}.
+
+This lets the widget float to one of the sides of the parent widget, at the current line. A typical use is to position images within text. Valid values for Side Side\+::\+Left, or Side\+::\+Right.
+
+This applies to C\+S\+S-\/based layout. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a5a7dc68330fcca06af8902a96b802ab0}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a55a148829deaee2136fd349603a04403}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a49b5c27de386b34ab0eecb712864a3a8}\label{classWt_1_1WWidget_a49b5c27de386b34ab0eecb712864a3a8}} 
+\index{Wt::WWidget@{Wt::WWidget}!setFocus@{setFocus}}
+\index{setFocus@{setFocus}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setFocus()}{setFocus()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Widget\+::set\+Focus (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sets focus. 
+
+This only has an effect for a widget which can receive focus, and is equivalent to set\+Focus(true).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_af8cc593162ec1ace01a0640d0759cc13}{set\+Can\+Receive\+Focus()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WWidget_aee0ea3cc14a53876cbae5b4f95813a3a}\label{classWt_1_1WWidget_aee0ea3cc14a53876cbae5b4f95813a3a}} 
+\index{Wt::WWidget@{Wt::WWidget}!setFocus@{setFocus}}
+\index{setFocus@{setFocus}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setFocus()}{setFocus()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Focus (\begin{DoxyParamCaption}\item[{bool}]{focus }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets focus. 
+
+When using {\ttfamily focus} = {\ttfamily false}, you can undo a previous \mbox{\hyperlink{classWt_1_1WWidget_a49b5c27de386b34ab0eecb712864a3a8}{set\+Focus()}} call. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a1eebc89432908ec7004f993d56bf6915}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a316537ab387d38597aad5e354649b316}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a7d82ee32496743fdd28b30461f95d5ec}\label{classWt_1_1WWidget_a7d82ee32496743fdd28b30461f95d5ec}} 
+\index{Wt::WWidget@{Wt::WWidget}!setHeight@{setHeight}}
+\index{setHeight@{setHeight}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setHeight()}{setHeight()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Widget\+::set\+Height (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{height }\end{DoxyParamCaption})}
+
+
+
+Sets the height. 
+
+This is a convenience method to change only the height of a widget, and is implemented as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WWidget_a54365f7acdc237895328be54969165f4}{resize}}(\mbox{\hyperlink{classWt_1_1WWidget_a3f423e20a9b0792c1bc3d52899065e82}{width}}(), \mbox{\hyperlink{classWt_1_1WWidget_a9454454144fe3729378c87c3b90372b4}{height}})}
+\end{DoxyCode}
+
+
+This applies to C\+S\+S-\/based layout.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a54365f7acdc237895328be54969165f4}{resize()}}, \mbox{\hyperlink{classWt_1_1WWidget_afc4bfcc92fa39010cac8775f3332dfa5}{set\+Width()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WWidget_a66bdda41220267a8c7ff9865996e2675}\label{classWt_1_1WWidget_a66bdda41220267a8c7ff9865996e2675}} 
+\index{Wt::WWidget@{Wt::WWidget}!setHidden@{setHidden}}
+\index{setHidden@{setHidden}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setHidden()}{setHidden()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Hidden (\begin{DoxyParamCaption}\item[{bool}]{hidden,  }\item[{const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&}]{animation = {\ttfamily \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Hides or shows the widget. 
+
+Hides or show the widget (including all its descendant widgets). When setting {\ttfamily hidden} = {\ttfamily false}, this widget and all descendant widgets that are not hidden will be shown. A widget is only visible if it and all its ancestors in the widget tree are visible, which may be checked using \mbox{\hyperlink{classWt_1_1WWidget_a450f94dc5a28737625cdb6bde3fdc788}{is\+Visible()}}. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WMenuItem_a288ce06a0de2cda2eecfb71d96f21f0e}{Wt\+::\+W\+Menu\+Item}}, \mbox{\hyperlink{classWt_1_1WDialog_a463eff1cca2623aed12f80c86e3ce331}{Wt\+::\+W\+Dialog}}, \mbox{\hyperlink{classWt_1_1WMessageBox_aaf4e30f472f3cf21a404a309c2c10013}{Wt\+::\+W\+Message\+Box}}, \mbox{\hyperlink{classWt_1_1WPopupMenu_a87952f97b56ce078639c762c2b314bf5}{Wt\+::\+W\+Popup\+Menu}}, \mbox{\hyperlink{classWt_1_1WDatePicker_a6b980e46ea9e1facb4a2d39006b2e464}{Wt\+::\+W\+Date\+Picker}}, \mbox{\hyperlink{classWt_1_1WTableView_a7a0d8437e94be761b7e02529753274e3}{Wt\+::\+W\+Table\+View}}, \mbox{\hyperlink{classWt_1_1WDateEdit_aaa34f03860ab1e4099203cfe521c1f16}{Wt\+::\+W\+Date\+Edit}}, \mbox{\hyperlink{classWt_1_1WWebWidget_a9adb6f6fe79146883c423f4b5684aa40}{Wt\+::\+W\+Web\+Widget}}, \mbox{\hyperlink{classWt_1_1WCompositeWidget_a7670a0e7c0f9582cbd769111fd58ed42}{Wt\+::\+W\+Composite\+Widget}}, \mbox{\hyperlink{classWt_1_1WPopupWidget_a14a014c21069fc293bf73ebb3a17475d}{Wt\+::\+W\+Popup\+Widget}}, \mbox{\hyperlink{classWt_1_1WTimeEdit_ae132039a83dae4299a0667d0f91fad20}{Wt\+::\+W\+Time\+Edit}}, \mbox{\hyperlink{classWt_1_1WFormWidget_a4f84feb567f0d56c07e9dfdb3b84512e}{Wt\+::\+W\+Form\+Widget}}, \mbox{\hyperlink{classOption_a5b3e0fd43ddf77552bb0b1a3cbe72499}{Option}}, and \mbox{\hyperlink{classAddresseeEdit_ac85375f2f0716c10742daf777ed1ae83}{Addressee\+Edit}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a8cd985ab1dfcee828c7b6189a7e052a5}\label{classWt_1_1WWidget_a8cd985ab1dfcee828c7b6189a7e052a5}} 
+\index{Wt::WWidget@{Wt::WWidget}!setHiddenKeepsGeometry@{setHiddenKeepsGeometry}}
+\index{setHiddenKeepsGeometry@{setHiddenKeepsGeometry}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setHiddenKeepsGeometry()}{setHiddenKeepsGeometry()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Hidden\+Keeps\+Geometry (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets whether the widget keeps its geometry when hidden. 
+
+Normally, a widget that is hidden will no longer occupy space, causing a reflow of sibling widgets. Using this method you may change this behavior to keep an (open) space when hidden.
+
+\begin{DoxyNote}{Note}
+Currently you can only set this before initial rendering.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a66bdda41220267a8c7ff9865996e2675}{set\+Hidden()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a941e9bafd1b18baada7bf5e1674a0237}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_aff04a9c434ae0af902654c4aca04e512}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a93ff9d1ca04e733cd54cd40a06775f7e}\label{classWt_1_1WWidget_a93ff9d1ca04e733cd54cd40a06775f7e}} 
+\index{Wt::WWidget@{Wt::WWidget}!setId@{setId}}
+\index{setId@{setId}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Id (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the C\+SS Id. 
+
+Sets a custom Id. \mbox{\hyperlink{classNote}{Note}} that the Id must be unique across the whole widget tree, can only be set right after construction and cannot be changed. This is mostly useful for in tests using a test plan that manipulates D\+OM elements by Id.
+
+By default, auto-\/generated id\textquotesingle{}s are used.
+
+\begin{DoxyNote}{Note}
+An id must start with a letter (\mbox{[}A-\/\+Za-\/z\mbox{]}), followed by one or more letters, digits (\mbox{[}0-\/9\mbox{]}), hyphens (\char`\"{}-\/\char`\"{}), underscores (\char`\"{}\+\_\+\char`\"{}), colons (\char`\"{}\+:\char`\"{}), and periods (\char`\"{}.\char`\"{}).
+\end{DoxyNote}
+\begin{DoxyWarning}{Warning}
+We recommend that you leave the id of a widget unchanged. Wt uses the id to identify widgets in the Java\+Script it generates, and this can often leads to bugs. If you do change the id, {\bfseries{only}} change the id right after widget construction. However, usually there\textquotesingle{}s a more preferable alternative, like setting the object name (\mbox{\hyperlink{classWt_1_1WObject_a875fda02eff6260ab665647f7215e262}{W\+Object\+::set\+Object\+Name}}), or adding style classes (\mbox{\hyperlink{classWt_1_1WWidget_a8a8f4537dd93462c063cb02cddec2ea3}{W\+Widget\+::add\+Style\+Class}}).
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WObject_a9f34b0c9ec343cf467f8b237d3256792}{W\+Object\+::id()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WTreeView_a99974e8fc9ce45f2952280e1174aa0f4}{Wt\+::\+W\+Tree\+View}}, \mbox{\hyperlink{classWt_1_1WWebWidget_abeefcf1a85aa93308d4a1364c29fc4da}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a37e6c2b356362866dba89da9e4082bec}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_ac78e3af143883334c82031790c87416e}\label{classWt_1_1WWidget_ac78e3af143883334c82031790c87416e}} 
+\index{Wt::WWidget@{Wt::WWidget}!setInline@{setInline}}
+\index{setInline@{setInline}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setInline()}{setInline()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Inline (\begin{DoxyParamCaption}\item[{bool}]{inlined }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets whether the widget is displayed inline or as a block. 
+
+This option changes whether this widget must be rendered in line with sibling widgets wrapping at the right edge of the parent container (like text), or whether this widget must be rendered as a rectangular block that stacks vertically with sibling widgets (unless a C\+SS float property is applied). Depending on the widget type, the default value is inline (such as for example for \mbox{\hyperlink{classWt_1_1WText}{W\+Text}}, or \mbox{\hyperlink{classWt_1_1WPushButton}{W\+Push\+Button}}), or block (such as for example for a \mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}}).
+
+This applies to C\+S\+S-\/based layout. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a8dd675df2e8d34d8bce404d3bd38e60e}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a8739d8b9eb16b5b3f59eb95393bb098a}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_ab876fc1b7d2e4e5dfc631e380d406ae2}\label{classWt_1_1WWidget_ab876fc1b7d2e4e5dfc631e380d406ae2}} 
+\index{Wt::WWidget@{Wt::WWidget}!setJavaScriptMember@{setJavaScriptMember}}
+\index{setJavaScriptMember@{setJavaScriptMember}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setJavaScriptMember()}{setJavaScriptMember()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Java\+Script\+Member (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets a Java\+Script member. 
+
+This binds a Java\+Script member, which is set as a Java\+Script property to the D\+OM object that implements this widget. The value may be any Java\+Script expression, including a function.
+
+Members that start with {\ttfamily \char`\"{}wt\char`\"{}} are reserved for internal use. You may define a member {\ttfamily \char`\"{}wt\+Resize(self, width,
+height)\char`\"{}} method if your widget needs active layout management. If defined, this method will be used by layout managers and when doing \mbox{\hyperlink{classWt_1_1WWidget_a54365f7acdc237895328be54969165f4}{resize()}} to set the size of the widget, instead of setting the C\+SS width and height properties. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_af38dbe0d5a1e8ee53796402f9dc9ff06}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_ac1a382ed6e73fc2af524d6432465c2ce}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a4f83592912a7f8fa4fd35dadde78ee74}\label{classWt_1_1WWidget_a4f83592912a7f8fa4fd35dadde78ee74}} 
+\index{Wt::WWidget@{Wt::WWidget}!setLayoutSizeAware@{setLayoutSizeAware}}
+\index{setLayoutSizeAware@{setLayoutSizeAware}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setLayoutSizeAware()}{setLayoutSizeAware()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Widget\+::set\+Layout\+Size\+Aware (\begin{DoxyParamCaption}\item[{bool}]{size\+Aware }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Sets the widget to be aware of its size set by a layout manager. 
+
+When the widget is inserted in a layout manager, it will be resized to fit within the constraints imposed by the layout manager. By default, this done client-\/side only by setting the C\+SS height (and if needed, width) properties of the D\+OM element corresponding to the widget.
+
+A widget may define a Java\+Script method, {\ttfamily \char`\"{}wt\+Resize(self,
+width, height)\char`\"{}}, to actively manage its client-\/side width and height, if it wants to react to these client-\/side size hints in a custom way (see \mbox{\hyperlink{classWt_1_1WWidget_ab876fc1b7d2e4e5dfc631e380d406ae2}{set\+Java\+Script\+Member()}}).
+
+By setting {\ttfamily size\+Aware} to true, the widget will propagate the width and height provided by the layout manager to the virtual \mbox{\hyperlink{classWt_1_1WWidget_a1a4397e904a92b833fad8526d645f7ab}{layout\+Size\+Changed()}} method, so that you may for example change the size of contained children in a particular way (doing a custom, manual, layout).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a1a4397e904a92b833fad8526d645f7ab}{layout\+Size\+Changed()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WWidget_a058b4e5641f41d3fa9a50bfa6f339408}\label{classWt_1_1WWidget_a058b4e5641f41d3fa9a50bfa6f339408}} 
+\index{Wt::WWidget@{Wt::WWidget}!setMargin@{setMargin}}
+\index{setMargin@{setMargin}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setMargin()}{setMargin()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Margin (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{margin,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} $>$}]{sides = {\ttfamily AllSides} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets C\+SS margins around the widget. 
+
+Setting margin has the effect of adding a distance between the widget and surrounding widgets. The default margin (with an automatic length) is zero.
+
+Use any combination of Wt\+::\+Side\+::\+Left, Wt\+::\+Side\+::\+Right, Wt\+::\+Side\+::\+Bottom, or Wt\+::\+Side\+::\+Top.
+
+This applies to C\+S\+S-\/based layout.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a8b7c40b966518e22543d290229fbd29f}{margin()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a4b1c84c6e6b0b3596ab73c453c4cdb70}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_ae67717a740b9dcbe3133594e23637315}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_af023064cf8007bda6baeb5277d79bbd9}\label{classWt_1_1WWidget_af023064cf8007bda6baeb5277d79bbd9}} 
+\index{Wt::WWidget@{Wt::WWidget}!setMaximumSize@{setMaximumSize}}
+\index{setMaximumSize@{setMaximumSize}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setMaximumSize()}{setMaximumSize()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Maximum\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{width,  }\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets a maximum size. 
+
+Specifies a maximum size for this widget, setting C\+SS {\ttfamily max-\/width} and {\ttfamily max-\/height} properties.
+
+The default the maximum width and height are \mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}}, indicating no maximum size. A Length\+Unit\+::\+Percentage size should not be used, as this is (in virtually all cases) undefined behaviour.
+
+When the widget is a container widget that contains a layout manager, then setting a maximum size will have the effect of letting the size of the container to reflect the preferred size of the contents (rather than constraining the size of the children based on the size of the container), up to the specified maximum size.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a54365f7acdc237895328be54969165f4}{resize()}}, \mbox{\hyperlink{classWt_1_1WWidget_a092c7d1ecfde7f004ef120389d91775d}{set\+Minimum\+Size()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WDialog_acc3bfa4afea05c8ed342620da9dd897f}{Wt\+::\+W\+Dialog}}, \mbox{\hyperlink{classWt_1_1WPopupMenu_a84fd240c9f76809a3d6b7d9a18c87817}{Wt\+::\+W\+Popup\+Menu}}, \mbox{\hyperlink{classWt_1_1WWebWidget_ad8aa8bec911b7af4907d251b76bbd502}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a8d6e43eec426afb7d96a200abe246ad7}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a092c7d1ecfde7f004ef120389d91775d}\label{classWt_1_1WWidget_a092c7d1ecfde7f004ef120389d91775d}} 
+\index{Wt::WWidget@{Wt::WWidget}!setMinimumSize@{setMinimumSize}}
+\index{setMinimumSize@{setMinimumSize}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setMinimumSize()}{setMinimumSize()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Minimum\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{width,  }\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets a minimum size. 
+
+Specifies a minimum size for this widget, setting C\+SS {\ttfamily min-\/width} and {\ttfamily min-\/height} properties.
+
+The default minimum width and height is 0. The special value \mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}} indicates that the initial width is used as minimum size. A Length\+Unit\+::\+Percentage size should not be used, as this is (in virtually all cases) undefined behaviour.
+
+When the widget is inserted in a layout manager, then the minimum size will be taken into account.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a54365f7acdc237895328be54969165f4}{resize()}}, \mbox{\hyperlink{classWt_1_1WWidget_af5847c8028f501b51d74184107ccdde6}{minimum\+Width()}}, \mbox{\hyperlink{classWt_1_1WWidget_a411b6bbac918eeb19946d65c4352beb1}{minimum\+Height()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WDialog_adeca1bfc134d8c41e9e658c46025b246}{Wt\+::\+W\+Dialog}}, \mbox{\hyperlink{classWt_1_1WPopupMenu_a4a66d28d48e870e2302457f9ecce88d3}{Wt\+::\+W\+Popup\+Menu}}, \mbox{\hyperlink{classWt_1_1WWebWidget_a6633bc9e7a437bd1827e68a779c76947}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a562d90c7e7aa813a202605e5cd522cfa}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a730c10f642915f724f616ad4bebd2fca}\label{classWt_1_1WWidget_a730c10f642915f724f616ad4bebd2fca}} 
+\index{Wt::WWidget@{Wt::WWidget}!setOffsets@{setOffsets}}
+\index{setOffsets@{setOffsets}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setOffsets()}{setOffsets()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Offsets (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{offset,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} $>$}]{sides = {\ttfamily AllSides} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets C\+SS offsets for a non-\/statically positioned widget. 
+
+The argument {\ttfamily sides} may be a combination of Wt\+::\+Side\+::\+Left, Wt\+::\+Side\+::\+Right, Wt\+::\+Side\+::\+Top, and Wt\+::\+Side\+::\+Bottom.
+
+This applies only to widgets that have a position scheme that is Wt\+::\+Position\+Scheme\+::\+Relative, Wt\+::\+Position\+Scheme\+::\+Absolute, or Wt\+::\+Position\+Scheme\+::\+Fixed, and has a slightly different meaning for these three cases.
+
+For a \mbox{\hyperlink{}{relatively positioned}} widget, an offset applies relative to the position the widget would have when layed-\/out using a \mbox{\hyperlink{}{static}} position scheme. The widget may be shifted to the left or right by specifying an offset for the \mbox{\hyperlink{}{left}} or \mbox{\hyperlink{}{right}}) side. The widget may be shifted vertically, by specifying an offset for the \mbox{\hyperlink{}{top}} or \mbox{\hyperlink{}{bottom}} side.
+
+For an \mbox{\hyperlink{}{absolutely positioned}} widget, an offset specifies a distance of the corresponding side of the widget with respect to the corresponding side of the reference parent widget. Thus, setting all offsets to 0 result in a widget that spans the entire reference widget. The reference parent widget is the first ancestor widget that is a table cell, or a widget with a relative, absolute or fixed position scheme.
+
+For an \mbox{\hyperlink{}{fixed positioned}} widget, an offset specifies a distance of the corresponding side of the widget with respect to the browser window, regardless of scrolling. Thus, setting all offsets to 0 result in a widget that spans the entire browser window.
+
+This applies to C\+S\+S-\/based layout.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a08e07b6d0ca355a3fe2c7dead3dde228}{offset(\+Side) const}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a3b04d3e906cc1d8163f9f3896512627d}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_afb77ef7bc6c9ad71a2fe8622c98a6fdb}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a3890a2ef04571b6d36e7468583457091}\label{classWt_1_1WWidget_a3890a2ef04571b6d36e7468583457091}} 
+\index{Wt::WWidget@{Wt::WWidget}!setPopup@{setPopup}}
+\index{setPopup@{setPopup}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setPopup()}{setPopup()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Popup (\begin{DoxyParamCaption}\item[{bool}]{popup }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Lets the widget overlay over other sibling widgets. 
+
+A widget that \mbox{\hyperlink{classWt_1_1WWidget_a29f3361a8c518dabc1251892da55dd6d}{is\+Popup()}} will be rendered on top of any other sibling widget contained within the same parent (including other popup widgets previously added to the container).
+
+This will only have an effect when the widgetis either Wt\+::\+Position\+Scheme\+::\+Absolute or Wt\+::\+Position\+Scheme\+::\+Fixed \mbox{\hyperlink{classWt_1_1WWidget_aea3a7c21d936d34f28b42143aba4edd5}{position\+Scheme()}}.
+
+This applies to C\+S\+S-\/based layout, and configures the z-\/index property. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WInteractWidget_a1be1ab5959fe8151a0de98c529150488}{Wt\+::\+W\+Interact\+Widget}}, \mbox{\hyperlink{classWt_1_1WWebWidget_a2dedbbac99ee782e323e5e7b50ec2032}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_afab5a535654e54ef64dab04443300aee}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_ae15ffe92fdc5c394013d61b5bebb2f11}\label{classWt_1_1WWidget_ae15ffe92fdc5c394013d61b5bebb2f11}} 
+\index{Wt::WWidget@{Wt::WWidget}!setPositionScheme@{setPositionScheme}}
+\index{setPositionScheme@{setPositionScheme}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setPositionScheme()}{setPositionScheme()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Position\+Scheme (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a2551043da5512cfe7b857c5db6e5ae40}{Position\+Scheme}}}]{scheme }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the C\+SS position scheme. 
+
+Establishes how the widget must be layed-\/out relative to its siblings. The default position scheme is Position\+Scheme\+::\+Static.
+
+This applies to C\+S\+S-\/based layout.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_a2551043da5512cfe7b857c5db6e5ae40}{Wt\+::\+Position\+Scheme}}, \mbox{\hyperlink{classWt_1_1WWidget_aea3a7c21d936d34f28b42143aba4edd5}{position\+Scheme()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a986206da8821f5ed820631cd63ab99b7}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_aac60a512b57cf3da450abed0faa1355e}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a5d403e0390841df77a23445b28044d5d}\label{classWt_1_1WWidget_a5d403e0390841df77a23445b28044d5d}} 
+\index{Wt::WWidget@{Wt::WWidget}!setScrollVisibilityEnabled@{setScrollVisibilityEnabled}}
+\index{setScrollVisibilityEnabled@{setScrollVisibilityEnabled}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setScrollVisibilityEnabled()}{setScrollVisibilityEnabled()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Scroll\+Visibility\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets whether scroll visibility detection is enabled for this widget. 
+
+Disabled by default. When enabled, the client keeps track of whether this widget is currently visible inside of the browser window. A widget is \char`\"{}scroll visible\char`\"{} if it is currently visible according to \mbox{\hyperlink{classWt_1_1WWidget_a450f94dc5a28737625cdb6bde3fdc788}{is\+Visible()}}, and its position is inside of the browser window, with an extra margin determined by \mbox{\hyperlink{classWt_1_1WWidget_a1c96147342b1295e0243b5e2e6e28f66}{scroll\+Visibility\+Margin()}}.
+
+If scroll visibility changes, the \mbox{\hyperlink{classWt_1_1WWidget_aa5ce605dd465e06f3e3c2dbce2a4098e}{scroll\+Visibility\+Changed()}} signal is fired, and \mbox{\hyperlink{classWt_1_1WWidget_a0feab16b8797b4f023aafd7e33ffef26}{is\+Scroll\+Visible()}} is updated.
+
+This feature can be useful to implement infinite scroll, where a sentinel widget placed at the bottom of the page causes more content to be loaded when it becomes visible, see the {\ttfamily scrollvisibility} example.
+
+This feature can also be used to lazy load widgets when they become visible.
+
+\begin{DoxyNote}{Note}
+If the widget is \char`\"{}scroll visible\char`\"{} when scroll visibility detection is first enabled, the \mbox{\hyperlink{classWt_1_1WWidget_aa5ce605dd465e06f3e3c2dbce2a4098e}{scroll\+Visibility\+Changed()}} signal will be emitted. If it is outside of the browser\textquotesingle{}s viewport when first enabled, the \mbox{\hyperlink{classWt_1_1WWidget_aa5ce605dd465e06f3e3c2dbce2a4098e}{scroll\+Visibility\+Changed()}} signal will not be emitted. 
+
+If scroll visibility is enabled, disabled, and then enabled again, \mbox{\hyperlink{classWt_1_1WWidget_a0feab16b8797b4f023aafd7e33ffef26}{is\+Scroll\+Visible()}} may not be correctly updated, and \mbox{\hyperlink{classWt_1_1WWidget_aa5ce605dd465e06f3e3c2dbce2a4098e}{scroll\+Visibility\+Changed()}} may not be correctly emitted, because then \mbox{\hyperlink{classWt}{Wt}} can\textquotesingle{}t properly keep track of the state that the widget is in on the client side. This feature is not intended to be toggled on and off, but rather enabled once and disabled once after that. 
+\end{DoxyNote}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_aa7dd49ec41b81137185d5fc260bb45ef}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a53357b130a016da0af951000200089e7}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a57f77dcf800b37f03cfe7fea0d6f90cc}\label{classWt_1_1WWidget_a57f77dcf800b37f03cfe7fea0d6f90cc}} 
+\index{Wt::WWidget@{Wt::WWidget}!setScrollVisibilityMargin@{setScrollVisibilityMargin}}
+\index{setScrollVisibilityMargin@{setScrollVisibilityMargin}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setScrollVisibilityMargin()}{setScrollVisibilityMargin()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Scroll\+Visibility\+Margin (\begin{DoxyParamCaption}\item[{int}]{margin }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the margin around the viewport within which the widget is considered visible. 
+
+This causes the widget to be considered \char`\"{}scroll visible\char`\"{} before it is within the viewport. Setting this margin could be useful to trigger the loading of content before it is in view. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_ad3aefb0b1051ef9ea176afa5ba5e414e}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a849f88bed5fd23ce64c319ad737ea90a}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a3ccd308793bbf124aa2aeebfb1b4f42e}\label{classWt_1_1WWidget_a3ccd308793bbf124aa2aeebfb1b4f42e}} 
+\index{Wt::WWidget@{Wt::WWidget}!setSelectable@{setSelectable}}
+\index{setSelectable@{setSelectable}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setSelectable()}{setSelectable()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Selectable (\begin{DoxyParamCaption}\item[{bool}]{selectable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets as selectable. 
+
+When a widget is made unselectable, a selection of text (or images) will not be visible (but may still be possible).
+
+By default, the widget inherits this property from its parent, and this property propagates to all children. The top level container (\mbox{\hyperlink{classWt_1_1WApplication_a485af3ad2b758931edbde77fcf529981}{W\+Application\+::root()}}) selectable by default. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WMenuItem_a0474c427d515fa4caee5e3d555a711ef}{Wt\+::\+W\+Menu\+Item}}, \mbox{\hyperlink{classWt_1_1WTreeNode_ac9ba44fb7b14a65874ab9eccd7469f36}{Wt\+::\+W\+Tree\+Node}}, \mbox{\hyperlink{classWt_1_1WWebWidget_a76fd9cb9ed25a0a01f1b574da64cd264}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_aed964e6edf25a065e9b65915b54b5bc0}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a1845d1e92aa82b7772ca2295b8571296}\label{classWt_1_1WWidget_a1845d1e92aa82b7772ca2295b8571296}} 
+\index{Wt::WWidget@{Wt::WWidget}!setStyleClass@{setStyleClass}}
+\index{setStyleClass@{setStyleClass}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setStyleClass()}{setStyleClass()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Style\+Class (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{style\+Class }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets (one or more) C\+SS style classes. 
+
+You may set one or more space separated style classes. C\+SS style class works in conjunction with style sheet, and provides a flexible way to provide many widgets the same markup.
+
+Setting an empty string removes the style class(es).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_a6a9a20d65ce9e7c2f62b27387c94e10d}{W\+Application\+::style\+Sheet()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a357e2e1c665808cc19f38ae5a6acd50b}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a0144ca79ca3c52193be252c6034e87d1}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_aeca7e1e9852d83067b3834078378f22d}\label{classWt_1_1WWidget_aeca7e1e9852d83067b3834078378f22d}} 
+\index{Wt::WWidget@{Wt::WWidget}!setTabIndex@{setTabIndex}}
+\index{setTabIndex@{setTabIndex}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setTabIndex()}{setTabIndex()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Tab\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the tab index. 
+
+For widgets that receive focus (\mbox{\hyperlink{classWt_1_1WWidget_aa66f7106435c5418ba986909a00ee8f1}{can\+Receive\+Focus()}}), focus is passed on to the next widget in the {\itshape tabbing chain} based on their tab index. When the user navigates through form widgets using the keyboard, widgets receive focus starting from the element with the lowest tab index to elements with the highest tab index.
+
+Widgets with a same tab index will receive focus in the same order as they are inserted in the widget tree.
+
+The default tab index is 0 (for a widget that can receive focus).
+
+\begin{DoxySeeAlso}{See also}
+set\+Tab\+Order() 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a1cb80e4884f2f80abd297d6102bcb679}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a67def271a82f6fc577d090b11ff6ac7e}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_ae1e28bff803905ca8625c1fb722f3d21}\label{classWt_1_1WWidget_ae1e28bff803905ca8625c1fb722f3d21}} 
+\index{Wt::WWidget@{Wt::WWidget}!setThemeStyleEnabled@{setThemeStyleEnabled}}
+\index{setThemeStyleEnabled@{setThemeStyleEnabled}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setThemeStyleEnabled()}{setThemeStyleEnabled()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Theme\+Style\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets whether theme styling for a widget is enabled or disabled. 
+
+By default all widgets are styled according to the chosen theme. Disabling the theme style could be useful to completely customize the style of the widget outside of the theme.
+
+\begin{DoxyNote}{Note}
+This should be changed after the construction but before the rendering of the widget. 
+\end{DoxyNote}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_abd6161fc4adcf74130ddf9bcd535dffa}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a0fd1d0821088bbf88fd6a1db23f5d299}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a918513c29a40b49e60c5735017db05ed}\label{classWt_1_1WWidget_a918513c29a40b49e60c5735017db05ed}} 
+\index{Wt::WWidget@{Wt::WWidget}!setToolTip@{setToolTip}}
+\index{setToolTip@{setToolTip}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setToolTip()}{setToolTip()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Tool\+Tip (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text,  }\item[{\mbox{\hyperlink{classWt_a140dea437d52d3d7c438ea3bd16a1480}{Text\+Format}}}]{text\+Format = {\ttfamily TextFormat\+:\+:Plain} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets a tooltip. 
+
+The tooltip is displayed when the cursor hovers over the widget.
+
+When {\ttfamily text\+Format} is Text\+Format\+::\+X\+H\+T\+ML, the tooltip may contain any valid X\+H\+T\+ML snippet. The tooltip will then be rendered using Java\+Script.
+
+\mbox{\hyperlink{classNote}{Note}}\+: This will set deferred tooltip to false.
+
+\begin{DoxySeeAlso}{See also}
+set\+Deferred\+Tooltip() 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a62210b8b33c0b92e1e9a552ab259f533}{Wt\+::\+W\+Web\+Widget}}, \mbox{\hyperlink{classWt_1_1WFormWidget_ae4f81e36fefb003420b9d93e5642ba91}{Wt\+::\+W\+Form\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a7f2b2d1b7e1ffd4a52ee862f539662b0}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a4f911e2f62cf35c34cb603eaca0d9a3f}\label{classWt_1_1WWidget_a4f911e2f62cf35c34cb603eaca0d9a3f}} 
+\index{Wt::WWidget@{Wt::WWidget}!setVerticalAlignment@{setVerticalAlignment}}
+\index{setVerticalAlignment@{setVerticalAlignment}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setVerticalAlignment()}{setVerticalAlignment()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::set\+Vertical\+Alignment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}}}]{alignment,  }\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{length = {\ttfamily \mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the vertical alignment. 
+
+This only applies to inline widgets, and determines how to position itself on the current line, with respect to sibling inline widgets.
+
+This applies to C\+S\+S-\/based layout. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WCompositeWidget_a80f7b668bbbfcea4e3898334bc46922d}{Wt\+::\+W\+Composite\+Widget}}, and \mbox{\hyperlink{classWt_1_1WWebWidget_a8c0ef327cde2fc1e25fd25704efc3bb5}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_afc4bfcc92fa39010cac8775f3332dfa5}\label{classWt_1_1WWidget_afc4bfcc92fa39010cac8775f3332dfa5}} 
+\index{Wt::WWidget@{Wt::WWidget}!setWidth@{setWidth}}
+\index{setWidth@{setWidth}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{setWidth()}{setWidth()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Widget\+::set\+Width (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{width }\end{DoxyParamCaption})}
+
+
+
+Sets the width. 
+
+This is a convenience method to change only the width of a widget, and is implemented as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WWidget_a54365f7acdc237895328be54969165f4}{resize}}(\mbox{\hyperlink{classWt_1_1WWidget_a3f423e20a9b0792c1bc3d52899065e82}{width}}, \mbox{\hyperlink{classWt_1_1WWidget_a9454454144fe3729378c87c3b90372b4}{height}}())}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a54365f7acdc237895328be54969165f4}{resize()}}, \mbox{\hyperlink{classWt_1_1WWidget_a7d82ee32496743fdd28b30461f95d5ec}{set\+Height()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WWidget_a52dcef5a385ddfa0a8c3e6c20000f181}\label{classWt_1_1WWidget_a52dcef5a385ddfa0a8c3e6c20000f181}} 
+\index{Wt::WWidget@{Wt::WWidget}!show@{show}}
+\index{show@{show}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Widget\+::show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Shows the widget. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a66bdda41220267a8c7ff9865996e2675}{set\+Hidden()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WWidget_a04e40616d1dffd7cb109370c18a1bb45}\label{classWt_1_1WWidget_a04e40616d1dffd7cb109370c18a1bb45}} 
+\index{Wt::WWidget@{Wt::WWidget}!stopAcceptDrops@{stopAcceptDrops}}
+\index{stopAcceptDrops@{stopAcceptDrops}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{stopAcceptDrops()}{stopAcceptDrops()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Widget\+::stop\+Accept\+Drops (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mime\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Indicates that a mime type is no longer accepted for dropping. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a18d42a95a4a3ee01b19deb50fcbe37d4}{accept\+Drops()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WWidget_a4d0fac1bd596983314e50492e50dc1c1}\label{classWt_1_1WWidget_a4d0fac1bd596983314e50492e50dc1c1}} 
+\index{Wt::WWidget@{Wt::WWidget}!styleClass@{styleClass}}
+\index{styleClass@{styleClass}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{styleClass()}{styleClass()}}
+{\footnotesize\ttfamily virtual W\+T\+\_\+\+U\+S\+T\+R\+I\+NG Wt\+::\+W\+Widget\+::style\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the C\+SS style class. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a1845d1e92aa82b7772ca2295b8571296}{set\+Style\+Class()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_affa24a829c0d4a3ab8736961466247a5}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a48b7d961c9e7e266c6e57686e26bfff6}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_ac8e874a86853e3e230e2cee1a7a153c4}\label{classWt_1_1WWidget_ac8e874a86853e3e230e2cee1a7a153c4}} 
+\index{Wt::WWidget@{Wt::WWidget}!tabIndex@{tabIndex}}
+\index{tabIndex@{tabIndex}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{tabIndex()}{tabIndex()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Widget\+::tab\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the tab index. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_aeca7e1e9852d83067b3834078378f22d}{set\+Tab\+Index()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a1f7beb14ac5ba5d08a0af1e117416301}{Wt\+::\+W\+Web\+Widget}}, \mbox{\hyperlink{classWt_1_1WAnchor_a5453b8f98c7872c10128b0c1c6dd2694}{Wt\+::\+W\+Anchor}}, \mbox{\hyperlink{classWt_1_1WCompositeWidget_a67c3cf2f4e9313071aece3678d75540b}{Wt\+::\+W\+Composite\+Widget}}, and \mbox{\hyperlink{classWt_1_1WFormWidget_aa9e8ce2337f74cfec840fdfb7789b398}{Wt\+::\+W\+Form\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_ab8da3af9cb03eb2f3acf16b8131d84bf}\label{classWt_1_1WWidget_ab8da3af9cb03eb2f3acf16b8131d84bf}} 
+\index{Wt::WWidget@{Wt::WWidget}!tr@{tr}}
+\index{tr@{tr}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{tr()}{tr()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classWt_1_1WString}{W\+String}} Wt\+::\+W\+Widget\+::tr (\begin{DoxyParamCaption}\item[{const char $\ast$}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Short hand for \mbox{\hyperlink{classWt_1_1WString_adf1e7e5fc3c7199563a69bf07d77e571}{W\+String\+::tr()}} 
+
+Creates a localized string with the given key. \mbox{\Hypertarget{classWt_1_1WWidget_a0ae4522f15e80ff00d246a19604f6c7f}\label{classWt_1_1WWidget_a0ae4522f15e80ff00d246a19604f6c7f}} 
+\index{Wt::WWidget@{Wt::WWidget}!verticalAlignment@{verticalAlignment}}
+\index{verticalAlignment@{verticalAlignment}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{verticalAlignment()}{verticalAlignment()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} Wt\+::\+W\+Widget\+::vertical\+Alignment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the vertical alignment. 
+
+This applies to C\+S\+S-\/based layout.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a4f911e2f62cf35c34cb603eaca0d9a3f}{set\+Vertical\+Alignment()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a9981b504b46a92b24c9349a4d1cc2c9c}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a36a3215757a84cefe1203d7f84633560}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a9faaa6c2b46c0adf6606ad1496c4e52b}\label{classWt_1_1WWidget_a9faaa6c2b46c0adf6606ad1496c4e52b}} 
+\index{Wt::WWidget@{Wt::WWidget}!verticalAlignmentLength@{verticalAlignmentLength}}
+\index{verticalAlignmentLength@{verticalAlignmentLength}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{verticalAlignmentLength()}{verticalAlignmentLength()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} Wt\+::\+W\+Widget\+::vertical\+Alignment\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the fixed vertical alignment that was set. 
+
+This applies to C\+S\+S-\/based layout.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a4f911e2f62cf35c34cb603eaca0d9a3f}{set\+Vertical\+Alignment()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_af8ddac0e0bff9b20c9a91d40af3529ff}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a6c3ecf773bbff61c8cc61345839e77d3}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WWidget_a3f423e20a9b0792c1bc3d52899065e82}\label{classWt_1_1WWidget_a3f423e20a9b0792c1bc3d52899065e82}} 
+\index{Wt::WWidget@{Wt::WWidget}!width@{width}}
+\index{width@{width}!Wt::WWidget@{Wt::WWidget}}
+\doxysubsubsection{\texorpdfstring{width()}{width()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} Wt\+::\+W\+Widget\+::width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the width. 
+
+Returns the width set for this widget. This is not a calculated width, based on layout, but the width as specified with \mbox{\hyperlink{classWt_1_1WWidget_a54365f7acdc237895328be54969165f4}{resize(const W\+Length\&, const W\+Length\&)}}.
+
+This applies to C\+S\+S-\/based layout.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWidget_a54365f7acdc237895328be54969165f4}{resize(const W\+Length\&, const W\+Length\&)}}, \mbox{\hyperlink{classWt_1_1WWidget_a9454454144fe3729378c87c3b90372b4}{height()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WWebWidget_a3e1a8d2d95fa92763e2e3a0ee520468f}{Wt\+::\+W\+Web\+Widget}}, and \mbox{\hyperlink{classWt_1_1WCompositeWidget_a29ea57c8313b5316bbfa5c6d3590ad3a}{Wt\+::\+W\+Composite\+Widget}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Widget.\+h\end{DoxyCompactItemize}

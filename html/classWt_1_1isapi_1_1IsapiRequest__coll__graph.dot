@@ -1,0 +1,51 @@
+digraph "Wt::isapi::IsapiRequest"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Wt::isapi::IsapiRequest",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Wt::WebResponse",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WebResponse.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Wt::WebRequest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WebRequest.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" entryPoint_" ,fontname="Helvetica"];
+  Node4 [label="const",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" server_" ,fontname="Helvetica"];
+  Node5 [label="Wt::isapi::IsapiServer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1isapi_1_1IsapiServer.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" configuration_" ,fontname="Helvetica"];
+  Node6 [label="Wt::Configuration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Configuration.html",tooltip=" "];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rootPathSegment_" ,fontname="Helvetica"];
+  Node7 [label="Wt::PathSegment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1PathSegment.html",tooltip=" "];
+  Node7 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" parent" ,fontname="Helvetica"];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" segment" ,fontname="Helvetica"];
+  Node8 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" entryPoint" ,fontname="Helvetica"];
+  Node9 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" server_" ,fontname="Helvetica"];
+  Node9 [label="Wt::WServer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WServer.html",tooltip="A class encapsulating a web application server."];
+  Node10 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ioService_" ,fontname="Helvetica"];
+  Node10 [label="Wt::WIOService",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WIOService.html",tooltip="An I/O service."];
+  Node11 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="AsioWrapper::asio::\lio_service",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" configuration_" ,fontname="Helvetica"];
+  Node12 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" logger_" ,fontname="Helvetica"];
+  Node12 [label="Wt::WLogger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WLogger.html",tooltip="A simple logging class."];
+  Node4 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sep\ntimestamp" ,fontname="Helvetica"];
+  Node9 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" instance_" ,fontname="Helvetica"];
+  Node13 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" webController_" ,fontname="Helvetica"];
+  Node13 [label="Wt::WebController",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WebController.html",tooltip=" "];
+  Node6 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" conf_" ,fontname="Helvetica"];
+  Node9 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" server_" ,fontname="Helvetica"];
+  Node14 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ajaxSessions_\nplainHtmlSessions\l_\nzombieSessions_" ,fontname="Helvetica"];
+  Node14 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node8 -> Node13 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" redirectSecret_\nsingleSessionId_" ,fontname="Helvetica"];
+  Node8 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" appRoot_\ndescription_\napplication_\nconfigurationFile_" ,fontname="Helvetica"];
+  Node4 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" customLogger_" ,fontname="Helvetica"];
+  Node14 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" numSessionThreads_\nbootstrapTimeout_\nmaxPendingEvents_\nserverPushTimeout\l_\nsessionIdLength\l_\nnumThreads_\nsessionTimeout\l_\nindicatorTimeout\l_\nidleTimeout\l_\ndoubleClickTimeout\l_\n..." ,fontname="Helvetica"];
+  Node8 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" valgrindPath_\nredirectMsg_\nappRoot_\nuaCompatible_\noriginalIPHeader\l_\nconnectorSessionId\lPrefix_\ndefaultEntryPoint\l_\nrunDirectory\l_\napplicationPath\l_\nconfigurationFile\l_\n..." ,fontname="Helvetica"];
+  Node9 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" server_" ,fontname="Helvetica"];
+  Node5 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" instance_" ,fontname="Helvetica"];
+  Node14 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" writeIndex_\nwriteOffset_" ,fontname="Helvetica"];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" emptyString_\nrequestFileName_" ,fontname="Helvetica"];
+  Node15 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" out_\nin_mem_\nheader_\nerr_" ,fontname="Helvetica"];
+  Node15 [label="stringstream",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

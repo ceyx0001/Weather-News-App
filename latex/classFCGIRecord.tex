@@ -1,0 +1,98 @@
+\hypertarget{classFCGIRecord}{}\doxysection{F\+C\+G\+I\+Record Class Reference}
+\label{classFCGIRecord}\index{FCGIRecord@{FCGIRecord}}
+
+
+Collaboration diagram for F\+C\+G\+I\+Record\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a363d1351c09839028a2331a6376724be}\label{classFCGIRecord_a363d1351c09839028a2331a6376724be}} 
+{\bfseries F\+C\+G\+I\+Record} (short request\+Id, char version)
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a08c22484c3714dbfb8cd63752b1882a3}\label{classFCGIRecord_a08c22484c3714dbfb8cd63752b1882a3}} 
+void {\bfseries clear} ()
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a14b02b1651a2b7bb5979aaf37394e44f}\label{classFCGIRecord_a14b02b1651a2b7bb5979aaf37394e44f}} 
+bool {\bfseries good} ()
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a680b195e3981127ca0ddf0f07bd01b00}\label{classFCGIRecord_a680b195e3981127ca0ddf0f07bd01b00}} 
+unsigned char {\bfseries type} () const
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a115f31abc5e9c471b3c2d66cee8b4b43}\label{classFCGIRecord_a115f31abc5e9c471b3c2d66cee8b4b43}} 
+unsigned char {\bfseries version} () const
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a45674a3d3c5319bcf61bc53b54f9f07f}\label{classFCGIRecord_a45674a3d3c5319bcf61bc53b54f9f07f}} 
+unsigned short {\bfseries request\+Id} () const
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a54dc53bf3145e7e036c8ef26d72a7710}\label{classFCGIRecord_a54dc53bf3145e7e036c8ef26d72a7710}} 
+unsigned int {\bfseries content\+Length} () const
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a4221acf644ebabb047cfb54a585875ca}\label{classFCGIRecord_a4221acf644ebabb047cfb54a585875ca}} 
+const unsigned char $\ast$ {\bfseries content\+Data} () const
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a5513ff7213027b380d487cab1c0ea827}\label{classFCGIRecord_a5513ff7213027b380d487cab1c0ea827}} 
+unsigned int {\bfseries plain\+Text\+Length} () const
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a06aa8594f58b34a69bf3e4f8472622a2}\label{classFCGIRecord_a06aa8594f58b34a69bf3e4f8472622a2}} 
+const unsigned char $\ast$ {\bfseries plain\+Text} () const
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a1ca4c1c6bacb3c1023f661cebaa28c12}\label{classFCGIRecord_a1ca4c1c6bacb3c1023f661cebaa28c12}} 
+void {\bfseries read} (int fd)
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a13efb7886dfc32373da8a21bf5b5b510}\label{classFCGIRecord_a13efb7886dfc32373da8a21bf5b5b510}} 
+bool {\bfseries get\+Param} (const std\+::string name, std\+::string \&value) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a93cbbde28581799b5d78109de4808c85}\label{classFCGIRecord_a93cbbde28581799b5d78109de4808c85}} 
+int {\bfseries get\+Char} (int fd, bool wait\+For\+It)
+\item 
+\mbox{\Hypertarget{classFCGIRecord_acc2530d169e2bdea87160158158e6538}\label{classFCGIRecord_acc2530d169e2bdea87160158158e6538}} 
+bool {\bfseries get\+Buffer} (int fd, unsigned char $\ast$buf, int length)
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a2066c18c3da04832742d91965e03f14f}\label{classFCGIRecord_a2066c18c3da04832742d91965e03f14f}} 
+bool {\bfseries get\+And\+Assign} (int fd, unsigned char \&r, bool wait\+For\+It)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a04f4b464fdea4c2d4c471f3ef89697d1}\label{classFCGIRecord_a04f4b464fdea4c2d4c471f3ef89697d1}} 
+bool {\bfseries good\+\_\+}
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a1328d0cadd64eb5df96b45cfd5fc0459}\label{classFCGIRecord_a1328d0cadd64eb5df96b45cfd5fc0459}} 
+unsigned char {\bfseries version\+\_\+}
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a0ff801f447f2ffa1574282d7dc486881}\label{classFCGIRecord_a0ff801f447f2ffa1574282d7dc486881}} 
+unsigned char {\bfseries type\+\_\+}
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a191e60b45ec84c04b998b63c7811827a}\label{classFCGIRecord_a191e60b45ec84c04b998b63c7811827a}} 
+unsigned short {\bfseries request\+Id\+\_\+}
+\item 
+\mbox{\Hypertarget{classFCGIRecord_ae07f5e88debea57e31bfb8d0b6ab9ee8}\label{classFCGIRecord_ae07f5e88debea57e31bfb8d0b6ab9ee8}} 
+unsigned int {\bfseries content\+Length\+\_\+}
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a975226c38aaa567d51bdad5b935f378c}\label{classFCGIRecord_a975226c38aaa567d51bdad5b935f378c}} 
+unsigned char {\bfseries padding\+Length\+\_\+}
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a4de650f670c4aafc82865064724ecf74}\label{classFCGIRecord_a4de650f670c4aafc82865064724ecf74}} 
+unsigned char {\bfseries reserved\+\_\+}
+\item 
+\mbox{\Hypertarget{classFCGIRecord_aab46e62b68b2e835731348bcba612ce7}\label{classFCGIRecord_aab46e62b68b2e835731348bcba612ce7}} 
+unsigned char $\ast$ {\bfseries content\+Data\+\_\+}
+\item 
+\mbox{\Hypertarget{classFCGIRecord_a0009f6914ff30b8f8f06b9500ca45e5d}\label{classFCGIRecord_a0009f6914ff30b8f8f06b9500ca45e5d}} 
+unsigned int {\bfseries plain\+Text\+Length\+\_\+}
+\item 
+\mbox{\Hypertarget{classFCGIRecord_acbdbf558d472da9f138e5023e1d1a4a0}\label{classFCGIRecord_acbdbf558d472da9f138e5023e1d1a4a0}} 
+unsigned char $\ast$ {\bfseries plain\+Text\+Buf\+\_\+}
+\item 
+\mbox{\Hypertarget{classFCGIRecord_aa5f8630823e38985c24fa1b4796a557b}\label{classFCGIRecord_aa5f8630823e38985c24fa1b4796a557b}} 
+unsigned int {\bfseries plain\+Text\+Buf\+Length\+\_\+}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/fcgi/F\+C\+G\+I\+Record.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,173 @@
+\hypertarget{classWt_1_1Auth_1_1OAuthClient}{}\doxysection{Wt\+::Auth\+::O\+Auth\+Client Class Reference}
+\label{classWt_1_1Auth_1_1OAuthClient}\index{Wt::Auth::OAuthClient@{Wt::Auth::OAuthClient}}
+
+
+{\ttfamily \#include $<$\textbackslash{}brief$>$}
+
+
+
+Collaboration diagram for Wt\+::Auth\+::O\+Auth\+Client\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient_ae33e12e222abd8291ec1ba4139d653bf}{O\+Auth\+Client}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that creates an invalid \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient}{O\+Auth\+Client}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient_abd066abe152aba1d3b27fa0dba0fe291}{O\+Auth\+Client}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient_a105b00c1b59a62524aba3143176e1571}{id}}, const \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&db)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient_a5a7c7d8a80fd44beb6fbf938127c9bc9}{check\+Valid}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the user is valid. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient_a105b00c1b59a62524aba3143176e1571}{id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the ID used to identify the client in the database. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient_a5ef115487e58fa631eb5108449f9e057}{client\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the ID used to identify the client with the Open\+ID Connect provider and user. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient_acb88bad3fecf2f9c8ecde16a494925a4}{verify\+Secret}} (const std\+::string \&secret) const
+\begin{DoxyCompactList}\small\item\em Returns true if the given secret is correct for the given client. \end{DoxyCompactList}\item 
+std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient_ab307658b119edbc99a00d07c472cc5b1}{redirect\+Uris}} () const
+\begin{DoxyCompactList}\small\item\em Returns the set of redirect U\+RI\textquotesingle{}s that are valid for this client. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient_a1dff18e04e5c614bb4e861d6b657a7e9}{confidential}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the client is confidential or public. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceWt_1_1Auth_a4e55a92c5ff4dd9bbd74439868b8400d}{Client\+Secret\+Method}} \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient_ad14a3f485e298c8dd582643435c599bb}{auth\+Method}} () const
+\begin{DoxyCompactList}\small\item\em Returns the client authentication method (see O\+I\+DC \mbox{\hyperlink{namespaceWt_1_1Core}{Core}} chapter 9) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthClient_a6fd273f3923a975d16287e3e0ea039df}\label{classWt_1_1Auth_1_1OAuthClient_a6fd273f3923a975d16287e3e0ea039df}} 
+const \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} $\ast$ {\bfseries db\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthClient_a329ca75fe399b00e7a3531830b1caf98}\label{classWt_1_1Auth_1_1OAuthClient_a329ca75fe399b00e7a3531830b1caf98}} 
+std\+::string {\bfseries id\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+O\+Auth 2.\+0 client implementing Open\+ID Connect, a.\+k.\+a. relying party.
+
+This class represents a client. It is a value class that stores only the id and a reference to an \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} to access its properties.
+
+An object can point to a valid client, or be invalid. Invalid clients are typically used as return value for database queries which did not match with an existing client.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthClient_ae33e12e222abd8291ec1ba4139d653bf}\label{classWt_1_1Auth_1_1OAuthClient_ae33e12e222abd8291ec1ba4139d653bf}} 
+\index{Wt::Auth::OAuthClient@{Wt::Auth::OAuthClient}!OAuthClient@{OAuthClient}}
+\index{OAuthClient@{OAuthClient}!Wt::Auth::OAuthClient@{Wt::Auth::OAuthClient}}
+\doxysubsubsection{\texorpdfstring{OAuthClient()}{OAuthClient()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wt\+::\+Auth\+::\+O\+Auth\+Client\+::\+O\+Auth\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor that creates an invalid \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient}{O\+Auth\+Client}}. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient_a5a7c7d8a80fd44beb6fbf938127c9bc9}{check\+Valid()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthClient_abd066abe152aba1d3b27fa0dba0fe291}\label{classWt_1_1Auth_1_1OAuthClient_abd066abe152aba1d3b27fa0dba0fe291}} 
+\index{Wt::Auth::OAuthClient@{Wt::Auth::OAuthClient}!OAuthClient@{OAuthClient}}
+\index{OAuthClient@{OAuthClient}!Wt::Auth::OAuthClient@{Wt::Auth::OAuthClient}}
+\doxysubsubsection{\texorpdfstring{OAuthClient()}{OAuthClient()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wt\+::\+Auth\+::\+O\+Auth\+Client\+::\+O\+Auth\+Client (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id,  }\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&}]{db }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Creates a client with id {\ttfamily id}, and whose information is stored in the {\ttfamily database}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthClient_ad14a3f485e298c8dd582643435c599bb}\label{classWt_1_1Auth_1_1OAuthClient_ad14a3f485e298c8dd582643435c599bb}} 
+\index{Wt::Auth::OAuthClient@{Wt::Auth::OAuthClient}!authMethod@{authMethod}}
+\index{authMethod@{authMethod}!Wt::Auth::OAuthClient@{Wt::Auth::OAuthClient}}
+\doxysubsubsection{\texorpdfstring{authMethod()}{authMethod()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceWt_1_1Auth_a4e55a92c5ff4dd9bbd74439868b8400d}{Client\+Secret\+Method}} Wt\+::\+Auth\+::\+O\+Auth\+Client\+::auth\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the client authentication method (see O\+I\+DC \mbox{\hyperlink{namespaceWt_1_1Core}{Core}} chapter 9) 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_af1896d497ca63e7163001ca4d9584e5f}{Abstract\+User\+Database\+::idp\+Client\+Auth\+Method()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthClient_a5a7c7d8a80fd44beb6fbf938127c9bc9}\label{classWt_1_1Auth_1_1OAuthClient_a5a7c7d8a80fd44beb6fbf938127c9bc9}} 
+\index{Wt::Auth::OAuthClient@{Wt::Auth::OAuthClient}!checkValid@{checkValid}}
+\index{checkValid@{checkValid}!Wt::Auth::OAuthClient@{Wt::Auth::OAuthClient}}
+\doxysubsubsection{\texorpdfstring{checkValid()}{checkValid()}}
+{\footnotesize\ttfamily bool Wt\+::\+Auth\+::\+O\+Auth\+Client\+::check\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the user is valid. 
+
+A invalid user is a sentinel value returned by methods that query the database but could not identify a matching user. \mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthClient_a5ef115487e58fa631eb5108449f9e057}\label{classWt_1_1Auth_1_1OAuthClient_a5ef115487e58fa631eb5108449f9e057}} 
+\index{Wt::Auth::OAuthClient@{Wt::Auth::OAuthClient}!clientId@{clientId}}
+\index{clientId@{clientId}!Wt::Auth::OAuthClient@{Wt::Auth::OAuthClient}}
+\doxysubsubsection{\texorpdfstring{clientId()}{clientId()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Auth\+::\+O\+Auth\+Client\+::client\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the ID used to identify the client with the Open\+ID Connect provider and user. 
+
+This is the id that the client uses to identify itself with the identity provider.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_aa3c713440663c29e1b03da3d9bd49c61}{Abstract\+User\+Database\+::idp\+Client\+Id()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthClient_a1dff18e04e5c614bb4e861d6b657a7e9}\label{classWt_1_1Auth_1_1OAuthClient_a1dff18e04e5c614bb4e861d6b657a7e9}} 
+\index{Wt::Auth::OAuthClient@{Wt::Auth::OAuthClient}!confidential@{confidential}}
+\index{confidential@{confidential}!Wt::Auth::OAuthClient@{Wt::Auth::OAuthClient}}
+\doxysubsubsection{\texorpdfstring{confidential()}{confidential()}}
+{\footnotesize\ttfamily bool Wt\+::\+Auth\+::\+O\+Auth\+Client\+::confidential (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the client is confidential or public. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a7ccd5c02ccc55a53e04c112ac74f32c1}{Abstract\+User\+Database\+::idp\+Client\+Confidential()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthClient_a105b00c1b59a62524aba3143176e1571}\label{classWt_1_1Auth_1_1OAuthClient_a105b00c1b59a62524aba3143176e1571}} 
+\index{Wt::Auth::OAuthClient@{Wt::Auth::OAuthClient}!id@{id}}
+\index{id@{id}!Wt::Auth::OAuthClient@{Wt::Auth::OAuthClient}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Auth\+::\+O\+Auth\+Client\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the ID used to identify the client in the database. 
+
+This returns the id that uniquely identifies the user, and acts as a \char`\"{}primary key\char`\"{} to obtain other information for the user in the database. \mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthClient_ab307658b119edbc99a00d07c472cc5b1}\label{classWt_1_1Auth_1_1OAuthClient_ab307658b119edbc99a00d07c472cc5b1}} 
+\index{Wt::Auth::OAuthClient@{Wt::Auth::OAuthClient}!redirectUris@{redirectUris}}
+\index{redirectUris@{redirectUris}!Wt::Auth::OAuthClient@{Wt::Auth::OAuthClient}}
+\doxysubsubsection{\texorpdfstring{redirectUris()}{redirectUris()}}
+{\footnotesize\ttfamily std\+::set$<$std\+::string$>$ Wt\+::\+Auth\+::\+O\+Auth\+Client\+::redirect\+Uris (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the set of redirect U\+RI\textquotesingle{}s that are valid for this client. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a702033478b1a37d9d94a9d2b2390894e}{Abstract\+User\+Database\+::idp\+Client\+Redirect\+Uris()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthClient_acb88bad3fecf2f9c8ecde16a494925a4}\label{classWt_1_1Auth_1_1OAuthClient_acb88bad3fecf2f9c8ecde16a494925a4}} 
+\index{Wt::Auth::OAuthClient@{Wt::Auth::OAuthClient}!verifySecret@{verifySecret}}
+\index{verifySecret@{verifySecret}!Wt::Auth::OAuthClient@{Wt::Auth::OAuthClient}}
+\doxysubsubsection{\texorpdfstring{verifySecret()}{verifySecret()}}
+{\footnotesize\ttfamily bool Wt\+::\+Auth\+::\+O\+Auth\+Client\+::verify\+Secret (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{secret }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if the given secret is correct for the given client. 
+
+\begin{DoxySeeAlso}{See also}
+Abstract\+User\+Database\+::verify\+Secret() 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/O\+Auth\+Client.\+h\end{DoxyCompactItemize}

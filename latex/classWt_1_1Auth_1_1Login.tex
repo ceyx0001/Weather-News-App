@@ -1,0 +1,168 @@
+\hypertarget{classWt_1_1Auth_1_1Login}{}\doxysection{Wt\+::Auth\+::Login Class Reference}
+\label{classWt_1_1Auth_1_1Login}\index{Wt::Auth::Login@{Wt::Auth::Login}}
+
+
+A class that manages the current login state.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Auth/\+Login.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Auth\+::Login\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Auth\+::Login\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Login_a2764ee1d445fbb8f5c7a93d9d2932b6c}\label{classWt_1_1Auth_1_1Login_a2764ee1d445fbb8f5c7a93d9d2932b6c}} 
+typedef \mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796}{Login\+State}} \mbox{\hyperlink{classWt_1_1Auth_1_1Login_a2764ee1d445fbb8f5c7a93d9d2932b6c}{State}}
+\begin{DoxyCompactList}\small\item\em Typedef for enum \mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796}{Wt\+::\+Auth\+::\+Login\+State}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1Login_a528837a0fd1e66dfce9eae6ff15a7b79}{Login}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Login_af3993f0f74c0deea96cd5cc62cdc6749}{login}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1Login_a0b7792713b65284cc80a177d5cb9b3bf}{user}}, \mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796}{Login\+State}} \mbox{\hyperlink{classWt_1_1Auth_1_1Login_a99cb512c352f7d011ab6d39fc8f4ec0e}{state}}=\mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796ac43e0fd449c758dab8f891d8e19eb1a9}{Login\+State\+::\+Strong}})
+\begin{DoxyCompactList}\small\item\em Logs a user in. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Login_af10e98871028d79460a4e64415ca90e4}{logout}} ()
+\begin{DoxyCompactList}\small\item\em Logs the current user out. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796}{Login\+State}} \mbox{\hyperlink{classWt_1_1Auth_1_1Login_a99cb512c352f7d011ab6d39fc8f4ec0e}{state}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current login state. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Auth_1_1Login_ab80cb200923961dbd1c6573b0845addb}{logged\+In}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether a user has successfully logged in. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \& \mbox{\hyperlink{classWt_1_1Auth_1_1Login_a0b7792713b65284cc80a177d5cb9b3bf}{user}} () const
+\begin{DoxyCompactList}\small\item\em Returns the user currently identified. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} \& \mbox{\hyperlink{classWt_1_1Auth_1_1Login_aafb1d791aeee8b59d28faeda88e8392b}{changed}} ()
+\begin{DoxyCompactList}\small\item\em Signal that indicates login changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Login_a4be9360d8f0111204cdca209ad2345a2}\label{classWt_1_1Auth_1_1Login_a4be9360d8f0111204cdca209ad2345a2}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} {\bfseries changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Login_aa0e535c162c698f31dd6733a22de090f}\label{classWt_1_1Auth_1_1Login_aa0e535c162c698f31dd6733a22de090f}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} {\bfseries user\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Login_aa14959d406fcda336c8b143fc79aa0fd}\label{classWt_1_1Auth_1_1Login_aa14959d406fcda336c8b143fc79aa0fd}} 
+\mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796}{Login\+State}} {\bfseries state\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A class that manages the current login state. 
+
+This is a model class which is typically associated with a single session, for the duration of the session.
+
+Widgets that implement authentication (and thus produce authentication changes), will indicate their result in this object using the \mbox{\hyperlink{classWt_1_1Auth_1_1Login_af3993f0f74c0deea96cd5cc62cdc6749}{login()}} or \mbox{\hyperlink{classWt_1_1Auth_1_1Login_af10e98871028d79460a4e64415ca90e4}{logout()}} methods.
+
+Widgets that want to react to login state changes (typically, as user logging in or out) should listen to the \mbox{\hyperlink{classWt_1_1Auth_1_1Login_aafb1d791aeee8b59d28faeda88e8392b}{changed()}} signal of this object.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget}{Auth\+Widget}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Login_a528837a0fd1e66dfce9eae6ff15a7b79}\label{classWt_1_1Auth_1_1Login_a528837a0fd1e66dfce9eae6ff15a7b79}} 
+\index{Wt::Auth::Login@{Wt::Auth::Login}!Login@{Login}}
+\index{Login@{Login}!Wt::Auth::Login@{Wt::Auth::Login}}
+\doxysubsubsection{\texorpdfstring{Login()}{Login()}}
+{\footnotesize\ttfamily Wt\+::\+Auth\+::\+Login\+::\+Login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Creates a login object in the \mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796ae27816978dfe5f0f3acd72cee314955f}{Login\+State\+::\+Logged\+Out}} state. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Login_aafb1d791aeee8b59d28faeda88e8392b}\label{classWt_1_1Auth_1_1Login_aafb1d791aeee8b59d28faeda88e8392b}} 
+\index{Wt::Auth::Login@{Wt::Auth::Login}!changed@{changed}}
+\index{changed@{changed}!Wt::Auth::Login@{Wt::Auth::Login}}
+\doxysubsubsection{\texorpdfstring{changed()}{changed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}\& Wt\+::\+Auth\+::\+Login\+::changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal that indicates login changes. 
+
+This signal is emitted as a result of \mbox{\hyperlink{classWt_1_1Auth_1_1Login_af3993f0f74c0deea96cd5cc62cdc6749}{login()}} or \mbox{\hyperlink{classWt_1_1Auth_1_1Login_af10e98871028d79460a4e64415ca90e4}{logout()}}. If no user was logged in, then a \mbox{\hyperlink{classWt_1_1Auth_1_1Login_aafb1d791aeee8b59d28faeda88e8392b}{changed()}} signal does not necessarily mean that user is \mbox{\hyperlink{classWt_1_1Auth_1_1Login_ab80cb200923961dbd1c6573b0845addb}{logged\+In()}} as the user may have been identified correctly but have a \mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796ab9f5c797ebbf55adccdd8539a65a0241}{Login\+State\+::\+Disabled}} \mbox{\hyperlink{classWt_1_1Auth_1_1Login_a99cb512c352f7d011ab6d39fc8f4ec0e}{state()}} for example. \mbox{\Hypertarget{classWt_1_1Auth_1_1Login_ab80cb200923961dbd1c6573b0845addb}\label{classWt_1_1Auth_1_1Login_ab80cb200923961dbd1c6573b0845addb}} 
+\index{Wt::Auth::Login@{Wt::Auth::Login}!loggedIn@{loggedIn}}
+\index{loggedIn@{loggedIn}!Wt::Auth::Login@{Wt::Auth::Login}}
+\doxysubsubsection{\texorpdfstring{loggedIn()}{loggedIn()}}
+{\footnotesize\ttfamily bool Wt\+::\+Auth\+::\+Login\+::logged\+In (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether a user has successfully logged in. 
+
+This returns {\ttfamily true} only if the state is \mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796a7324e3727807d95037eb19d304fd91ec}{Login\+State\+::\+Weak}} or \mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796ac43e0fd449c758dab8f891d8e19eb1a9}{Login\+State\+::\+Strong}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Login_a99cb512c352f7d011ab6d39fc8f4ec0e}{state()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Login_af3993f0f74c0deea96cd5cc62cdc6749}\label{classWt_1_1Auth_1_1Login_af3993f0f74c0deea96cd5cc62cdc6749}} 
+\index{Wt::Auth::Login@{Wt::Auth::Login}!login@{login}}
+\index{login@{login}!Wt::Auth::Login@{Wt::Auth::Login}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Login\+::login (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{\mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796}{Login\+State}}}]{state = {\ttfamily \mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796ac43e0fd449c758dab8f891d8e19eb1a9}{Login\+State\+::\+Strong}}} }\end{DoxyParamCaption})}
+
+
+
+Logs a user in. 
+
+A user can be logged in using either a \mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796ab9f5c797ebbf55adccdd8539a65a0241}{Login\+State\+::\+Disabled}}, \mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796a7324e3727807d95037eb19d304fd91ec}{Login\+State\+::\+Weak}} or \mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796ac43e0fd449c758dab8f891d8e19eb1a9}{Login\+State\+::\+Strong}} {\ttfamily state}. The login state is forced to \mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796ab9f5c797ebbf55adccdd8539a65a0241}{Login\+State\+::\+Disabled}} if \mbox{\hyperlink{classWt_1_1Auth_1_1User_a6f0e7c1aa39d3f9754e3e210c4f43206}{User\+::status()}} returns Disabled.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Login_af10e98871028d79460a4e64415ca90e4}{logout()}}, \mbox{\hyperlink{classWt_1_1Auth_1_1Login_ab80cb200923961dbd1c6573b0845addb}{logged\+In()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Login_af10e98871028d79460a4e64415ca90e4}\label{classWt_1_1Auth_1_1Login_af10e98871028d79460a4e64415ca90e4}} 
+\index{Wt::Auth::Login@{Wt::Auth::Login}!logout@{logout}}
+\index{logout@{logout}!Wt::Auth::Login@{Wt::Auth::Login}}
+\doxysubsubsection{\texorpdfstring{logout()}{logout()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Login\+::logout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Logs the current user out. 
+
+Sets the state to \mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796ae27816978dfe5f0f3acd72cee314955f}{Login\+State\+::\+Logged\+Out}}. \mbox{\Hypertarget{classWt_1_1Auth_1_1Login_a99cb512c352f7d011ab6d39fc8f4ec0e}\label{classWt_1_1Auth_1_1Login_a99cb512c352f7d011ab6d39fc8f4ec0e}} 
+\index{Wt::Auth::Login@{Wt::Auth::Login}!state@{state}}
+\index{state@{state}!Wt::Auth::Login@{Wt::Auth::Login}}
+\doxysubsubsection{\texorpdfstring{state()}{state()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796}{Login\+State}} Wt\+::\+Auth\+::\+Login\+::state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the current login state. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Login_af3993f0f74c0deea96cd5cc62cdc6749}{login()}}, \mbox{\hyperlink{classWt_1_1Auth_1_1Login_af10e98871028d79460a4e64415ca90e4}{logout()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Login_a0b7792713b65284cc80a177d5cb9b3bf}\label{classWt_1_1Auth_1_1Login_a0b7792713b65284cc80a177d5cb9b3bf}} 
+\index{Wt::Auth::Login@{Wt::Auth::Login}!user@{user}}
+\index{user@{user}!Wt::Auth::Login@{Wt::Auth::Login}}
+\doxysubsubsection{\texorpdfstring{user()}{user()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}}\& Wt\+::\+Auth\+::\+Login\+::user (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the user currently identified. 
+
+Returns the user currently identified.
+
+\begin{DoxyNote}{Note}
+This may also be a user whose account is currently disabled. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/Login.\+h\end{DoxyCompactItemize}

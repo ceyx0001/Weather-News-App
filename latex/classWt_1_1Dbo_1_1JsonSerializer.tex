@@ -1,0 +1,197 @@
+\hypertarget{classWt_1_1Dbo_1_1JsonSerializer}{}\doxysection{Wt\+::Dbo\+::Json\+Serializer Class Reference}
+\label{classWt_1_1Dbo_1_1JsonSerializer}\index{Wt::Dbo::JsonSerializer@{Wt::Dbo::JsonSerializer}}
+
+
+An action to serialize objects to J\+S\+ON.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Dbo/\+Json.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::Dbo\+::Json\+Serializer\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1JsonSerializer_a555dfce1175498bf30c40dcfc6c8b929}{Json\+Serializer}} (std\+::ostream \&out)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{classWt_1_1Dbo_1_1JsonSerializer}{Json\+Serializer}} that writes to an std\+::ostream. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_acecc9b2ecd8b47e0ad6f34c314cc3b35}\label{classWt_1_1Dbo_1_1JsonSerializer_acecc9b2ecd8b47e0ad6f34c314cc3b35}} 
+virtual \mbox{\hyperlink{classWt_1_1Dbo_1_1JsonSerializer_acecc9b2ecd8b47e0ad6f34c314cc3b35}{$\sim$\+Json\+Serializer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a5491c77b59962ee1e8586176df006360}\label{classWt_1_1Dbo_1_1JsonSerializer_a5491c77b59962ee1e8586176df006360}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} $\ast$ {\bfseries session} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a49f8d0262b7cd3e588ef52ddaa68c197}\label{classWt_1_1Dbo_1_1JsonSerializer_a49f8d0262b7cd3e588ef52ddaa68c197}} 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if$<$ !std\+::is\+\_\+enum$<$ T $>$\+::value, void $>$\+::type {\bfseries act} (\mbox{\hyperlink{classWt_1_1Dbo_1_1FieldRef}{Field\+Ref}}$<$ T $>$ field)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_ab623d4866d084ebaad1b2a43975b6660}\label{classWt_1_1Dbo_1_1JsonSerializer_ab623d4866d084ebaad1b2a43975b6660}} 
+{\footnotesize template$<$typename T $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+enum$<$ T $>$\+::value, void $>$\+::type {\bfseries act} (\mbox{\hyperlink{classWt_1_1Dbo_1_1FieldRef}{Field\+Ref}}$<$ T $>$ field)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a9395ea24a27998eed831b9afbaf3f417}\label{classWt_1_1Dbo_1_1JsonSerializer_a9395ea24a27998eed831b9afbaf3f417}} 
+void {\bfseries act} (\mbox{\hyperlink{classWt_1_1Dbo_1_1FieldRef}{Field\+Ref}}$<$ std\+::string $>$ field)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a771d50829b18c7300e5b4a14026ab1fd}\label{classWt_1_1Dbo_1_1JsonSerializer_a771d50829b18c7300e5b4a14026ab1fd}} 
+void {\bfseries act} (\mbox{\hyperlink{classWt_1_1Dbo_1_1FieldRef}{Field\+Ref}}$<$ int $>$ field)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a4d326a0e47a7142597cfbe10c3e47d38}\label{classWt_1_1Dbo_1_1JsonSerializer_a4d326a0e47a7142597cfbe10c3e47d38}} 
+void {\bfseries act} (\mbox{\hyperlink{classWt_1_1Dbo_1_1FieldRef}{Field\+Ref}}$<$ long long $>$ field)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a41329eb1dd333992f483bc7609762b70}\label{classWt_1_1Dbo_1_1JsonSerializer_a41329eb1dd333992f483bc7609762b70}} 
+void {\bfseries act} (\mbox{\hyperlink{classWt_1_1Dbo_1_1FieldRef}{Field\+Ref}}$<$ bool $>$ field)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_ac5116a90d6dc7933b23761e4a3529e25}\label{classWt_1_1Dbo_1_1JsonSerializer_ac5116a90d6dc7933b23761e4a3529e25}} 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries act\+Id} (T \&value, const std\+::string \&name, int size)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_aae0829d89cc545f17c40988b3aa2f6df}\label{classWt_1_1Dbo_1_1JsonSerializer_aae0829d89cc545f17c40988b3aa2f6df}} 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries act\+Id} (\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ T $>$ \&value, const std\+::string \&name, int size, int fk\+Constraints)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a483c344841e9d2d6a95a8088c8459fc6}\label{classWt_1_1Dbo_1_1JsonSerializer_a483c344841e9d2d6a95a8088c8459fc6}} 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries act\+Ptr} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1PtrRef}{Ptr\+Ref}}$<$ T $>$ \&field)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a56c4a0a438d3e54d40f114d845f61085}\label{classWt_1_1Dbo_1_1JsonSerializer_a56c4a0a438d3e54d40f114d845f61085}} 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries act\+Weak\+Ptr} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1WeakPtrRef}{Weak\+Ptr\+Ref}}$<$ T $>$ \&field)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a1dc35a41a24dbd6f1e14b0949fed108d}\label{classWt_1_1Dbo_1_1JsonSerializer_a1dc35a41a24dbd6f1e14b0949fed108d}} 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries act\+Collection} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1CollectionRef}{Collection\+Ref}}$<$ T $>$ \&collec)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a3ac911d168da0470f0ba427530a7a455}\label{classWt_1_1Dbo_1_1JsonSerializer_a3ac911d168da0470f0ba427530a7a455}} 
+bool {\bfseries gets\+Value} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_aab196a66e079eb298482c33091a9a732}\label{classWt_1_1Dbo_1_1JsonSerializer_aab196a66e079eb298482c33091a9a732}} 
+bool {\bfseries sets\+Value} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a7672f39ace3f63a908743471d6cfeea1}\label{classWt_1_1Dbo_1_1JsonSerializer_a7672f39ace3f63a908743471d6cfeea1}} 
+bool {\bfseries is\+Schema} () const
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classWt_1_1Dbo_1_1JsonSerializer_a7b62337c94d1a100c54e00db782e4171}{serialize}} (const T \&t)
+\begin{DoxyCompactList}\small\item\em Serialize the given object. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classWt_1_1Dbo_1_1JsonSerializer_a251fb9f5e2fd0c0ac156c369149cd297}{serialize}} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ T $>$ \&t)
+\begin{DoxyCompactList}\small\item\em Serialize the object that is pointed to by the given \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classWt_1_1Dbo_1_1JsonSerializer_ab9ab56c5a4b193b803084c7de31902a9}{serialize}} (const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ T $>$ $>$ \&v)
+\begin{DoxyCompactList}\small\item\em Serialize an std\+::vector of \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptrs}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{classWt_1_1Dbo_1_1JsonSerializer_a9e47a55c2f9e000c17da59e0100b4f2f}{serialize}} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}}$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ T $>$ $>$ \&c)
+\begin{DoxyCompactList}\small\item\em Serialize a \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}} of \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptrs}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_adf6d3ddea21a7e68eaf20a52b0bf7783}\label{classWt_1_1Dbo_1_1JsonSerializer_adf6d3ddea21a7e68eaf20a52b0bf7783}} 
+void {\bfseries out} (char)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a56e28c37695dfb32d267b8d9a5bed264}\label{classWt_1_1Dbo_1_1JsonSerializer_a56e28c37695dfb32d267b8d9a5bed264}} 
+void {\bfseries out} (const char $\ast$)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_afaf1b963c197998bd1b7fbedc465a955}\label{classWt_1_1Dbo_1_1JsonSerializer_afaf1b963c197998bd1b7fbedc465a955}} 
+void {\bfseries out} (int)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a2c6135927809bf8b78a3cd72434f64f6}\label{classWt_1_1Dbo_1_1JsonSerializer_a2c6135927809bf8b78a3cd72434f64f6}} 
+void {\bfseries out} (long long)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a9b0405e0c84d451be726a2c88d3166e0}\label{classWt_1_1Dbo_1_1JsonSerializer_a9b0405e0c84d451be726a2c88d3166e0}} 
+{\footnotesize template$<$typename T $>$ }\\void {\bfseries output\+Id} (T \mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}})
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a22c27e9319eadb746e2e1866b4f85a7a}\label{classWt_1_1Dbo_1_1JsonSerializer_a22c27e9319eadb746e2e1866b4f85a7a}} 
+void {\bfseries output\+Id} (long long \mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}})
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a0f96f06e546d75e09495ecdf37aa08d5}\label{classWt_1_1Dbo_1_1JsonSerializer_a0f96f06e546d75e09495ecdf37aa08d5}} 
+void {\bfseries write\+Field\+Name} (const std\+::string \&field\+Name)
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a5a46efac1a2e523af853b7f2ad751fff}\label{classWt_1_1Dbo_1_1JsonSerializer_a5a46efac1a2e523af853b7f2ad751fff}} 
+void {\bfseries fast\+Js\+String\+Literal} (const std\+::string \&s)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a242372479def7d8486980e8aef055cdb}\label{classWt_1_1Dbo_1_1JsonSerializer_a242372479def7d8486980e8aef055cdb}} 
+std\+::ostream \& {\bfseries out\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_ad2bd910fb245cc663c02908e880460fb}\label{classWt_1_1Dbo_1_1JsonSerializer_ad2bd910fb245cc663c02908e880460fb}} 
+\mbox{\hyperlink{classWt_1_1EscapeOStream}{Escape\+O\+Stream}} $\ast$ {\bfseries escape\+Out\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a15b023267da51243e0db55fe20f0bba2}\label{classWt_1_1Dbo_1_1JsonSerializer_a15b023267da51243e0db55fe20f0bba2}} 
+\mbox{\hyperlink{classWt_1_1EscapeOStream}{Escape\+O\+Stream}} $\ast$ {\bfseries string\+Literal\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a960257203c53d8c093b05652b0d88651}\label{classWt_1_1Dbo_1_1JsonSerializer_a960257203c53d8c093b05652b0d88651}} 
+bool {\bfseries first\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a2b692cb88589736a694acadb560a21d9}\label{classWt_1_1Dbo_1_1JsonSerializer_a2b692cb88589736a694acadb560a21d9}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} $\ast$ {\bfseries session\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An action to serialize objects to J\+S\+ON. 
+
+This class is an {\ttfamily Action} that serializes objects to an ostream. These objects must implement the {\ttfamily persist()} method. It also has support for serializing \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptrs}} to these objects, std\+::vectors of \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptrs}}, and \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collections}} of \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptrs}}.
+
+It will follow one-\/to-\/one and \mbox{\hyperlink{group__dbo_gga1d0ec6819b1bf5b7a88ad030b91ca564a32d7393c325724244671b18be53058fa}{Many\+To\+One}} relations in one way\+: \mbox{\hyperlink{classWt_1_1Dbo_1_1weak__ptr}{weak\+\_\+ptr}} and \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}} fields are followed and serialized, for \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}} fields only the \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr_a43ea33191c46985752c192edb8254331}{id}} is output.
+
+No extraneous whitespace is output. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a555dfce1175498bf30c40dcfc6c8b929}\label{classWt_1_1Dbo_1_1JsonSerializer_a555dfce1175498bf30c40dcfc6c8b929}} 
+\index{Wt::Dbo::JsonSerializer@{Wt::Dbo::JsonSerializer}!JsonSerializer@{JsonSerializer}}
+\index{JsonSerializer@{JsonSerializer}!Wt::Dbo::JsonSerializer@{Wt::Dbo::JsonSerializer}}
+\doxysubsubsection{\texorpdfstring{JsonSerializer()}{JsonSerializer()}}
+{\footnotesize\ttfamily Wt\+::\+Dbo\+::\+Json\+Serializer\+::\+Json\+Serializer (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{classWt_1_1Dbo_1_1JsonSerializer}{Json\+Serializer}} that writes to an std\+::ostream. 
+
+\mbox{\hyperlink{classNote}{Note}} that the std\+::ostream is not flushed to automatically. The flush will happen automatically when this \mbox{\hyperlink{classWt_1_1Dbo_1_1JsonSerializer}{Json\+Serializer}} is destructed. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a9e47a55c2f9e000c17da59e0100b4f2f}\label{classWt_1_1Dbo_1_1JsonSerializer_a9e47a55c2f9e000c17da59e0100b4f2f}} 
+\index{Wt::Dbo::JsonSerializer@{Wt::Dbo::JsonSerializer}!serialize@{serialize}}
+\index{serialize@{serialize}!Wt::Dbo::JsonSerializer@{Wt::Dbo::JsonSerializer}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Wt\+::\+Dbo\+::\+Json\+Serializer\+::serialize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}}$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ T $>$ $>$ \&}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize a \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}} of \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptrs}}. 
+
+Serializes each \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}} in the \mbox{\hyperlink{classWt_1_1Dbo_1_1collection}{collection}} individually, and puts it in an {\ttfamily Array}.
+
+The typical usage scenario of this method is to serialize the results of a query to J\+S\+ON. \mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a251fb9f5e2fd0c0ac156c369149cd297}\label{classWt_1_1Dbo_1_1JsonSerializer_a251fb9f5e2fd0c0ac156c369149cd297}} 
+\index{Wt::Dbo::JsonSerializer@{Wt::Dbo::JsonSerializer}!serialize@{serialize}}
+\index{serialize@{serialize}!Wt::Dbo::JsonSerializer@{Wt::Dbo::JsonSerializer}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Wt\+::\+Dbo\+::\+Json\+Serializer\+::serialize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ T $>$ \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize the object that is pointed to by the given \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}. 
+
+This method does the same as the plain object serializer, but also adds an extra \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr_a43ea33191c46985752c192edb8254331}{id}} field. \mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_ab9ab56c5a4b193b803084c7de31902a9}\label{classWt_1_1Dbo_1_1JsonSerializer_ab9ab56c5a4b193b803084c7de31902a9}} 
+\index{Wt::Dbo::JsonSerializer@{Wt::Dbo::JsonSerializer}!serialize@{serialize}}
+\index{serialize@{serialize}!Wt::Dbo::JsonSerializer@{Wt::Dbo::JsonSerializer}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Wt\+::\+Dbo\+::\+Json\+Serializer\+::serialize (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}}$<$ T $>$ $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize an std\+::vector of \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptrs}}. 
+
+Serializes each \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{ptr}} in the vector individually, and puts it in an {\ttfamily Array}. \mbox{\Hypertarget{classWt_1_1Dbo_1_1JsonSerializer_a7b62337c94d1a100c54e00db782e4171}\label{classWt_1_1Dbo_1_1JsonSerializer_a7b62337c94d1a100c54e00db782e4171}} 
+\index{Wt::Dbo::JsonSerializer@{Wt::Dbo::JsonSerializer}!serialize@{serialize}}
+\index{serialize@{serialize}!Wt::Dbo::JsonSerializer@{Wt::Dbo::JsonSerializer}}
+\doxysubsubsection{\texorpdfstring{serialize()}{serialize()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Wt\+::\+Dbo\+::\+Json\+Serializer\+::serialize (\begin{DoxyParamCaption}\item[{const T \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Serialize the given object. 
+
+Serializes a plain object that implements the {\ttfamily persist()} method. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/Json.\+h\end{DoxyCompactItemize}

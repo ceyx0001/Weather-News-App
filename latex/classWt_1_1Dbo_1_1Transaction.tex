@@ -1,0 +1,192 @@
+\hypertarget{classWt_1_1Dbo_1_1Transaction}{}\doxysection{Wt\+::Dbo\+::Transaction Class Reference}
+\label{classWt_1_1Dbo_1_1Transaction}\index{Wt::Dbo::Transaction@{Wt::Dbo::Transaction}}
+
+
+A database transaction.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Dbo/\+Transaction.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Dbo\+::Transaction\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Dbo\+::Transaction\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1Dbo_1_1Transaction_1_1Impl}{Impl}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction_ad617b2cb23bc0778ad2c534e2482f74c}{Transaction}} (\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} \&\mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction_a47fe1b5cab87a9d87eff76644df285c6}{session}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction_af04d5b754bdfd2d35c24be34eddb85c2}{$\sim$\+Transaction}} () noexcept(false)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Transaction_a10ef27e1c4a954d7885b80819a1dffd8}\label{classWt_1_1Dbo_1_1Transaction_a10ef27e1c4a954d7885b80819a1dffd8}} 
+{\bfseries Transaction} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction}{Transaction}} \&)=delete
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Transaction_a04d0af0412001fcca0b0d76dbfa64c4e}\label{classWt_1_1Dbo_1_1Transaction_a04d0af0412001fcca0b0d76dbfa64c4e}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction}{Transaction}} \& {\bfseries operator=} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction}{Transaction}} \&)=delete
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Transaction_aa10184b6fba3c825d67ca40f039251f8}\label{classWt_1_1Dbo_1_1Transaction_aa10184b6fba3c825d67ca40f039251f8}} 
+{\bfseries Transaction} (\mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction}{Transaction}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Transaction_a0bf64eada11c273171fafa04997ba898}\label{classWt_1_1Dbo_1_1Transaction_a0bf64eada11c273171fafa04997ba898}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction}{Transaction}} \& {\bfseries operator=} (\mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction}{Transaction}} \&\&)=delete
+\item 
+bool \mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction_a519f1331028cabaaa0e728653cdf6e47}{is\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the transaction is still active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction_a76e109abb03f00cf3ba5a5c6d84529a5}{commit}} ()
+\begin{DoxyCompactList}\small\item\em Commits the transaction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction_a071848320ad21e06890fb30d4b6b46e9}{rollback}} ()
+\begin{DoxyCompactList}\small\item\em Rolls back the transaction. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} \& \mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction_a47fe1b5cab87a9d87eff76644df285c6}{session}} () const
+\begin{DoxyCompactList}\small\item\em Returns the session associated with this transaction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Transaction_acd3ee2c8e349e843305d3710a8df7951}\label{classWt_1_1Dbo_1_1Transaction_acd3ee2c8e349e843305d3710a8df7951}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction_acd3ee2c8e349e843305d3710a8df7951}{connection}} () const
+\begin{DoxyCompactList}\small\item\em Returns the connection used by this transaction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Transaction_a2b7f7375ea0ab893b31f00ab0faa9c88}\label{classWt_1_1Dbo_1_1Transaction_a2b7f7375ea0ab893b31f00ab0faa9c88}} 
+void {\bfseries release} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Transaction_aa287c76ca257f0960d87eb9b9f65088e}\label{classWt_1_1Dbo_1_1Transaction_aa287c76ca257f0960d87eb9b9f65088e}} 
+bool {\bfseries committed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Transaction_a1becd4650ff178348e4652316dd07565}\label{classWt_1_1Dbo_1_1Transaction_a1becd4650ff178348e4652316dd07565}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} \& {\bfseries session\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Transaction_af804f2b2bf0d92c86cac1fd89004c430}\label{classWt_1_1Dbo_1_1Transaction_af804f2b2bf0d92c86cac1fd89004c430}} 
+\mbox{\hyperlink{structWt_1_1Dbo_1_1Transaction_1_1Impl}{Impl}} $\ast$ {\bfseries impl\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Transaction_afbdd63a566878ce30072e785ca7e7740}\label{classWt_1_1Dbo_1_1Transaction_afbdd63a566878ce30072e785ca7e7740}} 
+class {\bfseries Session}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A database transaction. 
+
+This class implements a R\+A\+II transaction. Most dbo manipulations require that a transaction is active, and database changes will not be committed to the database until the active transaction is committed. A transaction can be committed using \mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction_a76e109abb03f00cf3ba5a5c6d84529a5}{commit()}}, but also commits automatically when it is deleted while no exception is being thrown (using std\+::uncaught\+\_\+exception()). This means that it is possible that the transaction destructor throws an exception in case the transaction still needs to be committed, and the commit fails. If the transaction is deleted because of stack unwinding while an exception is thrown, then the transaction rolls back.
+
+A transaction is active until it is either committed or rolled back. When a transaction is rolled back or fails, the modified database objects are not successfully synchronized with the database. A roll-\/back does not affect the value of the in memory database objects, so they may possibly be synchronized later in a new transaction or discarded using \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_add5f4d579b9841072d5e777925acd92c}{Session\+::reread\+All()}}.
+
+In most occasions you will want to guard any method that touches the database using a transaction object on the stack.
+
+But you may create multiple (nested) transaction objects at the same time\+: in this way you can guard a method with a transaction object even if it is called from another method which also defines a transaction at a wider scope. Nested transactions act in concert and reference the same logical transaction\+: the logical transaction will fail if at least one transaction fails, and will be committed only if all transactions are committed.
+
+Usage example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void} doSomething(\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Wt::Dbo::Session}}\& \mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction_a47fe1b5cab87a9d87eff76644df285c6}{session}})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction}{Wt::Dbo::Transaction}} transaction(\mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction_a47fe1b5cab87a9d87eff76644df285c6}{session}});}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{Wt::Dbo::ptr<Account>}} a = \mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction_a47fe1b5cab87a9d87eff76644df285c6}{session}}.\mbox{\hyperlink{classWt_1_1Dbo_1_1Session_af28082ec3551be9b5dfe34cebaba53ec}{load}}<Account>(42);}
+\DoxyCodeLine{  ...}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \textcolor{comment}{// the transaction will roll back if an exception is thrown, or}}
+\DoxyCodeLine{  \textcolor{comment}{// commit otherwise}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Transaction_ad617b2cb23bc0778ad2c534e2482f74c}\label{classWt_1_1Dbo_1_1Transaction_ad617b2cb23bc0778ad2c534e2482f74c}} 
+\index{Wt::Dbo::Transaction@{Wt::Dbo::Transaction}!Transaction@{Transaction}}
+\index{Transaction@{Transaction}!Wt::Dbo::Transaction@{Wt::Dbo::Transaction}}
+\doxysubsubsection{\texorpdfstring{Transaction()}{Transaction()}}
+{\footnotesize\ttfamily Wt\+::\+Dbo\+::\+Transaction\+::\+Transaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} \&}]{session }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor. 
+
+Opens a transaction for the given {\ttfamily session}. If a transaction is already open for the session, this transaction is added. All open transactions must commit successfully for the entire transaction to succeed. \mbox{\Hypertarget{classWt_1_1Dbo_1_1Transaction_af04d5b754bdfd2d35c24be34eddb85c2}\label{classWt_1_1Dbo_1_1Transaction_af04d5b754bdfd2d35c24be34eddb85c2}} 
+\index{Wt::Dbo::Transaction@{Wt::Dbo::Transaction}!````~Transaction@{$\sim$Transaction}}
+\index{````~Transaction@{$\sim$Transaction}!Wt::Dbo::Transaction@{Wt::Dbo::Transaction}}
+\doxysubsubsection{\texorpdfstring{$\sim$Transaction()}{~Transaction()}}
+{\footnotesize\ttfamily virtual Wt\+::\+Dbo\+::\+Transaction\+::$\sim$\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Destructor. 
+
+If the transaction is still active, it is rolled back. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Transaction_a76e109abb03f00cf3ba5a5c6d84529a5}\label{classWt_1_1Dbo_1_1Transaction_a76e109abb03f00cf3ba5a5c6d84529a5}} 
+\index{Wt::Dbo::Transaction@{Wt::Dbo::Transaction}!commit@{commit}}
+\index{commit@{commit}!Wt::Dbo::Transaction@{Wt::Dbo::Transaction}}
+\doxysubsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily bool Wt\+::\+Dbo\+::\+Transaction\+::commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Commits the transaction. 
+
+If this is the last open transaction for the session, the session is flushed and pending changes are committed to the database.
+
+Returns whether the transaction was flushed to the database (i.\+e. whether this was indeed the last open transaction).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction_a071848320ad21e06890fb30d4b6b46e9}{rollback()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Transaction_a519f1331028cabaaa0e728653cdf6e47}\label{classWt_1_1Dbo_1_1Transaction_a519f1331028cabaaa0e728653cdf6e47}} 
+\index{Wt::Dbo::Transaction@{Wt::Dbo::Transaction}!isActive@{isActive}}
+\index{isActive@{isActive}!Wt::Dbo::Transaction@{Wt::Dbo::Transaction}}
+\doxysubsubsection{\texorpdfstring{isActive()}{isActive()}}
+{\footnotesize\ttfamily bool Wt\+::\+Dbo\+::\+Transaction\+::is\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the transaction is still active. 
+
+A transaction is active unless it has been committed or rolled back.
+
+While a transaction is active, new transactions for the same session are treated as nested transactions. \mbox{\Hypertarget{classWt_1_1Dbo_1_1Transaction_a071848320ad21e06890fb30d4b6b46e9}\label{classWt_1_1Dbo_1_1Transaction_a071848320ad21e06890fb30d4b6b46e9}} 
+\index{Wt::Dbo::Transaction@{Wt::Dbo::Transaction}!rollback@{rollback}}
+\index{rollback@{rollback}!Wt::Dbo::Transaction@{Wt::Dbo::Transaction}}
+\doxysubsubsection{\texorpdfstring{rollback()}{rollback()}}
+{\footnotesize\ttfamily void Wt\+::\+Dbo\+::\+Transaction\+::rollback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rolls back the transaction. 
+
+The transaction is rolled back (if it was still active), and is no longer active.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction_a76e109abb03f00cf3ba5a5c6d84529a5}{commit()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1Transaction_a47fe1b5cab87a9d87eff76644df285c6}\label{classWt_1_1Dbo_1_1Transaction_a47fe1b5cab87a9d87eff76644df285c6}} 
+\index{Wt::Dbo::Transaction@{Wt::Dbo::Transaction}!session@{session}}
+\index{session@{session}!Wt::Dbo::Transaction@{Wt::Dbo::Transaction}}
+\doxysubsubsection{\texorpdfstring{session()}{session()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}}\& Wt\+::\+Dbo\+::\+Transaction\+::session (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the session associated with this transaction. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Transaction_ad617b2cb23bc0778ad2c534e2482f74c}{Transaction()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/Transaction.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,267 @@
+\hypertarget{classWt_1_1Dbo_1_1SqlStatement}{}\doxysection{Wt\+::Dbo\+::Sql\+Statement Class Reference}
+\label{classWt_1_1Dbo_1_1SqlStatement}\index{Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}}
+
+
+Abstract base class for a prepared S\+QL statement.  
+
+
+
+
+{\ttfamily \#include $<$Sql\+Statement.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_a1c04a6ecc92d5928c391fd9da2bca172}\label{classWt_1_1Dbo_1_1SqlStatement_a1c04a6ecc92d5928c391fd9da2bca172}} 
+virtual \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_a1c04a6ecc92d5928c391fd9da2bca172}{$\sim$\+Sql\+Statement}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_a9b894eddd589cb481b21217b7ecad462}{use}} ()
+\begin{DoxyCompactList}\small\item\em Uses the statement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_a98e67c18e7a5c3da2aa9a1c02f6ba3be}{done}} ()
+\begin{DoxyCompactList}\small\item\em Finish statement use. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_aa373b68969bcfa8e5c41113576b823fd}\label{classWt_1_1Dbo_1_1SqlStatement_aa373b68969bcfa8e5c41113576b823fd}} 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_aa373b68969bcfa8e5c41113576b823fd}{reset}} ()=0
+\begin{DoxyCompactList}\small\item\em Resets the statement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_ad8b53ca87bdef11ceceb96ab05c260b9}\label{classWt_1_1Dbo_1_1SqlStatement_ad8b53ca87bdef11ceceb96ab05c260b9}} 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_ad8b53ca87bdef11ceceb96ab05c260b9}{bind}} (int column, const std\+::string \&value)=0
+\begin{DoxyCompactList}\small\item\em Binds a value to a column. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_ae05c21f97335e6ff3a8c59bf5e0727ed}\label{classWt_1_1Dbo_1_1SqlStatement_ae05c21f97335e6ff3a8c59bf5e0727ed}} 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_ae05c21f97335e6ff3a8c59bf5e0727ed}{bind}} (int column, short value)=0
+\begin{DoxyCompactList}\small\item\em Binds a value to a column. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_aa6b3c0525a43d0016116f8e7adad9d50}\label{classWt_1_1Dbo_1_1SqlStatement_aa6b3c0525a43d0016116f8e7adad9d50}} 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_aa6b3c0525a43d0016116f8e7adad9d50}{bind}} (int column, int value)=0
+\begin{DoxyCompactList}\small\item\em Binds a value to a column. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_aaf3c0b71e7af23dddac2aaae7d698f26}\label{classWt_1_1Dbo_1_1SqlStatement_aaf3c0b71e7af23dddac2aaae7d698f26}} 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_aaf3c0b71e7af23dddac2aaae7d698f26}{bind}} (int column, long long value)=0
+\begin{DoxyCompactList}\small\item\em Binds a value to a column. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_a44b457f74cea0f4685af49022cb53d60}\label{classWt_1_1Dbo_1_1SqlStatement_a44b457f74cea0f4685af49022cb53d60}} 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_a44b457f74cea0f4685af49022cb53d60}{bind}} (int column, float value)=0
+\begin{DoxyCompactList}\small\item\em Binds a value to a column. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_afe5d6c654dc5f35fb5bd743d801c8cbd}\label{classWt_1_1Dbo_1_1SqlStatement_afe5d6c654dc5f35fb5bd743d801c8cbd}} 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_afe5d6c654dc5f35fb5bd743d801c8cbd}{bind}} (int column, double value)=0
+\begin{DoxyCompactList}\small\item\em Binds a value to a column. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_afbe4698684c7b9b355748a199e0b0558}\label{classWt_1_1Dbo_1_1SqlStatement_afbe4698684c7b9b355748a199e0b0558}} 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_afbe4698684c7b9b355748a199e0b0558}{bind}} (int column, const std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \&value, \mbox{\hyperlink{namespaceWt_1_1Dbo_af213c090c1ccddc36d70d56e0804047f}{Sql\+Date\+Time\+Type}} type)=0
+\begin{DoxyCompactList}\small\item\em Binds a value to a column. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_a41aebebd47fa107ee6de26f3b091125f}\label{classWt_1_1Dbo_1_1SqlStatement_a41aebebd47fa107ee6de26f3b091125f}} 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_a41aebebd47fa107ee6de26f3b091125f}{bind}} (int column, const std\+::chrono\+::duration$<$ int, std\+::milli $>$ \&value)=0
+\begin{DoxyCompactList}\small\item\em Binds a value to a column. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_ae2bbddef8fd8c11687d23187920dc4da}\label{classWt_1_1Dbo_1_1SqlStatement_ae2bbddef8fd8c11687d23187920dc4da}} 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_ae2bbddef8fd8c11687d23187920dc4da}{bind}} (int column, const std\+::vector$<$ unsigned char $>$ \&value)=0
+\begin{DoxyCompactList}\small\item\em Binds a value to a column. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_affff3fa371c416b6c984082d8f5dc050}\label{classWt_1_1Dbo_1_1SqlStatement_affff3fa371c416b6c984082d8f5dc050}} 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_affff3fa371c416b6c984082d8f5dc050}{bind\+Null}} (int column)=0
+\begin{DoxyCompactList}\small\item\em Binds {\ttfamily null} to a column. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_ab8b5af1a2f9cd87e8c2aac883a3d805f}\label{classWt_1_1Dbo_1_1SqlStatement_ab8b5af1a2f9cd87e8c2aac883a3d805f}} 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_ab8b5af1a2f9cd87e8c2aac883a3d805f}{execute}} ()=0
+\begin{DoxyCompactList}\small\item\em Executes the statement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_a88ab03b6ac501ce5b424746d42b2b882}\label{classWt_1_1Dbo_1_1SqlStatement_a88ab03b6ac501ce5b424746d42b2b882}} 
+virtual long long \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_a88ab03b6ac501ce5b424746d42b2b882}{inserted\+Id}} ()=0
+\begin{DoxyCompactList}\small\item\em Returns the id if the statement was an S\+QL {\ttfamily insert}. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_a4a0eedff10a29eb511ebf66762b13e72}{affected\+Row\+Count}} ()=0
+\begin{DoxyCompactList}\small\item\em Returns the affected number of rows. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_a5da3f872f0dfb742dd4c1608ad1dd550}{next\+Row}} ()=0
+\begin{DoxyCompactList}\small\item\em Fetches the next result row. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_a4868a3639566171ac3d58e15e3bf77f3}{column\+Count}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the number of columns in the result. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_afca829eb43f0977b2af6ea7e0b66aad1}{get\+Result}} (int column, std\+::string $\ast$value, int size)=0
+\begin{DoxyCompactList}\small\item\em Fetches a result value. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_ab531e2336cac4d92abf4af926dffbe36}{get\+Result}} (int column, short $\ast$value)=0
+\begin{DoxyCompactList}\small\item\em Fetches a result value. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_a8512932928f07c81917c67ec86551685}{get\+Result}} (int column, int $\ast$value)=0
+\begin{DoxyCompactList}\small\item\em Fetches a result value. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_a2d286430babae4a15f7a64ffb8b7f463}{get\+Result}} (int column, long long $\ast$value)=0
+\begin{DoxyCompactList}\small\item\em Fetches a result value. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_af22bf78fd30fb12b502a2c49251c3808}{get\+Result}} (int column, float $\ast$value)=0
+\begin{DoxyCompactList}\small\item\em Fetches a result value. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_af55759bcb42119292bf2e05308a50db8}{get\+Result}} (int column, double $\ast$value)=0
+\begin{DoxyCompactList}\small\item\em Fetches a result value. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_ad5a4e0587a4300cab459fd2c66c00998}{get\+Result}} (int column, std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point $\ast$value, \mbox{\hyperlink{namespaceWt_1_1Dbo_af213c090c1ccddc36d70d56e0804047f}{Sql\+Date\+Time\+Type}} type)=0
+\begin{DoxyCompactList}\small\item\em Fetches a result value. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_a4dea8cf8fdc26995abd657d2e332821a}{get\+Result}} (int column, std\+::chrono\+::duration$<$ int, std\+::milli $>$ $\ast$value)=0
+\begin{DoxyCompactList}\small\item\em Fetches a result value. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_afa7b64d1c949c39e1cddd16f8e343b42}{get\+Result}} (int column, std\+::vector$<$ unsigned char $>$ $\ast$value, int size)=0
+\begin{DoxyCompactList}\small\item\em Fetches a result value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_ac1a8b9037b9f106135150a547626b826}\label{classWt_1_1Dbo_1_1SqlStatement_ac1a8b9037b9f106135150a547626b826}} 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_ac1a8b9037b9f106135150a547626b826}{sql}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the prepared S\+QL string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_a1a68195d42f79bc6681e51e8f0018d0f}\label{classWt_1_1Dbo_1_1SqlStatement_a1a68195d42f79bc6681e51e8f0018d0f}} 
+{\bfseries Sql\+Statement} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_a3d0522314598fd3bfe4b71b8cf8f707d}\label{classWt_1_1Dbo_1_1SqlStatement_a3d0522314598fd3bfe4b71b8cf8f707d}} 
+bool {\bfseries inuse\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for a prepared S\+QL statement. 
+
+The statement may be used multiple times, but cannot be used concurrently. It also cannot be copied.
+
+This class is part of \mbox{\hyperlink{namespaceWt_1_1Dbo}{Wt\+::\+Dbo}}\textquotesingle{}s backend A\+PI, and should not be used directly. Its interface must be reimplemented for each backend corresponding to a supported database.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_a4a0eedff10a29eb511ebf66762b13e72}\label{classWt_1_1Dbo_1_1SqlStatement_a4a0eedff10a29eb511ebf66762b13e72}} 
+\index{Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}!affectedRowCount@{affectedRowCount}}
+\index{affectedRowCount@{affectedRowCount}!Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}}
+\doxysubsubsection{\texorpdfstring{affectedRowCount()}{affectedRowCount()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+Dbo\+::\+Sql\+Statement\+::affected\+Row\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the affected number of rows. 
+
+This is only useful for an S\+QL {\ttfamily update} or {\ttfamily delete} statement. \mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_a4868a3639566171ac3d58e15e3bf77f3}\label{classWt_1_1Dbo_1_1SqlStatement_a4868a3639566171ac3d58e15e3bf77f3}} 
+\index{Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}!columnCount@{columnCount}}
+\index{columnCount@{columnCount}!Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}}
+\doxysubsubsection{\texorpdfstring{columnCount()}{columnCount()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+Dbo\+::\+Sql\+Statement\+::column\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the number of columns in the result. 
+
+\begin{DoxyNote}{Note}
+The column count may only be available after the query was executed. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_a98e67c18e7a5c3da2aa9a1c02f6ba3be}\label{classWt_1_1Dbo_1_1SqlStatement_a98e67c18e7a5c3da2aa9a1c02f6ba3be}} 
+\index{Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}!done@{done}}
+\index{done@{done}!Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}}
+\doxysubsubsection{\texorpdfstring{done()}{done()}}
+{\footnotesize\ttfamily void Wt\+::\+Dbo\+::\+Sql\+Statement\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Finish statement use. 
+
+Marks the statement as no longer used and resets the statement.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_a9b894eddd589cb481b21217b7ecad462}{use()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_af55759bcb42119292bf2e05308a50db8}\label{classWt_1_1Dbo_1_1SqlStatement_af55759bcb42119292bf2e05308a50db8}} 
+\index{Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}!getResult@{getResult}}
+\index{getResult@{getResult}!Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}}
+\doxysubsubsection{\texorpdfstring{getResult()}{getResult()}\hspace{0.1cm}{\footnotesize\ttfamily [1/9]}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::\+Sql\+Statement\+::get\+Result (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{double $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Fetches a result value. 
+
+Returns {\ttfamily true} when the value was not {\ttfamily null}. \mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_af22bf78fd30fb12b502a2c49251c3808}\label{classWt_1_1Dbo_1_1SqlStatement_af22bf78fd30fb12b502a2c49251c3808}} 
+\index{Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}!getResult@{getResult}}
+\index{getResult@{getResult}!Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}}
+\doxysubsubsection{\texorpdfstring{getResult()}{getResult()}\hspace{0.1cm}{\footnotesize\ttfamily [2/9]}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::\+Sql\+Statement\+::get\+Result (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{float $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Fetches a result value. 
+
+Returns {\ttfamily true} when the value was not {\ttfamily null}. \mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_a8512932928f07c81917c67ec86551685}\label{classWt_1_1Dbo_1_1SqlStatement_a8512932928f07c81917c67ec86551685}} 
+\index{Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}!getResult@{getResult}}
+\index{getResult@{getResult}!Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}}
+\doxysubsubsection{\texorpdfstring{getResult()}{getResult()}\hspace{0.1cm}{\footnotesize\ttfamily [3/9]}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::\+Sql\+Statement\+::get\+Result (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{int $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Fetches a result value. 
+
+Returns {\ttfamily true} when the value was not {\ttfamily null}. \mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_a2d286430babae4a15f7a64ffb8b7f463}\label{classWt_1_1Dbo_1_1SqlStatement_a2d286430babae4a15f7a64ffb8b7f463}} 
+\index{Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}!getResult@{getResult}}
+\index{getResult@{getResult}!Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}}
+\doxysubsubsection{\texorpdfstring{getResult()}{getResult()}\hspace{0.1cm}{\footnotesize\ttfamily [4/9]}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::\+Sql\+Statement\+::get\+Result (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{long long $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Fetches a result value. 
+
+Returns {\ttfamily true} when the value was not {\ttfamily null}. \mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_ab531e2336cac4d92abf4af926dffbe36}\label{classWt_1_1Dbo_1_1SqlStatement_ab531e2336cac4d92abf4af926dffbe36}} 
+\index{Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}!getResult@{getResult}}
+\index{getResult@{getResult}!Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}}
+\doxysubsubsection{\texorpdfstring{getResult()}{getResult()}\hspace{0.1cm}{\footnotesize\ttfamily [5/9]}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::\+Sql\+Statement\+::get\+Result (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{short $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Fetches a result value. 
+
+Returns {\ttfamily true} when the value was not {\ttfamily null}. \mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_a4dea8cf8fdc26995abd657d2e332821a}\label{classWt_1_1Dbo_1_1SqlStatement_a4dea8cf8fdc26995abd657d2e332821a}} 
+\index{Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}!getResult@{getResult}}
+\index{getResult@{getResult}!Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}}
+\doxysubsubsection{\texorpdfstring{getResult()}{getResult()}\hspace{0.1cm}{\footnotesize\ttfamily [6/9]}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::\+Sql\+Statement\+::get\+Result (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{std\+::chrono\+::duration$<$ int, std\+::milli $>$ $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Fetches a result value. 
+
+Returns {\ttfamily true} when the value was not {\ttfamily null}. \mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_ad5a4e0587a4300cab459fd2c66c00998}\label{classWt_1_1Dbo_1_1SqlStatement_ad5a4e0587a4300cab459fd2c66c00998}} 
+\index{Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}!getResult@{getResult}}
+\index{getResult@{getResult}!Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}}
+\doxysubsubsection{\texorpdfstring{getResult()}{getResult()}\hspace{0.1cm}{\footnotesize\ttfamily [7/9]}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::\+Sql\+Statement\+::get\+Result (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point $\ast$}]{value,  }\item[{\mbox{\hyperlink{namespaceWt_1_1Dbo_af213c090c1ccddc36d70d56e0804047f}{Sql\+Date\+Time\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Fetches a result value. 
+
+Returns {\ttfamily true} when the value was not {\ttfamily null}. \mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_afca829eb43f0977b2af6ea7e0b66aad1}\label{classWt_1_1Dbo_1_1SqlStatement_afca829eb43f0977b2af6ea7e0b66aad1}} 
+\index{Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}!getResult@{getResult}}
+\index{getResult@{getResult}!Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}}
+\doxysubsubsection{\texorpdfstring{getResult()}{getResult()}\hspace{0.1cm}{\footnotesize\ttfamily [8/9]}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::\+Sql\+Statement\+::get\+Result (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{std\+::string $\ast$}]{value,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Fetches a result value. 
+
+Returns {\ttfamily true} when the value was not {\ttfamily null}. The size is the expected size of sql string type and can be used to dimension buffers but the return string may be bigger. \mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_afa7b64d1c949c39e1cddd16f8e343b42}\label{classWt_1_1Dbo_1_1SqlStatement_afa7b64d1c949c39e1cddd16f8e343b42}} 
+\index{Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}!getResult@{getResult}}
+\index{getResult@{getResult}!Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}}
+\doxysubsubsection{\texorpdfstring{getResult()}{getResult()}\hspace{0.1cm}{\footnotesize\ttfamily [9/9]}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::\+Sql\+Statement\+::get\+Result (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{std\+::vector$<$ unsigned char $>$ $\ast$}]{value,  }\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Fetches a result value. 
+
+Returns {\ttfamily true} when the value was not {\ttfamily null}. \mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_a5da3f872f0dfb742dd4c1608ad1dd550}\label{classWt_1_1Dbo_1_1SqlStatement_a5da3f872f0dfb742dd4c1608ad1dd550}} 
+\index{Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}!nextRow@{nextRow}}
+\index{nextRow@{nextRow}!Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}}
+\doxysubsubsection{\texorpdfstring{nextRow()}{nextRow()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::\+Sql\+Statement\+::next\+Row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Fetches the next result row. 
+
+Returns {\ttfamily true} if there was one more row to be fetched. \mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlStatement_a9b894eddd589cb481b21217b7ecad462}\label{classWt_1_1Dbo_1_1SqlStatement_a9b894eddd589cb481b21217b7ecad462}} 
+\index{Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}!use@{use}}
+\index{use@{use}!Wt::Dbo::SqlStatement@{Wt::Dbo::SqlStatement}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily bool Wt\+::\+Dbo\+::\+Sql\+Statement\+::use (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Uses the statement. 
+
+Marks the statement as in-\/use. If the statement is already in use, return false. In that case, we will later provision that a statement can be cloned and that a list of equivalent statement is kept in the statement cache of a connectin. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/Sql\+Statement.\+h\end{DoxyCompactItemize}

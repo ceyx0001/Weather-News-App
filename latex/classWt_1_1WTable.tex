@@ -1,0 +1,374 @@
+\hypertarget{classWt_1_1WTable}{}\doxysection{Wt\+::W\+Table Class Reference}
+\label{classWt_1_1WTable}\index{Wt::WTable@{Wt::WTable}}
+
+
+A container widget which provides layout of children in a table grid.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Table.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Table\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Table\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_a8b9c9832da1cab0c750092bbda597a14}\label{classWt_1_1WTable_a8b9c9832da1cab0c750092bbda597a14}} 
+\mbox{\hyperlink{classWt_1_1WTable_a8b9c9832da1cab0c750092bbda597a14}{W\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Creates an empty table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTable_ad96b85a79ba25154d7d61777e05c4666}\label{classWt_1_1WTable_ad96b85a79ba25154d7d61777e05c4666}} 
+virtual \mbox{\hyperlink{classWt_1_1WTable_ad96b85a79ba25154d7d61777e05c4666}{$\sim$\+W\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Deletes the table and its entire contents. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTableCell}{W\+Table\+Cell}} $\ast$ \mbox{\hyperlink{classWt_1_1WTable_abb23850096316e37d2b77dced200514a}{element\+At}} (int row, int column)
+\begin{DoxyCompactList}\small\item\em Accesses the table element at the given row and column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTableRow}{W\+Table\+Row}} $\ast$ \mbox{\hyperlink{classWt_1_1WTable_ad773593b3a5521d385497d54cd651bdf}{row\+At}} (int row)
+\begin{DoxyCompactList}\small\item\em Returns the row object for the given row. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTableColumn}{W\+Table\+Column}} $\ast$ \mbox{\hyperlink{classWt_1_1WTable_afc72f8bb80b6a6e659a13124a407fd98}{column\+At}} (int column)
+\begin{DoxyCompactList}\small\item\em Returns the column object for the given column. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTable_a5c45c882a0b3af6d0c0ed13b6217c078}{remove\+Cell}} (\mbox{\hyperlink{classWt_1_1WTableCell}{W\+Table\+Cell}} $\ast$item)
+\begin{DoxyCompactList}\small\item\em Deletes a table cell and its contents. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTable_a18d96434a944a8cf4572cec108087754}{remove\+Cell}} (int row, int column)
+\begin{DoxyCompactList}\small\item\em Deletes the table cell at the given position. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTable_a5283404c86d414b979d0a5ee0be1c1a4}\label{classWt_1_1WTable_a5283404c86d414b979d0a5ee0be1c1a4}} 
+virtual \mbox{\hyperlink{classWt_1_1WTableRow}{W\+Table\+Row}} $\ast$ \mbox{\hyperlink{classWt_1_1WTable_a5283404c86d414b979d0a5ee0be1c1a4}{insert\+Row}} (int row, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WTableRow}{W\+Table\+Row}} $>$ table\+Row=nullptr)
+\begin{DoxyCompactList}\small\item\em Inserts a row. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WTableRow}{W\+Table\+Row}} $>$ \mbox{\hyperlink{classWt_1_1WTable_a2d746a483b726c77c5799e56b9a1d68f}{remove\+Row}} (int row)
+\begin{DoxyCompactList}\small\item\em Removes a row. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTable_aa62508a64beb2611372133356423af55}\label{classWt_1_1WTable_aa62508a64beb2611372133356423af55}} 
+virtual \mbox{\hyperlink{classWt_1_1WTableColumn}{W\+Table\+Column}} $\ast$ \mbox{\hyperlink{classWt_1_1WTable_aa62508a64beb2611372133356423af55}{insert\+Column}} (int column, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WTableColumn}{W\+Table\+Column}} $>$ table\+Column=nullptr)
+\begin{DoxyCompactList}\small\item\em Inserts an empty column. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WTableColumn}{W\+Table\+Column}} $>$ \mbox{\hyperlink{classWt_1_1WTable_a24be53ab4b240b011d700a8467bc7953}{remove\+Column}} (int column)
+\begin{DoxyCompactList}\small\item\em Remove a column and all its contents. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTable_a53ee1940ce543fb3fc4bb9937f2d9c61}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears the entire table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTable_a0bdf6c859d764c9312f0462e9dc30eaf}\label{classWt_1_1WTable_a0bdf6c859d764c9312f0462e9dc30eaf}} 
+int \mbox{\hyperlink{classWt_1_1WTable_a0bdf6c859d764c9312f0462e9dc30eaf}{row\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of rows in the table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTable_a3064a4f966c97dddc09761565546c903}\label{classWt_1_1WTable_a3064a4f966c97dddc09761565546c903}} 
+int \mbox{\hyperlink{classWt_1_1WTable_a3064a4f966c97dddc09761565546c903}{column\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of columns in the table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTable_aff5f29161a03a71b162f37e4e92a25c5}{set\+Header\+Count}} (int count, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation=Orientation\+::\+Horizontal)
+\begin{DoxyCompactList}\small\item\em Sets the number of header rows or columns. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WTable_afb491fdea6f09d43d18653dcb3701230}{header\+Count}} (\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation=Orientation\+::\+Horizontal)
+\begin{DoxyCompactList}\small\item\em Returns the number of header rows or columns. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTable_a5047905fd09f0b1034a126dd8fbffa94}{move\+Row}} (int from, int to)
+\begin{DoxyCompactList}\small\item\em Move a table row from its original position to a new position. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTable_a52aa69939af956e9835c65beaf09cf52}{move\+Column}} (int from, int to)
+\begin{DoxyCompactList}\small\item\em Move a table column from its original position to a new position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WTableCell}{W\+Table\+Cell}} $>$ \mbox{\hyperlink{classWt_1_1WTable_a06014b96a6c795cf167eecb67dfc8de9}{create\+Cell}} (int row, int column)
+\begin{DoxyCompactList}\small\item\em Creates a table cell. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WTableRow}{W\+Table\+Row}} $>$ \mbox{\hyperlink{classWt_1_1WTable_a4d0994be9908948e7312171e33b63876}{create\+Row}} (int row)
+\begin{DoxyCompactList}\small\item\em Creates a table row. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WTableColumn}{W\+Table\+Column}} $>$ \mbox{\hyperlink{classWt_1_1WTable_a60918cb67cb560eff5aec99284605856}{create\+Column}} (int column)
+\begin{DoxyCompactList}\small\item\em Creates a table column. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTable_a67fa4a863e601a0d06655c82efb4727c}\label{classWt_1_1WTable_a67fa4a863e601a0d06655c82efb4727c}} 
+virtual void {\bfseries update\+Dom} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&element, bool all) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_ac5e0626725d81af9a028b5246281f7c5}\label{classWt_1_1WTable_ac5e0626725d81af9a028b5246281f7c5}} 
+virtual \mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} {\bfseries dom\+Element\+Type} () const override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_a65ac281bd8e7cc92ed44795ea4e43275}\label{classWt_1_1WTable_a65ac281bd8e7cc92ed44795ea4e43275}} 
+virtual \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ {\bfseries create\+Dom\+Element} (\mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_adf0a0938895a54ca78a464b9ba491041}\label{classWt_1_1WTable_adf0a0938895a54ca78a464b9ba491041}} 
+virtual void {\bfseries get\+Dom\+Changes} (std\+::vector$<$ \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ $>$ \&result, \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_a5cdfa4307e544e06503e851510c8e151}\label{classWt_1_1WTable_a5cdfa4307e544e06503e851510c8e151}} 
+virtual void {\bfseries propagate\+Render\+Ok} (bool deep) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_a0ac97dc1c089387086b0755348a938dc}\label{classWt_1_1WTable_a0ac97dc1c089387086b0755348a938dc}} 
+virtual void {\bfseries iterate\+Children} (const Handle\+Widget\+Method \&method) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_a129899702422804f95fb4fa67d2514b0}\label{classWt_1_1WTable_a129899702422804f95fb4fa67d2514b0}} 
+void {\bfseries expand} (int row, int column, int row\+Span, int column\+Span)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_ab1073b889f50f91f064ba946a8db7426}\label{classWt_1_1WTable_ab1073b889f50f91f064ba946a8db7426}} 
+\mbox{\hyperlink{classWt_1_1WTableCell}{W\+Table\+Cell}} $\ast$ {\bfseries item\+At} (int row, int column)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_aaa8b43f9a3a5c887348e5ac95f09b587}\label{classWt_1_1WTable_aaa8b43f9a3a5c887348e5ac95f09b587}} 
+void {\bfseries set\+Item\+At} (int row, int column, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WTableCell}{W\+Table\+Cell}} $>$ cell)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_a4bb29b08ac4b965af2a869af3dfa9f01}\label{classWt_1_1WTable_a4bb29b08ac4b965af2a869af3dfa9f01}} 
+void {\bfseries repaint\+Row} (\mbox{\hyperlink{classWt_1_1WTableRow}{W\+Table\+Row}} $\ast$row)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_a7206995ea1d7beb9d858821c4244e462}\label{classWt_1_1WTable_a7206995ea1d7beb9d858821c4244e462}} 
+void {\bfseries repaint\+Column} (\mbox{\hyperlink{classWt_1_1WTableColumn}{W\+Table\+Column}} $\ast$col)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_a3c3e7e9e81bd7e7bdaf12080541064e3}\label{classWt_1_1WTable_a3c3e7e9e81bd7e7bdaf12080541064e3}} 
+\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ {\bfseries create\+Row\+Dom\+Element} (int row, bool with\+Ids, \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_a8720759b7597c45509fde78107b52816}\label{classWt_1_1WTable_a8720759b7597c45509fde78107b52816}} 
+std\+::bitset$<$ 3 $>$ {\bfseries flags\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_a85d93e5d756aabf1077da174e19a595e}\label{classWt_1_1WTable_a85d93e5d756aabf1077da174e19a595e}} 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WTableRow}{W\+Table\+Row}} $>$ $>$ {\bfseries rows\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_a53a6ebbbb58aa514c5183f4eb8b77323}\label{classWt_1_1WTable_a53a6ebbbb58aa514c5183f4eb8b77323}} 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WTableColumn}{W\+Table\+Column}} $>$ $>$ {\bfseries columns\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_a12422e4169ac6abdccb50276a9a2eeb6}\label{classWt_1_1WTable_a12422e4169ac6abdccb50276a9a2eeb6}} 
+std\+::set$<$ \mbox{\hyperlink{classWt_1_1WTableRow}{W\+Table\+Row}} $\ast$ $>$ {\bfseries rows\+Changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_a72c45d7c43d090bbab635f2d83622b6a}\label{classWt_1_1WTable_a72c45d7c43d090bbab635f2d83622b6a}} 
+unsigned {\bfseries rows\+Added\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_aea1237ec2800d3400c94bcf0c7e6bf4e}\label{classWt_1_1WTable_aea1237ec2800d3400c94bcf0c7e6bf4e}} 
+int {\bfseries header\+Row\+Count\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_ad8fcf3d2072a110e70ed1a6d917c721a}\label{classWt_1_1WTable_ad8fcf3d2072a110e70ed1a6d917c721a}} 
+int {\bfseries header\+Column\+Count\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_ac0860a22736fb19b1dfeba9945e25cc9}\label{classWt_1_1WTable_ac0860a22736fb19b1dfeba9945e25cc9}} 
+static const int {\bfseries B\+I\+T\+\_\+\+G\+R\+I\+D\+\_\+\+C\+H\+A\+N\+G\+ED} = 0
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_aa38c3e177eb591b0792b9abc732407ff}\label{classWt_1_1WTable_aa38c3e177eb591b0792b9abc732407ff}} 
+static const int {\bfseries B\+I\+T\+\_\+\+C\+O\+L\+U\+M\+N\+S\+\_\+\+C\+H\+A\+N\+G\+ED} = 1
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_aca09f2a9941e97906f4b186e9d50ba45}\label{classWt_1_1WTable_aca09f2a9941e97906f4b186e9d50ba45}} 
+class {\bfseries W\+Table\+Cell}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_a5944c2966ea2a2edc9453c920373d5ea}\label{classWt_1_1WTable_a5944c2966ea2a2edc9453c920373d5ea}} 
+class {\bfseries W\+Table\+Column}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTable_a79550ea6db85a38f93f385c501f0ac7a}\label{classWt_1_1WTable_a79550ea6db85a38f93f385c501f0ac7a}} 
+class {\bfseries W\+Table\+Row}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A container widget which provides layout of children in a table grid. 
+
+A W\+Table arranges its children in a table.
+
+To insert or access contents, use \mbox{\hyperlink{classWt_1_1WTable_abb23850096316e37d2b77dced200514a}{element\+At(int row, int column)}} to access the \mbox{\hyperlink{classWt_1_1WTableCell}{cell}} at a particular location in the table. The W\+Table expands automatically to create the indexed (row, column) as necessary.
+
+It is possible to insert and delete entire rows or columns from the table using the insert\+Column(int column), insert\+Row(int row), delete\+Column(int column), or delete\+Row(int row) methods.
+
+You may indicate a number of rows and columns that act as headers using \mbox{\hyperlink{classWt_1_1WTable_aff5f29161a03a71b162f37e4e92a25c5}{set\+Header\+Count()}}. Header cells are rendered as {\ttfamily $<$th$>$} instead of {\ttfamily $<$td$>$} elements. By default, no rows or columns are configured as headers.
+
+W\+Table is displayed as a \mbox{\hyperlink{classWt_1_1WWidget_ac78e3af143883334c82031790c87416e}{block}}.
+
+\doxyparagraph*{C\+SS}
+
+The widget corresponds to the H\+T\+ML {\ttfamily $<$table$>$} tag and does not provide styling. It can be styled using inline or external C\+SS as appropriate.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTableCell}{W\+Table\+Cell}}, \mbox{\hyperlink{classWt_1_1WTableRow}{W\+Table\+Row}}, \mbox{\hyperlink{classWt_1_1WTableColumn}{W\+Table\+Column}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WTable_a53ee1940ce543fb3fc4bb9937f2d9c61}\label{classWt_1_1WTable_a53ee1940ce543fb3fc4bb9937f2d9c61}} 
+\index{Wt::WTable@{Wt::WTable}!clear@{clear}}
+\index{clear@{clear}!Wt::WTable@{Wt::WTable}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Table\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Clears the entire table. 
+
+This method clears the entire table\+: all cells and their contents are deleted. \mbox{\Hypertarget{classWt_1_1WTable_afc72f8bb80b6a6e659a13124a407fd98}\label{classWt_1_1WTable_afc72f8bb80b6a6e659a13124a407fd98}} 
+\index{Wt::WTable@{Wt::WTable}!columnAt@{columnAt}}
+\index{columnAt@{columnAt}!Wt::WTable@{Wt::WTable}}
+\doxysubsubsection{\texorpdfstring{columnAt()}{columnAt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WTableColumn}{W\+Table\+Column}}$\ast$ Wt\+::\+W\+Table\+::column\+At (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption})}
+
+
+
+Returns the column object for the given column. 
+
+Like with \mbox{\hyperlink{classWt_1_1WTable_abb23850096316e37d2b77dced200514a}{element\+At()}}, the table expands automatically when the column is beyond the current table dimensions.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTable_abb23850096316e37d2b77dced200514a}{element\+At(int, int)}}, \mbox{\hyperlink{classWt_1_1WTable_ad773593b3a5521d385497d54cd651bdf}{row\+At(int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTable_a06014b96a6c795cf167eecb67dfc8de9}\label{classWt_1_1WTable_a06014b96a6c795cf167eecb67dfc8de9}} 
+\index{Wt::WTable@{Wt::WTable}!createCell@{createCell}}
+\index{createCell@{createCell}!Wt::WTable@{Wt::WTable}}
+\doxysubsubsection{\texorpdfstring{createCell()}{createCell()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WTableCell}{W\+Table\+Cell}}$>$ Wt\+::\+W\+Table\+::create\+Cell (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates a table cell. 
+
+You may want to override this method if you want your table to contain specialized cells. \mbox{\Hypertarget{classWt_1_1WTable_a60918cb67cb560eff5aec99284605856}\label{classWt_1_1WTable_a60918cb67cb560eff5aec99284605856}} 
+\index{Wt::WTable@{Wt::WTable}!createColumn@{createColumn}}
+\index{createColumn@{createColumn}!Wt::WTable@{Wt::WTable}}
+\doxysubsubsection{\texorpdfstring{createColumn()}{createColumn()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WTableColumn}{W\+Table\+Column}}$>$ Wt\+::\+W\+Table\+::create\+Column (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates a table column. 
+
+You may want to override this method if you want your table to contain specialized columns. \mbox{\Hypertarget{classWt_1_1WTable_a4d0994be9908948e7312171e33b63876}\label{classWt_1_1WTable_a4d0994be9908948e7312171e33b63876}} 
+\index{Wt::WTable@{Wt::WTable}!createRow@{createRow}}
+\index{createRow@{createRow}!Wt::WTable@{Wt::WTable}}
+\doxysubsubsection{\texorpdfstring{createRow()}{createRow()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WTableRow}{W\+Table\+Row}}$>$ Wt\+::\+W\+Table\+::create\+Row (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates a table row. 
+
+You may want to override this method if you want your table to contain specialized rows. \mbox{\Hypertarget{classWt_1_1WTable_abb23850096316e37d2b77dced200514a}\label{classWt_1_1WTable_abb23850096316e37d2b77dced200514a}} 
+\index{Wt::WTable@{Wt::WTable}!elementAt@{elementAt}}
+\index{elementAt@{elementAt}!Wt::WTable@{Wt::WTable}}
+\doxysubsubsection{\texorpdfstring{elementAt()}{elementAt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WTableCell}{W\+Table\+Cell}}$\ast$ Wt\+::\+W\+Table\+::element\+At (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column }\end{DoxyParamCaption})}
+
+
+
+Accesses the table element at the given row and column. 
+
+If the row/column is beyond the current table dimensions, then the table is expanded automatically. \mbox{\Hypertarget{classWt_1_1WTable_afb491fdea6f09d43d18653dcb3701230}\label{classWt_1_1WTable_afb491fdea6f09d43d18653dcb3701230}} 
+\index{Wt::WTable@{Wt::WTable}!headerCount@{headerCount}}
+\index{headerCount@{headerCount}!Wt::WTable@{Wt::WTable}}
+\doxysubsubsection{\texorpdfstring{headerCount()}{headerCount()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Table\+::header\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation = {\ttfamily Orientation\+:\+:Horizontal} }\end{DoxyParamCaption})}
+
+
+
+Returns the number of header rows or columns. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTable_aff5f29161a03a71b162f37e4e92a25c5}{set\+Header\+Count()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTable_a52aa69939af956e9835c65beaf09cf52}\label{classWt_1_1WTable_a52aa69939af956e9835c65beaf09cf52}} 
+\index{Wt::WTable@{Wt::WTable}!moveColumn@{moveColumn}}
+\index{moveColumn@{moveColumn}!Wt::WTable@{Wt::WTable}}
+\doxysubsubsection{\texorpdfstring{moveColumn()}{moveColumn()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Table\+::move\+Column (\begin{DoxyParamCaption}\item[{int}]{from,  }\item[{int}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Move a table column from its original position to a new position. 
+
+The table expands automatically when the {\ttfamily to} column is beyond the current table dimensions.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTable_a5047905fd09f0b1034a126dd8fbffa94}{move\+Row()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTable_a5047905fd09f0b1034a126dd8fbffa94}\label{classWt_1_1WTable_a5047905fd09f0b1034a126dd8fbffa94}} 
+\index{Wt::WTable@{Wt::WTable}!moveRow@{moveRow}}
+\index{moveRow@{moveRow}!Wt::WTable@{Wt::WTable}}
+\doxysubsubsection{\texorpdfstring{moveRow()}{moveRow()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Table\+::move\+Row (\begin{DoxyParamCaption}\item[{int}]{from,  }\item[{int}]{to }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Move a table row from its original position to a new position. 
+
+The table expands automatically when the {\ttfamily to} row is beyond the current table dimensions.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTable_a52aa69939af956e9835c65beaf09cf52}{move\+Column()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTable_a18d96434a944a8cf4572cec108087754}\label{classWt_1_1WTable_a18d96434a944a8cf4572cec108087754}} 
+\index{Wt::WTable@{Wt::WTable}!removeCell@{removeCell}}
+\index{removeCell@{removeCell}!Wt::WTable@{Wt::WTable}}
+\doxysubsubsection{\texorpdfstring{removeCell()}{removeCell()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Table\+::remove\+Cell (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Deletes the table cell at the given position. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTable_a5c45c882a0b3af6d0c0ed13b6217c078}{remove\+Cell(\+W\+Table\+Cell $\ast$)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTable_a5c45c882a0b3af6d0c0ed13b6217c078}\label{classWt_1_1WTable_a5c45c882a0b3af6d0c0ed13b6217c078}} 
+\index{Wt::WTable@{Wt::WTable}!removeCell@{removeCell}}
+\index{removeCell@{removeCell}!Wt::WTable@{Wt::WTable}}
+\doxysubsubsection{\texorpdfstring{removeCell()}{removeCell()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Table\+::remove\+Cell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WTableCell}{W\+Table\+Cell}} $\ast$}]{item }\end{DoxyParamCaption})}
+
+
+
+Deletes a table cell and its contents. 
+
+The table cell at that position is recreated.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTable_a18d96434a944a8cf4572cec108087754}{remove\+Cell(int, int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTable_a24be53ab4b240b011d700a8467bc7953}\label{classWt_1_1WTable_a24be53ab4b240b011d700a8467bc7953}} 
+\index{Wt::WTable@{Wt::WTable}!removeColumn@{removeColumn}}
+\index{removeColumn@{removeColumn}!Wt::WTable@{Wt::WTable}}
+\doxysubsubsection{\texorpdfstring{removeColumn()}{removeColumn()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WTableColumn}{W\+Table\+Column}}$>$ Wt\+::\+W\+Table\+::remove\+Column (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Remove a column and all its contents. 
+
+The contents of the column will be deleted, because a \mbox{\hyperlink{classWt_1_1WTableColumn}{W\+Table\+Column}} does not own its cells. \mbox{\Hypertarget{classWt_1_1WTable_a2d746a483b726c77c5799e56b9a1d68f}\label{classWt_1_1WTable_a2d746a483b726c77c5799e56b9a1d68f}} 
+\index{Wt::WTable@{Wt::WTable}!removeRow@{removeRow}}
+\index{removeRow@{removeRow}!Wt::WTable@{Wt::WTable}}
+\doxysubsubsection{\texorpdfstring{removeRow()}{removeRow()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WTableRow}{W\+Table\+Row}}$>$ Wt\+::\+W\+Table\+::remove\+Row (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Removes a row. 
+
+Rows below the given row are shifted up. Returns a \mbox{\hyperlink{classWt_1_1WTableRow}{W\+Table\+Row}} that is not associated with a \mbox{\hyperlink{classWt_1_1WTable}{W\+Table}}. Unlinke \mbox{\hyperlink{classWt_1_1WTable_a24be53ab4b240b011d700a8467bc7953}{remove\+Column()}}, the cells in the row will not be deleted, because they are owned by the \mbox{\hyperlink{classWt_1_1WTableRow}{W\+Table\+Row}}. \mbox{\Hypertarget{classWt_1_1WTable_ad773593b3a5521d385497d54cd651bdf}\label{classWt_1_1WTable_ad773593b3a5521d385497d54cd651bdf}} 
+\index{Wt::WTable@{Wt::WTable}!rowAt@{rowAt}}
+\index{rowAt@{rowAt}!Wt::WTable@{Wt::WTable}}
+\doxysubsubsection{\texorpdfstring{rowAt()}{rowAt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WTableRow}{W\+Table\+Row}}$\ast$ Wt\+::\+W\+Table\+::row\+At (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})}
+
+
+
+Returns the row object for the given row. 
+
+Like with \mbox{\hyperlink{classWt_1_1WTable_abb23850096316e37d2b77dced200514a}{element\+At()}}, the table expands automatically when the row is beyond the current table dimensions.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTable_abb23850096316e37d2b77dced200514a}{element\+At(int, int)}}, \mbox{\hyperlink{classWt_1_1WTable_afc72f8bb80b6a6e659a13124a407fd98}{column\+At(int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTable_aff5f29161a03a71b162f37e4e92a25c5}\label{classWt_1_1WTable_aff5f29161a03a71b162f37e4e92a25c5}} 
+\index{Wt::WTable@{Wt::WTable}!setHeaderCount@{setHeaderCount}}
+\index{setHeaderCount@{setHeaderCount}!Wt::WTable@{Wt::WTable}}
+\doxysubsubsection{\texorpdfstring{setHeaderCount()}{setHeaderCount()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Table\+::set\+Header\+Count (\begin{DoxyParamCaption}\item[{int}]{count,  }\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation = {\ttfamily Orientation\+:\+:Horizontal} }\end{DoxyParamCaption})}
+
+
+
+Sets the number of header rows or columns. 
+
+The default values are 0.
+
+\begin{DoxyNote}{Note}
+This must be set before the initial rendering and cannot be changed later. 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Table.\+h\end{DoxyCompactItemize}

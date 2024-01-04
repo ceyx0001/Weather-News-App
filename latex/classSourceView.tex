@@ -1,0 +1,106 @@
+\hypertarget{classSourceView}{}\doxysection{Source\+View Class Reference}
+\label{classSourceView}\index{SourceView@{SourceView}}
+
+
+View class for source code.  
+
+
+
+
+{\ttfamily \#include $<$Source\+View.\+h$>$}
+
+
+
+Inheritance diagram for Source\+View\+:
+% FIG 0
+
+
+Collaboration diagram for Source\+View\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSourceView_a9ef0534087143b2a48dff785b19d894f}{Source\+View}} (\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} file\+Name\+Role, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} content\+Role, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} file\+Path\+Role)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSourceView_afeb94d9159913659805d85b2e06d3764}\label{classSourceView_afeb94d9159913659805d85b2e06d3764}} 
+virtual \mbox{\hyperlink{classSourceView_afeb94d9159913659805d85b2e06d3764}{$\sim$\+Source\+View}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSourceView_a7d334112b68bbfc65814db62443295b6}{set\+Index}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index)
+\begin{DoxyCompactList}\small\item\em Sets the model index. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classSourceView_afb5171a305a5230376addbb11287bd60}{render\+View}} ()
+\begin{DoxyCompactList}\small\item\em Returns the widget that renders the view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSourceView_a74bb7ab280cd3f32ab507b65ba74fc63}\label{classSourceView_a74bb7ab280cd3f32ab507b65ba74fc63}} 
+std\+::string {\bfseries image\+Extension} (const std\+::string \&file\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSourceView_a25ec48ee939015d3b5deb8c3e56cd707}\label{classSourceView_a25ec48ee939015d3b5deb8c3e56cd707}} 
+\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classSourceView_a25ec48ee939015d3b5deb8c3e56cd707}{index\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The index that is currently displayed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSourceView_a83ff1f0ce5b67bf6631df3ed6c325274}\label{classSourceView_a83ff1f0ce5b67bf6631df3ed6c325274}} 
+\mbox{\hyperlink{classWt_1_1ItemDataRole}{Wt\+::\+Item\+Data\+Role}} \mbox{\hyperlink{classSourceView_a83ff1f0ce5b67bf6631df3ed6c325274}{file\+Name\+Role\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The role that is currently displayed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSourceView_aac2112c196f9bc69957a30f7ddceb682}\label{classSourceView_aac2112c196f9bc69957a30f7ddceb682}} 
+\mbox{\hyperlink{classWt_1_1ItemDataRole}{Wt\+::\+Item\+Data\+Role}} {\bfseries content\+Role\+\_\+}
+\item 
+\mbox{\Hypertarget{classSourceView_a1e0f430306530bf44c31eff07f2ae05d}\label{classSourceView_a1e0f430306530bf44c31eff07f2ae05d}} 
+\mbox{\hyperlink{classWt_1_1ItemDataRole}{Wt\+::\+Item\+Data\+Role}} {\bfseries file\+Path\+Role\+\_\+}
+\item 
+\mbox{\Hypertarget{classSourceView_a8905f7056426b864ecc7df7a2c6630f1}\label{classSourceView_a8905f7056426b864ecc7df7a2c6630f1}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WMemoryResource}{W\+Memory\+Resource}} $>$ {\bfseries image\+Resource\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+View class for source code. 
+
+A view class is used so that no server-\/side memory is used while displaying a potentially large file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSourceView_a9ef0534087143b2a48dff785b19d894f}\label{classSourceView_a9ef0534087143b2a48dff785b19d894f}} 
+\index{SourceView@{SourceView}!SourceView@{SourceView}}
+\index{SourceView@{SourceView}!SourceView@{SourceView}}
+\doxysubsubsection{\texorpdfstring{SourceView()}{SourceView()}}
+{\footnotesize\ttfamily Source\+View\+::\+Source\+View (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{file\+Name\+Role,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{content\+Role,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{file\+Path\+Role }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The {\itshape file\+Name\+Role} will be used to retrieve data from a file to be displayed. If no data is set for this role, then {\itshape content\+Role} should hold the data as a string. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSourceView_afb5171a305a5230376addbb11287bd60}\label{classSourceView_afb5171a305a5230376addbb11287bd60}} 
+\index{SourceView@{SourceView}!renderView@{renderView}}
+\index{renderView@{renderView}!SourceView@{SourceView}}
+\doxysubsubsection{\texorpdfstring{renderView()}{renderView()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$>$ Source\+View\+::render\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the widget that renders the view. 
+
+Returns he view contents\+: renders the file to a W\+Text widget. W\+View\+Widget deletes this widget after every rendering step. 
+
+Implements \mbox{\hyperlink{classWt_1_1WViewWidget_a58784e9a334ea7b23c200aaf08f0c1dd}{Wt\+::\+W\+View\+Widget}}.
+
+\mbox{\Hypertarget{classSourceView_a7d334112b68bbfc65814db62443295b6}\label{classSourceView_a7d334112b68bbfc65814db62443295b6}} 
+\index{SourceView@{SourceView}!setIndex@{setIndex}}
+\index{setIndex@{setIndex}!SourceView@{SourceView}}
+\doxysubsubsection{\texorpdfstring{setIndex()}{setIndex()}}
+{\footnotesize\ttfamily bool Source\+View\+::set\+Index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption})}
+
+
+
+Sets the model index. 
+
+Returns true whether the view will be rerendered. The view will only be rerendered if the index contains new data. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/wt-\/homepage/Source\+View.\+h\end{DoxyCompactItemize}

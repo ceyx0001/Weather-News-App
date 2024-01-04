@@ -1,0 +1,1635 @@
+\hypertarget{classWt_1_1Chart_1_1WAxis}{}\doxysection{Wt\+::Chart\+::W\+Axis Class Reference}
+\label{classWt_1_1Chart_1_1WAxis}\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+
+
+Class which represents an axis of a cartesian chart.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Chart/\+W\+Axis.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::Chart\+::W\+Axis\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1Chart_1_1WAxis_1_1Segment}{Segment}}
+\item 
+struct \mbox{\hyperlink{structWt_1_1Chart_1_1WAxis_1_1TickLabel}{Tick\+Label}}
+\begin{DoxyCompactList}\small\item\em Represents a label/tick on the axis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::function$<$ double(double)$>$ \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a7b5884981063a827701c610c2322fa34}{Label\+Transform}}
+\begin{DoxyCompactList}\small\item\em A label transform function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a0ca5a582e1a1050e242e0117f6ccdd07}\label{classWt_1_1Chart_1_1WAxis_a0ca5a582e1a1050e242e0117f6ccdd07}} 
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a0ca5a582e1a1050e242e0117f6ccdd07}{W\+Axis}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a03b69e6298726087c24b4c7d4d1a2924}\label{classWt_1_1Chart_1_1WAxis_a03b69e6298726087c24b4c7d4d1a2924}} 
+virtual \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a03b69e6298726087c24b4c7d4d1a2924}{$\sim$\+W\+Axis}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}} \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a3cd1146e8ebffe7eac9ea725f56fa4c0}{id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the axis id. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_abea578c283b1fb09d8588cc3eeaeb480}{x\+Axis\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the X axis id. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a15a4c674c07f2985f2e3006b1492dae2}{y\+Axis\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Returns the Y axis id. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a59fd4c6a79f6e3ea75f21aa44c4acfa8}{set\+Visible}} (bool visible)
+\begin{DoxyCompactList}\small\item\em Sets whether this axis is visible. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a8b84efcd18d293ad8557775225c02c8d}{is\+Visible}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this axis is visible. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a6dab2f46117b85a4a6f439e4f194ee82}{set\+Location}} (\mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}} value)
+\begin{DoxyCompactList}\small\item\em Sets the axis location. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}} \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ada8fdf77721fac957b708d62ccc55782}{location}} () const
+\begin{DoxyCompactList}\small\item\em Returns the axis location. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ab067037b83d1d663535250968a1776d8}{set\+Scale}} (\mbox{\hyperlink{group__charts_gadfcaed8cd6ff52f5747f7df48f2eeab6}{Axis\+Scale}} \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a9961d16fab1e27bfaa31ff5462dd6848}{scale}})
+\begin{DoxyCompactList}\small\item\em Sets the scale of the axis. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__charts_gadfcaed8cd6ff52f5747f7df48f2eeab6}{Axis\+Scale}} \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a9961d16fab1e27bfaa31ff5462dd6848}{scale}} () const
+\begin{DoxyCompactList}\small\item\em Returns the scale of the axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a878e20a87f7f6c5b4693bb81699c9f5b}{set\+Minimum}} (double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ac55ee5817fb30b0bc59c78594ef435d4}{minimum}})
+\begin{DoxyCompactList}\small\item\em Sets the minimum value displayed on the axis. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ac55ee5817fb30b0bc59c78594ef435d4}{minimum}} () const
+\begin{DoxyCompactList}\small\item\em Returns the minimum value displayed on the axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a64152da3f00fdeb6824d6a06e33ab346}{set\+Maximum}} (double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a08717c323e62c03619b3c55a33e16ada}{maximum}})
+\begin{DoxyCompactList}\small\item\em Sets the maximum value for the axis displayed on the axis. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a08717c323e62c03619b3c55a33e16ada}{maximum}} () const
+\begin{DoxyCompactList}\small\item\em Returns the maximum value displayed on the axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aae563fd94b81a03cfe2662dbde2ae548}{set\+Range}} (double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ac55ee5817fb30b0bc59c78594ef435d4}{minimum}}, double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a08717c323e62c03619b3c55a33e16ada}{maximum}})
+\begin{DoxyCompactList}\small\item\em Sets the axis range (minimum and maximum values) manually. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ab36cb584a0aa8bdcc1c3212a9304e6cd}{set\+Resolution}} (double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aec3c5315f9a76eef613feaa16f80a2d5}{resolution}})
+\begin{DoxyCompactList}\small\item\em Sets the axis resolution. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aec3c5315f9a76eef613feaa16f80a2d5}{resolution}} () const
+\begin{DoxyCompactList}\small\item\em Returns the axis resolution. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a26b0b1b9a61fa3355a0ec224a7ff1caa}{set\+Auto\+Limits}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}} $>$ locations)
+\begin{DoxyCompactList}\small\item\em Let the minimum and/or maximum be calculated from the data. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}} $>$ \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a3353a464c85a8712375c80422d875a37}{auto\+Limits}} () const
+\begin{DoxyCompactList}\small\item\em Returns the limits that are calculated automatically. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a07be968a06695f6fd37007ea5008295d}{set\+Round\+Limits}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}} $>$ locations)
+\begin{DoxyCompactList}\small\item\em Specifies whether limits should be rounded. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}} $>$ \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ab8bb0e9762c614bdf93a9d35a7aa5ca4}{round\+Limits}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether limits should be rounded. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a159f74342b4800e5c5be11eb1b2a351b}{set\+Break}} (double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ac55ee5817fb30b0bc59c78594ef435d4}{minimum}}, double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a08717c323e62c03619b3c55a33e16ada}{maximum}})
+\begin{DoxyCompactList}\small\item\em Specifies a range that needs to be omitted from the axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a68b1f798fd0d9a713fac29f9d761e2a8}{set\+Label\+Interval}} (double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_afe2f9f85ada388092692772ad7df0042}{label\+Interval}})
+\begin{DoxyCompactList}\small\item\em Sets the label interval. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_afe2f9f85ada388092692772ad7df0042}{label\+Interval}} () const
+\begin{DoxyCompactList}\small\item\em Returns the label interval. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a6a75b78e746b235bab553f53ddc3e33b}{set\+Label\+Base\+Point}} (double point)
+\begin{DoxyCompactList}\small\item\em Sets a point to be included as one of the labels (if possible). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aa4003413e7792719c9282ca1426adb2e}{label\+Base\+Point}} () const
+\begin{DoxyCompactList}\small\item\em Returns the base point for labels. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a7c37c241825af404b36916dcae9ae87b}{set\+Label\+Format}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&format)
+\begin{DoxyCompactList}\small\item\em Sets the label format. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a5f2c20aeaaa81a28ff9dba8af348141b}{label\+Format}} () const
+\begin{DoxyCompactList}\small\item\em Returns the label format string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_afd850eefc2beb7dffa5a637987cb1c6c}{set\+Label\+Angle}} (double angle)
+\begin{DoxyCompactList}\small\item\em Sets the label angle. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_af53567dbc374c064127fe76845f4fcac}{label\+Angle}} () const
+\begin{DoxyCompactList}\small\item\em Returns the label angle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_adb8fa80e48d26bc84bbca164eb2e2eed}{set\+Title\+Orientation}} (const \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} \&orientation)
+\begin{DoxyCompactList}\small\item\em Sets the title orientation. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} \& \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_acc40e5ad8f6ab3998a39d91fb054829c}{title\+Orientation}} () const
+\begin{DoxyCompactList}\small\item\em Returns the title orientation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a79d70190d984c7f956e44b79de0af527}{set\+Grid\+Lines\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Sets whether gridlines are displayed for this axis. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ae236a9caab0dfc35e3078374eaaec6c1}{is\+Grid\+Lines\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether gridlines are displayed for this axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ab1b9dcb9e23e01ec18994712fa5e11d1}{set\+Pen}} (const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \&\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_acab3b65e3acda4b0dfadbbc3af2be8ed}{pen}})
+\begin{DoxyCompactList}\small\item\em Changes the pen used for rendering the axis and ticks. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \& \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_acab3b65e3acda4b0dfadbbc3af2be8ed}{pen}} () const
+\begin{DoxyCompactList}\small\item\em Returns the pen used for rendering the axis and ticks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a8425fd89520a88fd788fcb0d1be125a0}{set\+Text\+Pen}} (const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \&\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_acab3b65e3acda4b0dfadbbc3af2be8ed}{pen}})
+\begin{DoxyCompactList}\small\item\em Changes the pen used for rendering labels for this axis. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \& \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_af462ef4239c9b4c050b289a454b493b2}{text\+Pen}} () const
+\begin{DoxyCompactList}\small\item\em Returns the pen used for rendering labels for this axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aa97db5c1f1bff788382ef48b8a6d1cc2}{set\+Grid\+Lines\+Pen}} (const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \&\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_acab3b65e3acda4b0dfadbbc3af2be8ed}{pen}})
+\begin{DoxyCompactList}\small\item\em Changes the pen used for rendering the grid lines. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \& \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aa8ba493d968ac8931c0a39d6755d878a}{grid\+Lines\+Pen}} () const
+\begin{DoxyCompactList}\small\item\em Returns the pen used for rendering the grid lines. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a61a297a8d3c99e74b07e9def9ebe88a5}{set\+Margin}} (int pixels)
+\begin{DoxyCompactList}\small\item\em Sets the margin between the axis and the plot area. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a3aaa1382bba3b0af6374871e4b8216b5}{margin}} () const
+\begin{DoxyCompactList}\small\item\em Returns the margin between the axis and the plot area. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ae85436297049bd4c60a75a9cc5313e4a}{set\+Title}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a62aab15e5587879432f5d94c89773453}{title}})
+\begin{DoxyCompactList}\small\item\em Sets the axis title. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \& \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a62aab15e5587879432f5d94c89773453}{title}} () const
+\begin{DoxyCompactList}\small\item\em Returns the axis title. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ad977d82494e5922ccf6882f1378c4db6}{set\+Title\+Font}} (const \mbox{\hyperlink{classWt_1_1WFont}{W\+Font}} \&\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_afcb7c573660911813755a7342669bd21}{title\+Font}})
+\begin{DoxyCompactList}\small\item\em Sets the axis title font. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WFont}{W\+Font}} \& \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_afcb7c573660911813755a7342669bd21}{title\+Font}} () const
+\begin{DoxyCompactList}\small\item\em Returns the axis title font. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ac1fa38a42df526aab88637929f624710}\label{classWt_1_1Chart_1_1WAxis_ac1fa38a42df526aab88637929f624710}} 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ac1fa38a42df526aab88637929f624710}{set\+Title\+Offset}} (double offset)
+\begin{DoxyCompactList}\small\item\em Sets the offset from the axis for the title label. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a8876b547a7ae48276649567c270639c4}\label{classWt_1_1Chart_1_1WAxis_a8876b547a7ae48276649567c270639c4}} 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a8876b547a7ae48276649567c270639c4}{title\+Offset}} () const
+\begin{DoxyCompactList}\small\item\em Returns the title offset. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ae9f02413691b40e95e6b7284d41dfba3}{set\+Label\+Font}} (const \mbox{\hyperlink{classWt_1_1WFont}{W\+Font}} \&\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aba4eaf482ea260eab009fbc2dde11941}{label\+Font}})
+\begin{DoxyCompactList}\small\item\em Sets the axis label font. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WFont}{W\+Font}} \& \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aba4eaf482ea260eab009fbc2dde11941}{label\+Font}} () const
+\begin{DoxyCompactList}\small\item\em Returns the axis label font. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a9823c0cf9106231559595e06f0c73f06}{label}} (double u) const
+\begin{DoxyCompactList}\small\item\em Returns the label for a value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a0be187399e7cb4877f2c5e3837eba6ea}{set\+Zoom\+Range}} (double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ac55ee5817fb30b0bc59c78594ef435d4}{minimum}}, double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a08717c323e62c03619b3c55a33e16ada}{maximum}})
+\begin{DoxyCompactList}\small\item\em Set the range to zoom to on this axis. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ad16bf59f1fbb8c9cabc51e8ee8d82bbc}{zoom\+Minimum}} () const
+\begin{DoxyCompactList}\small\item\em Get the zoom range minimum for this axis. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a10a6b8727799a2f20807f04880d04600}{zoom\+Maximum}} () const
+\begin{DoxyCompactList}\small\item\em Get the zoom range maximum for this axis. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ double, double $>$ \& \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a7e432917f0f23f18db3a043397a81904}{zoom\+Range\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em A signal triggered when the zoom range is changed on the client side. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a16d188d56c2b62b7b3f2ddb6fa96d7cc}{set\+Zoom}} (double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a4f1debe792c846d23d931fee4887ebf2}{zoom}})
+\begin{DoxyCompactList}\small\item\em Sets the zoom level for this axis. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a4f1debe792c846d23d931fee4887ebf2}{zoom}} () const
+\begin{DoxyCompactList}\small\item\em Get the zoom level for this axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a6f5776dc9e8d6fd3cfebfc00d3cd2ad2}{set\+Max\+Zoom}} (double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a87bb72b58a57c3f89492c21654b52acb}{max\+Zoom}})
+\begin{DoxyCompactList}\small\item\em Sets the maximum zoom level for this axis. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a87bb72b58a57c3f89492c21654b52acb}{max\+Zoom}} () const
+\begin{DoxyCompactList}\small\item\em Get the maximum zoom level for this axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a4558ed53e30fa3d8dfa71b20717af9e4}{set\+Minimum\+Zoom\+Range}} (double size)
+\begin{DoxyCompactList}\small\item\em Sets the minimum zoom range for this axis. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aa14b5e6a8543de02fd800c455aade230}{minimum\+Zoom\+Range}} () const
+\begin{DoxyCompactList}\small\item\em Get the minimum zoom range for this axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ada743ccf44212cfb1f4a6fa83b79e581}{set\+Maximum\+Zoom\+Range}} (double size)
+\begin{DoxyCompactList}\small\item\em Sets the maximum zoom range for this axis. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a04d3d2424d4c76b5fbab9c607cbf4917}{maximum\+Zoom\+Range}} () const
+\begin{DoxyCompactList}\small\item\em Get the maximum zoom range for this axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a13d7f38a677d502e3b5dd0d9550e6d33}{set\+Min\+Zoom}} (double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a4ed1120c3529fb8c8fe563152508d44f}{min\+Zoom}})
+\begin{DoxyCompactList}\small\item\em Sets the minimum zoom level for this axis. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a4ed1120c3529fb8c8fe563152508d44f}{min\+Zoom}} () const
+\begin{DoxyCompactList}\small\item\em Get the minimum zoom level for this axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a2f6a11d9d47036f8806c5a8412dfd24c}{set\+Pan}} (double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a98f22863b5afa622087b648aaf4d9515}{pan}})
+\begin{DoxyCompactList}\small\item\em Sets the value to pan to for this axis. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a98f22863b5afa622087b648aaf4d9515}{pan}} () const
+\begin{DoxyCompactList}\small\item\em Get the value to pan to for this axis, when pan is enabled on the chart. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a23f464974348b4e4301d2f07345b0a06}{set\+Padding}} (int \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a4271fae25a7dca58b9a69c687aac8d51}{padding}})
+\begin{DoxyCompactList}\small\item\em Sets the padding between the chart area and this axis. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a4271fae25a7dca58b9a69c687aac8d51}{padding}} () const
+\begin{DoxyCompactList}\small\item\em Returns the padding between the chart area and this axis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ab16cfe889a24fbeb08b3d313a8d5cab0}{set\+Tick\+Direction}} (\mbox{\hyperlink{namespaceWt_1_1Chart_a2cdbbf3dff0fe5b35fcdbce84792463f}{Tick\+Direction}} direction)
+\begin{DoxyCompactList}\small\item\em Sets the direction that the axis ticks should point to. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceWt_1_1Chart_a2cdbbf3dff0fe5b35fcdbce84792463f}{Tick\+Direction}} \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_af9a518ede2f0f40d55198498b2d42582}{tick\+Direction}} () const
+\begin{DoxyCompactList}\small\item\em Gets the direction that the axis ticks point to. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a4897cedc1f8cf704f723c031026181ed}{set\+Soft\+Label\+Clipping}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enables soft clipping of axis labels. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aa934edc8f5d5b8e078668128211150a3}{soft\+Label\+Clipping}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether soft label clipping is enabled. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a0bcbced7e6ad07d482d1fcc0edbc8542}\label{classWt_1_1Chart_1_1WAxis_a0bcbced7e6ad07d482d1fcc0edbc8542}} 
+int {\bfseries segment\+Count} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_acf318b058e8a18728fe5e79bd22337e9}\label{classWt_1_1Chart_1_1WAxis_acf318b058e8a18728fe5e79bd22337e9}} 
+double {\bfseries segment\+Margin} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ab904f5baea0835f22ff867f43703c02f}\label{classWt_1_1Chart_1_1WAxis_ab904f5baea0835f22ff867f43703c02f}} 
+bool {\bfseries prepare\+Render} (\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation, double length) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ae672ec729055cfddb8b0a6231a50b222}\label{classWt_1_1Chart_1_1WAxis_ae672ec729055cfddb8b0a6231a50b222}} 
+void {\bfseries render} (\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} \&painter, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__charts_ga814d38dbe18cc597674f3833c1da84a5}{Axis\+Property}} $>$ properties, const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&axis\+Start, const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&axis\+End, double tick\+Start, double tick\+End, double label\+Pos, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ label\+Flags, const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \&transform=\mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}}(), \mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}} side=\mbox{\hyperlink{group__charts_gga77eb6d0cefa4a012950ea972b471b849aa1d0ec6d56f8833a078b5a7ac4caf2d4}{Axis\+Value\+::\+Minimum}}) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a3801bc7297cf372bfbf7b11e687b95b7}\label{classWt_1_1Chart_1_1WAxis_a3801bc7297cf372bfbf7b11e687b95b7}} 
+void {\bfseries render} (\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} \&painter, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__charts_ga814d38dbe18cc597674f3833c1da84a5}{Axis\+Property}} $>$ properties, const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&axis\+Start, const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&axis\+End, double tick\+Start, double tick\+End, double label\+Pos, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ label\+Flags, const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \&transform, \mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}} side, std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} $>$ pens, std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} $>$ text\+Pens) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a9b39a3524ce86ad8a57aad354db4c3cd}\label{classWt_1_1Chart_1_1WAxis_a9b39a3524ce86ad8a57aad354db4c3cd}} 
+std\+::vector$<$ double $>$ {\bfseries grid\+Line\+Positions} (\mbox{\hyperlink{structWt_1_1Chart_1_1AxisConfig}{Axis\+Config}} config) const
+\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a2bb7c8ec67ed2ff0b57953ea40cd87ef}{set\+Inverted}} (bool \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a0e7e2fcb5b8e1cb6f25b087d811234e7}{inverted}}=true)
+\begin{DoxyCompactList}\small\item\em Set whether this axis should be inverted. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a0e7e2fcb5b8e1cb6f25b087d811234e7}{inverted}} () const
+\begin{DoxyCompactList}\small\item\em Get whether this axis is inverted. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a71928aabf753854274d753e266aabfc2}{set\+Label\+Transform}} (const \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a7b5884981063a827701c610c2322fa34}{Label\+Transform}} \&transform, \mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}} side)
+\begin{DoxyCompactList}\small\item\em Set the transform function to apply to a given side. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a7b5884981063a827701c610c2322fa34}{Label\+Transform}} \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a026bc50fce6c7d3a4f77b68e0a6431d3}{label\+Transform}} (\mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}} side) const
+\begin{DoxyCompactList}\small\item\em Get the label transform configured for the given side. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a5cb3797bc3198d513d25cded65cb75b9}\label{classWt_1_1Chart_1_1WAxis_a5cb3797bc3198d513d25cded65cb75b9}} 
+void {\bfseries set\+Render\+Mirror} (bool enable)
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a0b1b00c2072c2b348d2ffc207969d390}\label{classWt_1_1Chart_1_1WAxis_a0b1b00c2072c2b348d2ffc207969d390}} 
+double {\bfseries calc\+Title\+Size} (\mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}} $\ast$device, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_aca15c2d34cb183f6e53757ec7087b17d}\label{classWt_1_1Chart_1_1WAxis_aca15c2d34cb183f6e53757ec7087b17d}} 
+double {\bfseries calc\+Max\+Tick\+Label\+Size} (\mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}} $\ast$device, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ad0c60f190b30ddfec321e750248c6579}{A\+U\+T\+O\+\_\+\+M\+I\+N\+I\+M\+UM}}
+\begin{DoxyCompactList}\small\item\em Constant which indicates automatic minimum calculation. \end{DoxyCompactList}\item 
+static const double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_af506429983c72703d8fadbc03a1e67d4}{A\+U\+T\+O\+\_\+\+M\+A\+X\+I\+M\+UM}}
+\begin{DoxyCompactList}\small\item\em Constant which indicates automatic maximum calculation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a6b278fccd5e11ba8f287ae190e5145c4}\label{classWt_1_1Chart_1_1WAxis_a6b278fccd5e11ba8f287ae190e5145c4}} 
+virtual void \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a6b278fccd5e11ba8f287ae190e5145c4}{get\+Label\+Ticks}} (std\+::vector$<$ \mbox{\hyperlink{structWt_1_1Chart_1_1WAxis_1_1TickLabel}{Tick\+Label}} $>$ \&ticks, int segment, \mbox{\hyperlink{structWt_1_1Chart_1_1AxisConfig}{Axis\+Config}} config) const
+\begin{DoxyCompactList}\small\item\em Returns the label (and ticks) information for this axis. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a0b8b5af03eb4d1c772b0e72f583fafdb}\label{classWt_1_1Chart_1_1WAxis_a0b8b5af03eb4d1c772b0e72f583fafdb}} 
+virtual \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a0b8b5af03eb4d1c772b0e72f583fafdb}{auto\+Date\+Format}} (const \mbox{\hyperlink{classWt_1_1WDateTime}{W\+Date\+Time}} \&dt, \mbox{\hyperlink{namespaceWt_1_1Chart_a321da77821baec60d65cd72736768e04}{Date\+Time\+Unit}} unit, bool at\+Tick) const
+\begin{DoxyCompactList}\small\item\em Returns the Date format. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a667639045d23ffd85905dcddd7294819}\label{classWt_1_1Chart_1_1WAxis_a667639045d23ffd85905dcddd7294819}} 
+void {\bfseries init} (\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractChartImplementation}{W\+Abstract\+Chart\+Implementation}} $\ast$chart, \mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}} axis)
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a7f3e155c882fb7204bc031d19c3a60f0}\label{classWt_1_1Chart_1_1WAxis_a7f3e155c882fb7204bc031d19c3a60f0}} 
+void {\bfseries init\+X\+Axis} (\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractChartImplementation}{W\+Abstract\+Chart\+Implementation}} $\ast$chart, int x\+Axis)
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a31a6f691fdcd4c41b9ed141637048b50}\label{classWt_1_1Chart_1_1WAxis_a31a6f691fdcd4c41b9ed141637048b50}} 
+void {\bfseries init\+Y\+Axis} (\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractChartImplementation}{W\+Abstract\+Chart\+Implementation}} $\ast$chart, int y\+Axis)
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a9f223c20f61cd4bfc97573fb277f5b97}\label{classWt_1_1Chart_1_1WAxis_a9f223c20f61cd4bfc97573fb277f5b97}} 
+void {\bfseries update} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a860e24953c7ce9028a189ecae7336f38}\label{classWt_1_1Chart_1_1WAxis_a860e24953c7ce9028a189ecae7336f38}} 
+{\footnotesize template$<$typename T $>$ }\\bool {\bfseries set} (T \&m, const T \&v)
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a8ec8cf47f61b4ece2b428eb8b935113b}\label{classWt_1_1Chart_1_1WAxis_a8ec8cf47f61b4ece2b428eb8b935113b}} 
+void {\bfseries compute\+Range} (const \mbox{\hyperlink{structWt_1_1Chart_1_1WAxis_1_1Segment}{Segment}} \&segment) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ae4f431fdd1096fbc7748722df30537d2}\label{classWt_1_1Chart_1_1WAxis_ae4f431fdd1096fbc7748722df30537d2}} 
+double {\bfseries get\+Value} (const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&v) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_afdb423131828bd8a8a820032a7936559}\label{classWt_1_1Chart_1_1WAxis_afdb423131828bd8a8a820032a7936559}} 
+double {\bfseries calc\+Auto\+Num\+Labels} (\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation, const \mbox{\hyperlink{structWt_1_1Chart_1_1WAxis_1_1Segment}{Segment}} \&s) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a6e6bcfe92498c794b8b2e7fa8fa2f680}\label{classWt_1_1Chart_1_1WAxis_a6e6bcfe92498c794b8b2e7fa8fa2f680}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries default\+Date\+Time\+Format} (const \mbox{\hyperlink{structWt_1_1Chart_1_1WAxis_1_1Segment}{Segment}} \&s) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a5cbfeb6f12fb9473110ebf16a4547654}\label{classWt_1_1Chart_1_1WAxis_a5cbfeb6f12fb9473110ebf16a4547654}} 
+double {\bfseries map\+From\+Device} (double d) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a0253022e55b873c1556de278fcfb41ff}\label{classWt_1_1Chart_1_1WAxis_a0253022e55b873c1556de278fcfb41ff}} 
+double {\bfseries map\+To\+Device} (const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a15f15e274e84d2276d3e0604c3e31395}\label{classWt_1_1Chart_1_1WAxis_a15f15e274e84d2276d3e0604c3e31395}} 
+double {\bfseries map\+To\+Device} (const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, int segment) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_adc45b07f89e0af91b0398ab2fffb0b67}\label{classWt_1_1Chart_1_1WAxis_adc45b07f89e0af91b0398ab2fffb0b67}} 
+double {\bfseries map\+To\+Device} (double value) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a45b04f1a773a6ad24678dd58576f7ecf}\label{classWt_1_1Chart_1_1WAxis_a45b04f1a773a6ad24678dd58576f7ecf}} 
+double {\bfseries map\+To\+Device} (double value, int segment) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a64fb16ff230bd10ad5ab8258e5595211}\label{classWt_1_1Chart_1_1WAxis_a64fb16ff230bd10ad5ab8258e5595211}} 
+bool {\bfseries is\+On\+Axis} (double d) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ac43770f0f629cb89e16aae0567f28634}\label{classWt_1_1Chart_1_1WAxis_ac43770f0f629cb89e16aae0567f28634}} 
+double {\bfseries drawn\+Minimum} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a8dce36ce4ab5cf5d539f8de93f56f235}\label{classWt_1_1Chart_1_1WAxis_a8dce36ce4ab5cf5d539f8de93f56f235}} 
+double {\bfseries drawn\+Maximum} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a55d16af991db296b83835fe33141342f}\label{classWt_1_1Chart_1_1WAxis_a55d16af991db296b83835fe33141342f}} 
+long long {\bfseries get\+Date\+Number} (const \mbox{\hyperlink{classWt_1_1WDateTime}{Wt\+::\+W\+Date\+Time}} \&dt) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a3b0d26d5da5bd8040f0d235ba5270384}\label{classWt_1_1Chart_1_1WAxis_a3b0d26d5da5bd8040f0d235ba5270384}} 
+void {\bfseries set\+Zoom\+Range\+From\+Client} (double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ac55ee5817fb30b0bc59c78594ef435d4}{minimum}}, double \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a08717c323e62c03619b3c55a33e16ada}{maximum}})
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_aa5d6c15195b0ee6f4d37a9cfa6fba435}\label{classWt_1_1Chart_1_1WAxis_aa5d6c15195b0ee6f4d37a9cfa6fba435}} 
+bool {\bfseries has\+Label\+Transform\+On\+Side} (\mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}} side) const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_aa9463b7d9c3d66949ef6e42585089728}\label{classWt_1_1Chart_1_1WAxis_aa9463b7d9c3d66949ef6e42585089728}} 
+void {\bfseries render\+Labels} (\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} \&painter, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&labels, const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&path, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ flags, double angle, int \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a3aaa1382bba3b0af6374871e4b8216b5}{margin}}, const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \&transform, const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \&\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_acab3b65e3acda4b0dfadbbc3af2be8ed}{pen}}) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_aa6106ac8ea71b3873a4cb529e2567d18}\label{classWt_1_1Chart_1_1WAxis_aa6106ac8ea71b3873a4cb529e2567d18}} 
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractChartImplementation}{W\+Abstract\+Chart\+Implementation}} $\ast$ {\bfseries chart\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_aee221fa755d6767817d6a2bab5666984}\label{classWt_1_1Chart_1_1WAxis_aee221fa755d6767817d6a2bab5666984}} 
+\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}} {\bfseries axis\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_aee28726fe8e726d9e0b0663979fcb961}\label{classWt_1_1Chart_1_1WAxis_aee28726fe8e726d9e0b0663979fcb961}} 
+int {\bfseries x\+Axis\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a7e57f780af176ca1cc5d5477fd1a664b}\label{classWt_1_1Chart_1_1WAxis_a7e57f780af176ca1cc5d5477fd1a664b}} 
+int {\bfseries y\+Axis\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_adcc51ba9a85fd469db146272e743626c}\label{classWt_1_1Chart_1_1WAxis_adcc51ba9a85fd469db146272e743626c}} 
+bool {\bfseries visible\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ac989ebc900d488616561661d716b1836}\label{classWt_1_1Chart_1_1WAxis_ac989ebc900d488616561661d716b1836}} 
+\mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}} {\bfseries location\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a76f792845a5b7b5b7c20c586ff5d8fae}\label{classWt_1_1Chart_1_1WAxis_a76f792845a5b7b5b7c20c586ff5d8fae}} 
+\mbox{\hyperlink{group__charts_gadfcaed8cd6ff52f5747f7df48f2eeab6}{Axis\+Scale}} {\bfseries scale\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a9e880e1ba214fe1f6a1cb7b824610c8d}\label{classWt_1_1Chart_1_1WAxis_a9e880e1ba214fe1f6a1cb7b824610c8d}} 
+double {\bfseries resolution\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a632ea506b8acd305f8d07bfdca302afb}\label{classWt_1_1Chart_1_1WAxis_a632ea506b8acd305f8d07bfdca302afb}} 
+double {\bfseries label\+Interval\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ac1d72e31310000412861d0bc87a18028}\label{classWt_1_1Chart_1_1WAxis_ac1d72e31310000412861d0bc87a18028}} 
+double {\bfseries label\+Base\+Point\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a4a17d72fa72ec005858f2437e9b63ea2}\label{classWt_1_1Chart_1_1WAxis_a4a17d72fa72ec005858f2437e9b63ea2}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries label\+Format\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a90d281e366d71d552a3c52c2d056923e}\label{classWt_1_1Chart_1_1WAxis_a90d281e366d71d552a3c52c2d056923e}} 
+bool {\bfseries default\+Label\+Format\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a8e23c2652a1bdcb3bdab53afea707f87}\label{classWt_1_1Chart_1_1WAxis_a8e23c2652a1bdcb3bdab53afea707f87}} 
+bool {\bfseries grid\+Lines\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a90c12de5b843f3444da411beda13a38b}\label{classWt_1_1Chart_1_1WAxis_a90c12de5b843f3444da411beda13a38b}} 
+\mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} {\bfseries pen\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a81ff58146c1cc51a496f2f21b68b166e}\label{classWt_1_1Chart_1_1WAxis_a81ff58146c1cc51a496f2f21b68b166e}} 
+\mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} {\bfseries grid\+Lines\+Pen\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ab6dceefca40aa23c40571f0c35ef9ef9}\label{classWt_1_1Chart_1_1WAxis_ab6dceefca40aa23c40571f0c35ef9ef9}} 
+int {\bfseries margin\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a9cfa623fe8369f603675089b40779b85}\label{classWt_1_1Chart_1_1WAxis_a9cfa623fe8369f603675089b40779b85}} 
+double {\bfseries label\+Angle\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_adb9503d53daa94131d8deadaddc2d7e5}\label{classWt_1_1Chart_1_1WAxis_adb9503d53daa94131d8deadaddc2d7e5}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries title\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a731a0898f6faee0dd91e917f47fa61b2}\label{classWt_1_1Chart_1_1WAxis_a731a0898f6faee0dd91e917f47fa61b2}} 
+\mbox{\hyperlink{classWt_1_1WFont}{W\+Font}} {\bfseries title\+Font\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a8b2270d617f840cc1ebed3acda617f09}\label{classWt_1_1Chart_1_1WAxis_a8b2270d617f840cc1ebed3acda617f09}} 
+\mbox{\hyperlink{classWt_1_1WFont}{W\+Font}} {\bfseries label\+Font\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a0a1decb670b4f6d25cc7d226f7e15ba9}\label{classWt_1_1Chart_1_1WAxis_a0a1decb670b4f6d25cc7d226f7e15ba9}} 
+\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}} $>$ {\bfseries round\+Limits\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a1e8be5a0761bbdf0946d0967fa6885b5}\label{classWt_1_1Chart_1_1WAxis_a1e8be5a0761bbdf0946d0967fa6885b5}} 
+double {\bfseries segment\+Margin\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a8f21441a40e83405d879c67680002f07}\label{classWt_1_1Chart_1_1WAxis_a8f21441a40e83405d879c67680002f07}} 
+double {\bfseries title\+Offset\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ab3918a81b980fe49154f1e457c3a1ec0}\label{classWt_1_1Chart_1_1WAxis_ab3918a81b980fe49154f1e457c3a1ec0}} 
+\mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} {\bfseries text\+Pen\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_af92a37a61133248a32a6144019c7c406}\label{classWt_1_1Chart_1_1WAxis_af92a37a61133248a32a6144019c7c406}} 
+\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} {\bfseries title\+Orientation\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a4cc1e73b0f8c45365fbcd6f86bfdc9f0}\label{classWt_1_1Chart_1_1WAxis_a4cc1e73b0f8c45365fbcd6f86bfdc9f0}} 
+double {\bfseries max\+Zoom\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a5f75dfd4b8737ed0d51f99f9dc44b49f}\label{classWt_1_1Chart_1_1WAxis_a5f75dfd4b8737ed0d51f99f9dc44b49f}} 
+double {\bfseries min\+Zoom\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_aa71c8de89afb8a4080655e386e748fcd}\label{classWt_1_1Chart_1_1WAxis_aa71c8de89afb8a4080655e386e748fcd}} 
+double {\bfseries minimum\+Zoom\+Range\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a02ce7a2943379763a7aba90200a12299}\label{classWt_1_1Chart_1_1WAxis_a02ce7a2943379763a7aba90200a12299}} 
+double {\bfseries maximum\+Zoom\+Range\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a337e7421ebc528cba89495cc4ce0dbee}\label{classWt_1_1Chart_1_1WAxis_a337e7421ebc528cba89495cc4ce0dbee}} 
+double {\bfseries zoom\+Min\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a214fd2c83bed810232fd10513ed54e63}\label{classWt_1_1Chart_1_1WAxis_a214fd2c83bed810232fd10513ed54e63}} 
+double {\bfseries zoom\+Max\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_aa954b2fd2e5e9d566e83d8659804e652}\label{classWt_1_1Chart_1_1WAxis_aa954b2fd2e5e9d566e83d8659804e652}} 
+bool {\bfseries zoom\+Range\+Dirty\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_aef234be0753d3e670a9149a3d585c577}\label{classWt_1_1Chart_1_1WAxis_aef234be0753d3e670a9149a3d585c577}} 
+int {\bfseries padding\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a479c75a96ec925f94c5457ee87bcb778}\label{classWt_1_1Chart_1_1WAxis_a479c75a96ec925f94c5457ee87bcb778}} 
+\mbox{\hyperlink{namespaceWt_1_1Chart_a2cdbbf3dff0fe5b35fcdbce84792463f}{Tick\+Direction}} {\bfseries tick\+Direction\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ad329686a1c28ea4535e953ec7eeb8c57}\label{classWt_1_1Chart_1_1WAxis_ad329686a1c28ea4535e953ec7eeb8c57}} 
+bool {\bfseries partial\+Label\+Clipping\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_aec9f0973d94195dbc5b787865e2be0d6}\label{classWt_1_1Chart_1_1WAxis_aec9f0973d94195dbc5b787865e2be0d6}} 
+bool {\bfseries inverted\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a46ebc43802e02237aa0a92dbf339d4d3}\label{classWt_1_1Chart_1_1WAxis_a46ebc43802e02237aa0a92dbf339d4d3}} 
+std\+::map$<$ \mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a7b5884981063a827701c610c2322fa34}{Label\+Transform}} $>$ {\bfseries label\+Transforms\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a8c856578c64f05c16437a23f36918765}\label{classWt_1_1Chart_1_1WAxis_a8c856578c64f05c16437a23f36918765}} 
+bool {\bfseries rendering\+Mirror\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a8386c7b722ad3f4cf5af8746ae13894d}\label{classWt_1_1Chart_1_1WAxis_a8386c7b722ad3f4cf5af8746ae13894d}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ double, double $>$ {\bfseries zoom\+Range\+Changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a604508f4c278c841fc306ba25ace7a11}\label{classWt_1_1Chart_1_1WAxis_a604508f4c278c841fc306ba25ace7a11}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1Chart_1_1WAxis_1_1Segment}{Segment}} $>$ {\bfseries segments\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ace2a741bf99d823c49df924a2fae6718}\label{classWt_1_1Chart_1_1WAxis_ace2a741bf99d823c49df924a2fae6718}} 
+double {\bfseries render\+Interval\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a7880c165723610acd75126496b8bbdba}\label{classWt_1_1Chart_1_1WAxis_a7880c165723610acd75126496b8bbdba}} 
+double {\bfseries full\+Render\+Length\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a319983ed25f4d6d0d17fe598b505c18b}\label{classWt_1_1Chart_1_1WAxis_a319983ed25f4d6d0d17fe598b505c18b}} 
+class {\bfseries W\+Cartesian\+Chart}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a0a51b5aeaade4250a07abe4fcbca89c9}\label{classWt_1_1Chart_1_1WAxis_a0a51b5aeaade4250a07abe4fcbca89c9}} 
+class {\bfseries W\+Cartesian3\+D\+Chart}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a5532736707e0fe92ff32e265eff8ca5b}\label{classWt_1_1Chart_1_1WAxis_a5532736707e0fe92ff32e265eff8ca5b}} 
+class {\bfseries W\+Chart2\+D\+Renderer}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_aedd7175068233780bd868ea39535e00e}\label{classWt_1_1Chart_1_1WAxis_aedd7175068233780bd868ea39535e00e}} 
+class {\bfseries W\+Axis\+Slider\+Widget}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_afbd0630f538466b7cbe3595b04bbefb6}\label{classWt_1_1Chart_1_1WAxis_afbd0630f538466b7cbe3595b04bbefb6}} 
+class {\bfseries Line\+Series\+Renderer}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class which represents an axis of a cartesian chart. 
+
+A cartesian chart has two or three axes\+: an X axis (\mbox{\hyperlink{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa02129bb861061d1a052c592e2dc6b383}{Axis\+::X}}), a Y axis (\mbox{\hyperlink{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa57cec4137b614c87cb4e24a3d003a3e0}{Axis\+::Y}}) and optionally a second Y axis (\mbox{\hyperlink{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa2aa016bd54aa28710a128dff5a42e456}{Axis\+::\+Y2}}). Each of the up to three axes in a cartesian chart has a unique \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a3cd1146e8ebffe7eac9ea725f56fa4c0}{id()}} that identifies which of these three axes it is in the enclosing chart().
+
+Use \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a59fd4c6a79f6e3ea75f21aa44c4acfa8}{set\+Visible()}} to change the visibility of an axis, \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a79d70190d984c7f956e44b79de0af527}{set\+Grid\+Lines\+Enabled()}} to show grid lines for an axis. The pen styles for rendering the axis or grid lines may be changed using \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ab1b9dcb9e23e01ec18994712fa5e11d1}{set\+Pen()}} and \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aa97db5c1f1bff788382ef48b8a6d1cc2}{set\+Grid\+Lines\+Pen()}}. A margin between the axis and the main plot area may be configured using \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a61a297a8d3c99e74b07e9def9ebe88a5}{set\+Margin()}}.
+
+By default, the axis will automatically adjust its range so that all data will be visible. You may manually specify a range using \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a878e20a87f7f6c5b4693bb81699c9f5b}{set\+Minimum()}}, set\+Maximum or \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aae563fd94b81a03cfe2662dbde2ae548}{set\+Range()}}. The interval between labels is by default automatically adjusted depending on the axis length and the range, but may be manually specified using \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a68b1f798fd0d9a713fac29f9d761e2a8}{set\+Label\+Interval()}}.
+
+The axis has support for being \char`\"{}broken\char`\"{}, to support displaying data with a few outliers which would otherwise swamp the chart. This is not done automatically, but instead you need to use \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a159f74342b4800e5c5be11eb1b2a351b}{set\+Break()}} to specify the value range that needs to be omitted from the axis. The omission is rendered in the axis and in bars that cross the break.
+
+The labels are shown using a \char`\"{}\%.\+4g\char`\"{} format string for numbers, and a suitable format for \mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a44749712dbec183e983dcd78a7736c41}{Axis\+Scale\+::\+Date}} or \mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a8cf10d2341ed01492506085688270c1e}{Axis\+Scale\+::\+Date\+Time}} scales, based on heuristics. The format may be customized using \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a7c37c241825af404b36916dcae9ae87b}{set\+Label\+Format()}}. The angle of the label text may be changed using \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_afd850eefc2beb7dffa5a637987cb1c6c}{set\+Label\+Angle()}}. By default, all labels are printed horizontally.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a7b5884981063a827701c610c2322fa34}\label{classWt_1_1Chart_1_1WAxis_a7b5884981063a827701c610c2322fa34}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!LabelTransform@{LabelTransform}}
+\index{LabelTransform@{LabelTransform}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{LabelTransform}{LabelTransform}}
+{\footnotesize\ttfamily typedef std\+::function$<$double (double)$>$ \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a7b5884981063a827701c610c2322fa34}{Wt\+::\+Chart\+::\+W\+Axis\+::\+Label\+Transform}}}
+
+
+
+A label transform function. 
+
+The label transform is a function from double to double.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a71928aabf753854274d753e266aabfc2}{W\+Axis\+::set\+Label\+Transform()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a3353a464c85a8712375c80422d875a37}\label{classWt_1_1Chart_1_1WAxis_a3353a464c85a8712375c80422d875a37}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!autoLimits@{autoLimits}}
+\index{autoLimits@{autoLimits}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{autoLimits()}{autoLimits()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$\mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}}$>$ Wt\+::\+Chart\+::\+W\+Axis\+::auto\+Limits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the limits that are calculated automatically. 
+
+This returns the limits (\mbox{\hyperlink{group__charts_gga77eb6d0cefa4a012950ea972b471b849aa1d0ec6d56f8833a078b5a7ac4caf2d4}{Chart\+::\+Axis\+Value\+::\+Minimum}} and/or \mbox{\hyperlink{group__charts_gga77eb6d0cefa4a012950ea972b471b849a8321e79c278ec510f63675c040594892}{Chart\+::\+Axis\+Value\+::\+Maximum}}) that are calculated automatically from the data, rather than being specified manually using \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a878e20a87f7f6c5b4693bb81699c9f5b}{set\+Minimum()}} and/or \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a64152da3f00fdeb6824d6a06e33ab346}{set\+Maximum()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a26b0b1b9a61fa3355a0ec224a7ff1caa}{set\+Auto\+Limits()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_aa8ba493d968ac8931c0a39d6755d878a}\label{classWt_1_1Chart_1_1WAxis_aa8ba493d968ac8931c0a39d6755d878a}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!gridLinesPen@{gridLinesPen}}
+\index{gridLinesPen@{gridLinesPen}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{gridLinesPen()}{gridLinesPen()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}}\& Wt\+::\+Chart\+::\+W\+Axis\+::grid\+Lines\+Pen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the pen used for rendering the grid lines. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aa97db5c1f1bff788382ef48b8a6d1cc2}{set\+Grid\+Lines\+Pen()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a3cd1146e8ebffe7eac9ea725f56fa4c0}\label{classWt_1_1Chart_1_1WAxis_a3cd1146e8ebffe7eac9ea725f56fa4c0}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!id@{id}}
+\index{id@{id}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}} Wt\+::\+Chart\+::\+W\+Axis\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the axis id. 
+
+\begin{DoxySeeAlso}{See also}
+chart(), \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart_a4cc02053adf654d8a754e13426299a80}{W\+Cartesian\+Chart\+::axis()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a0e7e2fcb5b8e1cb6f25b087d811234e7}\label{classWt_1_1Chart_1_1WAxis_a0e7e2fcb5b8e1cb6f25b087d811234e7}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!inverted@{inverted}}
+\index{inverted@{inverted}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{inverted()}{inverted()}}
+{\footnotesize\ttfamily bool Wt\+::\+Chart\+::\+W\+Axis\+::inverted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get whether this axis is inverted. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a2bb7c8ec67ed2ff0b57953ea40cd87ef}{set\+Inverted()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ae236a9caab0dfc35e3078374eaaec6c1}\label{classWt_1_1Chart_1_1WAxis_ae236a9caab0dfc35e3078374eaaec6c1}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!isGridLinesEnabled@{isGridLinesEnabled}}
+\index{isGridLinesEnabled@{isGridLinesEnabled}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{isGridLinesEnabled()}{isGridLinesEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+Chart\+::\+W\+Axis\+::is\+Grid\+Lines\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether gridlines are displayed for this axis. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a79d70190d984c7f956e44b79de0af527}{set\+Grid\+Lines\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a8b84efcd18d293ad8557775225c02c8d}\label{classWt_1_1Chart_1_1WAxis_a8b84efcd18d293ad8557775225c02c8d}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!isVisible@{isVisible}}
+\index{isVisible@{isVisible}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{isVisible()}{isVisible()}}
+{\footnotesize\ttfamily bool Wt\+::\+Chart\+::\+W\+Axis\+::is\+Visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether this axis is visible. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a59fd4c6a79f6e3ea75f21aa44c4acfa8}{set\+Visible()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a9823c0cf9106231559595e06f0c73f06}\label{classWt_1_1Chart_1_1WAxis_a9823c0cf9106231559595e06f0c73f06}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!label@{label}}
+\index{label@{label}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{label()}{label()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WString}{W\+String}} Wt\+::\+Chart\+::\+W\+Axis\+::label (\begin{DoxyParamCaption}\item[{double}]{u }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the label for a value. 
+
+This returns the label text that corresponds to a given value.
+
+The default implementation uses the \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a5f2c20aeaaa81a28ff9dba8af348141b}{label\+Format()}} to properly represent the value. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_af53567dbc374c064127fe76845f4fcac}\label{classWt_1_1Chart_1_1WAxis_af53567dbc374c064127fe76845f4fcac}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!labelAngle@{labelAngle}}
+\index{labelAngle@{labelAngle}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{labelAngle()}{labelAngle()}}
+{\footnotesize\ttfamily double Wt\+::\+Chart\+::\+W\+Axis\+::label\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the label angle. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_afd850eefc2beb7dffa5a637987cb1c6c}{set\+Label\+Angle()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_aa4003413e7792719c9282ca1426adb2e}\label{classWt_1_1Chart_1_1WAxis_aa4003413e7792719c9282ca1426adb2e}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!labelBasePoint@{labelBasePoint}}
+\index{labelBasePoint@{labelBasePoint}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{labelBasePoint()}{labelBasePoint()}}
+{\footnotesize\ttfamily double Wt\+::\+Chart\+::\+W\+Axis\+::label\+Base\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the base point for labels. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a6a75b78e746b235bab553f53ddc3e33b}{set\+Label\+Base\+Point()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_aba4eaf482ea260eab009fbc2dde11941}\label{classWt_1_1Chart_1_1WAxis_aba4eaf482ea260eab009fbc2dde11941}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!labelFont@{labelFont}}
+\index{labelFont@{labelFont}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{labelFont()}{labelFont()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WFont}{W\+Font}}\& Wt\+::\+Chart\+::\+W\+Axis\+::label\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the axis label font. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ae9f02413691b40e95e6b7284d41dfba3}{set\+Label\+Font()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a5f2c20aeaaa81a28ff9dba8af348141b}\label{classWt_1_1Chart_1_1WAxis_a5f2c20aeaaa81a28ff9dba8af348141b}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!labelFormat@{labelFormat}}
+\index{labelFormat@{labelFormat}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{labelFormat()}{labelFormat()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WString}{W\+String}} Wt\+::\+Chart\+::\+W\+Axis\+::label\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the label format string. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a7c37c241825af404b36916dcae9ae87b}{set\+Label\+Format()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_afe2f9f85ada388092692772ad7df0042}\label{classWt_1_1Chart_1_1WAxis_afe2f9f85ada388092692772ad7df0042}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!labelInterval@{labelInterval}}
+\index{labelInterval@{labelInterval}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{labelInterval()}{labelInterval()}}
+{\footnotesize\ttfamily double Wt\+::\+Chart\+::\+W\+Axis\+::label\+Interval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the label interval. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a68b1f798fd0d9a713fac29f9d761e2a8}{set\+Label\+Interval()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a026bc50fce6c7d3a4f77b68e0a6431d3}\label{classWt_1_1Chart_1_1WAxis_a026bc50fce6c7d3a4f77b68e0a6431d3}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!labelTransform@{labelTransform}}
+\index{labelTransform@{labelTransform}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{labelTransform()}{labelTransform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a7b5884981063a827701c610c2322fa34}{Label\+Transform}} Wt\+::\+Chart\+::\+W\+Axis\+::label\+Transform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}}}]{side }\end{DoxyParamCaption}) const}
+
+
+
+Get the label transform configured for the given side. 
+
+If no transform is configured for the given side, the identity function is returned.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a71928aabf753854274d753e266aabfc2}{set\+Label\+Transform()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ada8fdf77721fac957b708d62ccc55782}\label{classWt_1_1Chart_1_1WAxis_ada8fdf77721fac957b708d62ccc55782}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!location@{location}}
+\index{location@{location}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{location()}{location()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}} Wt\+::\+Chart\+::\+W\+Axis\+::location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the axis location. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a6dab2f46117b85a4a6f439e4f194ee82}{set\+Location()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a3aaa1382bba3b0af6374871e4b8216b5}\label{classWt_1_1Chart_1_1WAxis_a3aaa1382bba3b0af6374871e4b8216b5}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!margin@{margin}}
+\index{margin@{margin}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{margin()}{margin()}}
+{\footnotesize\ttfamily int Wt\+::\+Chart\+::\+W\+Axis\+::margin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the margin between the axis and the plot area. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a61a297a8d3c99e74b07e9def9ebe88a5}{set\+Margin()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a08717c323e62c03619b3c55a33e16ada}\label{classWt_1_1Chart_1_1WAxis_a08717c323e62c03619b3c55a33e16ada}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!maximum@{maximum}}
+\index{maximum@{maximum}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{maximum()}{maximum()}}
+{\footnotesize\ttfamily double Wt\+::\+Chart\+::\+W\+Axis\+::maximum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the maximum value displayed on the axis. 
+
+This returned the maximum value that was set using \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a64152da3f00fdeb6824d6a06e33ab346}{set\+Maximum()}}, or otherwise the automatically calculated (and rounded) maximum.
+
+The numerical value corresponding to a data point is defined by it\textquotesingle{}s Axis\+Scale type.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a64152da3f00fdeb6824d6a06e33ab346}{set\+Maximum()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a26b0b1b9a61fa3355a0ec224a7ff1caa}{set\+Auto\+Limits()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a07be968a06695f6fd37007ea5008295d}{set\+Round\+Limits()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a04d3d2424d4c76b5fbab9c607cbf4917}\label{classWt_1_1Chart_1_1WAxis_a04d3d2424d4c76b5fbab9c607cbf4917}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!maximumZoomRange@{maximumZoomRange}}
+\index{maximumZoomRange@{maximumZoomRange}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{maximumZoomRange()}{maximumZoomRange()}}
+{\footnotesize\ttfamily double Wt\+::\+Chart\+::\+W\+Axis\+::maximum\+Zoom\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the maximum zoom range for this axis. 
+
+Only applies to a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} in interactive mode.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ada743ccf44212cfb1f4a6fa83b79e581}{set\+Maximum\+Zoom\+Range()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a87bb72b58a57c3f89492c21654b52acb}\label{classWt_1_1Chart_1_1WAxis_a87bb72b58a57c3f89492c21654b52acb}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!maxZoom@{maxZoom}}
+\index{maxZoom@{maxZoom}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{maxZoom()}{maxZoom()}}
+{\footnotesize\ttfamily double Wt\+::\+Chart\+::\+W\+Axis\+::max\+Zoom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the maximum zoom level for this axis. 
+
+Only applies to a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} in interactive mode.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a6f5776dc9e8d6fd3cfebfc00d3cd2ad2}{set\+Max\+Zoom()}}
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000004}{Deprecated}}]Use \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aa14b5e6a8543de02fd800c455aade230}{minimum\+Zoom\+Range()}} instead \end{DoxyRefDesc}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ac55ee5817fb30b0bc59c78594ef435d4}\label{classWt_1_1Chart_1_1WAxis_ac55ee5817fb30b0bc59c78594ef435d4}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!minimum@{minimum}}
+\index{minimum@{minimum}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{minimum()}{minimum()}}
+{\footnotesize\ttfamily double Wt\+::\+Chart\+::\+W\+Axis\+::minimum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the minimum value displayed on the axis. 
+
+This returned the minimum value that was set using \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a878e20a87f7f6c5b4693bb81699c9f5b}{set\+Minimum()}}, or otherwise the automatically calculated (and rounded) minimum.
+
+The numerical value corresponding to a data point is defined by it\textquotesingle{}s Axis\+Scale type.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a878e20a87f7f6c5b4693bb81699c9f5b}{set\+Minimum()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a26b0b1b9a61fa3355a0ec224a7ff1caa}{set\+Auto\+Limits()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a07be968a06695f6fd37007ea5008295d}{set\+Round\+Limits()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_aa14b5e6a8543de02fd800c455aade230}\label{classWt_1_1Chart_1_1WAxis_aa14b5e6a8543de02fd800c455aade230}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!minimumZoomRange@{minimumZoomRange}}
+\index{minimumZoomRange@{minimumZoomRange}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{minimumZoomRange()}{minimumZoomRange()}}
+{\footnotesize\ttfamily double Wt\+::\+Chart\+::\+W\+Axis\+::minimum\+Zoom\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the minimum zoom range for this axis. 
+
+Only applies to a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} in interactive mode.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a4558ed53e30fa3d8dfa71b20717af9e4}{set\+Minimum\+Zoom\+Range()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a4ed1120c3529fb8c8fe563152508d44f}\label{classWt_1_1Chart_1_1WAxis_a4ed1120c3529fb8c8fe563152508d44f}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!minZoom@{minZoom}}
+\index{minZoom@{minZoom}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{minZoom()}{minZoom()}}
+{\footnotesize\ttfamily double Wt\+::\+Chart\+::\+W\+Axis\+::min\+Zoom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the minimum zoom level for this axis. 
+
+Only applies to a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} in interactive mode.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a13d7f38a677d502e3b5dd0d9550e6d33}{set\+Min\+Zoom()}}
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000006}{Deprecated}}]Use \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a04d3d2424d4c76b5fbab9c607cbf4917}{maximum\+Zoom\+Range()}} instead \end{DoxyRefDesc}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a4271fae25a7dca58b9a69c687aac8d51}\label{classWt_1_1Chart_1_1WAxis_a4271fae25a7dca58b9a69c687aac8d51}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!padding@{padding}}
+\index{padding@{padding}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{padding()}{padding()}}
+{\footnotesize\ttfamily int Wt\+::\+Chart\+::\+W\+Axis\+::padding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the padding between the chart area and this axis. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a23f464974348b4e4301d2f07345b0a06}{set\+Padding()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a98f22863b5afa622087b648aaf4d9515}\label{classWt_1_1Chart_1_1WAxis_a98f22863b5afa622087b648aaf4d9515}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!pan@{pan}}
+\index{pan@{pan}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{pan()}{pan()}}
+{\footnotesize\ttfamily double Wt\+::\+Chart\+::\+W\+Axis\+::pan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the value to pan to for this axis, when pan is enabled on the chart. 
+
+Only applies to a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} in interactive mode.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a2f6a11d9d47036f8806c5a8412dfd24c}{set\+Pan()}}
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000008}{Deprecated}}]Use \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ad16bf59f1fbb8c9cabc51e8ee8d82bbc}{zoom\+Minimum()}} instead. \end{DoxyRefDesc}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_acab3b65e3acda4b0dfadbbc3af2be8ed}\label{classWt_1_1Chart_1_1WAxis_acab3b65e3acda4b0dfadbbc3af2be8ed}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!pen@{pen}}
+\index{pen@{pen}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{pen()}{pen()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}}\& Wt\+::\+Chart\+::\+W\+Axis\+::pen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the pen used for rendering the axis and ticks. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ab1b9dcb9e23e01ec18994712fa5e11d1}{set\+Pen()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_aec3c5315f9a76eef613feaa16f80a2d5}\label{classWt_1_1Chart_1_1WAxis_aec3c5315f9a76eef613feaa16f80a2d5}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!resolution@{resolution}}
+\index{resolution@{resolution}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{resolution()}{resolution()}}
+{\footnotesize\ttfamily double Wt\+::\+Chart\+::\+W\+Axis\+::resolution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the axis resolution. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ab36cb584a0aa8bdcc1c3212a9304e6cd}{set\+Resolution()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ab8bb0e9762c614bdf93a9d35a7aa5ca4}\label{classWt_1_1Chart_1_1WAxis_ab8bb0e9762c614bdf93a9d35a7aa5ca4}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!roundLimits@{roundLimits}}
+\index{roundLimits@{roundLimits}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{roundLimits()}{roundLimits()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$\mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}}$>$ Wt\+::\+Chart\+::\+W\+Axis\+::round\+Limits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether limits should be rounded. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a07be968a06695f6fd37007ea5008295d}{set\+Round\+Limits()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a9961d16fab1e27bfaa31ff5462dd6848}\label{classWt_1_1Chart_1_1WAxis_a9961d16fab1e27bfaa31ff5462dd6848}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!scale@{scale}}
+\index{scale@{scale}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__charts_gadfcaed8cd6ff52f5747f7df48f2eeab6}{Axis\+Scale}} Wt\+::\+Chart\+::\+W\+Axis\+::scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the scale of the axis. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ab067037b83d1d663535250968a1776d8}{set\+Scale()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a26b0b1b9a61fa3355a0ec224a7ff1caa}\label{classWt_1_1Chart_1_1WAxis_a26b0b1b9a61fa3355a0ec224a7ff1caa}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setAutoLimits@{setAutoLimits}}
+\index{setAutoLimits@{setAutoLimits}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setAutoLimits()}{setAutoLimits()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Auto\+Limits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}} $>$}]{locations }\end{DoxyParamCaption})}
+
+
+
+Let the minimum and/or maximum be calculated from the data. 
+
+Using this method, you can indicate that you want to have automatic limits, rather than limits set manually using \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a878e20a87f7f6c5b4693bb81699c9f5b}{set\+Minimum()}} or \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a64152da3f00fdeb6824d6a06e33ab346}{set\+Maximum()}}.
+
+{\ttfamily locations} can be \mbox{\hyperlink{group__charts_gga77eb6d0cefa4a012950ea972b471b849aa1d0ec6d56f8833a078b5a7ac4caf2d4}{Chart\+::\+Axis\+Value\+::\+Minimum}} and/or \mbox{\hyperlink{group__charts_gga77eb6d0cefa4a012950ea972b471b849a8321e79c278ec510f63675c040594892}{Chart\+::\+Axis\+Value\+::\+Maximum}}.
+
+The default value is \mbox{\hyperlink{group__charts_gga77eb6d0cefa4a012950ea972b471b849aa1d0ec6d56f8833a078b5a7ac4caf2d4}{Chart\+::\+Axis\+Value\+::\+Minimum}} $\vert$ \mbox{\hyperlink{group__charts_gga77eb6d0cefa4a012950ea972b471b849a8321e79c278ec510f63675c040594892}{Chart\+::\+Axis\+Value\+::\+Maximum}}. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a159f74342b4800e5c5be11eb1b2a351b}\label{classWt_1_1Chart_1_1WAxis_a159f74342b4800e5c5be11eb1b2a351b}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setBreak@{setBreak}}
+\index{setBreak@{setBreak}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setBreak()}{setBreak()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Break (\begin{DoxyParamCaption}\item[{double}]{minimum,  }\item[{double}]{maximum }\end{DoxyParamCaption})}
+
+
+
+Specifies a range that needs to be omitted from the axis. 
+
+This is useful to display data with a few outliers which would otherwise swamp the chart. This is not done automatically, but instead you need to use \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a159f74342b4800e5c5be11eb1b2a351b}{set\+Break()}} to specify the value range that needs to be omitted from the axis. The omission is rendered in the axis and in \mbox{\hyperlink{group__charts_gga44d64e4a9d08c7ef69648f4a9c3e4053addc35f88fa71b6ef142ae61f35364653}{Series\+Type\+::\+Bar}} that cross the break.
+
+\begin{DoxyNote}{Note}
+This feature is incompatible with the interactive features of \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a79d70190d984c7f956e44b79de0af527}\label{classWt_1_1Chart_1_1WAxis_a79d70190d984c7f956e44b79de0af527}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setGridLinesEnabled@{setGridLinesEnabled}}
+\index{setGridLinesEnabled@{setGridLinesEnabled}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setGridLinesEnabled()}{setGridLinesEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Grid\+Lines\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Sets whether gridlines are displayed for this axis. 
+
+When {\itshape enabled}, gird lines are drawn for each tick on this axis, using the \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aa8ba493d968ac8931c0a39d6755d878a}{grid\+Lines\+Pen()}}.
+
+Unlike all other visual aspects of an axis, rendering of the gridlines is not controlled by set\+Display\+Enabled().
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aa97db5c1f1bff788382ef48b8a6d1cc2}{set\+Grid\+Lines\+Pen()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ae236a9caab0dfc35e3078374eaaec6c1}{is\+Grid\+Lines\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_aa97db5c1f1bff788382ef48b8a6d1cc2}\label{classWt_1_1Chart_1_1WAxis_aa97db5c1f1bff788382ef48b8a6d1cc2}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setGridLinesPen@{setGridLinesPen}}
+\index{setGridLinesPen@{setGridLinesPen}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setGridLinesPen()}{setGridLinesPen()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Grid\+Lines\+Pen (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \&}]{pen }\end{DoxyParamCaption})}
+
+
+
+Changes the pen used for rendering the grid lines. 
+
+The default value is a Standard\+Color\+::\+Gray pen of 0 width.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ab1b9dcb9e23e01ec18994712fa5e11d1}{set\+Pen()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aa8ba493d968ac8931c0a39d6755d878a}{grid\+Lines\+Pen()}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a2bb7c8ec67ed2ff0b57953ea40cd87ef}\label{classWt_1_1Chart_1_1WAxis_a2bb7c8ec67ed2ff0b57953ea40cd87ef}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setInverted@{setInverted}}
+\index{setInverted@{setInverted}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setInverted()}{setInverted()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Inverted (\begin{DoxyParamCaption}\item[{bool}]{inverted = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Set whether this axis should be inverted. 
+
+When inverted, the axis will be drawn in the opposite direction, e.\+g. if normally, the low values are on the left and high values on the right, when inverted, the low values will be on the right and high values on the left. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_afd850eefc2beb7dffa5a637987cb1c6c}\label{classWt_1_1Chart_1_1WAxis_afd850eefc2beb7dffa5a637987cb1c6c}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setLabelAngle@{setLabelAngle}}
+\index{setLabelAngle@{setLabelAngle}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setLabelAngle()}{setLabelAngle()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Label\+Angle (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})}
+
+
+
+Sets the label angle. 
+
+Sets the angle used for displaying the labels (in degrees). A 0 angle corresponds to horizontal text.
+
+The default value is 0.\+0.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_af53567dbc374c064127fe76845f4fcac}{label\+Angle()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a6a75b78e746b235bab553f53ddc3e33b}\label{classWt_1_1Chart_1_1WAxis_a6a75b78e746b235bab553f53ddc3e33b}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setLabelBasePoint@{setLabelBasePoint}}
+\index{setLabelBasePoint@{setLabelBasePoint}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setLabelBasePoint()}{setLabelBasePoint()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Label\+Base\+Point (\begin{DoxyParamCaption}\item[{double}]{point }\end{DoxyParamCaption})}
+
+
+
+Sets a point to be included as one of the labels (if possible). 
+
+The given point will be included as one of the labels, by adjusting the minimum value on the axis, if that minimum is auto-\/computed. This is only applicable to a Linear scale axis.
+
+The default value is 0.\+0.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a07be968a06695f6fd37007ea5008295d}{set\+Round\+Limits()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ae9f02413691b40e95e6b7284d41dfba3}\label{classWt_1_1Chart_1_1WAxis_ae9f02413691b40e95e6b7284d41dfba3}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setLabelFont@{setLabelFont}}
+\index{setLabelFont@{setLabelFont}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setLabelFont()}{setLabelFont()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Label\+Font (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WFont}{W\+Font}} \&}]{label\+Font }\end{DoxyParamCaption})}
+
+
+
+Sets the axis label font. 
+
+The default label font is a 10 point Sans Serif font.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aba4eaf482ea260eab009fbc2dde11941}{label\+Font()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a7c37c241825af404b36916dcae9ae87b}\label{classWt_1_1Chart_1_1WAxis_a7c37c241825af404b36916dcae9ae87b}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setLabelFormat@{setLabelFormat}}
+\index{setLabelFormat@{setLabelFormat}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setLabelFormat()}{setLabelFormat()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Label\+Format (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{format }\end{DoxyParamCaption})}
+
+
+
+Sets the label format. 
+
+Sets a format string which is used to format values, both for the axis labels as well as data series values (see \mbox{\hyperlink{classWt_1_1Chart_1_1WDataSeries_a0b3425ac94c831ffa6b46bb1fb354f2f}{W\+Data\+Series\+::set\+Labels\+Enabled()}}).
+
+For an axis with a \mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a32a843da6ea40ab3b17a3421ccdf671b}{Axis\+Scale\+::\+Linear}} or \mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6ace0be71e33226e4c1db2bcea5959f16b}{Axis\+Scale\+::\+Log}} scale, the format string must be a format string that is accepted by snprintf() and which formats one double. If the format string is an empty string, then \mbox{\hyperlink{classWt_1_1WLocale_a7f8394196dc930415eb10f0f611aefbb}{W\+Locale\+::to\+String()}} is used.
+
+For an axis with a \mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a44749712dbec183e983dcd78a7736c41}{Axis\+Scale\+::\+Date}} scale, the format string must be a format string accepted by \mbox{\hyperlink{classWt_1_1WDate_a8fb0648e3910ee4fc68a55e245f86463}{W\+Date\+::to\+String()}}, to format a date. If the format string is an empty string, a suitable format is chosen based on heuristics.
+
+For an axis with a \mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a8cf10d2341ed01492506085688270c1e}{Axis\+Scale\+::\+Date\+Time}} scale, the format string must be a format string accepted by \mbox{\hyperlink{classWt_1_1WDateTime_a2269c77624781225e7ea63322be767d0}{W\+Date\+Time\+::to\+String()}}, to format a date. If the format string is an empty string, a suitable format is chosen based on heuristics.
+
+The default value is \char`\"{}\%.\+4g\char`\"{} for a numeric axis, and a suitable format for date(time) scales based on a heuristic taking into account the current axis range.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a5f2c20aeaaa81a28ff9dba8af348141b}{label\+Format()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a68b1f798fd0d9a713fac29f9d761e2a8}\label{classWt_1_1Chart_1_1WAxis_a68b1f798fd0d9a713fac29f9d761e2a8}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setLabelInterval@{setLabelInterval}}
+\index{setLabelInterval@{setLabelInterval}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setLabelInterval()}{setLabelInterval()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Label\+Interval (\begin{DoxyParamCaption}\item[{double}]{label\+Interval }\end{DoxyParamCaption})}
+
+
+
+Sets the label interval. 
+
+Specifies the interval for displaying labels (and ticks) on the axis. The default value is 0.\+0, and indicates that the interval should be computed automatically.
+
+The unit for the label interval is in logical units (i.\+e. the same as minimum or maximum).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a7c37c241825af404b36916dcae9ae87b}{set\+Label\+Format()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a71928aabf753854274d753e266aabfc2}\label{classWt_1_1Chart_1_1WAxis_a71928aabf753854274d753e266aabfc2}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setLabelTransform@{setLabelTransform}}
+\index{setLabelTransform@{setLabelTransform}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setLabelTransform()}{setLabelTransform()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Label\+Transform (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a7b5884981063a827701c610c2322fa34}{Label\+Transform}} \&}]{transform,  }\item[{\mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}}}]{side }\end{DoxyParamCaption})}
+
+
+
+Set the transform function to apply to a given side. 
+
+The label transform must be a function from double to double, and will be applied on the double value of the model coordinate of every axis tick.
+
+The label transform will not move the position of the axis ticks, only change the labels displayed at the ticks.
+
+This can be useful in combination with a \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ada8fdf77721fac957b708d62ccc55782}{location()}} set to \mbox{\hyperlink{group__charts_gga77eb6d0cefa4a012950ea972b471b849a130c5b3473c57faa76e2a1c54e26f88e}{Axis\+Value\+::\+Both}}, to show different labels on each side.
+
+If \mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a44749712dbec183e983dcd78a7736c41}{Axis\+Scale\+::\+Date}} or \mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a8cf10d2341ed01492506085688270c1e}{Axis\+Scale\+::\+Date\+Time}} are used, the double value will be in seconds since the Epoch (00\+:00\+:00 U\+TC, January 1, 1970).
+
+Only \mbox{\hyperlink{group__charts_gga77eb6d0cefa4a012950ea972b471b849aa1d0ec6d56f8833a078b5a7ac4caf2d4}{Axis\+Value\+::\+Minimum}}, \mbox{\hyperlink{group__charts_gga77eb6d0cefa4a012950ea972b471b849ad7ed4ee1df437474d005188535f74875}{Axis\+Value\+::\+Zero}} and \mbox{\hyperlink{group__charts_gga77eb6d0cefa4a012950ea972b471b849a8321e79c278ec510f63675c040594892}{Axis\+Value\+::\+Maximum}} are accepted for side. If you set a label transform for another side, the label transform will not be used.
+
+The label transform will not be used if the \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a9961d16fab1e27bfaa31ff5462dd6848}{scale()}} is \mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a4984667940802dedc139aa7a430a6553}{Axis\+Scale\+::\+Discrete}}. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a6dab2f46117b85a4a6f439e4f194ee82}\label{classWt_1_1Chart_1_1WAxis_a6dab2f46117b85a4a6f439e4f194ee82}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setLocation@{setLocation}}
+\index{setLocation@{setLocation}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setLocation()}{setLocation()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Location (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets the axis location. 
+
+Configures the location of the axis, relative to values on the other axis (i.\+e. Y values for the X axis, and X values for the Y axis).
+
+The default value is \mbox{\hyperlink{group__charts_gga77eb6d0cefa4a012950ea972b471b849aa1d0ec6d56f8833a078b5a7ac4caf2d4}{Chart\+::\+Axis\+Value\+::\+Minimum}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ada8fdf77721fac957b708d62ccc55782}{location()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a61a297a8d3c99e74b07e9def9ebe88a5}\label{classWt_1_1Chart_1_1WAxis_a61a297a8d3c99e74b07e9def9ebe88a5}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setMargin@{setMargin}}
+\index{setMargin@{setMargin}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setMargin()}{setMargin()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Margin (\begin{DoxyParamCaption}\item[{int}]{pixels }\end{DoxyParamCaption})}
+
+
+
+Sets the margin between the axis and the plot area. 
+
+The margin is defined in pixels.
+
+The default value is 0.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a3aaa1382bba3b0af6374871e4b8216b5}{margin()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a64152da3f00fdeb6824d6a06e33ab346}\label{classWt_1_1Chart_1_1WAxis_a64152da3f00fdeb6824d6a06e33ab346}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setMaximum@{setMaximum}}
+\index{setMaximum@{setMaximum}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setMaximum()}{setMaximum()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Maximum (\begin{DoxyParamCaption}\item[{double}]{maximum }\end{DoxyParamCaption})}
+
+
+
+Sets the maximum value for the axis displayed on the axis. 
+
+By default, the minimum and maximum values are determined automatically so that all the data can be displayed.
+
+The numerical value corresponding to a data point is defined by it\textquotesingle{}s Axis\+Scale type.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a878e20a87f7f6c5b4693bb81699c9f5b}{set\+Minimum()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a26b0b1b9a61fa3355a0ec224a7ff1caa}{set\+Auto\+Limits()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ada743ccf44212cfb1f4a6fa83b79e581}\label{classWt_1_1Chart_1_1WAxis_ada743ccf44212cfb1f4a6fa83b79e581}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setMaximumZoomRange@{setMaximumZoomRange}}
+\index{setMaximumZoomRange@{setMaximumZoomRange}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setMaximumZoomRange()}{setMaximumZoomRange()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Maximum\+Zoom\+Range (\begin{DoxyParamCaption}\item[{double}]{size }\end{DoxyParamCaption})}
+
+
+
+Sets the maximum zoom range for this axis. 
+
+Only applies to a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} in interactive mode.
+
+This range is the largest difference there can be between \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ad16bf59f1fbb8c9cabc51e8ee8d82bbc}{zoom\+Minimum()}} and \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a10a6b8727799a2f20807f04880d04600}{zoom\+Maximum()}}.
+
+This is especially useful in combination with \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart_a97f7f38a9f751b0b41d67f4546cc32f9}{on demand loading }}, when showing the entire chart is undesirable because the amount of data to be shown is too large. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a6f5776dc9e8d6fd3cfebfc00d3cd2ad2}\label{classWt_1_1Chart_1_1WAxis_a6f5776dc9e8d6fd3cfebfc00d3cd2ad2}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setMaxZoom@{setMaxZoom}}
+\index{setMaxZoom@{setMaxZoom}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setMaxZoom()}{setMaxZoom()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Max\+Zoom (\begin{DoxyParamCaption}\item[{double}]{max\+Zoom }\end{DoxyParamCaption})}
+
+
+
+Sets the maximum zoom level for this axis. 
+
+Only applies to a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} in interactive mode. The zoom level should be $>$= 1 (1 = no zoom).
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000003}{Deprecated}}]Use \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a4558ed53e30fa3d8dfa71b20717af9e4}{set\+Minimum\+Zoom\+Range(double)}} instead \end{DoxyRefDesc}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a878e20a87f7f6c5b4693bb81699c9f5b}\label{classWt_1_1Chart_1_1WAxis_a878e20a87f7f6c5b4693bb81699c9f5b}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setMinimum@{setMinimum}}
+\index{setMinimum@{setMinimum}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setMinimum()}{setMinimum()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Minimum (\begin{DoxyParamCaption}\item[{double}]{minimum }\end{DoxyParamCaption})}
+
+
+
+Sets the minimum value displayed on the axis. 
+
+By default, the minimum and maximum values are determined automatically so that all the data can be displayed.
+
+The numerical value corresponding to a data point is defined by it\textquotesingle{}s Axis\+Scale type.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a64152da3f00fdeb6824d6a06e33ab346}{set\+Maximum()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a26b0b1b9a61fa3355a0ec224a7ff1caa}{set\+Auto\+Limits()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a4558ed53e30fa3d8dfa71b20717af9e4}\label{classWt_1_1Chart_1_1WAxis_a4558ed53e30fa3d8dfa71b20717af9e4}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setMinimumZoomRange@{setMinimumZoomRange}}
+\index{setMinimumZoomRange@{setMinimumZoomRange}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setMinimumZoomRange()}{setMinimumZoomRange()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Minimum\+Zoom\+Range (\begin{DoxyParamCaption}\item[{double}]{size }\end{DoxyParamCaption})}
+
+
+
+Sets the minimum zoom range for this axis. 
+
+Only applies to a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} in interactive mode.
+
+This range is the smallest difference there can be between \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ad16bf59f1fbb8c9cabc51e8ee8d82bbc}{zoom\+Minimum()}} and \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a10a6b8727799a2f20807f04880d04600}{zoom\+Maximum()}}. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a13d7f38a677d502e3b5dd0d9550e6d33}\label{classWt_1_1Chart_1_1WAxis_a13d7f38a677d502e3b5dd0d9550e6d33}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setMinZoom@{setMinZoom}}
+\index{setMinZoom@{setMinZoom}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setMinZoom()}{setMinZoom()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Min\+Zoom (\begin{DoxyParamCaption}\item[{double}]{min\+Zoom }\end{DoxyParamCaption})}
+
+
+
+Sets the minimum zoom level for this axis. 
+
+Only applies to a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} in interactive mode. The zoom level should be $>$= 1 (1 = no zoom).
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000005}{Deprecated}}]Use \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ada743ccf44212cfb1f4a6fa83b79e581}{set\+Maximum\+Zoom\+Range(double)}} instead \end{DoxyRefDesc}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a23f464974348b4e4301d2f07345b0a06}\label{classWt_1_1Chart_1_1WAxis_a23f464974348b4e4301d2f07345b0a06}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setPadding@{setPadding}}
+\index{setPadding@{setPadding}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setPadding()}{setPadding()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Padding (\begin{DoxyParamCaption}\item[{int}]{padding }\end{DoxyParamCaption})}
+
+
+
+Sets the padding between the chart area and this axis. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a4271fae25a7dca58b9a69c687aac8d51}{padding()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a2f6a11d9d47036f8806c5a8412dfd24c}\label{classWt_1_1Chart_1_1WAxis_a2f6a11d9d47036f8806c5a8412dfd24c}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setPan@{setPan}}
+\index{setPan@{setPan}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setPan()}{setPan()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Pan (\begin{DoxyParamCaption}\item[{double}]{pan }\end{DoxyParamCaption})}
+
+
+
+Sets the value to pan to for this axis. 
+
+This sets the leftmost (horizontal axis) or bottom (vertical axis) value to be displayed on the chart.
+
+\mbox{\hyperlink{classNote}{Note}} that if this would cause the chart to go out of bounds, the panning of the chart will be automatically adjusted.
+
+Only applies to a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} in interactive mode.
+
+\begin{DoxyNote}{Note}
+If the pan position has been changed on the client side, this may not reflect the actual pan position.
+\end{DoxyNote}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000007}{Deprecated}}]Use \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a0be187399e7cb4877f2c5e3837eba6ea}{set\+Zoom\+Range()}} instead. \end{DoxyRefDesc}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ab1b9dcb9e23e01ec18994712fa5e11d1}\label{classWt_1_1Chart_1_1WAxis_ab1b9dcb9e23e01ec18994712fa5e11d1}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setPen@{setPen}}
+\index{setPen@{setPen}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setPen()}{setPen()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Pen (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \&}]{pen }\end{DoxyParamCaption})}
+
+
+
+Changes the pen used for rendering the axis and ticks. 
+
+The default value is a Standard\+Color\+::\+Black pen of 0 width.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aa97db5c1f1bff788382ef48b8a6d1cc2}{set\+Grid\+Lines\+Pen()}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_aae563fd94b81a03cfe2662dbde2ae548}\label{classWt_1_1Chart_1_1WAxis_aae563fd94b81a03cfe2662dbde2ae548}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setRange@{setRange}}
+\index{setRange@{setRange}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setRange()}{setRange()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Range (\begin{DoxyParamCaption}\item[{double}]{minimum,  }\item[{double}]{maximum }\end{DoxyParamCaption})}
+
+
+
+Sets the axis range (minimum and maximum values) manually. 
+
+Specifies both minimum and maximum value for the axis. This automatically disables automatic range calculation.
+
+The numerical value corresponding to a data point is defined by it\textquotesingle{}s Axis\+Scale type.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a878e20a87f7f6c5b4693bb81699c9f5b}{set\+Minimum()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a64152da3f00fdeb6824d6a06e33ab346}{set\+Maximum()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ab36cb584a0aa8bdcc1c3212a9304e6cd}\label{classWt_1_1Chart_1_1WAxis_ab36cb584a0aa8bdcc1c3212a9304e6cd}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setResolution@{setResolution}}
+\index{setResolution@{setResolution}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setResolution()}{setResolution()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Resolution (\begin{DoxyParamCaption}\item[{double}]{resolution }\end{DoxyParamCaption})}
+
+
+
+Sets the axis resolution. 
+
+Specifies the axis resolution, in case maximum-\/minimum $<$ resolution minimum and maximum are modified so the maximum -\/ minimum = resolution
+
+The default resolution is 0, which uses a built-\/in epsilon.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aec3c5315f9a76eef613feaa16f80a2d5}{resolution()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a07be968a06695f6fd37007ea5008295d}\label{classWt_1_1Chart_1_1WAxis_a07be968a06695f6fd37007ea5008295d}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setRoundLimits@{setRoundLimits}}
+\index{setRoundLimits@{setRoundLimits}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setRoundLimits()}{setRoundLimits()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Round\+Limits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Axis\+Value}} $>$}]{locations }\end{DoxyParamCaption})}
+
+
+
+Specifies whether limits should be rounded. 
+
+When enabling rounding, this has the effect of rounding down the minimum value, or rounding up the maximum value, to the nearest label interval.
+
+By default, rounding is enabled for an auto-\/calculated limited, and disabled for a manually specifed limit.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a26b0b1b9a61fa3355a0ec224a7ff1caa}{set\+Auto\+Limits()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ab067037b83d1d663535250968a1776d8}\label{classWt_1_1Chart_1_1WAxis_ab067037b83d1d663535250968a1776d8}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setScale@{setScale}}
+\index{setScale@{setScale}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setScale()}{setScale()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Scale (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__charts_gadfcaed8cd6ff52f5747f7df48f2eeab6}{Axis\+Scale}}}]{scale }\end{DoxyParamCaption})}
+
+
+
+Sets the scale of the axis. 
+
+For the X scale in a \mbox{\hyperlink{group__charts_gga8d63464f873580c77508e1c0c26cbfeaa3adbdb3ac060038aa0e6e6c138ef9873}{Chart\+Type\+::\+Category}}, the scale should be left unchanged to \mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a4984667940802dedc139aa7a430a6553}{Axis\+Scale\+::\+Discrete}}.
+
+For all other axes, the default value is \mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a32a843da6ea40ab3b17a3421ccdf671b}{Axis\+Scale\+::\+Linear}}, but this may be changed to \mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6ace0be71e33226e4c1db2bcea5959f16b}{Axis\+Scale\+::\+Log}} or \mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a44749712dbec183e983dcd78a7736c41}{Axis\+Scale\+::\+Date}}. \mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a44749712dbec183e983dcd78a7736c41}{Axis\+Scale\+::\+Date}} is only useful for the X axis in a \mbox{\hyperlink{group__charts_gga8d63464f873580c77508e1c0c26cbfeaa09870720ca8134284e4e305ac6ce5f19}{Chart\+Type\+::\+Scatter}} which contains \mbox{\hyperlink{classWt_1_1WDate}{W\+Date}} values.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a9961d16fab1e27bfaa31ff5462dd6848}{scale()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a4897cedc1f8cf704f723c031026181ed}\label{classWt_1_1Chart_1_1WAxis_a4897cedc1f8cf704f723c031026181ed}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setSoftLabelClipping@{setSoftLabelClipping}}
+\index{setSoftLabelClipping@{setSoftLabelClipping}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setSoftLabelClipping()}{setSoftLabelClipping()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Soft\+Label\+Clipping (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enables soft clipping of axis labels. 
+
+This is set to {\ttfamily false} by for a 3D chart and to {\ttfamily true} for a 2D chart.
+
+This setting determines how labels should be clipped in case not the entire axis is visible due to clipping. \char`\"{}\+Hard\char`\"{} clipping is done by the paint device and may truncate labels. \char`\"{}\+Soft\char`\"{} clipping will determine if the corresponding tick is visible, and draw the label (unclipped), preventing labels from being truncated. For a 2D chart, this feature is only relevant when \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart_a5ff1331e2837807cae16fea146e93ce4}{zoom is enabled }} on a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}}. \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+ This is the default for \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}}. The tick for 0 is visible, and the 0 is shown completely. The tick for 01/01/86 is not visible, so its label is not shown. & The tick of the 0 is visible, but the 0 is shown partially. Also, the tick of 01/01/86 is not visible, but the label is partially shown.  \\\cline{1-2}
+\end{longtabu}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a8425fd89520a88fd788fcb0d1be125a0}\label{classWt_1_1Chart_1_1WAxis_a8425fd89520a88fd788fcb0d1be125a0}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setTextPen@{setTextPen}}
+\index{setTextPen@{setTextPen}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setTextPen()}{setTextPen()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Text\+Pen (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \&}]{pen }\end{DoxyParamCaption})}
+
+
+
+Changes the pen used for rendering labels for this axis. 
+
+The default value is a Standard\+Color\+::\+Black pen of 0 width.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aa97db5c1f1bff788382ef48b8a6d1cc2}{set\+Grid\+Lines\+Pen()}}. 
+
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ab1b9dcb9e23e01ec18994712fa5e11d1}{set\+Pen()}}. 
+
+\mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart_afe121f12015e1932beedac3d93a45e7c}{W\+Cartesian\+Chart\+::set\+Text\+Pen()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ab16cfe889a24fbeb08b3d313a8d5cab0}\label{classWt_1_1Chart_1_1WAxis_ab16cfe889a24fbeb08b3d313a8d5cab0}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setTickDirection@{setTickDirection}}
+\index{setTickDirection@{setTickDirection}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setTickDirection()}{setTickDirection()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Tick\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWt_1_1Chart_a2cdbbf3dff0fe5b35fcdbce84792463f}{Tick\+Direction}}}]{direction }\end{DoxyParamCaption})}
+
+
+
+Sets the direction that the axis ticks should point to. 
+
+If set to \mbox{\hyperlink{namespaceWt_1_1Chart_a2cdbbf3dff0fe5b35fcdbce84792463faeda0dcaadaa93d19d3e8be1a27e4a854}{Tick\+Direction\+::\+Outwards}}, the axis ticks will point outside of the chart, and the labels will be on the outside.
+
+If set to \mbox{\hyperlink{namespaceWt_1_1Chart_a2cdbbf3dff0fe5b35fcdbce84792463fa2094b2fa3082c55abb44ea0522883f8b}{Tick\+Direction\+::\+Inwards}}, the axis ticks will point inside of the chart, and the labels will be on the inside. Also, the \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a4271fae25a7dca58b9a69c687aac8d51}{padding()}} will be set to 25.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_af9a518ede2f0f40d55198498b2d42582}{tick\+Direction()}} 
+
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a23f464974348b4e4301d2f07345b0a06}{set\+Padding()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ae85436297049bd4c60a75a9cc5313e4a}\label{classWt_1_1Chart_1_1WAxis_ae85436297049bd4c60a75a9cc5313e4a}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setTitle()}{setTitle()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Title (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{title }\end{DoxyParamCaption})}
+
+
+
+Sets the axis title. 
+
+The default title is empty.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a62aab15e5587879432f5d94c89773453}{title()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ad977d82494e5922ccf6882f1378c4db6}\label{classWt_1_1Chart_1_1WAxis_ad977d82494e5922ccf6882f1378c4db6}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setTitleFont@{setTitleFont}}
+\index{setTitleFont@{setTitleFont}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setTitleFont()}{setTitleFont()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Title\+Font (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WFont}{W\+Font}} \&}]{title\+Font }\end{DoxyParamCaption})}
+
+
+
+Sets the axis title font. 
+
+The default title font is a 12 point Sans Serif font.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_afcb7c573660911813755a7342669bd21}{title\+Font()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_adb8fa80e48d26bc84bbca164eb2e2eed}\label{classWt_1_1Chart_1_1WAxis_adb8fa80e48d26bc84bbca164eb2e2eed}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setTitleOrientation@{setTitleOrientation}}
+\index{setTitleOrientation@{setTitleOrientation}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setTitleOrientation()}{setTitleOrientation()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Title\+Orientation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} \&}]{orientation }\end{DoxyParamCaption})}
+
+
+
+Sets the title orientation. 
+
+Sets the orientation used for displaying the title.
+
+The default value is Orientation\+::\+Horizontal
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_acc40e5ad8f6ab3998a39d91fb054829c}{title\+Orientation()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a59fd4c6a79f6e3ea75f21aa44c4acfa8}\label{classWt_1_1Chart_1_1WAxis_a59fd4c6a79f6e3ea75f21aa44c4acfa8}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setVisible@{setVisible}}
+\index{setVisible@{setVisible}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setVisible()}{setVisible()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible }\end{DoxyParamCaption})}
+
+
+
+Sets whether this axis is visible. 
+
+Changes whether the axis is displayed, including ticks and labels. The rendering of the grid lines is controlled separately by \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a79d70190d984c7f956e44b79de0af527}{set\+Grid\+Lines\+Enabled()}}.
+
+The default value is true for the X axis and first Y axis, but false for the second Y axis.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a79d70190d984c7f956e44b79de0af527}{set\+Grid\+Lines\+Enabled()}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a16d188d56c2b62b7b3f2ddb6fa96d7cc}\label{classWt_1_1Chart_1_1WAxis_a16d188d56c2b62b7b3f2ddb6fa96d7cc}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setZoom@{setZoom}}
+\index{setZoom@{setZoom}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setZoom()}{setZoom()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Zoom (\begin{DoxyParamCaption}\item[{double}]{zoom }\end{DoxyParamCaption})}
+
+
+
+Sets the zoom level for this axis. 
+
+Only applies to a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} in interactive mode. The zoom level should be $>$= 1 and smaller than \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a87bb72b58a57c3f89492c21654b52acb}{max\+Zoom()}}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000001}{Deprecated}}]Use \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a0be187399e7cb4877f2c5e3837eba6ea}{set\+Zoom\+Range()}} instead. \end{DoxyRefDesc}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a0be187399e7cb4877f2c5e3837eba6ea}\label{classWt_1_1Chart_1_1WAxis_a0be187399e7cb4877f2c5e3837eba6ea}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!setZoomRange@{setZoomRange}}
+\index{setZoomRange@{setZoomRange}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{setZoomRange()}{setZoomRange()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Axis\+::set\+Zoom\+Range (\begin{DoxyParamCaption}\item[{double}]{minimum,  }\item[{double}]{maximum }\end{DoxyParamCaption})}
+
+
+
+Set the range to zoom to on this axis. 
+
+The minimum is the lowest value to be displayed, and the maximum is the highest value to be displayed.
+
+If the difference between minimum and maximum is less than \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_aa14b5e6a8543de02fd800c455aade230}{minimum\+Zoom\+Range()}}, the zoom range will be made more narrow around the center of minimum and maximum.
+
+If the given minimum is larger than the given maximum, the two values are swapped.
+
+Only applies to a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} in interactive mode. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_aa934edc8f5d5b8e078668128211150a3}\label{classWt_1_1Chart_1_1WAxis_aa934edc8f5d5b8e078668128211150a3}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!softLabelClipping@{softLabelClipping}}
+\index{softLabelClipping@{softLabelClipping}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{softLabelClipping()}{softLabelClipping()}}
+{\footnotesize\ttfamily bool Wt\+::\+Chart\+::\+W\+Axis\+::soft\+Label\+Clipping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether soft label clipping is enabled. 
+
+\begin{DoxySeeAlso}{See also}
+set\+Soft\+Label\+C\+Lipping() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_af462ef4239c9b4c050b289a454b493b2}\label{classWt_1_1Chart_1_1WAxis_af462ef4239c9b4c050b289a454b493b2}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!textPen@{textPen}}
+\index{textPen@{textPen}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{textPen()}{textPen()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}}\& Wt\+::\+Chart\+::\+W\+Axis\+::text\+Pen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the pen used for rendering labels for this axis. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a8425fd89520a88fd788fcb0d1be125a0}{set\+Text\+Pen()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_af9a518ede2f0f40d55198498b2d42582}\label{classWt_1_1Chart_1_1WAxis_af9a518ede2f0f40d55198498b2d42582}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!tickDirection@{tickDirection}}
+\index{tickDirection@{tickDirection}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{tickDirection()}{tickDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceWt_1_1Chart_a2cdbbf3dff0fe5b35fcdbce84792463f}{Tick\+Direction}} Wt\+::\+Chart\+::\+W\+Axis\+::tick\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the direction that the axis ticks point to. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ab16cfe889a24fbeb08b3d313a8d5cab0}{set\+Tick\+Direction()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a62aab15e5587879432f5d94c89773453}\label{classWt_1_1Chart_1_1WAxis_a62aab15e5587879432f5d94c89773453}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!title@{title}}
+\index{title@{title}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WString}{W\+String}}\& Wt\+::\+Chart\+::\+W\+Axis\+::title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the axis title. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ae85436297049bd4c60a75a9cc5313e4a}{set\+Title()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_afcb7c573660911813755a7342669bd21}\label{classWt_1_1Chart_1_1WAxis_afcb7c573660911813755a7342669bd21}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!titleFont@{titleFont}}
+\index{titleFont@{titleFont}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{titleFont()}{titleFont()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WFont}{W\+Font}}\& Wt\+::\+Chart\+::\+W\+Axis\+::title\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the axis title font. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ad977d82494e5922ccf6882f1378c4db6}{set\+Title\+Font()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_acc40e5ad8f6ab3998a39d91fb054829c}\label{classWt_1_1Chart_1_1WAxis_acc40e5ad8f6ab3998a39d91fb054829c}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!titleOrientation@{titleOrientation}}
+\index{titleOrientation@{titleOrientation}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{titleOrientation()}{titleOrientation()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}\& Wt\+::\+Chart\+::\+W\+Axis\+::title\+Orientation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the title orientation. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_adb8fa80e48d26bc84bbca164eb2e2eed}{set\+Title\+Orientation()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_abea578c283b1fb09d8588cc3eeaeb480}\label{classWt_1_1Chart_1_1WAxis_abea578c283b1fb09d8588cc3eeaeb480}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!xAxisId@{xAxisId}}
+\index{xAxisId@{xAxisId}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{xAxisId()}{xAxisId()}}
+{\footnotesize\ttfamily int Wt\+::\+Chart\+::\+W\+Axis\+::x\+Axis\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the X axis id. 
+
+Returns 0 if this axis is not a X axis.
+
+\begin{DoxySeeAlso}{See also}
+chart(), \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart_acff481e0bb4a04407ddbece2bb18a45d}{W\+Cartesian\+Chart\+::x\+Axis()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a15a4c674c07f2985f2e3006b1492dae2}\label{classWt_1_1Chart_1_1WAxis_a15a4c674c07f2985f2e3006b1492dae2}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!yAxisId@{yAxisId}}
+\index{yAxisId@{yAxisId}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{yAxisId()}{yAxisId()}}
+{\footnotesize\ttfamily int Wt\+::\+Chart\+::\+W\+Axis\+::y\+Axis\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Y axis id. 
+
+Returns 0 if this axis is not a Y axis.
+
+\begin{DoxySeeAlso}{See also}
+chart(), \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart_ae456864a8c8bdf7a7890eaedf6bebfeb}{W\+Cartesian\+Chart\+::y\+Axis()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a4f1debe792c846d23d931fee4887ebf2}\label{classWt_1_1Chart_1_1WAxis_a4f1debe792c846d23d931fee4887ebf2}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!zoom@{zoom}}
+\index{zoom@{zoom}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{zoom()}{zoom()}}
+{\footnotesize\ttfamily double Wt\+::\+Chart\+::\+W\+Axis\+::zoom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the zoom level for this axis. 
+
+Only applies to a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} in interactive mode.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a16d188d56c2b62b7b3f2ddb6fa96d7cc}{set\+Zoom()}}
+\end{DoxySeeAlso}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000002}{Deprecated}}]Use \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ad16bf59f1fbb8c9cabc51e8ee8d82bbc}{zoom\+Minimum()}} and \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a10a6b8727799a2f20807f04880d04600}{zoom\+Maximum()}} instead. \end{DoxyRefDesc}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a10a6b8727799a2f20807f04880d04600}\label{classWt_1_1Chart_1_1WAxis_a10a6b8727799a2f20807f04880d04600}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!zoomMaximum@{zoomMaximum}}
+\index{zoomMaximum@{zoomMaximum}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{zoomMaximum()}{zoomMaximum()}}
+{\footnotesize\ttfamily double Wt\+::\+Chart\+::\+W\+Axis\+::zoom\+Maximum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the zoom range maximum for this axis. 
+
+Only applies to a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} in interactive mode.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a0be187399e7cb4877f2c5e3837eba6ea}{set\+Zoom\+Range()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ad16bf59f1fbb8c9cabc51e8ee8d82bbc}\label{classWt_1_1Chart_1_1WAxis_ad16bf59f1fbb8c9cabc51e8ee8d82bbc}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!zoomMinimum@{zoomMinimum}}
+\index{zoomMinimum@{zoomMinimum}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{zoomMinimum()}{zoomMinimum()}}
+{\footnotesize\ttfamily double Wt\+::\+Chart\+::\+W\+Axis\+::zoom\+Minimum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the zoom range minimum for this axis. 
+
+Only applies to a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} in interactive mode.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a0be187399e7cb4877f2c5e3837eba6ea}{set\+Zoom\+Range()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_a7e432917f0f23f18db3a043397a81904}\label{classWt_1_1Chart_1_1WAxis_a7e432917f0f23f18db3a043397a81904}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!zoomRangeChanged@{zoomRangeChanged}}
+\index{zoomRangeChanged@{zoomRangeChanged}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{zoomRangeChanged()}{zoomRangeChanged()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$double, double$>$\& Wt\+::\+Chart\+::\+W\+Axis\+::zoom\+Range\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+A signal triggered when the zoom range is changed on the client side. 
+
+Only applies to a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} in interactive mode.
+
+\begin{DoxyNote}{Note}
+If you want to use this signal, you must connect a signal listener before the chart is rendered. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_af506429983c72703d8fadbc03a1e67d4}\label{classWt_1_1Chart_1_1WAxis_af506429983c72703d8fadbc03a1e67d4}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!AUTO\_MAXIMUM@{AUTO\_MAXIMUM}}
+\index{AUTO\_MAXIMUM@{AUTO\_MAXIMUM}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{AUTO\_MAXIMUM}{AUTO\_MAXIMUM}}
+{\footnotesize\ttfamily const double Wt\+::\+Chart\+::\+W\+Axis\+::\+A\+U\+T\+O\+\_\+\+M\+A\+X\+I\+M\+UM\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constant which indicates automatic maximum calculation. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a64152da3f00fdeb6824d6a06e33ab346}{set\+Maximum()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAxis_ad0c60f190b30ddfec321e750248c6579}\label{classWt_1_1Chart_1_1WAxis_ad0c60f190b30ddfec321e750248c6579}} 
+\index{Wt::Chart::WAxis@{Wt::Chart::WAxis}!AUTO\_MINIMUM@{AUTO\_MINIMUM}}
+\index{AUTO\_MINIMUM@{AUTO\_MINIMUM}!Wt::Chart::WAxis@{Wt::Chart::WAxis}}
+\doxysubsubsection{\texorpdfstring{AUTO\_MINIMUM}{AUTO\_MINIMUM}}
+{\footnotesize\ttfamily const double Wt\+::\+Chart\+::\+W\+Axis\+::\+A\+U\+T\+O\+\_\+\+M\+I\+N\+I\+M\+UM\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Constant which indicates automatic minimum calculation. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a878e20a87f7f6c5b4693bb81699c9f5b}{set\+Minimum()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Chart/W\+Axis.\+h\end{DoxyCompactItemize}

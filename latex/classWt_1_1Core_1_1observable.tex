@@ -1,0 +1,106 @@
+\hypertarget{classWt_1_1Core_1_1observable}{}\doxysection{Wt\+::Core\+::observable Class Reference}
+\label{classWt_1_1Core_1_1observable}\index{Wt::Core::observable@{Wt::Core::observable}}
+
+
+A base class for objects whose life-\/time can be tracked.  
+
+
+
+
+Inheritance diagram for Wt\+::Core\+::observable\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Core_1_1observable_ac18aee9da79a11ad8492ed5e95ed52e4}\label{classWt_1_1Core_1_1observable_ac18aee9da79a11ad8492ed5e95ed52e4}} 
+\mbox{\hyperlink{classWt_1_1Core_1_1observable_ac18aee9da79a11ad8492ed5e95ed52e4}{observable}} () noexcept
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Core_1_1observable_aaff32cdbd6cd167b3e384f0d7ee7d0b8}{$\sim$observable}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Core_1_1observable_a625f1708625699d556d00c8d96a4bb71}\label{classWt_1_1Core_1_1observable_a625f1708625699d556d00c8d96a4bb71}} 
+{\bfseries observable} (const \mbox{\hyperlink{classWt_1_1Core_1_1observable}{observable}} \&)=delete
+\item 
+\mbox{\Hypertarget{classWt_1_1Core_1_1observable_a597c081875ade0dec5bb6741c1c05e2c}\label{classWt_1_1Core_1_1observable_a597c081875ade0dec5bb6741c1c05e2c}} 
+\mbox{\hyperlink{classWt_1_1Core_1_1observable}{observable}} \& {\bfseries operator=} (const \mbox{\hyperlink{classWt_1_1Core_1_1observable}{observable}} \&)=delete
+\item 
+\mbox{\Hypertarget{classWt_1_1Core_1_1observable_a720fc263d40a60092b44302584810ea2}\label{classWt_1_1Core_1_1observable_a720fc263d40a60092b44302584810ea2}} 
+{\bfseries observable} (\mbox{\hyperlink{classWt_1_1Core_1_1observable}{observable}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classWt_1_1Core_1_1observable_a6dae2f6e52ebc8bc3a130dfdd0ea2401}\label{classWt_1_1Core_1_1observable_a6dae2f6e52ebc8bc3a130dfdd0ea2401}} 
+\mbox{\hyperlink{classWt_1_1Core_1_1observable}{observable}} \& {\bfseries operator=} (\mbox{\hyperlink{classWt_1_1Core_1_1observable}{observable}} \&\&)=delete
+\item 
+\mbox{\Hypertarget{classWt_1_1Core_1_1observable_ad139d2f6b87228ddbf97857c9ca81e89}\label{classWt_1_1Core_1_1observable_ad139d2f6b87228ddbf97857c9ca81e89}} 
+{\footnotesize template$<$typename... Args, typename Class\+Type $>$ }\\auto {\bfseries bind\+Safe} (void(Class\+Type\+::$\ast$f)(Args...)) noexcept -\/$>$ std\+::function$<$ void(Args...)$>$
+\item 
+\mbox{\Hypertarget{classWt_1_1Core_1_1observable_a0ba032e0de28f877141614dc81fb67d3}\label{classWt_1_1Core_1_1observable_a0ba032e0de28f877141614dc81fb67d3}} 
+{\footnotesize template$<$typename... Args, typename Class\+Type $>$ }\\auto {\bfseries bind\+Safe} (void(Class\+Type\+::$\ast$f)(Args...) const) const noexcept -\/$>$ std\+::function$<$ void(Args...)$>$
+\item 
+\mbox{\Hypertarget{classWt_1_1Core_1_1observable_a64503740d940b1a41993161c05a6f797}\label{classWt_1_1Core_1_1observable_a64503740d940b1a41993161c05a6f797}} 
+{\footnotesize template$<$typename First\+Arg , typename... Args, class F $>$ }\\auto {\bfseries bind\+Safe} (F \&\&f) const noexcept -\/$>$ std\+::function$<$ decltype(f(std\+::declval$<$ First\+Arg $>$(), std\+::declval$<$ Args $>$()...))(First\+Arg, Args...)$>$
+\item 
+\mbox{\Hypertarget{classWt_1_1Core_1_1observable_a434e48bbd9aa66939dff686ff4b1f153}\label{classWt_1_1Core_1_1observable_a434e48bbd9aa66939dff686ff4b1f153}} 
+{\footnotesize template$<$class F $>$ }\\auto {\bfseries bind\+Safe} (F \&\&f) const noexcept -\/$>$ decltype(bind\+Safe(\&std\+::remove\+\_\+reference$<$ F $>$\+::type\+::operator()))
+\item 
+\mbox{\Hypertarget{classWt_1_1Core_1_1observable_ac7823bd7c35f55a2d04bdaaee288c9b4}\label{classWt_1_1Core_1_1observable_ac7823bd7c35f55a2d04bdaaee288c9b4}} 
+{\footnotesize template$<$typename... Args$>$ }\\std\+::function$<$ void(Args...)$>$ {\bfseries bind\+Safe} (const std\+::function$<$ void(Args...)$>$ \&f) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Core_1_1observable_ab501b3395469f96829039d22b6e736f9}\label{classWt_1_1Core_1_1observable_ab501b3395469f96829039d22b6e736f9}} 
+void {\bfseries add\+Observer} (\mbox{\hyperlink{structWt_1_1Core_1_1Impl_1_1observing__ptr__base}{Impl\+::observing\+\_\+ptr\+\_\+base}} $\ast$observer) noexcept
+\item 
+\mbox{\Hypertarget{classWt_1_1Core_1_1observable_a97d3117b10a201aa2a8918b12ce04a74}\label{classWt_1_1Core_1_1observable_a97d3117b10a201aa2a8918b12ce04a74}} 
+void {\bfseries remove\+Observer} (\mbox{\hyperlink{structWt_1_1Core_1_1Impl_1_1observing__ptr__base}{Impl\+::observing\+\_\+ptr\+\_\+base}} $\ast$observer) noexcept
+\item 
+\mbox{\Hypertarget{classWt_1_1Core_1_1observable_aef536d62c52aa08f76874f7c6f9347e4}\label{classWt_1_1Core_1_1observable_aef536d62c52aa08f76874f7c6f9347e4}} 
+void {\bfseries replace\+Observer} (\mbox{\hyperlink{structWt_1_1Core_1_1Impl_1_1observing__ptr__base}{Impl\+::observing\+\_\+ptr\+\_\+base}} $\ast$original, \mbox{\hyperlink{structWt_1_1Core_1_1Impl_1_1observing__ptr__base}{Impl\+::observing\+\_\+ptr\+\_\+base}} $\ast$observer) noexcept
+\item 
+\mbox{\Hypertarget{classWt_1_1Core_1_1observable_a972870947db6555f946ef84efa1957f4}\label{classWt_1_1Core_1_1observable_a972870947db6555f946ef84efa1957f4}} 
+{\footnotesize template$<$typename... Args$>$ }\\std\+::function$<$ void(Args...)$>$ {\bfseries bind\+Safe\+Function} (std\+::function$<$ void(Args...)$>$ f) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Core_1_1observable_a24bdfcf4d9bd78ef74870d8922472a46}\label{classWt_1_1Core_1_1observable_a24bdfcf4d9bd78ef74870d8922472a46}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{structWt_1_1Core_1_1Impl_1_1observer__info}{Impl\+::observer\+\_\+info}} $>$ {\bfseries observer\+Info\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Core_1_1observable_abd9f19c50ce8c9c8f1d68692714e615a}\label{classWt_1_1Core_1_1observable_abd9f19c50ce8c9c8f1d68692714e615a}} 
+{\footnotesize template$<$typename T $>$ }\\class {\bfseries observing\+\_\+ptr}
+\item 
+\mbox{\Hypertarget{classWt_1_1Core_1_1observable_a5d865d883268712cd46dbe7ce8efce14}\label{classWt_1_1Core_1_1observable_a5d865d883268712cd46dbe7ce8efce14}} 
+struct {\bfseries Impl\+::observing\+\_\+ptr\+\_\+base}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A base class for objects whose life-\/time can be tracked. 
+
+This class provides the ability to be observed by a \mbox{\hyperlink{classWt_1_1Core_1_1observing__ptr}{observing\+\_\+ptr}}, which is a smart pointer that is aware of the deletion of this object. It is used by the signal/slot system to automatically disconnect a slot when the receiving object has been deleted, and can wrap itself inside a function that guards against deletion of the object using bind\+Safe().
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Core_1_1observable_aaff32cdbd6cd167b3e384f0d7ee7d0b8}\label{classWt_1_1Core_1_1observable_aaff32cdbd6cd167b3e384f0d7ee7d0b8}} 
+\index{Wt::Core::observable@{Wt::Core::observable}!````~observable@{$\sim$observable}}
+\index{````~observable@{$\sim$observable}!Wt::Core::observable@{Wt::Core::observable}}
+\doxysubsubsection{\texorpdfstring{$\sim$observable()}{~observable()}}
+{\footnotesize\ttfamily Wt\+::\+Core\+::observable\+::$\sim$observable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+Destruction may result in automatic disconnects from signal connections. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Core/observable.\+hpp\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Core/observable.\+cpp\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Core/observable\+\_\+impl.\+hpp\end{DoxyCompactItemize}

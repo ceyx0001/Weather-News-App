@@ -1,0 +1,324 @@
+\hypertarget{classWt_1_1WGoogleMap}{}\doxysection{Wt\+::W\+Google\+Map Class Reference}
+\label{classWt_1_1WGoogleMap}\index{Wt::WGoogleMap@{Wt::WGoogleMap}}
+
+
+A widget that displays a google map.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Google\+Map.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Google\+Map\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Google\+Map\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}}
+\begin{DoxyCompactList}\small\item\em A geographical coordinate (latitude/longitude) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a3c33f8a5b4ca882860a7111a0222879d}\label{classWt_1_1WGoogleMap_a3c33f8a5b4ca882860a7111a0222879d}} 
+typedef \mbox{\hyperlink{classWt_a6c8a89b3d0f3ecdd7cf4a02170e4a2ba}{Google\+Maps\+Version}} \mbox{\hyperlink{classWt_1_1WGoogleMap_a3c33f8a5b4ca882860a7111a0222879d}{Version}}
+\begin{DoxyCompactList}\small\item\em Typedef for enum \mbox{\hyperlink{classWt_a6c8a89b3d0f3ecdd7cf4a02170e4a2ba}{Wt\+::\+Google\+Maps\+Version}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a16e74d1c8ba1e7b7c2b52f25d94dcfa7}\label{classWt_1_1WGoogleMap_a16e74d1c8ba1e7b7c2b52f25d94dcfa7}} 
+\mbox{\hyperlink{classWt_1_1WGoogleMap_a16e74d1c8ba1e7b7c2b52f25d94dcfa7}{W\+Google\+Map}} (\mbox{\hyperlink{classWt_a6c8a89b3d0f3ecdd7cf4a02170e4a2ba}{Google\+Maps\+Version}} version=Google\+Maps\+Version\+::v3)
+\begin{DoxyCompactList}\small\item\em Creates a map widget with a version. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a0666671f7efe71fd7733075ef95d8765}\label{classWt_1_1WGoogleMap_a0666671f7efe71fd7733075ef95d8765}} 
+virtual \mbox{\hyperlink{classWt_1_1WGoogleMap_a0666671f7efe71fd7733075ef95d8765}{$\sim$\+W\+Google\+Map}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_ad80935926cc2a08f6dff26de3480dcc6}\label{classWt_1_1WGoogleMap_ad80935926cc2a08f6dff26de3480dcc6}} 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_ad80935926cc2a08f6dff26de3480dcc6}{add\+Marker}} (const \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} \&pos)
+\begin{DoxyCompactList}\small\item\em Adds a marker overlay to the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_aae6ed201b6eb206469d77576e9b52360}{add\+Polyline}} (const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} $>$ \&points, const \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \&color=\mbox{\hyperlink{classWt_1_1WColor}{W\+Color}}(Standard\+Color\+::\+Red), int \mbox{\hyperlink{classWt_1_1WCompositeWidget_a29ea57c8313b5316bbfa5c6d3590ad3a}{width}}=2, double opacity=1.\+0)
+\begin{DoxyCompactList}\small\item\em Adds a polyline overlay to the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_a9e8be8d6d2edea9b3357ff00aeb0ffdc}{add\+Circle}} (const \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} \&center, double radius, const \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \&stroke\+Color, int stroke\+Width, const \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \&fill\+Color=\mbox{\hyperlink{classWt_1_1WColor}{W\+Color}}())
+\begin{DoxyCompactList}\small\item\em Adds a circle to the map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a727702768884cdfa1c46c0160f51310a}\label{classWt_1_1WGoogleMap_a727702768884cdfa1c46c0160f51310a}} 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_a727702768884cdfa1c46c0160f51310a}{add\+Icon\+Marker}} (const \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} \&pos, const std\+::string \&icon\+U\+RL)
+\begin{DoxyCompactList}\small\item\em Adds a icon marker overlay to the map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a77204daba9840d892e3621b129e742d4}\label{classWt_1_1WGoogleMap_a77204daba9840d892e3621b129e742d4}} 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_a77204daba9840d892e3621b129e742d4}{clear\+Overlays}} ()
+\begin{DoxyCompactList}\small\item\em Removes all overlays from the map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a90b58b02052aa788efcf0b9d92335112}\label{classWt_1_1WGoogleMap_a90b58b02052aa788efcf0b9d92335112}} 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_a90b58b02052aa788efcf0b9d92335112}{open\+Info\+Window}} (const \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} \&pos, const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&my\+Html)
+\begin{DoxyCompactList}\small\item\em Opens a text bubble with html text at a specific location. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_aa9f62ed546a090cc9dbcf3d10769bc80}\label{classWt_1_1WGoogleMap_aa9f62ed546a090cc9dbcf3d10769bc80}} 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_aa9f62ed546a090cc9dbcf3d10769bc80}{set\+Center}} (const \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} \&center)
+\begin{DoxyCompactList}\small\item\em Sets the map view to the given center. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a34df0d680b54a956342d2e095229f9fe}\label{classWt_1_1WGoogleMap_a34df0d680b54a956342d2e095229f9fe}} 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_a34df0d680b54a956342d2e095229f9fe}{set\+Center}} (const \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} \&center, int zoom)
+\begin{DoxyCompactList}\small\item\em Sets the map view to the given center and zoom level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_ac1d54272ff541cc54b29ed4fee288931}{pan\+To}} (const \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} \&center)
+\begin{DoxyCompactList}\small\item\em Changes the center point of the map to the given point. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a6b08ef4a408d75d10d71d005d3c65783}\label{classWt_1_1WGoogleMap_a6b08ef4a408d75d10d71d005d3c65783}} 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_a6b08ef4a408d75d10d71d005d3c65783}{zoom\+Window}} (const std\+::pair$<$ \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}}, \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} $>$ \&bbox)
+\begin{DoxyCompactList}\small\item\em Zooms the map to a region defined by a bounding box. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a66cf38a3c31b97c08321c5ac9bf71270}\label{classWt_1_1WGoogleMap_a66cf38a3c31b97c08321c5ac9bf71270}} 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_a66cf38a3c31b97c08321c5ac9bf71270}{zoom\+Window}} (const \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} \&top\+Left, const \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} \&bottom\+Right)
+\begin{DoxyCompactList}\small\item\em Zooms the map to a region defined by a bounding box. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a9b4583c4557d756ba1cecab1ab00bf9b}\label{classWt_1_1WGoogleMap_a9b4583c4557d756ba1cecab1ab00bf9b}} 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_a9b4583c4557d756ba1cecab1ab00bf9b}{set\+Zoom}} (int level)
+\begin{DoxyCompactList}\small\item\em Sets the zoom level to the given new value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_afbd9cf2dc56673f4870aa91a71c3301c}\label{classWt_1_1WGoogleMap_afbd9cf2dc56673f4870aa91a71c3301c}} 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_afbd9cf2dc56673f4870aa91a71c3301c}{zoom\+In}} ()
+\begin{DoxyCompactList}\small\item\em Increments zoom level by one. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a74363a089b5b1dcbbd644ab810c94464}\label{classWt_1_1WGoogleMap_a74363a089b5b1dcbbd644ab810c94464}} 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_a74363a089b5b1dcbbd644ab810c94464}{zoom\+Out}} ()
+\begin{DoxyCompactList}\small\item\em Decrements zoom level by one. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_af6addd98268d64aa33834280b8819d65}{save\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Stores the current map position and zoom level. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_ae6abfd1d0942d0559e511caa5f2f5c97}\label{classWt_1_1WGoogleMap_ae6abfd1d0942d0559e511caa5f2f5c97}} 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_ae6abfd1d0942d0559e511caa5f2f5c97}{return\+To\+Saved\+Position}} ()
+\begin{DoxyCompactList}\small\item\em Restores the map view that was saved by \mbox{\hyperlink{classWt_1_1WGoogleMap_af6addd98268d64aa33834280b8819d65}{save\+Position()}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a83be42bcd7f4be38e04fbaec72a95b8e}\label{classWt_1_1WGoogleMap_a83be42bcd7f4be38e04fbaec72a95b8e}} 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_a83be42bcd7f4be38e04fbaec72a95b8e}{enable\+Dragging}} ()
+\begin{DoxyCompactList}\small\item\em Enables the dragging of the map (enabled by default). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a9b8b0c3f121f498e4cf5256390880ae6}\label{classWt_1_1WGoogleMap_a9b8b0c3f121f498e4cf5256390880ae6}} 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_a9b8b0c3f121f498e4cf5256390880ae6}{disable\+Dragging}} ()
+\begin{DoxyCompactList}\small\item\em Disables the dragging of the map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_ae4993bd2e7baf017183a4ff3b554c53b}\label{classWt_1_1WGoogleMap_ae4993bd2e7baf017183a4ff3b554c53b}} 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_ae4993bd2e7baf017183a4ff3b554c53b}{enable\+Double\+Click\+Zoom}} ()
+\begin{DoxyCompactList}\small\item\em Enables double click to zoom in and out (enabled by default). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a5cfa10ca7087f3a7f032bdbdcc422e67}\label{classWt_1_1WGoogleMap_a5cfa10ca7087f3a7f032bdbdcc422e67}} 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_a5cfa10ca7087f3a7f032bdbdcc422e67}{disable\+Double\+Click\+Zoom}} ()
+\begin{DoxyCompactList}\small\item\em Disables double click to zoom in and out. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_aed48586350d3e4908459a47ce0822348}{enable\+Google\+Bar}} ()
+\begin{DoxyCompactList}\small\item\em Enables the Google\+Bar, an integrated search control, on the map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_a3982558cba9768c4815e7fbb6c23d92f}{disable\+Google\+Bar}} ()
+\begin{DoxyCompactList}\small\item\em Disables the Google\+Bar integrated search control. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_a39dc1da1fe51f1c285dac04e565fdfa5}{enable\+Scroll\+Wheel\+Zoom}} ()
+\begin{DoxyCompactList}\small\item\em Enables zooming using a mouse\textquotesingle{}s scroll wheel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_a90462279e5092088aba4e79c2f4eaab9}{disable\+Scroll\+Wheel\+Zoom}} ()
+\begin{DoxyCompactList}\small\item\em Disables zooming using a mouse\textquotesingle{}s scroll wheel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGoogleMap_ad5b1aabd260b3b05e9888718264c40e2}{set\+Map\+Type\+Control}} (\mbox{\hyperlink{classWt_a4e48eb453974ce71473cc97a536e4709}{Map\+Type\+Control}} type)
+\begin{DoxyCompactList}\small\item\em Sets the map type control. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} $>$ \& \mbox{\hyperlink{classWt_1_1WGoogleMap_a3b1b5e513502222e89d8fbcfb79a9198}{clicked}} ()
+\begin{DoxyCompactList}\small\item\em The click event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} $>$ \& \mbox{\hyperlink{classWt_1_1WGoogleMap_aa81efcc86e7ab1b6a6701e97d9e3fb02}{double\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em The double click event. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_adfdd221d9ea430870f052a2180028f73}\label{classWt_1_1WGoogleMap_adfdd221d9ea430870f052a2180028f73}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} $>$ \& \mbox{\hyperlink{classWt_1_1WGoogleMap_adfdd221d9ea430870f052a2180028f73}{mouse\+Moved}} ()
+\begin{DoxyCompactList}\small\item\em This event is fired when the user moves the mouse inside the map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a57762ff84541014abc2f67ba6b9b7c7f}\label{classWt_1_1WGoogleMap_a57762ff84541014abc2f67ba6b9b7c7f}} 
+\mbox{\hyperlink{classWt_a6c8a89b3d0f3ecdd7cf4a02170e4a2ba}{Google\+Maps\+Version}} \mbox{\hyperlink{classWt_1_1WGoogleMap_a57762ff84541014abc2f67ba6b9b7c7f}{api\+Version}} ()
+\begin{DoxyCompactList}\small\item\em Return the used Google Maps A\+PI version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WGoogleMap_aee9186b124db81ffe1a7d93f8f78dce3}{render}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$ flags) override
+\begin{DoxyCompactList}\small\item\em Renders the widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WGoogleMap_ad28483f4ab353ae5287f0f9c0c10d2cf}{do\+Gm\+Java\+Script}} (const std\+::string \&jscode)
+\begin{DoxyCompactList}\small\item\em Execute a piece of Java\+Script that manipulates the map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_ab59391f85bfac6d0cdc62751e515ec19}\label{classWt_1_1WGoogleMap_ab59391f85bfac6d0cdc62751e515ec19}} 
+void {\bfseries stream\+J\+S\+Listener} (const \mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} $>$ \&signal, std\+::string signal\+Name, \mbox{\hyperlink{classWt_1_1WStringStream}{W\+String\+Stream}} \&strm)
+\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a63ec860912fe68c40c5085348864741b}\label{classWt_1_1WGoogleMap_a63ec860912fe68c40c5085348864741b}} 
+void {\bfseries set\+Map\+Option} (const std\+::string \&option, const std\+::string \&state)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_ab5819b3b29c8a20052f2287b2f07b843}\label{classWt_1_1WGoogleMap_ab5819b3b29c8a20052f2287b2f07b843}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} $>$ {\bfseries clicked\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_acd4bf6c362d9ee477ec9bd2132eee33c}\label{classWt_1_1WGoogleMap_acd4bf6c362d9ee477ec9bd2132eee33c}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} $>$ {\bfseries double\+Clicked\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a5e8873feb37caacbc5ad830f79f18bee}\label{classWt_1_1WGoogleMap_a5e8873feb37caacbc5ad830f79f18bee}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} $>$ $\ast$ {\bfseries mouse\+Moved\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_ad4ce4b33a52cd55d72772c9cfaf1aba2}\label{classWt_1_1WGoogleMap_ad4ce4b33a52cd55d72772c9cfaf1aba2}} 
+std\+::string {\bfseries googlekey\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a35a699411ed7a3b8d78385f917695ccc}\label{classWt_1_1WGoogleMap_a35a699411ed7a3b8d78385f917695ccc}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries additions\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a793cd5beb80218575c132bfa378ee3e1}\label{classWt_1_1WGoogleMap_a793cd5beb80218575c132bfa378ee3e1}} 
+\mbox{\hyperlink{classWt_a6c8a89b3d0f3ecdd7cf4a02170e4a2ba}{Google\+Maps\+Version}} {\bfseries api\+Version\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A widget that displays a google map. 
+
+This widget uses the online Google Maps server to display a map. It exposes a part of the google maps A\+PI.
+
+This widget supports both version 2 and version 3 of the Google Maps A\+PI. The version 2 A\+PI is used by default, to enable the version 3 A\+PI, use the constructor\textquotesingle{}s version argument.
+
+To use the map on a public server you will need to obtain a key. The widget will look for this key as the configuration property {\ttfamily \char`\"{}google\+\_\+api\+\_\+key\char`\"{}}. If this configuration property has not been set, it will use a key that is suitable for localhost.
+
+\doxyparagraph*{C\+SS}
+
+Styling through C\+SS is not applicable.
+
+Contributed by\+: Richard Ulrich. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a9e8be8d6d2edea9b3357ff00aeb0ffdc}\label{classWt_1_1WGoogleMap_a9e8be8d6d2edea9b3357ff00aeb0ffdc}} 
+\index{Wt::WGoogleMap@{Wt::WGoogleMap}!addCircle@{addCircle}}
+\index{addCircle@{addCircle}!Wt::WGoogleMap@{Wt::WGoogleMap}}
+\doxysubsubsection{\texorpdfstring{addCircle()}{addCircle()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Google\+Map\+::add\+Circle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} \&}]{center,  }\item[{double}]{radius,  }\item[{const \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \&}]{stroke\+Color,  }\item[{int}]{stroke\+Width,  }\item[{const \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \&}]{fill\+Color = {\ttfamily \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}}()} }\end{DoxyParamCaption})}
+
+
+
+Adds a circle to the map. 
+
+The stroke and fill opacity can be configured respectively in the stroke\+Color and fill\+Color. This feature is only supported by the Google Maps A\+PI version 3. \mbox{\Hypertarget{classWt_1_1WGoogleMap_aae6ed201b6eb206469d77576e9b52360}\label{classWt_1_1WGoogleMap_aae6ed201b6eb206469d77576e9b52360}} 
+\index{Wt::WGoogleMap@{Wt::WGoogleMap}!addPolyline@{addPolyline}}
+\index{addPolyline@{addPolyline}!Wt::WGoogleMap@{Wt::WGoogleMap}}
+\doxysubsubsection{\texorpdfstring{addPolyline()}{addPolyline()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Google\+Map\+::add\+Polyline (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} $>$ \&}]{points,  }\item[{const \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \&}]{color = {\ttfamily \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}}(StandardColor\+:\+:Red)},  }\item[{int}]{width = {\ttfamily 2},  }\item[{double}]{opacity = {\ttfamily 1.0} }\end{DoxyParamCaption})}
+
+
+
+Adds a polyline overlay to the map. 
+
+Specify a value between 0.\+0 and 1.\+0 for the opacity or set the alpha value in the color. \mbox{\Hypertarget{classWt_1_1WGoogleMap_a3b1b5e513502222e89d8fbcfb79a9198}\label{classWt_1_1WGoogleMap_a3b1b5e513502222e89d8fbcfb79a9198}} 
+\index{Wt::WGoogleMap@{Wt::WGoogleMap}!clicked@{clicked}}
+\index{clicked@{clicked}!Wt::WGoogleMap@{Wt::WGoogleMap}}
+\doxysubsubsection{\texorpdfstring{clicked()}{clicked()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$\mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}}$>$\& Wt\+::\+W\+Google\+Map\+::clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The click event. 
+
+This event is fired when the user clicks on the map with the mouse. \mbox{\Hypertarget{classWt_1_1WGoogleMap_a3982558cba9768c4815e7fbb6c23d92f}\label{classWt_1_1WGoogleMap_a3982558cba9768c4815e7fbb6c23d92f}} 
+\index{Wt::WGoogleMap@{Wt::WGoogleMap}!disableGoogleBar@{disableGoogleBar}}
+\index{disableGoogleBar@{disableGoogleBar}!Wt::WGoogleMap@{Wt::WGoogleMap}}
+\doxysubsubsection{\texorpdfstring{disableGoogleBar()}{disableGoogleBar()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Google\+Map\+::disable\+Google\+Bar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Disables the Google\+Bar integrated search control. 
+
+When disabled, the default Powered by Google logo occupies the position formerly containing this control. \mbox{\hyperlink{classNote}{Note}} that this control is already disabled by default.
+
+\begin{DoxyNote}{Note}
+This functionality is no longer available in the Google Maps A\+PI \mbox{\hyperlink{structv3}{v3}}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a90462279e5092088aba4e79c2f4eaab9}\label{classWt_1_1WGoogleMap_a90462279e5092088aba4e79c2f4eaab9}} 
+\index{Wt::WGoogleMap@{Wt::WGoogleMap}!disableScrollWheelZoom@{disableScrollWheelZoom}}
+\index{disableScrollWheelZoom@{disableScrollWheelZoom}!Wt::WGoogleMap@{Wt::WGoogleMap}}
+\doxysubsubsection{\texorpdfstring{disableScrollWheelZoom()}{disableScrollWheelZoom()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Google\+Map\+::disable\+Scroll\+Wheel\+Zoom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Disables zooming using a mouse\textquotesingle{}s scroll wheel. 
+
+Scroll wheel zoom is disabled by default. \mbox{\Hypertarget{classWt_1_1WGoogleMap_ad28483f4ab353ae5287f0f9c0c10d2cf}\label{classWt_1_1WGoogleMap_ad28483f4ab353ae5287f0f9c0c10d2cf}} 
+\index{Wt::WGoogleMap@{Wt::WGoogleMap}!doGmJavaScript@{doGmJavaScript}}
+\index{doGmJavaScript@{doGmJavaScript}!Wt::WGoogleMap@{Wt::WGoogleMap}}
+\doxysubsubsection{\texorpdfstring{doGmJavaScript()}{doGmJavaScript()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Google\+Map\+::do\+Gm\+Java\+Script (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{jscode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Execute a piece of Java\+Script that manipulates the map. 
+
+This is like \mbox{\hyperlink{classWt_1_1WCompositeWidget_af6871ab12defc3efd203cd3dbe5c4e25}{do\+Java\+Script()}} but delays the javascript until the map has been loaded. \mbox{\Hypertarget{classWt_1_1WGoogleMap_aa81efcc86e7ab1b6a6701e97d9e3fb02}\label{classWt_1_1WGoogleMap_aa81efcc86e7ab1b6a6701e97d9e3fb02}} 
+\index{Wt::WGoogleMap@{Wt::WGoogleMap}!doubleClicked@{doubleClicked}}
+\index{doubleClicked@{doubleClicked}!Wt::WGoogleMap@{Wt::WGoogleMap}}
+\doxysubsubsection{\texorpdfstring{doubleClicked()}{doubleClicked()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$\mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}}$>$\& Wt\+::\+W\+Google\+Map\+::double\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The double click event. 
+
+This event is fired when a double click is done on the map. \mbox{\Hypertarget{classWt_1_1WGoogleMap_aed48586350d3e4908459a47ce0822348}\label{classWt_1_1WGoogleMap_aed48586350d3e4908459a47ce0822348}} 
+\index{Wt::WGoogleMap@{Wt::WGoogleMap}!enableGoogleBar@{enableGoogleBar}}
+\index{enableGoogleBar@{enableGoogleBar}!Wt::WGoogleMap@{Wt::WGoogleMap}}
+\doxysubsubsection{\texorpdfstring{enableGoogleBar()}{enableGoogleBar()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Google\+Map\+::enable\+Google\+Bar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables the Google\+Bar, an integrated search control, on the map. 
+
+When enabled, this control takes the place of the default Powered By Google logo.
+
+This control is initially disabled.
+
+\begin{DoxyNote}{Note}
+This functionality is no longer available in the Google Maps A\+PI \mbox{\hyperlink{structv3}{v3}}. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_a39dc1da1fe51f1c285dac04e565fdfa5}\label{classWt_1_1WGoogleMap_a39dc1da1fe51f1c285dac04e565fdfa5}} 
+\index{Wt::WGoogleMap@{Wt::WGoogleMap}!enableScrollWheelZoom@{enableScrollWheelZoom}}
+\index{enableScrollWheelZoom@{enableScrollWheelZoom}!Wt::WGoogleMap@{Wt::WGoogleMap}}
+\doxysubsubsection{\texorpdfstring{enableScrollWheelZoom()}{enableScrollWheelZoom()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Google\+Map\+::enable\+Scroll\+Wheel\+Zoom (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Enables zooming using a mouse\textquotesingle{}s scroll wheel. 
+
+Scroll wheel zoom is disabled by default. \mbox{\Hypertarget{classWt_1_1WGoogleMap_ac1d54272ff541cc54b29ed4fee288931}\label{classWt_1_1WGoogleMap_ac1d54272ff541cc54b29ed4fee288931}} 
+\index{Wt::WGoogleMap@{Wt::WGoogleMap}!panTo@{panTo}}
+\index{panTo@{panTo}!Wt::WGoogleMap@{Wt::WGoogleMap}}
+\doxysubsubsection{\texorpdfstring{panTo()}{panTo()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Google\+Map\+::pan\+To (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WGoogleMap_1_1Coordinate}{Coordinate}} \&}]{center }\end{DoxyParamCaption})}
+
+
+
+Changes the center point of the map to the given point. 
+
+If the point is already visible in the current map view, change the center in a smooth animation. \mbox{\Hypertarget{classWt_1_1WGoogleMap_aee9186b124db81ffe1a7d93f8f78dce3}\label{classWt_1_1WGoogleMap_aee9186b124db81ffe1a7d93f8f78dce3}} 
+\index{Wt::WGoogleMap@{Wt::WGoogleMap}!render@{render}}
+\index{render@{render}!Wt::WGoogleMap@{Wt::WGoogleMap}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Google\+Map\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Renders the widget. 
+
+This function renders the widget (or an update for the widget), after this has been scheduled using \mbox{\hyperlink{classWt_1_1WWidget_a5d3d4edaafa2d7c892a5078f3df4cf11}{schedule\+Render()}}.
+
+The default implementation will render the widget by serializing changes to Java\+Script and H\+T\+ML. You may want to reimplement this widget if you have been postponing some of the layout / rendering implementation until the latest moment possible. In that case you should make sure you call the base implementation however. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WCompositeWidget_aeb7ede8809e2f195a61106a9d5cc9de3}{Wt\+::\+W\+Composite\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WGoogleMap_af6addd98268d64aa33834280b8819d65}\label{classWt_1_1WGoogleMap_af6addd98268d64aa33834280b8819d65}} 
+\index{Wt::WGoogleMap@{Wt::WGoogleMap}!savePosition@{savePosition}}
+\index{savePosition@{savePosition}!Wt::WGoogleMap@{Wt::WGoogleMap}}
+\doxysubsubsection{\texorpdfstring{savePosition()}{savePosition()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Google\+Map\+::save\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stores the current map position and zoom level. 
+
+You can later restore this position using \mbox{\hyperlink{classWt_1_1WGoogleMap_ae6abfd1d0942d0559e511caa5f2f5c97}{return\+To\+Saved\+Position()}}. \mbox{\Hypertarget{classWt_1_1WGoogleMap_ad5b1aabd260b3b05e9888718264c40e2}\label{classWt_1_1WGoogleMap_ad5b1aabd260b3b05e9888718264c40e2}} 
+\index{Wt::WGoogleMap@{Wt::WGoogleMap}!setMapTypeControl@{setMapTypeControl}}
+\index{setMapTypeControl@{setMapTypeControl}!Wt::WGoogleMap@{Wt::WGoogleMap}}
+\doxysubsubsection{\texorpdfstring{setMapTypeControl()}{setMapTypeControl()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Google\+Map\+::set\+Map\+Type\+Control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a4e48eb453974ce71473cc97a536e4709}{Map\+Type\+Control}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Sets the map type control. 
+
+The control allows selecting and switching between supported map types via buttons. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Google\+Map.\+h\end{DoxyCompactItemize}

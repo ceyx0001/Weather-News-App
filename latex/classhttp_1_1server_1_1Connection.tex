@@ -1,0 +1,235 @@
+\hypertarget{classhttp_1_1server_1_1Connection}{}\doxysection{http\+::server\+::Connection Class Reference}
+\label{classhttp_1_1server_1_1Connection}\index{http::server::Connection@{http::server::Connection}}
+
+
+Represents a single connection from a client.  
+
+
+
+
+{\ttfamily \#include $<$Connection.\+h$>$}
+
+
+
+Inheritance diagram for http\+::server\+::Connection\+:
+% FIG 0
+
+
+Collaboration diagram for http\+::server\+::Connection\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_acd3c975e6fb0feab61bfb0fae356e3e2}\label{classhttp_1_1server_1_1Connection_acd3c975e6fb0feab61bfb0fae356e3e2}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1Connection_acd3c975e6fb0feab61bfb0fae356e3e2}{Connection}} (asio\+::io\+\_\+service \&io\+\_\+service, \mbox{\hyperlink{classhttp_1_1server_1_1Server}{Server}} $\ast$server, \mbox{\hyperlink{classhttp_1_1server_1_1ConnectionManager}{Connection\+Manager}} \&manager, \mbox{\hyperlink{classhttp_1_1server_1_1RequestHandler}{Request\+Handler}} \&handler)
+\begin{DoxyCompactList}\small\item\em Construct a connection with the given io\+\_\+service. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_ad432afb6c740b1e580c6becb8c3c6830}\label{classhttp_1_1server_1_1Connection_ad432afb6c740b1e580c6becb8c3c6830}} 
+{\bfseries Connection} (const \mbox{\hyperlink{classhttp_1_1server_1_1Connection}{Connection}} \&other)=delete
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_ad52b4587718ba884014d6d02e56b6350}\label{classhttp_1_1server_1_1Connection_ad52b4587718ba884014d6d02e56b6350}} 
+virtual asio\+::ip\+::tcp\+::socket \& \mbox{\hyperlink{classhttp_1_1server_1_1Connection_ad52b4587718ba884014d6d02e56b6350}{socket}} ()=0
+\begin{DoxyCompactList}\small\item\em Get the socket associated with the connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_aa132171942295f3cdf8227450d7b8d48}\label{classhttp_1_1server_1_1Connection_aa132171942295f3cdf8227450d7b8d48}} 
+virtual void \mbox{\hyperlink{classhttp_1_1server_1_1Connection_aa132171942295f3cdf8227450d7b8d48}{start}} ()
+\begin{DoxyCompactList}\small\item\em Start the first asynchronous operation for the connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a923386464dd46413b19d7b49aa11b41a}\label{classhttp_1_1server_1_1Connection_a923386464dd46413b19d7b49aa11b41a}} 
+void {\bfseries close} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_abcb855dcf4f0f5416fac5fd781d248eb}\label{classhttp_1_1server_1_1Connection_abcb855dcf4f0f5416fac5fd781d248eb}} 
+bool {\bfseries closed} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a4bfd854b745a390556f6a333c8174239}\label{classhttp_1_1server_1_1Connection_a4bfd854b745a390556f6a333c8174239}} 
+virtual const char $\ast$ \mbox{\hyperlink{classhttp_1_1server_1_1Connection_a4bfd854b745a390556f6a333c8174239}{url\+Scheme}} ()=0
+\begin{DoxyCompactList}\small\item\em Like C\+GI\textquotesingle{}s Url scheme\+: http or https. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a94a95226c90e0bbc58bd76e26c12523d}\label{classhttp_1_1server_1_1Connection_a94a95226c90e0bbc58bd76e26c12523d}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1Server}{Server}} $\ast$ {\bfseries server} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_ab980a0b06b2c06fac35e08c28aa08f56}\label{classhttp_1_1server_1_1Connection_ab980a0b06b2c06fac35e08c28aa08f56}} 
+Wt\+::\+Asio\+Wrapper\+::strand \& {\bfseries strand} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a414046e4a5dae3452db901a20dd27836}\label{classhttp_1_1server_1_1Connection_a414046e4a5dae3452db901a20dd27836}} 
+void \mbox{\hyperlink{classhttp_1_1server_1_1Connection_a414046e4a5dae3452db901a20dd27836}{schedule\+Stop}} ()
+\begin{DoxyCompactList}\small\item\em Stop all asynchronous operations associated with the connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a98d759d034f4d801a6204159c6a3bfce}\label{classhttp_1_1server_1_1Connection_a98d759d034f4d801a6204159c6a3bfce}} 
+bool {\bfseries waiting\+Response} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a895572966ca2594f98de02a6eca84970}\label{classhttp_1_1server_1_1Connection_a895572966ca2594f98de02a6eca84970}} 
+void {\bfseries set\+Have\+Response} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a434cc83dcc9785df9ad42c327ec46690}\label{classhttp_1_1server_1_1Connection_a434cc83dcc9785df9ad42c327ec46690}} 
+void {\bfseries start\+Write\+Response} (Reply\+Ptr reply)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a15d86d2ffc9acda0a6f0574743ed158b}\label{classhttp_1_1server_1_1Connection_a15d86d2ffc9acda0a6f0574743ed158b}} 
+void {\bfseries handle\+Read\+Body} (Reply\+Ptr reply)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_aa486082072f489b5260d67304b5a2869}\label{classhttp_1_1server_1_1Connection_aa486082072f489b5260d67304b5a2869}} 
+void {\bfseries read\+More} (Reply\+Ptr reply, int timeout)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_ab125eeec61bbec20ce80a72a67005d1c}\label{classhttp_1_1server_1_1Connection_ab125eeec61bbec20ce80a72a67005d1c}} 
+bool {\bfseries read\+Available} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a858fba0c4ff56387715ec2e68daa97f0}\label{classhttp_1_1server_1_1Connection_a858fba0c4ff56387715ec2e68daa97f0}} 
+void {\bfseries detect\+Disconnect} (Reply\+Ptr reply, const std\+::function$<$ void()$>$ \&callback)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_ac1a5ac0ebf52f3abcdd7c1711b20dd4e}\label{classhttp_1_1server_1_1Connection_ac1a5ac0ebf52f3abcdd7c1711b20dd4e}} 
+void {\bfseries async\+Detect\+Disconnect} (Reply\+Ptr reply, const std\+::function$<$ void()$>$ \&callback)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a64df129cbb14df7f060b3fa950d15742}\label{classhttp_1_1server_1_1Connection_a64df129cbb14df7f060b3fa950d15742}} 
+enum {\bfseries State} \{ {\bfseries Idle} = 0x0, 
+{\bfseries Reading} = 0x1, 
+{\bfseries Writing} = 0x2
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a707a1c2230df5a6874b94b16b8e6b0f8}\label{classhttp_1_1server_1_1Connection_a707a1c2230df5a6874b94b16b8e6b0f8}} 
+asio\+::ip\+::tcp\+::socket\+::native\+\_\+type \mbox{\hyperlink{classhttp_1_1server_1_1Connection_a707a1c2230df5a6874b94b16b8e6b0f8}{native}} ()
+\begin{DoxyCompactList}\small\item\em Get the native handle of the socket. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a02b320fa174d41a01d2e35e646f21ae4}\label{classhttp_1_1server_1_1Connection_a02b320fa174d41a01d2e35e646f21ae4}} 
+void {\bfseries handle\+Write\+Response0} (Reply\+Ptr reply, const Wt\+::\+Asio\+Wrapper\+::error\+\_\+code \&e, std\+::size\+\_\+t bytes\+\_\+transferred)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a1a88ab321825bc60f7dc8bff89b3e1ba}\label{classhttp_1_1server_1_1Connection_a1a88ab321825bc60f7dc8bff89b3e1ba}} 
+void {\bfseries handle\+Write\+Response} (Reply\+Ptr reply)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_adc5b573e861c5994a6b769b897d14fdf}\label{classhttp_1_1server_1_1Connection_adc5b573e861c5994a6b769b897d14fdf}} 
+void {\bfseries handle\+Read\+Request} (const Wt\+::\+Asio\+Wrapper\+::error\+\_\+code \&e, std\+::size\+\_\+t bytes\+\_\+transferred)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a7de3548e5c2a7cb56278dc8aacbb9fe5}\label{classhttp_1_1server_1_1Connection_a7de3548e5c2a7cb56278dc8aacbb9fe5}} 
+void \mbox{\hyperlink{classhttp_1_1server_1_1Connection_a7de3548e5c2a7cb56278dc8aacbb9fe5}{handle\+Read\+Request0}} ()
+\begin{DoxyCompactList}\small\item\em Process read buffer, reading request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a87ec8fec90e2c66ddcfa517cf8cd9f78}\label{classhttp_1_1server_1_1Connection_a87ec8fec90e2c66ddcfa517cf8cd9f78}} 
+void {\bfseries handle\+Read\+Body0} (Reply\+Ptr reply, const Wt\+::\+Asio\+Wrapper\+::error\+\_\+code \&e, std\+::size\+\_\+t bytes\+\_\+transferred)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a841948069b49cbb71613e92acaf00e62}\label{classhttp_1_1server_1_1Connection_a841948069b49cbb71613e92acaf00e62}} 
+void {\bfseries set\+Read\+Timeout} (int seconds)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a92e8bbce90dc25c5931b30ab88303d13}\label{classhttp_1_1server_1_1Connection_a92e8bbce90dc25c5931b30ab88303d13}} 
+void {\bfseries set\+Write\+Timeout} (int seconds)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_ae98767d694f3c5537088fd898c17c15c}\label{classhttp_1_1server_1_1Connection_ae98767d694f3c5537088fd898c17c15c}} 
+void {\bfseries finish\+Reply} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a8f920cfab838430b11683454dc676130}\label{classhttp_1_1server_1_1Connection_a8f920cfab838430b11683454dc676130}} 
+virtual void {\bfseries stop} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_aa01e0d496519ab1bcedf58f6c845483e}\label{classhttp_1_1server_1_1Connection_aa01e0d496519ab1bcedf58f6c845483e}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1ConnectionManager}{Connection\+Manager}} \& \mbox{\hyperlink{classhttp_1_1server_1_1Connection_aa01e0d496519ab1bcedf58f6c845483e}{Connection\+Manager\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The manager for this connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a7ef1bceaaa67ac58db94d486915778ef}\label{classhttp_1_1server_1_1Connection_a7ef1bceaaa67ac58db94d486915778ef}} 
+Wt\+::\+Asio\+Wrapper\+::strand {\bfseries strand\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a7fcd8a48c13ffc7c8e2089213f338bb1}\label{classhttp_1_1server_1_1Connection_a7fcd8a48c13ffc7c8e2089213f338bb1}} 
+\mbox{\hyperlink{classWt_1_1WFlags}{Wt\+::\+W\+Flags}}$<$ State $>$ {\bfseries state\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_aa627fdfb2b6a640a88c8c04292f2e81d}\label{classhttp_1_1server_1_1Connection_aa627fdfb2b6a640a88c8c04292f2e81d}} 
+virtual void {\bfseries start\+Async\+Read\+Request} (Buffer \&buffer, int timeout)=0
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_ac962f9fabda52fcbd048573f8e2480fb}\label{classhttp_1_1server_1_1Connection_ac962f9fabda52fcbd048573f8e2480fb}} 
+virtual void {\bfseries start\+Async\+Read\+Body} (Reply\+Ptr reply, Buffer \&buffer, int timeout)=0
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a73509314fb83d78cab6b33d27d77be18}\label{classhttp_1_1server_1_1Connection_a73509314fb83d78cab6b33d27d77be18}} 
+virtual void {\bfseries start\+Async\+Write\+Response} (Reply\+Ptr reply, const std\+::vector$<$ asio\+::const\+\_\+buffer $>$ \&buffers, int timeout)=0
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a6e330214d6ff20dd37b0ca5326755156}\label{classhttp_1_1server_1_1Connection_a6e330214d6ff20dd37b0ca5326755156}} 
+void \mbox{\hyperlink{classhttp_1_1server_1_1Connection_a6e330214d6ff20dd37b0ca5326755156}{handle\+Error}} (const Wt\+::\+Asio\+Wrapper\+::error\+\_\+code \&e)
+\begin{DoxyCompactList}\small\item\em Generic I/O error handling\+: closes the connection and cancels timers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a73897b3f72a415a7e667470b4158629b}\label{classhttp_1_1server_1_1Connection_a73897b3f72a415a7e667470b4158629b}} 
+void {\bfseries send\+Stock\+Reply} (Reply\+::status\+\_\+type code)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_ac4177759b5d4871edbdfe1016d656bde}\label{classhttp_1_1server_1_1Connection_ac4177759b5d4871edbdfe1016d656bde}} 
+void {\bfseries cancel\+Read\+Timer} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a72973b26e3a7e045549e6ea629ea5a10}\label{classhttp_1_1server_1_1Connection_a72973b26e3a7e045549e6ea629ea5a10}} 
+void {\bfseries cancel\+Write\+Timer} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_ab75e3f849187b6f8081ba4e529e8afe9}\label{classhttp_1_1server_1_1Connection_ab75e3f849187b6f8081ba4e529e8afe9}} 
+void {\bfseries timeout} (const Wt\+::\+Asio\+Wrapper\+::error\+\_\+code \&e)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a9a851006596bda61fdfda2516cfd71bb}\label{classhttp_1_1server_1_1Connection_a9a851006596bda61fdfda2516cfd71bb}} 
+void {\bfseries do\+Timeout} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_acd4501ff8cf55de0a66fd5a31b43178d}\label{classhttp_1_1server_1_1Connection_acd4501ff8cf55de0a66fd5a31b43178d}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1RequestHandler}{Request\+Handler}} \& \mbox{\hyperlink{classhttp_1_1server_1_1Connection_acd4501ff8cf55de0a66fd5a31b43178d}{request\+\_\+handler\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The handler used to process the incoming request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a21da7ce76b61d6543034d845e9cddd3f}\label{classhttp_1_1server_1_1Connection_a21da7ce76b61d6543034d845e9cddd3f}} 
+asio\+::steady\+\_\+timer \mbox{\hyperlink{classhttp_1_1server_1_1Connection_a21da7ce76b61d6543034d845e9cddd3f}{read\+Timer\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Timer for reading data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a1c9bf7341050a6987a6223a980ec8f0f}\label{classhttp_1_1server_1_1Connection_a1c9bf7341050a6987a6223a980ec8f0f}} 
+asio\+::steady\+\_\+timer {\bfseries write\+Timer\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a079b2c7fbf5995d5e54b9332e0d0dc8a}\label{classhttp_1_1server_1_1Connection_a079b2c7fbf5995d5e54b9332e0d0dc8a}} 
+std\+::list$<$ Buffer $>$ \mbox{\hyperlink{classhttp_1_1server_1_1Connection_a079b2c7fbf5995d5e54b9332e0d0dc8a}{rcv\+\_\+buffers\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Current request buffer data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a0a4a38f470a686810cc3c8865b0cc423}\label{classhttp_1_1server_1_1Connection_a0a4a38f470a686810cc3c8865b0cc423}} 
+std\+::size\+\_\+t \mbox{\hyperlink{classhttp_1_1server_1_1Connection_a0a4a38f470a686810cc3c8865b0cc423}{rcv\+\_\+buffer\+\_\+size\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Size of last buffer and iterator for next request in last buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a18dc134fa34a1ae0b097e3cd0df59c11}\label{classhttp_1_1server_1_1Connection_a18dc134fa34a1ae0b097e3cd0df59c11}} 
+char $\ast$ {\bfseries rcv\+\_\+remaining\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a48467a00082610a5b7dd4b59d03c73d1}\label{classhttp_1_1server_1_1Connection_a48467a00082610a5b7dd4b59d03c73d1}} 
+bool {\bfseries rcv\+\_\+body\+\_\+buffer\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_ad20f4a4b40c41b39a530cca3d9774edb}\label{classhttp_1_1server_1_1Connection_ad20f4a4b40c41b39a530cca3d9774edb}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1Request}{Request}} \mbox{\hyperlink{classhttp_1_1server_1_1Connection_ad20f4a4b40c41b39a530cca3d9774edb}{request\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The incoming request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a2a9dd4e42eebc680674816d9bd90ac45}\label{classhttp_1_1server_1_1Connection_a2a9dd4e42eebc680674816d9bd90ac45}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1RequestParser}{Request\+Parser}} \mbox{\hyperlink{classhttp_1_1server_1_1Connection_a2a9dd4e42eebc680674816d9bd90ac45}{request\+\_\+parser\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The parser for the incoming request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_adcf16379a4fde1e417d0dcc53f02cb59}\label{classhttp_1_1server_1_1Connection_adcf16379a4fde1e417d0dcc53f02cb59}} 
+Reply\+Ptr \mbox{\hyperlink{classhttp_1_1server_1_1Connection_adcf16379a4fde1e417d0dcc53f02cb59}{last\+Wt\+Reply\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Recycled reply pointers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a8b4cc6380ae8117e13f6f30041b5d1d2}\label{classhttp_1_1server_1_1Connection_a8b4cc6380ae8117e13f6f30041b5d1d2}} 
+Reply\+Ptr {\bfseries last\+Proxy\+Reply\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a45576ac1097bd84a6bd9c7d15aafcc37}\label{classhttp_1_1server_1_1Connection_a45576ac1097bd84a6bd9c7d15aafcc37}} 
+Reply\+Ptr {\bfseries last\+Static\+Reply\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a3758cbebbfd062f83660554b104f9a58}\label{classhttp_1_1server_1_1Connection_a3758cbebbfd062f83660554b104f9a58}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1Server}{Server}} $\ast$ \mbox{\hyperlink{classhttp_1_1server_1_1Connection_a3758cbebbfd062f83660554b104f9a58}{server\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The server that owns this connection. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classhttp_1_1server_1_1Connection_afbd4fe0266b2e34e1aea6920e691be35}{waiting\+Response\+\_\+}}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a217b93afbeb628ae652fb7519f9ef769}\label{classhttp_1_1server_1_1Connection_a217b93afbeb628ae652fb7519f9ef769}} 
+bool \mbox{\hyperlink{classhttp_1_1server_1_1Connection_a217b93afbeb628ae652fb7519f9ef769}{have\+Response\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Indicates that we can send a response. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classhttp_1_1server_1_1Connection_a7a3641d208e7c2c7cf179ab4a5ef1ffc}{response\+Done\+\_\+}}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a00f58c56bf4183f5eeee6f5354bfbf21}\label{classhttp_1_1server_1_1Connection_a00f58c56bf4183f5eeee6f5354bfbf21}} 
+std\+::function$<$ void()$>$ {\bfseries disconnect\+Callback\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a single connection from a client. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classhttp_1_1server_1_1Connection_a7a3641d208e7c2c7cf179ab4a5ef1ffc}\label{classhttp_1_1server_1_1Connection_a7a3641d208e7c2c7cf179ab4a5ef1ffc}} 
+\index{http::server::Connection@{http::server::Connection}!responseDone\_@{responseDone\_}}
+\index{responseDone\_@{responseDone\_}!http::server::Connection@{http::server::Connection}}
+\doxysubsubsection{\texorpdfstring{responseDone\_}{responseDone\_}}
+{\footnotesize\ttfamily bool http\+::server\+::\+Connection\+::response\+Done\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Indicates that the current response is finished (after the current write operation) \mbox{\Hypertarget{classhttp_1_1server_1_1Connection_afbd4fe0266b2e34e1aea6920e691be35}\label{classhttp_1_1server_1_1Connection_afbd4fe0266b2e34e1aea6920e691be35}} 
+\index{http::server::Connection@{http::server::Connection}!waitingResponse\_@{waitingResponse\_}}
+\index{waitingResponse\_@{waitingResponse\_}!http::server::Connection@{http::server::Connection}}
+\doxysubsubsection{\texorpdfstring{waitingResponse\_}{waitingResponse\_}}
+{\footnotesize\ttfamily bool http\+::server\+::\+Connection\+::waiting\+Response\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+Indicates that we\textquotesingle{}re waiting for a response while invoking a \mbox{\hyperlink{classhttp_1_1server_1_1Reply}{Reply}} function and thus that \mbox{\hyperlink{classhttp_1_1server_1_1Reply}{Reply}} function should not start a write response but simply indicate have\+Response\+\_\+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/http/Connection.\+h\end{DoxyCompactItemize}

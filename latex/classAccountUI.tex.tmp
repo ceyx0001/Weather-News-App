@@ -1,0 +1,203 @@
+\hypertarget{classAccountUI}{}\doxysection{Account\+UI Class Reference}
+\label{classAccountUI}\index{AccountUI@{AccountUI}}
+
+
+Account Management User Interface.  
+
+
+
+
+{\ttfamily \#include $<$Account\+U\+I.\+h$>$}
+
+
+
+Inheritance diagram for Account\+UI\+:
+% FIG 0
+
+
+Collaboration diagram for Account\+UI\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAccountUI_a97a563e3ac733ad8f7b898d0c2669dcf}{Account\+UI}} (std\+::string username)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAccountUI_ada9fb5a67a23653f333d3cb7ba6df200}{$\sim$\+Account\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Default Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classAccountUI_ae3e713995bc447ac1f2e4d3a199766cb}{account\+Exists}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the account exists in the database under the given username. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAccountUI_a4d4cbcc91c17fdac64de9667a9147316}{get\+Curr\+Pass}} ()
+\begin{DoxyCompactList}\small\item\em Gets the input from the first text field. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAccountUI_a58b6c8f487c1ac2e3c98d445a0e5b46b}{get\+New\+Pass}} ()
+\begin{DoxyCompactList}\small\item\em Gets the input from the second text field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAccountUI_ab4137ebf4c278d25dae0da861d86f1d2}{validate\+Password}} ()
+\begin{DoxyCompactList}\small\item\em Main logic after pressing submit button. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAccountUI_a4169c45eaa9bc37224e7e4bcc56e010a}{changing}} ()
+\begin{DoxyCompactList}\small\item\em Changes UI form to Password Change. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAccountUI_a639cf2718cf19323c7a11c6c2560c77b}{deleting}} ()
+\begin{DoxyCompactList}\small\item\em Changes UI form to Account Deletion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAccountUI_a3601a46eca3711e8d6e276157ea6cadc}\label{classAccountUI_a3601a46eca3711e8d6e276157ea6cadc}} 
+bool {\bfseries ok\+Bool}
+\item 
+\mbox{\Hypertarget{classAccountUI_a005ee6fe00af148ede79532d6098026d}\label{classAccountUI_a005ee6fe00af148ede79532d6098026d}} 
+\mbox{\hyperlink{classDatabase}{Database}} {\bfseries db}
+\item 
+\mbox{\Hypertarget{classAccountUI_ab16c8108622142a6ed01d4177cb1ba98}\label{classAccountUI_ab16c8108622142a6ed01d4177cb1ba98}} 
+Wt\+::\+W\+Line\+Edit $\ast$ {\bfseries current\+Pass}
+\item 
+\mbox{\Hypertarget{classAccountUI_a7b720e529780d7eb2d35d00e4c173b25}\label{classAccountUI_a7b720e529780d7eb2d35d00e4c173b25}} 
+Wt\+::\+W\+Line\+Edit $\ast$ {\bfseries new\+Pass}
+\item 
+\mbox{\Hypertarget{classAccountUI_a79e06a2059c60255ec022fe1d5ef0712}\label{classAccountUI_a79e06a2059c60255ec022fe1d5ef0712}} 
+Wt\+::\+W\+Push\+Button $\ast$ {\bfseries ok\+Btn}
+\item 
+\mbox{\Hypertarget{classAccountUI_a8bb285f3ab88f71cf3ccd0aea7c7090a}\label{classAccountUI_a8bb285f3ab88f71cf3ccd0aea7c7090a}} 
+Wt\+::\+W\+Push\+Button $\ast$ {\bfseries back\+Btn}
+\item 
+\mbox{\Hypertarget{classAccountUI_a0c1908a27485a8912e0ed8faa1999659}\label{classAccountUI_a0c1908a27485a8912e0ed8faa1999659}} 
+Wt\+::\+W\+Push\+Button $\ast$ {\bfseries link\+Btn}
+\item 
+\mbox{\Hypertarget{classAccountUI_a3533d37e1b9754533cba43a281bed0a5}\label{classAccountUI_a3533d37e1b9754533cba43a281bed0a5}} 
+Wt\+::\+W\+Text $\ast$ {\bfseries help}
+\item 
+\mbox{\Hypertarget{classAccountUI_af4036669ebd8545cc8d437ad11c45d1a}\label{classAccountUI_af4036669ebd8545cc8d437ad11c45d1a}} 
+Wt\+::\+W\+Text $\ast$ {\bfseries title}
+\item 
+\mbox{\Hypertarget{classAccountUI_af424a4c75881dbc831107c71eb665b6c}\label{classAccountUI_af424a4c75881dbc831107c71eb665b6c}} 
+std\+::string {\bfseries username}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Account Management User Interface. 
+
+Contains the logic as well as interface for account management, allowing logged in users to change their password or delete their account. \begin{DoxyAuthor}{Author}
+Anthony Tam 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAccountUI_a97a563e3ac733ad8f7b898d0c2669dcf}\label{classAccountUI_a97a563e3ac733ad8f7b898d0c2669dcf}} 
+\index{AccountUI@{AccountUI}!AccountUI@{AccountUI}}
+\index{AccountUI@{AccountUI}!AccountUI@{AccountUI}}
+\doxysubsubsection{\texorpdfstring{AccountUI()}{AccountUI()}}
+{\footnotesize\ttfamily Account\+U\+I\+::\+Account\+UI (\begin{DoxyParamCaption}\item[{std\+::string}]{username }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor for \mbox{\hyperlink{classAccountUI}{Account\+UI}}, intializes username from parameter and creates database object, creates the UI using Wt widgets, prepares UI for password changing initially. 
+\begin{DoxyParams}{Parameters}
+{\em username} & is the username of the current logged in user \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAccountUI_ada9fb5a67a23653f333d3cb7ba6df200}\label{classAccountUI_ada9fb5a67a23653f333d3cb7ba6df200}} 
+\index{AccountUI@{AccountUI}!````~AccountUI@{$\sim$AccountUI}}
+\index{````~AccountUI@{$\sim$AccountUI}!AccountUI@{AccountUI}}
+\doxysubsubsection{\texorpdfstring{$\sim$AccountUI()}{~AccountUI()}}
+{\footnotesize\ttfamily Account\+U\+I\+::$\sim$\+Account\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default Destructor. 
+
+Default Destrucor for the \mbox{\hyperlink{classAccountUI}{Account\+UI}} class. \begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAccountUI_ae3e713995bc447ac1f2e4d3a199766cb}\label{classAccountUI_ae3e713995bc447ac1f2e4d3a199766cb}} 
+\index{AccountUI@{AccountUI}!accountExists@{accountExists}}
+\index{accountExists@{accountExists}!AccountUI@{AccountUI}}
+\doxysubsubsection{\texorpdfstring{accountExists()}{accountExists()}}
+{\footnotesize\ttfamily bool Account\+U\+I\+::account\+Exists (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Checks if the account exists in the database under the given username. 
+
+Function which checks in the database object for any account with the provided username, somewhat redundant given that an account must exist for a user to be logged in and use this function, but checks just in case for freak incidents where the account does not exist. \begin{DoxyReturn}{Returns}
+whether or not the username is saved with boolean value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAccountUI_a4169c45eaa9bc37224e7e4bcc56e010a}\label{classAccountUI_a4169c45eaa9bc37224e7e4bcc56e010a}} 
+\index{AccountUI@{AccountUI}!changing@{changing}}
+\index{changing@{changing}!AccountUI@{AccountUI}}
+\doxysubsubsection{\texorpdfstring{changing()}{changing()}}
+{\footnotesize\ttfamily void Account\+U\+I\+::changing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Changes UI form to Password Change. 
+
+Method which is called to change the UI to the password change form, sets global variable ok\+Bool to true so that verify\+Password() knows the submit button is being called for password changing, and changes the link button to go to the delete account form using \mbox{\hyperlink{classAccountUI_a639cf2718cf19323c7a11c6c2560c77b}{deleting()}}. \begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAccountUI_a639cf2718cf19323c7a11c6c2560c77b}\label{classAccountUI_a639cf2718cf19323c7a11c6c2560c77b}} 
+\index{AccountUI@{AccountUI}!deleting@{deleting}}
+\index{deleting@{deleting}!AccountUI@{AccountUI}}
+\doxysubsubsection{\texorpdfstring{deleting()}{deleting()}}
+{\footnotesize\ttfamily void Account\+U\+I\+::deleting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Changes UI form to Account Deletion. 
+
+Method which is called to change the UI to the password change form, sets global variable ok\+Bool to flase so that verify\+Password() knows the submit button is being called for account deletion, and changes the link button to go to the password change form using \mbox{\hyperlink{classAccountUI_a4169c45eaa9bc37224e7e4bcc56e010a}{changing()}}. \begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAccountUI_a4d4cbcc91c17fdac64de9667a9147316}\label{classAccountUI_a4d4cbcc91c17fdac64de9667a9147316}} 
+\index{AccountUI@{AccountUI}!getCurrPass@{getCurrPass}}
+\index{getCurrPass@{getCurrPass}!AccountUI@{AccountUI}}
+\doxysubsubsection{\texorpdfstring{getCurrPass()}{getCurrPass()}}
+{\footnotesize\ttfamily string Account\+U\+I\+::get\+Curr\+Pass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets the input from the first text field. 
+
+Accessor method that returns the input from the first text field as a U\+T\+F-\/8 string, in both the password changing form and account deletion form this represents the user\textquotesingle{}s current password. \begin{DoxyReturn}{Returns}
+the input in the first text field as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAccountUI_a58b6c8f487c1ac2e3c98d445a0e5b46b}\label{classAccountUI_a58b6c8f487c1ac2e3c98d445a0e5b46b}} 
+\index{AccountUI@{AccountUI}!getNewPass@{getNewPass}}
+\index{getNewPass@{getNewPass}!AccountUI@{AccountUI}}
+\doxysubsubsection{\texorpdfstring{getNewPass()}{getNewPass()}}
+{\footnotesize\ttfamily string Account\+U\+I\+::get\+New\+Pass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets the input from the second text field. 
+
+Accessor method that returns the input from the second text field as a U\+T\+F-\/8 string, in the password changing form this is the new desired passsword, in the account deletion form this represents the user\textquotesingle{}s current password again. \begin{DoxyReturn}{Returns}
+the input in the second text field as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAccountUI_ab4137ebf4c278d25dae0da861d86f1d2}\label{classAccountUI_ab4137ebf4c278d25dae0da861d86f1d2}} 
+\index{AccountUI@{AccountUI}!validatePassword@{validatePassword}}
+\index{validatePassword@{validatePassword}!AccountUI@{AccountUI}}
+\doxysubsubsection{\texorpdfstring{validatePassword()}{validatePassword()}}
+{\footnotesize\ttfamily void Account\+U\+I\+::validate\+Password (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Main logic after pressing submit button. 
+
+Function that is called when the submit button is pressed, contains the main algorithm for both changing passwords and deleting accounts depending on the page it was pressed on. \begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+gui/account/Account\+U\+I.\+h\item 
+gui/account/Account\+U\+I.\+cpp\end{DoxyCompactItemize}

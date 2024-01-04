@@ -1,0 +1,58 @@
+digraph "Wt::Auth::OAuthAuthorizationEndpointProcess"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Wt::Auth::OAuthAuthorization\lEndpointProcess",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Allows clients to authorize users according to the OAuth 2.0 protocol."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Wt::WObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WObject.html",tooltip="A base class for objects that participate in the signal/slot system."];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Wt::Core::observable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Core_1_1observable.html",tooltip="A base class for objects whose life-time can be tracked."];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name_" ];
+  Node4 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" id_" ];
+  Node5 [label="const",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" login_" ];
+  Node6 [label="Wt::Auth::Login",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Auth_1_1Login.html",tooltip="A class that manages the current login state."];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" changed_" ];
+  Node7 [label="Wt::Signal\< A \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Signal.html",tooltip="A signal that propagates events to listeners."];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Wt::SignalBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1SignalBase.html",tooltip="Abstract base class of a signal."];
+  Node9 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" impl_" ];
+  Node9 [label="Wt::Signals::Signal\l\< A... \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1Signals_1_1Signal.html",tooltip=" "];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="Wt::Signals::Impl::\lProtoSignal\< Args... \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Signals_1_1Impl_1_1ProtoSignal.html",tooltip=" "];
+  Node11 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" callback_ring_" ];
+  Node11 [label="Wt::Signals::Impl::\lProtoSignal\< Args \>\l::SignalLink",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1Signals_1_1Impl_1_1ProtoSignal_1_1SignalLink.html",tooltip=" "];
+  Node12 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="Wt::Signals::Impl::\lSignalLinkBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Signals_1_1Impl_1_1SignalLinkBase.html",tooltip=" "];
+  Node13 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" unlink_callback_" ];
+  Node13 [label="void",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node14 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" obj_" ];
+  Node14 [label="Wt::Core::observing\l_ptr\< const Wt::Core\l::observable \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Core_1_1observing__ptr.html",tooltip=" "];
+  Node15 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" impl_" ];
+  Node15 [label="Wt::Core::Impl::observing\l_ptr_base",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1Core_1_1Impl_1_1observing__ptr__base.html",tooltip=" "];
+  Node3 -> Node15 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" observed_" ];
+  Node5 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" connection_ring_" ];
+  Node16 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ref_count" ];
+  Node16 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node11 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" prev\nnext" ];
+  Node17 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" user_" ];
+  Node17 [label="Wt::Auth::User",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Auth_1_1User.html",tooltip="A user."];
+  Node4 -> Node17 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" id_" ];
+  Node18 -> Node17 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" db_" ];
+  Node18 [label="Wt::Auth::AbstractUserDatabase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Auth_1_1AbstractUserDatabase.html",tooltip="Abstract interface for an authentication user database."];
+  Node19 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" client_" ];
+  Node19 [label="Wt::Auth::OAuthClient",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Auth_1_1OAuthClient.html",tooltip=" "];
+  Node4 -> Node19 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" id_" ];
+  Node5 -> Node19 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" db_" ];
+  Node20 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" authorized_" ];
+  Node20 [label="Wt::Signal\< std::string \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Signal.html",tooltip=" "];
+  Node8 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 -> Node20 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" impl_" ];
+  Node16 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" authCodeExpSecs_" ];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" redirectUri_\nscope_\nstate_" ];
+  Node18 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" db_" ];
+}

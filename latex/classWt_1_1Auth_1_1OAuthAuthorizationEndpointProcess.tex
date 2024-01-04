@@ -1,0 +1,170 @@
+\hypertarget{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess}{}\doxysection{Wt\+::Auth\+::O\+Auth\+Authorization\+Endpoint\+Process Class Reference}
+\label{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess}\index{Wt::Auth::OAuthAuthorizationEndpointProcess@{Wt::Auth::OAuthAuthorizationEndpointProcess}}
+
+
+Allows clients to authorize users according to the O\+Auth 2.\+0 protocol.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Auth/\+O\+Auth\+Authorization\+Endpoint\+Process.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Auth\+::O\+Auth\+Authorization\+Endpoint\+Process\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Auth\+::O\+Auth\+Authorization\+Endpoint\+Process\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a3d3464a8ed6b70038bcf03af3bf2ae40}\label{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a3d3464a8ed6b70038bcf03af3bf2ae40}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a3d3464a8ed6b70038bcf03af3bf2ae40}{O\+Auth\+Authorization\+Endpoint\+Process}} (\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \&login, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&db)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a55ae9c812d2ae560e31382ca94e3bb97}{process\+Environment}} ()
+\begin{DoxyCompactList}\small\item\em Processes the environment and authorizes the user when already logged in. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a319471d5fa3e2dc5c77979d71f7a0905}\label{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a319471d5fa3e2dc5c77979d71f7a0905}} 
+bool \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a319471d5fa3e2dc5c77979d71f7a0905}{valid\+Request}} () const
+\begin{DoxyCompactList}\small\item\em Returns true if the request was a valid O\+Auth request with the correct parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ std\+::string $>$ \& \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_ac79f4ce1a95b2de29d7deffcc13aef5c}{authorized}} ()
+\begin{DoxyCompactList}\small\item\em This signal is emitted when the user has successfully logged in. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_aafcea878368e0cb17f4ee075bc12b809}{authorize\+Scope}} (const std\+::string \&scope)
+\begin{DoxyCompactList}\small\item\em Authorize the given scope and redirect the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_ad470578a353058c0beb08cac0dd05795}{set\+Auth\+Code\+Exp\+Secs}} (int seconds)
+\begin{DoxyCompactList}\small\item\em Sets the amount of seconds after which generated authorization codes expire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_adfc3f5baf21352c9747e2819e4afb92c}\label{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_adfc3f5baf21352c9747e2819e4afb92c}} 
+void {\bfseries auth\+Event} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a833ec972226a2ccc30766f746d54430a}\label{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a833ec972226a2ccc30766f746d54430a}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} $\ast$ {\bfseries db\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_af1193e3dc64e8e84195eaa1d9b875476}\label{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_af1193e3dc64e8e84195eaa1d9b875476}} 
+void {\bfseries send\+Response} (const std\+::string \&param)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_ad7366100b32cfe084da04527a4c75526}\label{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_ad7366100b32cfe084da04527a4c75526}} 
+int {\bfseries auth\+Code\+Exp\+Secs\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_aa98190042aba988c4a1a10762245f2d9}\label{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_aa98190042aba988c4a1a10762245f2d9}} 
+std\+::string {\bfseries redirect\+Uri\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a81f36ad0b873fdbd4d9b6f5c6e6c5f35}\label{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a81f36ad0b873fdbd4d9b6f5c6e6c5f35}} 
+std\+::string {\bfseries state\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a0bc500f8180996109a631a5a5461d4cd}\label{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a0bc500f8180996109a631a5a5461d4cd}} 
+std\+::string {\bfseries scope\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_af8685966a79406f8b65d782efe779e44}\label{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_af8685966a79406f8b65d782efe779e44}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient}{O\+Auth\+Client}} {\bfseries client\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a3010f299b79f21d2003263d53c818cbf}\label{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a3010f299b79f21d2003263d53c818cbf}} 
+bool {\bfseries valid\+Request\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a156748f504c45d4a13619741d51e442b}\label{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a156748f504c45d4a13619741d51e442b}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \& {\bfseries login\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a87c6c51bc8551a17efd27ec05aa450f4}\label{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a87c6c51bc8551a17efd27ec05aa450f4}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ std\+::string $>$ {\bfseries authorized\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Allows clients to authorize users according to the O\+Auth 2.\+0 protocol. 
+
+This class will process the environment and perform the authorization of the user if this is possible. If this is successful, an authorization code will be sent to the client.
+
+The following U\+RL parameters are expected\+: \char`\"{}client\+\_\+id\char`\"{}, which obviously has to contain a valid client ID. \char`\"{}redirect\+\_\+uri\char`\"{}, which has to be a valid redirect U\+RI where the user will be redirected to when the authorization has been succesful. \char`\"{}scope\char`\"{}, which has to be set to the scope of the requested information. \char`\"{}response\+\_\+type\char`\"{}, which has to be set to \char`\"{}code\char`\"{}. If the \char`\"{}state\char`\"{} parameter has been included, it will be passed on as a paremeter to the redirect U\+RI.
+
+When the client ID and the redirect U\+RI is valid but something else went wrong, an \char`\"{}error=invalid\+\_\+request\char`\"{} will be sent to the client. If the user failed to log in correctly \char`\"{}error=login\+\_\+required\char`\"{} will be sent. If everything went OK, the \char`\"{}code\char`\"{} parameter is included which can be used to obtain a token from a token endpoint.
+
+See \href{https://tools.ietf.org/rfc/rfc6749.txt}{\texttt{ https\+://tools.\+ietf.\+org/rfc/rfc6749.\+txt}} for more information.
+
+This class relies on a correct implementation of several function in the \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}}. Namely \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ac21618ad3ebc7b234f23ddfff2e1bcd3}{Abstract\+User\+Database\+::idp\+Client\+Find\+With\+Id}}, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_aa3af13034323439708bf30f6177bfca3}{Abstract\+User\+Database\+::idp\+Token\+Add}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a702033478b1a37d9d94a9d2b2390894e}{Abstract\+User\+Database\+::idp\+Client\+Redirect\+Uris}}.
+
+Must be deployed with T\+LS.
+
+Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{process = std::make\_unique<OAuthAuthorizationEndpointProcess>(}
+\DoxyCodeLine{    login,}
+\DoxyCodeLine{    database);}
+\DoxyCodeLine{process-\/>authorized().connect(}
+\DoxyCodeLine{    process.get(),}
+\DoxyCodeLine{    \&\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_aafcea878368e0cb17f4ee075bc12b809}{OAuthAuthorizationEndpointProcess::authorizeScope}});}
+\DoxyCodeLine{process-\/>processEnvironment();}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (process-\/>validRequest()) \{}
+\DoxyCodeLine{  root()-\/>addWidget(std::move(authWidget));}
+\DoxyCodeLine{\} \textcolor{keywordflow}{else}}
+\DoxyCodeLine{  root()-\/>addWidget(std::make\_unique<Wt::WText>(Wt::utf8(\textcolor{stringliteral}{"The request was invalid."}));}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthTokenEndpoint}{O\+Auth\+Token\+Endpoint}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_ac79f4ce1a95b2de29d7deffcc13aef5c}\label{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_ac79f4ce1a95b2de29d7deffcc13aef5c}} 
+\index{Wt::Auth::OAuthAuthorizationEndpointProcess@{Wt::Auth::OAuthAuthorizationEndpointProcess}!authorized@{authorized}}
+\index{authorized@{authorized}!Wt::Auth::OAuthAuthorizationEndpointProcess@{Wt::Auth::OAuthAuthorizationEndpointProcess}}
+\doxysubsubsection{\texorpdfstring{authorized()}{authorized()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$std\+::string$>$\& Wt\+::\+Auth\+::\+O\+Auth\+Authorization\+Endpoint\+Process\+::authorized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+This signal is emitted when the user has successfully logged in. 
+
+When the user has successfully logged in and the request is valid, this signal will be emitted and the user can be redirected to the redirect U\+RI using authorize\+Scope.
+
+This signal supplies the scope as argument. \mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_aafcea878368e0cb17f4ee075bc12b809}\label{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_aafcea878368e0cb17f4ee075bc12b809}} 
+\index{Wt::Auth::OAuthAuthorizationEndpointProcess@{Wt::Auth::OAuthAuthorizationEndpointProcess}!authorizeScope@{authorizeScope}}
+\index{authorizeScope@{authorizeScope}!Wt::Auth::OAuthAuthorizationEndpointProcess@{Wt::Auth::OAuthAuthorizationEndpointProcess}}
+\doxysubsubsection{\texorpdfstring{authorizeScope()}{authorizeScope()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+O\+Auth\+Authorization\+Endpoint\+Process\+::authorize\+Scope (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{scope }\end{DoxyParamCaption})}
+
+
+
+Authorize the given scope and redirect the user. 
+
+If the user has successfully logged in this function will redirect the user to the redirect U\+RI with a valid \char`\"{}code\char`\"{} parameter which is only valid for the given scope. \mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a55ae9c812d2ae560e31382ca94e3bb97}\label{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_a55ae9c812d2ae560e31382ca94e3bb97}} 
+\index{Wt::Auth::OAuthAuthorizationEndpointProcess@{Wt::Auth::OAuthAuthorizationEndpointProcess}!processEnvironment@{processEnvironment}}
+\index{processEnvironment@{processEnvironment}!Wt::Auth::OAuthAuthorizationEndpointProcess@{Wt::Auth::OAuthAuthorizationEndpointProcess}}
+\doxysubsubsection{\texorpdfstring{processEnvironment()}{processEnvironment()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+O\+Auth\+Authorization\+Endpoint\+Process\+::process\+Environment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Processes the environment and authorizes the user when already logged in. 
+
+The \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_ac79f4ce1a95b2de29d7deffcc13aef5c}{authorized()}} signal should be connected before calling this function. \mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_ad470578a353058c0beb08cac0dd05795}\label{classWt_1_1Auth_1_1OAuthAuthorizationEndpointProcess_ad470578a353058c0beb08cac0dd05795}} 
+\index{Wt::Auth::OAuthAuthorizationEndpointProcess@{Wt::Auth::OAuthAuthorizationEndpointProcess}!setAuthCodeExpSecs@{setAuthCodeExpSecs}}
+\index{setAuthCodeExpSecs@{setAuthCodeExpSecs}!Wt::Auth::OAuthAuthorizationEndpointProcess@{Wt::Auth::OAuthAuthorizationEndpointProcess}}
+\doxysubsubsection{\texorpdfstring{setAuthCodeExpSecs()}{setAuthCodeExpSecs()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+O\+Auth\+Authorization\+Endpoint\+Process\+::set\+Auth\+Code\+Exp\+Secs (\begin{DoxyParamCaption}\item[{int}]{seconds }\end{DoxyParamCaption})}
+
+
+
+Sets the amount of seconds after which generated authorization codes expire. 
+
+This defaults to 600 seconds. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/O\+Auth\+Authorization\+Endpoint\+Process.\+h\end{DoxyCompactItemize}

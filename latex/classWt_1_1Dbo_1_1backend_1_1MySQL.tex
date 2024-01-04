@@ -1,0 +1,470 @@
+\hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL}{}\doxysection{Wt\+::Dbo\+::backend\+::My\+S\+QL Class Reference}
+\label{classWt_1_1Dbo_1_1backend_1_1MySQL}\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+
+
+A \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL}{My\+S\+QL}} connection.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Dbo/backend/\+My\+S\+Q\+L.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Dbo\+::backend\+::My\+S\+QL\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Dbo\+::backend\+::My\+S\+QL\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_a63610e88d55ae94d600efccfb2f9408a}{My\+S\+QL}} (const std\+::string \&db, const std\+::string \&dbuser=\char`\"{}root\char`\"{}, const std\+::string \&dbpasswd=\char`\"{}\char`\"{}, const std\+::string dbhost=\char`\"{}localhost\char`\"{}, unsigned int dbport=0, const std\+::string \&dbsocket=\char`\"{}/var/run/mysqld/mysqld.\+sock\char`\"{}, int fractional\+Seconds\+Part=-\/1)
+\begin{DoxyCompactList}\small\item\em Opens a new \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL}{My\+S\+QL}} backend connection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_aca6c1a113207f893dade5a9f6cdb56f4}{My\+S\+QL}} (const \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL}{My\+S\+QL}} \&other)
+\begin{DoxyCompactList}\small\item\em Copies a \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL}{My\+S\+QL}} connection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_ae479950b9729c2b40196ec78ce44d867}{$\sim$\+My\+S\+QL}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_a39bcba71660f090cad6374966b465f32}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_a39bcba71660f090cad6374966b465f32}} 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_a39bcba71660f090cad6374966b465f32}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Returns a copy of the connection. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_a016de5d42ec0c7de6a7d3ae667de56e9}{connect}} (const std\+::string \&db, const std\+::string \&dbuser=\char`\"{}root\char`\"{}, const std\+::string \&dbpasswd=\char`\"{}\char`\"{}, const std\+::string \&dbhost=\char`\"{}localhost\char`\"{}, unsigned int dbport=0, const std\+::string \&dbsocket=\char`\"{}/var/run/mysqld/mysqld.\+sock\char`\"{})
+\begin{DoxyCompactList}\small\item\em Tries to connect. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_a3a3b7075d485a4133f188719a9c244a2}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_a3a3b7075d485a4133f188719a9c244a2}} 
+My\+S\+Q\+L\+\_\+impl $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_a3a3b7075d485a4133f188719a9c244a2}{connection}} ()
+\begin{DoxyCompactList}\small\item\em Returns the underlying connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_a95115527cec3f2cb4ad52c0751645e8c}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_a95115527cec3f2cb4ad52c0751645e8c}} 
+void {\bfseries check\+Connection} ()
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_acfe9ecd7e8844749f418ec4b044f4ba7}{execute\+Sql}} (const std\+::string \&sql) override
+\begin{DoxyCompactList}\small\item\em Executes an S\+QL statement. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_acb16d4b667d916ad255c618aa037b334}{start\+Transaction}} () override
+\begin{DoxyCompactList}\small\item\em Starts a transaction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_a7357c99464b46057aadfce3410701ddd}{commit\+Transaction}} () override
+\begin{DoxyCompactList}\small\item\em Commits a transaction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_acb39c85dc5178c5213127d7b2c7d6e42}{rollback\+Transaction}} () override
+\begin{DoxyCompactList}\small\item\em Rolls back a transaction. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_ab43ee131181fffc3bddb0480a97ba67d}{prepare\+Statement}} (const std\+::string \&sql) override
+\begin{DoxyCompactList}\small\item\em Prepares a statement. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_a8325469159d931eb2a4031aacba853d5}{get\+Fractional\+Seconds\+Part}} () const
+\begin{DoxyCompactList}\small\item\em Returns the supported fractional seconds part. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_a0424fc4ee7979c5636e4f8c977a1338c}{set\+Fractional\+Seconds\+Part}} (int fractional\+Seconds\+Part)
+\begin{DoxyCompactList}\small\item\em Set the supported fractional seconds part. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Methods that return dialect information}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_aff14037f0670a59a52d7e3c1af00b848}{autoincrement\+Sql}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type modifier. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_af59085ae7169f35a4684633c3c60cd2e}{autoincrement\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_a4a20fbc2ed95b6801c5005036f831b73}{autoincrement\+Insert\+Suffix}} (const std\+::string \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the suffix for an \textquotesingle{}autoincrement\textquotesingle{} insert statement. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_a3f54b6856df87e12789ee4b42b23ec5a}{autoincrement\+Create\+Sequence\+Sql}} (const std\+::string \&table, const std\+::string \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the S\+QL statement(s) required to create an id sequence. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_a300b228fdc239c0216216ef78a00e4bf}{autoincrement\+Drop\+Sequence\+Sql}} (const std\+::string \&table, const std\+::string \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the S\+QL statement(s) required to drop an id sequence. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_a1471e8a5835fb1bb34708411c38e4482}{date\+Time\+Type}} (\mbox{\hyperlink{namespaceWt_1_1Dbo_af213c090c1ccddc36d70d56e0804047f}{Sql\+Date\+Time\+Type}} type) const override
+\begin{DoxyCompactList}\small\item\em Returns the date/time type. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_ad06db443d3fce353f22a0b8c4d018e7c}{blob\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the blob type. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_a6a016af77a1fd949c6f1ec7954085dc4}{support\+Alter\+Table}} () const override
+\begin{DoxyCompactList}\small\item\em Returns true if the backend support Alter \mbox{\hyperlink{structTable}{Table}}. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_ad2b1c11a390e9d6c728b9c6ab2646552}{alter\+Table\+Constraint\+String}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the command used in alter table .. drop constraint .. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_aa66a5693b1ee5fc70e8ddb03dab1af2b}{require\+Subquery\+Alias}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the true if the database require subquery alias. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_afeadf71324d7456d25c6fc572ba217ed}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_afeadf71324d7456d25c6fc572ba217ed}} 
+void {\bfseries init} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_aa1ec7d11558ebeb71562e50911dd158b}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_aa1ec7d11558ebeb71562e50911dd158b}} 
+std\+::string {\bfseries dbname\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_a8173229ab9db4096a7fa48c8f5c18f9f}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_a8173229ab9db4096a7fa48c8f5c18f9f}} 
+std\+::string {\bfseries dbuser\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_aec00f735f819fe21359d5b0506f0adde}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_aec00f735f819fe21359d5b0506f0adde}} 
+std\+::string {\bfseries dbpasswd\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_a225986724121761bdd35d07a0b4cf540}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_a225986724121761bdd35d07a0b4cf540}} 
+std\+::string {\bfseries dbhost\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_aba17bd61326fcf7d9e287abd2550f763}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_aba17bd61326fcf7d9e287abd2550f763}} 
+std\+::string {\bfseries dbsocket\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_ada16d0baeeef335bddc44e3a8c4ca1f8}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_ada16d0baeeef335bddc44e3a8c4ca1f8}} 
+unsigned int {\bfseries dbport\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_a66dd4d26780d1ff56eac6dcf7509b1c7}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_a66dd4d26780d1ff56eac6dcf7509b1c7}} 
+int {\bfseries fractional\+Seconds\+Part\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_ad43d35225819b58c3b5aef364cdb0176}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_ad43d35225819b58c3b5aef364cdb0176}} 
+std\+::string {\bfseries date\+Type\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_ae4e837f0c3f6259328692b7a44c917d1}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_ae4e837f0c3f6259328692b7a44c917d1}} 
+std\+::string {\bfseries time\+Type\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_ad394d5c518b4f34d45ffbe557614ed0d}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_ad394d5c518b4f34d45ffbe557614ed0d}} 
+My\+S\+Q\+L\+\_\+impl $\ast$ {\bfseries impl\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL}{My\+S\+QL}} connection. 
+
+This class provides the backend implementation for mariadb databases. It has been tested against \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL}{My\+S\+QL}} 5.\+6.
+
+In order to work properly with \mbox{\hyperlink{namespaceWt_1_1Dbo}{Wt\+::\+Dbo}}, \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL}{My\+S\+QL}} must be configured with Inno\+DB (for \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL}{My\+S\+QL}}) or Xtra\+DB (for mariadb) as the default database engine -\/ so that the transaction based functionality works.
+
+\begin{DoxyNote}{Note}
+There is a bug in the implementation of milliseconds in mariadb C client which affects \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} and posix\+::time\+\_\+duration values -- it goes berserk when fractional part = 0. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_a63610e88d55ae94d600efccfb2f9408a}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_a63610e88d55ae94d600efccfb2f9408a}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!MySQL@{MySQL}}
+\index{MySQL@{MySQL}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{MySQL()}{MySQL()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::\+My\+S\+QL (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{db,  }\item[{const std\+::string \&}]{dbuser = {\ttfamily \char`\"{}root\char`\"{}},  }\item[{const std\+::string \&}]{dbpasswd = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const std\+::string}]{dbhost = {\ttfamily \char`\"{}localhost\char`\"{}},  }\item[{unsigned int}]{dbport = {\ttfamily 0},  }\item[{const std\+::string \&}]{dbsocket = {\ttfamily \char`\"{}/var/run/mysqld/mysqld.sock\char`\"{}},  }\item[{int}]{fractional\+Seconds\+Part = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Opens a new \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL}{My\+S\+QL}} backend connection. 
+
+For the connection parameter description, please refer to the \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_a016de5d42ec0c7de6a7d3ae667de56e9}{connect()}} method.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fractional\+Seconds\+Part} & The number of fractional units (0 to 6). A value of -\/1 indicates that the fractional part is not stored. Fractional seconds part are supported for \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL}{My\+S\+QL}} 5.\+6.\+4 \href{http://dev.mysql.com/doc/refman/5.6/en/fractional-seconds.html}{\texttt{ http\+://dev.\+mysql.\+com/doc/refman/5.\+6/en/fractional-\/seconds.\+html}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_aca6c1a113207f893dade5a9f6cdb56f4}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_aca6c1a113207f893dade5a9f6cdb56f4}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!MySQL@{MySQL}}
+\index{MySQL@{MySQL}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{MySQL()}{MySQL()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::\+My\+S\+QL (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL}{My\+S\+QL}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copies a \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL}{My\+S\+QL}} connection. 
+
+This creates a new connection with the same settings as another connection.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_a39bcba71660f090cad6374966b465f32}{clone()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_ae479950b9729c2b40196ec78ce44d867}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_ae479950b9729c2b40196ec78ce44d867}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!````~MySQL@{$\sim$MySQL}}
+\index{````~MySQL@{$\sim$MySQL}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{$\sim$MySQL()}{~MySQL()}}
+{\footnotesize\ttfamily Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::$\sim$\+My\+S\+QL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Closes the connection. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_ad2b1c11a390e9d6c728b9c6ab2646552}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_ad2b1c11a390e9d6c728b9c6ab2646552}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!alterTableConstraintString@{alterTableConstraintString}}
+\index{alterTableConstraintString@{alterTableConstraintString}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{alterTableConstraintString()}{alterTableConstraintString()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::alter\+Table\+Constraint\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the command used in alter table .. drop constraint .. 
+
+This method will return \char`\"{}constraint\char`\"{} by default. Default\+: A\+L\+T\+ER T\+A\+B\+LE .. D\+R\+OP C\+O\+N\+S\+T\+R\+A\+I\+NT .. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a15912e0c8e9f2c0d04b7a9b97fd8c6c4}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_a3f54b6856df87e12789ee4b42b23ec5a}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_a3f54b6856df87e12789ee4b42b23ec5a}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!autoincrementCreateSequenceSql@{autoincrementCreateSequenceSql}}
+\index{autoincrementCreateSequenceSql@{autoincrementCreateSequenceSql}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{autoincrementCreateSequenceSql()}{autoincrementCreateSequenceSql()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::autoincrement\+Create\+Sequence\+Sql (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{table,  }\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the S\+QL statement(s) required to create an id sequence. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aba79d84c7c91faae06f954e6d3d390ab}{Session\+::create\+Tables()}} to create the id sequence for a table. The table\textquotesingle{}s name and primary key are passed as arguments to this function and can be used to construct an S\+QL sequence that is unique for the table. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a7922dac3fd8a808dbbeef97a5a772e3f}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_a300b228fdc239c0216216ef78a00e4bf}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_a300b228fdc239c0216216ef78a00e4bf}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!autoincrementDropSequenceSql@{autoincrementDropSequenceSql}}
+\index{autoincrementDropSequenceSql@{autoincrementDropSequenceSql}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{autoincrementDropSequenceSql()}{autoincrementDropSequenceSql()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::string$>$ Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::autoincrement\+Drop\+Sequence\+Sql (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{table,  }\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the S\+QL statement(s) required to drop an id sequence. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_a4c1fedb21e4e1cc44b182a34e8ebb4ef}{Session\+::drop\+Tables()}} to drop the id sequence for a table. The table\textquotesingle{}s name and primary key are passed as arguments to this function and can be used to construct an S\+QL sequence that is unique for the table. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a188acc931dd1d3dbd3a21e28783f7bd2}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_a4a20fbc2ed95b6801c5005036f831b73}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_a4a20fbc2ed95b6801c5005036f831b73}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!autoincrementInsertSuffix@{autoincrementInsertSuffix}}
+\index{autoincrementInsertSuffix@{autoincrementInsertSuffix}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{autoincrementInsertSuffix()}{autoincrementInsertSuffix()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::autoincrement\+Insert\+Suffix (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the suffix for an \textquotesingle{}autoincrement\textquotesingle{} insert statement. 
+
+This is appended to the {\ttfamily insert} statement, since some back-\/ends need to be indicated that they should return the autoincrement id. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_abda2502e05a08d4728ff8f026663321f}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_aff14037f0670a59a52d7e3c1af00b848}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_aff14037f0670a59a52d7e3c1af00b848}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!autoincrementSql@{autoincrementSql}}
+\index{autoincrementSql@{autoincrementSql}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{autoincrementSql()}{autoincrementSql()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::autoincrement\+Sql (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type modifier. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aba79d84c7c91faae06f954e6d3d390ab}{Session\+::create\+Tables()}} to create the {\itshape id} column. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a8c00fd64eb82999880cc813ef3866f5d}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_af59085ae7169f35a4684633c3c60cd2e}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_af59085ae7169f35a4684633c3c60cd2e}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!autoincrementType@{autoincrementType}}
+\index{autoincrementType@{autoincrementType}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{autoincrementType()}{autoincrementType()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::autoincrement\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the \textquotesingle{}autoincrement\textquotesingle{} S\+QL type. 
+
+This is used by \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_aba79d84c7c91faae06f954e6d3d390ab}{Session\+::create\+Tables()}} to create the {\itshape id} column. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_aff293ff5ad586e15143729eb38300ad6}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_ad06db443d3fce353f22a0b8c4d018e7c}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_ad06db443d3fce353f22a0b8c4d018e7c}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!blobType@{blobType}}
+\index{blobType@{blobType}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{blobType()}{blobType()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::blob\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the blob type. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_ae2bbddef8fd8c11687d23187920dc4da}{Sql\+Statement\+::bind(int, const std\+::vector$<$unsigned char$>$\&)}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a68a272eaafeef5e04912914f0662da39}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_a7357c99464b46057aadfce3410701ddd}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_a7357c99464b46057aadfce3410701ddd}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!commitTransaction@{commitTransaction}}
+\index{commitTransaction@{commitTransaction}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{commitTransaction()}{commitTransaction()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::commit\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Commits a transaction. 
+
+This function commits a transaction. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a38ed9ab4831a0bfd8694f250813803bf}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classMyConnection_a7f62f7171dff41815d01d7b5dcbaff53}{My\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_a016de5d42ec0c7de6a7d3ae667de56e9}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_a016de5d42ec0c7de6a7d3ae667de56e9}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!connect@{connect}}
+\index{connect@{connect}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily bool Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::connect (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{db,  }\item[{const std\+::string \&}]{dbuser = {\ttfamily \char`\"{}root\char`\"{}},  }\item[{const std\+::string \&}]{dbpasswd = {\ttfamily \char`\"{}\char`\"{}},  }\item[{const std\+::string \&}]{dbhost = {\ttfamily \char`\"{}localhost\char`\"{}},  }\item[{unsigned int}]{dbport = {\ttfamily 0},  }\item[{const std\+::string \&}]{dbsocket = {\ttfamily \char`\"{}/var/run/mysqld/mysqld.sock\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+Tries to connect. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & The database name. \\
+\hline
+{\em dbuser} & The username for the database connection -\/ defaults to \char`\"{}root\char`\"{}. \\
+\hline
+{\em dbpasswd} & The password for the database conection -\/ defaults to an empty string. \\
+\hline
+{\em dbhost} & The hostname of the database -\/ defaults to localhost. \\
+\hline
+{\em dbport} & The portnumber -\/ defaults to a default port. \\
+\hline
+{\em dbsocket} & The socket to use.\\
+\hline
+\end{DoxyParams}
+Throws an exception if there was a problem, otherwise true. \mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_a1471e8a5835fb1bb34708411c38e4482}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_a1471e8a5835fb1bb34708411c38e4482}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!dateTimeType@{dateTimeType}}
+\index{dateTimeType@{dateTimeType}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{dateTimeType()}{dateTimeType()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::date\+Time\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWt_1_1Dbo_af213c090c1ccddc36d70d56e0804047f}{Sql\+Date\+Time\+Type}}}]{type }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the date/time type. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement_afbe4698684c7b9b355748a199e0b0558}{Sql\+Statement\+::bind(int, const std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point\&, Sql\+Date\+Time\+Type)}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_af1f3290a984288175c6d82d088d0636c}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_acfe9ecd7e8844749f418ec4b044f4ba7}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_acfe9ecd7e8844749f418ec4b044f4ba7}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!executeSql@{executeSql}}
+\index{executeSql@{executeSql}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{executeSql()}{executeSql()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::execute\+Sql (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sql }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executes an S\+QL statement. 
+
+This is a convenience method for preparing a statement, executing it, and deleting it. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_afe86e3baaffa9276654a4dea9a6830a0}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_a8325469159d931eb2a4031aacba853d5}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_a8325469159d931eb2a4031aacba853d5}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!getFractionalSecondsPart@{getFractionalSecondsPart}}
+\index{getFractionalSecondsPart@{getFractionalSecondsPart}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{getFractionalSecondsPart()}{getFractionalSecondsPart()}}
+{\footnotesize\ttfamily int Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::get\+Fractional\+Seconds\+Part (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the supported fractional seconds part. 
+
+By default return -\/1\+: fractional part is not stored. Fractional seconds part is supported for \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL}{My\+S\+QL}} 5.\+6.\+4 \href{http://dev.mysql.com/doc/refman/5.6/en/fractional-seconds.html}{\texttt{ http\+://dev.\+mysql.\+com/doc/refman/5.\+6/en/fractional-\/seconds.\+html}}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_a0424fc4ee7979c5636e4f8c977a1338c}{set\+Fractional\+Seconds\+Part()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_ab43ee131181fffc3bddb0480a97ba67d}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_ab43ee131181fffc3bddb0480a97ba67d}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!prepareStatement@{prepareStatement}}
+\index{prepareStatement@{prepareStatement}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{prepareStatement()}{prepareStatement()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlStatement}{Sql\+Statement}}$>$ Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::prepare\+Statement (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sql }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Prepares a statement. 
+
+Returns the prepared statement. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a4990470cf601ed8b523d97a7f8849210}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_aa66a5693b1ee5fc70e8ddb03dab1af2b}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_aa66a5693b1ee5fc70e8ddb03dab1af2b}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!requireSubqueryAlias@{requireSubqueryAlias}}
+\index{requireSubqueryAlias@{requireSubqueryAlias}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{requireSubqueryAlias()}{requireSubqueryAlias()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::require\+Subquery\+Alias (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the true if the database require subquery alias. 
+
+This method will return false by default. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a997517374428a3f5d5ea68fa97b4632e}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_acb39c85dc5178c5213127d7b2c7d6e42}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_acb39c85dc5178c5213127d7b2c7d6e42}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!rollbackTransaction@{rollbackTransaction}}
+\index{rollbackTransaction@{rollbackTransaction}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{rollbackTransaction()}{rollbackTransaction()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::rollback\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Rolls back a transaction. 
+
+This function rolls back a transaction. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_aee5a42b2f3b452d32360a1c31f59f22d}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classMyConnection_a6ad0552282399e5f581d9ef166e41b8c}{My\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_a0424fc4ee7979c5636e4f8c977a1338c}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_a0424fc4ee7979c5636e4f8c977a1338c}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!setFractionalSecondsPart@{setFractionalSecondsPart}}
+\index{setFractionalSecondsPart@{setFractionalSecondsPart}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{setFractionalSecondsPart()}{setFractionalSecondsPart()}}
+{\footnotesize\ttfamily void Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::set\+Fractional\+Seconds\+Part (\begin{DoxyParamCaption}\item[{int}]{fractional\+Seconds\+Part }\end{DoxyParamCaption})}
+
+
+
+Set the supported fractional seconds part. 
+
+The fractional seconds part can be also set in the constructor Fractional seconds part is supported for \mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL}{My\+S\+QL}} 5.\+6.\+4 \href{http://dev.mysql.com/doc/refman/5.6/en/fractional-seconds.html}{\texttt{ http\+://dev.\+mysql.\+com/doc/refman/5.\+6/en/fractional-\/seconds.\+html}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em fractional\+Seconds\+Part} & Must be in the range 0 to 6.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1backend_1_1MySQL_a0424fc4ee7979c5636e4f8c977a1338c}{set\+Fractional\+Seconds\+Part()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_acb16d4b667d916ad255c618aa037b334}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_acb16d4b667d916ad255c618aa037b334}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!startTransaction@{startTransaction}}
+\index{startTransaction@{startTransaction}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{startTransaction()}{startTransaction()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::start\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Starts a transaction. 
+
+This function starts a transaction. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_abcddbb27f50192113d14c66a5ca10731}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classMyConnection_a67d79cc55bb63f03377e2137c75cfa23}{My\+Connection}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1backend_1_1MySQL_a6a016af77a1fd949c6f1ec7954085dc4}\label{classWt_1_1Dbo_1_1backend_1_1MySQL_a6a016af77a1fd949c6f1ec7954085dc4}} 
+\index{Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}!supportAlterTable@{supportAlterTable}}
+\index{supportAlterTable@{supportAlterTable}!Wt::Dbo::backend::MySQL@{Wt::Dbo::backend::MySQL}}
+\doxysubsubsection{\texorpdfstring{supportAlterTable()}{supportAlterTable()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Dbo\+::backend\+::\+My\+S\+Q\+L\+::support\+Alter\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns true if the backend support Alter \mbox{\hyperlink{structTable}{Table}}. 
+
+This method will return false by default. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection_a35bfadac642cc5d6cfbf8c123a8b4a2f}{Wt\+::\+Dbo\+::\+Sql\+Connection}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/backend/My\+S\+Q\+L.\+h\end{DoxyCompactItemize}

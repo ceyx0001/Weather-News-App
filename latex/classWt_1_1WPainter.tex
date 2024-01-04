@@ -1,0 +1,1364 @@
+\hypertarget{classWt_1_1WPainter}{}\doxysection{Wt\+::W\+Painter Class Reference}
+\label{classWt_1_1WPainter}\index{Wt::WPainter@{Wt::WPainter}}
+
+
+Vector graphics painting class.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Painter.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::W\+Painter\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWt_1_1WPainter_1_1Image}{Image}}
+\begin{DoxyCompactList}\small\item\em An image that can be rendered on a \mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structWt_1_1WPainter_1_1State}{State}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainter_acf45aaa7e1b9acc391a19f4ec8dadc92}\label{classWt_1_1WPainter_acf45aaa7e1b9acc391a19f4ec8dadc92}} 
+typedef \mbox{\hyperlink{classWt_a5afa3162ba5b228f8074e0fda89f9a50}{Painter\+Change\+Flag}} \mbox{\hyperlink{classWt_1_1WPainter_acf45aaa7e1b9acc391a19f4ec8dadc92}{Change\+Flag}}
+\begin{DoxyCompactList}\small\item\em Typedef for enum \mbox{\hyperlink{classWt_a5afa3162ba5b228f8074e0fda89f9a50}{Wt\+::\+Painter\+Change\+Flag}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WPainter_a420b1e54536d4815534f31208a825b54}{W\+Painter}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPainter_aa9e93aac4be32b5c0943360d9cf8c1cc}\label{classWt_1_1WPainter_aa9e93aac4be32b5c0943360d9cf8c1cc}} 
+\mbox{\hyperlink{classWt_1_1WPainter_aa9e93aac4be32b5c0943360d9cf8c1cc}{W\+Painter}} (\mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}} $\ast$\mbox{\hyperlink{classWt_1_1WPainter_aae6b14e85ec1926aa60f603cb422ffc8}{device}})
+\begin{DoxyCompactList}\small\item\em Creates a painter on a given paint device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPainter_a611557a8722bc49df70a1a2dd79628c7}\label{classWt_1_1WPainter_a611557a8722bc49df70a1a2dd79628c7}} 
+\mbox{\hyperlink{classWt_1_1WPainter_a611557a8722bc49df70a1a2dd79628c7}{$\sim$\+W\+Painter}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WPainter_a6b81663b5599f0736ae5099ac7325d44}{begin}} (\mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}} $\ast$\mbox{\hyperlink{classWt_1_1WPainter_aae6b14e85ec1926aa60f603cb422ffc8}{device}})
+\begin{DoxyCompactList}\small\item\em Begins painting on a paint device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WPainter_a778dd28ce072446a3fed66abec04abc6}{is\+Active}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this painter is active on a paint device. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WPainter_a50beb0c8cb77c12e2dee807e4fe4bcb4}{end}} ()
+\begin{DoxyCompactList}\small\item\em Ends painting. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}} $\ast$ \mbox{\hyperlink{classWt_1_1WPainter_aae6b14e85ec1926aa60f603cb422ffc8}{device}} () const
+\begin{DoxyCompactList}\small\item\em Returns the device on which this painter is active (or 0 if not active). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_af859825a00ff428e773c2abeb328f078}{set\+Render\+Hint}} (\mbox{\hyperlink{classWt_a38b6fd8709ca4629750f4f641819eac9}{Render\+Hint}} hint, bool on=true)
+\begin{DoxyCompactList}\small\item\em Sets a render hint. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a38b6fd8709ca4629750f4f641819eac9}{Render\+Hint}} $>$ \mbox{\hyperlink{classWt_1_1WPainter_a2aebe42c09c957d70069e487fb71f11a}{render\+Hints}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current render hints. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_aa79220ed9456f67a393009e5c5eea27e}{draw\+Arc}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rectangle, int start\+Angle, int span\+Angle)
+\begin{DoxyCompactList}\small\item\em Draws an arc. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a96c03e411d46cd720f454504f53491bd}{draw\+Arc}} (double x, double y, double width, double height, int start\+Angle, int span\+Angle)
+\begin{DoxyCompactList}\small\item\em Draws an arc. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_aa34b0972745692d55bc03ff1c57f1f4c}{draw\+Chord}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rectangle, int start\+Angle, int span\+Angle)
+\begin{DoxyCompactList}\small\item\em Draws a chord. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_ac8735155d03ab0332a66880e251b0fc2}{draw\+Chord}} (double x, double y, double width, double height, int start\+Angle, int span\+Angle)
+\begin{DoxyCompactList}\small\item\em Draws a chord. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a5a1969356a8edae0cdd3abfc141082a7}{draw\+Ellipse}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rectangle)
+\begin{DoxyCompactList}\small\item\em Draws an ellipse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_ac46f725e54280bd6ace0e941eced790c}{draw\+Ellipse}} (double x, double y, double width, double height)
+\begin{DoxyCompactList}\small\item\em Draws an ellipse. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_ae36e5ce0c6a324ec83ebbc397a513202}{draw\+Image}} (const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&point, const \mbox{\hyperlink{classWt_1_1WPainter_1_1Image}{Image}} \&image)
+\begin{DoxyCompactList}\small\item\em Draws an image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_ad69c06dbcb10d8f12bce1c369ae34c31}{draw\+Image}} (const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&point, const \mbox{\hyperlink{classWt_1_1WPainter_1_1Image}{Image}} \&image, const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&source\+Rect)
+\begin{DoxyCompactList}\small\item\em Draws part of an image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_aaf6ea6a37b0fd8244d1b7afa3c24b55c}{draw\+Image}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rect, const \mbox{\hyperlink{classWt_1_1WPainter_1_1Image}{Image}} \&image)
+\begin{DoxyCompactList}\small\item\em Draws an image inside a rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a58a14d4610582eed6c76e0bda6117e3d}{draw\+Image}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rect, const \mbox{\hyperlink{classWt_1_1WPainter_1_1Image}{Image}} \&image, const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&source\+Rect)
+\begin{DoxyCompactList}\small\item\em Draws part of an image inside a rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a508b7828bbbf5805838a30a830c34f36}{draw\+Image}} (double x, double y, const \mbox{\hyperlink{classWt_1_1WPainter_1_1Image}{Image}} \&image, double sx=0, double sy=0, double sw=-\/1, double sh=-\/1)
+\begin{DoxyCompactList}\small\item\em Draws part of an image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a259601487cb2ec23a2f6f3d64c0c5913}{draw\+Line}} (const \mbox{\hyperlink{classWt_1_1WLineF}{W\+LineF}} \&line)
+\begin{DoxyCompactList}\small\item\em Draws a line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a1c9ad3f225f7ca93800431adfc5731f0}{draw\+Line}} (const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&p1, const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&p2)
+\begin{DoxyCompactList}\small\item\em Draws a line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_ab596b1cfa230d37e9c429adde84d5985}{draw\+Line}} (double x1, double y1, double x2, double y2)
+\begin{DoxyCompactList}\small\item\em Draws a line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a98452645f922921af971d54dc5da1801}{draw\+Lines}} (const W\+T\+\_\+\+A\+R\+R\+AY \mbox{\hyperlink{classWt_1_1WLineF}{W\+LineF}} $\ast$lines, int line\+Count)
+\begin{DoxyCompactList}\small\item\em Draws an array of lines. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a6727bd2dc0cf4eec2eb014751aa6712a}{draw\+Lines}} (const W\+T\+\_\+\+A\+R\+R\+AY \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} $\ast$point\+Pairs, int line\+Count)
+\begin{DoxyCompactList}\small\item\em Draws an array of lines. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_aebfb0fc62a58789f7b21650485ef9985}{draw\+Lines}} (const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WLineF}{W\+LineF}} $>$ \&lines)
+\begin{DoxyCompactList}\small\item\em Draws an array of lines. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a762442b01f5603492e9673cb84081596}{draw\+Lines}} (const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} $>$ \&point\+Pairs)
+\begin{DoxyCompactList}\small\item\em Draws an array of lines. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a2ef57868d6fbf99a901cbe1f29723b50}{draw\+Path}} (const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&path)
+\begin{DoxyCompactList}\small\item\em Draws a (complex) path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_abccad19493d7461ca08c9e50ad7326f1}{draw\+Stencil\+Along\+Path}} (const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&stencil, const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&path, bool soft\+Clipping=false)
+\begin{DoxyCompactList}\small\item\em Draws a \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} on every anchor point of a path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a5c46ed008445a80feb258774a3af3b62}{draw\+Pie}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rectangle, int start\+Angle, int span\+Angle)
+\begin{DoxyCompactList}\small\item\em Draws a pie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a3d8bc8608db5dad5e8d499b0fed58b85}{draw\+Pie}} (double x, double y, double width, double height, int start\+Angle, int span\+Angle)
+\begin{DoxyCompactList}\small\item\em Draws a pie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_aca2e989c3cd9bc635e6d13786cc73119}{draw\+Point}} (const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&position)
+\begin{DoxyCompactList}\small\item\em Draws a point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a9159b8ae72494b4973642143296daa96}{draw\+Point}} (double x, double y)
+\begin{DoxyCompactList}\small\item\em Draws a point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a2d169ea1842bbe628093fa52e9c07c1c}{draw\+Points}} (const W\+T\+\_\+\+A\+R\+R\+AY \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} $\ast$points, int point\+Count)
+\begin{DoxyCompactList}\small\item\em Draws a number of points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_abe6acaa34defd1045f57e5aecc750948}{draw\+Polygon}} (const W\+T\+\_\+\+A\+R\+R\+AY \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} $\ast$points, int point\+Count)
+\begin{DoxyCompactList}\small\item\em Draws a polygon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_af3b0631face3f01c6be3167c919b224d}{draw\+Polyline}} (const W\+T\+\_\+\+A\+R\+R\+AY \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} $\ast$points, int point\+Count)
+\begin{DoxyCompactList}\small\item\em Draws a polyline. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_ad1fcb68312327194b3dccc67adc3bd33}{draw\+Rect}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rectangle)
+\begin{DoxyCompactList}\small\item\em Draws a rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a368289c57968343089d82c26acc62ca6}{draw\+Rect}} (double x, double y, double width, double height)
+\begin{DoxyCompactList}\small\item\em Draws a rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_ae5dd39b9d23b222a3d8123eeeb73e4e3}{draw\+Rects}} (const W\+T\+\_\+\+A\+R\+R\+AY \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} $\ast$rectangles, int rect\+Count)
+\begin{DoxyCompactList}\small\item\em Draws a number of rectangles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a36818dd1aea0c8f50dc0385dca39a6b8}{draw\+Rects}} (const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} $>$ \&rectangles)
+\begin{DoxyCompactList}\small\item\em Draws a number of rectangles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_afc7fee7dc4d839f78c1c99244da4f486}{draw\+Text}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rect, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment\+Flags, \mbox{\hyperlink{classWt_a3bf85f6b385349dadfa7e205a39ec419}{Text\+Flag}} text\+Flag, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text, const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} $\ast$clip\+Point=nullptr)
+\begin{DoxyCompactList}\small\item\em Draws text. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPainter_ace401602d0fb867500a02dfd33214d4f}\label{classWt_1_1WPainter_ace401602d0fb867500a02dfd33214d4f}} 
+void {\bfseries draw\+Text\+On\+Path} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rect, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment\+Flags, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&text, const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \&transform, const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&path, double angle, double line\+Height, bool soft\+Clipping)
+\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a8565a90a75207b318a2ff608e19df806}{draw\+Text}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rectangle, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ flags, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text)
+\begin{DoxyCompactList}\small\item\em Draws text. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_ae2a04838933687fd0791e1187b28fdca}{draw\+Text}} (double x, double y, double width, double height, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ flags, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text)
+\begin{DoxyCompactList}\small\item\em Draws text. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_aa6a327223e1b5b09db4dfb20bd00ce99}{draw\+Text}} (double x, double y, double width, double height, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment\+Flags, \mbox{\hyperlink{classWt_a3bf85f6b385349dadfa7e205a39ec419}{Text\+Flag}} text\+Flag, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text)
+\begin{DoxyCompactList}\small\item\em Draws text. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a761f8f85d14fe171fcc91823bc4dab5c}{fill\+Path}} (const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&path, const \mbox{\hyperlink{classWt_1_1WBrush}{W\+Brush}} \&\mbox{\hyperlink{classWt_1_1WPainter_aab2962a34bb1fe9bf9cd4328999203fe}{brush}})
+\begin{DoxyCompactList}\small\item\em Fills a (complex) path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a4b9ce79b5abd8584fd2cf85876ab140f}{fill\+Rect}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rectangle, const \mbox{\hyperlink{classWt_1_1WBrush}{W\+Brush}} \&\mbox{\hyperlink{classWt_1_1WPainter_aab2962a34bb1fe9bf9cd4328999203fe}{brush}})
+\begin{DoxyCompactList}\small\item\em Fills a rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_ac99ee3d64df9742e167c01d750c899be}{fill\+Rect}} (double x, double y, double width, double height, const \mbox{\hyperlink{classWt_1_1WBrush}{W\+Brush}} \&\mbox{\hyperlink{classWt_1_1WPainter_aab2962a34bb1fe9bf9cd4328999203fe}{brush}})
+\begin{DoxyCompactList}\small\item\em Fills a rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a93cb3a37591c6dde4f006e8eada2d1f8}{stroke\+Path}} (const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&path, const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \&\mbox{\hyperlink{classWt_1_1WPainter_a990bd8bef109cb8d97768b50975ca832}{pen}})
+\begin{DoxyCompactList}\small\item\em Strokes a path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a9c727b82879ab055f3fcf4c9cdfc1f8d}{set\+Shadow}} (const \mbox{\hyperlink{classWt_1_1WShadow}{W\+Shadow}} \&\mbox{\hyperlink{classWt_1_1WPainter_aaa5aed8b454e39316c4b78e0ffe57dff}{shadow}})
+\begin{DoxyCompactList}\small\item\em Sets a shadow effect. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WShadow}{W\+Shadow}} \& \mbox{\hyperlink{classWt_1_1WPainter_aaa5aed8b454e39316c4b78e0ffe57dff}{shadow}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current shadow effect. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_ad63f01349e9163992d440e9aa85f916b}{set\+Brush}} (const \mbox{\hyperlink{classWt_1_1WBrush}{W\+Brush}} \&\mbox{\hyperlink{classWt_1_1WPainter_aab2962a34bb1fe9bf9cd4328999203fe}{brush}})
+\begin{DoxyCompactList}\small\item\em Sets the fill style. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_ad9cac6c8eaba94226f54343cde9676ea}{set\+Font}} (const \mbox{\hyperlink{classWt_1_1WFont}{W\+Font}} \&\mbox{\hyperlink{classWt_1_1WPainter_a4d4278fb25293129d93b20cdab059827}{font}})
+\begin{DoxyCompactList}\small\item\em Sets the font. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a159ebf24df790e409d4060f7bd4aa725}{set\+Pen}} (const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \&\mbox{\hyperlink{classWt_1_1WPainter_a990bd8bef109cb8d97768b50975ca832}{pen}})
+\begin{DoxyCompactList}\small\item\em Sets the pen. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WBrush}{W\+Brush}} \& \mbox{\hyperlink{classWt_1_1WPainter_aab2962a34bb1fe9bf9cd4328999203fe}{brush}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current brush. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WFont}{W\+Font}} \& \mbox{\hyperlink{classWt_1_1WPainter_a4d4278fb25293129d93b20cdab059827}{font}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current font. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \& \mbox{\hyperlink{classWt_1_1WPainter_a990bd8bef109cb8d97768b50975ca832}{pen}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current pen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a4163898f999d4ecafec52c3f8890f380}{set\+Clipping}} (bool enable)
+\begin{DoxyCompactList}\small\item\em Enables or disables clipping. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WPainter_a98d222b9577e75b17fc4629e4caeb387}{has\+Clipping}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether clipping is enabled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a65be44d995c5f06f065f68d15c8889a5}{set\+Clip\+Path}} (const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&\mbox{\hyperlink{classWt_1_1WPainter_a255605d5f7c6425192cdd33ef64904b6}{clip\+Path}})
+\begin{DoxyCompactList}\small\item\em Sets the clip path. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \mbox{\hyperlink{classWt_1_1WPainter_a255605d5f7c6425192cdd33ef64904b6}{clip\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Returns the clip path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_ac0cc4dedd2cf8801e12d7550bce2a2c1}{reset\+Transform}} ()
+\begin{DoxyCompactList}\small\item\em Resets the current transformation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_ab6d68d362e43f8e8df7e4400e2324d8e}{rotate}} (double angle)
+\begin{DoxyCompactList}\small\item\em Rotates the logical coordinate system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a0167a7c8c8d72ee0cca6f735b65a7938}{scale}} (double sx, double sy)
+\begin{DoxyCompactList}\small\item\em Scales the logical coordinate system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_aaf5755eca15cb6e73fc24edf3bbd5758}{translate}} (const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&offset)
+\begin{DoxyCompactList}\small\item\em Translates the origin of the logical coordinate system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_aef98cc3b4fa2da57efc9721a8bd2a6e5}{translate}} (double dx, double dy)
+\begin{DoxyCompactList}\small\item\em Translates the origin of the logical coordinate system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_ac0aa03db16f695b9bec3ef38588a5f3e}{set\+World\+Transform}} (const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \&matrix, bool combine=false)
+\begin{DoxyCompactList}\small\item\em Sets a transformation for the logical coordinate system. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \& \mbox{\hyperlink{classWt_1_1WPainter_a0a509496b00579ec993d91850c44e05d}{world\+Transform}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current world transformation matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a0262e162bb4be43f800c6c7b784c8d7a}{save}} ()
+\begin{DoxyCompactList}\small\item\em Saves the current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a3fd8699e88d695cfd10043d18a666991}{restore}} ()
+\begin{DoxyCompactList}\small\item\em Returns the last save state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a70dcfbed2b7bdeb39ddbc7f213b5a9ce}{set\+View\+Port}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&\mbox{\hyperlink{classWt_1_1WPainter_a08c013cf3c07170319c48318bc586dc0}{view\+Port}})
+\begin{DoxyCompactList}\small\item\em Sets the viewport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_afd9272b6a583b273a64105e88fb65e42}{set\+View\+Port}} (double x, double y, double width, double height)
+\begin{DoxyCompactList}\small\item\em Sets the viewport. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \mbox{\hyperlink{classWt_1_1WPainter_a08c013cf3c07170319c48318bc586dc0}{view\+Port}} () const
+\begin{DoxyCompactList}\small\item\em Returns the viewport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_af223eea7db8164e404f6725705569fa6}{set\+Window}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&\mbox{\hyperlink{classWt_1_1WPainter_a8d3d36b7be094fad53559c44239543dc}{window}})
+\begin{DoxyCompactList}\small\item\em Sets the window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPainter_a7d56a3fb66457c02584aa4bed8ce6023}{set\+Window}} (double x, double y, double width, double height)
+\begin{DoxyCompactList}\small\item\em Sets the window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \mbox{\hyperlink{classWt_1_1WPainter_a8d3d36b7be094fad53559c44239543dc}{window}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \mbox{\hyperlink{classWt_1_1WPainter_a4e330319179120cb1e7dea582a39ebc3}{combined\+Transform}} () const
+\begin{DoxyCompactList}\small\item\em Returns the combined transformation matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPainter_aa39e735fd2ced163170e4cf0bd96b7d4}\label{classWt_1_1WPainter_aa39e735fd2ced163170e4cf0bd96b7d4}} 
+const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \& {\bfseries clip\+Path\+Transform} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainter_a084c6bc10dac706039fbe71031cf8b68}\label{classWt_1_1WPainter_a084c6bc10dac706039fbe71031cf8b68}} 
+\mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} {\bfseries normalized\+Pen\+Width} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&pen\+Width, bool correct\+Cosmetic) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainter_acfdb04e4ee12f8789756ecc938eb8249}\label{classWt_1_1WPainter_acfdb04e4ee12f8789756ecc938eb8249}} 
+{\bfseries W\+Painter} (const \mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} \&)
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainter_a4b38a88b79b57a3d5238626b365fa6e5}\label{classWt_1_1WPainter_a4b38a88b79b57a3d5238626b365fa6e5}} 
+\mbox{\hyperlink{structWt_1_1WPainter_1_1State}{State}} \& {\bfseries s} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainter_adca0de420e0a187cb55eb647ec1e50e8}\label{classWt_1_1WPainter_adca0de420e0a187cb55eb647ec1e50e8}} 
+const \mbox{\hyperlink{structWt_1_1WPainter_1_1State}{State}} \& {\bfseries s} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainter_acdbd9551e4e8e85a2a9630a802143039}\label{classWt_1_1WPainter_acdbd9551e4e8e85a2a9630a802143039}} 
+void {\bfseries recalculate\+View\+Transform} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainter_ada8c4e4a16ec6feff5de59c5ad8d4000}\label{classWt_1_1WPainter_ada8c4e4a16ec6feff5de59c5ad8d4000}} 
+void {\bfseries draw\+Multiline\+Text} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rect, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment\+Flags, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainter_a32d07516712b80fa55d8dc40e6ff9f09}\label{classWt_1_1WPainter_a32d07516712b80fa55d8dc40e6ff9f09}} 
+\mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}} $\ast$ {\bfseries device\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainter_ae420f0f7d7c222e2b81131c5cba8de1d}\label{classWt_1_1WPainter_ae420f0f7d7c222e2b81131c5cba8de1d}} 
+\mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} {\bfseries view\+Port\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainter_a01042e8ce5c6e2562c2be34689d33061}\label{classWt_1_1WPainter_a01042e8ce5c6e2562c2be34689d33061}} 
+\mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} {\bfseries window\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainter_a7fc78f1860c0fb2ab030c786af379731}\label{classWt_1_1WPainter_a7fc78f1860c0fb2ab030c786af379731}} 
+\mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} {\bfseries view\+Transform\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPainter_a70e1e7de379e694c7ed5d5b83c278f59}\label{classWt_1_1WPainter_a70e1e7de379e694c7ed5d5b83c278f59}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1WPainter_1_1State}{State}} $>$ {\bfseries state\+Stack\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Vector graphics painting class. 
+
+The painter class provides a vector graphics interface for painting. It needs to be used in conjunction with a \mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}}, onto which it paints. To start painting on a device, either pass the device through the constructor, or use \mbox{\hyperlink{classWt_1_1WPainter_a6b81663b5599f0736ae5099ac7325d44}{begin()}}.
+
+A typical use is to instantiate a W\+Painter from within a specialized \mbox{\hyperlink{classWt_1_1WPaintedWidget_ad8ce22eff41754c8616f45851f57fb1a}{W\+Painted\+Widget\+::paint\+Event()}} implementation, to paint on the given paint device, but you can also use a painter to paint directly to a particular paint device of choice, for example to create S\+VG, P\+DF or P\+NG images (as resources).
+
+The painter maintains state such as the current \mbox{\hyperlink{classWt_1_1WPainter_a159ebf24df790e409d4060f7bd4aa725}{pen}}, \mbox{\hyperlink{classWt_1_1WPainter_ad63f01349e9163992d440e9aa85f916b}{brush}}, \mbox{\hyperlink{classWt_1_1WPainter_ad9cac6c8eaba94226f54343cde9676ea}{font}}, \mbox{\hyperlink{classWt_1_1WPainter_aaa5aed8b454e39316c4b78e0ffe57dff}{shadow}}, \mbox{\hyperlink{classWt_1_1WPainter_a0a509496b00579ec993d91850c44e05d}{transformation}} and clipping settings (see \mbox{\hyperlink{classWt_1_1WPainter_a4163898f999d4ecafec52c3f8890f380}{set\+Clipping()}} and \mbox{\hyperlink{classWt_1_1WPainter_a65be44d995c5f06f065f68d15c8889a5}{set\+Clip\+Path()}}). A particular state can be saved using \mbox{\hyperlink{classWt_1_1WPainter_a0262e162bb4be43f800c6c7b784c8d7a}{save()}} and later restored using \mbox{\hyperlink{classWt_1_1WPainter_a3fd8699e88d695cfd10043d18a666991}{restore()}}.
+
+The painting system distinguishes between device coordinates, logical coordinates, and local coordinates. The device coordinate system ranges from (0, 0) in the top left corner of the device, to (device-\/$>$width().to\+Pixels(), device-\/$>$height().to\+Pixels()) for the bottom right corner. The logical coordinate system defines a coordinate system that may be chosen independent of the geometry of the device, which is convenient to make abstraction of the actual device size. Finally, the current local coordinate system may be different from the logical coordinate system because of a transformation set (using \mbox{\hyperlink{classWt_1_1WPainter_aaf5755eca15cb6e73fc24edf3bbd5758}{translate()}}, \mbox{\hyperlink{classWt_1_1WPainter_ab6d68d362e43f8e8df7e4400e2324d8e}{rotate()}}, and \mbox{\hyperlink{classWt_1_1WPainter_a0167a7c8c8d72ee0cca6f735b65a7938}{scale()}}). Initially, the local coordinate system coincides with the logical coordinate system, which coincides with the device coordinate system.
+
+The device coordinates are defined in terms of pixels. Even though most underlying devices are actual vector graphics formats, when used in conjunction with a \mbox{\hyperlink{classWt_1_1WPaintedWidget}{W\+Painted\+Widget}}, these vector graphics are rendered by the browser onto a pixel-\/based canvas (like the rest of the user-\/interface). The coordinates are defined such that integer values correspond to an imaginary raster which separates the individual pixels, as in the figure below.
+
+
+
+As a consequence, to avoid anti-\/aliasing effects when drawing straight lines of width one pixel, you will need to use vertices that indicate the middle of a pixel to get a crisp one-\/pixel wide line, as in the example figure.
+
+By setting a \mbox{\hyperlink{classWt_1_1WPainter_a08c013cf3c07170319c48318bc586dc0}{view\+Port()}} and a \mbox{\hyperlink{classWt_1_1WPainter_a8d3d36b7be094fad53559c44239543dc}{window()}}, a view\+Port transformation is defined which maps logical coordinates onto device coordinates. By changing the world transformation (using \mbox{\hyperlink{classWt_1_1WPainter_ac0aa03db16f695b9bec3ef38588a5f3e}{set\+World\+Transform()}}, or \mbox{\hyperlink{classWt_1_1WPainter_aaf5755eca15cb6e73fc24edf3bbd5758}{translate()}}, \mbox{\hyperlink{classWt_1_1WPainter_ab6d68d362e43f8e8df7e4400e2324d8e}{rotate()}}, \mbox{\hyperlink{classWt_1_1WPainter_a0167a7c8c8d72ee0cca6f735b65a7938}{scale()}} operations), it is defined how current local coordinates map onto logical coordinates.
+
+The painter provides support for clipping using an arbitrary \mbox{\hyperlink{classWt_1_1WPainterPath}{path}}, but not that the W\+Vml\+Image paint device only has limited support for clipping.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPaintedWidget_ad8ce22eff41754c8616f45851f57fb1a}{W\+Painted\+Widget\+::paint\+Event(\+W\+Paint\+Device $\ast$)}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WPainter_a420b1e54536d4815534f31208a825b54}\label{classWt_1_1WPainter_a420b1e54536d4815534f31208a825b54}} 
+\index{Wt::WPainter@{Wt::WPainter}!WPainter@{WPainter}}
+\index{WPainter@{WPainter}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{WPainter()}{WPainter()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Painter\+::\+W\+Painter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Before painting, you must invoke \mbox{\hyperlink{classWt_1_1WPainter_a6b81663b5599f0736ae5099ac7325d44}{begin(\+W\+Paint\+Device $\ast$)}} on a paint device.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_aa9e93aac4be32b5c0943360d9cf8c1cc}{W\+Painter(\+W\+Paint\+Device $\ast$)}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WPainter_a6b81663b5599f0736ae5099ac7325d44}\label{classWt_1_1WPainter_a6b81663b5599f0736ae5099ac7325d44}} 
+\index{Wt::WPainter@{Wt::WPainter}!begin@{begin}}
+\index{begin@{begin}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Painter\+::begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}} $\ast$}]{device }\end{DoxyParamCaption})}
+
+
+
+Begins painting on a paint device. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a50beb0c8cb77c12e2dee807e4fe4bcb4}{end()}}, \mbox{\hyperlink{classWt_1_1WPainter_a778dd28ce072446a3fed66abec04abc6}{is\+Active()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_aab2962a34bb1fe9bf9cd4328999203fe}\label{classWt_1_1WPainter_aab2962a34bb1fe9bf9cd4328999203fe}} 
+\index{Wt::WPainter@{Wt::WPainter}!brush@{brush}}
+\index{brush@{brush}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{brush()}{brush()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WBrush}{W\+Brush}}\& Wt\+::\+W\+Painter\+::brush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current brush. 
+
+Returns the brush style that is currently used for filling.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_ad63f01349e9163992d440e9aa85f916b}{set\+Brush(const W\+Brush\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a255605d5f7c6425192cdd33ef64904b6}\label{classWt_1_1WPainter_a255605d5f7c6425192cdd33ef64904b6}} 
+\index{Wt::WPainter@{Wt::WPainter}!clipPath@{clipPath}}
+\index{clipPath@{clipPath}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{clipPath()}{clipPath()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} Wt\+::\+W\+Painter\+::clip\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the clip path. 
+
+The clip path is returned as it was defined\+: in the local coordinates at time of definition.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a65be44d995c5f06f065f68d15c8889a5}{set\+Clip\+Path(const W\+Painter\+Path\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a4e330319179120cb1e7dea582a39ebc3}\label{classWt_1_1WPainter_a4e330319179120cb1e7dea582a39ebc3}} 
+\index{Wt::WPainter@{Wt::WPainter}!combinedTransform@{combinedTransform}}
+\index{combinedTransform@{combinedTransform}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{combinedTransform()}{combinedTransform()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} Wt\+::\+W\+Painter\+::combined\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the combined transformation matrix. 
+
+Returns the transformation matrix that maps coordinates to device coordinates. It is the combination of the current world transformation (which defines the transformation within the logical coordinate system) and the window/viewport transformation (which transforms logical coordinates to device coordinates).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_ac0aa03db16f695b9bec3ef38588a5f3e}{set\+World\+Transform()}}, \mbox{\hyperlink{classWt_1_1WPainter_a70dcfbed2b7bdeb39ddbc7f213b5a9ce}{set\+View\+Port()}}, \mbox{\hyperlink{classWt_1_1WPainter_af223eea7db8164e404f6725705569fa6}{set\+Window()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_aae6b14e85ec1926aa60f603cb422ffc8}\label{classWt_1_1WPainter_aae6b14e85ec1926aa60f603cb422ffc8}} 
+\index{Wt::WPainter@{Wt::WPainter}!device@{device}}
+\index{device@{device}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{device()}{device()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WPaintDevice}{W\+Paint\+Device}}$\ast$ Wt\+::\+W\+Painter\+::device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the device on which this painter is active (or 0 if not active). 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a6b81663b5599f0736ae5099ac7325d44}{begin(\+W\+Paint\+Device $\ast$)}}, \mbox{\hyperlink{classWt_1_1WPainter_aa9e93aac4be32b5c0943360d9cf8c1cc}{W\+Painter(\+W\+Paint\+Device $\ast$)}}, \mbox{\hyperlink{classWt_1_1WPainter_a778dd28ce072446a3fed66abec04abc6}{is\+Active()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_aa79220ed9456f67a393009e5c5eea27e}\label{classWt_1_1WPainter_aa79220ed9456f67a393009e5c5eea27e}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawArc@{drawArc}}
+\index{drawArc@{drawArc}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawArc()}{drawArc()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Arc (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rectangle,  }\item[{int}]{start\+Angle,  }\item[{int}]{span\+Angle }\end{DoxyParamCaption})}
+
+
+
+Draws an arc. 
+
+Draws an arc using the current pen, and fills using the current brush.
+
+The arc is defined as a segment from an ellipse, which fits in the {\itshape rectangle}. The segment starts at {\ttfamily start\+Angle}, and spans an angle given by {\ttfamily span\+Angle}. These angles have as unit 1/16th of a degree, and are measured counter-\/clockwise starting from the 3 o\textquotesingle{}clock position.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a5a1969356a8edae0cdd3abfc141082a7}{draw\+Ellipse(const W\+Rect\+F\&)}}, \mbox{\hyperlink{classWt_1_1WPainter_aa34b0972745692d55bc03ff1c57f1f4c}{draw\+Chord(const W\+Rect\+F\&, int, int)}} 
+
+\mbox{\hyperlink{classWt_1_1WPainter_a96c03e411d46cd720f454504f53491bd}{draw\+Arc(double, double, double, double, int, int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a96c03e411d46cd720f454504f53491bd}\label{classWt_1_1WPainter_a96c03e411d46cd720f454504f53491bd}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawArc@{drawArc}}
+\index{drawArc@{drawArc}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawArc()}{drawArc()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Arc (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{width,  }\item[{double}]{height,  }\item[{int}]{start\+Angle,  }\item[{int}]{span\+Angle }\end{DoxyParamCaption})}
+
+
+
+Draws an arc. 
+
+This is an overloaded method for convenience.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_aa79220ed9456f67a393009e5c5eea27e}{draw\+Arc(const W\+Rect\+F\&, int, int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_aa34b0972745692d55bc03ff1c57f1f4c}\label{classWt_1_1WPainter_aa34b0972745692d55bc03ff1c57f1f4c}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawChord@{drawChord}}
+\index{drawChord@{drawChord}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawChord()}{drawChord()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Chord (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rectangle,  }\item[{int}]{start\+Angle,  }\item[{int}]{span\+Angle }\end{DoxyParamCaption})}
+
+
+
+Draws a chord. 
+
+Draws an arc using the current pen, and connects start and end point with a line. The area is filled using the current brush.
+
+The arc is defined as a segment from an ellipse, which fits in the {\itshape rectangle}. The segment starts at {\ttfamily start\+Angle}, and spans an angle given by {\ttfamily span\+Angle}. These angles have as unit 1/16th of a degree, and are measured counter-\/clockwise starting at 3 o\textquotesingle{}clock.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a5a1969356a8edae0cdd3abfc141082a7}{draw\+Ellipse(const W\+Rect\+F\&)}}, \mbox{\hyperlink{classWt_1_1WPainter_aa79220ed9456f67a393009e5c5eea27e}{draw\+Arc(const W\+Rect\+F\&, int, int)}} 
+
+\mbox{\hyperlink{classWt_1_1WPainter_ac8735155d03ab0332a66880e251b0fc2}{draw\+Chord(double, double, double, double, int, int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_ac8735155d03ab0332a66880e251b0fc2}\label{classWt_1_1WPainter_ac8735155d03ab0332a66880e251b0fc2}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawChord@{drawChord}}
+\index{drawChord@{drawChord}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawChord()}{drawChord()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Chord (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{width,  }\item[{double}]{height,  }\item[{int}]{start\+Angle,  }\item[{int}]{span\+Angle }\end{DoxyParamCaption})}
+
+
+
+Draws a chord. 
+
+This is an overloaded method for convenience.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_aa34b0972745692d55bc03ff1c57f1f4c}{draw\+Chord(const W\+Rect\+F\&, int, int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a5a1969356a8edae0cdd3abfc141082a7}\label{classWt_1_1WPainter_a5a1969356a8edae0cdd3abfc141082a7}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawEllipse@{drawEllipse}}
+\index{drawEllipse@{drawEllipse}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawEllipse()}{drawEllipse()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Ellipse (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rectangle }\end{DoxyParamCaption})}
+
+
+
+Draws an ellipse. 
+
+Draws an ellipse using the current pen and fills it using the current brush.
+
+The ellipse is defined as being bounded by the {\ttfamily rectangle}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_aa79220ed9456f67a393009e5c5eea27e}{draw\+Arc(const W\+Rect\+F\&, int, int)}} 
+
+\mbox{\hyperlink{classWt_1_1WPainter_ac46f725e54280bd6ace0e941eced790c}{draw\+Ellipse(double, double, double, double)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_ac46f725e54280bd6ace0e941eced790c}\label{classWt_1_1WPainter_ac46f725e54280bd6ace0e941eced790c}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawEllipse@{drawEllipse}}
+\index{drawEllipse@{drawEllipse}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawEllipse()}{drawEllipse()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Ellipse (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{width,  }\item[{double}]{height }\end{DoxyParamCaption})}
+
+
+
+Draws an ellipse. 
+
+This is an overloaded method for convenience.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a5a1969356a8edae0cdd3abfc141082a7}{draw\+Ellipse(const W\+Rect\+F\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_ae36e5ce0c6a324ec83ebbc397a513202}\label{classWt_1_1WPainter_ae36e5ce0c6a324ec83ebbc397a513202}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawImage@{drawImage}}
+\index{drawImage@{drawImage}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawImage()}{drawImage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&}]{point,  }\item[{const \mbox{\hyperlink{classWt_1_1WPainter_1_1Image}{Image}} \&}]{image }\end{DoxyParamCaption})}
+
+
+
+Draws an image. 
+
+Draws the {\ttfamily image} so that the top left corner corresponds to {\ttfamily point}.
+
+This is an overloaded method provided for convenience. \mbox{\Hypertarget{classWt_1_1WPainter_ad69c06dbcb10d8f12bce1c369ae34c31}\label{classWt_1_1WPainter_ad69c06dbcb10d8f12bce1c369ae34c31}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawImage@{drawImage}}
+\index{drawImage@{drawImage}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawImage()}{drawImage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&}]{point,  }\item[{const \mbox{\hyperlink{classWt_1_1WPainter_1_1Image}{Image}} \&}]{image,  }\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{source\+Rect }\end{DoxyParamCaption})}
+
+
+
+Draws part of an image. 
+
+Draws the {\ttfamily source\+Rect} rectangle from an image to the location {\ttfamily point}.
+
+This is an overloaded method provided for convenience. \mbox{\Hypertarget{classWt_1_1WPainter_aaf6ea6a37b0fd8244d1b7afa3c24b55c}\label{classWt_1_1WPainter_aaf6ea6a37b0fd8244d1b7afa3c24b55c}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawImage@{drawImage}}
+\index{drawImage@{drawImage}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawImage()}{drawImage()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rect,  }\item[{const \mbox{\hyperlink{classWt_1_1WPainter_1_1Image}{Image}} \&}]{image }\end{DoxyParamCaption})}
+
+
+
+Draws an image inside a rectangle. 
+
+Draws the {\itshape image} inside {\ttfamily rect} (If necessary, the image is scaled to fit into the rectangle).
+
+This is an overloaded method provided for convenience. \mbox{\Hypertarget{classWt_1_1WPainter_a58a14d4610582eed6c76e0bda6117e3d}\label{classWt_1_1WPainter_a58a14d4610582eed6c76e0bda6117e3d}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawImage@{drawImage}}
+\index{drawImage@{drawImage}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawImage()}{drawImage()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rect,  }\item[{const \mbox{\hyperlink{classWt_1_1WPainter_1_1Image}{Image}} \&}]{image,  }\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{source\+Rect }\end{DoxyParamCaption})}
+
+
+
+Draws part of an image inside a rectangle. 
+
+Draws the {\ttfamily source\+Rect} rectangle from an image inside {\ttfamily rect} (If necessary, the image is scaled to fit into the rectangle). \mbox{\Hypertarget{classWt_1_1WPainter_a508b7828bbbf5805838a30a830c34f36}\label{classWt_1_1WPainter_a508b7828bbbf5805838a30a830c34f36}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawImage@{drawImage}}
+\index{drawImage@{drawImage}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawImage()}{drawImage()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Image (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{const \mbox{\hyperlink{classWt_1_1WPainter_1_1Image}{Image}} \&}]{image,  }\item[{double}]{sx = {\ttfamily 0},  }\item[{double}]{sy = {\ttfamily 0},  }\item[{double}]{sw = {\ttfamily -\/1},  }\item[{double}]{sh = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Draws part of an image. 
+
+Draws the {\ttfamily source\+Rect} rectangle with top left corner ({\itshape sx}, {\itshape sy}) and size {\itshape sw} x {\ttfamily sh} from an image to the location ({\itshape x}, {\ttfamily y}). \mbox{\Hypertarget{classWt_1_1WPainter_a259601487cb2ec23a2f6f3d64c0c5913}\label{classWt_1_1WPainter_a259601487cb2ec23a2f6f3d64c0c5913}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawLine@{drawLine}}
+\index{drawLine@{drawLine}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawLine()}{drawLine()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Line (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLineF}{W\+LineF}} \&}]{line }\end{DoxyParamCaption})}
+
+
+
+Draws a line. 
+
+Draws a line using the current pen.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a1c9ad3f225f7ca93800431adfc5731f0}{draw\+Line(const W\+Point\+F\&, const W\+Point\+F\&)}}, \mbox{\hyperlink{classWt_1_1WPainter_ab596b1cfa230d37e9c429adde84d5985}{draw\+Line(double, double, double, double)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a1c9ad3f225f7ca93800431adfc5731f0}\label{classWt_1_1WPainter_a1c9ad3f225f7ca93800431adfc5731f0}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawLine@{drawLine}}
+\index{drawLine@{drawLine}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawLine()}{drawLine()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Line (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&}]{p1,  }\item[{const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&}]{p2 }\end{DoxyParamCaption})}
+
+
+
+Draws a line. 
+
+Draws a line defined by two points.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a259601487cb2ec23a2f6f3d64c0c5913}{draw\+Line(const W\+Line\+F\&)}}, \mbox{\hyperlink{classWt_1_1WPainter_ab596b1cfa230d37e9c429adde84d5985}{draw\+Line(double, double, double, double)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_ab596b1cfa230d37e9c429adde84d5985}\label{classWt_1_1WPainter_ab596b1cfa230d37e9c429adde84d5985}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawLine@{drawLine}}
+\index{drawLine@{drawLine}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawLine()}{drawLine()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Line (\begin{DoxyParamCaption}\item[{double}]{x1,  }\item[{double}]{y1,  }\item[{double}]{x2,  }\item[{double}]{y2 }\end{DoxyParamCaption})}
+
+
+
+Draws a line. 
+
+Draws a line defined by two points.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a259601487cb2ec23a2f6f3d64c0c5913}{draw\+Line(const W\+Line\+F\&)}}, \mbox{\hyperlink{classWt_1_1WPainter_a1c9ad3f225f7ca93800431adfc5731f0}{draw\+Line(const W\+Point\+F\&, const W\+Point\+F\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_aebfb0fc62a58789f7b21650485ef9985}\label{classWt_1_1WPainter_aebfb0fc62a58789f7b21650485ef9985}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawLines@{drawLines}}
+\index{drawLines@{drawLines}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawLines()}{drawLines()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Lines (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WLineF}{W\+LineF}} $>$ \&}]{lines }\end{DoxyParamCaption})}
+
+
+
+Draws an array of lines. 
+
+Draws the lines given in the vector. \mbox{\Hypertarget{classWt_1_1WPainter_a762442b01f5603492e9673cb84081596}\label{classWt_1_1WPainter_a762442b01f5603492e9673cb84081596}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawLines@{drawLines}}
+\index{drawLines@{drawLines}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawLines()}{drawLines()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Lines (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} $>$ \&}]{point\+Pairs }\end{DoxyParamCaption})}
+
+
+
+Draws an array of lines. 
+
+Draws a number of lines that are specified by pairs of begin-\/ and endpoints. The vector should hold a number of points that is a multiple of two. \mbox{\Hypertarget{classWt_1_1WPainter_a98452645f922921af971d54dc5da1801}\label{classWt_1_1WPainter_a98452645f922921af971d54dc5da1801}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawLines@{drawLines}}
+\index{drawLines@{drawLines}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawLines()}{drawLines()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Lines (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+A\+R\+R\+AY \mbox{\hyperlink{classWt_1_1WLineF}{W\+LineF}} $\ast$}]{lines,  }\item[{int}]{line\+Count }\end{DoxyParamCaption})}
+
+
+
+Draws an array of lines. 
+
+Draws the {\ttfamily line\+Count} first lines from the given array of lines. \mbox{\Hypertarget{classWt_1_1WPainter_a6727bd2dc0cf4eec2eb014751aa6712a}\label{classWt_1_1WPainter_a6727bd2dc0cf4eec2eb014751aa6712a}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawLines@{drawLines}}
+\index{drawLines@{drawLines}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawLines()}{drawLines()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Lines (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+A\+R\+R\+AY \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} $\ast$}]{point\+Pairs,  }\item[{int}]{line\+Count }\end{DoxyParamCaption})}
+
+
+
+Draws an array of lines. 
+
+Draws {\ttfamily line\+Count} lines, where each line is specified using a begin and end point that are read from an array. Thus, the {\itshape point\+Pairs} array must have at least 2$\ast${\ttfamily line\+Count} points. \mbox{\Hypertarget{classWt_1_1WPainter_a2ef57868d6fbf99a901cbe1f29723b50}\label{classWt_1_1WPainter_a2ef57868d6fbf99a901cbe1f29723b50}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawPath@{drawPath}}
+\index{drawPath@{drawPath}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawPath()}{drawPath()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Draws a (complex) path. 
+
+Draws and fills the given path using the current pen and brush.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a93cb3a37591c6dde4f006e8eada2d1f8}{stroke\+Path(const W\+Painter\+Path\&, const W\+Pen\&)}}, \mbox{\hyperlink{classWt_1_1WPainter_a761f8f85d14fe171fcc91823bc4dab5c}{fill\+Path(const W\+Painter\+Path\&, const W\+Brush\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a5c46ed008445a80feb258774a3af3b62}\label{classWt_1_1WPainter_a5c46ed008445a80feb258774a3af3b62}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawPie@{drawPie}}
+\index{drawPie@{drawPie}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawPie()}{drawPie()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Pie (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rectangle,  }\item[{int}]{start\+Angle,  }\item[{int}]{span\+Angle }\end{DoxyParamCaption})}
+
+
+
+Draws a pie. 
+
+Draws an arc using the current pen, and connects start and end point with the center of the corresponding ellipse. The area is filled using the current brush.
+
+The arc is defined as a segment from an ellipse, which fits in the {\itshape rectangle}. The segment starts at {\ttfamily start\+Angle}, and spans an angle given by {\ttfamily span\+Angle}. These angles have as unit 1/16th of a degree, and are measured counter-\/clockwise starting at 3 o\textquotesingle{}clock.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a5a1969356a8edae0cdd3abfc141082a7}{draw\+Ellipse(const W\+Rect\+F\&)}}, \mbox{\hyperlink{classWt_1_1WPainter_aa79220ed9456f67a393009e5c5eea27e}{draw\+Arc(const W\+Rect\+F\&, int, int)}} 
+
+\mbox{\hyperlink{classWt_1_1WPainter_a3d8bc8608db5dad5e8d499b0fed58b85}{draw\+Pie(double, double, double, double, int, int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a3d8bc8608db5dad5e8d499b0fed58b85}\label{classWt_1_1WPainter_a3d8bc8608db5dad5e8d499b0fed58b85}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawPie@{drawPie}}
+\index{drawPie@{drawPie}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawPie()}{drawPie()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Pie (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{width,  }\item[{double}]{height,  }\item[{int}]{start\+Angle,  }\item[{int}]{span\+Angle }\end{DoxyParamCaption})}
+
+
+
+Draws a pie. 
+
+This is an overloaded method for convenience.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a5c46ed008445a80feb258774a3af3b62}{draw\+Pie(const W\+Rect\+F\&, int, int)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_aca2e989c3cd9bc635e6d13786cc73119}\label{classWt_1_1WPainter_aca2e989c3cd9bc635e6d13786cc73119}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawPoint@{drawPoint}}
+\index{drawPoint@{drawPoint}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawPoint()}{drawPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&}]{position }\end{DoxyParamCaption})}
+
+
+
+Draws a point. 
+
+Draws a single point using the current pen. This is implemented by drawing a very short line, centered around the given {\ttfamily position}. To get the result of a single point, you should use a pen with a Wt\+::\+Pen\+Cap\+Style\+::\+Square or Wt\+::\+Pen\+Cap\+Style\+::\+Round pen cap style.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a9159b8ae72494b4973642143296daa96}{draw\+Point(double, double)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a9159b8ae72494b4973642143296daa96}\label{classWt_1_1WPainter_a9159b8ae72494b4973642143296daa96}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawPoint@{drawPoint}}
+\index{drawPoint@{drawPoint}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawPoint()}{drawPoint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Point (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+
+
+Draws a point. 
+
+This is an overloaded method for convenience.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_aca2e989c3cd9bc635e6d13786cc73119}{draw\+Point(const W\+Point\+F\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a2d169ea1842bbe628093fa52e9c07c1c}\label{classWt_1_1WPainter_a2d169ea1842bbe628093fa52e9c07c1c}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawPoints@{drawPoints}}
+\index{drawPoints@{drawPoints}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawPoints()}{drawPoints()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Points (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+A\+R\+R\+AY \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} $\ast$}]{points,  }\item[{int}]{point\+Count }\end{DoxyParamCaption})}
+
+
+
+Draws a number of points. 
+
+Draws the {\ttfamily point\+Count} first points from the given array of points.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_aca2e989c3cd9bc635e6d13786cc73119}{draw\+Point(const W\+Point\+F\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_abe6acaa34defd1045f57e5aecc750948}\label{classWt_1_1WPainter_abe6acaa34defd1045f57e5aecc750948}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawPolygon@{drawPolygon}}
+\index{drawPolygon@{drawPolygon}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawPolygon()}{drawPolygon()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Polygon (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+A\+R\+R\+AY \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} $\ast$}]{points,  }\item[{int}]{point\+Count }\end{DoxyParamCaption})}
+
+
+
+Draws a polygon. 
+
+Draws a polygon that is specified by a list of points, using the current pen. The polygon is closed by connecting the last point with the first point, and filled using the current brush.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a2ef57868d6fbf99a901cbe1f29723b50}{draw\+Path(const W\+Painter\+Path\&)}}, \mbox{\hyperlink{classWt_1_1WPainter_af3b0631face3f01c6be3167c919b224d}{draw\+Polyline()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_af3b0631face3f01c6be3167c919b224d}\label{classWt_1_1WPainter_af3b0631face3f01c6be3167c919b224d}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawPolyline@{drawPolyline}}
+\index{drawPolyline@{drawPolyline}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawPolyline()}{drawPolyline()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Polyline (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+A\+R\+R\+AY \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} $\ast$}]{points,  }\item[{int}]{point\+Count }\end{DoxyParamCaption})}
+
+
+
+Draws a polyline. 
+
+Draws a polyline that is specified by a list of points, using the current pen.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a2ef57868d6fbf99a901cbe1f29723b50}{draw\+Path(const W\+Painter\+Path\&)}}, \mbox{\hyperlink{classWt_1_1WPainter_abe6acaa34defd1045f57e5aecc750948}{draw\+Polygon()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_ad1fcb68312327194b3dccc67adc3bd33}\label{classWt_1_1WPainter_ad1fcb68312327194b3dccc67adc3bd33}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawRect@{drawRect}}
+\index{drawRect@{drawRect}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawRect()}{drawRect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Rect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rectangle }\end{DoxyParamCaption})}
+
+
+
+Draws a rectangle. 
+
+Draws and fills a rectangle using the current pen and brush.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a368289c57968343089d82c26acc62ca6}{draw\+Rect(double, double, double, double)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a368289c57968343089d82c26acc62ca6}\label{classWt_1_1WPainter_a368289c57968343089d82c26acc62ca6}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawRect@{drawRect}}
+\index{drawRect@{drawRect}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawRect()}{drawRect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Rect (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{width,  }\item[{double}]{height }\end{DoxyParamCaption})}
+
+
+
+Draws a rectangle. 
+
+This is an overloaded method for convenience.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_ad1fcb68312327194b3dccc67adc3bd33}{draw\+Rect(const W\+Rect\+F\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a36818dd1aea0c8f50dc0385dca39a6b8}\label{classWt_1_1WPainter_a36818dd1aea0c8f50dc0385dca39a6b8}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawRects@{drawRects}}
+\index{drawRects@{drawRects}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawRects()}{drawRects()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Rects (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} $>$ \&}]{rectangles }\end{DoxyParamCaption})}
+
+
+
+Draws a number of rectangles. 
+
+Draws and fills a list of rectangles using the current pen and brush.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_ad1fcb68312327194b3dccc67adc3bd33}{draw\+Rect(const W\+Rect\+F\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_ae5dd39b9d23b222a3d8123eeeb73e4e3}\label{classWt_1_1WPainter_ae5dd39b9d23b222a3d8123eeeb73e4e3}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawRects@{drawRects}}
+\index{drawRects@{drawRects}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawRects()}{drawRects()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Rects (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+A\+R\+R\+AY \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} $\ast$}]{rectangles,  }\item[{int}]{rect\+Count }\end{DoxyParamCaption})}
+
+
+
+Draws a number of rectangles. 
+
+Draws and fills the {\ttfamily rect\+Count} first rectangles from the given array, using the current pen and brush.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_ad1fcb68312327194b3dccc67adc3bd33}{draw\+Rect(const W\+Rect\+F\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_abccad19493d7461ca08c9e50ad7326f1}\label{classWt_1_1WPainter_abccad19493d7461ca08c9e50ad7326f1}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawStencilAlongPath@{drawStencilAlongPath}}
+\index{drawStencilAlongPath@{drawStencilAlongPath}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawStencilAlongPath()}{drawStencilAlongPath()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Stencil\+Along\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&}]{stencil,  }\item[{const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&}]{path,  }\item[{bool}]{soft\+Clipping = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Draws a \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} on every anchor point of a path. 
+
+Draws the first \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} on every anchor point of the second path. When rendering to an H\+T\+ML canvas, this will cause far less Java\+Script to be generated than separate calls to draw\+Path. Also, it\textquotesingle{}s possible for either path to be \mbox{\hyperlink{classWt_1_1WJavaScriptExposableObject_a4e121ccbb14715c33dc1b019b6636156}{Java\+Script bound}} through, e.\+g. applying a Java\+Script bound \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} without deforming the other path. This is used by W\+Cartesian\+Chart to draw data series markers that don\textquotesingle{}t change size when zooming in.
+
+If one of the anchor points of the path is outside of the current clipping area, the stencil will be drawn if soft\+Clipping is disabled, and it will not be drawn when soft\+Clipping is enabled. \mbox{\Hypertarget{classWt_1_1WPainter_afc7fee7dc4d839f78c1c99244da4f486}\label{classWt_1_1WPainter_afc7fee7dc4d839f78c1c99244da4f486}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawText@{drawText}}
+\index{drawText@{drawText}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawText()}{drawText()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Text (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rect,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment\+Flags,  }\item[{\mbox{\hyperlink{classWt_a3bf85f6b385349dadfa7e205a39ec419}{Text\+Flag}}}]{text\+Flag,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text,  }\item[{const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} $\ast$}]{clip\+Point = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Draws text. 
+
+Draws text using inside the rectangle, using the current font. The text is aligned inside the rectangle following alignment indications given in {\ttfamily flags}. The text is drawn using the current transformation, pen color (\mbox{\hyperlink{classWt_1_1WPainter_a990bd8bef109cb8d97768b50975ca832}{pen()}}) and font settings (\mbox{\hyperlink{classWt_1_1WPainter_a4d4278fb25293129d93b20cdab059827}{font()}}).
+
+Alignment\+Flags is the logical OR of a horizontal and vertical alignment. Orientation\+::\+Horizontal alignment may be one of Alignment\+Flag\+::\+Left, Alignment\+Flag\+::\+Center, or Alignment\+Flag\+::\+Right. Orientation\+::\+Vertical alignment is one of Alignment\+Flag\+::\+Top, Alignment\+Flag\+::\+Middle or Alignment\+Flag\+::\+Bottom.
+
+Text\+Flag determines how the text is rendered in the rectangle. \mbox{\hyperlink{structText}{Text}} can be rendered on one line or by wrapping the words within the rectangle.
+
+If a clip\+Point is provided, the text will not be drawn if the point is outside of the \mbox{\hyperlink{classWt_1_1WPainter_a255605d5f7c6425192cdd33ef64904b6}{clip\+Path()}}.
+
+\begin{DoxyNote}{Note}
+If the clip path is not a polygon, i.\+e. it has rounded segments in it, an approximation will be used instead by having the polygon pass through the control points, and the begin and end point of arcs.
+
+Html\+Canvas\+: on older browsers implementing Html5 canvas, text will be rendered horizontally (unaffected by rotation and unaffected by the scaling component of the transformation matrix). In that case, text is overlayed on top of painted shapes (in D\+OM div\textquotesingle{}s), and is not covered by shapes that are painted after the text. Use the S\+VG and V\+ML renderers (W\+Painted\+Widget\+::inline\+Svg\+Vml) for the most accurate font rendering. Native H\+T\+M\+L5 text rendering is supported on Firefox3+, Chrome2+ and Safari4+.
+
+Text\+Flag\+::\+Word\+Wrap\+: using the Text\+Flag\+::\+Word\+Wrap Text\+Flag is currently only supported by the S\+VG backend. The code generated by the S\+VG backend uses features currently only supported by Inkscape. Inkscape currently supports only Side\+::\+Top vertical alignments. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WPainter_a8565a90a75207b318a2ff608e19df806}\label{classWt_1_1WPainter_a8565a90a75207b318a2ff608e19df806}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawText@{drawText}}
+\index{drawText@{drawText}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawText()}{drawText()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Text (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rectangle,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{flags,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Draws text. 
+
+This is an overloaded method for convenience, it will render text on a single line.
+
+\begin{DoxySeeAlso}{See also}
+draw\+Text(const W\+Rect\+F\&, W\+Flags$<$\+Alignment\+Flag$>$, Text\+Flag text\+Flag, const W\+String\&) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_aa6a327223e1b5b09db4dfb20bd00ce99}\label{classWt_1_1WPainter_aa6a327223e1b5b09db4dfb20bd00ce99}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawText@{drawText}}
+\index{drawText@{drawText}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawText()}{drawText()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Text (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{width,  }\item[{double}]{height,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment\+Flags,  }\item[{\mbox{\hyperlink{classWt_a3bf85f6b385349dadfa7e205a39ec419}{Text\+Flag}}}]{text\+Flag,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Draws text. 
+
+This is an overloaded method for convenience.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_afc7fee7dc4d839f78c1c99244da4f486}{draw\+Text}}(const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}}\& rect, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags$<$\+Alignment\+Flag$>$}} alignment\+Flags, \mbox{\hyperlink{classWt_a3bf85f6b385349dadfa7e205a39ec419}{Text\+Flag}} text\+Flag, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}}\& text) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_ae2a04838933687fd0791e1187b28fdca}\label{classWt_1_1WPainter_ae2a04838933687fd0791e1187b28fdca}} 
+\index{Wt::WPainter@{Wt::WPainter}!drawText@{drawText}}
+\index{drawText@{drawText}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{drawText()}{drawText()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::draw\+Text (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{width,  }\item[{double}]{height,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{flags,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Draws text. 
+
+This is an overloaded method for convenience.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a8565a90a75207b318a2ff608e19df806}{draw\+Text(const W\+Rect\+F\&, W\+Flags$<$\+Alignment\+Flag$>$, const W\+String\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a50beb0c8cb77c12e2dee807e4fe4bcb4}\label{classWt_1_1WPainter_a50beb0c8cb77c12e2dee807e4fe4bcb4}} 
+\index{Wt::WPainter@{Wt::WPainter}!end@{end}}
+\index{end@{end}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Painter\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ends painting. 
+
+\mbox{\Hypertarget{classWt_1_1WPainter_a761f8f85d14fe171fcc91823bc4dab5c}\label{classWt_1_1WPainter_a761f8f85d14fe171fcc91823bc4dab5c}} 
+\index{Wt::WPainter@{Wt::WPainter}!fillPath@{fillPath}}
+\index{fillPath@{fillPath}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{fillPath()}{fillPath()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::fill\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&}]{path,  }\item[{const \mbox{\hyperlink{classWt_1_1WBrush}{W\+Brush}} \&}]{brush }\end{DoxyParamCaption})}
+
+
+
+Fills a (complex) path. 
+
+Like \mbox{\hyperlink{classWt_1_1WPainter_a2ef57868d6fbf99a901cbe1f29723b50}{draw\+Path(const W\+Painter\+Path\&)}}, but does not stroke the path, and fills the path with the given {\ttfamily brush}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a2ef57868d6fbf99a901cbe1f29723b50}{draw\+Path(const W\+Painter\+Path\&)}}, \mbox{\hyperlink{classWt_1_1WPainter_a93cb3a37591c6dde4f006e8eada2d1f8}{stroke\+Path(const W\+Painter\+Path\&, const W\+Pen\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a4b9ce79b5abd8584fd2cf85876ab140f}\label{classWt_1_1WPainter_a4b9ce79b5abd8584fd2cf85876ab140f}} 
+\index{Wt::WPainter@{Wt::WPainter}!fillRect@{fillRect}}
+\index{fillRect@{fillRect}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{fillRect()}{fillRect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::fill\+Rect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rectangle,  }\item[{const \mbox{\hyperlink{classWt_1_1WBrush}{W\+Brush}} \&}]{brush }\end{DoxyParamCaption})}
+
+
+
+Fills a rectangle. 
+
+Like \mbox{\hyperlink{classWt_1_1WPainter_ad1fcb68312327194b3dccc67adc3bd33}{draw\+Rect(const W\+Rect\+F\&)}}, but does not stroke the rect, and fills the rect with the given {\ttfamily brush}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_ad1fcb68312327194b3dccc67adc3bd33}{draw\+Rect(const W\+Rect\+F\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_ac99ee3d64df9742e167c01d750c899be}\label{classWt_1_1WPainter_ac99ee3d64df9742e167c01d750c899be}} 
+\index{Wt::WPainter@{Wt::WPainter}!fillRect@{fillRect}}
+\index{fillRect@{fillRect}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{fillRect()}{fillRect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::fill\+Rect (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{width,  }\item[{double}]{height,  }\item[{const \mbox{\hyperlink{classWt_1_1WBrush}{W\+Brush}} \&}]{brush }\end{DoxyParamCaption})}
+
+
+
+Fills a rectangle. 
+
+This is an overloaded method for convenience.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a4b9ce79b5abd8584fd2cf85876ab140f}{fill\+Rect(const W\+Rect\+F\&, const W\+Brush\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a4d4278fb25293129d93b20cdab059827}\label{classWt_1_1WPainter_a4d4278fb25293129d93b20cdab059827}} 
+\index{Wt::WPainter@{Wt::WPainter}!font@{font}}
+\index{font@{font}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{font()}{font()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WFont}{W\+Font}}\& Wt\+::\+W\+Painter\+::font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current font. 
+
+Returns the font that is currently used for rendering text. The default font is a 10pt sans serif font.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_ad9cac6c8eaba94226f54343cde9676ea}{set\+Font(const W\+Font\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a98d222b9577e75b17fc4629e4caeb387}\label{classWt_1_1WPainter_a98d222b9577e75b17fc4629e4caeb387}} 
+\index{Wt::WPainter@{Wt::WPainter}!hasClipping@{hasClipping}}
+\index{hasClipping@{hasClipping}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{hasClipping()}{hasClipping()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Painter\+::has\+Clipping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether clipping is enabled. 
+
+\begin{DoxyNote}{Note}
+Clipping support is limited for the V\+ML renderer.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a4163898f999d4ecafec52c3f8890f380}{set\+Clipping(bool)}}, \mbox{\hyperlink{classWt_1_1WPainter_a65be44d995c5f06f065f68d15c8889a5}{set\+Clip\+Path(const W\+Painter\+Path\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a778dd28ce072446a3fed66abec04abc6}\label{classWt_1_1WPainter_a778dd28ce072446a3fed66abec04abc6}} 
+\index{Wt::WPainter@{Wt::WPainter}!isActive@{isActive}}
+\index{isActive@{isActive}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{isActive()}{isActive()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Painter\+::is\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether this painter is active on a paint device. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a6b81663b5599f0736ae5099ac7325d44}{begin(\+W\+Paint\+Device $\ast$)}}, \mbox{\hyperlink{classWt_1_1WPainter_a50beb0c8cb77c12e2dee807e4fe4bcb4}{end()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a990bd8bef109cb8d97768b50975ca832}\label{classWt_1_1WPainter_a990bd8bef109cb8d97768b50975ca832}} 
+\index{Wt::WPainter@{Wt::WPainter}!pen@{pen}}
+\index{pen@{pen}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{pen()}{pen()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}}\& Wt\+::\+W\+Painter\+::pen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current pen. 
+
+Returns the pen that is currently used for stroking.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a159ebf24df790e409d4060f7bd4aa725}{set\+Pen(const W\+Pen\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a2aebe42c09c957d70069e487fb71f11a}\label{classWt_1_1WPainter_a2aebe42c09c957d70069e487fb71f11a}} 
+\index{Wt::WPainter@{Wt::WPainter}!renderHints@{renderHints}}
+\index{renderHints@{renderHints}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{renderHints()}{renderHints()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$\mbox{\hyperlink{classWt_a38b6fd8709ca4629750f4f641819eac9}{Render\+Hint}}$>$ Wt\+::\+W\+Painter\+::render\+Hints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current render hints. 
+
+Returns the logical OR of render hints currently set.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_af859825a00ff428e773c2abeb328f078}{set\+Render\+Hint(\+Render\+Hint, bool)}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_ac0cc4dedd2cf8801e12d7550bce2a2c1}\label{classWt_1_1WPainter_ac0cc4dedd2cf8801e12d7550bce2a2c1}} 
+\index{Wt::WPainter@{Wt::WPainter}!resetTransform@{resetTransform}}
+\index{resetTransform@{resetTransform}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{resetTransform()}{resetTransform()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::reset\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the current transformation. 
+
+Resets the current transformation to the identity transformation matrix, so that the logical coordinate system coincides with the device coordinate system. \mbox{\Hypertarget{classWt_1_1WPainter_a3fd8699e88d695cfd10043d18a666991}\label{classWt_1_1WPainter_a3fd8699e88d695cfd10043d18a666991}} 
+\index{Wt::WPainter@{Wt::WPainter}!restore@{restore}}
+\index{restore@{restore}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{restore()}{restore()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::restore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the last save state. 
+
+Pops the last saved state from the state stack.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a0262e162bb4be43f800c6c7b784c8d7a}{save()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_ab6d68d362e43f8e8df7e4400e2324d8e}\label{classWt_1_1WPainter_ab6d68d362e43f8e8df7e4400e2324d8e}} 
+\index{Wt::WPainter@{Wt::WPainter}!rotate@{rotate}}
+\index{rotate@{rotate}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::rotate (\begin{DoxyParamCaption}\item[{double}]{angle }\end{DoxyParamCaption})}
+
+
+
+Rotates the logical coordinate system. 
+
+Rotates the logical coordinate system around its origin. The {\ttfamily angle} is specified in degrees, and positive values are clock-\/wise.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a0167a7c8c8d72ee0cca6f735b65a7938}{scale(double, double)}}, \mbox{\hyperlink{classWt_1_1WPainter_aef98cc3b4fa2da57efc9721a8bd2a6e5}{translate(double, double)}}, \mbox{\hyperlink{classWt_1_1WPainter_ac0cc4dedd2cf8801e12d7550bce2a2c1}{reset\+Transform()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a0262e162bb4be43f800c6c7b784c8d7a}\label{classWt_1_1WPainter_a0262e162bb4be43f800c6c7b784c8d7a}} 
+\index{Wt::WPainter@{Wt::WPainter}!save@{save}}
+\index{save@{save}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Saves the current state. 
+
+A copy of the current state is saved on a stack. This state will may later be restored by popping this state from the stack using \mbox{\hyperlink{classWt_1_1WPainter_a3fd8699e88d695cfd10043d18a666991}{restore()}}.
+
+The state that is saved is the current \mbox{\hyperlink{classWt_1_1WPainter_a159ebf24df790e409d4060f7bd4aa725}{pen}}, \mbox{\hyperlink{classWt_1_1WPainter_ad63f01349e9163992d440e9aa85f916b}{brush}}, \mbox{\hyperlink{classWt_1_1WPainter_ad9cac6c8eaba94226f54343cde9676ea}{font}}, \mbox{\hyperlink{classWt_1_1WPainter_aaa5aed8b454e39316c4b78e0ffe57dff}{shadow}}, \mbox{\hyperlink{classWt_1_1WPainter_a0a509496b00579ec993d91850c44e05d}{transformation}} and clipping settings (see \mbox{\hyperlink{classWt_1_1WPainter_a4163898f999d4ecafec52c3f8890f380}{set\+Clipping()}} and \mbox{\hyperlink{classWt_1_1WPainter_a65be44d995c5f06f065f68d15c8889a5}{set\+Clip\+Path()}}).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a3fd8699e88d695cfd10043d18a666991}{restore()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a0167a7c8c8d72ee0cca6f735b65a7938}\label{classWt_1_1WPainter_a0167a7c8c8d72ee0cca6f735b65a7938}} 
+\index{Wt::WPainter@{Wt::WPainter}!scale@{scale}}
+\index{scale@{scale}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{scale()}{scale()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::scale (\begin{DoxyParamCaption}\item[{double}]{sx,  }\item[{double}]{sy }\end{DoxyParamCaption})}
+
+
+
+Scales the logical coordinate system. 
+
+Scales the logical coordinate system around its origin, by a factor in the X and Y directions.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_ab6d68d362e43f8e8df7e4400e2324d8e}{rotate(double)}}, \mbox{\hyperlink{classWt_1_1WPainter_aef98cc3b4fa2da57efc9721a8bd2a6e5}{translate(double, double)}}, \mbox{\hyperlink{classWt_1_1WPainter_ac0cc4dedd2cf8801e12d7550bce2a2c1}{reset\+Transform()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_ad63f01349e9163992d440e9aa85f916b}\label{classWt_1_1WPainter_ad63f01349e9163992d440e9aa85f916b}} 
+\index{Wt::WPainter@{Wt::WPainter}!setBrush@{setBrush}}
+\index{setBrush@{setBrush}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{setBrush()}{setBrush()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::set\+Brush (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WBrush}{W\+Brush}} \&}]{brush }\end{DoxyParamCaption})}
+
+
+
+Sets the fill style. 
+
+Changes the fills style for subsequent draw operations.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_aab2962a34bb1fe9bf9cd4328999203fe}{brush()}}, \mbox{\hyperlink{classWt_1_1WPainter_a159ebf24df790e409d4060f7bd4aa725}{set\+Pen(const W\+Pen\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a65be44d995c5f06f065f68d15c8889a5}\label{classWt_1_1WPainter_a65be44d995c5f06f065f68d15c8889a5}} 
+\index{Wt::WPainter@{Wt::WPainter}!setClipPath@{setClipPath}}
+\index{setClipPath@{setClipPath}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{setClipPath()}{setClipPath()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::set\+Clip\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&}]{clip\+Path }\end{DoxyParamCaption})}
+
+
+
+Sets the clip path. 
+
+Sets the path that is used for clipping subsequent drawing operations. The clip path is only used when clipping is enabled using \mbox{\hyperlink{classWt_1_1WPainter_a4163898f999d4ecafec52c3f8890f380}{set\+Clipping(bool)}}. The path is specified in local coordinates.
+
+\begin{DoxyNote}{Note}
+Clipping support is limited for the V\+ML renderer.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a255605d5f7c6425192cdd33ef64904b6}{clip\+Path()}}, \mbox{\hyperlink{classWt_1_1WPainter_a4163898f999d4ecafec52c3f8890f380}{set\+Clipping(bool)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a4163898f999d4ecafec52c3f8890f380}\label{classWt_1_1WPainter_a4163898f999d4ecafec52c3f8890f380}} 
+\index{Wt::WPainter@{Wt::WPainter}!setClipping@{setClipping}}
+\index{setClipping@{setClipping}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{setClipping()}{setClipping()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::set\+Clipping (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+Enables or disables clipping. 
+
+Enables are disables clipping for subsequent operations using the current clip path set using \mbox{\hyperlink{classWt_1_1WPainter_a65be44d995c5f06f065f68d15c8889a5}{set\+Clip\+Path()}}.
+
+\begin{DoxyNote}{Note}
+Clipping support is limited for the V\+ML renderer. Only clipping with a rectangle is supported for the V\+ML renderer (see \mbox{\hyperlink{classWt_1_1WPainterPath_a52f1c2008c15cd133e8fb405d8b0466b}{W\+Painter\+Path\+::add\+Rect()}}). The rectangle must, after applying the combined transformation system, be aligned with the window.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a98d222b9577e75b17fc4629e4caeb387}{has\+Clipping()}}, \mbox{\hyperlink{classWt_1_1WPainter_a65be44d995c5f06f065f68d15c8889a5}{set\+Clip\+Path(const W\+Painter\+Path\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_ad9cac6c8eaba94226f54343cde9676ea}\label{classWt_1_1WPainter_ad9cac6c8eaba94226f54343cde9676ea}} 
+\index{Wt::WPainter@{Wt::WPainter}!setFont@{setFont}}
+\index{setFont@{setFont}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{setFont()}{setFont()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::set\+Font (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WFont}{W\+Font}} \&}]{font }\end{DoxyParamCaption})}
+
+
+
+Sets the font. 
+
+Changes the font for subsequent text rendering. \mbox{\hyperlink{classNote}{Note}} that only font sizes that are defined as an explicit size (see Font\+Size\+::\+Fixed\+Size) will render correctly in all devices (S\+VG, V\+ML, and Html\+Canvas).
+
+The list of fonts that will render correctly with V\+ML (on IE$<$9) are limited to the following\+: \href{http://www.ampsoft.net/webdesign-l/WindowsMacFonts.html}{\texttt{ http\+://www.\+ampsoft.\+net/webdesign-\/l/\+Windows\+Mac\+Fonts.\+html}}
+
+Careful, for a font family that contains a space, you need to add quotes, to \mbox{\hyperlink{classWt_1_1WFont_a2eca2f602b67a55ffc6919f69d7b8ac3}{W\+Font\+::set\+Family()}} e.\+g.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{WFont mono;}
+\DoxyCodeLine{mono.setFamily(FontFamily::Monospace, \textcolor{stringliteral}{"'Courier New'"});}
+\DoxyCodeLine{mono.setSize(18);}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a4d4278fb25293129d93b20cdab059827}{font()}}, \mbox{\hyperlink{classWt_1_1WPainter_afc7fee7dc4d839f78c1c99244da4f486}{draw\+Text()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a159ebf24df790e409d4060f7bd4aa725}\label{classWt_1_1WPainter_a159ebf24df790e409d4060f7bd4aa725}} 
+\index{Wt::WPainter@{Wt::WPainter}!setPen@{setPen}}
+\index{setPen@{setPen}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{setPen()}{setPen()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::set\+Pen (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \&}]{pen }\end{DoxyParamCaption})}
+
+
+
+Sets the pen. 
+
+Changes the pen used for stroking subsequent draw operations.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a990bd8bef109cb8d97768b50975ca832}{pen()}}, \mbox{\hyperlink{classWt_1_1WPainter_ad63f01349e9163992d440e9aa85f916b}{set\+Brush(const W\+Brush\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_af859825a00ff428e773c2abeb328f078}\label{classWt_1_1WPainter_af859825a00ff428e773c2abeb328f078}} 
+\index{Wt::WPainter@{Wt::WPainter}!setRenderHint@{setRenderHint}}
+\index{setRenderHint@{setRenderHint}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{setRenderHint()}{setRenderHint()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::set\+Render\+Hint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a38b6fd8709ca4629750f4f641819eac9}{Render\+Hint}}}]{hint,  }\item[{bool}]{on = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Sets a render hint. 
+
+Renderers may ignore particular hints for which they have no support. \mbox{\Hypertarget{classWt_1_1WPainter_a9c727b82879ab055f3fcf4c9cdfc1f8d}\label{classWt_1_1WPainter_a9c727b82879ab055f3fcf4c9cdfc1f8d}} 
+\index{Wt::WPainter@{Wt::WPainter}!setShadow@{setShadow}}
+\index{setShadow@{setShadow}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{setShadow()}{setShadow()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::set\+Shadow (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WShadow}{W\+Shadow}} \&}]{shadow }\end{DoxyParamCaption})}
+
+
+
+Sets a shadow effect. 
+
+The shadow effect is applied to all things drawn (paths, text and images).
+
+\begin{DoxyNote}{Note}
+\mbox{\hyperlink{structWith}{With}} the V\+ML backend (IE), the shadow is not applied to images, and the shadow color is always black; only the opacity (alpha) channel is taken into account. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+Low\+Quality\+Shadows 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a70dcfbed2b7bdeb39ddbc7f213b5a9ce}\label{classWt_1_1WPainter_a70dcfbed2b7bdeb39ddbc7f213b5a9ce}} 
+\index{Wt::WPainter@{Wt::WPainter}!setViewPort@{setViewPort}}
+\index{setViewPort@{setViewPort}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{setViewPort()}{setViewPort()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::set\+View\+Port (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{view\+Port }\end{DoxyParamCaption})}
+
+
+
+Sets the viewport. 
+
+Selects the part of the device that will correspond to the logical coordinate system.
+
+By default, the viewport spans the entire device\+: it is the rectangle (0, 0) to (device-\/$>$width(), device-\/$>$height()). The window defines how the viewport is mapped to logical coordinates.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a08c013cf3c07170319c48318bc586dc0}{view\+Port()}}, \mbox{\hyperlink{classWt_1_1WPainter_af223eea7db8164e404f6725705569fa6}{set\+Window(const W\+Rect\+F\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_afd9272b6a583b273a64105e88fb65e42}\label{classWt_1_1WPainter_afd9272b6a583b273a64105e88fb65e42}} 
+\index{Wt::WPainter@{Wt::WPainter}!setViewPort@{setViewPort}}
+\index{setViewPort@{setViewPort}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{setViewPort()}{setViewPort()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::set\+View\+Port (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{width,  }\item[{double}]{height }\end{DoxyParamCaption})}
+
+
+
+Sets the viewport. 
+
+This is an overloaded method for convenience.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a70dcfbed2b7bdeb39ddbc7f213b5a9ce}{set\+View\+Port(const W\+Rect\+F\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_af223eea7db8164e404f6725705569fa6}\label{classWt_1_1WPainter_af223eea7db8164e404f6725705569fa6}} 
+\index{Wt::WPainter@{Wt::WPainter}!setWindow@{setWindow}}
+\index{setWindow@{setWindow}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{setWindow()}{setWindow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::set\+Window (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{window }\end{DoxyParamCaption})}
+
+
+
+Sets the window. 
+
+Defines the viewport rectangle in logical coordinates, and thus how logical coordinates map onto the view\+Port.
+
+By default, is (0, 0) to (device-\/$>$width(), device-\/$>$height()). Thus, the default window and viewport leave logical coordinates identical to device coordinates.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a8d3d36b7be094fad53559c44239543dc}{window()}}, \mbox{\hyperlink{classWt_1_1WPainter_a70dcfbed2b7bdeb39ddbc7f213b5a9ce}{set\+View\+Port(const W\+Rect\+F\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a7d56a3fb66457c02584aa4bed8ce6023}\label{classWt_1_1WPainter_a7d56a3fb66457c02584aa4bed8ce6023}} 
+\index{Wt::WPainter@{Wt::WPainter}!setWindow@{setWindow}}
+\index{setWindow@{setWindow}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{setWindow()}{setWindow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::set\+Window (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{width,  }\item[{double}]{height }\end{DoxyParamCaption})}
+
+
+
+Sets the window. 
+
+This is an overloaded method for convenience.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_af223eea7db8164e404f6725705569fa6}{set\+Window(const W\+Rect\+F\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_ac0aa03db16f695b9bec3ef38588a5f3e}\label{classWt_1_1WPainter_ac0aa03db16f695b9bec3ef38588a5f3e}} 
+\index{Wt::WPainter@{Wt::WPainter}!setWorldTransform@{setWorldTransform}}
+\index{setWorldTransform@{setWorldTransform}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{setWorldTransform()}{setWorldTransform()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::set\+World\+Transform (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \&}]{matrix,  }\item[{bool}]{combine = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Sets a transformation for the logical coordinate system. 
+
+Sets a new transformation which transforms logical coordinates to device coordinates. When {\ttfamily combine} is {\ttfamily true}, the transformation is combined with the current world transformation matrix.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a0a509496b00579ec993d91850c44e05d}{world\+Transform()}} 
+
+\mbox{\hyperlink{classWt_1_1WPainter_ab6d68d362e43f8e8df7e4400e2324d8e}{rotate(double)}}, \mbox{\hyperlink{classWt_1_1WPainter_a0167a7c8c8d72ee0cca6f735b65a7938}{scale(double, double)}}, \mbox{\hyperlink{classWt_1_1WPainter_aef98cc3b4fa2da57efc9721a8bd2a6e5}{translate(double, double)}} 
+
+\mbox{\hyperlink{classWt_1_1WPainter_ac0cc4dedd2cf8801e12d7550bce2a2c1}{reset\+Transform()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_aaa5aed8b454e39316c4b78e0ffe57dff}\label{classWt_1_1WPainter_aaa5aed8b454e39316c4b78e0ffe57dff}} 
+\index{Wt::WPainter@{Wt::WPainter}!shadow@{shadow}}
+\index{shadow@{shadow}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{shadow()}{shadow()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WShadow}{W\+Shadow}}\& Wt\+::\+W\+Painter\+::shadow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current shadow effect. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a9c727b82879ab055f3fcf4c9cdfc1f8d}{set\+Shadow()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a93cb3a37591c6dde4f006e8eada2d1f8}\label{classWt_1_1WPainter_a93cb3a37591c6dde4f006e8eada2d1f8}} 
+\index{Wt::WPainter@{Wt::WPainter}!strokePath@{strokePath}}
+\index{strokePath@{strokePath}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{strokePath()}{strokePath()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::stroke\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&}]{path,  }\item[{const \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \&}]{pen }\end{DoxyParamCaption})}
+
+
+
+Strokes a path. 
+
+Like \mbox{\hyperlink{classWt_1_1WPainter_a2ef57868d6fbf99a901cbe1f29723b50}{draw\+Path(const W\+Painter\+Path\&)}}, but does not fill the path, and strokes the path with the given {\ttfamily pen}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a2ef57868d6fbf99a901cbe1f29723b50}{draw\+Path(const W\+Painter\+Path\&)}}, \mbox{\hyperlink{classWt_1_1WPainter_a761f8f85d14fe171fcc91823bc4dab5c}{fill\+Path(const W\+Painter\+Path\&, const W\+Brush\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_aaf5755eca15cb6e73fc24edf3bbd5758}\label{classWt_1_1WPainter_aaf5755eca15cb6e73fc24edf3bbd5758}} 
+\index{Wt::WPainter@{Wt::WPainter}!translate@{translate}}
+\index{translate@{translate}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::translate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \&}]{offset }\end{DoxyParamCaption})}
+
+
+
+Translates the origin of the logical coordinate system. 
+
+Translates the origin of the logical coordinate system to a new location relative to the current logical coordinate system.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_aef98cc3b4fa2da57efc9721a8bd2a6e5}{translate(double, double)}}, \mbox{\hyperlink{classWt_1_1WPainter_ab6d68d362e43f8e8df7e4400e2324d8e}{rotate(double)}}, \mbox{\hyperlink{classWt_1_1WPainter_a0167a7c8c8d72ee0cca6f735b65a7938}{scale(double, double)}}, \mbox{\hyperlink{classWt_1_1WPainter_ac0cc4dedd2cf8801e12d7550bce2a2c1}{reset\+Transform()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_aef98cc3b4fa2da57efc9721a8bd2a6e5}\label{classWt_1_1WPainter_aef98cc3b4fa2da57efc9721a8bd2a6e5}} 
+\index{Wt::WPainter@{Wt::WPainter}!translate@{translate}}
+\index{translate@{translate}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Painter\+::translate (\begin{DoxyParamCaption}\item[{double}]{dx,  }\item[{double}]{dy }\end{DoxyParamCaption})}
+
+
+
+Translates the origin of the logical coordinate system. 
+
+Translates the origin of the logical coordinate system to a new location relative to the logical coordinate system.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_aaf5755eca15cb6e73fc24edf3bbd5758}{translate(const W\+Point\+F\& offset)}}, \mbox{\hyperlink{classWt_1_1WPainter_ab6d68d362e43f8e8df7e4400e2324d8e}{rotate(double)}}, \mbox{\hyperlink{classWt_1_1WPainter_a0167a7c8c8d72ee0cca6f735b65a7938}{scale(double, double)}}, \mbox{\hyperlink{classWt_1_1WPainter_ac0cc4dedd2cf8801e12d7550bce2a2c1}{reset\+Transform()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a08c013cf3c07170319c48318bc586dc0}\label{classWt_1_1WPainter_a08c013cf3c07170319c48318bc586dc0}} 
+\index{Wt::WPainter@{Wt::WPainter}!viewPort@{viewPort}}
+\index{viewPort@{viewPort}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{viewPort()}{viewPort()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} Wt\+::\+W\+Painter\+::view\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the viewport. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a70dcfbed2b7bdeb39ddbc7f213b5a9ce}{set\+View\+Port(const W\+Rect\+F\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a8d3d36b7be094fad53559c44239543dc}\label{classWt_1_1WPainter_a8d3d36b7be094fad53559c44239543dc}} 
+\index{Wt::WPainter@{Wt::WPainter}!window@{window}}
+\index{window@{window}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{window()}{window()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} Wt\+::\+W\+Painter\+::window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current window. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a70dcfbed2b7bdeb39ddbc7f213b5a9ce}{set\+View\+Port(const W\+Rect\+F\&)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPainter_a0a509496b00579ec993d91850c44e05d}\label{classWt_1_1WPainter_a0a509496b00579ec993d91850c44e05d}} 
+\index{Wt::WPainter@{Wt::WPainter}!worldTransform@{worldTransform}}
+\index{worldTransform@{worldTransform}!Wt::WPainter@{Wt::WPainter}}
+\doxysubsubsection{\texorpdfstring{worldTransform()}{worldTransform()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}}\& Wt\+::\+W\+Painter\+::world\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current world transformation matrix. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_ac0aa03db16f695b9bec3ef38588a5f3e}{set\+World\+Transform()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Painter.\+h\end{DoxyCompactItemize}

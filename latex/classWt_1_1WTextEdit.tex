@@ -1,0 +1,440 @@
+\hypertarget{classWt_1_1WTextEdit}{}\doxysection{Wt\+::W\+Text\+Edit Class Reference}
+\label{classWt_1_1WTextEdit}\index{Wt::WTextEdit@{Wt::WTextEdit}}
+
+
+A rich-\/text X\+H\+T\+ML editor.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Text\+Edit.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Text\+Edit\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Text\+Edit\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTextEdit_a81348638330dd3a0b7dcc53677789de5}\label{classWt_1_1WTextEdit_a81348638330dd3a0b7dcc53677789de5}} 
+\mbox{\hyperlink{classWt_1_1WTextEdit_a81348638330dd3a0b7dcc53677789de5}{W\+Text\+Edit}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new text editor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTextEdit_aacadf8bf9618e87a7bae120cf04c664b}{W\+Text\+Edit}} (const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&\mbox{\hyperlink{classWt_1_1WTextArea_a4b347ba0b03ad5c06d21866e484ee302}{text}})
+\begin{DoxyCompactList}\small\item\em Creates a new text editor and initialize with given text. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTextEdit_a3e43187a1a3ad8386cb7c2271cb250ee}\label{classWt_1_1WTextEdit_a3e43187a1a3ad8386cb7c2271cb250ee}} 
+\mbox{\hyperlink{classWt_1_1WTextEdit_a3e43187a1a3ad8386cb7c2271cb250ee}{$\sim$\+W\+Text\+Edit}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WTextEdit_a2ae4c8dc8c0208a08f64ab030b45992d}{version}} () const
+\begin{DoxyCompactList}\small\item\em Returns the Tiny\+M\+CE version. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTextEdit_a1c46cdf8a729dc0620bbb34fab26255b}{set\+Text}} (const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&\mbox{\hyperlink{classWt_1_1WTextArea_a4b347ba0b03ad5c06d21866e484ee302}{text}}) override
+\begin{DoxyCompactList}\small\item\em Sets the content. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTextEdit_a7b6df4e80ea878c1c6d57d1c85f60b04}{set\+Style\+Sheet}} (const std\+::string \&uri)
+\begin{DoxyCompactList}\small\item\em Sets the stylesheet for displaying the content. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{classWt_1_1WTextEdit_acbd6b85bc29f4925c81e8d4e73343c34}{style\+Sheet}} () const
+\begin{DoxyCompactList}\small\item\em Returns the content stylesheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTextEdit_a106e80b7ae54d21a7307f3d4c125d098}{set\+Extra\+Plugins}} (const std\+::string \&plugins)
+\begin{DoxyCompactList}\small\item\em Loads additional Tiny\+M\+CE plugins. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{classWt_1_1WTextEdit_a466f195d54f2782a5bbe05381e392bf5}{extra\+Plugins}} () const
+\begin{DoxyCompactList}\small\item\em Returns the extra plugins. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTextEdit_ab569b96e871c547b1f992b727c00c902}{set\+Tool\+Bar}} (int i, const std\+::string \&config)
+\begin{DoxyCompactList}\small\item\em Configures a tool bar. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{classWt_1_1WTextEdit_a0b1638990f8474e32cc1b028f0fe5e68}{tool\+Bar}} (int i) const
+\begin{DoxyCompactList}\small\item\em Returns a tool bar configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTextEdit_a6abdda3e80332ee95223ab0c364d72ee}{set\+Configuration\+Setting}} (const std\+::string \&name, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value)
+\begin{DoxyCompactList}\small\item\em Configure a Tiny\+M\+CE setting. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classWt_1_1WTextEdit_aaebd93e2ff15ef9a28672f5b921807cd}{configuration\+Setting}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Returns a Tiny\+M\+CE configuration setting\textquotesingle{}s value. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTextEdit_afab6e68e27e44c3c1fb2ce45a6834580}{set\+Placeholder\+Text}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&placeholder) override
+\begin{DoxyCompactList}\small\item\em Sets the placeholder text. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTextEdit_a2cd403e153848194bc86b016e233af64}{set\+Read\+Only}} (bool read\+Only) override
+\begin{DoxyCompactList}\small\item\em Sets the element read-\/only. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTextEdit_ad4b2541a5e0e9e0bd8cca633b4aa3442}{propagate\+Set\+Enabled}} (bool enabled) override
+\begin{DoxyCompactList}\small\item\em Propagates that a widget was enabled or disabled through children. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTextEdit_a74c7a38cc8da7149b12f0bd2621d0fcb}{resize}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WWebWidget_a3e1a8d2d95fa92763e2e3a0ee520468f}{width}}, const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WWebWidget_ae0c87ae7cae2379eebbbb7df06e07a2c}{height}}) override
+\begin{DoxyCompactList}\small\item\em Resizes the widget. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}} \& \mbox{\hyperlink{classWt_1_1WTextEdit_a5952f46d2f8d21e2fd45135e29d5061d}{rendered}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when rendered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTextEdit_aea8a5f63082f4e5bd8ace3c992750b33}\label{classWt_1_1WTextEdit_aea8a5f63082f4e5bd8ace3c992750b33}} 
+virtual std\+::string {\bfseries render\+Remove\+Js} (bool recursive) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTextEdit_ab061b05e6f48a8254b945c9214f94626}\label{classWt_1_1WTextEdit_ab061b05e6f48a8254b945c9214f94626}} 
+virtual void {\bfseries update\+Dom} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&element, bool all) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTextEdit_a7705dd4a17a7247600e9acb682299f24}\label{classWt_1_1WTextEdit_a7705dd4a17a7247600e9acb682299f24}} 
+virtual void {\bfseries get\+Dom\+Changes} (std\+::vector$<$ \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ $>$ \&result, \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTextEdit_a38f42cd2bfb3b311821b279933ecc2da}\label{classWt_1_1WTextEdit_a38f42cd2bfb3b311821b279933ecc2da}} 
+virtual bool {\bfseries dom\+Can\+Be\+Saved} () const override
+\item 
+virtual int \mbox{\hyperlink{classWt_1_1WTextEdit_add615813eba8558afbf76a02a71d94fe}{box\+Padding}} (\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation) const override
+\begin{DoxyCompactList}\small\item\em Returns the widget\textquotesingle{}s built-\/in padding. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WTextEdit_a738d7bdfabe806a8c17b106f334f5be2}{box\+Border}} (\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation) const override
+\begin{DoxyCompactList}\small\item\em Returns the widget\textquotesingle{}s built-\/in border width. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTextEdit_a38d2c0c65df117bef4772c73d6124564}\label{classWt_1_1WTextEdit_a38d2c0c65df117bef4772c73d6124564}} 
+std\+::string {\bfseries plugins} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WTextEdit_acfc6f51b8ffef6420f61b2e0fbc0f704}\label{classWt_1_1WTextEdit_acfc6f51b8ffef6420f61b2e0fbc0f704}} 
+void {\bfseries init} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WTextEdit_aa28d161cf7f66988196cd69a3b56fc2f}\label{classWt_1_1WTextEdit_aa28d161cf7f66988196cd69a3b56fc2f}} 
+void {\bfseries propagate\+On\+Change} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTextEdit_aaf1afb04df2fe11ded29b14388aa8cfb}\label{classWt_1_1WTextEdit_aaf1afb04df2fe11ded29b14388aa8cfb}} 
+static void {\bfseries init\+Tiny\+M\+CE} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WTextEdit_a727b9b55da57103b5c1dca4a97bda46f}\label{classWt_1_1WTextEdit_a727b9b55da57103b5c1dca4a97bda46f}} 
+static int {\bfseries get\+Tiny\+M\+C\+E\+Version} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTextEdit_a9205c0564bd54b6e6c9599e740897aa0}\label{classWt_1_1WTextEdit_a9205c0564bd54b6e6c9599e740897aa0}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}} {\bfseries on\+Change\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTextEdit_af9041de08edc1f903aa7c74e087d98af}\label{classWt_1_1WTextEdit_af9041de08edc1f903aa7c74e087d98af}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}} {\bfseries on\+Render\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTextEdit_aa1c52f2d62b6c477dc1ef28e57546589}\label{classWt_1_1WTextEdit_aa1c52f2d62b6c477dc1ef28e57546589}} 
+int {\bfseries version\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTextEdit_ae0f92193fdcd31dd264cce7f96e7605d}\label{classWt_1_1WTextEdit_ae0f92193fdcd31dd264cce7f96e7605d}} 
+bool {\bfseries content\+Changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTextEdit_a2daa0ba2dc7f1740e4ffe35217196266}\label{classWt_1_1WTextEdit_a2daa0ba2dc7f1740e4ffe35217196266}} 
+std\+::map$<$ std\+::string, \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} $>$ {\bfseries configuration\+Settings\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A rich-\/text X\+H\+T\+ML editor. 
+
+The editor provides interactive editing of X\+H\+T\+ML text. By default it provides basic mark-\/up (font, formatting, color, links, and lists), but additional buttons may be added to the tool bars that add additional formatting options.
+
+The implementation is based on \href{http://tinymce.moxiecode.com/}{\texttt{ Tiny\+M\+CE}}. The widget may be configured and tailored using the \mbox{\hyperlink{classWt_1_1WTextEdit_a6abdda3e80332ee95223ab0c364d72ee}{set\+Configuration\+Setting()}} and related methods that provide direct access to the underlying Tiny\+M\+CE component.
+
+\doxyparagraph*{C\+SS}
+
+Styling through C\+SS is not applicable.
+
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WTextEdit_aacadf8bf9618e87a7bae120cf04c664b}\label{classWt_1_1WTextEdit_aacadf8bf9618e87a7bae120cf04c664b}} 
+\index{Wt::WTextEdit@{Wt::WTextEdit}!WTextEdit@{WTextEdit}}
+\index{WTextEdit@{WTextEdit}!Wt::WTextEdit@{Wt::WTextEdit}}
+\doxysubsubsection{\texorpdfstring{WTextEdit()}{WTextEdit()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Text\+Edit\+::\+W\+Text\+Edit (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Creates a new text editor and initialize with given text. 
+
+The {\ttfamily text} should be valid X\+H\+T\+ML. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WTextEdit_a738d7bdfabe806a8c17b106f334f5be2}\label{classWt_1_1WTextEdit_a738d7bdfabe806a8c17b106f334f5be2}} 
+\index{Wt::WTextEdit@{Wt::WTextEdit}!boxBorder@{boxBorder}}
+\index{boxBorder@{boxBorder}!Wt::WTextEdit@{Wt::WTextEdit}}
+\doxysubsubsection{\texorpdfstring{boxBorder()}{boxBorder()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Text\+Edit\+::box\+Border (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Returns the widget\textquotesingle{}s built-\/in border width. 
+
+This is used by the layout managers to correct for a built-\/in border which interferes with setting a widget\textquotesingle{}s width (or height) to 100\%.
+
+A layout manager needs to set the width to 100\% only for form widgets (\mbox{\hyperlink{classWt_1_1WTextArea}{W\+Text\+Area}}, \mbox{\hyperlink{classWt_1_1WLineEdit}{W\+Line\+Edit}}, \mbox{\hyperlink{classWt_1_1WComboBox}{W\+Combo\+Box}}, etc...). Therefore, only for those widgets this needs to return the border width (the default implementation returns 0).
+
+For form widgets, the border width depends on the specific browser/platform combination, unless an explicit border is set for the widget.
+
+When setting an explicit border for the widget using a style class, you will want to reimplement this method to return this border width, in case you want to set the widget inside a layout manager.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTextEdit_add615813eba8558afbf76a02a71d94fe}{box\+Padding()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WTextArea_a77dd4182761b4a2e5757ebd8e956cb32}{Wt\+::\+W\+Text\+Area}}.
+
+\mbox{\Hypertarget{classWt_1_1WTextEdit_add615813eba8558afbf76a02a71d94fe}\label{classWt_1_1WTextEdit_add615813eba8558afbf76a02a71d94fe}} 
+\index{Wt::WTextEdit@{Wt::WTextEdit}!boxPadding@{boxPadding}}
+\index{boxPadding@{boxPadding}!Wt::WTextEdit@{Wt::WTextEdit}}
+\doxysubsubsection{\texorpdfstring{boxPadding()}{boxPadding()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Text\+Edit\+::box\+Padding (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Returns the widget\textquotesingle{}s built-\/in padding. 
+
+This is used by the layout managers to correct for a built-\/in padding which interferes with setting a widget\textquotesingle{}s width (or height) to 100\%.
+
+A layout manager needs to set the width to 100\% only for form widgets (\mbox{\hyperlink{classWt_1_1WTextArea}{W\+Text\+Area}}, \mbox{\hyperlink{classWt_1_1WLineEdit}{W\+Line\+Edit}}, \mbox{\hyperlink{classWt_1_1WComboBox}{W\+Combo\+Box}}, etc...). Therefore, only for those widgets this needs to return the padding (the default implementation returns 0).
+
+For form widgets, the padding depends on the specific browser/platform combination, unless an explicit padding is set for the widget.
+
+When setting an explicit padding for the widget using a style class, you will want to reimplement this method to return this padding in case you want to set the widget inside a layout manager.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTextEdit_a738d7bdfabe806a8c17b106f334f5be2}{box\+Border()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WTextArea_a694c38429896da3071ef190a72cbe0bd}{Wt\+::\+W\+Text\+Area}}.
+
+\mbox{\Hypertarget{classWt_1_1WTextEdit_aaebd93e2ff15ef9a28672f5b921807cd}\label{classWt_1_1WTextEdit_aaebd93e2ff15ef9a28672f5b921807cd}} 
+\index{Wt::WTextEdit@{Wt::WTextEdit}!configurationSetting@{configurationSetting}}
+\index{configurationSetting@{configurationSetting}!Wt::WTextEdit@{Wt::WTextEdit}}
+\doxysubsubsection{\texorpdfstring{configurationSetting()}{configurationSetting()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} Wt\+::\+W\+Text\+Edit\+::configuration\+Setting (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Returns a Tiny\+M\+CE configuration setting\textquotesingle{}s value. 
+
+An empty Any is returned when no value could be found for the provided argument. \mbox{\Hypertarget{classWt_1_1WTextEdit_a466f195d54f2782a5bbe05381e392bf5}\label{classWt_1_1WTextEdit_a466f195d54f2782a5bbe05381e392bf5}} 
+\index{Wt::WTextEdit@{Wt::WTextEdit}!extraPlugins@{extraPlugins}}
+\index{extraPlugins@{extraPlugins}!Wt::WTextEdit@{Wt::WTextEdit}}
+\doxysubsubsection{\texorpdfstring{extraPlugins()}{extraPlugins()}}
+{\footnotesize\ttfamily const std\+::string Wt\+::\+W\+Text\+Edit\+::extra\+Plugins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the extra plugins. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTextEdit_a106e80b7ae54d21a7307f3d4c125d098}{set\+Extra\+Plugins()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTextEdit_ad4b2541a5e0e9e0bd8cca633b4aa3442}\label{classWt_1_1WTextEdit_ad4b2541a5e0e9e0bd8cca633b4aa3442}} 
+\index{Wt::WTextEdit@{Wt::WTextEdit}!propagateSetEnabled@{propagateSetEnabled}}
+\index{propagateSetEnabled@{propagateSetEnabled}!Wt::WTextEdit@{Wt::WTextEdit}}
+\doxysubsubsection{\texorpdfstring{propagateSetEnabled()}{propagateSetEnabled()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Text\+Edit\+::propagate\+Set\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Propagates that a widget was enabled or disabled through children. 
+
+When enabling or disabling a widget, you usually also want to disable contained children. This method is called by \mbox{\hyperlink{classWt_1_1WWebWidget_a87ad1dbe635cb0b52bd491d8108d55cf}{set\+Disabled()}} to propagate its state to all children.
+
+You may want to reimplement this method if they wish to render differently when a widget is disabled. The default implementation will propagate the signal to all children. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WFormWidget_af4ce565ee432956562fc25fb4e64109f}{Wt\+::\+W\+Form\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WTextEdit_a5952f46d2f8d21e2fd45135e29d5061d}\label{classWt_1_1WTextEdit_a5952f46d2f8d21e2fd45135e29d5061d}} 
+\index{Wt::WTextEdit@{Wt::WTextEdit}!rendered@{rendered}}
+\index{rendered@{rendered}!Wt::WTextEdit@{Wt::WTextEdit}}
+\doxysubsubsection{\texorpdfstring{rendered()}{rendered()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}\& Wt\+::\+W\+Text\+Edit\+::rendered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when rendered. 
+
+A text edit is instantiated asynchronously as it depends on additional Java\+Script libraries and initialization. This signal is emitted when the component is initialized. The underlying Tiny\+M\+CE editor component is accessible as \mbox{\hyperlink{classWt_1_1WWidget_a83a186d2feacfbfbdb5b54f4cefc6735}{js\+Ref()}} + \char`\"{}.\+ed\char`\"{}. \mbox{\Hypertarget{classWt_1_1WTextEdit_a74c7a38cc8da7149b12f0bd2621d0fcb}\label{classWt_1_1WTextEdit_a74c7a38cc8da7149b12f0bd2621d0fcb}} 
+\index{Wt::WTextEdit@{Wt::WTextEdit}!resize@{resize}}
+\index{resize@{resize}!Wt::WTextEdit@{Wt::WTextEdit}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Text\+Edit\+::resize (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{width,  }\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{height }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Resizes the widget. 
+
+Specifies a fixed size for this widget, setting C\+SS {\ttfamily width} and {\ttfamily height} properties. By default a widget has automatic width and height, which sets a size for the widget following C\+SS rules.
+
+When the widget is not managed by a layout manager, the automatic (natural) size of a widget depends on whether they widget is a {\itshape block} or {\itshape inline} widget\+:
+\begin{DoxyItemize}
+\item a {\itshape block} widget takes by default the width of the parent, and the height that it needs based on its contents
+\item an {\itshape inline} widget takes the width and height that it needs based on its contents (possibly wrapping over multiple lines). The width and height of an inline widget cannot be changed (by the letter of C\+SS, although most browsers will react to it in varying ways).
+\end{DoxyItemize}
+
+When inserted in a layout manager, the size set will be used as a widget\textquotesingle{}s preferred size, but the widget may be given a different size by the layout manager based on available space and stretch factors. The actual size given by a layout manager may be retrieved by making the widget \char`\"{}layout size aware\char`\"{}, using \mbox{\hyperlink{classWt_1_1WWidget_a4f83592912a7f8fa4fd35dadde78ee74}{set\+Layout\+Size\+Aware()}}. If you have defined a {\ttfamily \char`\"{}wt\+Resize()\char`\"{}} Java\+Script method for the widget, then this method will also be called.
+
+The default width and height of a widget is \mbox{\hyperlink{classWt_1_1WLength_a0cf39ca4225776879d56ade60320c31a}{W\+Length\+::\+Auto}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WWebWidget_a3e1a8d2d95fa92763e2e3a0ee520468f}{width()}}, \mbox{\hyperlink{classWt_1_1WWebWidget_ae0c87ae7cae2379eebbbb7df06e07a2c}{height()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a5113267dfd734df27d4b1c76e7d23abb}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WTextEdit_a6abdda3e80332ee95223ab0c364d72ee}\label{classWt_1_1WTextEdit_a6abdda3e80332ee95223ab0c364d72ee}} 
+\index{Wt::WTextEdit@{Wt::WTextEdit}!setConfigurationSetting@{setConfigurationSetting}}
+\index{setConfigurationSetting@{setConfigurationSetting}!Wt::WTextEdit@{Wt::WTextEdit}}
+\doxysubsubsection{\texorpdfstring{setConfigurationSetting()}{setConfigurationSetting()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Text\+Edit\+::set\+Configuration\+Setting (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Configure a Tiny\+M\+CE setting. 
+
+A list of possible settings can be found at\+: \href{http://tinymce.moxiecode.com/wiki.php/Configuration}{\texttt{ http\+://tinymce.\+moxiecode.\+com/wiki.\+php/\+Configuration}}
+
+The widget itself will also define a number of configuration settings and these may be overridden using this method. \mbox{\Hypertarget{classWt_1_1WTextEdit_a106e80b7ae54d21a7307f3d4c125d098}\label{classWt_1_1WTextEdit_a106e80b7ae54d21a7307f3d4c125d098}} 
+\index{Wt::WTextEdit@{Wt::WTextEdit}!setExtraPlugins@{setExtraPlugins}}
+\index{setExtraPlugins@{setExtraPlugins}!Wt::WTextEdit@{Wt::WTextEdit}}
+\doxysubsubsection{\texorpdfstring{setExtraPlugins()}{setExtraPlugins()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Text\+Edit\+::set\+Extra\+Plugins (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{plugins }\end{DoxyParamCaption})}
+
+
+
+Loads additional Tiny\+M\+CE plugins. 
+
+Wt loads by default only the plugin \textquotesingle{}safari\textquotesingle{} (which adds support for the Safari web browser). Use this method to load additional plugins. Multiple plugins may be specified as a comma separated list.
+
+The various plugins are described in the \href{http://www.tinymce.com/wiki.php/Plugins}{\texttt{ Tiny\+M\+CE documentation}}.
+
+\begin{DoxyNote}{Note}
+Plugins can only be loaded before the initial display of the widget. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WTextEdit_afab6e68e27e44c3c1fb2ce45a6834580}\label{classWt_1_1WTextEdit_afab6e68e27e44c3c1fb2ce45a6834580}} 
+\index{Wt::WTextEdit@{Wt::WTextEdit}!setPlaceholderText@{setPlaceholderText}}
+\index{setPlaceholderText@{setPlaceholderText}!Wt::WTextEdit@{Wt::WTextEdit}}
+\doxysubsubsection{\texorpdfstring{setPlaceholderText()}{setPlaceholderText()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Text\+Edit\+::set\+Placeholder\+Text (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{placeholder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the placeholder text. 
+
+This method is not supported on \mbox{\hyperlink{classWt_1_1WTextEdit}{W\+Text\+Edit}} and will thrown an exception instead. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WFormWidget_a0ea06bae6cd120c8977709d68901bf01}{Wt\+::\+W\+Form\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WTextEdit_a2cd403e153848194bc86b016e233af64}\label{classWt_1_1WTextEdit_a2cd403e153848194bc86b016e233af64}} 
+\index{Wt::WTextEdit@{Wt::WTextEdit}!setReadOnly@{setReadOnly}}
+\index{setReadOnly@{setReadOnly}!Wt::WTextEdit@{Wt::WTextEdit}}
+\doxysubsubsection{\texorpdfstring{setReadOnly()}{setReadOnly()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Text\+Edit\+::set\+Read\+Only (\begin{DoxyParamCaption}\item[{bool}]{read\+Only }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the element read-\/only. 
+
+A read-\/only form element cannot be edited, but the contents can still be selected.
+
+By default, a form element area is not read-\/only.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFormWidget_ad26d15f452d47832a4467608977f03f5}{set\+Enabled()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WFormWidget_a061c6fe9607c18ecb786572400a74102}{Wt\+::\+W\+Form\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WTextEdit_a7b6df4e80ea878c1c6d57d1c85f60b04}\label{classWt_1_1WTextEdit_a7b6df4e80ea878c1c6d57d1c85f60b04}} 
+\index{Wt::WTextEdit@{Wt::WTextEdit}!setStyleSheet@{setStyleSheet}}
+\index{setStyleSheet@{setStyleSheet}!Wt::WTextEdit@{Wt::WTextEdit}}
+\doxysubsubsection{\texorpdfstring{setStyleSheet()}{setStyleSheet()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Text\+Edit\+::set\+Style\+Sheet (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{uri }\end{DoxyParamCaption})}
+
+
+
+Sets the stylesheet for displaying the content. 
+
+The content is rendered using the rules defined in this stylesheet. The stylesheet is also used to derive additional styles that are available in the text editor, for example in the \char`\"{}styleselect\char`\"{} button.
+
+Multiple stylesheets may be specified as a comma separated list. \mbox{\Hypertarget{classWt_1_1WTextEdit_a1c46cdf8a729dc0620bbb34fab26255b}\label{classWt_1_1WTextEdit_a1c46cdf8a729dc0620bbb34fab26255b}} 
+\index{Wt::WTextEdit@{Wt::WTextEdit}!setText@{setText}}
+\index{setText@{setText}!Wt::WTextEdit@{Wt::WTextEdit}}
+\doxysubsubsection{\texorpdfstring{setText()}{setText()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Text\+Edit\+::set\+Text (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the content. 
+
+The {\ttfamily text} should be valid X\+H\+T\+ML.
+
+The default value is \char`\"{}\char`\"{}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WTextArea_ac60abff70f7067a196da274e943b5627}{Wt\+::\+W\+Text\+Area}}.
+
+\mbox{\Hypertarget{classWt_1_1WTextEdit_ab569b96e871c547b1f992b727c00c902}\label{classWt_1_1WTextEdit_ab569b96e871c547b1f992b727c00c902}} 
+\index{Wt::WTextEdit@{Wt::WTextEdit}!setToolBar@{setToolBar}}
+\index{setToolBar@{setToolBar}!Wt::WTextEdit@{Wt::WTextEdit}}
+\doxysubsubsection{\texorpdfstring{setToolBar()}{setToolBar()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Text\+Edit\+::set\+Tool\+Bar (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{const std\+::string \&}]{config }\end{DoxyParamCaption})}
+
+
+
+Configures a tool bar. 
+
+This configures the buttons for the {\ttfamily i\textquotesingle{}th} tool bar (with 0 $<$= {\ttfamily i} $<$= 3).
+
+\doxyparagraph*{Tiny\+M\+CE 3}
+
+The syntax and available buttons is documented in the \href{http://www.tinymce.com/wiki.php/Configuration3x:theme_advanced_buttons_1_n}{\texttt{ Tiny\+M\+CE documentation}}.
+
+The default {\itshape config} for the first tool bar ({\ttfamily i} = 0) is\+: "fontselect, $\vert$, bold, italic, underline, $\vert$, fontsizeselect, $\vert$, forecolor, backcolor, $\vert$, justifyleft, justifycenter, justifyright, justifyfull, $\vert$, anchor, $\vert$, numlist, bullist".
+
+By default, the other three tool bars are disabled ({\ttfamily config} = \char`\"{}\char`\"{}).
+
+\doxyparagraph*{Tiny\+M\+CE 4}
+
+The syntax and available buttons is documented in the \href{http://www.tinymce.com/wiki.php/Configuration:toolbar\%3CN\%3E}{\texttt{ Tiny\+M\+C\+Edocumentation}}.
+
+The default {\itshape config} for the first tool bar ({\ttfamily i} = 0) is\+: \char`\"{}undo redo $\vert$ styleselect $\vert$ bold italic $\vert$ link\char`\"{}.
+
+Some buttons are only available after loading extra plugins using \mbox{\hyperlink{classWt_1_1WTextEdit_a106e80b7ae54d21a7307f3d4c125d098}{set\+Extra\+Plugins()}}.
+
+\begin{DoxyNote}{Note}
+The tool bar configuration can only be set before the initial display of the widget. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WTextEdit_acbd6b85bc29f4925c81e8d4e73343c34}\label{classWt_1_1WTextEdit_acbd6b85bc29f4925c81e8d4e73343c34}} 
+\index{Wt::WTextEdit@{Wt::WTextEdit}!styleSheet@{styleSheet}}
+\index{styleSheet@{styleSheet}!Wt::WTextEdit@{Wt::WTextEdit}}
+\doxysubsubsection{\texorpdfstring{styleSheet()}{styleSheet()}}
+{\footnotesize\ttfamily const std\+::string Wt\+::\+W\+Text\+Edit\+::style\+Sheet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the content stylesheet. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTextEdit_a7b6df4e80ea878c1c6d57d1c85f60b04}{set\+Style\+Sheet()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTextEdit_a0b1638990f8474e32cc1b028f0fe5e68}\label{classWt_1_1WTextEdit_a0b1638990f8474e32cc1b028f0fe5e68}} 
+\index{Wt::WTextEdit@{Wt::WTextEdit}!toolBar@{toolBar}}
+\index{toolBar@{toolBar}!Wt::WTextEdit@{Wt::WTextEdit}}
+\doxysubsubsection{\texorpdfstring{toolBar()}{toolBar()}}
+{\footnotesize\ttfamily const std\+::string Wt\+::\+W\+Text\+Edit\+::tool\+Bar (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+
+
+
+Returns a tool bar configuration. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTextEdit_ab569b96e871c547b1f992b727c00c902}{set\+Tool\+Bar()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTextEdit_a2ae4c8dc8c0208a08f64ab030b45992d}\label{classWt_1_1WTextEdit_a2ae4c8dc8c0208a08f64ab030b45992d}} 
+\index{Wt::WTextEdit@{Wt::WTextEdit}!version@{version}}
+\index{version@{version}!Wt::WTextEdit@{Wt::WTextEdit}}
+\doxysubsubsection{\texorpdfstring{version()}{version()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Text\+Edit\+::version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the Tiny\+M\+CE version. 
+
+This returns the configured version of Tiny\+M\+CE (currently 3 or 4). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Text\+Edit.\+h\end{DoxyCompactItemize}

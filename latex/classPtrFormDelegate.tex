@@ -1,0 +1,79 @@
+\hypertarget{classPtrFormDelegate}{}\doxysection{Ptr\+Form\+Delegate Class Reference}
+\label{classPtrFormDelegate}\index{PtrFormDelegate@{PtrFormDelegate}}
+
+
+Inheritance diagram for Ptr\+Form\+Delegate\+:
+% FIG 0
+
+
+Collaboration diagram for Ptr\+Form\+Delegate\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPtrFormDelegate_a36bb34f2354b48f323ca38ec85282d58}\label{classPtrFormDelegate_a36bb34f2354b48f323ca38ec85282d58}} 
+{\bfseries Ptr\+Form\+Delegate} (\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Wt\+::\+Dbo\+::\+Session}} \&session)
+\item 
+\mbox{\Hypertarget{classPtrFormDelegate_acccb9f109900ed319a1b542e630241ab}\label{classPtrFormDelegate_acccb9f109900ed319a1b542e630241ab}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{Wt\+::\+W\+Widget}} $>$ \mbox{\hyperlink{classPtrFormDelegate_acccb9f109900ed319a1b542e630241ab}{create\+Form\+Widget}} () override
+\begin{DoxyCompactList}\small\item\em Create the widget to be used in the View. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPtrFormDelegate_a29c5429dcba1efe82e5e6b72ff35d6e4}{update\+Model\+Value}} (\mbox{\hyperlink{classWt_1_1WFormModel}{Wt\+::\+W\+Form\+Model}} $\ast$model, \mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Wt\+::\+W\+Form\+Model\+::\+Field}} field, \mbox{\hyperlink{classWt_1_1WFormWidget}{Wt\+::\+W\+Form\+Widget}} $\ast$edit) override
+\begin{DoxyCompactList}\small\item\em Updates a value in the Model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPtrFormDelegate_a425059dfb3faa3bed717f6898027a4f7}{update\+View\+Value}} (\mbox{\hyperlink{classWt_1_1WFormModel}{Wt\+::\+W\+Form\+Model}} $\ast$model, \mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Wt\+::\+W\+Form\+Model\+::\+Field}} field, \mbox{\hyperlink{classWt_1_1WFormWidget}{Wt\+::\+W\+Form\+Widget}} $\ast$edit) override
+\begin{DoxyCompactList}\small\item\em Updates a value in the View. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPtrFormDelegate_a1e5e6e5724f550a455f02c54d610a1bb}\label{classPtrFormDelegate_a1e5e6e5724f550a455f02c54d610a1bb}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Wt\+::\+Dbo\+::\+Session}} \& {\bfseries session\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPtrFormDelegate_a29c5429dcba1efe82e5e6b72ff35d6e4}\label{classPtrFormDelegate_a29c5429dcba1efe82e5e6b72ff35d6e4}} 
+\index{PtrFormDelegate@{PtrFormDelegate}!updateModelValue@{updateModelValue}}
+\index{updateModelValue@{updateModelValue}!PtrFormDelegate@{PtrFormDelegate}}
+\doxysubsubsection{\texorpdfstring{updateModelValue()}{updateModelValue()}}
+{\footnotesize\ttfamily void Ptr\+Form\+Delegate\+::update\+Model\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel}{Wt\+::\+W\+Form\+Model}} $\ast$}]{model,  }\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Wt\+::\+W\+Form\+Model\+::\+Field}}}]{field,  }\item[{\mbox{\hyperlink{classWt_1_1WFormWidget}{Wt\+::\+W\+Form\+Widget}} $\ast$}]{edit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates a value in the Model. 
+
+By default this sets the value in the model to the string returned by W\+Form\+Widget\+::value\+Text
+
+The user should only override this method or the other update\+Model\+Value method returning a boolean, depending on the type of widget that\textquotesingle{}s returned by create\+Form\+Widget.
+
+\begin{DoxySeeAlso}{See also}
+W\+Template\+Form\+View\+::update\+Model\+Value() 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Form_1_1WAbstractFormDelegate_ab93474c18db249830b830bb045428d27}{Wt\+::\+Form\+::\+W\+Abstract\+Form\+Delegate}}.
+
+\mbox{\Hypertarget{classPtrFormDelegate_a425059dfb3faa3bed717f6898027a4f7}\label{classPtrFormDelegate_a425059dfb3faa3bed717f6898027a4f7}} 
+\index{PtrFormDelegate@{PtrFormDelegate}!updateViewValue@{updateViewValue}}
+\index{updateViewValue@{updateViewValue}!PtrFormDelegate@{PtrFormDelegate}}
+\doxysubsubsection{\texorpdfstring{updateViewValue()}{updateViewValue()}}
+{\footnotesize\ttfamily void Ptr\+Form\+Delegate\+::update\+View\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel}{Wt\+::\+W\+Form\+Model}} $\ast$}]{model,  }\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Wt\+::\+W\+Form\+Model\+::\+Field}}}]{field,  }\item[{\mbox{\hyperlink{classWt_1_1WFormWidget}{Wt\+::\+W\+Form\+Widget}} $\ast$}]{edit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates a value in the View. 
+
+By default this uses W\+Form\+Widget\+::set\+Value\+Text and W\+Form\+Model\+::value to update the widget
+
+The user should only override this method or the other update\+View\+Value method returning a boolean, depending on the type of widget that\textquotesingle{}s returned by create\+Form\+Widget.
+
+\begin{DoxySeeAlso}{See also}
+W\+Template\+Form\+View\+::update\+View\+Value() 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Form_1_1WAbstractFormDelegate_ab46d32970458eb3b822ca0a72ee562d8}{Wt\+::\+Form\+::\+W\+Abstract\+Form\+Delegate}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/dbo-\/form/Ptr\+Form\+Delegate.\+h\end{DoxyCompactItemize}

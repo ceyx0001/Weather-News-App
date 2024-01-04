@@ -1,0 +1,88 @@
+\hypertarget{classhttp_1_1server_1_1StaticReply}{}\doxysection{http\+::server\+::Static\+Reply Class Reference}
+\label{classhttp_1_1server_1_1StaticReply}\index{http::server::StaticReply@{http::server::StaticReply}}
+
+
+Inheritance diagram for http\+::server\+::Static\+Reply\+:
+% FIG 0
+
+
+Collaboration diagram for http\+::server\+::Static\+Reply\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1StaticReply_aee61cbac47081752ae53a024113a3bd7}\label{classhttp_1_1server_1_1StaticReply_aee61cbac47081752ae53a024113a3bd7}} 
+{\bfseries Static\+Reply} (\mbox{\hyperlink{classhttp_1_1server_1_1Request}{Request}} \&request, const \mbox{\hyperlink{classhttp_1_1server_1_1Configuration}{Configuration}} \&config)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1StaticReply_a5c64bf6786f7126186af672bbfd4f0ae}\label{classhttp_1_1server_1_1StaticReply_a5c64bf6786f7126186af672bbfd4f0ae}} 
+virtual void {\bfseries reset} (const \mbox{\hyperlink{classWt_1_1EntryPoint}{Wt\+::\+Entry\+Point}} $\ast$ep) override
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1StaticReply_a5c0a29d3d23100698522e0c38c05c3c4}\label{classhttp_1_1server_1_1StaticReply_a5c0a29d3d23100698522e0c38c05c3c4}} 
+virtual void {\bfseries write\+Done} (bool success) override
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1StaticReply_aa49e1c1885703a37700faa58610094ef}\label{classhttp_1_1server_1_1StaticReply_aa49e1c1885703a37700faa58610094ef}} 
+virtual bool {\bfseries consume\+Data} (const char $\ast$begin, const char $\ast$end, Request\+::\+State state) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1StaticReply_a4b7a553fbbb5f236929dba6426a3a932}\label{classhttp_1_1server_1_1StaticReply_a4b7a553fbbb5f236929dba6426a3a932}} 
+virtual std\+::string {\bfseries content\+Type} () override
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1StaticReply_aed5db7e646488d3a80cd1e37e3ced103}\label{classhttp_1_1server_1_1StaticReply_aed5db7e646488d3a80cd1e37e3ced103}} 
+virtual \+::int64\+\_\+t {\bfseries content\+Length} () override
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1StaticReply_aac9492c2e71216a0eb75c6447682b942}\label{classhttp_1_1server_1_1StaticReply_aac9492c2e71216a0eb75c6447682b942}} 
+virtual bool {\bfseries next\+Content\+Buffers} (std\+::vector$<$ asio\+::const\+\_\+buffer $>$ \&result) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1StaticReply_a78c3408f37f3f41e1c7f7174f80d1592}\label{classhttp_1_1server_1_1StaticReply_a78c3408f37f3f41e1c7f7174f80d1592}} 
+std\+::string {\bfseries compute\+Modified\+Date} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1StaticReply_a890c288e2f0408bccf15841ff153d406}\label{classhttp_1_1server_1_1StaticReply_a890c288e2f0408bccf15841ff153d406}} 
+std\+::string {\bfseries compute\+E\+Tag} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1StaticReply_af75d10095aee3d2a7d2ed20477ab0721}\label{classhttp_1_1server_1_1StaticReply_af75d10095aee3d2a7d2ed20477ab0721}} 
+void {\bfseries parse\+Range\+Header} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1StaticReply_acec3da4b7d67954907cf3846173304d1}\label{classhttp_1_1server_1_1StaticReply_acec3da4b7d67954907cf3846173304d1}} 
+static std\+::string {\bfseries compute\+Expires} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1StaticReply_a3cf5e37abcc46960bc2429771d48f0cc}\label{classhttp_1_1server_1_1StaticReply_a3cf5e37abcc46960bc2429771d48f0cc}} 
+std\+::string {\bfseries path\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1StaticReply_a86c33fe999b1077bc8a95c597f6ce422}\label{classhttp_1_1server_1_1StaticReply_a86c33fe999b1077bc8a95c597f6ce422}} 
+std\+::string {\bfseries extension\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1StaticReply_a3cb24417e10bc60b1cf878d5e8ebf50b}\label{classhttp_1_1server_1_1StaticReply_a3cb24417e10bc60b1cf878d5e8ebf50b}} 
+std\+::ifstream {\bfseries stream\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1StaticReply_a121ecacedeb4f590168ea8a71d23356f}\label{classhttp_1_1server_1_1StaticReply_a121ecacedeb4f590168ea8a71d23356f}} 
+\+::int64\+\_\+t {\bfseries file\+Size\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1StaticReply_a52627daa34df771848c1620ea3b3a17f}\label{classhttp_1_1server_1_1StaticReply_a52627daa34df771848c1620ea3b3a17f}} 
+char {\bfseries buf\+\_\+} \mbox{[}64 $\ast$1024\mbox{]}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1StaticReply_ad19a0342efb08305b7643b06e66b7706}\label{classhttp_1_1server_1_1StaticReply_ad19a0342efb08305b7643b06e66b7706}} 
+bool {\bfseries has\+Range\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1StaticReply_afaa8fbe98ed4a6616cd6a8b7ee83af78}\label{classhttp_1_1server_1_1StaticReply_afaa8fbe98ed4a6616cd6a8b7ee83af78}} 
+\+::int64\+\_\+t {\bfseries range\+Begin\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1StaticReply_af49e457ed89f471bd81c69a3ed408752}\label{classhttp_1_1server_1_1StaticReply_af49e457ed89f471bd81c69a3ed408752}} 
+\+::int64\+\_\+t {\bfseries range\+End\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/http/Static\+Reply.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,108 @@
+\hypertarget{classWt_1_1WCssTemplateRule}{}\doxysection{Wt\+::W\+Css\+Template\+Rule Class Reference}
+\label{classWt_1_1WCssTemplateRule}\index{Wt::WCssTemplateRule@{Wt::WCssTemplateRule}}
+
+
+A C\+SS rule based on a template widget.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Css\+Style\+Sheet.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Css\+Template\+Rule\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Css\+Template\+Rule\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WCssTemplateRule_ae05ee2d960f007cda1db3fa3bc2db60d}{W\+Css\+Template\+Rule}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1WCssRule_abedc916853c3d8a889c070ca2c7ae7e7}{selector}})
+\begin{DoxyCompactList}\small\item\em Creates a C\+SS rule with a given selector. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WCssTemplateRule_a50d2e16a89369301e2e683dbf93389bc}{template\+Widget}} ()
+\begin{DoxyCompactList}\small\item\em Returns the widget that is used as a template. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1WCssTemplateRule_a4eca1206bd0f6556c1af31c4d54019c8}{declarations}} () override
+\begin{DoxyCompactList}\small\item\em Returns the declarations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WCssTemplateRule_a662110858b1df421826eddf6d3ccfa40}\label{classWt_1_1WCssTemplateRule_a662110858b1df421826eddf6d3ccfa40}} 
+virtual bool {\bfseries update\+Dom\+Element} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&css\+Rule\+Element, bool all) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WCssTemplateRule_adf1c038891fb871098666ab65c0e719d}\label{classWt_1_1WCssTemplateRule_adf1c038891fb871098666ab65c0e719d}} 
+std\+::unique\+\_\+ptr$<$ W\+Css\+Template\+Widget $>$ {\bfseries widget\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A C\+SS rule based on a template widget. 
+
+This is a C\+SS rule whose C\+SS style properties are defined based on properties of a template widget. When modifying the template widget, these changes are reflected on the C\+SS rule and thus all widgets that have this C\+SS rule.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WCssStyleSheet}{Wt\+::\+W\+Css\+Style\+Sheet}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WCssTemplateRule_ae05ee2d960f007cda1db3fa3bc2db60d}\label{classWt_1_1WCssTemplateRule_ae05ee2d960f007cda1db3fa3bc2db60d}} 
+\index{Wt::WCssTemplateRule@{Wt::WCssTemplateRule}!WCssTemplateRule@{WCssTemplateRule}}
+\index{WCssTemplateRule@{WCssTemplateRule}!Wt::WCssTemplateRule@{Wt::WCssTemplateRule}}
+\doxysubsubsection{\texorpdfstring{WCssTemplateRule()}{WCssTemplateRule()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Css\+Template\+Rule\+::\+W\+Css\+Template\+Rule (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{selector }\end{DoxyParamCaption})}
+
+
+
+Creates a C\+SS rule with a given selector. 
+
+The selector should be a valid C\+SS selector.
+
+\begin{DoxyNote}{Note}
+If you want to update the rule, then the selector should be unique and not contain commas, since this is not supported by Microsoft Internet Explorer. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WCssTemplateRule_a4eca1206bd0f6556c1af31c4d54019c8}\label{classWt_1_1WCssTemplateRule_a4eca1206bd0f6556c1af31c4d54019c8}} 
+\index{Wt::WCssTemplateRule@{Wt::WCssTemplateRule}!declarations@{declarations}}
+\index{declarations@{declarations}!Wt::WCssTemplateRule@{Wt::WCssTemplateRule}}
+\doxysubsubsection{\texorpdfstring{declarations()}{declarations()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+W\+Css\+Template\+Rule\+::declarations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the declarations. 
+
+This is a semi-\/colon separated list of C\+SS declarations. 
+
+Implements \mbox{\hyperlink{classWt_1_1WCssRule_afecf9476d8d319f1f607bf0519e4eeb3}{Wt\+::\+W\+Css\+Rule}}.
+
+\mbox{\Hypertarget{classWt_1_1WCssTemplateRule_a50d2e16a89369301e2e683dbf93389bc}\label{classWt_1_1WCssTemplateRule_a50d2e16a89369301e2e683dbf93389bc}} 
+\index{Wt::WCssTemplateRule@{Wt::WCssTemplateRule}!templateWidget@{templateWidget}}
+\index{templateWidget@{templateWidget}!Wt::WCssTemplateRule@{Wt::WCssTemplateRule}}
+\doxysubsubsection{\texorpdfstring{templateWidget()}{templateWidget()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$\ast$ Wt\+::\+W\+Css\+Template\+Rule\+::template\+Widget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the widget that is used as a template. 
+
+Various properties of the widget are reflected in the C\+SS style\+:
+\begin{DoxyItemize}
+\item size and dimensions\+: \mbox{\hyperlink{classWt_1_1WWidget_a54365f7acdc237895328be54969165f4}{W\+Widget\+::resize()}}, \mbox{\hyperlink{classWt_1_1WWidget_a092c7d1ecfde7f004ef120389d91775d}{W\+Widget\+::set\+Minimum\+Size()}}, and \mbox{\hyperlink{classWt_1_1WWidget_af023064cf8007bda6baeb5277d79bbd9}{W\+Widget\+::set\+Maximum\+Size()}}
+\item its position\+: \mbox{\hyperlink{classWt_1_1WWidget_ae15ffe92fdc5c394013d61b5bebb2f11}{W\+Widget\+::set\+Position\+Scheme()}}, \mbox{\hyperlink{classWt_1_1WWidget_a730c10f642915f724f616ad4bebd2fca}{W\+Widget\+::set\+Offsets()}}, \mbox{\hyperlink{classWt_1_1WWidget_a2915d313e6934173c087bf8212024289}{W\+Widget\+::set\+Float\+Side()}}, \mbox{\hyperlink{classWt_1_1WWidget_a1919e2e3628bb4e4b74517605b5062c5}{W\+Widget\+::set\+Clear\+Sides()}}
+\item visibility\+: \mbox{\hyperlink{classWt_1_1WWidget_a0825c3ccbd4999afc1a88fafa6aa6fc7}{W\+Widget\+::hide()}}, \mbox{\hyperlink{classWt_1_1WWidget_a52dcef5a385ddfa0a8c3e6c20000f181}{W\+Widget\+::show()}} and \mbox{\hyperlink{classWt_1_1WWidget_a66bdda41220267a8c7ff9865996e2675}{W\+Widget\+::set\+Hidden()}}
+\item margins\+: \mbox{\hyperlink{classWt_1_1WWidget_a058b4e5641f41d3fa9a50bfa6f339408}{W\+Widget\+::set\+Margin()}}
+\item line height\+: \mbox{\hyperlink{classWt_1_1WWidget_a0763f0e672e5cf673141405dc8e796bb}{W\+Widget\+::set\+Line\+Height()}}
+\item all decoration style properties\+: \mbox{\hyperlink{classWt_1_1WWidget_ac1833c7c01599b3733712ab0bf3c3a0a}{W\+Widget\+::decoration\+Style()}}
+\end{DoxyItemize}
+
+When modifying one of these properties of the returned widget, the rule will be updated accordingly. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Css\+Style\+Sheet.\+h\end{DoxyCompactItemize}

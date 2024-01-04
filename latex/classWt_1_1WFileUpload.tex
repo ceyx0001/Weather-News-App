@@ -1,0 +1,520 @@
+\hypertarget{classWt_1_1WFileUpload}{}\doxysection{Wt\+::W\+File\+Upload Class Reference}
+\label{classWt_1_1WFileUpload}\index{Wt::WFileUpload@{Wt::WFileUpload}}
+
+
+A widget that allows a file to be uploaded.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+File\+Upload.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+File\+Upload\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+File\+Upload\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a0587fa99d66585af33b41f683b266975}\label{classWt_1_1WFileUpload_a0587fa99d66585af33b41f683b266975}} 
+\mbox{\hyperlink{classWt_1_1WFileUpload_a0587fa99d66585af33b41f683b266975}{W\+File\+Upload}} ()
+\begin{DoxyCompactList}\small\item\em Creates a file upload widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WFileUpload_a17f8e368c2ffc9836c65e470b311de9d}{set\+Multiple}} (bool \mbox{\hyperlink{classWt_1_1WFileUpload_a8576b15a63ab5a4bdc2289429c5a49e3}{multiple}})
+\begin{DoxyCompactList}\small\item\em Sets whether the file upload accepts multiple files. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WFileUpload_a8576b15a63ab5a4bdc2289429c5a49e3}{multiple}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether multiple files can be uploaded. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_ac7ad1324c86d378da9da9740a631a662}\label{classWt_1_1WFileUpload_ac7ad1324c86d378da9da9740a631a662}} 
+void \mbox{\hyperlink{classWt_1_1WFileUpload_ac7ad1324c86d378da9da9740a631a662}{set\+File\+Text\+Size}} (int chars)
+\begin{DoxyCompactList}\small\item\em Sets the size of the file input. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a2527604bd27a5376076276ec7c890786}\label{classWt_1_1WFileUpload_a2527604bd27a5376076276ec7c890786}} 
+int \mbox{\hyperlink{classWt_1_1WFileUpload_a2527604bd27a5376076276ec7c890786}{file\+Text\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the size of the file input. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1WFileUpload_afd4e833c97e6c3f4e5449ac551795ae0}{spool\+File\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the spooled location of the uploaded file. \end{DoxyCompactList}\item 
+W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \mbox{\hyperlink{classWt_1_1WFileUpload_ae2227c5e12e60cc87ffcb5fe70aa6d35}{client\+File\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the client filename. \end{DoxyCompactList}\item 
+W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \mbox{\hyperlink{classWt_1_1WFileUpload_ae2c77b3ab17842c27d65321f41d1c1c2}{content\+Description}} () const
+\begin{DoxyCompactList}\small\item\em Returns the client content description. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WFileUpload_a541d634e9f9e546f59417682811f01ef}{steal\+Spooled\+File}} ()
+\begin{DoxyCompactList}\small\item\em Steals the spooled file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_ab19c49ef829c9f9fa8d6fb66c9b87c4f}\label{classWt_1_1WFileUpload_ab19c49ef829c9f9fa8d6fb66c9b87c4f}} 
+bool \mbox{\hyperlink{classWt_1_1WFileUpload_ab19c49ef829c9f9fa8d6fb66c9b87c4f}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether one or more files have been uploaded. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_af5ab58a0166ad0b99cc5daa6d29bc9f1}\label{classWt_1_1WFileUpload_af5ab58a0166ad0b99cc5daa6d29bc9f1}} 
+const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Http_1_1UploadedFile}{Http\+::\+Uploaded\+File}} $>$ \& \mbox{\hyperlink{classWt_1_1WFileUpload_af5ab58a0166ad0b99cc5daa6d29bc9f1}{uploaded\+Files}} () const
+\begin{DoxyCompactList}\small\item\em Returns the uploaded files. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WFileUpload_ac0b34ef1ceb8b6c2836756720fa86068}{can\+Upload}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether \mbox{\hyperlink{classWt_1_1WFileUpload_ac17094f2fd6ae8cac1035161f7d80b9c}{upload()}} will start a new file upload. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WFileUpload_ab95ec35db690296e848d89a71c23737a}{set\+Display\+Widget}} (\mbox{\hyperlink{classWt_1_1WInteractWidget}{W\+Interact\+Widget}} $\ast$widget)
+\begin{DoxyCompactList}\small\item\em Use the click signal of another widget to open the file picker. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}} \& \mbox{\hyperlink{classWt_1_1WFileUpload_a09f835e5966c48312014b91a4b8b2652}{uploaded}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when a new file was uploaded. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ \+::int64\+\_\+t $>$ \& \mbox{\hyperlink{classWt_1_1WFileUpload_a943e9ea6fb2eb542362afea67d527205}{file\+Too\+Large}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the user tried to upload a too large file. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}} \& \mbox{\hyperlink{classWt_1_1WFileUpload_a9518b7e06891736d214e4b5d62c9538d}{changed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the user selected a new file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WFileUpload_ac17094f2fd6ae8cac1035161f7d80b9c}{upload}} ()
+\begin{DoxyCompactList}\small\item\em Starts the file upload. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WFileUpload_a6600c5a1232057418b3fe63d5db1c004}{set\+Progress\+Bar}} (\mbox{\hyperlink{classWt_1_1WProgressBar}{W\+Progress\+Bar}} $\ast$\mbox{\hyperlink{classWt_1_1WFileUpload_ae86f9f223935a65b7320e8f376dec9eb}{progress\+Bar}})
+\begin{DoxyCompactList}\small\item\em Sets a progress bar to indicate upload progress. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WFileUpload_aff4b807b84f7d98e1a8a5d02fbb2da38}{set\+Progress\+Bar}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WProgressBar}{W\+Progress\+Bar}} $>$ \mbox{\hyperlink{classWt_1_1WFileUpload_ae86f9f223935a65b7320e8f376dec9eb}{progress\+Bar}})
+\begin{DoxyCompactList}\small\item\em Sets a progress bar to indicate upload progress. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WProgressBar}{W\+Progress\+Bar}} $\ast$ \mbox{\hyperlink{classWt_1_1WFileUpload_ae86f9f223935a65b7320e8f376dec9eb}{progress\+Bar}} () const
+\begin{DoxyCompactList}\small\item\em Returns the progress bar. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \+::uint64\+\_\+t, \+::uint64\+\_\+t $>$ \& \mbox{\hyperlink{classWt_1_1WFileUpload_ae488bf948aca68c9b9eb4e8ed751ff76}{data\+Received}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted while a file is being uploaded. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WFileUpload_ace76eeca336313905f431e151db46fd6}{enable\+Ajax}} () override
+\begin{DoxyCompactList}\small\item\em Progresses to an Ajax-\/enabled widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WFileUpload_a78bc33442b3f2b07b60b9cda650278d2}{set\+Filters}} (const std\+::string \&accept\+Attributes)
+\begin{DoxyCompactList}\small\item\em Sets input accept attributes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a9232dc53418e7633d144caaa66f8d379}\label{classWt_1_1WFileUpload_a9232dc53418e7633d144caaa66f8d379}} 
+virtual void {\bfseries update\+Dom} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&element, bool all) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_afe768a309b29a6804fd2f7d35bcb47c1}\label{classWt_1_1WFileUpload_afe768a309b29a6804fd2f7d35bcb47c1}} 
+virtual \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ {\bfseries create\+Dom\+Element} (\mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a79e65cc25038d1295956d0f402086f4b}\label{classWt_1_1WFileUpload_a79e65cc25038d1295956d0f402086f4b}} 
+virtual \mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} {\bfseries dom\+Element\+Type} () const override
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a0fa7d5545a3e0a78d8c187b71a23c8cf}\label{classWt_1_1WFileUpload_a0fa7d5545a3e0a78d8c187b71a23c8cf}} 
+virtual void {\bfseries propagate\+Render\+Ok} (bool deep) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a04bdf5f2adb5ab6f6e78d459fb2aa836}\label{classWt_1_1WFileUpload_a04bdf5f2adb5ab6f6e78d459fb2aa836}} 
+virtual void {\bfseries get\+Dom\+Changes} (std\+::vector$<$ \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ $>$ \&result, \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app) override
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WFileUpload_af97e6ba26cb4284eaa079a71ae9b3d1f}{propagate\+Set\+Enabled}} (bool enabled) override
+\begin{DoxyCompactList}\small\item\em Propagates that a widget was enabled or disabled through children. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_ab17ebb3eab5f9fca9652d9243fb2197a}\label{classWt_1_1WFileUpload_ab17ebb3eab5f9fca9652d9243fb2197a}} 
+virtual std\+::string {\bfseries render\+Remove\+Js} (bool recursive) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_aa79cd76c8f416ff5d81457ec46f57b74}\label{classWt_1_1WFileUpload_aa79cd76c8f416ff5d81457ec46f57b74}} 
+void {\bfseries create} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a79c7803e6f1bf9630e0079095daa5c5f}\label{classWt_1_1WFileUpload_a79c7803e6f1bf9630e0079095daa5c5f}} 
+void {\bfseries on\+Data} (\+::uint64\+\_\+t current, \+::uint64\+\_\+t total)
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_aa46d06adcc3b745160b17d5c6d5541cb}\label{classWt_1_1WFileUpload_aa46d06adcc3b745160b17d5c6d5541cb}} 
+void {\bfseries on\+Data\+Exceeded} (\+::uint64\+\_\+t data\+Exceeded)
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_af38ed31a365957ea775a6b16a5d0b76e}\label{classWt_1_1WFileUpload_af38ed31a365957ea775a6b16a5d0b76e}} 
+std\+::string {\bfseries display\+Widget\+Click\+JS} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a41a29382be56579727d31538b5ccd547}\label{classWt_1_1WFileUpload_a41a29382be56579727d31538b5ccd547}} 
+virtual void {\bfseries set\+Request\+Too\+Large} (\+::int64\+\_\+t size) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_ad74534e1d36df17b7a31b8f96612b928}\label{classWt_1_1WFileUpload_ad74534e1d36df17b7a31b8f96612b928}} 
+void {\bfseries handle\+File\+Too\+Large} (\+::int64\+\_\+t file\+Size)
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_ae11db8361a34c8850ff44892a3622984}\label{classWt_1_1WFileUpload_ae11db8361a34c8850ff44892a3622984}} 
+void {\bfseries on\+Uploaded} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a7808e2bb1741de6cfd79e8683866d813}\label{classWt_1_1WFileUpload_a7808e2bb1741de6cfd79e8683866d813}} 
+virtual void {\bfseries set\+Form\+Data} (const \mbox{\hyperlink{structWt_1_1WObject_1_1FormData}{Form\+Data}} \&form\+Data) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_aef2c07307ae2992dc46d07e65136c524}\label{classWt_1_1WFileUpload_aef2c07307ae2992dc46d07e65136c524}} 
+void {\bfseries set\+Files} (const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Http_1_1UploadedFile}{Http\+::\+Uploaded\+File}} $>$ \&files)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_ad37b96514af31819ee65991661e98832}\label{classWt_1_1WFileUpload_ad37b96514af31819ee65991661e98832}} 
+std\+::bitset$<$ 7 $>$ {\bfseries flags\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a01fde0b81294f8cb5fc10687d6786a28}\label{classWt_1_1WFileUpload_a01fde0b81294f8cb5fc10687d6786a28}} 
+int {\bfseries text\+Size\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a75b3311321aa814ce3a546c9acd46fb1}\label{classWt_1_1WFileUpload_a75b3311321aa814ce3a546c9acd46fb1}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Http_1_1UploadedFile}{Http\+::\+Uploaded\+File}} $>$ {\bfseries uploaded\+Files\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a1af7bd5fa9ec613bc9b347052cb237d5}\label{classWt_1_1WFileUpload_a1af7bd5fa9ec613bc9b347052cb237d5}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ \+::int64\+\_\+t $>$ {\bfseries file\+Too\+Large\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a9bbefce7c9a978af8943c83307e8b619}\label{classWt_1_1WFileUpload_a9bbefce7c9a978af8943c83307e8b619}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \+::uint64\+\_\+t, \+::uint64\+\_\+t $>$ {\bfseries data\+Received\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a989e704779877ff149088cd23adde61b}\label{classWt_1_1WFileUpload_a989e704779877ff149088cd23adde61b}} 
+\mbox{\hyperlink{classWt_1_1Core_1_1observing__ptr}{Core\+::observing\+\_\+ptr}}$<$ \mbox{\hyperlink{classWt_1_1WInteractWidget}{W\+Interact\+Widget}} $>$ {\bfseries display\+Widget\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a7a630f08fe9662796ddd8e6fac587e51}\label{classWt_1_1WFileUpload_a7a630f08fe9662796ddd8e6fac587e51}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{J\+Slot}} {\bfseries display\+Widget\+Redirect\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_ab2fc1fcb89c54038b663e912c4d44c64}\label{classWt_1_1WFileUpload_ab2fc1fcb89c54038b663e912c4d44c64}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}} $>$ {\bfseries file\+Upload\+Target\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a0636efa358100ea7afdea28d8b866bc5}\label{classWt_1_1WFileUpload_a0636efa358100ea7afdea28d8b866bc5}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WProgressBar}{W\+Progress\+Bar}} $>$ {\bfseries contained\+Progress\+Bar\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a2086af6b79cd576b78c2cf258afaca24}\label{classWt_1_1WFileUpload_a2086af6b79cd576b78c2cf258afaca24}} 
+\mbox{\hyperlink{classWt_1_1WProgressBar}{W\+Progress\+Bar}} $\ast$ {\bfseries progress\+Bar\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_ad38b622e3f7d69f6c9f3d6b95fdfea78}\label{classWt_1_1WFileUpload_ad38b622e3f7d69f6c9f3d6b95fdfea78}} 
+std\+::string {\bfseries accept\+Attributes\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_abb887f7bcfafdfd8710d9e73be2390aa}\label{classWt_1_1WFileUpload_abb887f7bcfafdfd8710d9e73be2390aa}} 
+static const char $\ast$ {\bfseries C\+H\+A\+N\+G\+E\+\_\+\+S\+I\+G\+N\+AL}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_aa140174b5bb2f9631d85373353ab9eae}\label{classWt_1_1WFileUpload_aa140174b5bb2f9631d85373353ab9eae}} 
+static const char $\ast$ {\bfseries U\+P\+L\+O\+A\+D\+E\+D\+\_\+\+S\+I\+G\+N\+AL}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_af6a7bdfc68a4e54b25a0013e9b264c75}\label{classWt_1_1WFileUpload_af6a7bdfc68a4e54b25a0013e9b264c75}} 
+static const int {\bfseries B\+I\+T\+\_\+\+D\+O\+\_\+\+U\+P\+L\+O\+AD} = 0
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_ae53c487162bcd03febbb4613dccf5a73}\label{classWt_1_1WFileUpload_ae53c487162bcd03febbb4613dccf5a73}} 
+static const int {\bfseries B\+I\+T\+\_\+\+E\+N\+A\+B\+L\+E\+\_\+\+A\+J\+AX} = 1
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a15c54b8e6da55a1247e05fe7141a9dbe}\label{classWt_1_1WFileUpload_a15c54b8e6da55a1247e05fe7141a9dbe}} 
+static const int {\bfseries B\+I\+T\+\_\+\+U\+P\+L\+O\+A\+D\+I\+NG} = 2
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a95bc800991f939db30f4a775f46d4e2f}\label{classWt_1_1WFileUpload_a95bc800991f939db30f4a775f46d4e2f}} 
+static const int {\bfseries B\+I\+T\+\_\+\+M\+U\+L\+T\+I\+P\+LE} = 3
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a899a89c712e1cb33f612319da5015a53}\label{classWt_1_1WFileUpload_a899a89c712e1cb33f612319da5015a53}} 
+static const int {\bfseries B\+I\+T\+\_\+\+E\+N\+A\+B\+L\+E\+D\+\_\+\+C\+H\+A\+N\+G\+ED} = 4
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a26ba102021d17c05e401cfe49878cfae}\label{classWt_1_1WFileUpload_a26ba102021d17c05e401cfe49878cfae}} 
+static const int {\bfseries B\+I\+T\+\_\+\+A\+C\+C\+E\+P\+T\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+C\+H\+A\+N\+G\+ED} = 5
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_ae24d28be8eab0e1b705a9be320af846d}\label{classWt_1_1WFileUpload_ae24d28be8eab0e1b705a9be320af846d}} 
+static const int {\bfseries B\+I\+T\+\_\+\+U\+S\+E\+\_\+\+D\+I\+S\+P\+L\+A\+Y\+\_\+\+W\+I\+D\+G\+ET} = 6
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a02a1a6b1dc78144f38db5cb6ec8b97b6}\label{classWt_1_1WFileUpload_a02a1a6b1dc78144f38db5cb6ec8b97b6}} 
+class {\bfseries W\+File\+Upload\+Resource}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A widget that allows a file to be uploaded. 
+
+This widget is displayed as a box in which a filename can be entered and a browse button.
+
+Depending on availability of Java\+Script, the behaviour of the widget is different, but the A\+PI is designed in a way which facilitates a portable use.
+
+When Java\+Script is available, the file will not be uploaded until \mbox{\hyperlink{classWt_1_1WFileUpload_ac17094f2fd6ae8cac1035161f7d80b9c}{upload()}} is called. This will start an asynchronous upload (and thus return immediately). When no Java\+Script is available, the file will be uploaded with the next click event. Thus, \mbox{\hyperlink{classWt_1_1WFileUpload_ac17094f2fd6ae8cac1035161f7d80b9c}{upload()}} has no effect -- the file will already be uploaded, and the corresponding signals will already be emitted. To test if \mbox{\hyperlink{classWt_1_1WFileUpload_ac17094f2fd6ae8cac1035161f7d80b9c}{upload()}} will start an upload, you may check using the \mbox{\hyperlink{classWt_1_1WFileUpload_ac0b34ef1ceb8b6c2836756720fa86068}{can\+Upload()}} call.
+
+Thus, to properly use the widget, one needs to follow these rules\+: 
+\begin{DoxyItemize}
+\item Be prepared to handle the \mbox{\hyperlink{classWt_1_1WFileUpload_a09f835e5966c48312014b91a4b8b2652}{uploaded()}} or \mbox{\hyperlink{classWt_1_1WFileUpload_a943e9ea6fb2eb542362afea67d527205}{file\+Too\+Large()}} signals also when \mbox{\hyperlink{classWt_1_1WFileUpload_ac17094f2fd6ae8cac1035161f7d80b9c}{upload()}} was not called. 
+\item Check using \mbox{\hyperlink{classWt_1_1WFileUpload_ac0b34ef1ceb8b6c2836756720fa86068}{can\+Upload()}} if \mbox{\hyperlink{classWt_1_1WFileUpload_ac17094f2fd6ae8cac1035161f7d80b9c}{upload()}} will schedule a new upload. if (!can\+Upload()) then \mbox{\hyperlink{classWt_1_1WFileUpload_ac17094f2fd6ae8cac1035161f7d80b9c}{upload()}} will not have any effect. if (\mbox{\hyperlink{classWt_1_1WFileUpload_ac0b34ef1ceb8b6c2836756720fa86068}{can\+Upload()}}), \mbox{\hyperlink{classWt_1_1WFileUpload_ac17094f2fd6ae8cac1035161f7d80b9c}{upload()}} will start a new file upload, which completes succesfully using an \mbox{\hyperlink{classWt_1_1WFileUpload_a09f835e5966c48312014b91a4b8b2652}{uploaded()}} signal or a \mbox{\hyperlink{classWt_1_1WFileUpload_a943e9ea6fb2eb542362afea67d527205}{file\+Too\+Large()}} signals gets emitted.  
+\end{DoxyItemize}
+
+The W\+File\+Upload widget must be hidden or deleted when a file is received. In addition it is wise to prevent the user from uploading the file twice as in the example below.
+
+The uploaded file is automatically spooled to a local temporary file which will be deleted together with the \mbox{\hyperlink{classWt_1_1WFileUpload}{W\+File\+Upload}} widget, unless \mbox{\hyperlink{classWt_1_1WFileUpload_a541d634e9f9e546f59417682811f01ef}{steal\+Spooled\+File()}} is called.
+
+W\+File\+Upload is an \mbox{\hyperlink{classWt_1_1WWidget_ac78e3af143883334c82031790c87416e}{inline }} widget.
+
+\doxyparagraph*{C\+SS}
+
+The file upload itself corresponds to a {\ttfamily $<$input type=\char`\"{}file\char`\"{}$>$} tag, but may be wrapped in a {\ttfamily $<$form$>$} tag for an Ajax session to implement the asynchronous upload action. This widget does not provide styling, and styling through C\+SS is not well supported across browsers. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WFileUpload_ac0b34ef1ceb8b6c2836756720fa86068}\label{classWt_1_1WFileUpload_ac0b34ef1ceb8b6c2836756720fa86068}} 
+\index{Wt::WFileUpload@{Wt::WFileUpload}!canUpload@{canUpload}}
+\index{canUpload@{canUpload}!Wt::WFileUpload@{Wt::WFileUpload}}
+\doxysubsubsection{\texorpdfstring{canUpload()}{canUpload()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+File\+Upload\+::can\+Upload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether \mbox{\hyperlink{classWt_1_1WFileUpload_ac17094f2fd6ae8cac1035161f7d80b9c}{upload()}} will start a new file upload. 
+
+A call to \mbox{\hyperlink{classWt_1_1WFileUpload_ac17094f2fd6ae8cac1035161f7d80b9c}{upload()}} will only start a new file upload if there is no Java\+Script support. Otherwise, the most recent file will already be uploaded. \mbox{\Hypertarget{classWt_1_1WFileUpload_a9518b7e06891736d214e4b5d62c9538d}\label{classWt_1_1WFileUpload_a9518b7e06891736d214e4b5d62c9538d}} 
+\index{Wt::WFileUpload@{Wt::WFileUpload}!changed@{changed}}
+\index{changed@{changed}!Wt::WFileUpload@{Wt::WFileUpload}}
+\doxysubsubsection{\texorpdfstring{changed()}{changed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}\& Wt\+::\+W\+File\+Upload\+::changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Signal emitted when the user selected a new file. 
+
+One could react on the user selecting a (new) file, by uploading the file immediately.
+
+Caveat\+: this signal is not emitted with konqueror and possibly other browsers. Thus, in the above scenario you should still provide an alternative way to call the \mbox{\hyperlink{classWt_1_1WFileUpload_ac17094f2fd6ae8cac1035161f7d80b9c}{upload()}} method. \mbox{\Hypertarget{classWt_1_1WFileUpload_ae2227c5e12e60cc87ffcb5fe70aa6d35}\label{classWt_1_1WFileUpload_ae2227c5e12e60cc87ffcb5fe70aa6d35}} 
+\index{Wt::WFileUpload@{Wt::WFileUpload}!clientFileName@{clientFileName}}
+\index{clientFileName@{clientFileName}!Wt::WFileUpload@{Wt::WFileUpload}}
+\doxysubsubsection{\texorpdfstring{clientFileName()}{clientFileName()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+U\+S\+T\+R\+I\+NG Wt\+::\+W\+File\+Upload\+::client\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the client filename. 
+
+When multiple files were uploaded, this returns the information from the first file.
+
+\begin{DoxyNote}{Note}
+Depending on the browser this is an absolute path or only the file name. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WFileUpload_ae2c77b3ab17842c27d65321f41d1c1c2}\label{classWt_1_1WFileUpload_ae2c77b3ab17842c27d65321f41d1c1c2}} 
+\index{Wt::WFileUpload@{Wt::WFileUpload}!contentDescription@{contentDescription}}
+\index{contentDescription@{contentDescription}!Wt::WFileUpload@{Wt::WFileUpload}}
+\doxysubsubsection{\texorpdfstring{contentDescription()}{contentDescription()}}
+{\footnotesize\ttfamily W\+T\+\_\+\+U\+S\+T\+R\+I\+NG Wt\+::\+W\+File\+Upload\+::content\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the client content description. 
+
+When multiple files were uploaded, this returns the information from the first file. \mbox{\Hypertarget{classWt_1_1WFileUpload_ae488bf948aca68c9b9eb4e8ed751ff76}\label{classWt_1_1WFileUpload_ae488bf948aca68c9b9eb4e8ed751ff76}} 
+\index{Wt::WFileUpload@{Wt::WFileUpload}!dataReceived@{dataReceived}}
+\index{dataReceived@{dataReceived}!Wt::WFileUpload@{Wt::WFileUpload}}
+\doxysubsubsection{\texorpdfstring{dataReceived()}{dataReceived()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \+::uint64\+\_\+t, \+::uint64\+\_\+t$>$\& Wt\+::\+W\+File\+Upload\+::data\+Received (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted while a file is being uploaded. 
+
+When supported by the connector library, you can track the progress of the file upload by listening to this signal.
+
+The first argument is the number of bytes received so far, and the second argument is the total number of bytes. \mbox{\Hypertarget{classWt_1_1WFileUpload_ace76eeca336313905f431e151db46fd6}\label{classWt_1_1WFileUpload_ace76eeca336313905f431e151db46fd6}} 
+\index{Wt::WFileUpload@{Wt::WFileUpload}!enableAjax@{enableAjax}}
+\index{enableAjax@{enableAjax}!Wt::WFileUpload@{Wt::WFileUpload}}
+\doxysubsubsection{\texorpdfstring{enableAjax()}{enableAjax()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+File\+Upload\+::enable\+Ajax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Progresses to an Ajax-\/enabled widget. 
+
+This method is called when the progressive bootstrap method is used, and support for A\+J\+AX has been detected. The default behavior will upgrade the widget\textquotesingle{}s event handling to use A\+J\+AX instead of full page reloads, and propagate the call to its children.
+
+You may want to reimplement this method if you want to make changes to widget when A\+J\+AX is enabled. You should always call the base implementation.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_a46c573a3cd370cb2f83250c99d42b575}{W\+Application\+::enable\+Ajax()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_af717033681b5cbe5857c88b65558e10c}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a943e9ea6fb2eb542362afea67d527205}\label{classWt_1_1WFileUpload_a943e9ea6fb2eb542362afea67d527205}} 
+\index{Wt::WFileUpload@{Wt::WFileUpload}!fileTooLarge@{fileTooLarge}}
+\index{fileTooLarge@{fileTooLarge}!Wt::WFileUpload@{Wt::WFileUpload}}
+\doxysubsubsection{\texorpdfstring{fileTooLarge()}{fileTooLarge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}}$<$ \+::int64\+\_\+t$>$\& Wt\+::\+W\+File\+Upload\+::file\+Too\+Large (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when the user tried to upload a too large file. 
+
+The parameter is the (approximate) size of the file (in bytes) the user tried to upload.
+
+The maximum file size is determined by the maximum request size, which may be configured in the configuration file ($<$max-\/request-\/size$>$).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFileUpload_a09f835e5966c48312014b91a4b8b2652}{uploaded()}} 
+
+\mbox{\hyperlink{classWt_1_1WApplication_aaa3a28a32244dd8383fb760906e2ee77}{W\+Application\+::request\+Too\+Large()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a8576b15a63ab5a4bdc2289429c5a49e3}\label{classWt_1_1WFileUpload_a8576b15a63ab5a4bdc2289429c5a49e3}} 
+\index{Wt::WFileUpload@{Wt::WFileUpload}!multiple@{multiple}}
+\index{multiple@{multiple}!Wt::WFileUpload@{Wt::WFileUpload}}
+\doxysubsubsection{\texorpdfstring{multiple()}{multiple()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+File\+Upload\+::multiple (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether multiple files can be uploaded. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFileUpload_a17f8e368c2ffc9836c65e470b311de9d}{set\+Multiple()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFileUpload_ae86f9f223935a65b7320e8f376dec9eb}\label{classWt_1_1WFileUpload_ae86f9f223935a65b7320e8f376dec9eb}} 
+\index{Wt::WFileUpload@{Wt::WFileUpload}!progressBar@{progressBar}}
+\index{progressBar@{progressBar}!Wt::WFileUpload@{Wt::WFileUpload}}
+\doxysubsubsection{\texorpdfstring{progressBar()}{progressBar()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WProgressBar}{W\+Progress\+Bar}}$\ast$ Wt\+::\+W\+File\+Upload\+::progress\+Bar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the progress bar. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFileUpload_a6600c5a1232057418b3fe63d5db1c004}{set\+Progress\+Bar()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFileUpload_af97e6ba26cb4284eaa079a71ae9b3d1f}\label{classWt_1_1WFileUpload_af97e6ba26cb4284eaa079a71ae9b3d1f}} 
+\index{Wt::WFileUpload@{Wt::WFileUpload}!propagateSetEnabled@{propagateSetEnabled}}
+\index{propagateSetEnabled@{propagateSetEnabled}!Wt::WFileUpload@{Wt::WFileUpload}}
+\doxysubsubsection{\texorpdfstring{propagateSetEnabled()}{propagateSetEnabled()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+File\+Upload\+::propagate\+Set\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Propagates that a widget was enabled or disabled through children. 
+
+When enabling or disabling a widget, you usually also want to disable contained children. This method is called by \mbox{\hyperlink{classWt_1_1WWebWidget_a87ad1dbe635cb0b52bd491d8108d55cf}{set\+Disabled()}} to propagate its state to all children.
+
+You may want to reimplement this method if they wish to render differently when a widget is disabled. The default implementation will propagate the signal to all children. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a8aa3f316c46bc18aab72e13e8127d9d8}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WFileUpload_ab95ec35db690296e848d89a71c23737a}\label{classWt_1_1WFileUpload_ab95ec35db690296e848d89a71c23737a}} 
+\index{Wt::WFileUpload@{Wt::WFileUpload}!setDisplayWidget@{setDisplayWidget}}
+\index{setDisplayWidget@{setDisplayWidget}!Wt::WFileUpload@{Wt::WFileUpload}}
+\doxysubsubsection{\texorpdfstring{setDisplayWidget()}{setDisplayWidget()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+File\+Upload\+::set\+Display\+Widget (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WInteractWidget}{W\+Interact\+Widget}} $\ast$}]{widget }\end{DoxyParamCaption})}
+
+
+
+Use the click signal of another widget to open the file picker. 
+
+This hides the default \mbox{\hyperlink{classWt_1_1WFileUpload}{W\+File\+Upload}} widget and uses the click-\/signal of the argument to open the file picker. The upload logic is still handled by \mbox{\hyperlink{classWt_1_1WFileUpload}{W\+File\+Upload}} behind the scenes. This action cannot be undone.
+
+\mbox{\hyperlink{classWt_1_1WFileUpload}{W\+File\+Upload}} does not take ownership of the widget, nor does it display it. You must still place it in the widget tree yourself. \mbox{\Hypertarget{classWt_1_1WFileUpload_a78bc33442b3f2b07b60b9cda650278d2}\label{classWt_1_1WFileUpload_a78bc33442b3f2b07b60b9cda650278d2}} 
+\index{Wt::WFileUpload@{Wt::WFileUpload}!setFilters@{setFilters}}
+\index{setFilters@{setFilters}!Wt::WFileUpload@{Wt::WFileUpload}}
+\doxysubsubsection{\texorpdfstring{setFilters()}{setFilters()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+File\+Upload\+::set\+Filters (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{accept\+Attributes }\end{DoxyParamCaption})}
+
+
+
+Sets input accept attributes. 
+
+The accept attribute may be specified to provide user agents with a hint of what file types will be accepted. Use html input accept attributes as input.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{   \mbox{\hyperlink{classWt_1_1WFileUpload_a0587fa99d66585af33b41f683b266975}{WFileUpload}} *fu = \textcolor{keyword}{new} \mbox{\hyperlink{classWt_1_1WFileUpload_a0587fa99d66585af33b41f683b266975}{WFileUpload}}(root());}
+\DoxyCodeLine{   fu-\/>\mbox{\hyperlink{classWt_1_1WFileUpload_a78bc33442b3f2b07b60b9cda650278d2}{setFilters}}(\textcolor{stringliteral}{"image/*"});}
+\DoxyCodeLine{*  }
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1WFileUpload_a17f8e368c2ffc9836c65e470b311de9d}\label{classWt_1_1WFileUpload_a17f8e368c2ffc9836c65e470b311de9d}} 
+\index{Wt::WFileUpload@{Wt::WFileUpload}!setMultiple@{setMultiple}}
+\index{setMultiple@{setMultiple}!Wt::WFileUpload@{Wt::WFileUpload}}
+\doxysubsubsection{\texorpdfstring{setMultiple()}{setMultiple()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+File\+Upload\+::set\+Multiple (\begin{DoxyParamCaption}\item[{bool}]{multiple }\end{DoxyParamCaption})}
+
+
+
+Sets whether the file upload accepts multiple files. 
+
+In browsers which support the \char`\"{}multiple\char`\"{} attribute for the file upload (to be part of H\+T\+M\+L5) control, this will allow the user to select multiple files at once.
+
+All uploaded files are available from \mbox{\hyperlink{classWt_1_1WFileUpload_af5ab58a0166ad0b99cc5daa6d29bc9f1}{uploaded\+Files()}}. The single-\/file A\+PI will return only information on the first uploaded file.
+
+The default value is {\ttfamily false}. \mbox{\Hypertarget{classWt_1_1WFileUpload_aff4b807b84f7d98e1a8a5d02fbb2da38}\label{classWt_1_1WFileUpload_aff4b807b84f7d98e1a8a5d02fbb2da38}} 
+\index{Wt::WFileUpload@{Wt::WFileUpload}!setProgressBar@{setProgressBar}}
+\index{setProgressBar@{setProgressBar}!Wt::WFileUpload@{Wt::WFileUpload}}
+\doxysubsubsection{\texorpdfstring{setProgressBar()}{setProgressBar()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+File\+Upload\+::set\+Progress\+Bar (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WProgressBar}{W\+Progress\+Bar}} $>$}]{progress\+Bar }\end{DoxyParamCaption})}
+
+
+
+Sets a progress bar to indicate upload progress. 
+
+When the file is being uploaded, upload progress is indicated using the provided progress bar. Both the progress bar range and values are configured when the upload starts.
+
+The bar becomes part of the file upload, and replaces the file prompt when the upload is started.
+
+The default progress bar is 0 (no upload progress is indicated).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFileUpload_ae488bf948aca68c9b9eb4e8ed751ff76}{data\+Received()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a6600c5a1232057418b3fe63d5db1c004}\label{classWt_1_1WFileUpload_a6600c5a1232057418b3fe63d5db1c004}} 
+\index{Wt::WFileUpload@{Wt::WFileUpload}!setProgressBar@{setProgressBar}}
+\index{setProgressBar@{setProgressBar}!Wt::WFileUpload@{Wt::WFileUpload}}
+\doxysubsubsection{\texorpdfstring{setProgressBar()}{setProgressBar()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+File\+Upload\+::set\+Progress\+Bar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WProgressBar}{W\+Progress\+Bar}} $\ast$}]{progress\+Bar }\end{DoxyParamCaption})}
+
+
+
+Sets a progress bar to indicate upload progress. 
+
+When the file is being uploaded, upload progress is indicated using the provided progress bar. Both the progress bar range and values are configured when the upload starts.
+
+The file upload itself is hidden as soon as the upload starts.
+
+The default progress bar is 0 (no upload progress is indicated).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFileUpload_ae488bf948aca68c9b9eb4e8ed751ff76}{data\+Received()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFileUpload_afd4e833c97e6c3f4e5449ac551795ae0}\label{classWt_1_1WFileUpload_afd4e833c97e6c3f4e5449ac551795ae0}} 
+\index{Wt::WFileUpload@{Wt::WFileUpload}!spoolFileName@{spoolFileName}}
+\index{spoolFileName@{spoolFileName}!Wt::WFileUpload@{Wt::WFileUpload}}
+\doxysubsubsection{\texorpdfstring{spoolFileName()}{spoolFileName()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+W\+File\+Upload\+::spool\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the spooled location of the uploaded file. 
+
+Returns the temporary filename in which the uploaded file was spooled. The file is guaranteed to exist as long as the \mbox{\hyperlink{classWt_1_1WFileUpload}{W\+File\+Upload}} widget is not deleted, or a new file is not uploaded.
+
+When multiple files were uploaded, this returns the information from the first file.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFileUpload_a541d634e9f9e546f59417682811f01ef}{steal\+Spooled\+File()}} 
+
+\mbox{\hyperlink{classWt_1_1WFileUpload_a09f835e5966c48312014b91a4b8b2652}{uploaded}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a541d634e9f9e546f59417682811f01ef}\label{classWt_1_1WFileUpload_a541d634e9f9e546f59417682811f01ef}} 
+\index{Wt::WFileUpload@{Wt::WFileUpload}!stealSpooledFile@{stealSpooledFile}}
+\index{stealSpooledFile@{stealSpooledFile}!Wt::WFileUpload@{Wt::WFileUpload}}
+\doxysubsubsection{\texorpdfstring{stealSpooledFile()}{stealSpooledFile()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+File\+Upload\+::steal\+Spooled\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Steals the spooled file. 
+
+By stealing the file, the spooled file will no longer be deleted together with this widget, which means you need to take care of managing that.
+
+When multiple files were uploaded, this returns the information from the first file. \mbox{\Hypertarget{classWt_1_1WFileUpload_ac17094f2fd6ae8cac1035161f7d80b9c}\label{classWt_1_1WFileUpload_ac17094f2fd6ae8cac1035161f7d80b9c}} 
+\index{Wt::WFileUpload@{Wt::WFileUpload}!upload@{upload}}
+\index{upload@{upload}!Wt::WFileUpload@{Wt::WFileUpload}}
+\doxysubsubsection{\texorpdfstring{upload()}{upload()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+File\+Upload\+::upload (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the file upload. 
+
+The \mbox{\hyperlink{classWt_1_1WFileUpload_a09f835e5966c48312014b91a4b8b2652}{uploaded()}} signal is emitted when a file is uploaded, or the \mbox{\hyperlink{classWt_1_1WFileUpload_a943e9ea6fb2eb542362afea67d527205}{file\+Too\+Large()}} signal is emitted when the file size exceeded the maximum request size.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFileUpload_a09f835e5966c48312014b91a4b8b2652}{uploaded()}} 
+
+\mbox{\hyperlink{classWt_1_1WFileUpload_ac0b34ef1ceb8b6c2836756720fa86068}{can\+Upload()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WFileUpload_a09f835e5966c48312014b91a4b8b2652}\label{classWt_1_1WFileUpload_a09f835e5966c48312014b91a4b8b2652}} 
+\index{Wt::WFileUpload@{Wt::WFileUpload}!uploaded@{uploaded}}
+\index{uploaded@{uploaded}!Wt::WFileUpload@{Wt::WFileUpload}}
+\doxysubsubsection{\texorpdfstring{uploaded()}{uploaded()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1EventSignal}{Event\+Signal}}\& Wt\+::\+W\+File\+Upload\+::uploaded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Signal emitted when a new file was uploaded. 
+
+This signal is emitted when file upload has been completed. It is good practice to hide or delete the \mbox{\hyperlink{classWt_1_1WFileUpload}{W\+File\+Upload}} widget when a file has been uploaded succesfully.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFileUpload_ac17094f2fd6ae8cac1035161f7d80b9c}{upload()}} 
+
+\mbox{\hyperlink{classWt_1_1WFileUpload_a943e9ea6fb2eb542362afea67d527205}{file\+Too\+Large()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+File\+Upload.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,625 @@
+\hypertarget{group__charts}{}\doxysection{Charts (Wt\+::Chart)}
+\label{group__charts}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}}
+
+
+A charting library implemented using the Wt \mbox{\hyperlink{group__painting}{Painting system}}.  
+
+
+Collaboration diagram for Charts (Wt\+::Chart)\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractChart}{Wt\+::\+Chart\+::\+W\+Abstract\+Chart}}
+\begin{DoxyCompactList}\small\item\em Abstract base class for M\+V\+C-\/based charts. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractChartModel}{Wt\+::\+Chart\+::\+W\+Abstract\+Chart\+Model}}
+\begin{DoxyCompactList}\small\item\em An abstract model for use with Wt\textquotesingle{}s charts. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap}{Wt\+::\+Chart\+::\+W\+Abstract\+Color\+Map}}
+\begin{DoxyCompactList}\small\item\em Maps numerical values to colors. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D}{Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3D}}
+\begin{DoxyCompactList}\small\item\em Abstract base class for dataseries that can be drawn on a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesian3DChart}{W\+Cartesian3\+D\+Chart}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData}{Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data}}
+\begin{DoxyCompactList}\small\item\em Class representing grid-\/based data for on a 3D chart. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WAxis}{Wt\+::\+Chart\+::\+W\+Axis}}
+\begin{DoxyCompactList}\small\item\em Class which represents an axis of a cartesian chart. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WAxisSliderWidget}{Wt\+::\+Chart\+::\+W\+Axis\+Slider\+Widget}}
+\begin{DoxyCompactList}\small\item\em A widget for selecting an X axis range to display on an associated \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesian3DChart}{Wt\+::\+Chart\+::\+W\+Cartesian3\+D\+Chart}}
+\begin{DoxyCompactList}\small\item\em A 3D Cartesian chart. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1SeriesIterator}{Wt\+::\+Chart\+::\+Series\+Iterator}}
+\begin{DoxyCompactList}\small\item\em Abstract base class for iterating over series data in a chart. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{Wt\+::\+Chart\+::\+W\+Cartesian\+Chart}}
+\begin{DoxyCompactList}\small\item\em A cartesian chart. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WChartPalette}{Wt\+::\+Chart\+::\+W\+Chart\+Palette}}
+\begin{DoxyCompactList}\small\item\em Abstract base class for styling rendered data series in charts. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WDataSeries}{Wt\+::\+Chart\+::\+W\+Data\+Series}}
+\begin{DoxyCompactList}\small\item\em A single data series in a cartesian chart. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WEquidistantGridData}{Wt\+::\+Chart\+::\+W\+Equidistant\+Grid\+Data}}
+\begin{DoxyCompactList}\small\item\em Class representing grid-\/based data for on a 3D chart. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WGridData}{Wt\+::\+Chart\+::\+W\+Grid\+Data}}
+\begin{DoxyCompactList}\small\item\em Class representing grid-\/based data for a 3D chart. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WPieChart}{Wt\+::\+Chart\+::\+W\+Pie\+Chart}}
+\begin{DoxyCompactList}\small\item\em A pie chart. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WScatterData}{Wt\+::\+Chart\+::\+W\+Scatter\+Data}}
+\begin{DoxyCompactList}\small\item\em Class representing a collection of points for on a 3D chart. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WSelection}{Wt\+::\+Chart\+::\+W\+Selection}}
+\begin{DoxyCompactList}\small\item\em Represents a selection on a chart. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardChartProxyModel}{Wt\+::\+Chart\+::\+W\+Standard\+Chart\+Proxy\+Model}}
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractChartModel}{W\+Abstract\+Chart\+Model}} implementation that wraps a \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}}. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardPalette}{Wt\+::\+Chart\+::\+W\+Standard\+Palette}}
+\begin{DoxyCompactList}\small\item\em Standard styling for rendering series in charts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__signalslot_ga50f91169486bada5931f3adc3a623091}{Keyboard\+Modifier}} $>$, \mbox{\hyperlink{group__charts_gada979ae7a2d2652d0b48f9d8004ea7d1}{Interactive\+Action}} $>$ \mbox{\hyperlink{group__charts_ga4faa1a57df4a4df163b9daf719b454bf}{Wt\+::\+Chart\+::\+Wheel\+Actions}}
+\begin{DoxyCompactList}\small\item\em A map of mouse wheel actions for interactive charts, indexed by \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags$<$\+Keyboard\+Modifier$>$}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__charts_gacca4e123c9e4b212050bcfac488fceee}{Wt\+::\+Chart\+::\+Series3\+D\+Type}} \{ \mbox{\hyperlink{group__charts_ggacca4e123c9e4b212050bcfac488fceeea2a3cd5946cfd317eb99c3d32e35e2d4c}{Wt\+::\+Chart\+::\+Series3\+D\+Type\+::\+Point}}, 
+\mbox{\hyperlink{group__charts_ggacca4e123c9e4b212050bcfac488fceeeaaa0d528ba11ea1485d466dfe1ea40819}{Wt\+::\+Chart\+::\+Series3\+D\+Type\+::\+Surface}}, 
+\mbox{\hyperlink{group__charts_ggacca4e123c9e4b212050bcfac488fceeeaddc35f88fa71b6ef142ae61f35364653}{Wt\+::\+Chart\+::\+Series3\+D\+Type\+::\+Bar}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration with the possible representations of a W\+Abstract\+Grid\+Data. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Wt\+::\+Chart\+::\+Axis}} \{ \newline
+\mbox{\hyperlink{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa02129bb861061d1a052c592e2dc6b383}{Wt\+::\+Chart\+::\+Axis\+::X}} = 0, 
+\mbox{\hyperlink{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa57cec4137b614c87cb4e24a3d003a3e0}{Wt\+::\+Chart\+::\+Axis\+::Y}} = 1, 
+\mbox{\hyperlink{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa5aefcaaf9790cc8ece124e274779ae94}{Wt\+::\+Chart\+::\+Axis\+::\+Y1}} = Y, 
+\mbox{\hyperlink{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa2aa016bd54aa28710a128dff5a42e456}{Wt\+::\+Chart\+::\+Axis\+::\+Y2}} = 2, 
+\newline
+\mbox{\hyperlink{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa5d32a72e2819aaf62362fcc862b37c5e}{Wt\+::\+Chart\+::\+Axis\+::\+Ordinate}} = Y, 
+\mbox{\hyperlink{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa11a797408c8edb4b9a2e44ca3b11a292}{Wt\+::\+Chart\+::\+Axis\+::\+X3D}} = 0, 
+\mbox{\hyperlink{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa730488f53d4282788994ff91554c9d29}{Wt\+::\+Chart\+::\+Axis\+::\+Y3D}} = 3, 
+\mbox{\hyperlink{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa4cfc1afb67e964963920f1c68ea1d31a}{Wt\+::\+Chart\+::\+Axis\+::\+Z3D}} = 1
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration that indicates a chart axis. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Wt\+::\+Chart\+::\+Axis\+Value}} \{ \mbox{\hyperlink{group__charts_gga77eb6d0cefa4a012950ea972b471b849aa1d0ec6d56f8833a078b5a7ac4caf2d4}{Wt\+::\+Chart\+::\+Axis\+Value\+::\+Minimum}} = 0x1, 
+\mbox{\hyperlink{group__charts_gga77eb6d0cefa4a012950ea972b471b849a8321e79c278ec510f63675c040594892}{Wt\+::\+Chart\+::\+Axis\+Value\+::\+Maximum}} = 0x2, 
+\mbox{\hyperlink{group__charts_gga77eb6d0cefa4a012950ea972b471b849ad7ed4ee1df437474d005188535f74875}{Wt\+::\+Chart\+::\+Axis\+Value\+::\+Zero}} = 0x4, 
+\mbox{\hyperlink{group__charts_gga77eb6d0cefa4a012950ea972b471b849a130c5b3473c57faa76e2a1c54e26f88e}{Wt\+::\+Chart\+::\+Axis\+Value\+::\+Both}} = 0x8
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration that indicates a logical location for an axis. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__charts_gadfcaed8cd6ff52f5747f7df48f2eeab6}{Wt\+::\+Chart\+::\+Axis\+Scale}} \{ \newline
+\mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a4984667940802dedc139aa7a430a6553}{Wt\+::\+Chart\+::\+Axis\+Scale\+::\+Discrete}} = 0, 
+\mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a32a843da6ea40ab3b17a3421ccdf671b}{Wt\+::\+Chart\+::\+Axis\+Scale\+::\+Linear}} = 1, 
+\mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6ace0be71e33226e4c1db2bcea5959f16b}{Wt\+::\+Chart\+::\+Axis\+Scale\+::\+Log}} = 2, 
+\mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a44749712dbec183e983dcd78a7736c41}{Wt\+::\+Chart\+::\+Axis\+Scale\+::\+Date}} = 3, 
+\newline
+\mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a8cf10d2341ed01492506085688270c1e}{Wt\+::\+Chart\+::\+Axis\+Scale\+::\+Date\+Time}} = 4
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration that indicates a scale for an axis. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__charts_gada979ae7a2d2652d0b48f9d8004ea7d1}{Wt\+::\+Chart\+::\+Interactive\+Action}} \{ \newline
+\mbox{\hyperlink{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1a5517fc80cd3145020faa411d8f545874}{Wt\+::\+Chart\+::\+Interactive\+Action\+::\+ZoomX}}, 
+\mbox{\hyperlink{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1ac31b1ae596f0225f36e91ecca55c71c6}{Wt\+::\+Chart\+::\+Interactive\+Action\+::\+ZoomY}}, 
+\mbox{\hyperlink{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1af8c18924dd06615bfb118db733702ecf}{Wt\+::\+Chart\+::\+Interactive\+Action\+::\+Zoom\+XY}}, 
+\mbox{\hyperlink{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1a6c5838d43ad155d5915b018d6e9b873e}{Wt\+::\+Chart\+::\+Interactive\+Action\+::\+Zoom\+Matching}}, 
+\newline
+\mbox{\hyperlink{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1a0f00bc6b37f7083f90edaa5fe6c022d6}{Wt\+::\+Chart\+::\+Interactive\+Action\+::\+PanX}}, 
+\mbox{\hyperlink{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1a70f667d5421b6ec607fb2437eeed51b9}{Wt\+::\+Chart\+::\+Interactive\+Action\+::\+PanY}}, 
+\mbox{\hyperlink{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1ade42640a6ef6a592db1222b0c939210b}{Wt\+::\+Chart\+::\+Interactive\+Action\+::\+Pan\+Matching}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration of mouse wheel actions for interactive charts. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__charts_ga44d64e4a9d08c7ef69648f4a9c3e4053}{Wt\+::\+Chart\+::\+Series\+Type}} \{ \mbox{\hyperlink{group__charts_gga44d64e4a9d08c7ef69648f4a9c3e4053a2a3cd5946cfd317eb99c3d32e35e2d4c}{Wt\+::\+Chart\+::\+Series\+Type\+::\+Point}}, 
+\mbox{\hyperlink{group__charts_gga44d64e4a9d08c7ef69648f4a9c3e4053a4803e6b9e63dabf04de980788d6a13c4}{Wt\+::\+Chart\+::\+Series\+Type\+::\+Line}}, 
+\mbox{\hyperlink{group__charts_gga44d64e4a9d08c7ef69648f4a9c3e4053a2cb4d4a3f8dacd623fa045a44febd476}{Wt\+::\+Chart\+::\+Series\+Type\+::\+Curve}}, 
+\mbox{\hyperlink{group__charts_gga44d64e4a9d08c7ef69648f4a9c3e4053addc35f88fa71b6ef142ae61f35364653}{Wt\+::\+Chart\+::\+Series\+Type\+::\+Bar}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration that specifies the type of a chart series. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__charts_ga9f38f3460fb2575d5f4f1a1ac51a7db6}{Wt\+::\+Chart\+::\+Marker\+Type}} \{ \newline
+\mbox{\hyperlink{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a6adf97f83acf6453d4a6a4b1070f3754}{Wt\+::\+Chart\+::\+Marker\+Type\+::\+None}}, 
+\mbox{\hyperlink{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6aceb46ca115d05c51aa5a16a8867c3304}{Wt\+::\+Chart\+::\+Marker\+Type\+::\+Square}}, 
+\mbox{\hyperlink{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a30954d90085f6eaaf5817917fc5fecb3}{Wt\+::\+Chart\+::\+Marker\+Type\+::\+Circle}}, 
+\mbox{\hyperlink{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6ae76b449b9fc8536af7557ffa6321d269}{Wt\+::\+Chart\+::\+Marker\+Type\+::\+Cross}}, 
+\newline
+\mbox{\hyperlink{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a727d820d1768aaa0b26040a70fc1028f}{Wt\+::\+Chart\+::\+Marker\+Type\+::\+X\+Cross}}, 
+\mbox{\hyperlink{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a5e5500cb2b82eb72d550de644bd1b64b}{Wt\+::\+Chart\+::\+Marker\+Type\+::\+Triangle}}, 
+\mbox{\hyperlink{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a90589c47f06eb971d548591f23c285af}{Wt\+::\+Chart\+::\+Marker\+Type\+::\+Custom}}, 
+\mbox{\hyperlink{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a26f93e6e68e28a698377e941cb59f29a}{Wt\+::\+Chart\+::\+Marker\+Type\+::\+Star}}, 
+\newline
+\mbox{\hyperlink{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a16c50716e1215556854a27f071a50fb4}{Wt\+::\+Chart\+::\+Marker\+Type\+::\+Inverted\+Triangle}}, 
+\mbox{\hyperlink{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a9c8ae0945940e5baec5a93c4c8ec869e}{Wt\+::\+Chart\+::\+Marker\+Type\+::\+Asterisk}}, 
+\mbox{\hyperlink{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a8f7671185d590914ac21c7511767b699}{Wt\+::\+Chart\+::\+Marker\+Type\+::\+Diamond}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration that specifies a type of point marker. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__charts_ga7236e5b04bdb6f393162842982b4d1a0}{Wt\+::\+Chart\+::\+Fill\+Range\+Type}} \{ \mbox{\hyperlink{group__charts_gga7236e5b04bdb6f393162842982b4d1a0a6adf97f83acf6453d4a6a4b1070f3754}{Wt\+::\+Chart\+::\+Fill\+Range\+Type\+::\+None}}, 
+\mbox{\hyperlink{group__charts_gga7236e5b04bdb6f393162842982b4d1a0acae48b5275b95ab3ae03e365b32f86b2}{Wt\+::\+Chart\+::\+Fill\+Range\+Type\+::\+Minimum\+Value}}, 
+\mbox{\hyperlink{group__charts_gga7236e5b04bdb6f393162842982b4d1a0a55a7238410862f8958a8f57b6daab822}{Wt\+::\+Chart\+::\+Fill\+Range\+Type\+::\+Maximum\+Value}}, 
+\mbox{\hyperlink{group__charts_gga7236e5b04bdb6f393162842982b4d1a0a0600d7757a21d96591e24471b6d14335}{Wt\+::\+Chart\+::\+Fill\+Range\+Type\+::\+Zero\+Value}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration that specifies how an area should be filled. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__charts_ga8d63464f873580c77508e1c0c26cbfea}{Wt\+::\+Chart\+::\+Chart\+Type}} \{ \mbox{\hyperlink{group__charts_gga8d63464f873580c77508e1c0c26cbfeaa3adbdb3ac060038aa0e6e6c138ef9873}{Wt\+::\+Chart\+::\+Chart\+Type\+::\+Category}}, 
+\mbox{\hyperlink{group__charts_gga8d63464f873580c77508e1c0c26cbfeaa09870720ca8134284e4e305ac6ce5f19}{Wt\+::\+Chart\+::\+Chart\+Type\+::\+Scatter}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration type that indicates a chart type for a cartesian chart. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__charts_ga814d38dbe18cc597674f3833c1da84a5}\label{group__charts_ga814d38dbe18cc597674f3833c1da84a5}} 
+enum \mbox{\hyperlink{group__charts_ga814d38dbe18cc597674f3833c1da84a5}{Wt\+::\+Chart\+::\+Axis\+Property}} \{ {\bfseries Labels} = 0x1, 
+{\bfseries Line} = 0x4
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration that specifies a property of the axes. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__charts_ga950e490e52f40d945b7301bf3831f2af}{Wt\+::\+Chart\+::\+Legend\+Location}} \{ \mbox{\hyperlink{group__charts_gga950e490e52f40d945b7301bf3831f2afa9b6d3000134648fc9f1e71094ae0847d}{Wt\+::\+Chart\+::\+Legend\+Location\+::\+Inside}}, 
+\mbox{\hyperlink{group__charts_gga950e490e52f40d945b7301bf3831f2afa76fbf0ccd7fcd64879c2ff2119dc15a4}{Wt\+::\+Chart\+::\+Legend\+Location\+::\+Outside}}
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration type that indicates a legend location. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__charts_ga9345394a8eeda6800d8a24c5df44d983}{Wt\+::\+Chart\+::\+Label\+Option}} \{ \newline
+\mbox{\hyperlink{group__charts_gga9345394a8eeda6800d8a24c5df44d983a6adf97f83acf6453d4a6a4b1070f3754}{Wt\+::\+Chart\+::\+Label\+Option\+::\+None}} = 0x00, 
+\mbox{\hyperlink{group__charts_gga9345394a8eeda6800d8a24c5df44d983a9b6d3000134648fc9f1e71094ae0847d}{Wt\+::\+Chart\+::\+Label\+Option\+::\+Inside}} = 0x01, 
+\mbox{\hyperlink{group__charts_gga9345394a8eeda6800d8a24c5df44d983a76fbf0ccd7fcd64879c2ff2119dc15a4}{Wt\+::\+Chart\+::\+Label\+Option\+::\+Outside}} = 0x02, 
+\mbox{\hyperlink{group__charts_gga9345394a8eeda6800d8a24c5df44d983aa40c79f506c247b54376e25bdf769d4e}{Wt\+::\+Chart\+::\+Label\+Option\+::\+Text\+Label}} = 0x10, 
+\newline
+\mbox{\hyperlink{group__charts_gga9345394a8eeda6800d8a24c5df44d983a653c63c792f72bbdf78fb0ed08f22b6a}{Wt\+::\+Chart\+::\+Label\+Option\+::\+Text\+Percentage}} = 0x20
+ \}
+\begin{DoxyCompactList}\small\item\em Enumeration that specifies options for the labels. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__charts_ga6b93af055b0852d9a04e50a057a657ba}{Wt\+::\+Chart\+::\+Plane}} \{ \mbox{\hyperlink{group__charts_ga6b93af055b0852d9a04e50a057a657baa74c53bcd3dcb2bb79993b2fec37d362a}{Wt\+::\+Chart\+::\+Plane\+::\+XY}}, 
+\mbox{\hyperlink{group__charts_ga6b93af055b0852d9a04e50a057a657baa27db3b98d01e664c17a6620b222c6469}{Wt\+::\+Chart\+::\+Plane\+::\+XZ}}, 
+\mbox{\hyperlink{group__charts_ga6b93af055b0852d9a04e50a057a657baaffa4ba973372c3650fd0881abeca6512}{Wt\+::\+Chart\+::\+Plane\+::\+YZ}}
+ \}
+\begin{DoxyCompactList}\small\item\em Lists the three orthogonal planes in 3D. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{group__charts_ga8e8aff145d7a6e03e84bab096a2254b3}{Wt\+::\+Chart\+::\+Chart\+Updates}} \{ \mbox{\hyperlink{group__charts_ga8e8aff145d7a6e03e84bab096a2254b3a4744c8238d0c4642a50182fab97d66c5}{Wt\+::\+Chart\+::\+Chart\+Updates\+::\+Camera\+Matrix}} = 0x1, 
+\mbox{\hyperlink{group__charts_ga8e8aff145d7a6e03e84bab096a2254b3af221866805bf3d75f2e15ae9157c7cc3}{Wt\+::\+Chart\+::\+Chart\+Updates\+::\+G\+L\+Context}} = 0x2, 
+\mbox{\hyperlink{group__charts_ga8e8aff145d7a6e03e84bab096a2254b3ae5cf24f32112e34d91a03dec70224818}{Wt\+::\+Chart\+::\+Chart\+Updates\+::\+G\+L\+Textures}} = 0x4
+ \}
+\begin{DoxyCompactList}\small\item\em Lists the different ways that a chart can be updated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A charting library implemented using the Wt \mbox{\hyperlink{group__painting}{Painting system}}. 
+
+The charting library contains two main chart widget classes, \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} and \mbox{\hyperlink{classWt_1_1Chart_1_1WPieChart}{W\+Pie\+Chart}}, and a number of utility classes for drawing simple to complex charts. 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group__charts_ga4faa1a57df4a4df163b9daf719b454bf}\label{group__charts_ga4faa1a57df4a4df163b9daf719b454bf}} 
+\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!WheelActions@{WheelActions}}
+\index{WheelActions@{WheelActions}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}
+\doxysubsubsection{\texorpdfstring{WheelActions}{WheelActions}}
+{\footnotesize\ttfamily typedef std\+::map$<$\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$\mbox{\hyperlink{group__signalslot_ga50f91169486bada5931f3adc3a623091}{Keyboard\+Modifier}}$>$, \mbox{\hyperlink{group__charts_gada979ae7a2d2652d0b48f9d8004ea7d1}{Interactive\+Action}}$>$ \mbox{\hyperlink{group__charts_ga4faa1a57df4a4df163b9daf719b454bf}{Wt\+::\+Chart\+::\+Wheel\+Actions}}}
+
+
+
+A map of mouse wheel actions for interactive charts, indexed by \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags$<$\+Keyboard\+Modifier$>$}} 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart_a9080d0351171802250889d1dd5e3ae92}{W\+Cartesian\+Chart\+::set\+Wheel\+Actions(\+Wheel\+Actions)}} 
+
+\mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart_a49bca58bf053358024c88935a57a6915}{W\+Cartesian\+Chart\+::wheel\+Actions()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}\label{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}} 
+\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Axis@{Axis}}
+\index{Axis@{Axis}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}
+\doxysubsubsection{\texorpdfstring{Axis}{Axis}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Wt\+::\+Chart\+::\+Axis}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration that indicates a chart axis. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart_a4cc02053adf654d8a754e13426299a80}{W\+Cartesian\+Chart\+::axis(\+Axis)}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X@{X}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!X@{X}}}\mbox{\Hypertarget{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa02129bb861061d1a052c592e2dc6b383}\label{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa02129bb861061d1a052c592e2dc6b383}} 
+X&X axis. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Y@{Y}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Y@{Y}}}\mbox{\Hypertarget{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa57cec4137b614c87cb4e24a3d003a3e0}\label{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa57cec4137b614c87cb4e24a3d003a3e0}} 
+Y&First Y axis (== Y1). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Y1@{Y1}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Y1@{Y1}}}\mbox{\Hypertarget{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa5aefcaaf9790cc8ece124e274779ae94}\label{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa5aefcaaf9790cc8ece124e274779ae94}} 
+Y1&First Y axis (== Y). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Y2@{Y2}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Y2@{Y2}}}\mbox{\Hypertarget{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa2aa016bd54aa28710a128dff5a42e456}\label{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa2aa016bd54aa28710a128dff5a42e456}} 
+Y2&Second Y Axis. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Ordinate@{Ordinate}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Ordinate@{Ordinate}}}\mbox{\Hypertarget{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa5d32a72e2819aaf62362fcc862b37c5e}\label{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa5d32a72e2819aaf62362fcc862b37c5e}} 
+Ordinate&Ordinate axis (== Y1 for a 2D plot). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X3D@{X3D}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!X3D@{X3D}}}\mbox{\Hypertarget{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa11a797408c8edb4b9a2e44ca3b11a292}\label{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa11a797408c8edb4b9a2e44ca3b11a292}} 
+X3D&X axis on 3D chart. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Y3D@{Y3D}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Y3D@{Y3D}}}\mbox{\Hypertarget{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa730488f53d4282788994ff91554c9d29}\label{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa730488f53d4282788994ff91554c9d29}} 
+Y3D&Y axis on 3D chart. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Z3D@{Z3D}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Z3D@{Z3D}}}\mbox{\Hypertarget{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa4cfc1afb67e964963920f1c68ea1d31a}\label{group__charts_ggaddb678f67fbd9f374fcee0922f158c9fa4cfc1afb67e964963920f1c68ea1d31a}} 
+Z3D&Z axis on 3D chart. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__charts_gadfcaed8cd6ff52f5747f7df48f2eeab6}\label{group__charts_gadfcaed8cd6ff52f5747f7df48f2eeab6}} 
+\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!AxisScale@{AxisScale}}
+\index{AxisScale@{AxisScale}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}
+\doxysubsubsection{\texorpdfstring{AxisScale}{AxisScale}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__charts_gadfcaed8cd6ff52f5747f7df48f2eeab6}{Wt\+::\+Chart\+::\+Axis\+Scale}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration that indicates a scale for an axis. 
+
+The scale determines how values are mapped onto an axis.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_ab067037b83d1d663535250968a1776d8}{W\+Axis\+::set\+Scale(\+Axis\+Scale scale)}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Discrete@{Discrete}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Discrete@{Discrete}}}\mbox{\Hypertarget{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a4984667940802dedc139aa7a430a6553}\label{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a4984667940802dedc139aa7a430a6553}} 
+Discrete&A discrete scale is set as the scale for the X axis in a \mbox{\hyperlink{group__charts_gga8d63464f873580c77508e1c0c26cbfeaa3adbdb3ac060038aa0e6e6c138ef9873}{Chart\+Type\+::\+Category}}, and is only applicable there. It lists all values, evenly spaced, and consecutively in the order of the model. The categories are converted to numbers using their ordinal (first category = 0, second = 1, ...). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Linear@{Linear}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Linear@{Linear}}}\mbox{\Hypertarget{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a32a843da6ea40ab3b17a3421ccdf671b}\label{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a32a843da6ea40ab3b17a3421ccdf671b}} 
+Linear&A linear scale is the default scale for all axes, except for the X scale in a \mbox{\hyperlink{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a4984667940802dedc139aa7a430a6553}{Axis\+Scale\+::\+Discrete}}. It maps values in a linear fashion on the axis. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Log@{Log}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Log@{Log}}}\mbox{\Hypertarget{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6ace0be71e33226e4c1db2bcea5959f16b}\label{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6ace0be71e33226e4c1db2bcea5959f16b}} 
+Log&A logarithmic scale is useful for plotting values with of a large range, but only works for positive values. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Date@{Date}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Date@{Date}}}\mbox{\Hypertarget{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a44749712dbec183e983dcd78a7736c41}\label{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a44749712dbec183e983dcd78a7736c41}} 
+Date&A date scale is a special linear scale, which is useful for the X axis in a \mbox{\hyperlink{group__charts_gga8d63464f873580c77508e1c0c26cbfeaa09870720ca8134284e4e305ac6ce5f19}{Chart\+Type\+::\+Scatter}}, when the X series contain dates (of type \mbox{\hyperlink{classWt_1_1WDate}{W\+Date}}). The dates are converted to numbers, as Julian Days. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DateTime@{DateTime}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!DateTime@{DateTime}}}\mbox{\Hypertarget{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a8cf10d2341ed01492506085688270c1e}\label{group__charts_ggadfcaed8cd6ff52f5747f7df48f2eeab6a8cf10d2341ed01492506085688270c1e}} 
+Date\+Time&A datetime scale is a special linear scale, which is useful for the X axis in a \mbox{\hyperlink{group__charts_gga8d63464f873580c77508e1c0c26cbfeaa09870720ca8134284e4e305ac6ce5f19}{Chart\+Type\+::\+Scatter}}, when the X series contain timedates (of type \mbox{\hyperlink{classWt_1_1WDateTime}{W\+Date\+Time}}). The dates are converted to numbers, as the number of seconds since the Unix Epoch (midnight Coordinated Universal \mbox{\hyperlink{classWt_1_1Time}{Time}} (U\+TC) of January 1, 1970). \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__charts_ga77eb6d0cefa4a012950ea972b471b849}\label{group__charts_ga77eb6d0cefa4a012950ea972b471b849}} 
+\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!AxisValue@{AxisValue}}
+\index{AxisValue@{AxisValue}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}
+\doxysubsubsection{\texorpdfstring{AxisValue}{AxisValue}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__charts_ga77eb6d0cefa4a012950ea972b471b849}{Wt\+::\+Chart\+::\+Axis\+Value}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration that indicates a logical location for an axis. 
+
+The location is dependent on the values of the other axis.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAxis_a6dab2f46117b85a4a6f439e4f194ee82}{W\+Axis\+::set\+Location(\+Axis\+Value)}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Minimum@{Minimum}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Minimum@{Minimum}}}\mbox{\Hypertarget{group__charts_gga77eb6d0cefa4a012950ea972b471b849aa1d0ec6d56f8833a078b5a7ac4caf2d4}\label{group__charts_gga77eb6d0cefa4a012950ea972b471b849aa1d0ec6d56f8833a078b5a7ac4caf2d4}} 
+Minimum&The minimum value. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Maximum@{Maximum}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Maximum@{Maximum}}}\mbox{\Hypertarget{group__charts_gga77eb6d0cefa4a012950ea972b471b849a8321e79c278ec510f63675c040594892}\label{group__charts_gga77eb6d0cefa4a012950ea972b471b849a8321e79c278ec510f63675c040594892}} 
+Maximum&The maximum value. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Zero@{Zero}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Zero@{Zero}}}\mbox{\Hypertarget{group__charts_gga77eb6d0cefa4a012950ea972b471b849ad7ed4ee1df437474d005188535f74875}\label{group__charts_gga77eb6d0cefa4a012950ea972b471b849ad7ed4ee1df437474d005188535f74875}} 
+Zero&The zero value (if displayed). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Both@{Both}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Both@{Both}}}\mbox{\Hypertarget{group__charts_gga77eb6d0cefa4a012950ea972b471b849a130c5b3473c57faa76e2a1c54e26f88e}\label{group__charts_gga77eb6d0cefa4a012950ea972b471b849a130c5b3473c57faa76e2a1c54e26f88e}} 
+Both&At both sides (Minimum and Maximum). \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__charts_ga8d63464f873580c77508e1c0c26cbfea}\label{group__charts_ga8d63464f873580c77508e1c0c26cbfea}} 
+\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!ChartType@{ChartType}}
+\index{ChartType@{ChartType}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}
+\doxysubsubsection{\texorpdfstring{ChartType}{ChartType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__charts_ga8d63464f873580c77508e1c0c26cbfea}{Wt\+::\+Chart\+::\+Chart\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration type that indicates a chart type for a cartesian chart. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Category@{Category}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Category@{Category}}}\mbox{\Hypertarget{group__charts_gga8d63464f873580c77508e1c0c26cbfeaa3adbdb3ac060038aa0e6e6c138ef9873}\label{group__charts_gga8d63464f873580c77508e1c0c26cbfeaa3adbdb3ac060038aa0e6e6c138ef9873}} 
+Category&The X series are categories. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Scatter@{Scatter}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Scatter@{Scatter}}}\mbox{\Hypertarget{group__charts_gga8d63464f873580c77508e1c0c26cbfeaa09870720ca8134284e4e305ac6ce5f19}\label{group__charts_gga8d63464f873580c77508e1c0c26cbfeaa09870720ca8134284e4e305ac6ce5f19}} 
+Scatter&The X series must be interpreted as numerical data. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__charts_ga8e8aff145d7a6e03e84bab096a2254b3}\label{group__charts_ga8e8aff145d7a6e03e84bab096a2254b3}} 
+\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!ChartUpdates@{ChartUpdates}}
+\index{ChartUpdates@{ChartUpdates}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}
+\doxysubsubsection{\texorpdfstring{ChartUpdates}{ChartUpdates}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__charts_ga8e8aff145d7a6e03e84bab096a2254b3}{Wt\+::\+Chart\+::\+Chart\+Updates}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Lists the different ways that a chart can be updated. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CameraMatrix@{CameraMatrix}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!CameraMatrix@{CameraMatrix}}}\mbox{\Hypertarget{group__charts_ga8e8aff145d7a6e03e84bab096a2254b3a4744c8238d0c4642a50182fab97d66c5}\label{group__charts_ga8e8aff145d7a6e03e84bab096a2254b3a4744c8238d0c4642a50182fab97d66c5}} 
+Camera\+Matrix&Camera matrix. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GLContext@{GLContext}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!GLContext@{GLContext}}}\mbox{\Hypertarget{group__charts_ga8e8aff145d7a6e03e84bab096a2254b3af221866805bf3d75f2e15ae9157c7cc3}\label{group__charts_ga8e8aff145d7a6e03e84bab096a2254b3af221866805bf3d75f2e15ae9157c7cc3}} 
+G\+L\+Context&GL context. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GLTextures@{GLTextures}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!GLTextures@{GLTextures}}}\mbox{\Hypertarget{group__charts_ga8e8aff145d7a6e03e84bab096a2254b3ae5cf24f32112e34d91a03dec70224818}\label{group__charts_ga8e8aff145d7a6e03e84bab096a2254b3ae5cf24f32112e34d91a03dec70224818}} 
+G\+L\+Textures&GL textures. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__charts_ga7236e5b04bdb6f393162842982b4d1a0}\label{group__charts_ga7236e5b04bdb6f393162842982b4d1a0}} 
+\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!FillRangeType@{FillRangeType}}
+\index{FillRangeType@{FillRangeType}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}
+\doxysubsubsection{\texorpdfstring{FillRangeType}{FillRangeType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__charts_ga7236e5b04bdb6f393162842982b4d1a0}{Wt\+::\+Chart\+::\+Fill\+Range\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration that specifies how an area should be filled. 
+
+\mbox{\hyperlink{classData}{Data}} series of type \mbox{\hyperlink{group__charts_gga44d64e4a9d08c7ef69648f4a9c3e4053a4803e6b9e63dabf04de980788d6a13c4}{Series\+Type\+::\+Line}} or Curve\+Serie may be filled under or above the line or curve. This enumeration specifies the other limit of this fill. \mbox{\hyperlink{classData}{Data}} series of type \mbox{\hyperlink{group__charts_gga44d64e4a9d08c7ef69648f4a9c3e4053addc35f88fa71b6ef142ae61f35364653}{Series\+Type\+::\+Bar}} can use this setting to configure the bottom of the chart.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WDataSeries_a9b5ea5691c650d567e26b2a7ea762462}{W\+Data\+Series\+::set\+Fill\+Range(\+Fill\+Range\+Type range)}} 
+
+\mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!None@{None}}}\mbox{\Hypertarget{group__charts_gga7236e5b04bdb6f393162842982b4d1a0a6adf97f83acf6453d4a6a4b1070f3754}\label{group__charts_gga7236e5b04bdb6f393162842982b4d1a0a6adf97f83acf6453d4a6a4b1070f3754}} 
+None&Do not fill under the curve. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MinimumValue@{MinimumValue}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!MinimumValue@{MinimumValue}}}\mbox{\Hypertarget{group__charts_gga7236e5b04bdb6f393162842982b4d1a0acae48b5275b95ab3ae03e365b32f86b2}\label{group__charts_gga7236e5b04bdb6f393162842982b4d1a0acae48b5275b95ab3ae03e365b32f86b2}} 
+Minimum\+Value&Fill from the curve to the chart bottom (min) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MaximumValue@{MaximumValue}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!MaximumValue@{MaximumValue}}}\mbox{\Hypertarget{group__charts_gga7236e5b04bdb6f393162842982b4d1a0a55a7238410862f8958a8f57b6daab822}\label{group__charts_gga7236e5b04bdb6f393162842982b4d1a0a55a7238410862f8958a8f57b6daab822}} 
+Maximum\+Value&Fill from the curve to the chart top. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ZeroValue@{ZeroValue}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!ZeroValue@{ZeroValue}}}\mbox{\Hypertarget{group__charts_gga7236e5b04bdb6f393162842982b4d1a0a0600d7757a21d96591e24471b6d14335}\label{group__charts_gga7236e5b04bdb6f393162842982b4d1a0a0600d7757a21d96591e24471b6d14335}} 
+Zero\+Value&Fill from the curve to the zero Y value. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__charts_gada979ae7a2d2652d0b48f9d8004ea7d1}\label{group__charts_gada979ae7a2d2652d0b48f9d8004ea7d1}} 
+\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!InteractiveAction@{InteractiveAction}}
+\index{InteractiveAction@{InteractiveAction}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}
+\doxysubsubsection{\texorpdfstring{InteractiveAction}{InteractiveAction}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__charts_gada979ae7a2d2652d0b48f9d8004ea7d1}{Wt\+::\+Chart\+::\+Interactive\+Action}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration of mouse wheel actions for interactive charts. 
+
+\begin{DoxySeeAlso}{See also}
+W\+Cartesian\+Chart\+::\+Wheel\+Actions 
+
+\mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart_a9080d0351171802250889d1dd5e3ae92}{W\+Cartesian\+Chart\+::set\+Wheel\+Actions(\+Wheel\+Actions)}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ZoomX@{ZoomX}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!ZoomX@{ZoomX}}}\mbox{\Hypertarget{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1a5517fc80cd3145020faa411d8f545874}\label{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1a5517fc80cd3145020faa411d8f545874}} 
+ZoomX&Zoom x-\/axis. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ZoomY@{ZoomY}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!ZoomY@{ZoomY}}}\mbox{\Hypertarget{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1ac31b1ae596f0225f36e91ecca55c71c6}\label{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1ac31b1ae596f0225f36e91ecca55c71c6}} 
+ZoomY&Zoom y-\/axis. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ZoomXY@{ZoomXY}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!ZoomXY@{ZoomXY}}}\mbox{\Hypertarget{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1af8c18924dd06615bfb118db733702ecf}\label{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1af8c18924dd06615bfb118db733702ecf}} 
+Zoom\+XY&Zoom along both x and y-\/axes. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ZoomMatching@{ZoomMatching}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!ZoomMatching@{ZoomMatching}}}\mbox{\Hypertarget{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1a6c5838d43ad155d5915b018d6e9b873e}\label{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1a6c5838d43ad155d5915b018d6e9b873e}} 
+Zoom\+Matching&Zoom y-\/axis on vertical scroll, x-\/axis on horizontal scroll. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PanX@{PanX}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!PanX@{PanX}}}\mbox{\Hypertarget{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1a0f00bc6b37f7083f90edaa5fe6c022d6}\label{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1a0f00bc6b37f7083f90edaa5fe6c022d6}} 
+PanX&Pan x-\/axis. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PanY@{PanY}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!PanY@{PanY}}}\mbox{\Hypertarget{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1a70f667d5421b6ec607fb2437eeed51b9}\label{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1a70f667d5421b6ec607fb2437eeed51b9}} 
+PanY&Pan y-\/axis. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PanMatching@{PanMatching}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!PanMatching@{PanMatching}}}\mbox{\Hypertarget{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1ade42640a6ef6a592db1222b0c939210b}\label{group__charts_ggada979ae7a2d2652d0b48f9d8004ea7d1ade42640a6ef6a592db1222b0c939210b}} 
+Pan\+Matching&Pan y-\/axis on vertical scroll, x-\/axis on horizontal scroll. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__charts_ga9345394a8eeda6800d8a24c5df44d983}\label{group__charts_ga9345394a8eeda6800d8a24c5df44d983}} 
+\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!LabelOption@{LabelOption}}
+\index{LabelOption@{LabelOption}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}
+\doxysubsubsection{\texorpdfstring{LabelOption}{LabelOption}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__charts_ga9345394a8eeda6800d8a24c5df44d983}{Wt\+::\+Chart\+::\+Label\+Option}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration that specifies options for the labels. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WPieChart_a89324f6159e5893e1ddd368718d00e5d}{W\+Pie\+Chart\+::set\+Display\+Labels(\+W\+Flags$<$\+Label\+Option$>$)}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!None@{None}}}\mbox{\Hypertarget{group__charts_gga9345394a8eeda6800d8a24c5df44d983a6adf97f83acf6453d4a6a4b1070f3754}\label{group__charts_gga9345394a8eeda6800d8a24c5df44d983a6adf97f83acf6453d4a6a4b1070f3754}} 
+None&Do not display labels (default). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Inside@{Inside}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Inside@{Inside}}}\mbox{\Hypertarget{group__charts_gga9345394a8eeda6800d8a24c5df44d983a9b6d3000134648fc9f1e71094ae0847d}\label{group__charts_gga9345394a8eeda6800d8a24c5df44d983a9b6d3000134648fc9f1e71094ae0847d}} 
+Inside&Display labels inside each segment. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Outside@{Outside}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Outside@{Outside}}}\mbox{\Hypertarget{group__charts_gga9345394a8eeda6800d8a24c5df44d983a76fbf0ccd7fcd64879c2ff2119dc15a4}\label{group__charts_gga9345394a8eeda6800d8a24c5df44d983a76fbf0ccd7fcd64879c2ff2119dc15a4}} 
+Outside&Display labels outside each segment. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TextLabel@{TextLabel}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!TextLabel@{TextLabel}}}\mbox{\Hypertarget{group__charts_gga9345394a8eeda6800d8a24c5df44d983aa40c79f506c247b54376e25bdf769d4e}\label{group__charts_gga9345394a8eeda6800d8a24c5df44d983aa40c79f506c247b54376e25bdf769d4e}} 
+Text\+Label&Display the label text. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TextPercentage@{TextPercentage}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!TextPercentage@{TextPercentage}}}\mbox{\Hypertarget{group__charts_gga9345394a8eeda6800d8a24c5df44d983a653c63c792f72bbdf78fb0ed08f22b6a}\label{group__charts_gga9345394a8eeda6800d8a24c5df44d983a653c63c792f72bbdf78fb0ed08f22b6a}} 
+Text\+Percentage&Display the value (as percentage) \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__charts_ga950e490e52f40d945b7301bf3831f2af}\label{group__charts_ga950e490e52f40d945b7301bf3831f2af}} 
+\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!LegendLocation@{LegendLocation}}
+\index{LegendLocation@{LegendLocation}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}
+\doxysubsubsection{\texorpdfstring{LegendLocation}{LegendLocation}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__charts_ga950e490e52f40d945b7301bf3831f2af}{Wt\+::\+Chart\+::\+Legend\+Location}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration type that indicates a legend location. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Inside@{Inside}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Inside@{Inside}}}\mbox{\Hypertarget{group__charts_gga950e490e52f40d945b7301bf3831f2afa9b6d3000134648fc9f1e71094ae0847d}\label{group__charts_gga950e490e52f40d945b7301bf3831f2afa9b6d3000134648fc9f1e71094ae0847d}} 
+Inside&Inside the chart area. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Outside@{Outside}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Outside@{Outside}}}\mbox{\Hypertarget{group__charts_gga950e490e52f40d945b7301bf3831f2afa76fbf0ccd7fcd64879c2ff2119dc15a4}\label{group__charts_gga950e490e52f40d945b7301bf3831f2afa76fbf0ccd7fcd64879c2ff2119dc15a4}} 
+Outside&Outside the chart area (in the padding area) \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__charts_ga9f38f3460fb2575d5f4f1a1ac51a7db6}\label{group__charts_ga9f38f3460fb2575d5f4f1a1ac51a7db6}} 
+\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!MarkerType@{MarkerType}}
+\index{MarkerType@{MarkerType}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}
+\doxysubsubsection{\texorpdfstring{MarkerType}{MarkerType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__charts_ga9f38f3460fb2575d5f4f1a1ac51a7db6}{Wt\+::\+Chart\+::\+Marker\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration that specifies a type of point marker. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WDataSeries_ac8f4ae7c878df76662d92fd48e57d17d}{W\+Data\+Series\+::set\+Marker(\+Marker\+Type marker)}} 
+
+\mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!None@{None}}}\mbox{\Hypertarget{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a6adf97f83acf6453d4a6a4b1070f3754}\label{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a6adf97f83acf6453d4a6a4b1070f3754}} 
+None&Do not draw point markers. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Square@{Square}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Square@{Square}}}\mbox{\Hypertarget{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6aceb46ca115d05c51aa5a16a8867c3304}\label{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6aceb46ca115d05c51aa5a16a8867c3304}} 
+Square&Mark points using a square. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Circle@{Circle}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Circle@{Circle}}}\mbox{\Hypertarget{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a30954d90085f6eaaf5817917fc5fecb3}\label{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a30954d90085f6eaaf5817917fc5fecb3}} 
+Circle&Mark points using a circle. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cross@{Cross}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Cross@{Cross}}}\mbox{\Hypertarget{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6ae76b449b9fc8536af7557ffa6321d269}\label{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6ae76b449b9fc8536af7557ffa6321d269}} 
+Cross&Mark points using a cross (+). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XCross@{XCross}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!XCross@{XCross}}}\mbox{\Hypertarget{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a727d820d1768aaa0b26040a70fc1028f}\label{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a727d820d1768aaa0b26040a70fc1028f}} 
+X\+Cross&Mark points using a cross (x). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Triangle@{Triangle}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Triangle@{Triangle}}}\mbox{\Hypertarget{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a5e5500cb2b82eb72d550de644bd1b64b}\label{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a5e5500cb2b82eb72d550de644bd1b64b}} 
+Triangle&Mark points using a triangle. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Custom@{Custom}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Custom@{Custom}}}\mbox{\Hypertarget{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a90589c47f06eb971d548591f23c285af}\label{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a90589c47f06eb971d548591f23c285af}} 
+Custom&Mark points using a custom marker. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Star@{Star}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Star@{Star}}}\mbox{\Hypertarget{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a26f93e6e68e28a698377e941cb59f29a}\label{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a26f93e6e68e28a698377e941cb59f29a}} 
+Star&Mark points using a star. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{InvertedTriangle@{InvertedTriangle}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!InvertedTriangle@{InvertedTriangle}}}\mbox{\Hypertarget{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a16c50716e1215556854a27f071a50fb4}\label{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a16c50716e1215556854a27f071a50fb4}} 
+Inverted\+Triangle&Mark points using an inverted (upside-\/down) triangle. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Asterisk@{Asterisk}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Asterisk@{Asterisk}}}\mbox{\Hypertarget{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a9c8ae0945940e5baec5a93c4c8ec869e}\label{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a9c8ae0945940e5baec5a93c4c8ec869e}} 
+Asterisk&Mark points using an asterisk ($\ast$). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Diamond@{Diamond}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Diamond@{Diamond}}}\mbox{\Hypertarget{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a8f7671185d590914ac21c7511767b699}\label{group__charts_gga9f38f3460fb2575d5f4f1a1ac51a7db6a8f7671185d590914ac21c7511767b699}} 
+Diamond&Mark points using a diamond. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__charts_ga6b93af055b0852d9a04e50a057a657ba}\label{group__charts_ga6b93af055b0852d9a04e50a057a657ba}} 
+\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Plane@{Plane}}
+\index{Plane@{Plane}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}
+\doxysubsubsection{\texorpdfstring{Plane}{Plane}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__charts_ga6b93af055b0852d9a04e50a057a657ba}{Wt\+::\+Chart\+::\+Plane}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Lists the three orthogonal planes in 3D. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XY@{XY}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!XY@{XY}}}\mbox{\Hypertarget{group__charts_ga6b93af055b0852d9a04e50a057a657baa74c53bcd3dcb2bb79993b2fec37d362a}\label{group__charts_ga6b93af055b0852d9a04e50a057a657baa74c53bcd3dcb2bb79993b2fec37d362a}} 
+XY&X/Y Plane. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{XZ@{XZ}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!XZ@{XZ}}}\mbox{\Hypertarget{group__charts_ga6b93af055b0852d9a04e50a057a657baa27db3b98d01e664c17a6620b222c6469}\label{group__charts_ga6b93af055b0852d9a04e50a057a657baa27db3b98d01e664c17a6620b222c6469}} 
+XZ&X/Z Plane. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{YZ@{YZ}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!YZ@{YZ}}}\mbox{\Hypertarget{group__charts_ga6b93af055b0852d9a04e50a057a657baaffa4ba973372c3650fd0881abeca6512}\label{group__charts_ga6b93af055b0852d9a04e50a057a657baaffa4ba973372c3650fd0881abeca6512}} 
+YZ&Y/Z Plane. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__charts_gacca4e123c9e4b212050bcfac488fceee}\label{group__charts_gacca4e123c9e4b212050bcfac488fceee}} 
+\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Series3DType@{Series3DType}}
+\index{Series3DType@{Series3DType}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}
+\doxysubsubsection{\texorpdfstring{Series3DType}{Series3DType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__charts_gacca4e123c9e4b212050bcfac488fceee}{Wt\+::\+Chart\+::\+Series3\+D\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration with the possible representations of a \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData}{W\+Abstract\+Grid\+Data}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Point@{Point}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Point@{Point}}}\mbox{\Hypertarget{group__charts_ggacca4e123c9e4b212050bcfac488fceeea2a3cd5946cfd317eb99c3d32e35e2d4c}\label{group__charts_ggacca4e123c9e4b212050bcfac488fceeea2a3cd5946cfd317eb99c3d32e35e2d4c}} 
+Point&Series rendered as points. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Surface@{Surface}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Surface@{Surface}}}\mbox{\Hypertarget{group__charts_ggacca4e123c9e4b212050bcfac488fceeeaaa0d528ba11ea1485d466dfe1ea40819}\label{group__charts_ggacca4e123c9e4b212050bcfac488fceeeaaa0d528ba11ea1485d466dfe1ea40819}} 
+Surface&Series rendered as a surface. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bar@{Bar}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Bar@{Bar}}}\mbox{\Hypertarget{group__charts_ggacca4e123c9e4b212050bcfac488fceeeaddc35f88fa71b6ef142ae61f35364653}\label{group__charts_ggacca4e123c9e4b212050bcfac488fceeeaddc35f88fa71b6ef142ae61f35364653}} 
+Bar&Series rendered as bars. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{group__charts_ga44d64e4a9d08c7ef69648f4a9c3e4053}\label{group__charts_ga44d64e4a9d08c7ef69648f4a9c3e4053}} 
+\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!SeriesType@{SeriesType}}
+\index{SeriesType@{SeriesType}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}
+\doxysubsubsection{\texorpdfstring{SeriesType}{SeriesType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__charts_ga44d64e4a9d08c7ef69648f4a9c3e4053}{Wt\+::\+Chart\+::\+Series\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Enumeration that specifies the type of a chart series. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WDataSeries_a8db1e060f64d2b4f44c21f96a071ff38}{W\+Data\+Series\+::set\+Type(\+Series\+Type)}} 
+
+\mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{W\+Cartesian\+Chart}} 
+\end{DoxySeeAlso}
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Point@{Point}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Point@{Point}}}\mbox{\Hypertarget{group__charts_gga44d64e4a9d08c7ef69648f4a9c3e4053a2a3cd5946cfd317eb99c3d32e35e2d4c}\label{group__charts_gga44d64e4a9d08c7ef69648f4a9c3e4053a2a3cd5946cfd317eb99c3d32e35e2d4c}} 
+Point&Series rendered solely as point markers. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Line@{Line}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Line@{Line}}}\mbox{\Hypertarget{group__charts_gga44d64e4a9d08c7ef69648f4a9c3e4053a4803e6b9e63dabf04de980788d6a13c4}\label{group__charts_gga44d64e4a9d08c7ef69648f4a9c3e4053a4803e6b9e63dabf04de980788d6a13c4}} 
+Line&Series rendered as points connected by straight lines. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Curve@{Curve}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Curve@{Curve}}}\mbox{\Hypertarget{group__charts_gga44d64e4a9d08c7ef69648f4a9c3e4053a2cb4d4a3f8dacd623fa045a44febd476}\label{group__charts_gga44d64e4a9d08c7ef69648f4a9c3e4053a2cb4d4a3f8dacd623fa045a44febd476}} 
+Curve&Series rendered as points connected by curves. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Bar@{Bar}!Charts (Wt::Chart)@{Charts (Wt::Chart)}}\index{Charts (Wt::Chart)@{Charts (Wt::Chart)}!Bar@{Bar}}}\mbox{\Hypertarget{group__charts_gga44d64e4a9d08c7ef69648f4a9c3e4053addc35f88fa71b6ef142ae61f35364653}\label{group__charts_gga44d64e4a9d08c7ef69648f4a9c3e4053addc35f88fa71b6ef142ae61f35364653}} 
+Bar&Series rendered as bars. \\
+\hline
+
+\end{DoxyEnumFields}

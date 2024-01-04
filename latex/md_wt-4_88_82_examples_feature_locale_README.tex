@@ -1,0 +1,30 @@
+This is an example that illustrates how one may use the local date/time A\+PI.\hypertarget{md_wt-4_88_82_examples_feature_locale_README_autotoc_md55}{}\doxysection{How to run}\label{md_wt-4_88_82_examples_feature_locale_README_autotoc_md55}
+See the R\+E\+A\+D\+ME in the parent directory.
+
+On P\+O\+S\+IX systems (Linux, mac\+OS, B\+SD,...), the time zone information in /usr/share/zoneinfo is used, and you don\textquotesingle{}t need to do anything.
+
+On Windows, this example requires the uncompressed I\+A\+NA time zone data to be installed.
+
+On Windows, you can specify the tzdata directory with {\ttfamily date\+::set\+\_\+install}. This example sets it to {\ttfamily ./tzdata}. The default on Windows is in the users\textquotesingle{}s Downloads folder\+: {\ttfamily Downloads/tzdata}. You will also need to add the windows\+Zones.\+xml file (see \href{http://unicode.org/repos/cldr/trunk/common/supplemental/windowsZones.xml}{\texttt{ http\+://unicode.\+org/repos/cldr/trunk/common/supplemental/windows\+Zones.\+xml}}).
+
+To summarize, on Windows\+:
+
+
+\begin{DoxyItemize}
+\item In the directory that you will run the example from, create a {\ttfamily tzdata} directory
+\item Download the latest time zone database from I\+A\+NA\+: \href{https://www.iana.org/time-zones}{\texttt{ https\+://www.\+iana.\+org/time-\/zones}} (Choose the \mbox{\hyperlink{classData}{Data}} Only Distribution), and extract its contents into the {\ttfamily tzdata} directory you just created.
+\item Download {\ttfamily windows\+Zones.\+xml} from \href{http://unicode.org/repos/cldr/trunk/common/supplemental/windowsZones.xml}{\texttt{ http\+://unicode.\+org/repos/cldr/trunk/common/supplemental/windows\+Zones.\+xml}} and add it to the {\ttfamily tzdata} directory
+\end{DoxyItemize}\hypertarget{md_wt-4_88_82_examples_feature_locale_README_autotoc_md56}{}\doxysection{What it illustrates}\label{md_wt-4_88_82_examples_feature_locale_README_autotoc_md56}
+Timezones are not straightforward to deal with; the browser does not provide information on the user\textquotesingle{}s time zone, but only on his current U\+TC offset.
+
+The U\+TC offset is sufficient to show the current time in the user\textquotesingle{}s time zone, but, because of daylight savings rules cannot be used to translate other U\+TC dates in the user\textquotesingle{}s time zone. If these dates are critical for your application you will need to let the user configure his time zone.
+
+This example shows one way of doing it by letting the user select a time zone from a combo-\/box. Obviously, this is information that you would save in the user\textquotesingle{}s preferences.
+
+
+\begin{DoxyItemize}
+\item the use of W\+Environment\+::time\+Offset() to get the user\textquotesingle{}s current U\+TC offset
+\item the use of the time zone database to configure a time zone
+\item how one may make an educated guess of the time zone based on the user\textquotesingle{}s current U\+TC offset
+\item the use of W\+Local\+Date\+Time to display a time point in the user\textquotesingle{}s locale 
+\end{DoxyItemize}

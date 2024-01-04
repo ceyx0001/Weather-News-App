@@ -1,0 +1,933 @@
+\hypertarget{classWt_1_1WEnvironment}{}\doxysection{Wt\+::W\+Environment Class Reference}
+\label{classWt_1_1WEnvironment}\index{Wt::WEnvironment@{Wt::WEnvironment}}
+
+
+A class that captures information on the application environment.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Environment.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Environment\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Environment\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classWt_1_1WEnvironment_a163671f35f1080badcb791a826f5fadd}{Cookie\+Map}}
+\begin{DoxyCompactList}\small\item\em Cookie map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Http\+::\+Parameter\+Map}} \& \mbox{\hyperlink{classWt_1_1WEnvironment_a200031ac3a029704fe1bafddb496cc3f}{get\+Parameter\+Map}} () const
+\begin{DoxyCompactList}\small\item\em Parameters passed to the application. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespaceWt_1_1Http_ae1470e15e15eab123a19e4204f624598}{Http\+::\+Parameter\+Values}} \& \mbox{\hyperlink{classWt_1_1WEnvironment_a32d7fcc916416f738df40ce04b56bf16}{get\+Parameter\+Values}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Returns values for a query parameter. \end{DoxyCompactList}\item 
+const std\+::string $\ast$ \mbox{\hyperlink{classWt_1_1WEnvironment_a9ba190e18b3bc83ff25e2755ed700c66}{get\+Parameter}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Returns a single value for a query parameter. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WEnvironment_a163671f35f1080badcb791a826f5fadd}{Cookie\+Map}} \& \mbox{\hyperlink{classWt_1_1WEnvironment_a9f646d1d5e53e13ffb4169d563cd4716}{cookies}} () const
+\begin{DoxyCompactList}\small\item\em Returns the cookies from the environment. \end{DoxyCompactList}\item 
+const std\+::string $\ast$ \mbox{\hyperlink{classWt_1_1WEnvironment_a13e2c7b407afdde4c61eb489cffeee1e}{get\+Cookie}} (const std\+::string \&cookie\+Name) const
+\begin{DoxyCompactList}\small\item\em Returns a cookie value. \end{DoxyCompactList}\item 
+const std\+::string \mbox{\hyperlink{classWt_1_1WEnvironment_a6558368112dd7ccbbb23eacb1aed11b4}{header\+Value}} (const std\+::string \&field) const
+\begin{DoxyCompactList}\small\item\em Returns a header value. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WEnvironment_a9f71866d88ac3f00ae0fa9183d0e2600}{supports\+Cookies}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the browser has enabled support for cookies. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WEnvironment_a27d95d86838fb5bfcbc171809dca7e48}{java\+Script}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the browser has enabled support for Java\+Script. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WEnvironment_a18fb3679dc328a64cb90a2eb2c092722}{ajax}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the browser has enabled support for A\+J\+AX. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WEnvironment_a5b7ef1d77a68e9bb2f531974539bd4c9}{web\+GL}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the browser has support for Web\+GL. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WEnvironment_ad5b8c09e2fc986310c1b2a3b32888267}{screen\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Returns the horizontal resolution of the client\textquotesingle{}s screen. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WEnvironment_a8f995add84b2f28c916453a1fbb0e9fb}{screen\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Returns the vertical resolution of the client\textquotesingle{}s screen. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1WEnvironment_a9f1a553a3575cca16da64dc6f2b51f16}{dpi\+Scale}} () const
+\begin{DoxyCompactList}\small\item\em Returns the browser-\/side D\+PI scaling factor. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WLocale}{W\+Locale}} \& \mbox{\hyperlink{classWt_1_1WEnvironment_ab1930441b0ee774f0ffcdc9910a01a81}{locale}} () const
+\begin{DoxyCompactList}\small\item\em Returns the preferred language indicated in the request header. \end{DoxyCompactList}\item 
+std\+::chrono\+::minutes \mbox{\hyperlink{classWt_1_1WEnvironment_abe9ace6cd3b5c61e2d20cea5ef493e6c}{time\+Zone\+Offset}} () const
+\begin{DoxyCompactList}\small\item\em Returns the time zone offset as reported by the client. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1WEnvironment_ab429100601e457420dba6c436b97ba20}{time\+Zone\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the time zone name as reported by the client. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1WEnvironment_a3b8b1b38dd8c079d41b732356379ea8f}{host\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the server host name that is used by the client. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_acf00b114b5e0a0ace32e382aa4ee23ee}\label{classWt_1_1WEnvironment_acf00b114b5e0a0ace32e382aa4ee23ee}} 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1WEnvironment_acf00b114b5e0a0ace32e382aa4ee23ee}{url\+Scheme}} () const
+\begin{DoxyCompactList}\small\item\em Returns the U\+RL scheme used for the current request ({\ttfamily \char`\"{}http\char`\"{}} or {\ttfamily \char`\"{}https\char`\"{}}). \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1WEnvironment_a64c6dae101d4c5bf5e6ffd111a101202}{user\+Agent}} () const
+\begin{DoxyCompactList}\small\item\em Returns the user agent. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1WEnvironment_aa7abf89ebd352c7c1d5dcb1cc7a0bf1f}{referer}} () const
+\begin{DoxyCompactList}\small\item\em Returns the referer. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1WEnvironment_afff633321592a2c7e4bc6ccc543ed01b}{accept}} () const
+\begin{DoxyCompactList}\small\item\em Returns the accept header. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WEnvironment_ad7dd42fefc4e318b6724c71b3a79b487}{agent\+Is\+Spider\+Bot}} () const
+\begin{DoxyCompactList}\small\item\em Returns if the user agent is a (known) indexing spider bot. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1WEnvironment_a3470589906ac2589b82e59bd212b8fbc}{server\+Signature}} () const
+\begin{DoxyCompactList}\small\item\em Returns the web server signature. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1WEnvironment_ad919d78400f8064f1c944efd6af64d19}{server\+Software}} () const
+\begin{DoxyCompactList}\small\item\em Returns the web server software. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1WEnvironment_ae9dbe94327aa0832225157a7a2b7f4dd}{server\+Admin}} () const
+\begin{DoxyCompactList}\small\item\em Returns the email address of the server admin. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1WEnvironment_aedad4a59684dc41c9985a713ee4eb00a}{client\+Address}} () const
+\begin{DoxyCompactList}\small\item\em Returns the IP address of the client. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1WEnvironment_a1df7e3adc43bf704c1423d4d429a136d}{internal\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Returns the initial internal path. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1WEnvironment_a86e645f5cc3fcd58e7fc5fc226865fa9}{deployment\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Returns the deployment path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WEnvironment_a067e25b4898e1d301f448818ff397557}{library\+Version}} (int \&series, int \&major, int \&minor) const
+\begin{DoxyCompactList}\small\item\em Returns the version of the Wt library, broken down. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1WEnvironment_adbc113195ed44d4bc989990a5a6d7acc}{get\+Cgi\+Value}} (const std\+::string \&var\+Name) const
+\begin{DoxyCompactList}\small\item\em Returns a raw C\+GI environment variable. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_aa55cd390169cd62167722ad02eb00363}{Html\+Content\+Type}} \mbox{\hyperlink{classWt_1_1WEnvironment_a23d9a5849f74d9ce4a52b5e13a0c576c}{content\+Type}} () const
+\begin{DoxyCompactList}\small\item\em The type of the content provided to the browser. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_a0d79de497dbb0188e3420e53c776116f}{User\+Agent}} \mbox{\hyperlink{classWt_1_1WEnvironment_a48ae23f4129971bf4b3d4efa742e12f2}{agent}} () const
+\begin{DoxyCompactList}\small\item\em Returns the user agent type. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WEnvironment_a10778aadd4413f597eed53b41bd57bf0}{agent\+Is\+IE}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the user agent is Microsoft Internet Explorer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WEnvironment_a1e1342b3d4cbbdc19d4d09af915cd073}{agent\+Is\+I\+Elt}} (int version) const
+\begin{DoxyCompactList}\small\item\em Returns whether the user agent is an older version of IE. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WEnvironment_a2ce4a084202e5991f84480c1478c8f77}{agent\+Is\+I\+E\+Mobile}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the user agent is Internet Explorer Mobile. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WEnvironment_a11d99e31622e9c7765badc3440a3925c}{agent\+Is\+Opera}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the user agent is Opera. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WEnvironment_abeb5dde214ed5a4bcf97e731feb91e04}{agent\+Is\+Web\+Kit}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the user agent is Web\+Kit-\/based. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WEnvironment_a7cb4240cea01f06c2c31784630e2e68f}{agent\+Is\+Mobile\+Web\+Kit}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the user agent is Mobile Web\+Kit-\/based. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WEnvironment_a747666a1b823f7d86fcad2c83f8d9327}{agent\+Is\+Safari}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the user agent is Safari. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WEnvironment_a0d0f6d083e71d4fe2ecf83edb82b00e5}{agent\+Is\+Chrome}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the user agent is Chrome. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WEnvironment_a758e459c00594ce6c954ffd885392dbf}{agent\+Is\+Gecko}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the user agent is Gecko-\/based. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WServer}{W\+Server}} $\ast$ \mbox{\hyperlink{classWt_1_1WEnvironment_a3ba7ee74fff9d0dc3659bd2d2c3f8774}{server}} () const
+\begin{DoxyCompactList}\small\item\em Returns the server. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WSslInfo}{W\+Ssl\+Info}} $\ast$ \mbox{\hyperlink{classWt_1_1WEnvironment_a04b65c4f7fe6e3b0bd652e2580b4f62e}{ssl\+Info}} () const
+\begin{DoxyCompactList}\small\item\em Returns information on the S\+SL client certificate or {\ttfamily nullptr} if no authentication took place. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WEnvironment_a6894c40e61b280e83013a2f2300d5ff4}{internal\+Path\+Using\+Fragments}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether internal paths are implemented using U\+RI fragments. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_adcd867d6165e463338da73e87aa974c5}\label{classWt_1_1WEnvironment_adcd867d6165e463338da73e87aa974c5}} 
+bool \mbox{\hyperlink{classWt_1_1WEnvironment_adcd867d6165e463338da73e87aa974c5}{supports\+Css3\+Animations}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this agent supports C\+S\+S3 animations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_acbd6544e5f58965c74cb832a426ca25a}\label{classWt_1_1WEnvironment_acbd6544e5f58965c74cb832a426ca25a}} 
+virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WDialog}{W\+Dialog}} $\ast$ $>$ \& {\bfseries dialog\+Executed} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_ae56e0da51e4f23f5820cf2c3ab0d3a5d}\label{classWt_1_1WEnvironment_ae56e0da51e4f23f5820cf2c3ab0d3a5d}} 
+virtual \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1WPopupMenu}{W\+Popup\+Menu}} $\ast$ $>$ \& {\bfseries popup\+Executed} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a4098f940f2bef67447eb6fe12ea5bfbf}\label{classWt_1_1WEnvironment_a4098f940f2bef67447eb6fe12ea5bfbf}} 
+virtual bool \mbox{\hyperlink{classWt_1_1WEnvironment_a4098f940f2bef67447eb6fe12ea5bfbf}{is\+Test}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this is a mocked test environment. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classWt_1_1WEnvironment_aaec29f6cb5c78b03fcc58ae0375bf114}{library\+Version}} ()
+\begin{DoxyCompactList}\small\item\em Returns the version of the Wt library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a522120b69a5fcc727c7881adde15c892}\label{classWt_1_1WEnvironment_a522120b69a5fcc727c7881adde15c892}} 
+void {\bfseries set\+User\+Agent} (const std\+::string \&\mbox{\hyperlink{classWt_1_1WEnvironment_a48ae23f4129971bf4b3d4efa742e12f2}{agent}})
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a1f312fff2b941692ea959a76e5967d87}\label{classWt_1_1WEnvironment_a1f312fff2b941692ea959a76e5967d87}} 
+void {\bfseries set\+Internal\+Path} (const std\+::string \&path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_abe47d5d29b3d9e2dbb124c17a828497a}\label{classWt_1_1WEnvironment_abe47d5d29b3d9e2dbb124c17a828497a}} 
+\mbox{\hyperlink{classWt_1_1WebSession}{Web\+Session}} $\ast$ {\bfseries session\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_aa9e8a6ab19de4b19a6450a2330600c1d}\label{classWt_1_1WEnvironment_aa9e8a6ab19de4b19a6450a2330600c1d}} 
+bool {\bfseries does\+Ajax\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a3d7924b96c670060b6a3035b1bb71a31}\label{classWt_1_1WEnvironment_a3d7924b96c670060b6a3035b1bb71a31}} 
+bool {\bfseries does\+Cookies\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_ad81929a41e55a41edf3028a7118e36bd}\label{classWt_1_1WEnvironment_ad81929a41e55a41edf3028a7118e36bd}} 
+bool {\bfseries internal\+Path\+Using\+Fragments\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a8838dfc42d0720a378051deaa6d811b4}\label{classWt_1_1WEnvironment_a8838dfc42d0720a378051deaa6d811b4}} 
+\mbox{\hyperlink{classWt_a0d79de497dbb0188e3420e53c776116f}{User\+Agent}} {\bfseries agent\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a7ebed885967076dd5317f36c436564ef}\label{classWt_1_1WEnvironment_a7ebed885967076dd5317f36c436564ef}} 
+int {\bfseries screen\+Width\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a306b1deaf7ae7c592b53c8c4db510d34}\label{classWt_1_1WEnvironment_a306b1deaf7ae7c592b53c8c4db510d34}} 
+int {\bfseries screen\+Height\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a017a852e50e1752fcde9dec836cb7769}\label{classWt_1_1WEnvironment_a017a852e50e1752fcde9dec836cb7769}} 
+double {\bfseries dpi\+Scale\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a1197adc9512e893447785da90fb1b0c9}\label{classWt_1_1WEnvironment_a1197adc9512e893447785da90fb1b0c9}} 
+std\+::string {\bfseries query\+String\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a3b4bfcadce79ca03f5d1190c48bfdf9e}\label{classWt_1_1WEnvironment_a3b4bfcadce79ca03f5d1190c48bfdf9e}} 
+bool {\bfseries web\+G\+Lsupported\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_ab7f4f3baf6637d137b2efcddfb5b47e6}\label{classWt_1_1WEnvironment_ab7f4f3baf6637d137b2efcddfb5b47e6}} 
+\mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Http\+::\+Parameter\+Map}} {\bfseries parameters\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a829a2e50d53afee2879fd7827bc9525d}\label{classWt_1_1WEnvironment_a829a2e50d53afee2879fd7827bc9525d}} 
+\mbox{\hyperlink{classWt_1_1WEnvironment_a163671f35f1080badcb791a826f5fadd}{Cookie\+Map}} {\bfseries cookies\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_ad763992d0a5ce1fdf35e2b8f719ccba7}\label{classWt_1_1WEnvironment_ad763992d0a5ce1fdf35e2b8f719ccba7}} 
+\mbox{\hyperlink{classWt_1_1WLocale}{W\+Locale}} {\bfseries locale\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_aa8ed7385cd7425ee9f7280b232285c1e}\label{classWt_1_1WEnvironment_aa8ed7385cd7425ee9f7280b232285c1e}} 
+std\+::chrono\+::minutes {\bfseries time\+Zone\+Offset\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_adc550defdd1666e5ecc5cf60576e729b}\label{classWt_1_1WEnvironment_adc550defdd1666e5ecc5cf60576e729b}} 
+std\+::string {\bfseries time\+Zone\+Name\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a0ef5cb1ad383ec87bdc145a28e82986b}\label{classWt_1_1WEnvironment_a0ef5cb1ad383ec87bdc145a28e82986b}} 
+std\+::string {\bfseries host\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_aaab22222601566e17a048f5d4c69b6f7}\label{classWt_1_1WEnvironment_aaab22222601566e17a048f5d4c69b6f7}} 
+std\+::string {\bfseries user\+Agent\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a2f6199e63f23171cb12304b4100f2e14}\label{classWt_1_1WEnvironment_a2f6199e63f23171cb12304b4100f2e14}} 
+std\+::string {\bfseries url\+Scheme\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a95d53d4460edee30f8c130973c3cc13b}\label{classWt_1_1WEnvironment_a95d53d4460edee30f8c130973c3cc13b}} 
+std\+::string {\bfseries referer\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_af58e9ea9017f26cfbf6582d65ff5e91f}\label{classWt_1_1WEnvironment_af58e9ea9017f26cfbf6582d65ff5e91f}} 
+std\+::string {\bfseries accept\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_ab9cd1c7cf13284761d453b36c86861e5}\label{classWt_1_1WEnvironment_ab9cd1c7cf13284761d453b36c86861e5}} 
+std\+::string {\bfseries server\+Signature\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a8f19f3713c66419ce427c381eba18203}\label{classWt_1_1WEnvironment_a8f19f3713c66419ce427c381eba18203}} 
+std\+::string {\bfseries server\+Software\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a3f7f82bbef70071d9c765bb1e27b9871}\label{classWt_1_1WEnvironment_a3f7f82bbef70071d9c765bb1e27b9871}} 
+std\+::string {\bfseries server\+Admin\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_aae17dfaa50d434e7c68fa962d3d2fbf4}\label{classWt_1_1WEnvironment_aae17dfaa50d434e7c68fa962d3d2fbf4}} 
+std\+::string {\bfseries client\+Address\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a1451fe611544a095e7b495a2f46b3a4b}\label{classWt_1_1WEnvironment_a1451fe611544a095e7b495a2f46b3a4b}} 
+std\+::string {\bfseries path\+Info\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_ab105acf4003279798989dc020671f6c8}\label{classWt_1_1WEnvironment_ab105acf4003279798989dc020671f6c8}} 
+std\+::string {\bfseries internal\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_ad572f558fe3ff10e7af5f30b71cf266e}\label{classWt_1_1WEnvironment_ad572f558fe3ff10e7af5f30b71cf266e}} 
+std\+::string {\bfseries public\+Deployment\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_abafe68cfb746a47c3dccd565c0123b02}\label{classWt_1_1WEnvironment_abafe68cfb746a47c3dccd565c0123b02}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WSslInfo}{W\+Ssl\+Info}} $>$ {\bfseries ssl\+Info\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a25f7bb42d566dfb214a3b74f3a53b566}\label{classWt_1_1WEnvironment_a25f7bb42d566dfb214a3b74f3a53b566}} 
+{\bfseries W\+Environment} (\mbox{\hyperlink{classWt_1_1WebSession}{Web\+Session}} $\ast$session)
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a2a0696bebfcd1ea5066a4361f9526b15}\label{classWt_1_1WEnvironment_a2a0696bebfcd1ea5066a4361f9526b15}} 
+void {\bfseries init} (const \mbox{\hyperlink{classWt_1_1WebRequest}{Web\+Request}} \&request)
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_ac4cef8fe7ffc32377eab82a8b6ac556e}\label{classWt_1_1WEnvironment_ac4cef8fe7ffc32377eab82a8b6ac556e}} 
+void {\bfseries update\+Host\+Name} (const \mbox{\hyperlink{classWt_1_1WebRequest}{Web\+Request}} \&request)
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a99bdfc1e33be40c26ed7fdece45fa656}\label{classWt_1_1WEnvironment_a99bdfc1e33be40c26ed7fdece45fa656}} 
+void {\bfseries update\+Url\+Scheme} (const \mbox{\hyperlink{classWt_1_1WebRequest}{Web\+Request}} \&request)
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_ace18d0407ac41597ed9e0bff14a15ce9}\label{classWt_1_1WEnvironment_ace18d0407ac41597ed9e0bff14a15ce9}} 
+void {\bfseries enable\+Ajax} (const \mbox{\hyperlink{classWt_1_1WebRequest}{Web\+Request}} \&request)
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a255f3a8cdf457f3421d331f3463829f4}\label{classWt_1_1WEnvironment_a255f3a8cdf457f3421d331f3463829f4}} 
+bool {\bfseries agent\+Supports\+Ajax} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a968e44b5de978e1689c0739f7ca6b64c}\label{classWt_1_1WEnvironment_a968e44b5de978e1689c0739f7ca6b64c}} 
+static void {\bfseries parse\+Cookies} (const std\+::string \&cookie, std\+::map$<$ std\+::string, std\+::string $>$ \&result)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a61e851e22dadd21892e94ec3cfecda53}\label{classWt_1_1WEnvironment_a61e851e22dadd21892e94ec3cfecda53}} 
+class {\bfseries Web\+Controller}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a2da2051ff31597b74f7d7a63a9b0db5f}\label{classWt_1_1WEnvironment_a2da2051ff31597b74f7d7a63a9b0db5f}} 
+class {\bfseries Web\+Renderer}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a8248f10e62aee707eabe43458855d835}\label{classWt_1_1WEnvironment_a8248f10e62aee707eabe43458855d835}} 
+class {\bfseries Web\+Session}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a59f159dd904f669563320a185598a167}\label{classWt_1_1WEnvironment_a59f159dd904f669563320a185598a167}} 
+class {\bfseries W\+Application}
+\item 
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a9f12fceba911c927f68c87c8f958c4e2}\label{classWt_1_1WEnvironment_a9f12fceba911c927f68c87c8f958c4e2}} 
+class {\bfseries Http\+::\+Request}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class that captures information on the application environment. 
+
+The environment provides information on the client, and gives access to startup arguments.
+
+Usage example\+: 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a163671f35f1080badcb791a826f5fadd}\label{classWt_1_1WEnvironment_a163671f35f1080badcb791a826f5fadd}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!CookieMap@{CookieMap}}
+\index{CookieMap@{CookieMap}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{CookieMap}{CookieMap}}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string, std\+::string$>$ \mbox{\hyperlink{classWt_1_1WEnvironment_a163671f35f1080badcb791a826f5fadd}{Wt\+::\+W\+Environment\+::\+Cookie\+Map}}}
+
+
+
+Cookie map. 
+
+A std\+::map which associates a cookie name with a cookie value.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a9f646d1d5e53e13ffb4169d563cd4716}{cookies()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_afff633321592a2c7e4bc6ccc543ed01b}\label{classWt_1_1WEnvironment_afff633321592a2c7e4bc6ccc543ed01b}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!accept@{accept}}
+\index{accept@{accept}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+W\+Environment\+::accept (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the accept header. 
+
+The accept header, as reported in the H\+T\+TP {\ttfamily Accept} field. \mbox{\Hypertarget{classWt_1_1WEnvironment_a48ae23f4129971bf4b3d4efa742e12f2}\label{classWt_1_1WEnvironment_a48ae23f4129971bf4b3d4efa742e12f2}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!agent@{agent}}
+\index{agent@{agent}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{agent()}{agent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_a0d79de497dbb0188e3420e53c776116f}{User\+Agent}} Wt\+::\+W\+Environment\+::agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the user agent type. 
+
+This returns an interpretation of the \mbox{\hyperlink{classWt_1_1WEnvironment_a64c6dae101d4c5bf5e6ffd111a101202}{user\+Agent()}}. It should be used only for user-\/agent specific work-\/arounds (as a last resort).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a10778aadd4413f597eed53b41bd57bf0}{agent\+Is\+I\+E()}}, \mbox{\hyperlink{classWt_1_1WEnvironment_a11d99e31622e9c7765badc3440a3925c}{agent\+Is\+Opera()}}, \mbox{\hyperlink{classWt_1_1WEnvironment_a758e459c00594ce6c954ffd885392dbf}{agent\+Is\+Gecko()}}, \mbox{\hyperlink{classWt_1_1WEnvironment_a0d0f6d083e71d4fe2ecf83edb82b00e5}{agent\+Is\+Chrome()}}, \mbox{\hyperlink{classWt_1_1WEnvironment_a747666a1b823f7d86fcad2c83f8d9327}{agent\+Is\+Safari()}}, \mbox{\hyperlink{classWt_1_1WEnvironment_abeb5dde214ed5a4bcf97e731feb91e04}{agent\+Is\+Web\+Kit()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a0d0f6d083e71d4fe2ecf83edb82b00e5}\label{classWt_1_1WEnvironment_a0d0f6d083e71d4fe2ecf83edb82b00e5}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!agentIsChrome@{agentIsChrome}}
+\index{agentIsChrome@{agentIsChrome}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{agentIsChrome()}{agentIsChrome()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Environment\+::agent\+Is\+Chrome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the user agent is Chrome. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a48ae23f4129971bf4b3d4efa742e12f2}{agent()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a758e459c00594ce6c954ffd885392dbf}\label{classWt_1_1WEnvironment_a758e459c00594ce6c954ffd885392dbf}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!agentIsGecko@{agentIsGecko}}
+\index{agentIsGecko@{agentIsGecko}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{agentIsGecko()}{agentIsGecko()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Environment\+::agent\+Is\+Gecko (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the user agent is Gecko-\/based. 
+
+Gecko-\/based browsers include Firefox.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a48ae23f4129971bf4b3d4efa742e12f2}{agent()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a10778aadd4413f597eed53b41bd57bf0}\label{classWt_1_1WEnvironment_a10778aadd4413f597eed53b41bd57bf0}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!agentIsIE@{agentIsIE}}
+\index{agentIsIE@{agentIsIE}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{agentIsIE()}{agentIsIE()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Environment\+::agent\+Is\+IE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the user agent is Microsoft Internet Explorer. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a48ae23f4129971bf4b3d4efa742e12f2}{agent()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a1e1342b3d4cbbdc19d4d09af915cd073}\label{classWt_1_1WEnvironment_a1e1342b3d4cbbdc19d4d09af915cd073}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!agentIsIElt@{agentIsIElt}}
+\index{agentIsIElt@{agentIsIElt}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{agentIsIElt()}{agentIsIElt()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Environment\+::agent\+Is\+I\+Elt (\begin{DoxyParamCaption}\item[{int}]{version }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the user agent is an older version of IE. 
+
+Returns whether the agent is an IE version older than the given version.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a10778aadd4413f597eed53b41bd57bf0}{agent\+Is\+I\+E()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a2ce4a084202e5991f84480c1478c8f77}\label{classWt_1_1WEnvironment_a2ce4a084202e5991f84480c1478c8f77}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!agentIsIEMobile@{agentIsIEMobile}}
+\index{agentIsIEMobile@{agentIsIEMobile}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{agentIsIEMobile()}{agentIsIEMobile()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Environment\+::agent\+Is\+I\+E\+Mobile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the user agent is Internet Explorer Mobile. 
+
+Returns also {\ttfamily true} when the agent is Internet Explorer 5 or older.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a48ae23f4129971bf4b3d4efa742e12f2}{agent()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a7cb4240cea01f06c2c31784630e2e68f}\label{classWt_1_1WEnvironment_a7cb4240cea01f06c2c31784630e2e68f}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!agentIsMobileWebKit@{agentIsMobileWebKit}}
+\index{agentIsMobileWebKit@{agentIsMobileWebKit}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{agentIsMobileWebKit()}{agentIsMobileWebKit()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Environment\+::agent\+Is\+Mobile\+Web\+Kit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the user agent is Mobile Web\+Kit-\/based. 
+
+Mobile Webkit-\/based browsers include the Android Mobile Web\+Kit and the i\+Phone Mobile Web\+Kit browsers.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a48ae23f4129971bf4b3d4efa742e12f2}{agent()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a11d99e31622e9c7765badc3440a3925c}\label{classWt_1_1WEnvironment_a11d99e31622e9c7765badc3440a3925c}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!agentIsOpera@{agentIsOpera}}
+\index{agentIsOpera@{agentIsOpera}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{agentIsOpera()}{agentIsOpera()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Environment\+::agent\+Is\+Opera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the user agent is Opera. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a48ae23f4129971bf4b3d4efa742e12f2}{agent()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a747666a1b823f7d86fcad2c83f8d9327}\label{classWt_1_1WEnvironment_a747666a1b823f7d86fcad2c83f8d9327}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!agentIsSafari@{agentIsSafari}}
+\index{agentIsSafari@{agentIsSafari}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{agentIsSafari()}{agentIsSafari()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Environment\+::agent\+Is\+Safari (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the user agent is Safari. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a48ae23f4129971bf4b3d4efa742e12f2}{agent()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_ad7dd42fefc4e318b6724c71b3a79b487}\label{classWt_1_1WEnvironment_ad7dd42fefc4e318b6724c71b3a79b487}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!agentIsSpiderBot@{agentIsSpiderBot}}
+\index{agentIsSpiderBot@{agentIsSpiderBot}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{agentIsSpiderBot()}{agentIsSpiderBot()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Environment\+::agent\+Is\+Spider\+Bot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns if the user agent is a (known) indexing spider bot. 
+
+\mbox{\hyperlink{classNote}{Note}}\+: currently the list of know bots is quite small. This method is used internally to render the web application for optimal indexing by bots\+:
+\begin{DoxyItemize}
+\item there is no detection for Java\+Script, instead the application is directly served assuming no Java\+Script support.
+\item session information is omitted from the Urls.
+\item no sessions are created (they are immediately stopped after the request has been handled).
+\item auto-\/generated {\ttfamily id} and {\ttfamily name} attributes are omitted from D\+OM nodes. In this way, the generated page is always exactly the same. 
+\end{DoxyItemize}\mbox{\Hypertarget{classWt_1_1WEnvironment_abeb5dde214ed5a4bcf97e731feb91e04}\label{classWt_1_1WEnvironment_abeb5dde214ed5a4bcf97e731feb91e04}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!agentIsWebKit@{agentIsWebKit}}
+\index{agentIsWebKit@{agentIsWebKit}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{agentIsWebKit()}{agentIsWebKit()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Environment\+::agent\+Is\+Web\+Kit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the user agent is Web\+Kit-\/based. 
+
+Webkit-\/based browsers include Safari, Chrome, Arora and Konquerer browsers.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a48ae23f4129971bf4b3d4efa742e12f2}{agent()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a18fb3679dc328a64cb90a2eb2c092722}\label{classWt_1_1WEnvironment_a18fb3679dc328a64cb90a2eb2c092722}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!ajax@{ajax}}
+\index{ajax@{ajax}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{ajax()}{ajax()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Environment\+::ajax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the browser has enabled support for A\+J\+AX. 
+
+Without support for Java\+Script/\+A\+J\+AX, Wt will still be able to serve the application, but with one considerable limitation\+: only the \mbox{\hyperlink{classWt_1_1WTimer_ac51fbab67b0889a9e142786e0db3ffc6}{W\+Timer\+::timeout()}}, \mbox{\hyperlink{classWt_1_1WInteractWidget_af6cb297f8593e6884de66d23ea69d49c}{W\+Interact\+Widget\+::clicked()}}, \mbox{\hyperlink{classWt_1_1WApplication_a3e68c4b6bb387f27a614e7962e11967b}{W\+Application\+::internal\+Path\+Changed()}}, and \mbox{\hyperlink{classWt_1_1WAbstractArea_aca43e192854190d37eff862a2eeecc10}{W\+Abstract\+Area\+::clicked()}} signals (and any derived signals) will generate events.
+
+Every event will cause the complete page to be rerendered.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a27d95d86838fb5bfcbc171809dca7e48}{java\+Script()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_aedad4a59684dc41c9985a713ee4eb00a}\label{classWt_1_1WEnvironment_aedad4a59684dc41c9985a713ee4eb00a}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!clientAddress@{clientAddress}}
+\index{clientAddress@{clientAddress}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{clientAddress()}{clientAddress()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+W\+Environment\+::client\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the IP address of the client. 
+
+The (most likely) IP address of the client that is connected to this session.
+
+This is taken to be the first public address that is given in the Client-\/\+IP header, or in the X-\/\+Forwarded-\/\+For header (in case the client is behind a proxy). If none of these headers is present, the remote socket IP address is used. \mbox{\Hypertarget{classWt_1_1WEnvironment_a23d9a5849f74d9ce4a52b5e13a0c576c}\label{classWt_1_1WEnvironment_a23d9a5849f74d9ce4a52b5e13a0c576c}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!contentType@{contentType}}
+\index{contentType@{contentType}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{contentType()}{contentType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_aa55cd390169cd62167722ad02eb00363}{Html\+Content\+Type}} Wt\+::\+W\+Environment\+::content\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The type of the content provided to the browser. 
+
+This is here for backwards compatibility, but the implementation now alwasy returns H\+T\+M\+L5. \mbox{\Hypertarget{classWt_1_1WEnvironment_a9f646d1d5e53e13ffb4169d563cd4716}\label{classWt_1_1WEnvironment_a9f646d1d5e53e13ffb4169d563cd4716}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!cookies@{cookies}}
+\index{cookies@{cookies}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{cookies()}{cookies()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WEnvironment_a163671f35f1080badcb791a826f5fadd}{Cookie\+Map}}\& Wt\+::\+W\+Environment\+::cookies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the cookies from the environment. 
+
+This returns all cookies that were present in initial request for the application. Cookies set with \mbox{\hyperlink{classWt_1_1WApplication_a5d10106d4131611aa98e20e6a82b3c40}{W\+Application\+::set\+Cookie()}} are not taken into consideration.
+
+Cookies allow you to persist information across sessions, but note that not all clients may support cookies or may some clients may be configured to block cookies.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a9f71866d88ac3f00ae0fa9183d0e2600}{supports\+Cookies()}}, \mbox{\hyperlink{classWt_1_1WEnvironment_a13e2c7b407afdde4c61eb489cffeee1e}{get\+Cookie()}}, get\+Cookie\+Value() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a86e645f5cc3fcd58e7fc5fc226865fa9}\label{classWt_1_1WEnvironment_a86e645f5cc3fcd58e7fc5fc226865fa9}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!deploymentPath@{deploymentPath}}
+\index{deploymentPath@{deploymentPath}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{deploymentPath()}{deploymentPath()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+W\+Environment\+::deployment\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the deployment path. 
+
+This is the path at which the application is deployed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a1df7e3adc43bf704c1423d4d429a136d}{internal\+Path()}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a9f1a553a3575cca16da64dc6f2b51f16}\label{classWt_1_1WEnvironment_a9f1a553a3575cca16da64dc6f2b51f16}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!dpiScale@{dpiScale}}
+\index{dpiScale@{dpiScale}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{dpiScale()}{dpiScale()}}
+{\footnotesize\ttfamily double Wt\+::\+W\+Environment\+::dpi\+Scale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the browser-\/side D\+PI scaling factor. 
+
+Internet Explorer scales all graphics, fonts and other elements on high-\/density screens to make them readable. This is controlled by the D\+PI setting of the display. If all goes well, you do not have to worry about this scaling factor. Unfortunately, not all elements are scaled appropriately. The scaling factor is supposed to be used only internally in Wt and is in this interface for informational purposes.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WVmlImage}{W\+Vml\+Image}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_adbc113195ed44d4bc989990a5a6d7acc}\label{classWt_1_1WEnvironment_adbc113195ed44d4bc989990a5a6d7acc}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!getCgiValue@{getCgiValue}}
+\index{getCgiValue@{getCgiValue}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{getCgiValue()}{getCgiValue()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+W\+Environment\+::get\+Cgi\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{var\+Name }\end{DoxyParamCaption}) const}
+
+
+
+Returns a raw C\+GI environment variable. 
+
+Retrieves the value for the given C\+GI environment variable (like {\ttfamily \char`\"{}\+S\+S\+L\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+S\+\_\+\+D\+N\+\_\+\+C\+N\char`\"{}}), if it is defined, otherwise an empty string.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a3470589906ac2589b82e59bd212b8fbc}{server\+Signature()}}, \mbox{\hyperlink{classWt_1_1WEnvironment_ad919d78400f8064f1c944efd6af64d19}{server\+Software()}}, \mbox{\hyperlink{classWt_1_1WEnvironment_ae9dbe94327aa0832225157a7a2b7f4dd}{server\+Admin()}}, 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a13e2c7b407afdde4c61eb489cffeee1e}\label{classWt_1_1WEnvironment_a13e2c7b407afdde4c61eb489cffeee1e}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!getCookie@{getCookie}}
+\index{getCookie@{getCookie}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{getCookie()}{getCookie()}}
+{\footnotesize\ttfamily const std\+::string$\ast$ Wt\+::\+W\+Environment\+::get\+Cookie (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cookie\+Name }\end{DoxyParamCaption}) const}
+
+
+
+Returns a cookie value. 
+
+Returns 0 if no value was set for the given cookie.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a13e2c7b407afdde4c61eb489cffeee1e}{get\+Cookie()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a9ba190e18b3bc83ff25e2755ed700c66}\label{classWt_1_1WEnvironment_a9ba190e18b3bc83ff25e2755ed700c66}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!getParameter@{getParameter}}
+\index{getParameter@{getParameter}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{getParameter()}{getParameter()}}
+{\footnotesize\ttfamily const std\+::string$\ast$ Wt\+::\+W\+Environment\+::get\+Parameter (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Returns a single value for a query parameter. 
+
+Returns the first value for a parameter, or {\ttfamily 0} if the parameter is not found.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a32d7fcc916416f738df40ce04b56bf16}{get\+Parameter\+Values()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a200031ac3a029704fe1bafddb496cc3f}\label{classWt_1_1WEnvironment_a200031ac3a029704fe1bafddb496cc3f}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!getParameterMap@{getParameterMap}}
+\index{getParameterMap@{getParameterMap}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{getParameterMap()}{getParameterMap()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Http\+::\+Parameter\+Map}}\& Wt\+::\+W\+Environment\+::get\+Parameter\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parameters passed to the application. 
+
+Arguments passed to the application, either in the U\+RL for a http G\+ET, or in both the U\+RL and data submitted in a http P\+O\+ST.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a32d7fcc916416f738df40ce04b56bf16}{get\+Parameter\+Values()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a32d7fcc916416f738df40ce04b56bf16}\label{classWt_1_1WEnvironment_a32d7fcc916416f738df40ce04b56bf16}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!getParameterValues@{getParameterValues}}
+\index{getParameterValues@{getParameterValues}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{getParameterValues()}{getParameterValues()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceWt_1_1Http_ae1470e15e15eab123a19e4204f624598}{Http\+::\+Parameter\+Values}}\& Wt\+::\+W\+Environment\+::get\+Parameter\+Values (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Returns values for a query parameter. 
+
+Returns an empty list if the parameter was not defined.
+
+One or more values may be associated with a single argument.
+
+For example a Wt application {\ttfamily foo.\+wt} started as {\ttfamily \href{http://.../foo.wt?hello=Hello&hello=World}{\texttt{ http\+://.../foo.\+wt?hello=\+Hello\&hello=\+World}}} will result in both values {\ttfamily \char`\"{}\+Hello\char`\"{}} and {\ttfamily \char`\"{}\+World\char`\"{}} to be associated with the argument {\ttfamily \char`\"{}hello\char`\"{}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a200031ac3a029704fe1bafddb496cc3f}{get\+Parameter\+Map()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a6558368112dd7ccbbb23eacb1aed11b4}\label{classWt_1_1WEnvironment_a6558368112dd7ccbbb23eacb1aed11b4}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!headerValue@{headerValue}}
+\index{headerValue@{headerValue}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{headerValue()}{headerValue()}}
+{\footnotesize\ttfamily const std\+::string Wt\+::\+W\+Environment\+::header\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{field }\end{DoxyParamCaption}) const}
+
+
+
+Returns a header value. 
+
+Returns a header value, or an empty string if the header was present. \mbox{\Hypertarget{classWt_1_1WEnvironment_a3b8b1b38dd8c079d41b732356379ea8f}\label{classWt_1_1WEnvironment_a3b8b1b38dd8c079d41b732356379ea8f}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!hostName@{hostName}}
+\index{hostName@{hostName}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{hostName()}{hostName()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+W\+Environment\+::host\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the server host name that is used by the client. 
+
+The hostname is the unresolved host name with optional port number, which the browser used to connect to the application.
+
+Examples\+:
+\begin{DoxyItemize}
+\item {\ttfamily www.\+mydomain.\+com}
+\item {\ttfamily localhost\+:8080}
+\end{DoxyItemize}
+
+For H\+T\+TP 1.\+1 requests, this information is fetched from the H\+T\+TP {\ttfamily Host} header. If Wt is configured behind a reverse proxy, then the last entry in the H\+T\+TP {\ttfamily X-\/\+Forwarded-\/\+Host} header field is used instead (to infer the name of the reverse proxy instead).
+
+For H\+T\+TP 1.\+0 requests, the H\+T\+TP {\ttfamily Host} header is not required. When not present, the server host name is inferred from the configured server name, which defaults to the D\+NS name. \mbox{\Hypertarget{classWt_1_1WEnvironment_a1df7e3adc43bf704c1423d4d429a136d}\label{classWt_1_1WEnvironment_a1df7e3adc43bf704c1423d4d429a136d}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!internalPath@{internalPath}}
+\index{internalPath@{internalPath}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{internalPath()}{internalPath()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+W\+Environment\+::internal\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the initial internal path. 
+
+This is the internal path with which the application was started.
+
+For an application deployed at {\ttfamily \char`\"{}/stuff/app.\+wt\char`\"{}}, the following two U\+R\+Ls are considered equivalent, and indicate an internal path {\ttfamily \char`\"{}/this/there\char`\"{}}\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{http:\textcolor{comment}{//www.mydomain.com/stuff/app.wt/this/there}}
+\DoxyCodeLine{http:\textcolor{comment}{//www.mydomain.com/stuff/app.wt/this/there}}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_a2c1a10aadc0d7ed877b5715b42ca4911}{W\+Application\+::set\+Internal\+Path()}}, \mbox{\hyperlink{classWt_1_1WEnvironment_a86e645f5cc3fcd58e7fc5fc226865fa9}{deployment\+Path()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a6894c40e61b280e83013a2f2300d5ff4}\label{classWt_1_1WEnvironment_a6894c40e61b280e83013a2f2300d5ff4}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!internalPathUsingFragments@{internalPathUsingFragments}}
+\index{internalPathUsingFragments@{internalPathUsingFragments}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{internalPathUsingFragments()}{internalPathUsingFragments()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Environment\+::internal\+Path\+Using\+Fragments (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether internal paths are implemented using U\+RI fragments. 
+
+This may be the case for older non-\/\+H\+T\+M\+L5 browsers which do not support H\+T\+M\+L5 History A\+P\+Is. \mbox{\Hypertarget{classWt_1_1WEnvironment_a27d95d86838fb5bfcbc171809dca7e48}\label{classWt_1_1WEnvironment_a27d95d86838fb5bfcbc171809dca7e48}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!javaScript@{javaScript}}
+\index{javaScript@{javaScript}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{javaScript()}{javaScript()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Environment\+::java\+Script (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the browser has enabled support for Java\+Script. 
+
+This is the same as \mbox{\hyperlink{classWt_1_1WEnvironment_a18fb3679dc328a64cb90a2eb2c092722}{ajax()}}\+: Wt only considers using Java\+Script when it has detected A\+J\+AX support.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a18fb3679dc328a64cb90a2eb2c092722}{ajax()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_aaec29f6cb5c78b03fcc58ae0375bf114}\label{classWt_1_1WEnvironment_aaec29f6cb5c78b03fcc58ae0375bf114}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!libraryVersion@{libraryVersion}}
+\index{libraryVersion@{libraryVersion}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{libraryVersion()}{libraryVersion()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static std\+::string Wt\+::\+W\+Environment\+::library\+Version (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the version of the Wt library. 
+
+Example\+: {\ttfamily \char`\"{}1.\+99.\+2\char`\"{}} \mbox{\Hypertarget{classWt_1_1WEnvironment_a067e25b4898e1d301f448818ff397557}\label{classWt_1_1WEnvironment_a067e25b4898e1d301f448818ff397557}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!libraryVersion@{libraryVersion}}
+\index{libraryVersion@{libraryVersion}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{libraryVersion()}{libraryVersion()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Environment\+::library\+Version (\begin{DoxyParamCaption}\item[{int \&}]{series,  }\item[{int \&}]{major,  }\item[{int \&}]{minor }\end{DoxyParamCaption}) const}
+
+
+
+Returns the version of the Wt library, broken down. 
+
+The version of the Wt library, broken down in its three numbers,
+
+Example\+: {\itshape series} = 1, {\itshape major} = 99, {\ttfamily minor} = 2. \mbox{\Hypertarget{classWt_1_1WEnvironment_ab1930441b0ee774f0ffcdc9910a01a81}\label{classWt_1_1WEnvironment_ab1930441b0ee774f0ffcdc9910a01a81}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!locale@{locale}}
+\index{locale@{locale}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{locale()}{locale()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WLocale}{W\+Locale}}\& Wt\+::\+W\+Environment\+::locale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the preferred language indicated in the request header. 
+
+The language is parsed from the H\+T\+TP {\ttfamily Accept-\/\+Language} field, if present. If not, the locale is empty.
+
+If multiple languages are present, the one with the highest \char`\"{}q\char`\"{}uality is assumed, and if a tie is present, the first one is taken.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_ac0af7e0131c926c77b207595c8c6e283}{W\+Application\+::set\+Locale()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_aa7abf89ebd352c7c1d5dcb1cc7a0bf1f}\label{classWt_1_1WEnvironment_aa7abf89ebd352c7c1d5dcb1cc7a0bf1f}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!referer@{referer}}
+\index{referer@{referer}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{referer()}{referer()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+W\+Environment\+::referer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the referer. 
+
+The referer, as reported in the H\+T\+TP {\ttfamily Referer} field. \mbox{\Hypertarget{classWt_1_1WEnvironment_a8f995add84b2f28c916453a1fbb0e9fb}\label{classWt_1_1WEnvironment_a8f995add84b2f28c916453a1fbb0e9fb}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!screenHeight@{screenHeight}}
+\index{screenHeight@{screenHeight}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{screenHeight()}{screenHeight()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Environment\+::screen\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the vertical resolution of the client\textquotesingle{}s screen. 
+
+Returns -\/1 if screen height is not known.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_ad5b8c09e2fc986310c1b2a3b32888267}{screen\+Width()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_ad5b8c09e2fc986310c1b2a3b32888267}\label{classWt_1_1WEnvironment_ad5b8c09e2fc986310c1b2a3b32888267}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!screenWidth@{screenWidth}}
+\index{screenWidth@{screenWidth}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{screenWidth()}{screenWidth()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Environment\+::screen\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the horizontal resolution of the client\textquotesingle{}s screen. 
+
+Returns -\/1 if screen width is not known.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a8f995add84b2f28c916453a1fbb0e9fb}{screen\+Height()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a3ba7ee74fff9d0dc3659bd2d2c3f8774}\label{classWt_1_1WEnvironment_a3ba7ee74fff9d0dc3659bd2d2c3f8774}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!server@{server}}
+\index{server@{server}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{server()}{server()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WServer}{W\+Server}}$\ast$ Wt\+::\+W\+Environment\+::server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the server. 
+
+This returns the server environment of this session. \mbox{\Hypertarget{classWt_1_1WEnvironment_ae9dbe94327aa0832225157a7a2b7f4dd}\label{classWt_1_1WEnvironment_ae9dbe94327aa0832225157a7a2b7f4dd}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!serverAdmin@{serverAdmin}}
+\index{serverAdmin@{serverAdmin}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{serverAdmin()}{serverAdmin()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+W\+Environment\+::server\+Admin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the email address of the server admin. 
+
+The value of the C\+GI variable {\ttfamily S\+E\+R\+V\+E\+R\+\_\+\+A\+D\+M\+IN}.
+
+Example\+: {\ttfamily \char`\"{}root@localhost\char`\"{}} \mbox{\Hypertarget{classWt_1_1WEnvironment_a3470589906ac2589b82e59bd212b8fbc}\label{classWt_1_1WEnvironment_a3470589906ac2589b82e59bd212b8fbc}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!serverSignature@{serverSignature}}
+\index{serverSignature@{serverSignature}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{serverSignature()}{serverSignature()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+W\+Environment\+::server\+Signature (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the web server signature. 
+
+The value of the C\+GI variable {\ttfamily S\+E\+R\+V\+E\+R\+\_\+\+S\+I\+G\+N\+A\+T\+U\+RE}.
+
+Example\+: {\ttfamily $<$address$>$Apache \mbox{\hyperlink{classWt_1_1Server}{Server}} at localhost Port 80$<$/address$>$}. \mbox{\Hypertarget{classWt_1_1WEnvironment_ad919d78400f8064f1c944efd6af64d19}\label{classWt_1_1WEnvironment_ad919d78400f8064f1c944efd6af64d19}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!serverSoftware@{serverSoftware}}
+\index{serverSoftware@{serverSoftware}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{serverSoftware()}{serverSoftware()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+W\+Environment\+::server\+Software (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the web server software. 
+
+The value of the C\+GI variable {\ttfamily S\+E\+R\+V\+E\+R\+\_\+\+S\+O\+F\+T\+W\+A\+RE}.
+
+Example\+: {\ttfamily \char`\"{}\+Apache\char`\"{}} \mbox{\Hypertarget{classWt_1_1WEnvironment_a04b65c4f7fe6e3b0bd652e2580b4f62e}\label{classWt_1_1WEnvironment_a04b65c4f7fe6e3b0bd652e2580b4f62e}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!sslInfo@{sslInfo}}
+\index{sslInfo@{sslInfo}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{sslInfo()}{sslInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WSslInfo}{W\+Ssl\+Info}}$\ast$ Wt\+::\+W\+Environment\+::ssl\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns information on the S\+SL client certificate or {\ttfamily nullptr} if no authentication took place. 
+
+This function will return {\ttfamily nullptr} if no verification took place, Wt was compiled without S\+SL support, or the web server was configured without client S\+SL certificates.
+
+This method may return a pointer to a \mbox{\hyperlink{classWt_1_1WSslInfo}{W\+Ssl\+Info}} object, while the authentication may have failed. This depends on the configuration of the web server. It is therefore important to always check the verification result with \mbox{\hyperlink{classWt_1_1WSslInfo_a1f89fbb138034ae3b012f4b470ad30ae}{W\+Ssl\+Info\+::client\+Verification\+Result()}}.
+
+Remember that \mbox{\hyperlink{classWt_1_1WEnvironment}{W\+Environment}} is \textquotesingle{}const\textquotesingle{}, thus the object returned by this function will represent the S\+SL information of the first request for this session. It will not be updated during the lifetime of the session.
+
+The object returned is owned by \mbox{\hyperlink{classWt_1_1WEnvironment}{W\+Environment}} and will be deleted when \mbox{\hyperlink{classWt_1_1WEnvironment}{W\+Environment}} is destroyed (= at the end of the session).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Request_af4d09d8e5da790c1535d9db24da2a803}{Wt\+::\+Http\+::\+Request\+::ssl\+Info()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a9f71866d88ac3f00ae0fa9183d0e2600}\label{classWt_1_1WEnvironment_a9f71866d88ac3f00ae0fa9183d0e2600}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!supportsCookies@{supportsCookies}}
+\index{supportsCookies@{supportsCookies}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{supportsCookies()}{supportsCookies()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Environment\+::supports\+Cookies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the browser has enabled support for cookies. 
+
+When the user disables cookies during the visit of the page, this value is not updated.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a9f646d1d5e53e13ffb4169d563cd4716}{cookies()}}, \mbox{\hyperlink{classWt_1_1WEnvironment_a13e2c7b407afdde4c61eb489cffeee1e}{get\+Cookie()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_ab429100601e457420dba6c436b97ba20}\label{classWt_1_1WEnvironment_ab429100601e457420dba6c436b97ba20}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!timeZoneName@{timeZoneName}}
+\index{timeZoneName@{timeZoneName}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{timeZoneName()}{timeZoneName()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+W\+Environment\+::time\+Zone\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the time zone name as reported by the client. 
+
+\begin{DoxyNote}{Note}
+This requires Java\+Script support and is only supported by browsers that implement the Java\+Script Internationalization A\+PI. No version of Internet Explorer supports this, but modern browsers do. If not supported, this will return the empty string. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_abe9ace6cd3b5c61e2d20cea5ef493e6c}\label{classWt_1_1WEnvironment_abe9ace6cd3b5c61e2d20cea5ef493e6c}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!timeZoneOffset@{timeZoneOffset}}
+\index{timeZoneOffset@{timeZoneOffset}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{timeZoneOffset()}{timeZoneOffset()}}
+{\footnotesize\ttfamily std\+::chrono\+::minutes Wt\+::\+W\+Environment\+::time\+Zone\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the time zone offset as reported by the client. 
+
+This returns the time offset that the client has relative to U\+TC. A positive value thus means that the local time is ahead of U\+TC.
+
+This requires Java\+Script support.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLocalDateTime_a08aaccd32fd329f4f696b07a060bcca1}{W\+Local\+Date\+Time\+::time\+Zone\+Offset()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a64c6dae101d4c5bf5e6ffd111a101202}\label{classWt_1_1WEnvironment_a64c6dae101d4c5bf5e6ffd111a101202}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!userAgent@{userAgent}}
+\index{userAgent@{userAgent}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{userAgent()}{userAgent()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+W\+Environment\+::user\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the user agent. 
+
+The user agent, as reported in the H\+T\+TP {\ttfamily User-\/\+Agent} field.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a48ae23f4129971bf4b3d4efa742e12f2}{agent()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WEnvironment_a5b7ef1d77a68e9bb2f531974539bd4c9}\label{classWt_1_1WEnvironment_a5b7ef1d77a68e9bb2f531974539bd4c9}} 
+\index{Wt::WEnvironment@{Wt::WEnvironment}!webGL@{webGL}}
+\index{webGL@{webGL}!Wt::WEnvironment@{Wt::WEnvironment}}
+\doxysubsubsection{\texorpdfstring{webGL()}{webGL()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Environment\+::web\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the browser has support for Web\+GL. 
+
+Support for Web\+GL is required for client-\/side rendering of \mbox{\hyperlink{classWt_1_1WGLWidget}{W\+G\+L\+Widget}}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Environment.\+h\end{DoxyCompactItemize}

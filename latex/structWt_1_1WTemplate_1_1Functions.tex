@@ -1,0 +1,138 @@
+\hypertarget{structWt_1_1WTemplate_1_1Functions}{}\doxysection{Wt\+::W\+Template\+::Functions Struct Reference}
+\label{structWt_1_1WTemplate_1_1Functions}\index{Wt::WTemplate::Functions@{Wt::WTemplate::Functions}}
+
+
+A collection of predefined functions.  
+
+
+
+
+{\ttfamily \#include $<$W\+Template.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{structWt_1_1WTemplate_1_1Functions_af3243a572e9ee6a9706f22fced021ec1}{tr}} (\mbox{\hyperlink{classWt_1_1WTemplate}{W\+Template}} $\ast$t, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&args, std\+::ostream \&result)
+\begin{DoxyCompactList}\small\item\em A function that resolves to a localized string. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{structWt_1_1WTemplate_1_1Functions_a3c7e34998d4171b707d154f96343600c}{block}} (\mbox{\hyperlink{classWt_1_1WTemplate}{W\+Template}} $\ast$t, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&args, std\+::ostream \&result)
+\begin{DoxyCompactList}\small\item\em A function that renders a macro block. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{structWt_1_1WTemplate_1_1Functions_a21ea7d4d2c1ffb2f23e5b01f4cc5bdc3}{while\+\_\+f}} (\mbox{\hyperlink{classWt_1_1WTemplate}{W\+Template}} $\ast$t, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&args, std\+::ostream \&result)
+\begin{DoxyCompactList}\small\item\em A function that renders a macro block as long as the given condition is true. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{structWt_1_1WTemplate_1_1Functions_a4ea82da2c5b39c19a44aaf37309f7251}{id}} (\mbox{\hyperlink{classWt_1_1WTemplate}{W\+Template}} $\ast$t, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&args, std\+::ostream \&result)
+\begin{DoxyCompactList}\small\item\em A function that resolves the id of a bound widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A collection of predefined functions. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_ae8f4d8e21baa953323f3c0ce1cb4314a}{add\+Function()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structWt_1_1WTemplate_1_1Functions_a3c7e34998d4171b707d154f96343600c}\label{structWt_1_1WTemplate_1_1Functions_a3c7e34998d4171b707d154f96343600c}} 
+\index{Wt::WTemplate::Functions@{Wt::WTemplate::Functions}!block@{block}}
+\index{block@{block}!Wt::WTemplate::Functions@{Wt::WTemplate::Functions}}
+\doxysubsubsection{\texorpdfstring{block()}{block()}}
+{\footnotesize\ttfamily static bool Wt\+::\+W\+Template\+::\+Functions\+::block (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WTemplate}{W\+Template}} $\ast$}]{t,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&}]{args,  }\item[{std\+::ostream \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that renders a macro block. 
+
+The function will consider the first argument as the key for a localized string that is a macro block, and additional arguments as positional parameters in that block.
+
+For example, a template that contains\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{...}
+\DoxyCodeLine{\$\{\mbox{\hyperlink{structWt_1_1WTemplate_1_1Functions_a3c7e34998d4171b707d154f96343600c}{block}}:form-\/\mbox{\hyperlink{group__dbo_ga864a2e134149e7f614f45967777992c7}{field}} category\}}
+\DoxyCodeLine{...}
+\end{DoxyCode}
+
+
+would look-\/up the following message\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<message \textcolor{keywordtype}{id}=\textcolor{stringliteral}{"form-\/field"}>}
+\DoxyCodeLine{   <div \textcolor{keyword}{class}=\textcolor{stringliteral}{"control-\/group"}>}
+\DoxyCodeLine{      \$\{\{1\}-\/info\}}
+\DoxyCodeLine{   </div>}
+\DoxyCodeLine{</message>}
+\end{DoxyCode}
+
+
+and render as\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{...}
+\DoxyCodeLine{<div \textcolor{keyword}{class}=\textcolor{stringliteral}{"control-\/group"}>}
+\DoxyCodeLine{  \$\{category-\/info\}}
+\DoxyCodeLine{</div>}
+\DoxyCodeLine{...}
+\end{DoxyCode}
+ \mbox{\Hypertarget{structWt_1_1WTemplate_1_1Functions_a4ea82da2c5b39c19a44aaf37309f7251}\label{structWt_1_1WTemplate_1_1Functions_a4ea82da2c5b39c19a44aaf37309f7251}} 
+\index{Wt::WTemplate::Functions@{Wt::WTemplate::Functions}!id@{id}}
+\index{id@{id}!Wt::WTemplate::Functions@{Wt::WTemplate::Functions}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily static bool Wt\+::\+W\+Template\+::\+Functions\+::id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WTemplate}{W\+Template}} $\ast$}]{t,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&}]{args,  }\item[{std\+::ostream \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that resolves the id of a bound widget. 
+
+For example, when bound to the function {\ttfamily \char`\"{}id\char`\"{}}, template text that contains a place-\/holder 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{... \$\{\mbox{\hyperlink{structWt_1_1WTemplate_1_1Functions_a4ea82da2c5b39c19a44aaf37309f7251}{id}}:name\} ...}
+\end{DoxyCode}
+
+
+will be resolved to the value of\+:
+
+This is useful for binding labels to input elements.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_ae8f4d8e21baa953323f3c0ce1cb4314a}{add\+Function()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structWt_1_1WTemplate_1_1Functions_af3243a572e9ee6a9706f22fced021ec1}\label{structWt_1_1WTemplate_1_1Functions_af3243a572e9ee6a9706f22fced021ec1}} 
+\index{Wt::WTemplate::Functions@{Wt::WTemplate::Functions}!tr@{tr}}
+\index{tr@{tr}!Wt::WTemplate::Functions@{Wt::WTemplate::Functions}}
+\doxysubsubsection{\texorpdfstring{tr()}{tr()}}
+{\footnotesize\ttfamily static bool Wt\+::\+W\+Template\+::\+Functions\+::tr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WTemplate}{W\+Template}} $\ast$}]{t,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&}]{args,  }\item[{std\+::ostream \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that resolves to a localized string. 
+
+For example, when bound to the function {\ttfamily \char`\"{}tr\char`\"{}}, template that contains the placeholder 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{... \$\{\mbox{\hyperlink{structWt_1_1WTemplate_1_1Functions_af3243a572e9ee6a9706f22fced021ec1}{tr}}:name\} ...}
+\end{DoxyCode}
+ will be resolved to the value of\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WString_adf1e7e5fc3c7199563a69bf07d77e571}{WString::tr}}(\textcolor{stringliteral}{"name"})}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_ae8f4d8e21baa953323f3c0ce1cb4314a}{add\+Function()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{structWt_1_1WTemplate_1_1Functions_a21ea7d4d2c1ffb2f23e5b01f4cc5bdc3}\label{structWt_1_1WTemplate_1_1Functions_a21ea7d4d2c1ffb2f23e5b01f4cc5bdc3}} 
+\index{Wt::WTemplate::Functions@{Wt::WTemplate::Functions}!while\_f@{while\_f}}
+\index{while\_f@{while\_f}!Wt::WTemplate::Functions@{Wt::WTemplate::Functions}}
+\doxysubsubsection{\texorpdfstring{while\_f()}{while\_f()}}
+{\footnotesize\ttfamily static bool Wt\+::\+W\+Template\+::\+Functions\+::while\+\_\+f (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WTemplate}{W\+Template}} $\ast$}]{t,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&}]{args,  }\item[{std\+::ostream \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A function that renders a macro block as long as the given condition is true. 
+
+The function will consider the first argument as the condition, and the second argument as the key for a localized string that is a macro block.
+
+Just like the \mbox{\hyperlink{structWt_1_1WTemplate_1_1Functions_a3c7e34998d4171b707d154f96343600c}{block()}} function, you can provide additional arguments, so the third argument will be what is filled in into {\ttfamily \{1\}} in the macro block, etc. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Template.\+h\end{DoxyCompactItemize}

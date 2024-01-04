@@ -1,0 +1,197 @@
+\hypertarget{classWt_1_1WSound}{}\doxysection{Wt\+::W\+Sound Class Reference}
+\label{classWt_1_1WSound}\index{Wt::WSound@{Wt::WSound}}
+
+
+A value class to play a sound effect.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Sound.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Sound\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Sound\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WSound_1_1Source}{Source}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WSound_aecbe18842afa8d17845e4795fffdf499}{W\+Sound}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a sound object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WSound_a27fcfab1397d7c47ea4d112e5d65cd88}{W\+Sound}} (const std\+::string \&url)
+\begin{DoxyCompactList}\small\item\em Constructs a sound object for an M\+P3 media source. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WSound_ad8e2997fc9607a1876d2bad665281f9d}{W\+Sound}} (\mbox{\hyperlink{classWt_a486bbdb14981c4eeb1ea218ba6afdeff}{Media\+Encoding}} encoding, const \mbox{\hyperlink{classWt_1_1WLink}{W\+Link}} \&link)
+\begin{DoxyCompactList}\small\item\em Constructs a sound object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WSound_ad2b9aa6ce656708845c21aff965e02ea}{$\sim$\+W\+Sound}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSound_acf9488b44c7e487b38352fe927098da9}{add\+Source}} (\mbox{\hyperlink{classWt_a486bbdb14981c4eeb1ea218ba6afdeff}{Media\+Encoding}} encoding, const \mbox{\hyperlink{classWt_1_1WLink}{W\+Link}} \&link)
+\begin{DoxyCompactList}\small\item\em Adds a media source. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WLink}{W\+Link}} \mbox{\hyperlink{classWt_1_1WSound_afe3d322282128680dd55bca8cc05b3c9}{get\+Source}} (\mbox{\hyperlink{classWt_a486bbdb14981c4eeb1ea218ba6afdeff}{Media\+Encoding}} encoding) const
+\begin{DoxyCompactList}\small\item\em Returns the media source. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSound_a6cf72578210c7a6ff345372afa85d198}{set\+Loops}} (int number)
+\begin{DoxyCompactList}\small\item\em Sets the amount of times the sound has to be repeated. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WSound_aac5067b17c764fb792a3558a44c4e6fa}{loops}} () const
+\begin{DoxyCompactList}\small\item\em Returns the configured number of repeats. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSound_a6ca6b48ebc9e49ee6745228961df3817}{play}} ()
+\begin{DoxyCompactList}\small\item\em Start asynchronous playback of the sound. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSound_a7c3ce5dc7204f5c156bffd71487e3f72}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops playback of the sound. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSound_aa6f7117280de0ff012019309c197629b}\label{classWt_1_1WSound_aa6f7117280de0ff012019309c197629b}} 
+\mbox{\hyperlink{classWt_1_1Core_1_1observing__ptr}{observing\+\_\+ptr}}$<$ \mbox{\hyperlink{classWt_1_1SoundManager}{Sound\+Manager}} $>$ {\bfseries manager\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSound_a28bcdd134e752f8fb4201930e24369dd}\label{classWt_1_1WSound_a28bcdd134e752f8fb4201930e24369dd}} 
+std\+::vector$<$ \mbox{\hyperlink{structWt_1_1WSound_1_1Source}{Source}} $>$ {\bfseries media\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSound_abf1c109463d74b40063eec9a1fa5f9ed}\label{classWt_1_1WSound_abf1c109463d74b40063eec9a1fa5f9ed}} 
+int {\bfseries loops\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSound_aee940642f2974e262db9284c0b1d9766}\label{classWt_1_1WSound_aee940642f2974e262db9284c0b1d9766}} 
+class {\bfseries Sound\+Manager}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A value class to play a sound effect. 
+
+This class provides a way to play an M\+P3 sound asynchonously (if the browser supports this). It is intended as a simple way to play event sounds (not quite for a media center).
+
+This class uses a \mbox{\hyperlink{classWt_1_1WMediaPlayer}{W\+Media\+Player}} to play the sound (using H\+T\+ML $<$audio$>$ or a flash player). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WSound_aecbe18842afa8d17845e4795fffdf499}\label{classWt_1_1WSound_aecbe18842afa8d17845e4795fffdf499}} 
+\index{Wt::WSound@{Wt::WSound}!WSound@{WSound}}
+\index{WSound@{WSound}!Wt::WSound@{Wt::WSound}}
+\doxysubsubsection{\texorpdfstring{WSound()}{WSound()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Sound\+::\+W\+Sound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs a sound object. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSound_acf9488b44c7e487b38352fe927098da9}{add\+Source()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSound_a27fcfab1397d7c47ea4d112e5d65cd88}\label{classWt_1_1WSound_a27fcfab1397d7c47ea4d112e5d65cd88}} 
+\index{Wt::WSound@{Wt::WSound}!WSound@{WSound}}
+\index{WSound@{WSound}!Wt::WSound@{Wt::WSound}}
+\doxysubsubsection{\texorpdfstring{WSound()}{WSound()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Sound\+::\+W\+Sound (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url }\end{DoxyParamCaption})}
+
+
+
+Constructs a sound object for an M\+P3 media source. 
+
+The {\ttfamily url} will be assumed to be an M\+P3 file.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSound_acf9488b44c7e487b38352fe927098da9}{add\+Source()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSound_ad8e2997fc9607a1876d2bad665281f9d}\label{classWt_1_1WSound_ad8e2997fc9607a1876d2bad665281f9d}} 
+\index{Wt::WSound@{Wt::WSound}!WSound@{WSound}}
+\index{WSound@{WSound}!Wt::WSound@{Wt::WSound}}
+\doxysubsubsection{\texorpdfstring{WSound()}{WSound()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Sound\+::\+W\+Sound (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a486bbdb14981c4eeb1ea218ba6afdeff}{Media\+Encoding}}}]{encoding,  }\item[{const \mbox{\hyperlink{classWt_1_1WLink}{W\+Link}} \&}]{link }\end{DoxyParamCaption})}
+
+
+
+Constructs a sound object. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSound_acf9488b44c7e487b38352fe927098da9}{add\+Source()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSound_ad2b9aa6ce656708845c21aff965e02ea}\label{classWt_1_1WSound_ad2b9aa6ce656708845c21aff965e02ea}} 
+\index{Wt::WSound@{Wt::WSound}!````~WSound@{$\sim$WSound}}
+\index{````~WSound@{$\sim$WSound}!Wt::WSound@{Wt::WSound}}
+\doxysubsubsection{\texorpdfstring{$\sim$WSound()}{~WSound()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Sound\+::$\sim$\+W\+Sound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+Deleting a sound also stops it (if it was playing). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WSound_acf9488b44c7e487b38352fe927098da9}\label{classWt_1_1WSound_acf9488b44c7e487b38352fe927098da9}} 
+\index{Wt::WSound@{Wt::WSound}!addSource@{addSource}}
+\index{addSource@{addSource}!Wt::WSound@{Wt::WSound}}
+\doxysubsubsection{\texorpdfstring{addSource()}{addSource()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Sound\+::add\+Source (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a486bbdb14981c4eeb1ea218ba6afdeff}{Media\+Encoding}}}]{encoding,  }\item[{const \mbox{\hyperlink{classWt_1_1WLink}{W\+Link}} \&}]{link }\end{DoxyParamCaption})}
+
+
+
+Adds a media source. 
+
+You may add multiple media sources (with different encodings) to allow the file to be played in more browsers without needing Flash plugins. \mbox{\Hypertarget{classWt_1_1WSound_afe3d322282128680dd55bca8cc05b3c9}\label{classWt_1_1WSound_afe3d322282128680dd55bca8cc05b3c9}} 
+\index{Wt::WSound@{Wt::WSound}!getSource@{getSource}}
+\index{getSource@{getSource}!Wt::WSound@{Wt::WSound}}
+\doxysubsubsection{\texorpdfstring{getSource()}{getSource()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WLink}{W\+Link}} Wt\+::\+W\+Sound\+::get\+Source (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a486bbdb14981c4eeb1ea218ba6afdeff}{Media\+Encoding}}}]{encoding }\end{DoxyParamCaption}) const}
+
+
+
+Returns the media source. 
+
+This returns the link set for a specific encoding, or an empty link if no U\+RL was set for that encoding. \mbox{\Hypertarget{classWt_1_1WSound_aac5067b17c764fb792a3558a44c4e6fa}\label{classWt_1_1WSound_aac5067b17c764fb792a3558a44c4e6fa}} 
+\index{Wt::WSound@{Wt::WSound}!loops@{loops}}
+\index{loops@{loops}!Wt::WSound@{Wt::WSound}}
+\doxysubsubsection{\texorpdfstring{loops()}{loops()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Sound\+::loops (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the configured number of repeats. 
+
+{\itshape \mbox{\hyperlink{classWt_1_1WSound_a6cf72578210c7a6ff345372afa85d198}{set\+Loops()}}} \mbox{\Hypertarget{classWt_1_1WSound_a6ca6b48ebc9e49ee6745228961df3817}\label{classWt_1_1WSound_a6ca6b48ebc9e49ee6745228961df3817}} 
+\index{Wt::WSound@{Wt::WSound}!play@{play}}
+\index{play@{play}!Wt::WSound@{Wt::WSound}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Sound\+::play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Start asynchronous playback of the sound. 
+
+This method returns immediately. It will cause the sound to be played for the configured amount of \mbox{\hyperlink{classWt_1_1WSound_aac5067b17c764fb792a3558a44c4e6fa}{loops()}}.
+
+The behavior of \mbox{\hyperlink{classWt_1_1WSound_a6ca6b48ebc9e49ee6745228961df3817}{play()}} when a sound is already playing is undefind\+: it may be intermixed, sequentially queued, or a current playing sound may be stopped. It is recommended to call \mbox{\hyperlink{classWt_1_1WSound_a7c3ce5dc7204f5c156bffd71487e3f72}{stop()}} before \mbox{\hyperlink{classWt_1_1WSound_a6ca6b48ebc9e49ee6745228961df3817}{play()}} if you want to avoid mixing multiple instances of a single \mbox{\hyperlink{classWt_1_1WSound}{W\+Sound}} object. \mbox{\Hypertarget{classWt_1_1WSound_a6cf72578210c7a6ff345372afa85d198}\label{classWt_1_1WSound_a6cf72578210c7a6ff345372afa85d198}} 
+\index{Wt::WSound@{Wt::WSound}!setLoops@{setLoops}}
+\index{setLoops@{setLoops}!Wt::WSound@{Wt::WSound}}
+\doxysubsubsection{\texorpdfstring{setLoops()}{setLoops()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Sound\+::set\+Loops (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})}
+
+
+
+Sets the amount of times the sound has to be repeated. 
+
+A call to \mbox{\hyperlink{classWt_1_1WSound_a6ca6b48ebc9e49ee6745228961df3817}{play()}} will play the sound {\ttfamily number} of times. The default value is 1 (no repeats). \mbox{\Hypertarget{classWt_1_1WSound_a7c3ce5dc7204f5c156bffd71487e3f72}\label{classWt_1_1WSound_a7c3ce5dc7204f5c156bffd71487e3f72}} 
+\index{Wt::WSound@{Wt::WSound}!stop@{stop}}
+\index{stop@{stop}!Wt::WSound@{Wt::WSound}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Sound\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stops playback of the sound. 
+
+This method returns immediately. It causes the current playback (if any) of the sound to be stopped. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Sound.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,99 @@
+\hypertarget{classhttp_1_1server_1_1SessionProcess}{}\doxysection{http\+::server\+::Session\+Process Class Reference}
+\label{classhttp_1_1server_1_1SessionProcess}\index{http::server::SessionProcess@{http::server::SessionProcess}}
+
+
+Inheritance diagram for http\+::server\+::Session\+Process\+:
+% FIG 0
+
+
+Collaboration diagram for http\+::server\+::Session\+Process\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_acbedbd4c27e9f7437205f43455ea6d33}\label{classhttp_1_1server_1_1SessionProcess_acbedbd4c27e9f7437205f43455ea6d33}} 
+{\bfseries Session\+Process} (\mbox{\hyperlink{classhttp_1_1server_1_1SessionProcessManager}{Session\+Process\+Manager}} $\ast$manager)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_a8ebd4344bd1257e90494ff3e596bea55}\label{classhttp_1_1server_1_1SessionProcess_a8ebd4344bd1257e90494ff3e596bea55}} 
+{\bfseries Session\+Process} (const \mbox{\hyperlink{classhttp_1_1server_1_1SessionProcess}{Session\+Process}} \&)=delete
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_aef128f142bbf47dcbc162a216088fcff}\label{classhttp_1_1server_1_1SessionProcess_aef128f142bbf47dcbc162a216088fcff}} 
+void {\bfseries stop} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_a0420495c8c5dccb0a5851a03c7b149b2}\label{classhttp_1_1server_1_1SessionProcess_a0420495c8c5dccb0a5851a03c7b149b2}} 
+void {\bfseries async\+Exec} (const \mbox{\hyperlink{classhttp_1_1server_1_1Configuration}{Configuration}} \&config, const std\+::function$<$ void(bool)$>$ \&on\+Ready=std\+::function$<$ void(bool)$>$())
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_adf5caffb8f9b128b25eee53196c95dc5}\label{classhttp_1_1server_1_1SessionProcess_adf5caffb8f9b128b25eee53196c95dc5}} 
+bool {\bfseries ready} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_ac9080a869694c7881b578ac177acb3bb}\label{classhttp_1_1server_1_1SessionProcess_ac9080a869694c7881b578ac177acb3bb}} 
+int {\bfseries port} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_ae224e0453edce5529cc9e1a53d29f0df}\label{classhttp_1_1server_1_1SessionProcess_ae224e0453edce5529cc9e1a53d29f0df}} 
+pid\+\_\+t {\bfseries pid} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_a6e24ade0e79dc52be05658d02d8a528f}\label{classhttp_1_1server_1_1SessionProcess_a6e24ade0e79dc52be05658d02d8a528f}} 
+const std\+::string \& {\bfseries session\+Id} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_a3b9cd4b4a7977726c272021094f231e1}\label{classhttp_1_1server_1_1SessionProcess_a3b9cd4b4a7977726c272021094f231e1}} 
+void {\bfseries set\+Session\+Id} (const std\+::string \&session\+Id)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_ae2d2a41acffad3029d7bb5887c671689}\label{classhttp_1_1server_1_1SessionProcess_ae2d2a41acffad3029d7bb5887c671689}} 
+asio\+::ip\+::tcp\+::endpoint {\bfseries endpoint} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_a8d268357eb25c566aaec25f542e98156}\label{classhttp_1_1server_1_1SessionProcess_a8d268357eb25c566aaec25f542e98156}} 
+void {\bfseries close\+Client\+Socket} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_a3378937de2be1156dd014923565e6c85}\label{classhttp_1_1server_1_1SessionProcess_a3378937de2be1156dd014923565e6c85}} 
+void {\bfseries exec} (const \mbox{\hyperlink{classhttp_1_1server_1_1Configuration}{Configuration}} \&config, const std\+::function$<$ void(bool)$>$ \&on\+Ready)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_abfdbc7914ae860f49617062ab4d4ff73}\label{classhttp_1_1server_1_1SessionProcess_abfdbc7914ae860f49617062ab4d4ff73}} 
+void {\bfseries accept\+Handler} (const Wt\+::\+Asio\+Wrapper\+::error\+\_\+code \&err, const std\+::function$<$ void(bool)$>$ \&on\+Ready)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_aa113a4ef732dcdb40e24ffeaa221f2f4}\label{classhttp_1_1server_1_1SessionProcess_aa113a4ef732dcdb40e24ffeaa221f2f4}} 
+void {\bfseries read} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_a1c114e56cd7e78b7ba991cdac612d5ec}\label{classhttp_1_1server_1_1SessionProcess_a1c114e56cd7e78b7ba991cdac612d5ec}} 
+void {\bfseries read\+Handler} (const Wt\+::\+Asio\+Wrapper\+::error\+\_\+code \&err, std\+::size\+\_\+t bytes\+\_\+transferred)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_ab38d00db7049c344067e85e4e1ea4236}\label{classhttp_1_1server_1_1SessionProcess_ab38d00db7049c344067e85e4e1ea4236}} 
+bool {\bfseries handle\+Child\+Message} (const std\+::string \&message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_a25b76febed9ed628bd7b63e0fd2c8ede}\label{classhttp_1_1server_1_1SessionProcess_a25b76febed9ed628bd7b63e0fd2c8ede}} 
+asio\+::io\+\_\+service \& {\bfseries io\+\_\+service\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_abba42e8bb0d9b4e2e52d0da296021773}\label{classhttp_1_1server_1_1SessionProcess_abba42e8bb0d9b4e2e52d0da296021773}} 
+std\+::shared\+\_\+ptr$<$ asio\+::ip\+::tcp\+::socket $>$ {\bfseries socket\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_a5f47a34befc4886e81a7209fceef9847}\label{classhttp_1_1server_1_1SessionProcess_a5f47a34befc4886e81a7209fceef9847}} 
+std\+::shared\+\_\+ptr$<$ asio\+::ip\+::tcp\+::acceptor $>$ {\bfseries acceptor\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_a8f22cb83388598c72eb64271022c41ff}\label{classhttp_1_1server_1_1SessionProcess_a8f22cb83388598c72eb64271022c41ff}} 
+asio\+::streambuf {\bfseries buf\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_aeb0429d0919001e439dfc2e95bb8fb83}\label{classhttp_1_1server_1_1SessionProcess_aeb0429d0919001e439dfc2e95bb8fb83}} 
+int {\bfseries port\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_a6b45999382f3296181fc6adec9340201}\label{classhttp_1_1server_1_1SessionProcess_a6b45999382f3296181fc6adec9340201}} 
+std\+::string {\bfseries session\+Id\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_a26d18dbb51cf5029556c4bddc47555de}\label{classhttp_1_1server_1_1SessionProcess_a26d18dbb51cf5029556c4bddc47555de}} 
+pid\+\_\+t {\bfseries pid\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_a51f093dd5e4db4f0ba46f91310fbb0ed}\label{classhttp_1_1server_1_1SessionProcess_a51f093dd5e4db4f0ba46f91310fbb0ed}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1SessionProcessManager}{Session\+Process\+Manager}} $\ast$ {\bfseries manager\+\_\+} = nullptr
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1SessionProcess_a26245b8475bc0df88ddfa4fe533503c7}\label{classhttp_1_1server_1_1SessionProcess_a26245b8475bc0df88ddfa4fe533503c7}} 
+std\+::function$<$ void(bool)$>$ {\bfseries listening\+Callback\+\_\+}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/http/Session\+Process.\+h\end{DoxyCompactItemize}

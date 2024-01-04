@@ -1,0 +1,153 @@
+\hypertarget{classWt_1_1Chart_1_1WStandardPalette}{}\doxysection{Wt\+::Chart\+::W\+Standard\+Palette Class Reference}
+\label{classWt_1_1Chart_1_1WStandardPalette}\index{Wt::Chart::WStandardPalette@{Wt::Chart::WStandardPalette}}
+
+
+Standard styling for rendering series in charts.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Chart/\+W\+Standard\+Palette.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Chart\+::W\+Standard\+Palette\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Chart\+::W\+Standard\+Palette\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WStandardPalette_abab0a5c056f341d09234041ba3fc9c59}\label{classWt_1_1Chart_1_1WStandardPalette_abab0a5c056f341d09234041ba3fc9c59}} 
+typedef \mbox{\hyperlink{namespaceWt_1_1Chart_a6ff71535c97a8648b2344ae6b5ec3b12}{Palette\+Flavour}} \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardPalette_abab0a5c056f341d09234041ba3fc9c59}{Flavour}}
+\begin{DoxyCompactList}\small\item\em Typedef for enum \mbox{\hyperlink{namespaceWt_1_1Chart_a6ff71535c97a8648b2344ae6b5ec3b12}{Wt\+::\+Chart\+::\+Palette\+Flavour}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WStandardPalette_ab298f0bc799407532de249995c0f6033}\label{classWt_1_1Chart_1_1WStandardPalette_ab298f0bc799407532de249995c0f6033}} 
+\mbox{\hyperlink{classWt_1_1Chart_1_1WStandardPalette_ab298f0bc799407532de249995c0f6033}{W\+Standard\+Palette}} (\mbox{\hyperlink{namespaceWt_1_1Chart_a6ff71535c97a8648b2344ae6b5ec3b12}{Palette\+Flavour}} flavour)
+\begin{DoxyCompactList}\small\item\em Creates a standard palette of a particular flavour. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WBrush}{W\+Brush}} \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardPalette_a80ba2da1372397055b84f647330de3b4}{brush}} (int index) const override
+\begin{DoxyCompactList}\small\item\em Returns a brush from the palette. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardPalette_adcccd56729ec15622900361647980a74}{border\+Pen}} (int index) const override
+\begin{DoxyCompactList}\small\item\em Returns a border pen from the palette. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardPalette_a38923828423e93af59036174587b499f}{stroke\+Pen}} (int index) const override
+\begin{DoxyCompactList}\small\item\em Returns a stroke pen from the palette. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardPalette_ad67d735ddbb5797999dde2af8ad2b977}{font\+Color}} (int index) const override
+\begin{DoxyCompactList}\small\item\em Returns a font color from the palette. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WStandardPalette_a2851ea95e0072423eb63feb9b3d1af12}\label{classWt_1_1Chart_1_1WStandardPalette_a2851ea95e0072423eb63feb9b3d1af12}} 
+virtual \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardPalette_a2851ea95e0072423eb63feb9b3d1af12}{color}} (int index) const
+\begin{DoxyCompactList}\small\item\em Returns the color for the given index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WStandardPalette_a7a7091aa461714c59940deaa03fea08a}\label{classWt_1_1Chart_1_1WStandardPalette_a7a7091aa461714c59940deaa03fea08a}} 
+\mbox{\hyperlink{namespaceWt_1_1Chart_a6ff71535c97a8648b2344ae6b5ec3b12}{Palette\+Flavour}} {\bfseries flavour\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Standard styling for rendering series in charts. 
+
+This class provides four standard palettes, each composed of eight different colors (these are recycled at index 8).
+
+The three colored palettes are a variation on those defined at \href{http://www.modernlifeisrubbish.co.uk/article/web-2.0-colour-palette}{\texttt{ http\+://www.\+modernlifeisrubbish.\+co.\+uk/article/web-\/2.\+0-\/colour-\/palette}}.
+
+The following table lists the background color, and font color of the different palettes\+:
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+{\bfseries{Neutral}} &{\bfseries{Bold}} &{\bfseries{Muted}} &{\bfseries{Gray\+Scale}}  \\\cline{1-4}
+Gmail blue &Mozilla red &Ruby on Rails red &Gray \#1  \\\cline{1-4}
+Shiny silver &Flock blue &Mozilla blue &Gray \#2  \\\cline{1-4}
+Interactive action yellow &R\+SS orange &Etsy vermillion &Gray \#3  \\\cline{1-4}
+Qoop mint &Techcrunch green &Digg blue &Gray \#4  \\\cline{1-4}
+Digg blue &Flickr pink &43 Things gold &Gray \#5  \\\cline{1-4}
+Shadows grey &Newsvine green &Writely olive &Gray \#6  \\\cline{1-4}
+Magnolia Mag.\+nolia &Magnolia Mag.\+nolia &Last.\+fm crimson &Gray \#7  \\\cline{1-4}
+R\+SS orange &Rollyo red &Basecamp green &Gray \#8  \\\cline{1-4}
+\end{longtabu}
+
+
+The border pen is in all cases a gray pen of 0 width, while the stroke pen is a line of width 2 in the background color. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WStandardPalette_adcccd56729ec15622900361647980a74}\label{classWt_1_1Chart_1_1WStandardPalette_adcccd56729ec15622900361647980a74}} 
+\index{Wt::Chart::WStandardPalette@{Wt::Chart::WStandardPalette}!borderPen@{borderPen}}
+\index{borderPen@{borderPen}!Wt::Chart::WStandardPalette@{Wt::Chart::WStandardPalette}}
+\doxysubsubsection{\texorpdfstring{borderPen()}{borderPen()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} Wt\+::\+Chart\+::\+W\+Standard\+Palette\+::border\+Pen (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a border pen from the palette. 
+
+Returns the pen for stroking borders around an area filled using the brush at the same {\itshape index}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WStandardPalette_a38923828423e93af59036174587b499f}{stroke\+Pen()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardPalette_a80ba2da1372397055b84f647330de3b4}{brush()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Chart_1_1WChartPalette_a770025513b0e83146d54011743950726}{Wt\+::\+Chart\+::\+W\+Chart\+Palette}}.
+
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WStandardPalette_a80ba2da1372397055b84f647330de3b4}\label{classWt_1_1Chart_1_1WStandardPalette_a80ba2da1372397055b84f647330de3b4}} 
+\index{Wt::Chart::WStandardPalette@{Wt::Chart::WStandardPalette}!brush@{brush}}
+\index{brush@{brush}!Wt::Chart::WStandardPalette@{Wt::Chart::WStandardPalette}}
+\doxysubsubsection{\texorpdfstring{brush()}{brush()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WBrush}{W\+Brush}} Wt\+::\+Chart\+::\+W\+Standard\+Palette\+::brush (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a brush from the palette. 
+
+Returns the brush for the style with given {\itshape index}. 
+
+Implements \mbox{\hyperlink{classWt_1_1Chart_1_1WChartPalette_aa7e88bb175f4f83b245076150e658e99}{Wt\+::\+Chart\+::\+W\+Chart\+Palette}}.
+
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WStandardPalette_ad67d735ddbb5797999dde2af8ad2b977}\label{classWt_1_1Chart_1_1WStandardPalette_ad67d735ddbb5797999dde2af8ad2b977}} 
+\index{Wt::Chart::WStandardPalette@{Wt::Chart::WStandardPalette}!fontColor@{fontColor}}
+\index{fontColor@{fontColor}!Wt::Chart::WStandardPalette@{Wt::Chart::WStandardPalette}}
+\doxysubsubsection{\texorpdfstring{fontColor()}{fontColor()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} Wt\+::\+Chart\+::\+W\+Standard\+Palette\+::font\+Color (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a font color from the palette. 
+
+Returns a font color suitable for rendering text in the area filled with the brush at the same {\itshape index}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WStandardPalette_a80ba2da1372397055b84f647330de3b4}{brush()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Chart_1_1WChartPalette_a4968d1f875e0aedac02d7dbc312d085f}{Wt\+::\+Chart\+::\+W\+Chart\+Palette}}.
+
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WStandardPalette_a38923828423e93af59036174587b499f}\label{classWt_1_1Chart_1_1WStandardPalette_a38923828423e93af59036174587b499f}} 
+\index{Wt::Chart::WStandardPalette@{Wt::Chart::WStandardPalette}!strokePen@{strokePen}}
+\index{strokePen@{strokePen}!Wt::Chart::WStandardPalette@{Wt::Chart::WStandardPalette}}
+\doxysubsubsection{\texorpdfstring{strokePen()}{strokePen()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WPen}{W\+Pen}} Wt\+::\+Chart\+::\+W\+Standard\+Palette\+::stroke\+Pen (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a stroke pen from the palette. 
+
+Returns the pen for stroking lines for the style with given {\itshape index}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WStandardPalette_a38923828423e93af59036174587b499f}{stroke\+Pen()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Chart_1_1WChartPalette_ab395b91af20d3171c0cbb0abca85d967}{Wt\+::\+Chart\+::\+W\+Chart\+Palette}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Chart/W\+Standard\+Palette.\+h\end{DoxyCompactItemize}

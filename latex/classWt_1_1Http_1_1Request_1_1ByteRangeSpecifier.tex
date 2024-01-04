@@ -1,0 +1,74 @@
+\hypertarget{classWt_1_1Http_1_1Request_1_1ByteRangeSpecifier}{}\doxysection{Wt\+::Http\+::Request\+::Byte\+Range\+Specifier Class Reference}
+\label{classWt_1_1Http_1_1Request_1_1ByteRangeSpecifier}\index{Wt::Http::Request::ByteRangeSpecifier@{Wt::Http::Request::ByteRangeSpecifier}}
+
+
+A byte range specifier.  
+
+
+
+
+{\ttfamily \#include $<$Request.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Http\+::Request\+::Byte\+Range\+Specifier\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Http\+::Request\+::Byte\+Range\+Specifier\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Http_1_1Request_1_1ByteRangeSpecifier_ac4fc38d1759336f50099de17d4c22af4}{Byte\+Range\+Specifier}} ()
+\begin{DoxyCompactList}\small\item\em Creates an empty byte range specifier. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Http_1_1Request_1_1ByteRangeSpecifier_a1acda3e94a0108d39eda22aea55cd2a0}{is\+Satisfiable}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the range is satisfiable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_1_1ByteRangeSpecifier_afc7043d292dbf9fa16dcde9ff30b813a}\label{classWt_1_1Http_1_1Request_1_1ByteRangeSpecifier_afc7043d292dbf9fa16dcde9ff30b813a}} 
+void \mbox{\hyperlink{classWt_1_1Http_1_1Request_1_1ByteRangeSpecifier_afc7043d292dbf9fa16dcde9ff30b813a}{set\+Satisfiable}} (bool satisfiable)
+\begin{DoxyCompactList}\small\item\em Sets whether the specifier is satisfiable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_1_1ByteRangeSpecifier_a3f9e467b80003ef2626a412a44393b9a}\label{classWt_1_1Http_1_1Request_1_1ByteRangeSpecifier_a3f9e467b80003ef2626a412a44393b9a}} 
+bool {\bfseries satisfiable\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A byte range specifier. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Request_a8ca558a8969a214bce810c4bd4741e63}{get\+Ranges()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_1_1ByteRangeSpecifier_ac4fc38d1759336f50099de17d4c22af4}\label{classWt_1_1Http_1_1Request_1_1ByteRangeSpecifier_ac4fc38d1759336f50099de17d4c22af4}} 
+\index{Wt::Http::Request::ByteRangeSpecifier@{Wt::Http::Request::ByteRangeSpecifier}!ByteRangeSpecifier@{ByteRangeSpecifier}}
+\index{ByteRangeSpecifier@{ByteRangeSpecifier}!Wt::Http::Request::ByteRangeSpecifier@{Wt::Http::Request::ByteRangeSpecifier}}
+\doxysubsubsection{\texorpdfstring{ByteRangeSpecifier()}{ByteRangeSpecifier()}}
+{\footnotesize\ttfamily Wt\+::\+Http\+::\+Request\+::\+Byte\+Range\+Specifier\+::\+Byte\+Range\+Specifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates an empty byte range specifier. 
+
+The specifier is satisfiable but empty, indicating that no ranges were present. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_1_1ByteRangeSpecifier_a1acda3e94a0108d39eda22aea55cd2a0}\label{classWt_1_1Http_1_1Request_1_1ByteRangeSpecifier_a1acda3e94a0108d39eda22aea55cd2a0}} 
+\index{Wt::Http::Request::ByteRangeSpecifier@{Wt::Http::Request::ByteRangeSpecifier}!isSatisfiable@{isSatisfiable}}
+\index{isSatisfiable@{isSatisfiable}!Wt::Http::Request::ByteRangeSpecifier@{Wt::Http::Request::ByteRangeSpecifier}}
+\doxysubsubsection{\texorpdfstring{isSatisfiable()}{isSatisfiable()}}
+{\footnotesize\ttfamily bool Wt\+::\+Http\+::\+Request\+::\+Byte\+Range\+Specifier\+::is\+Satisfiable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the range is satisfiable. 
+
+If the range specification is not satisfiable, R\+FC 2616 states you should return a response status of 416. \mbox{\hyperlink{classWt_1_1Http_1_1Request_1_1ByteRangeSpecifier_a1acda3e94a0108d39eda22aea55cd2a0}{is\+Satisfiable()}} will return true if a Range header was missing or a syntax error occured, in which case the number of Byte\+Ranges will be zero and the client must send the entire file. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Http/Request.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,168 @@
+\hypertarget{classhttp_1_1server_1_1Server}{}\doxysection{http\+::server\+::Server Class Reference}
+\label{classhttp_1_1server_1_1Server}\index{http::server::Server@{http::server::Server}}
+
+
+The top-\/level class of the H\+T\+TP server.  
+
+
+
+
+{\ttfamily \#include $<$Server.\+h$>$}
+
+
+
+Collaboration diagram for http\+::server\+::Server\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structhttp_1_1server_1_1Server_1_1TcpListener}{Tcp\+Listener}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhttp_1_1server_1_1Server_a129875602e90bdc752e1ca139964b494}{Server}} (const \mbox{\hyperlink{classhttp_1_1server_1_1Configuration}{Configuration}} \&config, \mbox{\hyperlink{classWt_1_1WServer}{Wt\+::\+W\+Server}} \&wt\+Server)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a53ef1361ad913ae8169a98ee925b373f}\label{classhttp_1_1server_1_1Server_a53ef1361ad913ae8169a98ee925b373f}} 
+{\bfseries Server} (const \mbox{\hyperlink{classhttp_1_1server_1_1Server}{Server}} \&other)=delete
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a17de224f359677c1e609d8e29eb560fe}\label{classhttp_1_1server_1_1Server_a17de224f359677c1e609d8e29eb560fe}} 
+void \mbox{\hyperlink{classhttp_1_1server_1_1Server_a17de224f359677c1e609d8e29eb560fe}{start}} ()
+\begin{DoxyCompactList}\small\item\em Start the server (called from constructor) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a05436a9181223861304072f0ff351428}\label{classhttp_1_1server_1_1Server_a05436a9181223861304072f0ff351428}} 
+void \mbox{\hyperlink{classhttp_1_1server_1_1Server_a05436a9181223861304072f0ff351428}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Stop the server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_aa325f4a2732c1c2b4fdc721908ea01fb}\label{classhttp_1_1server_1_1Server_aa325f4a2732c1c2b4fdc721908ea01fb}} 
+void \mbox{\hyperlink{classhttp_1_1server_1_1Server_aa325f4a2732c1c2b4fdc721908ea01fb}{resume}} ()
+\begin{DoxyCompactList}\small\item\em Assumes accept sockets have been closed and reopens them. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classhttp_1_1server_1_1Server_a7ca1b98ccb122903c854123b6305cd47}{http\+Port}} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a8c2bcc5579950d7687f34cf7994abf62}\label{classhttp_1_1server_1_1Server_a8c2bcc5579950d7687f34cf7994abf62}} 
+\mbox{\hyperlink{classWt_1_1WebController}{Wt\+::\+Web\+Controller}} $\ast$ {\bfseries controller} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a30a357a05e03b4ba20b39846e1b41b1b}\label{classhttp_1_1server_1_1Server_a30a357a05e03b4ba20b39846e1b41b1b}} 
+const \mbox{\hyperlink{classhttp_1_1server_1_1Configuration}{Configuration}} \& {\bfseries configuration} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_ad600d1b198b9abc5fb450a4335980346}\label{classhttp_1_1server_1_1Server_ad600d1b198b9abc5fb450a4335980346}} 
+asio\+::io\+\_\+service \& {\bfseries service} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_aada66d814a273ce3a48e545d71c9eda1}\label{classhttp_1_1server_1_1Server_aada66d814a273ce3a48e545d71c9eda1}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1SessionProcessManager}{Session\+Process\+Manager}} $\ast$ {\bfseries session\+Manager} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a966e8bbdb793d982668d840357400da7}\label{classhttp_1_1server_1_1Server_a966e8bbdb793d982668d840357400da7}} 
+void {\bfseries update\+Process\+Session\+Id} (const std\+::string \&session\+Id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a976eb1ce6f147986d9f321b0bbeb5b89}\label{classhttp_1_1server_1_1Server_a976eb1ce6f147986d9f321b0bbeb5b89}} 
+std\+::vector$<$ asio\+::ip\+::address $>$ {\bfseries resolve\+Address} (asio\+::ip\+::tcp\+::resolver \&resolver, const std\+::string \&address)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a4ed9a95887af0e16b71723c26abe0a18}\label{classhttp_1_1server_1_1Server_a4ed9a95887af0e16b71723c26abe0a18}} 
+void \mbox{\hyperlink{classhttp_1_1server_1_1Server_a4ed9a95887af0e16b71723c26abe0a18}{add\+Tcp\+Listener}} (asio\+::ip\+::tcp\+::resolver \&resolver, const std\+::string \&address, const std\+::string \&port)
+\begin{DoxyCompactList}\small\item\em Add new T\+CP listener, called from \mbox{\hyperlink{classhttp_1_1server_1_1Server_a17de224f359677c1e609d8e29eb560fe}{start()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_ac2bcf1416e9635a0bf7187ef2be140f8}\label{classhttp_1_1server_1_1Server_ac2bcf1416e9635a0bf7187ef2be140f8}} 
+void \mbox{\hyperlink{classhttp_1_1server_1_1Server_ac2bcf1416e9635a0bf7187ef2be140f8}{add\+Tcp\+Endpoint}} (const asio\+::ip\+::tcp\+::endpoint \&endpoint, const std\+::string \&address, Wt\+::\+Asio\+Wrapper\+::error\+\_\+code \&errc)
+\begin{DoxyCompactList}\small\item\em Add new T\+CP endpoint, called from add\+Tcp\+Listener. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_aca54f5dd0ddab24207be306f8979b140}\label{classhttp_1_1server_1_1Server_aca54f5dd0ddab24207be306f8979b140}} 
+void \mbox{\hyperlink{classhttp_1_1server_1_1Server_aca54f5dd0ddab24207be306f8979b140}{start\+Accept}} ()
+\begin{DoxyCompactList}\small\item\em Starts accepting http/https connections. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classhttp_1_1server_1_1Server_a7f7b21b7bf392d51778cca51c9230e70}{start\+Connect}} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a9e3bedac7eb85359a286f811237127ec}\label{classhttp_1_1server_1_1Server_a9e3bedac7eb85359a286f811237127ec}} 
+void \mbox{\hyperlink{classhttp_1_1server_1_1Server_a9e3bedac7eb85359a286f811237127ec}{handle\+Connected}} (const Wt\+::\+Asio\+Wrapper\+::error\+\_\+code \&e)
+\begin{DoxyCompactList}\small\item\em Connected to the parent, sends the listening port back. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a7537699f467117b4ca505fab078b3900}\label{classhttp_1_1server_1_1Server_a7537699f467117b4ca505fab078b3900}} 
+void \mbox{\hyperlink{classhttp_1_1server_1_1Server_a7537699f467117b4ca505fab078b3900}{handle\+Message\+Sent}} (const std\+::shared\+\_\+ptr$<$ std\+::string $>$ \&buf, const Wt\+::\+Asio\+Wrapper\+::error\+\_\+code \&e)
+\begin{DoxyCompactList}\small\item\em The port has been sent to the parent, close the socket. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_af176e9d84840440b4a9a3d3611a6cb38}\label{classhttp_1_1server_1_1Server_af176e9d84840440b4a9a3d3611a6cb38}} 
+void {\bfseries close\+Parent\+Connection} ()
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a19af34248ff53e86055a4b640b73b222}\label{classhttp_1_1server_1_1Server_a19af34248ff53e86055a4b640b73b222}} 
+void \mbox{\hyperlink{classhttp_1_1server_1_1Server_a19af34248ff53e86055a4b640b73b222}{handle\+Tcp\+Accept}} (\mbox{\hyperlink{structhttp_1_1server_1_1Server_1_1TcpListener}{Tcp\+Listener}} $\ast$listener, const Wt\+::\+Asio\+Wrapper\+::error\+\_\+code \&e)
+\begin{DoxyCompactList}\small\item\em Handle completion of an asynchronous accept operation. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a299d80fae87b33ea8a4295201c1c53e6}\label{classhttp_1_1server_1_1Server_a299d80fae87b33ea8a4295201c1c53e6}} 
+void \mbox{\hyperlink{classhttp_1_1server_1_1Server_a299d80fae87b33ea8a4295201c1c53e6}{handle\+Stop}} ()
+\begin{DoxyCompactList}\small\item\em Handle a request to stop the server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a3a8d14d6e05e68e88da06350ddc0c288}\label{classhttp_1_1server_1_1Server_a3a8d14d6e05e68e88da06350ddc0c288}} 
+void \mbox{\hyperlink{classhttp_1_1server_1_1Server_a3a8d14d6e05e68e88da06350ddc0c288}{handle\+Resume}} ()
+\begin{DoxyCompactList}\small\item\em Handle a request to resume the server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a2ae26479076283905dcdfb22ed3ad594}\label{classhttp_1_1server_1_1Server_a2ae26479076283905dcdfb22ed3ad594}} 
+void \mbox{\hyperlink{classhttp_1_1server_1_1Server_a2ae26479076283905dcdfb22ed3ad594}{expire\+Sessions}} (Wt\+::\+Asio\+Wrapper\+::error\+\_\+code ec)
+\begin{DoxyCompactList}\small\item\em Expire sessions periodically for dedicated processes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_aef4c9dd7ca41b3feb9ef71a463cfb035}\label{classhttp_1_1server_1_1Server_aef4c9dd7ca41b3feb9ef71a463cfb035}} 
+void {\bfseries handle\+Timeout} (asio\+::steady\+\_\+timer $\ast$timer, const std\+::function$<$ void()$>$ \&function, const Wt\+::\+Asio\+Wrapper\+::error\+\_\+code \&err)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_adba3935391dfba5d7d29c7b5f66d13db}\label{classhttp_1_1server_1_1Server_adba3935391dfba5d7d29c7b5f66d13db}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1Configuration}{Configuration}} \mbox{\hyperlink{classhttp_1_1server_1_1Server_adba3935391dfba5d7d29c7b5f66d13db}{config\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The server\textquotesingle{}s configuration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a932b207afc890420f84c10287eeffe43}\label{classhttp_1_1server_1_1Server_a932b207afc890420f84c10287eeffe43}} 
+\mbox{\hyperlink{classWt_1_1WServer}{Wt\+::\+W\+Server}} \& \mbox{\hyperlink{classhttp_1_1server_1_1Server_a932b207afc890420f84c10287eeffe43}{wt\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classWt}{Wt}} app server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a4ed3f1722721dbf2fa4a71c17fbc9966}\label{classhttp_1_1server_1_1Server_a4ed3f1722721dbf2fa4a71c17fbc9966}} 
+\mbox{\hyperlink{classWt_1_1WLogger}{Wt\+::\+W\+Logger}} \mbox{\hyperlink{classhttp_1_1server_1_1Server_a4ed3f1722721dbf2fa4a71c17fbc9966}{access\+Logger\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The logger. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_ad9eb0eca64ee1ea5bb6d065613882152}\label{classhttp_1_1server_1_1Server_ad9eb0eca64ee1ea5bb6d065613882152}} 
+Wt\+::\+Asio\+Wrapper\+::strand \mbox{\hyperlink{classhttp_1_1server_1_1Server_ad9eb0eca64ee1ea5bb6d065613882152}{accept\+\_\+strand\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The strand for \mbox{\hyperlink{classhttp_1_1server_1_1Server_a19af34248ff53e86055a4b640b73b222}{handle\+Tcp\+Accept()}}, handle\+Ssl\+Accept() and \mbox{\hyperlink{classhttp_1_1server_1_1Server_a299d80fae87b33ea8a4295201c1c53e6}{handle\+Stop()}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a309bc081963215a523104c45c3553aaa}\label{classhttp_1_1server_1_1Server_a309bc081963215a523104c45c3553aaa}} 
+std\+::vector$<$ \mbox{\hyperlink{structhttp_1_1server_1_1Server_1_1TcpListener}{Tcp\+Listener}} $>$ \mbox{\hyperlink{classhttp_1_1server_1_1Server_a309bc081963215a523104c45c3553aaa}{tcp\+\_\+listeners\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Acceptors used to listen for incoming http connections. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a113d0cd2cc1247305cc3c62be2fcacf8}\label{classhttp_1_1server_1_1Server_a113d0cd2cc1247305cc3c62be2fcacf8}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1ConnectionManager}{Connection\+Manager}} \mbox{\hyperlink{classhttp_1_1server_1_1Server_a113d0cd2cc1247305cc3c62be2fcacf8}{connection\+\_\+manager\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The connection manager which owns all live connections. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a84c138ecf1f43e23a6389f0f2d28a008}\label{classhttp_1_1server_1_1Server_a84c138ecf1f43e23a6389f0f2d28a008}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1SessionProcessManager}{Session\+Process\+Manager}} $\ast$ \mbox{\hyperlink{classhttp_1_1server_1_1Server_a84c138ecf1f43e23a6389f0f2d28a008}{session\+Manager\+\_\+}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classSession}{Session}} process manager for Dedicated\+Process option. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a5b4dbe2db4ba8d4c894b97f36f22ff5a}\label{classhttp_1_1server_1_1Server_a5b4dbe2db4ba8d4c894b97f36f22ff5a}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1RequestHandler}{Request\+Handler}} \mbox{\hyperlink{classhttp_1_1server_1_1Server_a5b4dbe2db4ba8d4c894b97f36f22ff5a}{request\+\_\+handler\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The handler for all incoming requests. \end{DoxyCompactList}\item 
+asio\+::steady\+\_\+timer \mbox{\hyperlink{classhttp_1_1server_1_1Server_adbb436a8f283bb4548fdcc6c8e1b6785}{expire\+Sessions\+Timer\+\_\+}}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_ae0596cbdcc3683c1558df70c09b5833d}\label{classhttp_1_1server_1_1Server_ae0596cbdcc3683c1558df70c09b5833d}} 
+std\+::unique\+\_\+ptr$<$ asio\+::ip\+::tcp\+::socket $>$ {\bfseries parent\+Socket\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The top-\/level class of the H\+T\+TP server. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a129875602e90bdc752e1ca139964b494}\label{classhttp_1_1server_1_1Server_a129875602e90bdc752e1ca139964b494}} 
+\index{http::server::Server@{http::server::Server}!Server@{Server}}
+\index{Server@{Server}!http::server::Server@{http::server::Server}}
+\doxysubsubsection{\texorpdfstring{Server()}{Server()}}
+{\footnotesize\ttfamily http\+::server\+::\+Server\+::\+Server (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classhttp_1_1server_1_1Configuration}{Configuration}} \&}]{config,  }\item[{\mbox{\hyperlink{classWt_1_1WServer}{Wt\+::\+W\+Server}} \&}]{wt\+Server }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Construct the server to listen on the specified T\+CP address and port, and serve up files from the given directory. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_a7ca1b98ccb122903c854123b6305cd47}\label{classhttp_1_1server_1_1Server_a7ca1b98ccb122903c854123b6305cd47}} 
+\index{http::server::Server@{http::server::Server}!httpPort@{httpPort}}
+\index{httpPort@{httpPort}!http::server::Server@{http::server::Server}}
+\doxysubsubsection{\texorpdfstring{httpPort()}{httpPort()}}
+{\footnotesize\ttfamily int http\+::server\+::\+Server\+::http\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the http port number. If the server listens on multiple port, only the first port is returned \mbox{\Hypertarget{classhttp_1_1server_1_1Server_a7f7b21b7bf392d51778cca51c9230e70}\label{classhttp_1_1server_1_1Server_a7f7b21b7bf392d51778cca51c9230e70}} 
+\index{http::server::Server@{http::server::Server}!startConnect@{startConnect}}
+\index{startConnect@{startConnect}!http::server::Server@{http::server::Server}}
+\doxysubsubsection{\texorpdfstring{startConnect()}{startConnect()}}
+{\footnotesize\ttfamily void http\+::server\+::\+Server\+::start\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Start to connect to a listening T\+CP socket of the parent Used for dedicated processes. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classhttp_1_1server_1_1Server_adbb436a8f283bb4548fdcc6c8e1b6785}\label{classhttp_1_1server_1_1Server_adbb436a8f283bb4548fdcc6c8e1b6785}} 
+\index{http::server::Server@{http::server::Server}!expireSessionsTimer\_@{expireSessionsTimer\_}}
+\index{expireSessionsTimer\_@{expireSessionsTimer\_}!http::server::Server@{http::server::Server}}
+\doxysubsubsection{\texorpdfstring{expireSessionsTimer\_}{expireSessionsTimer\_}}
+{\footnotesize\ttfamily asio\+::steady\+\_\+timer http\+::server\+::\+Server\+::expire\+Sessions\+Timer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+For dedicated process deployment\+: timer to periodically call Web\+Controller\+::expire\+Sessions() 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/http/Server.\+h\end{DoxyCompactItemize}

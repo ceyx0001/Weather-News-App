@@ -1,0 +1,668 @@
+\hypertarget{classWt_1_1WSortFilterProxyModel}{}\doxysection{Wt\+::W\+Sort\+Filter\+Proxy\+Model Class Reference}
+\label{classWt_1_1WSortFilterProxyModel}\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+
+
+A proxy model for Wt\textquotesingle{}s item models that provides filtering and/or sorting.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Sort\+Filter\+Proxy\+Model.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Sort\+Filter\+Proxy\+Model\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Sort\+Filter\+Proxy\+Model\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WSortFilterProxyModel_1_1Item}{Item}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a164830ee100cd2d755262db8f297fd69}\label{classWt_1_1WSortFilterProxyModel_a164830ee100cd2d755262db8f297fd69}} 
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a164830ee100cd2d755262db8f297fd69}{W\+Sort\+Filter\+Proxy\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a3c0c28f12f04496395e44ed1282bcbed}\label{classWt_1_1WSortFilterProxyModel_a3c0c28f12f04496395e44ed1282bcbed}} 
+virtual \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a3c0c28f12f04496395e44ed1282bcbed}{$\sim$\+W\+Sort\+Filter\+Proxy\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_ac16d6045b303fe4307edec47909080aa}{map\+From\+Source}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&source\+Index) const override
+\begin{DoxyCompactList}\small\item\em Maps a source model index to the proxy model. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a1c4be4cc538417e215be178ecc6b2d03}{map\+To\+Source}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&proxy\+Index) const override
+\begin{DoxyCompactList}\small\item\em Maps a proxy model index to the source model. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a6dd4619120134fc180d8470b1f29a126}{set\+Source\+Model}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \&\mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a7e92d9d2b91f852286b7d49d08a88d5e}{source\+Model}}) override
+\begin{DoxyCompactList}\small\item\em Sets the source model. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_aaf272fe23196b67a409e7d0de03fd8d5}{set\+Filter\+Key\+Column}} (int column)
+\begin{DoxyCompactList}\small\item\em Specify the column on which the filtering is applied. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a699995360233ac666860268a48a17e69}{filter\+Key\+Column}} () const
+\begin{DoxyCompactList}\small\item\em Return the column on which the filtering is applied. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_abd4e255015997a23017de5df48be3a8f}{set\+Filter\+Reg\+Exp}} (std\+::unique\+\_\+ptr$<$ std\+::regex $>$ pattern)
+\begin{DoxyCompactList}\small\item\em Specify a regular expression for filtering. \end{DoxyCompactList}\item 
+std\+::regex $\ast$ \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a68d5b668fc978d63c2ac2d962cd58536}{filter\+Reg\+Exp}} () const
+\begin{DoxyCompactList}\small\item\em Return the regular expression used for filtering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a813d0ddf54e2e7ce7ccbd1b2a2c6819f}{set\+Filter\+Role}} (\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role)
+\begin{DoxyCompactList}\small\item\em Specify the data role used for filtering. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a0d329225cf7e958acad9900218880f62}{filter\+Role}} () const
+\begin{DoxyCompactList}\small\item\em Return the data role used for filtering. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a097579ed002d4506771dc0eeb478ba4c}{set\+Sort\+Role}} (\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role)
+\begin{DoxyCompactList}\small\item\em Specify the data role used used for sorting. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a1aa9ffa360b2db4eb67d3d4de5c5d895}{sort\+Role}} () const
+\begin{DoxyCompactList}\small\item\em Return the data role used for sorting. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a841e9268e221448aeabc9277dc6014b3}{sort\+Column}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current sort column. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Sort\+Order}} \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_aca14a5b0ac985e6b45bea4e6419fdaa2}{sort\+Order}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current sort order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a4dfdc62d591249454cbb38e5099f19b4}{set\+Dynamic\+Sort\+Filter}} (bool enable)
+\begin{DoxyCompactList}\small\item\em Configure the proxy to dynamically track changes in the source model. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a8d957012f067e3081dcf2b91b0ca48d0}{dynamic\+Sort\+Filter}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this proxy dynmically filters and sorts. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a0a14d093e21a93aaf9ce3cc98576b00b}{invalidate}} ()
+\begin{DoxyCompactList}\small\item\em Invalidates the current filter. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a8537cff99904d1f1ddfd6ca68a6ef0f1}{column\+Count}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a7e8e9bf57c94f7637129f553b50f200f}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const override
+\begin{DoxyCompactList}\small\item\em Returns the number of columns. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_aa083a80f5979b5c32793d8b008abb09f}{row\+Count}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a7e8e9bf57c94f7637129f553b50f200f}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const override
+\begin{DoxyCompactList}\small\item\em Returns the number of rows. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a7e8e9bf57c94f7637129f553b50f200f}{parent}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a5d469babd3d0b593d0eb43c3eeee3ad2}{index}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the parent for a model index. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a5d469babd3d0b593d0eb43c3eeee3ad2}{index}} (int row, int column, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a7e8e9bf57c94f7637129f553b50f200f}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const override
+\begin{DoxyCompactList}\small\item\em Returns the child index for the given row and column. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_af6c4b785d95569ff7c3fd87b9b78a910}{set\+Header\+Data}} (int section, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}) override
+\begin{DoxyCompactList}\small\item\em Sets header data for a column or row. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a6df6b8712ffc0c9effee44115e55f8b5}{header\+Data}} (int section, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation=Orientation\+::\+Horizontal, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}) const override
+\begin{DoxyCompactList}\small\item\em Returns the row or column header data. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{group__modelview_gafb18b4339442f1327c2a65850f3d8a53}{Header\+Flag}} $>$ \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_aaccc1dbd57c47c3a2f32af5801f87c8d}{header\+Flags}} (int section, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation=Orientation\+::\+Horizontal) const override
+\begin{DoxyCompactList}\small\item\em Returns the flags for a header. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a4cbaf47c168933f218ab1d4035d3974c}{insert\+Rows}} (int row, int count, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a7e8e9bf57c94f7637129f553b50f200f}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) override
+\begin{DoxyCompactList}\small\item\em Inserts a number rows. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a00f1b0eacdcb152b0873b9d3a13eca56}{remove\+Rows}} (int row, int count, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a7e8e9bf57c94f7637129f553b50f200f}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) override
+\begin{DoxyCompactList}\small\item\em Removes a number rows. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_af6bab4995d859f96c0bc4233f83dc6d9}{sort}} (int column, \mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Sort\+Order}} order=Sort\+Order\+::\+Ascending) override
+\begin{DoxyCompactList}\small\item\em Sorts the model according to a particular column. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a9780b5aec4806a8f44a9fcf378b445a7}{filter\+Accept\+Row}} (int source\+Row, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&source\+Parent) const
+\begin{DoxyCompactList}\small\item\em Returns whether a source row is accepted by the filter. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_ad4f2c31c260dea967644e8378eed33da}{less\+Than}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&lhs, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Compares two indexes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a6c91bb1e6999f8ade9e98d3bb5515b64}\label{classWt_1_1WSortFilterProxyModel_a6c91bb1e6999f8ade9e98d3bb5515b64}} 
+struct Compare {\bfseries W\+\_\+\+J\+A\+V\+A\+\_\+\+C\+O\+M\+P\+A\+R\+A\+T\+OR} (int)
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_ad4cca18185cf0912a163181ddcc3ea3d}\label{classWt_1_1WSortFilterProxyModel_ad4cca18185cf0912a163181ddcc3ea3d}} 
+void {\bfseries source\+Columns\+About\+To\+Be\+Inserted} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a7e8e9bf57c94f7637129f553b50f200f}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_aa1f2ecf3c9bed253c2ae17ed86e51e38}\label{classWt_1_1WSortFilterProxyModel_aa1f2ecf3c9bed253c2ae17ed86e51e38}} 
+void {\bfseries source\+Columns\+Inserted} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a7e8e9bf57c94f7637129f553b50f200f}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_abf542300278405182981e250ca791f7e}\label{classWt_1_1WSortFilterProxyModel_abf542300278405182981e250ca791f7e}} 
+void {\bfseries source\+Columns\+About\+To\+Be\+Removed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a7e8e9bf57c94f7637129f553b50f200f}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a25c63fc38bbd63cac4364766852b80eb}\label{classWt_1_1WSortFilterProxyModel_a25c63fc38bbd63cac4364766852b80eb}} 
+void {\bfseries source\+Columns\+Removed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a7e8e9bf57c94f7637129f553b50f200f}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a737a5ea72bb9e40fade3bf3191633d68}\label{classWt_1_1WSortFilterProxyModel_a737a5ea72bb9e40fade3bf3191633d68}} 
+void {\bfseries source\+Rows\+About\+To\+Be\+Inserted} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a7e8e9bf57c94f7637129f553b50f200f}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a457d29ad039a787fb856cff6021517ca}\label{classWt_1_1WSortFilterProxyModel_a457d29ad039a787fb856cff6021517ca}} 
+void {\bfseries source\+Rows\+Inserted} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a7e8e9bf57c94f7637129f553b50f200f}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a6fb4dba077e823dcea6d6c078a697479}\label{classWt_1_1WSortFilterProxyModel_a6fb4dba077e823dcea6d6c078a697479}} 
+void {\bfseries source\+Rows\+About\+To\+Be\+Removed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a7e8e9bf57c94f7637129f553b50f200f}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a045e59a9a76c546f5e4501df998bb524}\label{classWt_1_1WSortFilterProxyModel_a045e59a9a76c546f5e4501df998bb524}} 
+void {\bfseries source\+Rows\+Removed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a7e8e9bf57c94f7637129f553b50f200f}{parent}}, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_ab0c5c1041612712dbba7158b67b81e0d}\label{classWt_1_1WSortFilterProxyModel_ab0c5c1041612712dbba7158b67b81e0d}} 
+void {\bfseries source\+Data\+Changed} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&top\+Left, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&bottom\+Right)
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a3b521e0519328aca9a5ee8915d1e4920}\label{classWt_1_1WSortFilterProxyModel_a3b521e0519328aca9a5ee8915d1e4920}} 
+void {\bfseries source\+Header\+Data\+Changed} (\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} orientation, int start, int end)
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a7fc983f16ea68c4e03b1df516df661e4}\label{classWt_1_1WSortFilterProxyModel_a7fc983f16ea68c4e03b1df516df661e4}} 
+void {\bfseries source\+Layout\+About\+To\+Be\+Changed} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a90a6491083dc8e1e019f87a3544b43fe}\label{classWt_1_1WSortFilterProxyModel_a90a6491083dc8e1e019f87a3544b43fe}} 
+void {\bfseries source\+Layout\+Changed} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_ac378b1607c63221dcc9b77704df06793}\label{classWt_1_1WSortFilterProxyModel_ac378b1607c63221dcc9b77704df06793}} 
+void {\bfseries source\+Model\+Reset} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a58c6f1d1dffc52e66cfa3d089e7f7e2c}\label{classWt_1_1WSortFilterProxyModel_a58c6f1d1dffc52e66cfa3d089e7f7e2c}} 
+\mbox{\hyperlink{structWt_1_1WSortFilterProxyModel_1_1Item}{Item}} $\ast$ {\bfseries item\+From\+Source\+Index} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&source\+Index) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a6234946ca0d3817a908e9ad70b5ae065}\label{classWt_1_1WSortFilterProxyModel_a6234946ca0d3817a908e9ad70b5ae065}} 
+\mbox{\hyperlink{structWt_1_1WSortFilterProxyModel_1_1Item}{Item}} $\ast$ {\bfseries parent\+Item\+From\+Index} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a5d469babd3d0b593d0eb43c3eeee3ad2}{index}}) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_af2cf488597cf5736a43da6a3feb2614d}\label{classWt_1_1WSortFilterProxyModel_af2cf488597cf5736a43da6a3feb2614d}} 
+\mbox{\hyperlink{structWt_1_1WSortFilterProxyModel_1_1Item}{Item}} $\ast$ {\bfseries item\+From\+Index} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a5d469babd3d0b593d0eb43c3eeee3ad2}{index}}) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a51e18655028e87a717058ebe96e2f0cd}\label{classWt_1_1WSortFilterProxyModel_a51e18655028e87a717058ebe96e2f0cd}} 
+void {\bfseries reset\+Mappings} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_aecc9173f37177fc32dacd4997b233553}\label{classWt_1_1WSortFilterProxyModel_aecc9173f37177fc32dacd4997b233553}} 
+void {\bfseries update\+Item} (\mbox{\hyperlink{structWt_1_1WSortFilterProxyModel_1_1Item}{Item}} $\ast$item) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a1de6bfa507cfd28e5dda3f7f18755e50}\label{classWt_1_1WSortFilterProxyModel_a1de6bfa507cfd28e5dda3f7f18755e50}} 
+void {\bfseries rebuild\+Source\+Row\+Map} (\mbox{\hyperlink{structWt_1_1WSortFilterProxyModel_1_1Item}{Item}} $\ast$item) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a16a42ffa029a6f70105eafde5c3a7d39}\label{classWt_1_1WSortFilterProxyModel_a16a42ffa029a6f70105eafde5c3a7d39}} 
+int {\bfseries mapped\+Insertion\+Point} (int source\+Row, \mbox{\hyperlink{structWt_1_1WSortFilterProxyModel_1_1Item}{Item}} $\ast$item) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a1b0f6c0e14cd1d7b9d65e8a4c11b31b4}\label{classWt_1_1WSortFilterProxyModel_a1b0f6c0e14cd1d7b9d65e8a4c11b31b4}} 
+int {\bfseries compare} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&lhs, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&rhs) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a1c3cfa3986e814357c1e8c4b422f99cc}\label{classWt_1_1WSortFilterProxyModel_a1c3cfa3986e814357c1e8c4b422f99cc}} 
+std\+::unique\+\_\+ptr$<$ std\+::regex $>$ {\bfseries regex\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a26e839cf1bf642895cae193fc80b3781}\label{classWt_1_1WSortFilterProxyModel_a26e839cf1bf642895cae193fc80b3781}} 
+int {\bfseries filter\+Key\+Column\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_afb3d587378b0ac7b96aa53758e5ea218}\label{classWt_1_1WSortFilterProxyModel_afb3d587378b0ac7b96aa53758e5ea218}} 
+\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} {\bfseries filter\+Role\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a76d738020bdc65756028cfdca48e2a67}\label{classWt_1_1WSortFilterProxyModel_a76d738020bdc65756028cfdca48e2a67}} 
+int {\bfseries sort\+Key\+Column\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_ab73e96b2f2b5746b7b768200f09c5e15}\label{classWt_1_1WSortFilterProxyModel_ab73e96b2f2b5746b7b768200f09c5e15}} 
+\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} {\bfseries sort\+Role\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a53a12f1b76fab8ffaf4bdd2948637e0b}\label{classWt_1_1WSortFilterProxyModel_a53a12f1b76fab8ffaf4bdd2948637e0b}} 
+\mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Sort\+Order}} {\bfseries sort\+Order\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a42350c0ef273c74fa0a85853138ae082}\label{classWt_1_1WSortFilterProxyModel_a42350c0ef273c74fa0a85853138ae082}} 
+bool {\bfseries dynamic\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_ad948e70e1d14bcedc7377d265c3d0264}\label{classWt_1_1WSortFilterProxyModel_ad948e70e1d14bcedc7377d265c3d0264}} 
+bool {\bfseries inserting\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a58116f30cfa7443b07c88c6efb48340d}\label{classWt_1_1WSortFilterProxyModel_a58116f30cfa7443b07c88c6efb48340d}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} $>$ {\bfseries model\+Connections\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a9dabe700c5491fbc886aedd68d404e27}\label{classWt_1_1WSortFilterProxyModel_a9dabe700c5491fbc886aedd68d404e27}} 
+\mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a272b9667c732a6d2e11e1b6d5d211697}{Item\+Map}} {\bfseries mapped\+Indexes\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a707bd350169aaab2fd0d9076e6ff024f}\label{classWt_1_1WSortFilterProxyModel_a707bd350169aaab2fd0d9076e6ff024f}} 
+\mbox{\hyperlink{structWt_1_1WSortFilterProxyModel_1_1Item}{Item}} $\ast$ {\bfseries mapped\+Root\+Item\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A proxy model for Wt\textquotesingle{}s item models that provides filtering and/or sorting. 
+
+This proxy model does not store data itself, but presents data from a source model, after filtering rows. It also allows sorting of the source model data, without actually altering the source model. This may be convenient when the source model does not support sorting (i.\+e. does not reimplement \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab044b92afa69282ea2e351bcdfd7c0c7}{W\+Abstract\+Proxy\+Model\+::sort()}}), or you do not want to reorder the underlying model since that affects all views on the model.
+
+To use the proxy model to filter data, you use the methods \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_aaf272fe23196b67a409e7d0de03fd8d5}{set\+Filter\+Key\+Column()}}, \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_abd4e255015997a23017de5df48be3a8f}{set\+Filter\+Reg\+Exp()}} and \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a813d0ddf54e2e7ce7ccbd1b2a2c6819f}{set\+Filter\+Role()}} to specify a filtering operation based on the values of a single column. If this filtering mechanism is too limiting, you can provide specialized filtering by reimplementing the \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a9780b5aec4806a8f44a9fcf378b445a7}{filter\+Accept\+Row()}} method.
+
+Sorting is provided by reimplementing the standard \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab044b92afa69282ea2e351bcdfd7c0c7}{W\+Abstract\+Item\+Model\+::sort()}} method. In this way, a view class such as \mbox{\hyperlink{classWt_1_1WTreeView}{W\+Tree\+View}} may resort the model as indicated by the user. Use \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a097579ed002d4506771dc0eeb478ba4c}{set\+Sort\+Role()}} to indicate on what data role sorting should be done, or reimplement the \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_ad4f2c31c260dea967644e8378eed33da}{less\+Than()}} method to provide a specialized sorting method.
+
+By default, the proxy does not automatically refilter and resort when the original model changes. \mbox{\hyperlink{classData}{Data}} changes or row additions to the source model are not automatically reflected in the proxy model, but to maintain integrity, row removals in the source model are always reflected in the proxy model. You can enable the model to always refilter and resort when the underlying model changes using \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a4dfdc62d591249454cbb38e5099f19b4}{set\+Dynamic\+Sort\+Filter()}}.
+
+Usage example\+: 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a8537cff99904d1f1ddfd6ca68a6ef0f1}\label{classWt_1_1WSortFilterProxyModel_a8537cff99904d1f1ddfd6ca68a6ef0f1}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!columnCount@{columnCount}}
+\index{columnCount@{columnCount}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{columnCount()}{columnCount()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::column\+Count (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of columns. 
+
+This returns the number of columns at index {\ttfamily parent}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_aa083a80f5979b5c32793d8b008abb09f}{row\+Count()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_abcf7912a95a0a60f8e9b1c37d30b8383}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a8d957012f067e3081dcf2b91b0ca48d0}\label{classWt_1_1WSortFilterProxyModel_a8d957012f067e3081dcf2b91b0ca48d0}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!dynamicSortFilter@{dynamicSortFilter}}
+\index{dynamicSortFilter@{dynamicSortFilter}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{dynamicSortFilter()}{dynamicSortFilter()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::dynamic\+Sort\+Filter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether this proxy dynmically filters and sorts. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a4dfdc62d591249454cbb38e5099f19b4}{set\+Dynamic\+Sort\+Filter()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a9780b5aec4806a8f44a9fcf378b445a7}\label{classWt_1_1WSortFilterProxyModel_a9780b5aec4806a8f44a9fcf378b445a7}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!filterAcceptRow@{filterAcceptRow}}
+\index{filterAcceptRow@{filterAcceptRow}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{filterAcceptRow()}{filterAcceptRow()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::filter\+Accept\+Row (\begin{DoxyParamCaption}\item[{int}]{source\+Row,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{source\+Parent }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Returns whether a source row is accepted by the filter. 
+
+The default implementation uses \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a699995360233ac666860268a48a17e69}{filter\+Key\+Column()}}, \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a0d329225cf7e958acad9900218880f62}{filter\+Role()}} and \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a68d5b668fc978d63c2ac2d962cd58536}{filter\+Reg\+Exp()}}.
+
+You may want to reimplement this method to provide specialized filtering. \mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a699995360233ac666860268a48a17e69}\label{classWt_1_1WSortFilterProxyModel_a699995360233ac666860268a48a17e69}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!filterKeyColumn@{filterKeyColumn}}
+\index{filterKeyColumn@{filterKeyColumn}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{filterKeyColumn()}{filterKeyColumn()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::filter\+Key\+Column (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the column on which the filtering is applied. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_aaf272fe23196b67a409e7d0de03fd8d5}{set\+Filter\+Key\+Column()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a68d5b668fc978d63c2ac2d962cd58536}\label{classWt_1_1WSortFilterProxyModel_a68d5b668fc978d63c2ac2d962cd58536}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!filterRegExp@{filterRegExp}}
+\index{filterRegExp@{filterRegExp}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{filterRegExp()}{filterRegExp()}}
+{\footnotesize\ttfamily std\+::regex$\ast$ Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::filter\+Reg\+Exp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the regular expression used for filtering. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_abd4e255015997a23017de5df48be3a8f}{set\+Filter\+Reg\+Exp()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a0d329225cf7e958acad9900218880f62}\label{classWt_1_1WSortFilterProxyModel_a0d329225cf7e958acad9900218880f62}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!filterRole@{filterRole}}
+\index{filterRole@{filterRole}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{filterRole()}{filterRole()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::filter\+Role (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the data role used for filtering. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a813d0ddf54e2e7ce7ccbd1b2a2c6819f}{set\+Filter\+Role()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a6df6b8712ffc0c9effee44115e55f8b5}\label{classWt_1_1WSortFilterProxyModel_a6df6b8712ffc0c9effee44115e55f8b5}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!headerData@{headerData}}
+\index{headerData@{headerData}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{headerData()}{headerData()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::header\+Data (\begin{DoxyParamCaption}\item[{int}]{section,  }\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation = {\ttfamily Orientation\+:\+:Horizontal},  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the row or column header data. 
+
+The default proxy implementation constructs a dummy \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} with the row set to 0 and column set to {\ttfamily section} if the orientation is Wt\+::\+Orientation\+::\+Horizontal, or with the row set to {\ttfamily section} and the column set to 0 if the orientation is Wt\+::\+Orientation\+::\+Vertical.
+
+The resulting section that is forwarded to \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a7e92d9d2b91f852286b7d49d08a88d5e}{source\+Model()}}-\/$>$\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a6df6b8712ffc0c9effee44115e55f8b5}{header\+Data()}} depends on how the \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} is transformed with \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a1c4be4cc538417e215be178ecc6b2d03}{map\+To\+Source()}}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_aa1d16a5336bd1a75023b1b20f63708a2}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_aaccc1dbd57c47c3a2f32af5801f87c8d}\label{classWt_1_1WSortFilterProxyModel_aaccc1dbd57c47c3a2f32af5801f87c8d}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!headerFlags@{headerFlags}}
+\index{headerFlags@{headerFlags}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{headerFlags()}{headerFlags()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$\mbox{\hyperlink{group__modelview_gafb18b4339442f1327c2a65850f3d8a53}{Header\+Flag}}$>$ Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::header\+Flags (\begin{DoxyParamCaption}\item[{int}]{section,  }\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation = {\ttfamily Orientation\+:\+:Horizontal} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the flags for a header. 
+
+The default proxy implementation constructs a dummy \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} with the row set to 0 and column set to {\ttfamily section} if the orientation is Wt\+::\+Orientation\+::\+Horizontal, or with the row set to {\ttfamily section} and the column set to 0 if the orientation is Wt\+::\+Orientation\+::\+Vertical.
+
+The resulting section that is forwarded to \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a7e92d9d2b91f852286b7d49d08a88d5e}{source\+Model()}}-\/$>$\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_aaccc1dbd57c47c3a2f32af5801f87c8d}{header\+Flags()}} depends on how the \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} is transformed with \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a1c4be4cc538417e215be178ecc6b2d03}{map\+To\+Source()}}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a89eb0b330b49faf718f10fc8e5081ccd}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a5d469babd3d0b593d0eb43c3eeee3ad2}\label{classWt_1_1WSortFilterProxyModel_a5d469babd3d0b593d0eb43c3eeee3ad2}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!index@{index}}
+\index{index@{index}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::index (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the child index for the given row and column. 
+
+When implementing this method, you can use \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af9b04fdec198dfbc1c9297ead93c8930}{create\+Index()}} to create an index that corresponds to the item at {\ttfamily row} and {\ttfamily column} within {\ttfamily parent}.
+
+If the location is invalid (out of bounds at the parent), then an invalid index must be returned.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a7e8e9bf57c94f7637129f553b50f200f}{parent()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a4cbaf47c168933f218ab1d4035d3974c}\label{classWt_1_1WSortFilterProxyModel_a4cbaf47c168933f218ab1d4035d3974c}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!insertRows@{insertRows}}
+\index{insertRows@{insertRows}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{insertRows()}{insertRows()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::insert\+Rows (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{count,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inserts a number rows. 
+
+The rows are inserted in the source model, and if successful, also in the proxy model regardless of whether they are matched by the current filter. They are inserted at the indicated row, regardless of whether this is the correct place according to the defined sorting.
+
+As soon as you set data for the column on which the filtering is active, or which affects the sorting, the row may be filtered out or change position when dynamic sorting/filtering is enabled. Therefore, it is usually a good idea to temporarily disable the dynamic sort/filtering behaviour while inserting new row(s) of data. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a59b5169e158b4cbfb1ec98df67c87200}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a0a14d093e21a93aaf9ce3cc98576b00b}\label{classWt_1_1WSortFilterProxyModel_a0a14d093e21a93aaf9ce3cc98576b00b}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!invalidate@{invalidate}}
+\index{invalidate@{invalidate}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{invalidate()}{invalidate()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::invalidate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Invalidates the current filter. 
+
+This refilters and resorts the model, and is useful only if you have reimplemented \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a9780b5aec4806a8f44a9fcf378b445a7}{filter\+Accept\+Row()}} and/or \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_ad4f2c31c260dea967644e8378eed33da}{less\+Than()}} \mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_ad4f2c31c260dea967644e8378eed33da}\label{classWt_1_1WSortFilterProxyModel_ad4f2c31c260dea967644e8378eed33da}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!lessThan@{lessThan}}
+\index{lessThan@{lessThan}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{lessThan()}{lessThan()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::less\+Than (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Compares two indexes. 
+
+The default implementation uses \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a1aa9ffa360b2db4eb67d3d4de5c5d895}{sort\+Role()}} and an ordering using the operator$<$ when the data is of the same type or compares lexicographically otherwise.
+
+You may want to reimplement this method to provide specialized sorting. \mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_ac16d6045b303fe4307edec47909080aa}\label{classWt_1_1WSortFilterProxyModel_ac16d6045b303fe4307edec47909080aa}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!mapFromSource@{mapFromSource}}
+\index{mapFromSource@{mapFromSource}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{mapFromSource()}{mapFromSource()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::map\+From\+Source (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{source\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Maps a source model index to the proxy model. 
+
+This method returns a model index in the proxy model that corresponds to the model index {\ttfamily source\+Index} in the source model. This method must only be implemented for source model indexes that are mapped and thus are the result of \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a1c4be4cc538417e215be178ecc6b2d03}{map\+To\+Source()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a1c4be4cc538417e215be178ecc6b2d03}{map\+To\+Source()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a856d190cc66edcf05462e2476f43b01d}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a1c4be4cc538417e215be178ecc6b2d03}\label{classWt_1_1WSortFilterProxyModel_a1c4be4cc538417e215be178ecc6b2d03}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!mapToSource@{mapToSource}}
+\index{mapToSource@{mapToSource}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{mapToSource()}{mapToSource()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::map\+To\+Source (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{proxy\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Maps a proxy model index to the source model. 
+
+This method returns a model index in the source model that corresponds to the proxy model index {\ttfamily proxy\+Index}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_ac16d6045b303fe4307edec47909080aa}{map\+From\+Source()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_ac36b0ee3110073578da8b999d1882bf7}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a7e8e9bf57c94f7637129f553b50f200f}\label{classWt_1_1WSortFilterProxyModel_a7e8e9bf57c94f7637129f553b50f200f}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!parent@{parent}}
+\index{parent@{parent}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{parent()}{parent()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::parent (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the parent for a model index. 
+
+An implementation should use \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af9b04fdec198dfbc1c9297ead93c8930}{create\+Index()}} to create a model index that corresponds to the parent of a given index.
+
+\mbox{\hyperlink{classNote}{Note}} that the index itself may be stale (referencing a row/column within the parent that is outside the model geometry), but its parent (identified by the \mbox{\hyperlink{classWt_1_1WModelIndex_a870e6637b7beebef4f4dfaec9f08e0a2}{W\+Model\+Index\+::internal\+Pointer()}}) is referencing an existing parent. A stale index can only be used while the model geometry is being updated, i.\+e. during the emission of the corresponding \mbox{[}rows/columns\mbox{]}(Being)\mbox{[}Removed/\+Inserted\mbox{]}() signals.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a5d469babd3d0b593d0eb43c3eeee3ad2}{index()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a00f1b0eacdcb152b0873b9d3a13eca56}\label{classWt_1_1WSortFilterProxyModel_a00f1b0eacdcb152b0873b9d3a13eca56}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!removeRows@{removeRows}}
+\index{removeRows@{removeRows}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{removeRows()}{removeRows()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::remove\+Rows (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{count,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Removes a number rows. 
+
+The rows are removed from the source model. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ad1788e38e96df5795fc453f63d557ba2}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_aa083a80f5979b5c32793d8b008abb09f}\label{classWt_1_1WSortFilterProxyModel_aa083a80f5979b5c32793d8b008abb09f}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!rowCount@{rowCount}}
+\index{rowCount@{rowCount}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{rowCount()}{rowCount()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::row\+Count (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of rows. 
+
+This returns the number of rows at index {\ttfamily parent}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a8537cff99904d1f1ddfd6ca68a6ef0f1}{column\+Count()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab0709a8f71fd5df882f29bb29fd055f0}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a4dfdc62d591249454cbb38e5099f19b4}\label{classWt_1_1WSortFilterProxyModel_a4dfdc62d591249454cbb38e5099f19b4}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!setDynamicSortFilter@{setDynamicSortFilter}}
+\index{setDynamicSortFilter@{setDynamicSortFilter}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{setDynamicSortFilter()}{setDynamicSortFilter()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::set\+Dynamic\+Sort\+Filter (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+Configure the proxy to dynamically track changes in the source model. 
+
+When {\ttfamily enable} is {\ttfamily true}, the proxy will re-\/filter and re-\/sort the model when changes happen to the source model.
+
+\begin{DoxyNote}{Note}
+This may be ackward when editing through the proxy model, since changing some data may rearrange the model and thus invalidate model indexes. Therefore it is usually less complicated to manipulate directly the source model instead.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_ad4f2c31c260dea967644e8378eed33da}{less\+Than()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_aaf272fe23196b67a409e7d0de03fd8d5}\label{classWt_1_1WSortFilterProxyModel_aaf272fe23196b67a409e7d0de03fd8d5}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!setFilterKeyColumn@{setFilterKeyColumn}}
+\index{setFilterKeyColumn@{setFilterKeyColumn}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{setFilterKeyColumn()}{setFilterKeyColumn()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::set\+Filter\+Key\+Column (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption})}
+
+
+
+Specify the column on which the filtering is applied. 
+
+This configures the column on which the \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a68d5b668fc978d63c2ac2d962cd58536}{filter\+Reg\+Exp()}} is applied.
+
+The default value is 0.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_abd4e255015997a23017de5df48be3a8f}{set\+Filter\+Reg\+Exp()}}, \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a813d0ddf54e2e7ce7ccbd1b2a2c6819f}{set\+Filter\+Role()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_abd4e255015997a23017de5df48be3a8f}\label{classWt_1_1WSortFilterProxyModel_abd4e255015997a23017de5df48be3a8f}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!setFilterRegExp@{setFilterRegExp}}
+\index{setFilterRegExp@{setFilterRegExp}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{setFilterRegExp()}{setFilterRegExp()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::set\+Filter\+Reg\+Exp (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ std\+::regex $>$}]{pattern }\end{DoxyParamCaption})}
+
+
+
+Specify a regular expression for filtering. 
+
+This configures the regular expression used for filtering on \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a699995360233ac666860268a48a17e69}{filter\+Key\+Column()}}.
+
+The default value is an empty expression, which disables filtering.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_aaf272fe23196b67a409e7d0de03fd8d5}{set\+Filter\+Key\+Column()}}, \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a813d0ddf54e2e7ce7ccbd1b2a2c6819f}{set\+Filter\+Role()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a813d0ddf54e2e7ce7ccbd1b2a2c6819f}\label{classWt_1_1WSortFilterProxyModel_a813d0ddf54e2e7ce7ccbd1b2a2c6819f}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!setFilterRole@{setFilterRole}}
+\index{setFilterRole@{setFilterRole}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{setFilterRole()}{setFilterRole()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::set\+Filter\+Role (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role }\end{DoxyParamCaption})}
+
+
+
+Specify the data role used for filtering. 
+
+This configures the data role used for filtering on \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a699995360233ac666860268a48a17e69}{filter\+Key\+Column()}}.
+
+The default value is \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_aaf272fe23196b67a409e7d0de03fd8d5}{set\+Filter\+Key\+Column()}}, \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_abd4e255015997a23017de5df48be3a8f}{set\+Filter\+Reg\+Exp()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_af6c4b785d95569ff7c3fd87b9b78a910}\label{classWt_1_1WSortFilterProxyModel_af6c4b785d95569ff7c3fd87b9b78a910}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!setHeaderData@{setHeaderData}}
+\index{setHeaderData@{setHeaderData}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{setHeaderData()}{setHeaderData()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::set\+Header\+Data (\begin{DoxyParamCaption}\item[{int}]{section,  }\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation,  }\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{value,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Item\+Data\+Role\+::\+Edit}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets header data for a column or row. 
+
+Returns {\ttfamily true} if the operation was successful.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a6df6b8712ffc0c9effee44115e55f8b5}{header\+Data()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a3c4a0ffe050bc0d11feeac4749dde784}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a097579ed002d4506771dc0eeb478ba4c}\label{classWt_1_1WSortFilterProxyModel_a097579ed002d4506771dc0eeb478ba4c}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!setSortRole@{setSortRole}}
+\index{setSortRole@{setSortRole}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{setSortRole()}{setSortRole()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::set\+Sort\+Role (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role }\end{DoxyParamCaption})}
+
+
+
+Specify the data role used used for sorting. 
+
+This configures the data role used for sorting.
+
+The default value is \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Item\+Data\+Role\+::\+Display}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_ad4f2c31c260dea967644e8378eed33da}{less\+Than()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a6dd4619120134fc180d8470b1f29a126}\label{classWt_1_1WSortFilterProxyModel_a6dd4619120134fc180d8470b1f29a126}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!setSourceModel@{setSourceModel}}
+\index{setSourceModel@{setSourceModel}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{setSourceModel()}{setSourceModel()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::set\+Source\+Model (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \&}]{source\+Model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the source model. 
+
+The source model provides the actual data for the proxy model.
+
+Ownership of the source model is {\itshape not} transferred.
+
+All signals of the source model are forwarded to the proxy model. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractProxyModel_a213dfe399091f8134657436de86efca7}{Wt\+::\+W\+Abstract\+Proxy\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_af6bab4995d859f96c0bc4233f83dc6d9}\label{classWt_1_1WSortFilterProxyModel_af6bab4995d859f96c0bc4233f83dc6d9}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!sort@{sort}}
+\index{sort@{sort}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::sort (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{\mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Sort\+Order}}}]{order = {\ttfamily SortOrder\+:\+:Ascending} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sorts the model according to a particular column. 
+
+If the model supports sorting, then it should emit the \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab377ac2fcb9de9d191bd1353665d1389}{layout\+About\+To\+Be\+Changed()}} signal, rearrange its items, and afterwards emit the \mbox{\hyperlink{classWt_1_1WAbstractItemModel_afe7cb1d5186881f83aa8f0e452aaef66}{layout\+Changed()}} signal.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab377ac2fcb9de9d191bd1353665d1389}{layout\+About\+To\+Be\+Changed()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_afe7cb1d5186881f83aa8f0e452aaef66}{layout\+Changed()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab044b92afa69282ea2e351bcdfd7c0c7}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a841e9268e221448aeabc9277dc6014b3}\label{classWt_1_1WSortFilterProxyModel_a841e9268e221448aeabc9277dc6014b3}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!sortColumn@{sortColumn}}
+\index{sortColumn@{sortColumn}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{sortColumn()}{sortColumn()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::sort\+Column (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current sort column. 
+
+When \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_af6bab4995d859f96c0bc4233f83dc6d9}{sort()}} has not been called, the model is unsorted, and this method returns -\/1.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_af6bab4995d859f96c0bc4233f83dc6d9}{sort()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_aca14a5b0ac985e6b45bea4e6419fdaa2}\label{classWt_1_1WSortFilterProxyModel_aca14a5b0ac985e6b45bea4e6419fdaa2}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!sortOrder@{sortOrder}}
+\index{sortOrder@{sortOrder}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{sortOrder()}{sortOrder()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__modelview_ga4173856040cf108a9c7360927a43ebac}{Sort\+Order}} Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::sort\+Order (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current sort order. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_af6bab4995d859f96c0bc4233f83dc6d9}{sort()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSortFilterProxyModel_a1aa9ffa360b2db4eb67d3d4de5c5d895}\label{classWt_1_1WSortFilterProxyModel_a1aa9ffa360b2db4eb67d3d4de5c5d895}} 
+\index{Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}!sortRole@{sortRole}}
+\index{sortRole@{sortRole}!Wt::WSortFilterProxyModel@{Wt::WSortFilterProxyModel}}
+\doxysubsubsection{\texorpdfstring{sortRole()}{sortRole()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} Wt\+::\+W\+Sort\+Filter\+Proxy\+Model\+::sort\+Role (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the data role used for sorting. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSortFilterProxyModel_a097579ed002d4506771dc0eeb478ba4c}{set\+Sort\+Role()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Sort\+Filter\+Proxy\+Model.\+h\end{DoxyCompactItemize}

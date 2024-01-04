@@ -1,0 +1,133 @@
+\hypertarget{classOidcUserDatabase}{}\doxysection{Oidc\+User\+Database Class Reference}
+\label{classOidcUserDatabase}\index{OidcUserDatabase@{OidcUserDatabase}}
+
+
+Inheritance diagram for Oidc\+User\+Database\+:
+% FIG 0
+
+
+Collaboration diagram for Oidc\+User\+Database\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structOidcUserDatabase_1_1WithIssuedToken}{With\+Issued\+Token}}
+\item 
+struct \mbox{\hyperlink{structOidcUserDatabase_1_1WithOAuthClient}{With\+O\+Auth\+Client}}
+\item 
+struct \mbox{\hyperlink{structOidcUserDatabase_1_1WithUser}{With\+User}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classOidcUserDatabase_ab6afa7bbe41365215ca403f7b2766073}\label{classOidcUserDatabase_ab6afa7bbe41365215ca403f7b2766073}} 
+{\bfseries Oidc\+User\+Database} (\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Wt\+::\+Dbo\+::\+Session}} \&session)
+\item 
+virtual \mbox{\hyperlink{classWt_1_1Json_1_1Value}{Wt\+::\+Json\+::\+Value}} \mbox{\hyperlink{classOidcUserDatabase_afbeb8113099222229054b8592cc9ecbd}{idp\+Json\+Claim}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&user, const std\+::string \&claim) const
+\begin{DoxyCompactList}\small\item\em Returns the value of a claim for a user. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOidcUserDatabase_a9f002c0c44bde10a186c00c2e7cde08b}\label{classOidcUserDatabase_a9f002c0c44bde10a186c00c2e7cde08b}} 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1IssuedToken}{Wt\+::\+Auth\+::\+Issued\+Token}} \mbox{\hyperlink{classOidcUserDatabase_a9f002c0c44bde10a186c00c2e7cde08b}{idp\+Token\+Add}} (const std\+::string \&value, const \mbox{\hyperlink{classWt_1_1WDateTime}{Wt\+::\+W\+Date\+Time}} \&expiration\+Time, const std\+::string \&purpose, const std\+::string \&scope, const std\+::string \&redirect\+Uri, const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&user, const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient}{Wt\+::\+Auth\+::\+O\+Auth\+Client}} \&auth\+Client)
+\begin{DoxyCompactList}\small\item\em Adds a new \mbox{\hyperlink{classWt_1_1Auth_1_1IssuedToken}{Wt\+::\+Auth\+::\+Issued\+Token}} to the database and returns it. S. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOidcUserDatabase_a38cc85e098c95ac0b8df3125f92b1826}\label{classOidcUserDatabase_a38cc85e098c95ac0b8df3125f92b1826}} 
+virtual void \mbox{\hyperlink{classOidcUserDatabase_a38cc85e098c95ac0b8df3125f92b1826}{idp\+Token\+Remove}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1IssuedToken}{Wt\+::\+Auth\+::\+Issued\+Token}} \&token)
+\begin{DoxyCompactList}\small\item\em Removes an issued token from the database. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOidcUserDatabase_a3ed49b8f6791b44e717a51f33f6a29f1}\label{classOidcUserDatabase_a3ed49b8f6791b44e717a51f33f6a29f1}} 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1IssuedToken}{Wt\+::\+Auth\+::\+Issued\+Token}} \mbox{\hyperlink{classOidcUserDatabase_a3ed49b8f6791b44e717a51f33f6a29f1}{idp\+Token\+Find\+With\+Value}} (const std\+::string \&purpose, const std\+::string \&value) const
+\begin{DoxyCompactList}\small\item\em Finds a token in the database with a given value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOidcUserDatabase_a8da8a5214c0a583318792df2ba1f3532}\label{classOidcUserDatabase_a8da8a5214c0a583318792df2ba1f3532}} 
+virtual \mbox{\hyperlink{classWt_1_1WDateTime}{Wt\+::\+W\+Date\+Time}} \mbox{\hyperlink{classOidcUserDatabase_a8da8a5214c0a583318792df2ba1f3532}{idp\+Token\+Expiration\+Time}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1IssuedToken}{Wt\+::\+Auth\+::\+Issued\+Token}} \&token) const
+\begin{DoxyCompactList}\small\item\em Gets the expiration time for a token. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOidcUserDatabase_abf8f1147253805176823cca11b25ef08}\label{classOidcUserDatabase_abf8f1147253805176823cca11b25ef08}} 
+virtual std\+::string \mbox{\hyperlink{classOidcUserDatabase_abf8f1147253805176823cca11b25ef08}{idp\+Token\+Value}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1IssuedToken}{Wt\+::\+Auth\+::\+Issued\+Token}} \&token) const
+\begin{DoxyCompactList}\small\item\em Gets the value for a token. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOidcUserDatabase_afe07f923a07286b00652d3ef0f206539}\label{classOidcUserDatabase_afe07f923a07286b00652d3ef0f206539}} 
+virtual std\+::string \mbox{\hyperlink{classOidcUserDatabase_afe07f923a07286b00652d3ef0f206539}{idp\+Token\+Purpose}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1IssuedToken}{Wt\+::\+Auth\+::\+Issued\+Token}} \&token) const
+\begin{DoxyCompactList}\small\item\em Gets the token purpose (authorization\+\_\+code, access\+\_\+token, id\+\_\+token, refresh\+\_\+token). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOidcUserDatabase_ad99de1b21bb3edcb35c1fd3484f13889}\label{classOidcUserDatabase_ad99de1b21bb3edcb35c1fd3484f13889}} 
+virtual std\+::string \mbox{\hyperlink{classOidcUserDatabase_ad99de1b21bb3edcb35c1fd3484f13889}{idp\+Token\+Scope}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1IssuedToken}{Wt\+::\+Auth\+::\+Issued\+Token}} \&token) const
+\begin{DoxyCompactList}\small\item\em Gets the scope associated with the token. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOidcUserDatabase_aa2a5787dc80923804dd00e19cb14527c}\label{classOidcUserDatabase_aa2a5787dc80923804dd00e19cb14527c}} 
+virtual std\+::string \mbox{\hyperlink{classOidcUserDatabase_aa2a5787dc80923804dd00e19cb14527c}{idp\+Token\+Redirect\+Uri}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1IssuedToken}{Wt\+::\+Auth\+::\+Issued\+Token}} \&token) const
+\begin{DoxyCompactList}\small\item\em Returns the redirect U\+RI that was used with the token request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOidcUserDatabase_a80086b4989d704f8463a525fa2484f44}\label{classOidcUserDatabase_a80086b4989d704f8463a525fa2484f44}} 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \mbox{\hyperlink{classOidcUserDatabase_a80086b4989d704f8463a525fa2484f44}{idp\+Token\+User}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1IssuedToken}{Wt\+::\+Auth\+::\+Issued\+Token}} \&token) const
+\begin{DoxyCompactList}\small\item\em Returns the user associated with the token. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOidcUserDatabase_a3784299c08b40f6fa322ad493aeae3ae}\label{classOidcUserDatabase_a3784299c08b40f6fa322ad493aeae3ae}} 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient}{Wt\+::\+Auth\+::\+O\+Auth\+Client}} \mbox{\hyperlink{classOidcUserDatabase_a3784299c08b40f6fa322ad493aeae3ae}{idp\+Token\+O\+Auth\+Client}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1IssuedToken}{Wt\+::\+Auth\+::\+Issued\+Token}} \&token) const
+\begin{DoxyCompactList}\small\item\em Returns the authorization client (relying party) that is associated with the token. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOidcUserDatabase_a4aad39144916e7eca510e3c8005bea4a}\label{classOidcUserDatabase_a4aad39144916e7eca510e3c8005bea4a}} 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient}{Wt\+::\+Auth\+::\+O\+Auth\+Client}} \mbox{\hyperlink{classOidcUserDatabase_a4aad39144916e7eca510e3c8005bea4a}{idp\+Client\+Find\+With\+Id}} (const std\+::string \&client\+Id) const
+\begin{DoxyCompactList}\small\item\em Finds the authorization client (relying party) with this identifier. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOidcUserDatabase_af78e45410b6c149b1531f325ca9d18f1}\label{classOidcUserDatabase_af78e45410b6c149b1531f325ca9d18f1}} 
+virtual std\+::string \mbox{\hyperlink{classOidcUserDatabase_af78e45410b6c149b1531f325ca9d18f1}{idp\+Client\+Secret}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient}{Wt\+::\+Auth\+::\+O\+Auth\+Client}} \&client) const
+\begin{DoxyCompactList}\small\item\em Returns the secret for this client. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOidcUserDatabase_a5e70070a9243d645ad8f5a3000291824}\label{classOidcUserDatabase_a5e70070a9243d645ad8f5a3000291824}} 
+virtual bool \mbox{\hyperlink{classOidcUserDatabase_a5e70070a9243d645ad8f5a3000291824}{idp\+Verify\+Secret}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient}{Wt\+::\+Auth\+::\+O\+Auth\+Client}} \&client, const std\+::string \&secret) const
+\begin{DoxyCompactList}\small\item\em Returns true if the given secret is correct for the given client. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOidcUserDatabase_ab10147eaf9ab2e78db3a614140a0384c}\label{classOidcUserDatabase_ab10147eaf9ab2e78db3a614140a0384c}} 
+virtual std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classOidcUserDatabase_ab10147eaf9ab2e78db3a614140a0384c}{idp\+Client\+Redirect\+Uris}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient}{Wt\+::\+Auth\+::\+O\+Auth\+Client}} \&client) const
+\begin{DoxyCompactList}\small\item\em Returns the redirect U\+RI for this client. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOidcUserDatabase_ab3125bf97e46ec5b37ac2afea57af6a9}\label{classOidcUserDatabase_ab3125bf97e46ec5b37ac2afea57af6a9}} 
+virtual std\+::string \mbox{\hyperlink{classOidcUserDatabase_ab3125bf97e46ec5b37ac2afea57af6a9}{idp\+Client\+Id}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient}{Wt\+::\+Auth\+::\+O\+Auth\+Client}} \&client) const
+\begin{DoxyCompactList}\small\item\em Returns the identifier for this client. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOidcUserDatabase_a81a428ab33bbb59bec100d5f19136489}\label{classOidcUserDatabase_a81a428ab33bbb59bec100d5f19136489}} 
+virtual bool \mbox{\hyperlink{classOidcUserDatabase_a81a428ab33bbb59bec100d5f19136489}{idp\+Client\+Confidential}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient}{Wt\+::\+Auth\+::\+O\+Auth\+Client}} \&client) const
+\begin{DoxyCompactList}\small\item\em Returns whether the client is confidential or public. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOidcUserDatabase_a1566e5bbfe61df629dbe739074686a03}\label{classOidcUserDatabase_a1566e5bbfe61df629dbe739074686a03}} 
+virtual \mbox{\hyperlink{namespaceWt_1_1Auth_a4e55a92c5ff4dd9bbd74439868b8400d}{Wt\+::\+Auth\+::\+Client\+Secret\+Method}} \mbox{\hyperlink{classOidcUserDatabase_a1566e5bbfe61df629dbe739074686a03}{idp\+Client\+Auth\+Method}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient}{Wt\+::\+Auth\+::\+O\+Auth\+Client}} \&client) const
+\begin{DoxyCompactList}\small\item\em Returns the client authentication method (see O\+I\+DC Core chapter 9) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classOidcUserDatabase_a3acf795e3606e01290d998a9ad177e0b}\label{classOidcUserDatabase_a3acf795e3606e01290d998a9ad177e0b}} 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthClient}{Wt\+::\+Auth\+::\+O\+Auth\+Client}} \mbox{\hyperlink{classOidcUserDatabase_a3acf795e3606e01290d998a9ad177e0b}{idp\+Client\+Add}} (const std\+::string \&client\+Id, bool confidential, const std\+::set$<$ std\+::string $>$ \&redirect\+Uris, \mbox{\hyperlink{namespaceWt_1_1Auth_a4e55a92c5ff4dd9bbd74439868b8400d}{Wt\+::\+Auth\+::\+Client\+Secret\+Method}} auth\+Method, const std\+::string \&secret)
+\begin{DoxyCompactList}\small\item\em Add a new client to the database and returns it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classOidcUserDatabase_a2c5e44cdba717916ffc9c6511cc5f978}\label{classOidcUserDatabase_a2c5e44cdba717916ffc9c6511cc5f978}} 
+void {\bfseries get\+User} (const std\+::string \&id) const
+\item 
+\mbox{\Hypertarget{classOidcUserDatabase_a146d812bd9593f4d6c269a7b019589c3}\label{classOidcUserDatabase_a146d812bd9593f4d6c269a7b019589c3}} 
+void {\bfseries set\+User} (\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{Wt\+::\+Dbo\+::ptr}}$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1AuthInfo}{Wt\+::\+Auth\+::\+Dbo\+::\+Auth\+Info}}$<$ \mbox{\hyperlink{classUser}{User}} $>$ $>$ user) const
+\item 
+\mbox{\Hypertarget{classOidcUserDatabase_a37c5a00fe4b9c03b5f566ad69b5e5ceb}\label{classOidcUserDatabase_a37c5a00fe4b9c03b5f566ad69b5e5ceb}} 
+void {\bfseries get\+Issued\+Token} (const std\+::string \&id) const
+\item 
+\mbox{\Hypertarget{classOidcUserDatabase_aaa64eeb7aba6a1bde1b5110dce8160ef}\label{classOidcUserDatabase_aaa64eeb7aba6a1bde1b5110dce8160ef}} 
+void {\bfseries get\+O\+Auth\+Client} (const std\+::string \&id) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classOidcUserDatabase_af63f422ca3cabb5442187c180c531b5f}\label{classOidcUserDatabase_af63f422ca3cabb5442187c180c531b5f}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Wt\+::\+Dbo\+::\+Session}} \& {\bfseries session\+\_\+}
+\item 
+\mbox{\Hypertarget{classOidcUserDatabase_a770d6946304f0137e22c85e537afa4ad}\label{classOidcUserDatabase_a770d6946304f0137e22c85e537afa4ad}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{Wt\+::\+Dbo\+::ptr}}$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1Dbo_1_1AuthInfo}{Wt\+::\+Auth\+::\+Dbo\+::\+Auth\+Info}}$<$ \mbox{\hyperlink{classUser}{User}} $>$ $>$ {\bfseries user\+\_\+}
+\item 
+\mbox{\Hypertarget{classOidcUserDatabase_a21274b78c29c48928c3f97c2e3518270}\label{classOidcUserDatabase_a21274b78c29c48928c3f97c2e3518270}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{Wt\+::\+Dbo\+::ptr}}$<$ \mbox{\hyperlink{classIssuedToken}{Issued\+Token}} $>$ {\bfseries issued\+Token\+\_\+}
+\item 
+\mbox{\Hypertarget{classOidcUserDatabase_addc6837bd4083f8b7e29603510bf7994}\label{classOidcUserDatabase_addc6837bd4083f8b7e29603510bf7994}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{Wt\+::\+Dbo\+::ptr}}$<$ \mbox{\hyperlink{classOAuthClient}{O\+Auth\+Client}} $>$ {\bfseries auth\+Client\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classOidcUserDatabase_afbeb8113099222229054b8592cc9ecbd}\label{classOidcUserDatabase_afbeb8113099222229054b8592cc9ecbd}} 
+\index{OidcUserDatabase@{OidcUserDatabase}!idpJsonClaim@{idpJsonClaim}}
+\index{idpJsonClaim@{idpJsonClaim}!OidcUserDatabase@{OidcUserDatabase}}
+\doxysubsubsection{\texorpdfstring{idpJsonClaim()}{idpJsonClaim()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Json_1_1Value}{Wt\+::\+Json\+::\+Value}} Oidc\+User\+Database\+::idp\+Json\+Claim (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&}]{user,  }\item[{const std\+::string \&}]{claim }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the value of a claim for a user. 
+
+Should return a null Json value when the claim is unavailable. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a2fd1e71fca20b1c377d08f9b228d17e4}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/feature/oidc/model/Oidc\+User\+Database.\+h\end{DoxyCompactItemize}

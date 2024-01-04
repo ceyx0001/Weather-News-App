@@ -1,0 +1,179 @@
+\hypertarget{classWt_1_1Http_1_1Response}{}\doxysection{Wt\+::Http\+::Response Class Reference}
+\label{classWt_1_1Http_1_1Response}\index{Wt::Http::Response@{Wt::Http::Response}}
+
+
+A resource response.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Http/\+Response.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::Http\+::Response\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1Response_a7c14ba3ab34ff14461df3a4369118443}{set\+Status}} (int status)
+\begin{DoxyCompactList}\small\item\em Sets the response status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1Response_aea93d6918a90e8c9b0010499771a1c87}{set\+Content\+Length}} (\+::uint64\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Sets the content length. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1Response_a20dd49d512ffc0cf407f9dd39db30341}{set\+Mime\+Type}} (const std\+::string \&mime\+Type)
+\begin{DoxyCompactList}\small\item\em Set the content mime type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1Response_a5827dd04629251d0c7ff3cc9062afb7d}{add\+Header}} (const std\+::string \&name, const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Add an H\+T\+TP header. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation}{Response\+Continuation}} $\ast$ \mbox{\hyperlink{classWt_1_1Http_1_1Response_a76391b7300bdf3be3ca0a00f3670d592}{create\+Continuation}} ()
+\begin{DoxyCompactList}\small\item\em Create a continuation object for this response. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation}{Response\+Continuation}} $\ast$ \mbox{\hyperlink{classWt_1_1Http_1_1Response_a8c0541b3cafc4f528dbfa96302c3ae24}{continuation}} () const
+\begin{DoxyCompactList}\small\item\em Return the continuation, if one was created for this response. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Response_a5a76d6272200ead33695f22735341cd6}\label{classWt_1_1Http_1_1Response_a5a76d6272200ead33695f22735341cd6}} 
+std\+::ostream \& \mbox{\hyperlink{classWt_1_1Http_1_1Response_a5a76d6272200ead33695f22735341cd6}{out}} ()
+\begin{DoxyCompactList}\small\item\em Returns the stream for getting the response output. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Response_adf3d1a151caff44ba359f2a01696b229}\label{classWt_1_1Http_1_1Response_adf3d1a151caff44ba359f2a01696b229}} 
+W\+T\+\_\+\+B\+O\+S\+T\+R\+E\+AM \& {\bfseries bout} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Response_a113901b9b003c831781c013d3ba88137}\label{classWt_1_1Http_1_1Response_a113901b9b003c831781c013d3ba88137}} 
+{\bfseries Response} (\mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}} $\ast$resource, \mbox{\hyperlink{classWt_1_1WebResponse}{Web\+Response}} $\ast$response, Response\+Continuation\+Ptr \mbox{\hyperlink{classWt_1_1Http_1_1Response_a8c0541b3cafc4f528dbfa96302c3ae24}{continuation}})
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Response_aa4858d3eb3572fde7944d88cf301cc73}\label{classWt_1_1Http_1_1Response_aa4858d3eb3572fde7944d88cf301cc73}} 
+{\bfseries Response} (\mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}} $\ast$resource, W\+T\+\_\+\+B\+O\+S\+T\+R\+E\+AM \&\mbox{\hyperlink{classWt_1_1Http_1_1Response_a5a76d6272200ead33695f22735341cd6}{out}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Response_a144f88346ca863de95b570dc60c11e63}\label{classWt_1_1Http_1_1Response_a144f88346ca863de95b570dc60c11e63}} 
+\mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}} $\ast$ {\bfseries resource\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Response_af4b321fd65644dd680f25fbbd87a8790}\label{classWt_1_1Http_1_1Response_af4b321fd65644dd680f25fbbd87a8790}} 
+\mbox{\hyperlink{classWt_1_1WebResponse}{Web\+Response}} $\ast$ {\bfseries response\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Response_a4a8793f37a382101490d67704ae9fc22}\label{classWt_1_1Http_1_1Response_a4a8793f37a382101490d67704ae9fc22}} 
+Response\+Continuation\+Ptr {\bfseries continuation\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Response_a7341300c3ab25e871a11fc376d18179e}\label{classWt_1_1Http_1_1Response_a7341300c3ab25e871a11fc376d18179e}} 
+W\+T\+\_\+\+B\+O\+S\+T\+R\+E\+AM $\ast$ {\bfseries out\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Response_a81817335ace1ef0ec5a4b73a89069819}\label{classWt_1_1Http_1_1Response_a81817335ace1ef0ec5a4b73a89069819}} 
+bool {\bfseries headers\+Committed\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Response_ac331572ec8a235b3ebf1030c5614cdec}\label{classWt_1_1Http_1_1Response_ac331572ec8a235b3ebf1030c5614cdec}} 
+class {\bfseries Wt\+::\+W\+Resource}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Response_ac6243a6417de40a9e95175fd4ee87a06}\label{classWt_1_1Http_1_1Response_ac6243a6417de40a9e95175fd4ee87a06}} 
+class {\bfseries Wt\+::\+Web\+Session}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A resource response. 
+
+This class defines the H\+T\+TP response for a \mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}} request.
+
+More specifically you can\+:
+\begin{DoxyItemize}
+\item set the content mime type using \mbox{\hyperlink{classWt_1_1Http_1_1Response_a20dd49d512ffc0cf407f9dd39db30341}{set\+Mime\+Type()}}
+\item add H\+T\+TP headers using \mbox{\hyperlink{classWt_1_1Http_1_1Response_a5827dd04629251d0c7ff3cc9062afb7d}{add\+Header()}}
+\item stream content into \mbox{\hyperlink{classWt_1_1Http_1_1Response_a5a76d6272200ead33695f22735341cd6}{out()}}
+\end{DoxyItemize}
+
+You may chose to provide only a partial response. In that case, use \mbox{\hyperlink{classWt_1_1Http_1_1Response_a76391b7300bdf3be3ca0a00f3670d592}{create\+Continuation()}} to create a continuation object to which you can annotate information for the next request to process the response further.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{W\+Resource\+::handle\+Request()}}, \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Request}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Response_a5827dd04629251d0c7ff3cc9062afb7d}\label{classWt_1_1Http_1_1Response_a5827dd04629251d0c7ff3cc9062afb7d}} 
+\index{Wt::Http::Response@{Wt::Http::Response}!addHeader@{addHeader}}
+\index{addHeader@{addHeader}!Wt::Http::Response@{Wt::Http::Response}}
+\doxysubsubsection{\texorpdfstring{addHeader()}{addHeader()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Response\+::add\+Header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Add an H\+T\+TP header. 
+
+Headers may be added only before setting the content mime-\/type (\mbox{\hyperlink{classWt_1_1Http_1_1Response_a20dd49d512ffc0cf407f9dd39db30341}{set\+Mime\+Type()}}), and before streaming any data to the \mbox{\hyperlink{classWt_1_1Http_1_1Response_a5a76d6272200ead33695f22735341cd6}{out()}} stream. \mbox{\Hypertarget{classWt_1_1Http_1_1Response_a8c0541b3cafc4f528dbfa96302c3ae24}\label{classWt_1_1Http_1_1Response_a8c0541b3cafc4f528dbfa96302c3ae24}} 
+\index{Wt::Http::Response@{Wt::Http::Response}!continuation@{continuation}}
+\index{continuation@{continuation}!Wt::Http::Response@{Wt::Http::Response}}
+\doxysubsubsection{\texorpdfstring{continuation()}{continuation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation}{Response\+Continuation}}$\ast$ Wt\+::\+Http\+::\+Response\+::continuation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Return the continuation, if one was created for this response. 
+
+Returns the continuation that was previously created using \mbox{\hyperlink{classWt_1_1Http_1_1Response_a76391b7300bdf3be3ca0a00f3670d592}{create\+Continuation()}}, or {\ttfamily nullptr} if no continuation was created yet.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Response_a76391b7300bdf3be3ca0a00f3670d592}{create\+Continuation()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Response_a76391b7300bdf3be3ca0a00f3670d592}\label{classWt_1_1Http_1_1Response_a76391b7300bdf3be3ca0a00f3670d592}} 
+\index{Wt::Http::Response@{Wt::Http::Response}!createContinuation@{createContinuation}}
+\index{createContinuation@{createContinuation}!Wt::Http::Response@{Wt::Http::Response}}
+\doxysubsubsection{\texorpdfstring{createContinuation()}{createContinuation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation}{Response\+Continuation}}$\ast$ Wt\+::\+Http\+::\+Response\+::create\+Continuation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a continuation object for this response. 
+
+A continuation is used to resume sending more data later for this response. There are two possible reasons for this\+:
+\begin{DoxyItemize}
+\item the entire response is quite big and you may want to read and send it in smaller chunks to avoid memory consumption problems since the I/O layer buffers the response first in memory to send it then out to a possibly slow client using async I/O.
+\item you may not have any more data available, currently, but expect more data later. In that case you can call \mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation_a3b441e3fa71a68b9dfb7091464e07433}{Response\+Continuation\+::wait\+For\+More\+Data()}} and later call \mbox{\hyperlink{classWt_1_1WResource_a1a9c35416eb690939ff288b053da3e1b}{W\+Resource\+::have\+More\+Data()}} when more data is available.
+\end{DoxyItemize}
+
+A new call to handle\+Request() will be made to retrieve more data.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Response_a8c0541b3cafc4f528dbfa96302c3ae24}{continuation()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Response_aea93d6918a90e8c9b0010499771a1c87}\label{classWt_1_1Http_1_1Response_aea93d6918a90e8c9b0010499771a1c87}} 
+\index{Wt::Http::Response@{Wt::Http::Response}!setContentLength@{setContentLength}}
+\index{setContentLength@{setContentLength}!Wt::Http::Response@{Wt::Http::Response}}
+\doxysubsubsection{\texorpdfstring{setContentLength()}{setContentLength()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Response\+::set\+Content\+Length (\begin{DoxyParamCaption}\item[{\+::uint64\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Sets the content length. 
+
+If content length is known, use this method to set it. File downloads will see progress bars. If not set, \mbox{\hyperlink{classWt}{Wt}} will use chunked transfers.
+
+Always use this method instead of setting the Content-\/\+Length header with \mbox{\hyperlink{classWt_1_1Http_1_1Response_a5827dd04629251d0c7ff3cc9062afb7d}{add\+Header()}}.
+
+Headers may be added only before setting the content mime-\/type (\mbox{\hyperlink{classWt_1_1Http_1_1Response_a20dd49d512ffc0cf407f9dd39db30341}{set\+Mime\+Type()}}), and before streaming any data to the \mbox{\hyperlink{classWt_1_1Http_1_1Response_a5a76d6272200ead33695f22735341cd6}{out()}} stream. \mbox{\Hypertarget{classWt_1_1Http_1_1Response_a20dd49d512ffc0cf407f9dd39db30341}\label{classWt_1_1Http_1_1Response_a20dd49d512ffc0cf407f9dd39db30341}} 
+\index{Wt::Http::Response@{Wt::Http::Response}!setMimeType@{setMimeType}}
+\index{setMimeType@{setMimeType}!Wt::Http::Response@{Wt::Http::Response}}
+\doxysubsubsection{\texorpdfstring{setMimeType()}{setMimeType()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Response\+::set\+Mime\+Type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mime\+Type }\end{DoxyParamCaption})}
+
+
+
+Set the content mime type. 
+
+The content mimetype is used by the browser to correctly interpret the resource. \mbox{\Hypertarget{classWt_1_1Http_1_1Response_a7c14ba3ab34ff14461df3a4369118443}\label{classWt_1_1Http_1_1Response_a7c14ba3ab34ff14461df3a4369118443}} 
+\index{Wt::Http::Response@{Wt::Http::Response}!setStatus@{setStatus}}
+\index{setStatus@{setStatus}!Wt::Http::Response@{Wt::Http::Response}}
+\doxysubsubsection{\texorpdfstring{setStatus()}{setStatus()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Response\+::set\+Status (\begin{DoxyParamCaption}\item[{int}]{status }\end{DoxyParamCaption})}
+
+
+
+Sets the response status. 
+
+Unless a overriden, 200 OK will be assumed. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Http/Response.\+h\end{DoxyCompactItemize}

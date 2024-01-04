@@ -1,0 +1,408 @@
+\hypertarget{saml_windows_autotoc_md25}{}\doxysection{Dependencies}\label{saml_windows_autotoc_md25}
+These instructions were derived from the Windows build instruction for Shibboleth SP\+: \href{https://wiki.shibboleth.net/confluence/display/SP3/WindowsBuild}{\texttt{ https\+://wiki.\+shibboleth.\+net/confluence/display/\+S\+P3/\+Windows\+Build}}
+
+These steps describe how I (Roel Standaert) built it on Windows with the Visual Studio 2017 toolset\+:\hypertarget{saml_windows_autotoc_md26}{}\doxysubsection{Get dependencies}\label{saml_windows_autotoc_md26}
+Create your {\ttfamily R\+O\+O\+T\+\_\+\+D\+IR} to put everything in, e.\+g.\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{C:\(\backslash\)Users\(\backslash\)roel\(\backslash\)libraries\(\backslash\)saml}
+\end{DoxyCode}
+
+
+\mbox{\hyperlink{classGit}{Git}}, if installed into its default location is fine for the {\ttfamily S\+ED} dependency.
+
+Get \href{https://strawberryperl.com/}{\texttt{ Perl}}
+
+Netwide Assembler (for Open\+S\+SL)\+: \href{https://www.nasm.us/pub/nasm/releasebuilds/2.15.05/win64/nasm-2.15.05-installer-x64.exe}{\texttt{ https\+://www.\+nasm.\+us/pub/nasm/releasebuilds/2.\+15.\+05/win64/nasm-\/2.\+15.\+05-\/installer-\/x64.\+exe}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://git.shibboleth.net/git/cpp-\/msbuild}
+\DoxyCodeLine{cd cpp-\/msbuild}
+\DoxyCodeLine{git checkout 5fca76fcfe36aa3a37220a2e5f033677b8688479}
+\DoxyCodeLine{cd ..}
+\DoxyCodeLine{git clone https://git.shibboleth.net/git/cpp-\/xmltooling -\/b 3.2.0}
+\DoxyCodeLine{git clone https://git.shibboleth.net/git/cpp-\/opensaml -\/b 3.2.0}
+\end{DoxyCode}
+
+
+Get log4shib\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{git clone https://git.shibboleth.net/git/cpp-\/log4shib}
+\DoxyCodeLine{cd cpp-\/log4shib}
+\DoxyCodeLine{REM master at time of writing (2.0.0 release has issues):}
+\DoxyCodeLine{git checkout ed0436600d5315e8795a35079548abe157700756}
+\DoxyCodeLine{cd ..}
+\end{DoxyCode}
+
+
+Get \href{https://zlib.net/zlib1211.zip}{\texttt{ zlib}}, put {\ttfamily zlib-\/1.\+2.\+11} folder in {\ttfamily R\+O\+O\+T\+\_\+\+D\+IR}.
+
+Get \href{https://www.openssl.org/source/openssl-1.1.1j.tar.gz}{\texttt{ Open\+S\+SL}}, and unpack it in {\ttfamily R\+O\+O\+T\+\_\+\+D\+IR}.
+
+Get \href{https://github.com/curl/curl/releases/download/curl-7_75_0/curl-7.75.0.zip}{\texttt{ curl}}, and unpack it in {\ttfamily R\+O\+O\+T\+\_\+\+D\+IR}.
+
+Get \href{https://downloads.apache.org//xerces/c/3/sources/xerces-c-3.2.3.zip}{\texttt{ Xerces C++}}, and unpack it in {\ttfamily R\+O\+O\+T\+\_\+\+D\+IR}
+
+Get \href{https://www.apache.org/dyn/closer.lua/santuario/c-library/xml-security-c-2.0.2.zip}{\texttt{ Xml\+Security}}, and unpack it in {\ttfamily R\+O\+O\+T\+\_\+\+D\+IR}\hypertarget{saml_windows_autotoc_md27}{}\doxysubsection{Dependency configuration}\label{saml_windows_autotoc_md27}
+Had to uncomment in {\ttfamily cpp-\/msbuild/env.\+make}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# !if "\$(SED)" == ""}
+\DoxyCodeLine{\# SED=sed}
+\DoxyCodeLine{\# !endif}
+\end{DoxyCode}
+
+
+Change {\ttfamily R\+O\+O\+T\+\_\+\+D\+IR}, e.\+g.\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{set ROOT\_DIR=C:\(\backslash\)Users\(\backslash\)roel\(\backslash\)libraries\(\backslash\)saml\(\backslash\)}
+\end{DoxyCode}
+
+
+\mbox{\hyperlink{classNote}{Note}} the trailing slash!\hypertarget{saml_windows_autotoc_md28}{}\doxysubsubsection{Modify $<$tt$>$cpp-\/msbuild/dependencies/config.\+bat$<$/tt$>$}\label{saml_windows_autotoc_md28}
+Under {\ttfamily \+:path\+\_\+done}\+:
+
+Add Perl and N\+A\+SM\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{REM Set Perl and nasm}
+\DoxyCodeLine{set PERL=c:\(\backslash\)Strawberry\(\backslash\)perl\(\backslash\)bin\(\backslash\)perl.exe}
+\DoxyCodeLine{set PATH=\%PATH\%;C:\(\backslash\)Program Files\(\backslash\)NASM}
+\end{DoxyCode}
+
+
+Change Open\+S\+SL\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{set OPENSSL\_DIR=openssl-\/1.1.1j}
+\DoxyCodeLine{REM j is the tenth letter of the alphabet, hence 10}
+\DoxyCodeLine{set OPENSSL\_MM\_VERSION=1.1.1.10}
+\DoxyCodeLine{set OPENSSL\_FILE\_VERSION=1\_1\_1\_10}
+\end{DoxyCode}
+
+
+Change Curl\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Set LIBCURL\_VERSION=7.75.0}
+\DoxyCodeLine{set LIBCURL\_DIR=curl-\/\%LIBCURL\_VERSION\%}
+\DoxyCodeLine{set LIBCURL\_FILE\_VERSION=}
+\end{DoxyCode}
+
+
+Xml\+Security is already fine
+
+Zlib is already fine
+
+Change Log4shib\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{set LOG4SHIB\_DIR=cpp-\/log4shib}
+\DoxyCodeLine{set LOG4SHIB\_MM\_VERSION=2.0.0}
+\DoxyCodeLine{set LOG4SHIB\_FILE\_VERSION=2\_0}
+\end{DoxyCode}
+
+
+Xerces is already fine
+
+This corresponds to Visual Studio 2017\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{SET MsVCVersionNum=15}
+\end{DoxyCode}
+\hypertarget{saml_windows_autotoc_md29}{}\doxysubsubsection{Open\+S\+S\+L modifications}\label{saml_windows_autotoc_md29}
+Add the Open\+S\+SL subversion in {\ttfamily Configurations/10-\/main.\+conf}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{multilib         => "\_1\_10-\/x64",}
+\end{DoxyCode}
+
+
+Duplicate the whole setting to a new target \char`\"{}\+V\+C-\/\+W\+I\+N64\+A\+D\char`\"{}, this time add D to the {\ttfamily multilib}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{"VC-\/WIN64AD" => \{}
+\DoxyCodeLine{    inherit\_from     => [ "VC-\/WIN64-\/common", asm("x86\_64\_asm"),}
+\DoxyCodeLine{                          sub \{ \$disabled\{shared\} ? () : "x86\_64\_uplink" \} ],}
+\DoxyCodeLine{    AS               => sub \{ vc\_win64a\_info()-\/>\{AS\} \},}
+\DoxyCodeLine{    ASFLAGS          => sub \{ vc\_win64a\_info()-\/>\{ASFLAGS\} \},}
+\DoxyCodeLine{    asoutflag        => sub \{ vc\_win64a\_info()-\/>\{asoutflag\} \},}
+\DoxyCodeLine{    asflags          => sub \{ vc\_win64a\_info()-\/>\{asflags\} \},}
+\DoxyCodeLine{    sys\_id           => "WIN64A",}
+\DoxyCodeLine{    bn\_asm\_src       => sub \{ return undef unless @\_;}
+\DoxyCodeLine{                              my \$r=join(" ",@\_); \$r=\string~s|asm/x86\_64-\/gcc|bn\_asm|; \$r; \},}
+\DoxyCodeLine{    perlasm\_scheme   => "auto",}
+\DoxyCodeLine{    multilib         => "\_1\_10D-\/x64",}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+We won\textquotesingle{}t do the 32 bit build.\hypertarget{saml_windows_autotoc_md30}{}\doxysubsection{Building dependencies}\label{saml_windows_autotoc_md30}
+Launch \char`\"{}x64 Native Tools Command Prompt for V\+S 2017\char`\"{} and go to the {\ttfamily R\+O\+O\+T\+\_\+\+D\+IR}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd cpp-\/msbuild\(\backslash\)dependencies}
+\DoxyCodeLine{.\(\backslash\)config.bat}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{nmake /f dependency.make openssl}
+\DoxyCodeLine{REM got winsock2.h include error}
+\DoxyCodeLine{REM opened sln file for log4shib in Visual Studio and}
+\DoxyCodeLine{REM retargeted to one of the Windows SDK versions I had}
+\DoxyCodeLine{nmake /f dependency.make log4shib}
+\DoxyCodeLine{nmake /f dependency.make zlib}
+\DoxyCodeLine{nmake /f dependency.make xerces}
+\DoxyCodeLine{nmake /f dependency.make curl}
+\DoxyCodeLine{REM needed MFC installed for afxres.h}
+\DoxyCodeLine{nmake /f dependency.make xsec}
+\end{DoxyCode}
+\hypertarget{saml_windows_autotoc_md31}{}\doxysubsection{Building Open\+S\+A\+ML}\label{saml_windows_autotoc_md31}
+Create {\ttfamily Build\+Path.\+props} in {\ttfamily R\+O\+O\+T\+\_\+\+D\+IR}\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?\textcolor{keyword}{xml} \textcolor{keyword}{version}=\textcolor{stringliteral}{"1.0"} \textcolor{keyword}{encoding}=\textcolor{stringliteral}{"utf-\/8"}?>}
+\DoxyCodeLine{<\textcolor{keywordtype}{Project} \textcolor{keyword}{DefaultTargets}=\textcolor{stringliteral}{"Build"} \textcolor{keyword}{ToolsVersion}=\textcolor{stringliteral}{"4.0"} \textcolor{keyword}{xmlns}=\textcolor{stringliteral}{"http://schemas.microsoft.com/developer/msbuild/2003"}>}
+\DoxyCodeLine{</\textcolor{keywordtype}{Project}>}
+\end{DoxyCode}
+
+
+Update {\ttfamily cpp-\/msbuild/\+Versions.\+props}\+:
+
+I left the G\+U\+I\+Ds intact for now, but maybe they should be changed?
+
+Curl (7.\+74.\+0 to 7.\+75.\+0)\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<\textcolor{keywordtype}{PropertyGroup} \textcolor{keyword}{Label}=\textcolor{stringliteral}{"CurlGuidsBad"} \textcolor{keyword}{Condition}=\textcolor{stringliteral}{"'\$(LIBCURL\_FILE\_VERSION)' != '9'"}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{CurlFileVersion}>\textcolor{keyword}{BAD\_LIBCURL\_FILE\_VERSION}</\textcolor{keywordtype}{CurlFileVersion}>}
+\DoxyCodeLine{  \textcolor{comment}{<!-\/-\/ Changing LIBCURL\_FILE\_VERSION version requires changing the GUIDs since it is garnish on the name -\/-\/>}}
+\DoxyCodeLine{</\textcolor{keywordtype}{PropertyGroup}>}
+\DoxyCodeLine{<\textcolor{keywordtype}{PropertyGroup} \textcolor{keyword}{Label}=\textcolor{stringliteral}{"CurlGuids"} \textcolor{keyword}{Condition}=\textcolor{stringliteral}{"'\$(LIBCURL\_FILE\_VERSION)' == '9'"}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{CurlVersion} \textcolor{keyword}{Condition}=\textcolor{stringliteral}{"'\$(LIBCURL\_DIR)'!=''"}>\$(\textcolor{keyword}{LIBCURL\_VERSION})</\textcolor{keywordtype}{CurlVersion}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{CurlVersion} \textcolor{keyword}{Condition}=\textcolor{stringliteral}{"'\$(LIBCURL\_DIR)'==''"}>7.75.0</\textcolor{keywordtype}{CurlVersion}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{curl} \textcolor{keyword}{Condition}=\textcolor{stringliteral}{"'\$(LIBCURL\_DIR)'!=''"}>\$(\textcolor{keyword}{LIBCURL\_DIR})</\textcolor{keywordtype}{curl}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{curl} \textcolor{keyword}{Condition}=\textcolor{stringliteral}{"'\$(LIBCURL\_DIR)'==''"}>\textcolor{keyword}{curl-\/}\$(\textcolor{keyword}{CurlVersion})</\textcolor{keywordtype}{curl}>}
+\DoxyCodeLine{}
+\DoxyCodeLine{  <\textcolor{keywordtype}{CurlFileVersion}>\$(\textcolor{keyword}{LIBCURL\_FILE\_VERSION})</\textcolor{keywordtype}{CurlFileVersion}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{LibCurlGuid32}>\{\textcolor{keyword}{C5DA388E-\/C39C-\/4164-\/98EF-\/CB5660F9ABB4}\}</\textcolor{keywordtype}{LibCurlGuid32}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{LibCurlGuid64}>\{38\textcolor{keyword}{B92986-\/C5BA-\/4CB1-\/BFFD-\/E031FF22BE4C}\}</\textcolor{keywordtype}{LibCurlGuid64}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{LibCurlGuid32d}>\{42951\textcolor{keyword}{E00-\/7863-\/41B6-\/A770-\/BB3711588BDD}\}</\textcolor{keywordtype}{LibCurlGuid32d}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{LibCurlGuid64d}>\{8\textcolor{keyword}{C610CA1-\/DDA8-\/45AA-\/A9C4-\/914420824D84}\}</\textcolor{keywordtype}{LibCurlGuid64d}>}
+\DoxyCodeLine{</\textcolor{keywordtype}{PropertyGroup}>}
+\end{DoxyCode}
+
+
+Open\+S\+SL (1.\+1.\+1i to 1.\+1.\+1j)\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<\textcolor{keywordtype}{PropertyGroup} \textcolor{keyword}{Label}=\textcolor{stringliteral}{"OpenSSLGeneral"}>}
+\DoxyCodeLine{  \textcolor{comment}{<!-\/-\/ Just for now -\/-\/>}}
+\DoxyCodeLine{  <\textcolor{keywordtype}{OPENSSL\_FILE\_VERSION} \textcolor{keyword}{Condition}=\textcolor{stringliteral}{"'\$(OPENSSL\_FILE\_VERSION)' == ''"}>1\textcolor{keyword}{\_1\_1\_10}</\textcolor{keywordtype}{OPENSSL\_FILE\_VERSION}>}
+\DoxyCodeLine{}
+\DoxyCodeLine{  <\textcolor{keywordtype}{openssl} \textcolor{keyword}{Condition}=\textcolor{stringliteral}{"'\$(OPENSSL\_DIR)'==''"}>\textcolor{keyword}{openssl-\/1.1.1j}</\textcolor{keywordtype}{openssl}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{openssl} \textcolor{keyword}{Condition}=\textcolor{stringliteral}{"'\$(OPENSSL\_DIR)'!=''"}>\$(\textcolor{keyword}{OPENSSL\_DIR})</\textcolor{keywordtype}{openssl}>}
+\DoxyCodeLine{</\textcolor{keywordtype}{PropertyGroup}>}
+\DoxyCodeLine{}
+\DoxyCodeLine{<\textcolor{keywordtype}{PropertyGroup} \textcolor{keyword}{Label}=\textcolor{stringliteral}{"OpenSSLGuidsBad"} \textcolor{keyword}{Condition}=\textcolor{stringliteral}{"'\$(OPENSSL\_FILE\_VERSION)' != '1\_1\_1\_10'"}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{OpenSSLFileVersion}>\textcolor{keyword}{BAD\_OPENSSL\_FILE\_VERSION}</\textcolor{keywordtype}{OpenSSLFileVersion}>}
+\DoxyCodeLine{  \textcolor{comment}{<!-\/-\/ Changing OPENSSL\_FILE\_VERSION version requires changing the GUIDs since it is garnish on the name -\/-\/>}}
+\DoxyCodeLine{</\textcolor{keywordtype}{PropertyGroup}>}
+\DoxyCodeLine{<\textcolor{keywordtype}{PropertyGroup} \textcolor{keyword}{Label}=\textcolor{stringliteral}{"OpenSSLGuids"} \textcolor{keyword}{Condition}=\textcolor{stringliteral}{"'\$(OPENSSL\_FILE\_VERSION)' == '1\_1\_1\_10'"}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{OpenSSLFileVersion}>\$(\textcolor{keyword}{OPENSSL\_FILE\_VERSION})</\textcolor{keywordtype}{OpenSSLFileVersion}>}
+\DoxyCodeLine{  \textcolor{comment}{<!-\/-\/ Change the 8 components below iff OpenSSLFileVersion changes -\/-\/>}}
+\DoxyCodeLine{  <\textcolor{keywordtype}{LibEay32Component}>\{\textcolor{keyword}{E5CDA78B-\/1024-\/4DF7-\/9F11-\/8532B6F55E21}\}</\textcolor{keywordtype}{LibEay32Component}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{SSlEay32Component}>\{6\textcolor{keyword}{AD1215B-\/E983-\/4823-\/A363-\/6127420408E4}\}</\textcolor{keywordtype}{SSlEay32Component}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{LibEay32Componentd}>\{\textcolor{keyword}{E3B837AE-\/B103-\/45F7-\/AC98-\/72BE66B76746}\}</\textcolor{keywordtype}{LibEay32Componentd}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{SSlEay32Componentd}>\{\textcolor{keyword}{C7454E2E-\/DAEA-\/487B-\/AB1C-\/9339E5E390C0}\}</\textcolor{keywordtype}{SSlEay32Componentd}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{LibEay64Component}>\{6\textcolor{keyword}{E57A83F-\/E67E-\/4E8D-\/B24B-\/ACDDFC7FDA5E}\}</\textcolor{keywordtype}{LibEay64Component}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{SSlEay64Component}>\{73702736-\/2\textcolor{keyword}{A6F-\/43DC-\/BB08-\/663641C1798C}\}</\textcolor{keywordtype}{SSlEay64Component}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{LibEay64Componentd}>\{\textcolor{keyword}{DBA7EF27-\/C817-\/43EC-\/B2E6-\/A4E945355F0A}\}</\textcolor{keywordtype}{LibEay64Componentd}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{SSlEay64Componentd}>\{96350\textcolor{keyword}{A7E-\/15DA-\/4CF4-\/B90D-\/F3E670AF9D36}\}</\textcolor{keywordtype}{SSlEay64Componentd}>}
+\DoxyCodeLine{</\textcolor{keywordtype}{PropertyGroup}>}
+\end{DoxyCode}
+
+
+Fixing up log4shib path\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<\textcolor{keywordtype}{PropertyGroup} \textcolor{keyword}{Label}=\textcolor{stringliteral}{"Log4ShibGeneral"}>}
+\DoxyCodeLine{  \textcolor{comment}{<!-\/-\/ Just for now -\/-\/>}}
+\DoxyCodeLine{  <\textcolor{keywordtype}{LOG4SHIB\_FILE\_VERSION} \textcolor{keyword}{Condition}=\textcolor{stringliteral}{"'\$(LOG4SHIB\_FILE\_VERSION)' == ''"}>2\textcolor{keyword}{\_0}</\textcolor{keywordtype}{LOG4SHIB\_FILE\_VERSION}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{Log4ShibVersion} \textcolor{keyword}{Condition}=\textcolor{stringliteral}{"'\$(LOG4SHIB\_MM\_VERSION)' == ''"}>2.0.0</\textcolor{keywordtype}{Log4ShibVersion}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{Log4ShibVersion} \textcolor{keyword}{Condition}=\textcolor{stringliteral}{"'\$(LOG4SHIB\_MM\_VERSION)' != ''"}>\$(\textcolor{keyword}{LOG4SHIB\_MM\_VERSION})</\textcolor{keywordtype}{Log4ShibVersion}>}
+\DoxyCodeLine{</\textcolor{keywordtype}{PropertyGroup}>}
+\DoxyCodeLine{}
+\DoxyCodeLine{<\textcolor{keywordtype}{PropertyGroup} \textcolor{keyword}{Label}=\textcolor{stringliteral}{"Log4ShibGuidsBad"} \textcolor{keyword}{Condition}=\textcolor{stringliteral}{"'\$(LOG4SHIB\_FILE\_VERSION)' != '2\_0'"}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{Log4ShibFileVersion}>\textcolor{keyword}{BAD\_LOG4SHIB\_FILE\_VERSION}</\textcolor{keywordtype}{Log4ShibFileVersion}>}
+\DoxyCodeLine{  \textcolor{comment}{<!-\/-\/ Changing LOG4SHIB\_FILE\_VERSION version requires changing the GUIDs since it is garnish on the name -\/-\/>}}
+\DoxyCodeLine{</\textcolor{keywordtype}{PropertyGroup}>}
+\DoxyCodeLine{<\textcolor{keywordtype}{PropertyGroup} \textcolor{keyword}{Label}=\textcolor{stringliteral}{"Log4ShibGuids"} \textcolor{keyword}{Condition}=\textcolor{stringliteral}{"'\$(LOG4SHIB\_FILE\_VERSION)' == '2\_0'"}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{Log4ShibFileVersion}>\$(\textcolor{keyword}{LOG4SHIB\_FILE\_VERSION})</\textcolor{keywordtype}{Log4ShibFileVersion}>}
+\DoxyCodeLine{  \textcolor{comment}{<!-\/-\/ Change the 4 components below if the Log4ShibFileVersion name changes -\/-\/>}}
+\DoxyCodeLine{  <\textcolor{keywordtype}{Log4ShibComponent32}>\{4\textcolor{keyword}{A96D4F3-\/51DD-\/4FBD-\/9478-\/8EC2197FAF70}\}</\textcolor{keywordtype}{Log4ShibComponent32}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{Log4ShibComponent32d}>\{08\textcolor{keyword}{A406FB-\/D426-\/40A6-\/B5C1-\/9FFBC9A085B2}\}</\textcolor{keywordtype}{Log4ShibComponent32d}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{Log4ShibComponent64}>\{\textcolor{keyword}{AED2A19A-\/D47E-\/41B4-\/A4FB-\/5F23601F989D}\}</\textcolor{keywordtype}{Log4ShibComponent64}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{Log4ShibComponent64d}>\{\textcolor{keyword}{A30DBD49-\/6717-\/44CB-\/9A38-\/349D4F8DF149}\}</\textcolor{keywordtype}{Log4ShibComponent64d}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{log4shib}>\textcolor{keyword}{cpp-\/log4shib}</\textcolor{keywordtype}{log4shib}>}
+\DoxyCodeLine{</\textcolor{keywordtype}{PropertyGroup}>}
+\end{DoxyCode}
+
+
+Other versions seem fine...
+
+Using {\ttfamily boost\+\_\+1\+\_\+74\+\_\+0}\+: Download zipfile and unpack it in the {\ttfamily R\+O\+O\+T\+\_\+\+D\+IR}. Header only is fine?
+
+Need to retarget xmltooling and opensaml!
+
+Add env variable {\ttfamily D\+E\+B\+U\+G\+\_\+\+I\+N\+S\+T\+A\+L\+L\+ER}, set it to {\ttfamily Y\+ES}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{nmake /f build.make saml64}
+\end{DoxyCode}
+\hypertarget{saml_windows_autotoc_md32}{}\doxysubsection{Collecting all headers and libraries}\label{saml_windows_autotoc_md32}
+This is how I went about adding all libraries and headers to an install dir. Some parts I did in {\ttfamily git bash} because I\textquotesingle{}m not very familiar with {\ttfamily cmd.\+exe}. This may not be necessary if you go through the painstaking process of setting all of the correct include and lib directories when configuring \mbox{\hyperlink{classWt}{Wt}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{mkdir install-\/dir}
+\DoxyCodeLine{mkdir install-\/dir\(\backslash\)lib}
+\DoxyCodeLine{mkdir install-\/dir\(\backslash\)bin}
+\DoxyCodeLine{mkdir install-\/dir\(\backslash\)include}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)cpp-\/opensaml\(\backslash\)Build\(\backslash\)VC15\(\backslash\)x64\(\backslash\)Debug\(\backslash\)*.lib  \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)lib\(\backslash\)}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)cpp-\/opensaml\(\backslash\)Build\(\backslash\)VC15\(\backslash\)x64\(\backslash\)Debug\(\backslash\)*.dll  \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)bin\(\backslash\)}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)cpp-\/opensaml\(\backslash\)Build\(\backslash\)VC15\(\backslash\)x64\(\backslash\)Release\(\backslash\)*.lib  \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)lib\(\backslash\)}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)cpp-\/opensaml\(\backslash\)Build\(\backslash\)VC15\(\backslash\)x64\(\backslash\)Release\(\backslash\)*.dll  \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)bin\(\backslash\)}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd cpp-\/opensaml/saml}
+\DoxyCodeLine{for f in \$(find . -\/name '*.h'); do dir=\$(dirname \$f); mkdir -\/p ../../install-\/dir/include/saml/\$dir; cp \$f ../../install-\/dir/include/saml/\$dir/; done}
+\DoxyCodeLine{cd ../..}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)cpp-\/xmltooling\(\backslash\)Build\(\backslash\)VC15\(\backslash\)x64\(\backslash\)Debug\(\backslash\)*.lib  \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)lib\(\backslash\)}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)cpp-\/xmltooling\(\backslash\)Build\(\backslash\)VC15\(\backslash\)x64\(\backslash\)Debug\(\backslash\)*.dll  \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)bin\(\backslash\)}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)cpp-\/xmltooling\(\backslash\)Build\(\backslash\)VC15\(\backslash\)x64\(\backslash\)Release\(\backslash\)*.lib  \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)lib\(\backslash\)}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)cpp-\/xmltooling\(\backslash\)Build\(\backslash\)VC15\(\backslash\)x64\(\backslash\)Release\(\backslash\)*.dll  \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)bin\(\backslash\)}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd cpp-\/xmltooling/xmltooling}
+\DoxyCodeLine{for f in \$(find . -\/name '*.h'); do dir=\$(dirname \$f); mkdir -\/p ../../install-\/dir/include/xmltooling/\$dir; cp \$f ../../install-\/dir/include/xmltooling/\$dir/; done}
+\DoxyCodeLine{cd ../..}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)cpp-\/log4shib\(\backslash\)msvc15\(\backslash\)x64\(\backslash\)Debug\(\backslash\)*.lib  \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)lib\(\backslash\)}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)cpp-\/log4shib\(\backslash\)msvc15\(\backslash\)x64\(\backslash\)Debug\(\backslash\)*.dll  \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)bin\(\backslash\)}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)cpp-\/log4shib\(\backslash\)msvc15\(\backslash\)x64\(\backslash\)Release\(\backslash\)*.lib  \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)lib\(\backslash\)}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)cpp-\/log4shib\(\backslash\)msvc15\(\backslash\)x64\(\backslash\)Release\(\backslash\)*.dll  \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)bin\(\backslash\)}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd cpp-\/log4shib/include}
+\DoxyCodeLine{cp -\/r log4shib ../../install-\/dir/include}
+\DoxyCodeLine{cd ../..}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)xml-\/security-\/c-\/2.0.2\(\backslash\)Build\(\backslash\)x64\(\backslash\)VC15\(\backslash\)"Debug Minimal"\(\backslash\)*.lib \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)lib}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)xml-\/security-\/c-\/2.0.2\(\backslash\)Build\(\backslash\)x64\(\backslash\)VC15\(\backslash\)"Debug Minimal"\(\backslash\)*.dll \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)bin}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)xml-\/security-\/c-\/2.0.2\(\backslash\)Build\(\backslash\)x64\(\backslash\)VC15\(\backslash\)"Release Minimal"\(\backslash\)*.lib \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)lib}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)xml-\/security-\/c-\/2.0.2\(\backslash\)Build\(\backslash\)x64\(\backslash\)VC15\(\backslash\)"Release Minimal"\(\backslash\)*.dll \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)bin}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd xml-\/security-\/c-\/2.0.2/xsec}
+\DoxyCodeLine{for f in \$(find . -\/name '*.h' -\/or -\/name '*.hpp'); do dir=\$(dirname \$f); mkdir -\/p ../../install-\/dir/include/xsec/\$dir; cp \$f ../../install-\/dir/include/xsec/\$dir/; done}
+\DoxyCodeLine{cd ../..}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)xerces-\/c-\/3.2.3\(\backslash\)Install64\(\backslash\)VC15\(\backslash\)lib\(\backslash\)*.lib \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)lib}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)xerces-\/c-\/3.2.3\(\backslash\)Install64\(\backslash\)VC15\(\backslash\)bin\(\backslash\)*.dll \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)bin}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cp -\/r xerces-\/c-\/3.2.3/Install64/VC15/include/xercesc install-\/dir/include/}
+\DoxyCodeLine{cp -\/r xerces-\/c-\/3.2.3/Install64/VC15/cmake install-\/dir/lib/}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)zlib-\/1.2.11\(\backslash\)*.lib \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)lib}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)zlib-\/1.2.11\(\backslash\)*.dll \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)bin}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)zlib-\/1.2.11\(\backslash\)*.h \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)include}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)curl-\/7.75.0\(\backslash\)builds\(\backslash\)libcurl-\/vc15-\/x64-\/debug-\/dll-\/ssl-\/dll-\/zlib-\/dll-\/ipv6-\/sspi\(\backslash\)lib\(\backslash\)*.lib \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)lib}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)curl-\/7.75.0\(\backslash\)builds\(\backslash\)libcurl-\/vc15-\/x64-\/debug-\/dll-\/ssl-\/dll-\/zlib-\/dll-\/ipv6-\/sspi\(\backslash\)bin\(\backslash\)*.dll \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)bin}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)curl-\/7.75.0\(\backslash\)builds\(\backslash\)libcurl-\/vc15-\/x64-\/release-\/dll-\/ssl-\/dll-\/zlib-\/dll-\/ipv6-\/sspi\(\backslash\)lib\(\backslash\)*.lib \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)lib}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)curl-\/7.75.0\(\backslash\)builds\(\backslash\)libcurl-\/vc15-\/x64-\/release-\/dll-\/ssl-\/dll-\/zlib-\/dll-\/ipv6-\/sspi\(\backslash\)bin\(\backslash\)*.dll \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)bin}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)openssl-\/1.1.1j\(\backslash\)*.lib \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)lib}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)openssl-\/1.1.1j\(\backslash\)*.dll \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)bin}
+\DoxyCodeLine{copy \%ROOT\_DIR\%\(\backslash\)openssl-\/1.1.1j\(\backslash\)x64Debug\(\backslash\)bin\(\backslash\)*.dll \%ROOT\_DIR\%\(\backslash\)install-\/dir\(\backslash\)bin}
+\end{DoxyCode}
+
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cp -\/r openssl-\/1.1.1j/include/* install-\/dir/include/}
+\end{DoxyCode}
+\hypertarget{saml_windows_autotoc_md33}{}\doxysection{Configuring Wt}\label{saml_windows_autotoc_md33}
+You need to set {\ttfamily E\+N\+A\+B\+L\+E\+\_\+\+S\+A\+ML} to {\ttfamily ON} when configuring \mbox{\hyperlink{classWt}{Wt}}. You can use {\ttfamily S\+A\+M\+L\+\_\+\+R\+O\+OT} to set the S\+A\+ML prefix\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake path\(\backslash\)to\(\backslash\)sources -\/DENABLE\_SAML=ON -\/DSAML\_ROOT=path\(\backslash\)to\(\backslash\)saml\(\backslash\)prefix}
+\end{DoxyCode}
+ 

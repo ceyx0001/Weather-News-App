@@ -1,0 +1,104 @@
+\hypertarget{classWeatherUI}{}\doxysection{Weather\+UI Class Reference}
+\label{classWeatherUI}\index{WeatherUI@{WeatherUI}}
+
+
+Inheritance diagram for Weather\+UI\+:
+% FIG 0
+
+
+Collaboration diagram for Weather\+UI\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWeatherUI_a7d3992eb5b5d4a18f13a397ed6a4ba59}{Weather\+UI}} (std\+::string username)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWeatherUI_a26ad9a5b64c4483de3b96ddd7e1db586}{$\sim$\+Weather\+UI}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classWeatherUI_a4bdad7c821b5e04c44fa6ddd4c70102c}{build\+Feed\+Item}} (Wt\+::\+W\+Container\+Widget $\ast$day, const int index)
+\begin{DoxyCompactList}\small\item\em Render one weather day. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWeatherUI_a88d1f2cf0fd62725b6dfaf24a76373e4}\label{classWeatherUI_a88d1f2cf0fd62725b6dfaf24a76373e4}} 
+std\+::string {\bfseries username}
+\item 
+\mbox{\Hypertarget{classWeatherUI_a7d02be432275e85536394d19bee8ed67}\label{classWeatherUI_a7d02be432275e85536394d19bee8ed67}} 
+std\+::vector$<$ Wt\+::\+W\+Container\+Widget $\ast$ $>$ {\bfseries days}
+\item 
+\mbox{\Hypertarget{classWeatherUI_a93f79a6ece9986fd294fd3fb4bf8b3c4}\label{classWeatherUI_a93f79a6ece9986fd294fd3fb4bf8b3c4}} 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ {\bfseries weather}
+\item 
+\mbox{\Hypertarget{classWeatherUI_afceb222f2117ccfd047624f2a56e0481}\label{classWeatherUI_afceb222f2117ccfd047624f2a56e0481}} 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ {\bfseries icons}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWeatherUI_a7d3992eb5b5d4a18f13a397ed6a4ba59}\label{classWeatherUI_a7d3992eb5b5d4a18f13a397ed6a4ba59}} 
+\index{WeatherUI@{WeatherUI}!WeatherUI@{WeatherUI}}
+\index{WeatherUI@{WeatherUI}!WeatherUI@{WeatherUI}}
+\doxysubsubsection{\texorpdfstring{WeatherUI()}{WeatherUI()}}
+{\footnotesize\ttfamily Weather\+U\+I\+::\+Weather\+UI (\begin{DoxyParamCaption}\item[{std\+::string}]{username }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor for \mbox{\hyperlink{classWeatherUI}{Weather\+UI}} that initializes all members and renders the UI. 
+\begin{DoxyParams}{Parameters}
+{\em username} & is the session username. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWeatherUI_a26ad9a5b64c4483de3b96ddd7e1db586}\label{classWeatherUI_a26ad9a5b64c4483de3b96ddd7e1db586}} 
+\index{WeatherUI@{WeatherUI}!````~WeatherUI@{$\sim$WeatherUI}}
+\index{````~WeatherUI@{$\sim$WeatherUI}!WeatherUI@{WeatherUI}}
+\doxysubsubsection{\texorpdfstring{$\sim$WeatherUI()}{~WeatherUI()}}
+{\footnotesize\ttfamily Weather\+U\+I\+::$\sim$\+Weather\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default destructor. 
+
+Default destructor for \mbox{\hyperlink{classWeatherUI}{Weather\+UI}} but does nothing. \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWeatherUI_a4bdad7c821b5e04c44fa6ddd4c70102c}\label{classWeatherUI_a4bdad7c821b5e04c44fa6ddd4c70102c}} 
+\index{WeatherUI@{WeatherUI}!buildFeedItem@{buildFeedItem}}
+\index{buildFeedItem@{buildFeedItem}!WeatherUI@{WeatherUI}}
+\doxysubsubsection{\texorpdfstring{buildFeedItem()}{buildFeedItem()}}
+{\footnotesize\ttfamily void Weather\+U\+I\+::build\+Feed\+Item (\begin{DoxyParamCaption}\item[{Wt\+::\+W\+Container\+Widget $\ast$}]{day,  }\item[{const int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+
+
+Render one weather day. 
+
+Builds the element that renders one day of the weather forecast. 
+\begin{DoxyParams}{Parameters}
+{\em day} & is the container holding the graphical component. \\
+\hline
+{\em index} & is the item index of the day in weather. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classFeed_ad8bb7b04a4756592fab73228a532e78c}{Feed}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+gui/feed/Weather\+U\+I.\+h\item 
+gui/feed/Weather\+U\+I.\+cpp\end{DoxyCompactItemize}

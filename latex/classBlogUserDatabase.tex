@@ -1,0 +1,368 @@
+\hypertarget{classBlogUserDatabase}{}\doxysection{Blog\+User\+Database Class Reference}
+\label{classBlogUserDatabase}\index{BlogUserDatabase@{BlogUserDatabase}}
+
+
+Inheritance diagram for Blog\+User\+Database\+:
+% FIG 0
+
+
+Collaboration diagram for Blog\+User\+Database\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structBlogUserDatabase_1_1WithUser}{With\+User}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBlogUserDatabase_aa1c02b9031ea28b38f09032b592665a7}\label{classBlogUserDatabase_aa1c02b9031ea28b38f09032b592665a7}} 
+{\bfseries Blog\+User\+Database} (\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{dbo\+::\+Session}} \&session)
+\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_1_1Transaction}{Transaction}} $\ast$ \mbox{\hyperlink{classBlogUserDatabase_a7a8d063ed5d51f050fae7526643c384a}{start\+Transaction}} () override
+\begin{DoxyCompactList}\small\item\em Creates a new database transaction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBlogUserDatabase_afe9d5f7002efac8ef4b71e8d02e5d68e}\label{classBlogUserDatabase_afe9d5f7002efac8ef4b71e8d02e5d68e}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{dbo\+::ptr}}$<$ \mbox{\hyperlink{classUser}{User}} $>$ {\bfseries find} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&user) const
+\item 
+\mbox{\Hypertarget{classBlogUserDatabase_ae67dfbe9a86516d9eefe54cd8bd3590f}\label{classBlogUserDatabase_ae67dfbe9a86516d9eefe54cd8bd3590f}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} {\bfseries find} (\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{dbo\+::ptr}}$<$ \mbox{\hyperlink{classUser}{User}} $>$ user) const
+\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \mbox{\hyperlink{classBlogUserDatabase_ac18fe448d5eb7b0854894046d1b6f850}{find\+With\+Id}} (const std\+::string \&id) const override
+\begin{DoxyCompactList}\small\item\em Finds a user with a given id. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBlogUserDatabase_ab2264fddc17355f5b017be9bc536c621}\label{classBlogUserDatabase_ab2264fddc17355f5b017be9bc536c621}} 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} {\bfseries find\+With\+Identity} (const std\+::string \&provider, const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&\mbox{\hyperlink{classBlogUserDatabase_a79893828a833d0bd5204459ae3021fa5}{identity}}) const override
+\item 
+\mbox{\Hypertarget{classBlogUserDatabase_a1c048fcae26c95f1c387c470d276e4b1}\label{classBlogUserDatabase_a1c048fcae26c95f1c387c470d276e4b1}} 
+virtual void {\bfseries add\+Identity} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&user, const std\+::string \&provider, const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&\mbox{\hyperlink{classBlogUserDatabase_a79893828a833d0bd5204459ae3021fa5}{identity}}) override
+\item 
+virtual \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \mbox{\hyperlink{classBlogUserDatabase_a79893828a833d0bd5204459ae3021fa5}{identity}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&user, const std\+::string \&provider) const override
+\begin{DoxyCompactList}\small\item\em Returns a user identity. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBlogUserDatabase_af804af275913f80419c85526c565722a}{remove\+Identity}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&user, const std\+::string \&provider) override
+\begin{DoxyCompactList}\small\item\em Removes a user identity. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1PasswordHash}{Wt\+::\+Auth\+::\+Password\+Hash}} \mbox{\hyperlink{classBlogUserDatabase_aeb019f13bfb7fb9222cbf1cf3978a39d}{password}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&user) const override
+\begin{DoxyCompactList}\small\item\em Returns a user password. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBlogUserDatabase_a6e6e8391d8e64a4fe72225aa36793892}{set\+Password}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&user, const \mbox{\hyperlink{classWt_1_1Auth_1_1PasswordHash}{Wt\+::\+Auth\+::\+Password\+Hash}} \&\mbox{\hyperlink{classBlogUserDatabase_aeb019f13bfb7fb9222cbf1cf3978a39d}{password}}) override
+\begin{DoxyCompactList}\small\item\em Sets a new user password. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespaceWt_1_1Auth_a70a1c0094c0dbc4731b3fd0dae143034}{Wt\+::\+Auth\+::\+User\+::\+Status}} \mbox{\hyperlink{classBlogUserDatabase_a25f082397d932e28a5101f77ded27c3c}{status}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&user) const override
+\begin{DoxyCompactList}\small\item\em Returns the status for a user. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBlogUserDatabase_a55445ecaf7ea7e1596e997d53f6e41b8}{set\+Status}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&user, \mbox{\hyperlink{namespaceWt_1_1Auth_a70a1c0094c0dbc4731b3fd0dae143034}{Wt\+::\+Auth\+::\+User\+::\+Status}} \mbox{\hyperlink{classBlogUserDatabase_a25f082397d932e28a5101f77ded27c3c}{status}}) override
+\begin{DoxyCompactList}\small\item\em Sets the user status. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \mbox{\hyperlink{classBlogUserDatabase_a09d570c4818459212105045c2477e59a}{register\+New}} () override
+\begin{DoxyCompactList}\small\item\em Registers a new user. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBlogUserDatabase_a99113a7a264e5bc818a188c0dc1eb72f}{add\+Auth\+Token}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&user, const \mbox{\hyperlink{classWt_1_1Auth_1_1Token}{Wt\+::\+Auth\+::\+Token}} \&token) override
+\begin{DoxyCompactList}\small\item\em Adds an authentication token to a user. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classBlogUserDatabase_a8a2a5549f5742563c73c3f10bab6432e}{update\+Auth\+Token}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&user, const std\+::string \&hash, const std\+::string \&new\+Hash) override
+\begin{DoxyCompactList}\small\item\em Updates the authentication token with a new hash. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBlogUserDatabase_ae975c49ea48baed86fd04cede3e3825d}{remove\+Auth\+Token}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&user, const std\+::string \&hash) override
+\begin{DoxyCompactList}\small\item\em Deletes an authentication token. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \mbox{\hyperlink{classBlogUserDatabase_aed29958884d4f941a82950a3052b3171}{find\+With\+Auth\+Token}} (const std\+::string \&hash) const override
+\begin{DoxyCompactList}\small\item\em Finds a user with an authentication token. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classBlogUserDatabase_ad46de1984e9256a1f59aae7e3b20fd93}{failed\+Login\+Attempts}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&user) const override
+\begin{DoxyCompactList}\small\item\em Returns the number of consecutive authentication failures. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBlogUserDatabase_adbb4d9276f30c7f14816190cb6d951cb}{set\+Failed\+Login\+Attempts}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&user, int count) override
+\begin{DoxyCompactList}\small\item\em Sets the number of consecutive authentication failures. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WDateTime}{Wt\+::\+W\+Date\+Time}} \mbox{\hyperlink{classBlogUserDatabase_a1903d6c8ac3c39a2c08fb678f460cebc}{last\+Login\+Attempt}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&user) const override
+\begin{DoxyCompactList}\small\item\em Returns the time of the last login. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classBlogUserDatabase_a17f8af79f1b88a0719c38b0702b0eff9}{set\+Last\+Login\+Attempt}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&user, const \mbox{\hyperlink{classWt_1_1WDateTime}{Wt\+::\+W\+Date\+Time}} \&t) override
+\begin{DoxyCompactList}\small\item\em Sets the time of the last login attempt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBlogUserDatabase_a0738c8113a88d516836a1bfef99bce6a}\label{classBlogUserDatabase_a0738c8113a88d516836a1bfef99bce6a}} 
+void {\bfseries get\+User} (const std\+::string \&id) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBlogUserDatabase_ac6fdbf12db5376e9a28a22ad65663e2d}\label{classBlogUserDatabase_ac6fdbf12db5376e9a28a22ad65663e2d}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{dbo\+::\+Session}} \& {\bfseries session\+\_\+}
+\item 
+\mbox{\Hypertarget{classBlogUserDatabase_a999d9fb41053264c3016ae427548ae25}\label{classBlogUserDatabase_a999d9fb41053264c3016ae427548ae25}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{dbo\+::ptr}}$<$ \mbox{\hyperlink{classUser}{User}} $>$ {\bfseries user\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBlogUserDatabase_a99113a7a264e5bc818a188c0dc1eb72f}\label{classBlogUserDatabase_a99113a7a264e5bc818a188c0dc1eb72f}} 
+\index{BlogUserDatabase@{BlogUserDatabase}!addAuthToken@{addAuthToken}}
+\index{addAuthToken@{addAuthToken}!BlogUserDatabase@{BlogUserDatabase}}
+\doxysubsubsection{\texorpdfstring{addAuthToken()}{addAuthToken()}}
+{\footnotesize\ttfamily virtual void Blog\+User\+Database\+::add\+Auth\+Token (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&}]{user,  }\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1Token}{Wt\+::\+Auth\+::\+Token}} \&}]{token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds an authentication token to a user. 
+
+Unless you want a user to only have remember-\/me support from a single computer at a time, you should support multiple authentication tokens per user. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a980983064d3831064b5c3ce1279ee2ed}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classBlogUserDatabase_ad46de1984e9256a1f59aae7e3b20fd93}\label{classBlogUserDatabase_ad46de1984e9256a1f59aae7e3b20fd93}} 
+\index{BlogUserDatabase@{BlogUserDatabase}!failedLoginAttempts@{failedLoginAttempts}}
+\index{failedLoginAttempts@{failedLoginAttempts}!BlogUserDatabase@{BlogUserDatabase}}
+\doxysubsubsection{\texorpdfstring{failedLoginAttempts()}{failedLoginAttempts()}}
+{\footnotesize\ttfamily virtual int Blog\+User\+Database\+::failed\+Login\+Attempts (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&}]{user }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of consecutive authentication failures. 
+
+{\itshape \mbox{\hyperlink{classBlogUserDatabase_adbb4d9276f30c7f14816190cb6d951cb}{set\+Failed\+Login\+Attempts()}}} 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_aafa098c42c9c94fb0fcd2af9539043cb}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classBlogUserDatabase_aed29958884d4f941a82950a3052b3171}\label{classBlogUserDatabase_aed29958884d4f941a82950a3052b3171}} 
+\index{BlogUserDatabase@{BlogUserDatabase}!findWithAuthToken@{findWithAuthToken}}
+\index{findWithAuthToken@{findWithAuthToken}!BlogUserDatabase@{BlogUserDatabase}}
+\doxysubsubsection{\texorpdfstring{findWithAuthToken()}{findWithAuthToken()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} Blog\+User\+Database\+::find\+With\+Auth\+Token (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{hash }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finds a user with an authentication token. 
+
+Returns a user with an authentication token.
+
+This should find the user associated with a particular token hash, or return an invalid user if no user with that token hash exists. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a9d9bca9ea7d7a91f9b45b7e69a71cb85}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classBlogUserDatabase_ac18fe448d5eb7b0854894046d1b6f850}\label{classBlogUserDatabase_ac18fe448d5eb7b0854894046d1b6f850}} 
+\index{BlogUserDatabase@{BlogUserDatabase}!findWithId@{findWithId}}
+\index{findWithId@{findWithId}!BlogUserDatabase@{BlogUserDatabase}}
+\doxysubsubsection{\texorpdfstring{findWithId()}{findWithId()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} Blog\+User\+Database\+::find\+With\+Id (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finds a user with a given id. 
+
+The id uniquely identifies a user.
+
+This should find the user with the given {\ttfamily id}, or return an invalid user if no user with that id exists. 
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_afe820eed084f426a89cc7276d5db3e0f}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classBlogUserDatabase_a79893828a833d0bd5204459ae3021fa5}\label{classBlogUserDatabase_a79893828a833d0bd5204459ae3021fa5}} 
+\index{BlogUserDatabase@{BlogUserDatabase}!identity@{identity}}
+\index{identity@{identity}!BlogUserDatabase@{BlogUserDatabase}}
+\doxysubsubsection{\texorpdfstring{identity()}{identity()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} Blog\+User\+Database\+::identity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&}]{user,  }\item[{const std\+::string \&}]{provider }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a user identity. 
+
+Returns a user identity for the given provider, or an empty string if the user has no identitfy set for this provider.
+
+\begin{DoxySeeAlso}{See also}
+add\+Identity() 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_abd937e6e3a59a142988a2d1b78963607}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classBlogUserDatabase_a1903d6c8ac3c39a2c08fb678f460cebc}\label{classBlogUserDatabase_a1903d6c8ac3c39a2c08fb678f460cebc}} 
+\index{BlogUserDatabase@{BlogUserDatabase}!lastLoginAttempt@{lastLoginAttempt}}
+\index{lastLoginAttempt@{lastLoginAttempt}!BlogUserDatabase@{BlogUserDatabase}}
+\doxysubsubsection{\texorpdfstring{lastLoginAttempt()}{lastLoginAttempt()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WDateTime}{Wt\+::\+W\+Date\+Time}} Blog\+User\+Database\+::last\+Login\+Attempt (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&}]{user }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the time of the last login. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classBlogUserDatabase_a17f8af79f1b88a0719c38b0702b0eff9}{set\+Last\+Login\+Attempt()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ad94521b769f7149caf0756e3f96f6f27}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classBlogUserDatabase_aeb019f13bfb7fb9222cbf1cf3978a39d}\label{classBlogUserDatabase_aeb019f13bfb7fb9222cbf1cf3978a39d}} 
+\index{BlogUserDatabase@{BlogUserDatabase}!password@{password}}
+\index{password@{password}!BlogUserDatabase@{BlogUserDatabase}}
+\doxysubsubsection{\texorpdfstring{password()}{password()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Auth_1_1PasswordHash}{Wt\+::\+Auth\+::\+Password\+Hash}} Blog\+User\+Database\+::password (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&}]{user }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a user password. 
+
+This returns the stored password for a user, or a default constructed password hash if the user does not yet have password credentials.
+
+This is used only by Password\+Service. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a8343af7b2561734b907472346e324cb5}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classBlogUserDatabase_a09d570c4818459212105045c2477e59a}\label{classBlogUserDatabase_a09d570c4818459212105045c2477e59a}} 
+\index{BlogUserDatabase@{BlogUserDatabase}!registerNew@{registerNew}}
+\index{registerNew@{registerNew}!BlogUserDatabase@{BlogUserDatabase}}
+\doxysubsubsection{\texorpdfstring{registerNew()}{registerNew()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} Blog\+User\+Database\+::register\+New (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Registers a new user. 
+
+This adds a new user.
+
+This method is only used by view classes involved with registration (Registration\+Widget). 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a78c9e140f0d57a199db3b6c15b86a381}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classBlogUserDatabase_ae975c49ea48baed86fd04cede3e3825d}\label{classBlogUserDatabase_ae975c49ea48baed86fd04cede3e3825d}} 
+\index{BlogUserDatabase@{BlogUserDatabase}!removeAuthToken@{removeAuthToken}}
+\index{removeAuthToken@{removeAuthToken}!BlogUserDatabase@{BlogUserDatabase}}
+\doxysubsubsection{\texorpdfstring{removeAuthToken()}{removeAuthToken()}}
+{\footnotesize\ttfamily virtual void Blog\+User\+Database\+::remove\+Auth\+Token (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&}]{user,  }\item[{const std\+::string \&}]{hash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Deletes an authentication token. 
+
+Deletes an authentication token previously added with \mbox{\hyperlink{classBlogUserDatabase_a99113a7a264e5bc818a188c0dc1eb72f}{add\+Auth\+Token()}} 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a418a1ddb2f8c3e9c87fa6eb76cb6bfb3}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classBlogUserDatabase_af804af275913f80419c85526c565722a}\label{classBlogUserDatabase_af804af275913f80419c85526c565722a}} 
+\index{BlogUserDatabase@{BlogUserDatabase}!removeIdentity@{removeIdentity}}
+\index{removeIdentity@{removeIdentity}!BlogUserDatabase@{BlogUserDatabase}}
+\doxysubsubsection{\texorpdfstring{removeIdentity()}{removeIdentity()}}
+{\footnotesize\ttfamily virtual void Blog\+User\+Database\+::remove\+Identity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&}]{user,  }\item[{const std\+::string \&}]{provider }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Removes a user identity. 
+
+This removes all identities of a {\ttfamily provider} from the {\ttfamily user}.
+
+\begin{DoxySeeAlso}{See also}
+add\+Identity() 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a09dbc8bf6ef4f8d367c4bc471c9d780d}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classBlogUserDatabase_adbb4d9276f30c7f14816190cb6d951cb}\label{classBlogUserDatabase_adbb4d9276f30c7f14816190cb6d951cb}} 
+\index{BlogUserDatabase@{BlogUserDatabase}!setFailedLoginAttempts@{setFailedLoginAttempts}}
+\index{setFailedLoginAttempts@{setFailedLoginAttempts}!BlogUserDatabase@{BlogUserDatabase}}
+\doxysubsubsection{\texorpdfstring{setFailedLoginAttempts()}{setFailedLoginAttempts()}}
+{\footnotesize\ttfamily virtual void Blog\+User\+Database\+::set\+Failed\+Login\+Attempts (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&}]{user,  }\item[{int}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the number of consecutive authentication failures. 
+
+This sets the number of consecutive authentication failures since the last valid login.
+
+This is used by the throttling logic to determine how much time a user needs to wait before he can do a new login attempt. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ad1d701f369ba97e37bccede4e5a0307d}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classBlogUserDatabase_a17f8af79f1b88a0719c38b0702b0eff9}\label{classBlogUserDatabase_a17f8af79f1b88a0719c38b0702b0eff9}} 
+\index{BlogUserDatabase@{BlogUserDatabase}!setLastLoginAttempt@{setLastLoginAttempt}}
+\index{setLastLoginAttempt@{setLastLoginAttempt}!BlogUserDatabase@{BlogUserDatabase}}
+\doxysubsubsection{\texorpdfstring{setLastLoginAttempt()}{setLastLoginAttempt()}}
+{\footnotesize\ttfamily virtual void Blog\+User\+Database\+::set\+Last\+Login\+Attempt (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&}]{user,  }\item[{const \mbox{\hyperlink{classWt_1_1WDateTime}{Wt\+::\+W\+Date\+Time}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the time of the last login attempt. 
+
+This sets the time at which the user attempted to login. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a53f4486844da577d385770dacb8981b2}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classBlogUserDatabase_a6e6e8391d8e64a4fe72225aa36793892}\label{classBlogUserDatabase_a6e6e8391d8e64a4fe72225aa36793892}} 
+\index{BlogUserDatabase@{BlogUserDatabase}!setPassword@{setPassword}}
+\index{setPassword@{setPassword}!BlogUserDatabase@{BlogUserDatabase}}
+\doxysubsubsection{\texorpdfstring{setPassword()}{setPassword()}}
+{\footnotesize\ttfamily virtual void Blog\+User\+Database\+::set\+Password (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&}]{user,  }\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1PasswordHash}{Wt\+::\+Auth\+::\+Password\+Hash}} \&}]{password }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets a new user password. 
+
+This updates the password for a user.
+
+This is used only by Password\+Service. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a50849af8aefa9b74c5881a1eccbcc211}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classBlogUserDatabase_a55445ecaf7ea7e1596e997d53f6e41b8}\label{classBlogUserDatabase_a55445ecaf7ea7e1596e997d53f6e41b8}} 
+\index{BlogUserDatabase@{BlogUserDatabase}!setStatus@{setStatus}}
+\index{setStatus@{setStatus}!BlogUserDatabase@{BlogUserDatabase}}
+\doxysubsubsection{\texorpdfstring{setStatus()}{setStatus()}}
+{\footnotesize\ttfamily virtual void Blog\+User\+Database\+::set\+Status (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&}]{user,  }\item[{\mbox{\hyperlink{namespaceWt_1_1Auth_a70a1c0094c0dbc4731b3fd0dae143034}{Wt\+::\+Auth\+::\+User\+::\+Status}}}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the user status. 
+
+This sets the status for a user (if supported). 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a6a164f70cb02cac0997e20b7f08e1e7b}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classBlogUserDatabase_a7a8d063ed5d51f050fae7526643c384a}\label{classBlogUserDatabase_a7a8d063ed5d51f050fae7526643c384a}} 
+\index{BlogUserDatabase@{BlogUserDatabase}!startTransaction@{startTransaction}}
+\index{startTransaction@{startTransaction}!BlogUserDatabase@{BlogUserDatabase}}
+\doxysubsubsection{\texorpdfstring{startTransaction()}{startTransaction()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_1_1Transaction}{Transaction}}$\ast$ Blog\+User\+Database\+::start\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a new database transaction. 
+
+If the underlying database does not support transactions, you can return {\ttfamily nullptr}.
+
+Ownership of the transaction is transferred, and the transaction must be deleted after it has been committed or rolled back.
+
+The default implementation returns {\ttfamily nullptr} (no transaction support). 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a916289c27997a0d8d8608d59eccc71d4}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classBlogUserDatabase_a25f082397d932e28a5101f77ded27c3c}\label{classBlogUserDatabase_a25f082397d932e28a5101f77ded27c3c}} 
+\index{BlogUserDatabase@{BlogUserDatabase}!status@{status}}
+\index{status@{status}!BlogUserDatabase@{BlogUserDatabase}}
+\doxysubsubsection{\texorpdfstring{status()}{status()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespaceWt_1_1Auth_a70a1c0094c0dbc4731b3fd0dae143034}{Wt\+::\+Auth\+::\+User\+::\+Status}} Blog\+User\+Database\+::status (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&}]{user }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the status for a user. 
+
+If there is support for suspending accounts, then this method may be implemented to return whether a user account is disabled.
+
+The default implementation always returns Account\+Status\+::\+Normal.
+
+\begin{DoxySeeAlso}{See also}
+Login\+::login\+State() 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ac9f5e9db5ffc59ca89435b82c2f2ceb0}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+\mbox{\Hypertarget{classBlogUserDatabase_a8a2a5549f5742563c73c3f10bab6432e}\label{classBlogUserDatabase_a8a2a5549f5742563c73c3f10bab6432e}} 
+\index{BlogUserDatabase@{BlogUserDatabase}!updateAuthToken@{updateAuthToken}}
+\index{updateAuthToken@{updateAuthToken}!BlogUserDatabase@{BlogUserDatabase}}
+\doxysubsubsection{\texorpdfstring{updateAuthToken()}{updateAuthToken()}}
+{\footnotesize\ttfamily virtual int Blog\+User\+Database\+::update\+Auth\+Token (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1User}{Wt\+::\+Auth\+::\+User}} \&}]{user,  }\item[{const std\+::string \&}]{oldhash,  }\item[{const std\+::string \&}]{newhash }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the authentication token with a new hash. 
+
+If successful, returns the validity of the updated token in seconds.
+
+Returns 0 if the token could not be updated because it wasn\textquotesingle{}t found or is expired.
+
+Returns -\/1 if not implemented. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_ac5b9a6ffc139ad83d5648b9aeecae4ce}{Wt\+::\+Auth\+::\+Abstract\+User\+Database}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/blog/model/Blog\+User\+Database.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,280 @@
+\hypertarget{classWt_1_1WStackedWidget}{}\doxysection{Wt\+::W\+Stacked\+Widget Class Reference}
+\label{classWt_1_1WStackedWidget}\index{Wt::WStackedWidget@{Wt::WStackedWidget}}
+
+
+A container widget that stacks its widgets on top of each other.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Stacked\+Widget.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Stacked\+Widget\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Stacked\+Widget\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_aa4a5fb4f111b606cef7c1245f91a85bb}\label{classWt_1_1WStackedWidget_aa4a5fb4f111b606cef7c1245f91a85bb}} 
+\mbox{\hyperlink{classWt_1_1WStackedWidget_aa4a5fb4f111b606cef7c1245f91a85bb}{W\+Stacked\+Widget}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new stack. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WStackedWidget_a4fe515ba7d7eba43f6f0414b74756473}{add\+Widget}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WContainerWidget_a6a769c49b0e4303b1e2af7ec8134d2bf}{widget}}) override
+\begin{DoxyCompactList}\small\item\em Adds a child widget to this container. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_a88589e01db14d0e621ae54d7fb30090f}\label{classWt_1_1WStackedWidget_a88589e01db14d0e621ae54d7fb30090f}} 
+{\footnotesize template$<$typename Widget $>$ }\\Widget $\ast$ {\bfseries add\+Widget} (std\+::unique\+\_\+ptr$<$ Widget $>$ \mbox{\hyperlink{classWt_1_1WContainerWidget_a6a769c49b0e4303b1e2af7ec8134d2bf}{widget}})
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WStackedWidget_a5edcdb2032dfbd7abfc4b1ef8f89298e}{remove\+Widget}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$\mbox{\hyperlink{classWt_1_1WContainerWidget_a6a769c49b0e4303b1e2af7ec8134d2bf}{widget}}) override
+\begin{DoxyCompactList}\small\item\em Removes a child widget from this container. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WStackedWidget_a3192b31ecdc24848cbbe9173d899c66a}{current\+Index}} () const
+\begin{DoxyCompactList}\small\item\em Returns the index of the widget that is currently shown. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WStackedWidget_a5cf1dad01e4db9a2f29334f3d6c25509}{current\+Widget}} () const
+\begin{DoxyCompactList}\small\item\em Returns the widget that is currently shown. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_ad203e854591e642009709514e4e5a90c}\label{classWt_1_1WStackedWidget_ad203e854591e642009709514e4e5a90c}} 
+virtual void \mbox{\hyperlink{classWt_1_1WStackedWidget_ad203e854591e642009709514e4e5a90c}{insert\+Widget}} (int index, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WContainerWidget_a6a769c49b0e4303b1e2af7ec8134d2bf}{widget}}) override
+\begin{DoxyCompactList}\small\item\em Insert a widget at a given index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WStackedWidget_a4a2f79cf685ade6ad529e0673e22e6b0}{set\+Current\+Index}} (int index)
+\begin{DoxyCompactList}\small\item\em Changes the current widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WStackedWidget_ae0a85f389b655961c1b45a7ffea9ceed}{set\+Current\+Index}} (int index, const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&animation, bool auto\+Reverse=true)
+\begin{DoxyCompactList}\small\item\em Changes the current widget using a custom animation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WStackedWidget_a460ba17f219b8cc75748735417b04828}{set\+Current\+Widget}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$\mbox{\hyperlink{classWt_1_1WContainerWidget_a6a769c49b0e4303b1e2af7ec8134d2bf}{widget}})
+\begin{DoxyCompactList}\small\item\em Changes the current widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WStackedWidget_a46949b8def26baae654f54e3774da80e}{set\+Transition\+Animation}} (const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&animation, bool auto\+Reverse=false)
+\begin{DoxyCompactList}\small\item\em Specifies an animation used during transitions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_a6ab0b1a46d2aeaac584dd054a0e670c8}\label{classWt_1_1WStackedWidget_a6ab0b1a46d2aeaac584dd054a0e670c8}} 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WStackedWidget_a6ab0b1a46d2aeaac584dd054a0e670c8}{remove\+Widget}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$\mbox{\hyperlink{classWt_1_1WContainerWidget_a6a769c49b0e4303b1e2af7ec8134d2bf}{widget}})
+\begin{DoxyCompactList}\small\item\em Removes a child widget. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Widget $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ Widget $\ast$, \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ $>$\+::value \&\&!std\+::is\+\_\+same$<$ Widget, \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$\+::value, std\+::unique\+\_\+ptr$<$ Widget $>$ $>$\+::type \mbox{\hyperlink{classWt_1_1WStackedWidget_a7c3d094d6260d10227fddccd13b90def}{remove\+Widget}} (Widget $\ast$\mbox{\hyperlink{classWt_1_1WContainerWidget_a6a769c49b0e4303b1e2af7ec8134d2bf}{widget}})
+\begin{DoxyCompactList}\small\item\em Removes a child widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_a0ae0f8b41a08cc61087f7e9eaf856542}\label{classWt_1_1WStackedWidget_a0ae0f8b41a08cc61087f7e9eaf856542}} 
+virtual \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ {\bfseries create\+Dom\+Element} (\mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_a5e2e2e56cdb4cacc9ffb5426ed16300e}\label{classWt_1_1WStackedWidget_a5e2e2e56cdb4cacc9ffb5426ed16300e}} 
+virtual void {\bfseries get\+Dom\+Changes} (std\+::vector$<$ \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} $\ast$ $>$ \&result, \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$app) override
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WStackedWidget_a7d711a2c5517b9d86b8ca8d27630965f}{render}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$ flags) override
+\begin{DoxyCompactList}\small\item\em Renders the widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_a49503d3e703f70daf169b806935a5364}\label{classWt_1_1WStackedWidget_a49503d3e703f70daf169b806935a5364}} 
+void {\bfseries define\+Java\+Script} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_af56933037fc89f5a1bc1097be3dd7cf7}\label{classWt_1_1WStackedWidget_af56933037fc89f5a1bc1097be3dd7cf7}} 
+void {\bfseries load\+Animate\+JS} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_a694eb94a748795d6f4acfcefb2e67d5f}\label{classWt_1_1WStackedWidget_a694eb94a748795d6f4acfcefb2e67d5f}} 
+\mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} {\bfseries animation\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_a395d31689f147fcd60ca7ae75e19121d}\label{classWt_1_1WStackedWidget_a395d31689f147fcd60ca7ae75e19121d}} 
+bool {\bfseries auto\+Reverse\+Animation\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_aa882b2c95fbae4c8d7920507b2a27ce5}\label{classWt_1_1WStackedWidget_aa882b2c95fbae4c8d7920507b2a27ce5}} 
+int {\bfseries current\+Index\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_a743d12481c6dcc63469d45e1e7eb1263}\label{classWt_1_1WStackedWidget_a743d12481c6dcc63469d45e1e7eb1263}} 
+bool {\bfseries widgets\+Added\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_aeaf58b389085abb0e0d9246c89390c7a}\label{classWt_1_1WStackedWidget_aeaf58b389085abb0e0d9246c89390c7a}} 
+bool {\bfseries java\+Script\+Defined\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_a1bc9e2ade4e7d00d1e98af9cf327b5a0}\label{classWt_1_1WStackedWidget_a1bc9e2ade4e7d00d1e98af9cf327b5a0}} 
+bool {\bfseries load\+Animate\+J\+S\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A container widget that stacks its widgets on top of each other. 
+
+This is a container widget which at all times has only one item visible. The widget accomplishes this using set\+Hidden(bool) on the children.
+
+Using \mbox{\hyperlink{classWt_1_1WStackedWidget_a3192b31ecdc24848cbbe9173d899c66a}{current\+Index()}} and \mbox{\hyperlink{classWt_1_1WStackedWidget_a4a2f79cf685ade6ad529e0673e22e6b0}{set\+Current\+Index(int index)}} you can retrieve or set the visible widget.
+
+W\+Stacked\+Widget, like \mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}}, is by default not inline.
+
+\doxyparagraph*{C\+SS}
+
+The widget is rendered using an H\+T\+ML {\ttfamily $<$div$>$} tag and does not provide styling. It can be styled using inline or external C\+SS as appropriate.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WMenu}{W\+Menu}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_a4fe515ba7d7eba43f6f0414b74756473}\label{classWt_1_1WStackedWidget_a4fe515ba7d7eba43f6f0414b74756473}} 
+\index{Wt::WStackedWidget@{Wt::WStackedWidget}!addWidget@{addWidget}}
+\index{addWidget@{addWidget}!Wt::WStackedWidget@{Wt::WStackedWidget}}
+\doxysubsubsection{\texorpdfstring{addWidget()}{addWidget()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Stacked\+Widget\+::add\+Widget (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds a child widget to this container. 
+
+The widget is appended to the list of children, and thus also layed-\/out at the end.
+
+If, for some reason, you want to be in control of the lifetime of the widget, you can retrieve a unique\+\_\+ptr with \mbox{\hyperlink{classWt_1_1WObject_ad1d60618c6ca687226a5f1bbf1be6dc4}{W\+Object\+::remove\+Child()}} 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WContainerWidget_a800886eb60c904c8d00978cb8ac8d158}{Wt\+::\+W\+Container\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_a3192b31ecdc24848cbbe9173d899c66a}\label{classWt_1_1WStackedWidget_a3192b31ecdc24848cbbe9173d899c66a}} 
+\index{Wt::WStackedWidget@{Wt::WStackedWidget}!currentIndex@{currentIndex}}
+\index{currentIndex@{currentIndex}!Wt::WStackedWidget@{Wt::WStackedWidget}}
+\doxysubsubsection{\texorpdfstring{currentIndex()}{currentIndex()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Stacked\+Widget\+::current\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the index of the widget that is currently shown. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WStackedWidget_a4a2f79cf685ade6ad529e0673e22e6b0}{set\+Current\+Index()}}, \mbox{\hyperlink{classWt_1_1WStackedWidget_a5cf1dad01e4db9a2f29334f3d6c25509}{current\+Widget()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_a5cf1dad01e4db9a2f29334f3d6c25509}\label{classWt_1_1WStackedWidget_a5cf1dad01e4db9a2f29334f3d6c25509}} 
+\index{Wt::WStackedWidget@{Wt::WStackedWidget}!currentWidget@{currentWidget}}
+\index{currentWidget@{currentWidget}!Wt::WStackedWidget@{Wt::WStackedWidget}}
+\doxysubsubsection{\texorpdfstring{currentWidget()}{currentWidget()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$\ast$ Wt\+::\+W\+Stacked\+Widget\+::current\+Widget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the widget that is currently shown. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WStackedWidget_a460ba17f219b8cc75748735417b04828}{set\+Current\+Widget()}}, \mbox{\hyperlink{classWt_1_1WStackedWidget_a3192b31ecdc24848cbbe9173d899c66a}{current\+Index()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_a7c3d094d6260d10227fddccd13b90def}\label{classWt_1_1WStackedWidget_a7c3d094d6260d10227fddccd13b90def}} 
+\index{Wt::WStackedWidget@{Wt::WStackedWidget}!removeWidget@{removeWidget}}
+\index{removeWidget@{removeWidget}!Wt::WStackedWidget@{Wt::WStackedWidget}}
+\doxysubsubsection{\texorpdfstring{removeWidget()}{removeWidget()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Widget $>$ \\
+std\+::enable\+\_\+if$<$std\+::is\+\_\+convertible$<$Widget$\ast$,\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$\ast$$>$\+::value \&\& !std\+::is\+\_\+same$<$Widget,\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$>$\+::value, std\+::unique\+\_\+ptr$<$Widget$>$ $>$\+::type Wt\+::\+W\+Widget\+::remove\+Widget (\begin{DoxyParamCaption}\item[{typename Widget}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes a child widget. 
+
+This is an overload that automatically casts the returned value to a unique\+\_\+ptr$<$\+Widget$>$ for convenience
+
+This is implemented as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{return} std::unique\_ptr<Widget>(\textcolor{keyword}{static\_cast<}Widget*\textcolor{keyword}{>}(\mbox{\hyperlink{classWt_1_1WStackedWidget_a5edcdb2032dfbd7abfc4b1ef8f89298e}{removeWidget}}(\textcolor{keyword}{static\_cast<}WWidget*\textcolor{keyword}{>}(\mbox{\hyperlink{classWt_1_1WContainerWidget_a6a769c49b0e4303b1e2af7ec8134d2bf}{widget}})).release()));}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1WStackedWidget_a5edcdb2032dfbd7abfc4b1ef8f89298e}\label{classWt_1_1WStackedWidget_a5edcdb2032dfbd7abfc4b1ef8f89298e}} 
+\index{Wt::WStackedWidget@{Wt::WStackedWidget}!removeWidget@{removeWidget}}
+\index{removeWidget@{removeWidget}!Wt::WStackedWidget@{Wt::WStackedWidget}}
+\doxysubsubsection{\texorpdfstring{removeWidget()}{removeWidget()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$>$ Wt\+::\+W\+Stacked\+Widget\+::remove\+Widget (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Removes a child widget from this container. 
+
+If the \mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}} owns the given widget (i.\+e. if it was added with \mbox{\hyperlink{classWt_1_1WStackedWidget_a4fe515ba7d7eba43f6f0414b74756473}{add\+Widget()}} or \mbox{\hyperlink{classWt_1_1WStackedWidget_ad203e854591e642009709514e4e5a90c}{insert\+Widget()}} and not removed with \mbox{\hyperlink{classWt_1_1WObject_ad1d60618c6ca687226a5f1bbf1be6dc4}{W\+Object\+::remove\+Child()}}), a unique\+\_\+ptr to this widget is returned. Otherwise, this returns nullptr. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WContainerWidget_a57b5b482731285a6e949118ab3528340}{Wt\+::\+W\+Container\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_a7d711a2c5517b9d86b8ca8d27630965f}\label{classWt_1_1WStackedWidget_a7d711a2c5517b9d86b8ca8d27630965f}} 
+\index{Wt::WStackedWidget@{Wt::WStackedWidget}!render@{render}}
+\index{render@{render}!Wt::WStackedWidget@{Wt::WStackedWidget}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Stacked\+Widget\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Renders the widget. 
+
+This function renders the widget (or an update for the widget), after this has been scheduled using \mbox{\hyperlink{classWt_1_1WWidget_a5d3d4edaafa2d7c892a5078f3df4cf11}{schedule\+Render()}}.
+
+The default implementation will render the widget by serializing changes to Java\+Script and H\+T\+ML. You may want to reimplement this widget if you have been postponing some of the layout / rendering implementation until the latest moment possible. In that case you should make sure you call the base implementation however. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a5ca222ef9275cfd6d0005c63197d40a0}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_a4a2f79cf685ade6ad529e0673e22e6b0}\label{classWt_1_1WStackedWidget_a4a2f79cf685ade6ad529e0673e22e6b0}} 
+\index{Wt::WStackedWidget@{Wt::WStackedWidget}!setCurrentIndex@{setCurrentIndex}}
+\index{setCurrentIndex@{setCurrentIndex}!Wt::WStackedWidget@{Wt::WStackedWidget}}
+\doxysubsubsection{\texorpdfstring{setCurrentIndex()}{setCurrentIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Stacked\+Widget\+::set\+Current\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Changes the current widget. 
+
+The widget with index {\ttfamily index} is made visible, while all other widgets are hidden.
+
+The change of current widget is done using the animation settings specified by \mbox{\hyperlink{classWt_1_1WStackedWidget_a46949b8def26baae654f54e3774da80e}{set\+Transition\+Animation()}}.
+
+The default value for current index is 0 (provided thath
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WStackedWidget_a3192b31ecdc24848cbbe9173d899c66a}{current\+Index()}}, \mbox{\hyperlink{classWt_1_1WStackedWidget_a460ba17f219b8cc75748735417b04828}{set\+Current\+Widget()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_ae0a85f389b655961c1b45a7ffea9ceed}\label{classWt_1_1WStackedWidget_ae0a85f389b655961c1b45a7ffea9ceed}} 
+\index{Wt::WStackedWidget@{Wt::WStackedWidget}!setCurrentIndex@{setCurrentIndex}}
+\index{setCurrentIndex@{setCurrentIndex}!Wt::WStackedWidget@{Wt::WStackedWidget}}
+\doxysubsubsection{\texorpdfstring{setCurrentIndex()}{setCurrentIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Stacked\+Widget\+::set\+Current\+Index (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&}]{animation,  }\item[{bool}]{auto\+Reverse = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Changes the current widget using a custom animation. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WStackedWidget_a3192b31ecdc24848cbbe9173d899c66a}{current\+Index()}}, \mbox{\hyperlink{classWt_1_1WStackedWidget_a460ba17f219b8cc75748735417b04828}{set\+Current\+Widget()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_a460ba17f219b8cc75748735417b04828}\label{classWt_1_1WStackedWidget_a460ba17f219b8cc75748735417b04828}} 
+\index{Wt::WStackedWidget@{Wt::WStackedWidget}!setCurrentWidget@{setCurrentWidget}}
+\index{setCurrentWidget@{setCurrentWidget}!Wt::WStackedWidget@{Wt::WStackedWidget}}
+\doxysubsubsection{\texorpdfstring{setCurrentWidget()}{setCurrentWidget()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Stacked\+Widget\+::set\+Current\+Widget (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{widget }\end{DoxyParamCaption})}
+
+
+
+Changes the current widget. 
+
+The widget {\ttfamily widget}, which must have been added before, is made visible, while all other widgets are hidden.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WStackedWidget_a5cf1dad01e4db9a2f29334f3d6c25509}{current\+Widget()}}, \mbox{\hyperlink{classWt_1_1WStackedWidget_a4a2f79cf685ade6ad529e0673e22e6b0}{set\+Current\+Index()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WStackedWidget_a46949b8def26baae654f54e3774da80e}\label{classWt_1_1WStackedWidget_a46949b8def26baae654f54e3774da80e}} 
+\index{Wt::WStackedWidget@{Wt::WStackedWidget}!setTransitionAnimation@{setTransitionAnimation}}
+\index{setTransitionAnimation@{setTransitionAnimation}!Wt::WStackedWidget@{Wt::WStackedWidget}}
+\doxysubsubsection{\texorpdfstring{setTransitionAnimation()}{setTransitionAnimation()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Stacked\+Widget\+::set\+Transition\+Animation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&}]{animation,  }\item[{bool}]{auto\+Reverse = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Specifies an animation used during transitions. 
+
+The animation is used to hide the previously current widget and show the next current widget using \mbox{\hyperlink{classWt_1_1WStackedWidget_a4a2f79cf685ade6ad529e0673e22e6b0}{set\+Current\+Index()}}.
+
+The initial value for {\ttfamily animation} is W\+Animation(), specifying no animation.
+
+When {\ttfamily auto\+Reverse} is set to {\ttfamily true}, then the reverse animation is chosen when the new index precedes the current index. This only applies to Animation\+Effect\+::\+Slide\+In\+From\+Left, Animation\+Effect\+::\+Slide\+In\+From\+Right, Animation\+Effect\+::\+Slide\+In\+From\+Top or Animation\+Effect\+::\+Slide\+In\+From\+Bottom transition effects.
+
+\begin{DoxyNote}{Note}
+If you intend to use a transition animation with a \mbox{\hyperlink{classWt_1_1WStackedWidget}{W\+Stacked\+Widget}} you should set it before it is first rendered. Otherwise, transition animations caused by \mbox{\hyperlink{classWt_1_1WStackedWidget_a4a2f79cf685ade6ad529e0673e22e6b0}{set\+Current\+Index()}} may not be correctly performed. If you do want to force this change you can use \mbox{\hyperlink{classWt_1_1WApplication_a48ceb7972ef7ec0e557adf441f660f2f}{W\+Application\+::process\+Events}} before calling \mbox{\hyperlink{classWt_1_1WStackedWidget_a4a2f79cf685ade6ad529e0673e22e6b0}{set\+Current\+Index()}}.
+
+It is also not supported to use a Animation\+Effect\+::\+Pop animation on a \mbox{\hyperlink{classWt_1_1WStackedWidget}{W\+Stacked\+Widget}}.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WStackedWidget_a4a2f79cf685ade6ad529e0673e22e6b0}{set\+Current\+Index()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Stacked\+Widget.\+h\end{DoxyCompactItemize}

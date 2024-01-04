@@ -1,0 +1,65 @@
+\hypertarget{classdate_1_1gps__clock}{}\doxysection{date\+::gps\+\_\+clock Class Reference}
+\label{classdate_1_1gps__clock}\index{date::gps\_clock@{date::gps\_clock}}
+
+
+Collaboration diagram for date\+::gps\+\_\+clock\+:
+% FIG 0
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdate_1_1gps__clock_a5c1bab57eea57a3e5031ea483e957b7c}\label{classdate_1_1gps__clock_a5c1bab57eea57a3e5031ea483e957b7c}} 
+using {\bfseries duration} = std\+::chrono\+::system\+\_\+clock\+::duration
+\item 
+\mbox{\Hypertarget{classdate_1_1gps__clock_a2045bca838b8671f930a481059c2da1b}\label{classdate_1_1gps__clock_a2045bca838b8671f930a481059c2da1b}} 
+using {\bfseries rep} = duration\+::rep
+\item 
+\mbox{\Hypertarget{classdate_1_1gps__clock_abd13d85dcce95a51506985317784a7be}\label{classdate_1_1gps__clock_abd13d85dcce95a51506985317784a7be}} 
+using {\bfseries period} = duration\+::period
+\item 
+\mbox{\Hypertarget{classdate_1_1gps__clock_a4cf3f9117178a55eac9f3ff9dbe3afb5}\label{classdate_1_1gps__clock_a4cf3f9117178a55eac9f3ff9dbe3afb5}} 
+using {\bfseries time\+\_\+point} = std\+::chrono\+::time\+\_\+point$<$ \mbox{\hyperlink{classdate_1_1gps__clock}{gps\+\_\+clock}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdate_1_1gps__clock_a94b9deb44984c8e89d108351c3fb6baf}\label{classdate_1_1gps__clock_a94b9deb44984c8e89d108351c3fb6baf}} 
+{\footnotesize template$<$class Duration $>$ }\\utc\+\_\+time$<$ typename std\+::common\+\_\+type$<$ Duration, std\+::chrono\+::seconds $>$\+::type $>$ {\bfseries to\+\_\+utc} (const gps\+\_\+time$<$ Duration $>$ \&t) N\+O\+E\+X\+C\+E\+PT
+\item 
+\mbox{\Hypertarget{classdate_1_1gps__clock_aa7d421834e634024ff16b3b3847f4785}\label{classdate_1_1gps__clock_aa7d421834e634024ff16b3b3847f4785}} 
+{\footnotesize template$<$class Duration $>$ }\\gps\+\_\+time$<$ typename std\+::common\+\_\+type$<$ Duration, std\+::chrono\+::seconds $>$\+::type $>$ {\bfseries from\+\_\+utc} (const utc\+\_\+time$<$ Duration $>$ \&t) N\+O\+E\+X\+C\+E\+PT
+\item 
+\mbox{\Hypertarget{classdate_1_1gps__clock_a15e196c8c1240a59a7bd023f87151793}\label{classdate_1_1gps__clock_a15e196c8c1240a59a7bd023f87151793}} 
+{\footnotesize template$<$class Duration $>$ }\\local\+\_\+time$<$ typename std\+::common\+\_\+type$<$ Duration, date\+::days $>$\+::type $>$ {\bfseries to\+\_\+local} (const gps\+\_\+time$<$ Duration $>$ \&t) N\+O\+E\+X\+C\+E\+PT
+\item 
+\mbox{\Hypertarget{classdate_1_1gps__clock_a390b1b185dd0034178061acf0fbdb0c2}\label{classdate_1_1gps__clock_a390b1b185dd0034178061acf0fbdb0c2}} 
+{\footnotesize template$<$class Duration $>$ }\\gps\+\_\+time$<$ typename std\+::common\+\_\+type$<$ Duration, date\+::days $>$\+::type $>$ {\bfseries from\+\_\+local} (const local\+\_\+time$<$ Duration $>$ \&t) N\+O\+E\+X\+C\+E\+PT
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdate_1_1gps__clock_a5783dfbdd98b618b0efd979717c997c8}\label{classdate_1_1gps__clock_a5783dfbdd98b618b0efd979717c997c8}} 
+static time\+\_\+point {\bfseries now} ()
+\item 
+\mbox{\Hypertarget{classdate_1_1gps__clock_a77df6079d4dd41b552926efbfdde09b9}\label{classdate_1_1gps__clock_a77df6079d4dd41b552926efbfdde09b9}} 
+{\footnotesize template$<$typename Duration $>$ }\\static std\+::chrono\+::time\+\_\+point$<$ \mbox{\hyperlink{classdate_1_1utc__clock}{utc\+\_\+clock}}, typename std\+::common\+\_\+type$<$ Duration, std\+::chrono\+::seconds $>$\+::type $>$ {\bfseries to\+\_\+utc} (const std\+::chrono\+::time\+\_\+point$<$ \mbox{\hyperlink{classdate_1_1gps__clock}{gps\+\_\+clock}}, Duration $>$ \&) N\+O\+E\+X\+C\+E\+PT
+\item 
+\mbox{\Hypertarget{classdate_1_1gps__clock_aaaf5d9ab7641275f4d8124137e57abfa}\label{classdate_1_1gps__clock_aaaf5d9ab7641275f4d8124137e57abfa}} 
+{\footnotesize template$<$typename Duration $>$ }\\static std\+::chrono\+::time\+\_\+point$<$ \mbox{\hyperlink{classdate_1_1gps__clock}{gps\+\_\+clock}}, typename std\+::common\+\_\+type$<$ Duration, std\+::chrono\+::seconds $>$\+::type $>$ {\bfseries from\+\_\+utc} (const std\+::chrono\+::time\+\_\+point$<$ \mbox{\hyperlink{classdate_1_1utc__clock}{utc\+\_\+clock}}, Duration $>$ \&) N\+O\+E\+X\+C\+E\+PT
+\item 
+\mbox{\Hypertarget{classdate_1_1gps__clock_a8bd6a9b4cfcc95dc0b3e6f783c32cda8}\label{classdate_1_1gps__clock_a8bd6a9b4cfcc95dc0b3e6f783c32cda8}} 
+{\footnotesize template$<$typename Duration $>$ }\\static std\+::chrono\+::time\+\_\+point$<$ \mbox{\hyperlink{structdate_1_1local__t}{local\+\_\+t}}, typename std\+::common\+\_\+type$<$ Duration, date\+::days $>$\+::type $>$ {\bfseries to\+\_\+local} (const std\+::chrono\+::time\+\_\+point$<$ \mbox{\hyperlink{classdate_1_1gps__clock}{gps\+\_\+clock}}, Duration $>$ \&) N\+O\+E\+X\+C\+E\+PT
+\item 
+\mbox{\Hypertarget{classdate_1_1gps__clock_ad6109b3bd746626c5e5c525021453519}\label{classdate_1_1gps__clock_ad6109b3bd746626c5e5c525021453519}} 
+{\footnotesize template$<$typename Duration $>$ }\\static std\+::chrono\+::time\+\_\+point$<$ \mbox{\hyperlink{classdate_1_1gps__clock}{gps\+\_\+clock}}, typename std\+::common\+\_\+type$<$ Duration, date\+::days $>$\+::type $>$ {\bfseries from\+\_\+local} (const std\+::chrono\+::time\+\_\+point$<$ \mbox{\hyperlink{structdate_1_1local__t}{local\+\_\+t}}, Duration $>$ \&) N\+O\+E\+X\+C\+E\+PT
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdate_1_1gps__clock_a77079ad13800fdf7e7b9c177485dcd01}\label{classdate_1_1gps__clock_a77079ad13800fdf7e7b9c177485dcd01}} 
+static const bool {\bfseries is\+\_\+steady} = false
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Date/include/date/tz.\+h\end{DoxyCompactItemize}

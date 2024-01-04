@@ -1,0 +1,112 @@
+\hypertarget{classComboDelegate}{}\doxysection{Combo\+Delegate Class Reference}
+\label{classComboDelegate}\index{ComboDelegate@{ComboDelegate}}
+
+
+Inheritance diagram for Combo\+Delegate\+:
+% FIG 0
+
+
+Collaboration diagram for Combo\+Delegate\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classComboDelegate_add5c118970a26f109cd4072826a118d3}\label{classComboDelegate_add5c118970a26f109cd4072826a118d3}} 
+{\bfseries Combo\+Delegate} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{Wt\+::\+W\+Abstract\+Item\+Model}} $>$ items)
+\item 
+virtual void \mbox{\hyperlink{classComboDelegate_a0198c96e95678ed494f7f3fc08204a9f}{set\+Model\+Data}} (const \mbox{\hyperlink{classlinb_1_1any}{Wt\+::cpp17\+::any}} \&\mbox{\hyperlink{classComboDelegate_a7899eeff9b9c9416b2416a21cad05738}{edit\+State}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{Wt\+::\+W\+Abstract\+Item\+Model}} $\ast$model, const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&index) const override
+\begin{DoxyCompactList}\small\item\em Saves the edited data to the model. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlinb_1_1any}{Wt\+::cpp17\+::any}} \mbox{\hyperlink{classComboDelegate_a7899eeff9b9c9416b2416a21cad05738}{edit\+State}} (\mbox{\hyperlink{classWt_1_1WWidget}{Wt\+::\+W\+Widget}} $\ast$editor, const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&index) const override
+\begin{DoxyCompactList}\small\item\em Returns the current edit state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classComboDelegate_a3746677ce93926d8a643e463eefc14c3}{set\+Edit\+State}} (\mbox{\hyperlink{classWt_1_1WWidget}{Wt\+::\+W\+Widget}} $\ast$editor, const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&index, const \mbox{\hyperlink{classlinb_1_1any}{Wt\+::cpp17\+::any}} \&value) const override
+\begin{DoxyCompactList}\small\item\em Sets the editor data from the editor state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classComboDelegate_aa039d8b6f2249b6744155f2e670f1675}\label{classComboDelegate_aa039d8b6f2249b6744155f2e670f1675}} 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{Wt\+::\+W\+Widget}} $>$ {\bfseries create\+Editor} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&index, \mbox{\hyperlink{classWt_1_1WFlags}{Wt\+::\+W\+Flags}}$<$ \mbox{\hyperlink{classWt_a8df2183a957c453839f3382e3db167d6}{Wt\+::\+View\+Item\+Render\+Flag}} $>$ flags) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classComboDelegate_a5cc108370c2bc990e89543c18eb82b31}\label{classComboDelegate_a5cc108370c2bc990e89543c18eb82b31}} 
+virtual void {\bfseries do\+Close\+Editor} (\mbox{\hyperlink{classWt_1_1WWidget}{Wt\+::\+W\+Widget}} $\ast$editor, bool save) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classComboDelegate_a62a4f64a0affbbd2b6222394a57c4374}\label{classComboDelegate_a62a4f64a0affbbd2b6222394a57c4374}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{Wt\+::\+W\+Abstract\+Item\+Model}} $>$ {\bfseries items\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classComboDelegate_a7899eeff9b9c9416b2416a21cad05738}\label{classComboDelegate_a7899eeff9b9c9416b2416a21cad05738}} 
+\index{ComboDelegate@{ComboDelegate}!editState@{editState}}
+\index{editState@{editState}!ComboDelegate@{ComboDelegate}}
+\doxysubsubsection{\texorpdfstring{editState()}{editState()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlinb_1_1any}{Wt\+::cpp17\+::any}} Combo\+Delegate\+::edit\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{Wt\+::\+W\+Widget}} $\ast$}]{editor,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the current edit state. 
+
+The default implementation returns the current text in the line edit. You will need to reimplement this method for a custom editor.
+
+As an example of how to deal with a specialized editor, consider the default implementation\+:
+
+\begin{DoxySeeAlso}{See also}
+create\+Editor(), \mbox{\hyperlink{classComboDelegate_a3746677ce93926d8a643e463eefc14c3}{set\+Edit\+State()}}, \mbox{\hyperlink{classComboDelegate_a0198c96e95678ed494f7f3fc08204a9f}{set\+Model\+Data()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WItemDelegate_a79941ae50687f0e65da2f58f86bf571c}{Wt\+::\+W\+Item\+Delegate}}.
+
+\mbox{\Hypertarget{classComboDelegate_a3746677ce93926d8a643e463eefc14c3}\label{classComboDelegate_a3746677ce93926d8a643e463eefc14c3}} 
+\index{ComboDelegate@{ComboDelegate}!setEditState@{setEditState}}
+\index{setEditState@{setEditState}!ComboDelegate@{ComboDelegate}}
+\doxysubsubsection{\texorpdfstring{setEditState()}{setEditState()}}
+{\footnotesize\ttfamily virtual void Combo\+Delegate\+::set\+Edit\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{Wt\+::\+W\+Widget}} $\ast$}]{editor,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&}]{index,  }\item[{const \mbox{\hyperlink{classlinb_1_1any}{Wt\+::cpp17\+::any}} \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the editor data from the editor state. 
+
+The default implementation resets the text in the line edit. You will need to reimplement this method if for a custom editor.
+
+As an example of how to deal with a specialized editor, consider the default implementation\+:
+
+\begin{DoxySeeAlso}{See also}
+create\+Editor() 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WItemDelegate_a9b15fa5d2feb767deb4233d73cb8d1e1}{Wt\+::\+W\+Item\+Delegate}}.
+
+\mbox{\Hypertarget{classComboDelegate_a0198c96e95678ed494f7f3fc08204a9f}\label{classComboDelegate_a0198c96e95678ed494f7f3fc08204a9f}} 
+\index{ComboDelegate@{ComboDelegate}!setModelData@{setModelData}}
+\index{setModelData@{setModelData}!ComboDelegate@{ComboDelegate}}
+\doxysubsubsection{\texorpdfstring{setModelData()}{setModelData()}}
+{\footnotesize\ttfamily virtual void Combo\+Delegate\+::set\+Model\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlinb_1_1any}{Wt\+::cpp17\+::any}} \&}]{edit\+State,  }\item[{\mbox{\hyperlink{classWt_1_1WAbstractItemModel}{Wt\+::\+W\+Abstract\+Item\+Model}} $\ast$}]{model,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Saves the edited data to the model. 
+
+The default implementation saves the current edit value to the model. You will need to reimplement this method for a custom editor.
+
+As an example of how to deal with a specialized editor, consider the default implementation\+:
+
+\begin{DoxySeeAlso}{See also}
+create\+Editor(), \mbox{\hyperlink{classComboDelegate_a7899eeff9b9c9416b2416a21cad05738}{edit\+State()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WItemDelegate_a3746136f103c4ad4d1574ac3f2ad11d4}{Wt\+::\+W\+Item\+Delegate}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/widgetgallery/examples/Combo\+Delegate\+Table.\+cpp\end{DoxyCompactItemize}

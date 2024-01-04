@@ -1,0 +1,15 @@
+This is an example that illustrates how {\ttfamily \mbox{\hyperlink{namespaceWt_1_1Auth}{Wt\+::\+Auth}}} can be extended with additional authentication mechanisms. The example is introduced in \href{http://www.webtoolkit.eu/wt/blog/2012/02/17/qr_code_login_example}{\texttt{ this post}}
+
+The example adds the ability to login by authenticating on a mobile phone after scanning a QR code. This means that if on the phone you have a remember-\/me cookie stored, you can sign in to a public computer without needing password authentication.\hypertarget{md_wt-4_88_82_examples_qrlogin_README_autotoc_md115}{}\doxysection{How to run}\label{md_wt-4_88_82_examples_qrlogin_README_autotoc_md115}
+See the R\+E\+A\+D\+ME in the parent directory.
+
+Additional arguments\+: {\ttfamily -\/c wt\+\_\+config.\+xml}
+
+The configuration file configures progressive bootstrap, which is needed to apply viewport indications for mobile browsers, and also enables websockets, just for fun.\hypertarget{md_wt-4_88_82_examples_qrlogin_README_autotoc_md116}{}\doxysection{What it illustrates}\label{md_wt-4_88_82_examples_qrlogin_README_autotoc_md116}
+
+\begin{DoxyItemize}
+\item server push to handle the remote login using {\ttfamily W\+Application\+::trigger\+Update()}
+\item the use of {\ttfamily W\+Resource} and {\ttfamily Http\+::\+Client} to implement inter-\/session communication in case not all sessions run within the same process
+\item using {\ttfamily \mbox{\hyperlink{namespaceWt_1_1Dbo}{Wt\+::\+Dbo}}} to map an additional database table
+\item how to customize and extend {\ttfamily \mbox{\hyperlink{namespaceWt_1_1Auth}{Wt\+::\+Auth}}} 
+\end{DoxyItemize}

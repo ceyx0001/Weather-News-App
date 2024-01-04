@@ -1,0 +1,200 @@
+\hypertarget{classLocationInfo}{}\doxysection{Location\+Info Class Reference}
+\label{classLocationInfo}\index{LocationInfo@{LocationInfo}}
+
+
+Manages user location information.  
+
+
+
+
+{\ttfamily \#include $<$Location\+Info.\+h$>$}
+
+
+
+Inheritance diagram for Location\+Info\+:
+% FIG 0
+
+
+Collaboration diagram for Location\+Info\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLocationInfo_a5e168be354c0748fca436211cd5b1679}{Location\+Info}} (std\+::string username)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLocationInfo_a52af02d9e1aca120884006c3703be67f}{$\sim$\+Location\+Info}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classLocationInfo_ae73cda5050b108cac95de671667b6a30}{get\+Lat}} ()
+\begin{DoxyCompactList}\small\item\em Get latitude. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classLocationInfo_a3b5737b6664d0ca7a5e7a45c52c6940e}{get\+Lon}} ()
+\begin{DoxyCompactList}\small\item\em Get latitude. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLocationInfo_a721ada29e0f97ca3319594b4904e43d4}{change\+Location}} (double lat, double lon)
+\begin{DoxyCompactList}\small\item\em Updates location information. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLocationInfo_a1af4f6fda592bfb4f8d6524ffc8de328}\label{classLocationInfo_a1af4f6fda592bfb4f8d6524ffc8de328}} 
+void {\bfseries change\+Location} (std\+::string lat, std\+::string lon)
+\item 
+void \mbox{\hyperlink{classLocationInfo_a84983dc70d18812fc22fada8fea7eb07}{save\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Saves location information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLocationInfo_a018ec05136ea5017f620c9e8dc1004cc}{del\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Deletes location information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLocationInfo_ac3979e3f3f5ab783cf4efa0f2f82bebc}{load\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Loads location information from table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLocationInfo_a7b481fa3bdd9b9dae8119f28fb0d8b8d}\label{classLocationInfo_a7b481fa3bdd9b9dae8119f28fb0d8b8d}} 
+std\+::string {\bfseries username}
+\item 
+\mbox{\Hypertarget{classLocationInfo_a66de0252fdfe0904a7c1b9313b066eda}\label{classLocationInfo_a66de0252fdfe0904a7c1b9313b066eda}} 
+std\+::string {\bfseries \+\_\+lat}
+\item 
+\mbox{\Hypertarget{classLocationInfo_aec766a01ba86b9193b41c1d17d849cc7}\label{classLocationInfo_aec766a01ba86b9193b41c1d17d849cc7}} 
+std\+::string {\bfseries \+\_\+lon}
+\item 
+\mbox{\Hypertarget{classLocationInfo_a43447c6d23af011f95b3d64fbc9c3abf}\label{classLocationInfo_a43447c6d23af011f95b3d64fbc9c3abf}} 
+\mbox{\hyperlink{classDatabase}{Database}} {\bfseries db}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages user location information. 
+
+The \mbox{\hyperlink{classLocationInfo}{Location\+Info}} object stores, deletes, or changes the associated users location information in the database and. also provides this information to clients. \begin{DoxyAuthor}{Author}
+Jun Shao 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLocationInfo_a5e168be354c0748fca436211cd5b1679}\label{classLocationInfo_a5e168be354c0748fca436211cd5b1679}} 
+\index{LocationInfo@{LocationInfo}!LocationInfo@{LocationInfo}}
+\index{LocationInfo@{LocationInfo}!LocationInfo@{LocationInfo}}
+\doxysubsubsection{\texorpdfstring{LocationInfo()}{LocationInfo()}}
+{\footnotesize\ttfamily Location\+Info\+::\+Location\+Info (\begin{DoxyParamCaption}\item[{std\+::string}]{username }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor for creating a \mbox{\hyperlink{classLocationInfo}{Location\+Info}} object and initializing members. 
+\begin{DoxyParams}{Parameters}
+{\em username} & is the session username. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLocationInfo_a52af02d9e1aca120884006c3703be67f}\label{classLocationInfo_a52af02d9e1aca120884006c3703be67f}} 
+\index{LocationInfo@{LocationInfo}!````~LocationInfo@{$\sim$LocationInfo}}
+\index{````~LocationInfo@{$\sim$LocationInfo}!LocationInfo@{LocationInfo}}
+\doxysubsubsection{\texorpdfstring{$\sim$LocationInfo()}{~LocationInfo()}}
+{\footnotesize\ttfamily Location\+Info\+::$\sim$\+Location\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default destructor. 
+
+Default destructor for deleting a \mbox{\hyperlink{classLocationInfo}{Location\+Info}} object but does not do anything. \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLocationInfo_a721ada29e0f97ca3319594b4904e43d4}\label{classLocationInfo_a721ada29e0f97ca3319594b4904e43d4}} 
+\index{LocationInfo@{LocationInfo}!changeLocation@{changeLocation}}
+\index{changeLocation@{changeLocation}!LocationInfo@{LocationInfo}}
+\doxysubsubsection{\texorpdfstring{changeLocation()}{changeLocation()}}
+{\footnotesize\ttfamily void Location\+Info\+::change\+Location (\begin{DoxyParamCaption}\item[{double}]{lat,  }\item[{double}]{lon }\end{DoxyParamCaption})}
+
+
+
+Updates location information. 
+
+Changes the location information of the user given double format. 
+\begin{DoxyParams}{Parameters}
+{\em lat} & is the latitude coordinate of the new location. \\
+\hline
+{\em lon} & is the longitude coordainte of the new location. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLocationInfo_a018ec05136ea5017f620c9e8dc1004cc}\label{classLocationInfo_a018ec05136ea5017f620c9e8dc1004cc}} 
+\index{LocationInfo@{LocationInfo}!delData@{delData}}
+\index{delData@{delData}!LocationInfo@{LocationInfo}}
+\doxysubsubsection{\texorpdfstring{delData()}{delData()}}
+{\footnotesize\ttfamily void Location\+Info\+::del\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Deletes location information. 
+
+Deletes the currently stored location information of the user in the table. \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classData_a80fda217e8c5777b662bae60bce00776}{Data}}.
+
+\mbox{\Hypertarget{classLocationInfo_ae73cda5050b108cac95de671667b6a30}\label{classLocationInfo_ae73cda5050b108cac95de671667b6a30}} 
+\index{LocationInfo@{LocationInfo}!getLat@{getLat}}
+\index{getLat@{getLat}!LocationInfo@{LocationInfo}}
+\doxysubsubsection{\texorpdfstring{getLat()}{getLat()}}
+{\footnotesize\ttfamily string Location\+Info\+::get\+Lat (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get latitude. 
+
+Gets the latitude coordinate that is currently saved. \begin{DoxyReturn}{Returns}
+The latitude coordinate. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLocationInfo_a3b5737b6664d0ca7a5e7a45c52c6940e}\label{classLocationInfo_a3b5737b6664d0ca7a5e7a45c52c6940e}} 
+\index{LocationInfo@{LocationInfo}!getLon@{getLon}}
+\index{getLon@{getLon}!LocationInfo@{LocationInfo}}
+\doxysubsubsection{\texorpdfstring{getLon()}{getLon()}}
+{\footnotesize\ttfamily string Location\+Info\+::get\+Lon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get latitude. 
+
+Gets the latitude coordinate that is currently saved. \begin{DoxyReturn}{Returns}
+The latitude coordinate. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLocationInfo_ac3979e3f3f5ab783cf4efa0f2f82bebc}\label{classLocationInfo_ac3979e3f3f5ab783cf4efa0f2f82bebc}} 
+\index{LocationInfo@{LocationInfo}!loadData@{loadData}}
+\index{loadData@{loadData}!LocationInfo@{LocationInfo}}
+\doxysubsubsection{\texorpdfstring{loadData()}{loadData()}}
+{\footnotesize\ttfamily void Location\+Info\+::load\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads location information from table. 
+
+Loads any previously saved location information of the user from the table. \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLocationInfo_a84983dc70d18812fc22fada8fea7eb07}\label{classLocationInfo_a84983dc70d18812fc22fada8fea7eb07}} 
+\index{LocationInfo@{LocationInfo}!saveData@{saveData}}
+\index{saveData@{saveData}!LocationInfo@{LocationInfo}}
+\doxysubsubsection{\texorpdfstring{saveData()}{saveData()}}
+{\footnotesize\ttfamily void Location\+Info\+::save\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Saves location information. 
+
+Saves the currently stored location information of the user to the table. \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classData_a1e9710ed430d1183985f285cf742da65}{Data}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+data/location/Location\+Info.\+h\item 
+data/location/Location\+Info.\+cpp\end{DoxyCompactItemize}

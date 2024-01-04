@@ -1,0 +1,410 @@
+\hypertarget{classWt_1_1WTime}{}\doxysection{Wt\+::W\+Time Class Reference}
+\label{classWt_1_1WTime}\index{Wt::WTime@{Wt::WTime}}
+
+
+A value class that defines a clock time.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Time.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::W\+Time\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WTime_1_1ParseState}{Parse\+State}}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WTime_1_1RegExpInfo}{Reg\+Exp\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WTime_af45b86652752e63c00baee8662d793e3}{W\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Construct a {\itshape Null} time. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTime_a529d211c58a37ad4568745414c4a25c8}{W\+Time}} (int h, int m, int s=0, int ms=0)
+\begin{DoxyCompactList}\small\item\em Construct a time given hour, minutes, seconds, and milliseconds. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WTime_ae506c60945d8c2a452233ade046fa9ac}{set\+H\+MS}} (int h, int m, int s, int ms=0)
+\begin{DoxyCompactList}\small\item\em Sets the time. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} \mbox{\hyperlink{classWt_1_1WTime_a0b4cd53f68902477dcb8735193d5b53c}{add\+Secs}} (int s) const
+\begin{DoxyCompactList}\small\item\em Adds seconds. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} \mbox{\hyperlink{classWt_1_1WTime_a575e5d72e8798921fe88e6d2785eafcd}{add\+M\+Secs}} (int ms) const
+\begin{DoxyCompactList}\small\item\em Adds milliseconds. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WTime_a69f4015b6f6627fe02dc04a72ef81ad8}{is\+Null}} () const
+\begin{DoxyCompactList}\small\item\em Returns if this time is {\itshape Null}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTime_a2034c0c43e8e04b2272fe584bf5b0786}\label{classWt_1_1WTime_a2034c0c43e8e04b2272fe584bf5b0786}} 
+bool \mbox{\hyperlink{classWt_1_1WTime_a2034c0c43e8e04b2272fe584bf5b0786}{is\+Valid}} () const
+\begin{DoxyCompactList}\small\item\em Returns if this time is valid. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTime_a01d82d0910766607a881d59b3b8996f7}\label{classWt_1_1WTime_a01d82d0910766607a881d59b3b8996f7}} 
+int \mbox{\hyperlink{classWt_1_1WTime_a01d82d0910766607a881d59b3b8996f7}{hour}} () const
+\begin{DoxyCompactList}\small\item\em Returns the hour. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTime_a356dcc6bb561c971ee7ec7b67cda29c6}\label{classWt_1_1WTime_a356dcc6bb561c971ee7ec7b67cda29c6}} 
+int \mbox{\hyperlink{classWt_1_1WTime_a356dcc6bb561c971ee7ec7b67cda29c6}{minute}} () const
+\begin{DoxyCompactList}\small\item\em Returns the minutes (0-\/59). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTime_a0431e8efc09305f95652161722e97fe8}\label{classWt_1_1WTime_a0431e8efc09305f95652161722e97fe8}} 
+int \mbox{\hyperlink{classWt_1_1WTime_a0431e8efc09305f95652161722e97fe8}{second}} () const
+\begin{DoxyCompactList}\small\item\em Returns the seconds (0-\/59). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTime_a58a4d2f9aa22d3b10988c093d5964804}\label{classWt_1_1WTime_a58a4d2f9aa22d3b10988c093d5964804}} 
+int \mbox{\hyperlink{classWt_1_1WTime_a58a4d2f9aa22d3b10988c093d5964804}{msec}} () const
+\begin{DoxyCompactList}\small\item\em Returns the milliseconds (0-\/999) \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{classWt_1_1WTime_ad66a14ac1a75aa33f76dc46a467fcc3f}{secs\+To}} (const \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} \&t) const
+\begin{DoxyCompactList}\small\item\em Returns the difference between two time values (in seconds). \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{classWt_1_1WTime_aaf02970ab350914978888deb51421ee3}{msecs\+To}} (const \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} \&t) const
+\begin{DoxyCompactList}\small\item\em Returns the difference between two time values (in milliseconds). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTime_aaa29ba291d6b35f6f8f0181541c45c44}\label{classWt_1_1WTime_aaa29ba291d6b35f6f8f0181541c45c44}} 
+bool \mbox{\hyperlink{classWt_1_1WTime_aaa29ba291d6b35f6f8f0181541c45c44}{operator$<$}} (const \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} \&other) const
+\begin{DoxyCompactList}\small\item\em Compares two time values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTime_a11a19809778a1507c38d9fcf025c2198}\label{classWt_1_1WTime_a11a19809778a1507c38d9fcf025c2198}} 
+bool \mbox{\hyperlink{classWt_1_1WTime_a11a19809778a1507c38d9fcf025c2198}{operator$<$=}} (const \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} \&other) const
+\begin{DoxyCompactList}\small\item\em Compares two time values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTime_a4f569dc5358a0d60bf328ab03b21586b}\label{classWt_1_1WTime_a4f569dc5358a0d60bf328ab03b21586b}} 
+bool \mbox{\hyperlink{classWt_1_1WTime_a4f569dc5358a0d60bf328ab03b21586b}{operator$>$}} (const \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} \&other) const
+\begin{DoxyCompactList}\small\item\em Compares two time values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTime_a634273ebe8d971aa06d3a66732c82dc9}\label{classWt_1_1WTime_a634273ebe8d971aa06d3a66732c82dc9}} 
+bool \mbox{\hyperlink{classWt_1_1WTime_a634273ebe8d971aa06d3a66732c82dc9}{operator$>$=}} (const \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} \&other) const
+\begin{DoxyCompactList}\small\item\em Compares two time values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTime_a74316f0cff0a28b42ccfbe8fb4c70f60}\label{classWt_1_1WTime_a74316f0cff0a28b42ccfbe8fb4c70f60}} 
+bool \mbox{\hyperlink{classWt_1_1WTime_a74316f0cff0a28b42ccfbe8fb4c70f60}{operator==}} (const \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} \&other) const
+\begin{DoxyCompactList}\small\item\em Compares two time values. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTime_aedaa7f3e5cd5c2ba906ffa541f354c59}\label{classWt_1_1WTime_aedaa7f3e5cd5c2ba906ffa541f354c59}} 
+bool \mbox{\hyperlink{classWt_1_1WTime_aedaa7f3e5cd5c2ba906ffa541f354c59}{operator!=}} (const \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} \&other) const
+\begin{DoxyCompactList}\small\item\em Compares two time values. \end{DoxyCompactList}\item 
+W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \mbox{\hyperlink{classWt_1_1WTime_a2f0fae3bf317c98830f3075f022d2071}{to\+String}} () const
+\begin{DoxyCompactList}\small\item\em Formats this time to a string using a default format. \end{DoxyCompactList}\item 
+W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \mbox{\hyperlink{classWt_1_1WTime_aaf72f5f9c45b65c065d0da1a73514852}{to\+String}} (const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&format) const
+\begin{DoxyCompactList}\small\item\em Formats this time to a string using a specified format. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTime_ae351a4efd2ae0dff001020a0d3c5e342}\label{classWt_1_1WTime_ae351a4efd2ae0dff001020a0d3c5e342}} 
+std\+::chrono\+::duration$<$ int, std\+::milli $>$ {\bfseries to\+Time\+Duration} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTime_aff90ff7238fe00b9eb8dc998d059930b}\label{classWt_1_1WTime_aff90ff7238fe00b9eb8dc998d059930b}} 
+static W\+T\+\_\+\+U\+S\+T\+R\+I\+NG {\bfseries default\+Format} ()
+\item 
+static \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} \mbox{\hyperlink{classWt_1_1WTime_a835a944103515d4f89b418b54632ac95}{from\+String}} (const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&s)
+\begin{DoxyCompactList}\small\item\em Parses a string to a time using a default format. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} \mbox{\hyperlink{classWt_1_1WTime_a4f925a7de314ce1bd196689751275ce2}{from\+String}} (const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&s, const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&format)
+\begin{DoxyCompactList}\small\item\em Parses a string to a time using a specified format. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} \mbox{\hyperlink{classWt_1_1WTime_a86779c3db4114df023985b4cdb70f178}{current\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Reports the current client date. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} \mbox{\hyperlink{classWt_1_1WTime_acde4e6e6ccb3e896e58d759c8f20daf3}{current\+Server\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Reports the current server time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTime_a1da227d0c72cff0040ff55ce6fee958a}\label{classWt_1_1WTime_a1da227d0c72cff0040ff55ce6fee958a}} 
+static \mbox{\hyperlink{structWt_1_1WTime_1_1RegExpInfo}{Reg\+Exp\+Info}} {\bfseries format\+To\+Reg\+Exp} (const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&format)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTime_ab110ef62ac1dc19e4306221d0f5ebc69}\label{classWt_1_1WTime_ab110ef62ac1dc19e4306221d0f5ebc69}} 
+static \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} {\bfseries from\+Time\+Duration} (const std\+::chrono\+::duration$<$ int, std\+::milli $>$ \&duration)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTime_af38501e5c671f66a6c0b38b29bfc5e89}\label{classWt_1_1WTime_af38501e5c671f66a6c0b38b29bfc5e89}} 
+{\bfseries W\+Time} (long time)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTime_add5b910cfbea8aa95b3a2051d237433c}\label{classWt_1_1WTime_add5b910cfbea8aa95b3a2051d237433c}} 
+bool {\bfseries write\+Special} (const std\+::string \&f, unsigned \&i, \mbox{\hyperlink{classWt_1_1WStringStream}{W\+String\+Stream}} \&result, bool use\+A\+M\+PM, int zone\+Offset) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WTime_acec394d9527e25aed0417b41db178e23}\label{classWt_1_1WTime_acec394d9527e25aed0417b41db178e23}} 
+int {\bfseries pmhour} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTime_ab19f213aefa9b174a1b8a1d62eb09cdd}\label{classWt_1_1WTime_ab19f213aefa9b174a1b8a1d62eb09cdd}} 
+static bool {\bfseries parse\+Last} (const std\+::string \&v, unsigned \&vi, \mbox{\hyperlink{structWt_1_1WTime_1_1ParseState}{Parse\+State}} \&parse, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&format)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTime_ae7ada447da9b08ba39df79a46ff96325}\label{classWt_1_1WTime_ae7ada447da9b08ba39df79a46ff96325}} 
+static W\+Date\+Time\+::\+Char\+State {\bfseries handle\+Special} (char c, const std\+::string \&v, unsigned \&vi, \mbox{\hyperlink{structWt_1_1WTime_1_1ParseState}{Parse\+State}} \&parse, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&format)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTime_ab7b9a0ecbc3a1db2d815e9e62afb6541}\label{classWt_1_1WTime_ab7b9a0ecbc3a1db2d815e9e62afb6541}} 
+static \mbox{\hyperlink{structWt_1_1WTime_1_1RegExpInfo}{Reg\+Exp\+Info}} {\bfseries format\+Hour\+To\+Reg\+Exp} (\mbox{\hyperlink{structWt_1_1WTime_1_1RegExpInfo}{Reg\+Exp\+Info}} \&result, const std\+::string \&format, unsigned \&i, int \&current\+Group)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTime_a6c19de60b392d07220124011f403d6f5}\label{classWt_1_1WTime_a6c19de60b392d07220124011f403d6f5}} 
+static \mbox{\hyperlink{structWt_1_1WTime_1_1RegExpInfo}{Reg\+Exp\+Info}} {\bfseries format\+Minute\+To\+Reg\+Exp} (\mbox{\hyperlink{structWt_1_1WTime_1_1RegExpInfo}{Reg\+Exp\+Info}} \&result, const std\+::string \&format, unsigned \&i, int \&current\+Group)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTime_a16d1d331835b5fa79558efdc93c172a5}\label{classWt_1_1WTime_a16d1d331835b5fa79558efdc93c172a5}} 
+static \mbox{\hyperlink{structWt_1_1WTime_1_1RegExpInfo}{Reg\+Exp\+Info}} {\bfseries format\+Second\+To\+Reg\+Exp} (\mbox{\hyperlink{structWt_1_1WTime_1_1RegExpInfo}{Reg\+Exp\+Info}} \&result, const std\+::string \&format, unsigned \&i, int \&current\+Group)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTime_a4673fc3eeeff1a1bf0ac11b450bed53a}\label{classWt_1_1WTime_a4673fc3eeeff1a1bf0ac11b450bed53a}} 
+static \mbox{\hyperlink{structWt_1_1WTime_1_1RegExpInfo}{Reg\+Exp\+Info}} {\bfseries format\+M\+Second\+To\+Reg\+Exp} (\mbox{\hyperlink{structWt_1_1WTime_1_1RegExpInfo}{Reg\+Exp\+Info}} \&result, const std\+::string \&format, unsigned \&i, int \&current\+Group)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTime_add26f0919711ceda6b53cb5bf01ae599}\label{classWt_1_1WTime_add26f0919711ceda6b53cb5bf01ae599}} 
+static \mbox{\hyperlink{structWt_1_1WTime_1_1RegExpInfo}{Reg\+Exp\+Info}} {\bfseries format\+A\+P\+To\+Reg\+Exp} (\mbox{\hyperlink{structWt_1_1WTime_1_1RegExpInfo}{Reg\+Exp\+Info}} \&result, const std\+::string \&format, unsigned \&i)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTime_a744a8d4a17f23333e6f38af415b54426}\label{classWt_1_1WTime_a744a8d4a17f23333e6f38af415b54426}} 
+static \mbox{\hyperlink{structWt_1_1WTime_1_1RegExpInfo}{Reg\+Exp\+Info}} {\bfseries process\+Char} (\mbox{\hyperlink{structWt_1_1WTime_1_1RegExpInfo}{Reg\+Exp\+Info}} \&result, const std\+::string \&format, unsigned \&i)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTime_a8bb53c9866f277fc65029f2c61c9c08f}\label{classWt_1_1WTime_a8bb53c9866f277fc65029f2c61c9c08f}} 
+static bool {\bfseries uses\+Am\+Pm} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&format)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTime_a1c6cbf255a1e0e0c1f2c08618d9ecdf0}\label{classWt_1_1WTime_a1c6cbf255a1e0e0c1f2c08618d9ecdf0}} 
+bool {\bfseries valid\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTime_a8c2cade4db6913ffe1ca5bcfde674fbd}\label{classWt_1_1WTime_a8c2cade4db6913ffe1ca5bcfde674fbd}} 
+bool {\bfseries null\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTime_aef9ab1a34ba670c34c84852d869d41de}\label{classWt_1_1WTime_aef9ab1a34ba670c34c84852d869d41de}} 
+long {\bfseries time\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTime_ab4be273738e53b3ebd2b3044f6309c65}\label{classWt_1_1WTime_ab4be273738e53b3ebd2b3044f6309c65}} 
+class {\bfseries W\+Date\+Time}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTime_a9407e994db0f4dbedd9ec69cadc0d4c9}\label{classWt_1_1WTime_a9407e994db0f4dbedd9ec69cadc0d4c9}} 
+class {\bfseries W\+Time\+Picker}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A value class that defines a clock time. 
+
+A clock time represents the time of day (usually 0 to 24 hour), up to millisecond precision.
+
+As of version \%3.\+3.\+1, the time class itself will no longer limit times to the 24-\/hour range, but will allow any time (duration), including negative values.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WDate}{W\+Date}}, \mbox{\hyperlink{classWt_1_1WDateTime}{W\+Date\+Time}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WTime_af45b86652752e63c00baee8662d793e3}\label{classWt_1_1WTime_af45b86652752e63c00baee8662d793e3}} 
+\index{Wt::WTime@{Wt::WTime}!WTime@{WTime}}
+\index{WTime@{WTime}!Wt::WTime@{Wt::WTime}}
+\doxysubsubsection{\texorpdfstring{WTime()}{WTime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Time\+::\+W\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a {\itshape Null} time. 
+
+A time for which \mbox{\hyperlink{classWt_1_1WTime_a69f4015b6f6627fe02dc04a72ef81ad8}{is\+Null()}} returns true. A {\itshape Null} time is also invalid.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTime_a2034c0c43e8e04b2272fe584bf5b0786}{is\+Valid()}}, \mbox{\hyperlink{classWt_1_1WTime_a69f4015b6f6627fe02dc04a72ef81ad8}{is\+Null()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTime_a529d211c58a37ad4568745414c4a25c8}\label{classWt_1_1WTime_a529d211c58a37ad4568745414c4a25c8}} 
+\index{Wt::WTime@{Wt::WTime}!WTime@{WTime}}
+\index{WTime@{WTime}!Wt::WTime@{Wt::WTime}}
+\doxysubsubsection{\texorpdfstring{WTime()}{WTime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Time\+::\+W\+Time (\begin{DoxyParamCaption}\item[{int}]{h,  }\item[{int}]{m,  }\item[{int}]{s = {\ttfamily 0},  }\item[{int}]{ms = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Construct a time given hour, minutes, seconds, and milliseconds. 
+
+{\ttfamily m} and {\ttfamily s} have range 0-\/59, and {\ttfamily ms} has range 0-\/999. A duration can be positive or negative depending on the sign of {\ttfamily h}.
+
+When the time is invalid, \mbox{\hyperlink{classWt_1_1WTime_a2034c0c43e8e04b2272fe584bf5b0786}{is\+Valid()}} is set to {\ttfamily false}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WTime_a575e5d72e8798921fe88e6d2785eafcd}\label{classWt_1_1WTime_a575e5d72e8798921fe88e6d2785eafcd}} 
+\index{Wt::WTime@{Wt::WTime}!addMSecs@{addMSecs}}
+\index{addMSecs@{addMSecs}!Wt::WTime@{Wt::WTime}}
+\doxysubsubsection{\texorpdfstring{addMSecs()}{addMSecs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} Wt\+::\+W\+Time\+::add\+M\+Secs (\begin{DoxyParamCaption}\item[{int}]{ms }\end{DoxyParamCaption}) const}
+
+
+
+Adds milliseconds. 
+
+Returns a time that is {\ttfamily ms} milliseconds later than this time. Negative values for {\ttfamily ms} will result in a time that is as many milliseconds earlier. \mbox{\Hypertarget{classWt_1_1WTime_a0b4cd53f68902477dcb8735193d5b53c}\label{classWt_1_1WTime_a0b4cd53f68902477dcb8735193d5b53c}} 
+\index{Wt::WTime@{Wt::WTime}!addSecs@{addSecs}}
+\index{addSecs@{addSecs}!Wt::WTime@{Wt::WTime}}
+\doxysubsubsection{\texorpdfstring{addSecs()}{addSecs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} Wt\+::\+W\+Time\+::add\+Secs (\begin{DoxyParamCaption}\item[{int}]{s }\end{DoxyParamCaption}) const}
+
+
+
+Adds seconds. 
+
+Returns a time that is {\ttfamily s} seconds later than this time. Negative values for {\ttfamily s} will result in a time that is as many seconds earlier. \mbox{\Hypertarget{classWt_1_1WTime_acde4e6e6ccb3e896e58d759c8f20daf3}\label{classWt_1_1WTime_acde4e6e6ccb3e896e58d759c8f20daf3}} 
+\index{Wt::WTime@{Wt::WTime}!currentServerTime@{currentServerTime}}
+\index{currentServerTime@{currentServerTime}!Wt::WTime@{Wt::WTime}}
+\doxysubsubsection{\texorpdfstring{currentServerTime()}{currentServerTime()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} Wt\+::\+W\+Time\+::current\+Server\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Reports the current server time. 
+
+This method returns the local time on the server.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WDateTime_accc1d6a4815dab7c5e5332b494130178}{W\+Date\+Time\+::current\+Date\+Time()}}, \mbox{\hyperlink{classWt_1_1WLocalDateTime_ab0debabf1396279f3eff791463ca68dc}{W\+Local\+Date\+Time\+::current\+Server\+Date\+Time()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTime_a86779c3db4114df023985b4cdb70f178}\label{classWt_1_1WTime_a86779c3db4114df023985b4cdb70f178}} 
+\index{Wt::WTime@{Wt::WTime}!currentTime@{currentTime}}
+\index{currentTime@{currentTime}!Wt::WTime@{Wt::WTime}}
+\doxysubsubsection{\texorpdfstring{currentTime()}{currentTime()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} Wt\+::\+W\+Time\+::current\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Reports the current client date. 
+
+This method uses browser information to retrieve the time that is configured in the client.
+
+\begin{DoxySeeAlso}{See also}
+W\+Local\+Date\+Time\+::current\+Date() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTime_a835a944103515d4f89b418b54632ac95}\label{classWt_1_1WTime_a835a944103515d4f89b418b54632ac95}} 
+\index{Wt::WTime@{Wt::WTime}!fromString@{fromString}}
+\index{fromString@{fromString}!Wt::WTime@{Wt::WTime}}
+\doxysubsubsection{\texorpdfstring{fromString()}{fromString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} Wt\+::\+W\+Time\+::from\+String (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parses a string to a time using a default format. 
+
+The default format is \char`\"{}hh\+:mm\+:ss\char`\"{}. For example, a time specified as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{stringliteral}{"22:55:15"}}
+\end{DoxyCode}
+ will be parsed as a time that equals a time constructed as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WTime_af45b86652752e63c00baee8662d793e3}{WTime}} d(22,55,15);}
+\end{DoxyCode}
+
+
+When the time could not be parsed or is not valid, an invalid time is returned (for which \mbox{\hyperlink{classWt_1_1WTime_a2034c0c43e8e04b2272fe584bf5b0786}{is\+Valid()}} returns false).
+
+\begin{DoxySeeAlso}{See also}
+from\+String(const W\+String\& s, const W\+String\& format), \mbox{\hyperlink{classWt_1_1WTime_a2034c0c43e8e04b2272fe584bf5b0786}{is\+Valid()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTime_a4f925a7de314ce1bd196689751275ce2}\label{classWt_1_1WTime_a4f925a7de314ce1bd196689751275ce2}} 
+\index{Wt::WTime@{Wt::WTime}!fromString@{fromString}}
+\index{fromString@{fromString}!Wt::WTime@{Wt::WTime}}
+\doxysubsubsection{\texorpdfstring{fromString()}{fromString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} Wt\+::\+W\+Time\+::from\+String (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{s,  }\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Parses a string to a time using a specified format. 
+
+The {\ttfamily format} follows the same syntax as used by \mbox{\hyperlink{}{to\+String(const W\+String\& format)}}.
+
+When the time could not be parsed or is not valid, an invalid time is returned (for which \mbox{\hyperlink{classWt_1_1WTime_a2034c0c43e8e04b2272fe584bf5b0786}{is\+Valid()}} returns false).
+
+\begin{DoxySeeAlso}{See also}
+to\+String(const W\+String\&) const 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTime_a69f4015b6f6627fe02dc04a72ef81ad8}\label{classWt_1_1WTime_a69f4015b6f6627fe02dc04a72ef81ad8}} 
+\index{Wt::WTime@{Wt::WTime}!isNull@{isNull}}
+\index{isNull@{isNull}!Wt::WTime@{Wt::WTime}}
+\doxysubsubsection{\texorpdfstring{isNull()}{isNull()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Time\+::is\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns if this time is {\itshape Null}. 
+
+A null time is also invalid.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTime_a2034c0c43e8e04b2272fe584bf5b0786}{is\+Valid()}}, \mbox{\hyperlink{classWt_1_1WTime_af45b86652752e63c00baee8662d793e3}{W\+Time()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTime_aaf02970ab350914978888deb51421ee3}\label{classWt_1_1WTime_aaf02970ab350914978888deb51421ee3}} 
+\index{Wt::WTime@{Wt::WTime}!msecsTo@{msecsTo}}
+\index{msecsTo@{msecsTo}!Wt::WTime@{Wt::WTime}}
+\doxysubsubsection{\texorpdfstring{msecsTo()}{msecsTo()}}
+{\footnotesize\ttfamily long Wt\+::\+W\+Time\+::msecs\+To (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} \&}]{t }\end{DoxyParamCaption}) const}
+
+
+
+Returns the difference between two time values (in milliseconds). 
+
+The result is negative if t is earlier than this. \mbox{\Hypertarget{classWt_1_1WTime_ad66a14ac1a75aa33f76dc46a467fcc3f}\label{classWt_1_1WTime_ad66a14ac1a75aa33f76dc46a467fcc3f}} 
+\index{Wt::WTime@{Wt::WTime}!secsTo@{secsTo}}
+\index{secsTo@{secsTo}!Wt::WTime@{Wt::WTime}}
+\doxysubsubsection{\texorpdfstring{secsTo()}{secsTo()}}
+{\footnotesize\ttfamily long Wt\+::\+W\+Time\+::secs\+To (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WTime}{W\+Time}} \&}]{t }\end{DoxyParamCaption}) const}
+
+
+
+Returns the difference between two time values (in seconds). 
+
+The result is negative if t is earlier than this. \mbox{\Hypertarget{classWt_1_1WTime_ae506c60945d8c2a452233ade046fa9ac}\label{classWt_1_1WTime_ae506c60945d8c2a452233ade046fa9ac}} 
+\index{Wt::WTime@{Wt::WTime}!setHMS@{setHMS}}
+\index{setHMS@{setHMS}!Wt::WTime@{Wt::WTime}}
+\doxysubsubsection{\texorpdfstring{setHMS()}{setHMS()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Time\+::set\+H\+MS (\begin{DoxyParamCaption}\item[{int}]{h,  }\item[{int}]{m,  }\item[{int}]{s,  }\item[{int}]{ms = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Sets the time. 
+
+{\ttfamily m} and {\ttfamily s} have range 0-\/59, and {\ttfamily ms} has range 0-\/999.
+
+When the time is invalid, \mbox{\hyperlink{classWt_1_1WTime_a2034c0c43e8e04b2272fe584bf5b0786}{is\+Valid()}} is set to {\ttfamily false}. \mbox{\Hypertarget{classWt_1_1WTime_a2f0fae3bf317c98830f3075f022d2071}\label{classWt_1_1WTime_a2f0fae3bf317c98830f3075f022d2071}} 
+\index{Wt::WTime@{Wt::WTime}!toString@{toString}}
+\index{toString@{toString}!Wt::WTime@{Wt::WTime}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily W\+T\+\_\+\+U\+S\+T\+R\+I\+NG Wt\+::\+W\+Time\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Formats this time to a string using a default format. 
+
+The default format is \char`\"{}hh\+:mm\+:ss\char`\"{}. \mbox{\Hypertarget{classWt_1_1WTime_aaf72f5f9c45b65c065d0da1a73514852}\label{classWt_1_1WTime_aaf72f5f9c45b65c065d0da1a73514852}} 
+\index{Wt::WTime@{Wt::WTime}!toString@{toString}}
+\index{toString@{toString}!Wt::WTime@{Wt::WTime}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily W\+T\+\_\+\+U\+S\+T\+R\+I\+NG Wt\+::\+W\+Time\+::to\+String (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{format }\end{DoxyParamCaption}) const}
+
+
+
+Formats this time to a string using a specified format. 
+
+The {\ttfamily format} is a string in which the following contents has a special meaning.
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+{\bfseries{Code}}&{\bfseries{Meaning}} &{\bfseries{Example (for 14\+:06\+:23.\+045)}} \\\cline{1-3}
+h&The hour without leading zero (0-\/23 or 1-\/12 for A\+M/\+PM display) &14 or 2 \\\cline{1-3}
+hh&The hour with leading zero (00-\/23 or 01-\/12 for A\+M/\+PM display) &14 or 02 \\\cline{1-3}
+H&The hour without leading zero (0-\/23) &14 \\\cline{1-3}
+HH&The hour with leading zero (00-\/23) &14 \\\cline{1-3}
++ followed by (h/hh/\+H/\+HH)&The sign of the hour (+/-\/) &+ \\\cline{1-3}
+m&The minutes without leading zero (0-\/59) &6 \\\cline{1-3}
+mm&The minutes with leading zero (00-\/59) &06 \\\cline{1-3}
+s&The seconds without leading zero (0-\/59) &23 \\\cline{1-3}
+ss&The seconds with leading zero (00-\/59) &23 \\\cline{1-3}
+z&The milliseconds without leading zero (0-\/999) &45 \\\cline{1-3}
+zzz&The millisecons with leading zero (000-\/999) &045 \\\cline{1-3}
+AP or A&use A\+M/\+PM display\+: affects h or hh display and is replaced itself by A\+M/\+PM &PM \\\cline{1-3}
+ap or a&use am/pm display\+: affects h or hh display and is replaced itself by am/pm &pm \\\cline{1-3}
+Z&the timezone in R\+FC 822 format (e.\+g. -\/0800) &+0000 \\\cline{1-3}
+\end{longtabu}
+
+
+Any other text is kept literally. String content between single quotes (\textquotesingle{}) are not interpreted as special codes. Label\+Option\+::\+Inside a string, a literal quote may be specifed using a double quote (\textquotesingle{}\textquotesingle{}).
+
+Examples of format and result\+: \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+{\bfseries{Format}}&{\bfseries{Result (for 22\+:53\+:13.\+078)}} \\\cline{1-2}
+hh\+:mm\+:ss.\+zzz&22\+:53\+:13.\+078 \\\cline{1-2}
+hh\+:mm\+:ss AP&10\+:53\+:13 PM \\\cline{1-2}
+\end{longtabu}
+
+
+\begin{DoxySeeAlso}{See also}
+from\+String(const W\+String\& value, const W\+String\& format) 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Time.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,59 @@
+\hypertarget{classFileTreeTableNode}{}\doxysection{File\+Tree\+Table\+Node Class Reference}
+\label{classFileTreeTableNode}\index{FileTreeTableNode@{FileTreeTableNode}}
+
+
+A single node in a file tree table.  
+
+
+
+
+{\ttfamily \#include $<$File\+Tree\+Table\+Node.\+h$>$}
+
+
+
+Inheritance diagram for File\+Tree\+Table\+Node\+:
+% FIG 0
+
+
+Collaboration diagram for File\+Tree\+Table\+Node\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFileTreeTableNode_ad3dcd44cf30aaab34ee104f5bce5b1fe}\label{classFileTreeTableNode_ad3dcd44cf30aaab34ee104f5bce5b1fe}} 
+\mbox{\hyperlink{classFileTreeTableNode_ad3dcd44cf30aaab34ee104f5bce5b1fe}{File\+Tree\+Table\+Node}} (const boost\+::filesystem\+::path \&path)
+\begin{DoxyCompactList}\small\item\em Construct a new node for the given file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFileTreeTableNode_ab89c0a9ba8ff7df80fc4e67902fa0e04}\label{classFileTreeTableNode_ab89c0a9ba8ff7df80fc4e67902fa0e04}} 
+virtual void \mbox{\hyperlink{classFileTreeTableNode_ab89c0a9ba8ff7df80fc4e67902fa0e04}{populate}} () override
+\begin{DoxyCompactList}\small\item\em Reimplements W\+Tree\+Node\+::populate to read files within a directory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFileTreeTableNode_a718393387da9dc242af1d44bdb5f2b9a}\label{classFileTreeTableNode_a718393387da9dc242af1d44bdb5f2b9a}} 
+virtual bool \mbox{\hyperlink{classFileTreeTableNode_a718393387da9dc242af1d44bdb5f2b9a}{expandable}} () override
+\begin{DoxyCompactList}\small\item\em Reimplements W\+Tree\+Node\+::expandable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFileTreeTableNode_af90c4a0fc964e58fa2d791ae77817eef}\label{classFileTreeTableNode_af90c4a0fc964e58fa2d791ae77817eef}} 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WIconPair}{W\+Icon\+Pair}} $>$ \mbox{\hyperlink{classFileTreeTableNode_af90c4a0fc964e58fa2d791ae77817eef}{create\+Icon}} (const boost\+::filesystem\+::path \&path)
+\begin{DoxyCompactList}\small\item\em Create the iconpair for representing the path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFileTreeTableNode_a27263407eedaf759152902162099da62}\label{classFileTreeTableNode_a27263407eedaf759152902162099da62}} 
+boost\+::filesystem\+::path \mbox{\hyperlink{classFileTreeTableNode_a27263407eedaf759152902162099da62}{path\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The path. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A single node in a file tree table. 
+
+The node manages the details about one file, and if the file is a directory, populates a subtree with nodes for every directory item.
+
+The tree node reimplements \mbox{\hyperlink{classWt_1_1WTreeNode_a4721df55d08218f4ca114a885d5018fb}{Wt\+::\+W\+Tree\+Table\+Node\+::populate()}} to populate a directory node only when the node is expanded. In this way, only directories that are actually browsed are loaded from disk. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/filetreetable/File\+Tree\+Table\+Node.\+h\end{DoxyCompactItemize}

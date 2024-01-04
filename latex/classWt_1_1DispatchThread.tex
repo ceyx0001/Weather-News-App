@@ -1,0 +1,102 @@
+\hypertarget{classWt_1_1DispatchThread}{}\doxysection{Wt\+::Dispatch\+Thread Class Reference}
+\label{classWt_1_1DispatchThread}\index{Wt::DispatchThread@{Wt::DispatchThread}}
+
+
+Inheritance diagram for Wt\+::Dispatch\+Thread\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Dispatch\+Thread\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_a5d437e8f6f8b91fa3f6005609ac6d20b}\label{classWt_1_1DispatchThread_a5d437e8f6f8b91fa3f6005609ac6d20b}} 
+{\bfseries Dispatch\+Thread} (\mbox{\hyperlink{classWt_1_1WQApplication}{W\+Q\+Application}} $\ast$app, bool with\+Event\+Loop)
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_ada570234b95505fc183f045bb27925c2}\label{classWt_1_1DispatchThread_ada570234b95505fc183f045bb27925c2}} 
+virtual void {\bfseries run} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_ab53d4d5b769285445866c8df07a8acd1}\label{classWt_1_1DispatchThread_ab53d4d5b769285445866c8df07a8acd1}} 
+std\+::unique\+\_\+lock$<$ std\+::mutex $>$ $\ast$ {\bfseries event\+Lock} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_ade5c514641477d6f6a2c0eabd04a3528}\label{classWt_1_1DispatchThread_ade5c514641477d6f6a2c0eabd04a3528}} 
+void {\bfseries notify} (const \mbox{\hyperlink{classWt_1_1WEvent}{W\+Event}} \&event)
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_a753f9973d73dbe34aff9b26fa681343b}\label{classWt_1_1DispatchThread_a753f9973d73dbe34aff9b26fa681343b}} 
+void {\bfseries destroy} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_a87256321ac88fad57b43f4e883d0454d}\label{classWt_1_1DispatchThread_a87256321ac88fad57b43f4e883d0454d}} 
+bool {\bfseries exception} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_ac107dd106baf89aecc17fc89cfe51a52}\label{classWt_1_1DispatchThread_ac107dd106baf89aecc17fc89cfe51a52}} 
+void {\bfseries reset\+Exception} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_a4a7f5855e628338840fa50ed4956f523}\label{classWt_1_1DispatchThread_a4a7f5855e628338840fa50ed4956f523}} 
+void {\bfseries wait\+Done} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_a421a244f3980652244619817624df511}\label{classWt_1_1DispatchThread_a421a244f3980652244619817624df511}} 
+void {\bfseries do\+Event} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_ac1aa782e610b029b2626450383167bdc}\label{classWt_1_1DispatchThread_ac1aa782e610b029b2626450383167bdc}} 
+void {\bfseries signal\+Done} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_a3a5e79487bb401c9f4cb0bd43021f798}\label{classWt_1_1DispatchThread_a3a5e79487bb401c9f4cb0bd43021f798}} 
+void {\bfseries my\+Exec} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_a5631cbbf3cde7cfd20f41b883e7c8519}\label{classWt_1_1DispatchThread_a5631cbbf3cde7cfd20f41b883e7c8519}} 
+void {\bfseries my\+Propagate\+Event} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_a53adcd9caaa7326f5cc0e244bd778e7c}\label{classWt_1_1DispatchThread_a53adcd9caaa7326f5cc0e244bd778e7c}} 
+\mbox{\hyperlink{classWt_1_1WQApplication}{W\+Q\+Application}} $\ast$ {\bfseries app\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_ad47fbb83827e114ff1ec5661e33548f4}\label{classWt_1_1DispatchThread_ad47fbb83827e114ff1ec5661e33548f4}} 
+bool {\bfseries qt\+Event\+Loop\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_a9b56721cb3a5c9dd2ba56e06d5f2acf1}\label{classWt_1_1DispatchThread_a9b56721cb3a5c9dd2ba56e06d5f2acf1}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1DispatchObject}{Dispatch\+Object}} $>$ {\bfseries dispatch\+Object\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_a509caf1584842acad8819ffab4c6d97b}\label{classWt_1_1DispatchThread_a509caf1584842acad8819ffab4c6d97b}} 
+const \mbox{\hyperlink{classWt_1_1WEvent}{W\+Event}} $\ast$ {\bfseries event\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_a7cef4ad075db5afea8df78a22d7261bd}\label{classWt_1_1DispatchThread_a7cef4ad075db5afea8df78a22d7261bd}} 
+bool {\bfseries exception\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_a8112e4872778af8da8b26bfe82c99f63}\label{classWt_1_1DispatchThread_a8112e4872778af8da8b26bfe82c99f63}} 
+std\+::mutex {\bfseries done\+Mutex\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_ade354df64ba6b65d66a136044b0a56a4}\label{classWt_1_1DispatchThread_ade354df64ba6b65d66a136044b0a56a4}} 
+bool {\bfseries done\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_a5331730fb280c4f0f7b2dbc9f8a29735}\label{classWt_1_1DispatchThread_a5331730fb280c4f0f7b2dbc9f8a29735}} 
+std\+::condition\+\_\+variable {\bfseries done\+Condition\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_a16ce7814c818d1fe3bcfc944dffcde5e}\label{classWt_1_1DispatchThread_a16ce7814c818d1fe3bcfc944dffcde5e}} 
+std\+::mutex {\bfseries new\+Event\+Mutex\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_a3b1e5d863b179c480d3206253e193b54}\label{classWt_1_1DispatchThread_a3b1e5d863b179c480d3206253e193b54}} 
+bool {\bfseries new\+Event\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_a2a68f019626d297da0f1bb5625adb651}\label{classWt_1_1DispatchThread_a2a68f019626d297da0f1bb5625adb651}} 
+std\+::condition\+\_\+variable {\bfseries new\+Event\+Condition\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_a8513484cd756e2bf4414f160be6ae69c}\label{classWt_1_1DispatchThread_a8513484cd756e2bf4414f160be6ae69c}} 
+std\+::unique\+\_\+lock$<$ std\+::mutex $>$ $\ast$ {\bfseries event\+Lock\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1DispatchThread_a2e5e613e0c368f4be792c0895a6546bc}\label{classWt_1_1DispatchThread_a2e5e613e0c368f4be792c0895a6546bc}} 
+class {\bfseries Dispatch\+Object}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/wtwithqt/lib/Dispatch\+Thread.\+h\end{DoxyCompactItemize}

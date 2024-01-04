@@ -1,0 +1,30 @@
+digraph "Sqlite3Config"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Sqlite3Config",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" m" ,fontname="Helvetica"];
+  Node2 [label="sqlite3_mem_methods",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsqlite3__mem__methods.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" xMalloc\nxShutdown\nxRealloc\nxFree\npAppData" ,fontname="Helvetica"];
+  Node3 [label="void",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" xSize\nxRoundup\nxInit" ,fontname="Helvetica"];
+  Node4 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pHeap\npPage\npLogArg\nxLog" ,fontname="Helvetica"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pInitMutex" ,fontname="Helvetica"];
+  Node5 [label="sqlite3_mutex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsqlite3__mutex.html",tooltip=" "];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mutex" ,fontname="Helvetica"];
+  Node6 [label="sqlite3_mutex_methods",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsqlite3__mutex__methods.html",tooltip=" "];
+  Node3 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" xMutexFree\nxMutexLeave\nxMutexEnter" ,fontname="Helvetica"];
+  Node5 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" xMutexAlloc" ,fontname="Helvetica"];
+  Node4 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" xMutexTry\nxMutexNotheld\nxMutexHeld\nxMutexEnd\nxMutexInit" ,fontname="Helvetica"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" iOnceResetThreshold\nisPCacheInit\nisMallocInit\nnHeap\nszLookaside\nnRefInitMutex\nbMemstat\nsharedCacheEnabled\nszPage\nnPage\n..." ,fontname="Helvetica"];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pcache2" ,fontname="Helvetica"];
+  Node7 [label="sqlite3_pcache_methods2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsqlite3__pcache__methods2.html",tooltip=" "];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" xFetch" ,fontname="Helvetica"];
+  Node8 [label="sqlite3_pcache_page",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsqlite3__pcache__page.html",tooltip=" "];
+  Node3 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pExtra\npBuf" ,fontname="Helvetica"];
+  Node3 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" xShrink\nxShutdown\nxRekey\nxUnpin\nxCachesize\npArg\nxDestroy\nxTruncate" ,fontname="Helvetica"];
+  Node4 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" xPagecount\niVersion\nxInit" ,fontname="Helvetica"];
+}

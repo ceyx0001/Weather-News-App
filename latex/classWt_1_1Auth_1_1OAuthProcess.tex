@@ -1,0 +1,324 @@
+\hypertarget{classWt_1_1Auth_1_1OAuthProcess}{}\doxysection{Wt\+::Auth\+::O\+Auth\+Process Class Reference}
+\label{classWt_1_1Auth_1_1OAuthProcess}\index{Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}}
+
+
+An O\+Auth authorization (and authentication) process.  
+
+
+
+
+Inheritance diagram for Wt\+::Auth\+::O\+Auth\+Process\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Auth\+::O\+Auth\+Process\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_1_1TokenError}{Token\+Error}}
+\begin{DoxyCompactList}\small\item\em Exception thrown while parsing a token response. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_a0abac41f14450571445d1c82e9dba4cc}{scope}} () const
+\begin{DoxyCompactList}\small\item\em Returns the scope for which this process was created. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService}{O\+Auth\+Service}} \& \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_acee5353a12ed322183b7418558d27025}{service}} () const
+\begin{DoxyCompactList}\small\item\em Returns the O\+Auth service which spawned this process. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_a93e204aa6b2f4fdadaf4d51f878a41c5}{start\+Authorize}} ()
+\begin{DoxyCompactList}\small\item\em Starts an authorization process. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_ad5f0e4c66f098d1b3e61fbe8ae36e742}{start\+Authenticate}} ()
+\begin{DoxyCompactList}\small\item\em Starts an authorization and authentication process. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_ae1e483eb0a1bb3032e15bcbc78ff47e9}{get\+Identity}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAccessToken}{O\+Auth\+Access\+Token}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_aea64f50455bdef267ebc854e9991e4f8}{token}})
+\begin{DoxyCompactList}\small\item\em Obtains an authenticated identity. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_a0422fcabe43babfc6763b7ef22775e41}{error}} () const
+\begin{DoxyCompactList}\small\item\em Error information, in case authentication or identification failed. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAccessToken}{O\+Auth\+Access\+Token}} \& \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_aea64f50455bdef267ebc854e9991e4f8}{token}} () const
+\begin{DoxyCompactList}\small\item\em Returns the access token. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAccessToken}{O\+Auth\+Access\+Token}} $>$ \& \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_ad1f0c2b2915d4d2e75143b1d73170b86}{authorized}} ()
+\begin{DoxyCompactList}\small\item\em Authorization signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} $>$ \& \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_a22d65da9fa8a510363beff4b6e057d8b}{authenticated}} ()
+\begin{DoxyCompactList}\small\item\em Authentication signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_aa31f2e070502f9614a90ec3dfc5037fc}{O\+Auth\+Process}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService}{O\+Auth\+Service}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_acee5353a12ed322183b7418558d27025}{service}}, const std\+::string \&\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_a0abac41f14450571445d1c82e9dba4cc}{scope}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAccessToken}{O\+Auth\+Access\+Token}} \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_a4d814d020ecc6f5860529a13c68d6ae8}{parse\+Token\+Response}} (const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Http\+::\+Message}} \&response)
+\begin{DoxyCompactList}\small\item\em Parses the response for a token request. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_aac8e40127a3ba278c0bcfd7e78ca66d0}{set\+Error}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&e)
+\begin{DoxyCompactList}\small\item\em Sets the error. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_aca3299914acba6167f4eb3bbce1859d7}\label{classWt_1_1Auth_1_1OAuthProcess_aca3299914acba6167f4eb3bbce1859d7}} 
+void {\bfseries request\+Token} (const std\+::string \&authorization\+Code)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a9353de16213637ff653bc3021b974dda}\label{classWt_1_1Auth_1_1OAuthProcess_a9353de16213637ff653bc3021b974dda}} 
+void {\bfseries handle\+Token} (Asio\+Wrapper\+::error\+\_\+code err, const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Http\+::\+Message}} \&response)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a32a7157be3153d3e15465087b7729992}\label{classWt_1_1Auth_1_1OAuthProcess_a32a7157be3153d3e15465087b7729992}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAccessToken}{O\+Auth\+Access\+Token}} {\bfseries parse\+Url\+Encoded\+Token} (const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Http\+::\+Message}} \&response)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a8482f410e2565925b539840360d4a1a1}\label{classWt_1_1Auth_1_1OAuthProcess_a8482f410e2565925b539840360d4a1a1}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAccessToken}{O\+Auth\+Access\+Token}} {\bfseries parse\+Json\+Token} (const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Http\+::\+Message}} \&response)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_aa59237def57535f007e3557b0a619390}\label{classWt_1_1Auth_1_1OAuthProcess_aa59237def57535f007e3557b0a619390}} 
+std\+::string {\bfseries authorize\+Url} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a73459a5c02d4180f6b41012dc56322a3}\label{classWt_1_1Auth_1_1OAuthProcess_a73459a5c02d4180f6b41012dc56322a3}} 
+void {\bfseries do\+Parse\+Token\+Response} (const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Http\+::\+Message}} \&response)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a28bc48f6b9fa0790e280d85951eea7f9}\label{classWt_1_1Auth_1_1OAuthProcess_a28bc48f6b9fa0790e280d85951eea7f9}} 
+void {\bfseries on\+O\+Auth\+Done} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a425af65f234920ca4797b70acc406a6e}\label{classWt_1_1Auth_1_1OAuthProcess_a425af65f234920ca4797b70acc406a6e}} 
+void {\bfseries handle\+Auth\+Complete} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_ae4fdfbf69a8f2ed92e5c35c027fd948d}\label{classWt_1_1Auth_1_1OAuthProcess_ae4fdfbf69a8f2ed92e5c35c027fd948d}} 
+const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService}{O\+Auth\+Service}} \& {\bfseries service\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a513dd3e4b984521b0d08e9b0d8f2154a}\label{classWt_1_1Auth_1_1OAuthProcess_a513dd3e4b984521b0d08e9b0d8f2154a}} 
+std\+::string {\bfseries scope\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a3d3f72738ea1fe8e331423ee91486224}\label{classWt_1_1Auth_1_1OAuthProcess_a3d3f72738ea1fe8e331423ee91486224}} 
+bool {\bfseries authenticate\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a8c9b1e417fd3d4dfa3843149cf5a75e3}\label{classWt_1_1Auth_1_1OAuthProcess_a8c9b1e417fd3d4dfa3843149cf5a75e3}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAccessToken}{O\+Auth\+Access\+Token}} $>$ {\bfseries authorized\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_ab5e2d9ddbad8407f3f5a31b0b32ff7c7}\label{classWt_1_1Auth_1_1OAuthProcess_ab5e2d9ddbad8407f3f5a31b0b32ff7c7}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} $>$ {\bfseries authenticated\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_aa56a79dc4cef6109d51137ccb1b2e375}\label{classWt_1_1Auth_1_1OAuthProcess_aa56a79dc4cef6109d51137ccb1b2e375}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}} {\bfseries redirected\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a31afb22b88153ec2e03001987510065f}\label{classWt_1_1Auth_1_1OAuthProcess_a31afb22b88153ec2e03001987510065f}} 
+std\+::string {\bfseries o\+Auth\+State\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a353a514e41d869529f3265b26850f8d4}\label{classWt_1_1Auth_1_1OAuthProcess_a353a514e41d869529f3265b26850f8d4}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAccessToken}{O\+Auth\+Access\+Token}} {\bfseries token\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a5d9fb3332e0fd835c6bd3e9efd4cbffc}\label{classWt_1_1Auth_1_1OAuthProcess_a5d9fb3332e0fd835c6bd3e9efd4cbffc}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries error\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a44783e5ed16765d2d33730367d9dfb38}\label{classWt_1_1Auth_1_1OAuthProcess_a44783e5ed16765d2d33730367d9dfb38}} 
+std\+::string {\bfseries start\+Internal\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a78a2ea7077991fea2e3e58a2f9c8d84b}\label{classWt_1_1Auth_1_1OAuthProcess_a78a2ea7077991fea2e3e58a2f9c8d84b}} 
+std\+::unique\+\_\+ptr$<$ O\+Auth\+Redirect\+Endpoint $>$ {\bfseries redirect\+Endpoint\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a22386eb08927020c9df0a44e848981e1}\label{classWt_1_1Auth_1_1OAuthProcess_a22386eb08927020c9df0a44e848981e1}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Http_1_1Client}{Http\+::\+Client}} $>$ {\bfseries http\+Client\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a184c63f2c20e0ce47a870adff1fed744}\label{classWt_1_1Auth_1_1OAuthProcess_a184c63f2c20e0ce47a870adff1fed744}} 
+\mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} {\bfseries done\+Callback\+Connection\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_acbe55b6b671757a5a4382860ded2f857}\label{classWt_1_1Auth_1_1OAuthProcess_acbe55b6b671757a5a4382860ded2f857}} 
+class {\bfseries O\+Auth\+Redirect\+Endpoint}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An O\+Auth authorization (and authentication) process. 
+
+The process implements the state machine that is needed to complete an O\+Auth authorization cycle.
+
+Optionally, it also provides authentication, by using the service-\/specific logic which uses the access token to return identity information.
+
+A process is created for a particular scope, which represents what kind of information one wants to access, and which is used to inform the user of the kind of operations he needs to authorize for your application to make with his protected data.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a2978c25f9b60f7e0b5fac414e23923a6}{O\+Auth\+Service\+::create\+Process()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_aa31f2e070502f9614a90ec3dfc5037fc}\label{classWt_1_1Auth_1_1OAuthProcess_aa31f2e070502f9614a90ec3dfc5037fc}} 
+\index{Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}!OAuthProcess@{OAuthProcess}}
+\index{OAuthProcess@{OAuthProcess}!Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}}
+\doxysubsubsection{\texorpdfstring{OAuthProcess()}{OAuthProcess()}}
+{\footnotesize\ttfamily Wt\+::\+Auth\+::\+O\+Auth\+Process\+::\+O\+Auth\+Process (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService}{O\+Auth\+Service}} \&}]{service,  }\item[{const std\+::string \&}]{scope }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Constructor. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a2978c25f9b60f7e0b5fac414e23923a6}{O\+Auth\+Service\+::create\+Process()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a22d65da9fa8a510363beff4b6e057d8b}\label{classWt_1_1Auth_1_1OAuthProcess_a22d65da9fa8a510363beff4b6e057d8b}} 
+\index{Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}!authenticated@{authenticated}}
+\index{authenticated@{authenticated}!Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}}
+\doxysubsubsection{\texorpdfstring{authenticated()}{authenticated()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}}$>$\& Wt\+::\+Auth\+::\+O\+Auth\+Process\+::authenticated (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Authentication signal. 
+
+This signal indicates the end of an authentication process started with \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_ad5f0e4c66f098d1b3e61fbe8ae36e742}{start\+Authenticate()}} or \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_ae1e483eb0a1bb3032e15bcbc78ff47e9}{get\+Identity()}}. If the authentication process was successful, then the parameter is a valid and authentic identity. If the authentication process failed then the identity parameter is invalid, and you can get more information using \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_a0422fcabe43babfc6763b7ef22775e41}{error()}}.
+
+Authentication can fail because authorization failed (in case of \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_ad5f0e4c66f098d1b3e61fbe8ae36e742}{start\+Authenticate()}}), or because of a protocol error, or configuration problem.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_ad5f0e4c66f098d1b3e61fbe8ae36e742}{start\+Authenticate()}}, \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_ae1e483eb0a1bb3032e15bcbc78ff47e9}{get\+Identity()}}, \mbox{\hyperlink{classWt_1_1Auth_1_1Identity_a0cecd842fd6235d55bd43ff00adc555a}{Identity\+::is\+Valid()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_ad1f0c2b2915d4d2e75143b1d73170b86}\label{classWt_1_1Auth_1_1OAuthProcess_ad1f0c2b2915d4d2e75143b1d73170b86}} 
+\index{Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}!authorized@{authorized}}
+\index{authorized@{authorized}!Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}}
+\doxysubsubsection{\texorpdfstring{authorized()}{authorized()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAccessToken}{O\+Auth\+Access\+Token}}$>$\& Wt\+::\+Auth\+::\+O\+Auth\+Process\+::authorized (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Authorization signal. 
+
+This signal indicates the end of an authorization process started with \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_a93e204aa6b2f4fdadaf4d51f878a41c5}{start\+Authorize()}}. If the authorization process was successful, then the parameter carries a valid access token that was obtained. If the authorization process failed then the access token parameter is invalid, and you can get more information using \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_a0422fcabe43babfc6763b7ef22775e41}{error()}}.
+
+Authorization can fail because of a protocol error, aconfiguration problem, or because the user denied the authorization.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_a93e204aa6b2f4fdadaf4d51f878a41c5}{start\+Authorize()}}, \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAccessToken_acbb4ec55c068fb1c0b6b4dbb4a3106c7}{O\+Auth\+Access\+Token\+::is\+Valid()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a0422fcabe43babfc6763b7ef22775e41}\label{classWt_1_1Auth_1_1OAuthProcess_a0422fcabe43babfc6763b7ef22775e41}} 
+\index{Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}!error@{error}}
+\index{error@{error}!Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WString}{W\+String}} Wt\+::\+Auth\+::\+O\+Auth\+Process\+::error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Error information, in case authentication or identification failed. 
+
+The error message contains details when the \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_ad1f0c2b2915d4d2e75143b1d73170b86}{authorized()}} or \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_a22d65da9fa8a510363beff4b6e057d8b}{authenticated()}} signals indicate respectively an invalid token or invalid identity. \mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_ae1e483eb0a1bb3032e15bcbc78ff47e9}\label{classWt_1_1Auth_1_1OAuthProcess_ae1e483eb0a1bb3032e15bcbc78ff47e9}} 
+\index{Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}!getIdentity@{getIdentity}}
+\index{getIdentity@{getIdentity}!Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}}
+\doxysubsubsection{\texorpdfstring{getIdentity()}{getIdentity()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+O\+Auth\+Process\+::get\+Identity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAccessToken}{O\+Auth\+Access\+Token}} \&}]{token }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Obtains an authenticated identity. 
+
+The authentication process uses an access token to issue one or more protected requests for obtaining identity information. This is not part of the O\+Auth protocol, since O\+Auth does not standardize the use of the access token to obtain this information.
+
+The authentication process ends with the \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_a22d65da9fa8a510363beff4b6e057d8b}{authenticated()}} signal which signals the obtained identity. 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1Auth_1_1OidcProcess_a9c7ba6dfe59b7563d99a97aa95ecbf27}{Wt\+::\+Auth\+::\+Oidc\+Process}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a4d814d020ecc6f5860529a13c68d6ae8}\label{classWt_1_1Auth_1_1OAuthProcess_a4d814d020ecc6f5860529a13c68d6ae8}} 
+\index{Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}!parseTokenResponse@{parseTokenResponse}}
+\index{parseTokenResponse@{parseTokenResponse}!Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}}
+\doxysubsubsection{\texorpdfstring{parseTokenResponse()}{parseTokenResponse()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAccessToken}{O\+Auth\+Access\+Token}} Wt\+::\+Auth\+::\+O\+Auth\+Process\+::parse\+Token\+Response (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Http\+::\+Message}} \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Parses the response for a token request. 
+
+Throws a \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_1_1TokenError}{Token\+Error}} when the response indicates an error, or when the response could not be properly parsed.
+
+Some O\+Auth implementations may uses a non-\/standard encoding of the token. \mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a0abac41f14450571445d1c82e9dba4cc}\label{classWt_1_1Auth_1_1OAuthProcess_a0abac41f14450571445d1c82e9dba4cc}} 
+\index{Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}!scope@{scope}}
+\index{scope@{scope}!Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}}
+\doxysubsubsection{\texorpdfstring{scope()}{scope()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+Auth\+::\+O\+Auth\+Process\+::scope (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the scope for which this process was created. 
+
+The scope represents how much protected information the web application wants to access, and in what way.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a2978c25f9b60f7e0b5fac414e23923a6}{O\+Auth\+Service\+::create\+Process()}}, \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a040351f2a2b956c059ea9974e6829d13}{O\+Auth\+Service\+::authentication\+Scope()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_acee5353a12ed322183b7418558d27025}\label{classWt_1_1Auth_1_1OAuthProcess_acee5353a12ed322183b7418558d27025}} 
+\index{Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}!service@{service}}
+\index{service@{service}!Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}}
+\doxysubsubsection{\texorpdfstring{service()}{service()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService}{O\+Auth\+Service}}\& Wt\+::\+Auth\+::\+O\+Auth\+Process\+::service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the O\+Auth service which spawned this process. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a2978c25f9b60f7e0b5fac414e23923a6}{O\+Auth\+Service\+::create\+Process()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_aac8e40127a3ba278c0bcfd7e78ca66d0}\label{classWt_1_1Auth_1_1OAuthProcess_aac8e40127a3ba278c0bcfd7e78ca66d0}} 
+\index{Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}!setError@{setError}}
+\index{setError@{setError}!Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}}
+\doxysubsubsection{\texorpdfstring{setError()}{setError()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+O\+Auth\+Process\+::set\+Error (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Sets the error. 
+
+This should be used in \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_ae1e483eb0a1bb3032e15bcbc78ff47e9}{get\+Identity()}} implementations to set the error, before emitting \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_a22d65da9fa8a510363beff4b6e057d8b}{authenticated()}} with an invalid \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}}. \mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_ad5f0e4c66f098d1b3e61fbe8ae36e742}\label{classWt_1_1Auth_1_1OAuthProcess_ad5f0e4c66f098d1b3e61fbe8ae36e742}} 
+\index{Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}!startAuthenticate@{startAuthenticate}}
+\index{startAuthenticate@{startAuthenticate}!Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}}
+\doxysubsubsection{\texorpdfstring{startAuthenticate()}{startAuthenticate()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+O\+Auth\+Process\+::start\+Authenticate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Starts an authorization and authentication process. 
+
+This is \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_a93e204aa6b2f4fdadaf4d51f878a41c5}{start\+Authorize()}} followed by \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_ae1e483eb0a1bb3032e15bcbc78ff47e9}{get\+Identity()}}.
+
+This requires that the process is created with an authorization scope that includes sufficient rights for authentication (at least \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a040351f2a2b956c059ea9974e6829d13}{O\+Auth\+Service\+::authentication\+Scope()}})
+
+The authentication process ends with the \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_a22d65da9fa8a510363beff4b6e057d8b}{authenticated()}} signal which signals the obtained identity.
+
+\begin{DoxyNote}{Note}
+To be able to use a popup (instead of a page redirect), you should connect this method directly to an, since popup windows are blocked in most web browsers unless they are the direct consequence of an event. 
+\end{DoxyNote}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1Auth_1_1OidcProcess_a9f13e10a3f9e9121f919732d5b65f1db}{Wt\+::\+Auth\+::\+Oidc\+Process}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_a93e204aa6b2f4fdadaf4d51f878a41c5}\label{classWt_1_1Auth_1_1OAuthProcess_a93e204aa6b2f4fdadaf4d51f878a41c5}} 
+\index{Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}!startAuthorize@{startAuthorize}}
+\index{startAuthorize@{startAuthorize}!Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}}
+\doxysubsubsection{\texorpdfstring{startAuthorize()}{startAuthorize()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+O\+Auth\+Process\+::start\+Authorize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Starts an authorization process. 
+
+This starts an authorization process to request an accesstoken to access protected information within the process scope.
+
+The authorization process ends with the \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_ad1f0c2b2915d4d2e75143b1d73170b86}{authorized()}} signal which signals the obtained token.
+
+\begin{DoxyNote}{Note}
+To be able to use a popup (instead of a page redirect), you should connect this method directly to an, since popup windows are blocked in most web browsers unless they are the direct consequence of an event. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthProcess_aea64f50455bdef267ebc854e9991e4f8}\label{classWt_1_1Auth_1_1OAuthProcess_aea64f50455bdef267ebc854e9991e4f8}} 
+\index{Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}!token@{token}}
+\index{token@{token}!Wt::Auth::OAuthProcess@{Wt::Auth::OAuthProcess}}
+\doxysubsubsection{\texorpdfstring{token()}{token()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthAccessToken}{O\+Auth\+Access\+Token}}\& Wt\+::\+Auth\+::\+O\+Auth\+Process\+::token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the access token. 
+
+This returns the access token that was obtained in the last authorization cycle. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/O\+Auth\+Service.\+h\end{DoxyCompactItemize}

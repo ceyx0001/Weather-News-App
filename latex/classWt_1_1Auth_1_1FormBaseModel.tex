@@ -1,0 +1,197 @@
+\hypertarget{classWt_1_1Auth_1_1FormBaseModel}{}\doxysection{Wt\+::Auth\+::Form\+Base\+Model Class Reference}
+\label{classWt_1_1Auth_1_1FormBaseModel}\index{Wt::Auth::FormBaseModel@{Wt::Auth::FormBaseModel}}
+
+
+A base model class for authentication-\/related forms.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Auth/\+Form\+Base\+Model.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Auth\+::Form\+Base\+Model\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Auth\+::Form\+Base\+Model\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1FormBaseModel_a44a317a22dde28a5267013e9c659bde4}\label{classWt_1_1Auth_1_1FormBaseModel_a44a317a22dde28a5267013e9c659bde4}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a44a317a22dde28a5267013e9c659bde4}{Form\+Base\+Model}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a37e8facdc2ea29975c948567b5d8192f}{base\+Auth}}, \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a28037bb9c5b0ef277b3832b4f823ae11}{users}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} $\ast$ \mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a37e8facdc2ea29975c948567b5d8192f}{base\+Auth}} () const
+\begin{DoxyCompactList}\small\item\em Returns the authentication base service. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1FormBaseModel_a28037bb9c5b0ef277b3832b4f823ae11}\label{classWt_1_1Auth_1_1FormBaseModel_a28037bb9c5b0ef277b3832b4f823ae11}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \& \mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a28037bb9c5b0ef277b3832b4f823ae11}{users}} ()
+\begin{DoxyCompactList}\small\item\em Returns the user database. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a4c7735048d261aab85c7490926d9651c}{add\+Password\+Auth}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractPasswordService}{Abstract\+Password\+Service}} $\ast$auth)
+\begin{DoxyCompactList}\small\item\em Adds a password authentication service. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractPasswordService}{Abstract\+Password\+Service}} $\ast$ \mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a218d6385e522ebfcf7c2ab4cf7368111}{password\+Auth}} () const
+\begin{DoxyCompactList}\small\item\em Returns the password authentication service. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a0b63e63436c873484decccae5ea21395}{add\+O\+Auth}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService}{O\+Auth\+Service}} $\ast$auth)
+\begin{DoxyCompactList}\small\item\em Adds an O\+Auth authentication service provider. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a6ff56d783f6c1453f27f0f4d943083f9}{add\+O\+Auth}} (const std\+::vector$<$ const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService}{O\+Auth\+Service}} $\ast$ $>$ \&auth)
+\begin{DoxyCompactList}\small\item\em Adds a list of O\+Auth authentication service providers. \end{DoxyCompactList}\item 
+std\+::vector$<$ const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService}{O\+Auth\+Service}} $\ast$ $>$ \mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a688aad26179f370121d45694a41ec85b}{o\+Auth}} () const
+\begin{DoxyCompactList}\small\item\em Returns the list of O\+Auth authentication service providers. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_abf810ff89ecbc96526ae4673b14d76b8}{label}} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field) const override
+\begin{DoxyCompactList}\small\item\em Returns a field label. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_ad9a5bb87299522bb63a0d15f91632994}{login\+User}} (\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \&login, \mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&user, \mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796}{Login\+State}} state=\mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796ac43e0fd449c758dab8f891d8e19eb1a9}{Login\+State\+::\+Strong}})
+\begin{DoxyCompactList}\small\item\em Logs the user in. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1FormBaseModel_a01bbc44c4de29f7508d424fc58835562}\label{classWt_1_1Auth_1_1FormBaseModel_a01bbc44c4de29f7508d424fc58835562}} 
+static const \mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} \mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a01bbc44c4de29f7508d424fc58835562}{Login\+Name\+Field}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} name field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1FormBaseModel_a8861b5d9e9c41d7964460eb220fbca68}\label{classWt_1_1Auth_1_1FormBaseModel_a8861b5d9e9c41d7964460eb220fbca68}} 
+void {\bfseries set\+Valid} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field)
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1FormBaseModel_a7b3c0e290eee2e09b5775a933f2fffe1}\label{classWt_1_1Auth_1_1FormBaseModel_a7b3c0e290eee2e09b5775a933f2fffe1}} 
+void {\bfseries set\+Valid} (\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}} field, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1FormBaseModel_af224327c5b00fddf697643a5ce484af9}\label{classWt_1_1Auth_1_1FormBaseModel_af224327c5b00fddf697643a5ce484af9}} 
+const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} \& {\bfseries base\+Auth\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1FormBaseModel_aa4575f1b6e089b04710e01b0a3a55448}\label{classWt_1_1Auth_1_1FormBaseModel_aa4575f1b6e089b04710e01b0a3a55448}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase}{Abstract\+User\+Database}} \& {\bfseries users\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1FormBaseModel_a0473e0d0a0a164c2a2f4d8e28bf26efb}\label{classWt_1_1Auth_1_1FormBaseModel_a0473e0d0a0a164c2a2f4d8e28bf26efb}} 
+const \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractPasswordService}{Abstract\+Password\+Service}} $\ast$ {\bfseries password\+Auth\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1FormBaseModel_ad7d7e88a5612444af97a1ab4c685dc87}\label{classWt_1_1Auth_1_1FormBaseModel_ad7d7e88a5612444af97a1ab4c685dc87}} 
+std\+::vector$<$ const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService}{O\+Auth\+Service}} $\ast$ $>$ {\bfseries o\+Auth\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A base model class for authentication-\/related forms. 
+
+This class manages the the auth services and the user database which an authentication model will use to implement a form.. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1FormBaseModel_a0b63e63436c873484decccae5ea21395}\label{classWt_1_1Auth_1_1FormBaseModel_a0b63e63436c873484decccae5ea21395}} 
+\index{Wt::Auth::FormBaseModel@{Wt::Auth::FormBaseModel}!addOAuth@{addOAuth}}
+\index{addOAuth@{addOAuth}!Wt::Auth::FormBaseModel@{Wt::Auth::FormBaseModel}}
+\doxysubsubsection{\texorpdfstring{addOAuth()}{addOAuth()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Form\+Base\+Model\+::add\+O\+Auth (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService}{O\+Auth\+Service}} $\ast$}]{auth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adds an O\+Auth authentication service provider. 
+
+This enables O\+Auth-\/based registration. More than one O\+Auth authentication service can be configured\+: one for each supported third-\/party O\+Auth identity provider.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a4c7735048d261aab85c7490926d9651c}{add\+Password\+Auth()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1FormBaseModel_a6ff56d783f6c1453f27f0f4d943083f9}\label{classWt_1_1Auth_1_1FormBaseModel_a6ff56d783f6c1453f27f0f4d943083f9}} 
+\index{Wt::Auth::FormBaseModel@{Wt::Auth::FormBaseModel}!addOAuth@{addOAuth}}
+\index{addOAuth@{addOAuth}!Wt::Auth::FormBaseModel@{Wt::Auth::FormBaseModel}}
+\doxysubsubsection{\texorpdfstring{addOAuth()}{addOAuth()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Form\+Base\+Model\+::add\+O\+Auth (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService}{O\+Auth\+Service}} $\ast$ $>$ \&}]{auth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adds a list of O\+Auth authentication service providers. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a0b63e63436c873484decccae5ea21395}{add\+O\+Auth()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1FormBaseModel_a4c7735048d261aab85c7490926d9651c}\label{classWt_1_1Auth_1_1FormBaseModel_a4c7735048d261aab85c7490926d9651c}} 
+\index{Wt::Auth::FormBaseModel@{Wt::Auth::FormBaseModel}!addPasswordAuth@{addPasswordAuth}}
+\index{addPasswordAuth@{addPasswordAuth}!Wt::Auth::FormBaseModel@{Wt::Auth::FormBaseModel}}
+\doxysubsubsection{\texorpdfstring{addPasswordAuth()}{addPasswordAuth()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Form\+Base\+Model\+::add\+Password\+Auth (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractPasswordService}{Abstract\+Password\+Service}} $\ast$}]{auth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Adds a password authentication service. 
+
+This enables password-\/based registration, including choosing a proper password.
+
+Only one password authentication service can be configured.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a0b63e63436c873484decccae5ea21395}{add\+O\+Auth()}} 
+
+Abstract\+Password\+Service\+::validate\+Password() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1FormBaseModel_a37e8facdc2ea29975c948567b5d8192f}\label{classWt_1_1Auth_1_1FormBaseModel_a37e8facdc2ea29975c948567b5d8192f}} 
+\index{Wt::Auth::FormBaseModel@{Wt::Auth::FormBaseModel}!baseAuth@{baseAuth}}
+\index{baseAuth@{baseAuth}!Wt::Auth::FormBaseModel@{Wt::Auth::FormBaseModel}}
+\doxysubsubsection{\texorpdfstring{baseAuth()}{baseAuth()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}}$\ast$ Wt\+::\+Auth\+::\+Form\+Base\+Model\+::base\+Auth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the authentication base service. 
+
+This returns the service passed through the constructor. \mbox{\Hypertarget{classWt_1_1Auth_1_1FormBaseModel_abf810ff89ecbc96526ae4673b14d76b8}\label{classWt_1_1Auth_1_1FormBaseModel_abf810ff89ecbc96526ae4673b14d76b8}} 
+\index{Wt::Auth::FormBaseModel@{Wt::Auth::FormBaseModel}!label@{label}}
+\index{label@{label}!Wt::Auth::FormBaseModel@{Wt::Auth::FormBaseModel}}
+\doxysubsubsection{\texorpdfstring{label()}{label()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WString}{W\+String}} Wt\+::\+Auth\+::\+Form\+Base\+Model\+::label (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFormModel_a9c5277450be796ecac1b7dcea1084603}{Field}}}]{field }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a field label. 
+
+The default implementation returns the W\+String\+::tr(field) 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WFormModel_a4d1f32594e074146ddebd1f4b579d8bc}{Wt\+::\+W\+Form\+Model}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1FormBaseModel_ad9a5bb87299522bb63a0d15f91632994}\label{classWt_1_1Auth_1_1FormBaseModel_ad9a5bb87299522bb63a0d15f91632994}} 
+\index{Wt::Auth::FormBaseModel@{Wt::Auth::FormBaseModel}!loginUser@{loginUser}}
+\index{loginUser@{loginUser}!Wt::Auth::FormBaseModel@{Wt::Auth::FormBaseModel}}
+\doxysubsubsection{\texorpdfstring{loginUser()}{loginUser()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Auth\+::\+Form\+Base\+Model\+::login\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Login}} \&}]{login,  }\item[{\mbox{\hyperlink{classWt_1_1Auth_1_1User}{User}} \&}]{user,  }\item[{\mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796}{Login\+State}}}]{state = {\ttfamily \mbox{\hyperlink{namespaceWt_1_1Auth_a0ce4a4a08ad982d03a99a5405394b796ac43e0fd449c758dab8f891d8e19eb1a9}{Login\+State\+::\+Strong}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Logs the user in. 
+
+Logs in the user, after checking whether the user can actually be logged in. A valid user may be refused to login if its account is disabled (see \mbox{\hyperlink{classWt_1_1Auth_1_1User_a6f0e7c1aa39d3f9754e3e210c4f43206}{User\+::status()}}) or if it\textquotesingle{}s email address is unconfirmed and email confirmation is required.
+
+Returns whether the user could be logged in. \mbox{\Hypertarget{classWt_1_1Auth_1_1FormBaseModel_a688aad26179f370121d45694a41ec85b}\label{classWt_1_1Auth_1_1FormBaseModel_a688aad26179f370121d45694a41ec85b}} 
+\index{Wt::Auth::FormBaseModel@{Wt::Auth::FormBaseModel}!oAuth@{oAuth}}
+\index{oAuth@{oAuth}!Wt::Auth::FormBaseModel@{Wt::Auth::FormBaseModel}}
+\doxysubsubsection{\texorpdfstring{oAuth()}{oAuth()}}
+{\footnotesize\ttfamily std\+::vector$<$const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService}{O\+Auth\+Service}} $\ast$$>$ Wt\+::\+Auth\+::\+Form\+Base\+Model\+::o\+Auth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the list of O\+Auth authentication service providers. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a0b63e63436c873484decccae5ea21395}{add\+O\+Auth()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1FormBaseModel_a218d6385e522ebfcf7c2ab4cf7368111}\label{classWt_1_1Auth_1_1FormBaseModel_a218d6385e522ebfcf7c2ab4cf7368111}} 
+\index{Wt::Auth::FormBaseModel@{Wt::Auth::FormBaseModel}!passwordAuth@{passwordAuth}}
+\index{passwordAuth@{passwordAuth}!Wt::Auth::FormBaseModel@{Wt::Auth::FormBaseModel}}
+\doxysubsubsection{\texorpdfstring{passwordAuth()}{passwordAuth()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractPasswordService}{Abstract\+Password\+Service}}$\ast$ Wt\+::\+Auth\+::\+Form\+Base\+Model\+::password\+Auth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the password authentication service. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1FormBaseModel_a4c7735048d261aab85c7490926d9651c}{add\+Password\+Auth()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/Form\+Base\+Model.\+h\end{DoxyCompactItemize}

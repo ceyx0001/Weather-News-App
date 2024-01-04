@@ -1,0 +1,639 @@
+\hypertarget{classWt_1_1Http_1_1Client}{}\doxysection{Wt\+::Http\+::Client Class Reference}
+\label{classWt_1_1Http_1_1Client}\index{Wt::Http::Client@{Wt::Http::Client}}
+
+
+An H\+T\+TP client.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Http/\+Client.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Http\+::Client\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Http\+::Client\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1Http_1_1Client_1_1URL}{U\+RL}}
+\begin{DoxyCompactList}\small\item\em Utility class representing an U\+RL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Http_1_1Client_ab850f51173c33a12ec3d4b3371e7d1b0}{Client}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Http_1_1Client_a966378bd63f2babf2f8d2beb2783e45e}{Client}} (Wt\+::\+Asio\+Wrapper\+::asio\+::io\+\_\+service \&io\+Service)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Http_1_1Client_abee67605e85d941cd9726da986b26532}{$\sim$\+Client}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1Client_a3d8f9647e25c264cd9296a61aba16753}{set\+Timeout}} (std\+::chrono\+::steady\+\_\+clock\+::duration \mbox{\hyperlink{classWt_1_1Http_1_1Client_ab98a080e1ae3a5d0e09ab0fca76a43ea}{timeout}})
+\begin{DoxyCompactList}\small\item\em Sets an I/O timeout. \end{DoxyCompactList}\item 
+std\+::chrono\+::steady\+\_\+clock\+::duration \mbox{\hyperlink{classWt_1_1Http_1_1Client_ab98a080e1ae3a5d0e09ab0fca76a43ea}{timeout}} () const
+\begin{DoxyCompactList}\small\item\em Returns the I/O timeout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1Client_a45b25de10c5da7c7c5abf0892593a04d}{set\+Maximum\+Response\+Size}} (std\+::size\+\_\+t bytes)
+\begin{DoxyCompactList}\small\item\em Sets a maximum response size. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{classWt_1_1Http_1_1Client_ab8d6c65425f43fb373e4b66860033d31}{maximum\+Response\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the maximum response size. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1Client_a54355849e1235697747eb0361eb643dd}{set\+Ssl\+Certificate\+Verification\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enables S\+SL certificate verification. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Http_1_1Client_ae683fec0c7c53aa39085c3455a9ba519}{is\+Ssl\+Certificate\+Verification\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether S\+SL certificate verification is enabled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1Client_ac6b8b35ab2813a22c3c2e2ae7d1f9a35}{set\+Ssl\+Verify\+File}} (const std\+::string \&verify\+File)
+\begin{DoxyCompactList}\small\item\em Sets a S\+SL certificate used for server identity verification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1Client_a7c9fbf7fc9f671519b0652f3bbe38521}{set\+Ssl\+Verify\+Path}} (const std\+::string \&verify\+Path)
+\begin{DoxyCompactList}\small\item\em Sets a path with S\+SL certificates for server identity verification. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Http_1_1Client_a1bf5f26230279a99fa1429ab84315458}{get}} (const std\+::string \&url)
+\begin{DoxyCompactList}\small\item\em Starts a G\+ET request. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Http_1_1Client_ab8b9fe9ff278c5a8cb97125ed3671bb3}{get}} (const std\+::string \&url, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Http_1_1Message_1_1Header}{Message\+::\+Header}} $>$ headers)
+\begin{DoxyCompactList}\small\item\em Starts a G\+ET request. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Http_1_1Client_a28336ba9677e6e3cc6c890f490f2965a}{head}} (const std\+::string \&url)
+\begin{DoxyCompactList}\small\item\em Starts a H\+E\+AD request. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Http_1_1Client_a47fb86c27312b38145c90e47e72153af}{head}} (const std\+::string \&url, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Http_1_1Message_1_1Header}{Message\+::\+Header}} $>$ headers)
+\begin{DoxyCompactList}\small\item\em Starts a H\+E\+AD request. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Http_1_1Client_a2b5cad895252510ff1cd0e8e6e31c453}{post}} (const std\+::string \&url, const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}} \&message)
+\begin{DoxyCompactList}\small\item\em Starts a P\+O\+ST request. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Http_1_1Client_a7ec02e13a1436a6ab0eb7707681730e7}{put}} (const std\+::string \&url, const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}} \&message)
+\begin{DoxyCompactList}\small\item\em Starts a P\+UT request. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Http_1_1Client_afbed44b0b94e5a5c9cedc793609fc817}{delete\+Request}} (const std\+::string \&url, const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}} \&message)
+\begin{DoxyCompactList}\small\item\em Starts a D\+E\+L\+E\+TE request. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Http_1_1Client_a54cd8725e2af030be90c207d19c05493}{patch}} (const std\+::string \&url, const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}} \&message)
+\begin{DoxyCompactList}\small\item\em Starts a P\+A\+T\+CH request. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Http_1_1Client_aed50841f6c792d8f08e44225401abab0}{request}} (\mbox{\hyperlink{namespaceWt_1_1Http_a4a1e30eb403b05b4e5afc5c6286dd6b9}{Http\+::\+Method}} method, const std\+::string \&url, const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}} \&message)
+\begin{DoxyCompactList}\small\item\em Starts a request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1Client_ac2a756dec030880f02bb3411469c737e}{abort}} ()
+\begin{DoxyCompactList}\small\item\em Aborts the curent request. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ Wt\+::\+Asio\+Wrapper\+::error\+\_\+code, \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}} $>$ \& \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done}} ()
+\begin{DoxyCompactList}\small\item\em Signal that is emitted when the current request is done. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}} $>$ \& \mbox{\hyperlink{classWt_1_1Http_1_1Client_aad874b0869cb2202f6cd2b79e3956773}{headers\+Received}} ()
+\begin{DoxyCompactList}\small\item\em Signal that is emitted when all response headers have been received. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ std\+::string $>$ \& \mbox{\hyperlink{classWt_1_1Http_1_1Client_a391c75cf826d9918ad4dc200eadd8be3}{body\+Data\+Received}} ()
+\begin{DoxyCompactList}\small\item\em Signal that is emitted when more body data was received. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Http_1_1Client_a34bc95c42292f3fd7d6e54f86b3781b6}{follow\+Redirect}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the client will follow redirects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1Client_abede092c50845c4d6f788dde19dc9898}{set\+Follow\+Redirect}} (bool \mbox{\hyperlink{classWt_1_1Http_1_1Client_a34bc95c42292f3fd7d6e54f86b3781b6}{follow\+Redirect}})
+\begin{DoxyCompactList}\small\item\em Set whether the client will follow redirects. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Http_1_1Client_a91e8fb79cd34391b2c6da2b59fe7f223}{max\+Redirects}} () const
+\begin{DoxyCompactList}\small\item\em Returns the maximum number of redirects to follow. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1Client_a269c521c9ff7355b780a3b9056914ab0}{set\+Max\+Redirects}} (int \mbox{\hyperlink{classWt_1_1Http_1_1Client_a91e8fb79cd34391b2c6da2b59fe7f223}{max\+Redirects}})
+\begin{DoxyCompactList}\small\item\em Set the maximum number of redirects to follow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classWt_1_1Http_1_1Client_a4637aff36362649ce8c9dddc6118fd43}{parse\+Url}} (const std\+::string \&url, \mbox{\hyperlink{structWt_1_1Http_1_1Client_1_1URL}{U\+RL}} \&parsed\+Url)
+\begin{DoxyCompactList}\small\item\em Utility method to parse a U\+RL. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_abefa60e42cc8853bf13886dc3a7bfe32}\label{classWt_1_1Http_1_1Client_abefa60e42cc8853bf13886dc3a7bfe32}} 
+void {\bfseries handle\+Redirect} (\mbox{\hyperlink{namespaceWt_1_1Http_a4a1e30eb403b05b4e5afc5c6286dd6b9}{Http\+::\+Method}} method, Wt\+::\+Asio\+Wrapper\+::error\+\_\+code err, const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}} \&response, const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}} \&\mbox{\hyperlink{classWt_1_1Http_1_1Client_aed50841f6c792d8f08e44225401abab0}{request}})
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_adf655de18ffe1a1668f1ac14fa021761}\label{classWt_1_1Http_1_1Client_adf655de18ffe1a1668f1ac14fa021761}} 
+void {\bfseries emit\+Done} (Wt\+::\+Asio\+Wrapper\+::error\+\_\+code err, const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}} \&response)
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a2f06c7d7fdc83c78f0db2c4a83efcb9f}\label{classWt_1_1Http_1_1Client_a2f06c7d7fdc83c78f0db2c4a83efcb9f}} 
+void {\bfseries emit\+Headers\+Received} (const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}} \&response)
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a05c5a507f0cde0fac8ab1ee04821d9de}\label{classWt_1_1Http_1_1Client_a05c5a507f0cde0fac8ab1ee04821d9de}} 
+void {\bfseries emit\+Body\+Received} (const std\+::string \&data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a62cf8c659308fb7a85d7f46d32163fd5}\label{classWt_1_1Http_1_1Client_a62cf8c659308fb7a85d7f46d32163fd5}} 
+Wt\+::\+Asio\+Wrapper\+::asio\+::io\+\_\+service $\ast$ {\bfseries io\+Service\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a83aeade9aaaff2502050122ff9b50334}\label{classWt_1_1Http_1_1Client_a83aeade9aaaff2502050122ff9b50334}} 
+std\+::weak\+\_\+ptr$<$ Impl $>$ {\bfseries impl\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_adb7872856093f1bbeab3bd8da23faf32}\label{classWt_1_1Http_1_1Client_adb7872856093f1bbeab3bd8da23faf32}} 
+std\+::chrono\+::steady\+\_\+clock\+::duration {\bfseries timeout\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a9ae66796a31cd610cb3ac796a964724e}\label{classWt_1_1Http_1_1Client_a9ae66796a31cd610cb3ac796a964724e}} 
+std\+::size\+\_\+t {\bfseries maximum\+Response\+Size\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a65db2e1eb3b9b25c79f85171c68bc3de}\label{classWt_1_1Http_1_1Client_a65db2e1eb3b9b25c79f85171c68bc3de}} 
+bool {\bfseries verify\+Enabled\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a0ddd388a571353cb2e6fec6afeb4d1ef}\label{classWt_1_1Http_1_1Client_a0ddd388a571353cb2e6fec6afeb4d1ef}} 
+std\+::string {\bfseries verify\+File\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a171c0974cb2e264faa8001b1cbf7d2f6}\label{classWt_1_1Http_1_1Client_a171c0974cb2e264faa8001b1cbf7d2f6}} 
+std\+::string {\bfseries verify\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a0c78c4286a1b0581ed52aae4dace05c4}\label{classWt_1_1Http_1_1Client_a0c78c4286a1b0581ed52aae4dace05c4}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ Wt\+::\+Asio\+Wrapper\+::error\+\_\+code, \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}} $>$ {\bfseries done\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a4b1d6319c1b07e956370ecdbd640392b}\label{classWt_1_1Http_1_1Client_a4b1d6319c1b07e956370ecdbd640392b}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}} $>$ {\bfseries headers\+Received\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_aa65b30d6a6daf09df79a6c82d1ae711b}\label{classWt_1_1Http_1_1Client_aa65b30d6a6daf09df79a6c82d1ae711b}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ std\+::string $>$ {\bfseries body\+Data\+Received\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_ad9ee60c6da602e5e3bddf2e50cf31f5b}\label{classWt_1_1Http_1_1Client_ad9ee60c6da602e5e3bddf2e50cf31f5b}} 
+bool {\bfseries follow\+Redirect\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a13963ede5b008397543c96f6e46da59d}\label{classWt_1_1Http_1_1Client_a13963ede5b008397543c96f6e46da59d}} 
+int {\bfseries redirect\+Count\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a91d421b654e043a5f13962842562f2f4}\label{classWt_1_1Http_1_1Client_a91d421b654e043a5f13962842562f2f4}} 
+int {\bfseries max\+Redirects\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An H\+T\+TP client. 
+
+This class implements an H\+T\+TP client. It can be used to interact with web services using the H\+T\+TP protocol.
+
+The client uses asynchronous I/O and only provides an asynchronous interface\+: you cannot actively wait for an operation to complete, instead the client will notify you of the result using the \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} signal.
+
+Because the client uses asynchronous I/O, it does its work within the scope of an event-\/driven thread pool implementation. By default, this is the same thread pool that is used by the Wt server, available through \mbox{\hyperlink{classWt_1_1WServer_adf84e177385ff262005a2044daa9c34f}{W\+Server\+::io\+Service()}}, but you may also use the client by providing it an explicit I/O service to be used.
+
+The client supports the H\+T\+TP and H\+T\+T\+PS (if Wt was built with Open\+S\+SL support) protocols, and can be used for G\+ET and P\+O\+ST methods. One client can do only one operation at a time.
+
+Usage example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{   ...}
+\DoxyCodeLine{   \textcolor{keyword}{auto} client = \mbox{\hyperlink{classWt_1_1WObject_a3de0f0baf35f42aa4e77a90d427f2e11}{addChild}}(std::make\_unique<Http::Client>());}
+\DoxyCodeLine{   client-\/>setTimeout(std::chrono::seconds\{15\});}
+\DoxyCodeLine{   client-\/>setMaximumResponseSize(10 * 1024);}
+\DoxyCodeLine{   client-\/>done().connect(std::bind(\&MyWidget::handleHttpResponse, \textcolor{keyword}{this}, \_1, \_2));}
+\DoxyCodeLine{   \textcolor{keywordflow}{if} (client-\/>get(\textcolor{stringliteral}{"http://www.webtoolkit.eu/wt/blog/feed/"}))}
+\DoxyCodeLine{     \mbox{\hyperlink{classWt_1_1WApplication_a27690e10fb1dffef9b688b5a6ecf26b0}{WApplication::instance}}()-\/>\mbox{\hyperlink{classWt_1_1WApplication_af6a25f56ab9d309d799012faf8823f48}{deferRendering}}();}
+\DoxyCodeLine{   \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{     \textcolor{comment}{// in case of an error in the \%URL}}
+\DoxyCodeLine{   \}}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void} handleHttpResponse(std::system::error\_code err, \textcolor{keyword}{const} Http::Message\& response)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{   \mbox{\hyperlink{classWt_1_1WApplication_a27690e10fb1dffef9b688b5a6ecf26b0}{WApplication::instance}}()-\/>\mbox{\hyperlink{classWt_1_1WApplication_a62dfa943a37a250ec781e9019ccd7434}{resumeRendering}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{   \textcolor{keywordflow}{if} (!err \&\& response.status() == 200) \{}
+\DoxyCodeLine{      ... \mbox{\hyperlink{group__json_ga439195eac280701c9a1e5f0317149866}{parse}} response.body()}
+\DoxyCodeLine{   \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+The function connected to the \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} signal will be run within the context of the application that created the client. \mbox{\hyperlink{classWt_1_1WServer_a191243d6c9718b18f6e1830562b01806}{W\+Server\+::post()}} is used for this.
+
+\doxyparagraph*{Basic access authentication}
+
+When you want to add authentication information in the U\+RL, this can be done as {\ttfamily \href{https://username:password@www.example.com/}{\texttt{ https\+://username\+:password@www.\+example.\+com/}}}. When doing this, make sure that the username and password string are U\+R\+L-\/encoded (Wt\+::\+Utils\+::url\+Encode). For example, {\ttfamily \href{https://username:pass}{\texttt{ https\+://username\+:pass}} \href{mailto:word@www.example.com}{\texttt{ word@www.\+example.\+com}}/} should be passed as {\ttfamily \href{https://username:pass\%20word@www.example.com/}{\texttt{ https\+://username\+:pass\%20word@www.\+example.\+com/}}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_ab850f51173c33a12ec3d4b3371e7d1b0}\label{classWt_1_1Http_1_1Client_ab850f51173c33a12ec3d4b3371e7d1b0}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!Client@{Client}}
+\index{Client@{Client}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{Client()}{Client()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wt\+::\+Http\+::\+Client\+::\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+The client uses the I/O service and thread-\/pool from the current \mbox{\hyperlink{classWt_1_1WApplication_a27690e10fb1dffef9b688b5a6ecf26b0}{W\+Application\+::instance()}}. \mbox{\Hypertarget{classWt_1_1Http_1_1Client_a966378bd63f2babf2f8d2beb2783e45e}\label{classWt_1_1Http_1_1Client_a966378bd63f2babf2f8d2beb2783e45e}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!Client@{Client}}
+\index{Client@{Client}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{Client()}{Client()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wt\+::\+Http\+::\+Client\+::\+Client (\begin{DoxyParamCaption}\item[{Wt\+::\+Asio\+Wrapper\+::asio\+::io\+\_\+service \&}]{io\+Service }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+The client uses the given I/O service and thread-\/pool, and is useful to use the client outside the context of a web application. \mbox{\Hypertarget{classWt_1_1Http_1_1Client_abee67605e85d941cd9726da986b26532}\label{classWt_1_1Http_1_1Client_abee67605e85d941cd9726da986b26532}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!````~Client@{$\sim$Client}}
+\index{````~Client@{$\sim$Client}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{$\sim$Client()}{~Client()}}
+{\footnotesize\ttfamily virtual Wt\+::\+Http\+::\+Client\+::$\sim$\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+If the client is still busy, the current request is aborted.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Client_ac2a756dec030880f02bb3411469c737e}{abort()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_ac2a756dec030880f02bb3411469c737e}\label{classWt_1_1Http_1_1Client_ac2a756dec030880f02bb3411469c737e}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!abort@{abort}}
+\index{abort@{abort}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{abort()}{abort()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Client\+::abort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Aborts the curent request. 
+
+If the client is currently busy, this cancels the pending request. \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} will be emitted with asio\+::error\+::operation\+\_\+aborted.
+
+\begin{DoxyNote}{Note}
+The abort will be performed asynchronously, so it is possible that \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} is still emitted with a successful response after \mbox{\hyperlink{classWt_1_1Http_1_1Client_ac2a756dec030880f02bb3411469c737e}{abort()}} is called. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a391c75cf826d9918ad4dc200eadd8be3}\label{classWt_1_1Http_1_1Client_a391c75cf826d9918ad4dc200eadd8be3}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!bodyDataReceived@{bodyDataReceived}}
+\index{bodyDataReceived@{bodyDataReceived}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{bodyDataReceived()}{bodyDataReceived()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$std\+::string$>$\& Wt\+::\+Http\+::\+Client\+::body\+Data\+Received (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal that is emitted when more body data was received. 
+
+The signal contains the next body data chunk received. You may want to catch this signal if you want to process the response as it is being received.
+
+You may want to use this in combination with set\+Maximum\+Response\+Size(0) to handle very long responses. \mbox{\Hypertarget{classWt_1_1Http_1_1Client_afbed44b0b94e5a5c9cedc793609fc817}\label{classWt_1_1Http_1_1Client_afbed44b0b94e5a5c9cedc793609fc817}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!deleteRequest@{deleteRequest}}
+\index{deleteRequest@{deleteRequest}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{deleteRequest()}{deleteRequest()}}
+{\footnotesize\ttfamily bool Wt\+::\+Http\+::\+Client\+::delete\+Request (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}} \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Starts a D\+E\+L\+E\+TE request. 
+
+The function starts an asynchronous D\+E\+L\+E\+TE request, and returns immediately.
+
+The function returns {\ttfamily true} when the D\+E\+L\+E\+TE request has been scheduled, and thus \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} will be emitted eventually.
+
+The function returns {\ttfamily false} if the client could not schedule the request, for example if the {\ttfamily url} is invalid or if the U\+RL scheme is not supported.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Client_aed50841f6c792d8f08e44225401abab0}{request()}}, \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}\label{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!done@{done}}
+\index{done@{done}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{done()}{done()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$Wt\+::\+Asio\+Wrapper\+::error\+\_\+code, \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}}$>$\& Wt\+::\+Http\+::\+Client\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal that is emitted when the current request is done. 
+
+The {\ttfamily error} is 0 if the H\+T\+TP request was successful. Then, the {\ttfamily message} contains the result.
+
+If the {\ttfamily error} is not 0, then an error message is given by {\ttfamily err.\+message()}.
+
+Typical code to process the result is\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{void} handle(Wt::AsioWrapper::error\_code err, \textcolor{keyword}{const} Http::Message\& response)}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (!err) \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (response.status() == 200) \{}
+\DoxyCodeLine{      ... success}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{    Wt::log(\textcolor{stringliteral}{"error"}) << \textcolor{stringliteral}{"Http::Client error: "} << err.message();}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1Http_1_1Client_a34bc95c42292f3fd7d6e54f86b3781b6}\label{classWt_1_1Http_1_1Client_a34bc95c42292f3fd7d6e54f86b3781b6}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!followRedirect@{followRedirect}}
+\index{followRedirect@{followRedirect}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{followRedirect()}{followRedirect()}}
+{\footnotesize\ttfamily bool Wt\+::\+Http\+::\+Client\+::follow\+Redirect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns whether the client will follow redirects. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Client_abede092c50845c4d6f788dde19dc9898}{set\+Follow\+Redirect}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a1bf5f26230279a99fa1429ab84315458}\label{classWt_1_1Http_1_1Client_a1bf5f26230279a99fa1429ab84315458}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!get@{get}}
+\index{get@{get}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Wt\+::\+Http\+::\+Client\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url }\end{DoxyParamCaption})}
+
+
+
+Starts a G\+ET request. 
+
+The function starts an asynchronous G\+ET request, and returns immediately.
+
+The function returns {\ttfamily true} when the G\+ET request has been scheduled, and thus \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} will be emitted eventually.
+
+The function returns {\ttfamily false} if the client could not schedule the request, for example if the {\ttfamily url} is invalid or if the U\+RL scheme is not supported.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Client_aed50841f6c792d8f08e44225401abab0}{request()}}, \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_ab8b9fe9ff278c5a8cb97125ed3671bb3}\label{classWt_1_1Http_1_1Client_ab8b9fe9ff278c5a8cb97125ed3671bb3}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!get@{get}}
+\index{get@{get}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Wt\+::\+Http\+::\+Client\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Http_1_1Message_1_1Header}{Message\+::\+Header}} $>$}]{headers }\end{DoxyParamCaption})}
+
+
+
+Starts a G\+ET request. 
+
+The function starts an asynchronous G\+ET request, and returns immediately.
+
+The function returns {\ttfamily true} when the G\+ET request has been scheduled, and thus \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} will be emitted eventually.
+
+The function returns {\ttfamily false} if the client could not schedule the request, for example if the {\ttfamily url} is invalid or if the U\+RL scheme is not supported.
+
+This function accepts one or more headers.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Client_aed50841f6c792d8f08e44225401abab0}{request()}}, \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a28336ba9677e6e3cc6c890f490f2965a}\label{classWt_1_1Http_1_1Client_a28336ba9677e6e3cc6c890f490f2965a}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!head@{head}}
+\index{head@{head}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{head()}{head()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Wt\+::\+Http\+::\+Client\+::head (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url }\end{DoxyParamCaption})}
+
+
+
+Starts a H\+E\+AD request. 
+
+The function starts an asynchronous H\+E\+AD request, and returns immediately.
+
+The function returns {\ttfamily true} when the H\+E\+AD request has been scheduled, and thus \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} will be emitted eventually.
+
+The function returns {\ttfamily false} if the client could not schedule the request, for example if the {\ttfamily url} is invalid or if the U\+RL scheme is not supported.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Client_aed50841f6c792d8f08e44225401abab0}{request()}}, \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a47fb86c27312b38145c90e47e72153af}\label{classWt_1_1Http_1_1Client_a47fb86c27312b38145c90e47e72153af}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!head@{head}}
+\index{head@{head}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{head()}{head()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Wt\+::\+Http\+::\+Client\+::head (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Http_1_1Message_1_1Header}{Message\+::\+Header}} $>$}]{headers }\end{DoxyParamCaption})}
+
+
+
+Starts a H\+E\+AD request. 
+
+The function starts an asynchronous H\+E\+AD request, and returns immediately.
+
+The function returns {\ttfamily true} when the H\+E\+AD request has been scheduled, and thus \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} will be emitted eventually.
+
+The function returns {\ttfamily false} if the client could not schedule the request, for example if the {\ttfamily url} is invalid or if the U\+RL scheme is not supported.
+
+This function accepts one or more headers.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Client_aed50841f6c792d8f08e44225401abab0}{request()}}, \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_aad874b0869cb2202f6cd2b79e3956773}\label{classWt_1_1Http_1_1Client_aad874b0869cb2202f6cd2b79e3956773}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!headersReceived@{headersReceived}}
+\index{headersReceived@{headersReceived}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{headersReceived()}{headersReceived()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$\mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}}$>$\& Wt\+::\+Http\+::\+Client\+::headers\+Received (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal that is emitted when all response headers have been received. 
+
+The signal forwards the message with all headers, but with empty body text. You may want to catch this signal if you want to examine the headers prior to having received the complete message.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}}, \mbox{\hyperlink{classWt_1_1Http_1_1Client_a391c75cf826d9918ad4dc200eadd8be3}{body\+Data\+Received()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_ae683fec0c7c53aa39085c3455a9ba519}\label{classWt_1_1Http_1_1Client_ae683fec0c7c53aa39085c3455a9ba519}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!isSslCertificateVerificationEnabled@{isSslCertificateVerificationEnabled}}
+\index{isSslCertificateVerificationEnabled@{isSslCertificateVerificationEnabled}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{isSslCertificateVerificationEnabled()}{isSslCertificateVerificationEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+Http\+::\+Client\+::is\+Ssl\+Certificate\+Verification\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether S\+SL certificate verification is enabled. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Client_a54355849e1235697747eb0361eb643dd}{set\+Ssl\+Certificate\+Verification\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_ab8d6c65425f43fb373e4b66860033d31}\label{classWt_1_1Http_1_1Client_ab8d6c65425f43fb373e4b66860033d31}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!maximumResponseSize@{maximumResponseSize}}
+\index{maximumResponseSize@{maximumResponseSize}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{maximumResponseSize()}{maximumResponseSize()}}
+{\footnotesize\ttfamily std\+::size\+\_\+t Wt\+::\+Http\+::\+Client\+::maximum\+Response\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the maximum response size. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Client_a45b25de10c5da7c7c5abf0892593a04d}{set\+Maximum\+Response\+Size()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a91e8fb79cd34391b2c6da2b59fe7f223}\label{classWt_1_1Http_1_1Client_a91e8fb79cd34391b2c6da2b59fe7f223}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!maxRedirects@{maxRedirects}}
+\index{maxRedirects@{maxRedirects}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{maxRedirects()}{maxRedirects()}}
+{\footnotesize\ttfamily int Wt\+::\+Http\+::\+Client\+::max\+Redirects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the maximum number of redirects to follow. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Client_a269c521c9ff7355b780a3b9056914ab0}{set\+Max\+Redirects()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a4637aff36362649ce8c9dddc6118fd43}\label{classWt_1_1Http_1_1Client_a4637aff36362649ce8c9dddc6118fd43}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!parseUrl@{parseUrl}}
+\index{parseUrl@{parseUrl}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{parseUrl()}{parseUrl()}}
+{\footnotesize\ttfamily static bool Wt\+::\+Http\+::\+Client\+::parse\+Url (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{\mbox{\hyperlink{structWt_1_1Http_1_1Client_1_1URL}{U\+RL}} \&}]{parsed\+Url }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Utility method to parse a U\+RL. 
+
+This parses a U\+RL into an \mbox{\hyperlink{structWt_1_1Http_1_1Client_1_1URL}{U\+RL}} object.
+
+The method returns true if the U\+RL could be parsed successfully. \mbox{\Hypertarget{classWt_1_1Http_1_1Client_a54cd8725e2af030be90c207d19c05493}\label{classWt_1_1Http_1_1Client_a54cd8725e2af030be90c207d19c05493}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!patch@{patch}}
+\index{patch@{patch}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{patch()}{patch()}}
+{\footnotesize\ttfamily bool Wt\+::\+Http\+::\+Client\+::patch (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}} \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Starts a P\+A\+T\+CH request. 
+
+The function starts an asynchronous P\+A\+T\+CH request, and returns immediately.
+
+The function returns {\ttfamily true} when the P\+A\+T\+CH request has been scheduled, and thus \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} will be emitted eventually.
+
+The function returns {\ttfamily false} if the client could not schedule the request, for example if the {\ttfamily url} is invalid or if the U\+RL scheme is not supported.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Client_aed50841f6c792d8f08e44225401abab0}{request()}}, \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a2b5cad895252510ff1cd0e8e6e31c453}\label{classWt_1_1Http_1_1Client_a2b5cad895252510ff1cd0e8e6e31c453}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!post@{post}}
+\index{post@{post}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{post()}{post()}}
+{\footnotesize\ttfamily bool Wt\+::\+Http\+::\+Client\+::post (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}} \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Starts a P\+O\+ST request. 
+
+The function starts an asynchronous P\+O\+ST request, and returns immediately.
+
+The function returns {\ttfamily true} when the P\+O\+ST request has been scheduled, and thus \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} will be emitted eventually.
+
+The function returns {\ttfamily false} if the client could not schedule the request, for example if the {\ttfamily url} is invalid or if the U\+RL scheme is not supported.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Client_aed50841f6c792d8f08e44225401abab0}{request()}}, \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_a7ec02e13a1436a6ab0eb7707681730e7}\label{classWt_1_1Http_1_1Client_a7ec02e13a1436a6ab0eb7707681730e7}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!put@{put}}
+\index{put@{put}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily bool Wt\+::\+Http\+::\+Client\+::put (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url,  }\item[{const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}} \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Starts a P\+UT request. 
+
+The function starts an asynchronous P\+UT request, and returns immediately.
+
+The function returns {\ttfamily true} when the P\+UT request has been scheduled, and thus \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} will be emitted eventually.
+
+The function returns {\ttfamily false} if the client could not schedule the request, for example if the {\ttfamily url} is invalid or if the U\+RL scheme is not supported.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Client_aed50841f6c792d8f08e44225401abab0}{request()}}, \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_aed50841f6c792d8f08e44225401abab0}\label{classWt_1_1Http_1_1Client_aed50841f6c792d8f08e44225401abab0}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!request@{request}}
+\index{request@{request}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily bool Wt\+::\+Http\+::\+Client\+::request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWt_1_1Http_a4a1e30eb403b05b4e5afc5c6286dd6b9}{Http\+::\+Method}}}]{method,  }\item[{const std\+::string \&}]{url,  }\item[{const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}} \&}]{message }\end{DoxyParamCaption})}
+
+
+
+Starts a request. 
+
+The function starts an asynchronous H\+T\+TP request, and returns immediately.
+
+The function returns {\ttfamily true} when the request has been scheduled, and thus \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} will be emitted eventually.
+
+The function returns {\ttfamily false} if the client could not schedule the request, for example if the {\ttfamily url} is invalid or if the U\+RL scheme is not supported.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Client_aed50841f6c792d8f08e44225401abab0}{request()}}, \mbox{\hyperlink{classWt_1_1Http_1_1Client_ad288d9121ba7d6f7dd1e29c9ed2a627d}{done()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Client_abede092c50845c4d6f788dde19dc9898}\label{classWt_1_1Http_1_1Client_abede092c50845c4d6f788dde19dc9898}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!setFollowRedirect@{setFollowRedirect}}
+\index{setFollowRedirect@{setFollowRedirect}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{setFollowRedirect()}{setFollowRedirect()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Client\+::set\+Follow\+Redirect (\begin{DoxyParamCaption}\item[{bool}]{follow\+Redirect }\end{DoxyParamCaption})}
+
+
+
+Set whether the client will follow redirects. 
+
+If set and the request method is G\+ET, redirects are automatically followed. \mbox{\Hypertarget{classWt_1_1Http_1_1Client_a45b25de10c5da7c7c5abf0892593a04d}\label{classWt_1_1Http_1_1Client_a45b25de10c5da7c7c5abf0892593a04d}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!setMaximumResponseSize@{setMaximumResponseSize}}
+\index{setMaximumResponseSize@{setMaximumResponseSize}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{setMaximumResponseSize()}{setMaximumResponseSize()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Client\+::set\+Maximum\+Response\+Size (\begin{DoxyParamCaption}\item[{std\+::size\+\_\+t}]{bytes }\end{DoxyParamCaption})}
+
+
+
+Sets a maximum response size. 
+
+The response is stored in-\/memory. To avoid a DoS by a malicious downstream H\+T\+TP server, the response size is bounded by an upper limit.
+
+The limit includes status line, headers and response body.
+
+The default value is 64 kilo bytes.
+
+A value of 0 has a special meaning\+: the size of the response will not be limited, but the response body will not be stored in the response message. Instead the data is made available only to \mbox{\hyperlink{classWt_1_1Http_1_1Client_a391c75cf826d9918ad4dc200eadd8be3}{body\+Data\+Received()}} to be processed incrementally. \mbox{\Hypertarget{classWt_1_1Http_1_1Client_a269c521c9ff7355b780a3b9056914ab0}\label{classWt_1_1Http_1_1Client_a269c521c9ff7355b780a3b9056914ab0}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!setMaxRedirects@{setMaxRedirects}}
+\index{setMaxRedirects@{setMaxRedirects}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{setMaxRedirects()}{setMaxRedirects()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Client\+::set\+Max\+Redirects (\begin{DoxyParamCaption}\item[{int}]{max\+Redirects }\end{DoxyParamCaption})}
+
+
+
+Set the maximum number of redirects to follow. 
+
+This is used only when \mbox{\hyperlink{classWt_1_1Http_1_1Client_a34bc95c42292f3fd7d6e54f86b3781b6}{follow\+Redirect()}} is enabled.
+
+The default is 20. \mbox{\Hypertarget{classWt_1_1Http_1_1Client_a54355849e1235697747eb0361eb643dd}\label{classWt_1_1Http_1_1Client_a54355849e1235697747eb0361eb643dd}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!setSslCertificateVerificationEnabled@{setSslCertificateVerificationEnabled}}
+\index{setSslCertificateVerificationEnabled@{setSslCertificateVerificationEnabled}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{setSslCertificateVerificationEnabled()}{setSslCertificateVerificationEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Client\+::set\+Ssl\+Certificate\+Verification\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enables S\+SL certificate verification. 
+
+For https requests, it is (very strongly!) recommended to perform certificate verification\+: this verifies that you are indeed connected to the server you intended (and not to a man-\/in-\/the-\/middle). Without such a check, encryption simply isn\textquotesingle{}t very useful.
+
+Nevertheless, there may be situations in which you will want to disable this functionality.
+
+The default configuration is to have certificate verification enabled. \mbox{\Hypertarget{classWt_1_1Http_1_1Client_ac6b8b35ab2813a22c3c2e2ae7d1f9a35}\label{classWt_1_1Http_1_1Client_ac6b8b35ab2813a22c3c2e2ae7d1f9a35}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!setSslVerifyFile@{setSslVerifyFile}}
+\index{setSslVerifyFile@{setSslVerifyFile}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{setSslVerifyFile()}{setSslVerifyFile()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Client\+::set\+Ssl\+Verify\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{verify\+File }\end{DoxyParamCaption})}
+
+
+
+Sets a S\+SL certificate used for server identity verification. 
+
+This setting only affects a https request\+: it configures a certificate file to be used to verify the identity of the server. \mbox{\Hypertarget{classWt_1_1Http_1_1Client_a7c9fbf7fc9f671519b0652f3bbe38521}\label{classWt_1_1Http_1_1Client_a7c9fbf7fc9f671519b0652f3bbe38521}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!setSslVerifyPath@{setSslVerifyPath}}
+\index{setSslVerifyPath@{setSslVerifyPath}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{setSslVerifyPath()}{setSslVerifyPath()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Client\+::set\+Ssl\+Verify\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{verify\+Path }\end{DoxyParamCaption})}
+
+
+
+Sets a path with S\+SL certificates for server identity verification. 
+
+This setting only affects a https request\+: it configures a directory containing certificates to be used to verify the identity of the server. \mbox{\Hypertarget{classWt_1_1Http_1_1Client_a3d8f9647e25c264cd9296a61aba16753}\label{classWt_1_1Http_1_1Client_a3d8f9647e25c264cd9296a61aba16753}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!setTimeout@{setTimeout}}
+\index{setTimeout@{setTimeout}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{setTimeout()}{setTimeout()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Client\+::set\+Timeout (\begin{DoxyParamCaption}\item[{std\+::chrono\+::steady\+\_\+clock\+::duration}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Sets an I/O timeout. 
+
+This sets a timeout waiting for I/O operations. The timeout does not bound the total timeout, since the timer is reset on each I/O progress.
+
+The default timeout is 10 seconds. \mbox{\Hypertarget{classWt_1_1Http_1_1Client_ab98a080e1ae3a5d0e09ab0fca76a43ea}\label{classWt_1_1Http_1_1Client_ab98a080e1ae3a5d0e09ab0fca76a43ea}} 
+\index{Wt::Http::Client@{Wt::Http::Client}!timeout@{timeout}}
+\index{timeout@{timeout}!Wt::Http::Client@{Wt::Http::Client}}
+\doxysubsubsection{\texorpdfstring{timeout()}{timeout()}}
+{\footnotesize\ttfamily std\+::chrono\+::steady\+\_\+clock\+::duration Wt\+::\+Http\+::\+Client\+::timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the I/O timeout. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Client_a3d8f9647e25c264cd9296a61aba16753}{set\+Timeout()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Http/Client.\+h\end{DoxyCompactItemize}

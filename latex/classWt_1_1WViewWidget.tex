@@ -1,0 +1,170 @@
+\hypertarget{classWt_1_1WViewWidget}{}\doxysection{Wt\+::W\+View\+Widget Class Reference}
+\label{classWt_1_1WViewWidget}\index{Wt::WViewWidget@{Wt::WViewWidget}}
+
+
+An abstract base class for an M\+VC view that is rendered using a widget.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+View\+Widget.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+View\+Widget\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+View\+Widget\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WViewWidget_ad0b30cdda371d345b3118042e8808b44}\label{classWt_1_1WViewWidget_ad0b30cdda371d345b3118042e8808b44}} 
+\mbox{\hyperlink{classWt_1_1WViewWidget_ad0b30cdda371d345b3118042e8808b44}{W\+View\+Widget}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new view widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WViewWidget_a7dcbc05eb15c4d4168141871d5908e37}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the view. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WViewWidget_a087ed57a0f27ed6d65b780019e3bd208}{load}} () override
+\begin{DoxyCompactList}\small\item\em Loads content just before the widget is used. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WViewWidget_a3f59b92f2cc731511a39735ceb52eb6f}{render}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$ flags) override
+\begin{DoxyCompactList}\small\item\em Renders the widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WViewWidget_ab770401a3b71a43f0707768fc454c991}{refresh}} () override
+\begin{DoxyCompactList}\small\item\em Refresh the widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WViewWidget_a58784e9a334ea7b23c200aaf08f0c1dd}{render\+View}} ()=0
+\begin{DoxyCompactList}\small\item\em Creates a widget that renders the View. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WViewWidget_a510b86e980d7c7c812986c6e7c00e2c4}\label{classWt_1_1WViewWidget_a510b86e980d7c7c812986c6e7c00e2c4}} 
+virtual void {\bfseries update\+Dom} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&element, bool all) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WViewWidget_ac608ecbd7e7211c7f7a95ca620275561}\label{classWt_1_1WViewWidget_ac608ecbd7e7211c7f7a95ca620275561}} 
+virtual void {\bfseries propagate\+Render\+Ok} (bool deep) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WViewWidget_a95e9459124bb76d815fa27943ae590f6}\label{classWt_1_1WViewWidget_a95e9459124bb76d815fa27943ae590f6}} 
+virtual \mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} {\bfseries dom\+Element\+Type} () const override
+\item 
+\mbox{\Hypertarget{classWt_1_1WViewWidget_abe9fa5c219aa62c1b4eb6c3429d1d5f3}\label{classWt_1_1WViewWidget_abe9fa5c219aa62c1b4eb6c3429d1d5f3}} 
+virtual void {\bfseries done\+Rerender} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WViewWidget_a92fee9f4d344642b70b7c27ac88b7665}\label{classWt_1_1WViewWidget_a92fee9f4d344642b70b7c27ac88b7665}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ {\bfseries contents\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WViewWidget_a567ce8795f97991977310d82a0f5d778}\label{classWt_1_1WViewWidget_a567ce8795f97991977310d82a0f5d778}} 
+bool {\bfseries need\+Contents\+Update\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An abstract base class for an M\+VC view that is rendered using a widget. 
+
+In principle, Wt widgets are self-\/contained and manage both their content, behavior and layout. From the point of view of a Model-\/\+View-\/\+Controller (M\+VC) design pattern, they implement each of these, except for the view widgets that work in conjunction with \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}}. As a developer you can chose to keep Model, View and Controller together or separate them as you wish.
+
+This widget facilitates separation of the View from the Model and Controller in a particular way. The View is rendered as a Wt widget. The use of this widget provides two benefits. The classic M\+VC benefit is a decoupling between view and model, which may allow easier maintainance of code. In addition, this widget enforces the View to be stateless, as it is only created transiently on the server. Therefore the View does not require session resources. This may increase scalability for Internet-\/deployments.
+
+The rendered View widget returned by \mbox{\hyperlink{classWt_1_1WViewWidget_a58784e9a334ea7b23c200aaf08f0c1dd}{render\+View()}} should reflect the current model state. Whenever the model changes, rerendering can be triggered by calling \mbox{\hyperlink{classWt_1_1WViewWidget_a7dcbc05eb15c4d4168141871d5908e37}{update()}}.
+
+Currently, the View cannot enclose \mbox{\hyperlink{classWt_1_1WFormWidget}{W\+Form\+Widgets}} which would allow direct manipulation of the model (but we are working to remove this limitation in the future, and let the Model/\+Controller handle editing changes) and the View may only be updated by a complete rerendering of the entire view.
+
+The View widget may contain event handling code, but only in one of the following ways\+: 
+\begin{DoxyItemize}
+\item event handling implemented directly in Java\+Script code 
+\item event handling implemented in pre-\/learned stateless slot implementations 
+\end{DoxyItemize}Thus, currently, event handling code related to the View cannot be implemented at server-\/side (but we are thinking about a solution for this as well...).
+
+\doxyparagraph*{C\+SS}
+
+This widget does not provide styling, and can be styled using inline or external C\+SS as appropriate. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WViewWidget_a087ed57a0f27ed6d65b780019e3bd208}\label{classWt_1_1WViewWidget_a087ed57a0f27ed6d65b780019e3bd208}} 
+\index{Wt::WViewWidget@{Wt::WViewWidget}!load@{load}}
+\index{load@{load}!Wt::WViewWidget@{Wt::WViewWidget}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+View\+Widget\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Loads content just before the widget is used. 
+
+This function is called when a widget is inserted in the widget hierarchy. Widgets that get inserted in the widget hierarchy will be rendered. Visible widgets are rendered immediately, and invisible widgets in the back-\/ground (or not for a plain H\+T\+ML session). This method is called when the widget is directly or indirectly inserted into the widget tree.
+
+The default implementation simply propagates the load signal to its children. You may want to override this method to delay loading of resource-\/intensive contents.
+
+During the life-\/time of a widget, this method may be called multiple times, so you should make sure that you do a deferred initialization only once. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a3829020b1c4808c44af304d5d9dce3b3}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WViewWidget_ab770401a3b71a43f0707768fc454c991}\label{classWt_1_1WViewWidget_ab770401a3b71a43f0707768fc454c991}} 
+\index{Wt::WViewWidget@{Wt::WViewWidget}!refresh@{refresh}}
+\index{refresh@{refresh}!Wt::WViewWidget@{Wt::WViewWidget}}
+\doxysubsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+View\+Widget\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Refresh the widget. 
+
+The refresh method is invoked when the locale is changed using \mbox{\hyperlink{classWt_1_1WApplication_ac0af7e0131c926c77b207595c8c6e283}{W\+Application\+::set\+Locale()}} or when the user hit the refresh button.
+
+The widget must actualize its contents in response.
+
+\begin{DoxyNote}{Note}
+This does {\bfseries{not}} rerender the widget! Calling \mbox{\hyperlink{classWt_1_1WViewWidget_ab770401a3b71a43f0707768fc454c991}{refresh()}} usually does not have any effect (unless you\textquotesingle{}ve reimplemented \mbox{\hyperlink{classWt_1_1WViewWidget_ab770401a3b71a43f0707768fc454c991}{refresh()}} to attach to it an effect). 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a6cfacec8220f5063817e22506057a5dd}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WViewWidget_a3f59b92f2cc731511a39735ceb52eb6f}\label{classWt_1_1WViewWidget_a3f59b92f2cc731511a39735ceb52eb6f}} 
+\index{Wt::WViewWidget@{Wt::WViewWidget}!render@{render}}
+\index{render@{render}!Wt::WViewWidget@{Wt::WViewWidget}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+View\+Widget\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Renders the widget. 
+
+This function renders the widget (or an update for the widget), after this has been scheduled using \mbox{\hyperlink{classWt_1_1WWidget_a5d3d4edaafa2d7c892a5078f3df4cf11}{schedule\+Render()}}.
+
+The default implementation will render the widget by serializing changes to Java\+Script and H\+T\+ML. You may want to reimplement this widget if you have been postponing some of the layout / rendering implementation until the latest moment possible. In that case you should make sure you call the base implementation however. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a5ca222ef9275cfd6d0005c63197d40a0}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WViewWidget_a58784e9a334ea7b23c200aaf08f0c1dd}\label{classWt_1_1WViewWidget_a58784e9a334ea7b23c200aaf08f0c1dd}} 
+\index{Wt::WViewWidget@{Wt::WViewWidget}!renderView@{renderView}}
+\index{renderView@{renderView}!Wt::WViewWidget@{Wt::WViewWidget}}
+\doxysubsubsection{\texorpdfstring{renderView()}{renderView()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$>$ Wt\+::\+W\+View\+Widget\+::render\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Creates a widget that renders the View. 
+
+This method must be reimplemented to return a widget that renders the view. The returned widget will be deleted by W\+View\+Widget. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WStaticModelView_a8ae76533bf5ecff5f4555600c1e2540a}{Wt\+::\+W\+Static\+Model\+View$<$ Renderer $>$}}, and \mbox{\hyperlink{classSourceView_afb5171a305a5230376addbb11287bd60}{Source\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WViewWidget_a7dcbc05eb15c4d4168141871d5908e37}\label{classWt_1_1WViewWidget_a7dcbc05eb15c4d4168141871d5908e37}} 
+\index{Wt::WViewWidget@{Wt::WViewWidget}!update@{update}}
+\index{update@{update}!Wt::WViewWidget@{Wt::WViewWidget}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+View\+Widget\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the view. 
+
+Typically, the model will want to update the view when the model has changed.
+
+This will trigger a call to \mbox{\hyperlink{classWt_1_1WViewWidget_a58784e9a334ea7b23c200aaf08f0c1dd}{render\+View()}} to ask for a new rendering of the view. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+View\+Widget.\+h\end{DoxyCompactItemize}

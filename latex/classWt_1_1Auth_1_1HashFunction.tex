@@ -1,0 +1,90 @@
+\hypertarget{classWt_1_1Auth_1_1HashFunction}{}\doxysection{Wt\+::Auth\+::Hash\+Function Class Reference}
+\label{classWt_1_1Auth_1_1HashFunction}\index{Wt::Auth::HashFunction@{Wt::Auth::HashFunction}}
+
+
+An abstract cryptographic hash function interface.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Auth/\+Hash\+Function.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Auth\+::Hash\+Function\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1HashFunction_ad0f36de43233ac31afcc4027f99a9441}\label{classWt_1_1Auth_1_1HashFunction_ad0f36de43233ac31afcc4027f99a9441}} 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1HashFunction_ad0f36de43233ac31afcc4027f99a9441}{$\sim$\+Hash\+Function}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1HashFunction_aaa3f4d60d558577c118c3d8684f72ed4}{name}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the name for this hash function. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1HashFunction_a7a79f2aae54b390ba8a3b451d590ac92}{compute}} (const std\+::string \&msg, const std\+::string \&salt) const =0
+\begin{DoxyCompactList}\small\item\em Computes the hash of a message + salt. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1Auth_1_1HashFunction_a0a81472fd0c5077c0cf83322c3f40953}{verify}} (const std\+::string \&msg, const std\+::string \&salt, const std\+::string \&hash) const
+\begin{DoxyCompactList}\small\item\em Verifies a message with the salted hash. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An abstract cryptographic hash function interface. 
+
+A cryptographic hash function computes a hash value from a message, for which it is hard to guess another message that generates the same hash.
+
+These hash functions are intended for short messages, typically passwords or random tokens, and thus not suitable for computing the hash value of a large document.
+
+When used for passwords, to avoid dictionary attacks, the hash functions accept also a random salt which is hashed together with the password. Not all hash functions are adequate for passwords hashes. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1HashFunction_a7a79f2aae54b390ba8a3b451d590ac92}\label{classWt_1_1Auth_1_1HashFunction_a7a79f2aae54b390ba8a3b451d590ac92}} 
+\index{Wt::Auth::HashFunction@{Wt::Auth::HashFunction}!compute@{compute}}
+\index{compute@{compute}!Wt::Auth::HashFunction@{Wt::Auth::HashFunction}}
+\doxysubsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+Hash\+Function\+::compute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg,  }\item[{const std\+::string \&}]{salt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Computes the hash of a message + salt. 
+
+The message is usually an A\+S\+C\+II or U\+T\+F-\/8 string.
+
+The {\ttfamily salt} and the computed hash are encoded in printable characters. This is usually A\+S\+C\+I\+I-\/encoded or could be Base64-\/encoded. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Auth_1_1BCryptHashFunction_a998f448d1719bdffd04cc45dbc23eb8e}{Wt\+::\+Auth\+::\+B\+Crypt\+Hash\+Function}}, \mbox{\hyperlink{classWt_1_1Auth_1_1SHA1HashFunction_a3be1fc35f48c3a815535f169fcc73251}{Wt\+::\+Auth\+::\+S\+H\+A1\+Hash\+Function}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1MD5HashFunction_a8bd85a50a67e086b96c1f79b81a7d37d}{Wt\+::\+Auth\+::\+M\+D5\+Hash\+Function}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1HashFunction_aaa3f4d60d558577c118c3d8684f72ed4}\label{classWt_1_1Auth_1_1HashFunction_aaa3f4d60d558577c118c3d8684f72ed4}} 
+\index{Wt::Auth::HashFunction@{Wt::Auth::HashFunction}!name@{name}}
+\index{name@{name}!Wt::Auth::HashFunction@{Wt::Auth::HashFunction}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+Hash\+Function\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the name for this hash function. 
+
+This should return a (short) name that uniquely identifies this hash function. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Auth_1_1BCryptHashFunction_a00aaa33e43263858e71c2d908e36d3db}{Wt\+::\+Auth\+::\+B\+Crypt\+Hash\+Function}}, \mbox{\hyperlink{classWt_1_1Auth_1_1SHA1HashFunction_adf0d825f5a799398bd0b730d4ebc7eb6}{Wt\+::\+Auth\+::\+S\+H\+A1\+Hash\+Function}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1MD5HashFunction_ab8cf0ef085789438a83e988a923d2603}{Wt\+::\+Auth\+::\+M\+D5\+Hash\+Function}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1HashFunction_a0a81472fd0c5077c0cf83322c3f40953}\label{classWt_1_1Auth_1_1HashFunction_a0a81472fd0c5077c0cf83322c3f40953}} 
+\index{Wt::Auth::HashFunction@{Wt::Auth::HashFunction}!verify@{verify}}
+\index{verify@{verify}!Wt::Auth::HashFunction@{Wt::Auth::HashFunction}}
+\doxysubsubsection{\texorpdfstring{verify()}{verify()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+Auth\+::\+Hash\+Function\+::verify (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg,  }\item[{const std\+::string \&}]{salt,  }\item[{const std\+::string \&}]{hash }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Verifies a message with the salted hash. 
+
+The base implementation will recompute the hash of the message with the given salt, and compare it to the {\ttfamily hash}.
+
+Some methods however store the salt and additional settings in the {\ttfamily hash}, and this information is thus needed to verify the message hash. 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1Auth_1_1BCryptHashFunction_acab64174992ce03406abee206087a2f4}{Wt\+::\+Auth\+::\+B\+Crypt\+Hash\+Function}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/Hash\+Function.\+h\end{DoxyCompactItemize}

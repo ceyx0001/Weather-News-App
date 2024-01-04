@@ -1,0 +1,60 @@
+\hypertarget{classRequester}{}\doxysection{Requester Class Reference}
+\label{classRequester}\index{Requester@{Requester}}
+
+
+Inheritance diagram for Requester\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classRequester_ae5d5b48330e492f90ce8d6115bc1f2b2}{get\+Data}} (\mbox{\hyperlink{classRequest}{Request}} $\ast$request)=0
+\begin{DoxyCompactList}\small\item\em Get A\+PI data. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classRequester_a84f8b17453ce9ad23144968f2dd4d920}{get\+Host}} ()=0
+\begin{DoxyCompactList}\small\item\em Get A\+PI host. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRequester_ae5d5b48330e492f90ce8d6115bc1f2b2}\label{classRequester_ae5d5b48330e492f90ce8d6115bc1f2b2}} 
+\index{Requester@{Requester}!getData@{getData}}
+\index{getData@{getData}!Requester@{Requester}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::vector$<$std\+::string$>$ $>$ Requester\+::get\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRequest}{Request}} $\ast$}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get A\+PI data. 
+
+Returns the A\+PI response stored in a data table of 2d vector form with keys as headers 
+\begin{DoxyParams}{Parameters}
+{\em request} & is the \mbox{\hyperlink{classRequest}{Request}} context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The A\+PI response data table in 2d vector form. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classNewsRequester_ac1670eb706c02e04ef51004cbb9a9ce1}{News\+Requester}}, \mbox{\hyperlink{classAddressRequester_a26728f737f00a40d510da09dc088fbea}{Address\+Requester}}, \mbox{\hyperlink{classGeoRequester_a4c14c83b43ac71cb748d418ac3ef502e}{Geo\+Requester}}, and \mbox{\hyperlink{classWeatherRequester_a244450ab357f348edd9856d64296e5b4}{Weather\+Requester}}.
+
+\mbox{\Hypertarget{classRequester_a84f8b17453ce9ad23144968f2dd4d920}\label{classRequester_a84f8b17453ce9ad23144968f2dd4d920}} 
+\index{Requester@{Requester}!getHost@{getHost}}
+\index{getHost@{getHost}!Requester@{Requester}}
+\doxysubsubsection{\texorpdfstring{getHost()}{getHost()}}
+{\footnotesize\ttfamily virtual std\+::string Requester\+::get\+Host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get A\+PI host. 
+
+Returns the A\+PI host address of the \mbox{\hyperlink{classRequester}{Requester}} \begin{DoxyReturn}{Returns}
+The A\+PI host address of the requester. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classNewsRequester_a1d09c0fbf74ee59c61a741f2de6ac2eb}{News\+Requester}}, \mbox{\hyperlink{classAddressRequester_abc90eca07bc0a74222321b93ddddf65b}{Address\+Requester}}, \mbox{\hyperlink{classGeoRequester_a37374e8fdc78d766a9d94abccf847f2e}{Geo\+Requester}}, and \mbox{\hyperlink{classWeatherRequester_a3e282e52e6bbf1dac66e10b10f3b0da4}{Weather\+Requester}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+web/Requester.\+h\end{DoxyCompactItemize}

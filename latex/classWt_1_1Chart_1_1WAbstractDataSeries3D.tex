@@ -1,0 +1,565 @@
+\hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D}{}\doxysection{Wt\+::Chart\+::W\+Abstract\+Data\+Series3D Class Reference}
+\label{classWt_1_1Chart_1_1WAbstractDataSeries3D}\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+
+
+Abstract base class for dataseries that can be drawn on a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesian3DChart}{W\+Cartesian3\+D\+Chart}}.  
+
+
+
+
+{\ttfamily \#include $<$W\+Abstract\+Data\+Series3\+D.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Chart\+::W\+Abstract\+Data\+Series3D\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Chart\+::W\+Abstract\+Data\+Series3D\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a575f62e309026182aa4336b4e3105444}{W\+Abstract\+Data\+Series3D}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a39179ec22819e7c95689bd878beffc33}{model}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a6fa90e2168b69fea205f55bd6d5ae05c}{set\+Title}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&name)
+\begin{DoxyCompactList}\small\item\em Sets the title of this dataseries. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \& \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_af38182b82b508643cc8749d6f845f946}{title}} () const
+\begin{DoxyCompactList}\small\item\em Returns the title of this dataseries. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a1b7fe4d6ae21b20546d020168dd53f63}{set\+Model}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \&\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a39179ec22819e7c95689bd878beffc33}{model}})
+\begin{DoxyCompactList}\small\item\em Sets a model from which the dataseries gets its data. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a39179ec22819e7c95689bd878beffc33}{model}} () const
+\begin{DoxyCompactList}\small\item\em Returns a pointer to the model used by this dataseries. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a69a9cdb0827605fbe4dd8472cac24668}{minimum}} (\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}} axis) const =0
+\begin{DoxyCompactList}\small\item\em Returns the computed minimum value of this dataseries along the given axis. \end{DoxyCompactList}\item 
+virtual double \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_aa7bf2d8e3bd86b80e96f86ac0c1750a1}{maximum}} (\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}} axis) const =0
+\begin{DoxyCompactList}\small\item\em Returns the computed maximum value of this dataseries along the given axis. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a139e202dbb24243b0ac1aa2ddcb70180}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a139e202dbb24243b0ac1aa2ddcb70180}} 
+const \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesian3DChart}{W\+Cartesian3\+D\+Chart}} $\ast$ \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a139e202dbb24243b0ac1aa2ddcb70180}{chart}} () const
+\begin{DoxyCompactList}\small\item\em Returns a const pointer to the \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesian3DChart}{W\+Cartesian3\+D\+Chart}} on which the dataseries is drawn. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_af6046a048fc03ddcc453dd98e4dd398a}{set\+Point\+Size}} (double size)
+\begin{DoxyCompactList}\small\item\em Sets the pointsize for drawing this dataseries. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a19428c82734b0f37e2fa121a22e69c60}{point\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the pointsize for drawing this dataseries. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a0ac582c98fe58f36e0d60f11b5627656}{set\+Point\+Sprite}} (const std\+::string \&image)
+\begin{DoxyCompactList}\small\item\em Set the point sprite used for drawing this dataseries. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a80ee5e730c4004f05d41054be3898652}{point\+Sprite}} () const
+\begin{DoxyCompactList}\small\item\em Returns the point sprite used for drawing this dataseries. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a05a0b75a253302bfcfc288dbf913351b}{set\+Color\+Map}} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap}{W\+Abstract\+Color\+Map}} $>$ \&colormap)
+\begin{DoxyCompactList}\small\item\em Sets the colormap for this dataseries. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap}{W\+Abstract\+Color\+Map}} $\ast$ \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_ab620542a33ff5ace4c7adbc9e06c6141}{color\+Map}} () const
+\begin{DoxyCompactList}\small\item\em Returns the colormap used by this dataseries. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a4d2d42400ab765e08ca57d007eeb2595}{set\+Color\+Map\+Visible}} (bool enabled=true)
+\begin{DoxyCompactList}\small\item\em Sets whether the colormap that is used should be shown alongside the chart in the form of a legend. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a38c14e0ff819b7310525464d2cd37b52}{color\+Map\+Visible}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the colormap is shown alongside the chart in the form of a legend. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a886ff2084f2be4f0b061bd2579c0a8d2}{set\+Color\+Map\+Side}} (\mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} side)
+\begin{DoxyCompactList}\small\item\em Sets whether the colormap is shown on the left or right. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a7353231a6cb23369cb917b0191d48327}{color\+Map\+Side}} () const
+\begin{DoxyCompactList}\small\item\em Returns on which side the colormap is shown. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_adb73f255379210b04f1ff3ad3c51cd1d}{set\+Legend\+Enabled}} (bool enabled=true)
+\begin{DoxyCompactList}\small\item\em Sets whether this dataseries is included in the chart-\/legend. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a68ac82fc2c57c83be87a47e07032e7ee}{is\+Legend\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this dataseries is included in the chart-\/legend. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_afb0b01644644af1d5e2c68160442d574}{set\+Hidden}} (bool enabled=true)
+\begin{DoxyCompactList}\small\item\em Sets if this dataseries is hidden. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a2f8dcb0c792ff08f675ff5913d5194f0}{is\+Hidden}} () const
+\begin{DoxyCompactList}\small\item\em Returns if this dataseries is hidden. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a35e5b27da1bbccf3b10bf334c1b8d871}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a35e5b27da1bbccf3b10bf334c1b8d871}} 
+void {\bfseries set\+Default\+Title} (int i)
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_aa6f08171d5ce42ecd0c977d584a3c0df}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_aa6f08171d5ce42ecd0c977d584a3c0df}} 
+\mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} {\bfseries chartpalette\+Color} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a1b141a6dfe5ba704a15c46a6e8d9e39e}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a1b141a6dfe5ba704a15c46a6e8d9e39e}} 
+virtual void {\bfseries set\+Chart} (\mbox{\hyperlink{classWt_1_1Chart_1_1WCartesian3DChart}{W\+Cartesian3\+D\+Chart}} $\ast$\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a139e202dbb24243b0ac1aa2ddcb70180}{chart}})
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_abe89acc430b350c52d2f285e03c13a5b}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_abe89acc430b350c52d2f285e03c13a5b}} 
+virtual std\+::vector$<$ \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} $>$ {\bfseries get\+Gl\+Objects} ()
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a09f88c47c2fd01d83860dab188cad9b7}{initialize\+GL}} ()=0
+\begin{DoxyCompactList}\small\item\em Initialize GL resources. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_ab2965d965dbc6049756033bc40f80025}{paint\+GL}} () const =0
+\begin{DoxyCompactList}\small\item\em Update the client-\/side painting function. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_ab97b255bfc1c4af25da3828c82a8a8c7}{update\+GL}} ()=0
+\begin{DoxyCompactList}\small\item\em Update GL resources. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a77b0cad018156361205753ae16cebfcd}{resize\+GL}} ()=0
+\begin{DoxyCompactList}\small\item\em Act on resize events. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a49434192a0398755cec3bd1760450d46}{delete\+All\+G\+L\+Resources}} ()=0
+\begin{DoxyCompactList}\small\item\em Delete GL resources. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a306e359bab876652fe95f5bf02b0e533}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a306e359bab876652fe95f5bf02b0e533}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Texture}{W\+G\+L\+Widget\+::\+Texture}} {\bfseries color\+Texture} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a4812d1bf137e877e927c955f2276224d}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a4812d1bf137e877e927c955f2276224d}} 
+\mbox{\hyperlink{classWt_1_1WGLWidget_1_1Texture}{W\+G\+L\+Widget\+::\+Texture}} {\bfseries point\+Sprite\+Texture} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_aea7519d85a78961896eb3eb3586f93ea}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_aea7519d85a78961896eb3eb3586f93ea}} 
+void {\bfseries load\+Point\+Sprite\+Texture} (const \mbox{\hyperlink{classWt_1_1WGLWidget_1_1Texture}{W\+G\+L\+Widget\+::\+Texture}} \&tex) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a560295b1162a54d4f4f262675e6d0bd1}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a560295b1162a54d4f4f262675e6d0bd1}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries name\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a2fa402bbc027e781080b3131ba1657fb}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a2fa402bbc027e781080b3131ba1657fb}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ {\bfseries model\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a1e867df075df6b6db8be745fd6eee848}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a1e867df075df6b6db8be745fd6eee848}} 
+\mbox{\hyperlink{classWt_1_1Chart_1_1WCartesian3DChart}{W\+Cartesian3\+D\+Chart}} $\ast$ {\bfseries chart\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a9f0bcaaf9b29665a14ac70b3c615fd1d}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a9f0bcaaf9b29665a14ac70b3c615fd1d}} 
+double {\bfseries z\+Min\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_abedd4419ba2d158a00f9ef15b93d8cbb}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_abedd4419ba2d158a00f9ef15b93d8cbb}} 
+double {\bfseries z\+Max\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a400b7d25ed7332a142d0febd2e43caf2}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a400b7d25ed7332a142d0febd2e43caf2}} 
+bool {\bfseries range\+Cached\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a4694b52212c80a163cb3db93468261ed}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a4694b52212c80a163cb3db93468261ed}} 
+double {\bfseries point\+Size\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a3edfcb532b29eb30a799a9604a2eaee5}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a3edfcb532b29eb30a799a9604a2eaee5}} 
+std\+::string {\bfseries point\+Sprite\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a50e66a9f3afe878af64736a1eacfb276}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a50e66a9f3afe878af64736a1eacfb276}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap}{W\+Abstract\+Color\+Map}} $>$ {\bfseries colormap\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_afd63ff4513ed4e9d6423b8e8733ce35a}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_afd63ff4513ed4e9d6423b8e8733ce35a}} 
+bool {\bfseries show\+Color\+Map\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a31ce1469222e2c27f5b85125912dc1f6}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a31ce1469222e2c27f5b85125912dc1f6}} 
+\mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} {\bfseries color\+Map\+Side\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_ae44564b6c541a2c0e6173f85939d86d1}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_ae44564b6c541a2c0e6173f85939d86d1}} 
+bool {\bfseries legend\+Enabled\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a674143b6793171c59c9de23bb05bcf35}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a674143b6793171c59c9de23bb05bcf35}} 
+bool {\bfseries hidden\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a8c5b8d8bcff193bb8511b642b6b550f0}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a8c5b8d8bcff193bb8511b642b6b550f0}} 
+\mbox{\hyperlink{classWt_1_1WMatrix4x4}{W\+Matrix4x4}} {\bfseries mv\+Matrix\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_ac4122e641c8c3c6e01fad3bf169be72f}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_ac4122e641c8c3c6e01fad3bf169be72f}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Signals_1_1Impl_1_1Connection}{Wt\+::\+Signals\+::connection}} $>$ {\bfseries connections\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for dataseries that can be drawn on a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesian3DChart}{W\+Cartesian3\+D\+Chart}}. 
+
+\doxyparagraph*{General}
+
+The model that is provided at construction or with \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a1b7fe4d6ae21b20546d020168dd53f63}{set\+Model()}} contains the data of a dataseries. Implementations of this class format the data for representation on the chart and perform all necessary drawing operations. \mbox{\hyperlink{classNote}{Note}} that if a dataseries holds numerical data it should be added to a chart of type \mbox{\hyperlink{group__charts_gga8d63464f873580c77508e1c0c26cbfeaa09870720ca8134284e4e305ac6ce5f19}{Chart\+Type\+::\+Scatter}}, if it holds categorical data it should be added to a chart of type \mbox{\hyperlink{group__charts_gga8d63464f873580c77508e1c0c26cbfeaa3adbdb3ac060038aa0e6e6c138ef9873}{Chart\+Type\+::\+Category}}.
+
+\doxyparagraph*{Color}
+
+The color used to draw data on a chart can be specified in a number of ways. The priority of this is as follows (1 being the highest)\+:
+
+
+\begin{DoxyEnumerate}
+\item \mbox{\hyperlink{classWt_1_1ItemDataRole_abb34e7ee20014dba0e303eab053d1cc5}{Item\+Data\+Role\+::\+Marker\+Brush\+Color}} set on a value in the model 
+\item \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap}{W\+Abstract\+Color\+Map}} set on the dataseries 
+\item \mbox{\hyperlink{classWt_1_1Chart_1_1WChartPalette}{W\+Chart\+Palette}} present in the chart 
+\end{DoxyEnumerate}
+
+A chart-\/palette will specify one color for the entire dataseries. Each new dataseries on a chart will receive another color.~\newline
+ A colormap assigns different colors to the data within one dataseries, based on the z-\/value of the data. \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardColorMap}{W\+Standard\+Color\+Map}} provides an easy way to create a colormap that is either smooth or consists of a number of bands.
+
+\doxyparagraph*{Data-\/roles}
+
+The roles on the model which are taken into account are\+:~\newline
+
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{classWt_1_1ItemDataRole_abb34e7ee20014dba0e303eab053d1cc5}{Item\+Data\+Role\+::\+Marker\+Brush\+Color}}\+: this determines the color of a datapoint and overrides the default 
+\item \mbox{\hyperlink{classWt_1_1ItemDataRole_a757e4e9ef3813b362eec115be1983178}{Item\+Data\+Role\+::\+Marker\+Scale\+Factor}}\+: this determines the size of a datapoint and overrides the default 
+\end{DoxyItemize}
+
+Some representations of the data ignore these roles. For example, when a surface is drawn, the roles are ignored.
+
+\doxyparagraph*{Implementing a new dataseries class}
+
+When the existing implementations of W\+Abstract\+Data\+Series3D don\textquotesingle{}t meet your needs, you might want to make your own. When doing this there are some details of the chart that you should know. The chart is made so that when a property of the chart changes, which affect any of the GL resources, all GL resources are destroyed and re-\/initialized. This eliminates the need to determine which chart-\/setting affect which G\+L-\/resources, which can be a complicated problem.
+
+Therefore only unchanging GL resources are initialized in \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a09f88c47c2fd01d83860dab188cad9b7}{initialize\+G\+L()}}. The initialize\+GL function in the chart is implemented to immediately request a call to \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_ab97b255bfc1c4af25da3828c82a8a8c7}{update\+G\+L()}}, which then initializes the rest of the GL resources. Every call to update\+GL in the chart, will first call \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a49434192a0398755cec3bd1760450d46}{delete\+All\+G\+L\+Resources()}} on all dataseries and will then call \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_ab97b255bfc1c4af25da3828c82a8a8c7}{update\+G\+L()}} on all dataseries. So, when implementing a dataseries\+: initialize unchanging GL resources in \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a09f88c47c2fd01d83860dab188cad9b7}{initialize\+G\+L()}}, initialize the rest of your GL resources in \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_ab97b255bfc1c4af25da3828c82a8a8c7}{update\+G\+L()}} and make G\+L-\/delete calls to all resources initialized in \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_ab97b255bfc1c4af25da3828c82a8a8c7}{update\+G\+L()}} in the function \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a49434192a0398755cec3bd1760450d46}{delete\+All\+G\+L\+Resources()}}. It is also best to check is\+Null() on each of your G\+L-\/resources when deleting them. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a575f62e309026182aa4336b4e3105444}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a575f62e309026182aa4336b4e3105444}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!WAbstractDataSeries3D@{WAbstractDataSeries3D}}
+\index{WAbstractDataSeries3D@{WAbstractDataSeries3D}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{WAbstractDataSeries3D()}{WAbstractDataSeries3D()}}
+{\footnotesize\ttfamily Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::\+W\+Abstract\+Data\+Series3D (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$}]{model }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+This constructor takes a \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} as an argument. The model contains the data of this dataseries. How the model should be structured is dependent on the implementation. Therefore this information is found in the documentation of classes deriving from this one. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_ab620542a33ff5ace4c7adbc9e06c6141}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_ab620542a33ff5ace4c7adbc9e06c6141}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!colorMap@{colorMap}}
+\index{colorMap@{colorMap}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{colorMap()}{colorMap()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap}{W\+Abstract\+Color\+Map}}$\ast$ Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::color\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the colormap used by this dataseries. 
+
+If this dataseries has no colormap set, 0 will be returned.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a05a0b75a253302bfcfc288dbf913351b}{set\+Color\+Map()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a4d2d42400ab765e08ca57d007eeb2595}{set\+Color\+Map\+Visible()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a886ff2084f2be4f0b061bd2579c0a8d2}{set\+Color\+Map\+Side()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a7353231a6cb23369cb917b0191d48327}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a7353231a6cb23369cb917b0191d48327}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!colorMapSide@{colorMapSide}}
+\index{colorMapSide@{colorMapSide}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{colorMapSide()}{colorMapSide()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}} Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::color\+Map\+Side (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns on which side the colormap is shown. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a05a0b75a253302bfcfc288dbf913351b}{set\+Color\+Map}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a4d2d42400ab765e08ca57d007eeb2595}{set\+Color\+Map\+Visible()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a886ff2084f2be4f0b061bd2579c0a8d2}{set\+Color\+Map\+Side()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a38c14e0ff819b7310525464d2cd37b52}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a38c14e0ff819b7310525464d2cd37b52}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!colorMapVisible@{colorMapVisible}}
+\index{colorMapVisible@{colorMapVisible}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{colorMapVisible()}{colorMapVisible()}}
+{\footnotesize\ttfamily bool Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::color\+Map\+Visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the colormap is shown alongside the chart in the form of a legend. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a05a0b75a253302bfcfc288dbf913351b}{set\+Color\+Map()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a4d2d42400ab765e08ca57d007eeb2595}{set\+Color\+Map\+Visible()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a886ff2084f2be4f0b061bd2579c0a8d2}{set\+Color\+Map\+Side()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a49434192a0398755cec3bd1760450d46}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a49434192a0398755cec3bd1760450d46}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!deleteAllGLResources@{deleteAllGLResources}}
+\index{deleteAllGLResources@{deleteAllGLResources}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{deleteAllGLResources()}{deleteAllGLResources()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::delete\+All\+G\+L\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Delete GL resources. 
+
+This function is called by \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_ab97b255bfc1c4af25da3828c82a8a8c7}{update\+G\+L()}} in the chart to which this dataseries was added. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a678819da0d189c74ef6a4fc69296a325}{Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data}}, and \mbox{\hyperlink{classWt_1_1Chart_1_1WScatterData_aeb9e37a264df0dc62a65eb8c6ed55dd3}{Wt\+::\+Chart\+::\+W\+Scatter\+Data}}.
+
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a09f88c47c2fd01d83860dab188cad9b7}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a09f88c47c2fd01d83860dab188cad9b7}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!initializeGL@{initializeGL}}
+\index{initializeGL@{initializeGL}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{initializeGL()}{initializeGL()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::initialize\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Initialize GL resources. 
+
+This function is called by \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a09f88c47c2fd01d83860dab188cad9b7}{initialize\+G\+L()}} in the chart to which this dataseries was added. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a47157d5c2756adeb28a26911b2d9b91a}{Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data}}, and \mbox{\hyperlink{classWt_1_1Chart_1_1WScatterData_afb10fdf685aaf616c5603248fb227630}{Wt\+::\+Chart\+::\+W\+Scatter\+Data}}.
+
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a2f8dcb0c792ff08f675ff5913d5194f0}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a2f8dcb0c792ff08f675ff5913d5194f0}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!isHidden@{isHidden}}
+\index{isHidden@{isHidden}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{isHidden()}{isHidden()}}
+{\footnotesize\ttfamily bool Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::is\+Hidden (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns if this dataseries is hidden. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_afb0b01644644af1d5e2c68160442d574}{set\+Hidden()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a68ac82fc2c57c83be87a47e07032e7ee}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a68ac82fc2c57c83be87a47e07032e7ee}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!isLegendEnabled@{isLegendEnabled}}
+\index{isLegendEnabled@{isLegendEnabled}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{isLegendEnabled()}{isLegendEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::is\+Legend\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether this dataseries is included in the chart-\/legend. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_adb73f255379210b04f1ff3ad3c51cd1d}{set\+Legend\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_aa7bf2d8e3bd86b80e96f86ac0c1750a1}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_aa7bf2d8e3bd86b80e96f86ac0c1750a1}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!maximum@{maximum}}
+\index{maximum@{maximum}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{maximum()}{maximum()}}
+{\footnotesize\ttfamily virtual double Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::maximum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}}}]{axis }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the computed maximum value of this dataseries along the given axis. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a69a9cdb0827605fbe4dd8472cac24668}{minimum()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a8e761cb3a19340ccd5690bb6d254f196}{Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WScatterData_a05a25e06fc19e08b76a6a9219f5316cf}{Wt\+::\+Chart\+::\+W\+Scatter\+Data}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WGridData_ad17a5b634f810e2ecee2718781b5d7da}{Wt\+::\+Chart\+::\+W\+Grid\+Data}}, and \mbox{\hyperlink{classWt_1_1Chart_1_1WEquidistantGridData_acc7b03c8232c71eec9c42478e35055a8}{Wt\+::\+Chart\+::\+W\+Equidistant\+Grid\+Data}}.
+
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a69a9cdb0827605fbe4dd8472cac24668}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a69a9cdb0827605fbe4dd8472cac24668}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!minimum@{minimum}}
+\index{minimum@{minimum}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{minimum()}{minimum()}}
+{\footnotesize\ttfamily virtual double Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::minimum (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__charts_gaddb678f67fbd9f374fcee0922f158c9f}{Axis}}}]{axis }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the computed minimum value of this dataseries along the given axis. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_aa7bf2d8e3bd86b80e96f86ac0c1750a1}{maximum()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a0679d73b58f8b9f42d52d04b9127211a}{Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WScatterData_aff6e430859b049a875275b2b35f2a983}{Wt\+::\+Chart\+::\+W\+Scatter\+Data}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WGridData_a18efeb4c3003f9d6f68edbafc7f11f77}{Wt\+::\+Chart\+::\+W\+Grid\+Data}}, and \mbox{\hyperlink{classWt_1_1Chart_1_1WEquidistantGridData_a2a1d38c4caaa1b3eabf4ed9d0db78147}{Wt\+::\+Chart\+::\+W\+Equidistant\+Grid\+Data}}.
+
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a39179ec22819e7c95689bd878beffc33}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a39179ec22819e7c95689bd878beffc33}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!model@{model}}
+\index{model@{model}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{model()}{model()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}}$>$ Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a pointer to the model used by this dataseries. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a1b7fe4d6ae21b20546d020168dd53f63}{set\+Model()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_ab2965d965dbc6049756033bc40f80025}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_ab2965d965dbc6049756033bc40f80025}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!paintGL@{paintGL}}
+\index{paintGL@{paintGL}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{paintGL()}{paintGL()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::paint\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Update the client-\/side painting function. 
+
+This function is called by \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_ab2965d965dbc6049756033bc40f80025}{paint\+G\+L()}} in the chart to which this dataseries was added. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a074a43efadd7f265185fe9d4ae4edae6}{Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data}}, and \mbox{\hyperlink{classWt_1_1Chart_1_1WScatterData_a1a11e247c4104e93926867ae73fee33d}{Wt\+::\+Chart\+::\+W\+Scatter\+Data}}.
+
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a19428c82734b0f37e2fa121a22e69c60}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a19428c82734b0f37e2fa121a22e69c60}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!pointSize@{pointSize}}
+\index{pointSize@{pointSize}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{pointSize()}{pointSize()}}
+{\footnotesize\ttfamily double Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::point\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the pointsize for drawing this dataseries. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_af6046a048fc03ddcc453dd98e4dd398a}{set\+Point\+Size()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a80ee5e730c4004f05d41054be3898652}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a80ee5e730c4004f05d41054be3898652}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!pointSprite@{pointSprite}}
+\index{pointSprite@{pointSprite}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{pointSprite()}{pointSprite()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::point\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the point sprite used for drawing this dataseries. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a0ac582c98fe58f36e0d60f11b5627656}{set\+Point\+Sprite()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a77b0cad018156361205753ae16cebfcd}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a77b0cad018156361205753ae16cebfcd}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!resizeGL@{resizeGL}}
+\index{resizeGL@{resizeGL}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{resizeGL()}{resizeGL()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::resize\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Act on resize events. 
+
+This function is called by \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a77b0cad018156361205753ae16cebfcd}{resize\+G\+L()}} in the chart to which this dataseries was added. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a8a05b0cc2049ca969ec71d1a0e1ce28a}{Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data}}, and \mbox{\hyperlink{classWt_1_1Chart_1_1WScatterData_a481f722d8ef001edb775e2736bcd8646}{Wt\+::\+Chart\+::\+W\+Scatter\+Data}}.
+
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a05a0b75a253302bfcfc288dbf913351b}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a05a0b75a253302bfcfc288dbf913351b}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!setColorMap@{setColorMap}}
+\index{setColorMap@{setColorMap}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{setColorMap()}{setColorMap()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::set\+Color\+Map (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap}{W\+Abstract\+Color\+Map}} $>$ \&}]{colormap }\end{DoxyParamCaption})}
+
+
+
+Sets the colormap for this dataseries. 
+
+Ownership of the \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap}{W\+Abstract\+Color\+Map}} is transferred to this class.
+
+By default there is no colormap set. When a colormap is set on a dataseries, the color of \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesian3DChart_a012e7440432db678945b3510b1d129ca}{W\+Cartesian3\+D\+Chart\+::palette()}} is no longer used for this series. The colormap associates a color to the data based on the z-\/value of the data. If the colormap is set to 0, the value of the palette will be used again.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a4d2d42400ab765e08ca57d007eeb2595}{set\+Color\+Map\+Visible()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a886ff2084f2be4f0b061bd2579c0a8d2}{set\+Color\+Map\+Side()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a886ff2084f2be4f0b061bd2579c0a8d2}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a886ff2084f2be4f0b061bd2579c0a8d2}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!setColorMapSide@{setColorMapSide}}
+\index{setColorMapSide@{setColorMapSide}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{setColorMapSide()}{setColorMapSide()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::set\+Color\+Map\+Side (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a5a6f4636bcc6ab3c075165d249b3a5a3}{Side}}}]{side }\end{DoxyParamCaption})}
+
+
+
+Sets whether the colormap is shown on the left or right. 
+
+The default side is Side\+::\+Right.
+
+\mbox{\hyperlink{classNote}{Note}}\+: only Side\+::\+Left and Side\+::\+Right are valid values for this function.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a05a0b75a253302bfcfc288dbf913351b}{set\+Color\+Map()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a4d2d42400ab765e08ca57d007eeb2595}{set\+Color\+Map\+Visible()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a4d2d42400ab765e08ca57d007eeb2595}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a4d2d42400ab765e08ca57d007eeb2595}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!setColorMapVisible@{setColorMapVisible}}
+\index{setColorMapVisible@{setColorMapVisible}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{setColorMapVisible()}{setColorMapVisible()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::set\+Color\+Map\+Visible (\begin{DoxyParamCaption}\item[{bool}]{enabled = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Sets whether the colormap that is used should be shown alongside the chart in the form of a legend. 
+
+The default value is false.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a05a0b75a253302bfcfc288dbf913351b}{set\+Color\+Map()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a886ff2084f2be4f0b061bd2579c0a8d2}{set\+Color\+Map\+Side()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_afb0b01644644af1d5e2c68160442d574}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_afb0b01644644af1d5e2c68160442d574}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!setHidden@{setHidden}}
+\index{setHidden@{setHidden}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{setHidden()}{setHidden()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::set\+Hidden (\begin{DoxyParamCaption}\item[{bool}]{enabled = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Sets if this dataseries is hidden. 
+
+By default dataseries are visible. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_adb73f255379210b04f1ff3ad3c51cd1d}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_adb73f255379210b04f1ff3ad3c51cd1d}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!setLegendEnabled@{setLegendEnabled}}
+\index{setLegendEnabled@{setLegendEnabled}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{setLegendEnabled()}{setLegendEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::set\+Legend\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets whether this dataseries is included in the chart-\/legend. 
+
+By default, dataseries are enabled in the legend. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a1b7fe4d6ae21b20546d020168dd53f63}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a1b7fe4d6ae21b20546d020168dd53f63}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!setModel@{setModel}}
+\index{setModel@{setModel}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{setModel()}{setModel()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::set\+Model (\begin{DoxyParamCaption}\item[{const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $>$ \&}]{model }\end{DoxyParamCaption})}
+
+
+
+Sets a model from which the dataseries gets its data. 
+
+Every dataseries needs a model from which it gets the data. How the data is structured is determined by the type of dataseries. Therefore more info on how to construct a proper model is provided in classes that derive from this one.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a39179ec22819e7c95689bd878beffc33}{model()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a575f62e309026182aa4336b4e3105444}{W\+Abstract\+Data\+Series3\+D()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_af6046a048fc03ddcc453dd98e4dd398a}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_af6046a048fc03ddcc453dd98e4dd398a}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!setPointSize@{setPointSize}}
+\index{setPointSize@{setPointSize}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{setPointSize()}{setPointSize()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::set\+Point\+Size (\begin{DoxyParamCaption}\item[{double}]{size }\end{DoxyParamCaption})}
+
+
+
+Sets the pointsize for drawing this dataseries. 
+
+The default pointsize is 2 pixels.
+
+{\itshape {\bfseries{\mbox{\hyperlink{classNote}{Note}}\+: }}}Setting the point-\/size is currently not supported in IE. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a0ac582c98fe58f36e0d60f11b5627656}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a0ac582c98fe58f36e0d60f11b5627656}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!setPointSprite@{setPointSprite}}
+\index{setPointSprite@{setPointSprite}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{setPointSprite()}{setPointSprite()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::set\+Point\+Sprite (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{image }\end{DoxyParamCaption})}
+
+
+
+Set the point sprite used for drawing this dataseries. 
+
+This should be a local (server side) path to an image, such as a P\+NG or G\+IF. Only the alpha channel of this image is used\+: the sprite only decides if a pixel in the point appears or not. If the alpha value is below 0.\+5, the pixel is discarded.
+
+For best effect, the point sprite\textquotesingle{}s width and height should be the same as the \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a19428c82734b0f37e2fa121a22e69c60}{point\+Size()}}, and the chart\textquotesingle{}s antialiasing should be disabled.
+
+Defaults to the empty string, meaning that every pixel of the point will be drawn, yielding a square. \mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_a6fa90e2168b69fea205f55bd6d5ae05c}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_a6fa90e2168b69fea205f55bd6d5ae05c}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{setTitle()}{setTitle()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::set\+Title (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Sets the title of this dataseries. 
+
+When a dataseries that did not have a title set, is added to a \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesian3DChart}{W\+Cartesian3\+D\+Chart}} it automatically gets the default title \textquotesingle{}dataset i\textquotesingle{}, with i the count of how many dataseries have been added to the chart.
+
+\begin{DoxySeeAlso}{See also}
+name() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_af38182b82b508643cc8749d6f845f946}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_af38182b82b508643cc8749d6f845f946}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!title@{title}}
+\index{title@{title}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{title()}{title()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WString}{W\+String}}\& Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::title (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the title of this dataseries. 
+
+\begin{DoxySeeAlso}{See also}
+set\+Name() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractDataSeries3D_ab97b255bfc1c4af25da3828c82a8a8c7}\label{classWt_1_1Chart_1_1WAbstractDataSeries3D_ab97b255bfc1c4af25da3828c82a8a8c7}} 
+\index{Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}!updateGL@{updateGL}}
+\index{updateGL@{updateGL}!Wt::Chart::WAbstractDataSeries3D@{Wt::Chart::WAbstractDataSeries3D}}
+\doxysubsubsection{\texorpdfstring{updateGL()}{updateGL()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Chart\+::\+W\+Abstract\+Data\+Series3\+D\+::update\+GL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Update GL resources. 
+
+This function is called by \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_ab97b255bfc1c4af25da3828c82a8a8c7}{update\+G\+L()}} in the chart to which this dataseries was added. Before this function is called, \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a49434192a0398755cec3bd1760450d46}{delete\+All\+G\+L\+Resources()}} is called.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractDataSeries3D_a49434192a0398755cec3bd1760450d46}{delete\+All\+G\+L\+Resources()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractGridData_a49ee94acdbca991ae079b8094e52d533}{Wt\+::\+Chart\+::\+W\+Abstract\+Grid\+Data}}, and \mbox{\hyperlink{classWt_1_1Chart_1_1WScatterData_af5a6c8be8a2663878aa56c41fd5296f7}{Wt\+::\+Chart\+::\+W\+Scatter\+Data}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Chart/W\+Abstract\+Data\+Series3\+D.\+h\end{DoxyCompactItemize}

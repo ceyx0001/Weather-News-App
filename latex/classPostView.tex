@@ -1,0 +1,140 @@
+\hypertarget{classPostView}{}\doxysection{Post\+View Class Reference}
+\label{classPostView}\index{PostView@{PostView}}
+
+
+Inheritance diagram for Post\+View\+:
+% FIG 0
+
+
+Collaboration diagram for Post\+View\+:
+% FIG 1
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPostView_aaae068a18d07243d8f3c1fad06754956}\label{classPostView_aaae068a18d07243d8f3c1fad06754956}} 
+enum {\bfseries Render\+Type} \{ {\bfseries Brief}, 
+{\bfseries Detail}, 
+{\bfseries Edit}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPostView_a5969dc36ec9349e76fb536777e08725f}\label{classPostView_a5969dc36ec9349e76fb536777e08725f}} 
+{\bfseries Post\+View} (\mbox{\hyperlink{classBlogSession}{Blog\+Session}} \&session, const std\+::string \&base\+Path, \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{dbo\+::ptr}}$<$ \mbox{\hyperlink{classPost}{Post}} $>$ post, Render\+Type type)
+\item 
+virtual void \mbox{\hyperlink{classPostView_a181bc1f61d401ba6bf0d1889247379a5}{resolve\+String}} (const std\+::string \&var\+Name, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} $>$ \&args, std\+::ostream \&result)
+\begin{DoxyCompactList}\small\item\em Resolves the string value for a variable name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classPostView_aa813327708ed228c4d01ebba0642573a}{render\+Template}} (std\+::ostream \&result)
+\begin{DoxyCompactList}\small\item\em Renders the template into the given result stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPostView_afdc8d70a1d9c5a20b6959b4fad611d7c}\label{classPostView_afdc8d70a1d9c5a20b6959b4fad611d7c}} 
+void {\bfseries render} (Render\+Type type)
+\item 
+\mbox{\Hypertarget{classPostView_ac203054ddbdb4f1ba3d3703f6455d77c}\label{classPostView_ac203054ddbdb4f1ba3d3703f6455d77c}} 
+void {\bfseries update\+Comment\+Count} (\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{dbo\+::ptr}}$<$ \mbox{\hyperlink{classComment}{Comment}} $>$ comment)
+\item 
+\mbox{\Hypertarget{classPostView_a577dcb3497caf2910cc63af7b794efec}\label{classPostView_a577dcb3497caf2910cc63af7b794efec}} 
+void {\bfseries save\+Edit} ()
+\item 
+\mbox{\Hypertarget{classPostView_ab21939c5d639f1667c7d58d67d410fa1}\label{classPostView_ab21939c5d639f1667c7d58d67d410fa1}} 
+void {\bfseries show\+View} ()
+\item 
+\mbox{\Hypertarget{classPostView_ad32b8e15c8ac7a8785d658a295c0863d}\label{classPostView_ad32b8e15c8ac7a8785d658a295c0863d}} 
+void {\bfseries publish} ()
+\item 
+\mbox{\Hypertarget{classPostView_a5f156081d7666d5776646e730b0acfa5}\label{classPostView_a5f156081d7666d5776646e730b0acfa5}} 
+void {\bfseries retract} ()
+\item 
+\mbox{\Hypertarget{classPostView_ae839a9ff330a0301f277b1823be6aaa5}\label{classPostView_ae839a9ff330a0301f277b1823be6aaa5}} 
+void {\bfseries show\+Edit} ()
+\item 
+\mbox{\Hypertarget{classPostView_ae6923842d2ea3a3577d2c400b30081f8}\label{classPostView_ae6923842d2ea3a3577d2c400b30081f8}} 
+void {\bfseries rm} ()
+\item 
+\mbox{\Hypertarget{classPostView_a37bee76ea73d9488d27bbed9b09a2d74}\label{classPostView_a37bee76ea73d9488d27bbed9b09a2d74}} 
+void {\bfseries set\+State} (Post\+::\+State state)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classPostView_a2e4bf3084c22897bdd90b33dd27e223c}\label{classPostView_a2e4bf3084c22897bdd90b33dd27e223c}} 
+\mbox{\hyperlink{classBlogSession}{Blog\+Session}} \& {\bfseries session\+\_\+}
+\item 
+\mbox{\Hypertarget{classPostView_a418a874ca86cdef30b5ea4795334291d}\label{classPostView_a418a874ca86cdef30b5ea4795334291d}} 
+std\+::string {\bfseries base\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classPostView_a71f5b792dd1821bb4845ceb3e789aa67}\label{classPostView_a71f5b792dd1821bb4845ceb3e789aa67}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{dbo\+::ptr}}$<$ \mbox{\hyperlink{classPost}{Post}} $>$ {\bfseries post\+\_\+}
+\item 
+\mbox{\Hypertarget{classPostView_a866515d25a29b049a5a9369d913eae8b}\label{classPostView_a866515d25a29b049a5a9369d913eae8b}} 
+Render\+Type {\bfseries view\+Type\+\_\+}
+\item 
+\mbox{\Hypertarget{classPostView_a4eb03033b33b46eccfb2f96db98a82da}\label{classPostView_a4eb03033b33b46eccfb2f96db98a82da}} 
+\mbox{\hyperlink{classWt_1_1WText}{Wt\+::\+W\+Text}} $\ast$ {\bfseries comment\+Count\+\_\+}
+\item 
+\mbox{\Hypertarget{classPostView_aa17398ab6a37544d863593e969b36c4a}\label{classPostView_aa17398ab6a37544d863593e969b36c4a}} 
+\mbox{\hyperlink{classWt_1_1WLineEdit}{Wt\+::\+W\+Line\+Edit}} $\ast$ {\bfseries title\+Edit\+\_\+}
+\item 
+\mbox{\Hypertarget{classPostView_a8045ec6acf9221aca0e4eb3f48c314d1}\label{classPostView_a8045ec6acf9221aca0e4eb3f48c314d1}} 
+\mbox{\hyperlink{classWt_1_1WTextArea}{Wt\+::\+W\+Text\+Area}} $\ast$ {\bfseries brief\+Edit\+\_\+}
+\item 
+\mbox{\Hypertarget{classPostView_ae31a8b03bf4f778a6f6b2af850f53603}\label{classPostView_ae31a8b03bf4f778a6f6b2af850f53603}} 
+\mbox{\hyperlink{classWt_1_1WTextArea}{Wt\+::\+W\+Text\+Area}} $\ast$ {\bfseries body\+Edit\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPostView_aa813327708ed228c4d01ebba0642573a}\label{classPostView_aa813327708ed228c4d01ebba0642573a}} 
+\index{PostView@{PostView}!renderTemplate@{renderTemplate}}
+\index{renderTemplate@{renderTemplate}!PostView@{PostView}}
+\doxysubsubsection{\texorpdfstring{renderTemplate()}{renderTemplate()}}
+{\footnotesize\ttfamily virtual void Post\+View\+::render\+Template (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Renders the template into the given result stream. 
+
+The default implementation will call \mbox{\hyperlink{classWt_1_1WTemplate_ad3e74189683016b05f5736219538551c}{render\+Template\+Text()}} with the \mbox{\hyperlink{classWt_1_1WTemplate_ac8e2f6e8b1d5c46c2d3128ae51b892a0}{template\+Text()}}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WTemplate_a08d6d360e0dea5fbf0afb513a7b928b2}{Wt\+::\+W\+Template}}.
+
+\mbox{\Hypertarget{classPostView_a181bc1f61d401ba6bf0d1889247379a5}\label{classPostView_a181bc1f61d401ba6bf0d1889247379a5}} 
+\index{PostView@{PostView}!resolveString@{resolveString}}
+\index{resolveString@{resolveString}!PostView@{PostView}}
+\doxysubsubsection{\texorpdfstring{resolveString()}{resolveString()}}
+{\footnotesize\ttfamily virtual void Post\+View\+::resolve\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{var\+Name,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} $>$ \&}]{args,  }\item[{std\+::ostream \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resolves the string value for a variable name. 
+
+This is the main method used to resolve variables in the template text, during rendering.
+
+The default implementation considers first whether a string was bound using \mbox{\hyperlink{classWt_1_1WTemplate_a16e6f5aa8a866d95cb68a6ab8fbe753d}{bind\+String()}}. If so, that string is returned. If not, it will attempt to resolve a widget with that variable name using \mbox{\hyperlink{classWt_1_1WTemplate_a65fd50e2e83ef594b41a97b5a3f70588}{resolve\+Widget()}}, and render it as X\+H\+T\+ML. If that fails too, \mbox{\hyperlink{classWt_1_1WTemplate_a42a3a48a1f8c88af9e489b1e83e78c5f}{handle\+Unresolved\+Variable()}} is called, passing the initial arguments.
+
+You may want to reimplement this method to provide on-\/demand loading of strings for your template.
+
+The result stream expects a U\+T\+F-\/8 encoded string value.
+
+\begin{DoxyWarning}{Warning}
+When specializing this class, you need to make sure that you append proper X\+H\+T\+ML to the {\ttfamily result}, without unsafe active contents. The \mbox{\hyperlink{classWt_1_1WTemplate_adbe6894922347552f121e8356096d006}{format()}} methods may be used for this purpose.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classPostView_aa813327708ed228c4d01ebba0642573a}{render\+Template()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WTemplate_a1b41ce6236c27e91bfffb2d0686ac556}{Wt\+::\+W\+Template}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/blog/view/Post\+View.\+h\end{DoxyCompactItemize}

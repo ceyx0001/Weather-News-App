@@ -1,0 +1,41 @@
+digraph "Wt::Server"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Wt::Server",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" instance" ];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" wt_" ];
+  Node2 [label="Wt::WServer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WServer.html",tooltip="A class encapsulating a web application server."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ioService_" ];
+  Node3 [label="Wt::WIOService",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WIOService.html",tooltip="An I/O service."];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="AsioWrapper::asio::\lio_service",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" configuration_" ];
+  Node5 [label="Wt::Configuration",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Configuration.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" rootPathSegment_" ];
+  Node6 [label="Wt::PathSegment",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1PathSegment.html",tooltip=" "];
+  Node6 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" parent" ];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" segment" ];
+  Node7 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node8 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" entryPoint" ];
+  Node8 [label="const",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" server_" ];
+  Node9 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" numSessionThreads_\nbootstrapTimeout_\nmaxPendingEvents_\nserverPushTimeout\l_\nsessionIdLength\l_\nnumThreads_\nsessionTimeout\l_\nindicatorTimeout\l_\nidleTimeout\l_\ndoubleClickTimeout\l_\n..." ];
+  Node9 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" valgrindPath_\nredirectMsg_\nappRoot_\nuaCompatible_\noriginalIPHeader\l_\nconnectorSessionId\lPrefix_\ndefaultEntryPoint\l_\nrunDirectory\l_\napplicationPath\l_\nconfigurationFile\l_\n..." ];
+  Node10 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" logger_" ];
+  Node10 [label="Wt::WLogger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WLogger.html",tooltip="A simple logging class."];
+  Node8 -> Node10 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sep\ntimestamp" ];
+  Node2 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" instance_" ];
+  Node11 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" webController_" ];
+  Node11 [label="Wt::WebController",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WebController.html",tooltip=" "];
+  Node5 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" conf_" ];
+  Node2 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" server_" ];
+  Node9 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ajaxSessions_\nplainHtmlSessions\l_\nzombieSessions_" ];
+  Node7 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" redirectSecret_\nsingleSessionId_" ];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" appRoot_\ndescription_\napplication_\nconfigurationFile_" ];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" customLogger_" ];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" childrenDied_" ];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" applicationName_" ];
+}

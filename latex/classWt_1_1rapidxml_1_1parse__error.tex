@@ -1,0 +1,67 @@
+\hypertarget{classWt_1_1rapidxml_1_1parse__error}{}\doxysection{Wt\+::rapidxml\+::parse\+\_\+error Class Reference}
+\label{classWt_1_1rapidxml_1_1parse__error}\index{Wt::rapidxml::parse\_error@{Wt::rapidxml::parse\_error}}
+
+
+{\ttfamily \#include $<$rapidxml.\+hpp$>$}
+
+
+
+Inheritance diagram for Wt\+::rapidxml\+::parse\+\_\+error\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::rapidxml\+::parse\+\_\+error\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1rapidxml_1_1parse__error_adfc5ccb531ca6a7e0d2787df320089d9}\label{classWt_1_1rapidxml_1_1parse__error_adfc5ccb531ca6a7e0d2787df320089d9}} 
+\mbox{\hyperlink{classWt_1_1rapidxml_1_1parse__error_adfc5ccb531ca6a7e0d2787df320089d9}{parse\+\_\+error}} (const char $\ast$\mbox{\hyperlink{classWt_1_1rapidxml_1_1parse__error_abb0a240637b3f105a79e45adc4b31b1d}{what}}, void $\ast$location)
+\begin{DoxyCompactList}\small\item\em Constructs parse error. \end{DoxyCompactList}\item 
+virtual const char $\ast$ \mbox{\hyperlink{classWt_1_1rapidxml_1_1parse__error_abb0a240637b3f105a79e45adc4b31b1d}{what}} () const  throw ()
+\item 
+{\footnotesize template$<$class Ch $>$ }\\Ch $\ast$ \mbox{\hyperlink{classWt_1_1rapidxml_1_1parse__error_a5314fa8e1dd95b151b96dd61aa72c677}{where}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1rapidxml_1_1parse__error_ad0b949a2bab17b446462b94b2f4cbfac}\label{classWt_1_1rapidxml_1_1parse__error_ad0b949a2bab17b446462b94b2f4cbfac}} 
+const char $\ast$ {\bfseries m\+\_\+what}
+\item 
+\mbox{\Hypertarget{classWt_1_1rapidxml_1_1parse__error_a443316aa087b08d107a10304f262bb5e}\label{classWt_1_1rapidxml_1_1parse__error_a443316aa087b08d107a10304f262bb5e}} 
+void $\ast$ {\bfseries m\+\_\+where}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{structParse}{Parse}} error exception. This exception is thrown by the parser when an error occurs. Use \mbox{\hyperlink{classWt_1_1rapidxml_1_1parse__error_abb0a240637b3f105a79e45adc4b31b1d}{what()}} function to get human-\/readable error message. Use \mbox{\hyperlink{classWt_1_1rapidxml_1_1parse__error_a5314fa8e1dd95b151b96dd61aa72c677}{where()}} function to get a pointer to position within source text where error was detected. ~\newline
+~\newline
+ If throwing exceptions by the parser is undesirable, it can be disabled by defining R\+A\+P\+I\+D\+X\+M\+L\+\_\+\+N\+O\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+NS macro before \mbox{\hyperlink{rapidxml_8hpp}{rapidxml.\+hpp}} is included. This will cause the parser to call rapidxml\+::parse\+\_\+error\+\_\+handler() function instead of throwing an exception. This function must be defined by the user. ~\newline
+~\newline
+ This class derives from {\ttfamily std\+::exception} class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1rapidxml_1_1parse__error_abb0a240637b3f105a79e45adc4b31b1d}\label{classWt_1_1rapidxml_1_1parse__error_abb0a240637b3f105a79e45adc4b31b1d}} 
+\index{Wt::rapidxml::parse\_error@{Wt::rapidxml::parse\_error}!what@{what}}
+\index{what@{what}!Wt::rapidxml::parse\_error@{Wt::rapidxml::parse\_error}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily virtual const char$\ast$ Wt\+::rapidxml\+::parse\+\_\+error\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const throw ( ) \hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Gets human readable description of error. \begin{DoxyReturn}{Returns}
+Pointer to null terminated description of the error. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classWt_1_1rapidxml_1_1parse__error_a5314fa8e1dd95b151b96dd61aa72c677}\label{classWt_1_1rapidxml_1_1parse__error_a5314fa8e1dd95b151b96dd61aa72c677}} 
+\index{Wt::rapidxml::parse\_error@{Wt::rapidxml::parse\_error}!where@{where}}
+\index{where@{where}!Wt::rapidxml::parse\_error@{Wt::rapidxml::parse\_error}}
+\doxysubsubsection{\texorpdfstring{where()}{where()}}
+{\footnotesize\ttfamily template$<$class Ch $>$ \\
+Ch$\ast$ Wt\+::rapidxml\+::parse\+\_\+error\+::where (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets pointer to character data where error happened. Ch should be the same as char type of \mbox{\hyperlink{classWt_1_1rapidxml_1_1xml__document}{xml\+\_\+document}} that produced the error. \begin{DoxyReturn}{Returns}
+Pointer to location within the parsed string where error occured. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/3rdparty/rapidxml/\mbox{\hyperlink{rapidxml_8hpp}{rapidxml.\+hpp}}\end{DoxyCompactItemize}

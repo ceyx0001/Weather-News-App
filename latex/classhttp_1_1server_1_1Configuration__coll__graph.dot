@@ -1,0 +1,15 @@
+digraph "http::server::Configuration"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="http::server::Configuration",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" logger_" ];
+  Node2 [label="Wt::WLogger",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WLogger.html",tooltip="A simple logging class."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sep\ntimestamp" ];
+  Node3 [label="const",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sslVerifyDepth_\nthreads_\nparentPort_" ];
+  Node4 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sslPrivateKeyFile_\nhttpAddress_\nappRoot_\naccessLog_\ndeployPath_\nresourcesDir_\nsslCipherList\l_\nsslCaCertificates\l_\npidPath_\nhttpsPort_\n..." ];
+  Node5 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

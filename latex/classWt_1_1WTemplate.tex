@@ -1,0 +1,883 @@
+\hypertarget{classWt_1_1WTemplate}{}\doxysection{Wt\+::W\+Template Class Reference}
+\label{classWt_1_1WTemplate}\index{Wt::WTemplate@{Wt::WTemplate}}
+
+
+A widget that renders an X\+H\+T\+ML template.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Template.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Template\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Template\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WTemplate_1_1Functions}{Functions}}
+\begin{DoxyCompactList}\small\item\em A collection of predefined functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a969756d79cc19f0bd364b32f0ded39b8}\label{classWt_1_1WTemplate_a969756d79cc19f0bd364b32f0ded39b8}} 
+typedef \mbox{\hyperlink{classWt_a323dcef5293055d85c57d23ec1936a26}{Template\+Widget\+Id\+Mode}} \mbox{\hyperlink{classWt_1_1WTemplate_a969756d79cc19f0bd364b32f0ded39b8}{Widget\+Id\+Mode}}
+\begin{DoxyCompactList}\small\item\em Typedef for enum \mbox{\hyperlink{classWt_a323dcef5293055d85c57d23ec1936a26}{Wt\+::\+Template\+Widget\+Id\+Mode}}. \end{DoxyCompactList}\item 
+typedef std\+::function$<$ bool(\mbox{\hyperlink{classWt_1_1WTemplate}{W\+Template}} $\ast$t, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&args, std\+::ostream \&result)$>$ \mbox{\hyperlink{classWt_1_1WTemplate_a89d4fae99a0ebb3c43cb3ca2ab6732d3}{Function}}
+\begin{DoxyCompactList}\small\item\em A function type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a4493aa4e616f3b140532421a338b9573}\label{classWt_1_1WTemplate_a4493aa4e616f3b140532421a338b9573}} 
+\mbox{\hyperlink{classWt_1_1WTemplate_a4493aa4e616f3b140532421a338b9573}{W\+Template}} ()
+\begin{DoxyCompactList}\small\item\em Creates a template widget. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WTemplate_a0e5361a39cc6d985456effefece14c3e}{W\+Template}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text)
+\begin{DoxyCompactList}\small\item\em Creates a template widget with given template. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1WTemplate_ac8e2f6e8b1d5c46c2d3128ae51b892a0}{template\+Text}} () const
+\begin{DoxyCompactList}\small\item\em Returns the template. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTemplate_a862bf52416cdcbcb5228c7488fd6e729}{set\+Template\+Text}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text, \mbox{\hyperlink{classWt_a140dea437d52d3d7c438ea3bd16a1480}{Text\+Format}} text\+Format=Text\+Format\+::\+X\+H\+T\+ML)
+\begin{DoxyCompactList}\small\item\em Sets the template text. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTemplate_ae09c9f08a6bf1b50da8a5dd8feabcd4c}{set\+Widget\+Id\+Mode}} (\mbox{\hyperlink{classWt_a323dcef5293055d85c57d23ec1936a26}{Template\+Widget\+Id\+Mode}} mode)
+\begin{DoxyCompactList}\small\item\em Sets how the var\+Name should be reflected on bound widgets. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_a323dcef5293055d85c57d23ec1936a26}{Template\+Widget\+Id\+Mode}} \mbox{\hyperlink{classWt_1_1WTemplate_a23e84f95b9d0cab7f016cf27529458e3}{widget\+Id\+Mode}} () const
+\begin{DoxyCompactList}\small\item\em Returns how the var\+Name is reflected on a bound widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTemplate_a16e6f5aa8a866d95cb68a6ab8fbe753d}{bind\+String}} (const std\+::string \&var\+Name, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&value, \mbox{\hyperlink{classWt_a140dea437d52d3d7c438ea3bd16a1480}{Text\+Format}} text\+Format=Text\+Format\+::\+X\+H\+T\+ML)
+\begin{DoxyCompactList}\small\item\em Binds a string value to a variable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTemplate_a89426dcac3371befc127f7d5b04bb5ed}{bind\+Int}} (const std\+::string \&var\+Name, int value)
+\begin{DoxyCompactList}\small\item\em Binds an integer value to a variable. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTemplate_a06b821ef6d6c684ea7c708a13d66fce7}{bind\+Widget}} (const std\+::string \&var\+Name, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ widget)
+\begin{DoxyCompactList}\small\item\em Binds a widget to a variable. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Widget $>$ }\\Widget $\ast$ \mbox{\hyperlink{classWt_1_1WTemplate_afae324758c46944fde31c5065a1fcb64}{bind\+Widget}} (const std\+::string \&var\+Name, std\+::unique\+\_\+ptr$<$ Widget $>$ widget)
+\begin{DoxyCompactList}\small\item\em Binds a widget to a variable, returning a raw pointer. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Widget , typename ... Args$>$ }\\Widget $\ast$ \mbox{\hyperlink{classWt_1_1WTemplate_a240f910cd1e3d5b7876aa20f6b33767c}{bind\+New}} (const std\+::string \&var\+Name, Args \&\&...args)
+\begin{DoxyCompactList}\small\item\em Creates a new widget with the given arguments, and binds it, returning a raw pointer. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WTemplate_aad2323678635e59b05269351789aa57a}{remove\+Widget}} (const std\+::string \&var\+Name)
+\begin{DoxyCompactList}\small\item\em Unbinds a widget by variable name. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WTemplate_a8dd53bd0c8e5e293f39e242d00fb6d4e}{remove\+Widget}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$widget) override
+\begin{DoxyCompactList}\small\item\em Unbinds a widget by widget pointer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTemplate_a1b7e969d280a9f245696de10a7137a85}{bind\+Empty}} (const std\+::string \&var\+Name)
+\begin{DoxyCompactList}\small\item\em Binds an empty string to a variable. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTemplate_ae8f4d8e21baa953323f3c0ce1cb4314a}{add\+Function}} (const std\+::string \&name, const \mbox{\hyperlink{classWt_1_1WTemplate_a89d4fae99a0ebb3c43cb3ca2ab6732d3}{Function}} \&function)
+\begin{DoxyCompactList}\small\item\em Binds a function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTemplate_ab2b6fc00ef28674be103dd1b13fd0aec}{set\+Condition}} (const std\+::string \&name, bool value)
+\begin{DoxyCompactList}\small\item\em Sets a condition. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WTemplate_a143f874e9963fff32135270e69b2182d}{condition\+Value}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Returns a condition value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a8cbac567619c5e0bc0a84998c7ee643e}\label{classWt_1_1WTemplate_a8cbac567619c5e0bc0a84998c7ee643e}} 
+std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classWt_1_1WTemplate_a8cbac567619c5e0bc0a84998c7ee643e}{conditions\+Set}} ()
+\begin{DoxyCompactList}\small\item\em Returns the set of conditions set to true. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTemplate_a1b41ce6236c27e91bfffb2d0686ac556}{resolve\+String}} (const std\+::string \&var\+Name, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&args, std\+::ostream \&result)
+\begin{DoxyCompactList}\small\item\em Resolves the string value for a variable name. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTemplate_a42a3a48a1f8c88af9e489b1e83e78c5f}{handle\+Unresolved\+Variable}} (const std\+::string \&var\+Name, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&args, std\+::ostream \&result)
+\begin{DoxyCompactList}\small\item\em Handles a variable that could not be resolved. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WTemplate_a65fd50e2e83ef594b41a97b5a3f70588}{resolve\+Widget}} (const std\+::string \&var\+Name)
+\begin{DoxyCompactList}\small\item\em Resolves a widget for a variable name. \end{DoxyCompactList}\item 
+virtual const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \& \mbox{\hyperlink{classWt_1_1WTemplate_af1b00826a9bdcfc0158b28dc7828e000}{resolve\+String\+Value}} (const std\+::string \&var\+Name)
+\begin{DoxyCompactList}\small\item\em Resolves a string that was bound to a variable name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a47f8f662cc08c0320ac73d931dbb7472}\label{classWt_1_1WTemplate_a47f8f662cc08c0320ac73d931dbb7472}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ $>$ {\bfseries widgets} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a647f33c064bb9ad709596d4a366b33e3}\label{classWt_1_1WTemplate_a647f33c064bb9ad709596d4a366b33e3}} 
+std\+::string {\bfseries var\+Name} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$w) const
+\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WTemplate_a54a59255a73303197df91ead4a4b077a}{resolve\+Function}} (const std\+::string \&name, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&args, std\+::ostream \&result)
+\begin{DoxyCompactList}\small\item\em Resolves a function call. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{classWt_1_1WTemplate_a9249cc525fe3c16f999644f0f1db6cb4}{resolve}} (const std\+::string \&var\+Name)
+\begin{DoxyCompactList}\small\item\em Returns a widget for a variable name. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTemplate_aeb435b235bfda69d374b1a79c4e83422}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Erases all variable bindings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTemplate_aeee888e560c519ac0e33bfc1ebb315e2}{set\+Internal\+Path\+Encoding}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enables internal path anchors in the X\+H\+T\+ML template. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WTemplate_af302129ae6a44b1f122506a3672be6c5}{has\+Internal\+Path\+Encoding}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether internal paths are enabled. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTemplate_abb1762a2d712fd21566f9d8dddf1f43a}{set\+Encode\+Template\+Text}} (bool on)
+\begin{DoxyCompactList}\small\item\em Configures when internal path encoding is done. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WTemplate_add4a8383316df1556f1a118eb52134ba}{encode\+Template\+Text}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether internal path encoding is done on the template text. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTemplate_a6efbd90522d7df4aa2502e7103fda71b}{refresh}} () override
+\begin{DoxyCompactList}\small\item\em Refresh the widget. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTemplate_a08d6d360e0dea5fbf0afb513a7b928b2}{render\+Template}} (std\+::ostream \&result)
+\begin{DoxyCompactList}\small\item\em Renders the template into the given result stream. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WTemplate_ad3e74189683016b05f5736219538551c}{render\+Template\+Text}} (std\+::ostream \&result, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&\mbox{\hyperlink{classWt_1_1WTemplate_ac8e2f6e8b1d5c46c2d3128ae51b892a0}{template\+Text}})
+\begin{DoxyCompactList}\small\item\em Renders a template into the given result stream. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1WTemplate_a7201e3518819fcb0517f564dbd49234f}{get\+Error\+Text}} ()
+\begin{DoxyCompactList}\small\item\em Renders the errors during renderring. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a6ab0b1a46d2aeaac584dd054a0e670c8}\label{classWt_1_1WTemplate_a6ab0b1a46d2aeaac584dd054a0e670c8}} 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WTemplate_a6ab0b1a46d2aeaac584dd054a0e670c8}{remove\+Widget}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$widget)
+\begin{DoxyCompactList}\small\item\em Removes a child widget. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Widget $>$ }\\std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ Widget $\ast$, \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ $>$\+::value \&\&!std\+::is\+\_\+same$<$ Widget, \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$\+::value, std\+::unique\+\_\+ptr$<$ Widget $>$ $>$\+::type \mbox{\hyperlink{classWt_1_1WTemplate_a7c3d094d6260d10227fddccd13b90def}{remove\+Widget}} (Widget $\ast$widget)
+\begin{DoxyCompactList}\small\item\em Removes a child widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTemplate_aa83a0d918e10eb3e8de6a747dcd6a3be}{apply\+Arguments}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$w, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&args)
+\begin{DoxyCompactList}\small\item\em Applies arguments to a resolved widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_ad77619484645d4306123f04458bfac96}\label{classWt_1_1WTemplate_ad77619484645d4306123f04458bfac96}} 
+virtual void {\bfseries update\+Dom} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&element, bool all) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a87c642398dd10d7da6f1f499ecc26c08}\label{classWt_1_1WTemplate_a87c642398dd10d7da6f1f499ecc26c08}} 
+virtual \mbox{\hyperlink{classWt_a3225f485902921fedb33dc534326a782}{Dom\+Element\+Type}} {\bfseries dom\+Element\+Type} () const override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_ad8be1c60abac9ac4af3a5038c3f86245}\label{classWt_1_1WTemplate_ad8be1c60abac9ac4af3a5038c3f86245}} 
+virtual void {\bfseries propagate\+Render\+Ok} (bool deep) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a34e8bd788cc53c2a6661ad6c3fe58140}\label{classWt_1_1WTemplate_a34e8bd788cc53c2a6661ad6c3fe58140}} 
+virtual void {\bfseries iterate\+Children} (const Handle\+Widget\+Method \&method) const override
+\item 
+void \mbox{\hyperlink{classWt_1_1WTemplate_adbe6894922347552f121e8356096d006}{format}} (std\+::ostream \&result, const std\+::string \&s, \mbox{\hyperlink{classWt_a140dea437d52d3d7c438ea3bd16a1480}{Text\+Format}} text\+Format=Text\+Format\+::\+Plain)
+\begin{DoxyCompactList}\small\item\em Utility method to safely format an X\+H\+T\+ML string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTemplate_ab482057546699b1035b099a54b0c0685}{format}} (std\+::ostream \&result, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&s, \mbox{\hyperlink{classWt_a140dea437d52d3d7c438ea3bd16a1480}{Text\+Format}} text\+Format=Text\+Format\+::\+Plain)
+\begin{DoxyCompactList}\small\item\em Utility method to safely format an X\+H\+T\+ML string. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WTemplate_abeab4e0a1d5addf6bfaa085210176b97}{enable\+Ajax}} () override
+\begin{DoxyCompactList}\small\item\em Progresses to an Ajax-\/enabled widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WTemplate_a772c78a6499b03319b47a0fb74b9c1dd}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Notifies the template that it has changed and must be rerendered. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a169352f511371c481e13fc46a3619ce2}\label{classWt_1_1WTemplate_a169352f511371c481e13fc46a3619ce2}} 
+typedef std\+::map$<$ std\+::string, \mbox{\hyperlink{classWt_1_1WTemplate_a89d4fae99a0ebb3c43cb3ca2ab6732d3}{Function}} $>$ {\bfseries Function\+Map}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a13575c9377944f3718279c69a944b811}\label{classWt_1_1WTemplate_a13575c9377944f3718279c69a944b811}} 
+typedef std\+::map$<$ std\+::string, \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ {\bfseries String\+Map}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_adeda363443cb9ff43827e0c638d9e9a2}\label{classWt_1_1WTemplate_adeda363443cb9ff43827e0c638d9e9a2}} 
+typedef std\+::map$<$ std\+::string, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ $>$ {\bfseries Widget\+Map}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_af7e9a12e19670e0b7543a119f6550d41}\label{classWt_1_1WTemplate_af7e9a12e19670e0b7543a119f6550d41}} 
+typedef std\+::set$<$ std\+::string $>$ {\bfseries Condition\+Set}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_af0edf21903c81315ae5eae6c242c107c}\label{classWt_1_1WTemplate_af0edf21903c81315ae5eae6c242c107c}} 
+bool {\bfseries \+\_\+tr} (const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&args, std\+::ostream \&result)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_ae25b2cbb7dffdbeaf1743a1237da44f5}\label{classWt_1_1WTemplate_ae25b2cbb7dffdbeaf1743a1237da44f5}} 
+bool {\bfseries \+\_\+block} (const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&args, std\+::ostream \&result)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_ac5b178bc6b021dc7818564cbaa563633}\label{classWt_1_1WTemplate_ac5b178bc6b021dc7818564cbaa563633}} 
+bool {\bfseries \+\_\+while} (const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&args, std\+::ostream \&result)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_aec9073a22e4525b08c66debb4ba73276}\label{classWt_1_1WTemplate_aec9073a22e4525b08c66debb4ba73276}} 
+bool {\bfseries \+\_\+id} (const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&args, std\+::ostream \&result)
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a98855756aa18b4589ce5eb97368e32d5}\label{classWt_1_1WTemplate_a98855756aa18b4589ce5eb97368e32d5}} 
+std\+::string {\bfseries encode} (const std\+::string \&text) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_aed00a9a603d2cf0af6de16e504bc2948}\label{classWt_1_1WTemplate_aed00a9a603d2cf0af6de16e504bc2948}} 
+void {\bfseries unrender\+Widget} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$w, \mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&el)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a96121f5d09e7aa8e7376e9cc40837075}\label{classWt_1_1WTemplate_a96121f5d09e7aa8e7376e9cc40837075}} 
+static std\+::size\+\_\+t {\bfseries parse\+Args} (const std\+::string \&text, std\+::size\+\_\+t pos, std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&result)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_ade6e09bf82704f80a99d3b65918d5db1}\label{classWt_1_1WTemplate_ade6e09bf82704f80a99d3b65918d5db1}} 
+std\+::set$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ $>$ $\ast$ {\bfseries previously\+Rendered\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_aa504e8badb7ad1e133e125bb52a5c49f}\label{classWt_1_1WTemplate_aa504e8badb7ad1e133e125bb52a5c49f}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ $>$ $\ast$ {\bfseries newly\+Rendered\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a309914a59866feb18bdf426945dd13d7}\label{classWt_1_1WTemplate_a309914a59866feb18bdf426945dd13d7}} 
+Function\+Map {\bfseries functions\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a47a93fc5e2725edd07e0d46c866b4d15}\label{classWt_1_1WTemplate_a47a93fc5e2725edd07e0d46c866b4d15}} 
+String\+Map {\bfseries strings\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a54549be960b5476bb783de1cdf23e983}\label{classWt_1_1WTemplate_a54549be960b5476bb783de1cdf23e983}} 
+Widget\+Map {\bfseries widgets\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a14b9b109f027c5eb412766d21ab9b3e3}\label{classWt_1_1WTemplate_a14b9b109f027c5eb412766d21ab9b3e3}} 
+Condition\+Set {\bfseries conditions\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a433eb5d6ea7ef15dba29c49b0e2f23d1}\label{classWt_1_1WTemplate_a433eb5d6ea7ef15dba29c49b0e2f23d1}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries text\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a57d9aa4a2e341d1e6a15fa3206defe8e}\label{classWt_1_1WTemplate_a57d9aa4a2e341d1e6a15fa3206defe8e}} 
+std\+::string {\bfseries error\+Text\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_aeb45e43da4ad57ec4650ff0109abd316}\label{classWt_1_1WTemplate_aeb45e43da4ad57ec4650ff0109abd316}} 
+bool {\bfseries encode\+Internal\+Paths\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_ae9141b662f49d8d854cc72ee1920503e}\label{classWt_1_1WTemplate_ae9141b662f49d8d854cc72ee1920503e}} 
+bool {\bfseries encode\+Template\+Text\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a68187a6c4a55d6cbbdf6bbfdb02b6b7d}\label{classWt_1_1WTemplate_a68187a6c4a55d6cbbdf6bbfdb02b6b7d}} 
+bool {\bfseries changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_ae20dfc5123ee748c5ac28c5f5b9e80b8}\label{classWt_1_1WTemplate_ae20dfc5123ee748c5ac28c5f5b9e80b8}} 
+\mbox{\hyperlink{classWt_a323dcef5293055d85c57d23ec1936a26}{Template\+Widget\+Id\+Mode}} {\bfseries widget\+Id\+Mode\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WTemplate_a2104cbde230b97d9ca2959739cd24771}\label{classWt_1_1WTemplate_a2104cbde230b97d9ca2959739cd24771}} 
+\mbox{\hyperlink{classWt_1_1EscapeOStream}{Escape\+O\+Stream}} $\ast$ {\bfseries plain\+Text\+New\+Line\+Esc\+Stream\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A widget that renders an X\+H\+T\+ML template. 
+
+The X\+H\+T\+ML template may contain references to variables which replaced by strings are widgets.
+
+Since the template text may be supplied by a \mbox{\hyperlink{classWt_1_1WString}{W\+String}}, you can conveniently store the string in a message resource bundle, and make it localized by using \mbox{\hyperlink{classWt_1_1WString_adf1e7e5fc3c7199563a69bf07d77e571}{W\+String\+::tr()}}.
+
+Placeholders (for variables and functions) are delimited by\+: {\ttfamily \$\{...\}}. To use a literal {\ttfamily \char`\"{}\$\{\char`\"{}}, use {\ttfamily \char`\"{}\$\$\{\char`\"{}}. Place holder names can contain \textquotesingle{}\+\_\+\textquotesingle{}, \textquotesingle{}-\/\textquotesingle{}, \textquotesingle{}.\textquotesingle{} and alfanumeric characters.
+
+Usage example\+:
+
+There are currently three syntactic constructs defined\+: variable place holders, functions and conditional blocks.
+
+\doxyparagraph*{A. Variable placeholders}
+
+{\ttfamily \$\{var\}} defines a placeholder for the variable \char`\"{}var\char`\"{}, and gets replaced with whatever is bound to that variable\+:
+\begin{DoxyItemize}
+\item a widget, using \mbox{\hyperlink{classWt_1_1WTemplate_a06b821ef6d6c684ea7c708a13d66fce7}{bind\+Widget()}}
+\item a string value, using \mbox{\hyperlink{classWt_1_1WTemplate_a16e6f5aa8a866d95cb68a6ab8fbe753d}{bind\+String()}} or \mbox{\hyperlink{classWt_1_1WTemplate_a89426dcac3371befc127f7d5b04bb5ed}{bind\+Int()}}
+\item or in general, the result of \mbox{\hyperlink{classWt_1_1WTemplate_a1b41ce6236c27e91bfffb2d0686ac556}{resolve\+String()}} and \mbox{\hyperlink{classWt_1_1WTemplate_a65fd50e2e83ef594b41a97b5a3f70588}{resolve\+Widget()}} methods.
+\end{DoxyItemize}
+
+Optionally, additional arguments can be specified using the following syntax\+:
+
+{\ttfamily \$\{var arg1=\char`\"{}\+A value\char`\"{} arg2=\textquotesingle{}A second value\textquotesingle{}\}}
+
+The arguments can thus be simple strings or quoted strings (single or double quoted). These arguments are applied to a resolved widget in \mbox{\hyperlink{classWt_1_1WTemplate_aa83a0d918e10eb3e8de6a747dcd6a3be}{apply\+Arguments()}} and currently supports only style classes.
+
+You can bind widgets and values to variables using \mbox{\hyperlink{classWt_1_1WTemplate_a06b821ef6d6c684ea7c708a13d66fce7}{bind\+Widget()}}, \mbox{\hyperlink{classWt_1_1WTemplate_a16e6f5aa8a866d95cb68a6ab8fbe753d}{bind\+String()}} or \mbox{\hyperlink{classWt_1_1WTemplate_a89426dcac3371befc127f7d5b04bb5ed}{bind\+Int()}} or by reimplementing the \mbox{\hyperlink{classWt_1_1WTemplate_a1b41ce6236c27e91bfffb2d0686ac556}{resolve\+String()}} and \mbox{\hyperlink{classWt_1_1WTemplate_a65fd50e2e83ef594b41a97b5a3f70588}{resolve\+Widget()}} methods.
+
+\begin{DoxyNote}{Note}
+The use of X\+ML comments ({\ttfamily $<$!-\/-\/ ... -\/-\/$>$}) around variables that are bound to widgets will result in bad behaviour since the template parser is ignorant about these comments and the corresponding widgets will believe that they are rendered but aren\textquotesingle{}t actually.
+\end{DoxyNote}
+\doxyparagraph*{B. Functions}
+
+{\ttfamily \$\{fun\+:arg\}} defines a placeholder for applying a function \char`\"{}fun\char`\"{} to an argument \char`\"{}arg\char`\"{}.
+
+Optionally, additional arguments can be specified as with a variable placeholder.
+
+\mbox{\hyperlink{structWt_1_1WTemplate_1_1Functions}{Functions}} are resolved by \mbox{\hyperlink{classWt_1_1WTemplate_a54a59255a73303197df91ead4a4b077a}{resolve\+Function()}}, and the default implementation considers functions bound with \mbox{\hyperlink{classWt_1_1WTemplate_ae8f4d8e21baa953323f3c0ce1cb4314a}{add\+Function()}}. There are currently three functions that are generally useful\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{}{\+: resolves a localized strings, this is convenient to create a language neutral template, which contains translated strings Functions\+::id}} \+: resolves the id of a bound widget, this is convenient to bind $<$label$>$ elements to a form widget using its for attribute.
+\item \mbox{\hyperlink{}{\+: recursively renders another string as macro block optional arguments substituted before processing template substitution. For example, the following template uses the \char`\"{}tr\char`\"{} function to translate the age-\/label using the \char`\"{}age-\/label\char`\"{} internationalized key. }}C. Conditional blocks
+\end{DoxyItemize}
+
+{\ttfamily \$\{$<$cond$>$\}} starts a conditional block with a condition name \char`\"{}cond\char`\"{}, and must be closed by a balanced {\ttfamily \$\{$<$/cond$>$\}}.
+
+For example\+:
+
+Conditions are set using \mbox{\hyperlink{classWt_1_1WTemplate_ab2b6fc00ef28674be103dd1b13fd0aec}{set\+Condition()}}.
+
+\doxyparagraph*{C\+SS}
+
+This widget does not provide styling, and can be styled using inline or external C\+SS as appropriate. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classWt_1_1WTemplate_a89d4fae99a0ebb3c43cb3ca2ab6732d3}\label{classWt_1_1WTemplate_a89d4fae99a0ebb3c43cb3ca2ab6732d3}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!Function@{Function}}
+\index{Function@{Function}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{Function}{Function}}
+{\footnotesize\ttfamily typedef std\+::function$<$bool(\mbox{\hyperlink{classWt_1_1WTemplate}{W\+Template}} $\ast$t, const std\+::vector$<$\mbox{\hyperlink{classWt_1_1WString}{W\+String}}$>$\& args, std\+::ostream\& result)$>$ \mbox{\hyperlink{classWt_1_1WTemplate_a89d4fae99a0ebb3c43cb3ca2ab6732d3}{Wt\+::\+W\+Template\+::\+Function}}}
+
+
+
+A function type. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_ae8f4d8e21baa953323f3c0ce1cb4314a}{add\+Function()}} 
+
+\mbox{\hyperlink{structWt_1_1WTemplate_1_1Functions_af3243a572e9ee6a9706f22fced021ec1}{Functions\+::tr}}, \mbox{\hyperlink{structWt_1_1WTemplate_1_1Functions_a4ea82da2c5b39c19a44aaf37309f7251}{Functions\+::id}}, \mbox{\hyperlink{structWt_1_1WTemplate_1_1Functions_a3c7e34998d4171b707d154f96343600c}{Functions\+::block}}, \mbox{\hyperlink{structWt_1_1WTemplate_1_1Functions_a21ea7d4d2c1ffb2f23e5b01f4cc5bdc3}{Functions\+::while\+\_\+f}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WTemplate_a0e5361a39cc6d985456effefece14c3e}\label{classWt_1_1WTemplate_a0e5361a39cc6d985456effefece14c3e}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!WTemplate@{WTemplate}}
+\index{WTemplate@{WTemplate}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{WTemplate()}{WTemplate()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Template\+::\+W\+Template (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Creates a template widget with given template. 
+
+The {\ttfamily template\+Text} must be proper X\+H\+T\+ML, and this is checked unless the X\+H\+T\+ML is resolved from a message resource bundle. This behavior is similar to a \mbox{\hyperlink{classWt_1_1WText}{W\+Text}} when configured with the Wt\+::\+Text\+Format\+::\+X\+H\+T\+ML textformat. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WTemplate_ae8f4d8e21baa953323f3c0ce1cb4314a}\label{classWt_1_1WTemplate_ae8f4d8e21baa953323f3c0ce1cb4314a}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!addFunction@{addFunction}}
+\index{addFunction@{addFunction}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{addFunction()}{addFunction()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Template\+::add\+Function (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const \mbox{\hyperlink{classWt_1_1WTemplate_a89d4fae99a0ebb3c43cb3ca2ab6732d3}{Function}} \&}]{function }\end{DoxyParamCaption})}
+
+
+
+Binds a function. 
+
+\mbox{\hyperlink{structWt_1_1WTemplate_1_1Functions}{Functions}} are useful to automatically resolve placeholders.
+
+The syntax for a function \textquotesingle{}fun\textquotesingle{} applied to a single argument \textquotesingle{}bla\textquotesingle{} is\+:
+
+{\ttfamily \$\{fun\+:bla\}}
+
+There are three predefined functions, which can be bound using\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WTemplate_a4493aa4e616f3b140532421a338b9573}{WTemplate}} t = ...;}
+\DoxyCodeLine{t.addFunction(\textcolor{stringliteral}{"id"}, \mbox{\hyperlink{classWt_1_1WTemplate_a4493aa4e616f3b140532421a338b9573}{WTemplate}}.Functions.id);}
+\DoxyCodeLine{t.addFunction(\textcolor{stringliteral}{"tr"}, \mbox{\hyperlink{classWt_1_1WTemplate_a4493aa4e616f3b140532421a338b9573}{WTemplate}}.Functions.tr);}
+\DoxyCodeLine{t.addFunction(\textcolor{stringliteral}{"block"}, \mbox{\hyperlink{classWt_1_1WTemplate_a4493aa4e616f3b140532421a338b9573}{WTemplate}}.Functions.block);}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1WTemplate_aa83a0d918e10eb3e8de6a747dcd6a3be}\label{classWt_1_1WTemplate_aa83a0d918e10eb3e8de6a747dcd6a3be}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!applyArguments@{applyArguments}}
+\index{applyArguments@{applyArguments}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{applyArguments()}{applyArguments()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Template\+::apply\+Arguments (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{w,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Applies arguments to a resolved widget. 
+
+Currently only a {\ttfamily class} argument is handled, which adds one or more style classes to the widget {\ttfamily w}, using \mbox{\hyperlink{classWt_1_1WWidget_a8a8f4537dd93462c063cb02cddec2ea3}{W\+Widget\+::add\+Style\+Class()}}. \mbox{\Hypertarget{classWt_1_1WTemplate_a1b7e969d280a9f245696de10a7137a85}\label{classWt_1_1WTemplate_a1b7e969d280a9f245696de10a7137a85}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!bindEmpty@{bindEmpty}}
+\index{bindEmpty@{bindEmpty}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{bindEmpty()}{bindEmpty()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Template\+::bind\+Empty (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{var\+Name }\end{DoxyParamCaption})}
+
+
+
+Binds an empty string to a variable. 
+
+If a widget was bound to the variable, it is deleted first.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_a16e6f5aa8a866d95cb68a6ab8fbe753d}{bind\+String()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTemplate_a89426dcac3371befc127f7d5b04bb5ed}\label{classWt_1_1WTemplate_a89426dcac3371befc127f7d5b04bb5ed}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!bindInt@{bindInt}}
+\index{bindInt@{bindInt}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{bindInt()}{bindInt()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Template\+::bind\+Int (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{var\+Name,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Binds an integer value to a variable. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_a16e6f5aa8a866d95cb68a6ab8fbe753d}{bind\+String()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTemplate_a240f910cd1e3d5b7876aa20f6b33767c}\label{classWt_1_1WTemplate_a240f910cd1e3d5b7876aa20f6b33767c}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!bindNew@{bindNew}}
+\index{bindNew@{bindNew}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{bindNew()}{bindNew()}}
+{\footnotesize\ttfamily template$<$typename Widget , typename ... Args$>$ \\
+Widget$\ast$ Wt\+::\+W\+Template\+::bind\+New (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{var\+Name,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a new widget with the given arguments, and binds it, returning a raw pointer. 
+
+This is implemented as\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::unique\_ptr<Widget> w\{\textcolor{keyword}{new} Widget(std::forward<Args>(args)...)\};}
+\DoxyCodeLine{Widget *result = w.get();}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WTemplate_a06b821ef6d6c684ea7c708a13d66fce7}{bindWidget}}(varName, std::unique\_ptr<WWidget>(std::move(w)));}
+\DoxyCodeLine{\textcolor{keywordflow}{return} result;}
+\end{DoxyCode}
+
+
+This is a useful shorthand for creating and binding a widget in one go. \mbox{\Hypertarget{classWt_1_1WTemplate_a16e6f5aa8a866d95cb68a6ab8fbe753d}\label{classWt_1_1WTemplate_a16e6f5aa8a866d95cb68a6ab8fbe753d}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!bindString@{bindString}}
+\index{bindString@{bindString}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{bindString()}{bindString()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Template\+::bind\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{var\+Name,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{value,  }\item[{\mbox{\hyperlink{classWt_a140dea437d52d3d7c438ea3bd16a1480}{Text\+Format}}}]{text\+Format = {\ttfamily TextFormat\+:\+:XHTML} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Binds a string value to a variable. 
+
+Each occurrence of the variable within the template will be substituted by its value.
+
+\begin{DoxyNote}{Note}
+Depending on the {\ttfamily text\+Format}, the {\ttfamily value} is validated according as for a \mbox{\hyperlink{classWt_1_1WText}{W\+Text}}. The default (Text\+Format\+::\+X\+H\+T\+ML) filters \char`\"{}active\char`\"{} content, to avoid X\+S\+S-\/based security risks.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_a06b821ef6d6c684ea7c708a13d66fce7}{bind\+Widget()}}, \mbox{\hyperlink{classWt_1_1WTemplate_a89426dcac3371befc127f7d5b04bb5ed}{bind\+Int()}} 
+
+resolve\+String(const std\+::string\&) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTemplate_afae324758c46944fde31c5065a1fcb64}\label{classWt_1_1WTemplate_afae324758c46944fde31c5065a1fcb64}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!bindWidget@{bindWidget}}
+\index{bindWidget@{bindWidget}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{bindWidget()}{bindWidget()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Widget $>$ \\
+Widget$\ast$ Wt\+::\+W\+Template\+::bind\+Widget (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{var\+Name,  }\item[{std\+::unique\+\_\+ptr$<$ Widget $>$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Binds a widget to a variable, returning a raw pointer. 
+
+This is implemented as\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Widget *result = widget.get();}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1WTemplate_a06b821ef6d6c684ea7c708a13d66fce7}{bindWidget}}(varName, std::unique\_ptr<WWidget>(std::move(widget)));}
+\DoxyCodeLine{\textcolor{keywordflow}{return} result;}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1WTemplate_a06b821ef6d6c684ea7c708a13d66fce7}\label{classWt_1_1WTemplate_a06b821ef6d6c684ea7c708a13d66fce7}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!bindWidget@{bindWidget}}
+\index{bindWidget@{bindWidget}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{bindWidget()}{bindWidget()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Template\+::bind\+Widget (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{var\+Name,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Binds a widget to a variable. 
+
+The corresponding variable reference within the template will be replaced with the widget (rendered as X\+H\+T\+ML). Since a single widget may be instantiated only once in a template, the variable {\ttfamily var\+Name} may occur at most once in the template, and the {\ttfamily widget} must not yet be bound to another variable.
+
+The widget is reparented to the \mbox{\hyperlink{classWt_1_1WTemplate}{W\+Template}}, so that it is deleted when the \mbox{\hyperlink{classWt_1_1WTemplate}{W\+Template}} is deleted.
+
+If a widget was already bound to the variable, it is deleted first. If previously a string or other value was bound to the variable, it is removed.
+
+You may also pass a {\ttfamily nullptr} {\ttfamily widget}, which will resolve to an empty string.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_a16e6f5aa8a866d95cb68a6ab8fbe753d}{bind\+String()}} 
+
+\mbox{\hyperlink{classWt_1_1WTemplate_a65fd50e2e83ef594b41a97b5a3f70588}{resolve\+Widget()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTemplate_aeb435b235bfda69d374b1a79c4e83422}\label{classWt_1_1WTemplate_aeb435b235bfda69d374b1a79c4e83422}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!clear@{clear}}
+\index{clear@{clear}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Template\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Erases all variable bindings. 
+
+Removes all strings and deletes all widgets that were previously bound using \mbox{\hyperlink{classWt_1_1WTemplate_a16e6f5aa8a866d95cb68a6ab8fbe753d}{bind\+String()}} and \mbox{\hyperlink{classWt_1_1WTemplate_a06b821ef6d6c684ea7c708a13d66fce7}{bind\+Widget()}}.
+
+This also resets all conditions set using \mbox{\hyperlink{classWt_1_1WTemplate_ab2b6fc00ef28674be103dd1b13fd0aec}{set\+Condition()}}, but does not remove functions added with \mbox{\hyperlink{classWt_1_1WTemplate_ae8f4d8e21baa953323f3c0ce1cb4314a}{add\+Function()}} \mbox{\Hypertarget{classWt_1_1WTemplate_a143f874e9963fff32135270e69b2182d}\label{classWt_1_1WTemplate_a143f874e9963fff32135270e69b2182d}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!conditionValue@{conditionValue}}
+\index{conditionValue@{conditionValue}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{conditionValue()}{conditionValue()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Template\+::condition\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a condition value. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_ab2b6fc00ef28674be103dd1b13fd0aec}{set\+Condition()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classFortuneTemplate_a882d2fa00f228f6c20064451f6d17474}{Fortune\+Template}}.
+
+\mbox{\Hypertarget{classWt_1_1WTemplate_abeab4e0a1d5addf6bfaa085210176b97}\label{classWt_1_1WTemplate_abeab4e0a1d5addf6bfaa085210176b97}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!enableAjax@{enableAjax}}
+\index{enableAjax@{enableAjax}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{enableAjax()}{enableAjax()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Template\+::enable\+Ajax (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Progresses to an Ajax-\/enabled widget. 
+
+This method is called when the progressive bootstrap method is used, and support for A\+J\+AX has been detected. The default behavior will upgrade the widget\textquotesingle{}s event handling to use A\+J\+AX instead of full page reloads, and propagate the call to its children.
+
+You may want to reimplement this method if you want to make changes to widget when A\+J\+AX is enabled. You should always call the base implementation.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_a46c573a3cd370cb2f83250c99d42b575}{W\+Application\+::enable\+Ajax()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_af717033681b5cbe5857c88b65558e10c}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WTemplate_add4a8383316df1556f1a118eb52134ba}\label{classWt_1_1WTemplate_add4a8383316df1556f1a118eb52134ba}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!encodeTemplateText@{encodeTemplateText}}
+\index{encodeTemplateText@{encodeTemplateText}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{encodeTemplateText()}{encodeTemplateText()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Template\+::encode\+Template\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether internal path encoding is done on the template text. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_abb1762a2d712fd21566f9d8dddf1f43a}{set\+Encode\+Template\+Text()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTemplate_adbe6894922347552f121e8356096d006}\label{classWt_1_1WTemplate_adbe6894922347552f121e8356096d006}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!format@{format}}
+\index{format@{format}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Template\+::format (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{result,  }\item[{const std\+::string \&}]{s,  }\item[{\mbox{\hyperlink{classWt_a140dea437d52d3d7c438ea3bd16a1480}{Text\+Format}}}]{text\+Format = {\ttfamily TextFormat\+:\+:Plain} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Utility method to safely format an X\+H\+T\+ML string. 
+
+The string is formatted according to the indicated {\ttfamily text\+Format}. It is recommended to use this method when specializing \mbox{\hyperlink{classWt_1_1WTemplate_a1b41ce6236c27e91bfffb2d0686ac556}{resolve\+String()}} to avoid security risks. \mbox{\Hypertarget{classWt_1_1WTemplate_ab482057546699b1035b099a54b0c0685}\label{classWt_1_1WTemplate_ab482057546699b1035b099a54b0c0685}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!format@{format}}
+\index{format@{format}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{format()}{format()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Template\+::format (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{result,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{s,  }\item[{\mbox{\hyperlink{classWt_a140dea437d52d3d7c438ea3bd16a1480}{Text\+Format}}}]{text\+Format = {\ttfamily TextFormat\+:\+:Plain} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Utility method to safely format an X\+H\+T\+ML string. 
+
+The string is formatted according to the indicated {\ttfamily text\+Format}. It is recommended to use this method when specializing \mbox{\hyperlink{classWt_1_1WTemplate_a1b41ce6236c27e91bfffb2d0686ac556}{resolve\+String()}} to avoid security risks. \mbox{\Hypertarget{classWt_1_1WTemplate_a7201e3518819fcb0517f564dbd49234f}\label{classWt_1_1WTemplate_a7201e3518819fcb0517f564dbd49234f}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!getErrorText@{getErrorText}}
+\index{getErrorText@{getErrorText}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{getErrorText()}{getErrorText()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+W\+Template\+::get\+Error\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Renders the errors during renderring. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_ad3e74189683016b05f5736219538551c}{render\+Template\+Text()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTemplate_a42a3a48a1f8c88af9e489b1e83e78c5f}\label{classWt_1_1WTemplate_a42a3a48a1f8c88af9e489b1e83e78c5f}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!handleUnresolvedVariable@{handleUnresolvedVariable}}
+\index{handleUnresolvedVariable@{handleUnresolvedVariable}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{handleUnresolvedVariable()}{handleUnresolvedVariable()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Template\+::handle\+Unresolved\+Variable (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{var\+Name,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&}]{args,  }\item[{std\+::ostream \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles a variable that could not be resolved. 
+
+This method is called from \mbox{\hyperlink{classWt_1_1WTemplate_a1b41ce6236c27e91bfffb2d0686ac556}{resolve\+String()}} for variables that could not be resolved.
+
+The default implementation implementation writes \char`\"{}??\char`\"{} + var\+Name + \char`\"{}??\char`\"{} to the result stream.
+
+The result stream expects a U\+T\+F-\/8 encoded string value.
+
+\begin{DoxyWarning}{Warning}
+When specializing this class, you need to make sure that you append proper X\+H\+T\+ML to the {\ttfamily result}, without unsafe active contents. The \mbox{\hyperlink{classWt_1_1WTemplate_adbe6894922347552f121e8356096d006}{format()}} methods may be used for this purpose.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_a1b41ce6236c27e91bfffb2d0686ac556}{resolve\+String()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTemplate_af302129ae6a44b1f122506a3672be6c5}\label{classWt_1_1WTemplate_af302129ae6a44b1f122506a3672be6c5}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!hasInternalPathEncoding@{hasInternalPathEncoding}}
+\index{hasInternalPathEncoding@{hasInternalPathEncoding}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{hasInternalPathEncoding()}{hasInternalPathEncoding()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Template\+::has\+Internal\+Path\+Encoding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether internal paths are enabled. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_aeee888e560c519ac0e33bfc1ebb315e2}{set\+Internal\+Path\+Encoding()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTemplate_a6efbd90522d7df4aa2502e7103fda71b}\label{classWt_1_1WTemplate_a6efbd90522d7df4aa2502e7103fda71b}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!refresh@{refresh}}
+\index{refresh@{refresh}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Template\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Refresh the widget. 
+
+The refresh method is invoked when the locale is changed using \mbox{\hyperlink{classWt_1_1WApplication_ac0af7e0131c926c77b207595c8c6e283}{W\+Application\+::set\+Locale()}} or when the user hit the refresh button.
+
+The widget must actualize its contents in response.
+
+\begin{DoxyNote}{Note}
+This does {\bfseries{not}} rerender the widget! Calling \mbox{\hyperlink{classWt_1_1WTemplate_a6efbd90522d7df4aa2502e7103fda71b}{refresh()}} usually does not have any effect (unless you\textquotesingle{}ve reimplemented \mbox{\hyperlink{classWt_1_1WTemplate_a6efbd90522d7df4aa2502e7103fda71b}{refresh()}} to attach to it an effect). 
+\end{DoxyNote}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWebWidget_a6cfacec8220f5063817e22506057a5dd}{Wt\+::\+W\+Web\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WTemplate_aad2323678635e59b05269351789aa57a}\label{classWt_1_1WTemplate_aad2323678635e59b05269351789aa57a}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!removeWidget@{removeWidget}}
+\index{removeWidget@{removeWidget}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{removeWidget()}{removeWidget()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$>$ Wt\+::\+W\+Template\+::remove\+Widget (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{var\+Name }\end{DoxyParamCaption})}
+
+
+
+Unbinds a widget by variable name. 
+
+This removes a previously bound widget and unbinds the corresponding variable, effectively undoing the effect of \mbox{\hyperlink{classWt_1_1WTemplate_a06b821ef6d6c684ea7c708a13d66fce7}{bind\+Widget()}}.
+
+If this template does not contain a widget for the given {\ttfamily var\+Name}, {\ttfamily nullptr} is returned. \mbox{\Hypertarget{classWt_1_1WTemplate_a7c3d094d6260d10227fddccd13b90def}\label{classWt_1_1WTemplate_a7c3d094d6260d10227fddccd13b90def}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!removeWidget@{removeWidget}}
+\index{removeWidget@{removeWidget}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{removeWidget()}{removeWidget()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Widget $>$ \\
+std\+::enable\+\_\+if$<$std\+::is\+\_\+convertible$<$Widget$\ast$,\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$\ast$$>$\+::value \&\& !std\+::is\+\_\+same$<$Widget,\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$>$\+::value, std\+::unique\+\_\+ptr$<$Widget$>$ $>$\+::type Wt\+::\+W\+Widget\+::remove\+Widget (\begin{DoxyParamCaption}\item[{typename Widget}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes a child widget. 
+
+This is an overload that automatically casts the returned value to a unique\+\_\+ptr$<$\+Widget$>$ for convenience
+
+This is implemented as\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{return} std::unique\_ptr<Widget>(\textcolor{keyword}{static\_cast<}Widget*\textcolor{keyword}{>}(\mbox{\hyperlink{classWt_1_1WTemplate_aad2323678635e59b05269351789aa57a}{removeWidget}}(\textcolor{keyword}{static\_cast<}WWidget*\textcolor{keyword}{>}(widget)).release()));}
+\end{DoxyCode}
+ \mbox{\Hypertarget{classWt_1_1WTemplate_a8dd53bd0c8e5e293f39e242d00fb6d4e}\label{classWt_1_1WTemplate_a8dd53bd0c8e5e293f39e242d00fb6d4e}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!removeWidget@{removeWidget}}
+\index{removeWidget@{removeWidget}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{removeWidget()}{removeWidget()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$>$ Wt\+::\+W\+Template\+::remove\+Widget (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Unbinds a widget by widget pointer. 
+
+This removes a previously bound widget and unbinds the corresponding variable, effectively undoing the effect of \mbox{\hyperlink{classWt_1_1WTemplate_a06b821ef6d6c684ea7c708a13d66fce7}{bind\+Widget()}}.
+
+If this template does not contain the given widget, {\ttfamily nullptr} is returned. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WWidget_a6ab0b1a46d2aeaac584dd054a0e670c8}{Wt\+::\+W\+Widget}}.
+
+\mbox{\Hypertarget{classWt_1_1WTemplate_a08d6d360e0dea5fbf0afb513a7b928b2}\label{classWt_1_1WTemplate_a08d6d360e0dea5fbf0afb513a7b928b2}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!renderTemplate@{renderTemplate}}
+\index{renderTemplate@{renderTemplate}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{renderTemplate()}{renderTemplate()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Template\+::render\+Template (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Renders the template into the given result stream. 
+
+The default implementation will call \mbox{\hyperlink{classWt_1_1WTemplate_ad3e74189683016b05f5736219538551c}{render\+Template\+Text()}} with the \mbox{\hyperlink{classWt_1_1WTemplate_ac8e2f6e8b1d5c46c2d3128ae51b892a0}{template\+Text()}}. 
+
+Reimplemented in \mbox{\hyperlink{classCommentView_acf50fd1ffd737f82ca682e4203872498}{Comment\+View}}, and \mbox{\hyperlink{classPostView_aa813327708ed228c4d01ebba0642573a}{Post\+View}}.
+
+\mbox{\Hypertarget{classWt_1_1WTemplate_ad3e74189683016b05f5736219538551c}\label{classWt_1_1WTemplate_ad3e74189683016b05f5736219538551c}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!renderTemplateText@{renderTemplateText}}
+\index{renderTemplateText@{renderTemplateText}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{renderTemplateText()}{renderTemplateText()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Template\+::render\+Template\+Text (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{result,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{template\+Text }\end{DoxyParamCaption})}
+
+
+
+Renders a template into the given result stream. 
+
+The default implementation will parse the template, and resolve variables by calling \mbox{\hyperlink{classWt_1_1WTemplate_a1b41ce6236c27e91bfffb2d0686ac556}{resolve\+String()}}.
+
+You may want to reimplement this method to manage resources that are needed to load content on-\/demand (e.\+g. database objects), or support a custom template language.
+
+Return\+: true if rendered successfully. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_a7201e3518819fcb0517f564dbd49234f}{get\+Error\+Text()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTemplate_a772c78a6499b03319b47a0fb74b9c1dd}\label{classWt_1_1WTemplate_a772c78a6499b03319b47a0fb74b9c1dd}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!reset@{reset}}
+\index{reset@{reset}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Template\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Notifies the template that it has changed and must be rerendered. 
+
+If you update a \mbox{\hyperlink{classWt_1_1WTemplate}{W\+Template}} with e.\+g bind\+Widget or set\+Condition, or change the template text, the template will automatically be rerendered.
+
+However, if you create a subclass of \mbox{\hyperlink{classWt_1_1WTemplate}{W\+Template}} and override resolve\+String or resolve\+Widget, you will have to notify the \mbox{\hyperlink{classWt_1_1WTemplate}{W\+Template}} if it has changed with a call to \mbox{\hyperlink{classWt_1_1WTemplate_a772c78a6499b03319b47a0fb74b9c1dd}{reset()}}. \mbox{\Hypertarget{classWt_1_1WTemplate_a9249cc525fe3c16f999644f0f1db6cb4}\label{classWt_1_1WTemplate_a9249cc525fe3c16f999644f0f1db6cb4}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!resolve@{resolve}}
+\index{resolve@{resolve}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{resolve()}{resolve()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T Wt\+::\+W\+Template\+::resolve (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{var\+Name }\end{DoxyParamCaption})}
+
+
+
+Returns a widget for a variable name. 
+
+This is a convience method, which calls \mbox{\hyperlink{classWt_1_1WTemplate_a65fd50e2e83ef594b41a97b5a3f70588}{resolve\+Widget()}} and dynamic casts the result to type {\ttfamily T}. You may use this method to fetch widgets that have previously been bound using \mbox{\hyperlink{classWt_1_1WTemplate_a06b821ef6d6c684ea7c708a13d66fce7}{bind\+Widget()}}.
+
+If the cast fails, a null pointer is returned. \mbox{\Hypertarget{classWt_1_1WTemplate_a54a59255a73303197df91ead4a4b077a}\label{classWt_1_1WTemplate_a54a59255a73303197df91ead4a4b077a}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!resolveFunction@{resolveFunction}}
+\index{resolveFunction@{resolveFunction}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{resolveFunction()}{resolveFunction()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Template\+::resolve\+Function (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&}]{args,  }\item[{std\+::ostream \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resolves a function call. 
+
+This resolves a function with name {\ttfamily name}, and one or more arguments {\ttfamily args}, and writes the result into the stream {\ttfamily result}. The method returns whether a function was matched and applied.
+
+The default implementation considers functions that were bound using \mbox{\hyperlink{classWt_1_1WTemplate_ae8f4d8e21baa953323f3c0ce1cb4314a}{add\+Function()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_ae8f4d8e21baa953323f3c0ce1cb4314a}{add\+Function()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTemplate_a1b41ce6236c27e91bfffb2d0686ac556}\label{classWt_1_1WTemplate_a1b41ce6236c27e91bfffb2d0686ac556}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!resolveString@{resolveString}}
+\index{resolveString@{resolveString}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{resolveString()}{resolveString()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Template\+::resolve\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{var\+Name,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{W\+String}} $>$ \&}]{args,  }\item[{std\+::ostream \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resolves the string value for a variable name. 
+
+This is the main method used to resolve variables in the template text, during rendering.
+
+The default implementation considers first whether a string was bound using \mbox{\hyperlink{classWt_1_1WTemplate_a16e6f5aa8a866d95cb68a6ab8fbe753d}{bind\+String()}}. If so, that string is returned. If not, it will attempt to resolve a widget with that variable name using \mbox{\hyperlink{classWt_1_1WTemplate_a65fd50e2e83ef594b41a97b5a3f70588}{resolve\+Widget()}}, and render it as X\+H\+T\+ML. If that fails too, \mbox{\hyperlink{classWt_1_1WTemplate_a42a3a48a1f8c88af9e489b1e83e78c5f}{handle\+Unresolved\+Variable()}} is called, passing the initial arguments.
+
+You may want to reimplement this method to provide on-\/demand loading of strings for your template.
+
+The result stream expects a U\+T\+F-\/8 encoded string value.
+
+\begin{DoxyWarning}{Warning}
+When specializing this class, you need to make sure that you append proper X\+H\+T\+ML to the {\ttfamily result}, without unsafe active contents. The \mbox{\hyperlink{classWt_1_1WTemplate_adbe6894922347552f121e8356096d006}{format()}} methods may be used for this purpose.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_a08d6d360e0dea5fbf0afb513a7b928b2}{render\+Template()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classFortuneTemplate_a4cbb1ca5b6f88ace4b112dacbd87cbb6}{Fortune\+Template}}, \mbox{\hyperlink{classCommentView_a2cc4d4739445c73c54b81c67ccacec93}{Comment\+View}}, \mbox{\hyperlink{classPostView_a181bc1f61d401ba6bf0d1889247379a5}{Post\+View}}, and \mbox{\hyperlink{classTopicTemplate_ada6c620d9bb71de1c2a24f8eaa164655}{Topic\+Template}}.
+
+\mbox{\Hypertarget{classWt_1_1WTemplate_af1b00826a9bdcfc0158b28dc7828e000}\label{classWt_1_1WTemplate_af1b00826a9bdcfc0158b28dc7828e000}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!resolveStringValue@{resolveStringValue}}
+\index{resolveStringValue@{resolveStringValue}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{resolveStringValue()}{resolveStringValue()}}
+{\footnotesize\ttfamily virtual const \mbox{\hyperlink{classWt_1_1WString}{W\+String}}\& Wt\+::\+W\+Template\+::resolve\+String\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{var\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resolves a string that was bound to a variable name. 
+
+Returns the string that was bound to the variable with \mbox{\hyperlink{classWt_1_1WTemplate_a16e6f5aa8a866d95cb68a6ab8fbe753d}{bind\+String()}}.
+
+This method is not to be confused with \mbox{\hyperlink{classWt_1_1WTemplate_a1b41ce6236c27e91bfffb2d0686ac556}{resolve\+String(const std\+::string\&, const std\+::vector$<$\+W\+String$>$\&, std\+::ostream\&)}} which resolves any variable to a string (both strings and widgets alike). \mbox{\Hypertarget{classWt_1_1WTemplate_a65fd50e2e83ef594b41a97b5a3f70588}\label{classWt_1_1WTemplate_a65fd50e2e83ef594b41a97b5a3f70588}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!resolveWidget@{resolveWidget}}
+\index{resolveWidget@{resolveWidget}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{resolveWidget()}{resolveWidget()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$\ast$ Wt\+::\+W\+Template\+::resolve\+Widget (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{var\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resolves a widget for a variable name. 
+
+The default implementation returns a widget that was bound using \mbox{\hyperlink{classWt_1_1WTemplate_a06b821ef6d6c684ea7c708a13d66fce7}{bind\+Widget()}}.
+
+You may want to reimplement this method to create widgets on-\/demand. All widgets that are returned by this method are reparented to the \mbox{\hyperlink{classWt_1_1WTemplate}{W\+Template}}, so they will be deleted when the template is destroyed, but they are not deleted by \mbox{\hyperlink{classWt_1_1WTemplate_aeb435b235bfda69d374b1a79c4e83422}{clear()}} (unless bind was called on them as in the example below).
+
+This method is typically used for delayed binding of widgets. Usage example\+: \mbox{\Hypertarget{classWt_1_1WTemplate_ab2b6fc00ef28674be103dd1b13fd0aec}\label{classWt_1_1WTemplate_ab2b6fc00ef28674be103dd1b13fd0aec}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!setCondition@{setCondition}}
+\index{setCondition@{setCondition}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{setCondition()}{setCondition()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Template\+::set\+Condition (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets a condition. 
+
+This enables or disables the inclusion of a conditional block.
+
+The default value of all conditions is {\ttfamily false}. \mbox{\Hypertarget{classWt_1_1WTemplate_abb1762a2d712fd21566f9d8dddf1f43a}\label{classWt_1_1WTemplate_abb1762a2d712fd21566f9d8dddf1f43a}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!setEncodeTemplateText@{setEncodeTemplateText}}
+\index{setEncodeTemplateText@{setEncodeTemplateText}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{setEncodeTemplateText()}{setEncodeTemplateText()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Template\+::set\+Encode\+Template\+Text (\begin{DoxyParamCaption}\item[{bool}]{on }\end{DoxyParamCaption})}
+
+
+
+Configures when internal path encoding is done. 
+
+By default, the internal path encoding (if enabled) is done on the template text before placeholders are being resolved. In some rare situations, you may want to postpone the internal path encoding until after placeholders have been resolved, e.\+g. if a placeholder was used to provide the string for an anchor href.
+
+The default value is {\ttfamily true} \mbox{\Hypertarget{classWt_1_1WTemplate_aeee888e560c519ac0e33bfc1ebb315e2}\label{classWt_1_1WTemplate_aeee888e560c519ac0e33bfc1ebb315e2}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!setInternalPathEncoding@{setInternalPathEncoding}}
+\index{setInternalPathEncoding@{setInternalPathEncoding}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{setInternalPathEncoding()}{setInternalPathEncoding()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Template\+::set\+Internal\+Path\+Encoding (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enables internal path anchors in the X\+H\+T\+ML template. 
+
+Anchors to internal paths are represented differently depending on the session implementation (plain H\+T\+ML, Ajax or H\+T\+M\+L5 history). By enabling this option, anchors which reference an internal path (by referring a U\+RL of the form {\ttfamily href=\char`\"{}\#/...\char`\"{}}), are re-\/encoded to link to the internal path.
+
+The default value is {\ttfamily false}.
+
+\begin{DoxySeeAlso}{See also}
+W\+Anchor\+::set\+Ref\+Internal\+Path() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTemplate_a862bf52416cdcbcb5228c7488fd6e729}\label{classWt_1_1WTemplate_a862bf52416cdcbcb5228c7488fd6e729}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!setTemplateText@{setTemplateText}}
+\index{setTemplateText@{setTemplateText}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{setTemplateText()}{setTemplateText()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Template\+::set\+Template\+Text (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text,  }\item[{\mbox{\hyperlink{classWt_a140dea437d52d3d7c438ea3bd16a1480}{Text\+Format}}}]{text\+Format = {\ttfamily TextFormat\+:\+:XHTML} }\end{DoxyParamCaption})}
+
+
+
+Sets the template text. 
+
+The {\ttfamily text} must be proper X\+H\+T\+ML, and this is checked unless the X\+H\+T\+ML is resolved from a message resource bundle or Text\+Format is Wt\+::\+Text\+Format\+::\+Unsafe\+X\+H\+T\+ML. This behavior is similar to a \mbox{\hyperlink{classWt_1_1WText}{W\+Text}} when configured with the Wt\+::\+Text\+Format\+::\+X\+H\+T\+ML textformat.
+
+Changing the template text does not \mbox{\hyperlink{classWt_1_1WTemplate_aeb435b235bfda69d374b1a79c4e83422}{clear()}} bound widgets or values.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_aeb435b235bfda69d374b1a79c4e83422}{clear()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTemplate_ae09c9f08a6bf1b50da8a5dd8feabcd4c}\label{classWt_1_1WTemplate_ae09c9f08a6bf1b50da8a5dd8feabcd4c}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!setWidgetIdMode@{setWidgetIdMode}}
+\index{setWidgetIdMode@{setWidgetIdMode}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{setWidgetIdMode()}{setWidgetIdMode()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Template\+::set\+Widget\+Id\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a323dcef5293055d85c57d23ec1936a26}{Template\+Widget\+Id\+Mode}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Sets how the var\+Name should be reflected on bound widgets. 
+
+To easily identify a widget in the browser, it may be convenient to reflect the var\+Name, either through the object name (recommended) or the widget\textquotesingle{}s ID.
+
+The default value is Template\+Widget\+Id\+Mode\+::\+None which does not reflect the var\+Name on the bound widget. \mbox{\Hypertarget{classWt_1_1WTemplate_ac8e2f6e8b1d5c46c2d3128ae51b892a0}\label{classWt_1_1WTemplate_ac8e2f6e8b1d5c46c2d3128ae51b892a0}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!templateText@{templateText}}
+\index{templateText@{templateText}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{templateText()}{templateText()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WString}{W\+String}} Wt\+::\+W\+Template\+::template\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the template. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_a862bf52416cdcbcb5228c7488fd6e729}{set\+Template\+Text()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WTemplate_a23e84f95b9d0cab7f016cf27529458e3}\label{classWt_1_1WTemplate_a23e84f95b9d0cab7f016cf27529458e3}} 
+\index{Wt::WTemplate@{Wt::WTemplate}!widgetIdMode@{widgetIdMode}}
+\index{widgetIdMode@{widgetIdMode}!Wt::WTemplate@{Wt::WTemplate}}
+\doxysubsubsection{\texorpdfstring{widgetIdMode()}{widgetIdMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_a323dcef5293055d85c57d23ec1936a26}{Template\+Widget\+Id\+Mode}} Wt\+::\+W\+Template\+::widget\+Id\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns how the var\+Name is reflected on a bound widget. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_ae09c9f08a6bf1b50da8a5dd8feabcd4c}{set\+Widget\+Id\+Mode()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Template.\+h\end{DoxyCompactItemize}

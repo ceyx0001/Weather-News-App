@@ -1,0 +1,25 @@
+digraph "PGroup"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="PGroup",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" lru" ];
+  Node2 [label="PgHdr1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structPgHdr1.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" page" ];
+  Node3 [label="sqlite3_pcache_page",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsqlite3__pcache__page.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pExtra\npBuf" ];
+  Node4 [label="void",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node2 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pLruNext\npLruPrev\npNext" ];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" iKey" ];
+  Node5 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pCache" ];
+  Node6 [label="PCache1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structPCache1.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pGroup" ];
+  Node2 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pFree\napHash" ];
+  Node4 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" pBulk" ];
+  Node5 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" nRecyclable\nnHash\nszAlloc\nszPage\nnPage\nnPurgeableDummy\niMaxKey\nnMin\nnMax\nszExtra\n..." ];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" mutex" ];
+  Node7 [label="sqlite3_mutex",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structsqlite3__mutex.html",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" nMinPage\nnPurgeable\nmxPinned\nnMaxPage" ];
+}

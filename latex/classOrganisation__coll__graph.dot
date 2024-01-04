@@ -1,0 +1,44 @@
+digraph "Organisation"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Organisation",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name" ];
+  Node2 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" memberships" ];
+  Node3 [label="Wt::Dbo::collection\l\< Wt::Dbo::ptr\< Membership \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Dbo_1_1collection.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" query" ];
+  Node4 [label="Wt::Dbo::collection\l\< C \>::QueryData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1Dbo_1_1collection_1_1QueryData.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" countStatement\nstatement" ];
+  Node5 [label="Wt::Dbo::SqlStatement",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Dbo_1_1SqlStatement.html",tooltip="Abstract base class for a prepared SQL statement."];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" size\nuseCount" ];
+  Node6 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" session_" ];
+  Node7 [label="Wt::Dbo::Session",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Dbo_1_1Session.html",tooltip="A database session."];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" transaction_" ];
+  Node8 [label="Wt::Dbo::Transaction\l::Impl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1Dbo_1_1Transaction_1_1Impl.html",tooltip=" "];
+  Node6 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" transactionCount_" ];
+  Node7 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" session_" ];
+  Node2 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" longlongType_\nintType_" ];
+  Node9 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" const_typeinfo_ptr" ];
+  Node9 [label="const",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node10 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" connectionPool_" ];
+  Node10 [label="Wt::Dbo::SqlConnectionPool",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Dbo_1_1SqlConnectionPool.html",tooltip="Abstract base class for a SQL connection pool."];
+  Node11 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" relation" ];
+  Node11 [label="Wt::Dbo::collection\l\< C \>::RelationData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1Dbo_1_1collection_1_1RelationData.html",tooltip=" "];
+  Node12 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" dbo" ];
+  Node12 [label="Wt::Dbo::MetaDboBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Dbo_1_1MetaDboBase.html",tooltip=" "];
+  Node6 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" refCount_\nstate_\nversion_" ];
+  Node7 -> Node12 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" session_" ];
+  Node13 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" activity" ];
+  Node13 [label="Wt::Dbo::collection\l\< C \>::Activity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1Dbo_1_1collection_1_1Activity.html",tooltip=" "];
+  Node14 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" setInfo" ];
+  Node14 [label="Wt::Dbo::Impl::SetInfo",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1Dbo_1_1Impl_1_1SetInfo.html",tooltip=" "];
+  Node6 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" flags\notherFkConstraints\nfkConstraints" ];
+  Node2 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" joinSelfId\njoinName\njoinOtherId" ];
+  Node9 -> Node14 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tableName" ];
+  Node9 -> Node11 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sql" ];
+  Node9 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" const_reference\nconst_pointer" ];
+}

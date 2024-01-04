@@ -1,0 +1,94 @@
+\hypertarget{classWt_1_1Auth_1_1AbstractUserDatabase_1_1Transaction}{}\doxysection{Wt\+::Auth\+::Abstract\+User\+Database\+::Transaction Class Reference}
+\label{classWt_1_1Auth_1_1AbstractUserDatabase_1_1Transaction}\index{Wt::Auth::AbstractUserDatabase::Transaction@{Wt::Auth::AbstractUserDatabase::Transaction}}
+
+
+An abstract transaction.  
+
+
+
+
+{\ttfamily \#include $<$Abstract\+User\+Database.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Auth\+::Abstract\+User\+Database\+::Transaction\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_1_1Transaction_a1c73eb72f5c80053f6ca8d85e40e5662}{$\sim$\+Transaction}} () noexcept(false)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_1_1Transaction_ae42ecbf160772ffbf3c4f54a5ba76ddf}{commit}} ()=0
+\begin{DoxyCompactList}\small\item\em Commits the transaction. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_1_1Transaction_a43089da95c09844cb6615e8477bd7186}{rollback}} ()=0
+\begin{DoxyCompactList}\small\item\em Rolls back the transaction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An abstract transaction. 
+
+An abstract transaction interface.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_a916289c27997a0d8d8608d59eccc71d4}{start\+Transaction()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AbstractUserDatabase_1_1Transaction_a1c73eb72f5c80053f6ca8d85e40e5662}\label{classWt_1_1Auth_1_1AbstractUserDatabase_1_1Transaction_a1c73eb72f5c80053f6ca8d85e40e5662}} 
+\index{Wt::Auth::AbstractUserDatabase::Transaction@{Wt::Auth::AbstractUserDatabase::Transaction}!````~Transaction@{$\sim$Transaction}}
+\index{````~Transaction@{$\sim$Transaction}!Wt::Auth::AbstractUserDatabase::Transaction@{Wt::Auth::AbstractUserDatabase::Transaction}}
+\doxysubsubsection{\texorpdfstring{$\sim$Transaction()}{~Transaction()}}
+{\footnotesize\ttfamily virtual Wt\+::\+Auth\+::\+Abstract\+User\+Database\+::\+Transaction\+::$\sim$\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+Destructor. 
+
+If the transaction is not yet finished (committed or rolled back), it will be rolled back.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_1_1Transaction_a43089da95c09844cb6615e8477bd7186}{rollback()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AbstractUserDatabase_1_1Transaction_ae42ecbf160772ffbf3c4f54a5ba76ddf}\label{classWt_1_1Auth_1_1AbstractUserDatabase_1_1Transaction_ae42ecbf160772ffbf3c4f54a5ba76ddf}} 
+\index{Wt::Auth::AbstractUserDatabase::Transaction@{Wt::Auth::AbstractUserDatabase::Transaction}!commit@{commit}}
+\index{commit@{commit}!Wt::Auth::AbstractUserDatabase::Transaction@{Wt::Auth::AbstractUserDatabase::Transaction}}
+\doxysubsubsection{\texorpdfstring{commit()}{commit()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Abstract\+User\+Database\+::\+Transaction\+::commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Commits the transaction. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_1_1Transaction_a43089da95c09844cb6615e8477bd7186}{rollback()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{structWt_1_1Auth_1_1Dbo_1_1UserDatabase_1_1TransactionImpl_a32c02afddce76f7ba1e7de31ec91b8a5}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database$<$ Dbo\+Type $>$\+::\+Transaction\+Impl}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1AbstractUserDatabase_1_1Transaction_a43089da95c09844cb6615e8477bd7186}\label{classWt_1_1Auth_1_1AbstractUserDatabase_1_1Transaction_a43089da95c09844cb6615e8477bd7186}} 
+\index{Wt::Auth::AbstractUserDatabase::Transaction@{Wt::Auth::AbstractUserDatabase::Transaction}!rollback@{rollback}}
+\index{rollback@{rollback}!Wt::Auth::AbstractUserDatabase::Transaction@{Wt::Auth::AbstractUserDatabase::Transaction}}
+\doxysubsubsection{\texorpdfstring{rollback()}{rollback()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Abstract\+User\+Database\+::\+Transaction\+::rollback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Rolls back the transaction. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AbstractUserDatabase_1_1Transaction_ae42ecbf160772ffbf3c4f54a5ba76ddf}{commit()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{structWt_1_1Auth_1_1Dbo_1_1UserDatabase_1_1TransactionImpl_abfd51c8829c51bed643015bf46966338}{Wt\+::\+Auth\+::\+Dbo\+::\+User\+Database$<$ Dbo\+Type $>$\+::\+Transaction\+Impl}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/Abstract\+User\+Database.\+h\end{DoxyCompactItemize}

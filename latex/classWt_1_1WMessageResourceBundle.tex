@@ -1,0 +1,224 @@
+\hypertarget{classWt_1_1WMessageResourceBundle}{}\doxysection{Wt\+::W\+Message\+Resource\+Bundle Class Reference}
+\label{classWt_1_1WMessageResourceBundle}\index{Wt::WMessageResourceBundle@{Wt::WMessageResourceBundle}}
+
+
+Support for localized strings using X\+ML files.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Message\+Resource\+Bundle.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Message\+Resource\+Bundle\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Message\+Resource\+Bundle\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMessageResourceBundle_aecfe527e2123bf7793d926f71dc2ed23}\label{classWt_1_1WMessageResourceBundle_aecfe527e2123bf7793d926f71dc2ed23}} 
+\mbox{\hyperlink{classWt_1_1WMessageResourceBundle_aecfe527e2123bf7793d926f71dc2ed23}{W\+Message\+Resource\+Bundle}} ()
+\begin{DoxyCompactList}\small\item\em Creates a message resource bundle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMessageResourceBundle_aff9b02f63910957671a3e8011e843d91}\label{classWt_1_1WMessageResourceBundle_aff9b02f63910957671a3e8011e843d91}} 
+\mbox{\hyperlink{classWt_1_1WMessageResourceBundle}{W\+Message\+Resource\+Bundle}} \& {\bfseries operator=} (const \mbox{\hyperlink{classWt_1_1WMessageResourceBundle}{W\+Message\+Resource\+Bundle}} \&)=delete
+\item 
+\mbox{\Hypertarget{classWt_1_1WMessageResourceBundle_ab34dd39a9939d6761606a21cb2f3d7ec}\label{classWt_1_1WMessageResourceBundle_ab34dd39a9939d6761606a21cb2f3d7ec}} 
+{\bfseries W\+Message\+Resource\+Bundle} (const \mbox{\hyperlink{classWt_1_1WMessageResourceBundle}{W\+Message\+Resource\+Bundle}} \&)=delete
+\item 
+void \mbox{\hyperlink{classWt_1_1WMessageResourceBundle_a01368946b2a2aaceab3a64cddb1cb1e2}{use}} (const std\+::string \&path, bool load\+In\+Memory=true)
+\begin{DoxyCompactList}\small\item\em Adds a (series) of message resource files to be used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMessageResourceBundle_ab2461d2ba52aa3e93f029526c2d8bfbf}\label{classWt_1_1WMessageResourceBundle_ab2461d2ba52aa3e93f029526c2d8bfbf}} 
+void {\bfseries use\+Builtin} (const char $\ast$xmlbundle)
+\item 
+const std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classWt_1_1WMessageResourceBundle_a4f4faadac5e25aca7e126879508b10e6}{keys}} (const \mbox{\hyperlink{classWt_1_1WLocale}{W\+Locale}} \&locale) const
+\begin{DoxyCompactList}\small\item\em Returns a set of all keys in this bundle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WMessageResourceBundle_aa5b2b105b9c1496db0f9f4479f9f7f03}{hibernate}} () override
+\begin{DoxyCompactList}\small\item\em Purges memory resources, if possible. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structWt_1_1LocalizedString}{Localized\+String}} \mbox{\hyperlink{classWt_1_1WMessageResourceBundle_a75525f6586d534486a79c2b7e18a6169}{resolve\+Key}} (const \mbox{\hyperlink{classWt_1_1WLocale}{W\+Locale}} \&locale, const std\+::string \&key) override
+\begin{DoxyCompactList}\small\item\em Resolves a key in the given locale. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structWt_1_1LocalizedString}{Localized\+String}} \mbox{\hyperlink{classWt_1_1WMessageResourceBundle_a80bccbf38eb6be6a7653954d88b16197}{resolve\+Plural\+Key}} (const \mbox{\hyperlink{classWt_1_1WLocale}{W\+Locale}} \&locale, const std\+::string \&key, \+::uint64\+\_\+t amount) override
+\begin{DoxyCompactList}\small\item\em Resolves the plural form of a key in the given locale. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMessageResourceBundle_a85fa23a08cdbc9e70306727192c1c68d}\label{classWt_1_1WMessageResourceBundle_a85fa23a08cdbc9e70306727192c1c68d}} 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WMessageResources}{W\+Message\+Resources}} $>$ $>$ {\bfseries message\+Resources\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Support for localized strings using X\+ML files. 
+
+The resource bundle manages a number of resource files, which allow the developer to conceptually manage its messages in a number of libraries.
+
+For example, a \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} may have a generic message library, that is shared with many other libraries, with re-\/occurring messages (such as \textquotesingle{}welcome\textquotesingle{}, \textquotesingle{}add to shopping cart\textquotesingle{}, and \textquotesingle{}pay\textquotesingle{}), and a specific message library for specific messages.
+
+Usage example\+:
+
+X\+ML file \char`\"{}general.\+xml\char`\"{}\+: \begin{DoxyVerb} <?xml version="1.0" encoding="UTF-8"?>
+ <messages>
+
+   <message id='welcome-text'>
+     Welcome dear visiter, {1} of the WFooBar magic website !
+   </message>
+
+   <message id='company-policy'>
+     The company policy is to <b>please our share-holders</b>.
+   </message>
+
+ </messages>
+\end{DoxyVerb}
+
+
+The encodings supported are A\+S\+C\+II, U\+T\+F-\/8 (recommended) or U\+T\+F-\/16.
+
+To refer the two messages defined in this resource file, use \mbox{\hyperlink{classWt_1_1WString_adf1e7e5fc3c7199563a69bf07d77e571}{W\+String\+::tr}}(\char`\"{}welcome-\/text\char`\"{}).\mbox{\hyperlink{classWt_1_1WString_a745de0f70ed885057bf8f66a4582bb6b}{arg}}(user\+Name) or \mbox{\hyperlink{classWt_1_1WWidget_ab8da3af9cb03eb2f3acf16b8131d84bf}{W\+Widget\+::tr}}(\char`\"{}company-\/policy\char`\"{}).
+
+\doxyparagraph*{Plural forms}
+
+The X\+ML format supports plural noun forms, and allows the definition of different cases of plural nouns, per language. The amount of cases per noun may differ between language families, as does the expression to transform a number associated with a noun into a case id. Two attributes for the {\ttfamily messages} X\+ML element configure the plural support\+:
+
+
+\begin{DoxyItemize}
+\item the \textquotesingle{}nplurals\textquotesingle{} attribute indicates the number of plural cases; cases are numbered 0 .. ({\itshape nplurals} -\/ 1).
+\item the \textquotesingle{}plural\textquotesingle{} attribute is an expression which evaluates converts a count {\itshape n} into a plural case. This expression should use the C language syntax, with the exception that no negative numbers are allowed, numbers must be integers, and the only allowed variable is n, which corresponds to the amount passed to \mbox{\hyperlink{classWt_1_1WString_af43284d8db7ade763739ac11555bae3b}{W\+String\+::trn()}}. The resulting value must be a plural case\+: 0 .. ({\itshape nplurals} -\/ 1).
+\end{DoxyItemize}
+
+Using \mbox{\hyperlink{classWt_1_1WString_af43284d8db7ade763739ac11555bae3b}{W\+String\+::trn()}}, you can pass the count {\itshape n} that is used to select a suitable plural case.
+
+As an example, consider an X\+ML resource file describing Polish translations, which enlists all plural cases of the noun \textquotesingle{}plik\textquotesingle{} ({\itshape file} in Polish). The noun is used this way\+:
+\begin{DoxyItemize}
+\item 1 plik
+\item 2,3,4 pliki
+\item 5-\/21 pliko\textquotesingle{}w
+\item 22-\/24 pliki
+\item 25-\/31 pliko\textquotesingle{}w
+\end{DoxyItemize}
+
+\begin{DoxyVerb}<?xml version="1.0" encoding="UTF-8"?>
+  <messages nplurals="3"
+            plural="n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2">
+
+    <message id="file">
+      <plural case="0">{1} plik</plural>
+      <plural case="1">{1} pliki</plural>
+      <plural case="2">{1} pliko'w</plural>
+    </message>
+
+  </messages>
+\end{DoxyVerb}
+
+
+To message defined in this resource file can then be used using \mbox{\hyperlink{classWt_1_1WString_af43284d8db7ade763739ac11555bae3b}{W\+String\+::trn}}(\char`\"{}file\char`\"{}, n).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_a151728696e737a3af0256920a2463211}{W\+Application\+::locale()}}, \mbox{\hyperlink{classWt_1_1WString_adf1e7e5fc3c7199563a69bf07d77e571}{W\+String\+::tr()}}, \mbox{\hyperlink{classWt_1_1WString_af43284d8db7ade763739ac11555bae3b}{W\+String\+::trn()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WMessageResourceBundle_aa5b2b105b9c1496db0f9f4479f9f7f03}\label{classWt_1_1WMessageResourceBundle_aa5b2b105b9c1496db0f9f4479f9f7f03}} 
+\index{Wt::WMessageResourceBundle@{Wt::WMessageResourceBundle}!hibernate@{hibernate}}
+\index{hibernate@{hibernate}!Wt::WMessageResourceBundle@{Wt::WMessageResourceBundle}}
+\doxysubsubsection{\texorpdfstring{hibernate()}{hibernate()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Message\+Resource\+Bundle\+::hibernate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Purges memory resources, if possible. 
+
+This is called afer event handling, and is an opportunity to conserve memory inbetween events, by freeing memory used for cached key/value bindings, if applicable.
+
+The default implementation does nothing. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WLocalizedStrings_a745e30f22017ed72662c056838f79bcb}{Wt\+::\+W\+Localized\+Strings}}.
+
+\mbox{\Hypertarget{classWt_1_1WMessageResourceBundle_a4f4faadac5e25aca7e126879508b10e6}\label{classWt_1_1WMessageResourceBundle_a4f4faadac5e25aca7e126879508b10e6}} 
+\index{Wt::WMessageResourceBundle@{Wt::WMessageResourceBundle}!keys@{keys}}
+\index{keys@{keys}!Wt::WMessageResourceBundle@{Wt::WMessageResourceBundle}}
+\doxysubsubsection{\texorpdfstring{keys()}{keys()}}
+{\footnotesize\ttfamily const std\+::set$<$std\+::string$>$ Wt\+::\+W\+Message\+Resource\+Bundle\+::keys (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLocale}{W\+Locale}} \&}]{locale }\end{DoxyParamCaption}) const}
+
+
+
+Returns a set of all keys in this bundle. 
+
+Returns a set of all keys connected with this \mbox{\hyperlink{classWt_1_1WMessageResources}{W\+Message\+Resources}}, within the scope provided as parameter. \mbox{\Hypertarget{classWt_1_1WMessageResourceBundle_a75525f6586d534486a79c2b7e18a6169}\label{classWt_1_1WMessageResourceBundle_a75525f6586d534486a79c2b7e18a6169}} 
+\index{Wt::WMessageResourceBundle@{Wt::WMessageResourceBundle}!resolveKey@{resolveKey}}
+\index{resolveKey@{resolveKey}!Wt::WMessageResourceBundle@{Wt::WMessageResourceBundle}}
+\doxysubsubsection{\texorpdfstring{resolveKey()}{resolveKey()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWt_1_1LocalizedString}{Localized\+String}} Wt\+::\+W\+Message\+Resource\+Bundle\+::resolve\+Key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLocale}{W\+Locale}} \&}]{locale,  }\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Resolves a key in the given locale. 
+
+This method is used by \mbox{\hyperlink{classWt_1_1WString}{W\+String}} to obtain the U\+T\+F-\/8 value corresponding to a key in the given locale.
+
+Returns a successful \mbox{\hyperlink{structWt_1_1LocalizedString}{Localized\+String}} if the key could be resolved.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WString_adf1e7e5fc3c7199563a69bf07d77e571}{W\+String\+::tr()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WLocalizedStrings_a5dec0a1491724fac1e174f9c0f2651bd}{Wt\+::\+W\+Localized\+Strings}}.
+
+\mbox{\Hypertarget{classWt_1_1WMessageResourceBundle_a80bccbf38eb6be6a7653954d88b16197}\label{classWt_1_1WMessageResourceBundle_a80bccbf38eb6be6a7653954d88b16197}} 
+\index{Wt::WMessageResourceBundle@{Wt::WMessageResourceBundle}!resolvePluralKey@{resolvePluralKey}}
+\index{resolvePluralKey@{resolvePluralKey}!Wt::WMessageResourceBundle@{Wt::WMessageResourceBundle}}
+\doxysubsubsection{\texorpdfstring{resolvePluralKey()}{resolvePluralKey()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{structWt_1_1LocalizedString}{Localized\+String}} Wt\+::\+W\+Message\+Resource\+Bundle\+::resolve\+Plural\+Key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLocale}{W\+Locale}} \&}]{locale,  }\item[{const std\+::string \&}]{key,  }\item[{\+::uint64\+\_\+t}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Resolves the plural form of a key in the given locale. 
+
+This method is used by \mbox{\hyperlink{classWt_1_1WString}{W\+String}} to obtain the U\+T\+F-\/8 value corresponding to a key in the current locale, taking into account the possibility of multiple plural forms, and chosing the right plural form based on the {\ttfamily amount} passed.
+
+Throws a std\+::logic\+\_\+error if the underlying implementation does not provide support for plural internationalized strings.
+
+Returns a successful \mbox{\hyperlink{structWt_1_1LocalizedString}{Localized\+String}} if the key could be resolved.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WString_af43284d8db7ade763739ac11555bae3b}{W\+String\+::trn()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WLocalizedStrings_a66141dedd459037656e6774d7f460fa3}{Wt\+::\+W\+Localized\+Strings}}.
+
+\mbox{\Hypertarget{classWt_1_1WMessageResourceBundle_a01368946b2a2aaceab3a64cddb1cb1e2}\label{classWt_1_1WMessageResourceBundle_a01368946b2a2aaceab3a64cddb1cb1e2}} 
+\index{Wt::WMessageResourceBundle@{Wt::WMessageResourceBundle}!use@{use}}
+\index{use@{use}!Wt::WMessageResourceBundle@{Wt::WMessageResourceBundle}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Message\+Resource\+Bundle\+::use (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path,  }\item[{bool}]{load\+In\+Memory = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Adds a (series) of message resource files to be used. 
+
+The {\ttfamily path} is not a U\+RI, and relative paths will be resolved with respect to the working directory of the server. The X\+ML files do not need to be deployed in the web server\textquotesingle{}s docroot.
+
+When you give as {\ttfamily path\+:} /path/to/name, then the following message resource files will be used\+:
+\begin{DoxyItemize}
+\item /path/to/name.xml (default, English)
+\item /path/to/name\+\_\+nl.xml (for Dutch)
+\item /path/to/name\+\_\+fr.xml (for French)
+\item etc...
+\end{DoxyItemize}
+
+The message file that is used depends on the application\textquotesingle{}s locale.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_a151728696e737a3af0256920a2463211}{W\+Application\+::locale()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Message\+Resource\+Bundle.\+h\end{DoxyCompactItemize}

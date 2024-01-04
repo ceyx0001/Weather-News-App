@@ -1,0 +1,184 @@
+\hypertarget{classWt_1_1WSelectionBox}{}\doxysection{Wt\+::W\+Selection\+Box Class Reference}
+\label{classWt_1_1WSelectionBox}\index{Wt::WSelectionBox@{Wt::WSelectionBox}}
+
+
+A selection box allows selection from a list of options.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Selection\+Box.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Selection\+Box\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Selection\+Box\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSelectionBox_afc0128aea752993fdde3f7f67cc00cbf}\label{classWt_1_1WSelectionBox_afc0128aea752993fdde3f7f67cc00cbf}} 
+\mbox{\hyperlink{classWt_1_1WSelectionBox_afc0128aea752993fdde3f7f67cc00cbf}{W\+Selection\+Box}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WSelectionBox_a7da8b30f0de98440d893159b1a6ef872}\label{classWt_1_1WSelectionBox_a7da8b30f0de98440d893159b1a6ef872}} 
+int \mbox{\hyperlink{classWt_1_1WSelectionBox_a7da8b30f0de98440d893159b1a6ef872}{vertical\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of items that are visible. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSelectionBox_a90bcf3611a6f54e0358b7f208b0cb478}{set\+Vertical\+Size}} (int items)
+\begin{DoxyCompactList}\small\item\em Sets the number of items that are visible. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSelectionBox_aa3119417024e25b7b24e66cab17edb31}{set\+Selection\+Mode}} (\mbox{\hyperlink{classWt_a74b3f7eb1689a3cbf0ea514ffd20bccc}{Selection\+Mode}} mode)
+\begin{DoxyCompactList}\small\item\em Sets the selection mode. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_a74b3f7eb1689a3cbf0ea514ffd20bccc}{Selection\+Mode}} \mbox{\hyperlink{classWt_1_1WSelectionBox_a2d3328b92afaaaf43f918fcd3b7e2ec7}{selection\+Mode}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the selection mode. \end{DoxyCompactList}\item 
+const std\+::set$<$ int $>$ \& \mbox{\hyperlink{classWt_1_1WSelectionBox_ac54eac01c9ee8b24d27a5de0e02f934c}{selected\+Indexes}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current selection (in Wt\+::\+Selection\+Mode\+::\+Extended mode). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSelectionBox_a4fcb25c6d7c00f5659959180df9a337c}{set\+Selected\+Indexes}} (const std\+::set$<$ int $>$ \&selection)
+\begin{DoxyCompactList}\small\item\em Sets the selection (in Wt\+::\+Selection\+Mode\+::\+Extended mode). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WSelectionBox_a2925ed26e7e56d8ce7bca40dc338f5e0}{clear\+Selection}} ()
+\begin{DoxyCompactList}\small\item\em Clears the current selection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSelectionBox_acc3f5cca28b8da4431c4b51745d7f078}\label{classWt_1_1WSelectionBox_acc3f5cca28b8da4431c4b51745d7f078}} 
+virtual void {\bfseries update\+Dom} (\mbox{\hyperlink{classWt_1_1DomElement}{Dom\+Element}} \&element, bool all) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WSelectionBox_adb273cb820885dac3a02bcefa1ec3982}\label{classWt_1_1WSelectionBox_adb273cb820885dac3a02bcefa1ec3982}} 
+virtual void {\bfseries set\+Form\+Data} (const \mbox{\hyperlink{structWt_1_1WObject_1_1FormData}{Form\+Data}} \&form\+Data) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WSelectionBox_ae2fbb34622656884032ff65929ae4183}\label{classWt_1_1WSelectionBox_ae2fbb34622656884032ff65929ae4183}} 
+virtual void {\bfseries propagate\+Render\+Ok} (bool deep) override
+\item 
+\mbox{\Hypertarget{classWt_1_1WSelectionBox_a472e2963818f7a24bdcfa0260513e5eb}\label{classWt_1_1WSelectionBox_a472e2963818f7a24bdcfa0260513e5eb}} 
+virtual bool {\bfseries is\+Selected} (int index) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSelectionBox_aee92e010a5ca211a50725ac1aea8e973}\label{classWt_1_1WSelectionBox_aee92e010a5ca211a50725ac1aea8e973}} 
+virtual bool {\bfseries supports\+No\+Selection} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSelectionBox_a6599e69a95e6cb35a32d14332738afc0}\label{classWt_1_1WSelectionBox_a6599e69a95e6cb35a32d14332738afc0}} 
+int {\bfseries vertical\+Size\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSelectionBox_a83128e508b433b43ac00c2f102f1e226}\label{classWt_1_1WSelectionBox_a83128e508b433b43ac00c2f102f1e226}} 
+\mbox{\hyperlink{classWt_a74b3f7eb1689a3cbf0ea514ffd20bccc}{Selection\+Mode}} {\bfseries selection\+Mode\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSelectionBox_a60d5641b93be73ea155faa321a69189f}\label{classWt_1_1WSelectionBox_a60d5641b93be73ea155faa321a69189f}} 
+std\+::set$<$ int $>$ {\bfseries selection\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WSelectionBox_a0fedde61c863e06a9594dac594e2a19c}\label{classWt_1_1WSelectionBox_a0fedde61c863e06a9594dac594e2a19c}} 
+bool {\bfseries config\+Changed\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A selection box allows selection from a list of options. 
+
+By default, a selection box may be used to let the user select one item from a list. This may be changed to multiple selection mode using \mbox{\hyperlink{classWt_1_1WSelectionBox_aa3119417024e25b7b24e66cab17edb31}{set\+Selection\+Mode()}}.
+
+The current selection may be set and read using \mbox{\hyperlink{classWt_1_1WComboBox_a903e2d98c6860fe09198bdb43f0566bd}{set\+Current\+Index()}} and \mbox{\hyperlink{classWt_1_1WComboBox_a46d536faa379cf01e50974065265780f}{current\+Index()}}, for \mbox{\hyperlink{}{Selection\+Mode\+::\+Single}} mode, or \mbox{\hyperlink{classWt_1_1WSelectionBox_a4fcb25c6d7c00f5659959180df9a337c}{set\+Selected\+Indexes()}} and \mbox{\hyperlink{classWt_1_1WSelectionBox_ac54eac01c9ee8b24d27a5de0e02f934c}{selected\+Indexes()}} for Wt\+::\+Selection\+Mode\+::\+Extended mode. The \mbox{\hyperlink{classWt_1_1WComboBox_ac39b46ccd8134a5397b4cbd87dc9f01f}{activated()}} and \mbox{\hyperlink{classWt_1_1WComboBox_a06401499734540c65db26fceb60bfdbf}{sactivated()}} signals are not emited in the Wt\+::\+Selection\+Mode\+::\+Extended mode, use the \mbox{\hyperlink{classWt_1_1WFormWidget_a880589c79f1b93e7f38330e28cf6f5e2}{changed()}} signal.
+
+W\+Selection\+Box is an M\+VC view class, using a simple string list model by default. The model may be populated using \mbox{\hyperlink{classWt_1_1WComboBox_a9b2308a7d962ceb17c1ee32627b106d4}{W\+Combo\+Box\+::add\+Item()}} or \mbox{\hyperlink{classWt_1_1WComboBox_a2092c15c7c0c2f77342d0abdc393ca6b}{W\+Combo\+Box\+::insert\+Item()}} and the contents can be cleared through \mbox{\hyperlink{classWt_1_1WComboBox_a0ed207e9616b51089d97030cc767409d}{clear()}}. These methods manipulate the underlying \mbox{\hyperlink{classWt_1_1WComboBox_ab7ab1df5e7624815fca695243cc7eb0e}{model()}}.
+
+To use the selectionbox with a custom model instead of the default \mbox{\hyperlink{classWt_1_1WStringListModel}{W\+String\+List\+Model}}, use \mbox{\hyperlink{classWt_1_1WComboBox_ac1ae5c539f5b761b4a672ccde09f19f6}{set\+Model()}}.
+
+W\+Selection\+Box is an \mbox{\hyperlink{classWt_1_1WWidget_ac78e3af143883334c82031790c87416e}{inline }} widget.
+
+\doxyparagraph*{C\+SS}
+
+The widget corresponds to the H\+T\+ML {\ttfamily $<$select$>$} tag and does not provide styling. It can be styled using inline or external C\+SS as appropriate. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WSelectionBox_a2925ed26e7e56d8ce7bca40dc338f5e0}\label{classWt_1_1WSelectionBox_a2925ed26e7e56d8ce7bca40dc338f5e0}} 
+\index{Wt::WSelectionBox@{Wt::WSelectionBox}!clearSelection@{clearSelection}}
+\index{clearSelection@{clearSelection}!Wt::WSelectionBox@{Wt::WSelectionBox}}
+\doxysubsubsection{\texorpdfstring{clearSelection()}{clearSelection()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Selection\+Box\+::clear\+Selection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the current selection. 
+
+Clears the current selection.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WComboBox_a903e2d98c6860fe09198bdb43f0566bd}{set\+Current\+Index()}}, \mbox{\hyperlink{classWt_1_1WSelectionBox_a4fcb25c6d7c00f5659959180df9a337c}{set\+Selected\+Indexes()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSelectionBox_ac54eac01c9ee8b24d27a5de0e02f934c}\label{classWt_1_1WSelectionBox_ac54eac01c9ee8b24d27a5de0e02f934c}} 
+\index{Wt::WSelectionBox@{Wt::WSelectionBox}!selectedIndexes@{selectedIndexes}}
+\index{selectedIndexes@{selectedIndexes}!Wt::WSelectionBox@{Wt::WSelectionBox}}
+\doxysubsubsection{\texorpdfstring{selectedIndexes()}{selectedIndexes()}}
+{\footnotesize\ttfamily const std\+::set$<$int$>$\& Wt\+::\+W\+Selection\+Box\+::selected\+Indexes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the current selection (in Wt\+::\+Selection\+Mode\+::\+Extended mode). 
+
+Get the list of currently selected items. This method is only defined when \mbox{\hyperlink{classWt_1_1WSelectionBox_a2d3328b92afaaaf43f918fcd3b7e2ec7}{selection\+Mode()}} is Wt\+::\+Selection\+Mode\+::\+Extended. Otherwise, you should use \mbox{\hyperlink{classWt_1_1WComboBox_a46d536faa379cf01e50974065265780f}{current\+Index()}} to get item currently selected.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WComboBox_a46d536faa379cf01e50974065265780f}{current\+Index()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSelectionBox_a2d3328b92afaaaf43f918fcd3b7e2ec7}\label{classWt_1_1WSelectionBox_a2d3328b92afaaaf43f918fcd3b7e2ec7}} 
+\index{Wt::WSelectionBox@{Wt::WSelectionBox}!selectionMode@{selectionMode}}
+\index{selectionMode@{selectionMode}!Wt::WSelectionBox@{Wt::WSelectionBox}}
+\doxysubsubsection{\texorpdfstring{selectionMode()}{selectionMode()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_a74b3f7eb1689a3cbf0ea514ffd20bccc}{Selection\+Mode}} Wt\+::\+W\+Selection\+Box\+::selection\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the selection mode. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSelectionBox_aa3119417024e25b7b24e66cab17edb31}{set\+Selection\+Mode(\+Selection\+Mode)}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WComboBox_a676e354c2db9fdb712886023610e3922}{Wt\+::\+W\+Combo\+Box}}.
+
+\mbox{\Hypertarget{classWt_1_1WSelectionBox_a4fcb25c6d7c00f5659959180df9a337c}\label{classWt_1_1WSelectionBox_a4fcb25c6d7c00f5659959180df9a337c}} 
+\index{Wt::WSelectionBox@{Wt::WSelectionBox}!setSelectedIndexes@{setSelectedIndexes}}
+\index{setSelectedIndexes@{setSelectedIndexes}!Wt::WSelectionBox@{Wt::WSelectionBox}}
+\doxysubsubsection{\texorpdfstring{setSelectedIndexes()}{setSelectedIndexes()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Selection\+Box\+::set\+Selected\+Indexes (\begin{DoxyParamCaption}\item[{const std\+::set$<$ int $>$ \&}]{selection }\end{DoxyParamCaption})}
+
+
+
+Sets the selection (in Wt\+::\+Selection\+Mode\+::\+Extended mode). 
+
+For an Wt\+::\+Selection\+Mode\+::\+Extended mode, set the list of currently selected items.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WSelectionBox_ac54eac01c9ee8b24d27a5de0e02f934c}{selected\+Indexes()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WSelectionBox_aa3119417024e25b7b24e66cab17edb31}\label{classWt_1_1WSelectionBox_aa3119417024e25b7b24e66cab17edb31}} 
+\index{Wt::WSelectionBox@{Wt::WSelectionBox}!setSelectionMode@{setSelectionMode}}
+\index{setSelectionMode@{setSelectionMode}!Wt::WSelectionBox@{Wt::WSelectionBox}}
+\doxysubsubsection{\texorpdfstring{setSelectionMode()}{setSelectionMode()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Selection\+Box\+::set\+Selection\+Mode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a74b3f7eb1689a3cbf0ea514ffd20bccc}{Selection\+Mode}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Sets the selection mode. 
+
+The default selection mode is Selection\+Mode\+::\+Single. You can change to Wt\+::\+Selection\+Mode\+::\+Extended to allow selection of multiple items. \mbox{\Hypertarget{classWt_1_1WSelectionBox_a90bcf3611a6f54e0358b7f208b0cb478}\label{classWt_1_1WSelectionBox_a90bcf3611a6f54e0358b7f208b0cb478}} 
+\index{Wt::WSelectionBox@{Wt::WSelectionBox}!setVerticalSize@{setVerticalSize}}
+\index{setVerticalSize@{setVerticalSize}!Wt::WSelectionBox@{Wt::WSelectionBox}}
+\doxysubsubsection{\texorpdfstring{setVerticalSize()}{setVerticalSize()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Selection\+Box\+::set\+Vertical\+Size (\begin{DoxyParamCaption}\item[{int}]{items }\end{DoxyParamCaption})}
+
+
+
+Sets the number of items that are visible. 
+
+If more items are available, a scroll-\/bar is provided. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Selection\+Box.\+h\end{DoxyCompactItemize}

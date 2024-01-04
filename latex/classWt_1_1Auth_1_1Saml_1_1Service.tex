@@ -1,0 +1,1136 @@
+\hypertarget{classWt_1_1Auth_1_1Saml_1_1Service}{}\doxysection{Wt\+::Auth\+::Saml\+::Service Class Reference}
+\label{classWt_1_1Auth_1_1Saml_1_1Service}\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+
+
+A minimal implementation of a S\+A\+ML service provider.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Auth/\+Saml/\+Service.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Auth\+::Saml\+::Service\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Auth\+::Saml\+::Service\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_af894458e7d1f4da25d88d65b3c0521d6}\label{classWt_1_1Auth_1_1Saml_1_1Service_af894458e7d1f4da25d88d65b3c0521d6}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_af894458e7d1f4da25d88d65b3c0521d6}{Service}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a20c13e97ec9c0c1638a41ca6f7f9020b}{base\+Auth}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a1c0c0ec6ec17383986a8416ec343becf}{$\sim$\+Service}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ae2a277a945de546f35e499584fd27b3e}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}} so it is ready for use. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a89ae3fb932497cbe28ed8b032d447966}{set\+Popup\+Enabled}} (bool enable)
+\begin{DoxyCompactList}\small\item\em Configure if a popup should be used for the login. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_acc98e93b1476c86214daac705be6a795}{popup\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns if a popup is used for the login. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Process}{Process}} $>$ \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a7df79dd776525f4b11ccf355ea31c7f8}{create\+Process}} () const
+\begin{DoxyCompactList}\small\item\em Creates a new authorization process. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ab58e77d73a00268e35eda4a8eca491d7}{encode\+State}} (const std\+::string \&url) const
+\begin{DoxyCompactList}\small\item\em Derives a state value from the session ID. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a88dfaccabc3f3d2d5d02ff30b3c177dc}{decode\+State}} (const std\+::string \&state) const
+\begin{DoxyCompactList}\small\item\em Validates and decodes a state parameter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ac3084a6c768100b87c0a8fc1e55704b1}\label{classWt_1_1Auth_1_1Saml_1_1Service_ac3084a6c768100b87c0a8fc1e55704b1}} 
+{\bfseries Service} (const \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}} \&other)=delete
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a94e552a7b227d6314f14d9726a6e32a9}\label{classWt_1_1Auth_1_1Saml_1_1Service_a94e552a7b227d6314f14d9726a6e32a9}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}} \& {\bfseries operator=} (const \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}} \&other)=delete
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a35881af08b5a8f8ea4c237a5896e8d64}\label{classWt_1_1Auth_1_1Saml_1_1Service_a35881af08b5a8f8ea4c237a5896e8d64}} 
+{\bfseries Service} (\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}} \&\&other)=delete
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a196cade1c55794885054ee8416398b7f}\label{classWt_1_1Auth_1_1Saml_1_1Service_a196cade1c55794885054ee8416398b7f}} 
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}} \& {\bfseries operator=} (\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}} \&\&other)=delete
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a20c13e97ec9c0c1638a41ca6f7f9020b}\label{classWt_1_1Auth_1_1Saml_1_1Service_a20c13e97ec9c0c1638a41ca6f7f9020b}} 
+const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} \& \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a20c13e97ec9c0c1638a41ca6f7f9020b}{base\+Auth}} () const
+\begin{DoxyCompactList}\small\item\em Returns the basic authentication service. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a0d3010394bcf507b47602c790fbeb95d}{metadata}} () const
+\begin{DoxyCompactList}\small\item\em Returns the S\+Ps metadata as X\+ML. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a39e1f0a45c8bbfbc3f2327cc228ea60b}{assertion\+To\+Identity}} (const \mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion}{Assertion}} \&assertion) const =0
+\begin{DoxyCompactList}\small\item\em Creates an entity from the given \mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion}{Assertion}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Configuration properties}\par
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a2dcc5ab7c972228beb925340941336f0}{set\+Secret}} (const std\+::string \&secret)
+\begin{DoxyCompactList}\small\item\em Sets the secret used when encoding the Relay\+State. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a8091da292b5677d69a939db73515360f}{set\+Redirect\+Timeout}} (std\+::chrono\+::seconds timeout)
+\begin{DoxyCompactList}\small\item\em Sets the timeout to login when there is no popup. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a0df3c55a4f56b065844972aa5b6d2f8d}{set\+Name}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a58836e84f243b11a27971b0307888628}{name}})
+\begin{DoxyCompactList}\small\item\em Sets the provider name. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a58836e84f243b11a27971b0307888628}{name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the provider name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ad9328246814b8537b4d1ac06a59d27c2}{set\+Description}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ad948fb458ce34bb1f676be07973b78ca}{description}})
+\begin{DoxyCompactList}\small\item\em Sets the provider description. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ad948fb458ce34bb1f676be07973b78ca}{description}} () const
+\begin{DoxyCompactList}\small\item\em Returns the provider description. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a240472d7bc485504ebc58a1a4bfbe6a2}{set\+Popup\+Width}} (int \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ab54e1656165959ec599566a0c11f6c8a}{popup\+Width}})
+\begin{DoxyCompactList}\small\item\em Sets the desired width for the popup window. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ab54e1656165959ec599566a0c11f6c8a}{popup\+Width}} () const
+\begin{DoxyCompactList}\small\item\em Returns the desired width for the popup window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_afac6c02f6680467806a4c4ba3b84c27a}{set\+Popup\+Height}} (int \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a0eea43e2630d9230cd6fafd28b22f4a6}{popup\+Height}})
+\begin{DoxyCompactList}\small\item\em Sets the desired height for the popup window. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a0eea43e2630d9230cd6fafd28b22f4a6}{popup\+Height}} () const
+\begin{DoxyCompactList}\small\item\em Returns the desire height for the popup window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a56636969d62615fd0b817a23a8fe1bed}\label{classWt_1_1Auth_1_1Saml_1_1Service_a56636969d62615fd0b817a23a8fe1bed}} 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a56636969d62615fd0b817a23a8fe1bed}{set\+Idp\+Entity\+Id}} (const std\+::string \&entity\+ID)
+\begin{DoxyCompactList}\small\item\em Sets the entity ID of the IdP. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a7b5b8a9d8e9d94f542904df1b120548a}{idp\+Entity\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Gets the entity ID of the IdP. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_aa8b6e4429df61b21bf8fa519d70dba7d}{set\+Name\+Id\+Policy\+Format}} (const std\+::string \&format)
+\begin{DoxyCompactList}\small\item\em Sets the format for the name id policy in the authentication request. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a416336672dbeae75c0b4ef57ac8d89c2}{name\+Id\+Policy\+Format}} () const
+\begin{DoxyCompactList}\small\item\em Gets the format for the name id policy in the authentication request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_aa5cca89e64b80cc66fcff8f64fda4360}{set\+Name\+Id\+Policy\+Allow\+Create}} (bool allow\+Create)
+\begin{DoxyCompactList}\small\item\em Sets the Allow\+Create parameter for the name id policy in the authentication request. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a5394721576ef6b7ba610a095f2065eb6}{name\+Id\+Policy\+Allow\+Create}} () const
+\begin{DoxyCompactList}\small\item\em Gets the Allow\+Create parameter for the name id policy in the authentication request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a64528507f209fb94c96c61d4e0682982}{set\+Authn\+Context\+Class\+Ref}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a6187df4fec605e6dc61f315185c6823e}{authn\+Context\+Class\+Ref}})
+\begin{DoxyCompactList}\small\item\em Sets the authentication context class to use in the authentication request. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a6187df4fec605e6dc61f315185c6823e}{authn\+Context\+Class\+Ref}} () const
+\begin{DoxyCompactList}\small\item\em Gets the authentication context class to use in the authentication request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ae6be709a6ebc43302425da239622c05b}{set\+Authn\+Context\+Comparison}} (\mbox{\hyperlink{namespaceWt_1_1Auth_1_1Saml_a81a30449f40b43a5d56756e478eb1941}{Authn\+Context\+Comparison}} comparison)
+\begin{DoxyCompactList}\small\item\em Sets the comparison to use in the authentication context of the authentication request. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceWt_1_1Auth_1_1Saml_a81a30449f40b43a5d56756e478eb1941}{Authn\+Context\+Comparison}} \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a23d58e9d1f444e73425f7832b574276b}{authn\+Context\+Comparison}} () const
+\begin{DoxyCompactList}\small\item\em Gets the comparison to use in the authentication context of the application request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a73631e8105b1fabe941ae5dc2908017a}\label{classWt_1_1Auth_1_1Saml_1_1Service_a73631e8105b1fabe941ae5dc2908017a}} 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a73631e8105b1fabe941ae5dc2908017a}{set\+S\+P\+Entity\+Id}} (const std\+::string \&entity\+ID)
+\begin{DoxyCompactList}\small\item\em Sets the entity ID of this SP. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_aaa5017a450a5e31b68f5d7cb80369377}{sp\+Entity\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Gets the entity ID of this SP. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a54257a25fad3474861b50fbbece83e26}{set\+Acs\+Url}} (const std\+::string \&url)
+\begin{DoxyCompactList}\small\item\em Sets the Assertion Consumer Service U\+RL. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a618714265aab5c8b7b650c331eb6501e}{acs\+Url}} () const
+\begin{DoxyCompactList}\small\item\em Gets the Assertion Consumer Service U\+RL. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a37dbace0701f98e29020d0a9f393a55d}{acs\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Gets the Assertion Consumer Service path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a1aa1230618a443d8e4e1a016eaf66b7c}{set\+Metadata\+Path}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Sets the path at which the metadata of this SP will be made available. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a8f8aeacec029892e4cc58cd5f73ac178}{metadata\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Returns the path at which the metadata of this SP will be made available. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ae7432731b5eafd3fe2ebfebabfbeb304}{set\+Metadata\+Provider\+Path}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Sets the path to the X\+ML file that describes the metadata provider. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ae31c37bd4d50a6105aca7e5c6ec39574}{metadata\+Provider\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Returns the path to the X\+ML file that describes the metadata provider. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_acbc64d221edad2900653b45636b6ab4c}{set\+Credential\+Resolver\+Path}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Sets the path to the X\+ML that describes the credential resolver. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a3c3a1cbe6691a217e1fb3ad28e53e883}{credential\+Resolver\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Returns the path to the X\+ML file that describes the credential resolver. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a91c47aef0c81f647c0e269e6a838df1b}{set\+Xml\+Validation\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Sets whether responses should be validated against the X\+ML schema. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a8d83ebe66f5f2716526ef226f3a98f07}{xml\+Validation\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Retursn whether responses should be validated against the X\+ML schema. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ae3b49cecd1d7a8083cc1437aca29663b}{set\+Xml\+Tooling\+Catalog\+Path}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Sets the path of X\+M\+L\+Tooling\textquotesingle{}s {\ttfamily catalog.\+xml} file. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a91dfdbb2c4bb8ceab1fac720fd6445f8}{xml\+Tooling\+Catalog\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Returns the path of X\+M\+L\+Tooling\textquotesingle{}s {\ttfamily catalog.\+xml} file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ac077a2d43b0c1473b1ecdc5877c4da37}{set\+Saml\+Catalog\+Path}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Sets the path of Open\+S\+A\+ML\textquotesingle{}s {\ttfamily saml20-\/catalog.\+xml} file. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a0c3ee3ddf7624d19db6791e94cf1400b}{saml\+Catalog\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Returns the path of Open\+S\+A\+ML\textquotesingle{}s {\ttfamily saml20-\/catalog.\+xml} file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_aee4259bb10e82f73072baf0d1edce54f}{set\+Signature\+Policy}} (\mbox{\hyperlink{namespaceWt_1_1Auth_1_1Saml_a383129bac48708e3caa59adbd04cffa5}{Signature\+Policy}} policy)
+\begin{DoxyCompactList}\small\item\em Sets the signature policy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespaceWt_1_1Auth_1_1Saml_a383129bac48708e3caa59adbd04cffa5}{Signature\+Policy}} \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a0e6d756ad72ecf8a126393df4056d750}{signature\+Policy}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current signature policy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a31634aaca42c657f7876d366b9900094}{configure\+Logging}} ()
+\begin{DoxyCompactList}\small\item\em Sets up logging. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a50a505f48fcb333f37fc761b4c6d6cb3}{configure\+Xml\+Security}} ()
+\begin{DoxyCompactList}\small\item\em Configures the algorithm whitelist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a765b02a12d5f821edb7913d312a66ddf}\label{classWt_1_1Auth_1_1Saml_1_1Service_a765b02a12d5f821edb7913d312a66ddf}} 
+void {\bfseries check\+Initialized} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_aa65019f3fba7790fc01b903ddf1d553b}\label{classWt_1_1Auth_1_1Saml_1_1Service_aa65019f3fba7790fc01b903ddf1d553b}} 
+void {\bfseries check\+Config} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_aba2b123a7e52ecf2d2a2141615c0bc3f}\label{classWt_1_1Auth_1_1Saml_1_1Service_aba2b123a7e52ecf2d2a2141615c0bc3f}} 
+void {\bfseries generate\+Acs\+Endpoint} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a82413a1c24e3a4f34952bc03f6b91b4c}\label{classWt_1_1Auth_1_1Saml_1_1Service_a82413a1c24e3a4f34952bc03f6b91b4c}} 
+void {\bfseries generate\+Metadata\+Endpoint} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a180f5de657baa4b1348354f58aa5b505}\label{classWt_1_1Auth_1_1Saml_1_1Service_a180f5de657baa4b1348354f58aa5b505}} 
+static std\+::string {\bfseries configuration\+Property} (const std\+::string \&property)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a3f871b1836bb12ca1d4fdd81177a0557}\label{classWt_1_1Auth_1_1Saml_1_1Service_a3f871b1836bb12ca1d4fdd81177a0557}} 
+const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} \& {\bfseries base\+Auth\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_adcb9e9ae37b15a56b05573508582d5c3}\label{classWt_1_1Auth_1_1Saml_1_1Service_adcb9e9ae37b15a56b05573508582d5c3}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1ServiceImpl}{Service\+Impl}} $>$ {\bfseries impl\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a294e3dd0db01f9d068bb5d16872467d0}\label{classWt_1_1Auth_1_1Saml_1_1Service_a294e3dd0db01f9d068bb5d16872467d0}} 
+std\+::unique\+\_\+ptr$<$ Static\+Acs\+Resource $>$ {\bfseries static\+Acs\+Resource\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a3fe033b7002aa7136a1e92cf8c403b82}\label{classWt_1_1Auth_1_1Saml_1_1Service_a3fe033b7002aa7136a1e92cf8c403b82}} 
+std\+::unique\+\_\+ptr$<$ Metadata\+Resource $>$ {\bfseries metadata\+Resource\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a5a8b91ae819e096ff2543cc14ccb9bdb}\label{classWt_1_1Auth_1_1Saml_1_1Service_a5a8b91ae819e096ff2543cc14ccb9bdb}} 
+std\+::string {\bfseries secret\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a5bc4ee42acbbed1bafa34fc05dcc3d09}\label{classWt_1_1Auth_1_1Saml_1_1Service_a5bc4ee42acbbed1bafa34fc05dcc3d09}} 
+std\+::chrono\+::seconds {\bfseries redirect\+Timeout\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ab0fc11826198fb08d9c9d8f225d00b71}\label{classWt_1_1Auth_1_1Saml_1_1Service_ab0fc11826198fb08d9c9d8f225d00b71}} 
+std\+::string {\bfseries name\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a75043df79c5314339579cffacd8b5837}\label{classWt_1_1Auth_1_1Saml_1_1Service_a75043df79c5314339579cffacd8b5837}} 
+std\+::string {\bfseries description\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ada65bc0b0d24c2f30c0b25caf6803af3}\label{classWt_1_1Auth_1_1Saml_1_1Service_ada65bc0b0d24c2f30c0b25caf6803af3}} 
+int {\bfseries popup\+Width\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ad734c92890791b1f3a5cb4f6e9817535}\label{classWt_1_1Auth_1_1Saml_1_1Service_ad734c92890791b1f3a5cb4f6e9817535}} 
+int {\bfseries popup\+Height\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ac836b76a5251139b7fe695a0f929fb13}\label{classWt_1_1Auth_1_1Saml_1_1Service_ac836b76a5251139b7fe695a0f929fb13}} 
+std\+::string {\bfseries idp\+Entity\+Id\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_aaa7b9280de38780f4f3033b7cf4eb689}\label{classWt_1_1Auth_1_1Saml_1_1Service_aaa7b9280de38780f4f3033b7cf4eb689}} 
+std\+::string {\bfseries name\+Id\+Policy\+Format\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_af35404fb6430dc0205c0163cff72578a}\label{classWt_1_1Auth_1_1Saml_1_1Service_af35404fb6430dc0205c0163cff72578a}} 
+std\+::string {\bfseries authn\+Context\+Class\+Ref\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a4b0b4e3ae31a2ff35b86ca693cd9b549}\label{classWt_1_1Auth_1_1Saml_1_1Service_a4b0b4e3ae31a2ff35b86ca693cd9b549}} 
+\mbox{\hyperlink{namespaceWt_1_1Auth_1_1Saml_a81a30449f40b43a5d56756e478eb1941}{Authn\+Context\+Comparison}} {\bfseries authn\+Context\+Comparison\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ab4ed7a6565a001c8ba04fc7af23ca1ec}\label{classWt_1_1Auth_1_1Saml_1_1Service_ab4ed7a6565a001c8ba04fc7af23ca1ec}} 
+std\+::string {\bfseries sp\+Entity\+Id\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ae00f063a78ebe9dae866798826199445}\label{classWt_1_1Auth_1_1Saml_1_1Service_ae00f063a78ebe9dae866798826199445}} 
+std\+::string {\bfseries acs\+Url\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a10a70d5d11f021c550285513fd746957}\label{classWt_1_1Auth_1_1Saml_1_1Service_a10a70d5d11f021c550285513fd746957}} 
+std\+::string {\bfseries metadata\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_aec33adfcef7dad5b941ab4b72f9c7914}\label{classWt_1_1Auth_1_1Saml_1_1Service_aec33adfcef7dad5b941ab4b72f9c7914}} 
+std\+::string {\bfseries metadata\+Provider\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a8ac4887a3d7a1f05391f899699c753b5}\label{classWt_1_1Auth_1_1Saml_1_1Service_a8ac4887a3d7a1f05391f899699c753b5}} 
+std\+::string {\bfseries credential\+Resolver\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a371b1d42b2142d49fcd7fbbca73d1186}\label{classWt_1_1Auth_1_1Saml_1_1Service_a371b1d42b2142d49fcd7fbbca73d1186}} 
+std\+::string {\bfseries xml\+Tooling\+Catalog\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ae2117432461f322c9702717775545adc}\label{classWt_1_1Auth_1_1Saml_1_1Service_ae2117432461f322c9702717775545adc}} 
+std\+::string {\bfseries saml\+Catalog\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a7c962d135753e0804a2f43f3a0132ed4}\label{classWt_1_1Auth_1_1Saml_1_1Service_a7c962d135753e0804a2f43f3a0132ed4}} 
+\mbox{\hyperlink{namespaceWt_1_1Auth_1_1Saml_a383129bac48708e3caa59adbd04cffa5}{Signature\+Policy}} {\bfseries signature\+Policy\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a1661cdcf373b8a07e8a71eb87726f416}\label{classWt_1_1Auth_1_1Saml_1_1Service_a1661cdcf373b8a07e8a71eb87726f416}} 
+bool {\bfseries xml\+Validation\+Enabled\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a70c37188f7ba71e94fccb688b8b9f2d2}\label{classWt_1_1Auth_1_1Saml_1_1Service_a70c37188f7ba71e94fccb688b8b9f2d2}} 
+bool {\bfseries name\+Id\+Policy\+Allow\+Create\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ad6230d430dd525b09f785e50c6c9dd55}\label{classWt_1_1Auth_1_1Saml_1_1Service_ad6230d430dd525b09f785e50c6c9dd55}} 
+bool {\bfseries use\+Popup\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a7a4d413df5afafea63a3532759beeaa7}\label{classWt_1_1Auth_1_1Saml_1_1Service_a7a4d413df5afafea63a3532759beeaa7}} 
+class {\bfseries Process}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ad7daaaeec47657a292560487f965c021}\label{classWt_1_1Auth_1_1Saml_1_1Service_ad7daaaeec47657a292560487f965c021}} 
+class {\bfseries Process\+Impl}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a1b150fd81c2df5b6ebf694013940662c}\label{classWt_1_1Auth_1_1Saml_1_1Service_a1b150fd81c2df5b6ebf694013940662c}} 
+class {\bfseries Service\+Impl}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A minimal implementation of a S\+A\+ML service provider. 
+
+This class implements a minimal S\+A\+ML 2.\+0 service provider for single sign on based on the C++ version of \href{https://wiki.shibboleth.net/confluence/display/OS30/Home}{\texttt{ Open\+S\+A\+ML 3}}, part of \href{https://www.shibboleth.net}{\texttt{ Shibboleth}}.
+
+Part of the Web Browser S\+SO Profile (saml-\/profiles-\/2.\+0-\/os, section 4.\+1) is implemented, including\+:
+
+
+\begin{DoxyItemize}
+\item Authn\+Request (saml-\/core-\/2.\+0-\/os, section 3.\+4.\+1) using H\+T\+TP Redirect binding (saml-\/bindings-\/2.\+0-\/os, section 3.\+4)
+\item An Assertion Consumer Service receiving Response (saml-\/core-\/2.\+0-\/os, section 3.\+3.\+3) using H\+T\+TP P\+O\+ST binding (saml-\/bindings-\/2.\+0-\/os, section 3.\+5)
+\end{DoxyItemize}
+
+Only S\+P-\/initiated login is supported.\hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_autotoc_md143}{}\doxysubsubsection{Metadata}\label{classWt_1_1Auth_1_1Saml_1_1Service_autotoc_md143}
+It\textquotesingle{}s possible to get the SP\textquotesingle{}s metadata in X\+ML format through the \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a0d3010394bcf507b47602c790fbeb95d}{metadata()}} function, and it\textquotesingle{}s possible to set a metadata endpoint with \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a1aa1230618a443d8e4e1a016eaf66b7c}{set\+Metadata\+Path()}}. This may be useful when adding this SP\textquotesingle{}s information to the IdP.\hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_autotoc_md144}{}\doxysubsubsection{Tested Id\+Ps}\label{classWt_1_1Auth_1_1Saml_1_1Service_autotoc_md144}
+Single sign on was tested with\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://simplesamlphp.org/}{\texttt{ Simple\+S\+A\+M\+Lphp}}
+\item Microsoft Azure AD
+\item Google
+\item \href{https://www.samltest.id}{\texttt{ samltest.\+id}} (based on \href{https://www.shibboleth.net}{\texttt{ Shibboleth}})
+\item Auth0
+\end{DoxyItemize}\hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_autotoc_md145}{}\doxysubsubsection{Thread safety}\label{classWt_1_1Auth_1_1Saml_1_1Service_autotoc_md145}
+Once configured and initialized, the service may safely be used from multiple threads\+: it is stateless or locks are acquired where necessary, so a {\ttfamily const \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}}} is thread safe.\hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_autotoc_md146}{}\doxysubsubsection{Usage}\label{classWt_1_1Auth_1_1Saml_1_1Service_autotoc_md146}
+This \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}} is an abstract base class, \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a39e1f0a45c8bbfbc3f2327cc228ea60b}{assertion\+To\+Identity()}} needs to be specialized in order to retrieve an \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} from the \mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion}{Assertion}}, for example\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }MySamlService : \textcolor{keyword}{public} \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Wt::Auth::Saml::Service}} \{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{  \textcolor{keyword}{explicit} MySamlService(\textcolor{keyword}{const} \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Wt::Auth::AuthService}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a20c13e97ec9c0c1638a41ca6f7f9020b}{baseAuth}})}
+\DoxyCodeLine{    : \mbox{\hyperlink{namespaceWt}{Wt}}::Auth::Saml::\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_af894458e7d1f4da25d88d65b3c0521d6}{Service}}(\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a20c13e97ec9c0c1638a41ca6f7f9020b}{baseAuth}})}
+\DoxyCodeLine{  \{ \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Wt::Auth::Identity}} \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a39e1f0a45c8bbfbc3f2327cc228ea60b}{assertionToIdentity}}(\textcolor{keyword}{const} \mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion}{Wt::Auth::Saml::Assertion}} \&assertion)\textcolor{keyword}{ const override}}
+\DoxyCodeLine{\textcolor{keyword}{  }\{}
+\DoxyCodeLine{    \textcolor{keyword}{auto} name = assertion.\mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion_ae1bbb636b13b008ccaca7e262e5a4944}{attributeValue}}(\textcolor{stringliteral}{"name"});}
+\DoxyCodeLine{    \textcolor{keyword}{auto} email = assertion.\mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion_ae1bbb636b13b008ccaca7e262e5a4944}{attributeValue}}(\textcolor{stringliteral}{"email"});}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (!email || !name) \{}
+\DoxyCodeLine{      \textcolor{keywordflow}{return} \{\};}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Wt::Auth::Identity}}(\textcolor{stringliteral}{"saml"}, *email, *name, *email, \textcolor{keyword}{true});}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{\};}
+\end{DoxyCode}
+
+
+The \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}} must first be configured and then initialized. We recommend that you do this once at application startup.
+
+\begin{DoxyNote}{Note}
+The \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}}\textquotesingle{}s destructor should run before {\ttfamily main()} exits. Otherwise the cleanup may cause a crash.
+\end{DoxyNote}
+Example configuration\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// baseAuth is a const AuthService\&}}
+\DoxyCodeLine{MySamlService service(\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a20c13e97ec9c0c1638a41ca6f7f9020b}{baseAuth}});}
+\DoxyCodeLine{\textcolor{comment}{// It's common for the SP entityId to be the same as the metadata endpoint URL, but this}}
+\DoxyCodeLine{\textcolor{comment}{// could be anything}}
+\DoxyCodeLine{service.setSPEntityId(\textcolor{stringliteral}{"https://sp.example.com/metadata.xml"});}
+\DoxyCodeLine{service.setAcsUrl(\textcolor{stringliteral}{"https://sp.example.com/acs"});}
+\DoxyCodeLine{service.setMetadataPath(\textcolor{stringliteral}{"/metadata.xml"});}
+\DoxyCodeLine{service.setIdpEntityId(\textcolor{stringliteral}{"https://idp.example.com/sso"});}
+\DoxyCodeLine{service.setMetadataProviderPath(\textcolor{stringliteral}{"metadata\_provider.xml"});}
+\DoxyCodeLine{service.setAuthnRequestSigningEnabled(\textcolor{keyword}{true});}
+\DoxyCodeLine{service.setCredentialResolverPath(\textcolor{stringliteral}{"credential\_resolver.xml"});}
+\DoxyCodeLine{service.initialize();}
+\end{DoxyCode}
+\hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_autotoc_md147}{}\doxysubsubsection{Standards compliance notes}\label{classWt_1_1Auth_1_1Saml_1_1Service_autotoc_md147}
+The {\ttfamily Relay\+State} used by \mbox{\hyperlink{classWt}{Wt}} exceeds the limit of 80 bytes mandated by the standard (saml-\/bindings-\/2.\+0-\/os, section 3.\+4.\+3). However, most implementations allow this limit to be exceeded.
+
+The SP in Wt does not implement the full SP Lite operational mode (saml-\/conformance-\/2.\+0-\/os, section 3.\+1). Missing are\+:
+
+
+\begin{DoxyItemize}
+\item H\+T\+TP Artifact binding
+\item Artifact resolution (over S\+O\+AP)
+\item Single logout (S\+LO)
+\item Enhanced Client/\+Proxy S\+SO, P\+A\+OS
+\end{DoxyItemize}\hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_autotoc_md148}{}\doxysubsubsection{References}\label{classWt_1_1Auth_1_1Saml_1_1Service_autotoc_md148}
+
+\begin{DoxyItemize}
+\item saml-\/core-\/2.\+0-\/os\+: \href{https://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf}{\texttt{ Assertions and Protocols for the O\+A\+S\+IS Security Assertion Markup Language (S\+A\+ML) V2.\+0}}
+\item saml-\/bindings-\/2.\+0-\/os\+: \href{https://docs.oasis-open.org/security/saml/v2.0/saml-bindings-2.0-os.pdf}{\texttt{ Bindings for the O\+A\+S\+IS Security Security Assertion Markup Language (S\+A\+ML) V2.\+0}}
+\item saml-\/conformance-\/2.\+0-\/os\+: \href{https://docs.oasis-open.org/security/saml/v2.0/saml-conformance-2.0-os.pdf}{\texttt{ Conformance Requirements for the O\+A\+S\+IS Security Assertion Markup Language (S\+A\+ML) V2.\+0}}
+\item saml-\/profiles-\/2.\+0-\/os\+: \href{https://docs.oasis-open.org/security/saml/v2.0/saml-profiles-2.0-os.pdf}{\texttt{ Profiles for the O\+A\+S\+IS Security Markup Language (S\+A\+ML) V2.\+0}}
+\item saml-\/metadata-\/2.\+0-\/os\+: \href{https://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf}{\texttt{ Metadata for the O\+A\+S\+IS Security Markup Language (S\+A\+ML) V2.\+0}} 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a1c0c0ec6ec17383986a8416ec343becf}\label{classWt_1_1Auth_1_1Saml_1_1Service_a1c0c0ec6ec17383986a8416ec343becf}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!````~Service@{$\sim$Service}}
+\index{````~Service@{$\sim$Service}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{$\sim$Service()}{~Service()}}
+{\footnotesize\ttfamily virtual Wt\+::\+Auth\+::\+Saml\+::\+Service\+::$\sim$\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+\begin{DoxyNote}{Note}
+The destructor should be run before the {\ttfamily main()} function exits. 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a37dbace0701f98e29020d0a9f393a55d}\label{classWt_1_1Auth_1_1Saml_1_1Service_a37dbace0701f98e29020d0a9f393a55d}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!acsPath@{acsPath}}
+\index{acsPath@{acsPath}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{acsPath()}{acsPath()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Auth\+::\+Saml\+::\+Service\+::acs\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the Assertion Consumer Service path. 
+
+This strips the domain name from the \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a618714265aab5c8b7b650c331eb6501e}{acs\+Url()}}, e.\+g. if the \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a618714265aab5c8b7b650c331eb6501e}{acs\+Url()}} is {\ttfamily \href{https://sp.example.com/acs}{\texttt{ https\+://sp.\+example.\+com/acs}}} then this will return {\ttfamily /acs}. This is the path at which the \mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}} for the Assertion Consumer Service will be deployed. \mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a618714265aab5c8b7b650c331eb6501e}\label{classWt_1_1Auth_1_1Saml_1_1Service_a618714265aab5c8b7b650c331eb6501e}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!acsUrl@{acsUrl}}
+\index{acsUrl@{acsUrl}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{acsUrl()}{acsUrl()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+Auth\+::\+Saml\+::\+Service\+::acs\+Url (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the Assertion Consumer Service U\+RL. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a54257a25fad3474861b50fbbece83e26}{set\+Acs\+Url()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a39e1f0a45c8bbfbc3f2327cc228ea60b}\label{classWt_1_1Auth_1_1Saml_1_1Service_a39e1f0a45c8bbfbc3f2327cc228ea60b}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!assertionToIdentity@{assertionToIdentity}}
+\index{assertionToIdentity@{assertionToIdentity}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{assertionToIdentity()}{assertionToIdentity()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} Wt\+::\+Auth\+::\+Saml\+::\+Service\+::assertion\+To\+Identity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion}{Assertion}} \&}]{assertion }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates an entity from the given \mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion}{Assertion}}. 
+
+This function should be specialized to return an \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Identity}} based on the given \mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion}{Assertion}}, e.\+g.\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Wt::Auth::Identity}} \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a39e1f0a45c8bbfbc3f2327cc228ea60b}{assertionToIdentity}}(\textcolor{keyword}{const} \mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion}{Wt::Auth::Saml::Assertion}} \&assertion)\textcolor{keyword}{ const override}}
+\DoxyCodeLine{\textcolor{keyword}{}\{}
+\DoxyCodeLine{  \textcolor{keyword}{auto} name = assertion.\mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion_ae1bbb636b13b008ccaca7e262e5a4944}{attributeValue}}(\textcolor{stringliteral}{"name"});}
+\DoxyCodeLine{  \textcolor{keyword}{auto} email = assertion.\mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion_ae1bbb636b13b008ccaca7e262e5a4944}{attributeValue}}(\textcolor{stringliteral}{"email"});}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (!email || !name) \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} \{\};}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{  \textcolor{keywordflow}{return} \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Wt::Auth::Identity}}(\textcolor{stringliteral}{"saml"}, *email, *name, *email, \textcolor{keyword}{true});}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 
+
+Implemented in \mbox{\hyperlink{classSamlService_af176d198c2a9b8307b381b2af0510b74}{Saml\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a6187df4fec605e6dc61f315185c6823e}\label{classWt_1_1Auth_1_1Saml_1_1Service_a6187df4fec605e6dc61f315185c6823e}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!authnContextClassRef@{authnContextClassRef}}
+\index{authnContextClassRef@{authnContextClassRef}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{authnContextClassRef()}{authnContextClassRef()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+Auth\+::\+Saml\+::\+Service\+::authn\+Context\+Class\+Ref (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the authentication context class to use in the authentication request. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a64528507f209fb94c96c61d4e0682982}{set\+Authn\+Context\+Class\+Ref()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a23d58e9d1f444e73425f7832b574276b}{authn\+Context\+Comparison()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a23d58e9d1f444e73425f7832b574276b}\label{classWt_1_1Auth_1_1Saml_1_1Service_a23d58e9d1f444e73425f7832b574276b}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!authnContextComparison@{authnContextComparison}}
+\index{authnContextComparison@{authnContextComparison}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{authnContextComparison()}{authnContextComparison()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceWt_1_1Auth_1_1Saml_a81a30449f40b43a5d56756e478eb1941}{Authn\+Context\+Comparison}} Wt\+::\+Auth\+::\+Saml\+::\+Service\+::authn\+Context\+Comparison (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the comparison to use in the authentication context of the application request. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ae6be709a6ebc43302425da239622c05b}{set\+Authn\+Context\+Comparison()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a6187df4fec605e6dc61f315185c6823e}{authn\+Context\+Class\+Ref()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a31634aaca42c657f7876d366b9900094}\label{classWt_1_1Auth_1_1Saml_1_1Service_a31634aaca42c657f7876d366b9900094}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!configureLogging@{configureLogging}}
+\index{configureLogging@{configureLogging}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{configureLogging()}{configureLogging()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::configure\+Logging (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Sets up logging. 
+
+By default, this makes all log4shib logging redirect to \mbox{\hyperlink{classWt}{Wt}}\textquotesingle{}s logger.
+
+You can configure log4shib differently, or not set up logging altogether by overriding this function. \mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a50a505f48fcb333f37fc761b4c6d6cb3}\label{classWt_1_1Auth_1_1Saml_1_1Service_a50a505f48fcb333f37fc761b4c6d6cb3}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!configureXmlSecurity@{configureXmlSecurity}}
+\index{configureXmlSecurity@{configureXmlSecurity}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{configureXmlSecurity()}{configureXmlSecurity()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::configure\+Xml\+Security (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Configures the algorithm whitelist. 
+
+You can configure the whitelist differently, or not set up the whitelist altogether by overriding this function.
+
+By default, the following algorithms are supported\+:
+
+
+\begin{DoxyItemize}
+\item Hashing algorithms (for digest)
+\begin{DoxyItemize}
+\item \href{http://www.w3.org/2001/04/xmlenc\#sha256}{\texttt{ http\+://www.\+w3.\+org/2001/04/xmlenc\#sha256}}
+\item \href{http://www.w3.org/2001/04/xmldsig-more\#sha384}{\texttt{ http\+://www.\+w3.\+org/2001/04/xmldsig-\/more\#sha384}}
+\item \href{http://www.w3.org/2001/04/xmlenc\#sha512}{\texttt{ http\+://www.\+w3.\+org/2001/04/xmlenc\#sha512}}
+\end{DoxyItemize}
+\item Signing algorithms
+\begin{DoxyItemize}
+\item \href{http://www.w3.org/2001/04/xmldsig-more\#rsa-sha256}{\texttt{ http\+://www.\+w3.\+org/2001/04/xmldsig-\/more\#rsa-\/sha256}}
+\item \href{http://www.w3.org/2001/04/xmldsig-more\#rsa-sha384}{\texttt{ http\+://www.\+w3.\+org/2001/04/xmldsig-\/more\#rsa-\/sha384}}
+\item \href{http://www.w3.org/2001/04/xmldsig-more\#rsa-sha512}{\texttt{ http\+://www.\+w3.\+org/2001/04/xmldsig-\/more\#rsa-\/sha512}}
+\end{DoxyItemize}
+\item Encryption algorithms
+\begin{DoxyItemize}
+\item \href{http://www.w3.org/2001/04/xmlenc\#aes128-cbc}{\texttt{ http\+://www.\+w3.\+org/2001/04/xmlenc\#aes128-\/cbc}}
+\item \href{http://www.w3.org/2001/04/xmlenc\#aes192-cbc}{\texttt{ http\+://www.\+w3.\+org/2001/04/xmlenc\#aes192-\/cbc}}
+\item \href{http://www.w3.org/2001/04/xmlenc\#aes256-cbc}{\texttt{ http\+://www.\+w3.\+org/2001/04/xmlenc\#aes256-\/cbc}}
+\item \href{http://www.w3.org/2009/xmlenc11\#aes128-gcm}{\texttt{ http\+://www.\+w3.\+org/2009/xmlenc11\#aes128-\/gcm}}
+\item \href{http://www.w3.org/2009/xmlenc11\#aes192-gcm}{\texttt{ http\+://www.\+w3.\+org/2009/xmlenc11\#aes192-\/gcm}}
+\item \href{http://www.w3.org/2009/xmlenc11\#aes256-gcm}{\texttt{ http\+://www.\+w3.\+org/2009/xmlenc11\#aes256-\/gcm}} 
+\end{DoxyItemize}
+\end{DoxyItemize}\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a7df79dd776525f4b11ccf355ea31c7f8}\label{classWt_1_1Auth_1_1Saml_1_1Service_a7df79dd776525f4b11ccf355ea31c7f8}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!createProcess@{createProcess}}
+\index{createProcess@{createProcess}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{createProcess()}{createProcess()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Process}{Process}}$>$ Wt\+::\+Auth\+::\+Saml\+::\+Service\+::create\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Creates a new authorization process. 
+
+The service needs to be correctly configured and initialized before being able to call this function.
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classWt_1_1WException}{W\+Exception}}} & if the \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}} was not initialized\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ae2a277a945de546f35e499584fd27b3e}{initialize()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a3c3a1cbe6691a217e1fb3ad28e53e883}\label{classWt_1_1Auth_1_1Saml_1_1Service_a3c3a1cbe6691a217e1fb3ad28e53e883}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!credentialResolverPath@{credentialResolverPath}}
+\index{credentialResolverPath@{credentialResolverPath}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{credentialResolverPath()}{credentialResolverPath()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+Auth\+::\+Saml\+::\+Service\+::credential\+Resolver\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the path to the X\+ML file that describes the credential resolver. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_acbc64d221edad2900653b45636b6ab4c}{set\+Credential\+Resolver\+Path()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a88dfaccabc3f3d2d5d02ff30b3c177dc}\label{classWt_1_1Auth_1_1Saml_1_1Service_a88dfaccabc3f3d2d5d02ff30b3c177dc}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!decodeState@{decodeState}}
+\index{decodeState@{decodeState}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{decodeState()}{decodeState()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Auth\+::\+Saml\+::\+Service\+::decode\+State (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{state }\end{DoxyParamCaption}) const}
+
+
+
+Validates and decodes a state parameter. 
+
+This function returns the session\+Id that is encoded in the state, if the signature validates that it is an authentic state generated by \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ab58e77d73a00268e35eda4a8eca491d7}{encode\+State()}}. \mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ad948fb458ce34bb1f676be07973b78ca}\label{classWt_1_1Auth_1_1Saml_1_1Service_ad948fb458ce34bb1f676be07973b78ca}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!description@{description}}
+\index{description@{description}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{description()}{description()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+Auth\+::\+Saml\+::\+Service\+::description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the provider description. 
+
+This returns a description useful for e.\+g. tooltips on a login icon.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a58836e84f243b11a27971b0307888628}{name()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ad9328246814b8537b4d1ac06a59d27c2}{set\+Description()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ab58e77d73a00268e35eda4a8eca491d7}\label{classWt_1_1Auth_1_1Saml_1_1Service_ab58e77d73a00268e35eda4a8eca491d7}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!encodeState@{encodeState}}
+\index{encodeState@{encodeState}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{encodeState()}{encodeState()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Auth\+::\+Saml\+::\+Service\+::encode\+State (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url }\end{DoxyParamCaption}) const}
+
+
+
+Derives a state value from the session ID. 
+
+The state value protects the authorization protocol against misuse, and is used to connect an authorization code response with a particular request.
+
+In the default implementation the state is the {\ttfamily session\+Id}, cryptographically signed. This signature is verified in \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a88dfaccabc3f3d2d5d02ff30b3c177dc}{decode\+State()}}. \mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a7b5b8a9d8e9d94f542904df1b120548a}\label{classWt_1_1Auth_1_1Saml_1_1Service_a7b5b8a9d8e9d94f542904df1b120548a}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!idpEntityId@{idpEntityId}}
+\index{idpEntityId@{idpEntityId}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{idpEntityId()}{idpEntityId()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+Auth\+::\+Saml\+::\+Service\+::idp\+Entity\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the entity ID of the IdP. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a56636969d62615fd0b817a23a8fe1bed}{set\+Idp\+Entity\+Id()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ae2a277a945de546f35e499584fd27b3e}\label{classWt_1_1Auth_1_1Saml_1_1Service_ae2a277a945de546f35e499584fd27b3e}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!initialize@{initialize}}
+\index{initialize@{initialize}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}} so it is ready for use. 
+
+This function should be called after the \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}} is configured and before the service can be used (i.\+e. before \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a0d3010394bcf507b47602c790fbeb95d}{metadata()}} or \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a7df79dd776525f4b11ccf355ea31c7f8}{create\+Process()}} are called).
+
+No settings should be changed after the \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}} has been initialized.
+
+\begin{DoxyNote}{Note}
+This will call \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a31634aaca42c657f7876d366b9900094}{configure\+Logging()}} and \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a50a505f48fcb333f37fc761b4c6d6cb3}{configure\+Xml\+Security()}} in order to set up the global logging configuration of log4shib and algorithm whitelists or blacklist. If you do not want the \mbox{\hyperlink{namespaceWt_1_1Auth_1_1Saml}{Saml}} \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service}{Service}} to configure these, or configure them differently, you can override \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a31634aaca42c657f7876d366b9900094}{configure\+Logging()}} and \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a50a505f48fcb333f37fc761b4c6d6cb3}{configure\+Xml\+Security()}}.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a31634aaca42c657f7876d366b9900094}{configure\+Logging()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a50a505f48fcb333f37fc761b4c6d6cb3}{configure\+Xml\+Security()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a0d3010394bcf507b47602c790fbeb95d}\label{classWt_1_1Auth_1_1Saml_1_1Service_a0d3010394bcf507b47602c790fbeb95d}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!metadata@{metadata}}
+\index{metadata@{metadata}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{metadata()}{metadata()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Auth\+::\+Saml\+::\+Service\+::metadata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the S\+Ps metadata as X\+ML. 
+
+The result is an X\+ML string with an {\ttfamily $<$Entity\+Descriptor$>$} containing one {\ttfamily $<$S\+P\+S\+S\+O\+Descriptor$>$} describing this SP.
+
+See saml-\/metadata-\/2.\+0-\/os, sections 2.\+3.\+2 and 2.\+4.\+4 \mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a8f8aeacec029892e4cc58cd5f73ac178}\label{classWt_1_1Auth_1_1Saml_1_1Service_a8f8aeacec029892e4cc58cd5f73ac178}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!metadataPath@{metadataPath}}
+\index{metadataPath@{metadataPath}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{metadataPath()}{metadataPath()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+Auth\+::\+Saml\+::\+Service\+::metadata\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the path at which the metadata of this SP will be made available. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a1aa1230618a443d8e4e1a016eaf66b7c}{set\+Metadata\+Path()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ae31c37bd4d50a6105aca7e5c6ec39574}\label{classWt_1_1Auth_1_1Saml_1_1Service_ae31c37bd4d50a6105aca7e5c6ec39574}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!metadataProviderPath@{metadataProviderPath}}
+\index{metadataProviderPath@{metadataProviderPath}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{metadataProviderPath()}{metadataProviderPath()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+Auth\+::\+Saml\+::\+Service\+::metadata\+Provider\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the path to the X\+ML file that describes the metadata provider. 
+
+\begin{DoxySeeAlso}{See also}
+set\+Matadata\+Provider\+Path() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a58836e84f243b11a27971b0307888628}\label{classWt_1_1Auth_1_1Saml_1_1Service_a58836e84f243b11a27971b0307888628}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!name@{name}}
+\index{name@{name}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+Auth\+::\+Saml\+::\+Service\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the provider name. 
+
+This is a short identifier.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Identity_a7685ce88dbb909f5ead9bdac33505b62}{Identity\+::provider()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ad948fb458ce34bb1f676be07973b78ca}{description()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a0df3c55a4f56b065844972aa5b6d2f8d}{set\+Name()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a5394721576ef6b7ba610a095f2065eb6}\label{classWt_1_1Auth_1_1Saml_1_1Service_a5394721576ef6b7ba610a095f2065eb6}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!nameIdPolicyAllowCreate@{nameIdPolicyAllowCreate}}
+\index{nameIdPolicyAllowCreate@{nameIdPolicyAllowCreate}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{nameIdPolicyAllowCreate()}{nameIdPolicyAllowCreate()}}
+{\footnotesize\ttfamily bool Wt\+::\+Auth\+::\+Saml\+::\+Service\+::name\+Id\+Policy\+Allow\+Create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the Allow\+Create parameter for the name id policy in the authentication request. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_aa5cca89e64b80cc66fcff8f64fda4360}{set\+Name\+Id\+Policy\+Allow\+Create()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a416336672dbeae75c0b4ef57ac8d89c2}{name\+Id\+Policy\+Format()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a416336672dbeae75c0b4ef57ac8d89c2}\label{classWt_1_1Auth_1_1Saml_1_1Service_a416336672dbeae75c0b4ef57ac8d89c2}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!nameIdPolicyFormat@{nameIdPolicyFormat}}
+\index{nameIdPolicyFormat@{nameIdPolicyFormat}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{nameIdPolicyFormat()}{nameIdPolicyFormat()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+Auth\+::\+Saml\+::\+Service\+::name\+Id\+Policy\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the format for the name id policy in the authentication request. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_aa8b6e4429df61b21bf8fa519d70dba7d}{set\+Name\+Id\+Policy\+Format()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a5394721576ef6b7ba610a095f2065eb6}{name\+Id\+Policy\+Allow\+Create()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_acc98e93b1476c86214daac705be6a795}\label{classWt_1_1Auth_1_1Saml_1_1Service_acc98e93b1476c86214daac705be6a795}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!popupEnabled@{popupEnabled}}
+\index{popupEnabled@{popupEnabled}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{popupEnabled()}{popupEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+Auth\+::\+Saml\+::\+Service\+::popup\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns if a popup is used for the login. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a89ae3fb932497cbe28ed8b032d447966}{set\+Popup\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a0eea43e2630d9230cd6fafd28b22f4a6}\label{classWt_1_1Auth_1_1Saml_1_1Service_a0eea43e2630d9230cd6fafd28b22f4a6}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!popupHeight@{popupHeight}}
+\index{popupHeight@{popupHeight}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{popupHeight()}{popupHeight()}}
+{\footnotesize\ttfamily int Wt\+::\+Auth\+::\+Saml\+::\+Service\+::popup\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the desire height for the popup window. 
+
+Defaults to 400 pixels.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_afac6c02f6680467806a4c4ba3b84c27a}{set\+Popup\+Height()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ab54e1656165959ec599566a0c11f6c8a}{popup\+Width()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ab54e1656165959ec599566a0c11f6c8a}\label{classWt_1_1Auth_1_1Saml_1_1Service_ab54e1656165959ec599566a0c11f6c8a}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!popupWidth@{popupWidth}}
+\index{popupWidth@{popupWidth}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{popupWidth()}{popupWidth()}}
+{\footnotesize\ttfamily int Wt\+::\+Auth\+::\+Saml\+::\+Service\+::popup\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the desired width for the popup window. 
+
+Defaults to 670 pixels.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a240472d7bc485504ebc58a1a4bfbe6a2}{set\+Popup\+Width()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a0eea43e2630d9230cd6fafd28b22f4a6}{popup\+Height()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a0c3ee3ddf7624d19db6791e94cf1400b}\label{classWt_1_1Auth_1_1Saml_1_1Service_a0c3ee3ddf7624d19db6791e94cf1400b}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!samlCatalogPath@{samlCatalogPath}}
+\index{samlCatalogPath@{samlCatalogPath}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{samlCatalogPath()}{samlCatalogPath()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+Auth\+::\+Saml\+::\+Service\+::saml\+Catalog\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the path of Open\+S\+A\+ML\textquotesingle{}s {\ttfamily saml20-\/catalog.\+xml} file. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ac077a2d43b0c1473b1ecdc5877c4da37}{set\+Saml\+Catalog\+Path()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a54257a25fad3474861b50fbbece83e26}\label{classWt_1_1Auth_1_1Saml_1_1Service_a54257a25fad3474861b50fbbece83e26}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!setAcsUrl@{setAcsUrl}}
+\index{setAcsUrl@{setAcsUrl}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{setAcsUrl()}{setAcsUrl()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::set\+Acs\+Url (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{url }\end{DoxyParamCaption})}
+
+
+
+Sets the Assertion Consumer Service U\+RL. 
+
+This should be an absolute U\+RL. E.\+g. if your application is deployed on {\ttfamily \href{https://sp.example.com}{\texttt{ https\+://sp.\+example.\+com}}}, then your A\+CS U\+RL could be {\ttfamily \href{https://sp.example.com/acs}{\texttt{ https\+://sp.\+example.\+com/acs}}}. This is the U\+RL that responses will be sent to. \mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a64528507f209fb94c96c61d4e0682982}\label{classWt_1_1Auth_1_1Saml_1_1Service_a64528507f209fb94c96c61d4e0682982}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!setAuthnContextClassRef@{setAuthnContextClassRef}}
+\index{setAuthnContextClassRef@{setAuthnContextClassRef}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{setAuthnContextClassRef()}{setAuthnContextClassRef()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::set\+Authn\+Context\+Class\+Ref (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{authn\+Context\+Class\+Ref }\end{DoxyParamCaption})}
+
+
+
+Sets the authentication context class to use in the authentication request. 
+
+This defaults to {\ttfamily urn\+:oasis\+:names\+:tc\+:\+S\+A\+ML\+:2.\+0\+:ac\+:classes\+:Password}.
+
+Set to empty to omit the authentication context class altogether.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ae6be709a6ebc43302425da239622c05b}{set\+Authn\+Context\+Comparison}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ae6be709a6ebc43302425da239622c05b}\label{classWt_1_1Auth_1_1Saml_1_1Service_ae6be709a6ebc43302425da239622c05b}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!setAuthnContextComparison@{setAuthnContextComparison}}
+\index{setAuthnContextComparison@{setAuthnContextComparison}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{setAuthnContextComparison()}{setAuthnContextComparison()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::set\+Authn\+Context\+Comparison (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWt_1_1Auth_1_1Saml_a81a30449f40b43a5d56756e478eb1941}{Authn\+Context\+Comparison}}}]{comparison }\end{DoxyParamCaption})}
+
+
+
+Sets the comparison to use in the authentication context of the authentication request. 
+
+This defaults to \mbox{\hyperlink{namespaceWt_1_1Auth_1_1Saml_a81a30449f40b43a5d56756e478eb1941a1649aed298f99d587e2eb30c1db5946b}{Authn\+Context\+Comparison\+::\+Exact}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a64528507f209fb94c96c61d4e0682982}{set\+Authn\+Context\+Class\+Ref()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_acbc64d221edad2900653b45636b6ab4c}\label{classWt_1_1Auth_1_1Saml_1_1Service_acbc64d221edad2900653b45636b6ab4c}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!setCredentialResolverPath@{setCredentialResolverPath}}
+\index{setCredentialResolverPath@{setCredentialResolverPath}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{setCredentialResolverPath()}{setCredentialResolverPath()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::set\+Credential\+Resolver\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Sets the path to the X\+ML that describes the credential resolver. 
+
+This is used to resolve signing (and encryption) credentials for this SP, used to sign authentication requests and decrypt encrypted assertions, subject ids, or attributes.
+
+Example X\+ML file\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?\textcolor{keyword}{xml} \textcolor{keyword}{version}=\textcolor{stringliteral}{"1.0"} \textcolor{keyword}{encoding}=\textcolor{stringliteral}{"UTF-\/8"}?>}
+\DoxyCodeLine{<\textcolor{keywordtype}{CredentialResolver} \textcolor{keyword}{type}=\textcolor{stringliteral}{"Chaining"}}
+\DoxyCodeLine{  <\textcolor{keywordtype}{CredentialResolver} \textcolor{keyword}{type}=\textcolor{stringliteral}{"File"} \textcolor{keyword}{use}=\textcolor{stringliteral}{"signing"}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{Key}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{Path}>/\textcolor{keyword}{path}/\textcolor{keyword}{to}/\textcolor{keyword}{signing.pem}</\textcolor{keywordtype}{Path}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{Key}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{Certificate}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{Path}>/\textcolor{keyword}{path}/\textcolor{keyword}{to}/\textcolor{keyword}{signing.crt}</\textcolor{keywordtype}{Path}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{Certificate}>}
+\DoxyCodeLine{  </\textcolor{keywordtype}{CredentialResolver}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{CredentialResolver} \textcolor{keyword}{type}=\textcolor{stringliteral}{"File"} \textcolor{keyword}{use}=\textcolor{stringliteral}{"encryption"}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{Key}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{Path}>/\textcolor{keyword}{path}/\textcolor{keyword}{to}/\textcolor{keyword}{encryption.pem}</\textcolor{keywordtype}{Path}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{Key}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{Certificate}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{Path}>/\textcolor{keyword}{path}/\textcolor{keyword}{to}/\textcolor{keyword}{encryption.crt}</\textcolor{keywordtype}{Path}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{Certificate}>}
+\DoxyCodeLine{  </\textcolor{keywordtype}{CredentialResolver}>}
+\DoxyCodeLine{</\textcolor{keywordtype}{CredentialResolver}>}
+\end{DoxyCode}
+
+
+See the \href{https://wiki.shibboleth.net/confluence/display/SP3/CredentialResolver}{\texttt{ Shibboleth SP documentation on Credential\+Resolvers}} for more info. \mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ad9328246814b8537b4d1ac06a59d27c2}\label{classWt_1_1Auth_1_1Saml_1_1Service_ad9328246814b8537b4d1ac06a59d27c2}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{setDescription()}{setDescription()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::set\+Description (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{description }\end{DoxyParamCaption})}
+
+
+
+Sets the provider description. 
+
+This sets a description useful for e.\+g. tooltips on a login icon.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a0df3c55a4f56b065844972aa5b6d2f8d}{set\+Name()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a1aa1230618a443d8e4e1a016eaf66b7c}\label{classWt_1_1Auth_1_1Saml_1_1Service_a1aa1230618a443d8e4e1a016eaf66b7c}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!setMetadataPath@{setMetadataPath}}
+\index{setMetadataPath@{setMetadataPath}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{setMetadataPath()}{setMetadataPath()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::set\+Metadata\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Sets the path at which the metadata of this SP will be made available. 
+
+For example, if your application is deployed at {\ttfamily \href{https://sp.example.com}{\texttt{ https\+://sp.\+example.\+com}}}, and the {\ttfamily path} is set to {\ttfamily /metadata.xml}, then the metadata X\+ML will be made available at {\ttfamily \href{https://sp.example.com/metadata.xml}{\texttt{ https\+://sp.\+example.\+com/metadata.\+xml}}}.
+
+This is left empty by default. If left empty, no metadata endpoint will be created. \mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ae7432731b5eafd3fe2ebfebabfbeb304}\label{classWt_1_1Auth_1_1Saml_1_1Service_ae7432731b5eafd3fe2ebfebabfbeb304}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!setMetadataProviderPath@{setMetadataProviderPath}}
+\index{setMetadataProviderPath@{setMetadataProviderPath}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{setMetadataProviderPath()}{setMetadataProviderPath()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::set\+Metadata\+Provider\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Sets the path to the X\+ML file that describes the metadata provider. 
+
+This is used to get the metadata of the IdP, like the signing key and Single Sign On endpoint.
+
+Example X\+ML file\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?\textcolor{keyword}{xml} \textcolor{keyword}{version}=\textcolor{stringliteral}{"1.0"} \textcolor{keyword}{encoding}=\textcolor{stringliteral}{"UTF-\/8"}?>}
+\DoxyCodeLine{<\textcolor{keywordtype}{MetadataProvider} \textcolor{keyword}{type}=\textcolor{stringliteral}{"XML"} \textcolor{keyword}{path}=\textcolor{stringliteral}{"/path/to/metadata.xml"} \textcolor{keyword}{validate}=\textcolor{stringliteral}{"0"}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{KeyInfoResolver} \textcolor{keyword}{type}=\textcolor{stringliteral}{"Inline"} \textcolor{keyword}{keyInfoReferences}=\textcolor{stringliteral}{"true"} />}
+\DoxyCodeLine{</\textcolor{keywordtype}{MetadataProvider}>}
+\end{DoxyCode}
+
+
+See the \href{https://wiki.shibboleth.net/confluence/display/SP3/MetadataProvider}{\texttt{ Shibboleth SP documentation on Metadata\+Providers}} for more info. \mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a0df3c55a4f56b065844972aa5b6d2f8d}\label{classWt_1_1Auth_1_1Saml_1_1Service_a0df3c55a4f56b065844972aa5b6d2f8d}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!setName@{setName}}
+\index{setName@{setName}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Sets the provider name. 
+
+This is a short identifier.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Identity_a7685ce88dbb909f5ead9bdac33505b62}{Identity\+::provider()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ad9328246814b8537b4d1ac06a59d27c2}{set\+Description()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_aa5cca89e64b80cc66fcff8f64fda4360}\label{classWt_1_1Auth_1_1Saml_1_1Service_aa5cca89e64b80cc66fcff8f64fda4360}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!setNameIdPolicyAllowCreate@{setNameIdPolicyAllowCreate}}
+\index{setNameIdPolicyAllowCreate@{setNameIdPolicyAllowCreate}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{setNameIdPolicyAllowCreate()}{setNameIdPolicyAllowCreate()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::set\+Name\+Id\+Policy\+Allow\+Create (\begin{DoxyParamCaption}\item[{bool}]{allow\+Create }\end{DoxyParamCaption})}
+
+
+
+Sets the Allow\+Create parameter for the name id policy in the authentication request. 
+
+This detauls to true.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_aa8b6e4429df61b21bf8fa519d70dba7d}{set\+Name\+Id\+Policy\+Format()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_aa8b6e4429df61b21bf8fa519d70dba7d}\label{classWt_1_1Auth_1_1Saml_1_1Service_aa8b6e4429df61b21bf8fa519d70dba7d}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!setNameIdPolicyFormat@{setNameIdPolicyFormat}}
+\index{setNameIdPolicyFormat@{setNameIdPolicyFormat}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{setNameIdPolicyFormat()}{setNameIdPolicyFormat()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::set\+Name\+Id\+Policy\+Format (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{format }\end{DoxyParamCaption})}
+
+
+
+Sets the format for the name id policy in the authentication request. 
+
+This defaults to {\ttfamily urn\+:oasis\+:names\+:tc\+:\+S\+A\+ML\+:1.\+1\+:nameid-\/format\+:unspecified} (see saml-\/core-\/2.\+0-\/os, section 8.\+3).
+
+Set to empty to omit the name id policy altogether.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_aa5cca89e64b80cc66fcff8f64fda4360}{set\+Name\+Id\+Policy\+Allow\+Create()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a89ae3fb932497cbe28ed8b032d447966}\label{classWt_1_1Auth_1_1Saml_1_1Service_a89ae3fb932497cbe28ed8b032d447966}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!setPopupEnabled@{setPopupEnabled}}
+\index{setPopupEnabled@{setPopupEnabled}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{setPopupEnabled()}{setPopupEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::set\+Popup\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+Configure if a popup should be used for the login. 
+
+When Java\+Script is available and this is set to true, a popup will open for the authentication. By default, this is disabled, the session will be suspended and a redirect is used instead.
+
+A timeout can be configured in wt\+\_\+config.\+xml (see {\ttfamily saml-\/redirect-\/timeout}), or with \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a8091da292b5677d69a939db73515360f}{set\+Redirect\+Timeout()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_acc98e93b1476c86214daac705be6a795}{popup\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_afac6c02f6680467806a4c4ba3b84c27a}\label{classWt_1_1Auth_1_1Saml_1_1Service_afac6c02f6680467806a4c4ba3b84c27a}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!setPopupHeight@{setPopupHeight}}
+\index{setPopupHeight@{setPopupHeight}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{setPopupHeight()}{setPopupHeight()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::set\+Popup\+Height (\begin{DoxyParamCaption}\item[{int}]{popup\+Height }\end{DoxyParamCaption})}
+
+
+
+Sets the desired height for the popup window. 
+
+Defaults to 400 pixels.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a240472d7bc485504ebc58a1a4bfbe6a2}{set\+Popup\+Width()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a240472d7bc485504ebc58a1a4bfbe6a2}\label{classWt_1_1Auth_1_1Saml_1_1Service_a240472d7bc485504ebc58a1a4bfbe6a2}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!setPopupWidth@{setPopupWidth}}
+\index{setPopupWidth@{setPopupWidth}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{setPopupWidth()}{setPopupWidth()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::set\+Popup\+Width (\begin{DoxyParamCaption}\item[{int}]{popup\+Width }\end{DoxyParamCaption})}
+
+
+
+Sets the desired width for the popup window. 
+
+Defaults to 670 pixels.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_afac6c02f6680467806a4c4ba3b84c27a}{set\+Popup\+Height()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a8091da292b5677d69a939db73515360f}\label{classWt_1_1Auth_1_1Saml_1_1Service_a8091da292b5677d69a939db73515360f}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!setRedirectTimeout@{setRedirectTimeout}}
+\index{setRedirectTimeout@{setRedirectTimeout}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{setRedirectTimeout()}{setRedirectTimeout()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::set\+Redirect\+Timeout (\begin{DoxyParamCaption}\item[{std\+::chrono\+::seconds}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Sets the timeout to login when there is no popup. 
+
+If the user does not return to the application in time, then the session is destroyed.
+
+By default the timeout is retrieved from the \char`\"{}saml-\/redirect-\/timeout\char`\"{} configuration property, or if that property is not present, the default timeout is equal to 10 minutes. \mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ac077a2d43b0c1473b1ecdc5877c4da37}\label{classWt_1_1Auth_1_1Saml_1_1Service_ac077a2d43b0c1473b1ecdc5877c4da37}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!setSamlCatalogPath@{setSamlCatalogPath}}
+\index{setSamlCatalogPath@{setSamlCatalogPath}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{setSamlCatalogPath()}{setSamlCatalogPath()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::set\+Saml\+Catalog\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Sets the path of Open\+S\+A\+ML\textquotesingle{}s {\ttfamily saml20-\/catalog.\+xml} file. 
+
+This path is used to validate X\+ML responses from the IdP. The schemas from Open\+S\+A\+ML are used to validate the X\+ML of things like responses, assertions,...
+
+On non-\/\+Windows, this defaults to {\ttfamily /usr/share/xml/opensaml/saml20-\/catalog.xml}. On Windows, this defaults to {\ttfamily C\+:\textbackslash{}Program\+Data\textbackslash{}Shibboleth\textbackslash{}SP\textbackslash{}xml\textbackslash{}opensaml\textbackslash{}saml20-\/catalog.\+xml}.
+
+This file is mandatory if X\+ML validation is enabled (the default). Disabling X\+ML validation is not recommended.
+
+\begin{DoxySeeAlso}{See also}
+setX 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a2dcc5ab7c972228beb925340941336f0}\label{classWt_1_1Auth_1_1Saml_1_1Service_a2dcc5ab7c972228beb925340941336f0}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!setSecret@{setSecret}}
+\index{setSecret@{setSecret}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{setSecret()}{setSecret()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::set\+Secret (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{secret }\end{DoxyParamCaption})}
+
+
+
+Sets the secret used when encoding the Relay\+State. 
+
+This Relay\+State is used so that responses can be routed to the right \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}}.
+
+By default the secret is retrieved from the \char`\"{}saml-\/secret\char`\"{} configuration property, or if that property is not present, the secret generated automatically.
+
+\mbox{\hyperlink{classNote}{Note}} that when dedicated session processes are used, a fixed secret has to be set.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_ab58e77d73a00268e35eda4a8eca491d7}{encode\+State()}} 
+
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a88dfaccabc3f3d2d5d02ff30b3c177dc}{decode\+State()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_aee4259bb10e82f73072baf0d1edce54f}\label{classWt_1_1Auth_1_1Saml_1_1Service_aee4259bb10e82f73072baf0d1edce54f}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!setSignaturePolicy@{setSignaturePolicy}}
+\index{setSignaturePolicy@{setSignaturePolicy}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{setSignaturePolicy()}{setSignaturePolicy()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::set\+Signature\+Policy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespaceWt_1_1Auth_1_1Saml_a383129bac48708e3caa59adbd04cffa5}{Signature\+Policy}}}]{policy }\end{DoxyParamCaption})}
+
+
+
+Sets the signature policy. 
+
+The Signature\+Policy determines which signatures should be present in the response of the identity provider (IdP).
+
+This defaults to the most strict value of \mbox{\hyperlink{namespaceWt_1_1Auth_1_1Saml_a383129bac48708e3caa59adbd04cffa5a2b10e1c07391f9b9da7523263896fd56}{Signature\+Policy\+::\+Signed\+Response\+And\+Assertion}}.
+
+\begin{DoxyNote}{Note}
+\mbox{\hyperlink{namespaceWt_1_1Auth_1_1Saml_a383129bac48708e3caa59adbd04cffa5ad3d57868b6ff9839eff631d2cc8acbce}{Signature\+Policy\+::\+Unsafe}} is {\bfseries{not}} recommended for production use. As the name suggests is {\bfseries{not}} secure and makes exploits trivial. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_ae3b49cecd1d7a8083cc1437aca29663b}\label{classWt_1_1Auth_1_1Saml_1_1Service_ae3b49cecd1d7a8083cc1437aca29663b}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!setXmlToolingCatalogPath@{setXmlToolingCatalogPath}}
+\index{setXmlToolingCatalogPath@{setXmlToolingCatalogPath}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{setXmlToolingCatalogPath()}{setXmlToolingCatalogPath()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::set\+Xml\+Tooling\+Catalog\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Sets the path of X\+M\+L\+Tooling\textquotesingle{}s {\ttfamily catalog.\+xml} file. 
+
+This path is used to validate X\+ML responses from the IdP. The schemas from X\+M\+L\+Tooling are used to validate the X\+ML of things like X\+ML signatures.
+
+On non-\/\+Windows, this defaults to {\ttfamily /usr/share/xml/xmltooling/catalog.xml}. On Windows, this defaults to {\ttfamily C\+:\textbackslash{}Program\+Data\textbackslash{}Shibboleth\textbackslash{}SP\textbackslash{}xml\textbackslash{}xmltooling\textbackslash{}catalog.\+xml}.
+
+This file is mandatory if X\+ML validation is enabled (the default). Disabling X\+ML validation is not recommended.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a91c47aef0c81f647c0e269e6a838df1b}{set\+Xml\+Validation\+Enabled()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a91c47aef0c81f647c0e269e6a838df1b}\label{classWt_1_1Auth_1_1Saml_1_1Service_a91c47aef0c81f647c0e269e6a838df1b}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!setXmlValidationEnabled@{setXmlValidationEnabled}}
+\index{setXmlValidationEnabled@{setXmlValidationEnabled}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{setXmlValidationEnabled()}{setXmlValidationEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+Saml\+::\+Service\+::set\+Xml\+Validation\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Sets whether responses should be validated against the X\+ML schema. 
+
+This is enabled by default, and should preferably not be disabled. \mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a0e6d756ad72ecf8a126393df4056d750}\label{classWt_1_1Auth_1_1Saml_1_1Service_a0e6d756ad72ecf8a126393df4056d750}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!signaturePolicy@{signaturePolicy}}
+\index{signaturePolicy@{signaturePolicy}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{signaturePolicy()}{signaturePolicy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespaceWt_1_1Auth_1_1Saml_a383129bac48708e3caa59adbd04cffa5}{Signature\+Policy}} Wt\+::\+Auth\+::\+Saml\+::\+Service\+::signature\+Policy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the current signature policy. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_aee4259bb10e82f73072baf0d1edce54f}{set\+Signature\+Policy()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_aaa5017a450a5e31b68f5d7cb80369377}\label{classWt_1_1Auth_1_1Saml_1_1Service_aaa5017a450a5e31b68f5d7cb80369377}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!spEntityId@{spEntityId}}
+\index{spEntityId@{spEntityId}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{spEntityId()}{spEntityId()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+Auth\+::\+Saml\+::\+Service\+::sp\+Entity\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the entity ID of this SP. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a73631e8105b1fabe941ae5dc2908017a}{set\+S\+P\+Entity\+Id()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a91dfdbb2c4bb8ceab1fac720fd6445f8}\label{classWt_1_1Auth_1_1Saml_1_1Service_a91dfdbb2c4bb8ceab1fac720fd6445f8}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!xmlToolingCatalogPath@{xmlToolingCatalogPath}}
+\index{xmlToolingCatalogPath@{xmlToolingCatalogPath}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{xmlToolingCatalogPath()}{xmlToolingCatalogPath()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+Auth\+::\+Saml\+::\+Service\+::xml\+Tooling\+Catalog\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the path of X\+M\+L\+Tooling\textquotesingle{}s {\ttfamily catalog.\+xml} file. 
+
+\begin{DoxySeeAlso}{See also}
+set\+X\+M\+L\+Tooling\+Catalog\+Path() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1Saml_1_1Service_a8d83ebe66f5f2716526ef226f3a98f07}\label{classWt_1_1Auth_1_1Saml_1_1Service_a8d83ebe66f5f2716526ef226f3a98f07}} 
+\index{Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}!xmlValidationEnabled@{xmlValidationEnabled}}
+\index{xmlValidationEnabled@{xmlValidationEnabled}!Wt::Auth::Saml::Service@{Wt::Auth::Saml::Service}}
+\doxysubsubsection{\texorpdfstring{xmlValidationEnabled()}{xmlValidationEnabled()}}
+{\footnotesize\ttfamily bool Wt\+::\+Auth\+::\+Saml\+::\+Service\+::xml\+Validation\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retursn whether responses should be validated against the X\+ML schema. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a91c47aef0c81f647c0e269e6a838df1b}{set\+Xml\+Validation\+Enabled()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/\+Saml/Service.\+h\end{DoxyCompactItemize}

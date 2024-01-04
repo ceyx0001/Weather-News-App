@@ -1,0 +1,186 @@
+\hypertarget{classWt_1_1Http_1_1Message}{}\doxysection{Wt\+::Http\+::Message Class Reference}
+\label{classWt_1_1Http_1_1Message}\index{Wt::Http::Message@{Wt::Http::Message}}
+
+
+An H\+T\+TP client message (request or response).  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Http/\+Message.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::Http\+::Message\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWt_1_1Http_1_1Message_1_1Header}{Header}}
+\begin{DoxyCompactList}\small\item\em An H\+T\+TP message header. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Http_1_1Message_a5a55ee432496f398b3b20bb8f9703195}{Message}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Http_1_1Message_a75a34f09beb3093c789e09e205a455ea}{Message}} (std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Http_1_1Message_1_1Header}{Header}} $>$ \mbox{\hyperlink{classWt_1_1Http_1_1Message_aed6a1a14a0e4134f4c503d8f5c626789}{headers}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Message_ab07007d02d923da4bbec0d66314bae95}\label{classWt_1_1Http_1_1Message_ab07007d02d923da4bbec0d66314bae95}} 
+\mbox{\hyperlink{classWt_1_1Http_1_1Message_ab07007d02d923da4bbec0d66314bae95}{Message}} (const \mbox{\hyperlink{classWt_1_1Http_1_1Message}{Message}} \&message)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1Message_ae6098f85d8f1eb832f74e0ff7620ec21}{set\+Status}} (int \mbox{\hyperlink{classWt_1_1Http_1_1Message_aa1e1d063746fc61c15ed479b79a4d48e}{status}})
+\begin{DoxyCompactList}\small\item\em Sets the status code. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Http_1_1Message_aa1e1d063746fc61c15ed479b79a4d48e}{status}} () const
+\begin{DoxyCompactList}\small\item\em Returns the status code. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1Message_afe89b9985a884a500266df9ce358f013}{set\+Header}} (const std\+::string \&name, const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Sets a header value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1Message_af3ae185c24c499d08bf3475e594b1b2f}{add\+Header}} (const std\+::string \&name, const std\+::string \&value)
+\begin{DoxyCompactList}\small\item\em Adds a header value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Message_aed6a1a14a0e4134f4c503d8f5c626789}\label{classWt_1_1Http_1_1Message_aed6a1a14a0e4134f4c503d8f5c626789}} 
+const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Http_1_1Message_1_1Header}{Header}} $>$ \& \mbox{\hyperlink{classWt_1_1Http_1_1Message_aed6a1a14a0e4134f4c503d8f5c626789}{headers}} () const
+\begin{DoxyCompactList}\small\item\em Returns the headers. \end{DoxyCompactList}\item 
+const std\+::string $\ast$ \mbox{\hyperlink{classWt_1_1Http_1_1Message_a877ca3f66e2cbbbcd2f51a120f8ce057}{get\+Header}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Returns a header value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Http_1_1Message_afeab67c20483f8862015a79b9f9fa8d6}{add\+Body\+Text}} (const std\+::string \&text)
+\begin{DoxyCompactList}\small\item\em Concatenates body text. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Http_1_1Message_a6473e57fd50db07d436c1e156d59845f}{body}} () const
+\begin{DoxyCompactList}\small\item\em Returns the body text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Message_a340f9430757ad4360ef305eeeb6e3c5f}\label{classWt_1_1Http_1_1Message_a340f9430757ad4360ef305eeeb6e3c5f}} 
+int {\bfseries status\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Message_acdf9a16f4321f99ed160b454f2605ee5}\label{classWt_1_1Http_1_1Message_acdf9a16f4321f99ed160b454f2605ee5}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Http_1_1Message_1_1Header}{Header}} $>$ {\bfseries headers\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Message_a88938cb210972bfd0fdf09563fc4e0de}\label{classWt_1_1Http_1_1Message_a88938cb210972bfd0fdf09563fc4e0de}} 
+\mbox{\hyperlink{classWt_1_1WStringStream}{W\+String\+Stream}} {\bfseries body\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Message_a5db1c99e2c94b26278f3838c85cdb618}\label{classWt_1_1Http_1_1Message_a5db1c99e2c94b26278f3838c85cdb618}} 
+class {\bfseries Client}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An H\+T\+TP client message (request or response). 
+
+This class implements a message that is sent or received by the H\+T\+TP \mbox{\hyperlink{classWt_1_1Http_1_1Client}{Client}}.
+
+It is not to be confused with \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Request}} and \mbox{\hyperlink{classWt_1_1Http_1_1Response}{Response}}, which are involved in the web application server handling. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Message_a5a55ee432496f398b3b20bb8f9703195}\label{classWt_1_1Http_1_1Message_a5a55ee432496f398b3b20bb8f9703195}} 
+\index{Wt::Http::Message@{Wt::Http::Message}!Message@{Message}}
+\index{Message@{Message}!Wt::Http::Message@{Wt::Http::Message}}
+\doxysubsubsection{\texorpdfstring{Message()}{Message()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wt\+::\+Http\+::\+Message\+::\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+This creates an empty message, with an invalid status (-\/1), no headers and an empty body. \mbox{\Hypertarget{classWt_1_1Http_1_1Message_a75a34f09beb3093c789e09e205a455ea}\label{classWt_1_1Http_1_1Message_a75a34f09beb3093c789e09e205a455ea}} 
+\index{Wt::Http::Message@{Wt::Http::Message}!Message@{Message}}
+\index{Message@{Message}!Wt::Http::Message@{Wt::Http::Message}}
+\doxysubsubsection{\texorpdfstring{Message()}{Message()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wt\+::\+Http\+::\+Message\+::\+Message (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Http_1_1Message_1_1Header}{Header}} $>$}]{headers }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+This creates an empty message, with an invalid status (-\/1), an empty body and the given headers. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Message_afeab67c20483f8862015a79b9f9fa8d6}\label{classWt_1_1Http_1_1Message_afeab67c20483f8862015a79b9f9fa8d6}} 
+\index{Wt::Http::Message@{Wt::Http::Message}!addBodyText@{addBodyText}}
+\index{addBodyText@{addBodyText}!Wt::Http::Message@{Wt::Http::Message}}
+\doxysubsubsection{\texorpdfstring{addBodyText()}{addBodyText()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Message\+::add\+Body\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text }\end{DoxyParamCaption})}
+
+
+
+Concatenates body text. 
+
+Adds the {\ttfamily text} to the message body. \mbox{\Hypertarget{classWt_1_1Http_1_1Message_af3ae185c24c499d08bf3475e594b1b2f}\label{classWt_1_1Http_1_1Message_af3ae185c24c499d08bf3475e594b1b2f}} 
+\index{Wt::Http::Message@{Wt::Http::Message}!addHeader@{addHeader}}
+\index{addHeader@{addHeader}!Wt::Http::Message@{Wt::Http::Message}}
+\doxysubsubsection{\texorpdfstring{addHeader()}{addHeader()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Message\+::add\+Header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Adds a header value. 
+
+A header is added, even if a header with the same name already was present. This is allowed by H\+T\+TP only for certain headers (e.\+g. Set-\/\+Cookie).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Message_afe89b9985a884a500266df9ce358f013}{set\+Header()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Message_a6473e57fd50db07d436c1e156d59845f}\label{classWt_1_1Http_1_1Message_a6473e57fd50db07d436c1e156d59845f}} 
+\index{Wt::Http::Message@{Wt::Http::Message}!body@{body}}
+\index{body@{body}!Wt::Http::Message@{Wt::Http::Message}}
+\doxysubsubsection{\texorpdfstring{body()}{body()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Http\+::\+Message\+::body (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the body text. 
+
+Returns the body text. \mbox{\Hypertarget{classWt_1_1Http_1_1Message_a877ca3f66e2cbbbcd2f51a120f8ce057}\label{classWt_1_1Http_1_1Message_a877ca3f66e2cbbbcd2f51a120f8ce057}} 
+\index{Wt::Http::Message@{Wt::Http::Message}!getHeader@{getHeader}}
+\index{getHeader@{getHeader}!Wt::Http::Message@{Wt::Http::Message}}
+\doxysubsubsection{\texorpdfstring{getHeader()}{getHeader()}}
+{\footnotesize\ttfamily const std\+::string$\ast$ Wt\+::\+Http\+::\+Message\+::get\+Header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Returns a header value. 
+
+Returns 0 if no header with that name is found. \mbox{\Hypertarget{classWt_1_1Http_1_1Message_afe89b9985a884a500266df9ce358f013}\label{classWt_1_1Http_1_1Message_afe89b9985a884a500266df9ce358f013}} 
+\index{Wt::Http::Message@{Wt::Http::Message}!setHeader@{setHeader}}
+\index{setHeader@{setHeader}!Wt::Http::Message@{Wt::Http::Message}}
+\doxysubsubsection{\texorpdfstring{setHeader()}{setHeader()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Message\+::set\+Header (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Sets a header value. 
+
+If a header with that value was already defined, it is replaced with the new value. Otherwise, the header is added.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Message_af3ae185c24c499d08bf3475e594b1b2f}{add\+Header()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Message_ae6098f85d8f1eb832f74e0ff7620ec21}\label{classWt_1_1Http_1_1Message_ae6098f85d8f1eb832f74e0ff7620ec21}} 
+\index{Wt::Http::Message@{Wt::Http::Message}!setStatus@{setStatus}}
+\index{setStatus@{setStatus}!Wt::Http::Message@{Wt::Http::Message}}
+\doxysubsubsection{\texorpdfstring{setStatus()}{setStatus()}}
+{\footnotesize\ttfamily void Wt\+::\+Http\+::\+Message\+::set\+Status (\begin{DoxyParamCaption}\item[{int}]{status }\end{DoxyParamCaption})}
+
+
+
+Sets the status code. 
+
+\begin{DoxyNote}{Note}
+This method is probably not useful to you, since for a request it is ignored, and for a response it is set by the client. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Message_aa1e1d063746fc61c15ed479b79a4d48e}\label{classWt_1_1Http_1_1Message_aa1e1d063746fc61c15ed479b79a4d48e}} 
+\index{Wt::Http::Message@{Wt::Http::Message}!status@{status}}
+\index{status@{status}!Wt::Http::Message@{Wt::Http::Message}}
+\doxysubsubsection{\texorpdfstring{status()}{status()}}
+{\footnotesize\ttfamily int Wt\+::\+Http\+::\+Message\+::status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the status code. 
+
+This returns the H\+T\+TP status code of a response message. Typical values are 200 (OK) or 404 (Not found). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Http/Message.\+h\end{DoxyCompactItemize}

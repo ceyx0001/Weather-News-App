@@ -1,0 +1,83 @@
+\hypertarget{classFortuneTemplate}{}\doxysection{Fortune\+Template Class Reference}
+\label{classFortuneTemplate}\index{FortuneTemplate@{FortuneTemplate}}
+
+
+Inheritance diagram for Fortune\+Template\+:
+% FIG 0
+
+
+Collaboration diagram for Fortune\+Template\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFortuneTemplate_a40204fef1d8f0ebc2baeaca17eee9eba}\label{classFortuneTemplate_a40204fef1d8f0ebc2baeaca17eee9eba}} 
+{\bfseries Fortune\+Template} (const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{Wt\+::\+Dbo\+::ptr}}$<$ \mbox{\hyperlink{classFortune}{Fortune}} $>$ $>$ \&fortunes)
+\item 
+virtual bool \mbox{\hyperlink{classFortuneTemplate_a882d2fa00f228f6c20064451f6d17474}{condition\+Value}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Returns a condition value. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classFortuneTemplate_a4cbb1ca5b6f88ace4b112dacbd87cbb6}{resolve\+String}} (const std\+::string \&var\+Name, const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} $>$ \&vars, std\+::ostream \&result)
+\begin{DoxyCompactList}\small\item\em Resolves the string value for a variable name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFortuneTemplate_a14df43ec64e7ffdf5d4f79621007384c}\label{classFortuneTemplate_a14df43ec64e7ffdf5d4f79621007384c}} 
+const V\+Fortunes $\ast$ {\bfseries fortunes\+\_\+}
+\item 
+\mbox{\Hypertarget{classFortuneTemplate_a8003a6a746e96d4424911209691590fa}\label{classFortuneTemplate_a8003a6a746e96d4424911209691590fa}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr}{Wt\+::\+Dbo\+::ptr}}$<$ \mbox{\hyperlink{classFortune}{Fortune}} $>$ $>$\+::const\+\_\+iterator {\bfseries it\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFortuneTemplate_a882d2fa00f228f6c20064451f6d17474}\label{classFortuneTemplate_a882d2fa00f228f6c20064451f6d17474}} 
+\index{FortuneTemplate@{FortuneTemplate}!conditionValue@{conditionValue}}
+\index{conditionValue@{conditionValue}!FortuneTemplate@{FortuneTemplate}}
+\doxysubsubsection{\texorpdfstring{conditionValue()}{conditionValue()}}
+{\footnotesize\ttfamily virtual bool Fortune\+Template\+::condition\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns a condition value. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_ab2b6fc00ef28674be103dd1b13fd0aec}{set\+Condition()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WTemplate_a143f874e9963fff32135270e69b2182d}{Wt\+::\+W\+Template}}.
+
+\mbox{\Hypertarget{classFortuneTemplate_a4cbb1ca5b6f88ace4b112dacbd87cbb6}\label{classFortuneTemplate_a4cbb1ca5b6f88ace4b112dacbd87cbb6}} 
+\index{FortuneTemplate@{FortuneTemplate}!resolveString@{resolveString}}
+\index{resolveString@{resolveString}!FortuneTemplate@{FortuneTemplate}}
+\doxysubsubsection{\texorpdfstring{resolveString()}{resolveString()}}
+{\footnotesize\ttfamily virtual void Fortune\+Template\+::resolve\+String (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{var\+Name,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} $>$ \&}]{args,  }\item[{std\+::ostream \&}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Resolves the string value for a variable name. 
+
+This is the main method used to resolve variables in the template text, during rendering.
+
+The default implementation considers first whether a string was bound using \mbox{\hyperlink{classWt_1_1WTemplate_a16e6f5aa8a866d95cb68a6ab8fbe753d}{bind\+String()}}. If so, that string is returned. If not, it will attempt to resolve a widget with that variable name using \mbox{\hyperlink{classWt_1_1WTemplate_a65fd50e2e83ef594b41a97b5a3f70588}{resolve\+Widget()}}, and render it as X\+H\+T\+ML. If that fails too, \mbox{\hyperlink{classWt_1_1WTemplate_a42a3a48a1f8c88af9e489b1e83e78c5f}{handle\+Unresolved\+Variable()}} is called, passing the initial arguments.
+
+You may want to reimplement this method to provide on-\/demand loading of strings for your template.
+
+The result stream expects a U\+T\+F-\/8 encoded string value.
+
+\begin{DoxyWarning}{Warning}
+When specializing this class, you need to make sure that you append proper X\+H\+T\+ML to the {\ttfamily result}, without unsafe active contents. The \mbox{\hyperlink{classWt_1_1WTemplate_adbe6894922347552f121e8356096d006}{format()}} methods may be used for this purpose.
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WTemplate_a08d6d360e0dea5fbf0afb513a7b928b2}{render\+Template()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WTemplate_a1b41ce6236c27e91bfffb2d0686ac556}{Wt\+::\+W\+Template}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/te-\/benchmark/benchmark.\+cpp\end{DoxyCompactItemize}

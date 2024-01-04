@@ -1,0 +1,250 @@
+\hypertarget{classWt_1_1WItemDelegate}{}\doxysection{Wt\+::W\+Item\+Delegate Class Reference}
+\label{classWt_1_1WItemDelegate}\index{Wt::WItemDelegate@{Wt::WItemDelegate}}
+
+
+Standard delegate class for rendering a view item.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Item\+Delegate.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Item\+Delegate\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Item\+Delegate\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WItemDelegate_1_1WidgetRef}{Widget\+Ref}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WItemDelegate_a3044007aebd0aa59cd5c64f9b192d876}\label{classWt_1_1WItemDelegate_a3044007aebd0aa59cd5c64f9b192d876}} 
+\mbox{\hyperlink{classWt_1_1WItemDelegate_a3044007aebd0aa59cd5c64f9b192d876}{W\+Item\+Delegate}} ()
+\begin{DoxyCompactList}\small\item\em Create an item delegate. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WItemDelegate_ad1ca6556a9705bf70ccea8aba3a0b890}{update}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$widget, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a8df2183a957c453839f3382e3db167d6}{View\+Item\+Render\+Flag}} $>$ flags) override
+\begin{DoxyCompactList}\small\item\em Creates or updates a widget that renders an item. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WItemDelegate_a793f69ad703ff7e9e9fe636a0da2ad30}{update\+Model\+Index}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$widget, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index) override
+\begin{DoxyCompactList}\small\item\em Updates the model index of a widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WItemDelegate_a5c316445f87af6d053bb240ad6b295d6}{set\+Text\+Format}} (const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&format)
+\begin{DoxyCompactList}\small\item\em Sets the text format string. \end{DoxyCompactList}\item 
+const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \& \mbox{\hyperlink{classWt_1_1WItemDelegate_a67e4c8a673cca4c610d010454d771c9a}{text\+Format}} () const
+\begin{DoxyCompactList}\small\item\em Returns the text format string. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WItemDelegate_a3746136f103c4ad4d1574ac3f2ad11d4}{set\+Model\+Data}} (const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&\mbox{\hyperlink{classWt_1_1WItemDelegate_a79941ae50687f0e65da2f58f86bf571c}{edit\+State}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $\ast$model, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index) const override
+\begin{DoxyCompactList}\small\item\em Saves the edited data to the model. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classWt_1_1WItemDelegate_a79941ae50687f0e65da2f58f86bf571c}{edit\+State}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$editor, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index) const override
+\begin{DoxyCompactList}\small\item\em Returns the current edit state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WItemDelegate_a9b15fa5d2feb767deb4233d73cb8d1e1}{set\+Edit\+State}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$editor, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&value) const override
+\begin{DoxyCompactList}\small\item\em Sets the editor data from the editor state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WItemDelegate_ac099ea4a441059523831939353ed6cb7}{create\+Editor}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a8df2183a957c453839f3382e3db167d6}{View\+Item\+Render\+Flag}} $>$ flags) const
+\begin{DoxyCompactList}\small\item\em Creates an editor for a data item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WItemDelegate_a42f4567758bac9673d7bb7e1b238ad1d}\label{classWt_1_1WItemDelegate_a42f4567758bac9673d7bb7e1b238ad1d}} 
+Index\+Check\+Box $\ast$ {\bfseries check\+Box} (\mbox{\hyperlink{structWt_1_1WItemDelegate_1_1WidgetRef}{Widget\+Ref}} \&w, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, bool auto\+Create, bool \mbox{\hyperlink{classWt_1_1WItemDelegate_ad1ca6556a9705bf70ccea8aba3a0b890}{update}}=false, bool tri\+State=false)
+\item 
+\mbox{\Hypertarget{classWt_1_1WItemDelegate_aa78b836c489c4f3e76d97ded344bf8fb}\label{classWt_1_1WItemDelegate_aa78b836c489c4f3e76d97ded344bf8fb}} 
+Index\+Text $\ast$ {\bfseries text\+Widget} (\mbox{\hyperlink{structWt_1_1WItemDelegate_1_1WidgetRef}{Widget\+Ref}} \&w, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index)
+\item 
+\mbox{\Hypertarget{classWt_1_1WItemDelegate_a95ea618265a6fcf0e22ee83b759fb7a9}\label{classWt_1_1WItemDelegate_a95ea618265a6fcf0e22ee83b759fb7a9}} 
+\mbox{\hyperlink{classWt_1_1WImage}{W\+Image}} $\ast$ {\bfseries icon\+Widget} (\mbox{\hyperlink{structWt_1_1WItemDelegate_1_1WidgetRef}{Widget\+Ref}} \&w, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, bool auto\+Create=false)
+\item 
+\mbox{\Hypertarget{classWt_1_1WItemDelegate_a121a0e990294f24217a6066b10cd3507}\label{classWt_1_1WItemDelegate_a121a0e990294f24217a6066b10cd3507}} 
+Index\+Anchor $\ast$ {\bfseries anchor\+Widget} (\mbox{\hyperlink{structWt_1_1WItemDelegate_1_1WidgetRef}{Widget\+Ref}} \&w, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&index, bool auto\+Create=false)
+\item 
+\mbox{\Hypertarget{classWt_1_1WItemDelegate_aa3b7667d1362094d02a841226663dc6b}\label{classWt_1_1WItemDelegate_aa3b7667d1362094d02a841226663dc6b}} 
+void {\bfseries on\+Checked\+Change} (Index\+Check\+Box $\ast$check\+Box) const
+\item 
+\mbox{\Hypertarget{classWt_1_1WItemDelegate_a37045a8ce8e6aad013118550546a2633}\label{classWt_1_1WItemDelegate_a37045a8ce8e6aad013118550546a2633}} 
+void {\bfseries do\+Close\+Editor} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$editor, bool save) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WItemDelegate_ac6acb224787670df593b939b724f58ce}\label{classWt_1_1WItemDelegate_ac6acb224787670df593b939b724f58ce}} 
+W\+T\+\_\+\+U\+S\+T\+R\+I\+NG {\bfseries text\+Format\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Standard delegate class for rendering a view item. 
+
+This class provides the standard implementation for rendering an item (as in a \mbox{\hyperlink{classWt_1_1WAbstractItemView}{W\+Abstract\+Item\+View}}), and renders data provided by the standard data roles (see \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}). It also provides default editing support using a line edit.
+
+You may provide special editing support for an item by specializing the widget and reimplement \mbox{\hyperlink{classWt_1_1WItemDelegate_ac099ea4a441059523831939353ed6cb7}{create\+Editor()}}, \mbox{\hyperlink{classWt_1_1WItemDelegate_a3746136f103c4ad4d1574ac3f2ad11d4}{set\+Model\+Data()}}, \mbox{\hyperlink{classWt_1_1WItemDelegate_a79941ae50687f0e65da2f58f86bf571c}{edit\+State()}}, and \mbox{\hyperlink{classWt_1_1WItemDelegate_a9b15fa5d2feb767deb4233d73cb8d1e1}{set\+Edit\+State()}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WItemDelegate_ac099ea4a441059523831939353ed6cb7}\label{classWt_1_1WItemDelegate_ac099ea4a441059523831939353ed6cb7}} 
+\index{Wt::WItemDelegate@{Wt::WItemDelegate}!createEditor@{createEditor}}
+\index{createEditor@{createEditor}!Wt::WItemDelegate@{Wt::WItemDelegate}}
+\doxysubsubsection{\texorpdfstring{createEditor()}{createEditor()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$>$ Wt\+::\+W\+Item\+Delegate\+::create\+Editor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a8df2183a957c453839f3382e3db167d6}{View\+Item\+Render\+Flag}} $>$}]{flags }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates an editor for a data item. 
+
+The default implementation returns a \mbox{\hyperlink{classWt_1_1WLineEdit}{W\+Line\+Edit}} which edits the item\textquotesingle{}s \mbox{\hyperlink{classWt_1_1ItemDataRole_aa5ebe5a6363bc738d3efe4ad344e3aaf}{Wt\+::\+Item\+Data\+Role\+::\+Edit}} value.
+
+You may reimplement this method to provide a suitable editor, or to attach a custom validator. In that case, you will probably also want to reimplement \mbox{\hyperlink{classWt_1_1WItemDelegate_a79941ae50687f0e65da2f58f86bf571c}{edit\+State()}}, \mbox{\hyperlink{classWt_1_1WItemDelegate_a9b15fa5d2feb767deb4233d73cb8d1e1}{set\+Edit\+State()}}, and \mbox{\hyperlink{classWt_1_1WItemDelegate_a3746136f103c4ad4d1574ac3f2ad11d4}{set\+Model\+Data()}}.
+
+The editor should not keep a reference to the model index (it does not need to since \mbox{\hyperlink{classWt_1_1WItemDelegate_a3746136f103c4ad4d1574ac3f2ad11d4}{set\+Model\+Data()}} will provide the proper model index to save the data to the model). Otherwise, because model indexes may shift because of row or column insertions, you should reimplement \mbox{\hyperlink{classWt_1_1WItemDelegate_a793f69ad703ff7e9e9fe636a0da2ad30}{update\+Model\+Index()}}.
+
+As an example of how to provide a specialized editor, consider the default implementation, which returns a \mbox{\hyperlink{classWt_1_1WLineEdit}{W\+Line\+Edit}}\+: \mbox{\Hypertarget{classWt_1_1WItemDelegate_a79941ae50687f0e65da2f58f86bf571c}\label{classWt_1_1WItemDelegate_a79941ae50687f0e65da2f58f86bf571c}} 
+\index{Wt::WItemDelegate@{Wt::WItemDelegate}!editState@{editState}}
+\index{editState@{editState}!Wt::WItemDelegate@{Wt::WItemDelegate}}
+\doxysubsubsection{\texorpdfstring{editState()}{editState()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} Wt\+::\+W\+Item\+Delegate\+::edit\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{editor,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the current edit state. 
+
+The default implementation returns the current text in the line edit. You will need to reimplement this method for a custom editor.
+
+As an example of how to deal with a specialized editor, consider the default implementation\+:
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WItemDelegate_ac099ea4a441059523831939353ed6cb7}{create\+Editor()}}, \mbox{\hyperlink{classWt_1_1WItemDelegate_a9b15fa5d2feb767deb4233d73cb8d1e1}{set\+Edit\+State()}}, \mbox{\hyperlink{classWt_1_1WItemDelegate_a3746136f103c4ad4d1574ac3f2ad11d4}{set\+Model\+Data()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate_a20d34d31faf8fdb961810d18449f05e7}{Wt\+::\+W\+Abstract\+Item\+Delegate}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classComboDelegate_a7899eeff9b9c9416b2416a21cad05738}{Combo\+Delegate}}.
+
+\mbox{\Hypertarget{classWt_1_1WItemDelegate_a9b15fa5d2feb767deb4233d73cb8d1e1}\label{classWt_1_1WItemDelegate_a9b15fa5d2feb767deb4233d73cb8d1e1}} 
+\index{Wt::WItemDelegate@{Wt::WItemDelegate}!setEditState@{setEditState}}
+\index{setEditState@{setEditState}!Wt::WItemDelegate@{Wt::WItemDelegate}}
+\doxysubsubsection{\texorpdfstring{setEditState()}{setEditState()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Item\+Delegate\+::set\+Edit\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{editor,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the editor data from the editor state. 
+
+The default implementation resets the text in the line edit. You will need to reimplement this method if for a custom editor.
+
+As an example of how to deal with a specialized editor, consider the default implementation\+:
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WItemDelegate_ac099ea4a441059523831939353ed6cb7}{create\+Editor()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate_a8400deb4367c1cd1ca142a4714bcce14}{Wt\+::\+W\+Abstract\+Item\+Delegate}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classComboDelegate_a3746677ce93926d8a643e463eefc14c3}{Combo\+Delegate}}.
+
+\mbox{\Hypertarget{classWt_1_1WItemDelegate_a3746136f103c4ad4d1574ac3f2ad11d4}\label{classWt_1_1WItemDelegate_a3746136f103c4ad4d1574ac3f2ad11d4}} 
+\index{Wt::WItemDelegate@{Wt::WItemDelegate}!setModelData@{setModelData}}
+\index{setModelData@{setModelData}!Wt::WItemDelegate@{Wt::WItemDelegate}}
+\doxysubsubsection{\texorpdfstring{setModelData()}{setModelData()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Item\+Delegate\+::set\+Model\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \&}]{edit\+State,  }\item[{\mbox{\hyperlink{classWt_1_1WAbstractItemModel}{W\+Abstract\+Item\+Model}} $\ast$}]{model,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Saves the edited data to the model. 
+
+The default implementation saves the current edit value to the model. You will need to reimplement this method for a custom editor.
+
+As an example of how to deal with a specialized editor, consider the default implementation\+:
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WItemDelegate_ac099ea4a441059523831939353ed6cb7}{create\+Editor()}}, \mbox{\hyperlink{classWt_1_1WItemDelegate_a79941ae50687f0e65da2f58f86bf571c}{edit\+State()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate_a630f12863aeb4ed7f4e29d4a95bb7a07}{Wt\+::\+W\+Abstract\+Item\+Delegate}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classComboDelegate_a0198c96e95678ed494f7f3fc08204a9f}{Combo\+Delegate}}.
+
+\mbox{\Hypertarget{classWt_1_1WItemDelegate_a5c316445f87af6d053bb240ad6b295d6}\label{classWt_1_1WItemDelegate_a5c316445f87af6d053bb240ad6b295d6}} 
+\index{Wt::WItemDelegate@{Wt::WItemDelegate}!setTextFormat@{setTextFormat}}
+\index{setTextFormat@{setTextFormat}!Wt::WItemDelegate@{Wt::WItemDelegate}}
+\doxysubsubsection{\texorpdfstring{setTextFormat()}{setTextFormat()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Item\+Delegate\+::set\+Text\+Format (\begin{DoxyParamCaption}\item[{const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG \&}]{format }\end{DoxyParamCaption})}
+
+
+
+Sets the text format string. 
+
+The default value is \char`\"{}\char`\"{}. \mbox{\Hypertarget{classWt_1_1WItemDelegate_a67e4c8a673cca4c610d010454d771c9a}\label{classWt_1_1WItemDelegate_a67e4c8a673cca4c610d010454d771c9a}} 
+\index{Wt::WItemDelegate@{Wt::WItemDelegate}!textFormat@{textFormat}}
+\index{textFormat@{textFormat}!Wt::WItemDelegate@{Wt::WItemDelegate}}
+\doxysubsubsection{\texorpdfstring{textFormat()}{textFormat()}}
+{\footnotesize\ttfamily const W\+T\+\_\+\+U\+S\+T\+R\+I\+NG\& Wt\+::\+W\+Item\+Delegate\+::text\+Format (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the text format string. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WItemDelegate_a5c316445f87af6d053bb240ad6b295d6}{set\+Text\+Format()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WItemDelegate_ad1ca6556a9705bf70ccea8aba3a0b890}\label{classWt_1_1WItemDelegate_ad1ca6556a9705bf70ccea8aba3a0b890}} 
+\index{Wt::WItemDelegate@{Wt::WItemDelegate}!update@{update}}
+\index{update@{update}!Wt::WItemDelegate@{Wt::WItemDelegate}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$>$ Wt\+::\+W\+Item\+Delegate\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{widget,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a8df2183a957c453839f3382e3db167d6}{View\+Item\+Render\+Flag}} $>$}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates or updates a widget that renders an item. 
+
+The following properties of an item are rendered\+:
+
+
+\begin{DoxyItemize}
+\item text using the \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Wt\+::\+Item\+Data\+Role\+::\+Display}} data, with the format specified by \mbox{\hyperlink{classWt_1_1WItemDelegate_a5c316445f87af6d053bb240ad6b295d6}{set\+Text\+Format()}}
+\item a check box depending on the Wt\+::\+Item\+Flag\+::\+User\+Checkable flag and \mbox{\hyperlink{classWt_1_1ItemDataRole_af9f0b694aa760202db896dda696bf55f}{Wt\+::\+Item\+Data\+Role\+::\+Checked}} data
+\item an anchor depending on the value of \mbox{\hyperlink{classWt_1_1ItemDataRole_ae478217452f058add8fd204ddacde8ae}{Wt\+::\+Item\+Data\+Role\+::\+Link}}
+\item an icon depending on the value of \mbox{\hyperlink{classWt_1_1ItemDataRole_a9db6daf35b3c68db6df624411420d4b7}{Wt\+::\+Item\+Data\+Role\+::\+Decoration}}
+\item a tooltip depending on the value of \mbox{\hyperlink{classWt_1_1ItemDataRole_a9013847e572f2b118b5b1a6fa74691a6}{Wt\+::\+Item\+Data\+Role\+::\+Tool\+Tip}}
+\item a custom style class depending on the value of \mbox{\hyperlink{classWt_1_1ItemDataRole_ac91a7ef0ee5b9c13fd74ce2a1c57ecb9}{Wt\+::\+Item\+Data\+Role\+::\+Style\+Class}}
+\end{DoxyItemize}
+
+When the flags indicates Wt\+::\+View\+Item\+Render\+Flag\+::\+Editing, then \mbox{\hyperlink{classWt_1_1WItemDelegate_ac099ea4a441059523831939353ed6cb7}{create\+Editor()}} is called to create a suitable editor for editing the item. 
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate_a3d1735427e5dac683a19d156536db12d}{Wt\+::\+W\+Abstract\+Item\+Delegate}}.
+
+\mbox{\Hypertarget{classWt_1_1WItemDelegate_a793f69ad703ff7e9e9fe636a0da2ad30}\label{classWt_1_1WItemDelegate_a793f69ad703ff7e9e9fe636a0da2ad30}} 
+\index{Wt::WItemDelegate@{Wt::WItemDelegate}!updateModelIndex@{updateModelIndex}}
+\index{updateModelIndex@{updateModelIndex}!Wt::WItemDelegate@{Wt::WItemDelegate}}
+\doxysubsubsection{\texorpdfstring{updateModelIndex()}{updateModelIndex()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Item\+Delegate\+::update\+Model\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{widget,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates the model index of a widget. 
+
+This method is invoked by the view when due to row/column insertions or removals, the index has shifted.
+
+You should reimplement this method only if you are storing the model index in the {\ttfamily widget}, to update the stored model index.
+
+The default implementation does nothing. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WAbstractItemDelegate_a0843dcf2661f45635257528ed50f4b24}{Wt\+::\+W\+Abstract\+Item\+Delegate}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Item\+Delegate.\+h\end{DoxyCompactItemize}

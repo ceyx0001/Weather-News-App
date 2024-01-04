@@ -1,0 +1,22 @@
+digraph "Wt::Payment::OrderItem"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Wt::Payment::OrderItem",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Describes an item in an order."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" unitCost_" ,fontname="Helvetica"];
+  Node2 [label="Wt::Payment::Money",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Payment_1_1Money.html",tooltip="A value class which describes a monetary value."];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" currency_" ,fontname="Helvetica"];
+  Node3 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" valueInCents_" ,fontname="Helvetica"];
+  Node4 [label="long",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" description_\nname_" ,fontname="Helvetica"];
+  Node5 [label="Wt::WString",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WString.html",tooltip="A value class which describes a locale-aware unicode string."];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" impl_" ,fontname="Helvetica"];
+  Node6 [label="Wt::WString::Impl",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1WString_1_1Impl.html",tooltip=" "];
+  Node3 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" key_" ,fontname="Helvetica"];
+  Node3 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" utf8_" ,fontname="Helvetica"];
+  Node7 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Empty" ,fontname="Helvetica"];
+  Node7 [label="const",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" number_" ,fontname="Helvetica"];
+}

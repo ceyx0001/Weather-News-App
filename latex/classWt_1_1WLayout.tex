@@ -1,0 +1,388 @@
+\hypertarget{classWt_1_1WLayout}{}\doxysection{Wt\+::W\+Layout Class Reference}
+\label{classWt_1_1WLayout}\index{Wt::WLayout@{Wt::WLayout}}
+
+
+An abstract base class for layout managers.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Layout.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Layout\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Layout\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classWt_1_1WLayout_aa2f6e73aa014f9097b57ebf352d8018c}{$\sim$\+W\+Layout}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WLayout_a9cd0547c710e357e4c688ccfdb790d8f}{set\+Preferred\+Implementation}} (\mbox{\hyperlink{classWt_aeb0e4f49ce4a28d8ce9b0c6005027876}{Layout\+Implementation}} implementation)
+\begin{DoxyCompactList}\small\item\em Set the preferred layout implementation. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WLayout_a8cd69b5eb41376e6e7ab0dd97a2ab2b5}{add\+Item}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $>$ item)=0
+\begin{DoxyCompactList}\small\item\em Adds a layout {\itshape item}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WLayout_a0346e81ecebed58c0b11bf037c6fdd73}{add\+Widget}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}})
+\begin{DoxyCompactList}\small\item\em Adds the given {\itshape widget} to the layout. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $>$ \mbox{\hyperlink{classWt_1_1WLayout_a0647c62081611a0ef0135ff2e62341be}{remove\+Item}} (\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$item)=0
+\begin{DoxyCompactList}\small\item\em Removes a layout {\itshape item} (widget or nested layout). \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ \mbox{\hyperlink{classWt_1_1WLayout_adfff15c9ebcb28d8f152b6b754544988}{remove\+Widget}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$\mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}})
+\begin{DoxyCompactList}\small\item\em Removes the given {\itshape widget} from the layout. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WLayout_a799b3cce5c1717b18e54c14471e84033}{count}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the number of items in this layout. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WLayout_a3d48e5e4f56ad5d1b0e60180ebc91442}{item\+At}} (int index) const =0
+\begin{DoxyCompactList}\small\item\em Returns the layout item at a specific {\itshape index}. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1WLayout_a1ddb82c4f7d5ded93793af6eb3d0f2df}{index\+Of}} (\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$item) const
+\begin{DoxyCompactList}\small\item\em Returns the index of a given {\itshape item}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_a26692c31cf192c42bf73ce05fd6fe714}\label{classWt_1_1WLayout_a26692c31cf192c42bf73ce05fd6fe714}} 
+virtual \mbox{\hyperlink{classWt_1_1WWidgetItem}{W\+Widget\+Item}} $\ast$ \mbox{\hyperlink{classWt_1_1WLayout_a26692c31cf192c42bf73ce05fd6fe714}{find\+Widget\+Item}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$\mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}}) override
+\begin{DoxyCompactList}\small\item\em Finds the widget item associated with the given {\itshape widget}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ \mbox{\hyperlink{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}{widget}} () override
+\begin{DoxyCompactList}\small\item\em Returns the widget that is held by this \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}} $\ast$ \mbox{\hyperlink{classWt_1_1WLayout_aa880d7b97d507600941ed6d782c2cccd}{layout}} () override
+\begin{DoxyCompactList}\small\item\em Returns the layout that implements this \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_a49f1b45cb1ae79f68302443dd91a6f2a}\label{classWt_1_1WLayout_a49f1b45cb1ae79f68302443dd91a6f2a}} 
+virtual \mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}} $\ast$ \mbox{\hyperlink{classWt_1_1WLayout_a49f1b45cb1ae79f68302443dd91a6f2a}{parent\+Layout}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the layout in which this item is contained. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_a8d2fb94230057ff3ddcbf4a55e750136}\label{classWt_1_1WLayout_a8d2fb94230057ff3ddcbf4a55e750136}} 
+virtual \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ {\bfseries parent\+Widget} () const override
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_ad8ad2ee4b6d0715be997bc768ed478fa}\label{classWt_1_1WLayout_ad8ad2ee4b6d0715be997bc768ed478fa}} 
+virtual \mbox{\hyperlink{classWt_1_1WLayoutImpl}{W\+Layout\+Impl}} $\ast$ {\bfseries impl} () const override
+\item 
+void \mbox{\hyperlink{classWt_1_1WLayout_af18bae8c743c9f9a5cabee58826ffb45}{set\+Contents\+Margins}} (int left, int top, int right, int bottom)
+\begin{DoxyCompactList}\small\item\em Set contents margins (in pixels). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WLayout_abda27c67ec678ea3bb1407c70d003322}{get\+Contents\+Margins}} (int $\ast$left, int $\ast$top, int $\ast$right, int $\ast$bottom) const
+\begin{DoxyCompactList}\small\item\em Returns the contents margins. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_a88093f9372333b297e096b1fc261d8a5}\label{classWt_1_1WLayout_a88093f9372333b297e096b1fc261d8a5}} 
+virtual bool {\bfseries implementation\+Is\+Flex\+Layout} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classWt_1_1WLayout_a9e080e49a90648955a637859c5568802}{set\+Default\+Implementation}} (\mbox{\hyperlink{classWt_aeb0e4f49ce4a28d8ce9b0c6005027876}{Layout\+Implementation}} implementation)
+\begin{DoxyCompactList}\small\item\em Sets the preferred layout implementation globally. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_a7ea1c353ac9d38a94ad08fc0cb8d6c25}\label{classWt_1_1WLayout_a7ea1c353ac9d38a94ad08fc0cb8d6c25}} 
+\mbox{\hyperlink{classWt_1_1WLayout_a7ea1c353ac9d38a94ad08fc0cb8d6c25}{W\+Layout}} ()
+\begin{DoxyCompactList}\small\item\em Create a layout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WLayout_af4588f6cbff4de7abf77d1cc7b5a8d19}{update}} (\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$item=nullptr)
+\begin{DoxyCompactList}\small\item\em Update the layout. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_a659c4567bc202a7861c626b01726f11c}\label{classWt_1_1WLayout_a659c4567bc202a7861c626b01726f11c}} 
+void {\bfseries item\+Added} (\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$item)
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_a0578aa74b14953f3ef45cfa4ef8fd26f}\label{classWt_1_1WLayout_a0578aa74b14953f3ef45cfa4ef8fd26f}} 
+void {\bfseries item\+Removed} (\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$item)
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_acb8a477ccfc1476eee82cb524dcd80e7}\label{classWt_1_1WLayout_acb8a477ccfc1476eee82cb524dcd80e7}} 
+virtual void \mbox{\hyperlink{classWt_1_1WLayout_acb8a477ccfc1476eee82cb524dcd80e7}{set\+Parent\+Widget}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$parent) override
+\begin{DoxyCompactList}\small\item\em Internal method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_afa08834c6608f15623209237a83ceb9f}\label{classWt_1_1WLayout_afa08834c6608f15623209237a83ceb9f}} 
+void {\bfseries set\+Impl} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayoutImpl}{W\+Layout\+Impl}} $>$ impl)
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_a89e963876dcc78c35637c15e19ca71cb}\label{classWt_1_1WLayout_a89e963876dcc78c35637c15e19ca71cb}} 
+\mbox{\hyperlink{classWt_aeb0e4f49ce4a28d8ce9b0c6005027876}{Layout\+Implementation}} {\bfseries implementation} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_af337f608f3371ac1387fb03704f5a971}\label{classWt_1_1WLayout_af337f608f3371ac1387fb03704f5a971}} 
+\mbox{\hyperlink{classWt_aeb0e4f49ce4a28d8ce9b0c6005027876}{Layout\+Implementation}} {\bfseries preferred\+Implementation} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_a56f637cf35e32a1c61c6c88c359a0f89}\label{classWt_1_1WLayout_a56f637cf35e32a1c61c6c88c359a0f89}} 
+virtual void {\bfseries update\+Implementation} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_ac2ba59a3074a652909486b404802d95c}\label{classWt_1_1WLayout_ac2ba59a3074a652909486b404802d95c}} 
+virtual void \mbox{\hyperlink{classWt_1_1WLayout_ac2ba59a3074a652909486b404802d95c}{set\+Parent\+Layout}} (\mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}} $\ast$\mbox{\hyperlink{classWt_1_1WLayout_a49f1b45cb1ae79f68302443dd91a6f2a}{parent\+Layout}}) override
+\begin{DoxyCompactList}\small\item\em Internal method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_aa7d7184c36eab9f4cd3e6e3da56c0a35}\label{classWt_1_1WLayout_aa7d7184c36eab9f4cd3e6e3da56c0a35}} 
+\mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}} $\ast$ {\bfseries parent\+Layout\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_a79be0311c58a1c8b0e2c03e5b302e7b8}\label{classWt_1_1WLayout_a79be0311c58a1c8b0e2c03e5b302e7b8}} 
+\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ {\bfseries parent\+Widget\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_a996aa195c42e6cb1ef110b44f44cec7c}\label{classWt_1_1WLayout_a996aa195c42e6cb1ef110b44f44cec7c}} 
+int {\bfseries margins\+\_\+} \mbox{[}4\mbox{]}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_a91b6d165dd3992534923c8ba0d963865}\label{classWt_1_1WLayout_a91b6d165dd3992534923c8ba0d963865}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayoutImpl}{W\+Layout\+Impl}} $>$ {\bfseries impl\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_a7642f4a8fb04854798cefd33f4185162}\label{classWt_1_1WLayout_a7642f4a8fb04854798cefd33f4185162}} 
+\mbox{\hyperlink{classWt_aeb0e4f49ce4a28d8ce9b0c6005027876}{Layout\+Implementation}} {\bfseries preferred\+Implementation\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_a347b34ea31fe41712a80a6d5a8e183bb}\label{classWt_1_1WLayout_a347b34ea31fe41712a80a6d5a8e183bb}} 
+static \mbox{\hyperlink{classWt_aeb0e4f49ce4a28d8ce9b0c6005027876}{Layout\+Implementation}} {\bfseries default\+Implementation\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_a2255ad50657385b85116d2b613cff93b}\label{classWt_1_1WLayout_a2255ad50657385b85116d2b613cff93b}} 
+class {\bfseries W\+Widget}
+\item 
+\mbox{\Hypertarget{classWt_1_1WLayout_a567a8f1bfd41b10f6ceb713366b9c858}\label{classWt_1_1WLayout_a567a8f1bfd41b10f6ceb713366b9c858}} 
+class {\bfseries W\+Container\+Widget}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An abstract base class for layout managers. 
+
+This class is the abstract base class for any layout manager. A layout manager is associated with a container widget, and manages the layout of children inside the whole space available to the container widget.
+
+The implementation of the layout manager depends on the container widget to which it is set, and is therefore deferred to \mbox{\hyperlink{classWt_1_1WLayoutImpl}{W\+Layout\+Impl}}.
+
+\begin{DoxyNote}{Note}
+When applying a layout manager to a \mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}}, you may not define any padding for the container widget. Instead, use \mbox{\hyperlink{classWt_1_1WLayout_af18bae8c743c9f9a5cabee58826ffb45}{set\+Contents\+Margins()}}. 
+\end{DoxyNote}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WLayout_aa2f6e73aa014f9097b57ebf352d8018c}\label{classWt_1_1WLayout_aa2f6e73aa014f9097b57ebf352d8018c}} 
+\index{Wt::WLayout@{Wt::WLayout}!````~WLayout@{$\sim$WLayout}}
+\index{````~WLayout@{$\sim$WLayout}!Wt::WLayout@{Wt::WLayout}}
+\doxysubsubsection{\texorpdfstring{$\sim$WLayout()}{~WLayout()}}
+{\footnotesize\ttfamily virtual Wt\+::\+W\+Layout\+::$\sim$\+W\+Layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+This will delete the layout (and nested layouts), but not the contained widgets. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WLayout_a8cd69b5eb41376e6e7ab0dd97a2ab2b5}\label{classWt_1_1WLayout_a8cd69b5eb41376e6e7ab0dd97a2ab2b5}} 
+\index{Wt::WLayout@{Wt::WLayout}!addItem@{addItem}}
+\index{addItem@{addItem}!Wt::WLayout@{Wt::WLayout}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Layout\+::add\+Item (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $>$}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Adds a layout {\itshape item}. 
+
+The item may be a widget or nested layout.
+
+How the item is layed out with respect to siblings is implementation specific to the layout manager. In some cases, a layout manager will overload this method with extra arguments that specify layout options.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLayout_a0647c62081611a0ef0135ff2e62341be}{remove\+Item(\+W\+Layout\+Item $\ast$)}}, add\+Widget(\+W\+Widget $\ast$) 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WGridLayout_aea1c0a1e2188f477fe2076e2d185519f}{Wt\+::\+W\+Grid\+Layout}}, \mbox{\hyperlink{classWt_1_1WBoxLayout_a7c56ff7009773a2ad5ae809171421897}{Wt\+::\+W\+Box\+Layout}}, \mbox{\hyperlink{classWt_1_1WBorderLayout_a59e3e3b67755379f19a791ec3b60ec4e}{Wt\+::\+W\+Border\+Layout}}, and \mbox{\hyperlink{classWt_1_1WFitLayout_a2880bd2f01c3a4288c16f103bb8c4219}{Wt\+::\+W\+Fit\+Layout}}.
+
+\mbox{\Hypertarget{classWt_1_1WLayout_a0346e81ecebed58c0b11bf037c6fdd73}\label{classWt_1_1WLayout_a0346e81ecebed58c0b11bf037c6fdd73}} 
+\index{Wt::WLayout@{Wt::WLayout}!addWidget@{addWidget}}
+\index{addWidget@{addWidget}!Wt::WLayout@{Wt::WLayout}}
+\doxysubsubsection{\texorpdfstring{addWidget()}{addWidget()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Layout\+::add\+Widget (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$}]{widget }\end{DoxyParamCaption})}
+
+
+
+Adds the given {\itshape widget} to the layout. 
+
+This method wraps the widget in a \mbox{\hyperlink{classWt_1_1WWidgetItem}{W\+Widget\+Item}} and calls add\+Item(\+W\+Layout\+Item $\ast$).
+
+How the widget is layed out with respect to siblings is implementation specific to the layout manager. In some cases, a layout manager will overload this method with extra arguments that specify layout options.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLayout_adfff15c9ebcb28d8f152b6b754544988}{remove\+Widget(\+W\+Widget $\ast$)}}, add\+Item(\+W\+Layout\+Item $\ast$) 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WLayout_a799b3cce5c1717b18e54c14471e84033}\label{classWt_1_1WLayout_a799b3cce5c1717b18e54c14471e84033}} 
+\index{Wt::WLayout@{Wt::WLayout}!count@{count}}
+\index{count@{count}!Wt::WLayout@{Wt::WLayout}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Layout\+::count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the number of items in this layout. 
+
+This may be a theoretical number, which is greater than the actual number of items. It can be used to iterate over the items in the layout, in conjunction with \mbox{\hyperlink{classWt_1_1WLayout_a3d48e5e4f56ad5d1b0e60180ebc91442}{item\+At()}}. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1WGridLayout_aca5cce4994ebd8d2535d033314c100be}{Wt\+::\+W\+Grid\+Layout}}, \mbox{\hyperlink{classWt_1_1WBoxLayout_a24edc3c1eec5583b0e0e9d926161846c}{Wt\+::\+W\+Box\+Layout}}, \mbox{\hyperlink{classWt_1_1WBorderLayout_a674d9149d999f114fd627a4b3caf00b1}{Wt\+::\+W\+Border\+Layout}}, and \mbox{\hyperlink{classWt_1_1WFitLayout_afcdbdc9c3ec07eb6691ed67e74e18ae1}{Wt\+::\+W\+Fit\+Layout}}.
+
+\mbox{\Hypertarget{classWt_1_1WLayout_abda27c67ec678ea3bb1407c70d003322}\label{classWt_1_1WLayout_abda27c67ec678ea3bb1407c70d003322}} 
+\index{Wt::WLayout@{Wt::WLayout}!getContentsMargins@{getContentsMargins}}
+\index{getContentsMargins@{getContentsMargins}!Wt::WLayout@{Wt::WLayout}}
+\doxysubsubsection{\texorpdfstring{getContentsMargins()}{getContentsMargins()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Layout\+::get\+Contents\+Margins (\begin{DoxyParamCaption}\item[{int $\ast$}]{left,  }\item[{int $\ast$}]{top,  }\item[{int $\ast$}]{right,  }\item[{int $\ast$}]{bottom }\end{DoxyParamCaption}) const}
+
+
+
+Returns the contents margins. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLayout_af18bae8c743c9f9a5cabee58826ffb45}{set\+Contents\+Margins()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WLayout_a1ddb82c4f7d5ded93793af6eb3d0f2df}\label{classWt_1_1WLayout_a1ddb82c4f7d5ded93793af6eb3d0f2df}} 
+\index{Wt::WLayout@{Wt::WLayout}!indexOf@{indexOf}}
+\index{indexOf@{indexOf}!Wt::WLayout@{Wt::WLayout}}
+\doxysubsubsection{\texorpdfstring{indexOf()}{indexOf()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+W\+Layout\+::index\+Of (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$}]{item }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the index of a given {\itshape item}. 
+
+The default implementation loops over all items, and returns the index for which item\+At(index) equals {\ttfamily item}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLayout_a3d48e5e4f56ad5d1b0e60180ebc91442}{item\+At(int) const}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WFitLayout_a8011cef2f368c5d8d35f9f65457f2465}{Wt\+::\+W\+Fit\+Layout}}.
+
+\mbox{\Hypertarget{classWt_1_1WLayout_a3d48e5e4f56ad5d1b0e60180ebc91442}\label{classWt_1_1WLayout_a3d48e5e4f56ad5d1b0e60180ebc91442}} 
+\index{Wt::WLayout@{Wt::WLayout}!itemAt@{itemAt}}
+\index{itemAt@{itemAt}!Wt::WLayout@{Wt::WLayout}}
+\doxysubsubsection{\texorpdfstring{itemAt()}{itemAt()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}}$\ast$ Wt\+::\+W\+Layout\+::item\+At (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the layout item at a specific {\itshape index}. 
+
+If there is no item at the {\ttfamily index}, {\ttfamily 0} is returned.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLayout_a1ddb82c4f7d5ded93793af6eb3d0f2df}{index\+Of(\+W\+Layout\+Item $\ast$) const}}, \mbox{\hyperlink{classWt_1_1WLayout_a799b3cce5c1717b18e54c14471e84033}{count()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WGridLayout_a158530f0703912239623959890984b2f}{Wt\+::\+W\+Grid\+Layout}}, \mbox{\hyperlink{classWt_1_1WBoxLayout_a011c2a0ad13e25d3871e58d5bfc827c2}{Wt\+::\+W\+Box\+Layout}}, \mbox{\hyperlink{classWt_1_1WBorderLayout_a0986e385606ebe5772736e3b18c782ed}{Wt\+::\+W\+Border\+Layout}}, and \mbox{\hyperlink{classWt_1_1WFitLayout_a58dc4822006ba201063864a6412c0588}{Wt\+::\+W\+Fit\+Layout}}.
+
+\mbox{\Hypertarget{classWt_1_1WLayout_aa880d7b97d507600941ed6d782c2cccd}\label{classWt_1_1WLayout_aa880d7b97d507600941ed6d782c2cccd}} 
+\index{Wt::WLayout@{Wt::WLayout}!layout@{layout}}
+\index{layout@{layout}!Wt::WLayout@{Wt::WLayout}}
+\doxysubsubsection{\texorpdfstring{layout()}{layout()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}}$\ast$ Wt\+::\+W\+Layout\+::layout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the layout that implements this \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}}. 
+
+This implements a type-\/safe upcasting mechanism to a \mbox{\hyperlink{classWt_1_1WLayout}{W\+Layout}}. 
+
+Implements \mbox{\hyperlink{classWt_1_1WLayoutItem_a3f81b4d198401ae493276a61be6784cf}{Wt\+::\+W\+Layout\+Item}}.
+
+\mbox{\Hypertarget{classWt_1_1WLayout_a0647c62081611a0ef0135ff2e62341be}\label{classWt_1_1WLayout_a0647c62081611a0ef0135ff2e62341be}} 
+\index{Wt::WLayout@{Wt::WLayout}!removeItem@{removeItem}}
+\index{removeItem@{removeItem}!Wt::WLayout@{Wt::WLayout}}
+\doxysubsubsection{\texorpdfstring{removeItem()}{removeItem()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}}$>$ Wt\+::\+W\+Layout\+::remove\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$}]{item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Removes a layout {\itshape item} (widget or nested layout). 
+
+\begin{DoxySeeAlso}{See also}
+add\+Item(\+W\+Layout\+Item $\ast$), \mbox{\hyperlink{classWt_1_1WLayout_adfff15c9ebcb28d8f152b6b754544988}{remove\+Widget(\+W\+Widget $\ast$)}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1WGridLayout_a250b3e198cab01cdab63f6ac50b6b5b6}{Wt\+::\+W\+Grid\+Layout}}, \mbox{\hyperlink{classWt_1_1WBoxLayout_a9f521de344ca325f9838b99973b73773}{Wt\+::\+W\+Box\+Layout}}, \mbox{\hyperlink{classWt_1_1WBorderLayout_a45d0f5aa2b04f3700f0dff6307597f86}{Wt\+::\+W\+Border\+Layout}}, and \mbox{\hyperlink{classWt_1_1WFitLayout_af9a2a15ea30d80764de1af4393951d84}{Wt\+::\+W\+Fit\+Layout}}.
+
+\mbox{\Hypertarget{classWt_1_1WLayout_adfff15c9ebcb28d8f152b6b754544988}\label{classWt_1_1WLayout_adfff15c9ebcb28d8f152b6b754544988}} 
+\index{Wt::WLayout@{Wt::WLayout}!removeWidget@{removeWidget}}
+\index{removeWidget@{removeWidget}!Wt::WLayout@{Wt::WLayout}}
+\doxysubsubsection{\texorpdfstring{removeWidget()}{removeWidget()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$>$ Wt\+::\+W\+Layout\+::remove\+Widget (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{widget }\end{DoxyParamCaption})}
+
+
+
+Removes the given {\itshape widget} from the layout. 
+
+This method finds the corresponding \mbox{\hyperlink{classWt_1_1WWidgetItem}{W\+Widget\+Item}} and calls \mbox{\hyperlink{classWt_1_1WLayout_a0647c62081611a0ef0135ff2e62341be}{remove\+Item(\+W\+Layout\+Item $\ast$)}}, and returns the widget.
+
+\begin{DoxySeeAlso}{See also}
+add\+Widget(\+W\+Widget $\ast$), \mbox{\hyperlink{classWt_1_1WLayout_a0647c62081611a0ef0135ff2e62341be}{remove\+Item(\+W\+Layout\+Item $\ast$)}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WLayout_af18bae8c743c9f9a5cabee58826ffb45}\label{classWt_1_1WLayout_af18bae8c743c9f9a5cabee58826ffb45}} 
+\index{Wt::WLayout@{Wt::WLayout}!setContentsMargins@{setContentsMargins}}
+\index{setContentsMargins@{setContentsMargins}!Wt::WLayout@{Wt::WLayout}}
+\doxysubsubsection{\texorpdfstring{setContentsMargins()}{setContentsMargins()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Layout\+::set\+Contents\+Margins (\begin{DoxyParamCaption}\item[{int}]{left,  }\item[{int}]{top,  }\item[{int}]{right,  }\item[{int}]{bottom }\end{DoxyParamCaption})}
+
+
+
+Set contents margins (in pixels). 
+
+The default contents margins are 9 pixels in all directions.
+
+\begin{DoxyNote}{Note}
+Only used when the layout manager is applied to a \mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}}.
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLayout_af18bae8c743c9f9a5cabee58826ffb45}{set\+Contents\+Margins()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WLayout_a9e080e49a90648955a637859c5568802}\label{classWt_1_1WLayout_a9e080e49a90648955a637859c5568802}} 
+\index{Wt::WLayout@{Wt::WLayout}!setDefaultImplementation@{setDefaultImplementation}}
+\index{setDefaultImplementation@{setDefaultImplementation}!Wt::WLayout@{Wt::WLayout}}
+\doxysubsubsection{\texorpdfstring{setDefaultImplementation()}{setDefaultImplementation()}}
+{\footnotesize\ttfamily static void Wt\+::\+W\+Layout\+::set\+Default\+Implementation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_aeb0e4f49ce4a28d8ce9b0c6005027876}{Layout\+Implementation}}}]{implementation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the preferred layout implementation globally. 
+
+The default implementation for box layouts and fit layouts is \mbox{\hyperlink{}{Flex}} (if supported by the browser). Otherwise a fallback to \mbox{\hyperlink{}{Java\+Script}} is used.
+
+Because there are cases where \mbox{\hyperlink{}{Flex}} does not work properly, this method can be used to set the global preferred implementation to \mbox{\hyperlink{}{instead. Since this is a system-\/wide setting, and not a per-\/session setting, you should call this function before any session is created, e.\+g. in main() before calling W\+Run().  set\+Preferred\+Implementation() }}\mbox{\Hypertarget{classWt_1_1WLayout_a9cd0547c710e357e4c688ccfdb790d8f}\label{classWt_1_1WLayout_a9cd0547c710e357e4c688ccfdb790d8f}} 
+\index{Wt::WLayout@{Wt::WLayout}!setPreferredImplementation@{setPreferredImplementation}}
+\index{setPreferredImplementation@{setPreferredImplementation}!Wt::WLayout@{Wt::WLayout}}
+\doxysubsubsection{\texorpdfstring{setPreferredImplementation()}{setPreferredImplementation()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Layout\+::set\+Preferred\+Implementation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_aeb0e4f49ce4a28d8ce9b0c6005027876}{Layout\+Implementation}}}]{implementation }\end{DoxyParamCaption})}
+
+
+
+Set the preferred layout implementation. 
+
+The default implementation for box layouts and fit layouts is \mbox{\hyperlink{}{Flex}} (if supported by the browser). Otherwise a fallback to \mbox{\hyperlink{}{Java\+Script}} is used.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WLayout_a9e080e49a90648955a637859c5568802}{set\+Default\+Implementation()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WLayout_af4588f6cbff4de7abf77d1cc7b5a8d19}\label{classWt_1_1WLayout_af4588f6cbff4de7abf77d1cc7b5a8d19}} 
+\index{Wt::WLayout@{Wt::WLayout}!update@{update}}
+\index{update@{update}!Wt::WLayout@{Wt::WLayout}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Layout\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}} $\ast$}]{item = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Update the layout. 
+
+Must be called whenever some properties of the layout have changed. \mbox{\Hypertarget{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}\label{classWt_1_1WLayout_a7ba01f6297c03ffaf48acce34b99e400}} 
+\index{Wt::WLayout@{Wt::WLayout}!widget@{widget}}
+\index{widget@{widget}!Wt::WLayout@{Wt::WLayout}}
+\doxysubsubsection{\texorpdfstring{widget()}{widget()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}}$\ast$ Wt\+::\+W\+Layout\+::widget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the widget that is held by this \mbox{\hyperlink{classWt_1_1WLayoutItem}{W\+Layout\+Item}}. 
+
+This implements a type-\/safe upcasting mechanism to a \mbox{\hyperlink{classWt_1_1WWidgetItem}{W\+Widget\+Item}}. 
+
+Implements \mbox{\hyperlink{classWt_1_1WLayoutItem_a06b127060eaf8a0b87a994b483d493e1}{Wt\+::\+W\+Layout\+Item}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Layout.\+h\end{DoxyCompactItemize}

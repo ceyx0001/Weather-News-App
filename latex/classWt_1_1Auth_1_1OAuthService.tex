@@ -1,0 +1,417 @@
+\hypertarget{classWt_1_1Auth_1_1OAuthService}{}\doxysection{Wt\+::Auth\+::O\+Auth\+Service Class Reference}
+\label{classWt_1_1Auth_1_1OAuthService}\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+
+
+An O\+Auth authorization (and authentication) service provider.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Auth/\+O\+Auth\+Service.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Auth\+::O\+Auth\+Service\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Auth\+::O\+Auth\+Service\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_acfe5b14051c69894c8e49e6a8a68b271}{O\+Auth\+Service}} (const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a9f0d00b998656e9b9be808b447f705d9}{base\+Auth}})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a100fc1a211f9fb550cb94408095791f4}\label{classWt_1_1Auth_1_1OAuthService_a100fc1a211f9fb550cb94408095791f4}} 
+virtual \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a100fc1a211f9fb550cb94408095791f4}{$\sim$\+O\+Auth\+Service}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a9f0d00b998656e9b9be808b447f705d9}\label{classWt_1_1Auth_1_1OAuthService_a9f0d00b998656e9b9be808b447f705d9}} 
+const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} \& \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a9f0d00b998656e9b9be808b447f705d9}{base\+Auth}} () const
+\begin{DoxyCompactList}\small\item\em Returns the basic authentication service. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess}{O\+Auth\+Process}} $>$ \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a2978c25f9b60f7e0b5fac414e23923a6}{create\+Process}} (const std\+::string \&scope) const =0
+\begin{DoxyCompactList}\small\item\em Creates a new authorization process. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a72f987f61e7a53636ac3f08b61bee2a5}{set\+Popup\+Enabled}} (bool enable)
+\begin{DoxyCompactList}\small\item\em Configure if a popup should be used for the login. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a86b514d3e49a16e1004759287548e576}\label{classWt_1_1Auth_1_1OAuthService_a86b514d3e49a16e1004759287548e576}} 
+bool \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a86b514d3e49a16e1004759287548e576}{popup\+Enabled}} () const
+\begin{DoxyCompactList}\small\item\em Returns if a popup is used for the login. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a5718ddabc7de591b5f056daf1f17701e}{name}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the provider name. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a17346a2921fe706bc83018fb2443f236}{description}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the provider description. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_ae7caef7e593e4e078a50e5f872f14d20}{popup\+Width}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the desired width for the popup window. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a3f5f2ca918803753061105c0a5836a1e}{popup\+Height}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the desired height for the popup window. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a040351f2a2b956c059ea9974e6829d13}{authentication\+Scope}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the scope needed for authentication. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_add76eee14370693fa109c2768ca70725}{redirect\+Endpoint}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the redirection endpoint U\+RL. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a4b03967bf49f5e53d0ecefbe78f6ec68}{redirect\+Endpoint\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Returns the deployment path of the redirection endpoint. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_acab141d7eb5a987baf8ea9281bf00a9a}{authorization\+Endpoint}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the authorization endpoint U\+RL. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_ad649c21d85628e58eeba7171f1bb9990}{token\+Endpoint}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the token endpoint U\+RL. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a53f3802b486c1656bacd2a52e3f89180}\label{classWt_1_1Auth_1_1OAuthService_a53f3802b486c1656bacd2a52e3f89180}} 
+virtual std\+::string {\bfseries user\+Info\+Endpoint} () const
+\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a3f5d653cb613109848321463663ba636}{client\+Id}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the client ID. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a10f60c79a0892266e75fef4b0965c1f8}{client\+Secret}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the client secret. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_aabf0af50eec89fefede040a8f4f1f993}{encode\+State}} (const std\+::string \&session\+Id) const
+\begin{DoxyCompactList}\small\item\em Derives a state value from the session ID. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_aa042a92c959c8f225e27710684d3a72d}{decode\+State}} (const std\+::string \&state) const
+\begin{DoxyCompactList}\small\item\em Validates and decodes a state parameter. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespaceWt_1_1Http_a4a1e30eb403b05b4e5afc5c6286dd6b9}{Http\+::\+Method}} \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_aa0f131674fc1ec3705c5498a477af55d}{token\+Request\+Method}} () const
+\begin{DoxyCompactList}\small\item\em Returns the H\+T\+TP method used for the token request. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{namespaceWt_1_1Auth_a4e55a92c5ff4dd9bbd74439868b8400d}{Client\+Secret\+Method}} \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a375e645974e14c31d7ef755526cc35a4}{client\+Secret\+Method}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the method to transfer the client secret. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a01102df872a8762a3578186a55e953b6}\label{classWt_1_1Auth_1_1OAuthService_a01102df872a8762a3578186a55e953b6}} 
+std\+::string {\bfseries generate\+Redirect\+Endpoint} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_aa2551efcf342ace91fb07e5d6a853e7a}\label{classWt_1_1Auth_1_1OAuthService_aa2551efcf342ace91fb07e5d6a853e7a}} 
+virtual std\+::string {\bfseries redirect\+Internal\+Path} () const
+\item 
+void \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a850ad411f84c427d9eff0334499eb3d4}{configure\+Redirect\+Endpoint}} () const
+\begin{DoxyCompactList}\small\item\em Configures the static resource implementing the redirect endpoint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a8a7cf43ea7363e198caf751c6d29cca6}\label{classWt_1_1Auth_1_1OAuthService_a8a7cf43ea7363e198caf751c6d29cca6}} 
+static std\+::string {\bfseries configuration\+Property} (const std\+::string \&property)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a873204208d5e4d0919abda3f0beaa4ae}\label{classWt_1_1Auth_1_1OAuthService_a873204208d5e4d0919abda3f0beaa4ae}} 
+{\bfseries O\+Auth\+Service} (const \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService}{O\+Auth\+Service}} \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a4c21d52fccc8d269f1fc8a7015ff2d8e}\label{classWt_1_1Auth_1_1OAuthService_a4c21d52fccc8d269f1fc8a7015ff2d8e}} 
+const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} \& {\bfseries base\+Auth\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_aa6ebeab198a5462bc61e38943029cd7d}\label{classWt_1_1Auth_1_1OAuthService_aa6ebeab198a5462bc61e38943029cd7d}} 
+std\+::unique\+\_\+ptr$<$ Impl $>$ {\bfseries impl\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a1761054ed169ec7b9cf546aa364d1ac1}\label{classWt_1_1Auth_1_1OAuthService_a1761054ed169ec7b9cf546aa364d1ac1}} 
+bool {\bfseries use\+Popup\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An O\+Auth authorization (and authentication) service provider. 
+
+This class implements an O\+Auth client (\href{http://tools.ietf.org/html/draft-ietf-oauth-v2-22}{\texttt{ 2.\+0 draft}}), which can be used to allow the user to authorize access to information provided by a third-\/party O\+Auth service provider. This allows, among other things, for a user to safely authenticate with your web application without needing to store or even handle his authorization credentials (such as a password), a pattern called \char`\"{}\+O\+Auth2 connect\char`\"{}.
+
+The O\+Auth protocol provides a standard for a user to authorize access to protected resources made available by a third party service. The process starts with the user authenticating on an \char`\"{}authorization page\char`\"{} and authorizing access. This results eventually in an access token for the web application. The actual use of this token, to obtain certain information (such as an authenticated identity) from the third party is however not standardized, and there are many other uses of O\+Auth besides authentication.
+
+Because the focus of the Wt\+::\+Auth library is authentication, the O\+Auth class also contains the implementation for using the access token for authentication (\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_ae1e483eb0a1bb3032e15bcbc78ff47e9}{O\+Auth\+Process\+::get\+Identity()}}).
+
+Like all {\bfseries{service classes}}, this class holds only configuration state. Thus, once configured, it can be safely shared between multiple sessions since its state (the configuration) is read-\/only.
+
+The O\+Auth authorization protocol, including the subsequent use for authentication, consists of a number of consecutive steps, some of which require user interaction, and some which require the use of remote web services. The state machine for this process is implemented in an \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess}{O\+Auth\+Process}}. To use O\+Auth, you need to create such a process and listen for state changes.
+
+Usage example\+: 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_acfe5b14051c69894c8e49e6a8a68b271}\label{classWt_1_1Auth_1_1OAuthService_acfe5b14051c69894c8e49e6a8a68b271}} 
+\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}!OAuthService@{OAuthService}}
+\index{OAuthService@{OAuthService}!Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+\doxysubsubsection{\texorpdfstring{OAuthService()}{OAuthService()}}
+{\footnotesize\ttfamily Wt\+::\+Auth\+::\+O\+Auth\+Service\+::\+O\+Auth\+Service (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Auth\+Service}} \&}]{base\+Auth }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Creates a new O\+Auth service. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a040351f2a2b956c059ea9974e6829d13}\label{classWt_1_1Auth_1_1OAuthService_a040351f2a2b956c059ea9974e6829d13}} 
+\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}!authenticationScope@{authenticationScope}}
+\index{authenticationScope@{authenticationScope}!Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+\doxysubsubsection{\texorpdfstring{authenticationScope()}{authenticationScope()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+O\+Auth\+Service\+::authentication\+Scope (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the scope needed for authentication. 
+
+This returns the scope that is needed (and sufficient) for obtaining identity information, and thus to authenticate the user.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_ae1e483eb0a1bb3032e15bcbc78ff47e9}{O\+Auth\+Process\+::get\+Identity()}}, \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess_ad5f0e4c66f098d1b3e61fbe8ae36e742}{O\+Auth\+Process\+::start\+Authenticate()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_ab7747346bb35de9a01cacf3fac0d1a76}{Wt\+::\+Auth\+::\+Oidc\+Service}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1FacebookService_a6c91c35a659655f4ee84fcd190c880ae}{Wt\+::\+Auth\+::\+Facebook\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_acab141d7eb5a987baf8ea9281bf00a9a}\label{classWt_1_1Auth_1_1OAuthService_acab141d7eb5a987baf8ea9281bf00a9a}} 
+\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}!authorizationEndpoint@{authorizationEndpoint}}
+\index{authorizationEndpoint@{authorizationEndpoint}!Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+\doxysubsubsection{\texorpdfstring{authorizationEndpoint()}{authorizationEndpoint()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+O\+Auth\+Service\+::authorization\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the authorization endpoint U\+RL. 
+
+This is a remote U\+RL which hosts the O\+Auth authorization user interface. This U\+RL is loaded in the popup window at the start of an authorization process. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a4421754ea3a7ac197d92cade6c9b0303}{Wt\+::\+Auth\+::\+Oidc\+Service}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1FacebookService_abd3eeb55abcdb0b25908895a5cc8a263}{Wt\+::\+Auth\+::\+Facebook\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a3f5d653cb613109848321463663ba636}\label{classWt_1_1Auth_1_1OAuthService_a3f5d653cb613109848321463663ba636}} 
+\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}!clientId@{clientId}}
+\index{clientId@{clientId}!Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+\doxysubsubsection{\texorpdfstring{clientId()}{clientId()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+O\+Auth\+Service\+::client\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the client ID. 
+
+This is the identification for this web application with the O\+Auth authorization server. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_aadd82ba79a73180a507bc7fe948befe1}{Wt\+::\+Auth\+::\+Oidc\+Service}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1FacebookService_a3312f5120910d73f263814bcdcce4d27}{Wt\+::\+Auth\+::\+Facebook\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a10f60c79a0892266e75fef4b0965c1f8}\label{classWt_1_1Auth_1_1OAuthService_a10f60c79a0892266e75fef4b0965c1f8}} 
+\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}!clientSecret@{clientSecret}}
+\index{clientSecret@{clientSecret}!Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+\doxysubsubsection{\texorpdfstring{clientSecret()}{clientSecret()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+O\+Auth\+Service\+::client\+Secret (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the client secret. 
+
+This is the secret credentials for this web application with the O\+Auth authorization server. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a1a91ecf656aaa0cc99e26efe075c6fbe}{Wt\+::\+Auth\+::\+Oidc\+Service}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1FacebookService_a0194ad438f026c2c96b0add384757469}{Wt\+::\+Auth\+::\+Facebook\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a375e645974e14c31d7ef755526cc35a4}\label{classWt_1_1Auth_1_1OAuthService_a375e645974e14c31d7ef755526cc35a4}} 
+\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}!clientSecretMethod@{clientSecretMethod}}
+\index{clientSecretMethod@{clientSecretMethod}!Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+\doxysubsubsection{\texorpdfstring{clientSecretMethod()}{clientSecretMethod()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespaceWt_1_1Auth_a4e55a92c5ff4dd9bbd74439868b8400d}{Client\+Secret\+Method}} Wt\+::\+Auth\+::\+O\+Auth\+Service\+::client\+Secret\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the method to transfer the client secret. 
+
+Some implementations (like Facebook) encode the secret in the G\+ET request parameters, while this is explicitly not allowed in the O\+Auth 2.\+0 specification.
+
+The default implementation returns Http\+Authorization\+Basic (the recommended method). 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a31d1f85ee72756275295a0524442b591}{Wt\+::\+Auth\+::\+Oidc\+Service}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1FacebookService_a4ae9fbc507943ba039e547f43a64fc96}{Wt\+::\+Auth\+::\+Facebook\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a850ad411f84c427d9eff0334499eb3d4}\label{classWt_1_1Auth_1_1OAuthService_a850ad411f84c427d9eff0334499eb3d4}} 
+\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}!configureRedirectEndpoint@{configureRedirectEndpoint}}
+\index{configureRedirectEndpoint@{configureRedirectEndpoint}!Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+\doxysubsubsection{\texorpdfstring{configureRedirectEndpoint()}{configureRedirectEndpoint()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+O\+Auth\+Service\+::configure\+Redirect\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Configures the static resource implementing the redirect endpoint. 
+
+By default, this endpoint is configured whenever it\textquotesingle{}s necessary, but one may also configure it in advance, for example in a multi-\/process deployment (Fast\+C\+GI). \mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a2978c25f9b60f7e0b5fac414e23923a6}\label{classWt_1_1Auth_1_1OAuthService_a2978c25f9b60f7e0b5fac414e23923a6}} 
+\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}!createProcess@{createProcess}}
+\index{createProcess@{createProcess}!Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+\doxysubsubsection{\texorpdfstring{createProcess()}{createProcess()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthProcess}{O\+Auth\+Process}}$>$ Wt\+::\+Auth\+::\+O\+Auth\+Service\+::create\+Process (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{scope }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Creates a new authorization process. 
+
+This creates a new authorization process for the indicated scope. Valid names for the scope are service provider dependent.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a040351f2a2b956c059ea9974e6829d13}{authentication\+Scope()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a739fe836b326bc1b47b6e25845689a53}{Wt\+::\+Auth\+::\+Oidc\+Service}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1FacebookService_aae8a39ffb92c6457adfb1597ee6542c7}{Wt\+::\+Auth\+::\+Facebook\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_aa042a92c959c8f225e27710684d3a72d}\label{classWt_1_1Auth_1_1OAuthService_aa042a92c959c8f225e27710684d3a72d}} 
+\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}!decodeState@{decodeState}}
+\index{decodeState@{decodeState}!Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+\doxysubsubsection{\texorpdfstring{decodeState()}{decodeState()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+O\+Auth\+Service\+::decode\+State (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{state }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Validates and decodes a state parameter. 
+
+This function returns the session\+Id that is encoded in the state, if the signature validates that it is an authentic state generated by \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_aabf0af50eec89fefede040a8f4f1f993}{encode\+State()}}. \mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a17346a2921fe706bc83018fb2443f236}\label{classWt_1_1Auth_1_1OAuthService_a17346a2921fe706bc83018fb2443f236}} 
+\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}!description@{description}}
+\index{description@{description}!Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+\doxysubsubsection{\texorpdfstring{description()}{description()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WString}{W\+String}} Wt\+::\+Auth\+::\+O\+Auth\+Service\+::description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the provider description. 
+
+This returns a description useful for e.\+g. tool tips on a login icon.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a5718ddabc7de591b5f056daf1f17701e}{name()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a5ba4e08a636113d29e6e72adbf188d20}{Wt\+::\+Auth\+::\+Oidc\+Service}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1FacebookService_a7bc8d0301d943db166f60195e7a9ee51}{Wt\+::\+Auth\+::\+Facebook\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_aabf0af50eec89fefede040a8f4f1f993}\label{classWt_1_1Auth_1_1OAuthService_aabf0af50eec89fefede040a8f4f1f993}} 
+\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}!encodeState@{encodeState}}
+\index{encodeState@{encodeState}!Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+\doxysubsubsection{\texorpdfstring{encodeState()}{encodeState()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+O\+Auth\+Service\+::encode\+State (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{session\+Id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Derives a state value from the session ID. 
+
+The state value protects the authorization protocol against misuse, and is used to connect an authorization code response with a particular request.
+
+In the default implementation the state is the {\ttfamily session\+Id}, crytpographically signed. This signature is verified in \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_aa042a92c959c8f225e27710684d3a72d}{decode\+State()}}. \mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a5718ddabc7de591b5f056daf1f17701e}\label{classWt_1_1Auth_1_1OAuthService_a5718ddabc7de591b5f056daf1f17701e}} 
+\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}!name@{name}}
+\index{name@{name}!Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+O\+Auth\+Service\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the provider name. 
+
+This is a short identifier.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a17346a2921fe706bc83018fb2443f236}{description()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_adcb56614c72828bc7a4b423f9c4ef543}{Wt\+::\+Auth\+::\+Oidc\+Service}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1FacebookService_a4fa133eb111b6043218cbbbe3b1e3835}{Wt\+::\+Auth\+::\+Facebook\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a3f5f2ca918803753061105c0a5836a1e}\label{classWt_1_1Auth_1_1OAuthService_a3f5f2ca918803753061105c0a5836a1e}} 
+\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}!popupHeight@{popupHeight}}
+\index{popupHeight@{popupHeight}!Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+\doxysubsubsection{\texorpdfstring{popupHeight()}{popupHeight()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+Auth\+::\+O\+Auth\+Service\+::popup\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the desired height for the popup window. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_ae7caef7e593e4e078a50e5f872f14d20}{popup\+Width()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_ab2a4393cf9b26dd929c97c54808138e7}{Wt\+::\+Auth\+::\+Oidc\+Service}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1FacebookService_a2400c9c52cedbc827b12402e9c3be157}{Wt\+::\+Auth\+::\+Facebook\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_ae7caef7e593e4e078a50e5f872f14d20}\label{classWt_1_1Auth_1_1OAuthService_ae7caef7e593e4e078a50e5f872f14d20}} 
+\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}!popupWidth@{popupWidth}}
+\index{popupWidth@{popupWidth}!Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+\doxysubsubsection{\texorpdfstring{popupWidth()}{popupWidth()}}
+{\footnotesize\ttfamily virtual int Wt\+::\+Auth\+::\+O\+Auth\+Service\+::popup\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the desired width for the popup window. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_a3f5f2ca918803753061105c0a5836a1e}{popup\+Height()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a8d98be3318242d985f32d16e1e76179e}{Wt\+::\+Auth\+::\+Oidc\+Service}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1FacebookService_a41b27992df45a874cd98601fafe7cc9e}{Wt\+::\+Auth\+::\+Facebook\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_add76eee14370693fa109c2768ca70725}\label{classWt_1_1Auth_1_1OAuthService_add76eee14370693fa109c2768ca70725}} 
+\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}!redirectEndpoint@{redirectEndpoint}}
+\index{redirectEndpoint@{redirectEndpoint}!Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+\doxysubsubsection{\texorpdfstring{redirectEndpoint()}{redirectEndpoint()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+O\+Auth\+Service\+::redirect\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the redirection endpoint U\+RL. 
+
+This is the local U\+RL to which the browser is redirect from the service provider, after the authorization process. You need to configure this U\+RL with the third party authentication service.
+
+A static resource will be deployed at this U\+RL. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_aef1aceb2bd123fab39e352a1fbb4f69f}{Wt\+::\+Auth\+::\+Oidc\+Service}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1FacebookService_a3d213ce7a53461478b323b82f4f5d2ba}{Wt\+::\+Auth\+::\+Facebook\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a4b03967bf49f5e53d0ecefbe78f6ec68}\label{classWt_1_1Auth_1_1OAuthService_a4b03967bf49f5e53d0ecefbe78f6ec68}} 
+\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}!redirectEndpointPath@{redirectEndpointPath}}
+\index{redirectEndpointPath@{redirectEndpointPath}!Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+\doxysubsubsection{\texorpdfstring{redirectEndpointPath()}{redirectEndpointPath()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+O\+Auth\+Service\+::redirect\+Endpoint\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the deployment path of the redirection endpoint. 
+
+This returns the path at which the static resource is deployed that corresponds to the \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_add76eee14370693fa109c2768ca70725}{redirect\+Endpoint()}}.
+
+The default implementation will derive this path from the \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthService_add76eee14370693fa109c2768ca70725}{redirect\+Endpoint()}} U\+RL. 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1Auth_1_1FacebookService_aa333f480ebff65a014f8d5c699320e0a}{Wt\+::\+Auth\+::\+Facebook\+Service}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1GoogleService_a8beae22dae2ca60cb54c7905da8c68d3}{Wt\+::\+Auth\+::\+Google\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_a72f987f61e7a53636ac3f08b61bee2a5}\label{classWt_1_1Auth_1_1OAuthService_a72f987f61e7a53636ac3f08b61bee2a5}} 
+\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}!setPopupEnabled@{setPopupEnabled}}
+\index{setPopupEnabled@{setPopupEnabled}!Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+\doxysubsubsection{\texorpdfstring{setPopupEnabled()}{setPopupEnabled()}}
+{\footnotesize\ttfamily void Wt\+::\+Auth\+::\+O\+Auth\+Service\+::set\+Popup\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+Configure if a popup should be used for the login. 
+
+When set to false, the session will be suspended when the login starts, allowing the state to be restored when it completes. A timeout can be configured in wt\+\_\+config.\+xml (see {\ttfamily oauth2-\/redirect-\/timeout}).
+
+The default value is false. When Java\+Script is not available, a redirect without popup is always used.
+
+\begin{DoxyNote}{Note}
+In Wt 4.\+8.\+0 the default value changed from true to false 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_ad649c21d85628e58eeba7171f1bb9990}\label{classWt_1_1Auth_1_1OAuthService_ad649c21d85628e58eeba7171f1bb9990}} 
+\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}!tokenEndpoint@{tokenEndpoint}}
+\index{tokenEndpoint@{tokenEndpoint}!Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+\doxysubsubsection{\texorpdfstring{tokenEndpoint()}{tokenEndpoint()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+O\+Auth\+Service\+::token\+Endpoint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the token endpoint U\+RL. 
+
+This is a remote U\+RL which hosts a web-\/service that generates access tokens. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Auth_1_1OidcService_a1ac42991b7fb3fa3fc74f30409940517}{Wt\+::\+Auth\+::\+Oidc\+Service}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1FacebookService_a5fc05b875ba64aabc70b3436b896f70b}{Wt\+::\+Auth\+::\+Facebook\+Service}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1OAuthService_aa0f131674fc1ec3705c5498a477af55d}\label{classWt_1_1Auth_1_1OAuthService_aa0f131674fc1ec3705c5498a477af55d}} 
+\index{Wt::Auth::OAuthService@{Wt::Auth::OAuthService}!tokenRequestMethod@{tokenRequestMethod}}
+\index{tokenRequestMethod@{tokenRequestMethod}!Wt::Auth::OAuthService@{Wt::Auth::OAuthService}}
+\doxysubsubsection{\texorpdfstring{tokenRequestMethod()}{tokenRequestMethod()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespaceWt_1_1Http_a4a1e30eb403b05b4e5afc5c6286dd6b9}{Http\+::\+Method}} Wt\+::\+Auth\+::\+O\+Auth\+Service\+::token\+Request\+Method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the H\+T\+TP method used for the token request. 
+
+While the current O\+Auth 2.\+0 draft mandates the use of P\+O\+ST, some implementations (like Facebook) use U\+R\+L-\/encoding and a G\+ET request.
+
+The default implementation returns \mbox{\hyperlink{namespaceWt_1_1Http_a4a1e30eb403b05b4e5afc5c6286dd6b9a03d947a2158373c3b9d74325850cb8b9}{Http\+::\+Method\+::\+Post}} (corresponding to the current draft). 
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1Auth_1_1FacebookService_acd123d525283e5722e43c5483c311807}{Wt\+::\+Auth\+::\+Facebook\+Service}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/O\+Auth\+Service.\+h\end{DoxyCompactItemize}

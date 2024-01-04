@@ -1,0 +1,542 @@
+\hypertarget{classWt_1_1Http_1_1Request}{}\doxysection{Wt\+::Http\+::Request Class Reference}
+\label{classWt_1_1Http_1_1Request}\index{Wt::Http::Request@{Wt::Http::Request}}
+
+
+A resource request.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Http/\+Request.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::Http\+::Request\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWt_1_1Http_1_1Request_1_1ByteRange}{Byte\+Range}}
+\begin{DoxyCompactList}\small\item\em A single byte range. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classWt_1_1Http_1_1Request_1_1ByteRangeSpecifier}{Byte\+Range\+Specifier}}
+\begin{DoxyCompactList}\small\item\em A byte range specifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classWt_1_1Http_1_1Request_af227a7cda2c6bc96554cbd3554c3004c}{Cookie\+Map}}
+\begin{DoxyCompactList}\small\item\em Cookie map type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Parameter\+Map}} \& \mbox{\hyperlink{classWt_1_1Http_1_1Request_a87afdb7b0ded9dd3fa1b8e7685616857}{get\+Parameter\+Map}} () const
+\begin{DoxyCompactList}\small\item\em Returns the query parameters. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespaceWt_1_1Http_a90602329029048d738daae9ba63e059a}{Uploaded\+File\+Map}} \& \mbox{\hyperlink{classWt_1_1Http_1_1Request_ac09e96865c5dc1cde36263f8972557e3}{uploaded\+Files}} () const
+\begin{DoxyCompactList}\small\item\em Returns uploaded file parameters. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespaceWt_1_1Http_ae1470e15e15eab123a19e4204f624598}{Parameter\+Values}} \& \mbox{\hyperlink{classWt_1_1Http_1_1Request_a90136174096ba5186feccc9b2df831b0}{get\+Parameter\+Values}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Returns all values for a query parameter. \end{DoxyCompactList}\item 
+const std\+::string $\ast$ \mbox{\hyperlink{classWt_1_1Http_1_1Request_ac5a962620b3e2abe0196a30ed3fbbf4a}{get\+Parameter}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Returns a query parameter value. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1Http_1_1UploadedFile}{Uploaded\+File}} $\ast$ \mbox{\hyperlink{classWt_1_1Http_1_1Request_afd284072657dd7789b5fdcff3082fc42}{get\+Uploaded\+File}} (const std\+::string \&name) const
+\begin{DoxyCompactList}\small\item\em Returns an uploaded file. \end{DoxyCompactList}\item 
+\+::int64\+\_\+t \mbox{\hyperlink{classWt_1_1Http_1_1Request_a9cc1c9ccc77d8421edbe9de1c69e0e6f}{too\+Large}} () const
+\begin{DoxyCompactList}\small\item\em Returns a non-\/zero value that exceeded the maximum allowed request. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation}{Response\+Continuation}} $\ast$ \mbox{\hyperlink{classWt_1_1Http_1_1Request_a9fe40c73e6d2bd3b4fec6f2476d71265}{continuation}} () const
+\begin{DoxyCompactList}\small\item\em Returns a continuation object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Http_1_1Request_a66122e46066a0c5f428021b42b7467f7}{server\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the (public) server name. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Http_1_1Request_afcf1fcbb2cd82d6d55489f0208ec37d1}{server\+Port}} () const
+\begin{DoxyCompactList}\small\item\em Returns the server port. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Http_1_1Request_a991ba557992ea494565fe1854885b1b9}{path}} () const
+\begin{DoxyCompactList}\small\item\em Returns the request path. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Http_1_1Request_ac1fb1a90df0fc656567c169f116abe22}{path\+Info}} () const
+\begin{DoxyCompactList}\small\item\em Returns the request path info. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_a5fc1ed14d4f894768f79c64e4046d293}\label{classWt_1_1Http_1_1Request_a5fc1ed14d4f894768f79c64e4046d293}} 
+std\+::string \mbox{\hyperlink{classWt_1_1Http_1_1Request_a5fc1ed14d4f894768f79c64e4046d293}{query\+String}} () const
+\begin{DoxyCompactList}\small\item\em Returns the request query string. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Http_1_1Request_a970b7d266c6bead893ec6334520807bf}{url\+Scheme}} () const
+\begin{DoxyCompactList}\small\item\em Returns the url scheme used. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{classWt_1_1Http_1_1Request_ab6d4c4890155d4992764ff02d34fcdd2}{in}} () const
+\begin{DoxyCompactList}\small\item\em Returns the input stream for parsing the body. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Http_1_1Request_a9149056d8f404948c4763e9703a69d1c}{content\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the \char`\"{}\+Content Type\char`\"{} of the request body. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Http_1_1Request_a42b2cff1df874dc86c20eef046231113}{content\+Length}} () const
+\begin{DoxyCompactList}\small\item\em Returns the \char`\"{}\+Content Length\char`\"{} of the request body. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Http_1_1Request_a1051d981d70081d26f04b81f9dfdb4d0}{user\+Agent}} () const
+\begin{DoxyCompactList}\small\item\em Returns the user agent. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Http_1_1Request_a5f18be4100482713c257bea43a3c913b}{client\+Address}} () const
+\begin{DoxyCompactList}\small\item\em Returns the IP address of the client. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Http_1_1Request_ad8a1199b8692854fefb76f494d793f93}{host\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the host name used in the request. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1Http_1_1Request_af227a7cda2c6bc96554cbd3554c3004c}{Cookie\+Map}} \& \mbox{\hyperlink{classWt_1_1Http_1_1Request_ada0f476fa2c988c06dcdb0932bd379b3}{cookies}} () const
+\begin{DoxyCompactList}\small\item\em Returns the cookies. \end{DoxyCompactList}\item 
+const std\+::string $\ast$ \mbox{\hyperlink{classWt_1_1Http_1_1Request_a593883d9b460b56484c74db0e0bcecad}{get\+Cookie\+Value}} (const std\+::string \&cookie\+Name) const
+\begin{DoxyCompactList}\small\item\em Returns a cookie value. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Http_1_1Request_a061c82381338a0997899bc74c10986fb}{header\+Value}} (const std\+::string \&field) const
+\begin{DoxyCompactList}\small\item\em Returns a header value. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1Http_1_1Message_1_1Header}{Message\+::\+Header}} $>$ \mbox{\hyperlink{classWt_1_1Http_1_1Request_af063dbe85d5cf6f606a15837b7bed1f5}{headers}} () const
+\begin{DoxyCompactList}\small\item\em Returns all headers. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Http_1_1Request_afe0483237ad683f1d1958f84f4f5357f}{get\+Cgi\+Value}} (const std\+::string \&var\+Name) const
+\begin{DoxyCompactList}\small\item\em Returns a raw C\+GI environment variable. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Http_1_1Request_a1f2aa595d8c94fe9ec0f0586851bdcea}{method}} () const
+\begin{DoxyCompactList}\small\item\em Returns the request method. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Http_1_1Request_1_1ByteRangeSpecifier}{Byte\+Range\+Specifier}} \mbox{\hyperlink{classWt_1_1Http_1_1Request_a8ca558a8969a214bce810c4bd4741e63}{get\+Ranges}} (\+::int64\+\_\+t filesize) const
+\begin{DoxyCompactList}\small\item\em Returns the requested ranges as in the H\+T\+TP Range header. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WSslInfo}{W\+Ssl\+Info}} $\ast$ \mbox{\hyperlink{classWt_1_1Http_1_1Request_af4d09d8e5da790c1535d9db24da2a803}{ssl\+Info}} () const
+\begin{DoxyCompactList}\small\item\em Returns information on the S\+SL client certificate or {\ttfamily nullptr} if no authentication took place. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1Http_1_1Request_a56f41f5df0dc8cc160c313fea44d1c1c}{url\+Param}} (const std\+::string \&param) const
+\begin{DoxyCompactList}\small\item\em Get the value for the given U\+RL parameter. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \& \mbox{\hyperlink{classWt_1_1Http_1_1Request_aa64a90cc2d03c5219d725247bc9f946f}{url\+Params}} () const
+\begin{DoxyCompactList}\small\item\em Get all U\+RL parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_a8ef721a429f49374081468a3b57d19e9}\label{classWt_1_1Http_1_1Request_a8ef721a429f49374081468a3b57d19e9}} 
+static \mbox{\hyperlink{classWt_1_1Http_1_1Request_1_1ByteRangeSpecifier}{Byte\+Range\+Specifier}} {\bfseries get\+Ranges} (const std\+::string \&header, \+::int64\+\_\+t filesize)
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_a7f9a897fc566e19b944bb0addb95fba6}\label{classWt_1_1Http_1_1Request_a7f9a897fc566e19b944bb0addb95fba6}} 
+static void {\bfseries parse\+Form\+Url\+Encoded} (const std\+::string \&s, \mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Parameter\+Map}} \&parameters)
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_a155d7b786bb529948df43cf3ff4a4ac6}\label{classWt_1_1Http_1_1Request_a155d7b786bb529948df43cf3ff4a4ac6}} 
+static void {\bfseries parse\+Cookies} (const std\+::string \&cookie, std\+::map$<$ std\+::string, std\+::string $>$ \&result)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_a737271f114d8825d0dc0bb6f8d1c9934}\label{classWt_1_1Http_1_1Request_a737271f114d8825d0dc0bb6f8d1c9934}} 
+{\bfseries Request} (const \mbox{\hyperlink{classWt_1_1WebRequest}{Web\+Request}} \&request, \mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation}{Response\+Continuation}} $\ast$\mbox{\hyperlink{classWt_1_1Http_1_1Request_a9fe40c73e6d2bd3b4fec6f2476d71265}{continuation}})
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_a688bf64ee68f144b1a76de597724cc01}\label{classWt_1_1Http_1_1Request_a688bf64ee68f144b1a76de597724cc01}} 
+{\bfseries Request} (const \mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Parameter\+Map}} \&parameters, const \mbox{\hyperlink{namespaceWt_1_1Http_a90602329029048d738daae9ba63e059a}{Uploaded\+File\+Map}} \&files)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_a9c5bbf958bc4aed9bf2a5f0a1021aa14}\label{classWt_1_1Http_1_1Request_a9c5bbf958bc4aed9bf2a5f0a1021aa14}} 
+const \mbox{\hyperlink{classWt_1_1WebRequest}{Web\+Request}} $\ast$ {\bfseries request\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_aa1edac1cc7097cf4319d55ba0eae6316}\label{classWt_1_1Http_1_1Request_aa1edac1cc7097cf4319d55ba0eae6316}} 
+const \mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Parameter\+Map}} \& {\bfseries parameters\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_aefde17f3cf2d9214158a4e82c50a9438}\label{classWt_1_1Http_1_1Request_aefde17f3cf2d9214158a4e82c50a9438}} 
+const \mbox{\hyperlink{namespaceWt_1_1Http_a90602329029048d738daae9ba63e059a}{Uploaded\+File\+Map}} \& {\bfseries files\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_ad39c3479e72c8c11f49420f10f234028}\label{classWt_1_1Http_1_1Request_ad39c3479e72c8c11f49420f10f234028}} 
+\mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation}{Response\+Continuation}} $\ast$ {\bfseries continuation\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_a084d94c3c59c99debe4bd6f233c62435}\label{classWt_1_1Http_1_1Request_a084d94c3c59c99debe4bd6f233c62435}} 
+std\+::map$<$ std\+::string, std\+::string $>$ {\bfseries cookies\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_a1c65b330acf4ae38060d582524903c5c}\label{classWt_1_1Http_1_1Request_a1c65b330acf4ae38060d582524903c5c}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WSslInfo}{W\+Ssl\+Info}} $>$ {\bfseries ssl\+Info\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_ac331572ec8a235b3ebf1030c5614cdec}\label{classWt_1_1Http_1_1Request_ac331572ec8a235b3ebf1030c5614cdec}} 
+class {\bfseries Wt\+::\+W\+Resource}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_ac6243a6417de40a9e95175fd4ee87a06}\label{classWt_1_1Http_1_1Request_ac6243a6417de40a9e95175fd4ee87a06}} 
+class {\bfseries Wt\+::\+Web\+Session}
+\item 
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_a7439d62794b00ea8af2fbd65dbf2dcd4}\label{classWt_1_1Http_1_1Request_a7439d62794b00ea8af2fbd65dbf2dcd4}} 
+class {\bfseries Wt\+::\+Http\+::\+Response\+Continuation}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A resource request. 
+
+The request provides information of parameters, including uploaded files, that were present in a request to a \mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{W\+Resource\+::handle\+Request()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_af227a7cda2c6bc96554cbd3554c3004c}\label{classWt_1_1Http_1_1Request_af227a7cda2c6bc96554cbd3554c3004c}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!CookieMap@{CookieMap}}
+\index{CookieMap@{CookieMap}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{CookieMap}{CookieMap}}
+{\footnotesize\ttfamily typedef std\+::map$<$std\+::string, std\+::string$>$ \mbox{\hyperlink{classWt_1_1Http_1_1Request_af227a7cda2c6bc96554cbd3554c3004c}{Wt\+::\+Http\+::\+Request\+::\+Cookie\+Map}}}
+
+
+
+Cookie map type. 
+
+A map which associates a cookie name with a cookie value.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Request_ada0f476fa2c988c06dcdb0932bd379b3}{cookies()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_a5f18be4100482713c257bea43a3c913b}\label{classWt_1_1Http_1_1Request_a5f18be4100482713c257bea43a3c913b}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!clientAddress@{clientAddress}}
+\index{clientAddress@{clientAddress}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{clientAddress()}{clientAddress()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Http\+::\+Request\+::client\+Address (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the IP address of the client. 
+
+The (most likely) IP address of the client that is connected to this session.
+
+This is taken to be the first public address that is given in the Client-\/\+IP header, or in the X-\/\+Forwarded-\/\+For header (in case the client is behind a proxy). If none of these headers is present, the remote socket IP address is used. \mbox{\Hypertarget{classWt_1_1Http_1_1Request_a42b2cff1df874dc86c20eef046231113}\label{classWt_1_1Http_1_1Request_a42b2cff1df874dc86c20eef046231113}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!contentLength@{contentLength}}
+\index{contentLength@{contentLength}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{contentLength()}{contentLength()}}
+{\footnotesize\ttfamily int Wt\+::\+Http\+::\+Request\+::content\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the \char`\"{}\+Content Length\char`\"{} of the request body. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Request_ab6d4c4890155d4992764ff02d34fcdd2}{in()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_a9149056d8f404948c4763e9703a69d1c}\label{classWt_1_1Http_1_1Request_a9149056d8f404948c4763e9703a69d1c}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!contentType@{contentType}}
+\index{contentType@{contentType}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{contentType()}{contentType()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Http\+::\+Request\+::content\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the \char`\"{}\+Content Type\char`\"{} of the request body. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Request_ab6d4c4890155d4992764ff02d34fcdd2}{in()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_a9fe40c73e6d2bd3b4fec6f2476d71265}\label{classWt_1_1Http_1_1Request_a9fe40c73e6d2bd3b4fec6f2476d71265}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!continuation@{continuation}}
+\index{continuation@{continuation}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{continuation()}{continuation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation}{Response\+Continuation}}$\ast$ Wt\+::\+Http\+::\+Request\+::continuation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns a continuation object. 
+
+Returns a non-\/zero continuation object if the request is a continuation request for an earlier response for which a continuation was created.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Response_a76391b7300bdf3be3ca0a00f3670d592}{Response\+::create\+Continuation()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_ada0f476fa2c988c06dcdb0932bd379b3}\label{classWt_1_1Http_1_1Request_ada0f476fa2c988c06dcdb0932bd379b3}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!cookies@{cookies}}
+\index{cookies@{cookies}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{cookies()}{cookies()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Http_1_1Request_af227a7cda2c6bc96554cbd3554c3004c}{Cookie\+Map}}\& Wt\+::\+Http\+::\+Request\+::cookies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the cookies. 
+
+This returns all cookies set for this request.
+
+Not all clients may support cookies or have cookies enabled.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Request_a593883d9b460b56484c74db0e0bcecad}{get\+Cookie\+Value()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_afe0483237ad683f1d1958f84f4f5357f}\label{classWt_1_1Http_1_1Request_afe0483237ad683f1d1958f84f4f5357f}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!getCgiValue@{getCgiValue}}
+\index{getCgiValue@{getCgiValue}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{getCgiValue()}{getCgiValue()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Http\+::\+Request\+::get\+Cgi\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{var\+Name }\end{DoxyParamCaption}) const}
+
+
+
+Returns a raw C\+GI environment variable. 
+
+Retrieves the value for the given C\+GI environment variable (like {\ttfamily \char`\"{}\+S\+S\+L\+\_\+\+C\+L\+I\+E\+N\+T\+\_\+\+S\+\_\+\+D\+N\+\_\+\+C\+N\char`\"{}}), if it is defined, otherwise an empty string. \mbox{\Hypertarget{classWt_1_1Http_1_1Request_a593883d9b460b56484c74db0e0bcecad}\label{classWt_1_1Http_1_1Request_a593883d9b460b56484c74db0e0bcecad}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!getCookieValue@{getCookieValue}}
+\index{getCookieValue@{getCookieValue}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{getCookieValue()}{getCookieValue()}}
+{\footnotesize\ttfamily const std\+::string$\ast$ Wt\+::\+Http\+::\+Request\+::get\+Cookie\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{cookie\+Name }\end{DoxyParamCaption}) const}
+
+
+
+Returns a cookie value. 
+
+Returns {\ttfamily nullptr} if no value was set for the given cookie.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Request_ada0f476fa2c988c06dcdb0932bd379b3}{cookies()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_ac5a962620b3e2abe0196a30ed3fbbf4a}\label{classWt_1_1Http_1_1Request_ac5a962620b3e2abe0196a30ed3fbbf4a}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!getParameter@{getParameter}}
+\index{getParameter@{getParameter}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{getParameter()}{getParameter()}}
+{\footnotesize\ttfamily const std\+::string$\ast$ Wt\+::\+Http\+::\+Request\+::get\+Parameter (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Returns a query parameter value. 
+
+Returns the first value defined for a parameter named {\ttfamily name} or {\ttfamily nullptr} if the paramter does not exist. \mbox{\Hypertarget{classWt_1_1Http_1_1Request_a87afdb7b0ded9dd3fa1b8e7685616857}\label{classWt_1_1Http_1_1Request_a87afdb7b0ded9dd3fa1b8e7685616857}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!getParameterMap@{getParameterMap}}
+\index{getParameterMap@{getParameterMap}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{getParameterMap()}{getParameterMap()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Parameter\+Map}}\& Wt\+::\+Http\+::\+Request\+::get\+Parameter\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the query parameters. 
+
+Returns parameters that were passed to the query, either inside the U\+RL, or inside a P\+O\+ST request, excluding uploaded files.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Request_ac09e96865c5dc1cde36263f8972557e3}{uploaded\+Files()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_a90136174096ba5186feccc9b2df831b0}\label{classWt_1_1Http_1_1Request_a90136174096ba5186feccc9b2df831b0}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!getParameterValues@{getParameterValues}}
+\index{getParameterValues@{getParameterValues}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{getParameterValues()}{getParameterValues()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceWt_1_1Http_ae1470e15e15eab123a19e4204f624598}{Parameter\+Values}}\& Wt\+::\+Http\+::\+Request\+::get\+Parameter\+Values (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Returns all values for a query parameter. 
+
+Returns all values defined for a parameter named {\ttfamily name}. A single parameter may have multiple values, e.\+g. in the query string \textquotesingle{}?param=value1\&param=value2\textquotesingle{}.
+
+Returns an empty list if the query parameter does not exist. \mbox{\Hypertarget{classWt_1_1Http_1_1Request_a8ca558a8969a214bce810c4bd4741e63}\label{classWt_1_1Http_1_1Request_a8ca558a8969a214bce810c4bd4741e63}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!getRanges@{getRanges}}
+\index{getRanges@{getRanges}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{getRanges()}{getRanges()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Http_1_1Request_1_1ByteRangeSpecifier}{Byte\+Range\+Specifier}} Wt\+::\+Http\+::\+Request\+::get\+Ranges (\begin{DoxyParamCaption}\item[{\+::int64\+\_\+t}]{filesize }\end{DoxyParamCaption}) const}
+
+
+
+Returns the requested ranges as in the H\+T\+TP Range header. 
+
+The filesize is used to adapt the ranges to the actual file size as per rules of R\+FC 2616. If the file size is unknown, pass -\/1.
+
+You should check if the ranges are satisfiable using \mbox{\hyperlink{classWt_1_1Http_1_1Request_1_1ByteRangeSpecifier_a1acda3e94a0108d39eda22aea55cd2a0}{Byte\+Range\+Specifier\+::is\+Satisfiable()}}. \mbox{\Hypertarget{classWt_1_1Http_1_1Request_afd284072657dd7789b5fdcff3082fc42}\label{classWt_1_1Http_1_1Request_afd284072657dd7789b5fdcff3082fc42}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!getUploadedFile@{getUploadedFile}}
+\index{getUploadedFile@{getUploadedFile}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{getUploadedFile()}{getUploadedFile()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1Http_1_1UploadedFile}{Uploaded\+File}}$\ast$ Wt\+::\+Http\+::\+Request\+::get\+Uploaded\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+
+
+Returns an uploaded file. 
+
+Returns the file uploaded for a parameter named {\ttfamily name} or {\ttfamily nullptr} if the parameter does not contain does not exist or was not associated with a file input field. \mbox{\Hypertarget{classWt_1_1Http_1_1Request_af063dbe85d5cf6f606a15837b7bed1f5}\label{classWt_1_1Http_1_1Request_af063dbe85d5cf6f606a15837b7bed1f5}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!headers@{headers}}
+\index{headers@{headers}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{headers()}{headers()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classWt_1_1Http_1_1Message_1_1Header}{Message\+::\+Header}}$>$ Wt\+::\+Http\+::\+Request\+::headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns all headers. 
+
+\begin{DoxyNote}{Note}
+Use \mbox{\hyperlink{classWt_1_1Http_1_1Request_a061c82381338a0997899bc74c10986fb}{header\+Value()}} if you need to know the value of certain known headers. This method is not written to be efficient, but can be useful for debugging. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_a061c82381338a0997899bc74c10986fb}\label{classWt_1_1Http_1_1Request_a061c82381338a0997899bc74c10986fb}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!headerValue@{headerValue}}
+\index{headerValue@{headerValue}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{headerValue()}{headerValue()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Http\+::\+Request\+::header\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{field }\end{DoxyParamCaption}) const}
+
+
+
+Returns a header value. 
+
+Returns an empty string if the header was not present. \mbox{\Hypertarget{classWt_1_1Http_1_1Request_ad8a1199b8692854fefb76f494d793f93}\label{classWt_1_1Http_1_1Request_ad8a1199b8692854fefb76f494d793f93}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!hostName@{hostName}}
+\index{hostName@{hostName}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{hostName()}{hostName()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Http\+::\+Request\+::host\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the host name used in the request. 
+
+This returns the value of the Host header, or if behind a trusted reverse proxy, the value of the X-\/\+Forwarded-\/\+Host header if it is present. \mbox{\Hypertarget{classWt_1_1Http_1_1Request_ab6d4c4890155d4992764ff02d34fcdd2}\label{classWt_1_1Http_1_1Request_ab6d4c4890155d4992764ff02d34fcdd2}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!in@{in}}
+\index{in@{in}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{in()}{in()}}
+{\footnotesize\ttfamily std\+::istream\& Wt\+::\+Http\+::\+Request\+::in (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the input stream for parsing the body. 
+
+If the request was a P\+O\+ST with as \mbox{\hyperlink{classWt_1_1Http_1_1Request_a9149056d8f404948c4763e9703a69d1c}{content\+Type()}} \char`\"{}application/x-\/www-\/form-\/urlencoded\char`\"{} or \char`\"{}multipart/form-\/data\char`\"{}, the input stream will already have been consumed by \mbox{\hyperlink{classWt}{Wt}}\textquotesingle{}s C\+GI parser, and made available as parameters in the request. \mbox{\Hypertarget{classWt_1_1Http_1_1Request_a1f2aa595d8c94fe9ec0f0586851bdcea}\label{classWt_1_1Http_1_1Request_a1f2aa595d8c94fe9ec0f0586851bdcea}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!method@{method}}
+\index{method@{method}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{method()}{method()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Http\+::\+Request\+::method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the request method. 
+
+Returns the H\+T\+TP request method (\char`\"{}\+G\+E\+T\char`\"{}, \char`\"{}\+P\+O\+S\+T\char`\"{}, or other). \mbox{\Hypertarget{classWt_1_1Http_1_1Request_a991ba557992ea494565fe1854885b1b9}\label{classWt_1_1Http_1_1Request_a991ba557992ea494565fe1854885b1b9}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!path@{path}}
+\index{path@{path}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{path()}{path()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Http\+::\+Request\+::path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the request path. 
+
+Returns the path at which this request was received (excluding internal path information)\+: it is the path at which the application or resource is deployed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Request_ac1fb1a90df0fc656567c169f116abe22}{path\+Info()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_ac1fb1a90df0fc656567c169f116abe22}\label{classWt_1_1Http_1_1Request_ac1fb1a90df0fc656567c169f116abe22}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!pathInfo@{pathInfo}}
+\index{pathInfo@{pathInfo}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{pathInfo()}{pathInfo()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Http\+::\+Request\+::path\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the request path info. 
+
+Returns additional path information internal to the \mbox{\hyperlink{classWt_1_1Http_1_1Request_a991ba557992ea494565fe1854885b1b9}{path()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Request_ac1fb1a90df0fc656567c169f116abe22}{path\+Info()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_a66122e46066a0c5f428021b42b7467f7}\label{classWt_1_1Http_1_1Request_a66122e46066a0c5f428021b42b7467f7}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!serverName@{serverName}}
+\index{serverName@{serverName}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{serverName()}{serverName()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Http\+::\+Request\+::server\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the (public) server name. 
+
+Returns the public server name. This is the server name that is advertised to outside, which is determined in a OS specific way.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Request_afcf1fcbb2cd82d6d55489f0208ec37d1}{server\+Port()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_afcf1fcbb2cd82d6d55489f0208ec37d1}\label{classWt_1_1Http_1_1Request_afcf1fcbb2cd82d6d55489f0208ec37d1}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!serverPort@{serverPort}}
+\index{serverPort@{serverPort}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{serverPort()}{serverPort()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Http\+::\+Request\+::server\+Port (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the server port. 
+
+Returns the server port number through which this request was received.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Request_a66122e46066a0c5f428021b42b7467f7}{server\+Name()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_af4d09d8e5da790c1535d9db24da2a803}\label{classWt_1_1Http_1_1Request_af4d09d8e5da790c1535d9db24da2a803}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!sslInfo@{sslInfo}}
+\index{sslInfo@{sslInfo}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{sslInfo()}{sslInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1WSslInfo}{W\+Ssl\+Info}}$\ast$ Wt\+::\+Http\+::\+Request\+::ssl\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns information on the S\+SL client certificate or {\ttfamily nullptr} if no authentication took place. 
+
+This function will return {\ttfamily nullptr} if no verification took place, Wt was compiled without S\+SL support, or the web server was configured without client S\+SL certificates.
+
+This method may return a pointer to a \mbox{\hyperlink{classWt_1_1WSslInfo}{W\+Ssl\+Info}} object, while the authentication may have failed. This depends on the configuration of the web server. It is therefore important to always check the verification result with \mbox{\hyperlink{classWt_1_1WSslInfo_a1f89fbb138034ae3b012f4b470ad30ae}{W\+Ssl\+Info\+::client\+Verification\+Result()}}.
+
+Session-\/bound resources will probably not use this method, but rely on the validation done at the start of the session (see \mbox{\hyperlink{classWt_1_1Http_1_1Request_af4d09d8e5da790c1535d9db24da2a803}{ssl\+Info()}} in \mbox{\hyperlink{classWt_1_1WEnvironment}{W\+Environment}}). Static resources on the other hand don\textquotesingle{}t have an associated session, so using this method you can perform client authentication verification.
+
+The object returned is owned by \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Request}} and will be deleted when the \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Request}} object is destroyed.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WEnvironment_a04b65c4f7fe6e3b0bd652e2580b4f62e}{W\+Environment\+::ssl\+Info()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_a9cc1c9ccc77d8421edbe9de1c69e0e6f}\label{classWt_1_1Http_1_1Request_a9cc1c9ccc77d8421edbe9de1c69e0e6f}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!tooLarge@{tooLarge}}
+\index{tooLarge@{tooLarge}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{tooLarge()}{tooLarge()}}
+{\footnotesize\ttfamily \+::int64\+\_\+t Wt\+::\+Http\+::\+Request\+::too\+Large (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns a non-\/zero value that exceeded the maximum allowed request. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WApplication_aaa3a28a32244dd8383fb760906e2ee77}{W\+Application\+::request\+Too\+Large}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_ac09e96865c5dc1cde36263f8972557e3}\label{classWt_1_1Http_1_1Request_ac09e96865c5dc1cde36263f8972557e3}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!uploadedFiles@{uploadedFiles}}
+\index{uploadedFiles@{uploadedFiles}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{uploadedFiles()}{uploadedFiles()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespaceWt_1_1Http_a90602329029048d738daae9ba63e059a}{Uploaded\+File\+Map}}\& Wt\+::\+Http\+::\+Request\+::uploaded\+Files (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns uploaded file parameters. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Request_a87afdb7b0ded9dd3fa1b8e7685616857}{get\+Parameter\+Map()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_a56f41f5df0dc8cc160c313fea44d1c1c}\label{classWt_1_1Http_1_1Request_a56f41f5df0dc8cc160c313fea44d1c1c}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!urlParam@{urlParam}}
+\index{urlParam@{urlParam}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{urlParam()}{urlParam()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Http\+::\+Request\+::url\+Param (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{param }\end{DoxyParamCaption}) const}
+
+
+
+Get the value for the given U\+RL parameter. 
+
+Example\+:
+
+If a static resource is deployed at /tags/\$\{tag\}, then, if a request is made for /tags/\+Wt, url\+Param(\char`\"{}tag\char`\"{}) will return \char`\"{}\+Wt\char`\"{}.
+
+If the given parameter is not available, an empty string is returned. \mbox{\Hypertarget{classWt_1_1Http_1_1Request_aa64a90cc2d03c5219d725247bc9f946f}\label{classWt_1_1Http_1_1Request_aa64a90cc2d03c5219d725247bc9f946f}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!urlParams@{urlParams}}
+\index{urlParams@{urlParams}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{urlParams()}{urlParams()}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::pair$<$std\+::string, std\+::string$>$ $>$\& Wt\+::\+Http\+::\+Request\+::url\+Params (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get all U\+RL parameters. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Http_1_1Request_a56f41f5df0dc8cc160c313fea44d1c1c}{url\+Param()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Http_1_1Request_a970b7d266c6bead893ec6334520807bf}\label{classWt_1_1Http_1_1Request_a970b7d266c6bead893ec6334520807bf}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!urlScheme@{urlScheme}}
+\index{urlScheme@{urlScheme}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{urlScheme()}{urlScheme()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Http\+::\+Request\+::url\+Scheme (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the url scheme used. 
+
+This is either {\ttfamily \char`\"{}http\char`\"{}} or {\ttfamily \char`\"{}https\char`\"{}}
+
+If we\textquotesingle{}re behind a trusted reverse proxy, the value of X-\/\+Forwarded-\/\+Proto will be used if it is present. \mbox{\Hypertarget{classWt_1_1Http_1_1Request_a1051d981d70081d26f04b81f9dfdb4d0}\label{classWt_1_1Http_1_1Request_a1051d981d70081d26f04b81f9dfdb4d0}} 
+\index{Wt::Http::Request@{Wt::Http::Request}!userAgent@{userAgent}}
+\index{userAgent@{userAgent}!Wt::Http::Request@{Wt::Http::Request}}
+\doxysubsubsection{\texorpdfstring{userAgent()}{userAgent()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+Http\+::\+Request\+::user\+Agent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the user agent. 
+
+The user agent, as reported in the H\+T\+TP {\ttfamily User-\/\+Agent} field. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Http/Request.\+h\end{DoxyCompactItemize}

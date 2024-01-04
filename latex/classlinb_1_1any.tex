@@ -1,0 +1,182 @@
+\hypertarget{classlinb_1_1any}{}\doxysection{linb\+::any Class Reference}
+\label{classlinb_1_1any}\index{linb::any@{linb::any}}
+
+
+Collaboration diagram for linb\+::any\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structlinb_1_1any_1_1requires__allocation}{requires\+\_\+allocation}}
+\begin{DoxyCompactList}\small\item\em Whether the type T must be dynamically allocated or can be stored on the stack. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}}
+\item 
+struct \mbox{\hyperlink{structlinb_1_1any_1_1vtable__dynamic}{vtable\+\_\+dynamic}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structVTable}{V\+Table}} for dynamically allocated storage. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlinb_1_1any_1_1vtable__stack}{vtable\+\_\+stack}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structVTable}{V\+Table}} for stack allocated storage. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structlinb_1_1any_1_1vtable__type}{vtable\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em Base \mbox{\hyperlink{structVTable}{V\+Table}} specification. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlinb_1_1any_a4235c73347f588664514be22a85680d9}\label{classlinb_1_1any_a4235c73347f588664514be22a85680d9}} 
+\mbox{\hyperlink{classlinb_1_1any_a4235c73347f588664514be22a85680d9}{any}} ()
+\begin{DoxyCompactList}\small\item\em Constructs an object of type any with an empty state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlinb_1_1any_a56847f22e44c42dfe1b74633cf81d083}\label{classlinb_1_1any_a56847f22e44c42dfe1b74633cf81d083}} 
+\mbox{\hyperlink{classlinb_1_1any_a56847f22e44c42dfe1b74633cf81d083}{any}} (const \mbox{\hyperlink{classlinb_1_1any}{any}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Constructs an object of type any with an equivalent state as other. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlinb_1_1any_a50ccd807f1ded03ca732c5450d6f8117}{any}} (\mbox{\hyperlink{classlinb_1_1any}{any}} \&\&rhs) noexcept
+\item 
+\mbox{\Hypertarget{classlinb_1_1any_ae43b1437e9e7b51a0ae90463914c0fb3}\label{classlinb_1_1any_ae43b1437e9e7b51a0ae90463914c0fb3}} 
+\mbox{\hyperlink{classlinb_1_1any_ae43b1437e9e7b51a0ae90463914c0fb3}{$\sim$any}} ()
+\begin{DoxyCompactList}\small\item\em Same effect as this-\/$>$\mbox{\hyperlink{classlinb_1_1any_a3fdc740fdcf5fd3f0a6d6628702c54b3}{clear()}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Value\+Type , typename  = typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$typename std\+::decay$<$\+Value\+Type$>$\+::type, any$>$\+::value$>$\+::type$>$ }\\\mbox{\hyperlink{classlinb_1_1any_ac8364f28330ef3d4b1533ce108d5596c}{any}} (Value\+Type \&\&value)
+\item 
+\mbox{\Hypertarget{classlinb_1_1any_a8ea8acd8fc0ca1ac34bbad0689f723e7}\label{classlinb_1_1any_a8ea8acd8fc0ca1ac34bbad0689f723e7}} 
+\mbox{\hyperlink{classlinb_1_1any}{any}} \& \mbox{\hyperlink{classlinb_1_1any_a8ea8acd8fc0ca1ac34bbad0689f723e7}{operator=}} (const \mbox{\hyperlink{classlinb_1_1any}{any}} \&rhs)
+\begin{DoxyCompactList}\small\item\em Has the same effect as any(rhs).swap($\ast$this). No effects if an exception is thrown. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlinb_1_1any}{any}} \& \mbox{\hyperlink{classlinb_1_1any_aa86b33e236e0adbced25bc966176ad4a}{operator=}} (\mbox{\hyperlink{classlinb_1_1any}{any}} \&\&rhs) noexcept
+\item 
+{\footnotesize template$<$typename Value\+Type , typename  = typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$typename std\+::decay$<$\+Value\+Type$>$\+::type, any$>$\+::value$>$\+::type$>$ }\\\mbox{\hyperlink{classlinb_1_1any}{any}} \& \mbox{\hyperlink{classlinb_1_1any_a1277be0f11f27da9e2f88aef65465c3b}{operator=}} (Value\+Type \&\&value)
+\item 
+\mbox{\Hypertarget{classlinb_1_1any_a3fdc740fdcf5fd3f0a6d6628702c54b3}\label{classlinb_1_1any_a3fdc740fdcf5fd3f0a6d6628702c54b3}} 
+void \mbox{\hyperlink{classlinb_1_1any_a3fdc740fdcf5fd3f0a6d6628702c54b3}{clear}} () noexcept
+\begin{DoxyCompactList}\small\item\em If not empty, destroys the contained object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlinb_1_1any_a8959e7cf6d97c91f126cf5d17814017a}\label{classlinb_1_1any_a8959e7cf6d97c91f126cf5d17814017a}} 
+bool \mbox{\hyperlink{classlinb_1_1any_a8959e7cf6d97c91f126cf5d17814017a}{empty}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns true if $\ast$this has no contained object, otherwise false. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlinb_1_1any_a02e561daf38a0227ddde849fa2ecfc86}\label{classlinb_1_1any_a02e561daf38a0227ddde849fa2ecfc86}} 
+bool \mbox{\hyperlink{classlinb_1_1any_a02e561daf38a0227ddde849fa2ecfc86}{has\+\_\+value}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Returns true if $\ast$this has a contained object, otherwise false. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlinb_1_1any_adf34b63439c9089fa4af14d0df6ef079}\label{classlinb_1_1any_adf34b63439c9089fa4af14d0df6ef079}} 
+const std\+::type\+\_\+info \& \mbox{\hyperlink{classlinb_1_1any_adf34b63439c9089fa4af14d0df6ef079}{type}} () const noexcept
+\begin{DoxyCompactList}\small\item\em If $\ast$this has a contained object of type T, typeid(\+T); otherwise typeid(void). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlinb_1_1any_a6bd50f2fd178deacf049be223f73646e}\label{classlinb_1_1any_a6bd50f2fd178deacf049be223f73646e}} 
+void \mbox{\hyperlink{classlinb_1_1any_a6bd50f2fd178deacf049be223f73646e}{swap}} (\mbox{\hyperlink{classlinb_1_1any}{any}} \&rhs) noexcept
+\begin{DoxyCompactList}\small\item\em Exchange the states of $\ast$this and rhs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlinb_1_1any_a39b633b11e6bd5231ed4bafb42900020}\label{classlinb_1_1any_a39b633b11e6bd5231ed4bafb42900020}} 
+bool \mbox{\hyperlink{classlinb_1_1any_a39b633b11e6bd5231ed4bafb42900020}{is\+\_\+typed}} (const std\+::type\+\_\+info \&t) const
+\begin{DoxyCompactList}\small\item\em Same effect as is\+\_\+same(this-\/$>$\mbox{\hyperlink{classlinb_1_1any_adf34b63439c9089fa4af14d0df6ef079}{type()}}, t);. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlinb_1_1any_aa20d5f5835abed1d05e1603d27c55a08}\label{classlinb_1_1any_aa20d5f5835abed1d05e1603d27c55a08}} 
+{\footnotesize template$<$typename T $>$ }\\const T $\ast$ \mbox{\hyperlink{classlinb_1_1any_aa20d5f5835abed1d05e1603d27c55a08}{cast}} () const noexcept
+\begin{DoxyCompactList}\small\item\em Casts (with no type\+\_\+info checks) the storage pointer as const T$\ast$. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classlinb_1_1any_ac96af4a9edcf5985db026c0fe56edc6b}\label{classlinb_1_1any_ac96af4a9edcf5985db026c0fe56edc6b}} 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ \mbox{\hyperlink{classlinb_1_1any_ac96af4a9edcf5985db026c0fe56edc6b}{cast}} () noexcept
+\begin{DoxyCompactList}\small\item\em Casts (with no type\+\_\+info checks) the storage pointer as T$\ast$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classlinb_1_1any_a80ece74ea121b9381891c8d32a50916d}{is\+\_\+same}} (const std\+::type\+\_\+info \&a, const std\+::type\+\_\+info \&b)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlinb_1_1any_abba581567c01386cda5e6eceed238e5e}\label{classlinb_1_1any_abba581567c01386cda5e6eceed238e5e}} 
+{\footnotesize template$<$typename Value\+Type , typename T $>$ }\\std\+::enable\+\_\+if$<$ \mbox{\hyperlink{structlinb_1_1any_1_1requires__allocation}{requires\+\_\+allocation}}$<$ T $>$\+::value $>$\+::\mbox{\hyperlink{classlinb_1_1any_adf34b63439c9089fa4af14d0df6ef079}{type}} {\bfseries do\+\_\+construct} (Value\+Type \&\&value)
+\item 
+\mbox{\Hypertarget{classlinb_1_1any_a83a66c8dc60e70acb9c04abef397214c}\label{classlinb_1_1any_a83a66c8dc60e70acb9c04abef397214c}} 
+{\footnotesize template$<$typename Value\+Type , typename T $>$ }\\std\+::enable\+\_\+if$<$!\mbox{\hyperlink{structlinb_1_1any_1_1requires__allocation}{requires\+\_\+allocation}}$<$ T $>$\+::value $>$\+::\mbox{\hyperlink{classlinb_1_1any_adf34b63439c9089fa4af14d0df6ef079}{type}} {\bfseries do\+\_\+construct} (Value\+Type \&\&value)
+\item 
+{\footnotesize template$<$typename Value\+Type $>$ }\\void \mbox{\hyperlink{classlinb_1_1any_a712294fe6097ce70f1e39c49ed19ba6a}{construct}} (Value\+Type \&\&value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlinb_1_1any_ac7f20532e76ea1abbff453309e1d7a27}\label{classlinb_1_1any_ac7f20532e76ea1abbff453309e1d7a27}} 
+{\footnotesize template$<$typename T $>$ }\\static \mbox{\hyperlink{structlinb_1_1any_1_1vtable__type}{vtable\+\_\+type}} $\ast$ \mbox{\hyperlink{classlinb_1_1any_ac7f20532e76ea1abbff453309e1d7a27}{vtable\+\_\+for\+\_\+type}} ()
+\begin{DoxyCompactList}\small\item\em Returns the pointer to the vtable of the type T. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}\label{classlinb_1_1any_ab6c7d8b4887f6f2d31a1d976b68c0400}} 
+\mbox{\hyperlink{unionlinb_1_1any_1_1storage__union}{storage\+\_\+union}} {\bfseries storage}
+\item 
+\mbox{\Hypertarget{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}\label{classlinb_1_1any_a45cf908841a8cfe13f7c2a96ed6e141b}} 
+\mbox{\hyperlink{structlinb_1_1any_1_1vtable__type}{vtable\+\_\+type}} $\ast$ {\bfseries vtable}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\const friend T $\ast$ \mbox{\hyperlink{classlinb_1_1any_af01877c36bc32b27584d4e39a194d8dd}{any\+\_\+cast}} (const \mbox{\hyperlink{classlinb_1_1any}{any}} $\ast$operand) noexcept
+\item 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ \mbox{\hyperlink{classlinb_1_1any_abe28f391e70407f216660e75390eeead}{any\+\_\+cast}} (\mbox{\hyperlink{classlinb_1_1any}{any}} $\ast$operand) noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlinb_1_1any_a50ccd807f1ded03ca732c5450d6f8117}\label{classlinb_1_1any_a50ccd807f1ded03ca732c5450d6f8117}} 
+\index{linb::any@{linb::any}!any@{any}}
+\index{any@{any}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{any()}{any()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily linb\+::any\+::any (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlinb_1_1any}{any}} \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Constructs an object of type any with a state equivalent to the original state of other. rhs is left in a valid but otherwise unspecified state. \mbox{\Hypertarget{classlinb_1_1any_ac8364f28330ef3d4b1533ce108d5596c}\label{classlinb_1_1any_ac8364f28330ef3d4b1533ce108d5596c}} 
+\index{linb::any@{linb::any}!any@{any}}
+\index{any@{any}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{any()}{any()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename  = typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$typename std\+::decay$<$\+Value\+Type$>$\+::type, any$>$\+::value$>$\+::type$>$ \\
+linb\+::any\+::any (\begin{DoxyParamCaption}\item[{Value\+Type \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs an object of type any that contains an object of type T direct-\/initialized with std\+::forward$<$\+Value\+Type$>$(value).
+
+T shall satisfy the Copy\+Constructible requirements, otherwise the program is ill-\/formed. This is because an {\ttfamily any} may be copy constructed into another {\ttfamily any} at any time, so a copy should always be allowed. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlinb_1_1any_a712294fe6097ce70f1e39c49ed19ba6a}\label{classlinb_1_1any_a712294fe6097ce70f1e39c49ed19ba6a}} 
+\index{linb::any@{linb::any}!construct@{construct}}
+\index{construct@{construct}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{construct()}{construct()}}
+{\footnotesize\ttfamily template$<$typename Value\+Type $>$ \\
+void linb\+::any\+::construct (\begin{DoxyParamCaption}\item[{Value\+Type \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Chooses between stack and dynamic allocation for the type decay\+\_\+t$<$\+Value\+Type$>$, assigns the correct vtable, and constructs the object on our storage. \mbox{\Hypertarget{classlinb_1_1any_a80ece74ea121b9381891c8d32a50916d}\label{classlinb_1_1any_a80ece74ea121b9381891c8d32a50916d}} 
+\index{linb::any@{linb::any}!is\_same@{is\_same}}
+\index{is\_same@{is\_same}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{is\_same()}{is\_same()}}
+{\footnotesize\ttfamily static bool linb\+::any\+::is\+\_\+same (\begin{DoxyParamCaption}\item[{const std\+::type\+\_\+info \&}]{a,  }\item[{const std\+::type\+\_\+info \&}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+Checks if two type infos are the same.
+
+If A\+N\+Y\+\_\+\+I\+M\+P\+L\+\_\+\+F\+A\+S\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+F\+O\+\_\+\+C\+O\+M\+P\+A\+RE is defined, checks only the address of the type infos, otherwise does an actual comparision. Checking addresses is only a valid approach when there\textquotesingle{}s no interaction with outside sources (other shared libraries and such). \mbox{\Hypertarget{classlinb_1_1any_aa86b33e236e0adbced25bc966176ad4a}\label{classlinb_1_1any_aa86b33e236e0adbced25bc966176ad4a}} 
+\index{linb::any@{linb::any}!operator=@{operator=}}
+\index{operator=@{operator=}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlinb_1_1any}{any}}\& linb\+::any\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlinb_1_1any}{any}} \&\&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Has the same effect as any(std\+::move(rhs)).swap($\ast$this).
+
+The state of $\ast$this is equivalent to the original state of rhs and rhs is left in a valid but otherwise unspecified state. \mbox{\Hypertarget{classlinb_1_1any_a1277be0f11f27da9e2f88aef65465c3b}\label{classlinb_1_1any_a1277be0f11f27da9e2f88aef65465c3b}} 
+\index{linb::any@{linb::any}!operator=@{operator=}}
+\index{operator=@{operator=}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Value\+Type , typename  = typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$typename std\+::decay$<$\+Value\+Type$>$\+::type, any$>$\+::value$>$\+::type$>$ \\
+\mbox{\hyperlink{classlinb_1_1any}{any}}\& linb\+::any\+::operator= (\begin{DoxyParamCaption}\item[{Value\+Type \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Has the same effect as any(std\+::forward$<$\+Value\+Type$>$(value)).swap($\ast$this). No effect if a exception is thrown.
+
+T shall satisfy the Copy\+Constructible requirements, otherwise the program is ill-\/formed. This is because an {\ttfamily any} may be copy constructed into another {\ttfamily any} at any time, so a copy should always be allowed. 
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classlinb_1_1any_abe28f391e70407f216660e75390eeead}\label{classlinb_1_1any_abe28f391e70407f216660e75390eeead}} 
+\index{linb::any@{linb::any}!any\_cast@{any\_cast}}
+\index{any\_cast@{any\_cast}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{any\_cast}{any\_cast}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ any\+\_\+cast (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlinb_1_1any}{any}} $\ast$}]{operand }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+If operand != nullptr \&\& operand-\/$>$\mbox{\hyperlink{classlinb_1_1any_adf34b63439c9089fa4af14d0df6ef079}{type()}} == typeid(\+Value\+Type), a pointer to the object contained by operand, otherwise nullptr. \mbox{\Hypertarget{classlinb_1_1any_af01877c36bc32b27584d4e39a194d8dd}\label{classlinb_1_1any_af01877c36bc32b27584d4e39a194d8dd}} 
+\index{linb::any@{linb::any}!any\_cast@{any\_cast}}
+\index{any\_cast@{any\_cast}!linb::any@{linb::any}}
+\doxysubsubsection{\texorpdfstring{any\_cast}{any\_cast}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const friend T$\ast$ any\+\_\+cast (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlinb_1_1any}{any}} $\ast$}]{operand }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+If operand != nullptr \&\& operand-\/$>$\mbox{\hyperlink{classlinb_1_1any_adf34b63439c9089fa4af14d0df6ef079}{type()}} == typeid(\+Value\+Type), a pointer to the object contained by operand, otherwise nullptr. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/cpp17/any/any.\+hpp\end{DoxyCompactItemize}

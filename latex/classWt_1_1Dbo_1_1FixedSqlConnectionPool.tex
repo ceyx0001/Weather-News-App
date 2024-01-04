@@ -1,0 +1,143 @@
+\hypertarget{classWt_1_1Dbo_1_1FixedSqlConnectionPool}{}\doxysection{Wt\+::Dbo\+::Fixed\+Sql\+Connection\+Pool Class Reference}
+\label{classWt_1_1Dbo_1_1FixedSqlConnectionPool}\index{Wt::Dbo::FixedSqlConnectionPool@{Wt::Dbo::FixedSqlConnectionPool}}
+
+
+A connection pool of fixed size.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Dbo/\+Fixed\+Sql\+Connection\+Pool.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Dbo\+::Fixed\+Sql\+Connection\+Pool\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Dbo\+::Fixed\+Sql\+Connection\+Pool\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1FixedSqlConnectionPool_a437db9e5f6d1f60614d6358997c4acc9}{Fixed\+Sql\+Connection\+Pool}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} $>$ connection, int size)
+\begin{DoxyCompactList}\small\item\em Creates a fixed connection pool. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Dbo_1_1FixedSqlConnectionPool_aea8202906cf5264216a6e909b0008a74}{set\+Timeout}} (std\+::chrono\+::steady\+\_\+clock\+::duration \mbox{\hyperlink{classWt_1_1Dbo_1_1FixedSqlConnectionPool_ab7291dc4ff981598a75606ac29184002}{timeout}})
+\begin{DoxyCompactList}\small\item\em Set a timeout to get a connection. \end{DoxyCompactList}\item 
+std\+::chrono\+::steady\+\_\+clock\+::duration \mbox{\hyperlink{classWt_1_1Dbo_1_1FixedSqlConnectionPool_ab7291dc4ff981598a75606ac29184002}{timeout}} () const
+\begin{DoxyCompactList}\small\item\em Get the timeout to get a connection. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1FixedSqlConnectionPool_a118b97cc6e771648b8b28c8eacb4bc81}{get\+Connection}} () override
+\begin{DoxyCompactList}\small\item\em Uses a connection from the pool. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1FixedSqlConnectionPool_abd98929a99fb6711cb83f521b6b7a8a4}{return\+Connection}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} $>$) override
+\begin{DoxyCompactList}\small\item\em Returns a connection to the pool. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1FixedSqlConnectionPool_aec935ad8b3aa637aa6d05b72c60c08cb}\label{classWt_1_1Dbo_1_1FixedSqlConnectionPool_aec935ad8b3aa637aa6d05b72c60c08cb}} 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1FixedSqlConnectionPool_aec935ad8b3aa637aa6d05b72c60c08cb}{prepare\+For\+Drop\+Tables}} () const override
+\begin{DoxyCompactList}\small\item\em Prepares all connections in the pool for dropping the tables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1FixedSqlConnectionPool_a745f343e169af97f33095725f434d241}{handle\+Timeout}} ()
+\begin{DoxyCompactList}\small\item\em Handle a timeout that occured while getting a connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1FixedSqlConnectionPool_a5816e46435a17b8dd41021a405f5d555}\label{classWt_1_1Dbo_1_1FixedSqlConnectionPool_a5816e46435a17b8dd41021a405f5d555}} 
+std\+::unique\+\_\+ptr$<$ Impl $>$ {\bfseries impl\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A connection pool of fixed size. 
+
+This provides a connection pool of fixed size\+: its size is determined at startup time, and the pool will not grow as more connections are needed.
+
+This is adequate when the number of threads (which need different connections to work with) is also bounded, like when using a fixed size thread pool. This is for example the case when used in conjunction with Wt. \mbox{\hyperlink{classNote}{Note}} that you do not need as many connections as sessions, since \mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} will only use a connection while processing a transaction. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1FixedSqlConnectionPool_a437db9e5f6d1f60614d6358997c4acc9}\label{classWt_1_1Dbo_1_1FixedSqlConnectionPool_a437db9e5f6d1f60614d6358997c4acc9}} 
+\index{Wt::Dbo::FixedSqlConnectionPool@{Wt::Dbo::FixedSqlConnectionPool}!FixedSqlConnectionPool@{FixedSqlConnectionPool}}
+\index{FixedSqlConnectionPool@{FixedSqlConnectionPool}!Wt::Dbo::FixedSqlConnectionPool@{Wt::Dbo::FixedSqlConnectionPool}}
+\doxysubsubsection{\texorpdfstring{FixedSqlConnectionPool()}{FixedSqlConnectionPool()}}
+{\footnotesize\ttfamily Wt\+::\+Dbo\+::\+Fixed\+Sql\+Connection\+Pool\+::\+Fixed\+Sql\+Connection\+Pool (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} $>$}]{connection,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Creates a fixed connection pool. 
+
+The pool is initialized with the provided {\ttfamily connection}, which is cloned ({\ttfamily size} -\/ 1) times. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1FixedSqlConnectionPool_a118b97cc6e771648b8b28c8eacb4bc81}\label{classWt_1_1Dbo_1_1FixedSqlConnectionPool_a118b97cc6e771648b8b28c8eacb4bc81}} 
+\index{Wt::Dbo::FixedSqlConnectionPool@{Wt::Dbo::FixedSqlConnectionPool}!getConnection@{getConnection}}
+\index{getConnection@{getConnection}!Wt::Dbo::FixedSqlConnectionPool@{Wt::Dbo::FixedSqlConnectionPool}}
+\doxysubsubsection{\texorpdfstring{getConnection()}{getConnection()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}}$>$ Wt\+::\+Dbo\+::\+Fixed\+Sql\+Connection\+Pool\+::get\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Uses a connection from the pool. 
+
+This returns a connection from the pool that can be used. If the pool has no more connection available, the pool may decide to grow or block until a connection is returned.
+
+This method is called by a \mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} when a new transaction is started. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnectionPool_ad25b4ed62a99c13de8e51629821f7c40}{Wt\+::\+Dbo\+::\+Sql\+Connection\+Pool}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1FixedSqlConnectionPool_a745f343e169af97f33095725f434d241}\label{classWt_1_1Dbo_1_1FixedSqlConnectionPool_a745f343e169af97f33095725f434d241}} 
+\index{Wt::Dbo::FixedSqlConnectionPool@{Wt::Dbo::FixedSqlConnectionPool}!handleTimeout@{handleTimeout}}
+\index{handleTimeout@{handleTimeout}!Wt::Dbo::FixedSqlConnectionPool@{Wt::Dbo::FixedSqlConnectionPool}}
+\doxysubsubsection{\texorpdfstring{handleTimeout()}{handleTimeout()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::\+Fixed\+Sql\+Connection\+Pool\+::handle\+Timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Handle a timeout that occured while getting a connection. 
+
+The default implementation throws an \mbox{\hyperlink{classWt_1_1Dbo_1_1Exception}{Exception}}.
+
+If the function returns cleanly, it is assumed that something has been done to fix the situation (e.\+g. connections have been added to the pool)\+: the timeout is reset and another attempt is made to obtain a connection. \mbox{\Hypertarget{classWt_1_1Dbo_1_1FixedSqlConnectionPool_abd98929a99fb6711cb83f521b6b7a8a4}\label{classWt_1_1Dbo_1_1FixedSqlConnectionPool_abd98929a99fb6711cb83f521b6b7a8a4}} 
+\index{Wt::Dbo::FixedSqlConnectionPool@{Wt::Dbo::FixedSqlConnectionPool}!returnConnection@{returnConnection}}
+\index{returnConnection@{returnConnection}!Wt::Dbo::FixedSqlConnectionPool@{Wt::Dbo::FixedSqlConnectionPool}}
+\doxysubsubsection{\texorpdfstring{returnConnection()}{returnConnection()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::\+Fixed\+Sql\+Connection\+Pool\+::return\+Connection (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns a connection to the pool. 
+
+This returns a connection to the pool. This method is called by a \mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} after a transaction has been finished. 
+
+Implements \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnectionPool_a3cae08aa19a3f09c18353dd61d1d3781}{Wt\+::\+Dbo\+::\+Sql\+Connection\+Pool}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1FixedSqlConnectionPool_aea8202906cf5264216a6e909b0008a74}\label{classWt_1_1Dbo_1_1FixedSqlConnectionPool_aea8202906cf5264216a6e909b0008a74}} 
+\index{Wt::Dbo::FixedSqlConnectionPool@{Wt::Dbo::FixedSqlConnectionPool}!setTimeout@{setTimeout}}
+\index{setTimeout@{setTimeout}!Wt::Dbo::FixedSqlConnectionPool@{Wt::Dbo::FixedSqlConnectionPool}}
+\doxysubsubsection{\texorpdfstring{setTimeout()}{setTimeout()}}
+{\footnotesize\ttfamily void Wt\+::\+Dbo\+::\+Fixed\+Sql\+Connection\+Pool\+::set\+Timeout (\begin{DoxyParamCaption}\item[{std\+::chrono\+::steady\+\_\+clock\+::duration}]{timeout }\end{DoxyParamCaption})}
+
+
+
+Set a timeout to get a connection. 
+
+When the connection pool has no available connection, it will wait the given duration.
+
+On timeout, \mbox{\hyperlink{classWt_1_1Dbo_1_1FixedSqlConnectionPool_a745f343e169af97f33095725f434d241}{handle\+Timeout()}} is called, which throws an exception by default.
+
+By default, there is no timeout. \mbox{\Hypertarget{classWt_1_1Dbo_1_1FixedSqlConnectionPool_ab7291dc4ff981598a75606ac29184002}\label{classWt_1_1Dbo_1_1FixedSqlConnectionPool_ab7291dc4ff981598a75606ac29184002}} 
+\index{Wt::Dbo::FixedSqlConnectionPool@{Wt::Dbo::FixedSqlConnectionPool}!timeout@{timeout}}
+\index{timeout@{timeout}!Wt::Dbo::FixedSqlConnectionPool@{Wt::Dbo::FixedSqlConnectionPool}}
+\doxysubsubsection{\texorpdfstring{timeout()}{timeout()}}
+{\footnotesize\ttfamily std\+::chrono\+::steady\+\_\+clock\+::duration Wt\+::\+Dbo\+::\+Fixed\+Sql\+Connection\+Pool\+::timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the timeout to get a connection. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Dbo_1_1FixedSqlConnectionPool_aea8202906cf5264216a6e909b0008a74}{set\+Timeout()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/Fixed\+Sql\+Connection\+Pool.\+h\end{DoxyCompactItemize}

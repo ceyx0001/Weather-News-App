@@ -1,0 +1,154 @@
+\hypertarget{classSimpleChatWidget}{}\doxysection{Simple\+Chat\+Widget Class Reference}
+\label{classSimpleChatWidget}\index{SimpleChatWidget@{SimpleChatWidget}}
+
+
+A self-\/contained chat widget.  
+
+
+
+
+{\ttfamily \#include $<$Simple\+Chat\+Widget.\+h$>$}
+
+
+
+Inheritance diagram for Simple\+Chat\+Widget\+:
+% FIG 0
+
+
+Collaboration diagram for Simple\+Chat\+Widget\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_a6eaaff1a923185ffa453ce7060a19850}\label{classSimpleChatWidget_a6eaaff1a923185ffa453ce7060a19850}} 
+\mbox{\hyperlink{classSimpleChatWidget_a6eaaff1a923185ffa453ce7060a19850}{Simple\+Chat\+Widget}} (\mbox{\hyperlink{classSimpleChatServer}{Simple\+Chat\+Server}} \&server)
+\begin{DoxyCompactList}\small\item\em Create a chat widget that will connect to the given server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSimpleChatWidget_afdf56768400ee025d0b71ccce476b1bf}\label{classSimpleChatWidget_afdf56768400ee025d0b71ccce476b1bf}} 
+\mbox{\hyperlink{classSimpleChatWidget_afdf56768400ee025d0b71ccce476b1bf}{$\sim$\+Simple\+Chat\+Widget}} ()
+\begin{DoxyCompactList}\small\item\em Delete a chat widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSimpleChatWidget_a5fa75ab733ce294065a1233dfcbe83d6}\label{classSimpleChatWidget_a5fa75ab733ce294065a1233dfcbe83d6}} 
+void {\bfseries connect} ()
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_a7706247f4a599cd995003a260fd36b0a}\label{classSimpleChatWidget_a7706247f4a599cd995003a260fd36b0a}} 
+void {\bfseries disconnect} ()
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_a71d98bf20e007af247f3b5a74f35efa2}\label{classSimpleChatWidget_a71d98bf20e007af247f3b5a74f35efa2}} 
+void \mbox{\hyperlink{classSimpleChatWidget_a71d98bf20e007af247f3b5a74f35efa2}{let\+Login}} ()
+\begin{DoxyCompactList}\small\item\em Show a simple login screen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classSimpleChatWidget_a19c0deeaf8952ec36791c3f444964878}{start\+Chat}} (const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&user)
+\begin{DoxyCompactList}\small\item\em Start a chat for the given user. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSimpleChatWidget_abff498a5a43a7e0caac5f2140f14e301}\label{classSimpleChatWidget_abff498a5a43a7e0caac5f2140f14e301}} 
+void {\bfseries logout} ()
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_a839a181c695589b066c4d68152ab05c0}\label{classSimpleChatWidget_a839a181c695589b066c4d68152ab05c0}} 
+\mbox{\hyperlink{classSimpleChatServer}{Simple\+Chat\+Server}} \& {\bfseries server} ()
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_a89bb84de7baa0e926a5c1d45fbd91256}\label{classSimpleChatWidget_a89bb84de7baa0e926a5c1d45fbd91256}} 
+int {\bfseries user\+Count} ()
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_a2cadef52ce1596da9606438c5ecc2ff7}\label{classSimpleChatWidget_a2cadef52ce1596da9606438c5ecc2ff7}} 
+const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \& {\bfseries user\+Name} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_ae63bbae08a9d5a4d645b982d7893141b}\label{classSimpleChatWidget_ae63bbae08a9d5a4d645b982d7893141b}} 
+virtual void {\bfseries create\+Layout} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{Wt\+::\+W\+Widget}} $>$ messages, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{Wt\+::\+W\+Widget}} $>$ user\+List, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{Wt\+::\+W\+Widget}} $>$ message\+Edit, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{Wt\+::\+W\+Widget}} $>$ send\+Button, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{Wt\+::\+W\+Widget}} $>$ logout\+Button)
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_a365c39d6cecea6429bc415b121f12e33}\label{classSimpleChatWidget_a365c39d6cecea6429bc415b121f12e33}} 
+virtual void {\bfseries update\+Users} ()
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_a83ad60660ca18d0d8e525fe67ab4129f}\label{classSimpleChatWidget_a83ad60660ca18d0d8e525fe67ab4129f}} 
+virtual void {\bfseries new\+Message} ()
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_ab31f14a2bdc6d59d43762659651bf3e3}\label{classSimpleChatWidget_ab31f14a2bdc6d59d43762659651bf3e3}} 
+virtual void {\bfseries render} (\mbox{\hyperlink{classWt_1_1WFlags}{Wt\+::\+W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Wt\+::\+Render\+Flag}} $>$ flags)
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_a966deb9ed5e0be72fc6d2168274deace}\label{classSimpleChatWidget_a966deb9ed5e0be72fc6d2168274deace}} 
+bool {\bfseries logged\+In} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_ae3fdaeefe19e26c6c6ad9f7c0445af57}\label{classSimpleChatWidget_ae3fdaeefe19e26c6c6ad9f7c0445af57}} 
+typedef std\+::map$<$ \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}}, bool $>$ {\bfseries User\+Map}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_ae085fda18af441e1630342395499478c}\label{classSimpleChatWidget_ae085fda18af441e1630342395499478c}} 
+void {\bfseries login} ()
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_ab9d28293fb1a318be9c664beb16c4ba6}\label{classSimpleChatWidget_ab9d28293fb1a318be9c664beb16c4ba6}} 
+void {\bfseries change\+Name} (const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&name)
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_ad1c4dc9e6aca0c5b8e1db81ee7c5fad3}\label{classSimpleChatWidget_ad1c4dc9e6aca0c5b8e1db81ee7c5fad3}} 
+void {\bfseries send} ()
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_a287e2d933036e4ff509541e8daf774d7}\label{classSimpleChatWidget_a287e2d933036e4ff509541e8daf774d7}} 
+void {\bfseries update\+User} (\mbox{\hyperlink{classWt_1_1WCheckBox}{Wt\+::\+W\+Check\+Box}} $\ast$b)
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_acda2bbe138c3119e4c62a6132801a232}\label{classSimpleChatWidget_acda2bbe138c3119e4c62a6132801a232}} 
+void {\bfseries process\+Chat\+Event} (const \mbox{\hyperlink{classChatEvent}{Chat\+Event}} \&event)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_afe3350a7929733a5b93db803dee8704b}\label{classSimpleChatWidget_afe3350a7929733a5b93db803dee8704b}} 
+User\+Map {\bfseries users\+\_\+}
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_ab29db4cbc3935964daf6b6c264ce68d3}\label{classSimpleChatWidget_ab29db4cbc3935964daf6b6c264ce68d3}} 
+\mbox{\hyperlink{classSimpleChatServer}{Simple\+Chat\+Server}} \& {\bfseries server\+\_\+}
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_a8f56993c5967b22aff04009f4613a155}\label{classSimpleChatWidget_a8f56993c5967b22aff04009f4613a155}} 
+bool {\bfseries logged\+In\+\_\+}
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_a7e58bf2312b413d2d649500c26a6f8d6}\label{classSimpleChatWidget_a7e58bf2312b413d2d649500c26a6f8d6}} 
+\mbox{\hyperlink{classWt_1_1JSlot}{Wt\+::\+J\+Slot}} {\bfseries clear\+Input\+\_\+}
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_a596f7cbf70f45da9af017ac9d6f55ebc}\label{classSimpleChatWidget_a596f7cbf70f45da9af017ac9d6f55ebc}} 
+\mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} {\bfseries user\+\_\+}
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_a6216e8cf4d368c1550562e1c5525d34b}\label{classSimpleChatWidget_a6216e8cf4d368c1550562e1c5525d34b}} 
+\mbox{\hyperlink{classWt_1_1WLineEdit}{Wt\+::\+W\+Line\+Edit}} $\ast$ {\bfseries user\+Name\+Edit\+\_\+}
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_a98f69adc6f2381cd98584566ed4c497e}\label{classSimpleChatWidget_a98f69adc6f2381cd98584566ed4c497e}} 
+\mbox{\hyperlink{classWt_1_1WText}{Wt\+::\+W\+Text}} $\ast$ {\bfseries status\+Msg\+\_\+}
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_a32a593ed511997f32a33a55d651ce79d}\label{classSimpleChatWidget_a32a593ed511997f32a33a55d651ce79d}} 
+\mbox{\hyperlink{classWt_1_1WContainerWidget}{Wt\+::\+W\+Container\+Widget}} $\ast$ {\bfseries messages\+\_\+}
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_a4b658b56ef4ba1862765b9ad84fd9a9c}\label{classSimpleChatWidget_a4b658b56ef4ba1862765b9ad84fd9a9c}} 
+\mbox{\hyperlink{classWt_1_1WTextArea}{Wt\+::\+W\+Text\+Area}} $\ast$ {\bfseries message\+Edit\+\_\+}
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_ab858c82b1855180479e87ec391ed6e3f}\label{classSimpleChatWidget_ab858c82b1855180479e87ec391ed6e3f}} 
+\mbox{\hyperlink{classWt_1_1Core_1_1observing__ptr}{Wt\+::\+Core\+::observing\+\_\+ptr}}$<$ \mbox{\hyperlink{classWt_1_1WPushButton}{Wt\+::\+W\+Push\+Button}} $>$ {\bfseries send\+Button\+\_\+}
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_aa309ef2fbc70da578a5dc67934682e49}\label{classSimpleChatWidget_aa309ef2fbc70da578a5dc67934682e49}} 
+\mbox{\hyperlink{classWt_1_1Core_1_1observing__ptr}{Wt\+::\+Core\+::observing\+\_\+ptr}}$<$ \mbox{\hyperlink{classWt_1_1WContainerWidget}{Wt\+::\+W\+Container\+Widget}} $>$ {\bfseries user\+List\+\_\+}
+\item 
+\mbox{\Hypertarget{classSimpleChatWidget_a84a9b264e3dd8157c1d6d9078b7dc06d}\label{classSimpleChatWidget_a84a9b264e3dd8157c1d6d9078b7dc06d}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WSound}{Wt\+::\+W\+Sound}} $>$ {\bfseries message\+Received\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A self-\/contained chat widget. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSimpleChatWidget_a19c0deeaf8952ec36791c3f444964878}\label{classSimpleChatWidget_a19c0deeaf8952ec36791c3f444964878}} 
+\index{SimpleChatWidget@{SimpleChatWidget}!startChat@{startChat}}
+\index{startChat@{startChat}!SimpleChatWidget@{SimpleChatWidget}}
+\doxysubsubsection{\texorpdfstring{startChat()}{startChat()}}
+{\footnotesize\ttfamily bool Simple\+Chat\+Widget\+::start\+Chat (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&}]{user }\end{DoxyParamCaption})}
+
+
+
+Start a chat for the given user. 
+
+Returns false if the user could not login. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/simplechat/Simple\+Chat\+Widget.\+h\end{DoxyCompactItemize}

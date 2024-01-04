@@ -1,0 +1,103 @@
+\hypertarget{classQRAuthWidget}{}\doxysection{Q\+R\+Auth\+Widget Class Reference}
+\label{classQRAuthWidget}\index{QRAuthWidget@{QRAuthWidget}}
+
+
+Inheritance diagram for Q\+R\+Auth\+Widget\+:
+% FIG 0
+
+
+Collaboration diagram for Q\+R\+Auth\+Widget\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQRAuthWidget_aea52ba3a478d885b2a1ed7f8798d6b91}\label{classQRAuthWidget_aea52ba3a478d885b2a1ed7f8798d6b91}} 
+{\bfseries Q\+R\+Auth\+Widget} (\mbox{\hyperlink{classWt_1_1Auth_1_1Login}{Auth\+::\+Login}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_ada371aafa2d133314decb29f4520b75e}{login}})
+\item 
+\mbox{\Hypertarget{classQRAuthWidget_af377613b6037522600e91eddc2b9e1c1}\label{classQRAuthWidget_af377613b6037522600e91eddc2b9e1c1}} 
+void {\bfseries configure\+Q\+R\+Auth} (const \mbox{\hyperlink{classQRAuthService}{Q\+R\+Auth\+Service}} \&service, \mbox{\hyperlink{classQRTokenDatabase}{Q\+R\+Token\+Database}} \&database)
+\item 
+virtual void \mbox{\hyperlink{classQRAuthWidget_a9882b59e0ae0f6b4516fa7928e96a3c5}{process\+Environment}} ()
+\begin{DoxyCompactList}\small\item\em Processes the (initial) environment. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classQRAuthWidget_a3476f3b626cea3680abfbaa37e6ab8e3}{create\+Login\+View}} ()
+\begin{DoxyCompactList}\small\item\em Creates the login view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQRAuthWidget_af078ae212c8ddb37f60395cd65d7e5f9}\label{classQRAuthWidget_af078ae212c8ddb37f60395cd65d7e5f9}} 
+void {\bfseries confirm\+Remote\+Login} ()
+\item 
+\mbox{\Hypertarget{classQRAuthWidget_aa93e9404ea0ff5fd9a2384d8a704564c}\label{classQRAuthWidget_aa93e9404ea0ff5fd9a2384d8a704564c}} 
+void {\bfseries do\+Remote\+Login} (Standard\+Button button)
+\item 
+\mbox{\Hypertarget{classQRAuthWidget_af07d3db4f595cd3c463a4f885b8110ca}\label{classQRAuthWidget_af07d3db4f595cd3c463a4f885b8110ca}} 
+void {\bfseries show\+Q\+R\+Dialog} ()
+\item 
+\mbox{\Hypertarget{classQRAuthWidget_a9e03dce380a1e879b0320de6ecb8f49a}\label{classQRAuthWidget_a9e03dce380a1e879b0320de6ecb8f49a}} 
+void {\bfseries dialog\+Done} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classQRAuthWidget_aff9456271833230070c7693f01c0e1c3}\label{classQRAuthWidget_aff9456271833230070c7693f01c0e1c3}} 
+const \mbox{\hyperlink{classQRAuthService}{Q\+R\+Auth\+Service}} $\ast$ {\bfseries qr\+Service\+\_\+}
+\item 
+\mbox{\Hypertarget{classQRAuthWidget_a923fce9370912953f98f31670f82cd19}\label{classQRAuthWidget_a923fce9370912953f98f31670f82cd19}} 
+\mbox{\hyperlink{classQRTokenDatabase}{Q\+R\+Token\+Database}} $\ast$ {\bfseries qr\+Database\+\_\+}
+\item 
+\mbox{\Hypertarget{classQRAuthWidget_a95298c8dcfdee9abe8057ca001b461a2}\label{classQRAuthWidget_a95298c8dcfdee9abe8057ca001b461a2}} 
+std\+::string {\bfseries qr\+Token\+\_\+}
+\item 
+\mbox{\Hypertarget{classQRAuthWidget_ae8698355c4c6ed2de7abc7da2e2b4546}\label{classQRAuthWidget_ae8698355c4c6ed2de7abc7da2e2b4546}} 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WDialog}{W\+Dialog}} $>$ {\bfseries dialog\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classQRAuthWidget_a3476f3b626cea3680abfbaa37e6ab8e3}\label{classQRAuthWidget_a3476f3b626cea3680abfbaa37e6ab8e3}} 
+\index{QRAuthWidget@{QRAuthWidget}!createLoginView@{createLoginView}}
+\index{createLoginView@{createLoginView}!QRAuthWidget@{QRAuthWidget}}
+\doxysubsubsection{\texorpdfstring{createLoginView()}{createLoginView()}}
+{\footnotesize\ttfamily virtual void Q\+R\+Auth\+Widget\+::create\+Login\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates the login view. 
+
+This creates a view that allows the user to login, and is shown when no user is current logged in.
+
+The default implementation renders the {\ttfamily \char`\"{}\+Wt.\+Auth.\+template.\+login\char`\"{}} template, and binds fields using \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a577fcd126234d449affd90d91e8faa52}{create\+Password\+Login\+View()}} and \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_abaf26ea2fc953484c939b22b1c12b9bc}{create\+O\+Auth\+Login\+View()}}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a1a49d9d960a47a9fa76d18019c1131e9}{Wt\+::\+Auth\+::\+Auth\+Widget}}.
+
+\mbox{\Hypertarget{classQRAuthWidget_a9882b59e0ae0f6b4516fa7928e96a3c5}\label{classQRAuthWidget_a9882b59e0ae0f6b4516fa7928e96a3c5}} 
+\index{QRAuthWidget@{QRAuthWidget}!processEnvironment@{processEnvironment}}
+\index{processEnvironment@{processEnvironment}!QRAuthWidget@{QRAuthWidget}}
+\doxysubsubsection{\texorpdfstring{processEnvironment()}{processEnvironment()}}
+{\footnotesize\ttfamily virtual void Q\+R\+Auth\+Widget\+::process\+Environment (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Processes the (initial) environment. 
+
+This method process environmental information that may be relevant to authentication\+:
+
+
+\begin{DoxyItemize}
+\item email tokens, which are indicated through an internal path. The widget uses dialogs (by default) to interact with the user to act on the token.
+\item authentication tokens, which are stored in browser cookies, to implement remember-\/me functionality. When logging in using an authentication token, the login is considered \char`\"{}weak\char`\"{} (since a user may have inadvertently forgotten to logout from a public computer). You should let the user authenticate using another, primary method before doing sensitive operations. The \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a5f933e20250589dbdfd263b523e43d7d}{create\+Password\+Prompt\+Dialog()}} method may be useful for this.
+\end{DoxyItemize}
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_a329e19c031931985754a167d4548cc73}{let\+Update\+Password()}} 
+\end{DoxySeeAlso}
+
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1Auth_1_1AuthWidget_ad8f632750848aff23e6b5e0cc339fd6a}{Wt\+::\+Auth\+::\+Auth\+Widget}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/qrlogin/Q\+R\+Auth\+Widget.\+h\end{DoxyCompactItemize}

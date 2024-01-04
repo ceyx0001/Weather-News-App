@@ -1,0 +1,71 @@
+\hypertarget{classWt_1_1Auth_1_1SHA1HashFunction}{}\doxysection{Wt\+::Auth\+::S\+H\+A1\+Hash\+Function Class Reference}
+\label{classWt_1_1Auth_1_1SHA1HashFunction}\index{Wt::Auth::SHA1HashFunction@{Wt::Auth::SHA1HashFunction}}
+
+
+A cryptographic hash function implemented using S\+H\+A1.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Auth/\+Hash\+Function.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Auth\+::S\+H\+A1\+Hash\+Function\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Auth\+::S\+H\+A1\+Hash\+Function\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1SHA1HashFunction_adf0d825f5a799398bd0b730d4ebc7eb6}{name}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the name for this hash function. \end{DoxyCompactList}\item 
+virtual std\+::string \mbox{\hyperlink{classWt_1_1Auth_1_1SHA1HashFunction_a3be1fc35f48c3a815535f169fcc73251}{compute}} (const std\+::string \&msg, const std\+::string \&salt) const override
+\begin{DoxyCompactList}\small\item\em Computes the hash of a message + salt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A cryptographic hash function implemented using S\+H\+A1. 
+
+This hash function is only available if Wt was compiled with Open\+S\+SL support.
+
+This hash function is useful for creating token hashes, but should not be used for password hashes. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Auth_1_1SHA1HashFunction_a3be1fc35f48c3a815535f169fcc73251}\label{classWt_1_1Auth_1_1SHA1HashFunction_a3be1fc35f48c3a815535f169fcc73251}} 
+\index{Wt::Auth::SHA1HashFunction@{Wt::Auth::SHA1HashFunction}!compute@{compute}}
+\index{compute@{compute}!Wt::Auth::SHA1HashFunction@{Wt::Auth::SHA1HashFunction}}
+\doxysubsubsection{\texorpdfstring{compute()}{compute()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+S\+H\+A1\+Hash\+Function\+::compute (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg,  }\item[{const std\+::string \&}]{salt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Computes the hash of a message + salt. 
+
+The message is usually an A\+S\+C\+II or U\+T\+F-\/8 string.
+
+The {\ttfamily salt} and the computed hash are encoded in printable characters. This is usually A\+S\+C\+I\+I-\/encoded or could be Base64-\/encoded. 
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1HashFunction_a7a79f2aae54b390ba8a3b451d590ac92}{Wt\+::\+Auth\+::\+Hash\+Function}}.
+
+\mbox{\Hypertarget{classWt_1_1Auth_1_1SHA1HashFunction_adf0d825f5a799398bd0b730d4ebc7eb6}\label{classWt_1_1Auth_1_1SHA1HashFunction_adf0d825f5a799398bd0b730d4ebc7eb6}} 
+\index{Wt::Auth::SHA1HashFunction@{Wt::Auth::SHA1HashFunction}!name@{name}}
+\index{name@{name}!Wt::Auth::SHA1HashFunction@{Wt::Auth::SHA1HashFunction}}
+\doxysubsubsection{\texorpdfstring{name()}{name()}}
+{\footnotesize\ttfamily virtual std\+::string Wt\+::\+Auth\+::\+S\+H\+A1\+Hash\+Function\+::name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the name for this hash function. 
+
+Returns {\ttfamily \char`\"{}\+S\+H\+A1\char`\"{}}. 
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1HashFunction_aaa3f4d60d558577c118c3d8684f72ed4}{Wt\+::\+Auth\+::\+Hash\+Function}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Auth/Hash\+Function.\+h\end{DoxyCompactItemize}

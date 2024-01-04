@@ -1,0 +1,137 @@
+\hypertarget{classNewsRequester}{}\doxysection{News\+Requester Class Reference}
+\label{classNewsRequester}\index{NewsRequester@{NewsRequester}}
+
+
+Inheritance diagram for News\+Requester\+:
+% FIG 0
+
+
+Collaboration diagram for News\+Requester\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classNewsRequester_ac1670eb706c02e04ef51004cbb9a9ce1}{get\+Data}} (\mbox{\hyperlink{classRequest}{Request}} $\ast$request)
+\begin{DoxyCompactList}\small\item\em Get news A\+PI data. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classNewsRequester_a1d09c0fbf74ee59c61a741f2de6ac2eb}{get\+Host}} ()
+\begin{DoxyCompactList}\small\item\em Get host. \end{DoxyCompactList}\item 
+std\+::list$<$ std\+::string $>$ \mbox{\hyperlink{classNewsRequester_a3a217d2a3a68df292224bc60b88c66bb}{get\+Headers}} ()
+\begin{DoxyCompactList}\small\item\em Get headers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNewsRequester_ae6f7bf1bb7c140ac7d5f6fc7fbcf8824}{News\+Requester}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNewsRequester_a5bda1fcbc379df2a86f991eb7f176866}{$\sim$\+News\+Requester}} ()
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNewsRequester_af3eb92a90b89582b392e85a292fd4cdb}\label{classNewsRequester_af3eb92a90b89582b392e85a292fd4cdb}} 
+std\+::string {\bfseries host}
+\item 
+\mbox{\Hypertarget{classNewsRequester_aa0fc6a39fff364add1700f08f073cfdc}\label{classNewsRequester_aa0fc6a39fff364add1700f08f073cfdc}} 
+std\+::list$<$ std\+::string $>$ {\bfseries headers}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNewsRequester_ae6f7bf1bb7c140ac7d5f6fc7fbcf8824}\label{classNewsRequester_ae6f7bf1bb7c140ac7d5f6fc7fbcf8824}} 
+\index{NewsRequester@{NewsRequester}!NewsRequester@{NewsRequester}}
+\index{NewsRequester@{NewsRequester}!NewsRequester@{NewsRequester}}
+\doxysubsubsection{\texorpdfstring{NewsRequester()}{NewsRequester()}}
+{\footnotesize\ttfamily News\+Requester\+::\+News\+Requester (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+Constructor for \mbox{\hyperlink{classNewsRequester}{News\+Requester}} that initializes all members. \begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNewsRequester_a5bda1fcbc379df2a86f991eb7f176866}\label{classNewsRequester_a5bda1fcbc379df2a86f991eb7f176866}} 
+\index{NewsRequester@{NewsRequester}!````~NewsRequester@{$\sim$NewsRequester}}
+\index{````~NewsRequester@{$\sim$NewsRequester}!NewsRequester@{NewsRequester}}
+\doxysubsubsection{\texorpdfstring{$\sim$NewsRequester()}{~NewsRequester()}}
+{\footnotesize\ttfamily News\+Requester\+::$\sim$\+News\+Requester (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default destructor. 
+
+Default destructor for \mbox{\hyperlink{classNewsRequester}{News\+Requester}} but does nothing. 
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNewsRequester_ac1670eb706c02e04ef51004cbb9a9ce1}\label{classNewsRequester_ac1670eb706c02e04ef51004cbb9a9ce1}} 
+\index{NewsRequester@{NewsRequester}!getData@{getData}}
+\index{getData@{getData}!NewsRequester@{NewsRequester}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ string $>$ $>$ News\+Requester\+::get\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRequest}{Request}} $\ast$}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get news A\+PI data. 
+
+Queries against the host A\+PI endpoint and returns the data that was extracted as a table represented by 2d vector. with columns separated by the data name/type. 
+\begin{DoxyParams}{Parameters}
+{\em request} & is the \mbox{\hyperlink{classRequest}{Request}} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the news data table as 2d vector. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRequester_ae5d5b48330e492f90ce8d6115bc1f2b2}{Requester}}.
+
+\mbox{\Hypertarget{classNewsRequester_a3a217d2a3a68df292224bc60b88c66bb}\label{classNewsRequester_a3a217d2a3a68df292224bc60b88c66bb}} 
+\index{NewsRequester@{NewsRequester}!getHeaders@{getHeaders}}
+\index{getHeaders@{getHeaders}!NewsRequester@{NewsRequester}}
+\doxysubsubsection{\texorpdfstring{getHeaders()}{getHeaders()}}
+{\footnotesize\ttfamily std\+::list$<$ std\+::string $>$ News\+Requester\+::get\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get headers. 
+
+Returns the headers of \mbox{\hyperlink{classNewsRequester}{News\+Requester}}. 
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the headers of the \mbox{\hyperlink{classNewsRequester}{News\+Requester}} as string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classNewsRequester_a1d09c0fbf74ee59c61a741f2de6ac2eb}\label{classNewsRequester_a1d09c0fbf74ee59c61a741f2de6ac2eb}} 
+\index{NewsRequester@{NewsRequester}!getHost@{getHost}}
+\index{getHost@{getHost}!NewsRequester@{NewsRequester}}
+\doxysubsubsection{\texorpdfstring{getHost()}{getHost()}}
+{\footnotesize\ttfamily string News\+Requester\+::get\+Host (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get host. 
+
+Returns the host address of the \mbox{\hyperlink{classNewsRequester}{News\+Requester}}. 
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the host of the \mbox{\hyperlink{classNewsRequester}{News\+Requester}} as string. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classRequester_a84f8b17453ce9ad23144968f2dd4d920}{Requester}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+web/News\+Requester.\+h\item 
+web/News\+Requester.\+cpp\end{DoxyCompactItemize}

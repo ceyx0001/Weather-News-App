@@ -1,0 +1,71 @@
+\hypertarget{classWt_1_1Dbo_1_1SqlConnectionPool}{}\doxysection{Wt\+::Dbo\+::Sql\+Connection\+Pool Class Reference}
+\label{classWt_1_1Dbo_1_1SqlConnectionPool}\index{Wt::Dbo::SqlConnectionPool@{Wt::Dbo::SqlConnectionPool}}
+
+
+Abstract base class for a S\+QL connection pool.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Dbo/\+Sql\+Connection\+Pool.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Dbo\+::Sql\+Connection\+Pool\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlConnectionPool_af591dc8a754cabb604cf9889593ccb8b}\label{classWt_1_1Dbo_1_1SqlConnectionPool_af591dc8a754cabb604cf9889593ccb8b}} 
+virtual \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnectionPool_af591dc8a754cabb604cf9889593ccb8b}{$\sim$\+Sql\+Connection\+Pool}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} $>$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnectionPool_ad25b4ed62a99c13de8e51629821f7c40}{get\+Connection}} ()=0
+\begin{DoxyCompactList}\small\item\em Uses a connection from the pool. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnectionPool_a3cae08aa19a3f09c18353dd61d1d3781}{return\+Connection}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} $>$)=0
+\begin{DoxyCompactList}\small\item\em Returns a connection to the pool. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlConnectionPool_a24950949738300efec28e5d90fe17822}\label{classWt_1_1Dbo_1_1SqlConnectionPool_a24950949738300efec28e5d90fe17822}} 
+virtual void \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnectionPool_a24950949738300efec28e5d90fe17822}{prepare\+For\+Drop\+Tables}} () const =0
+\begin{DoxyCompactList}\small\item\em Prepares all connections in the pool for dropping the tables. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for a S\+QL connection pool. 
+
+An sql connection pool manages a pool of connections. It is shared between multiple sessions to allow these sessions to use a connection while handling a transaction. \mbox{\hyperlink{classNote}{Note}} that a session only needs a connection while in-\/transaction, and thus you only need as much connections as the number of concurrent transactions. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlConnectionPool_ad25b4ed62a99c13de8e51629821f7c40}\label{classWt_1_1Dbo_1_1SqlConnectionPool_ad25b4ed62a99c13de8e51629821f7c40}} 
+\index{Wt::Dbo::SqlConnectionPool@{Wt::Dbo::SqlConnectionPool}!getConnection@{getConnection}}
+\index{getConnection@{getConnection}!Wt::Dbo::SqlConnectionPool@{Wt::Dbo::SqlConnectionPool}}
+\doxysubsubsection{\texorpdfstring{getConnection()}{getConnection()}}
+{\footnotesize\ttfamily virtual std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}}$>$ Wt\+::\+Dbo\+::\+Sql\+Connection\+Pool\+::get\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Uses a connection from the pool. 
+
+This returns a connection from the pool that can be used. If the pool has no more connection available, the pool may decide to grow or block until a connection is returned.
+
+This method is called by a \mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} when a new transaction is started. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Dbo_1_1FixedSqlConnectionPool_a118b97cc6e771648b8b28c8eacb4bc81}{Wt\+::\+Dbo\+::\+Fixed\+Sql\+Connection\+Pool}}.
+
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1SqlConnectionPool_a3cae08aa19a3f09c18353dd61d1d3781}\label{classWt_1_1Dbo_1_1SqlConnectionPool_a3cae08aa19a3f09c18353dd61d1d3781}} 
+\index{Wt::Dbo::SqlConnectionPool@{Wt::Dbo::SqlConnectionPool}!returnConnection@{returnConnection}}
+\index{returnConnection@{returnConnection}!Wt::Dbo::SqlConnectionPool@{Wt::Dbo::SqlConnectionPool}}
+\doxysubsubsection{\texorpdfstring{returnConnection()}{returnConnection()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Dbo\+::\+Sql\+Connection\+Pool\+::return\+Connection (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1Dbo_1_1SqlConnection}{Sql\+Connection}} $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns a connection to the pool. 
+
+This returns a connection to the pool. This method is called by a \mbox{\hyperlink{classWt_1_1Dbo_1_1Session}{Session}} after a transaction has been finished. 
+
+Implemented in \mbox{\hyperlink{classWt_1_1Dbo_1_1FixedSqlConnectionPool_abd98929a99fb6711cb83f521b6b7a8a4}{Wt\+::\+Dbo\+::\+Fixed\+Sql\+Connection\+Pool}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/Sql\+Connection\+Pool.\+h\end{DoxyCompactItemize}

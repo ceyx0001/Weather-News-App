@@ -1,0 +1,218 @@
+\hypertarget{classWt_1_1Chart_1_1WAbstractColorMap}{}\doxysection{Wt\+::Chart\+::W\+Abstract\+Color\+Map Class Reference}
+\label{classWt_1_1Chart_1_1WAbstractColorMap}\index{Wt::Chart::WAbstractColorMap@{Wt::Chart::WAbstractColorMap}}
+
+
+Maps numerical values to colors.  
+
+
+
+
+{\ttfamily \#include $<$W\+Abstract\+Color\+Map.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Chart\+::W\+Abstract\+Color\+Map\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Chart\+::W\+Abstract\+Color\+Map\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_af482b7c6097cae4c36ba07dd31323e3d}{W\+Abstract\+Color\+Map}} (double min, double max)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractColorMap_a03f852160999c66c87862782e40b76be}\label{classWt_1_1Chart_1_1WAbstractColorMap_a03f852160999c66c87862782e40b76be}} 
+virtual \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a03f852160999c66c87862782e40b76be}{to\+Color}} (double value) const =0
+\begin{DoxyCompactList}\small\item\em Converts a numerical value to a \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a67a26a302d735efeb310a9e4f7eb32ae}{create\+Strip}} (\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} $\ast$painter, const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&area=\mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}}()) const =0
+\begin{DoxyCompactList}\small\item\em Paints the colormap as a colored strip. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a227ff91954cbe8caaa1f8c6f026af6a6}{paint\+Legend}} (\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} $\ast$painter, const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&area=\mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}}()) const =0
+\begin{DoxyCompactList}\small\item\em Paints the colormap as a legend. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractColorMap_a06ac67e0f81c466c427edc4723059d6e}\label{classWt_1_1Chart_1_1WAbstractColorMap_a06ac67e0f81c466c427edc4723059d6e}} 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a06ac67e0f81c466c427edc4723059d6e}{minimum}} () const
+\begin{DoxyCompactList}\small\item\em Returns the minimum of the colormap range. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractColorMap_a7788cd3360f0ee6c5d26fbea087a11db}\label{classWt_1_1Chart_1_1WAbstractColorMap_a7788cd3360f0ee6c5d26fbea087a11db}} 
+double \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a7788cd3360f0ee6c5d26fbea087a11db}{maximum}} () const
+\begin{DoxyCompactList}\small\item\em Returns the maximum of the colormap range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a73fd72a38644e08cf322bb5bd7123d12}{set\+Tick\+Spacing}} (int spacing)
+\begin{DoxyCompactList}\small\item\em Sets the tickspacing for the legend as a number of line-\/heights. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_adf30de87975c2b6b14a6a57f416e376c}{tick\+Spacing}} () const
+\begin{DoxyCompactList}\small\item\em Returns the tickspacing for the legend. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_aa07ac0cd56150e40baa41f842402d357}{set\+Format\+String}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&format)
+\begin{DoxyCompactList}\small\item\em Sets the format for the labels on the colormap-\/legend. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \& \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a83a514b2f37b5f60f2b63a51934cd2f4}{format\+String}} () const
+\begin{DoxyCompactList}\small\item\em Returns the format string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a21b6e7edc9867c4f3e5baaffc4092ff5}{set\+Label\+Font}} (const \mbox{\hyperlink{classWt_1_1WFont}{W\+Font}} \&font)
+\begin{DoxyCompactList}\small\item\em Sets the font to be used when drawing the labels in the legend. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WFont}{W\+Font}} \& \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_addb90ef7020094d73688e18a0d7eefee}{label\+Font}} ()
+\begin{DoxyCompactList}\small\item\em Returns the font to be used when drawing the labels in the legend. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractColorMap_a3c59aec59f09858400097a828ebc618d}\label{classWt_1_1Chart_1_1WAbstractColorMap_a3c59aec59f09858400097a828ebc618d}} 
+double {\bfseries min\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractColorMap_a4f16fb018b30169755c63733ebafe47f}\label{classWt_1_1Chart_1_1WAbstractColorMap_a4f16fb018b30169755c63733ebafe47f}} 
+double {\bfseries max\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractColorMap_a7f431893ec1c8efb1d97bfdd8257d310}\label{classWt_1_1Chart_1_1WAbstractColorMap_a7f431893ec1c8efb1d97bfdd8257d310}} 
+int {\bfseries tick\+Spacing\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractColorMap_a0adfe1f519d98fb0bdbbb79849c03558}\label{classWt_1_1Chart_1_1WAbstractColorMap_a0adfe1f519d98fb0bdbbb79849c03558}} 
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} {\bfseries format\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractColorMap_aa8d12bfb1d76c42fb55fc7bf4ba8e124}\label{classWt_1_1Chart_1_1WAbstractColorMap_aa8d12bfb1d76c42fb55fc7bf4ba8e124}} 
+\mbox{\hyperlink{classWt_1_1WFont}{W\+Font}} {\bfseries label\+Font\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Maps numerical values to colors. 
+
+The colormap has functionality to convert a numerical value to a \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}}. For details on how, see the documentation of the implementations.
+
+A colormap has a certain numerical range. When a colormap is painted as a colored strip or as a legend, this range is what will be presented, even if the colormap has the ability to convert values outside this range. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractColorMap_af482b7c6097cae4c36ba07dd31323e3d}\label{classWt_1_1Chart_1_1WAbstractColorMap_af482b7c6097cae4c36ba07dd31323e3d}} 
+\index{Wt::Chart::WAbstractColorMap@{Wt::Chart::WAbstractColorMap}!WAbstractColorMap@{WAbstractColorMap}}
+\index{WAbstractColorMap@{WAbstractColorMap}!Wt::Chart::WAbstractColorMap@{Wt::Chart::WAbstractColorMap}}
+\doxysubsubsection{\texorpdfstring{WAbstractColorMap()}{WAbstractColorMap()}}
+{\footnotesize\ttfamily Wt\+::\+Chart\+::\+W\+Abstract\+Color\+Map\+::\+W\+Abstract\+Color\+Map (\begin{DoxyParamCaption}\item[{double}]{min,  }\item[{double}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+Constructor taking a minimum and maximum value, determining the active range of the colormap. The default value for tick\+Spacing is 2 and the default label format is 2 decimal points. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractColorMap_a67a26a302d735efeb310a9e4f7eb32ae}\label{classWt_1_1Chart_1_1WAbstractColorMap_a67a26a302d735efeb310a9e4f7eb32ae}} 
+\index{Wt::Chart::WAbstractColorMap@{Wt::Chart::WAbstractColorMap}!createStrip@{createStrip}}
+\index{createStrip@{createStrip}!Wt::Chart::WAbstractColorMap@{Wt::Chart::WAbstractColorMap}}
+\doxysubsubsection{\texorpdfstring{createStrip()}{createStrip()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Chart\+::\+W\+Abstract\+Color\+Map\+::create\+Strip (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} $\ast$}]{painter,  }\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{area = {\ttfamily \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Paints the colormap as a colored strip. 
+
+This paints the colormap from the minimum to the maximum value in the provided area (default = fill the entire paintdevice). This is no legend with ticks and labels, only the colors are painted.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a227ff91954cbe8caaa1f8c6f026af6a6}{paint\+Legend()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardColorMap_a853786132b346d719ce6e6f029dbb6b9}{Wt\+::\+Chart\+::\+W\+Standard\+Color\+Map}}.
+
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractColorMap_a83a514b2f37b5f60f2b63a51934cd2f4}\label{classWt_1_1Chart_1_1WAbstractColorMap_a83a514b2f37b5f60f2b63a51934cd2f4}} 
+\index{Wt::Chart::WAbstractColorMap@{Wt::Chart::WAbstractColorMap}!formatString@{formatString}}
+\index{formatString@{formatString}!Wt::Chart::WAbstractColorMap@{Wt::Chart::WAbstractColorMap}}
+\doxysubsubsection{\texorpdfstring{formatString()}{formatString()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WString}{W\+String}}\& Wt\+::\+Chart\+::\+W\+Abstract\+Color\+Map\+::format\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the format string. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_aa07ac0cd56150e40baa41f842402d357}{set\+Format\+String()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractColorMap_addb90ef7020094d73688e18a0d7eefee}\label{classWt_1_1Chart_1_1WAbstractColorMap_addb90ef7020094d73688e18a0d7eefee}} 
+\index{Wt::Chart::WAbstractColorMap@{Wt::Chart::WAbstractColorMap}!labelFont@{labelFont}}
+\index{labelFont@{labelFont}!Wt::Chart::WAbstractColorMap@{Wt::Chart::WAbstractColorMap}}
+\doxysubsubsection{\texorpdfstring{labelFont()}{labelFont()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WFont}{W\+Font}}\& Wt\+::\+Chart\+::\+W\+Abstract\+Color\+Map\+::label\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the font to be used when drawing the labels in the legend. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a21b6e7edc9867c4f3e5baaffc4092ff5}{set\+Label\+Font}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractColorMap_a227ff91954cbe8caaa1f8c6f026af6a6}\label{classWt_1_1Chart_1_1WAbstractColorMap_a227ff91954cbe8caaa1f8c6f026af6a6}} 
+\index{Wt::Chart::WAbstractColorMap@{Wt::Chart::WAbstractColorMap}!paintLegend@{paintLegend}}
+\index{paintLegend@{paintLegend}!Wt::Chart::WAbstractColorMap@{Wt::Chart::WAbstractColorMap}}
+\doxysubsubsection{\texorpdfstring{paintLegend()}{paintLegend()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+Chart\+::\+W\+Abstract\+Color\+Map\+::paint\+Legend (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} $\ast$}]{painter,  }\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{area = {\ttfamily \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Paints the colormap as a legend. 
+
+The colormap is painted as a legend with ticks and value-\/labels. The parameter area can be used to specify a part of the paintdevice where the legend should be drawn. When drawing the legend, the tickspacing, labelformat and labelfont are taken into account.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a73fd72a38644e08cf322bb5bd7123d12}{set\+Tick\+Spacing()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_aa07ac0cd56150e40baa41f842402d357}{set\+Format\+String()}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a21b6e7edc9867c4f3e5baaffc4092ff5}{set\+Label\+Font()}} 
+\end{DoxySeeAlso}
+
+
+Implemented in \mbox{\hyperlink{classWt_1_1Chart_1_1WStandardColorMap_a1823407ef62c908d3686a71d2221979d}{Wt\+::\+Chart\+::\+W\+Standard\+Color\+Map}}.
+
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractColorMap_aa07ac0cd56150e40baa41f842402d357}\label{classWt_1_1Chart_1_1WAbstractColorMap_aa07ac0cd56150e40baa41f842402d357}} 
+\index{Wt::Chart::WAbstractColorMap@{Wt::Chart::WAbstractColorMap}!setFormatString@{setFormatString}}
+\index{setFormatString@{setFormatString}!Wt::Chart::WAbstractColorMap@{Wt::Chart::WAbstractColorMap}}
+\doxysubsubsection{\texorpdfstring{setFormatString()}{setFormatString()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Color\+Map\+::set\+Format\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the format for the labels on the colormap-\/legend. 
+
+The format string is interpreted by snprintf(). The default is a float with two decimal places.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a227ff91954cbe8caaa1f8c6f026af6a6}{paint\+Legend()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractColorMap_a21b6e7edc9867c4f3e5baaffc4092ff5}\label{classWt_1_1Chart_1_1WAbstractColorMap_a21b6e7edc9867c4f3e5baaffc4092ff5}} 
+\index{Wt::Chart::WAbstractColorMap@{Wt::Chart::WAbstractColorMap}!setLabelFont@{setLabelFont}}
+\index{setLabelFont@{setLabelFont}!Wt::Chart::WAbstractColorMap@{Wt::Chart::WAbstractColorMap}}
+\doxysubsubsection{\texorpdfstring{setLabelFont()}{setLabelFont()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Color\+Map\+::set\+Label\+Font (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WFont}{W\+Font}} \&}]{font }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the font to be used when drawing the labels in the legend. 
+
+The default is a default constructed \mbox{\hyperlink{classWt_1_1WFont}{W\+Font}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a227ff91954cbe8caaa1f8c6f026af6a6}{paint\+Legend()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractColorMap_a73fd72a38644e08cf322bb5bd7123d12}\label{classWt_1_1Chart_1_1WAbstractColorMap_a73fd72a38644e08cf322bb5bd7123d12}} 
+\index{Wt::Chart::WAbstractColorMap@{Wt::Chart::WAbstractColorMap}!setTickSpacing@{setTickSpacing}}
+\index{setTickSpacing@{setTickSpacing}!Wt::Chart::WAbstractColorMap@{Wt::Chart::WAbstractColorMap}}
+\doxysubsubsection{\texorpdfstring{setTickSpacing()}{setTickSpacing()}}
+{\footnotesize\ttfamily void Wt\+::\+Chart\+::\+W\+Abstract\+Color\+Map\+::set\+Tick\+Spacing (\begin{DoxyParamCaption}\item[{int}]{spacing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the tickspacing for the legend as a number of line-\/heights. 
+
+The tickspacing must be specified as an integer number of line-\/heigths. For example, the default value of 2 will leave two line-\/heights between the labels of the ticks.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a227ff91954cbe8caaa1f8c6f026af6a6}{paint\+Legend()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1Chart_1_1WAbstractColorMap_adf30de87975c2b6b14a6a57f416e376c}\label{classWt_1_1Chart_1_1WAbstractColorMap_adf30de87975c2b6b14a6a57f416e376c}} 
+\index{Wt::Chart::WAbstractColorMap@{Wt::Chart::WAbstractColorMap}!tickSpacing@{tickSpacing}}
+\index{tickSpacing@{tickSpacing}!Wt::Chart::WAbstractColorMap@{Wt::Chart::WAbstractColorMap}}
+\doxysubsubsection{\texorpdfstring{tickSpacing()}{tickSpacing()}}
+{\footnotesize\ttfamily int Wt\+::\+Chart\+::\+W\+Abstract\+Color\+Map\+::tick\+Spacing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the tickspacing for the legend. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1Chart_1_1WAbstractColorMap_a73fd72a38644e08cf322bb5bd7123d12}{set\+Tick\+Spacing()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Chart/W\+Abstract\+Color\+Map.\+h\end{DoxyCompactItemize}

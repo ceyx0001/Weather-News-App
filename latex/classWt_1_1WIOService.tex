@@ -1,0 +1,152 @@
+\hypertarget{classWt_1_1WIOService}{}\doxysection{Wt\+::W\+I\+O\+Service Class Reference}
+\label{classWt_1_1WIOService}\index{Wt::WIOService@{Wt::WIOService}}
+
+
+An I/O service.  
+
+
+
+
+Inheritance diagram for Wt\+::W\+I\+O\+Service\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+I\+O\+Service\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WIOService_a5ee1bf87cdc2eb1ff5fcc35dd8cddea4}{W\+I\+O\+Service}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new IO service. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WIOService_a4f79e83a51a786a9c22f431c11e7854d}{set\+Thread\+Count}} (int number)
+\begin{DoxyCompactList}\small\item\em Configures the number of threads. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WIOService_ad6700130fe7724e98b335aa6306d775e}\label{classWt_1_1WIOService_ad6700130fe7724e98b335aa6306d775e}} 
+int \mbox{\hyperlink{classWt_1_1WIOService_ad6700130fe7724e98b335aa6306d775e}{thread\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Returns the thread count. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WIOService_a5816e47cc1c8a493f63dee8c5db8e7b3}{start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the I/O service. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WIOService_a9780f76f0e6f0159de0a57c78c2f1fad}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the I/O service. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WIOService_ae5a4cffe1ef2ccd3fbe441cebff3f019}{post}} (const std\+::function$<$ void()$>$ \&function)
+\begin{DoxyCompactList}\small\item\em Posts a function into the thread-\/pool. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WIOService_a5e445e207ee36f75cea4ba7ae321d7dc}{schedule}} (std\+::chrono\+::steady\+\_\+clock\+::duration millis, const std\+::function$<$ void()$>$ \&function)
+\begin{DoxyCompactList}\small\item\em Schedules a function on the thread-\/pool. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WIOService_a7db1bff773573042df4b556628521fd5}{initialize\+Thread}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a thread. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WIOService_a394de0e02ebb91541932b602bfd62c2e}\label{classWt_1_1WIOService_a394de0e02ebb91541932b602bfd62c2e}} 
+bool {\bfseries request\+Blocked\+Thread} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WIOService_ada9f969e38aa0ba6636f40f9b3e1b6c7}\label{classWt_1_1WIOService_ada9f969e38aa0ba6636f40f9b3e1b6c7}} 
+void {\bfseries release\+Blocked\+Thread} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WIOService_a389c1b69597c1ab7d76dde863307501c}\label{classWt_1_1WIOService_a389c1b69597c1ab7d76dde863307501c}} 
+void {\bfseries handle\+Timeout} (const std\+::shared\+\_\+ptr$<$ Asio\+Wrapper\+::asio\+::steady\+\_\+timer $>$ \&timer, const std\+::function$<$ void()$>$ \&function, const Asio\+Wrapper\+::error\+\_\+code \&e)
+\item 
+\mbox{\Hypertarget{classWt_1_1WIOService_a28e3781f9a9c578d9fb85b82f720e051}\label{classWt_1_1WIOService_a28e3781f9a9c578d9fb85b82f720e051}} 
+void {\bfseries run} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WIOService_ae4b6a93499a63bb7a4bb21b6e8c6d3c8}\label{classWt_1_1WIOService_ae4b6a93499a63bb7a4bb21b6e8c6d3c8}} 
+W\+I\+O\+Service\+Impl $\ast$ {\bfseries impl\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WIOService_ac12c729ec002eb77d65642bdbb3f11cd}\label{classWt_1_1WIOService_ac12c729ec002eb77d65642bdbb3f11cd}} 
+strand {\bfseries strand\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+An I/O service. 
+
+! An I/O service combines (boost\+:\+:)asio\+::io\+\_\+service with a thread pool. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WIOService_a5ee1bf87cdc2eb1ff5fcc35dd8cddea4}\label{classWt_1_1WIOService_a5ee1bf87cdc2eb1ff5fcc35dd8cddea4}} 
+\index{Wt::WIOService@{Wt::WIOService}!WIOService@{WIOService}}
+\index{WIOService@{WIOService}!Wt::WIOService@{Wt::WIOService}}
+\doxysubsubsection{\texorpdfstring{WIOService()}{WIOService()}}
+{\footnotesize\ttfamily Wt\+::\+W\+I\+O\+Service\+::\+W\+I\+O\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new IO service. 
+
+\begin{DoxySeeAlso}{See also}
+set\+Server\+Configuration() 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WIOService_a7db1bff773573042df4b556628521fd5}\label{classWt_1_1WIOService_a7db1bff773573042df4b556628521fd5}} 
+\index{Wt::WIOService@{Wt::WIOService}!initializeThread@{initializeThread}}
+\index{initializeThread@{initializeThread}!Wt::WIOService@{Wt::WIOService}}
+\doxysubsubsection{\texorpdfstring{initializeThread()}{initializeThread()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+I\+O\+Service\+::initialize\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Initializes a thread. 
+
+This function is called for every new thread created, and can be used to configure the thread, e.\+g. with respect to scheduling priorities. \mbox{\Hypertarget{classWt_1_1WIOService_ae5a4cffe1ef2ccd3fbe441cebff3f019}\label{classWt_1_1WIOService_ae5a4cffe1ef2ccd3fbe441cebff3f019}} 
+\index{Wt::WIOService@{Wt::WIOService}!post@{post}}
+\index{post@{post}!Wt::WIOService@{Wt::WIOService}}
+\doxysubsubsection{\texorpdfstring{post()}{post()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+I\+O\+Service\+::post (\begin{DoxyParamCaption}\item[{const std\+::function$<$ void()$>$ \&}]{function }\end{DoxyParamCaption})}
+
+
+
+Posts a function into the thread-\/pool. 
+
+The function will be executed within a thread of the thread-\/pool.
+
+This method returns immediately. \mbox{\Hypertarget{classWt_1_1WIOService_a5e445e207ee36f75cea4ba7ae321d7dc}\label{classWt_1_1WIOService_a5e445e207ee36f75cea4ba7ae321d7dc}} 
+\index{Wt::WIOService@{Wt::WIOService}!schedule@{schedule}}
+\index{schedule@{schedule}!Wt::WIOService@{Wt::WIOService}}
+\doxysubsubsection{\texorpdfstring{schedule()}{schedule()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+I\+O\+Service\+::schedule (\begin{DoxyParamCaption}\item[{std\+::chrono\+::steady\+\_\+clock\+::duration}]{millis,  }\item[{const std\+::function$<$ void()$>$ \&}]{function }\end{DoxyParamCaption})}
+
+
+
+Schedules a function on the thread-\/pool. 
+
+The function will be executed after a time out, specified in milli-\/seconds, on the thread pool. \mbox{\Hypertarget{classWt_1_1WIOService_a4f79e83a51a786a9c22f431c11e7854d}\label{classWt_1_1WIOService_a4f79e83a51a786a9c22f431c11e7854d}} 
+\index{Wt::WIOService@{Wt::WIOService}!setThreadCount@{setThreadCount}}
+\index{setThreadCount@{setThreadCount}!Wt::WIOService@{Wt::WIOService}}
+\doxysubsubsection{\texorpdfstring{setThreadCount()}{setThreadCount()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+I\+O\+Service\+::set\+Thread\+Count (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})}
+
+
+
+Configures the number of threads. 
+
+This must be configured before the server is started using \mbox{\hyperlink{classWt_1_1WIOService_a5816e47cc1c8a493f63dee8c5db8e7b3}{start()}}.
+
+The default thread count is 5 (or is configured by \mbox{\hyperlink{classWt_1_1WServer}{W\+Server}} from information in the configuration file). \mbox{\Hypertarget{classWt_1_1WIOService_a5816e47cc1c8a493f63dee8c5db8e7b3}\label{classWt_1_1WIOService_a5816e47cc1c8a493f63dee8c5db8e7b3}} 
+\index{Wt::WIOService@{Wt::WIOService}!start@{start}}
+\index{start@{start}!Wt::WIOService@{Wt::WIOService}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+I\+O\+Service\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the I/O service. 
+
+This will start the internal thread pool to process work for the I/O service, if not already started. \mbox{\Hypertarget{classWt_1_1WIOService_a9780f76f0e6f0159de0a57c78c2f1fad}\label{classWt_1_1WIOService_a9780f76f0e6f0159de0a57c78c2f1fad}} 
+\index{Wt::WIOService@{Wt::WIOService}!stop@{stop}}
+\index{stop@{stop}!Wt::WIOService@{Wt::WIOService}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+I\+O\+Service\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Stops the I/O service. 
+
+This will stop the internal thread pool. The method will block until all work has been completed. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+I\+O\+Service.\+h\end{DoxyCompactItemize}

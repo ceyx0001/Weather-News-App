@@ -1,0 +1,195 @@
+\hypertarget{classhttp_1_1server_1_1RequestParser}{}\doxysection{http\+::server\+::Request\+Parser Class Reference}
+\label{classhttp_1_1server_1_1RequestParser}\index{http::server::RequestParser@{http::server::RequestParser}}
+
+
+Parser for incoming requests.  
+
+
+
+
+{\ttfamily \#include $<$Request\+Parser.\+h$>$}
+
+
+
+Collaboration diagram for http\+::server\+::Request\+Parser\+:
+% FIG 0
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_af9c35c2a4d0ce4e4aa55948fe8a3dc02}\label{classhttp_1_1server_1_1RequestParser_af9c35c2a4d0ce4e4aa55948fe8a3dc02}} 
+enum {\bfseries Parse\+Result} \{ {\bfseries Read\+More}, 
+{\bfseries Done}, 
+{\bfseries Not\+Ready}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_acf93c259992b54e2f86d9c4b1c5d796d}\label{classhttp_1_1server_1_1RequestParser_acf93c259992b54e2f86d9c4b1c5d796d}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1RequestParser_acf93c259992b54e2f86d9c4b1c5d796d}{Request\+Parser}} (\mbox{\hyperlink{classhttp_1_1server_1_1Server}{Server}} $\ast$server)
+\begin{DoxyCompactList}\small\item\em Construct ready to parse the request method. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_af8f1a7e654fbcf09e45c1c916572918e}\label{classhttp_1_1server_1_1RequestParser_af8f1a7e654fbcf09e45c1c916572918e}} 
+void \mbox{\hyperlink{classhttp_1_1server_1_1RequestParser_af8f1a7e654fbcf09e45c1c916572918e}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reset to initial parser state. \end{DoxyCompactList}\item 
+boost\+::tuple$<$ boost\+::tribool, char $\ast$ $>$ \mbox{\hyperlink{classhttp_1_1server_1_1RequestParser_a0ed1ccff6a30a2c358c7d1f15b213fd3}{parse}} (\mbox{\hyperlink{classhttp_1_1server_1_1Request}{Request}} \&req, char $\ast$begin, char $\ast$end)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_aff0423d7c36a09d9d16f7d52f7bd014c}\label{classhttp_1_1server_1_1RequestParser_aff0423d7c36a09d9d16f7d52f7bd014c}} 
+Reply\+::status\+\_\+type \mbox{\hyperlink{classhttp_1_1server_1_1RequestParser_aff0423d7c36a09d9d16f7d52f7bd014c}{validate}} (\mbox{\hyperlink{classhttp_1_1server_1_1Request}{Request}} \&req)
+\begin{DoxyCompactList}\small\item\em Validate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_adc18e0420bbe0ba96e1f798e4c868bed}\label{classhttp_1_1server_1_1RequestParser_adc18e0420bbe0ba96e1f798e4c868bed}} 
+Parse\+Result {\bfseries parse\+Body} (\mbox{\hyperlink{classhttp_1_1server_1_1Request}{Request}} \&req, Reply\+Ptr reply, char $\ast$\&begin, char $\ast$end)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_ab8c72a2954caf39791efaa887a3b229f}\label{classhttp_1_1server_1_1RequestParser_ab8c72a2954caf39791efaa887a3b229f}} 
+bool {\bfseries initial\+State} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_a3435ccc2974f1abaa29e8cc2a7aa4849}\label{classhttp_1_1server_1_1RequestParser_a3435ccc2974f1abaa29e8cc2a7aa4849}} 
+enum \mbox{\hyperlink{classhttp_1_1server_1_1RequestParser_a3435ccc2974f1abaa29e8cc2a7aa4849}{http\+\_\+state}} \{ \newline
+{\bfseries method\+\_\+start}, 
+{\bfseries expecting\+\_\+newline\+\_\+0}, 
+{\bfseries method}, 
+{\bfseries uri\+\_\+start}, 
+\newline
+{\bfseries uri}, 
+{\bfseries http\+\_\+version\+\_\+h}, 
+{\bfseries http\+\_\+version\+\_\+t\+\_\+1}, 
+{\bfseries http\+\_\+version\+\_\+t\+\_\+2}, 
+\newline
+{\bfseries http\+\_\+version\+\_\+p}, 
+{\bfseries http\+\_\+version\+\_\+slash}, 
+{\bfseries http\+\_\+version\+\_\+major\+\_\+start}, 
+{\bfseries http\+\_\+version\+\_\+major}, 
+\newline
+{\bfseries http\+\_\+version\+\_\+minor\+\_\+start}, 
+{\bfseries http\+\_\+version\+\_\+minor}, 
+{\bfseries expecting\+\_\+newline\+\_\+1}, 
+{\bfseries header\+\_\+line\+\_\+start}, 
+\newline
+{\bfseries header\+\_\+name}, 
+{\bfseries space\+\_\+before\+\_\+header\+\_\+value}, 
+{\bfseries header\+\_\+value}, 
+{\bfseries expecting\+\_\+newline\+\_\+2}, 
+\newline
+{\bfseries expecting\+\_\+newline\+\_\+3}
+ \}
+\begin{DoxyCompactList}\small\item\em The current state of the request parser. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_aafe34ba733966aa37bd981f406d9020c}\label{classhttp_1_1server_1_1RequestParser_aafe34ba733966aa37bd981f406d9020c}} 
+enum {\bfseries ws\+\_\+state} \{ \newline
+{\bfseries ws\+\_\+start}, 
+{\bfseries ws00\+\_\+hand\+\_\+shake}, 
+{\bfseries ws00\+\_\+frame\+\_\+start}, 
+{\bfseries ws00\+\_\+text\+\_\+data}, 
+\newline
+{\bfseries ws00\+\_\+binary\+\_\+length}, 
+{\bfseries ws00\+\_\+binary\+\_\+data}, 
+{\bfseries ws13\+\_\+frame\+\_\+start}, 
+{\bfseries ws13\+\_\+payload\+\_\+length}, 
+\newline
+{\bfseries ws13\+\_\+extended\+\_\+payload\+\_\+length}, 
+{\bfseries ws13\+\_\+mask}, 
+{\bfseries ws13\+\_\+payload}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_a15b464093eb56deeb3f4aceff4551447}\label{classhttp_1_1server_1_1RequestParser_a15b464093eb56deeb3f4aceff4551447}} 
+boost\+::tribool \& \mbox{\hyperlink{classhttp_1_1server_1_1RequestParser_a15b464093eb56deeb3f4aceff4551447}{consume}} (\mbox{\hyperlink{classhttp_1_1server_1_1Request}{Request}} \&req, char $\ast$input)
+\begin{DoxyCompactList}\small\item\em Handle the next character of input. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_af206ed7f746378d19cbe3dc14251e378}\label{classhttp_1_1server_1_1RequestParser_af206ed7f746378d19cbe3dc14251e378}} 
+bool {\bfseries consume\+Char} (char $\ast$d)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_a5b91d1092c5cb7a3d3d405b25ef22558}\label{classhttp_1_1server_1_1RequestParser_a5b91d1092c5cb7a3d3d405b25ef22558}} 
+void {\bfseries consume\+To\+String} (\mbox{\hyperlink{structhttp_1_1server_1_1buffer__string}{buffer\+\_\+string}} \&result, int max\+Size)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_ac2f5649678396173be210abd7cffbd73}\label{classhttp_1_1server_1_1RequestParser_ac2f5649678396173be210abd7cffbd73}} 
+void {\bfseries consume\+Complete} (char $\ast$d)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_a0bcb1cc5537adb60c14ceb1014400d01}\label{classhttp_1_1server_1_1RequestParser_a0bcb1cc5537adb60c14ceb1014400d01}} 
+Request\+::\+State {\bfseries parse\+Web\+Socket\+Message} (\mbox{\hyperlink{classhttp_1_1server_1_1Request}{Request}} \&req, Reply\+Ptr reply, char $\ast$\&begin, char $\ast$end)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_aa0b8bc765bc10ef276b19b2ca764da44}\label{classhttp_1_1server_1_1RequestParser_aa0b8bc765bc10ef276b19b2ca764da44}} 
+bool {\bfseries do\+Web\+Socket\+Handshake00} (const \mbox{\hyperlink{classhttp_1_1server_1_1Request}{Request}} \&req)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_adb4e8cd7e776fa57b92ec9a313f286c9}\label{classhttp_1_1server_1_1RequestParser_adb4e8cd7e776fa57b92ec9a313f286c9}} 
+std\+::string {\bfseries do\+Web\+Socket\+Handshake13} (const \mbox{\hyperlink{classhttp_1_1server_1_1Request}{Request}} \&req)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_a2bc39168b7a189a04ff0206fe54632af}\label{classhttp_1_1server_1_1RequestParser_a2bc39168b7a189a04ff0206fe54632af}} 
+bool {\bfseries parse\+Crazy\+Web\+Socket\+Key} (const \mbox{\hyperlink{structhttp_1_1server_1_1buffer__string}{buffer\+\_\+string}} \&key, \+::uint32\+\_\+t \&number)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_a4a3ee53c757ae9b7b16cf437531cd843}\label{classhttp_1_1server_1_1RequestParser_a4a3ee53c757ae9b7b16cf437531cd843}} 
+static bool \mbox{\hyperlink{classhttp_1_1server_1_1RequestParser_a4a3ee53c757ae9b7b16cf437531cd843}{is\+\_\+char}} (int c)
+\begin{DoxyCompactList}\small\item\em Check if a byte is an H\+T\+TP character. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_aca4a67d2e5b848015bc4367cd43cfedd}\label{classhttp_1_1server_1_1RequestParser_aca4a67d2e5b848015bc4367cd43cfedd}} 
+static bool \mbox{\hyperlink{classhttp_1_1server_1_1RequestParser_aca4a67d2e5b848015bc4367cd43cfedd}{is\+\_\+ctl}} (int c)
+\begin{DoxyCompactList}\small\item\em Check if a byte is an H\+T\+TP control character. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_afc6116a4c1196f284615069ecbcc67b1}\label{classhttp_1_1server_1_1RequestParser_afc6116a4c1196f284615069ecbcc67b1}} 
+static bool \mbox{\hyperlink{classhttp_1_1server_1_1RequestParser_afc6116a4c1196f284615069ecbcc67b1}{is\+\_\+tspecial}} (int c)
+\begin{DoxyCompactList}\small\item\em Check if a byte is defined as an H\+T\+TP tspecial character. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_af642316fffd409af6699cb9f2f33a822}\label{classhttp_1_1server_1_1RequestParser_af642316fffd409af6699cb9f2f33a822}} 
+static bool \mbox{\hyperlink{classhttp_1_1server_1_1RequestParser_af642316fffd409af6699cb9f2f33a822}{is\+\_\+digit}} (int c)
+\begin{DoxyCompactList}\small\item\em Check if a byte is a digit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_ade812efa5f5883e361e4371f17e835f2}\label{classhttp_1_1server_1_1RequestParser_ade812efa5f5883e361e4371f17e835f2}} 
+enum \mbox{\hyperlink{classhttp_1_1server_1_1RequestParser_a3435ccc2974f1abaa29e8cc2a7aa4849}{http\+::server\+::\+Request\+Parser\+::http\+\_\+state}} {\bfseries http\+State\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_af9b9949933ba1f982c55688a3a3aa8bf}\label{classhttp_1_1server_1_1RequestParser_af9b9949933ba1f982c55688a3a3aa8bf}} 
+enum http\+::server\+::\+Request\+Parser\+::ws\+\_\+state {\bfseries ws\+State\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_a39f3492bad15c5a52737cd888ad29264}\label{classhttp_1_1server_1_1RequestParser_a39f3492bad15c5a52737cd888ad29264}} 
+uint64\+\_\+t {\bfseries read\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_a6062f1e5f75d09296cb37ba368d3ef76}\label{classhttp_1_1server_1_1RequestParser_a6062f1e5f75d09296cb37ba368d3ef76}} 
+unsigned char {\bfseries ws\+Frame\+Type\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_a8e3c3c60f033de9e4d6f71eadc8caabd}\label{classhttp_1_1server_1_1RequestParser_a8e3c3c60f033de9e4d6f71eadc8caabd}} 
+unsigned char {\bfseries ws\+Count\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_af302fab948c409967a3d02eaadfbe038}\label{classhttp_1_1server_1_1RequestParser_af302fab948c409967a3d02eaadfbe038}} 
+unsigned {\bfseries ws\+Mask\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_aee66065f0bae2d78deb7c66b6304ea4e}\label{classhttp_1_1server_1_1RequestParser_aee66065f0bae2d78deb7c66b6304ea4e}} 
+char {\bfseries ws00\+\_\+buf\+\_\+} \mbox{[}16\mbox{]}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_ab1e529fd58b7640b1d294a979e24eea3}\label{classhttp_1_1server_1_1RequestParser_ab1e529fd58b7640b1d294a979e24eea3}} 
+\+::uint64\+\_\+t {\bfseries request\+Size\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_a3e76e62cbcecc8124f37a45f2a74fb45}\label{classhttp_1_1server_1_1RequestParser_a3e76e62cbcecc8124f37a45f2a74fb45}} 
+\+::int64\+\_\+t {\bfseries remainder\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_a712d8fd9e079184a8b5dcfeb67d2a012}\label{classhttp_1_1server_1_1RequestParser_a712d8fd9e079184a8b5dcfeb67d2a012}} 
+\mbox{\hyperlink{structhttp_1_1server_1_1buffer__string}{buffer\+\_\+string}} $\ast$ {\bfseries current\+String\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_aa6f2502eaf5a035ce25f454f16cb10b0}\label{classhttp_1_1server_1_1RequestParser_aa6f2502eaf5a035ce25f454f16cb10b0}} 
+unsigned {\bfseries max\+Size\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_afbdeef9232bc5a426e0876aa52493cfb}\label{classhttp_1_1server_1_1RequestParser_afbdeef9232bc5a426e0876aa52493cfb}} 
+bool {\bfseries have\+Header\+\_\+}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_a9a8ad81427b07a207d1fec6da6ecf51b}\label{classhttp_1_1server_1_1RequestParser_a9a8ad81427b07a207d1fec6da6ecf51b}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1Server}{Server}} $\ast$ {\bfseries server\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Parser for incoming requests. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestParser_a0ed1ccff6a30a2c358c7d1f15b213fd3}\label{classhttp_1_1server_1_1RequestParser_a0ed1ccff6a30a2c358c7d1f15b213fd3}} 
+\index{http::server::RequestParser@{http::server::RequestParser}!parse@{parse}}
+\index{parse@{parse}!http::server::RequestParser@{http::server::RequestParser}}
+\doxysubsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily boost\+::tuple$<$boost\+::tribool, char $\ast$$>$ http\+::server\+::\+Request\+Parser\+::parse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classhttp_1_1server_1_1Request}{Request}} \&}]{req,  }\item[{char $\ast$}]{begin,  }\item[{char $\ast$}]{end }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{structParse}{Parse}} some data. The tribool return value is true when a complete request has been parsed, false if the data is invalid, indeterminate when more data is required. The iterator return value indicates how much of the input has been consumed. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/http/Request\+Parser.\+h\end{DoxyCompactItemize}

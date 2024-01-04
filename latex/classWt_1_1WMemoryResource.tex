@@ -1,0 +1,157 @@
+\hypertarget{classWt_1_1WMemoryResource}{}\doxysection{Wt\+::W\+Memory\+Resource Class Reference}
+\label{classWt_1_1WMemoryResource}\index{Wt::WMemoryResource@{Wt::WMemoryResource}}
+
+
+A resource which streams data from memory.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Memory\+Resource.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Memory\+Resource\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Memory\+Resource\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WMemoryResource_ae0816b2da9995cd905937a7b4a25af5e}{W\+Memory\+Resource}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new resource. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WMemoryResource_af82a9e5381c340c3cd4d456525cd27c2}{W\+Memory\+Resource}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1WMemoryResource_af6e9c0043442f08ac6e8ad2d248f6c71}{mime\+Type}})
+\begin{DoxyCompactList}\small\item\em Creates a new resource with given mime-\/type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMemoryResource_a3c94cb2b1a9c6af76968bb6ad891d048}\label{classWt_1_1WMemoryResource_a3c94cb2b1a9c6af76968bb6ad891d048}} 
+\mbox{\hyperlink{classWt_1_1WMemoryResource_a3c94cb2b1a9c6af76968bb6ad891d048}{W\+Memory\+Resource}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1WMemoryResource_af6e9c0043442f08ac6e8ad2d248f6c71}{mime\+Type}}, const std\+::vector$<$ unsigned char $>$ \&\mbox{\hyperlink{classWt_1_1WMemoryResource_afe9356d4b3c25e88c62f78136c23f25e}{data}})
+\begin{DoxyCompactList}\small\item\em Creates a new resource with given mime-\/type and data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMemoryResource_a330bf924bd2d01de7dfce15778b56d48}\label{classWt_1_1WMemoryResource_a330bf924bd2d01de7dfce15778b56d48}} 
+void \mbox{\hyperlink{classWt_1_1WMemoryResource_a330bf924bd2d01de7dfce15778b56d48}{set\+Data}} (const std\+::vector$<$ unsigned char $>$ \&\mbox{\hyperlink{classWt_1_1WMemoryResource_afe9356d4b3c25e88c62f78136c23f25e}{data}})
+\begin{DoxyCompactList}\small\item\em Sets new data for the resource to serve. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WMemoryResource_a9ad4324110014390132405e941c9c87c}{set\+Data}} (const unsigned char $\ast$\mbox{\hyperlink{classWt_1_1WMemoryResource_afe9356d4b3c25e88c62f78136c23f25e}{data}}, int count)
+\begin{DoxyCompactList}\small\item\em Sets new data for the resource to serve. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMemoryResource_afe9356d4b3c25e88c62f78136c23f25e}\label{classWt_1_1WMemoryResource_afe9356d4b3c25e88c62f78136c23f25e}} 
+const std\+::vector$<$ unsigned char $>$ \mbox{\hyperlink{classWt_1_1WMemoryResource_afe9356d4b3c25e88c62f78136c23f25e}{data}} () const
+\begin{DoxyCompactList}\small\item\em Returns the data this resource will serve. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMemoryResource_af6e9c0043442f08ac6e8ad2d248f6c71}\label{classWt_1_1WMemoryResource_af6e9c0043442f08ac6e8ad2d248f6c71}} 
+const std\+::string \mbox{\hyperlink{classWt_1_1WMemoryResource_af6e9c0043442f08ac6e8ad2d248f6c71}{mime\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the mime-\/type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WMemoryResource_a057ea5ac18daacf2894c28e5bfbbde60}\label{classWt_1_1WMemoryResource_a057ea5ac18daacf2894c28e5bfbbde60}} 
+void \mbox{\hyperlink{classWt_1_1WMemoryResource_a057ea5ac18daacf2894c28e5bfbbde60}{set\+Mime\+Type}} (const std\+::string \&\mbox{\hyperlink{classWt_1_1WMemoryResource_af6e9c0043442f08ac6e8ad2d248f6c71}{mime\+Type}})
+\begin{DoxyCompactList}\small\item\em Sets the mime-\/type. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WMemoryResource_ada82af71acf8a47eabcb91af28726f1e}{handle\+Request}} (const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&request, \mbox{\hyperlink{classWt_1_1Http_1_1Response}{Http\+::\+Response}} \&response) override
+\begin{DoxyCompactList}\small\item\em Handles a request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMemoryResource_adf5c1b218a028f0a5556839bc5fc1b3d}\label{classWt_1_1WMemoryResource_adf5c1b218a028f0a5556839bc5fc1b3d}} 
+typedef std\+::shared\+\_\+ptr$<$ const std\+::vector$<$ unsigned char $>$ $>$ {\bfseries Data\+Ptr}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMemoryResource_a1eba5792f3b4398bee91890868fb0731}\label{classWt_1_1WMemoryResource_a1eba5792f3b4398bee91890868fb0731}} 
+void {\bfseries create} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMemoryResource_a1fc4dc30b6ce2a7d2041f9a48f8823f2}\label{classWt_1_1WMemoryResource_a1fc4dc30b6ce2a7d2041f9a48f8823f2}} 
+std\+::string {\bfseries mime\+Type\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMemoryResource_a3c913c86f4894ba3feb3f04d86d95ef6}\label{classWt_1_1WMemoryResource_a3c913c86f4894ba3feb3f04d86d95ef6}} 
+Data\+Ptr {\bfseries data\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WMemoryResource_a16efd0e512cb27ee0965922bba8dec83}\label{classWt_1_1WMemoryResource_a16efd0e512cb27ee0965922bba8dec83}} 
+std\+::shared\+\_\+ptr$<$ std\+::mutex $>$ {\bfseries data\+Mutex\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A resource which streams data from memory. 
+
+Use this resource if you want to serve resource data from memory. This is suitable for relatively small resources, which still require some computation.
+
+If creating the data requires computation which you would like to post-\/pone until the resource is served, then you may want to directly reimplement \mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}} instead and compute the data on the fly while streaming.
+
+Usage examples\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{auto} imageResource = std::make\_shared<Wt::WMemoryResource>(\textcolor{stringliteral}{"image/gif"});}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{static} \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} gifData[]}
+\DoxyCodeLine{   = \{ 0x47, 0x49, 0x46, 0x38, 0x39, 0x61, 0x01, 0x00, 0x01, 0x00,}
+\DoxyCodeLine{       0x80, 0x00, 0x00, 0xdb, 0xdf, 0xef, 0x00, 0x00, 0x00, 0x21,}
+\DoxyCodeLine{       0xf9, 0x04, 0x01, 0x00, 0x00, 0x00, 0x00, 0x2c, 0x00, 0x00,}
+\DoxyCodeLine{       0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0x00, 0x02, 0x02, 0x44,}
+\DoxyCodeLine{       0x01, 0x00, 0x3b \};}
+\DoxyCodeLine{}
+\DoxyCodeLine{imageResource-\/>setData(gifData, 43);}
+\DoxyCodeLine{\textcolor{keyword}{auto} image = std::make\_unique<Wt::WImage>(\mbox{\hyperlink{classWt_1_1WLink}{Wt::WLink}}(imageResource), \textcolor{stringliteral}{"1 transparent pixel"});}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WFileResource}{W\+File\+Resource}}. 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WMemoryResource_ae0816b2da9995cd905937a7b4a25af5e}\label{classWt_1_1WMemoryResource_ae0816b2da9995cd905937a7b4a25af5e}} 
+\index{Wt::WMemoryResource@{Wt::WMemoryResource}!WMemoryResource@{WMemoryResource}}
+\index{WMemoryResource@{WMemoryResource}!Wt::WMemoryResource@{Wt::WMemoryResource}}
+\doxysubsubsection{\texorpdfstring{WMemoryResource()}{WMemoryResource()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Memory\+Resource\+::\+W\+Memory\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a new resource. 
+
+You must call \mbox{\hyperlink{classWt_1_1WMemoryResource_a057ea5ac18daacf2894c28e5bfbbde60}{set\+Mime\+Type()}} and \mbox{\hyperlink{classWt_1_1WMemoryResource_a330bf924bd2d01de7dfce15778b56d48}{set\+Data()}} before using the resource. \mbox{\Hypertarget{classWt_1_1WMemoryResource_af82a9e5381c340c3cd4d456525cd27c2}\label{classWt_1_1WMemoryResource_af82a9e5381c340c3cd4d456525cd27c2}} 
+\index{Wt::WMemoryResource@{Wt::WMemoryResource}!WMemoryResource@{WMemoryResource}}
+\index{WMemoryResource@{WMemoryResource}!Wt::WMemoryResource@{Wt::WMemoryResource}}
+\doxysubsubsection{\texorpdfstring{WMemoryResource()}{WMemoryResource()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Memory\+Resource\+::\+W\+Memory\+Resource (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mime\+Type }\end{DoxyParamCaption})}
+
+
+
+Creates a new resource with given mime-\/type. 
+
+You must call \mbox{\hyperlink{classWt_1_1WMemoryResource_a330bf924bd2d01de7dfce15778b56d48}{set\+Data()}} before using the resource. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WMemoryResource_ada82af71acf8a47eabcb91af28726f1e}\label{classWt_1_1WMemoryResource_ada82af71acf8a47eabcb91af28726f1e}} 
+\index{Wt::WMemoryResource@{Wt::WMemoryResource}!handleRequest@{handleRequest}}
+\index{handleRequest@{handleRequest}!Wt::WMemoryResource@{Wt::WMemoryResource}}
+\doxysubsubsection{\texorpdfstring{handleRequest()}{handleRequest()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Memory\+Resource\+::handle\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&}]{request,  }\item[{\mbox{\hyperlink{classWt_1_1Http_1_1Response}{Http\+::\+Response}} \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles a request. 
+
+Reimplement this method so that a proper response is generated for the given request. From the {\ttfamily request} object you can access request parameters and whether the request is a continuation request. In the {\ttfamily response} object, you should set the mime type and stream the output data.
+
+A request may also concern a continuation, indicated in \mbox{\hyperlink{classWt_1_1Http_1_1Request_a9fe40c73e6d2bd3b4fec6f2476d71265}{Http\+::\+Request\+::continuation()}}, in which case the next part for a previously created continuation should be served.
+
+While handling a request, which may happen at any time together with event handling, the library makes sure that the resource is not being concurrently deleted, but multiple requests may happend simultaneously for a single resource. 
+
+Implements \mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{Wt\+::\+W\+Resource}}.
+
+\mbox{\Hypertarget{classWt_1_1WMemoryResource_a9ad4324110014390132405e941c9c87c}\label{classWt_1_1WMemoryResource_a9ad4324110014390132405e941c9c87c}} 
+\index{Wt::WMemoryResource@{Wt::WMemoryResource}!setData@{setData}}
+\index{setData@{setData}!Wt::WMemoryResource@{Wt::WMemoryResource}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Memory\+Resource\+::set\+Data (\begin{DoxyParamCaption}\item[{const unsigned char $\ast$}]{data,  }\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Sets new data for the resource to serve. 
+
+Sets the data from using the first {\ttfamily count} bytes from the C-\/style {\ttfamily data} array. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Memory\+Resource.\+h\end{DoxyCompactItemize}

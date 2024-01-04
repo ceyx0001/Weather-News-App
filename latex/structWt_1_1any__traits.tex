@@ -1,0 +1,83 @@
+\hypertarget{structWt_1_1any__traits}{}\doxysection{Wt\+::any\+\_\+traits$<$ Type $>$ Struct Template Reference}
+\label{structWt_1_1any__traits}\index{Wt::any\_traits$<$ Type $>$@{Wt::any\_traits$<$ Type $>$}}
+
+
+A traits class for a type stored in a cpp17\+::any.  
+
+
+
+
+{\ttfamily \#include $<$W\+Any.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{structWt_1_1any__traits_a4308aa7ddee4785e2d4a22c84aee4b49}{as\+String}} (const Type \&value, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&format)
+\begin{DoxyCompactList}\small\item\em Converts a value to a string. \end{DoxyCompactList}\item 
+static double \mbox{\hyperlink{structWt_1_1any__traits_ad294344c847931e451a60dc7e065a18a}{as\+Number}} (const Type \&v)
+\begin{DoxyCompactList}\small\item\em Converts a value to a number. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{structWt_1_1any__traits_a5a86f94d02d6933c906c65872b771c8b}{compare}} (const Type \&v1, const Type \&v2)
+\begin{DoxyCompactList}\small\item\em Compares two values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Type$>$\newline
+struct Wt\+::any\+\_\+traits$<$ Type $>$}
+
+A traits class for a type stored in a cpp17\+::any. 
+
+The traits are used by Wt\textquotesingle{}s view classes (such as \mbox{\hyperlink{classWt_1_1WTableView}{Wt\+::\+W\+Table\+View}} \mbox{\hyperlink{classWt_1_1WTreeView}{Wt\+::\+W\+Tree\+View}}, \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{Wt\+::\+Chart\+::\+W\+Cartesian\+Chart}}) to deal with values in a \mbox{\hyperlink{classWt_1_1WAbstractItemModel}{Wt\+::\+W\+Abstract\+Item\+Model}}\+:
+\begin{DoxyItemize}
+\item conversion to a string by \mbox{\hyperlink{group__modelview_ga2f96ad66a5212499e5b4d08609800a64}{Wt\+::as\+String()}}
+\item conversion to a number by \mbox{\hyperlink{group__modelview_ga48a507458cc9f4754fe8b6459f4ad3d1}{Wt\+::as\+Number()}}
+\item sorting by \mbox{\hyperlink{classWt_1_1WSortFilterProxyModel}{Wt\+::\+W\+Sort\+Filter\+Proxy\+Model}} or \mbox{\hyperlink{classWt_1_1WStandardItemModel}{W\+Standard\+Item\+Model}}.
+\end{DoxyItemize}
+
+This traits class provides a default implementation for supporting values {\itshape value} of a custom type {\itshape Type} in Wt\textquotesingle{}s M\+VC system, which relies on\+:
+\begin{DoxyItemize}
+\item serializing to a stream (std\+::ostream $<$$<$ {\itshape value}) for converting the value to a string.
+\item lexical interpretation as a number for converting the value to a number, using std\+::stod()
+\item sorting using operator== and operator$<$
+\end{DoxyItemize}
+
+You can specialize these traits if you need to customize one or more of these operations. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structWt_1_1any__traits_ad294344c847931e451a60dc7e065a18a}\label{structWt_1_1any__traits_ad294344c847931e451a60dc7e065a18a}} 
+\index{Wt::any\_traits$<$ Type $>$@{Wt::any\_traits$<$ Type $>$}!asNumber@{asNumber}}
+\index{asNumber@{asNumber}!Wt::any\_traits$<$ Type $>$@{Wt::any\_traits$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{asNumber()}{asNumber()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+double \mbox{\hyperlink{structWt_1_1any__traits}{Wt\+::any\+\_\+traits}}$<$ Type $>$\+::as\+Number (\begin{DoxyParamCaption}\item[{const Type \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts a value to a number. 
+
+The default implementation uses std\+::stod() on the string value \mbox{\Hypertarget{structWt_1_1any__traits_a4308aa7ddee4785e2d4a22c84aee4b49}\label{structWt_1_1any__traits_a4308aa7ddee4785e2d4a22c84aee4b49}} 
+\index{Wt::any\_traits$<$ Type $>$@{Wt::any\_traits$<$ Type $>$}!asString@{asString}}
+\index{asString@{asString}!Wt::any\_traits$<$ Type $>$@{Wt::any\_traits$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{asString()}{asString()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+\mbox{\hyperlink{classWt_1_1WString}{W\+String}} \mbox{\hyperlink{structWt_1_1any__traits}{Wt\+::any\+\_\+traits}}$<$ Type $>$\+::as\+String (\begin{DoxyParamCaption}\item[{const Type \&}]{value,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{format }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts a value to a string. 
+
+The default implementation uses std\+::ostream$<$$<$ operator for the value. \mbox{\Hypertarget{structWt_1_1any__traits_a5a86f94d02d6933c906c65872b771c8b}\label{structWt_1_1any__traits_a5a86f94d02d6933c906c65872b771c8b}} 
+\index{Wt::any\_traits$<$ Type $>$@{Wt::any\_traits$<$ Type $>$}!compare@{compare}}
+\index{compare@{compare}!Wt::any\_traits$<$ Type $>$@{Wt::any\_traits$<$ Type $>$}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily template$<$typename Type $>$ \\
+int \mbox{\hyperlink{structWt_1_1any__traits}{Wt\+::any\+\_\+traits}}$<$ Type $>$\+::compare (\begin{DoxyParamCaption}\item[{const Type \&}]{v1,  }\item[{const Type \&}]{v2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Compares two values. 
+
+The default implementation uses operator== and operator$<$. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Any.\+h\end{DoxyCompactItemize}

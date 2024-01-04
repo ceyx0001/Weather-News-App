@@ -1,0 +1,238 @@
+\hypertarget{classWt_1_1WPopupWidget}{}\doxysection{Wt\+::W\+Popup\+Widget Class Reference}
+\label{classWt_1_1WPopupWidget}\index{Wt::WPopupWidget@{Wt::WPopupWidget}}
+
+
+Base class for popup widgets.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Popup\+Widget.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Popup\+Widget\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Popup\+Widget\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WPopupWidget_af546196b580e8f6323bdb28c8d851311}{W\+Popup\+Widget}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ impl)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_aa8034097dde2ea152dbf9af6f67f530a}\label{classWt_1_1WPopupWidget_aa8034097dde2ea152dbf9af6f67f530a}} 
+virtual \mbox{\hyperlink{classWt_1_1WPopupWidget_aa8034097dde2ea152dbf9af6f67f530a}{$\sim$\+W\+Popup\+Widget}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPopupWidget_ab22b6a3a99836210a8d37c547c30f99b}{set\+Anchor\+Widget}} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$widget, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} \mbox{\hyperlink{classWt_1_1WPopupWidget_a2b8f99b08bf43dd8c199b7d57cd9d850}{orientation}}=Orientation\+::\+Vertical)
+\begin{DoxyCompactList}\small\item\em Sets an anchor widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_a5f31f38cb96a7f946261b8e04f783339}\label{classWt_1_1WPopupWidget_a5f31f38cb96a7f946261b8e04f783339}} 
+\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$ {\bfseries anchor\+Widget} () const
+\item 
+\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} \mbox{\hyperlink{classWt_1_1WPopupWidget_a2b8f99b08bf43dd8c199b7d57cd9d850}{orientation}} () const
+\begin{DoxyCompactList}\small\item\em Returns the orientation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPopupWidget_a4ced57e1c76e26ab6fe023d8ebf2b6cd}{set\+Transient}} (bool transient, int \mbox{\hyperlink{classWt_1_1WPopupWidget_a249f0b8ae77d270c578ec42934cbedbe}{auto\+Hide\+Delay}}=0)
+\begin{DoxyCompactList}\small\item\em Sets transient property. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WPopupWidget_a34fc38644999a134bedf3466cb9007ed}{is\+Transient}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the popup is transient. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWt_1_1WPopupWidget_a249f0b8ae77d270c578ec42934cbedbe}{auto\+Hide\+Delay}} () const
+\begin{DoxyCompactList}\small\item\em Returns the auto-\/hide delay. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WPopupWidget_a14a014c21069fc293bf73ebb3a17475d}{set\+Hidden}} (bool \mbox{\hyperlink{classWt_1_1WPopupWidget_ae7a830eb0047a72ac973d4e7ee40c6f1}{hidden}}, const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&animation=\mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}}()) override
+\begin{DoxyCompactList}\small\item\em Hides or shows the widget. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} \& \mbox{\hyperlink{classWt_1_1WPopupWidget_ae7a830eb0047a72ac973d4e7ee40c6f1}{hidden}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the popup is hidden. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} \& \mbox{\hyperlink{classWt_1_1WPopupWidget_aff7845cb5dcfd57ac997827b9f886c62}{shown}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the popup is shown. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WPopupWidget_a0274232e09629de47a12eb57ff8c1bc0}{render}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$ flags) override
+\begin{DoxyCompactList}\small\item\em Renders the widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_a73210c80baa15a7f101942f3144c9a90}\label{classWt_1_1WPopupWidget_a73210c80baa15a7f101942f3144c9a90}} 
+virtual void {\bfseries on\+Path\+Change} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_a9a66ec2f9e76fd3e554b9b3fd2df090a}\label{classWt_1_1WPopupWidget_a9a66ec2f9e76fd3e554b9b3fd2df090a}} 
+void {\bfseries create} (\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$\mbox{\hyperlink{classWt_1_1WWidget_a558ebea600669253ccc2bfa64472cc4e}{parent}})
+\item 
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_a5e774a3812636465a9024bfa201490d1}\label{classWt_1_1WPopupWidget_a5e774a3812636465a9024bfa201490d1}} 
+void {\bfseries define\+JS} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_a6b1c09adfb1fa5314fdf8909d88a900b}\label{classWt_1_1WPopupWidget_a6b1c09adfb1fa5314fdf8909d88a900b}} 
+\mbox{\hyperlink{classWt_1_1Core_1_1observing__ptr}{observing\+\_\+ptr}}$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$ {\bfseries anchor\+Widget\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_aaa706e1c65eeb3f522fad0142cbf2537}\label{classWt_1_1WPopupWidget_aaa706e1c65eeb3f522fad0142cbf2537}} 
+\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} {\bfseries orientation\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_a0377712fcb176b2657a5709d57391a5b}\label{classWt_1_1WPopupWidget_a0377712fcb176b2657a5709d57391a5b}} 
+bool {\bfseries transient\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_a3a588adfd09be5fe24dc5cfbed4261d7}\label{classWt_1_1WPopupWidget_a3a588adfd09be5fe24dc5cfbed4261d7}} 
+int {\bfseries auto\+Hide\+Delay\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_add8fed669ff60a98defba6460495bfa5}\label{classWt_1_1WPopupWidget_add8fed669ff60a98defba6460495bfa5}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} {\bfseries hidden\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_a0364350e8b0f3f17678a6fbc7fbdadce}\label{classWt_1_1WPopupWidget_a0364350e8b0f3f17678a6fbc7fbdadce}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} {\bfseries shown\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_a28c4ccaa4bd2ec4f3173fd1ce299bde3}\label{classWt_1_1WPopupWidget_a28c4ccaa4bd2ec4f3173fd1ce299bde3}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}} {\bfseries js\+Hidden\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_ac43c134eedbd60e62af4a7d0e9b6f26b}\label{classWt_1_1WPopupWidget_ac43c134eedbd60e62af4a7d0e9b6f26b}} 
+\mbox{\hyperlink{classWt_1_1JSignal}{J\+Signal}} {\bfseries js\+Shown\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Base class for popup widgets. 
+
+A popup widget anchors to another widget, for which it usually provides additional information or assists in editing, etc...
+
+The popup widget will position itself relative to the anchor widget by taking into account available space, and switching sides if necessary to fit the widget into the current window. For example, a vertically anchored widget will by default be a \char`\"{}drop-\/down\char`\"{}, positioning itself under the anchor widget, but it may also choose to position itself above the anchor widget if space is lacking below. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_af546196b580e8f6323bdb28c8d851311}\label{classWt_1_1WPopupWidget_af546196b580e8f6323bdb28c8d851311}} 
+\index{Wt::WPopupWidget@{Wt::WPopupWidget}!WPopupWidget@{WPopupWidget}}
+\index{WPopupWidget@{WPopupWidget}!Wt::WPopupWidget@{Wt::WPopupWidget}}
+\doxysubsubsection{\texorpdfstring{WPopupWidget()}{WPopupWidget()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Popup\+Widget\+::\+W\+Popup\+Widget (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $>$}]{impl }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+You need to pass in a widget that provides the main contents of the widget (e.\+g. a \mbox{\hyperlink{classWt_1_1WTemplate}{W\+Template}} or \mbox{\hyperlink{classWt_1_1WContainerWidget}{W\+Container\+Widget}}).
+
+Unlike other widgets, a popup widget is a top-\/level widget that should not be added to another container. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_a249f0b8ae77d270c578ec42934cbedbe}\label{classWt_1_1WPopupWidget_a249f0b8ae77d270c578ec42934cbedbe}} 
+\index{Wt::WPopupWidget@{Wt::WPopupWidget}!autoHideDelay@{autoHideDelay}}
+\index{autoHideDelay@{autoHideDelay}!Wt::WPopupWidget@{Wt::WPopupWidget}}
+\doxysubsubsection{\texorpdfstring{autoHideDelay()}{autoHideDelay()}}
+{\footnotesize\ttfamily int Wt\+::\+W\+Popup\+Widget\+::auto\+Hide\+Delay (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the auto-\/hide delay. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPopupWidget_a4ced57e1c76e26ab6fe023d8ebf2b6cd}{set\+Transient()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_ae7a830eb0047a72ac973d4e7ee40c6f1}\label{classWt_1_1WPopupWidget_ae7a830eb0047a72ac973d4e7ee40c6f1}} 
+\index{Wt::WPopupWidget@{Wt::WPopupWidget}!hidden@{hidden}}
+\index{hidden@{hidden}!Wt::WPopupWidget@{Wt::WPopupWidget}}
+\doxysubsubsection{\texorpdfstring{hidden()}{hidden()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}\& Wt\+::\+W\+Popup\+Widget\+::hidden (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when the popup is hidden. 
+
+This signal is emitted when the popup is being hidden because of a client-\/side event (not when \mbox{\hyperlink{classWt_1_1WPopupWidget_a14a014c21069fc293bf73ebb3a17475d}{set\+Hidden()}} or \mbox{\hyperlink{classWt_1_1WWidget_a0825c3ccbd4999afc1a88fafa6aa6fc7}{hide()}} is called). \mbox{\Hypertarget{classWt_1_1WPopupWidget_a34fc38644999a134bedf3466cb9007ed}\label{classWt_1_1WPopupWidget_a34fc38644999a134bedf3466cb9007ed}} 
+\index{Wt::WPopupWidget@{Wt::WPopupWidget}!isTransient@{isTransient}}
+\index{isTransient@{isTransient}!Wt::WPopupWidget@{Wt::WPopupWidget}}
+\doxysubsubsection{\texorpdfstring{isTransient()}{isTransient()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Popup\+Widget\+::is\+Transient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the popup is transient. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPopupWidget_a4ced57e1c76e26ab6fe023d8ebf2b6cd}{set\+Transient()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_a2b8f99b08bf43dd8c199b7d57cd9d850}\label{classWt_1_1WPopupWidget_a2b8f99b08bf43dd8c199b7d57cd9d850}} 
+\index{Wt::WPopupWidget@{Wt::WPopupWidget}!orientation@{orientation}}
+\index{orientation@{orientation}!Wt::WPopupWidget@{Wt::WPopupWidget}}
+\doxysubsubsection{\texorpdfstring{orientation()}{orientation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}} Wt\+::\+W\+Popup\+Widget\+::orientation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the orientation. 
+
+\begin{DoxySeeAlso}{See also}
+set\+Orientation() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_a0274232e09629de47a12eb57ff8c1bc0}\label{classWt_1_1WPopupWidget_a0274232e09629de47a12eb57ff8c1bc0}} 
+\index{Wt::WPopupWidget@{Wt::WPopupWidget}!render@{render}}
+\index{render@{render}!Wt::WPopupWidget@{Wt::WPopupWidget}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Popup\+Widget\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a1097ddb5b58c20fe2f6c9d096e71575c}{Render\+Flag}} $>$}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Renders the widget. 
+
+This function renders the widget (or an update for the widget), after this has been scheduled using \mbox{\hyperlink{classWt_1_1WWidget_a5d3d4edaafa2d7c892a5078f3df4cf11}{schedule\+Render()}}.
+
+The default implementation will render the widget by serializing changes to Java\+Script and H\+T\+ML. You may want to reimplement this widget if you have been postponing some of the layout / rendering implementation until the latest moment possible. In that case you should make sure you call the base implementation however. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WCompositeWidget_aeb7ede8809e2f195a61106a9d5cc9de3}{Wt\+::\+W\+Composite\+Widget}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WSuggestionPopup_a9d5a02e0693857a0fa7e67d13fcb3934}{Wt\+::\+W\+Suggestion\+Popup}}, and \mbox{\hyperlink{classWt_1_1WDialog_ab2d29f97f95cd7a92e20ec8b3501ffbd}{Wt\+::\+W\+Dialog}}.
+
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_ab22b6a3a99836210a8d37c547c30f99b}\label{classWt_1_1WPopupWidget_ab22b6a3a99836210a8d37c547c30f99b}} 
+\index{Wt::WPopupWidget@{Wt::WPopupWidget}!setAnchorWidget@{setAnchorWidget}}
+\index{setAnchorWidget@{setAnchorWidget}!Wt::WPopupWidget@{Wt::WPopupWidget}}
+\doxysubsubsection{\texorpdfstring{setAnchorWidget()}{setAnchorWidget()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Popup\+Widget\+::set\+Anchor\+Widget (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WWidget}{W\+Widget}} $\ast$}]{widget,  }\item[{\mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Orientation}}}]{orientation = {\ttfamily Orientation\+:\+:Vertical} }\end{DoxyParamCaption})}
+
+
+
+Sets an anchor widget. 
+
+A vertical popup will show below (or above) the widget, while a horizontal popup will show right (or left) of the widget. \mbox{\Hypertarget{classWt_1_1WPopupWidget_a14a014c21069fc293bf73ebb3a17475d}\label{classWt_1_1WPopupWidget_a14a014c21069fc293bf73ebb3a17475d}} 
+\index{Wt::WPopupWidget@{Wt::WPopupWidget}!setHidden@{setHidden}}
+\index{setHidden@{setHidden}!Wt::WPopupWidget@{Wt::WPopupWidget}}
+\doxysubsubsection{\texorpdfstring{setHidden()}{setHidden()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Popup\+Widget\+::set\+Hidden (\begin{DoxyParamCaption}\item[{bool}]{hidden,  }\item[{const \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}} \&}]{animation = {\ttfamily \mbox{\hyperlink{classWt_1_1WAnimation}{W\+Animation}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Hides or shows the widget. 
+
+Hides or show the widget (including all its descendant widgets). When setting {\ttfamily hidden} = {\ttfamily false}, this widget and all descendant widgets that are not hidden will be shown. A widget is only visible if it and all its ancestors in the widget tree are visible, which may be checked using \mbox{\hyperlink{classWt_1_1WCompositeWidget_a4cc174483fe8bfc1e45639eb0a9c5a03}{is\+Visible()}}. 
+
+Reimplemented from \mbox{\hyperlink{classWt_1_1WCompositeWidget_a7670a0e7c0f9582cbd769111fd58ed42}{Wt\+::\+W\+Composite\+Widget}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classWt_1_1WDialog_a463eff1cca2623aed12f80c86e3ce331}{Wt\+::\+W\+Dialog}}, and \mbox{\hyperlink{classWt_1_1WMessageBox_aaf4e30f472f3cf21a404a309c2c10013}{Wt\+::\+W\+Message\+Box}}.
+
+\mbox{\Hypertarget{classWt_1_1WPopupWidget_a4ced57e1c76e26ab6fe023d8ebf2b6cd}\label{classWt_1_1WPopupWidget_a4ced57e1c76e26ab6fe023d8ebf2b6cd}} 
+\index{Wt::WPopupWidget@{Wt::WPopupWidget}!setTransient@{setTransient}}
+\index{setTransient@{setTransient}!Wt::WPopupWidget@{Wt::WPopupWidget}}
+\doxysubsubsection{\texorpdfstring{setTransient()}{setTransient()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Popup\+Widget\+::set\+Transient (\begin{DoxyParamCaption}\item[{bool}]{transient,  }\item[{int}]{auto\+Hide\+Delay = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Sets transient property. 
+
+A transient popup will automatically hide when the user clicks outside of the popup. When {\ttfamily auto\+Hide\+Delay} is not 0, then it will also automatically hide when the user moves the mouse outside the widget for longer than this delay (in ms). \mbox{\Hypertarget{classWt_1_1WPopupWidget_aff7845cb5dcfd57ac997827b9f886c62}\label{classWt_1_1WPopupWidget_aff7845cb5dcfd57ac997827b9f886c62}} 
+\index{Wt::WPopupWidget@{Wt::WPopupWidget}!shown@{shown}}
+\index{shown@{shown}!Wt::WPopupWidget@{Wt::WPopupWidget}}
+\doxysubsubsection{\texorpdfstring{shown()}{shown()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}\& Wt\+::\+W\+Popup\+Widget\+::shown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when the popup is shown. 
+
+This signal is emitted when the popup is being shown because of a client-\/side event (not when \mbox{\hyperlink{classWt_1_1WPopupWidget_a14a014c21069fc293bf73ebb3a17475d}{set\+Hidden()}} or \mbox{\hyperlink{classWt_1_1WWidget_a52dcef5a385ddfa0a8c3e6c20000f181}{show()}} is called). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Popup\+Widget.\+h\end{DoxyCompactItemize}

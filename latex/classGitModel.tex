@@ -1,0 +1,364 @@
+\hypertarget{classGitModel}{}\doxysection{Git\+Model Class Reference}
+\label{classGitModel}\index{GitModel@{GitModel}}
+
+
+A model that retrieves revision trees from a git repository.  
+
+
+
+
+{\ttfamily \#include $<$Git\+Model.\+h$>$}
+
+
+
+Inheritance diagram for Git\+Model\+:
+% FIG 0
+
+
+Collaboration diagram for Git\+Model\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{structGitModel_1_1ChildIndex}{Child\+Index}}
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{structIndex}{Index}} usable as a key to a map, that identifies a child/row within a tree. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classGitModel_1_1Tree}{Tree}}
+\begin{DoxyCompactList}\small\item\em Used to uniquely locate a folder within the folder hierarchy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGitModel_a7c3622c0ae155da4a6f7043b08c147bb}\label{classGitModel_a7c3622c0ae155da4a6f7043b08c147bb}} 
+\mbox{\hyperlink{classGitModel_a7c3622c0ae155da4a6f7043b08c147bb}{Git\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGitModel_aac776e532822827e59a2233645995e65}\label{classGitModel_aac776e532822827e59a2233645995e65}} 
+void \mbox{\hyperlink{classGitModel_aac776e532822827e59a2233645995e65}{set\+Repository\+Path}} (const std\+::string \&repository\+Path)
+\begin{DoxyCompactList}\small\item\em Set the repository and load its \textquotesingle{}master\textquotesingle{} revision. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGitModel_af78bddbae2d7b76ec1e49d8626dc7526}{load\+Revision}} (const std\+::string \&rev\+Name)
+\begin{DoxyCompactList}\small\item\em Load a particular revision. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classGitModel_a50195f285c3712db0164f1ec33dcde82}{parent}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classGitModel_ae0e7f28a71de090019580831ff7bda60}{index}}) const
+\begin{DoxyCompactList}\small\item\em Returns the parent index. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classGitModel_ad022d1baeb5c4550676aa3a5ef226bf0}{column\+Count}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classGitModel_a50195f285c3712db0164f1ec33dcde82}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const
+\begin{DoxyCompactList}\small\item\em Returns the column count. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classGitModel_a629cde94d1861ea3d1e5e01e123ab60e}{row\+Count}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classGitModel_a50195f285c3712db0164f1ec33dcde82}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const
+\begin{DoxyCompactList}\small\item\em Returns the row count. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \mbox{\hyperlink{classGitModel_ae0e7f28a71de090019580831ff7bda60}{index}} (int row, int column, const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classGitModel_a50195f285c3712db0164f1ec33dcde82}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()) const
+\begin{DoxyCompactList}\small\item\em Returns a child index. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classGitModel_a76bda9f3fd7f0427a1d674ac85e13c1c}{data}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classGitModel_ae0e7f28a71de090019580831ff7bda60}{index}}, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=Item\+Data\+Role\+::\+Display) const
+\begin{DoxyCompactList}\small\item\em Returns data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGitModel_a9e855b5ee02c038637496ee14a15e096}\label{classGitModel_a9e855b5ee02c038637496ee14a15e096}} 
+virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} \mbox{\hyperlink{classGitModel_a9e855b5ee02c038637496ee14a15e096}{header\+Data}} (int section, Orientation orientation=Orientation\+::\+Horizontal, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} role=Item\+Data\+Role\+::\+Display) const
+\begin{DoxyCompactList}\small\item\em Returns header data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGitModel_a03ff9e852b646105ce2cca71a7e87429}\label{classGitModel_a03ff9e852b646105ce2cca71a7e87429}} 
+{\bfseries Git\+Model} (const std\+::string \&repository)
+\item 
+\mbox{\Hypertarget{classGitModel_af78bddbae2d7b76ec1e49d8626dc7526}\label{classGitModel_af78bddbae2d7b76ec1e49d8626dc7526}} 
+void {\bfseries load\+Revision} (const std\+::string \&rev\+Name)
+\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \mbox{\hyperlink{classGitModel_a3a7a048a7db45add8971d666716bc091}{parent}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&\mbox{\hyperlink{classGitModel_ae0e7f28a71de090019580831ff7bda60}{index}}) const
+\begin{DoxyCompactList}\small\item\em Returns the parent for a model index. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \mbox{\hyperlink{classGitModel_a058abed04e3d44424286dac82d9ca0fe}{index}} (int row, int column, const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&\mbox{\hyperlink{classGitModel_a50195f285c3712db0164f1ec33dcde82}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}}()) const
+\begin{DoxyCompactList}\small\item\em Returns the child index for the given row and column. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classGitModel_a4fed87a983c6d21d3667bd9030361398}{column\+Count}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&\mbox{\hyperlink{classGitModel_a50195f285c3712db0164f1ec33dcde82}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}}()) const
+\begin{DoxyCompactList}\small\item\em Returns the number of columns. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classGitModel_acc61b368ac78cb6fb219f31f03167789}{row\+Count}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&\mbox{\hyperlink{classGitModel_a50195f285c3712db0164f1ec33dcde82}{parent}}=\mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}}()) const
+\begin{DoxyCompactList}\small\item\em Returns the number of rows. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlinb_1_1any}{Wt\+::cpp17\+::any}} \mbox{\hyperlink{classGitModel_a9bb0a0fe25931df447c508d8b1ad9673}{data}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&\mbox{\hyperlink{classGitModel_ae0e7f28a71de090019580831ff7bda60}{index}}, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Wt\+::\+Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Wt\+::\+Item\+Data\+Role\+::\+Display}}) const
+\begin{DoxyCompactList}\small\item\em Returns data at a specified model index for the given role. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGitModel_ac244312ef66164992b2b94002fc23861}\label{classGitModel_ac244312ef66164992b2b94002fc23861}} 
+virtual \mbox{\hyperlink{classlinb_1_1any}{Wt\+::cpp17\+::any}} {\bfseries header\+Data} (int section, \mbox{\hyperlink{classWt_a2a8d45559e16a0185bf61bfad0a67912}{Wt\+::\+Orientation}} orientation=Wt\+::\+Orientation\+::\+Horizontal, \mbox{\hyperlink{classWt_1_1ItemDataRole}{Wt\+::\+Item\+Data\+Role}} role=\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Wt\+::\+Item\+Data\+Role\+::\+Display}}) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGitModel_a6585cee84d55403602f31933520d3d04}\label{classGitModel_a6585cee84d55403602f31933520d3d04}} 
+static const \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} \mbox{\hyperlink{classGitModel_a6585cee84d55403602f31933520d3d04}{Contents\+Role}}
+\begin{DoxyCompactList}\small\item\em The role which may be used on a file to retrieve its contents. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGitModel_aaec4cd86f19938af8b0622fa01448ce4}\label{classGitModel_aaec4cd86f19938af8b0622fa01448ce4}} 
+static const \mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}} {\bfseries File\+Path\+Role}
+\item 
+\mbox{\Hypertarget{classGitModel_a6585cee84d55403602f31933520d3d04}\label{classGitModel_a6585cee84d55403602f31933520d3d04}} 
+static constexpr \mbox{\hyperlink{classWt_1_1ItemDataRole}{Wt\+::\+Item\+Data\+Role}} {\bfseries Contents\+Role} = \mbox{\hyperlink{classWt_1_1ItemDataRole_a599e420c7dc508cebf6586628e218992}{Wt\+::\+Item\+Data\+Role\+::\+User}} + 1
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGitModel_a5bdd5d3dea3e158889afc795b455d103}\label{classGitModel_a5bdd5d3dea3e158889afc795b455d103}} 
+typedef std\+::map$<$ \mbox{\hyperlink{structGitModel_1_1ChildIndex}{Child\+Index}}, int $>$ {\bfseries Child\+Pointer\+Map}
+\item 
+\mbox{\Hypertarget{classGitModel_a5bdd5d3dea3e158889afc795b455d103}\label{classGitModel_a5bdd5d3dea3e158889afc795b455d103}} 
+typedef std\+::map$<$ \mbox{\hyperlink{structGitModel_1_1ChildIndex}{Child\+Index}}, int $>$ {\bfseries Child\+Pointer\+Map}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classGitModel_a58aeac65cdeb3588b2882ad2d9f23147}{get\+Tree\+Id}} (int parent\+Id, int child\+Index) const
+\begin{DoxyCompactList}\small\item\em Get or allocate an id for a folder. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGitModel_a6117042e66cee3ba3ace53d470194f21}\label{classGitModel_a6117042e66cee3ba3ace53d470194f21}} 
+\mbox{\hyperlink{structGit_1_1Object}{Git\+::\+Object}} \mbox{\hyperlink{classGitModel_a6117042e66cee3ba3ace53d470194f21}{get\+Object}} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&\mbox{\hyperlink{classGitModel_ae0e7f28a71de090019580831ff7bda60}{index}}) const
+\begin{DoxyCompactList}\small\item\em Get the \mbox{\hyperlink{structGit_1_1Object}{Git\+::\+Object}} that corresponds to an index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGitModel_a58aeac65cdeb3588b2882ad2d9f23147}\label{classGitModel_a58aeac65cdeb3588b2882ad2d9f23147}} 
+int {\bfseries get\+Tree\+Id} (int parent\+Id, int child\+Index) const
+\item 
+\mbox{\Hypertarget{classGitModel_a4ac94538c6aaa2ae3ef603e11e69b01c}\label{classGitModel_a4ac94538c6aaa2ae3ef603e11e69b01c}} 
+\mbox{\hyperlink{structGit_1_1Object}{Git\+::\+Object}} {\bfseries get\+Object} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&\mbox{\hyperlink{classGitModel_ae0e7f28a71de090019580831ff7bda60}{index}}) const
+\item 
+\mbox{\Hypertarget{classGitModel_a10429969e4829fa835ba472469a4e19f}\label{classGitModel_a10429969e4829fa835ba472469a4e19f}} 
+bool {\bfseries top\+Level} (const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&\mbox{\hyperlink{classGitModel_ae0e7f28a71de090019580831ff7bda60}{index}}) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGitModel_a4a54aa842d6a26dc1bd40562fd08c89f}\label{classGitModel_a4a54aa842d6a26dc1bd40562fd08c89f}} 
+static std\+::string {\bfseries get\+Suffix} (const std\+::string \&file\+Name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGitModel_afc8ff43e47ae51ce2af04d63a162be8e}\label{classGitModel_afc8ff43e47ae51ce2af04d63a162be8e}} 
+\mbox{\hyperlink{classGit}{Git}} \mbox{\hyperlink{classGitModel_afc8ff43e47ae51ce2af04d63a162be8e}{git\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The git repository. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classGitModel_1_1Tree}{Tree}} $>$ \mbox{\hyperlink{classGitModel_a71711dfb183124d9fa8e45c513ee8cc5}{tree\+Data\+\_\+}}
+\begin{DoxyCompactList}\small\item\em List of folder objects. \end{DoxyCompactList}\item 
+Child\+Pointer\+Map \mbox{\hyperlink{classGitModel_a4f3e07cf6dddd098c4c4f0978be0fe90}{child\+Pointer\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Maps child indexes to tree indexes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A model that retrieves revision trees from a git repository. 
+
+In its present form, it presents only a single column of data\+: the file names. Additional data could be easily added. \mbox{\hyperlink{classGit}{Git}} \char`\"{}tree\char`\"{} objects correspond to folders, and \char`\"{}blob\char`\"{} objects to files.
+
+The model is read-\/only, does not support sorting (that could be provided by using a W\+Sort\+Filter\+Proxy\+Model).
+
+The model loads only minimal information in memory\+: to create model indexes for folders. These cannot be uniquely identified by their S\+H\+A1 id, since two identical folders at different locations would have the same S\+H\+A1 id.
+
+The internal id of model indexes created by the model uniquely identify a containing folder for a particular file. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGitModel_ad022d1baeb5c4550676aa3a5ef226bf0}\label{classGitModel_ad022d1baeb5c4550676aa3a5ef226bf0}} 
+\index{GitModel@{GitModel}!columnCount@{columnCount}}
+\index{columnCount@{columnCount}!GitModel@{GitModel}}
+\doxysubsubsection{\texorpdfstring{columnCount()}{columnCount()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual int Git\+Model\+::column\+Count (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the column count. 
+
+Returns 1. 
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_abcf7912a95a0a60f8e9b1c37d30b8383}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classGitModel_a4fed87a983c6d21d3667bd9030361398}\label{classGitModel_a4fed87a983c6d21d3667bd9030361398}} 
+\index{GitModel@{GitModel}!columnCount@{columnCount}}
+\index{columnCount@{columnCount}!GitModel@{GitModel}}
+\doxysubsubsection{\texorpdfstring{columnCount()}{columnCount()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual int Git\+Model\+::column\+Count (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of columns. 
+
+This returns the number of columns at index {\ttfamily parent}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classGitModel_a629cde94d1861ea3d1e5e01e123ab60e}{row\+Count()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_abcf7912a95a0a60f8e9b1c37d30b8383}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classGitModel_a76bda9f3fd7f0427a1d674ac85e13c1c}\label{classGitModel_a76bda9f3fd7f0427a1d674ac85e13c1c}} 
+\index{GitModel@{GitModel}!data@{data}}
+\index{data@{data}!GitModel@{GitModel}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlinb_1_1any}{cpp17\+::any}} Git\+Model\+::data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Item\+Data\+Role}}}]{role = {\ttfamily ItemDataRole\+:\+:Display} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns data. 
+
+Returns only data corresponding to Display\+Role and Contents\+Role. 
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af77f707dd2340652717e7122cd7f4ffd}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classGitModel_a9bb0a0fe25931df447c508d8b1ad9673}\label{classGitModel_a9bb0a0fe25931df447c508d8b1ad9673}} 
+\index{GitModel@{GitModel}!data@{data}}
+\index{data@{data}!GitModel@{GitModel}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classlinb_1_1any}{Wt\+::cpp17\+::any}} Git\+Model\+::data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&}]{index,  }\item[{\mbox{\hyperlink{classWt_1_1ItemDataRole}{Wt\+::\+Item\+Data\+Role}}}]{role = {\ttfamily \mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Wt\+::\+Item\+Data\+Role\+::\+Display}}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns data at a specified model index for the given role. 
+
+You should check the {\ttfamily role} to decide what data to return. Usually a View class will ask for data for several roles which affect not only the contents (\mbox{\hyperlink{classWt_1_1ItemDataRole_ae3ecc48a21764c9fce36a9be37ccc2c1}{Wt\+::\+Item\+Data\+Role\+::\+Display}}) but also icons (\mbox{\hyperlink{classWt_1_1ItemDataRole_a9db6daf35b3c68db6df624411420d4b7}{Wt\+::\+Item\+Data\+Role\+::\+Decoration}}), U\+R\+Ls (\mbox{\hyperlink{classWt_1_1ItemDataRole_ae478217452f058add8fd204ddacde8ae}{Wt\+::\+Item\+Data\+Role\+::\+Link}}), and other visual aspects. If your item does not specify data for a particular role, it should simply return a Wt\+::cpp17\+::any().
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAbstractItemModel_ad65561084d42facbde3e075801ed2e4d}{flags()}}, \mbox{\hyperlink{classGitModel_a9e855b5ee02c038637496ee14a15e096}{header\+Data()}}, \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab72f9eac35b1852e3b86273016a7f27e}{set\+Data()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af77f707dd2340652717e7122cd7f4ffd}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classGitModel_a58aeac65cdeb3588b2882ad2d9f23147}\label{classGitModel_a58aeac65cdeb3588b2882ad2d9f23147}} 
+\index{GitModel@{GitModel}!getTreeId@{getTreeId}}
+\index{getTreeId@{getTreeId}!GitModel@{GitModel}}
+\doxysubsubsection{\texorpdfstring{getTreeId()}{getTreeId()}}
+{\footnotesize\ttfamily int Git\+Model\+::get\+Tree\+Id (\begin{DoxyParamCaption}\item[{int}]{parent\+Id,  }\item[{int}]{child\+Index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Get or allocate an id for a folder. 
+
+The folder is identified by a given child\+Index within a parent folder. This method adds data to the tree\+Data\+\_\+ (and child\+Pointer\+\_\+) data structures. \mbox{\Hypertarget{classGitModel_ae0e7f28a71de090019580831ff7bda60}\label{classGitModel_ae0e7f28a71de090019580831ff7bda60}} 
+\index{GitModel@{GitModel}!index@{index}}
+\index{index@{index}!GitModel@{GitModel}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Git\+Model\+::index (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns a child index. 
+
+Consults the internal data structure to create a child index. If necessary, the internal data structure is expanded by adding an entry for using the {\itshape parent} index as a parent index. 
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classGitModel_a058abed04e3d44424286dac82d9ca0fe}\label{classGitModel_a058abed04e3d44424286dac82d9ca0fe}} 
+\index{GitModel@{GitModel}!index@{index}}
+\index{index@{index}!GitModel@{GitModel}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} Git\+Model\+::index (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column,  }\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the child index for the given row and column. 
+
+When implementing this method, you can use \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af9b04fdec198dfbc1c9297ead93c8930}{create\+Index()}} to create an index that corresponds to the item at {\ttfamily row} and {\ttfamily column} within {\ttfamily parent}.
+
+If the location is invalid (out of bounds at the parent), then an invalid index must be returned.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classGitModel_a50195f285c3712db0164f1ec33dcde82}{parent()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_a83f37bf04b8574b328c139b02523b8cb}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classGitModel_af78bddbae2d7b76ec1e49d8626dc7526}\label{classGitModel_af78bddbae2d7b76ec1e49d8626dc7526}} 
+\index{GitModel@{GitModel}!loadRevision@{loadRevision}}
+\index{loadRevision@{loadRevision}!GitModel@{GitModel}}
+\doxysubsubsection{\texorpdfstring{loadRevision()}{loadRevision()}}
+{\footnotesize\ttfamily void Git\+Model\+::load\+Revision (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{rev\+Name }\end{DoxyParamCaption})}
+
+
+
+Load a particular revision. 
+
+The revision name may be any revision accepted by git, by git-\/rev-\/parse(1). \mbox{\Hypertarget{classGitModel_a50195f285c3712db0164f1ec33dcde82}\label{classGitModel_a50195f285c3712db0164f1ec33dcde82}} 
+\index{GitModel@{GitModel}!parent@{parent}}
+\index{parent@{parent}!GitModel@{GitModel}}
+\doxysubsubsection{\texorpdfstring{parent()}{parent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} Git\+Model\+::parent (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the parent index. 
+
+Consults the internal data structure to find the parent index. 
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classGitModel_a3a7a048a7db45add8971d666716bc091}\label{classGitModel_a3a7a048a7db45add8971d666716bc091}} 
+\index{GitModel@{GitModel}!parent@{parent}}
+\index{parent@{parent}!GitModel@{GitModel}}
+\doxysubsubsection{\texorpdfstring{parent()}{parent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} Git\+Model\+::parent (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the parent for a model index. 
+
+An implementation should use \mbox{\hyperlink{classWt_1_1WAbstractItemModel_af9b04fdec198dfbc1c9297ead93c8930}{create\+Index()}} to create a model index that corresponds to the parent of a given index.
+
+\mbox{\hyperlink{classNote}{Note}} that the index itself may be stale (referencing a row/column within the parent that is outside the model geometry), but its parent (identified by the W\+Model\+Index\+::internal\+Pointer()) is referencing an existing parent. A stale index can only be used while the model geometry is being updated, i.\+e. during the emission of the corresponding \mbox{[}rows/columns\mbox{]}(Being)\mbox{[}Removed/\+Inserted\mbox{]}() signals.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classGitModel_ae0e7f28a71de090019580831ff7bda60}{index()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ada454d45706ca0c1a0921dedd351c48c}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classGitModel_a629cde94d1861ea3d1e5e01e123ab60e}\label{classGitModel_a629cde94d1861ea3d1e5e01e123ab60e}} 
+\index{GitModel@{GitModel}!rowCount@{rowCount}}
+\index{rowCount@{rowCount}!GitModel@{GitModel}}
+\doxysubsubsection{\texorpdfstring{rowCount()}{rowCount()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual int Git\+Model\+::row\+Count (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the row count. 
+
+Returns 0 unless the item represents a folder, in which case it returns the number of items in the tree object that corresponds to the folder. 
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab0709a8f71fd5df882f29bb29fd055f0}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+\mbox{\Hypertarget{classGitModel_acc61b368ac78cb6fb219f31f03167789}\label{classGitModel_acc61b368ac78cb6fb219f31f03167789}} 
+\index{GitModel@{GitModel}!rowCount@{rowCount}}
+\index{rowCount@{rowCount}!GitModel@{GitModel}}
+\doxysubsubsection{\texorpdfstring{rowCount()}{rowCount()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual int Git\+Model\+::row\+Count (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}} \&}]{parent = {\ttfamily \mbox{\hyperlink{classWt_1_1WModelIndex}{Wt\+::\+W\+Model\+Index}}()} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Returns the number of rows. 
+
+This returns the number of rows at index {\ttfamily parent}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classGitModel_ad022d1baeb5c4550676aa3a5ef226bf0}{column\+Count()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WAbstractItemModel_ab0709a8f71fd5df882f29bb29fd055f0}{Wt\+::\+W\+Abstract\+Item\+Model}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classGitModel_a4f3e07cf6dddd098c4c4f0978be0fe90}\label{classGitModel_a4f3e07cf6dddd098c4c4f0978be0fe90}} 
+\index{GitModel@{GitModel}!childPointer\_@{childPointer\_}}
+\index{childPointer\_@{childPointer\_}!GitModel@{GitModel}}
+\doxysubsubsection{\texorpdfstring{childPointer\_}{childPointer\_}}
+{\footnotesize\ttfamily Child\+Pointer\+Map Git\+Model\+::child\+Pointer\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+Maps child indexes to tree indexes. 
+
+This map provides a way to lookup data in tree\+Data\+\_\+. It has an entry corresponding to every entry in tree\+Data\+\_\+\+: it maps child indexes for folders to indexes in the tree\+Data\+\_\+ vector.
+
+It is populated on-\/the-\/fly, as the user navigates the model. \mbox{\Hypertarget{classGitModel_a71711dfb183124d9fa8e45c513ee8cc5}\label{classGitModel_a71711dfb183124d9fa8e45c513ee8cc5}} 
+\index{GitModel@{GitModel}!treeData\_@{treeData\_}}
+\index{treeData\_@{treeData\_}!GitModel@{GitModel}}
+\doxysubsubsection{\texorpdfstring{treeData\_}{treeData\_}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classGitModel_1_1Tree}{Tree}} $>$ Git\+Model\+::tree\+Data\+\_\+\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+List of folder objects. 
+
+This list contains folders for which a model index has been allocated.
+
+Model indexes have an internal id that are indexes into this vector, identifying the folder that contains a particular file.
+
+\mbox{\hyperlink{classNote}{Note}}\+: only for folders this is needed, since files will never be used as a \textquotesingle{}parent\textquotesingle{} index.
+
+It is populated on-\/the-\/fly, as the user navigates the model. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/gitmodel/Git\+Model.\+h\item 
+wt-\/4.\+8.\+2/examples/widgetgallery/examples/Git\+Model.\+cpp\end{DoxyCompactItemize}

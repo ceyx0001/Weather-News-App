@@ -1,0 +1,27 @@
+digraph "http::server::StockReply"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="http::server::StockReply",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="A stock reply to be sent to a client."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="http::server::Reply",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhttp_1_1server_1_1Reply.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="std::enable_shared\l_from_this\< Reply \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" request_" ];
+  Node4 [label="http::server::Request",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhttp_1_1server_1_1Request.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" http_version_minor\nhttp_version_major\nwebSocketVersion" ];
+  Node5 [label="int",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" request_extra_path\nrequest_path\nremoteIP\nrequest_query" ];
+  Node6 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" method\nuri" ];
+  Node7 [label="http::server::buffer\l_string",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structhttp_1_1server_1_1buffer__string.html",tooltip=" "];
+  Node5 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" len" ];
+  Node7 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" postBuf_\nbuf_" ];
+  Node8 [label="Wt::WStringStream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WStringStream.html",tooltip=" "];
+  Node5 -> Node8 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" buf_i_" ];
+  Node9 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" configuration_" ];
+  Node9 [label="const",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" content_" ];
+}

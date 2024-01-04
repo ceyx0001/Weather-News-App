@@ -1,0 +1,42 @@
+\hypertarget{classWt_1_1Dbo_1_1StaleObjectException}{}\doxysection{Wt\+::Dbo\+::Stale\+Object\+Exception Class Reference}
+\label{classWt_1_1Dbo_1_1StaleObjectException}\index{Wt::Dbo::StaleObjectException@{Wt::Dbo::StaleObjectException}}
+
+
+Exception thrown when Wt\+::Dbo detects a concurrent modification  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+Dbo/\+Exception.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::Dbo\+::Stale\+Object\+Exception\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::Dbo\+::Stale\+Object\+Exception\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1Dbo_1_1StaleObjectException_a8e229dcb3abd3e234ffd87c92884686e}\label{classWt_1_1Dbo_1_1StaleObjectException_a8e229dcb3abd3e234ffd87c92884686e}} 
+\mbox{\hyperlink{classWt_1_1Dbo_1_1StaleObjectException_a8e229dcb3abd3e234ffd87c92884686e}{Stale\+Object\+Exception}} (const std\+::string \&\mbox{\hyperlink{group__dbo_ga42c50bd3bfc38ad8c810b30b279b0ba6}{id}}, const char $\ast$table, int version)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Exception thrown when Wt\+::Dbo detects a concurrent modification 
+
+Wt\+::Dbo uses optimistic locking for detecting and preventing concurrent modification of database objects. When trying to save an object that has been modified concurrently by another session, since it was read from the database, this exception is thrown.
+
+This exception is thrown during flushing from \mbox{\hyperlink{classWt_1_1Dbo_1_1Session_ab896d119f1e0fb79adffe2282b92ef17}{Session\+::flush()}} or \mbox{\hyperlink{classWt_1_1Dbo_1_1ptr_a3e4e12079f2e3595bc201207217b6a4f}{ptr\+::flush()}}. Since flushing will also be done automatically when needed (e.\+g. before running a query or before committing a transaction), you should be prepared to catch this exception from most library A\+PI calls.
+
+\begin{DoxyNote}{Note}
+We should perhaps also have a ptr\+::is\+Stale() method to find out what database object is stale ? 
+\end{DoxyNote}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/\+Dbo/Exception.\+h\end{DoxyCompactItemize}

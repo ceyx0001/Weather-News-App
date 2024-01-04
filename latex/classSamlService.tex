@@ -1,0 +1,55 @@
+\hypertarget{classSamlService}{}\doxysection{Saml\+Service Class Reference}
+\label{classSamlService}\index{SamlService@{SamlService}}
+
+
+Inheritance diagram for Saml\+Service\+:
+% FIG 0
+
+
+Collaboration diagram for Saml\+Service\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSamlService_a0b34cc577f4a076ee40047d426742986}\label{classSamlService_a0b34cc577f4a076ee40047d426742986}} 
+{\bfseries Saml\+Service} (\mbox{\hyperlink{classWt_1_1Auth_1_1AuthService}{Wt\+::\+Auth\+::\+Auth\+Service}} \&\mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a20c13e97ec9c0c1638a41ca6f7f9020b}{base\+Auth}})
+\item 
+\mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Wt\+::\+Auth\+::\+Identity}} \mbox{\hyperlink{classSamlService_af176d198c2a9b8307b381b2af0510b74}{assertion\+To\+Identity}} (const \mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion}{Wt\+::\+Auth\+::\+Saml\+::\+Assertion}} \&assertion) const override
+\begin{DoxyCompactList}\small\item\em Creates an entity from the given Assertion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSamlService_af176d198c2a9b8307b381b2af0510b74}\label{classSamlService_af176d198c2a9b8307b381b2af0510b74}} 
+\index{SamlService@{SamlService}!assertionToIdentity@{assertionToIdentity}}
+\index{assertionToIdentity@{assertionToIdentity}!SamlService@{SamlService}}
+\doxysubsubsection{\texorpdfstring{assertionToIdentity()}{assertionToIdentity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Wt\+::\+Auth\+::\+Identity}} Saml\+Service\+::assertion\+To\+Identity (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion}{Wt\+::\+Auth\+::\+Saml\+::\+Assertion}} \&}]{assertion }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates an entity from the given Assertion. 
+
+This function should be specialized to return an Identity based on the given Assertion, e.\+g.\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Wt::Auth::Identity}} \mbox{\hyperlink{classSamlService_af176d198c2a9b8307b381b2af0510b74}{assertionToIdentity}}(\textcolor{keyword}{const} \mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion}{Wt::Auth::Saml::Assertion}} \&assertion)\textcolor{keyword}{ const override}}
+\DoxyCodeLine{\textcolor{keyword}{}\{}
+\DoxyCodeLine{  \textcolor{keyword}{auto} name = assertion.\mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion_ae1bbb636b13b008ccaca7e262e5a4944}{attributeValue}}(\textcolor{stringliteral}{"name"});}
+\DoxyCodeLine{  \textcolor{keyword}{auto} email = assertion.\mbox{\hyperlink{structWt_1_1Auth_1_1Saml_1_1Assertion_ae1bbb636b13b008ccaca7e262e5a4944}{attributeValue}}(\textcolor{stringliteral}{"email"});}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (!email || !name) \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} \{\};}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{  \textcolor{keywordflow}{return} \mbox{\hyperlink{classWt_1_1Auth_1_1Identity}{Wt::Auth::Identity}}(\textcolor{stringliteral}{"saml"}, *email, *name, *email, \textcolor{keyword}{true});}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 
+
+Implements \mbox{\hyperlink{classWt_1_1Auth_1_1Saml_1_1Service_a39e1f0a45c8bbfbc3f2327cc228ea60b}{Wt\+::\+Auth\+::\+Saml\+::\+Service}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/examples/feature/saml/Saml\+Service.\+h\end{DoxyCompactItemize}

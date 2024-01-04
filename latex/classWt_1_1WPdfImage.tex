@@ -1,0 +1,515 @@
+\hypertarget{classWt_1_1WPdfImage}{}\doxysection{Wt\+::W\+Pdf\+Image Class Reference}
+\label{classWt_1_1WPdfImage}\index{Wt::WPdfImage@{Wt::WPdfImage}}
+
+
+A paint device for rendering to a P\+DF.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Pdf\+Image.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Pdf\+Image\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Pdf\+Image\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WPdfImage_a23df934767b93880993e9ee02e3fbe0d}{W\+Pdf\+Image}} (const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WPdfImage_a3874d729a32d779e06199ab88cbe1e80}{width}}, const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&\mbox{\hyperlink{classWt_1_1WPdfImage_a32c6801df55df08684187dcc33a06a6e}{height}})
+\begin{DoxyCompactList}\small\item\em Create a P\+DF resource that represents a single-\/page P\+DF document. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WPdfImage_a804c91c84fa751dd489a8e4b142a9094}{W\+Pdf\+Image}} (H\+P\+D\+F\+\_\+\+Doc pdf, H\+P\+D\+F\+\_\+\+Page page, H\+P\+D\+F\+\_\+\+R\+E\+AL x, H\+P\+D\+F\+\_\+\+R\+E\+AL y, H\+P\+D\+F\+\_\+\+R\+E\+AL \mbox{\hyperlink{classWt_1_1WPdfImage_a3874d729a32d779e06199ab88cbe1e80}{width}}, H\+P\+D\+F\+\_\+\+R\+E\+AL \mbox{\hyperlink{classWt_1_1WPdfImage_a32c6801df55df08684187dcc33a06a6e}{height}})
+\begin{DoxyCompactList}\small\item\em Create a P\+DF paint device to paint inside an existing page. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a86fde83dd116371ab099f79b83199145}\label{classWt_1_1WPdfImage_a86fde83dd116371ab099f79b83199145}} 
+\mbox{\hyperlink{classWt_1_1WPdfImage_a86fde83dd116371ab099f79b83199145}{$\sim$\+W\+Pdf\+Image}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WPdfImage_a479b8988ba6d379088ef097b894cbc22}{add\+Font\+Collection}} (const std\+::string \&directory, bool recursive=true)
+\begin{DoxyCompactList}\small\item\em Adds a font collection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a6aaa27e352048e18ae9bba09b0bb7685}\label{classWt_1_1WPdfImage_a6aaa27e352048e18ae9bba09b0bb7685}} 
+virtual \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ac5d03da7eec8b3a3f25e1ca054c88afa}{Paint\+Device\+Feature\+Flag}} $>$ \mbox{\hyperlink{classWt_1_1WPdfImage_a6aaa27e352048e18ae9bba09b0bb7685}{features}} () const override
+\begin{DoxyCompactList}\small\item\em Returns device features. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WPdfImage_a3ebfed6ecc3f79c2d5c7b5a5e23dd53c}{set\+Changed}} (\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a5afa3162ba5b228f8074e0fda89f9a50}{Painter\+Change\+Flag}} $>$ flags) override
+\begin{DoxyCompactList}\small\item\em Indicates changes in painter state. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WPdfImage_a4d421348abb4e54e7bf8727c4ebf2f42}{draw\+Arc}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rect, double start\+Angle, double span\+Angle) override
+\begin{DoxyCompactList}\small\item\em Draws an arc. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WPdfImage_a7374475bd41ba9e01e6f30101875450c}{draw\+Image}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rect, const std\+::string \&img\+Uri, int img\+Width, int img\+Height, const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&source\+Rect) override
+\begin{DoxyCompactList}\small\item\em Draws an image. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WPdfImage_a25dda353c268a539b33630ba9f8baf4d}{draw\+Line}} (double x1, double y1, double x2, double y2) override
+\begin{DoxyCompactList}\small\item\em Draws a line. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WPdfImage_a7393412177e2ffe7f12b5a8cf95f0818}{draw\+Rect}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rect) override
+\begin{DoxyCompactList}\small\item\em Draws a rectangle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WPdfImage_adabb89d6f02e389f1eb09fdd533114b7}{draw\+Path}} (const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&path) override
+\begin{DoxyCompactList}\small\item\em Draws a path. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WPdfImage_a9e70f7fbfb5ccbad60f7bff3c6b64370}{draw\+Text}} (const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&rect, \mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$ alignment\+Flags, \mbox{\hyperlink{classWt_a3bf85f6b385349dadfa7e205a39ec419}{Text\+Flag}} text\+Flag, const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text, const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} $\ast$clip\+Point) override
+\begin{DoxyCompactList}\small\item\em Draws text. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WTextItem}{W\+Text\+Item}} \mbox{\hyperlink{classWt_1_1WPdfImage_a93ffa32a772ee5d6a02ad602e6144d46}{measure\+Text}} (const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&text, double max\+Width=-\/1, bool word\+Wrap=false) override
+\begin{DoxyCompactList}\small\item\em Measures rendered text size. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WFontMetrics}{W\+Font\+Metrics}} \mbox{\hyperlink{classWt_1_1WPdfImage_a1765242ebed89d58af0f94f1dc809e0d}{font\+Metrics}} () override
+\begin{DoxyCompactList}\small\item\em Returns font metrics. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WPdfImage_af3206cbd0b62366a7c640d8d6ebcbd8c}{init}} () override
+\begin{DoxyCompactList}\small\item\em Initializes the device for painting. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WPdfImage_a85dc5ebd08579d093c4253c7b2323b92}{done}} () override
+\begin{DoxyCompactList}\small\item\em Finishes painting on the device. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classWt_1_1WPdfImage_a204d3fb9ea869b8937f5ba19f4bb4a81}{paint\+Active}} () const override
+\begin{DoxyCompactList}\small\item\em Returns whether painting is active. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \mbox{\hyperlink{classWt_1_1WPdfImage_a3874d729a32d779e06199ab88cbe1e80}{width}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the device width. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \mbox{\hyperlink{classWt_1_1WPdfImage_a32c6801df55df08684187dcc33a06a6e}{height}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the device height. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a28c4043247ccc1d49a383912ba315720}\label{classWt_1_1WPdfImage_a28c4043247ccc1d49a383912ba315720}} 
+void {\bfseries error\+Handler} (H\+P\+D\+F\+\_\+\+S\+T\+A\+T\+US error\+\_\+no, H\+P\+D\+F\+\_\+\+S\+T\+A\+T\+US detail\+\_\+no)
+\item 
+virtual void \mbox{\hyperlink{classWt_1_1WPdfImage_a45ef6cac7be6a5ecfa0d060db0d9ad5a}{handle\+Request}} (const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&request, \mbox{\hyperlink{classWt_1_1Http_1_1Response}{Http\+::\+Response}} \&response) override
+\begin{DoxyCompactList}\small\item\em Handles a request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} $\ast$ \mbox{\hyperlink{classWt_1_1WPdfImage_a669c832f31c25fff8c72b7a3fc7cf6b6}{painter}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the painter that is currently painting on the device. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_ad4f474570298b8b4df95acff167dae80}\label{classWt_1_1WPdfImage_ad4f474570298b8b4df95acff167dae80}} 
+virtual void \mbox{\hyperlink{classWt_1_1WPdfImage_ad4f474570298b8b4df95acff167dae80}{set\+Painter}} (\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} $\ast$\mbox{\hyperlink{classWt_1_1WPdfImage_a669c832f31c25fff8c72b7a3fc7cf6b6}{painter}}) override
+\begin{DoxyCompactList}\small\item\em Sets the painter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a61c5ff57487d03d9446657ee61cc2f9f}\label{classWt_1_1WPdfImage_a61c5ff57487d03d9446657ee61cc2f9f}} 
+void {\bfseries paint\+Path} ()
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_af68653e1f1d3c54e5e6a91c7f9b22d8a}\label{classWt_1_1WPdfImage_af68653e1f1d3c54e5e6a91c7f9b22d8a}} 
+void {\bfseries draw\+Plain\+Path} (const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&path)
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_af07e0e290eca26c164651e2b72d819ac}\label{classWt_1_1WPdfImage_af07e0e290eca26c164651e2b72d819ac}} 
+void {\bfseries apply\+Transform} (const \mbox{\hyperlink{classWt_1_1WTransform}{W\+Transform}} \&f)
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_af081749d0385ac01f6183e056a1c2397}\label{classWt_1_1WPdfImage_af081749d0385ac01f6183e056a1c2397}} 
+void {\bfseries set\+Stroke\+Color} (\mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} color)
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a3ce7d64559b04526d19401a941e844d0}\label{classWt_1_1WPdfImage_a3ce7d64559b04526d19401a941e844d0}} 
+void {\bfseries set\+Fill\+Color} (\mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} color)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a1ef6d2abe522f68fe61d587267a68db8}\label{classWt_1_1WPdfImage_a1ef6d2abe522f68fe61d587267a68db8}} 
+\mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} {\bfseries width\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_ab4e34edb20ae71f156734c5115d05a53}\label{classWt_1_1WPdfImage_ab4e34edb20ae71f156734c5115d05a53}} 
+\mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} {\bfseries height\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_addbfb576b90e0b7aee8928ec4cd5b703}\label{classWt_1_1WPdfImage_addbfb576b90e0b7aee8928ec4cd5b703}} 
+\mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} $\ast$ {\bfseries painter\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a8f1e2845c115071572023422138f95a1}\label{classWt_1_1WPdfImage_a8f1e2845c115071572023422138f95a1}} 
+\mbox{\hyperlink{classWt_1_1FontSupport}{Font\+Support}} $\ast$ {\bfseries true\+Type\+Fonts\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a2b1135c6358cd04fcc4664a92dd687a3}\label{classWt_1_1WPdfImage_a2b1135c6358cd04fcc4664a92dd687a3}} 
+H\+P\+D\+F\+\_\+\+Doc {\bfseries pdf\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_acdd3b0e872e5693f9ef19319e51455c3}\label{classWt_1_1WPdfImage_acdd3b0e872e5693f9ef19319e51455c3}} 
+H\+P\+D\+F\+\_\+\+Page {\bfseries page\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a5c36d4a1593896bb3f9602bfa1365724}\label{classWt_1_1WPdfImage_a5c36d4a1593896bb3f9602bfa1365724}} 
+H\+P\+D\+F\+\_\+\+Font {\bfseries font\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a5a56b9095416e5c573bf43012e3a10ea}\label{classWt_1_1WPdfImage_a5a56b9095416e5c573bf43012e3a10ea}} 
+bool {\bfseries true\+Type\+Font\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_ae083478684ec01e0b86e81912a39f3d9}\label{classWt_1_1WPdfImage_ae083478684ec01e0b86e81912a39f3d9}} 
+std\+::map$<$ std\+::string, const char $\ast$ $>$ {\bfseries ttf\+Fonts\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a35fb0f2e8992a0bd39754bf25793a341}\label{classWt_1_1WPdfImage_a35fb0f2e8992a0bd39754bf25793a341}} 
+\mbox{\hyperlink{classWt_1_1WFont}{W\+Font}} {\bfseries current\+Font\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_ab92719bab73467ba52e8a8f3a4d9a26f}\label{classWt_1_1WPdfImage_ab92719bab73467ba52e8a8f3a4d9a26f}} 
+std\+::string {\bfseries current\+Ttf\+Font\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a43c5a2bcc3cbd91d845aa4666f75c9be}\label{classWt_1_1WPdfImage_a43c5a2bcc3cbd91d845aa4666f75c9be}} 
+std\+::map$<$ int, H\+P\+D\+F\+\_\+\+Ext\+G\+State $>$ {\bfseries alpha\+Stroke\+Ext\+G\+State\+Map\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a8d142a9c5ec99261527c61ac2e6d4588}\label{classWt_1_1WPdfImage_a8d142a9c5ec99261527c61ac2e6d4588}} 
+std\+::map$<$ int, H\+P\+D\+F\+\_\+\+Ext\+G\+State $>$ {\bfseries alpha\+Fill\+Ext\+G\+State\+Map\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a16039c5dc41b5715d615471135c8d33e}\label{classWt_1_1WPdfImage_a16039c5dc41b5715d615471135c8d33e}} 
+bool {\bfseries my\+Pdf\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a2309b9083fb4a3101f75b8dcb65c3c27}\label{classWt_1_1WPdfImage_a2309b9083fb4a3101f75b8dcb65c3c27}} 
+double {\bfseries x\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a4c899e6f5432a3f8347a6801e75789c1}\label{classWt_1_1WPdfImage_a4c899e6f5432a3f8347a6801e75789c1}} 
+double {\bfseries y\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WPdfImage_ac2c60e65596e871c96e6e6b7bb69a090}\label{classWt_1_1WPdfImage_ac2c60e65596e871c96e6e6b7bb69a090}} 
+double {\bfseries font\+Size\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+A paint device for rendering to a P\+DF. 
+
+A W\+Pdf\+Image paint device should be used in conjunction with a \mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}}, and can be used to make a P\+DF version of a \mbox{\hyperlink{classWt_1_1WPaintedWidget}{W\+Painted\+Widget}}\textquotesingle{}s contents.
+
+The P\+DF is generated using \href{http://libharu.org/}{\texttt{ The Haru Free P\+DF Library}}, and this class is included in the library only if {\ttfamily libharu} was found during the build of the library.
+
+You can use the image as a resource and specialize \mbox{\hyperlink{classWt_1_1WPdfImage_a45ef6cac7be6a5ecfa0d060db0d9ad5a}{handle\+Request()}} to paint the contents on the fly. Alternatively can also use \mbox{\hyperlink{classWt_1_1WResource_aaf6d964de1056c7c9404f88fa5e5a0de}{write()}} to serialize to a P\+DF file (std\+::ostream). The latter usage is illustrated by the code below\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \mbox{\hyperlink{classWt_1_1Chart_1_1WCartesianChart}{Wt::Chart::WCartesianChart}}}
+\DoxyCodeLine{*chart = ...}
+\DoxyCodeLine{}
+\DoxyCodeLine{Wt::WPdfImage pdfImage(\textcolor{stringliteral}{"4cm"}, \textcolor{stringliteral}{"3cm"});}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \mbox{\hyperlink{classWt_1_1WPainter}{Wt::WPainter}} p(\&pdfImage);}
+\DoxyCodeLine{  chart-\/>paint(p);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{std::ofstream f(\textcolor{stringliteral}{"chart.pdf"}, std::ios::out | std::ios::binary);}
+\DoxyCodeLine{pdfImage.write(f);}
+\end{DoxyCode}
+
+
+A constructor is provided which allows the generated P\+DF image to be embedded directly into a page of a larger {\ttfamily libharu} document, and this approach is used for example by the W\+Pdf\+Renderer to render X\+H\+T\+ML to multi-\/page P\+DF files.
+
+Font information is embedded in the P\+DF. Fonts supported are native Post\+Script fonts (Base-\/14) (only A\+S\+C\+I\+I-\/7), or true type fonts (Unicode). See \mbox{\hyperlink{classWt_1_1WPdfImage_a479b8988ba6d379088ef097b894cbc22}{add\+Font\+Collection()}} for more information on how fonts are located and matched to \mbox{\hyperlink{classWt_1_1WFont}{W\+Font}} descriptions.
+
+This paint device has the following limitations\+:
+\begin{DoxyItemize}
+\item images (\mbox{\hyperlink{classWt_1_1WPainter_ae36e5ce0c6a324ec83ebbc397a513202}{W\+Painter\+::draw\+Image()}}) can only be included from local files, and only J\+PG and P\+NG images are supported.
+\item drop shadows are not supported. 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a23df934767b93880993e9ee02e3fbe0d}\label{classWt_1_1WPdfImage_a23df934767b93880993e9ee02e3fbe0d}} 
+\index{Wt::WPdfImage@{Wt::WPdfImage}!WPdfImage@{WPdfImage}}
+\index{WPdfImage@{WPdfImage}!Wt::WPdfImage@{Wt::WPdfImage}}
+\doxysubsubsection{\texorpdfstring{WPdfImage()}{WPdfImage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Pdf\+Image\+::\+W\+Pdf\+Image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{width,  }\item[{const \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} \&}]{height }\end{DoxyParamCaption})}
+
+
+
+Create a P\+DF resource that represents a single-\/page P\+DF document. 
+
+The single page will have a size {\ttfamily width} x {\ttfamily height}. The P\+DF will be using the same D\+PI (72dpi) as is conventionally used for the desktop.
+
+The passed width and height (such as 4 cm by 3 cm) can be specified in physical units (e.\+g. 4cm x 3cm), but this will be converted to pixels using the default D\+PI used in C\+SS (96dpi) !
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WResource_aaf6d964de1056c7c9404f88fa5e5a0de}{write()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a804c91c84fa751dd489a8e4b142a9094}\label{classWt_1_1WPdfImage_a804c91c84fa751dd489a8e4b142a9094}} 
+\index{Wt::WPdfImage@{Wt::WPdfImage}!WPdfImage@{WPdfImage}}
+\index{WPdfImage@{WPdfImage}!Wt::WPdfImage@{Wt::WPdfImage}}
+\doxysubsubsection{\texorpdfstring{WPdfImage()}{WPdfImage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Wt\+::\+W\+Pdf\+Image\+::\+W\+Pdf\+Image (\begin{DoxyParamCaption}\item[{H\+P\+D\+F\+\_\+\+Doc}]{pdf,  }\item[{H\+P\+D\+F\+\_\+\+Page}]{page,  }\item[{H\+P\+D\+F\+\_\+\+R\+E\+AL}]{x,  }\item[{H\+P\+D\+F\+\_\+\+R\+E\+AL}]{y,  }\item[{H\+P\+D\+F\+\_\+\+R\+E\+AL}]{width,  }\item[{H\+P\+D\+F\+\_\+\+R\+E\+AL}]{height }\end{DoxyParamCaption})}
+
+
+
+Create a P\+DF paint device to paint inside an existing page. 
+
+The image will be drawn in the existing page, as an image with lower-\/left point ({\ttfamily x}, {\ttfamily y}) and size ({\ttfamily width} x {\ttfamily height}). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a479b8988ba6d379088ef097b894cbc22}\label{classWt_1_1WPdfImage_a479b8988ba6d379088ef097b894cbc22}} 
+\index{Wt::WPdfImage@{Wt::WPdfImage}!addFontCollection@{addFontCollection}}
+\index{addFontCollection@{addFontCollection}!Wt::WPdfImage@{Wt::WPdfImage}}
+\doxysubsubsection{\texorpdfstring{addFontCollection()}{addFontCollection()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Pdf\+Image\+::add\+Font\+Collection (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{directory,  }\item[{bool}]{recursive = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Adds a font collection. 
+
+If Wt has been configured to use {\ttfamily libpango}, then font matching and character selection is done by libpango, which is seeded with information on installed fonts by fontconfig. In that case, invocations for this method is ignored. Only True\+Type fonts are supported.
+
+As of Wt 3.\+3.\+7, only True\+Type fonts will be selected by default. Prior to Wt 3.\+3.\+7, you needed to configure fontconfig (which is used by pango) to only return True\+Type fonts. This can be done using a fonts.\+conf configuration file\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{<?\textcolor{keyword}{xml} \textcolor{keyword}{version}=\textcolor{stringliteral}{'1.0'}?>}
+\DoxyCodeLine{<!\textcolor{keyword}{DOCTYPE} \textcolor{keyword}{fontconfig} \textcolor{keyword}{SYSTEM} \textcolor{stringliteral}{'fonts.dtd'}>}
+\DoxyCodeLine{<\textcolor{keywordtype}{fontconfig}>}
+\DoxyCodeLine{  <\textcolor{keywordtype}{selectfont}>}
+\DoxyCodeLine{    <\textcolor{keywordtype}{rejectfont}>}
+\DoxyCodeLine{      <\textcolor{keywordtype}{glob}>*.\textcolor{keyword}{pfb}</\textcolor{keywordtype}{glob}>}
+\DoxyCodeLine{    </\textcolor{keywordtype}{rejectfont}>}
+\DoxyCodeLine{  </\textcolor{keywordtype}{selectfont}>}
+\DoxyCodeLine{</\textcolor{keywordtype}{fontconfig}>}
+\end{DoxyCode}
+
+
+You may need to add more glob patterns to exclude other fonts than True\+Type, and also to exclude True\+Type fonts which do not work properly with libharu.
+
+If Wt has not been configured to use {\ttfamily libpango}, then this method may be used to indicate the location of True\+Type fonts. The main drawback compared to libpango is that font selection is not steered by the need for particular characters, i.\+e. font selection is independent from the text\textquotesingle{}s need for specific characters. Most True\+Type fonts provide only partial unicode support. The provided {\ttfamily directory} will be searched for fonts (currently only True\+Type \char`\"{}.\+ttf\char`\"{} or \char`\"{}.\+ttc\char`\"{} fonts). True\+Type fonts are preferable over Base-\/14 fonts (which are P\+DF\textquotesingle{}s default fonts) since they provide partial (or complete) unicode support.
+
+When using Base-\/14 fonts, \mbox{\hyperlink{classWt_1_1WString_a32f78326b7c2f213768645e04dfa790a}{W\+String\+::narrow()}} will be called on text which may result in loss of information. \mbox{\Hypertarget{classWt_1_1WPdfImage_a85dc5ebd08579d093c4253c7b2323b92}\label{classWt_1_1WPdfImage_a85dc5ebd08579d093c4253c7b2323b92}} 
+\index{Wt::WPdfImage@{Wt::WPdfImage}!done@{done}}
+\index{done@{done}!Wt::WPdfImage@{Wt::WPdfImage}}
+\doxysubsubsection{\texorpdfstring{done()}{done()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Pdf\+Image\+::done (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Finishes painting on the device. 
+
+This method is called when a \mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} stopped painting.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a50beb0c8cb77c12e2dee807e4fe4bcb4}{W\+Painter\+::end()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a75827be2076716985533dbc75dfdc512}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a4d421348abb4e54e7bf8727c4ebf2f42}\label{classWt_1_1WPdfImage_a4d421348abb4e54e7bf8727c4ebf2f42}} 
+\index{Wt::WPdfImage@{Wt::WPdfImage}!drawArc@{drawArc}}
+\index{drawArc@{drawArc}!Wt::WPdfImage@{Wt::WPdfImage}}
+\doxysubsubsection{\texorpdfstring{drawArc()}{drawArc()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Pdf\+Image\+::draw\+Arc (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rect,  }\item[{double}]{start\+Angle,  }\item[{double}]{span\+Angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws an arc. 
+
+The arc describes the segment of an ellipse enclosed by the rect. The segment starts at {\ttfamily start\+Angle}, and spans an angle given by {\ttfamily span\+Angle}. These angles have as unit degree, and are measured counter-\/clockwise starting from the 3 o\textquotesingle{}clock position.
+
+The arc must be stroked, filled, and transformed using the current painter settings. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a605316797b1aa4be60c24d95fc5a1ab4}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a7374475bd41ba9e01e6f30101875450c}\label{classWt_1_1WPdfImage_a7374475bd41ba9e01e6f30101875450c}} 
+\index{Wt::WPdfImage@{Wt::WPdfImage}!drawImage@{drawImage}}
+\index{drawImage@{drawImage}!Wt::WPdfImage@{Wt::WPdfImage}}
+\doxysubsubsection{\texorpdfstring{drawImage()}{drawImage()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Pdf\+Image\+::draw\+Image (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rect,  }\item[{const std\+::string \&}]{image\+Uri,  }\item[{int}]{img\+Width,  }\item[{int}]{img\+Height,  }\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{source\+Rect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws an image. 
+
+Draws {\itshape source\+Rect} from the image with U\+RL {\ttfamily image\+Uri} and original dimensions {\itshape img\+Width} and {\ttfamily img\+Height} to the location, into the rectangle defined by {\ttfamily rect}.
+
+The image is transformed using the current painter settings. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_af92ff3c6d2f5c351c6931306d9cc1162}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a25dda353c268a539b33630ba9f8baf4d}\label{classWt_1_1WPdfImage_a25dda353c268a539b33630ba9f8baf4d}} 
+\index{Wt::WPdfImage@{Wt::WPdfImage}!drawLine@{drawLine}}
+\index{drawLine@{drawLine}!Wt::WPdfImage@{Wt::WPdfImage}}
+\doxysubsubsection{\texorpdfstring{drawLine()}{drawLine()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Pdf\+Image\+::draw\+Line (\begin{DoxyParamCaption}\item[{double}]{x1,  }\item[{double}]{y1,  }\item[{double}]{x2,  }\item[{double}]{y2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws a line. 
+
+The line must be stroked and transformed using the current painter settings. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_abd267ca3adb6c394079042810864ac9a}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WPdfImage_adabb89d6f02e389f1eb09fdd533114b7}\label{classWt_1_1WPdfImage_adabb89d6f02e389f1eb09fdd533114b7}} 
+\index{Wt::WPdfImage@{Wt::WPdfImage}!drawPath@{drawPath}}
+\index{drawPath@{drawPath}!Wt::WPdfImage@{Wt::WPdfImage}}
+\doxysubsubsection{\texorpdfstring{drawPath()}{drawPath()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Pdf\+Image\+::draw\+Path (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WPainterPath}{W\+Painter\+Path}} \&}]{path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws a path. 
+
+The path must be stroked, filled, and transformed using the current painter settings. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_ab3c368b79fef8bc53681821610dd2077}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a7393412177e2ffe7f12b5a8cf95f0818}\label{classWt_1_1WPdfImage_a7393412177e2ffe7f12b5a8cf95f0818}} 
+\index{Wt::WPdfImage@{Wt::WPdfImage}!drawRect@{drawRect}}
+\index{drawRect@{drawRect}!Wt::WPdfImage@{Wt::WPdfImage}}
+\doxysubsubsection{\texorpdfstring{drawRect()}{drawRect()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Pdf\+Image\+::draw\+Rect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rectangle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws a rectangle. 
+
+The rect must be stroked, filled, and transformed using the current painter settings. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a1ef00ae9ef4506ab8a151810fc01b10c}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a9e70f7fbfb5ccbad60f7bff3c6b64370}\label{classWt_1_1WPdfImage_a9e70f7fbfb5ccbad60f7bff3c6b64370}} 
+\index{Wt::WPdfImage@{Wt::WPdfImage}!drawText@{drawText}}
+\index{drawText@{drawText}!Wt::WPdfImage@{Wt::WPdfImage}}
+\doxysubsubsection{\texorpdfstring{drawText()}{drawText()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Pdf\+Image\+::draw\+Text (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WRectF}{W\+RectF}} \&}]{rect,  }\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_ab8f772c69bc8180c31f9e4f4593b143f}{Alignment\+Flag}} $>$}]{alignment\+Flags,  }\item[{\mbox{\hyperlink{classWt_a3bf85f6b385349dadfa7e205a39ec419}{Text\+Flag}}}]{text\+Flag,  }\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text,  }\item[{const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} $\ast$}]{clip\+Point }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draws text. 
+
+The text must be rendered, stroked and transformed using the current painter settings.
+
+If clip\+Point is not null, a check is performed whether the point is inside of the current clip area. If not, the text is not drawn. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a970d7bcaa7d6b26c0134b7479626aea3}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a1765242ebed89d58af0f94f1dc809e0d}\label{classWt_1_1WPdfImage_a1765242ebed89d58af0f94f1dc809e0d}} 
+\index{Wt::WPdfImage@{Wt::WPdfImage}!fontMetrics@{fontMetrics}}
+\index{fontMetrics@{fontMetrics}!Wt::WPdfImage@{Wt::WPdfImage}}
+\doxysubsubsection{\texorpdfstring{fontMetrics()}{fontMetrics()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WFontMetrics}{W\+Font\+Metrics}} Wt\+::\+W\+Pdf\+Image\+::font\+Metrics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns font metrics. 
+
+This returns font metrics for the current font.
+
+Throws a std\+::logic\+\_\+error if the underlying device does not provide font metrics. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a468ec8684106f8e24b3c46876ee86ff7}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a45ef6cac7be6a5ecfa0d060db0d9ad5a}\label{classWt_1_1WPdfImage_a45ef6cac7be6a5ecfa0d060db0d9ad5a}} 
+\index{Wt::WPdfImage@{Wt::WPdfImage}!handleRequest@{handleRequest}}
+\index{handleRequest@{handleRequest}!Wt::WPdfImage@{Wt::WPdfImage}}
+\doxysubsubsection{\texorpdfstring{handleRequest()}{handleRequest()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Pdf\+Image\+::handle\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&}]{request,  }\item[{\mbox{\hyperlink{classWt_1_1Http_1_1Response}{Http\+::\+Response}} \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles a request. 
+
+Reimplement this method so that a proper response is generated for the given request. From the {\ttfamily request} object you can access request parameters and whether the request is a continuation request. In the {\ttfamily response} object, you should set the mime type and stream the output data.
+
+A request may also concern a continuation, indicated in \mbox{\hyperlink{classWt_1_1Http_1_1Request_a9fe40c73e6d2bd3b4fec6f2476d71265}{Http\+::\+Request\+::continuation()}}, in which case the next part for a previously created continuation should be served.
+
+While handling a request, which may happen at any time together with event handling, the library makes sure that the resource is not being concurrently deleted, but multiple requests may happend simultaneously for a single resource. 
+
+Implements \mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{Wt\+::\+W\+Resource}}.
+
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a32c6801df55df08684187dcc33a06a6e}\label{classWt_1_1WPdfImage_a32c6801df55df08684187dcc33a06a6e}} 
+\index{Wt::WPdfImage@{Wt::WPdfImage}!height@{height}}
+\index{height@{height}!Wt::WPdfImage@{Wt::WPdfImage}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} Wt\+::\+W\+Pdf\+Image\+::height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the device height. 
+
+The device height, in pixels, establishes the height of the device coordinate system. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a24c7e1363440e6994b44381ebf443157}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WPdfImage_af3206cbd0b62366a7c640d8d6ebcbd8c}\label{classWt_1_1WPdfImage_af3206cbd0b62366a7c640d8d6ebcbd8c}} 
+\index{Wt::WPdfImage@{Wt::WPdfImage}!init@{init}}
+\index{init@{init}!Wt::WPdfImage@{Wt::WPdfImage}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Pdf\+Image\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initializes the device for painting. 
+
+This method is called when a \mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}} starts painting.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPainter_a6b81663b5599f0736ae5099ac7325d44}{W\+Painter\+::begin(\+W\+Paint\+Device $\ast$)}}, \mbox{\hyperlink{classWt_1_1WPdfImage_a669c832f31c25fff8c72b7a3fc7cf6b6}{painter()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a04d6f9e0653a9785662c1e987b597cc6}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a93ffa32a772ee5d6a02ad602e6144d46}\label{classWt_1_1WPdfImage_a93ffa32a772ee5d6a02ad602e6144d46}} 
+\index{Wt::WPdfImage@{Wt::WPdfImage}!measureText@{measureText}}
+\index{measureText@{measureText}!Wt::WPdfImage@{Wt::WPdfImage}}
+\doxysubsubsection{\texorpdfstring{measureText()}{measureText()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WTextItem}{W\+Text\+Item}} Wt\+::\+W\+Pdf\+Image\+::measure\+Text (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{W\+String}} \&}]{text,  }\item[{double}]{max\+Width = {\ttfamily -\/1},  }\item[{bool}]{word\+Wrap = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Measures rendered text size. 
+
+Returns the bounding rect of the given text when rendered using the current font.
+
+If {\ttfamily max\+Width} != -\/1, then the text is truncated to fit in the width.
+
+If {\ttfamily word\+Wrap} = {\ttfamily true} then text is truncated only at word boundaries. \mbox{\hyperlink{classNote}{Note}} that in this case the whitespace at the truncated position is included in the text but not accounted for by the returned width (since usually you will not render the whitespace at the end of a line).
+
+Throws a std\+::logic\+\_\+error if the underlying device does not provide font metrics. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a21d005287f1973348357e089d6d18df1}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a204d3fb9ea869b8937f5ba19f4bb4a81}\label{classWt_1_1WPdfImage_a204d3fb9ea869b8937f5ba19f4bb4a81}} 
+\index{Wt::WPdfImage@{Wt::WPdfImage}!paintActive@{paintActive}}
+\index{paintActive@{paintActive}!Wt::WPdfImage@{Wt::WPdfImage}}
+\doxysubsubsection{\texorpdfstring{paintActive()}{paintActive()}}
+{\footnotesize\ttfamily virtual bool Wt\+::\+W\+Pdf\+Image\+::paint\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns whether painting is active. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPdfImage_af3206cbd0b62366a7c640d8d6ebcbd8c}{init()}}, \mbox{\hyperlink{classWt_1_1WPdfImage_a669c832f31c25fff8c72b7a3fc7cf6b6}{painter()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a7dc74a2c7c98e38c7851277313d313f6}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a669c832f31c25fff8c72b7a3fc7cf6b6}\label{classWt_1_1WPdfImage_a669c832f31c25fff8c72b7a3fc7cf6b6}} 
+\index{Wt::WPdfImage@{Wt::WPdfImage}!painter@{painter}}
+\index{painter@{painter}!Wt::WPdfImage@{Wt::WPdfImage}}
+\doxysubsubsection{\texorpdfstring{painter()}{painter()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WPainter}{W\+Painter}}$\ast$ Wt\+::\+W\+Pdf\+Image\+::painter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Returns the painter that is currently painting on the device. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPdfImage_af3206cbd0b62366a7c640d8d6ebcbd8c}{init()}} 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_ae1c75c6bc0e5a2d6322b176f6f13403c}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a3ebfed6ecc3f79c2d5c7b5a5e23dd53c}\label{classWt_1_1WPdfImage_a3ebfed6ecc3f79c2d5c7b5a5e23dd53c}} 
+\index{Wt::WPdfImage@{Wt::WPdfImage}!setChanged@{setChanged}}
+\index{setChanged@{setChanged}!Wt::WPdfImage@{Wt::WPdfImage}}
+\doxysubsubsection{\texorpdfstring{setChanged()}{setChanged()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Pdf\+Image\+::set\+Changed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_1_1WFlags}{W\+Flags}}$<$ \mbox{\hyperlink{classWt_a5afa3162ba5b228f8074e0fda89f9a50}{Painter\+Change\+Flag}} $>$}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Indicates changes in painter state. 
+
+The {\ttfamily flags} argument is the logical OR of one or more change flags.
+
+\begin{DoxySeeAlso}{See also}
+Change\+Flag 
+\end{DoxySeeAlso}
+
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_ae79cffac9e666ec6a62d96b73fd2a996}{Wt\+::\+W\+Paint\+Device}}.
+
+\mbox{\Hypertarget{classWt_1_1WPdfImage_a3874d729a32d779e06199ab88cbe1e80}\label{classWt_1_1WPdfImage_a3874d729a32d779e06199ab88cbe1e80}} 
+\index{Wt::WPdfImage@{Wt::WPdfImage}!width@{width}}
+\index{width@{width}!Wt::WPdfImage@{Wt::WPdfImage}}
+\doxysubsubsection{\texorpdfstring{width()}{width()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classWt_1_1WLength}{W\+Length}} Wt\+::\+W\+Pdf\+Image\+::width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the device width. 
+
+The device width, in pixels, establishes the width of the device coordinate system. 
+
+Implements \mbox{\hyperlink{classWt_1_1WPaintDevice_a9a0d38acb408d4520d0dd520c93d47e0}{Wt\+::\+W\+Paint\+Device}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Pdf\+Image.\+h\end{DoxyCompactItemize}

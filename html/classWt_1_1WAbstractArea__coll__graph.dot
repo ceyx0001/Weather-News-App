@@ -1,0 +1,20 @@
+digraph "Wt::WAbstractArea"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Wt::WAbstractArea",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Abstract base class for interactive areas in a widget."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Wt::WObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1WObject.html",tooltip="A base class for objects that participate in the signal/slot system."];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Wt::Core::observable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Core_1_1observable.html",tooltip="A base class for objects whose life-time can be tracked."];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" name_" ,fontname="Helvetica"];
+  Node4 [label="string",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" id_" ,fontname="Helvetica"];
+  Node5 [label="const",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" image_" ,fontname="Helvetica"];
+  Node6 [label="Wt::Core::observing\l_ptr\< Wt::WImage \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classWt_1_1Core_1_1observing__ptr.html",tooltip=" "];
+  Node7 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" impl_" ,fontname="Helvetica"];
+  Node7 [label="Wt::Core::Impl::observing\l_ptr_base",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structWt_1_1Core_1_1Impl_1_1observing__ptr__base.html",tooltip=" "];
+  Node3 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" observed_" ,fontname="Helvetica"];
+}

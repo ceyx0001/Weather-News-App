@@ -1,0 +1,79 @@
+\hypertarget{classhttp_1_1server_1_1RequestHandler}{}\doxysection{http\+::server\+::Request\+Handler Class Reference}
+\label{classhttp_1_1server_1_1RequestHandler}\index{http::server::RequestHandler@{http::server::RequestHandler}}
+
+
+The common handler for all incoming requests.  
+
+
+
+
+{\ttfamily \#include $<$Request\+Handler.\+h$>$}
+
+
+
+Collaboration diagram for http\+::server\+::Request\+Handler\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestHandler_a50d63f81414e1e01ed9cb6675e51fdea}\label{classhttp_1_1server_1_1RequestHandler_a50d63f81414e1e01ed9cb6675e51fdea}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1RequestHandler_a50d63f81414e1e01ed9cb6675e51fdea}{Request\+Handler}} (const \mbox{\hyperlink{classhttp_1_1server_1_1Configuration}{Configuration}} \&config, const \mbox{\hyperlink{classWt_1_1Configuration}{Wt\+::\+Configuration}} \&wt\+Config, \mbox{\hyperlink{classWt_1_1WLogger}{Wt\+::\+W\+Logger}} \&logger)
+\begin{DoxyCompactList}\small\item\em Construct with a directory containing files to be served. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestHandler_af086e3f00200ed3a477a8a47d13b157d}\label{classhttp_1_1server_1_1RequestHandler_af086e3f00200ed3a477a8a47d13b157d}} 
+Reply\+Ptr \mbox{\hyperlink{classhttp_1_1server_1_1RequestHandler_af086e3f00200ed3a477a8a47d13b157d}{handle\+Request}} (\mbox{\hyperlink{classhttp_1_1server_1_1Request}{Request}} \&req, Reply\+Ptr \&last\+Wt\+Reply, Reply\+Ptr \&last\+Proxy\+Reply, Reply\+Ptr \&last\+Static\+Reply)
+\begin{DoxyCompactList}\small\item\em Handle a request and produce a reply. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestHandler_a6f17bec0fbabe8346f9d56be0c1faeba}\label{classhttp_1_1server_1_1RequestHandler_a6f17bec0fbabe8346f9d56be0c1faeba}} 
+{\bfseries Request\+Handler} (const \mbox{\hyperlink{classhttp_1_1server_1_1RequestHandler}{Request\+Handler}} \&)=delete
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestHandler_aa2ab635c9295344d7b98ad2aac0a692c}\label{classhttp_1_1server_1_1RequestHandler_aa2ab635c9295344d7b98ad2aac0a692c}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1RequestHandler}{Request\+Handler}} \& {\bfseries operator=} (const \mbox{\hyperlink{classhttp_1_1server_1_1RequestHandler}{Request\+Handler}} \&)=delete
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestHandler_ad313a4fede42785a74f5f0d8255e9920}\label{classhttp_1_1server_1_1RequestHandler_ad313a4fede42785a74f5f0d8255e9920}} 
+const std\+::string {\bfseries get\+Error\+Root} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestHandler_adf8cb61ba2ad45b04e7c2720e2fbae71}\label{classhttp_1_1server_1_1RequestHandler_adf8cb61ba2ad45b04e7c2720e2fbae71}} 
+\mbox{\hyperlink{classWt_1_1WLogger}{Wt\+::\+W\+Logger}} \& {\bfseries logger} () const
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestHandler_a968de14e6ebd1f4be666c49082d4b590}\label{classhttp_1_1server_1_1RequestHandler_a968de14e6ebd1f4be666c49082d4b590}} 
+void {\bfseries set\+Session\+Manager} (\mbox{\hyperlink{classhttp_1_1server_1_1SessionProcessManager}{Session\+Process\+Manager}} $\ast$session\+Manager)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classhttp_1_1server_1_1RequestHandler_adfb6c3177ac13082830c35da07d887bb}{url\+\_\+decode}} (const \mbox{\hyperlink{structhttp_1_1server_1_1buffer__string}{buffer\+\_\+string}} \&in, std\+::string \&path, std\+::string \&query)
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestHandler_ab84d3a291ca6ca5a4f8b4fa1f5fed7d9}\label{classhttp_1_1server_1_1RequestHandler_ab84d3a291ca6ca5a4f8b4fa1f5fed7d9}} 
+static bool {\bfseries matches\+Path} (const std\+::string \&path, const std\+::string \&prefix, bool match\+After\+Slash)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestHandler_acaba1a21168c815d2952fccfbd5b3398}\label{classhttp_1_1server_1_1RequestHandler_acaba1a21168c815d2952fccfbd5b3398}} 
+const \mbox{\hyperlink{classhttp_1_1server_1_1Configuration}{Configuration}} \& \mbox{\hyperlink{classhttp_1_1server_1_1RequestHandler_acaba1a21168c815d2952fccfbd5b3398}{config\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The server configuration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestHandler_a7d89a9024efd99c160c6121bc005d54d}\label{classhttp_1_1server_1_1RequestHandler_a7d89a9024efd99c160c6121bc005d54d}} 
+const \mbox{\hyperlink{classWt_1_1Configuration}{Wt\+::\+Configuration}} \& \mbox{\hyperlink{classhttp_1_1server_1_1RequestHandler_a7d89a9024efd99c160c6121bc005d54d}{wt\+Config\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{classWt}{Wt}} configuration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestHandler_ae72c8deee3c4f142585d554fb87a1d5a}\label{classhttp_1_1server_1_1RequestHandler_ae72c8deee3c4f142585d554fb87a1d5a}} 
+\mbox{\hyperlink{classWt_1_1WLogger}{Wt\+::\+W\+Logger}} \& \mbox{\hyperlink{classhttp_1_1server_1_1RequestHandler_ae72c8deee3c4f142585d554fb87a1d5a}{logger\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The logger. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestHandler_a081d3a1c7a0d43f9b60e5814c7acfe2b}\label{classhttp_1_1server_1_1RequestHandler_a081d3a1c7a0d43f9b60e5814c7acfe2b}} 
+\mbox{\hyperlink{classhttp_1_1server_1_1SessionProcessManager}{Session\+Process\+Manager}} $\ast$ \mbox{\hyperlink{classhttp_1_1server_1_1RequestHandler_a081d3a1c7a0d43f9b60e5814c7acfe2b}{session\+Manager\+\_\+}}
+\begin{DoxyCompactList}\small\item\em The session manager for dedicated processes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The common handler for all incoming requests. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhttp_1_1server_1_1RequestHandler_adfb6c3177ac13082830c35da07d887bb}\label{classhttp_1_1server_1_1RequestHandler_adfb6c3177ac13082830c35da07d887bb}} 
+\index{http::server::RequestHandler@{http::server::RequestHandler}!url\_decode@{url\_decode}}
+\index{url\_decode@{url\_decode}!http::server::RequestHandler@{http::server::RequestHandler}}
+\doxysubsubsection{\texorpdfstring{url\_decode()}{url\_decode()}}
+{\footnotesize\ttfamily static bool http\+::server\+::\+Request\+Handler\+::url\+\_\+decode (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structhttp_1_1server_1_1buffer__string}{buffer\+\_\+string}} \&}]{in,  }\item[{std\+::string \&}]{path,  }\item[{std\+::string \&}]{query }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Perform U\+R\+L-\/decoding on a string and separates in path and query. Returns false if the encoding was invalid. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/http/Request\+Handler.\+h\end{DoxyCompactItemize}

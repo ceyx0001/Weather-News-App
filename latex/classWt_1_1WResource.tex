@@ -1,0 +1,562 @@
+\hypertarget{classWt_1_1WResource}{}\doxysection{Wt\+::W\+Resource Class Reference}
+\label{classWt_1_1WResource}\index{Wt::WResource@{Wt::WResource}}
+
+
+An object which can be rendered in the H\+T\+TP protocol.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Resource.\+h$>$}
+
+
+
+Inheritance diagram for Wt\+::W\+Resource\+:
+% FIG 0
+
+
+Collaboration diagram for Wt\+::W\+Resource\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structWt_1_1WResource_1_1UseLock}{Use\+Lock}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_a2ae6f178b035e3d99d1bec175f0afbea}\label{classWt_1_1WResource_a2ae6f178b035e3d99d1bec175f0afbea}} 
+\mbox{\hyperlink{classWt_1_1WResource_a2ae6f178b035e3d99d1bec175f0afbea}{W\+Resource}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new resource. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1WResource_a776c19c9bbc95330941744cd129bc01a}{$\sim$\+W\+Resource}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the resource. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WResource_a47632cad99e70712d4f898d97c3ea314}{suggest\+File\+Name}} (const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&name, \mbox{\hyperlink{classWt_a1c6a585445907b7e6e1f98bbd1501418}{Content\+Disposition}} disposition=Content\+Disposition\+::\+Attachment)
+\begin{DoxyCompactList}\small\item\em Suggests a filename to the user for the data streamed by this resource. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \& \mbox{\hyperlink{classWt_1_1WResource_a0f96ad3544cbcf441975f8970881e72d}{suggested\+File\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Returns the suggested file name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WResource_ad07f56c58e485b17620f2f1d93121640}{set\+Disposition\+Type}} (\mbox{\hyperlink{classWt_a1c6a585445907b7e6e1f98bbd1501418}{Content\+Disposition}} cd)
+\begin{DoxyCompactList}\small\item\em Configures the Content-\/\+Disposition header. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_a1c6a585445907b7e6e1f98bbd1501418}{Content\+Disposition}} \mbox{\hyperlink{classWt_1_1WResource_a62d1c1fa243d8250fa01273eb7b0c674}{disposition\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Returns the currently configured content disposition. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WResource_a9394f6c2ff6cadf8d1076ec52c5e909a}{set\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Generates a new U\+RL for this resource and emits the changed signal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WResource_aac7fe0468f832de7a1f98c12fec2cfec}{set\+Invalid\+After\+Changed}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Return \char`\"{}page not found\char`\"{} for prior resource U\+R\+Ls after change. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WResource_a19792cc6361fabd3f237afaee5953c89}{invalid\+After\+Changed}} () const
+\begin{DoxyCompactList}\small\item\em Should \char`\"{}page not found\char`\"{} be returned for outdated resource U\+R\+Ls. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WResource_a06bb9dbe3ae195c320cfed7b062d448a}{set\+Internal\+Path}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Sets an internal path for this resource. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classWt_1_1WResource_a12b871c53120ad1c7c708210f60422be}{internal\+Path}} () const
+\begin{DoxyCompactList}\small\item\em Returns the internal path. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1WResource_abf6241d315b1569323da8a6bf7c7896c}{generate\+Url}} ()
+\begin{DoxyCompactList}\small\item\em Generates an U\+RL for this resource. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{classWt_1_1WResource_a03872ea6bf9fc0dcaeaea7541f2c7217}{url}} () const
+\begin{DoxyCompactList}\small\item\em Returns the current U\+RL for this resource. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} \& \mbox{\hyperlink{classWt_1_1WResource_a1527418354a584790c372e86a40c6027}{data\+Changed}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when the data presented in this resource has changed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WResource_ae0b96cdd80b982c74adb9a762c77d479}{set\+Upload\+Progress}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Indicate interest in upload progress. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \+::uint64\+\_\+t, \+::uint64\+\_\+t $>$ \& \mbox{\hyperlink{classWt_1_1WResource_a23e0db25d9ad7da08f5c36603def5863}{data\+Received}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when data has been received for this resource. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WResource_a78b018c593703e4c8d12513374ff6fad}\label{classWt_1_1WResource_a78b018c593703e4c8d12513374ff6fad}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \+::uint64\+\_\+t $>$ \& {\bfseries data\+Exceeded} ()
+\item 
+void \mbox{\hyperlink{classWt_1_1WResource_aaf6d964de1056c7c9404f88fa5e5a0de}{write}} (W\+T\+\_\+\+B\+O\+S\+T\+R\+E\+AM \&out, const \mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Http\+::\+Parameter\+Map}} \&parameters=\mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Http\+::\+Parameter\+Map}}(), const \mbox{\hyperlink{namespaceWt_1_1Http_a90602329029048d738daae9ba63e059a}{Http\+::\+Uploaded\+File\+Map}} \&files=\mbox{\hyperlink{namespaceWt_1_1Http_a90602329029048d738daae9ba63e059a}{Http\+::\+Uploaded\+File\+Map}}())
+\begin{DoxyCompactList}\small\item\em Stream the resource to a stream. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{handle\+Request}} (const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&request, \mbox{\hyperlink{classWt_1_1Http_1_1Response}{Http\+::\+Response}} \&response)=0
+\begin{DoxyCompactList}\small\item\em Handles a request. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classWt_1_1WResource_a9ef85df4c847713b3077c99370e9ea35}{handle\+Abort}} (const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&request)
+\begin{DoxyCompactList}\small\item\em Handles a continued request being aborted. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WResource_a1a9c35416eb690939ff288b053da3e1b}{have\+More\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Indicate that more data is available. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WResource_a6695dad28a25c7cbfef93c371e7c5a1e}{set\+Takes\+Update\+Lock}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Set whether this resource takes the W\+Application\textquotesingle{}s update lock. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WResource_af0b52160a8d04700a17e9479dd489972}{takes\+Update\+Lock}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether this resources takes the W\+Application\textquotesingle{}s update lock. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WResource_a22186680dc5a2be39e12a929df334b2c}\label{classWt_1_1WResource_a22186680dc5a2be39e12a929df334b2c}} 
+unsigned long {\bfseries version} () const
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_a750ff7d60cf6098b79426db8ac17ff83}\label{classWt_1_1WResource_a750ff7d60cf6098b79426db8ac17ff83}} 
+void {\bfseries increment\+Version} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classWt_1_1WResource_a24f65859427f54012fef2fa9da14870d}{being\+Deleted}} ()
+\begin{DoxyCompactList}\small\item\em Prepares the resource for deletion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_a4bf50485ffd8533c77c37509c74b25de}\label{classWt_1_1WResource_a4bf50485ffd8533c77c37509c74b25de}} 
+void {\bfseries remove\+Continuation} (Http\+::\+Response\+Continuation\+Ptr continuation)
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_ab7a546af27ba4b05f471e37f0ea3d95e}\label{classWt_1_1WResource_ab7a546af27ba4b05f471e37f0ea3d95e}} 
+Http\+::\+Response\+Continuation\+Ptr {\bfseries add\+Continuation} (\mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation}{Http\+::\+Response\+Continuation}} $\ast$c)
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_ad488d1f5ee64a2437b5842a91df18dc3}\label{classWt_1_1WResource_ad488d1f5ee64a2437b5842a91df18dc3}} 
+void {\bfseries do\+Continue} (Http\+::\+Response\+Continuation\+Ptr continuation)
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_ac4da25332a50fa75b8d7b9f2609f0d8a}\label{classWt_1_1WResource_ac4da25332a50fa75b8d7b9f2609f0d8a}} 
+void {\bfseries handle} (\mbox{\hyperlink{classWt_1_1WebRequest}{Web\+Request}} $\ast$web\+Request, \mbox{\hyperlink{classWt_1_1WebResponse}{Web\+Response}} $\ast$web\+Response, Http\+::\+Response\+Continuation\+Ptr continuation=Http\+::\+Response\+Continuation\+Ptr())
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_a72a17fec86189270a619eba1a824dbca}\label{classWt_1_1WResource_a72a17fec86189270a619eba1a824dbca}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}} {\bfseries data\+Changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_a93cfebde175b242fcd4a3d0f6399b400}\label{classWt_1_1WResource_a93cfebde175b242fcd4a3d0f6399b400}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \+::uint64\+\_\+t, \+::uint64\+\_\+t $>$ {\bfseries data\+Received\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_a40566413e35e3f22fa5fd61392fe210a}\label{classWt_1_1WResource_a40566413e35e3f22fa5fd61392fe210a}} 
+\mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \+::uint64\+\_\+t $>$ {\bfseries data\+Exceeded\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_a5f36fbab07669838c0fffcc55a666a25}\label{classWt_1_1WResource_a5f36fbab07669838c0fffcc55a666a25}} 
+bool {\bfseries track\+Upload\+Progress\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_a902066cedc6291d349388528a86cfab5}\label{classWt_1_1WResource_a902066cedc6291d349388528a86cfab5}} 
+bool {\bfseries takes\+Update\+Lock\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_a563fd0564896ecf45c50e4cccf0aece7}\label{classWt_1_1WResource_a563fd0564896ecf45c50e4cccf0aece7}} 
+bool {\bfseries invalid\+After\+Changed\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_ad32aeac0dd21684cf2f3d7443ba22254}\label{classWt_1_1WResource_ad32aeac0dd21684cf2f3d7443ba22254}} 
+std\+::vector$<$ Http\+::\+Response\+Continuation\+Ptr $>$ {\bfseries continuations\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_a5cefc022491b83ef2efa282d12b08ccd}\label{classWt_1_1WResource_a5cefc022491b83ef2efa282d12b08ccd}} 
+\mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} {\bfseries suggested\+File\+Name\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_afc961494cb96a6d756e98e5445ad442c}\label{classWt_1_1WResource_afc961494cb96a6d756e98e5445ad442c}} 
+\mbox{\hyperlink{classWt_a1c6a585445907b7e6e1f98bbd1501418}{Content\+Disposition}} {\bfseries disposition\+Type\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_af1c17ec84036596a0f102bc89ba3f540}\label{classWt_1_1WResource_af1c17ec84036596a0f102bc89ba3f540}} 
+std\+::string {\bfseries current\+Url\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_a66039d30223bb4c04e8ac74490e5eca5}\label{classWt_1_1WResource_a66039d30223bb4c04e8ac74490e5eca5}} 
+std\+::string {\bfseries internal\+Path\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_a5f299c4511384003b4c2d9dce7236481}\label{classWt_1_1WResource_a5f299c4511384003b4c2d9dce7236481}} 
+unsigned long {\bfseries version\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_af2047daa713bece061a1293915646f37}\label{classWt_1_1WResource_af2047daa713bece061a1293915646f37}} 
+\mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}} $\ast$ {\bfseries app\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_a2f7590ac13de55ceace9a5a468d9afce}\label{classWt_1_1WResource_a2f7590ac13de55ceace9a5a468d9afce}} 
+class {\bfseries Http\+::\+Response\+Continuation}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_a8b481326cf1e19852adbe31a538794c8}\label{classWt_1_1WResource_a8b481326cf1e19852adbe31a538794c8}} 
+class {\bfseries Http\+::\+Response}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_a8248f10e62aee707eabe43458855d835}\label{classWt_1_1WResource_a8248f10e62aee707eabe43458855d835}} 
+class {\bfseries Web\+Session}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_a61e851e22dadd21892e94ec3cfecda53}\label{classWt_1_1WResource_a61e851e22dadd21892e94ec3cfecda53}} 
+class {\bfseries Web\+Controller}
+\item 
+\mbox{\Hypertarget{classWt_1_1WResource_a30221ddc558692a7b52598b963a74bc2}\label{classWt_1_1WResource_a30221ddc558692a7b52598b963a74bc2}} 
+class {\bfseries Configuration}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+An object which can be rendered in the H\+T\+TP protocol. 
+
+\doxyparagraph*{Usage}
+
+Besides the main page, other objects may be rendered as additional resources, for example documents or images. Classes such as \mbox{\hyperlink{classWt_1_1WAnchor}{W\+Anchor}} or \mbox{\hyperlink{classWt_1_1WImage}{W\+Image}} can use a resource instead of a U\+RL to provide their contents. Whenever the resource has changed, you should call the \mbox{\hyperlink{classWt_1_1WResource_a9394f6c2ff6cadf8d1076ec52c5e909a}{set\+Changed()}} method. \mbox{\hyperlink{classWt_1_1WResource_a9394f6c2ff6cadf8d1076ec52c5e909a}{set\+Changed()}} will make sure that the browser will use a new version of the resource by generating a new U\+RL, and emits the \mbox{\hyperlink{classWt_1_1WResource_a1527418354a584790c372e86a40c6027}{data\+Changed()}} signal to make those that refer to the resource aware that they should update their references to the new U\+RL.
+
+You can help the browser to start a suitable helper application to handle the downloaded resource, or suggest to the user a suitable filename for saving the resource, by setting an appropriate file name using \mbox{\hyperlink{classWt_1_1WResource_a47632cad99e70712d4f898d97c3ea314}{suggest\+File\+Name()}}.
+
+To serve resources that you create on the fly, you need to specialize this class and implement \mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{handle\+Request()}}.
+
+\doxyparagraph*{Concurrency issues}
+
+Because of the nature of the web, a resource may be requested one time or multiple times at the discretion of the browser, and therefore your resource should in general not have any side-\/effects except for what is needed to render its own contents. Unlike event notifications to a Wt application, resource requests are not serialized, but are handled concurrently. You need to grab the application lock if you want to access or modify other widget state from within the resource. You can enable \mbox{\hyperlink{classWt_1_1WResource_af0b52160a8d04700a17e9479dd489972}{takes\+Update\+Lock()}} to let W\+Resource do that for you. When deleting a resource, any pending request is cancelled first. For this mechanism to work you need to specialize the destructor and call \mbox{\hyperlink{classWt_1_1WResource_a24f65859427f54012fef2fa9da14870d}{being\+Deleted()}}. This method may safely be called multiple times (i.\+e. from within each destructor in the hierachy).
+
+\doxyparagraph*{Continuations for asynchronous I/O}
+
+\mbox{\hyperlink{structWith}{With}} respect to I/O, the current strategy is to cache the whole response first in a buffer and use async I/O to push the data to the client, in order to free the thread while waiting for I/O on a possibly slow link. You do not necessarily have to provide all output at once, instead you can obtain a \mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation}{Http\+::\+Response\+Continuation}} object for a response, construct the response piecewise. A new request() will be made to continue the response.
+
+Example for a custom resource implementation using continuations\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{class }\mbox{\hyperlink{classMyResource}{MyResource}} : \textcolor{keyword}{public} \mbox{\hyperlink{classWt_1_1WResource}{Wt::WResource}}}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\textcolor{keyword}{public}:}
+\DoxyCodeLine{  \mbox{\hyperlink{classMyResource}{MyResource}}(\textcolor{keywordtype}{int} iterations)}
+\DoxyCodeLine{    : iterations\_(iterations)}
+\DoxyCodeLine{  \{}
+\DoxyCodeLine{    \mbox{\hyperlink{classWt_1_1WResource_a47632cad99e70712d4f898d97c3ea314}{suggestFileName}}(\textcolor{stringliteral}{"data.txt"});}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \string~\mbox{\hyperlink{classMyResource}{MyResource}}() \{}
+\DoxyCodeLine{    \mbox{\hyperlink{classWt_1_1WResource_a24f65859427f54012fef2fa9da14870d}{beingDeleted}}();}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{  \textcolor{keywordtype}{void} \mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{handleRequest}}(\textcolor{keyword}{const} \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Wt::Http::Request}}\& request,}
+\DoxyCodeLine{                     \mbox{\hyperlink{classWt_1_1Http_1_1Response}{Wt::Http::Response}}\& response) \{}
+\DoxyCodeLine{    \textcolor{comment}{// see if this request is for a continuation:}}
+\DoxyCodeLine{    \mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation}{Wt::Http::ResponseContinuation}} *continuation = request.\mbox{\hyperlink{classWt_1_1Http_1_1Request_a9fe40c73e6d2bd3b4fec6f2476d71265}{continuation}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// calculate the current start}}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} iteration = continuation ? Wt::cpp17::any\_cast<int>(continuation-\/>\mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation_a20bd93d7429d8de5af200daab0cf22c8}{data}}()) : 0;}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (iteration == 0)}
+\DoxyCodeLine{      response.\mbox{\hyperlink{classWt_1_1Http_1_1Response_a20dd49d512ffc0cf407f9dd39db30341}{setMimeType}}(\textcolor{stringliteral}{"plain/text"});}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{keywordtype}{int} last = std::min(iterations\_, iteration + 100);}
+\DoxyCodeLine{    \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = iteration; i < last; ++i)}
+\DoxyCodeLine{      response.\mbox{\hyperlink{classWt_1_1Http_1_1Response_a5a76d6272200ead33695f22735341cd6}{out}}() << \textcolor{stringliteral}{"Data item "} << i << std::endl;}
+\DoxyCodeLine{}
+\DoxyCodeLine{    \textcolor{comment}{// if we have not yet finished, create a continuation to serve more}}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (last < iterations\_) \{}
+\DoxyCodeLine{      continuation = response.\mbox{\hyperlink{classWt_1_1Http_1_1Response_a76391b7300bdf3be3ca0a00f3670d592}{createContinuation}}();}
+\DoxyCodeLine{      \textcolor{comment}{// remember what to do next}}
+\DoxyCodeLine{      continuation-\/>\mbox{\hyperlink{classWt_1_1Http_1_1ResponseContinuation_a018939ff7a622576f072b94de59d2b6e}{setData}}(last);}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{  \}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{private}:}
+\DoxyCodeLine{  \textcolor{keywordtype}{int} iterations\_;}
+\DoxyCodeLine{\};}
+\end{DoxyCode}
+
+
+\doxyparagraph*{Global and private resources}
+
+By default, a resource is private to an application\+: access to it is protected by same secret session Id that protects any other access to the application.
+
+You can also deploy static resources, which are global, using \mbox{\hyperlink{classWt_1_1WServer_a3c5c323a9bccf591b63c9fb3f40e8b59}{W\+Server\+::add\+Resource()}}.
+
+\doxyparagraph*{Monitoring upload progress}
+
+A resource may also handle the uploading of files (in fact, \mbox{\hyperlink{classWt_1_1WFileUpload}{W\+File\+Upload}} uses a \mbox{\hyperlink{classWt_1_1WResource}{W\+Resource}} to do exactly that) or transmission of other large bodies of data being P\+O\+ST\textquotesingle{}ed or P\+UT to the resource U\+RL. For these requests, it may be convenient to enable upload progress monitoring using \mbox{\hyperlink{classWt_1_1WResource_ae0b96cdd80b982c74adb9a762c77d479}{set\+Upload\+Progress()}}, which allows you to be notified of data being received.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WAnchor}{W\+Anchor}}, \mbox{\hyperlink{classWt_1_1WImage}{W\+Image}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WResource_a776c19c9bbc95330941744cd129bc01a}\label{classWt_1_1WResource_a776c19c9bbc95330941744cd129bc01a}} 
+\index{Wt::WResource@{Wt::WResource}!````~WResource@{$\sim$WResource}}
+\index{````~WResource@{$\sim$WResource}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{$\sim$WResource()}{~WResource()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Resource\+::$\sim$\+W\+Resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys the resource. 
+
+When specializing a resource, you M\+U\+ST call \mbox{\hyperlink{classWt_1_1WResource_a24f65859427f54012fef2fa9da14870d}{being\+Deleted()}} from within the specialized destructor, in order to stop any further requests to the resource, unless it is guaranteed that no requests will arrive for this resource when it is being deleted, e.\+g. if the server is already stopped. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WResource_a24f65859427f54012fef2fa9da14870d}\label{classWt_1_1WResource_a24f65859427f54012fef2fa9da14870d}} 
+\index{Wt::WResource@{Wt::WResource}!beingDeleted@{beingDeleted}}
+\index{beingDeleted@{beingDeleted}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{beingDeleted()}{beingDeleted()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Resource\+::being\+Deleted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Prepares the resource for deletion. 
+
+When specializing a resource, you M\+U\+ST call \mbox{\hyperlink{classWt_1_1WResource_a24f65859427f54012fef2fa9da14870d}{being\+Deleted()}} from within the specialized destructor, in order to stop any further requests to the resource. \mbox{\Hypertarget{classWt_1_1WResource_a1527418354a584790c372e86a40c6027}\label{classWt_1_1WResource_a1527418354a584790c372e86a40c6027}} 
+\index{Wt::WResource@{Wt::WResource}!dataChanged@{dataChanged}}
+\index{dataChanged@{dataChanged}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{dataChanged()}{dataChanged()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}\& Wt\+::\+W\+Resource\+::data\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when the data presented in this resource has changed. 
+
+Widgets that reference the resource (such as anchors and images) will make sure the new data is rendered.
+
+It is better to call \mbox{\hyperlink{classWt_1_1WResource_a9394f6c2ff6cadf8d1076ec52c5e909a}{set\+Changed()}} than to emit this signal. set\+Changed generates a new U\+RL for this resource to avoid caching problems and then emits this signal. \mbox{\Hypertarget{classWt_1_1WResource_a23e0db25d9ad7da08f5c36603def5863}\label{classWt_1_1WResource_a23e0db25d9ad7da08f5c36603def5863}} 
+\index{Wt::WResource@{Wt::WResource}!dataReceived@{dataReceived}}
+\index{dataReceived@{dataReceived}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{dataReceived()}{dataReceived()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_1_1Signal}{Signal}}$<$ \+::uint64\+\_\+t, \+::uint64\+\_\+t$>$\& Wt\+::\+W\+Resource\+::data\+Received (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Signal emitted when data has been received for this resource. 
+
+When this signal is emitted, you have the update lock to modify the application. Because there is however no corresponding request from the browser, any update to the user interface is not immediately reflected in the client. To update the client interface, you need to use a \mbox{\hyperlink{classWt_1_1WTimer}{W\+Timer}} or enable \mbox{\hyperlink{classWt_1_1WApplication_ad9631ca64e68d30d40cb49c90e55223d}{server-\/push}}.
+
+The first argument is the number of bytes received so far, and the second argument is the total number of bytes.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WResource_ae0b96cdd80b982c74adb9a762c77d479}{set\+Upload\+Progress()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WResource_a62d1c1fa243d8250fa01273eb7b0c674}\label{classWt_1_1WResource_a62d1c1fa243d8250fa01273eb7b0c674}} 
+\index{Wt::WResource@{Wt::WResource}!dispositionType@{dispositionType}}
+\index{dispositionType@{dispositionType}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{dispositionType()}{dispositionType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWt_a1c6a585445907b7e6e1f98bbd1501418}{Content\+Disposition}} Wt\+::\+W\+Resource\+::disposition\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the currently configured content disposition. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WResource_ad07f56c58e485b17620f2f1d93121640}{set\+Disposition\+Type()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WResource_abf6241d315b1569323da8a6bf7c7896c}\label{classWt_1_1WResource_abf6241d315b1569323da8a6bf7c7896c}} 
+\index{Wt::WResource@{Wt::WResource}!generateUrl@{generateUrl}}
+\index{generateUrl@{generateUrl}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{generateUrl()}{generateUrl()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+W\+Resource\+::generate\+Url (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates an U\+RL for this resource. 
+
+Generates a new url that refers to this resource. The url is unique to assure that it is not cached by the web browser, and can thus be used to refer to a new \char`\"{}version\char`\"{} of the resource, which can be indicated by emitting the \mbox{\hyperlink{classWt_1_1WResource_a1527418354a584790c372e86a40c6027}{data\+Changed()}} signal.
+
+The old urls are not invalidated by calling this method, unless you enable \mbox{\hyperlink{classWt_1_1WResource_aac7fe0468f832de7a1f98c12fec2cfec}{set\+Invalid\+After\+Changed()}}. \mbox{\Hypertarget{classWt_1_1WResource_a9ef85df4c847713b3077c99370e9ea35}\label{classWt_1_1WResource_a9ef85df4c847713b3077c99370e9ea35}} 
+\index{Wt::WResource@{Wt::WResource}!handleAbort@{handleAbort}}
+\index{handleAbort@{handleAbort}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{handleAbort()}{handleAbort()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Resource\+::handle\+Abort (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Handles a continued request being aborted. 
+
+This function is only applicable to a request for which a response continuation was created, and indicates that the client has been closed (or the resource is being deleted) before the response was completed. This function may be reimplemented so that you can close any resources associated with the response continuation.
+
+The base implementation is empty.
+
+\mbox{\hyperlink{classNote}{Note}} that because this function could be called from within the destructor, you should not forget to call \mbox{\hyperlink{classWt_1_1WResource_a24f65859427f54012fef2fa9da14870d}{being\+Deleted()}} from the specialized destructor of your resource. \mbox{\Hypertarget{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}\label{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}} 
+\index{Wt::WResource@{Wt::WResource}!handleRequest@{handleRequest}}
+\index{handleRequest@{handleRequest}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{handleRequest()}{handleRequest()}}
+{\footnotesize\ttfamily virtual void Wt\+::\+W\+Resource\+::handle\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1Http_1_1Request}{Http\+::\+Request}} \&}]{request,  }\item[{\mbox{\hyperlink{classWt_1_1Http_1_1Response}{Http\+::\+Response}} \&}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Handles a request. 
+
+Reimplement this method so that a proper response is generated for the given request. From the {\ttfamily request} object you can access request parameters and whether the request is a continuation request. In the {\ttfamily response} object, you should set the mime type and stream the output data.
+
+A request may also concern a continuation, indicated in \mbox{\hyperlink{classWt_1_1Http_1_1Request_a9fe40c73e6d2bd3b4fec6f2476d71265}{Http\+::\+Request\+::continuation()}}, in which case the next part for a previously created continuation should be served.
+
+While handling a request, which may happen at any time together with event handling, the library makes sure that the resource is not being concurrently deleted, but multiple requests may happend simultaneously for a single resource. 
+
+Implemented in \mbox{\hyperlink{classPlaintextResource_ae6704150a7cc78e1a2db3929603763bc}{Plaintext\+Resource}}, \mbox{\hyperlink{classUpdateResource_aed319dc1bf7162f35910ee72c6d337c0}{Update\+Resource}}, \mbox{\hyperlink{classFortuneResource_a5da48a6adfaaffab7691ee64c078d33a}{Fortune\+Resource}}, \mbox{\hyperlink{classQueriesResource_a8eb5ce51d481a0c621f601cccc54c4ac}{Queries\+Resource}}, \mbox{\hyperlink{classDbResource_a3ec55eea7ffa9dc84538441cf804e7ad}{Db\+Resource}}, \mbox{\hyperlink{classJsonResource_aa31f455231406f80960abfd90e03dd1f}{Json\+Resource}}, \mbox{\hyperlink{classReportResource_a0cd624e760199392c15282c779e27ab2}{Report\+Resource}}, \mbox{\hyperlink{classBlogRSSFeed_a53be07389449119f7ef4a712fbe5b189}{Blog\+R\+S\+S\+Feed}}, \mbox{\hyperlink{classMyResource_a7a23f9029214b2447c075111309fd8fb}{My\+Resource}}, \mbox{\hyperlink{classWt_1_1WPdfImage_a45ef6cac7be6a5ecfa0d060db0d9ad5a}{Wt\+::\+W\+Pdf\+Image}}, \mbox{\hyperlink{classWt_1_1WRasterImage_a19a55883c3052cb60859dab2b2a952b7}{Wt\+::\+W\+Raster\+Image}}, \mbox{\hyperlink{classWt_1_1WFileResource_a06f4ee0961cbdd6c1663396455855964}{Wt\+::\+W\+File\+Resource}}, \mbox{\hyperlink{classWt_1_1WMemoryResource_ada82af71acf8a47eabcb91af28726f1e}{Wt\+::\+W\+Memory\+Resource}}, \mbox{\hyperlink{classWt_1_1WSvgImage_a2a3fec726602d63ad76dfe0c33b056e8}{Wt\+::\+W\+Svg\+Image}}, \mbox{\hyperlink{classWt_1_1Auth_1_1OAuthTokenEndpoint_a648b1ccc8b2a54a16457d819cee305a5}{Wt\+::\+Auth\+::\+O\+Auth\+Token\+Endpoint}}, and \mbox{\hyperlink{classWt_1_1Auth_1_1OidcUserInfoEndpoint_a341f81448aa6fa29a5ada28afdbc6365}{Wt\+::\+Auth\+::\+Oidc\+User\+Info\+Endpoint}}.
+
+\mbox{\Hypertarget{classWt_1_1WResource_a1a9c35416eb690939ff288b053da3e1b}\label{classWt_1_1WResource_a1a9c35416eb690939ff288b053da3e1b}} 
+\index{Wt::WResource@{Wt::WResource}!haveMoreData@{haveMoreData}}
+\index{haveMoreData@{haveMoreData}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{haveMoreData()}{haveMoreData()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Resource\+::have\+More\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Indicate that more data is available. 
+
+In some occasions, data may be requested for a resource which is currently not yet available. Then you can suspend the response using a continuation which you let wait for more data.
+
+Using this method you can indicate that more data is available. This will resume all responses that are currently waiting for more data.
+
+If no responses are currently waiting for data, then this method has no effect.
+
+\begin{DoxySeeAlso}{See also}
+Response\+Continuation\+::wait\+For\+More\+Data() 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WResource_a12b871c53120ad1c7c708210f60422be}\label{classWt_1_1WResource_a12b871c53120ad1c7c708210f60422be}} 
+\index{Wt::WResource@{Wt::WResource}!internalPath@{internalPath}}
+\index{internalPath@{internalPath}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{internalPath()}{internalPath()}}
+{\footnotesize\ttfamily std\+::string Wt\+::\+W\+Resource\+::internal\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the internal path. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WResource_a06bb9dbe3ae195c320cfed7b062d448a}{set\+Internal\+Path()}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WResource_a19792cc6361fabd3f237afaee5953c89}\label{classWt_1_1WResource_a19792cc6361fabd3f237afaee5953c89}} 
+\index{Wt::WResource@{Wt::WResource}!invalidAfterChanged@{invalidAfterChanged}}
+\index{invalidAfterChanged@{invalidAfterChanged}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{invalidAfterChanged()}{invalidAfterChanged()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Resource\+::invalid\+After\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Should \char`\"{}page not found\char`\"{} be returned for outdated resource U\+R\+Ls. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WResource_aac7fe0468f832de7a1f98c12fec2cfec}{set\+Invalid\+After\+Changed()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WResource_a9394f6c2ff6cadf8d1076ec52c5e909a}\label{classWt_1_1WResource_a9394f6c2ff6cadf8d1076ec52c5e909a}} 
+\index{Wt::WResource@{Wt::WResource}!setChanged@{setChanged}}
+\index{setChanged@{setChanged}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{setChanged()}{setChanged()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Resource\+::set\+Changed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates a new U\+RL for this resource and emits the changed signal. 
+
+This does not work when the resource is deployed at an internal path using \mbox{\hyperlink{classWt_1_1WResource_a06bb9dbe3ae195c320cfed7b062d448a}{set\+Internal\+Path()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WResource_aac7fe0468f832de7a1f98c12fec2cfec}{set\+Invalid\+After\+Changed()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WResource_ad07f56c58e485b17620f2f1d93121640}\label{classWt_1_1WResource_ad07f56c58e485b17620f2f1d93121640}} 
+\index{Wt::WResource@{Wt::WResource}!setDispositionType@{setDispositionType}}
+\index{setDispositionType@{setDispositionType}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{setDispositionType()}{setDispositionType()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Resource\+::set\+Disposition\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWt_a1c6a585445907b7e6e1f98bbd1501418}{Content\+Disposition}}}]{cd }\end{DoxyParamCaption})}
+
+
+
+Configures the Content-\/\+Disposition header. 
+
+The Content-\/\+Disposition header allows to instruct the browser that a resource should be shown inline or as attachment. This function enables you to set this property.
+
+This is often used in combination with suggest\+Filename(). The Content-\/\+Disposition must not be None when a filename is given; if this case is encountered, None will be rendered as \mbox{\hyperlink{classAttachment}{Attachment}}.
+
+\begin{DoxySeeAlso}{See also}
+suggest\+Filename(). 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WResource_a06bb9dbe3ae195c320cfed7b062d448a}\label{classWt_1_1WResource_a06bb9dbe3ae195c320cfed7b062d448a}} 
+\index{Wt::WResource@{Wt::WResource}!setInternalPath@{setInternalPath}}
+\index{setInternalPath@{setInternalPath}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{setInternalPath()}{setInternalPath()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Resource\+::set\+Internal\+Path (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Sets an internal path for this resource. 
+
+Using this method you can deploy the resource at a fixed path. Unless you deploy using cookies for session tracking (not recommended), a session identifier will be appended to the path.
+
+You should use internal paths that are different from internal paths handled by your application (\mbox{\hyperlink{classWt_1_1WApplication_a2c1a10aadc0d7ed877b5715b42ca4911}{W\+Application\+::set\+Internal\+Path()}}), if you do not want a conflict between these two when the browser does not use A\+J\+AX (and thus url fragments for its internal paths).
+
+The default value is empty. By default the U\+RL for a resource is unspecified and a U\+RL will be generated by the library.
+
+The internal path for a static resource is the deployment path specified using \mbox{\hyperlink{classWt_1_1WServer_a3c5c323a9bccf591b63c9fb3f40e8b59}{W\+Server\+::add\+Resource()}}. \mbox{\Hypertarget{classWt_1_1WResource_aac7fe0468f832de7a1f98c12fec2cfec}\label{classWt_1_1WResource_aac7fe0468f832de7a1f98c12fec2cfec}} 
+\index{Wt::WResource@{Wt::WResource}!setInvalidAfterChanged@{setInvalidAfterChanged}}
+\index{setInvalidAfterChanged@{setInvalidAfterChanged}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{setInvalidAfterChanged()}{setInvalidAfterChanged()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Resource\+::set\+Invalid\+After\+Changed (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Return \char`\"{}page not found\char`\"{} for prior resource U\+R\+Ls after change. 
+
+This option invalidates earlier versions of the resource url prior to the last call of \mbox{\hyperlink{classWt_1_1WResource_a9394f6c2ff6cadf8d1076ec52c5e909a}{set\+Changed()}} or \mbox{\hyperlink{classWt_1_1WResource_abf6241d315b1569323da8a6bf7c7896c}{generate\+Url()}}. The default value is false.
+
+This does not work when the resource is deployed at an internal path using \mbox{\hyperlink{classWt_1_1WResource_a06bb9dbe3ae195c320cfed7b062d448a}{set\+Internal\+Path()}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WResource_a9394f6c2ff6cadf8d1076ec52c5e909a}{set\+Changed()}}, \mbox{\hyperlink{classWt_1_1WResource_abf6241d315b1569323da8a6bf7c7896c}{generate\+Url()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WResource_a6695dad28a25c7cbfef93c371e7c5a1e}\label{classWt_1_1WResource_a6695dad28a25c7cbfef93c371e7c5a1e}} 
+\index{Wt::WResource@{Wt::WResource}!setTakesUpdateLock@{setTakesUpdateLock}}
+\index{setTakesUpdateLock@{setTakesUpdateLock}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{setTakesUpdateLock()}{setTakesUpdateLock()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Resource\+::set\+Takes\+Update\+Lock (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Set whether this resource takes the W\+Application\textquotesingle{}s update lock. 
+
+By default, W\+Resource does not keep the \mbox{\hyperlink{classWt_1_1WApplication}{W\+Application}}\textquotesingle{}s update lock, so \mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{handle\+Request()}} is done outside of the W\+Application\textquotesingle{}s event loop. This makes sure that resources don\textquotesingle{}t block the event loop, and multiple requests to a W\+Resource can be handled concurrently.
+
+However, if necessary you can either manually grab the update lock, (see \mbox{\hyperlink{classWt_1_1WApplication_1_1UpdateLock}{W\+Application\+::\+Update\+Lock}}) or enable this option.
+
+\begin{DoxyNote}{Note}
+This is not applicable to static resources, since static resources do not have a W\+Application associated with them. 
+\end{DoxyNote}
+\mbox{\Hypertarget{classWt_1_1WResource_ae0b96cdd80b982c74adb9a762c77d479}\label{classWt_1_1WResource_ae0b96cdd80b982c74adb9a762c77d479}} 
+\index{Wt::WResource@{Wt::WResource}!setUploadProgress@{setUploadProgress}}
+\index{setUploadProgress@{setUploadProgress}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{setUploadProgress()}{setUploadProgress()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Resource\+::set\+Upload\+Progress (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Indicate interest in upload progress. 
+
+When supported, you can track upload progress using this signal. While data is being received, and before \mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{handle\+Request()}} is called, progress information is indicated using \mbox{\hyperlink{classWt_1_1WResource_a23e0db25d9ad7da08f5c36603def5863}{data\+Received()}}.
+
+We envision that in the future support will depend on a combination of browser and connector. Currently only the wthttp connector provides support for this across all A\+J\+AX browsers. In the future, we are likely to implement this also using Java\+Script File A\+PI features making it independent of connectors.
+
+The default value is {\ttfamily false}. \mbox{\Hypertarget{classWt_1_1WResource_a0f96ad3544cbcf441975f8970881e72d}\label{classWt_1_1WResource_a0f96ad3544cbcf441975f8970881e72d}} 
+\index{Wt::WResource@{Wt::WResource}!suggestedFileName@{suggestedFileName}}
+\index{suggestedFileName@{suggestedFileName}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{suggestedFileName()}{suggestedFileName()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}}\& Wt\+::\+W\+Resource\+::suggested\+File\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the suggested file name. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WResource_a47632cad99e70712d4f898d97c3ea314}{suggest\+File\+Name()}}; 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WResource_a47632cad99e70712d4f898d97c3ea314}\label{classWt_1_1WResource_a47632cad99e70712d4f898d97c3ea314}} 
+\index{Wt::WResource@{Wt::WResource}!suggestFileName@{suggestFileName}}
+\index{suggestFileName@{suggestFileName}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{suggestFileName()}{suggestFileName()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Resource\+::suggest\+File\+Name (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WString}{Wt\+::\+W\+String}} \&}]{name,  }\item[{\mbox{\hyperlink{classWt_a1c6a585445907b7e6e1f98bbd1501418}{Content\+Disposition}}}]{disposition = {\ttfamily ContentDisposition\+:\+:Attachment} }\end{DoxyParamCaption})}
+
+
+
+Suggests a filename to the user for the data streamed by this resource. 
+
+For resources, intended to be downloaded by the user, suggest a name used for saving. The filename extension may also help the browser to identify the correct program for opening the resource.
+
+The disposition type determines if the resource is intended to be opened by a plugin in the browser (Inline), or to be saved to disk (\mbox{\hyperlink{classAttachment}{Attachment}}). No\+Disposition is not a valid Content-\/\+Disposition when a filename is suggested; this will be rendered as \mbox{\hyperlink{classAttachment}{Attachment}}.
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WResource_ad07f56c58e485b17620f2f1d93121640}{set\+Disposition\+Type()}}. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WResource_af0b52160a8d04700a17e9479dd489972}\label{classWt_1_1WResource_af0b52160a8d04700a17e9479dd489972}} 
+\index{Wt::WResource@{Wt::WResource}!takesUpdateLock@{takesUpdateLock}}
+\index{takesUpdateLock@{takesUpdateLock}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{takesUpdateLock()}{takesUpdateLock()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Resource\+::takes\+Update\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether this resources takes the W\+Application\textquotesingle{}s update lock. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WResource_a6695dad28a25c7cbfef93c371e7c5a1e}{set\+Takes\+Update\+Lock()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WResource_a03872ea6bf9fc0dcaeaea7541f2c7217}\label{classWt_1_1WResource_a03872ea6bf9fc0dcaeaea7541f2c7217}} 
+\index{Wt::WResource@{Wt::WResource}!url@{url}}
+\index{url@{url}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{url()}{url()}}
+{\footnotesize\ttfamily const std\+::string\& Wt\+::\+W\+Resource\+::url (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the current U\+RL for this resource. 
+
+Returns the url that references this resource. \mbox{\Hypertarget{classWt_1_1WResource_aaf6d964de1056c7c9404f88fa5e5a0de}\label{classWt_1_1WResource_aaf6d964de1056c7c9404f88fa5e5a0de}} 
+\index{Wt::WResource@{Wt::WResource}!write@{write}}
+\index{write@{write}!Wt::WResource@{Wt::WResource}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Resource\+::write (\begin{DoxyParamCaption}\item[{W\+T\+\_\+\+B\+O\+S\+T\+R\+E\+AM \&}]{out,  }\item[{const \mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Http\+::\+Parameter\+Map}} \&}]{parameters = {\ttfamily \mbox{\hyperlink{namespaceWt_1_1Http_a3420f95c8bfecf3d46e65920c765345a}{Http\+::\+Parameter\+Map}}()},  }\item[{const \mbox{\hyperlink{namespaceWt_1_1Http_a90602329029048d738daae9ba63e059a}{Http\+::\+Uploaded\+File\+Map}} \&}]{files = {\ttfamily \mbox{\hyperlink{namespaceWt_1_1Http_a90602329029048d738daae9ba63e059a}{Http\+::\+Uploaded\+File\+Map}}()} }\end{DoxyParamCaption})}
+
+
+
+Stream the resource to a stream. 
+
+This is a convenience method to serialize to a stream (for example a file stream).
+
+Unlike when an actual request is being done, exceptions thrown from \mbox{\hyperlink{classWt_1_1WResource_a3a740f8cc29e2e6e4e58defc9c88b8b6}{handle\+Request()}} are not caught. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Resource.\+h\end{DoxyCompactItemize}

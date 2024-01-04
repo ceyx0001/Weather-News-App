@@ -1,0 +1,241 @@
+\hypertarget{classWt_1_1WGradient}{}\doxysection{Wt\+::W\+Gradient Class Reference}
+\label{classWt_1_1WGradient}\index{Wt::WGradient@{Wt::WGradient}}
+
+
+A linear or radial gradient.  
+
+
+
+
+{\ttfamily \#include $<$Wt/\+W\+Gradient.\+h$>$}
+
+
+
+Collaboration diagram for Wt\+::W\+Gradient\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classWt_1_1WGradient_1_1ColorStop}{Color\+Stop}}
+\begin{DoxyCompactList}\small\item\em A gradient color stop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWt_1_1WGradient_ad5ecd0c5d62a3372d651415be1cb0c29}{W\+Gradient}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__painting_gad22e2acb96a8d8ebde011ed399f21b73}{Gradient\+Style}} \mbox{\hyperlink{classWt_1_1WGradient_a7fc7306dc93af31cb1e489e4309afece}{style}} () const
+\begin{DoxyCompactList}\small\item\em Returns the gradient style. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classWt_1_1WGradient_a19ef5c18af50fd8c9e1c28e5c2f82135}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Returns whether the gradient is empty. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGradient_a5b040127633d03999af47aae1e9924cd}{set\+Linear\+Gradient}} (double x0, double y0, double x1, double y1)
+\begin{DoxyCompactList}\small\item\em Configures a linear gradient. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGradient_a1f754c99ba22137cc0b12d0c6a6aa338}{set\+Radial\+Gradient}} (double cx, double cy, double r, double fx, double fy)
+\begin{DoxyCompactList}\small\item\em Configures a radial gradient. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGradient_aae1b2e9cc187b9ad7ec0946fa18263be}{add\+Color\+Stop}} (double position, const \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \&color)
+\begin{DoxyCompactList}\small\item\em Adds a color stop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGradient_acea4e4ddc957fba0d0bc500249a03d3f}{add\+Color\+Stop}} (const \mbox{\hyperlink{classWt_1_1WGradient_1_1ColorStop}{Color\+Stop}} \&colorstop)
+\begin{DoxyCompactList}\small\item\em Adds a color stop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWt_1_1WGradient_a2f5abd58b196cfe3e109e83295497602}{clear\+Color\+Stops}} ()
+\begin{DoxyCompactList}\small\item\em Removes all color stops. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WGradient_1_1ColorStop}{Color\+Stop}} $>$ \& \mbox{\hyperlink{classWt_1_1WGradient_a09ec47fb431442980fc887f4133a8203}{colorstops}} () const
+\begin{DoxyCompactList}\small\item\em Returns the color stops. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WLineF}{W\+LineF}} \& \mbox{\hyperlink{classWt_1_1WGradient_a1329e2e983d47bc8a8a7c74d02e5c982}{linear\+Gradient\+Vector}} () const
+\begin{DoxyCompactList}\small\item\em Returns the line positioning the linear gradient. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \& \mbox{\hyperlink{classWt_1_1WGradient_ad4d4450fa9142d4472ab27233ae0ff2e}{radial\+Center\+Point}} () const
+\begin{DoxyCompactList}\small\item\em Returns the center of a radial gradient. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} \& \mbox{\hyperlink{classWt_1_1WGradient_a2c9f5fff543ecb042e7cd8958f4460f8}{radial\+Focal\+Point}} () const
+\begin{DoxyCompactList}\small\item\em Returns the focal point of a radial gradient. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classWt_1_1WGradient_ab73d65cc3832dcf5be1c0fb15c028f03}{radial\+Radius}} () const
+\begin{DoxyCompactList}\small\item\em Returns the radius of a radial gradient. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGradient_a0688ef682d74c2d2c3361f68be496fc5}\label{classWt_1_1WGradient_a0688ef682d74c2d2c3361f68be496fc5}} 
+bool \mbox{\hyperlink{classWt_1_1WGradient_a0688ef682d74c2d2c3361f68be496fc5}{operator==}} (const \mbox{\hyperlink{classWt_1_1WGradient}{W\+Gradient}} \&other) const
+\begin{DoxyCompactList}\small\item\em Comparison operator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classWt_1_1WGradient_a8d382b79234d3b47a8fbd5db871d25aa}\label{classWt_1_1WGradient_a8d382b79234d3b47a8fbd5db871d25aa}} 
+bool \mbox{\hyperlink{classWt_1_1WGradient_a8d382b79234d3b47a8fbd5db871d25aa}{operator!=}} (const \mbox{\hyperlink{classWt_1_1WGradient}{W\+Gradient}} \&other) const
+\begin{DoxyCompactList}\small\item\em Comparison operator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classWt_1_1WGradient_aa7914c6cfceb9094c58ee7f669cb7671}\label{classWt_1_1WGradient_aa7914c6cfceb9094c58ee7f669cb7671}} 
+\mbox{\hyperlink{group__painting_gad22e2acb96a8d8ebde011ed399f21b73}{Gradient\+Style}} {\bfseries style\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WGradient_a54ad80a86fe21d18e688d6fdc62795a8}\label{classWt_1_1WGradient_a54ad80a86fe21d18e688d6fdc62795a8}} 
+std\+::vector$<$ \mbox{\hyperlink{classWt_1_1WGradient_1_1ColorStop}{Color\+Stop}} $>$ {\bfseries colorstops\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WGradient_a1be4a121c0968610555781f8ac2240e6}\label{classWt_1_1WGradient_a1be4a121c0968610555781f8ac2240e6}} 
+\mbox{\hyperlink{classWt_1_1WLineF}{W\+LineF}} {\bfseries gradient\+Vector\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WGradient_af438d770de7068ca8ee423e866bac002}\label{classWt_1_1WGradient_af438d770de7068ca8ee423e866bac002}} 
+\mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} {\bfseries center\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WGradient_a34c5aa95bc443f1dc8033657c7e423f9}\label{classWt_1_1WGradient_a34c5aa95bc443f1dc8033657c7e423f9}} 
+\mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}} {\bfseries focal\+\_\+}
+\item 
+\mbox{\Hypertarget{classWt_1_1WGradient_ac5ede0b28fd18648a5697b0e548e0931}\label{classWt_1_1WGradient_ac5ede0b28fd18648a5697b0e548e0931}} 
+double {\bfseries radius\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A linear or radial gradient. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WPen_ac96110880124d3b426ef660d69d2b7bb}{W\+Pen\+::set\+Gradient()}}, \mbox{\hyperlink{classWt_1_1WBrush_a8b9fa3282e28c6bce499ec2b20e38fb5}{W\+Brush\+::set\+Gradient()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classWt_1_1WGradient_ad5ecd0c5d62a3372d651415be1cb0c29}\label{classWt_1_1WGradient_ad5ecd0c5d62a3372d651415be1cb0c29}} 
+\index{Wt::WGradient@{Wt::WGradient}!WGradient@{WGradient}}
+\index{WGradient@{WGradient}!Wt::WGradient@{Wt::WGradient}}
+\doxysubsubsection{\texorpdfstring{WGradient()}{WGradient()}}
+{\footnotesize\ttfamily Wt\+::\+W\+Gradient\+::\+W\+Gradient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor. 
+
+Creates an empty linear gradient from (0,0) to (1,1) (without color stops).
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WGradient_a19ef5c18af50fd8c9e1c28e5c2f82135}{is\+Empty()}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classWt_1_1WGradient_acea4e4ddc957fba0d0bc500249a03d3f}\label{classWt_1_1WGradient_acea4e4ddc957fba0d0bc500249a03d3f}} 
+\index{Wt::WGradient@{Wt::WGradient}!addColorStop@{addColorStop}}
+\index{addColorStop@{addColorStop}!Wt::WGradient@{Wt::WGradient}}
+\doxysubsubsection{\texorpdfstring{addColorStop()}{addColorStop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Gradient\+::add\+Color\+Stop (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classWt_1_1WGradient_1_1ColorStop}{Color\+Stop}} \&}]{colorstop }\end{DoxyParamCaption})}
+
+
+
+Adds a color stop. 
+
+Adds a color stop. \mbox{\Hypertarget{classWt_1_1WGradient_aae1b2e9cc187b9ad7ec0946fa18263be}\label{classWt_1_1WGradient_aae1b2e9cc187b9ad7ec0946fa18263be}} 
+\index{Wt::WGradient@{Wt::WGradient}!addColorStop@{addColorStop}}
+\index{addColorStop@{addColorStop}!Wt::WGradient@{Wt::WGradient}}
+\doxysubsubsection{\texorpdfstring{addColorStop()}{addColorStop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Gradient\+::add\+Color\+Stop (\begin{DoxyParamCaption}\item[{double}]{position,  }\item[{const \mbox{\hyperlink{classWt_1_1WColor}{W\+Color}} \&}]{color }\end{DoxyParamCaption})}
+
+
+
+Adds a color stop. 
+
+For a linear gradient, the position is relative to the position on the line (from 0 to 1 corresponding to p0 to p1).
+
+For a radial gradient, the position indicates the distance from the center (from 0 to 1 corresponding to center to radius). \mbox{\Hypertarget{classWt_1_1WGradient_a2f5abd58b196cfe3e109e83295497602}\label{classWt_1_1WGradient_a2f5abd58b196cfe3e109e83295497602}} 
+\index{Wt::WGradient@{Wt::WGradient}!clearColorStops@{clearColorStops}}
+\index{clearColorStops@{clearColorStops}!Wt::WGradient@{Wt::WGradient}}
+\doxysubsubsection{\texorpdfstring{clearColorStops()}{clearColorStops()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Gradient\+::clear\+Color\+Stops (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Removes all color stops. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WGradient_aae1b2e9cc187b9ad7ec0946fa18263be}{add\+Color\+Stop()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WGradient_a09ec47fb431442980fc887f4133a8203}\label{classWt_1_1WGradient_a09ec47fb431442980fc887f4133a8203}} 
+\index{Wt::WGradient@{Wt::WGradient}!colorstops@{colorstops}}
+\index{colorstops@{colorstops}!Wt::WGradient@{Wt::WGradient}}
+\doxysubsubsection{\texorpdfstring{colorstops()}{colorstops()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{classWt_1_1WGradient_1_1ColorStop}{Color\+Stop}}$>$\& Wt\+::\+W\+Gradient\+::colorstops (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the color stops. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WGradient_aae1b2e9cc187b9ad7ec0946fa18263be}{add\+Color\+Stop()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classWt_1_1WGradient_a19ef5c18af50fd8c9e1c28e5c2f82135}\label{classWt_1_1WGradient_a19ef5c18af50fd8c9e1c28e5c2f82135}} 
+\index{Wt::WGradient@{Wt::WGradient}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Wt::WGradient@{Wt::WGradient}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool Wt\+::\+W\+Gradient\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns whether the gradient is empty. 
+
+A gradient is empty if no color stops are defined. \mbox{\Hypertarget{classWt_1_1WGradient_a1329e2e983d47bc8a8a7c74d02e5c982}\label{classWt_1_1WGradient_a1329e2e983d47bc8a8a7c74d02e5c982}} 
+\index{Wt::WGradient@{Wt::WGradient}!linearGradientVector@{linearGradientVector}}
+\index{linearGradientVector@{linearGradientVector}!Wt::WGradient@{Wt::WGradient}}
+\doxysubsubsection{\texorpdfstring{linearGradientVector()}{linearGradientVector()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WLineF}{W\+LineF}}\& Wt\+::\+W\+Gradient\+::linear\+Gradient\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the line positioning the linear gradient. 
+
+This returns the line set in \mbox{\hyperlink{classWt_1_1WGradient_a5b040127633d03999af47aae1e9924cd}{set\+Linear\+Gradient()}}. \mbox{\Hypertarget{classWt_1_1WGradient_ad4d4450fa9142d4472ab27233ae0ff2e}\label{classWt_1_1WGradient_ad4d4450fa9142d4472ab27233ae0ff2e}} 
+\index{Wt::WGradient@{Wt::WGradient}!radialCenterPoint@{radialCenterPoint}}
+\index{radialCenterPoint@{radialCenterPoint}!Wt::WGradient@{Wt::WGradient}}
+\doxysubsubsection{\texorpdfstring{radialCenterPoint()}{radialCenterPoint()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}}\& Wt\+::\+W\+Gradient\+::radial\+Center\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the center of a radial gradient. 
+
+This returns the center point set in \mbox{\hyperlink{classWt_1_1WGradient_a1f754c99ba22137cc0b12d0c6a6aa338}{set\+Radial\+Gradient()}}. \mbox{\Hypertarget{classWt_1_1WGradient_a2c9f5fff543ecb042e7cd8958f4460f8}\label{classWt_1_1WGradient_a2c9f5fff543ecb042e7cd8958f4460f8}} 
+\index{Wt::WGradient@{Wt::WGradient}!radialFocalPoint@{radialFocalPoint}}
+\index{radialFocalPoint@{radialFocalPoint}!Wt::WGradient@{Wt::WGradient}}
+\doxysubsubsection{\texorpdfstring{radialFocalPoint()}{radialFocalPoint()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classWt_1_1WPointF}{W\+PointF}}\& Wt\+::\+W\+Gradient\+::radial\+Focal\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the focal point of a radial gradient. 
+
+This returns the focal point set in \mbox{\hyperlink{classWt_1_1WGradient_a1f754c99ba22137cc0b12d0c6a6aa338}{set\+Radial\+Gradient()}}. \mbox{\Hypertarget{classWt_1_1WGradient_ab73d65cc3832dcf5be1c0fb15c028f03}\label{classWt_1_1WGradient_ab73d65cc3832dcf5be1c0fb15c028f03}} 
+\index{Wt::WGradient@{Wt::WGradient}!radialRadius@{radialRadius}}
+\index{radialRadius@{radialRadius}!Wt::WGradient@{Wt::WGradient}}
+\doxysubsubsection{\texorpdfstring{radialRadius()}{radialRadius()}}
+{\footnotesize\ttfamily double Wt\+::\+W\+Gradient\+::radial\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the radius of a radial gradient. 
+
+This returns the radius set in \mbox{\hyperlink{classWt_1_1WGradient_a1f754c99ba22137cc0b12d0c6a6aa338}{set\+Radial\+Gradient()}}. \mbox{\Hypertarget{classWt_1_1WGradient_a5b040127633d03999af47aae1e9924cd}\label{classWt_1_1WGradient_a5b040127633d03999af47aae1e9924cd}} 
+\index{Wt::WGradient@{Wt::WGradient}!setLinearGradient@{setLinearGradient}}
+\index{setLinearGradient@{setLinearGradient}!Wt::WGradient@{Wt::WGradient}}
+\doxysubsubsection{\texorpdfstring{setLinearGradient()}{setLinearGradient()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Gradient\+::set\+Linear\+Gradient (\begin{DoxyParamCaption}\item[{double}]{x0,  }\item[{double}]{y0,  }\item[{double}]{x1,  }\item[{double}]{y1 }\end{DoxyParamCaption})}
+
+
+
+Configures a linear gradient. 
+
+The coordinates describe a line which provides an origin and orientation of the gradient in user-\/space coordinates. \mbox{\Hypertarget{classWt_1_1WGradient_a1f754c99ba22137cc0b12d0c6a6aa338}\label{classWt_1_1WGradient_a1f754c99ba22137cc0b12d0c6a6aa338}} 
+\index{Wt::WGradient@{Wt::WGradient}!setRadialGradient@{setRadialGradient}}
+\index{setRadialGradient@{setRadialGradient}!Wt::WGradient@{Wt::WGradient}}
+\doxysubsubsection{\texorpdfstring{setRadialGradient()}{setRadialGradient()}}
+{\footnotesize\ttfamily void Wt\+::\+W\+Gradient\+::set\+Radial\+Gradient (\begin{DoxyParamCaption}\item[{double}]{cx,  }\item[{double}]{cy,  }\item[{double}]{r,  }\item[{double}]{fx,  }\item[{double}]{fy }\end{DoxyParamCaption})}
+
+
+
+Configures a radial gradient. 
+
+A radial gradient is described by a center, a radial and a focus point. All coordinates are user-\/space coordinates. \mbox{\Hypertarget{classWt_1_1WGradient_a7fc7306dc93af31cb1e489e4309afece}\label{classWt_1_1WGradient_a7fc7306dc93af31cb1e489e4309afece}} 
+\index{Wt::WGradient@{Wt::WGradient}!style@{style}}
+\index{style@{style}!Wt::WGradient@{Wt::WGradient}}
+\doxysubsubsection{\texorpdfstring{style()}{style()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__painting_gad22e2acb96a8d8ebde011ed399f21b73}{Gradient\+Style}} Wt\+::\+W\+Gradient\+::style (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns the gradient style. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{classWt_1_1WGradient_a5b040127633d03999af47aae1e9924cd}{set\+Linear\+Gradient()}}, \mbox{\hyperlink{classWt_1_1WGradient_a1f754c99ba22137cc0b12d0c6a6aa338}{set\+Radial\+Gradient()}} 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+wt-\/4.\+8.\+2/src/\+Wt/W\+Gradient.\+h\end{DoxyCompactItemize}
